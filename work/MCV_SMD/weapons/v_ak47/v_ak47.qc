@@ -519,22 +519,6 @@ $sequence "idle" {
 	node "0"
 }
 
-$sequence "idle_shoot" {
-	"basePose_a"
-	"ironsight_transition"
-	activity "ACT_VM_IDLE" 1
-	blend "ironsight" 0 0.5
-	blendwidth 2
-	delta
-	fadein 0.2
-	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
-	blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
-	hidden
-	node "0"
-}
-
 $sequence "draw" {
 	"v_ak47_anims\draw.smd"
 	"v_ak47_anims\draw_2.smd"
@@ -568,10 +552,51 @@ $sequence "Firstdraw" {
 	
 }
 
+$sequence "shootpose1" {
+	"basePose_a"
+	"ironsight_transition"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	blend "ironsight" 0 1
+	blendwidth 2
+	fadein 0
+	fadeout 0.2
+	addlayer "walklayerironsight"
+	addlayer "shoot1"
+	//blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
+	node "Fire"
+}
+
+$sequence "shootpose2" {
+	"basePose_a"
+	"ironsight_transition"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	blend "ironsight" 0 1
+	blendwidth 2
+	fadein 0
+	fadeout 0.2
+	addlayer "walklayerironsight"
+	addlayer "shoot2"
+	//blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
+	node "Fire"
+}
+
+$sequence "shootpose3" {
+	"basePose_a"
+	"ironsight_transition"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	blend "ironsight" 0 1
+	blendwidth 2
+	fadein 0
+	fadeout 0.2
+	addlayer "walklayerironsight"
+	addlayer "shoot3"
+	//blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
+	node "Fire"
+}
+
 $sequence "shoot1" {
 	"shoot1_a"
 	"shoot1_ironsight_a"
-	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
@@ -579,14 +604,13 @@ $sequence "shoot1" {
 	{ event AE_MUZZLEFLASH 0 "" }
 	fadein 0
 	fadeout 0.2
-	addlayer "idle_shoot"
+	blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
 	node "Fire"
 }
 
 $sequence "shoot2" {
 	"shoot2_a"
 	"shoot2_ironsight_a"
-	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
@@ -594,14 +618,13 @@ $sequence "shoot2" {
 	{ event AE_MUZZLEFLASH 0 "" }
 	fadein 0
 	fadeout 0.2
-	addlayer "idle_shoot"
+	blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
 	node "Fire"
 }
 
 $sequence "shoot3" {
 	"shoot3_a"
 	"shoot3_ironsight_a"
-	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
@@ -609,7 +632,7 @@ $sequence "shoot3" {
 	{ event AE_MUZZLEFLASH 0 "" }
 	fadein 0
 	fadeout 0.2
-	addlayer "idle_shoot"
+	blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
 	node "Fire"
 }
 
