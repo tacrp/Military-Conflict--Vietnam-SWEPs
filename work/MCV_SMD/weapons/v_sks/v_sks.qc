@@ -827,6 +827,11 @@ $animation "ChargeEnd_a_i" "v_sks_anims\ChargeEnd_a_i.smd" {
 	
 }
 
+$animation "a_idle" "v_sks_anims\basePose_a.smd" {
+	fps 30
+	noanimation
+}
+
 $sequence "idle" {
 	"basePose_a"
 	"ironsight_transition"
@@ -884,6 +889,7 @@ $sequence "shoot1" {
 	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
 	fadein 0
 	fadeout 0.2
+	addlayer "idle"
 	addlayer "BoltshootMovement"
 	node "Fire"
 }
@@ -900,6 +906,7 @@ $sequence "shoot2" {
 	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
 	fadein 0
 	fadeout 0.2
+	addlayer "idle"
 	addlayer "BoltshootMovement"
 	node "Fire"
 }
@@ -916,6 +923,7 @@ $sequence "shoot3" {
 	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
 	fadein 0
 	fadeout 0.2
+	addlayer "idle"
 	addlayer "BoltshootMovement"
 	node "Fire"
 }
