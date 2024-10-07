@@ -32,7 +32,7 @@ SWEP.ExplosionRadius = 0
 
 SWEP.MuzzleVelocity = 735
 
-SWEP.RangeModifier = 0.950
+SWEP.RangeModifier = 0.950 // Every 500 units the damage is multiplied by rangemodifier
 
 // "auto", "semi", "burst", "singleaction", "doubleaction", "fanning", "bolt", "pump"
 SWEP.Firemodes = {
@@ -75,7 +75,7 @@ SWEP.CustomAng = Angle(0, 0, 0)
 SWEP.Spread = 6.3
 SWEP.SpreadIronsighted = 1.15
 
-SWEP.FireRate = 40 // in rounds per minute
+SWEP.FireRate = 300 // in rounds per minute
 
 SWEP.CrosshairMinDistance = 8
 SWEP.CrosshairDeltaDistance = 4
@@ -205,7 +205,7 @@ function SWEP:SetupDataTables()
     self:NetworkVar("Float", 6, "LastScopeTime")
     self:NetworkVar("Float", 7, "LastMeleeTime")
     self:NetworkVar("Float", 8, "ReloadFinishTime")
-    self:NetworkVar("Float", 9, "NWSightAmount")
+    self:NetworkVar("Float", 9, "SightAmount")
     self:NetworkVar("Float", 10, "HolsterTime")
     self:NetworkVar("Float", 11, "NWHoldBreathAmount")
     self:NetworkVar("Float", 12, "Breath")
@@ -235,3 +235,21 @@ end
 function SWEP:SecondaryAttack()
     return
 end
+
+local function clunpredictvar(tbl, name, varname, default)
+    local clvar = "CL_" .. name
+
+    tbl[clvar] = default
+
+    tbl["Set" .. name] = function(self, v)
+        if (!game.SinglePlayer() and CLIENT and self:GetOwner() == LocalPlayer()) then self[clvar] = v end
+        self["Set" .. varname](self, v)
+    end
+
+    tbl["Get" .. name] = function(self)
+        if (!game.SinglePlayer() and CLIENT and self:GetOwner() == LocalPlayer()) then return self[clvar] end
+        return self["Get" .. varname](self)
+    end
+end
+
+clunpredictvar(SWEP, "HoldBreathAmount", "NWHoldBreathAmount", 0)

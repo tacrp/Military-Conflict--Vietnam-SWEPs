@@ -1,5 +1,5 @@
 function SWEP:Deploy()
-    self:PlayAnimation(ACT_VM_DEPLOY)
+    self:PlayAnimation(ACT_VM_DRAW)
 
     return true
 end

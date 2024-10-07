@@ -1,15 +1,9 @@
-function SWEP:PlayAnimation(act, mult, lock, doidle)
+function SWEP:PlayAnimation(act, lock, doidle)
     mult = mult or 1
     lock = lock or false
     doidle = doidle or false
-    local reverse = false
 
-    if mult < 0 then
-        reverse = true
-        mult = -mult
-    end
-
-    local vm = self:GetVM()
+    local vm = self:GetOwner():GetViewModel()
 
     if !IsValid(vm) then return end
 
@@ -19,35 +13,19 @@ function SWEP:PlayAnimation(act, mult, lock, doidle)
 
     time = time * mult
 
-    vm:SendViewModelMatchingSequence(act)
-
-    if reverse then
-        vm:SetCycle(1)
-        vm:SetPlaybackRate(-1 / mult)
-    else
-        vm:SetCycle(0)
-        vm:SetPlaybackRate(1 / mult)
-    end
+    self:SendWeaponAnim(act)
 
     if lock then
         self:SetAnimLockTime(CurTime() + time)
-        -- self:SetNextSecondaryFire(CurTime() + time)
     else
         self:SetAnimLockTime(0)
-        -- self:SetNextSecondaryFire(0)
-    end
-
-    if doidle and !self.NoIdle then
-        self:SetNextIdle(CurTime() + time)
-    else
-        self:SetNextIdle(math.huge)
     end
 
     return time
 end
 
 function SWEP:IdleAtEndOfAnimation()
-    local vm = self:GetVM()
+    local vm = self:GetOwner():GetViewModel()
     local cyc = vm:GetCycle()
     local duration = vm:SequenceDuration()
     local rate = vm:GetPlaybackRate()
