@@ -847,6 +847,23 @@ $sequence "idle" {
 	node "0"
 }
 
+$sequence "idle_shoot" {
+	"basePose_a"
+	"ironsight_transition"
+	activity "ACT_VM_IDLE" 1
+	blend "ironsight" 0 0.5
+	blendwidth 2
+	predelta
+	fadein 0.2
+	fadeout 0.2
+	addlayer "walklayer"
+	addlayer "runlayer"
+	blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
+	addlayer "SlidePosition"
+	hidden
+	node "0"
+}
+
 $sequence "draw" {
 	"v_sks_anims\draw.smd"
 	"v_sks_anims\draw_2.smd"
@@ -889,7 +906,7 @@ $sequence "shoot1" {
 	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
 	fadein 0
 	fadeout 0.2
-	addlayer "idle"
+	addlayer "idle_shoot"
 	addlayer "BoltshootMovement"
 	node "Fire"
 }
@@ -906,7 +923,7 @@ $sequence "shoot2" {
 	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
 	fadein 0
 	fadeout 0.2
-	addlayer "idle"
+	addlayer "idle_shoot"
 	addlayer "BoltshootMovement"
 	node "Fire"
 }
@@ -923,7 +940,7 @@ $sequence "shoot3" {
 	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
 	fadein 0
 	fadeout 0.2
-	addlayer "idle"
+	addlayer "idle_shoot"
 	addlayer "BoltshootMovement"
 	node "Fire"
 }
@@ -952,6 +969,7 @@ $sequence "shootlast" {
 	{ event AE_WPN_CLIP_TO_POSEPARAM 0 "ammo_fraction" }
 	fadein 0
 	fadeout 0.2
+	addlayer "idle_shoot"
 }
 
 $sequence "reload" {
