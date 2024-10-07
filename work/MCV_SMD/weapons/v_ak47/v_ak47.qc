@@ -519,6 +519,22 @@ $sequence "idle" {
 	node "0"
 }
 
+$sequence "idle_shoot" {
+	"basePose_a"
+	"ironsight_transition"
+	activity "ACT_VM_IDLE" 1
+	blend "ironsight" 0 0.5
+	blendwidth 2
+	delta
+	fadein 0.2
+	fadeout 0.2
+	addlayer "walklayer"
+	addlayer "runlayer"
+	blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
+	hidden
+	node "0"
+}
+
 $sequence "draw" {
 	"v_ak47_anims\draw.smd"
 	"v_ak47_anims\draw_2.smd"
@@ -563,6 +579,7 @@ $sequence "shoot1" {
 	{ event AE_MUZZLEFLASH 0 "" }
 	fadein 0
 	fadeout 0.2
+	addlayer "idle_shoot"
 	node "Fire"
 }
 
@@ -577,6 +594,7 @@ $sequence "shoot2" {
 	{ event AE_MUZZLEFLASH 0 "" }
 	fadein 0
 	fadeout 0.2
+	addlayer "idle_shoot"
 	node "Fire"
 }
 
@@ -591,6 +609,7 @@ $sequence "shoot3" {
 	{ event AE_MUZZLEFLASH 0 "" }
 	fadein 0
 	fadeout 0.2
+	addlayer "idle_shoot"
 	node "Fire"
 }
 

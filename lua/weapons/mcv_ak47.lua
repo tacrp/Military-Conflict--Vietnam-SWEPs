@@ -5,12 +5,12 @@ SWEP.Spawnable = true
 AddCSLuaFile()
 
 // Names and basic information
-SWEP.PrintName = "APS Stechkin"
+SWEP.PrintName = "AK-47"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = ""
 SWEP.SubCategory = ""
 
-SWEP.ViewModel = "models/weapons/mcv/v_aps.mdl"
+SWEP.ViewModel = "models/weapons/mcv/v_ak47.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_aps.mdl"
 
 SWEP.BodyGroups = ""
@@ -74,7 +74,7 @@ SWEP.CustomAng = Angle(0, 0, 0)
 SWEP.Spread = 6.3
 SWEP.SpreadIronsighted = 1.15
 
-SWEP.FireRate = 750 // in rounds per minute
+SWEP.FireRate = 600 // in rounds per minute
 
 SWEP.CrosshairMinDistance = 8
 SWEP.CrosshairDeltaDistance = 4
@@ -82,9 +82,9 @@ SWEP.CrosshairDeltaDistance = 4
 SWEP.WeaponWeight = 3.85
 
 SWEP.Primary.Ammo = "ar2"
-SWEP.Primary.ClipSize = 20
+SWEP.Primary.ClipSize = 30
 SWEP.Primary.Chamber = 1
-SWEP.Primary.DefaultClip = 60
+SWEP.Primary.DefaultClip = 90
 SWEP.Primary.Automatic = true
 
 SWEP.NearwallDistance = 40
