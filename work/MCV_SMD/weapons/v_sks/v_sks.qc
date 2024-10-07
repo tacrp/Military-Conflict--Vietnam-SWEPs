@@ -944,7 +944,6 @@ $sequence "shootlast" {
 	{ event AE_WPN_CLIP_TO_POSEPARAM 0 "ammo_fraction" }
 	fadein 0
 	fadeout 0.2
-	node "Fire"
 }
 
 $sequence "reload" {

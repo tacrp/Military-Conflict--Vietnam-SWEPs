@@ -3,13 +3,14 @@ function SWEP:Think()
     local vm = owner:GetViewModel()
 
     self:Think_Sights()
+    self:Think_Reload()
 
     if !IsValid(vm) then return end
 
-    vm:SetPoseParameter("ammo_fraction", self:Clip1() / self:GetMaxClip1())
+    vm:SetPoseParameter("ammo_fraction", 1 - (self:Clip1() / self:GetMaxClip1()))
     vm:SetPoseParameter("empty", self:Clip1() == 0 and 1 or 0)
-    vm:SetPoseParameter("player_movement", owner:GetVelocity():Length() / owner:GetRunSpeed() * 273)
-    vm:SetPoseParameter("ironsight", 0)
+    vm:SetPoseParameter("player_movement", (owner:GetVelocity():Length() / owner:GetRunSpeed()) * 273)
+    vm:SetPoseParameter("ironsight", self:GetSightAmount())
     vm:SetPoseParameter("move_yaw", 0)
 end
 
@@ -21,5 +22,6 @@ function SWEP:Think_Sights()
         target_sight_amount = 1
     end
 
-    self:SetSightAmount(math.Approach(self:GetSightAmount(), target_sight_amount, FrameTime()))
+    self:SetSightAmount(math.Approach(self:GetSightAmount(), target_sight_amount, FrameTime() / 0.2 * self.IronsightSpeedScale))
 end
+

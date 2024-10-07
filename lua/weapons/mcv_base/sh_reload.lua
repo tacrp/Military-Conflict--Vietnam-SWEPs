@@ -1,7 +1,13 @@
 function SWEP:Reload()
-    self:PlayAnimation(ACT_VM_RELOADEMPTY)
+    if self:StillWaiting() then return end
 
-    self:RestoreClip(self.Primary.ClipSize)
+    if self:Clip1() == 0 then
+        self:PlayAnimation(ACT_VM_RELOADEMPTY, 1, true)
+    else
+        self:PlayAnimation(ACT_VM_RELOAD, 1, true)
+    end
+
+    self:SetReloading(true)
 end
 
 function SWEP:RestoreClip(amt)
@@ -25,4 +31,11 @@ end
 
 function SWEP:GetInfiniteAmmo()
     return false
+end
+
+function SWEP:Think_Reload()
+    if self:GetReloading() and !self:StillWaiting() then
+        self:SetReloading(false)
+        self:RestoreClip(self.Primary.ClipSize)
+    end
 end
