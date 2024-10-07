@@ -1,5 +1,5 @@
 function SWEP:Reload()
-    self:PlayAnimation(ACT_VM_RELOAD_EMPTY)
+    self:PlayAnimation(ACT_VM_RELOADEMPTY)
 
     self:RestoreClip(self.Primary.ClipSize)
 end

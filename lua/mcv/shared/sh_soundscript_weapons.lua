@@ -21,12 +21,12 @@ sound.Add( {
 	level = 94,
 	pitch = {98, 101},
 	sound = {
-		"~mcv/weapons/weapon_ak47/AK47_GunFire_Distant_01.wav",
-		"~mcv/weapons/weapon_ak47/AK47_GunFire_Distant_02.wav",
-		"~mcv/weapons/weapon_ak47/AK47_GunFire_Distant_03.wav",
-		"~mcv/weapons/weapon_ak47/AK47_GunFire_Distant_04.wav",
-		"~mcv/weapons/weapon_ak47/AK47_GunFire_Distant_05.wav",
-		"~mcv/weapons/weapon_ak47/AK47_GunFire_Distant_06.wav",
+		"mcv/weapons/weapon_ak47/AK47_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_ak47/AK47_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_ak47/AK47_GunFire_Distant_03.wav",
+		"mcv/weapons/weapon_ak47/AK47_GunFire_Distant_04.wav",
+		"mcv/weapons/weapon_ak47/AK47_GunFire_Distant_05.wav",
+		"mcv/weapons/weapon_ak47/AK47_GunFire_Distant_06.wav",
 	},
 } )
 
@@ -53,12 +53,12 @@ sound.Add( {
 	level = 94,
 	pitch = {98, 101},
 	sound = {
-		"~mcv/weapons/weapon_akm/AKM_GunFire_Distant_01.wav",
-		"~mcv/weapons/weapon_akm/AKM_GunFire_Distant_02.wav",
-		"~mcv/weapons/weapon_akm/AKM_GunFire_Distant_03.wav",
-		"~mcv/weapons/weapon_akm/AKM_GunFire_Distant_04.wav",
-		"~mcv/weapons/weapon_akm/AKM_GunFire_Distant_05.wav",
-		"~mcv/weapons/weapon_akm/AKM_GunFire_Distant_06.wav",
+		"mcv/weapons/weapon_akm/AKM_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_akm/AKM_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_akm/AKM_GunFire_Distant_03.wav",
+		"mcv/weapons/weapon_akm/AKM_GunFire_Distant_04.wav",
+		"mcv/weapons/weapon_akm/AKM_GunFire_Distant_05.wav",
+		"mcv/weapons/weapon_akm/AKM_GunFire_Distant_06.wav",
 	},
 } )
 
@@ -83,9 +83,9 @@ sound.Add( {
 	level = 94,
 	pitch = {98, 101},
 	sound = {
-		"~mcv/weapons/weapon_akm_gp25/GP25_GunFire_Distant_01.wav",
-		"~mcv/weapons/weapon_akm_gp25/GP25_GunFire_Distant_02.wav",
-		"~mcv/weapons/weapon_akm_gp25/GP25_GunFire_Distant_03.wav",
+		"mcv/weapons/weapon_akm_gp25/GP25_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_akm_gp25/GP25_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_akm_gp25/GP25_GunFire_Distant_03.wav",
 	},
 } )
 
@@ -111,11 +111,11 @@ sound.Add( {
 	level = 94,
 	pitch = {98, 101},
 	sound = {
-		"~mcv/weapons/weapon_car15/CAR15_GunFire_Distant_01.wav",
-		"~mcv/weapons/weapon_car15/CAR15_GunFire_Distant_02.wav",
-		"~mcv/weapons/weapon_car15/CAR15_GunFire_Distant_03.wav",
-		"~mcv/weapons/weapon_car15/CAR15_GunFire_Distant_04.wav",
-		"~mcv/weapons/weapon_car15/CAR15_GunFire_Distant_05.wav",
+		"mcv/weapons/weapon_car15/CAR15_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_car15/CAR15_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_car15/CAR15_GunFire_Distant_03.wav",
+		"mcv/weapons/weapon_car15/CAR15_GunFire_Distant_04.wav",
+		"mcv/weapons/weapon_car15/CAR15_GunFire_Distant_05.wav",
 	},
 } )
 
@@ -140,10 +140,10 @@ sound.Add( {
 	level = 94,
 	pitch = {98, 101},
 	sound = {
-		"~mcv/weapons/weapon_dp28/DP28_GunFire_Distant_01.wav",
-		"~mcv/weapons/weapon_dp28/DP28_GunFire_Distant_02.wav",
-		"~mcv/weapons/weapon_dp28/DP28_GunFire_Distant_03.wav",
-		"~mcv/weapons/weapon_dp28/DP28_GunFire_Distant_04.wav",
+		"mcv/weapons/weapon_dp28/DP28_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_dp28/DP28_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_dp28/DP28_GunFire_Distant_03.wav",
+		"mcv/weapons/weapon_dp28/DP28_GunFire_Distant_04.wav",
 	},
 } )
 
@@ -169,11 +169,11 @@ sound.Add( {
 	level = 94,
 	pitch = {98, 101},
 	sound = {
-		"~mcv/weapons/weapon_hdm/HDM_GunFire_Distant_01.wav",
-		"~mcv/weapons/weapon_hdm/HDM_GunFire_Distant_02.wav",
-		"~mcv/weapons/weapon_hdm/HDM_GunFire_Distant_03.wav",
-		"~mcv/weapons/weapon_hdm/HDM_GunFire_Distant_04.wav",
-		"~mcv/weapons/weapon_hdm/HDM_GunFire_Distant_05.wav",
+		"mcv/weapons/weapon_hdm/HDM_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_hdm/HDM_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_hdm/HDM_GunFire_Distant_03.wav",
+		"mcv/weapons/weapon_hdm/HDM_GunFire_Distant_04.wav",
+		"mcv/weapons/weapon_hdm/HDM_GunFire_Distant_05.wav",
 	},
 } )
 
@@ -213,12 +213,12 @@ sound.Add( {
 	level = 94,
 	pitch = {98, 101},
 	sound = {
-		"~mcv/weapons/weapon_izh43/IZH43_GunFire_Distant_01.wav",
-		"~mcv/weapons/weapon_izh43/IZH43_GunFire_Distant_02.wav",
-		"~mcv/weapons/weapon_izh43/IZH43_GunFire_Distant_03.wav",
-		"~mcv/weapons/weapon_izh43/IZH43_GunFire_Distant_04.wav",
-		"~mcv/weapons/weapon_izh43/IZH43_GunFire_Distant_05.wav",
-		"~mcv/weapons/weapon_izh43/IZH43_GunFire_Distant_06.wav",
+		"mcv/weapons/weapon_izh43/IZH43_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_izh43/IZH43_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_izh43/IZH43_GunFire_Distant_03.wav",
+		"mcv/weapons/weapon_izh43/IZH43_GunFire_Distant_04.wav",
+		"mcv/weapons/weapon_izh43/IZH43_GunFire_Distant_05.wav",
+		"mcv/weapons/weapon_izh43/IZH43_GunFire_Distant_06.wav",
 	},
 } )
 
@@ -243,10 +243,10 @@ sound.Add( {
 	level = 94,
 	pitch = {98, 101},
 	sound = {
-		"~mcv/weapons/weapon_k50m/K50M_GunFire_Distant_01.wav",
-		"~mcv/weapons/weapon_k50m/K50M_GunFire_Distant_02.wav",
-		"~mcv/weapons/weapon_k50m/K50M_GunFire_Distant_03.wav",
-		"~mcv/weapons/weapon_k50m/K50M_GunFire_Distant_04.wav",
+		"mcv/weapons/weapon_k50m/K50M_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_k50m/K50M_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_k50m/K50M_GunFire_Distant_03.wav",
+		"mcv/weapons/weapon_k50m/K50M_GunFire_Distant_04.wav",
 	},
 } )
 
@@ -269,8 +269,8 @@ sound.Add( {
 	level = 94,
 	pitch = {98, 101},
 	sound = {
-		"~mcv/weapons/weapon_kar98k/KAR98K_GunFire_Distant_01.wav",
-		"~mcv/weapons/weapon_kar98k/KAR98K_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_kar98k/KAR98K_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_kar98k/KAR98K_GunFire_Distant_02.wav",
 	},
 } )
 
@@ -295,10 +295,10 @@ sound.Add( {
 	level = 94,
 	pitch = {98, 101},
 	sound = {
-		"~mcv/weapons/weapon_m1a1/M1A1_GunFire_Distant_01.wav",
-		"~mcv/weapons/weapon_m1a1/M1A1_GunFire_Distant_02.wav",
-		"~mcv/weapons/weapon_m1a1/M1A1_GunFire_Distant_03.wav",
-		"~mcv/weapons/weapon_m1a1/M1A1_GunFire_Distant_04.wav",
+		"mcv/weapons/weapon_m1a1/M1A1_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_m1a1/M1A1_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_m1a1/M1A1_GunFire_Distant_03.wav",
+		"mcv/weapons/weapon_m1a1/M1A1_GunFire_Distant_04.wav",
 	},
 } )
 
@@ -323,10 +323,10 @@ sound.Add( {
 	level = 94,
 	pitch = {98, 101},
 	sound = {
-		"~mcv/weapons/weapon_m1c/M1C_GunFire_Distant_01.wav",
-		"~mcv/weapons/weapon_m1c/M1C_GunFire_Distant_02.wav",
-		"~mcv/weapons/weapon_m1c/M1C_GunFire_Distant_03.wav",
-		"~mcv/weapons/weapon_m1c/M1C_GunFire_Distant_04.wav",
+		"mcv/weapons/weapon_m1c/M1C_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_m1c/M1C_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_m1c/M1C_GunFire_Distant_03.wav",
+		"mcv/weapons/weapon_m1c/M1C_GunFire_Distant_04.wav",
 	},
 } )
 
@@ -351,10 +351,10 @@ sound.Add( {
 	level = 94,
 	pitch = {98, 101},
 	sound = {
-		"~mcv/weapons/weapon_m1g/M1G_GunFire_Distant_01.wav",
-		"~mcv/weapons/weapon_m1g/M1G_GunFire_Distant_02.wav",
-		"~mcv/weapons/weapon_m1g/M1G_GunFire_Distant_03.wav",
-		"~mcv/weapons/weapon_m1g/M1G_GunFire_Distant_04.wav",
+		"mcv/weapons/weapon_m1g/M1G_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_m1g/M1G_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_m1g/M1G_GunFire_Distant_03.wav",
+		"mcv/weapons/weapon_m1g/M1G_GunFire_Distant_04.wav",
 	},
 } )
 
@@ -379,10 +379,10 @@ sound.Add( {
 	level = 94,
 	pitch = {98, 101},
 	sound = {
-		"~mcv/weapons/weapon_m3a1/M3A1_GunFire_Distant_01.wav",
-		"~mcv/weapons/weapon_m3a1/M3A1_GunFire_Distant_02.wav",
-		"~mcv/weapons/weapon_m3a1/M3A1_GunFire_Distant_03.wav",
-		"~mcv/weapons/weapon_m3a1/M3A1_GunFire_Distant_04.wav",
+		"mcv/weapons/weapon_m3a1/M3A1_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_m3a1/M3A1_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_m3a1/M3A1_GunFire_Distant_03.wav",
+		"mcv/weapons/weapon_m3a1/M3A1_GunFire_Distant_04.wav",
 	},
 } )
 
@@ -435,10 +435,10 @@ sound.Add( {
 	level = 94,
 	pitch = {98, 101},
 	sound = {
-		"~mcv/weapons/weapon_m8/M8_GunFire_Distant_01.wav",
-		"~mcv/weapons/weapon_m8/M8_GunFire_Distant_02.wav",
-		"~mcv/weapons/weapon_m8/M8_GunFire_Distant_03.wav",
-		"~mcv/weapons/weapon_m8/M8_GunFire_Distant_04.wav",
+		"mcv/weapons/weapon_m8/M8_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_m8/M8_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_m8/M8_GunFire_Distant_03.wav",
+		"mcv/weapons/weapon_m8/M8_GunFire_Distant_04.wav",
 	},
 } )
 
@@ -461,8 +461,8 @@ sound.Add( {
 	level = 94,
 	pitch = {98, 101},
 	sound = {
-		"~mcv/weapons/weapon_m14/M14_GunFire_Distant_01.wav",
-		"~mcv/weapons/weapon_m14/M14_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_m14/M14_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_m14/M14_GunFire_Distant_02.wav",
 	},
 } )
 
@@ -488,11 +488,11 @@ sound.Add( {
 	level = 94,
 	pitch = {98, 101},
 	sound = {
-		"~mcv/weapons/weapon_m16a1/M16A1_GunFire_Distant_01.wav",
-		"~mcv/weapons/weapon_m16a1/M16A1_GunFire_Distant_02.wav",
-		"~mcv/weapons/weapon_m16a1/M16A1_GunFire_Distant_03.wav",
-		"~mcv/weapons/weapon_m16a1/M16A1_GunFire_Distant_04.wav",
-		"~mcv/weapons/weapon_m16a1/M16A1_GunFire_Distant_05.wav",
+		"mcv/weapons/weapon_m16a1/M16A1_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_m16a1/M16A1_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_m16a1/M16A1_GunFire_Distant_03.wav",
+		"mcv/weapons/weapon_m16a1/M16A1_GunFire_Distant_04.wav",
+		"mcv/weapons/weapon_m16a1/M16A1_GunFire_Distant_05.wav",
 	},
 } )
 
@@ -518,11 +518,11 @@ sound.Add( {
 	level = 94,
 	pitch = {98, 101},
 	sound = {
-		"~mcv/weapons/weapon_m656/M656_GunFire_Distant_01.wav",
-		"~mcv/weapons/weapon_m656/M656_GunFire_Distant_02.wav",
-		"~mcv/weapons/weapon_m656/M656_GunFire_Distant_03.wav",
-		"~mcv/weapons/weapon_m656/M656_GunFire_Distant_04.wav",
-		"~mcv/weapons/weapon_m656/M656_GunFire_Distant_05.wav",
+		"mcv/weapons/weapon_m656/M656_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_m656/M656_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_m656/M656_GunFire_Distant_03.wav",
+		"mcv/weapons/weapon_m656/M656_GunFire_Distant_04.wav",
+		"mcv/weapons/weapon_m656/M656_GunFire_Distant_05.wav",
 	},
 } )
 
@@ -547,10 +547,10 @@ sound.Add( {
 	level = 94,
 	pitch = {98, 101},
 	sound = {
-		"~mcv/weapons/weapon_m16a1_m203/M203_GunFire_Distant_01.wav",
-		"~mcv/weapons/weapon_m16a1_m203/M203_GunFire_Distant_02.wav",
-		"~mcv/weapons/weapon_m16a1_m203/M203_GunFire_Distant_03.wav",
-		"~mcv/weapons/weapon_m16a1_m203/M203_GunFire_Distant_04.wav",
+		"mcv/weapons/weapon_m16a1_m203/M203_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_m16a1_m203/M203_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_m16a1_m203/M203_GunFire_Distant_03.wav",
+		"mcv/weapons/weapon_m16a1_m203/M203_GunFire_Distant_04.wav",
 	},
 } )
 
@@ -573,8 +573,8 @@ sound.Add( {
 	level = 94,
 	pitch = {98, 101},
 	sound = {
-		"~mcv/weapons/weapon_m38/M38_GunFire_Distant_01.wav",
-		"~mcv/weapons/weapon_m38/M38_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_m38/M38_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_m38/M38_GunFire_Distant_02.wav",
 	},
 } )
 
@@ -597,8 +597,8 @@ sound.Add( {
 	level = 94,
 	pitch = {98, 101},
 	sound = {
-		"~mcv/weapons/weapon_m40/M40_GunFire_Distant_01.wav",
-		"~mcv/weapons/weapon_m40/M40_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_m40/M40_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_m40/M40_GunFire_Distant_02.wav",
 	},
 } )
 
@@ -623,10 +623,10 @@ sound.Add( {
 	level = 94,
 	pitch = {98, 101},
 	sound = {
-		"~mcv/weapons/weapon_m60/M60_GunFire_Distant_01.wav",
-		"~mcv/weapons/weapon_m60/M60_GunFire_Distant_02.wav",
-		"~mcv/weapons/weapon_m60/M60_GunFire_Distant_03.wav",
-		"~mcv/weapons/weapon_m60/M60_GunFire_Distant_04.wav",
+		"mcv/weapons/weapon_m60/M60_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_m60/M60_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_m60/M60_GunFire_Distant_03.wav",
+		"mcv/weapons/weapon_m60/M60_GunFire_Distant_04.wav",
 	},
 } )
 
@@ -645,7 +645,7 @@ sound.Add( {
 	volume = 1.0,
 	level = 94,
 	pitch = {98, 101},
-	sound = "~mcv/weapons/weapon_m72/M72_GunFire_Distant_01.wav",
+	sound = "mcv/weapons/weapon_m72/M72_GunFire_Distant_01.wav",
 } )
 
 sound.Add( {
@@ -1771,9 +1771,9 @@ sound.Add( {
 	level = 95,
 	pitch = {95, 105},
 	sound = {
-		"~)mcv/weapons/weapon_molotov/MOLOTOV_Bottle_Break.wav",
-		"~)mcv/weapons/weapon_molotov/MOLOTOV_Bottle_Break.wav",
-		"~)mcv/weapons/weapon_molotov/MOLOTOV_Bottle_Break.wav",
+		")mcv/weapons/weapon_molotov/MOLOTOV_Bottle_Break.wav",
+		")mcv/weapons/weapon_molotov/MOLOTOV_Bottle_Break.wav",
+		")mcv/weapons/weapon_molotov/MOLOTOV_Bottle_Break.wav",
 	},
 } )
 
@@ -1784,9 +1784,9 @@ sound.Add( {
 	level = 130,
 	pitch = {95, 105},
 	sound = {
-		"~)mcv/weapons/weapon_molotov/MOLOTOV_Bottle_Break_Dist.wav",
-		"~)mcv/weapons/weapon_molotov/MOLOTOV_Bottle_Break_Dist.wav",
-		"~)mcv/weapons/weapon_molotov/MOLOTOV_Bottle_Break_Dist.wav",
+		")mcv/weapons/weapon_molotov/MOLOTOV_Bottle_Break_Dist.wav",
+		")mcv/weapons/weapon_molotov/MOLOTOV_Bottle_Break_Dist.wav",
+		")mcv/weapons/weapon_molotov/MOLOTOV_Bottle_Break_Dist.wav",
 	},
 } )
 
@@ -1796,7 +1796,7 @@ sound.Add( {
 	volume = 0.65,
 	level = 95,
 	pitch = {95, 105},
-	sound = "~)mcv/weapons/weapon_molotov/MOLOTOV_Fire_Sweetner.wav",
+	sound = ")mcv/weapons/weapon_molotov/MOLOTOV_Fire_Sweetner.wav",
 } )
 
 sound.Add( {
@@ -1912,7 +1912,7 @@ sound.Add( {
 	volume = 1.0,
 	level = 85,
 	pitch = 100,
-	sound = "~)mcv/weapons/weapon_m18/M18_Grenade_SmokeStart.wav",
+	sound = ")mcv/weapons/weapon_m18/M18_Grenade_SmokeStart.wav",
 } )
 
 sound.Add( {
@@ -1930,7 +1930,7 @@ sound.Add( {
 	volume = 1.0,
 	level = 110,
 	pitch = 100,
-	sound = "~)mcv/weapons/weapon_m18/M18_Grenade_SmokeStar_Dist.wav",
+	sound = ")mcv/weapons/weapon_m18/M18_Grenade_SmokeStar_Dist.wav",
 } )
 
 sound.Add( {
@@ -1939,7 +1939,7 @@ sound.Add( {
 	volume = 1.0,
 	level = 85,
 	pitch = 100,
-	sound = "~)mcv/weapons/weapon_m6a1/M6A1_Grenade_SmokeStart.wav",
+	sound = ")mcv/weapons/weapon_m6a1/M6A1_Grenade_SmokeStart.wav",
 } )
 
 sound.Add( {
@@ -1957,7 +1957,7 @@ sound.Add( {
 	volume = 1.0,
 	level = 110,
 	pitch = 100,
-	sound = "~)mcv/weapons/weapon_m6a1/M6A1_Grenade_SmokeStar_Dist.wav",
+	sound = ")mcv/weapons/weapon_m6a1/M6A1_Grenade_SmokeStar_Dist.wav",
 } )
 
 sound.Add( {
@@ -2027,8 +2027,8 @@ sound.Add( {
 	level = 94,
 	pitch = {98, 101},
 	sound = {
-		"~mcv/weapons/weapon_m50/M50_GunFire_Distant_01.wav",
-		"~mcv/weapons/weapon_m50/M50_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_m50/M50_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_m50/M50_GunFire_Distant_02.wav",
 	},
 } )
 
@@ -2054,11 +2054,11 @@ sound.Add( {
 	level = 94,
 	pitch = {98, 101},
 	sound = {
-		"~mcv/weapons/weapon_vz23/VZ23_GunFire_Distant_01.wav",
-		"~mcv/weapons/weapon_vz23/VZ23_GunFire_Distant_02.wav",
-		"~mcv/weapons/weapon_vz23/VZ23_GunFire_Distant_03.wav",
-		"~mcv/weapons/weapon_vz23/VZ23_GunFire_Distant_04.wav",
-		"~mcv/weapons/weapon_vz23/VZ23_GunFire_Distant_05.wav",
+		"mcv/weapons/weapon_vz23/VZ23_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_vz23/VZ23_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_vz23/VZ23_GunFire_Distant_03.wav",
+		"mcv/weapons/weapon_vz23/VZ23_GunFire_Distant_04.wav",
+		"mcv/weapons/weapon_vz23/VZ23_GunFire_Distant_05.wav",
 	},
 } )
 
@@ -2082,9 +2082,9 @@ sound.Add( {
 	level = 94,
 	pitch = {98, 101},
 	sound = {
-		"~mcv/weapons/weapon_t223/T223_GunFire_Distant_01.wav",
-		"~mcv/weapons/weapon_t223/T223_GunFire_Distant_02.wav",
-		"~mcv/weapons/weapon_t223/T223_GunFire_Distant_03.wav",
+		"mcv/weapons/weapon_t223/T223_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_t223/T223_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_t223/T223_GunFire_Distant_03.wav",
 	},
 } )
 
@@ -2110,11 +2110,11 @@ sound.Add( {
 	level = 94,
 	pitch = {98, 101},
 	sound = {
-		"~mcv/weapons/weapon_vz58/VZ58_GunFire_Distant_01.wav",
-		"~mcv/weapons/weapon_vz58/VZ58_GunFire_Distant_02.wav",
-		"~mcv/weapons/weapon_vz58/VZ58_GunFire_Distant_03.wav",
-		"~mcv/weapons/weapon_vz58/VZ58_GunFire_Distant_04.wav",
-		"~mcv/weapons/weapon_vz58/VZ58_GunFire_Distant_05.wav",
+		"mcv/weapons/weapon_vz58/VZ58_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_vz58/VZ58_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_vz58/VZ58_GunFire_Distant_03.wav",
+		"mcv/weapons/weapon_vz58/VZ58_GunFire_Distant_04.wav",
+		"mcv/weapons/weapon_vz58/VZ58_GunFire_Distant_05.wav",
 	},
 } )
 
@@ -2544,12 +2544,12 @@ sound.Add( {
 	level = 94,
 	pitch = {98, 101},
 	sound = {
-		"~mcv/weapons/weapon_amd65/AMD65_GunFire_Distant_01.wav",
-		"~mcv/weapons/weapon_amd65/AMD65_GunFire_Distant_02.wav",
-		"~mcv/weapons/weapon_amd65/AMD65_GunFire_Distant_03.wav",
-		"~mcv/weapons/weapon_amd65/AMD65_GunFire_Distant_04.wav",
-		"~mcv/weapons/weapon_amd65/AMD65_GunFire_Distant_05.wav",
-		"~mcv/weapons/weapon_amd65/AMD65_GunFire_Distant_06.wav",
+		"mcv/weapons/weapon_amd65/AMD65_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_amd65/AMD65_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_amd65/AMD65_GunFire_Distant_03.wav",
+		"mcv/weapons/weapon_amd65/AMD65_GunFire_Distant_04.wav",
+		"mcv/weapons/weapon_amd65/AMD65_GunFire_Distant_05.wav",
+		"mcv/weapons/weapon_amd65/AMD65_GunFire_Distant_06.wav",
 	},
 } )
 
@@ -2693,9 +2693,9 @@ sound.Add( {
 	level = 75,
 	pitch = {98, 101},
 	sound = {
-		"~)mcv/weapons/fx/crossbow/vietnam_crossbow_arrow_hitworld_1.wav",
-		"~)mcv/weapons/fx/crossbow/vietnam_crossbow_arrow_hitworld_2.wav",
-		"~)mcv/weapons/fx/crossbow/vietnam_crossbow_arrow_hitworld_3.wav",
+		")mcv/weapons/fx/crossbow/vietnam_crossbow_arrow_hitworld_1.wav",
+		")mcv/weapons/fx/crossbow/vietnam_crossbow_arrow_hitworld_2.wav",
+		")mcv/weapons/fx/crossbow/vietnam_crossbow_arrow_hitworld_3.wav",
 	},
 } )
 
@@ -2705,9 +2705,9 @@ sound.Add( {
 	level = 75,
 	pitch = {98, 101},
 	sound = {
-		"~)mcv/weapons/fx/crossbow/vietnam_crossbow_arrow_hitbody_1.wav",
-		"~)mcv/weapons/fx/crossbow/vietnam_crossbow_arrow_hitbody_2.wav",
-		"~)mcv/weapons/fx/crossbow/vietnam_crossbow_arrow_hitbody_3.wav",
+		")mcv/weapons/fx/crossbow/vietnam_crossbow_arrow_hitbody_1.wav",
+		")mcv/weapons/fx/crossbow/vietnam_crossbow_arrow_hitbody_2.wav",
+		")mcv/weapons/fx/crossbow/vietnam_crossbow_arrow_hitbody_3.wav",
 	},
 } )
 
@@ -2716,7 +2716,7 @@ sound.Add( {
 	volume = 1.0,
 	level = 75,
 	pitch = {98, 101},
-	sound = "~)mcv/weapons/fx/crossbow/vietnam_crossbow_arrow_skewer.wav",
+	sound = ")mcv/weapons/fx/crossbow/vietnam_crossbow_arrow_skewer.wav",
 } )
 
 sound.Add( {
@@ -3075,11 +3075,11 @@ sound.Add( {
 	level = 94,
 	pitch = {98, 101},
 	sound = {
-		"~mcv/weapons/weapon_mk4mod0/MK4MOD0_GunFire_Distant_01.wav",
-		"~mcv/weapons/weapon_mk4mod0/MK4MOD0_GunFire_Distant_02.wav",
-		"~mcv/weapons/weapon_mk4mod0/MK4MOD0_GunFire_Distant_03.wav",
-		"~mcv/weapons/weapon_mk4mod0/MK4MOD0_GunFire_Distant_04.wav",
-		"~mcv/weapons/weapon_mk4mod0/MK4MOD0_GunFire_Distant_05.wav",
+		"mcv/weapons/weapon_mk4mod0/MK4MOD0_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_mk4mod0/MK4MOD0_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_mk4mod0/MK4MOD0_GunFire_Distant_03.wav",
+		"mcv/weapons/weapon_mk4mod0/MK4MOD0_GunFire_Distant_04.wav",
+		"mcv/weapons/weapon_mk4mod0/MK4MOD0_GunFire_Distant_05.wav",
 	},
 } )
 
@@ -3115,8 +3115,8 @@ sound.Add( {
 	volume = 0.6,
 	level = 0,
 	sound = {
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_draw_1.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_draw_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_draw_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_draw_2.wav",
 	},
 } )
 
@@ -3127,8 +3127,8 @@ sound.Add( {
 	level = 0,
 	pitch = {100, 110},
 	sound = {
-		"~mcv/foley/vietnam_weapon_foley_knife_slash1.wav",
-		"~mcv/foley/vietnam_weapon_foley_knife_slash2.wav",
+		"mcv/foley/vietnam_weapon_foley_knife_slash1.wav",
+		"mcv/foley/vietnam_weapon_foley_knife_slash2.wav",
 	},
 } )
 
@@ -3139,9 +3139,9 @@ sound.Add( {
 	level = 0,
 	pitch = {105, 120},
 	sound = {
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitwall_1.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitwall_2.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitwall_3.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitwall_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitwall_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitwall_3.wav",
 	},
 } )
 
@@ -3151,10 +3151,10 @@ sound.Add( {
 	volume = 0.75,
 	level = 0,
 	sound = {
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitflesh_1.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitflesh_2.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitflesh_3.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitflesh_4.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitflesh_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitflesh_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitflesh_3.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitflesh_4.wav",
 	},
 } )
 
@@ -3164,9 +3164,9 @@ sound.Add( {
 	volume = 0.75,
 	level = 0,
 	sound = {
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_stab_1.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_stab_2.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_stab_3.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_stab_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_stab_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_stab_3.wav",
 	},
 } )
 
@@ -3177,9 +3177,9 @@ sound.Add( {
 	level = 0,
 	pitch = {105, 120},
 	sound = {
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_thrust_1.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_thrust_2.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_thrust_3.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_thrust_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_thrust_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_thrust_3.wav",
 	},
 } )
 
@@ -3190,9 +3190,9 @@ sound.Add( {
 	level = 0,
 	pitch = {100, 110},
 	sound = {
-		"~mcv/foley/vietnam_weapon_foley_knife_throw_1.wav",
-		"~mcv/foley/vietnam_weapon_foley_knife_throw_2.wav",
-		"~mcv/foley/vietnam_weapon_foley_knife_throw_3.wav",
+		"mcv/foley/vietnam_weapon_foley_knife_throw_1.wav",
+		"mcv/foley/vietnam_weapon_foley_knife_throw_2.wav",
+		"mcv/foley/vietnam_weapon_foley_knife_throw_3.wav",
 	},
 } )
 
@@ -3202,7 +3202,7 @@ sound.Add( {
 	volume = 0.6,
 	level = 0,
 	pitch = {100, 110},
-	sound = "~mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_draw.wav",
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_draw.wav",
 } )
 
 sound.Add( {
@@ -3211,7 +3211,7 @@ sound.Add( {
 	volume = 0.5,
 	level = 0,
 	pitch = {100, 110},
-	sound = "~mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_slash.wav",
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_slash.wav",
 } )
 
 sound.Add( {
@@ -3221,9 +3221,9 @@ sound.Add( {
 	level = 0,
 	pitch = {105, 120},
 	sound = {
-		"~mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_hitwall_1.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_hitwall_2.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_hitwall_3.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_hitwall_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_hitwall_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_hitwall_3.wav",
 	},
 } )
 
@@ -3233,7 +3233,7 @@ sound.Add( {
 	volume = 0.75,
 	level = 0,
 	pitch = {105, 120},
-	sound = "~mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_hitflesh.wav",
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_hitflesh.wav",
 } )
 
 sound.Add( {
@@ -3242,9 +3242,9 @@ sound.Add( {
 	volume = 0.75,
 	level = 0,
 	sound = {
-		"~mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_stab_1.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_stab_2.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_stab_3.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_stab_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_stab_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_stab_3.wav",
 	},
 } )
 
@@ -3255,9 +3255,9 @@ sound.Add( {
 	level = 0,
 	pitch = {105, 120},
 	sound = {
-		"~mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_thrust_1.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_thrust_2.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_thrust_3.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_thrust_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_thrust_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_thrust_3.wav",
 	},
 } )
 
@@ -3267,7 +3267,7 @@ sound.Add( {
 	volume = 0.6,
 	level = 0,
 	pitch = {100, 110},
-	sound = "~mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_draw.wav",
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_draw.wav",
 } )
 
 sound.Add( {
@@ -3276,7 +3276,7 @@ sound.Add( {
 	volume = 0.5,
 	level = 0,
 	pitch = {100, 110},
-	sound = "~mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_slash.wav",
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_slash.wav",
 } )
 
 sound.Add( {
@@ -3286,9 +3286,9 @@ sound.Add( {
 	level = 0,
 	pitch = {105, 120},
 	sound = {
-		"~mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_hitwall_1.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_hitwall_2.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_hitwall_3.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_hitwall_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_hitwall_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_hitwall_3.wav",
 	},
 } )
 
@@ -3298,7 +3298,7 @@ sound.Add( {
 	volume = 0.75,
 	level = 0,
 	pitch = {105, 120},
-	sound = "~mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_hitflesh.wav",
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_hitflesh.wav",
 } )
 
 sound.Add( {
@@ -3307,9 +3307,9 @@ sound.Add( {
 	volume = 0.75,
 	level = 0,
 	sound = {
-		"~mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_stab_1.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_stab_2.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_stab_3.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_stab_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_stab_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_stab_3.wav",
 	},
 } )
 
@@ -3320,9 +3320,9 @@ sound.Add( {
 	level = 0,
 	pitch = {105, 120},
 	sound = {
-		"~mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_thrust_1.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_thrust_2.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_thrust_3.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_thrust_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_thrust_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_m1942_foley_thrust_3.wav",
 	},
 } )
 
@@ -3333,10 +3333,10 @@ sound.Add( {
 	level = 0,
 	pitch = {100, 110},
 	sound = {
-		"~mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_draw_1.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_draw_2.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_draw_3.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_draw_4.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_draw_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_draw_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_draw_3.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_draw_4.wav",
 	},
 } )
 
@@ -3346,7 +3346,7 @@ sound.Add( {
 	volume = 0.75,
 	level = 0,
 	pitch = {100, 110},
-	sound = "~mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_holster.wav",
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_holster.wav",
 } )
 
 sound.Add( {
@@ -3355,9 +3355,9 @@ sound.Add( {
 	volume = 0.7,
 	level = 60,
 	sound = {
-		"~mcv/foley/weapon_specific/vietnam_weapon_fists_foley_powercharge_1.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_fists_foley_powercharge_2.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_fists_foley_powercharge_3.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_fists_foley_powercharge_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_fists_foley_powercharge_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_fists_foley_powercharge_3.wav",
 	},
 } )
 
@@ -3368,10 +3368,10 @@ sound.Add( {
 	level = 0,
 	pitch = {100, 110},
 	sound = {
-		"~mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_swipe_1.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_swipe_2.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_swipe_3.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_swipe_4.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_swipe_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_swipe_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_swipe_3.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_swipe_4.wav",
 	},
 } )
 
@@ -3382,10 +3382,10 @@ sound.Add( {
 	level = 0,
 	pitch = {100, 110},
 	sound = {
-		"~mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_charge_swipe_1.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_charge_swipe_2.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_charge_swipe_3.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_charge_swipe_4.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_charge_swipe_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_charge_swipe_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_charge_swipe_3.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_charge_swipe_4.wav",
 	},
 } )
 
@@ -3396,10 +3396,10 @@ sound.Add( {
 	level = 0,
 	pitch = {105, 120},
 	sound = {
-		"~mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_hit_wall_1.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_hit_wall_2.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_hit_wall_3.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_hit_wall_4.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_hit_wall_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_hit_wall_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_hit_wall_3.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_hit_wall_4.wav",
 	},
 } )
 
@@ -3410,10 +3410,10 @@ sound.Add( {
 	level = 0,
 	pitch = {105, 120},
 	sound = {
-		"~mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_hit_flesh_1.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_hit_flesh_2.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_hit_flesh_3.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_hit_flesh_4.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_hit_flesh_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_hit_flesh_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_hit_flesh_3.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_hit_flesh_4.wav",
 	},
 } )
 
@@ -3424,9 +3424,9 @@ sound.Add( {
 	level = 0,
 	pitch = {105, 120},
 	sound = {
-		"~mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_charge_hit_wall_1.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_charge_hit_wall_2.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_charge_hit_wall_3.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_charge_hit_wall_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_charge_hit_wall_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_charge_hit_wall_3.wav",
 	},
 } )
 
@@ -3437,9 +3437,9 @@ sound.Add( {
 	level = 0,
 	pitch = {105, 120},
 	sound = {
-		"~mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_charge_hit_flesh_1.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_charge_hit_flesh_2.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_charge_hit_flesh_3.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_charge_hit_flesh_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_charge_hit_flesh_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_charge_hit_flesh_3.wav",
 	},
 } )
 
@@ -3449,8 +3449,8 @@ sound.Add( {
 	volume = 0.6,
 	level = 0,
 	sound = {
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_draw_1.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_draw_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_draw_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_draw_2.wav",
 	},
 } )
 
@@ -3461,8 +3461,8 @@ sound.Add( {
 	level = 0,
 	pitch = {100, 110},
 	sound = {
-		"~mcv/foley/vietnam_weapon_foley_knife_slash1.wav",
-		"~mcv/foley/vietnam_weapon_foley_knife_slash2.wav",
+		"mcv/foley/vietnam_weapon_foley_knife_slash1.wav",
+		"mcv/foley/vietnam_weapon_foley_knife_slash2.wav",
 	},
 } )
 
@@ -3473,9 +3473,9 @@ sound.Add( {
 	level = 0,
 	pitch = {105, 120},
 	sound = {
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitwall_1.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitwall_2.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitwall_3.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitwall_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitwall_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitwall_3.wav",
 	},
 } )
 
@@ -3485,10 +3485,10 @@ sound.Add( {
 	volume = 0.75,
 	level = 0,
 	sound = {
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitflesh_1.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitflesh_2.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitflesh_3.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitflesh_4.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitflesh_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitflesh_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitflesh_3.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitflesh_4.wav",
 	},
 } )
 
@@ -3498,9 +3498,9 @@ sound.Add( {
 	volume = 0.75,
 	level = 0,
 	sound = {
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_stab_1.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_stab_2.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_stab_3.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_stab_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_stab_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_stab_3.wav",
 	},
 } )
 
@@ -3511,9 +3511,9 @@ sound.Add( {
 	level = 0,
 	pitch = {105, 120},
 	sound = {
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_thrust_1.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_thrust_2.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_thrust_3.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_thrust_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_thrust_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_thrust_3.wav",
 	},
 } )
 
@@ -3523,8 +3523,8 @@ sound.Add( {
 	volume = 0.6,
 	level = 0,
 	sound = {
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_draw_1.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_draw_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_draw_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_draw_2.wav",
 	},
 } )
 
@@ -3535,8 +3535,8 @@ sound.Add( {
 	level = 0,
 	pitch = {100, 110},
 	sound = {
-		"~mcv/foley/vietnam_weapon_foley_knife_slash1.wav",
-		"~mcv/foley/vietnam_weapon_foley_knife_slash2.wav",
+		"mcv/foley/vietnam_weapon_foley_knife_slash1.wav",
+		"mcv/foley/vietnam_weapon_foley_knife_slash2.wav",
 	},
 } )
 
@@ -3547,9 +3547,9 @@ sound.Add( {
 	level = 0,
 	pitch = {105, 120},
 	sound = {
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitwall_1.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitwall_2.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitwall_3.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitwall_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitwall_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitwall_3.wav",
 	},
 } )
 
@@ -3559,10 +3559,10 @@ sound.Add( {
 	volume = 0.75,
 	level = 0,
 	sound = {
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitflesh_1.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitflesh_2.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitflesh_3.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitflesh_4.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitflesh_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitflesh_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitflesh_3.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitflesh_4.wav",
 	},
 } )
 
@@ -3572,8 +3572,8 @@ sound.Add( {
 	volume = 0.6,
 	level = 0,
 	sound = {
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_draw_1.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_draw_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_draw_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_draw_2.wav",
 	},
 } )
 
@@ -3584,8 +3584,8 @@ sound.Add( {
 	level = 0,
 	pitch = {100, 110},
 	sound = {
-		"~mcv/foley/vietnam_weapon_foley_knife_slash1.wav",
-		"~mcv/foley/vietnam_weapon_foley_knife_slash2.wav",
+		"mcv/foley/vietnam_weapon_foley_knife_slash1.wav",
+		"mcv/foley/vietnam_weapon_foley_knife_slash2.wav",
 	},
 } )
 
@@ -3596,9 +3596,9 @@ sound.Add( {
 	level = 0,
 	pitch = {105, 120},
 	sound = {
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitwall_1.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitwall_2.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitwall_3.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitwall_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitwall_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitwall_3.wav",
 	},
 } )
 
@@ -3608,10 +3608,10 @@ sound.Add( {
 	volume = 0.75,
 	level = 0,
 	sound = {
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitflesh_1.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitflesh_2.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitflesh_3.wav",
-		"~mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitflesh_4.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitflesh_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitflesh_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitflesh_3.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_knife_foley_hitflesh_4.wav",
 	},
 } )
 
@@ -3630,7 +3630,7 @@ sound.Add( {
 	volume = 1.0,
 	level = 94,
 	pitch = {98, 101},
-	sound = "~mcv/weapons/weapon_riflegrenade/KAR98K_GunFire_Distant_RifleGrenade_01.wav",
+	sound = "mcv/weapons/weapon_riflegrenade/KAR98K_GunFire_Distant_RifleGrenade_01.wav",
 } )
 
 sound.Add( {
@@ -3648,7 +3648,7 @@ sound.Add( {
 	volume = 1.0,
 	level = 94,
 	pitch = {98, 101},
-	sound = "~mcv/weapons/weapon_riflegrenade/KBKG60_GunFire_Distant_RifleGrenade_01.wav",
+	sound = "mcv/weapons/weapon_riflegrenade/KBKG60_GunFire_Distant_RifleGrenade_01.wav",
 } )
 
 sound.Add( {
@@ -3666,7 +3666,7 @@ sound.Add( {
 	volume = 1.0,
 	level = 94,
 	pitch = {98, 101},
-	sound = "~mcv/weapons/weapon_riflegrenade/M1C_GunFire_Distant_RifleGrenade_01.wav",
+	sound = "mcv/weapons/weapon_riflegrenade/M1C_GunFire_Distant_RifleGrenade_01.wav",
 } )
 
 sound.Add( {
@@ -3684,7 +3684,7 @@ sound.Add( {
 	volume = 1.0,
 	level = 94,
 	pitch = {98, 101},
-	sound = "~mcv/weapons/weapon_riflegrenade/M1G_GunFire_Distant_RifleGrenade_01.wav",
+	sound = "mcv/weapons/weapon_riflegrenade/M1G_GunFire_Distant_RifleGrenade_01.wav",
 } )
 
 sound.Add( {
@@ -3702,7 +3702,7 @@ sound.Add( {
 	volume = 1.0,
 	level = 94,
 	pitch = {98, 101},
-	sound = "~mcv/weapons/weapon_riflegrenade/M14_GunFire_Distant_RifleGrenade_01.wav",
+	sound = "mcv/weapons/weapon_riflegrenade/M14_GunFire_Distant_RifleGrenade_01.wav",
 } )
 
 sound.Add( {
@@ -3720,7 +3720,7 @@ sound.Add( {
 	volume = 1.0,
 	level = 94,
 	pitch = {98, 101},
-	sound = "~mcv/weapons/weapon_riflegrenade/M38_GunFire_Distant_RifleGrenade_01.wav",
+	sound = "mcv/weapons/weapon_riflegrenade/M38_GunFire_Distant_RifleGrenade_01.wav",
 } )
 
 sound.Add( {
@@ -3738,7 +3738,7 @@ sound.Add( {
 	volume = 1.0,
 	level = 94,
 	pitch = {98, 101},
-	sound = "~mcv/weapons/weapon_riflegrenade/M1903_GunFire_Distant_RifleGrenade_01.wav",
+	sound = "mcv/weapons/weapon_riflegrenade/M1903_GunFire_Distant_RifleGrenade_01.wav",
 } )
 
 sound.Add( {
@@ -3756,7 +3756,7 @@ sound.Add( {
 	volume = 1.0,
 	level = 94,
 	pitch = {98, 101},
-	sound = "~mcv/weapons/weapon_riflegrenade/SKS_GunFire_Distant_RifleGrenade_01.wav",
+	sound = "mcv/weapons/weapon_riflegrenade/SKS_GunFire_Distant_RifleGrenade_01.wav",
 } )
 
 sound.Add( {
@@ -3777,7 +3777,7 @@ sound.Add( {
 	volume = 1.0,
 	level = 65,
 	pitch = 100,
-	sound = "~mcv/weapons/weapon_common/Common_Weapon_EmptyClick_01.wav",
+	sound = "mcv/weapons/weapon_common/Common_Weapon_EmptyClick_01.wav",
 } )
 
 sound.Add( {
@@ -3786,7 +3786,7 @@ sound.Add( {
 	volume = 1.0,
 	level = 65,
 	pitch = 100,
-	sound = "~mcv/weapons/weapon_common/Common_Weapon_EmptyClick_02.wav",
+	sound = "mcv/weapons/weapon_common/Common_Weapon_EmptyClick_02.wav",
 } )
 
 sound.Add( {
@@ -3795,7 +3795,7 @@ sound.Add( {
 	volume = 1.0,
 	level = 65,
 	pitch = 100,
-	sound = "~mcv/weapons/weapon_common/Common_Weapon_EmptyClick_03.wav",
+	sound = "mcv/weapons/weapon_common/Common_Weapon_EmptyClick_03.wav",
 } )
 
 sound.Add( {
@@ -3804,7 +3804,7 @@ sound.Add( {
 	volume = 1.0,
 	level = 65,
 	pitch = 100,
-	sound = "~mcv/weapons/weapon_common/Common_Weapon_EmptyClick_04.wav",
+	sound = "mcv/weapons/weapon_common/Common_Weapon_EmptyClick_04.wav",
 } )
 
 sound.Add( {
@@ -3813,7 +3813,7 @@ sound.Add( {
 	volume = 1.0,
 	level = 65,
 	pitch = 100,
-	sound = "~mcv/weapons/weapon_common/Common_Weapon_EmptyClick_05.wav",
+	sound = "mcv/weapons/weapon_common/Common_Weapon_EmptyClick_05.wav",
 } )
 
 sound.Add( {
@@ -3822,7 +3822,7 @@ sound.Add( {
 	volume = 1.0,
 	level = 65,
 	pitch = 100,
-	sound = "~mcv/weapons/weapon_common/Common_Weapon_EmptyClick_06.wav",
+	sound = "mcv/weapons/weapon_common/Common_Weapon_EmptyClick_06.wav",
 } )
 
 sound.Add( {
@@ -3831,7 +3831,7 @@ sound.Add( {
 	volume = 1.0,
 	level = 65,
 	pitch = 100,
-	sound = "~mcv/weapons/weapon_common/Common_Weapon_EmptyClick_07.wav",
+	sound = "mcv/weapons/weapon_common/Common_Weapon_EmptyClick_07.wav",
 } )
 
 sound.Add( {
@@ -3840,7 +3840,7 @@ sound.Add( {
 	volume = 1.0,
 	level = 65,
 	pitch = 100,
-	sound = "~mcv/weapons/weapon_common/Common_Weapon_EmptyClick_08.wav",
+	sound = "mcv/weapons/weapon_common/Common_Weapon_EmptyClick_08.wav",
 } )
 
 sound.Add( {
@@ -3849,7 +3849,7 @@ sound.Add( {
 	volume = 1.0,
 	level = 65,
 	pitch = 100,
-	sound = "~mcv/weapons/weapon_common/Common_Weapon_EmptyClick_09.wav",
+	sound = "mcv/weapons/weapon_common/Common_Weapon_EmptyClick_09.wav",
 } )
 
 sound.Add( {
@@ -3858,7 +3858,7 @@ sound.Add( {
 	volume = 1.0,
 	level = 65,
 	pitch = 100,
-	sound = "~mcv/weapons/weapon_common/Common_Weapon_EmptyClick_02.wav",
+	sound = "mcv/weapons/weapon_common/Common_Weapon_EmptyClick_02.wav",
 } )
 
 sound.Add( {
@@ -3867,7 +3867,7 @@ sound.Add( {
 	volume = 1.0,
 	level = 65,
 	pitch = 100,
-	sound = "~mcv/weapons/weapon_common/Common_Weapon_EmptyClick_03.wav",
+	sound = "mcv/weapons/weapon_common/Common_Weapon_EmptyClick_03.wav",
 } )
 
 sound.Add( {
@@ -3875,7 +3875,7 @@ sound.Add( {
 	channel = CHAN_STATIC,
 	volume = 0.6,
 	level = 75,
-	sound = "~mcv/weapons/weapon_common/Common_Rocket_FlyLoop.wav",
+	sound = "mcv/weapons/weapon_common/Common_Rocket_FlyLoop.wav",
 } )
 
 sound.Add( {
@@ -3883,7 +3883,7 @@ sound.Add( {
 	channel = CHAN_STATIC,
 	volume = 0.6,
 	level = 75,
-	sound = "~mcv/weapons/weapon_common/Common_Rocket_FlyLoop.wav",
+	sound = "mcv/weapons/weapon_common/Common_Rocket_FlyLoop.wav",
 } )
 
 sound.Add( {
@@ -3891,7 +3891,7 @@ sound.Add( {
 	channel = CHAN_STATIC,
 	volume = 1.0,
 	level = 110,
-	sound = "~mcv/weapons/weapon_c4/c4_ticking_loop_01.wav",
+	sound = "mcv/weapons/weapon_c4/c4_ticking_loop_01.wav",
 } )
 
 sound.Add( {
@@ -3899,7 +3899,7 @@ sound.Add( {
 	channel = CHAN_STATIC,
 	volume = 0.7,
 	level = 110,
-	sound = "~mcv/weapons/weapon_c4/c4_fuseburning_loop_01.wav",
+	sound = "mcv/weapons/weapon_c4/c4_fuseburning_loop_01.wav",
 } )
 
 sound.Add( {
@@ -3909,10 +3909,10 @@ sound.Add( {
 	level = 0,
 	pitch = {80, 120},
 	sound = {
-		"~mcv/weapons/weapon_binoculars/Binoculars_Airstrike_Incoming_Cannon_01.wav",
-		"~mcv/weapons/weapon_binoculars/Binoculars_Airstrike_Incoming_Cannon_02.wav",
-		"~mcv/weapons/weapon_binoculars/Binoculars_Airstrike_Incoming_Cannon_03.wav",
-		"~mcv/weapons/weapon_binoculars/Binoculars_Airstrike_Incoming_Cannon_04.wav",
+		"mcv/weapons/weapon_binoculars/Binoculars_Airstrike_Incoming_Cannon_01.wav",
+		"mcv/weapons/weapon_binoculars/Binoculars_Airstrike_Incoming_Cannon_02.wav",
+		"mcv/weapons/weapon_binoculars/Binoculars_Airstrike_Incoming_Cannon_03.wav",
+		"mcv/weapons/weapon_binoculars/Binoculars_Airstrike_Incoming_Cannon_04.wav",
 	},
 } )
 
@@ -3923,10 +3923,10 @@ sound.Add( {
 	level = 0,
 	pitch = {80, 120},
 	sound = {
-		"~mcv/weapons/weapon_binoculars/Binoculars_Airstrike_Incoming_Cannon_01.wav",
-		"~mcv/weapons/weapon_binoculars/Binoculars_Airstrike_Incoming_Cannon_02.wav",
-		"~mcv/weapons/weapon_binoculars/Binoculars_Airstrike_Incoming_Cannon_03.wav",
-		"~mcv/weapons/weapon_binoculars/Binoculars_Airstrike_Incoming_Cannon_04.wav",
+		"mcv/weapons/weapon_binoculars/Binoculars_Airstrike_Incoming_Cannon_01.wav",
+		"mcv/weapons/weapon_binoculars/Binoculars_Airstrike_Incoming_Cannon_02.wav",
+		"mcv/weapons/weapon_binoculars/Binoculars_Airstrike_Incoming_Cannon_03.wav",
+		"mcv/weapons/weapon_binoculars/Binoculars_Airstrike_Incoming_Cannon_04.wav",
 	},
 } )
 
@@ -3952,10 +3952,10 @@ sound.Add( {
 	level = 75,
 	pitch = {95, 105},
 	sound = {
-		"~)mcv/weapons/weapon_binoculars/Binoculars_Airstrike_ArtilleryExplosion_01.wav",
-		"~)mcv/weapons/weapon_binoculars/Binoculars_Airstrike_ArtilleryExplosion_02.wav",
-		"~)mcv/weapons/weapon_binoculars/Binoculars_Airstrike_ArtilleryExplosion_03.wav",
-		"~)mcv/weapons/weapon_binoculars/Binoculars_Airstrike_ArtilleryExplosion_04.wav",
+		")mcv/weapons/weapon_binoculars/Binoculars_Airstrike_ArtilleryExplosion_01.wav",
+		")mcv/weapons/weapon_binoculars/Binoculars_Airstrike_ArtilleryExplosion_02.wav",
+		")mcv/weapons/weapon_binoculars/Binoculars_Airstrike_ArtilleryExplosion_03.wav",
+		")mcv/weapons/weapon_binoculars/Binoculars_Airstrike_ArtilleryExplosion_04.wav",
 	},
 } )
 
@@ -3966,10 +3966,10 @@ sound.Add( {
 	level = 0,
 	pitch = {95, 105},
 	sound = {
-		"~mcv/weapons/weapon_binoculars/Binoculars_Airstrike_ArtilleryExplosion_Distant_01.wav",
-		"~mcv/weapons/weapon_binoculars/Binoculars_Airstrike_ArtilleryExplosion_Distant_02.wav",
-		"~mcv/weapons/weapon_binoculars/Binoculars_Airstrike_ArtilleryExplosion_Distant_03.wav",
-		"~mcv/weapons/weapon_binoculars/Binoculars_Airstrike_ArtilleryExplosion_Distant_04.wav",
+		"mcv/weapons/weapon_binoculars/Binoculars_Airstrike_ArtilleryExplosion_Distant_01.wav",
+		"mcv/weapons/weapon_binoculars/Binoculars_Airstrike_ArtilleryExplosion_Distant_02.wav",
+		"mcv/weapons/weapon_binoculars/Binoculars_Airstrike_ArtilleryExplosion_Distant_03.wav",
+		"mcv/weapons/weapon_binoculars/Binoculars_Airstrike_ArtilleryExplosion_Distant_04.wav",
 	},
 } )
 
@@ -3979,7 +3979,7 @@ sound.Add( {
 	volume = 1.0,
 	level = 100,
 	pitch = {90, 105},
-	sound = "~mcv/weapons/weapon_binoculars/Binoculars_NapalmStrike_Incoming_Bomb_01.wav",
+	sound = "mcv/weapons/weapon_binoculars/Binoculars_NapalmStrike_Incoming_Bomb_01.wav",
 } )
 
 sound.Add( {
@@ -3988,7 +3988,7 @@ sound.Add( {
 	volume = 1.0,
 	level = 0,
 	pitch = {95, 100},
-	sound = "~mcv/weapons/weapon_binoculars/Binoculars_NapalmStrike_Incoming_01.wav",
+	sound = "mcv/weapons/weapon_binoculars/Binoculars_NapalmStrike_Incoming_01.wav",
 } )
 
 sound.Add( {
@@ -3998,9 +3998,9 @@ sound.Add( {
 	level = 180,
 	pitch = {95, 105},
 	sound = {
-		"~)mcv/weapons/weapon_binoculars/Binoculars_NapalmStrike_InitialExplosion_01.wav",
-		"~)mcv/weapons/weapon_binoculars/Binoculars_NapalmStrike_InitialExplosion_02.wav",
-		"~)mcv/weapons/weapon_binoculars/Binoculars_NapalmStrike_InitialExplosion_03.wav",
+		")mcv/weapons/weapon_binoculars/Binoculars_NapalmStrike_InitialExplosion_01.wav",
+		")mcv/weapons/weapon_binoculars/Binoculars_NapalmStrike_InitialExplosion_02.wav",
+		")mcv/weapons/weapon_binoculars/Binoculars_NapalmStrike_InitialExplosion_03.wav",
 	},
 } )
 
@@ -4009,7 +4009,7 @@ sound.Add( {
 	channel = CHAN_STATIC,
 	volume = 1.0,
 	level = 90,
-	sound = "~mcv/weapons/weapon_binoculars/Binoculars_NapalmStrike_RoaringFlames_01.wav",
+	sound = "mcv/weapons/weapon_binoculars/Binoculars_NapalmStrike_RoaringFlames_01.wav",
 } )
 
 sound.Add( {
@@ -4019,9 +4019,9 @@ sound.Add( {
 	level = 0,
 	pitch = {95, 105},
 	sound = {
-		"~mcv/weapons/weapon_binoculars/Binoculars_NapalmStrike_InitialExplosion_Distant_01.wav",
-		"~mcv/weapons/weapon_binoculars/Binoculars_NapalmStrike_InitialExplosion_Distant_02.wav",
-		"~mcv/weapons/weapon_binoculars/Binoculars_NapalmStrike_InitialExplosion_Distant_03.wav",
+		"mcv/weapons/weapon_binoculars/Binoculars_NapalmStrike_InitialExplosion_Distant_01.wav",
+		"mcv/weapons/weapon_binoculars/Binoculars_NapalmStrike_InitialExplosion_Distant_02.wav",
+		"mcv/weapons/weapon_binoculars/Binoculars_NapalmStrike_InitialExplosion_Distant_03.wav",
 	},
 } )
 
@@ -4032,9 +4032,9 @@ sound.Add( {
 	level = 0,
 	pitch = {80, 120},
 	sound = {
-		"~mcv/weapons/weapon_binoculars/Binoculars_MortarStrike_MortarIncoming_01.wav",
-		"~mcv/weapons/weapon_binoculars/Binoculars_MortarStrike_MortarIncoming_02.wav",
-		"~mcv/weapons/weapon_binoculars/Binoculars_MortarStrike_MortarIncoming_03.wav",
+		"mcv/weapons/weapon_binoculars/Binoculars_MortarStrike_MortarIncoming_01.wav",
+		"mcv/weapons/weapon_binoculars/Binoculars_MortarStrike_MortarIncoming_02.wav",
+		"mcv/weapons/weapon_binoculars/Binoculars_MortarStrike_MortarIncoming_03.wav",
 	},
 } )
 
@@ -4044,7 +4044,7 @@ sound.Add( {
 	volume = 1.0,
 	level = 0,
 	pitch = {90, 110},
-	sound = "~mcv/weapons/weapon_binoculars/Binoculars_MortarStrike_Incoming_01.wav",
+	sound = "mcv/weapons/weapon_binoculars/Binoculars_MortarStrike_Incoming_01.wav",
 } )
 
 sound.Add( {
@@ -4054,11 +4054,11 @@ sound.Add( {
 	level = 75,
 	pitch = {95, 105},
 	sound = {
-		"~)mcv/weapons/weapon_binoculars/Binoculars_MortarStrike_MortarExplosion_01.wav",
-		"~)mcv/weapons/weapon_binoculars/Binoculars_MortarStrike_MortarExplosion_02.wav",
-		"~)mcv/weapons/weapon_binoculars/Binoculars_MortarStrike_MortarExplosion_03.wav",
-		"~)mcv/weapons/weapon_binoculars/Binoculars_MortarStrike_MortarExplosion_04.wav",
-		"~)mcv/weapons/weapon_binoculars/Binoculars_MortarStrike_MortarExplosion_05.wav",
+		")mcv/weapons/weapon_binoculars/Binoculars_MortarStrike_MortarExplosion_01.wav",
+		")mcv/weapons/weapon_binoculars/Binoculars_MortarStrike_MortarExplosion_02.wav",
+		")mcv/weapons/weapon_binoculars/Binoculars_MortarStrike_MortarExplosion_03.wav",
+		")mcv/weapons/weapon_binoculars/Binoculars_MortarStrike_MortarExplosion_04.wav",
+		")mcv/weapons/weapon_binoculars/Binoculars_MortarStrike_MortarExplosion_05.wav",
 	},
 } )
 
@@ -4069,11 +4069,11 @@ sound.Add( {
 	level = 0,
 	pitch = {95, 105},
 	sound = {
-		"~mcv/weapons/weapon_binoculars/Binoculars_MortarStrike_MortarExplosion_Distant_01.wav",
-		"~mcv/weapons/weapon_binoculars/Binoculars_MortarStrike_MortarExplosion_Distant_02.wav",
-		"~mcv/weapons/weapon_binoculars/Binoculars_MortarStrike_MortarExplosion_Distant_03.wav",
-		"~mcv/weapons/weapon_binoculars/Binoculars_MortarStrike_MortarExplosion_Distant_04.wav",
-		"~mcv/weapons/weapon_binoculars/Binoculars_MortarStrike_MortarExplosion_Distant_05.wav",
+		"mcv/weapons/weapon_binoculars/Binoculars_MortarStrike_MortarExplosion_Distant_01.wav",
+		"mcv/weapons/weapon_binoculars/Binoculars_MortarStrike_MortarExplosion_Distant_02.wav",
+		"mcv/weapons/weapon_binoculars/Binoculars_MortarStrike_MortarExplosion_Distant_03.wav",
+		"mcv/weapons/weapon_binoculars/Binoculars_MortarStrike_MortarExplosion_Distant_04.wav",
+		"mcv/weapons/weapon_binoculars/Binoculars_MortarStrike_MortarExplosion_Distant_05.wav",
 	},
 } )
 
@@ -4083,7 +4083,7 @@ sound.Add( {
 	volume = 0.75,
 	level = 100,
 	pitch = {90, 105},
-	sound = "~mcv/weapons/weapon_binoculars/Binoculars_PhosphorusStrike_Incoming_Bomb_01.wav",
+	sound = "mcv/weapons/weapon_binoculars/Binoculars_PhosphorusStrike_Incoming_Bomb_01.wav",
 } )
 
 sound.Add( {
@@ -4092,7 +4092,7 @@ sound.Add( {
 	volume = 1.0,
 	level = 0,
 	pitch = {95, 100},
-	sound = "~mcv/weapons/weapon_binoculars/Binoculars_PhosphorusStrike_Incoming_01.wav",
+	sound = "mcv/weapons/weapon_binoculars/Binoculars_PhosphorusStrike_Incoming_01.wav",
 } )
 
 sound.Add( {
@@ -4101,7 +4101,7 @@ sound.Add( {
 	volume = 1.0,
 	level = 180,
 	pitch = {95, 105},
-	sound = "~)mcv/weapons/weapon_binoculars/Binoculars_PhosphorusStrike_InitialExplosion_01.wav",
+	sound = ")mcv/weapons/weapon_binoculars/Binoculars_PhosphorusStrike_InitialExplosion_01.wav",
 } )
 
 sound.Add( {
@@ -4109,7 +4109,7 @@ sound.Add( {
 	channel = CHAN_STATIC,
 	volume = 1.0,
 	level = 90,
-	sound = "~mcv/weapons/weapon_binoculars/Binoculars_PhosphorusStrike_Flames_01.wav",
+	sound = "mcv/weapons/weapon_binoculars/Binoculars_PhosphorusStrike_Flames_01.wav",
 } )
 
 sound.Add( {
@@ -4119,9 +4119,9 @@ sound.Add( {
 	level = 0,
 	pitch = {95, 105},
 	sound = {
-		"~mcv/weapons/weapon_binoculars/Binoculars_NapalmStrike_InitialExplosion_Distant_01.wav",
-		"~mcv/weapons/weapon_binoculars/Binoculars_NapalmStrike_InitialExplosion_Distant_02.wav",
-		"~mcv/weapons/weapon_binoculars/Binoculars_NapalmStrike_InitialExplosion_Distant_03.wav",
+		"mcv/weapons/weapon_binoculars/Binoculars_NapalmStrike_InitialExplosion_Distant_01.wav",
+		"mcv/weapons/weapon_binoculars/Binoculars_NapalmStrike_InitialExplosion_Distant_02.wav",
+		"mcv/weapons/weapon_binoculars/Binoculars_NapalmStrike_InitialExplosion_Distant_03.wav",
 	},
 } )
 
@@ -4131,9 +4131,9 @@ sound.Add( {
 	volume = 1.0,
 	level = 75,
 	sound = {
-		"~mcv/weapons/weapon_binoculars/Binoculars_PhosphorusStrike_Debris_Hit_01.wav",
-		"~mcv/weapons/weapon_binoculars/Binoculars_PhosphorusStrike_Debris_Hit_02.wav",
-		"~mcv/weapons/weapon_binoculars/Binoculars_PhosphorusStrike_Debris_Hit_03.wav",
+		"mcv/weapons/weapon_binoculars/Binoculars_PhosphorusStrike_Debris_Hit_01.wav",
+		"mcv/weapons/weapon_binoculars/Binoculars_PhosphorusStrike_Debris_Hit_02.wav",
+		"mcv/weapons/weapon_binoculars/Binoculars_PhosphorusStrike_Debris_Hit_03.wav",
 	},
 } )
 
@@ -4143,9 +4143,9 @@ sound.Add( {
 	volume = 1.0,
 	level = 75,
 	sound = {
-		"~mcv/weapons/weapon_binoculars/Binoculars_PhosphorusStrike_Debris_HitSizzle_01.wav",
-		"~mcv/weapons/weapon_binoculars/Binoculars_PhosphorusStrike_Debris_HitSizzle_02.wav",
-		"~mcv/weapons/weapon_binoculars/Binoculars_PhosphorusStrike_Debris_HitSizzle_03.wav",
+		"mcv/weapons/weapon_binoculars/Binoculars_PhosphorusStrike_Debris_HitSizzle_01.wav",
+		"mcv/weapons/weapon_binoculars/Binoculars_PhosphorusStrike_Debris_HitSizzle_02.wav",
+		"mcv/weapons/weapon_binoculars/Binoculars_PhosphorusStrike_Debris_HitSizzle_03.wav",
 	},
 } )
 
@@ -4171,11 +4171,11 @@ sound.Add( {
 	level = 0,
 	pitch = {95, 105},
 	sound = {
-		"~mcv/weapons/weapon_common/Common_ExplosionGeneric_Explosion_Distant_01.wav",
-		"~mcv/weapons/weapon_common/Common_ExplosionGeneric_Explosion_Distant_02.wav",
-		"~mcv/weapons/weapon_common/Common_ExplosionGeneric_Explosion_Distant_03.wav",
-		"~mcv/weapons/weapon_common/Common_ExplosionGeneric_Explosion_Distant_04.wav",
-		"~mcv/weapons/weapon_common/Common_ExplosionGeneric_Explosion_Distant_05.wav",
+		"mcv/weapons/weapon_common/Common_ExplosionGeneric_Explosion_Distant_01.wav",
+		"mcv/weapons/weapon_common/Common_ExplosionGeneric_Explosion_Distant_02.wav",
+		"mcv/weapons/weapon_common/Common_ExplosionGeneric_Explosion_Distant_03.wav",
+		"mcv/weapons/weapon_common/Common_ExplosionGeneric_Explosion_Distant_04.wav",
+		"mcv/weapons/weapon_common/Common_ExplosionGeneric_Explosion_Distant_05.wav",
 	},
 } )
 
@@ -4201,11 +4201,11 @@ sound.Add( {
 	level = 0,
 	pitch = {95, 105},
 	sound = {
-		"~mcv/weapons/weapon_common/Common_ExplosionGrenade_Explosion_Distant_01.wav",
-		"~mcv/weapons/weapon_common/Common_ExplosionGrenade_Explosion_Distant_02.wav",
-		"~mcv/weapons/weapon_common/Common_ExplosionGrenade_Explosion_Distant_03.wav",
-		"~mcv/weapons/weapon_common/Common_ExplosionGrenade_Explosion_Distant_04.wav",
-		"~mcv/weapons/weapon_common/Common_ExplosionGrenade_Explosion_Distant_05.wav",
+		"mcv/weapons/weapon_common/Common_ExplosionGrenade_Explosion_Distant_01.wav",
+		"mcv/weapons/weapon_common/Common_ExplosionGrenade_Explosion_Distant_02.wav",
+		"mcv/weapons/weapon_common/Common_ExplosionGrenade_Explosion_Distant_03.wav",
+		"mcv/weapons/weapon_common/Common_ExplosionGrenade_Explosion_Distant_04.wav",
+		"mcv/weapons/weapon_common/Common_ExplosionGrenade_Explosion_Distant_05.wav",
 	},
 } )
 
@@ -4229,9 +4229,9 @@ sound.Add( {
 	level = 0,
 	pitch = {95, 105},
 	sound = {
-		"~mcv/weapons/weapon_m202/M202_Missile_ExplosionDistant_01.wav",
-		"~mcv/weapons/weapon_m202/M202_Missile_ExplosionDistant_02.wav",
-		"~mcv/weapons/weapon_m202/M202_Missile_ExplosionDistant_03.wav",
+		"mcv/weapons/weapon_m202/M202_Missile_ExplosionDistant_01.wav",
+		"mcv/weapons/weapon_m202/M202_Missile_ExplosionDistant_02.wav",
+		"mcv/weapons/weapon_m202/M202_Missile_ExplosionDistant_03.wav",
 	},
 } )
 
@@ -4240,7 +4240,7 @@ sound.Add( {
 	channel = CHAN_STATIC,
 	volume = 0.75,
 	level = 75,
-	sound = "~mcv/weapons/weapon_common/Common_FlareGunFlare_BurnLoop.wav",
+	sound = "mcv/weapons/weapon_common/Common_FlareGunFlare_BurnLoop.wav",
 } )
 
 sound.Add( {
@@ -4249,11 +4249,11 @@ sound.Add( {
 	volume = 1.0,
 	level = 75,
 	sound = {
-		"~mcv/weapons/weapon_common/Common_FlareGunFlare_Bounce_01.wav",
-		"~mcv/weapons/weapon_common/Common_FlareGunFlare_Bounce_02.wav",
-		"~mcv/weapons/weapon_common/Common_FlareGunFlare_Bounce_03.wav",
-		"~mcv/weapons/weapon_common/Common_FlareGunFlare_Bounce_04.wav",
-		"~mcv/weapons/weapon_common/Common_FlareGunFlare_Bounce_05.wav",
+		"mcv/weapons/weapon_common/Common_FlareGunFlare_Bounce_01.wav",
+		"mcv/weapons/weapon_common/Common_FlareGunFlare_Bounce_02.wav",
+		"mcv/weapons/weapon_common/Common_FlareGunFlare_Bounce_03.wav",
+		"mcv/weapons/weapon_common/Common_FlareGunFlare_Bounce_04.wav",
+		"mcv/weapons/weapon_common/Common_FlareGunFlare_Bounce_05.wav",
 	},
 } )
 
@@ -4263,7 +4263,7 @@ sound.Add( {
 	volume = 0.75,
 	level = 65,
 	pitch = 100,
-	sound = "~mcv/weapons/weapon_common/Common_Weapon_LowAmmoClick.wav",
+	sound = "mcv/weapons/weapon_common/Common_Weapon_LowAmmoClick.wav",
 } )
 
 sound.Add( {
@@ -4272,7 +4272,7 @@ sound.Add( {
 	volume = 1.0,
 	level = 65,
 	pitch = 100,
-	sound = "~mcv/weapons/weapon_common/Common_Weapon_LowAmmoClick_Pistol.wav",
+	sound = "mcv/weapons/weapon_common/Common_Weapon_LowAmmoClick_Pistol.wav",
 } )
 
 sound.Add( {
@@ -4281,7 +4281,7 @@ sound.Add( {
 	volume = 1.0,
 	level = 65,
 	pitch = 100,
-	sound = "~mcv/weapons/weapon_common/Common_Weapon_LowAmmoClick_Revolver.wav",
+	sound = "mcv/weapons/weapon_common/Common_Weapon_LowAmmoClick_Revolver.wav",
 } )
 
 sound.Add( {
@@ -4290,7 +4290,7 @@ sound.Add( {
 	volume = 0.75,
 	level = 65,
 	pitch = 100,
-	sound = "~mcv/weapons/weapon_common/Common_Weapon_LowAmmoClick_MP.wav",
+	sound = "mcv/weapons/weapon_common/Common_Weapon_LowAmmoClick_MP.wav",
 } )
 
 sound.Add( {
@@ -4299,7 +4299,7 @@ sound.Add( {
 	volume = 0.75,
 	level = 65,
 	pitch = 100,
-	sound = "~mcv/weapons/weapon_common/Common_Weapon_LowAmmoClick_SMG.wav",
+	sound = "mcv/weapons/weapon_common/Common_Weapon_LowAmmoClick_SMG.wav",
 } )
 
 sound.Add( {
@@ -4308,7 +4308,7 @@ sound.Add( {
 	volume = 0.5,
 	level = 65,
 	pitch = 100,
-	sound = "~mcv/weapons/weapon_common/Common_Weapon_LowAmmoClick_LMG.wav",
+	sound = "mcv/weapons/weapon_common/Common_Weapon_LowAmmoClick_LMG.wav",
 } )
 
 sound.Add( {
@@ -4317,13 +4317,13 @@ sound.Add( {
 	volume = 1.0,
 	level = 75,
 	sound = {
-		"~mcv/weapons/weapon_common/Common_Flamethrower_CollideBurn_01.wav",
-		"~mcv/weapons/weapon_common/Common_Flamethrower_CollideBurn_02.wav",
-		"~mcv/weapons/weapon_common/Common_Flamethrower_CollideBurn_03.wav",
-		"~mcv/weapons/weapon_common/Common_Flamethrower_CollideBurn_04.wav",
-		"~mcv/weapons/weapon_common/Common_Flamethrower_CollideBurn_05.wav",
-		"~mcv/weapons/weapon_common/Common_Flamethrower_CollideBurn_06.wav",
-		"~mcv/weapons/weapon_common/Common_Flamethrower_CollideBurn_07.wav",
+		"mcv/weapons/weapon_common/Common_Flamethrower_CollideBurn_01.wav",
+		"mcv/weapons/weapon_common/Common_Flamethrower_CollideBurn_02.wav",
+		"mcv/weapons/weapon_common/Common_Flamethrower_CollideBurn_03.wav",
+		"mcv/weapons/weapon_common/Common_Flamethrower_CollideBurn_04.wav",
+		"mcv/weapons/weapon_common/Common_Flamethrower_CollideBurn_05.wav",
+		"mcv/weapons/weapon_common/Common_Flamethrower_CollideBurn_06.wav",
+		"mcv/weapons/weapon_common/Common_Flamethrower_CollideBurn_07.wav",
 	},
 } )
 
