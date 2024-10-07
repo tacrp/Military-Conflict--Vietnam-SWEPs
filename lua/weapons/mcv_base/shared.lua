@@ -99,9 +99,20 @@ SWEP.CrouchMoveSpreadMultiplier = 1.35
 SWEP.JumpSpreadMultiplier = 3.0
 
 SWEP.HasBayonet = false
+SWEP.HasRifleGrenade = false
+
+SWEP.BashDamage = 50
+SWEP.BayonetDamage = 100
+
 SWEP.HasBipod = false
 
 // Penetration
+SWEP.MetalPenetrationDepth = 8
+SWEP.GlassPenetrationDepth = 14
+SWEP.ConcretePenetrationDepth = 10
+SWEP.WoodPenetrationDepth = 18
+SWEP.OtherPenetrationDepth = 12
+
 SWEP.MetalDamageModifier = 1.55
 SWEP.GlassDamageModifier = 1.15
 SWEP.ConcreteDamageModifier = 1.75
@@ -203,16 +214,16 @@ function SWEP:SetupDataTables()
     self:NetworkVar("Int", 1, "ScopeLevel")
     self:NetworkVar("Int", 2, "LoadedRounds")
     self:NetworkVar("Int", 3, "Firemode")
+    self:NetworkVar("Int", 3, "MuzzleMode")
 
     self:NetworkVar("Bool", 1, "Reloading")
     self:NetworkVar("Bool", 2, "EndReload")
-    self:NetworkVar("Bool", 3, "Bayonet")
-    self:NetworkVar("Bool", 4, "Ready")
-    self:NetworkVar("Bool", 5, "Bipod")
-    self:NetworkVar("Bool", 6, "OutOfBreath")
-    self:NetworkVar("Bool", 7, "HoldingBreath")
-    self:NetworkVar("Bool", 8, "LastWasSprinting")
-    self:NetworkVar("Bool", 9, "EmptyReload")
+    self:NetworkVar("Bool", 3, "Ready")
+    self:NetworkVar("Bool", 4, "Bipod")
+    self:NetworkVar("Bool", 5, "OutOfBreath")
+    self:NetworkVar("Bool", 6, "HoldingBreath")
+    self:NetworkVar("Bool", 7, "LastWasSprinting")
+    self:NetworkVar("Bool", 8, "EmptyReload")
 
     self:NetworkVar("Angle", 0, "BipodAngle")
 

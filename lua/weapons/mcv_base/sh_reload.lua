@@ -1,0 +1,2 @@
+function SWEP:Reload()
+end

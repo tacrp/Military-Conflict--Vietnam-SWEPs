@@ -1,0 +1,2 @@
+function SWEP:Think()
+end
