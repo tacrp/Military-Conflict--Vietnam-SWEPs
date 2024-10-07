@@ -604,7 +604,7 @@ $sequence "shoot1" {
 	{ event AE_MUZZLEFLASH 0 "" }
 	fadein 0
 	fadeout 0.2
-	blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
+	//blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
 	node "Fire"
 }
 
@@ -618,7 +618,7 @@ $sequence "shoot2" {
 	{ event AE_MUZZLEFLASH 0 "" }
 	fadein 0
 	fadeout 0.2
-	blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
+	//blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
 	node "Fire"
 }
 
@@ -632,7 +632,7 @@ $sequence "shoot3" {
 	{ event AE_MUZZLEFLASH 0 "" }
 	fadein 0
 	fadeout 0.2
-	blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
+	//blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
 	node "Fire"
 }
 
