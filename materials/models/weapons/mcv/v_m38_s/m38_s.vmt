@@ -1,7 +1,7 @@
 "VertexlitGeneric"
 {
-	"$basetexture"				"models/weapons/v_m38_s/m38_s_diffuse"
-	"$bumpmap"					"models/weapons/v_m38_s/m38_s_normal"
+	"$basetexture"				"models/weapons/mcv/v_m38_s/m38_s_diffuse"
+	"$bumpmap"					"models/weapons/mcv/v_m38_s/m38_s_normal"
 	
     "$PhongExponentTexture"		"models\weapons\mcv\v_m38_s\m38_s_exponent"
 

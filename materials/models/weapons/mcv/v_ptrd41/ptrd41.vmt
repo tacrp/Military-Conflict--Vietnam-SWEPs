@@ -1,7 +1,7 @@
 "VertexlitGeneric"
 {
-	"$basetexture"						"models/weapons/v_ptrd41/ptrd41_diffuse"
-	"$bumpmap"							"models/weapons/v_ptrd41/ptrd41_normal"
+	"$basetexture"						"models/weapons/mcv/v_ptrd41/ptrd41_diffuse"
+	"$bumpmap"							"models/weapons/mcv/v_ptrd41/ptrd41_normal"
     "$PhongExponentTexture" 			"models\weapons\mcv\v_ptrd41\ptrd41_exponent"
 
 	"$phong" "1"

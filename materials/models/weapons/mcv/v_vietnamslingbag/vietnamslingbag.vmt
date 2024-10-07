@@ -1,7 +1,7 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/v_vietnamslingbag/vietnamslingbag_diffuse"
-	"$bumpmap" "models/weapons/v_vietnamslingbag/vietnamslingbag_normal"
+	"$basetexture" "models/weapons/mcv/v_vietnamslingbag/vietnamslingbag_diffuse"
+	"$bumpmap" "models/weapons/mcv/v_vietnamslingbag/vietnamslingbag_normal"
                 "$PhongExponentTexture" 			"models\weapons\mcv\v_vietnamslingbag\vietnamslingbag_exponent"
 
 

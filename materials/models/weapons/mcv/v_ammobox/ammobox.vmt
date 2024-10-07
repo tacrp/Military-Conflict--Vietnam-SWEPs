@@ -1,7 +1,7 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/v_ammobox/ammobox_diffuse"
-	"$bumpmap" "models/weapons/v_ammobox/ammobox_normal"
+	"$basetexture" "models/weapons/mcv/v_ammobox/ammobox_diffuse"
+	"$bumpmap" "models/weapons/mcv/v_ammobox/ammobox_normal"
                 "$PhongExponentTexture" 			"models\weapons\mcv\v_ammobox\ammobox_exponent"
 
 

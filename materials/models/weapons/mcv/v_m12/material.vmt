@@ -1,8 +1,8 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/v_m12/m12_beretta"
-	"$bumpmap" "models/weapons/v_m12/m12_beretta_nm"
-	"$phongexponenttexture" "models/weapons/v_m12/m12_exponent"
+	"$basetexture" "models/weapons/mcv/v_m12/m12_beretta"
+	"$bumpmap" "models/weapons/mcv/v_m12/m12_beretta_nm"
+	"$phongexponenttexture" "models/weapons/mcv/v_m12/m12_exponent"
 
 	"$phong" "1"
               " $phongboost"  "1"

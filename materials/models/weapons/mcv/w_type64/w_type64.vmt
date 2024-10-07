@@ -1,7 +1,7 @@
 "VertexlitGeneric"
 {
-	"$basetexture" "models/weapons/w_type64/w_type64_diffuse"
-	"$bumpmap" "models/weapons/w_type64/w_type64_normal"
+	"$basetexture" "models/weapons/mcv/w_type64/w_type64_diffuse"
+	"$bumpmap" "models/weapons/mcv/w_type64/w_type64_normal"
 	"$PhongExponentTexture" 			"models\weapons\mcv\w_type64/w_type64_exponent"
 
 
