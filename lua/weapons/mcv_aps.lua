@@ -1,6 +1,7 @@
 // Spawnable
 SWEP.Spawnable = true
 SWEP.Base = "mcv_base"
+
 AddCSLuaFile()
 
 // Names and basic information
