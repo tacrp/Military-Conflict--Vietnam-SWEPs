@@ -1,0 +1,10 @@
+"patch"
+{
+	"include" "materials\models\weapons\mcv\m9a1_shared.vmt"
+	"insert"
+	{
+	"$basetexture" 	"models\weapons\mcv\v_m203\flamer_fuel_diffuse"
+	"$bumpmap" 		"models\player\equipment\USeq_fuel_normal"
+	"$PhongExponentTexture" "models\player\equipment\USeq_fuel_exponent"
+	}
+}

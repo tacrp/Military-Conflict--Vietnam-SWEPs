@@ -1,0 +1,10 @@
+"patch"
+{
+	"include" "materials\models\weapons\mcv\mac10_shared.vmt"
+	"insert"
+	{
+    "$basetexture"                    "models\weapons\mcv\v_mac10\mac10_diffuse"
+    "$bumpmap"                         "models\weapons\mcv\v_mac10\mac10_normal"
+	"$PhongExponentTexture" 			"models\weapons\mcv\v_mac10\mac10_exponent"
+	}
+}

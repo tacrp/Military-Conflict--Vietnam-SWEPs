@@ -1,0 +1,32 @@
+"VertexLitGeneric"
+{
+	"$basetexture" 	"models\weapons\mcv\w_molotov\w_molotov_diffuse"
+    "$bumpmap"      "models\weapons\mcv\w_molotov\w_molotov_normal"
+	"$PhongExponentTexture" 			"models\weapons\mcv\w_molotov\w_molotov_exponent"
+	"$surfaceprop" "glass"
+	
+	"$phong" "1"
+	"$phongboost"	"2.5"
+	"$phongfresnelranges"	"[1 5 6]"
+	// "$PhongAlbedoTint" "1"
+	"$PhongTint" "[.3 .4 .3]"
+	"$PhongExponent" "25"
+	
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[ .04 .03 .012]"
+	
+	"$detail" "models/weapons/mcv/effects/dynamic_detail"
+	"$detailscale" "1.75"
+	"$detailblendfactor" "0.0"
+	"$detailblendmode" "0"
+	"$detailframe" "0"
+	
+	"Proxies"
+	{
+		"DynamicDetail"
+		{
+			"frameVar" "$detailframe"
+			"blendVar" "$detailblendfactor"
+		}
+	}
+}

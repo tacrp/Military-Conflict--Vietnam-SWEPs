@@ -1,0 +1,10 @@
+"patch"
+{
+	"include" "materials\models\weapons\mcv\binoculars2_shared.vmt"
+	"insert"
+	{
+    "$basetexture"	"models\weapons\mcv\w_binoculars\w_binoculars2_diffuse"
+    "$bumpmap"	"models\weapons\mcv\w_binoculars\w_binoculars2_normal"
+	"$PhongExponentTexture"	"models\weapons\mcv\w_binoculars\w_binoculars2_exponent"
+	}
+}

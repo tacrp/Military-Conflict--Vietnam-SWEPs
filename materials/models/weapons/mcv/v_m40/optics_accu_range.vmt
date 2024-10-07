@@ -1,0 +1,10 @@
+"patch"
+{
+	"include" "materials\models\weapons\mcv\m40_shared.vmt"
+	"insert"
+	{
+    "$basetexture"                    "models\weapons\mcv\v_m40\optics_accu_range_diffuse"
+    "$bumpmap"                         "models\weapons\mcv\v_m40\optics_accu_range_normal"
+	"$PhongExponentTexture" 			"models\weapons\mcv\v_m40\optics_accu_range_exponent"
+	}
+}

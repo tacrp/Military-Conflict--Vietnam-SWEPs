@@ -1,0 +1,67 @@
+"Refract"
+{
+	"$basetexture" "_rt_SniperScope"
+	"$normalmap" "models\weapons\mcv\optics\scope_glass_normal"
+
+ 	"$model" "1"
+
+	"$scopelensmode" "1" 	// Mode used for scope lens effect on sniper rifles. 
+				// Multiplies RefractSampler by refract tint alpha and uses model's UV to read RefractSampler instead of screen coordinates
+	
+	"$refracttransform" "center 0.5 0.5 scale 0.01 0.01 rotate 0.0 translate 0.0 0.0"
+ 	"$refractamount" "0.5"	// normalmap strength
+
+ 	"$surfaceprop" "glass"
+
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[0.675 0.675 0.675]"
+	"$envmapfresnel" "1"
+
+	"$REFRACTTINTTEXTURE" "models\weapons\mcv\optics\crosshair_m1g"
+
+	"$subsurface_scattering" "1"
+    "$sssscale" "1.0"
+   	"$ssspower" "8.0"
+   	"$sssatten" "0.25"
+   	"$sssdistortion" "0.5"
+   	"$sssthickness" "0.5" // actually, reversed. Higher value - less thick
+   	"$ssscolortint" "[1 1 1]"
+	
+	// for ssao depth rendering hacks, do not modify or delete these lines
+	"$opaque_mode"	"1"
+	"$override_depth_texture" "_rt_SoftwareDepth_NOVM"
+
+	"Proxies"
+	{
+               "ScopeLensToggle"
+		{
+			"resultVar" "$refracttint"
+		}
+		"ScopeTintTransition"
+		{
+			"tintvar" "$envmaptint"
+			"tint_inscope" "0.1 0.1 0.1"
+		}
+	}
+}
+
+
+//"VertexLitGeneric"
+//{
+//	"$basetexture" "_rt_SniperScope"
+	//"$basetexture" "models\weapons\mcv\optics\scope_glass_diffuse"
+//	"$bumpmap" "models\weapons\mcv\optics\scope_glass_normal"
+//	"$surfaceprop" "glass"
+//	"$phong" "1"
+//	"$phongboost" "2"
+//	"$phongexponent" "7"
+//	"$phongfresnelranges"	"[0.05 0.7 1]"
+//	"$normalmapalphaenvmapmask" "1"
+//	"$envmap" "env_cubemap"
+ //   "$envmaptint" "[0.4 0.4 0.4]"
+	// "$envmapcontrast" ".3"
+	// "$envmapsaturation" "0.8"
+//	"$envmapfresnel" "1"
+//	"$translucent" 1
+//	"$nocsm" "1"
+//}

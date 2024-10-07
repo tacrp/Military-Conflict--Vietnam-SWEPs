@@ -1,0 +1,33 @@
+"VertexLitGeneric"
+{
+    "$basetexture"	"models\weapons\mcv\v_binocular\binoculars2_diffuse"
+    "$bumpmap"	"models\weapons\mcv\v_binocular\binoculars2_normal"
+
+	"$phong" "1"
+	"$phongboost"	"1"
+	"$phongfresnelranges"	"[0.02 0.5 6]"
+//	"$PhongAlbedoTint" "1"
+//	"$PhongTint" "[.9 1 .8]"
+	"$PhongExponent" "90"
+	"$surfaceprop" "metal"
+
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[.8 .8 .8]"
+	"$normalmapalphaenvmapmask" "1"
+	"$envmapfresnel" "1"
+	
+	"$detail" "models/weapons/mcv/effects/dynamic_detail"
+	"$detailscale" "2.00"
+	"$detailblendfactor" "0.0"
+	"$detailblendmode" "0"
+	"$detailframe" "0"
+
+	"Proxies"	
+	{
+		"DynamicDetail"
+		{
+			"frameVar" "$detailFrame"
+			"blendVar" "$detailblendfactor"
+		}
+	}
+}

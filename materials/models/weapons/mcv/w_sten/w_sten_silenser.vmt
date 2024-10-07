@@ -1,0 +1,10 @@
+"patch"
+{
+	"include" "materials\models\weapons\mcv\sten_shared.vmt"
+	"insert"
+	{
+    "$basetexture"                    "models\weapons\mcv\w_sten\w_sten_silenser_diffuse"
+    "$bumpmap"                         "models\weapons\mcv\w_sten\w_sten_silenser_normal"
+	"$PhongExponentTexture" 			"models\weapons\mcv\w_sten\w_sten_silenser_exponent"
+	}
+}

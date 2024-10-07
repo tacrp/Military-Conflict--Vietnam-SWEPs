@@ -1,0 +1,10 @@
+"patch"
+{
+	"include" "materials\models\weapons\mcv\m7b_shared.vmt"
+	"insert"
+	{
+    "$basetexture"                    "models\weapons\mcv\w_bayonet\w_m7b_diffuse"
+    "$bumpmap"                         "models\weapons\mcv\w_bayonet\w_m7b_normal"
+	"$PhongExponentTexture"            "models\weapons\mcv\w_bayonet\w_m7b_exponent"
+	}
+}

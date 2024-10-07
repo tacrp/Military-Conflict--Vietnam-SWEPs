@@ -1,0 +1,10 @@
+"patch"
+{
+	"include" "materials\models\weapons\mcv\madsen_m50_shared.vmt"
+	"insert"
+	{
+    "$basetexture"                    "models\weapons\mcv\v_m50_madsen\v_madsen_m50_diffuse"
+    "$bumpmap"                         "models\weapons\mcv\v_m50_madsen\v_madsen_m50_normal"
+	"$PhongExponentTexture" 			"models\weapons\mcv\v_m50_madsen\v_madsen_m50_exponent"
+	}
+}

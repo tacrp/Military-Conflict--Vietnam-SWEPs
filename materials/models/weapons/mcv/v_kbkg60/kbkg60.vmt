@@ -1,0 +1,10 @@
+"patch"
+{
+	"include" "materials\models\weapons\mcv\ak_shared.vmt"
+	"insert"
+	{
+	"$basetexture" 	"models\weapons\mcv\v_kbkg60\kbkg60_diffuse"
+	"$bumpmap" 		"models\weapons\mcv\v_kbkg60\kbkg60_normal"
+	"$PhongExponentTexture" "models\weapons\mcv\v_kbkg60\kbkg60_exponent"
+	}
+}

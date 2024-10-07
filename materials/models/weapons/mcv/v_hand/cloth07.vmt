@@ -1,0 +1,29 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" 		"models\weapons\mcv\v_hand\cloth07_diffuse"
+	"$bumpmap" 		"models\weapons\mcv\v_hand\cloth01_normal"
+	
+	"$notint" "1"
+	
+	"$detail" "models/weapons/mcv/effects/dynamic_detail"
+	"$detailscale" "1.75"
+	"$detailblendfactor" "0.0"
+	"$detailblendmode" "0"
+	"$detailframe" "0"
+
+	"$phong"	"1"
+	"$phongboost"	"1"
+	"$phongExponent" "12"
+	"$phongTint" "[1 1 1]"
+	"$phongFresnelRanges" "[.05 .2 1]"
+//	"$phongdisablehalflambert" "1"
+
+	"Proxies"
+	{
+		"DynamicDetail"
+		{
+			"frameVar" "$detailframe"
+			"blendVar" "$detailblendfactor"
+		}
+	}
+}

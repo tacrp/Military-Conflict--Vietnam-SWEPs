@@ -1,0 +1,35 @@
+"VertexLitGeneric"
+{
+    "$basetexture"				"models\weapons\mcv\v_m16a1\single_point_diffuse"
+    "$bumpmap"					"models\weapons\mcv\v_m16a1\single_point_normal"
+	"$PhongExponentTexture"		"models\weapons\mcv\v_m16a1\single_point_exponent"
+	
+	"$phong" "1"
+	"$phongboost"	".8"
+	"$phongfresnelranges"	"[1 1.4 3]"
+	"$PhongAlbedoTint" "1"
+	"$phongalbedoboost" "15"
+	"$surfaceprop" "metal"
+
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[ .12 .12 .12]"
+	"$normalmapalphaenvmapmask" "1"
+
+	"$detail" "models/weapons/mcv/effects/dynamic_detail"
+	"$detailscale" "1.50"
+	"$detailblendfactor" "0.0"
+	"$detailblendmode" "0"
+	"$detailframe" "0"
+	
+	"$selfillum" "1"
+	//"$selfillumtint" "[1 1 1]"
+
+	"Proxies"	
+	{
+		"DynamicDetail"
+		{
+			"frameVar" "$detailFrame"
+			"blendVar" "$detailblendfactor"
+		}
+	}
+}

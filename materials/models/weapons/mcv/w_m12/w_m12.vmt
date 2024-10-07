@@ -1,0 +1,11 @@
+"VertexlitGeneric"
+{
+	"$basetexture"				"models/weapons/w_m12/w_m12_diffuse"
+	"$bumpmap"					"models/weapons/w_m12/w_m12_normal"
+	"$phongexponenttexture"		"models/weapons/w_m12/w_m12_exponent"
+
+	"$phong"					"1"
+    "$phongboost"				".5"
+	"$PhongAlbedoTint"			"1"
+	"$phongalbedoboost"			"10"
+}

@@ -1,0 +1,33 @@
+"VertexLitGeneric"
+{
+	"$baseTexture" 		"models\weapons\mcv\v_hand\v_hands_dark_diffuse"
+	"$bumpmap" 		"models\weapons\mcv\v_hand\v_hands_light_normal"
+	"$phongexponenttexture"	"models\weapons\mcv\v_hand\v_hands_light_exponent"
+	
+	"$notint" "1"
+
+	"$detail" "models/effects/dynamic_detail_hands"
+	"$detailscale" "1.0"
+	"$detailblendfactor" "0.0"
+	"$detailblendmode" "0"
+	"$detailframe" "0"
+
+	// "$envmap" "env_cubemap"
+	// "$envmaptint" "[ .05 .05 .05]"
+	// "$normalmapalphaenvmapmask" "1"
+
+	"$phong"	"1"
+	"$phongboost"	"1"
+	"$phongfresnelranges"	"[0.05 0.8 1.5]"
+
+	"$lightwarptexture" "models\weapons\mcv\v_hand\dark_wrp"
+	
+	"Proxies"
+	{
+		"DynamicDetail"
+		{
+			"frameVar" "$detailframe"
+			"blendVar" "$detailblendfactor"
+		}
+	}
+}

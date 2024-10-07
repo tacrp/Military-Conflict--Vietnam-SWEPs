@@ -1,0 +1,10 @@
+"patch"
+{
+	"include" "materials\models\weapons\mcv\svd_shared.vmt"
+	"insert"
+	{
+    "$basetexture"                    "models\weapons\mcv\w_svd\w_svd_scope_diffuse"
+    "$bumpmap"                         "models\weapons\mcv\w_svd\w_svd_scope_normal"
+	"$PhongExponentTexture" 			"models\weapons\mcv\w_svd\w_svd_scope_exponent"
+	}
+}

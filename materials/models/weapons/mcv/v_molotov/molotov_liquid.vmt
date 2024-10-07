@@ -1,0 +1,52 @@
+"Refract"
+{
+ 	"$model" 1
+ 	"$refractamount" ".2"
+ 	"$bluramount" "3"
+//	"$dudvmap" "dev/water_dudv"
+ 	"$normalmap" "models\weapons\mcv\v_molotov\molotov_liquid_normal"
+ 	"$surfaceprop" "water"
+
+//	"$nocull" 1
+	"$REFRACTTINTTEXTURE" "models\weapons\mcv\v_molotov\molotov_liquid_diffuse"
+
+//      "$bumpframe" "0"
+
+	"$subsurface_scattering" "1"
+    	"$sssscale" "1.0"
+   	"$ssspower" "8.0"
+   	"$sssatten" "0.25"
+   	"$sssdistortion" "0.5"
+   	"$sssthickness" "0.5" // actually, reversed. Higher value - less thick
+   	"$ssscolortint" "[1 1 1]"
+
+	"Proxies"
+	{
+                "Sine"
+		{
+			"resultVar" "$refractamount"
+			"sinemin" 0.1
+			"sinemax" 0.45
+			"sineperiod" 2
+		}
+                "Sine"
+		{
+			"resultVar" "$bluramount"
+			"sinemin" 1
+			"sinemax" 4
+			"sineperiod" 2
+		}
+	}
+}
+
+// "VertexLitGeneric"
+// {
+	// "$basetexture" 	"models\weapons\mcv\v_molotov\molotov_liquid_diffuse"
+	// "$surfaceprop" "glass"
+	// "$translucent" "1"
+	//"$nocull" "1"
+	// "$envmap" "env_cubemap"
+	// "$envmapfresnelminmaxexp"	"[2 6 8]"
+	// "$envmaptint" "[ .6 .2 .1]"
+	// "$envmapfresnel" "1"
+// }

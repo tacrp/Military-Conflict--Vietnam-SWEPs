@@ -1,0 +1,10 @@
+"patch"
+{
+	"include" "materials\models\weapons\mcv\mine_shared.vmt"
+	"insert"
+	{
+    "$basetexture"	"models\weapons\mcv\w_mine\w_m16mine_diffuse"
+    "$bumpmap"	"models\weapons\mcv\w_mine\w_m16mine_normal"
+	"$PhongExponentTexture"	"models\weapons\mcv\w_mine\w_m16mine_exponent"
+	}
+}

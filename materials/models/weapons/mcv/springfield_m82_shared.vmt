@@ -1,0 +1,35 @@
+"VertexLitGeneric"
+{
+	"$phong" "1"
+	"$phongboost"	"0.9"
+	"$phongfresnelranges"	"[0.7 3 4]"
+	"$PhongAlbedoTint" "1"
+	"$phongalbedoboost"	"22"
+	"$surfaceprop" "metal"
+
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[ .1 .1 .1]"
+	"$normalmapalphaenvmapmask" "1"
+
+	//"$rimlight" "1"
+	//"$rimlightexponent" "6"
+	//"$rimlightboost" "0.4"
+	//"$rimmask" "1"
+
+	"$detail" "models/weapons/mcv/effects/dynamic_detail"
+	"$detailscale" "1.50"
+	"$detailblendfactor" "0.0"
+	"$detailblendmode" "0"
+	"$detailframe" "0"
+
+	"Proxies"	
+	{
+		"DynamicDetail"
+		{
+			"frameVar" "$detailFrame"
+			"blendVar" "$detailblendfactor"
+		}
+	}
+}
+
+

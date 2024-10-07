@@ -1,0 +1,36 @@
+"VertexLitGeneric"
+{
+	"$basetexture"					"models\weapons\mcv\v_ppk\v_walther_ppk_diffuse"
+    "$bumpmap"						"models\weapons\mcv\v_ppk\v_walther_ppk_normal"
+	"$PhongExponentTexture"			"models\weapons\mcv\v_ppk\v_walther_ppk_exponent"
+	
+	"$alphatest" "1"
+
+	"$phong" "1"
+	"$phongboost"	"0.4"
+	"$phongfresnelranges"	"[1 2 3]"
+	"$PhongAlbedoTint" "1"
+	"$phongalbedoboost" "4"
+	"$surfaceprop" "metal"
+
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[ .06 .06 .06]"
+	"$normalmapalphaenvmapmask" "1"
+
+	"$detail" "models/weapons/mcv/effects/dynamic_detail"
+	"$detailscale" "0.5"
+	"$detailblendfactor" "0.0"
+	"$detailblendmode" "0"
+	"$detailframe" "0"
+
+	"Proxies"	
+	{
+		"DynamicDetail"
+		{
+			"frameVar" "$detailFrame"
+			"blendVar" "$detailblendfactor"
+		}
+	}
+}
+
+

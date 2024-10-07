@@ -1,0 +1,12 @@
+"patch"
+{
+	"include" "materials\models\weapons\mcv\rifle_GLmounts_shared.vmt"
+	"insert"
+	{
+    "$basetexture"                    "models\weapons\mcv\rif_gl\w_rifle_GLmounts_diffuse"
+    "$bumpmap"                         "models\weapons\mcv\rif_gl\w_rifle_GLmounts_normal"
+	"$PhongExponentTexture" 			"models\weapons\mcv\rif_gl\w_rifle_GLmounts_exponent"
+	"$nocull" "1"
+	"$alphatest" "1"
+	}
+}

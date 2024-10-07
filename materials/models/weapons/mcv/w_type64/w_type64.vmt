@@ -1,0 +1,12 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/w_type64/w_type64_diffuse"
+	"$bumpmap" "models/weapons/w_type64/w_type64_normal"
+	"$PhongExponentTexture" 			"models\weapons\mcv\w_type64/w_type64_exponent"
+
+
+	"$phong" "1"
+              " $phongboost"  "1"
+	"$PhongAlbedoTint" "1"
+	"$phongalbedoboost" "25"
+}

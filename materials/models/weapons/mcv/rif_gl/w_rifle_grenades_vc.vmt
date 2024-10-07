@@ -1,0 +1,10 @@
+"patch"
+{
+	"include" "materials\models\weapons\mcv\rifle_grenades_shared.vmt"
+	"insert"
+	{
+    "$basetexture"                    "models\weapons\mcv\rif_gl\w_rifle_grenades_vc_diffuse"
+    "$bumpmap"                         "models\weapons\mcv\rif_gl\w_rifle_grenades_vc_normal"
+	"$PhongExponentTexture" 			"models\weapons\mcv\rif_gl\w_rifle_grenades_vc_exponent"
+	}
+}

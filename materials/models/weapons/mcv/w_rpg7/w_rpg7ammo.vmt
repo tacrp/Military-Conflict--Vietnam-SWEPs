@@ -1,0 +1,11 @@
+"patch"
+{
+	"include" "materials\models\weapons\mcv\rpg7_shared.vmt"
+	"insert"
+	{
+    	"$basetexture"			"models\weapons\mcv\w_rpg7\w_rpg7ammo_diffuse"
+    	"$bumpmap"			"models\weapons\mcv\w_rpg7\w_rpg7ammo_normal"
+	"$PhongExponentTexture"		"models\weapons\mcv\w_rpg7\w_rpg7ammo_exponent"
+	"$notint"			"1"
+	}
+}

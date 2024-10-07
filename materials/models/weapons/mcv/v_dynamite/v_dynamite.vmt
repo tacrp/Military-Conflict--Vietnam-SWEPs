@@ -1,0 +1,10 @@
+"patch"
+{
+	"include" "materials\models\weapons\mcv\dynamite_shared.vmt"
+	"insert"
+	{
+    "$basetexture"	"models\weapons\mcv\v_dynamite\v_dynamite_diffuse"
+    "$bumpmap"	"models\weapons\mcv\v_dynamite\v_dynamite_normal"
+	"$PhongExponentTexture"	"models\weapons\mcv\v_dynamite\v_dynamite_exponent"
+	}
+}

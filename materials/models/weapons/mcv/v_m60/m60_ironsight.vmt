@@ -1,0 +1,15 @@
+"patch"
+{
+	"include" "materials\models\weapons\mcv\m60_shared.vmt"
+	"insert"
+	{
+    "$basetexture"                    "models\weapons\mcv\v_m60\m60_diffuse"
+    "$bumpmap"                         "models\weapons\mcv\v_m60\m60_normal"
+	"$PhongExponentTexture" 			"models\weapons\mcv\v_m60\m60_exponent"
+	
+	"$detail" "detail\metal_detail_01"
+	"$detailscale" "38.0"
+	"$detailblendfactor" 2.8
+	"$detailblendmode" "0"
+	}
+}

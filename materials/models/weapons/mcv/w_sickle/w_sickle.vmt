@@ -1,0 +1,34 @@
+"VertexLitGeneric"
+{
+	"$basetexture"                    	"models\weapons\mcv\w_sickle\w_sickle_diffuse"
+    "$bumpmap"                         	"models\weapons\mcv\w_sickle\w_sickle_normal"
+	"$PhongExponentTexture" 			"models\weapons\mcv\w_sickle\w_sickle_exponent"
+
+	"$phong" "1"
+	"$phongboost"	"4"
+	"$phongfresnelranges"	"[1 1.3 2]"
+	"$phongalbedotint" "1"
+	"$phongalbedoboost" "15"
+	"$surfaceprop" "metal"
+
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[ .15 .15 .15]"
+	"$normalmapalphaenvmapmask" "1"
+
+	"$detail" "models/weapons/mcv/effects/dynamic_detail"
+	"$detailscale" "[0.5 0.5]"
+	"$detailblendfactor" "0.0"
+	"$detailblendmode" "0"
+	"$detailframe" "0"
+
+	"Proxies"	
+	{
+		"DynamicDetail"
+		{
+			"frameVar" "$detailFrame"
+			"blendVar" "$detailblendfactor"
+		}
+	}
+}
+
+

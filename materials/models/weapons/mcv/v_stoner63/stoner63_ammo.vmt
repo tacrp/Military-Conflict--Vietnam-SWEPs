@@ -1,0 +1,10 @@
+"patch"
+{
+	"include" "materials\models\weapons\mcv\stoner63_shared.vmt"
+	"insert"
+	{
+    "$basetexture"                    "models\weapons\mcv\v_stoner63\stoner63_ammo_diffuse"
+    "$bumpmap"                         "models\weapons\mcv\v_stoner63\stoner63_ammo_normal"
+	"$PhongExponentTexture" 			"models\weapons\mcv\v_stoner63\stoner63_ammo_exponent"
+	}
+}

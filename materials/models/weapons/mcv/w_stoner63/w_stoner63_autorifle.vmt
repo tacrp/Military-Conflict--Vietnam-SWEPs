@@ -1,0 +1,36 @@
+"VertexLitGeneric"
+{
+	"$basetexture"					"models\weapons\mcv\w_stoner63\w_stoner63_autorifle_diffuse"
+    "$bumpmap"						"models\weapons\mcv\w_stoner63\w_stoner63_autorifle_normal"
+	"$PhongExponentTexture"			"models\weapons\mcv\w_stoner63\w_stoner63_autorifle_exponent"
+
+	"$phong"						"1"
+	"$phongboost"					"1"
+	"$phongfresnelranges"			"[1 1 2]"
+	"$PhongAlbedoTint"				"1"
+	"$PhongAlbedoBoost"				"36"
+	"$surfaceprop"					"metal"
+
+	"$envmap"						"env_cubemap"
+	"$envmaptint"					"[ 0.27 0.27 0.27]"
+	"$normalmapalphaenvmapmask"		"1"
+
+	"$detail"						"models/weapons/mcv/effects/dynamic_detail"
+	"$detailscale"					"1.50"
+	"$detailblendfactor"			"0.0"
+	"$detailblendmode"				"0"
+	"$detailframe"					"0"
+	
+	"$alphatest"					"1"
+
+	"Proxies"	
+	{
+		"DynamicDetail"
+		{
+			"frameVar" "$detailFrame"
+			"blendVar" "$detailblendfactor"
+		}
+	}
+}
+
+

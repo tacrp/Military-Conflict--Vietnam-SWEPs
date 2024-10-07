@@ -1,0 +1,37 @@
+"VertexlitGeneric"
+{
+	"$basetexture"						"models/weapons/v_ptrd41/ptrd41_diffuse"
+	"$bumpmap"							"models/weapons/v_ptrd41/ptrd41_normal"
+    "$PhongExponentTexture" 			"models\weapons\mcv\v_ptrd41\ptrd41_exponent"
+
+	"$phong" "1"
+	"$phongboost"	".3"
+	"$phongfresnelranges"	"[1 3 5]"
+	"$PhongAlbedoTint" "1"
+	"$phongalbedoboost" "8"
+	"$surfaceprop" "metal"
+
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[ .23 .23 .23]"
+	"$normalmapalphaenvmapmask" "1"
+
+	"$rimlight" "0"
+	"$rimlightexponent" "15"
+	"$rimlightboost" "0.8"
+	"$rimmask" "1"
+
+	"$detail" "models/weapons/mcv/effects/dynamic_detail"
+	"$detailscale" "1.50"
+	"$detailblendfactor" "0.0"
+	"$detailblendmode" "0"
+	"$detailframe" "0"
+
+	"Proxies"	
+	{
+		"DynamicDetail"
+		{
+			"frameVar" "$detailFrame"
+			"blendVar" "$detailblendfactor"
+		}
+	}
+}

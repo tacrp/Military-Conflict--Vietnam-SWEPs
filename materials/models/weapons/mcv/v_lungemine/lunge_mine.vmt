@@ -1,0 +1,10 @@
+"patch"
+{
+	"include" "materials\models\weapons\mcv\lungemine_shared.vmt"
+	"insert"
+	{
+    "$basetexture"	"models\weapons\mcv\v_lungemine\lunge_mine_diffuse"
+    "$bumpmap"	"models\weapons\mcv\v_lungemine\lunge_mine_normal"
+	"$PhongExponentTexture"	"models\weapons\mcv\v_lungemine\lunge_mine_exponent"
+	}
+}

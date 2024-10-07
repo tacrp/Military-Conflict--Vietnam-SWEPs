@@ -1,0 +1,10 @@
+"patch"
+{
+	"include" "materials\models\weapons\mcv\lpo50_shared.vmt"
+	"insert"
+	{
+    "$basetexture"                    "models\weapons\mcv\v_lpo50\lpo50_diffuse"
+    "$bumpmap"                         "models\weapons\mcv\v_lpo50\lpo50_normal"
+	"$PhongExponentTexture" 			"models\weapons\mcv\v_lpo50\lpo50_exponent"
+	}
+}

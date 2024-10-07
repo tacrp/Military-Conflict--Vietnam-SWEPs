@@ -1,0 +1,22 @@
+"VertexLitGeneric"
+{
+    "$basetexture"					"models\weapons\mcv\shells\rpg2rocket_diffuse"
+    "$bumpmap"						"models\weapons\mcv\shells\rpg2rocket_normal"
+	"$PhongExponentTexture"			"models\weapons\mcv\shells\rpg2rocket_exponent"
+	
+	"$selfillum" "1"
+	//"$selfillumtint" "[.8 0.6 0.10]"
+
+	"$phong" "1"
+	"$phongboost"	"1"
+	"$phongfresnelranges"	"[1 2 7]"
+	"$PhongAlbedoTint" "1"
+	"$phongalbedoboost" "14"
+	"$surfaceprop" "metal"
+
+	"$lightwarptexture" "models\weapons\mcv\shells\bullets_wrp"
+	
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[.1 .1 .1]"
+	"$normalmapalphaenvmapmask" "1"
+}

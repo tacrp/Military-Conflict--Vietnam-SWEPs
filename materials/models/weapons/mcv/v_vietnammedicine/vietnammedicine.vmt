@@ -1,0 +1,12 @@
+"VertexlitGeneric"
+{
+	"$basetexture" "models/weapons/v_vietnammedicine/vietnammedicine_diffuse"
+	"$bumpmap" "models/weapons/v_vietnammedicine/vietnammedicine_normal"
+                "$PhongExponentTexture" 			"models\weapons\mcv\v_vietnammedicine\vietnammedicine_exponent"
+
+
+	"$phong" "1"
+              " $phongboost"  "1"
+	"$PhongAlbedoTint" "25"
+	"$phongalbedoboost" "100"
+}

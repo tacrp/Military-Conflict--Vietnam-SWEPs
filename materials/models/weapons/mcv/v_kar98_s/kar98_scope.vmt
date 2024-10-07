@@ -1,0 +1,10 @@
+"patch"
+{
+	"include" "materials\models\weapons\mcv\kar98_s_shared.vmt"
+	"insert"
+	{
+    "$basetexture"                    "models\weapons\mcv\v_kar98_s\kar98_scope_diffuse"
+    "$bumpmap"                         "models\weapons\mcv\v_kar98_s\kar98_scope_normal"
+	"$PhongExponentTexture" 			"models\weapons\mcv\v_kar98_s\kar98_scope_exponent"
+	}
+}

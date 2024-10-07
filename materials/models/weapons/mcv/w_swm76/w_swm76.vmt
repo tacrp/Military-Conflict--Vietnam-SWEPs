@@ -1,0 +1,10 @@
+"patch"
+{
+	"include" "materials\models\weapons\mcv\swm76_shared.vmt"
+	"insert"
+	{
+    "$basetexture"                    "models\weapons\mcv\w_swm76\w_swm76_diffuse"
+    "$bumpmap"                         "models\weapons\mcv\w_swm76\w_swm76_normal"
+	"$PhongExponentTexture" 			"models\weapons\mcv\w_swm76\w_swm76_exponent"
+	}
+}

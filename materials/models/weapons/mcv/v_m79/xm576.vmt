@@ -1,0 +1,19 @@
+"VertexLitGeneric"
+{
+    "$basetexture"					"models\weapons\mcv\v_m79\xm576_diffuse"
+    "$bumpmap"						"models\weapons\mcv\v_m79\xm576_normal"
+	"$PhongExponentTexture"			"models\weapons\mcv\v_m79\xm576_exponent"
+
+	"$phong" "1"
+	"$phongboost"	"1"
+	"$phongfresnelranges"	"[1 2 7]"
+	"$PhongAlbedoTint" "1"
+	"$phongalbedoboost" "14"
+	"$surfaceprop" "metal"
+
+	"$lightwarptexture" "models\weapons\mcv\shells\bullets_wrp"
+	
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[.03 .03 .03]"
+	"$normalmapalphaenvmapmask" "1"
+}

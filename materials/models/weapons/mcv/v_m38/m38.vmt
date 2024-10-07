@@ -1,0 +1,28 @@
+"VertexlitGeneric"
+{
+	"$basetexture"				"models/weapons/v_m38/m38_diffuse"
+	"$bumpmap"					"models/weapons/v_m38/m38_normal"
+	
+    "$PhongExponentTexture"		"models\weapons\mcv\v_m38\m38_exponent"
+
+	"$phong" "1"
+    "$phongboost"				".4"
+	"$phongfresnelranges"		"[1 1.2 4]"
+	"$PhongAlbedoTint"			"1"
+	"$phongalbedoboost"			"20"
+	
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[ .03 .03 .03]"
+	"$normalmapalphaenvmapmask" "1"
+	
+	// "$rimlight" "1"
+	// "$rimlightexponent" "4"
+	// "$rimlightboost" "0.5"
+	// "$rimmask" "1"
+
+	"$detail" "models/weapons/mcv/effects/dynamic_detail"
+	"$detailscale" "1.50"
+	"$detailblendfactor" "0.0"
+	"$detailblendmode" "0"
+	"$detailframe" "0"
+}

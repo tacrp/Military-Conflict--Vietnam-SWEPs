@@ -1,0 +1,19 @@
+"VertexLitGeneric"
+{
+    "$basetexture"				"models\weapons\mcv\w_m16a1\w_single_point_diffuse"
+    "$bumpmap"					"models\weapons\mcv\w_m16a1\w_single_point_normal"
+	
+	"$phong" "1"
+	"$phongboost"	".4"
+	"$phongexponent"   "10"
+	"$phongfresnelranges"	"[1 1.4 3]"
+	"$PhongAlbedoTint" "1"
+	"$phongalbedoboost" "15"
+	"$surfaceprop" "metal"
+
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[ .6 .6 .6]"
+	"$normalmapalphaenvmapmask" "1"
+	
+	"$translucent" "1"
+}

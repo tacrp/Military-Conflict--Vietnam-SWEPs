@@ -1,0 +1,10 @@
+"patch"
+{
+	"include" "materials\models\weapons\mcv\crowbar_shared.vmt"
+	"insert"
+	{
+    "$basetexture"	"models\weapons\mcv\v_crowbar\crowbar_diffuse"
+    "$bumpmap"	"models\weapons\mcv\v_crowbar\crowbar_normal"
+	"$PhongExponentTexture"	"models\weapons\mcv\v_crowbar\crowbar_exponent"
+	}
+}

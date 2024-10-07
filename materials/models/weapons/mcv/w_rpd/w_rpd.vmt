@@ -1,0 +1,10 @@
+"patch"
+{
+	"include" "materials\models\weapons\mcv\ak_shared.vmt"
+	"insert"
+	{
+    "$basetexture"                    "models\weapons\mcv\w_rpd\w_rpd_diffuse"
+    "$bumpmap"                         "models\weapons\mcv\w_rpd\w_rpd_normal"
+	"$PhongExponentTexture" 			"models\weapons\mcv\w_rpd\w_rpd_exponent"
+	}
+}

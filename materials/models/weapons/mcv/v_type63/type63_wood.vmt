@@ -1,0 +1,39 @@
+"VertexLitGeneric"
+{
+	"$basetexture"                    "models\weapons\mcv\v_type63\type63_diffuse"
+    "$bumpmap"                         "models\weapons\mcv\v_type63\type63_normal"
+	"$PhongExponentTexture" 			"models\weapons\mcv\v_type63\type63_exponent"
+
+	"$phong" "1"
+	"$phongboost"	".4"
+	"$phongfresnelranges"	"[1 3 4]"
+	"$PhongAlbedoTint" "1"
+	"$phongalbedoboost"	"1"
+	"$surfaceprop" "metal"
+
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[ .06 .06 .06]"
+	"$normalmapalphaenvmapmask" "1"
+//	"$envmapfresnel" "0.4"
+//	"$phongalbedoboost" "500"
+
+	"$rimlight" "1"
+	"$rimlightexponent" "6"
+	"$rimlightboost" "0.6"
+	"$rimmask" "1"
+
+	"$detail" "models/weapons/mcv/effects/dynamic_detail"
+	"$detailscale" "1.50"
+	"$detailblendfactor" "0.0"
+	"$detailblendmode" "0"
+	"$detailframe" "0"
+
+	"Proxies"	
+	{
+		"DynamicDetail"
+		{
+			"frameVar" "$detailFrame"
+			"blendVar" "$detailblendfactor"
+		}
+	}
+}
