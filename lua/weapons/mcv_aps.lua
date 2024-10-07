@@ -73,7 +73,7 @@ SWEP.CustomAng = Angle(0, 0, 0)
 SWEP.Spread = 6.3
 SWEP.SpreadIronsighted = 1.15
 
-SWEP.FireRate = 40 // in rounds per minute
+SWEP.FireRate = 750 // in rounds per minute
 
 SWEP.CrosshairMinDistance = 8
 SWEP.CrosshairDeltaDistance = 4
@@ -81,9 +81,9 @@ SWEP.CrosshairDeltaDistance = 4
 SWEP.WeaponWeight = 3.85
 
 SWEP.Primary.Ammo = "ar2"
-SWEP.Primary.ClipSize = 10
+SWEP.Primary.ClipSize = 20
 SWEP.Primary.Chamber = 1
-SWEP.Primary.DefaultClip = 30
+SWEP.Primary.DefaultClip = 60
 SWEP.Primary.Automatic = true
 
 SWEP.NearwallDistance = 40
