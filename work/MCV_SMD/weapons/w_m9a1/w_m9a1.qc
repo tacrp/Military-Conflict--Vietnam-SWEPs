@@ -1,0 +1,70 @@
+// Created by Crowbar 0.74
+
+$modelname "weapons\mcv\w_m9a1.mdl"
+
+$bodygroup "Body"
+{
+	studio "w_m9a1_lod0.smd"
+}
+
+$lod 15
+{
+	replacemodel "w_m9a1_lod0.smd" "w_m9a1_lod0_lod1.smd"
+	nofacial
+}
+$lod 30
+{
+	replacemodel "w_m9a1_lod0.smd" "w_m9a1_lod0_lod2.smd"
+	nofacial
+}
+
+$surfaceprop "weapon"
+
+$contents "solid"
+
+$illumposition -4.379 -1.786 -1.056
+
+$cdmaterials "models\weapons\mcv\w_m9a1\"
+$cdmaterials ""
+
+$attachment "muzzle" "ValveBiped.Weapon_bone" 0 1.1 14.6 rotate -90 -90 0
+$attachment "1" "ValveBiped.Weapon_bone" -2.6 1.2 -11 rotate -90 -90 0
+$attachment "flamethrower_gascable_2" "ValveBiped.Weapon_bone" -2.6 1.2 -11 rotate -90 -90 0
+
+$cbox 0 0 0 0 0 0
+
+$bbox -11.263 -10.219 -4.825 14.862 1.468 2.858
+
+$definebone "ValveBiped" "" 0 0 0 0 0 89.999982 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Hand" "ValveBiped" 0.267086 -2.58952 10.171795 78.841283 -102.773508 -9.262035 0 0 0 0 0 0
+$definebone "ValveBiped.Weapon_bone" "ValveBiped.Bip01_R_Hand" 5 -1.5 -4.999998 0.000002 0 0.000001 0 0 0 0 0 0
+
+
+$sequence "idle" {
+	"w_m9a1_anims\idle.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$collisionmodel "w_m9a1_physics.smd"
+{
+	$mass 8
+	$inertia 1
+	$damping 0
+	$rotdamping 0
+	$rootbone " "
+	$concave
+	$maxconvexpieces 6
+
+}
+
+$keyvalues
+{
+// CSGO compiler adds the qc_path keyvalue section automatically.
+//	qc_path 
+//	{
+//		"value" "e:\animations\vietnamcontent\vietnam\models\player\animation_iiopn\w_model\m9a1\w_m9a1.qc"
+//	}
+}

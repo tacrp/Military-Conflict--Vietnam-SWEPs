@@ -1,0 +1,96 @@
+// Created by Crowbar 0.74
+
+$modelname "weapons\mcv\w_sks.mdl"
+
+$bodygroup "Body"
+{
+	studio "w_sks_lod0.smd"
+}
+$bodygroup "bayonet"
+{
+	blank
+	studio "w_sks_w_akb_lod0.smd"
+}
+$bodygroup "mount"
+{
+	blank
+	studio "w_sks_vcm_lod0.smd"
+}
+$bodygroup "grenade"
+{
+	blank
+	studio "w_sks_vcg_lod0.smd"
+}
+
+$lod 8
+{
+	replacemodel "w_sks_lod0.smd" "w_sks_lod0_lod1.smd"
+	replacemodel "w_sks_w_akb_lod0.smd" "w_sks_w_akb_lod0_lod1.smd"
+	replacemodel "w_sks_vcm_lod0.smd" "w_sks_vcm_lod0_lod1.smd"
+	replacemodel "w_sks_vcg_lod0.smd" "w_sks_vcg_lod0_lod1.smd"
+	replacebone "ValveBiped.weapon_bone2" "ValveBiped.weapon_bone"
+	nofacial
+}
+$lod 14
+{
+	replacemodel "w_sks_lod0.smd" "w_sks_lod0_lod2.smd"
+	replacemodel "w_sks_w_akb_lod0.smd" "w_sks_w_akb_lod0_lod2.smd"
+	replacemodel "w_sks_vcm_lod0.smd" "w_sks_vcm_lod0_lod2.smd"
+	replacemodel "w_sks_vcg_lod0.smd" "w_sks_vcg_lod0_lod2.smd"
+	replacebone "ValveBiped.weapon_bone2" "ValveBiped.weapon_bone"
+	nofacial
+}
+
+$surfaceprop "weapon"
+
+$contents "solid"
+
+$illumposition -0.018 -6.475 -0.876
+
+$cdmaterials "models\weapons\mcv\w_ak47_bayonet\"
+$cdmaterials "models\weapons\mcv\w_sks\"
+$cdmaterials "models\weapons\mcv\rif_gl\"
+$cdmaterials ""
+
+$attachment "muzzle" "ValveBiped.weapon_bone" 0 1.3 21 rotate -90 -90 0
+$attachment "shell_eject" "ValveBiped.weapon_bone" 0 1.8 0 rotate 0 90 90
+$attachment "mag_eject" "ValveBiped.weapon_bone2" 0 0 0 rotate -90 -90 0
+
+$cbox 0 0 0 0 0 0
+
+$bbox -19.577 -1.484 -4.975 32.287 1.447 3.237
+
+$definebone "ValveBiped.weapon_bone" "" 0 0 -0.064417 0 0 89.999982 0 0 0 0 0 0
+$definebone "ValveBiped.weapon_bone2" "ValveBiped.weapon_bone" 0 0 0 0 0 0 0 0 0 0 0 0
+$definebone "ValveBiped.weapon_bone3" "ValveBiped.weapon_bone" 0 0 0 0 0 0 0 0 0 0 0 0
+$definebone "ValveBiped.weapon_bone4" "ValveBiped.weapon_bone" 0 0 0 0 0 0 0 0 0 0 0 0
+
+
+$sequence "idle" {
+	"w_sks_anims\idle.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$collisionmodel "w_sks_physics.smd"
+{
+	$mass 8
+	$inertia 1
+	$damping 0
+	$rotdamping 0
+	$rootbone " "
+	$concave
+	$maxconvexpieces 1
+
+}
+
+$keyvalues
+{
+// CSGO compiler adds the qc_path keyvalue section automatically.
+//	qc_path 
+//	{
+//		"value" "d:\dev_content2\mcv\mcv-content\vietnam\models\player\animation_iiopn\w_model\sks\w_sks.qc"
+//	}
+}

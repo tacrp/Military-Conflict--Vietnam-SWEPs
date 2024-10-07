@@ -1,0 +1,66 @@
+// Created by Crowbar 0.74
+
+$modelname "weapons\mcv\w_mine.mdl"
+
+$bodygroup "mine"
+{
+	studio "w_mine_m16m.smd"
+	studio "w_mine_rg.smd"
+	blank
+}
+$bodygroup "stick"
+{
+	studio "w_mine_stick.smd"
+	blank
+}
+
+
+$surfaceprop "weapon"
+
+$contents "solid"
+
+$illumposition 0 0 5.472
+
+$cdmaterials "models\weapons\mcv\w_mine\"
+$cdmaterials ""
+
+$attachment "wire_start" "ValveBiped.weapon_bone_left" 0 1.25 0 rotate 0 0 0
+$attachment "wire_end" "ValveBiped.weapon_bone" 0 8.25 -1.25 rotate 0 0 0
+
+$cbox 0 0 0 0 0 0
+
+$bbox -2.722 -2.722 -0.276 2.722 2.722 11.219
+
+$definebone "ValveBiped.weapon_bone" "" 0 0 -0.064417 0 0 90.000009 0 0 0 0 0 0
+$definebone "ValveBiped.weapon_bone_left" "" 0 0 0 0 0 89.999982 0 0 0 0 0 0
+$definebone "ValveBiped.weapon_bone2" "ValveBiped.weapon_bone" 0 0 0 0 0 0 0 0 0 0 0 0
+
+
+$sequence "idle" {
+	"w_mine_anims\idle.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$collisionmodel "w_mine_physics.smd"
+{
+	$mass 2
+	$inertia 1
+	$damping 0
+	$rotdamping 0
+	$rootbone " "
+	$concave
+	$maxconvexpieces 3
+
+}
+
+$keyvalues
+{
+// CSGO compiler adds the qc_path keyvalue section automatically.
+//	qc_path 
+//	{
+//		"value" "e:\animations\vietnamcontent\vietnam\models\player\animation_iiopn\w_model\mine\w_mine.qc"
+//	}
+}

@@ -1,0 +1,77 @@
+// Created by Crowbar 0.74
+
+$modelname "weapons\mcv\w_vz58.mdl"
+
+$bodygroup "Body"
+{
+	studio "w_vz58_lod0.smd"
+}
+$bodygroup "bayonet"
+{
+	blank
+	studio "w_vz58_bayonet_lod0.smd"
+}
+
+$lod 15
+{
+	replacemodel "w_vz58_lod0.smd" "w_vz58_lod0_lod1.smd"
+	replacemodel "w_vz58_bayonet_lod0.smd" "w_vz58_bayonet_lod0_lod1.smd"
+	nofacial
+}
+$lod 30
+{
+	replacemodel "w_vz58_lod0.smd" "w_vz58_lod0_lod2.smd"
+	replacemodel "w_vz58_bayonet_lod0.smd" "w_vz58_bayonet_lod0_lod2.smd"
+	nofacial
+}
+
+$surfaceprop "weapon"
+
+$contents "solid"
+
+$illumposition -0.485 -6.145 -3.041
+
+$cdmaterials "models\weapons\mcv\w_ak47_bayonet\"
+$cdmaterials "models\weapons\mcv\w_vz58\"
+
+$attachment "muzzle" "ValveBiped.weapon_bone" 0 0.3 20.15 rotate -90 -90 0
+$attachment "shell_eject" "ValveBiped.weapon_bone" 0 1 3.2 rotate 0 180 90
+$attachment "mag_eject" "ValveBiped.weapon_bone2" 0 -1.4 3 rotate -90 -90 0
+
+$cbox 0 0 0 0 0 0
+
+$bbox -13.577 -1.538 -8.448 25.48 0.776 2.331
+
+$definebone "ValveBiped.weapon_bone" "" 0 0 -0.064417 0 0 89.999982 0 0 0 0 0 0
+$definebone "ValveBiped.weapon_bone2" "ValveBiped.weapon_bone" 0 0 0 0 0 0 0 0 0 0 0 0
+$definebone "ValveBiped.weapon_bone4" "ValveBiped.weapon_bone" 0 0 0 0 0 0 0 0 0 0 0 0
+
+
+$sequence "idle" {
+	"w_vz58_anims\idle.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$collisionmodel "w_vz58_physics.smd"
+{
+	$mass 8
+	$inertia 1
+	$damping 0
+	$rotdamping 0
+	$rootbone " "
+	$concave
+	$maxconvexpieces 5
+
+}
+
+$keyvalues
+{
+// CSGO compiler adds the qc_path keyvalue section automatically.
+//	qc_path 
+//	{
+//		"value" "e:\animations\vietnamcontent\vietnam\models\player\animation_iiopn\w_model\ak\w_vz58.qc"
+//	}
+}

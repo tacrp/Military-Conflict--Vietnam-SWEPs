@@ -1,0 +1,69 @@
+// Created by Crowbar 0.74
+
+$modelname "weapons\mcv\w_pm63.mdl"
+
+$bodygroup "Body"
+{
+	studio "w_pm63_lod0.smd"
+}
+
+$lod 15
+{
+	replacemodel "w_pm63_lod0.smd" "w_pm63_lod0_lod1.smd"
+	nofacial
+}
+$lod 30
+{
+	replacemodel "w_pm63_lod0.smd" "w_pm63_lod0_lod2.smd"
+	nofacial
+}
+
+$surfaceprop "weapon"
+
+$contents "solid"
+
+$illumposition -0.019 -3.201 -1.016
+
+$cdmaterials "models\weapons\mcv\w_pm63\"
+$cdmaterials ""
+
+$attachment "muzzle" "ValveBiped.weapon_bone" 0 2.4 8.7 rotate -90 -90 0
+$attachment "shell_eject" "ValveBiped.weapon_bone" -0.3 2.6 0.8 rotate 0 160 90
+$attachment "mag_eject" "ValveBiped.weapon_bone2" 0 -0.4 0.4 rotate -90 -90 0
+
+$cbox 0 0 0 0 0 0
+
+$bbox -3.597 -0.836 -5.471 10.249 0.773 3.165
+
+$definebone "ValveBiped.weapon_bone" "" 0 0 -0.064417 0 0 90.000043 0 0 0 0 0 0
+$definebone "ValveBiped.weapon_bone2" "ValveBiped.weapon_bone" 0 0 0 0 0 0 0 0 0 0 0 0
+
+
+$sequence "idle" {
+	"w_pm63_anims\idle.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$collisionmodel "w_pm63_physics.smd"
+{
+	$mass 8
+	$inertia 1
+	$damping 0
+	$rotdamping 0
+	$rootbone " "
+	$concave
+	$maxconvexpieces 4
+
+}
+
+$keyvalues
+{
+// CSGO compiler adds the qc_path keyvalue section automatically.
+//	qc_path 
+//	{
+//		"value" "d:\dev_content2\mcv\mcv-content\vietnam\models\player\animation_iiopn\w_model\pm63\w_pm63.qc"
+//	}
+}

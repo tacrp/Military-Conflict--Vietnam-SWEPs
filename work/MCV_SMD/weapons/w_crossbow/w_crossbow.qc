@@ -1,0 +1,70 @@
+// Created by Crowbar 0.74
+
+$modelname "weapons\mcv\w_crossbow.mdl"
+
+$bodygroup "body"
+{
+	studio "w_crossbow_lod0.smd"
+}
+
+$lod 15
+{
+	replacemodel "w_crossbow_lod0.smd" "w_crossbow_lod0_lod1.smd"
+	nofacial
+}
+$lod 30
+{
+	replacemodel "w_crossbow_lod0.smd" "w_crossbow_lod0_lod2.smd"
+	nofacial
+}
+
+$surfaceprop "weapon"
+
+$contents "solid"
+
+$illumposition -0.036 -0.377 -0.768
+
+$cdmaterials "models\weapons\mcv\w_crossbow\"
+$cdmaterials ""
+
+$attachment "muzzle" "ValveBiped.weapon_bone" 0 1.3 26.8 rotate -90 -90 0
+$attachment "shell_eject" "ValveBiped.weapon_bone2" 0 1.1 -2.3 rotate 90 0 0
+$attachment "mag_eject" "ValveBiped.weapon_bone2" 0 1.1 -2.3 rotate 90 0 0
+
+$cbox 0 0 0 0 0 0
+
+$bbox -19.38 -19.129 -3.714 19.965 19.143 2.168
+
+$definebone "ValveBiped.weapon_bone" "" 0 0 -0.064417 0 0 90.000043 0 0 0 0 0 0
+$definebone "ValveBiped.weapon_bone3" "ValveBiped.weapon_bone" 0 0 0 0 0 0 0 0 0 0 0 0
+$definebone "ValveBiped.weapon_bone2" "ValveBiped.weapon_bone" 0 0 0 0 0 0 0 0 0 0 0 0
+
+
+$sequence "idle" {
+	"w_crossbow_anims\idle.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$collisionmodel "w_crossbow_physics.smd"
+{
+	$mass 8
+	$inertia 1
+	$damping 0
+	$rotdamping 0
+	$rootbone " "
+	$concave
+	$maxconvexpieces 3
+
+}
+
+$keyvalues
+{
+// CSGO compiler adds the qc_path keyvalue section automatically.
+//	qc_path 
+//	{
+//		"value" "d:\dev_content2\mcv\mcv-content\vietnam\models\player\animation_iiopn\w_model\crossbow\w_crossbow.qc"
+//	}
+}

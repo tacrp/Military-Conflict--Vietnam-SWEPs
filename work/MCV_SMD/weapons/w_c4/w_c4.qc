@@ -1,0 +1,55 @@
+// Created by Crowbar 0.74
+
+$modelname "weapons\mcv\w_c4.mdl"
+
+$bodygroup "Body"
+{
+	studio "w_c4_lod0.smd"
+}
+
+
+$surfaceprop "weapon"
+
+$contents "solid"
+
+$illumposition -0.014 -0.042 0.718
+
+$cdmaterials "models\weapons\mcv\v_c4\"
+$cdmaterials ""
+
+$attachment "Wick" "ValveBiped.weapon_bone" 0 3.9 -1.5 rotate 0 0 0
+$attachment "light" "ValveBiped.weapon_bone" 0.06 3.14 1.35 rotate 0 0 0
+
+$cbox 0 0 0 0 0 0
+
+$bbox -1.68 -1.836 -4.875 1.775 1.776 6.312
+
+$definebone "ValveBiped.weapon_bone" "" 0 0 -0.064417 0 0 90.000009 0 0 0 0 0 0
+
+
+$sequence "idle" {
+	"w_c4_anims\idle.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$collisionmodel "w_c4_physics.smd"
+{
+	$mass 4
+	$inertia 1
+	$damping 0
+	$rotdamping 0
+	$rootbone " "
+
+}
+
+$keyvalues
+{
+// CSGO compiler adds the qc_path keyvalue section automatically.
+//	qc_path 
+//	{
+//		"value" "e:\animations\vietnamcontent\vietnam\models\player\animation_iiopn\w_model\grenade\w_c4_lod0.qc"
+//	}
+}

@@ -1,0 +1,69 @@
+// Created by Crowbar 0.74
+
+$modelname "weapons\mcv\w_mat49_sog.mdl"
+
+$bodygroup "Body"
+{
+	studio "w_mat49_sog_lod0.smd"
+}
+
+$lod 15
+{
+	replacemodel "w_mat49_sog_lod0.smd" "w_mat49_sog_lod0_lod1.smd"
+	nofacial
+}
+$lod 30
+{
+	replacemodel "w_mat49_sog_lod0.smd" "w_mat49_sog_lod0_lod2.smd"
+	nofacial
+}
+
+$surfaceprop "weapon"
+
+$contents "solid"
+
+$illumposition 0.144 -3.064 -2.74
+
+$cdmaterials "models\weapons\mcv\w_mat49\"
+$cdmaterials "models\weapons\mcv\w_m3a1\"
+
+$attachment "muzzle" "ValveBiped.weapon_bone" 0 1.8 18 rotate -90 -90 0
+$attachment "shell_eject" "ValveBiped.weapon_bone" -1 1.9 2 rotate 0 180 90
+$attachment "mag_eject" "ValveBiped.weapon_bone2" 0 -1 2 rotate -90 -90 0
+
+$cbox 0 0 0 0 0 0
+
+$bbox -12.26 -1.31 -9.259 18.342 1.599 3.386
+
+$definebone "ValveBiped.weapon_bone" "" 0 0 -0.064417 0 0 89.999982 0 0 0 0 0 0
+$definebone "ValveBiped.weapon_bone2" "ValveBiped.weapon_bone" 0 0 0 0 0 0 0 0 0 0 0 0
+
+
+$sequence "idle" {
+	"w_mat49_sog_anims\idle.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$collisionmodel "w_mat49_sog_physics.smd"
+{
+	$mass 8
+	$inertia 1
+	$damping 0
+	$rotdamping 0
+	$rootbone " "
+	$concave
+	$maxconvexpieces 8
+
+}
+
+$keyvalues
+{
+// CSGO compiler adds the qc_path keyvalue section automatically.
+//	qc_path 
+//	{
+//		"value" "d:\dev_content2\mcv\mcv-content\vietnam\models\player\animation_iiopn\w_model\mat49\w_mat49_sog.qc"
+//	}
+}

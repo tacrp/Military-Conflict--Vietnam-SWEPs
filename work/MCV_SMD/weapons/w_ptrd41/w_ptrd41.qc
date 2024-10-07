@@ -1,0 +1,70 @@
+// Created by Crowbar 0.74
+
+$modelname "weapons\mcv\w_ptrd41.mdl"
+
+$bodygroup "Body"
+{
+	studio "w_ptrd41_lod0.smd"
+}
+
+$lod 15
+{
+	replacemodel "w_ptrd41_lod0.smd" "w_ptrd41_lod0_lod1.smd"
+	nofacial
+}
+$lod 30
+{
+	replacemodel "w_ptrd41_lod0.smd" "w_ptrd41_lod0_lod2.smd"
+	nofacial
+}
+
+$surfaceprop "weapon"
+
+$contents "solid"
+
+$illumposition 0.078 -23.078 -3.333
+
+$cdmaterials "models\weapons\mcv\w_ptrd41\"
+$cdmaterials "models\weapons\mcv\shells\"
+
+$attachment "muzzle" "ValveBiped.weapon_bone" 0 1 60 rotate -90 -90 0
+$attachment "shell_eject" "ValveBiped.weapon_bone" 0 1.3 3.5 rotate 0 -90 90
+$attachment "mag_eject" "ValveBiped.weapon_bone2" 0 1.3 3.5 rotate -90 -90 0
+
+$cbox 0 0 0 0 0 0
+
+$bbox -15.356 -9.724 -12.234 61.255 9.792 5.386
+
+$definebone "ValveBiped.weapon_bone" "" 0 0 -0.064417 0 0 89.999989 0 0 0 0 0 0
+$definebone "ValveBiped.weapon_bone2" "ValveBiped.weapon_bone" 0 0 0 0 0 0 0 0 0 0 0 0
+$definebone "ValveBiped.weapon_bone3" "ValveBiped.weapon_bone" 0 0 0 0 0 0 0 0 0 0 0 0
+
+
+$sequence "idle" {
+	"w_ptrd41_anims\idle.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$collisionmodel "w_ptrd41_physics.smd"
+{
+	$mass 8
+	$inertia 1
+	$damping 0
+	$rotdamping 0
+	$rootbone " "
+	$concave
+	$maxconvexpieces 7
+
+}
+
+$keyvalues
+{
+// CSGO compiler adds the qc_path keyvalue section automatically.
+//	qc_path 
+//	{
+//		"value" "d:\dev_content2\mcv\mcv-content\vietnam\models\player\animation_iiopn\w_model\ptrd41\w_ptrd41.qc"
+//	}
+}

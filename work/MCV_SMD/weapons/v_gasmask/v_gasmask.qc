@@ -1,0 +1,169 @@
+// Created by Crowbar 0.74
+
+$modelname "weapons/mcv/v_gasmask.mdl"
+
+$bodygroup "studio"
+{
+	studio "gasmask_us.smd"
+	studio "gasmask_vc.smd"
+}
+
+
+$surfaceprop "default"
+
+$contents "solid"
+
+$illumposition -3.441 -2.871 -2.982
+
+$cdmaterials "models\player\hats\"
+
+$attachment "cam" "cam_driver" 0 0 0 rotate 0 0 0
+
+$cbox 0 0 0 0 0 0
+
+$bbox -22.932 -21.671 -28.051 28.673 14.789 22.088
+
+$definebone "root" "" 0 7.450089 -27.509027 0 0 0 0 0 0 0 0 0
+$definebone "pelvis" "root" -0.000002 0 0 -89.790336 -89.995112 89.995112 0 0 0 0 0 0
+$definebone "spine_01" "pelvis" 4.255468 -0.335183 -0.000002 0 -7.153264 0 0 0 0 0 0 0
+$definebone "spine_02" "spine_01" 7.431244 1.496476 0.000003 0 14.061818 0 0 0 0 0 0 0
+$definebone "spine_03" "spine_02" 5.278476 0.165676 0.000001 0 2.779475 0 0 0 0 0 0 0
+$definebone "clavicle_r" "spine_03" 4.678681 -1.075517 1.488979 66.458294 -74.413354 113.206957 0 0 0 0 0 0
+$definebone "upperarm_r" "clavicle_r" -6.214489 -0.000051 -0.000013 -39.361595 171.562959 76.194401 0 0 0 0 0 0
+$definebone "lowerarm_r" "upperarm_r" 11.944914 0 -0.000001 -33.50147 -13.951567 11.422697 0 0 0 0 0 0
+$definebone "hand_r" "lowerarm_r" 10.620188 -0.000001 0 -16.392264 136.879354 7.278513 0 0 0 0 0 0
+$definebone "index_01_r" "hand_r" -4.751104 -0.694544 0.830583 -3.761983 25.537937 14.86688 0 0 0 0 0 0
+$definebone "index_02_r" "index_01_r" -1.688068 0 -0.000032 -0.475094 11.98548 1.337568 0 0 0 0 0 0
+$definebone "index_03_r" "index_02_r" -1.336143 0.000006 -0.000012 0.996949 -9.496082 1.137491 0 0 0 0 0 0
+$definebone "middle_01_r" "hand_r" -4.820498 -0.509525 -0.224756 -7.039186 22.826641 1.918148 0 0 0 0 0 0
+$definebone "middle_02_r" "middle_01_r" -1.826996 -0.000112 0.000005 1.136806 12.280723 -2.024889 0 0 0 0 0 0
+$definebone "middle_03_r" "middle_02_r" -1.436584 -0.000029 0.000002 -4.389886 -15.399042 0.781571 0 0 0 0 0 0
+$definebone "pinky_01_r" "hand_r" -3.992353 -0.891264 -1.827902 -18.933047 20.186851 -18.723804 0 0 0 0 0 0
+$definebone "pinky_02_r" "pinky_01_r" -1.405926 -0.000063 -0.000006 -1.31534 11.207978 1.063928 0 0 0 0 0 0
+$definebone "pinky_03_r" "pinky_02_r" -1.175362 0.000088 -0.00002 3.86947 1.038551 0.445649 0 0 0 0 0 0
+$definebone "ring_01_r" "hand_r" -4.526749 -0.690651 -1.120741 -10.988355 23.292571 -13.509258 0 0 0 0 0 0
+$definebone "ring_02_r" "ring_01_r" -1.744053 -0.000017 -0.000011 -1.669655 13.314453 0.301434 0 0 0 0 0 0
+$definebone "ring_03_r" "ring_02_r" -1.368774 -0.000032 0.000006 2.987519 -12.899339 -0.360962 0 0 0 0 0 0
+$definebone "thumb_01_r" "hand_r" -1.874792 -0.935143 0.999182 36.9214 27.05817 95.06637 0 0 0 0 0 0
+$definebone "thumb_02_r" "thumb_01_r" -1.523455 0.000011 0.000027 9.832189 15.151125 1.61322 0 0 0 0 0 0
+$definebone "thumb_03_r" "thumb_02_r" -1.599289 -0.000044 0.000014 0.481344 -12.385569 2.413985 0 0 0 0 0 0
+$definebone "lowerarm_twist_01_r" "lowerarm_r" 5.511816 0 0.000006 0.000749 -179.999855 76.491432 0 0 0 0 0 0
+$definebone "upperarm_twist_01_r" "upperarm_r" 0.196847 -0.000001 -0.000002 0.002048 179.998994 70.050126 0 0 0 0 0 0
+$definebone "clavicle_l" "spine_03" 4.678687 -1.075518 -1.488978 66.45787 105.586187 113.20917 0 0 0 0 0 0
+$definebone "upperarm_l" "clavicle_l" 6.214487 0 0.000018 39.360259 -8.439953 13.804273 0 0 0 0 0 0
+$definebone "lowerarm_l" "upperarm_l" 11.944899 -0.000024 -0.000187 -11.598666 -34.294906 -3.614679 0 0 0 0 0 0
+$definebone "hand_l" "lowerarm_l" 10.620166 -0.000072 0.000009 -40.973362 21.950186 -97.527848 0 0 0 0 0 0
+$definebone "index_01_l" "hand_l" 4.751165 0.694336 -0.830477 -3.764678 25.536558 14.866825 0 0 0 0 0 0
+$definebone "index_02_l" "index_01_l" 1.688065 -0.000042 0.000003 -0.475096 11.986165 1.337913 0 0 0 0 0 0
+$definebone "index_03_l" "index_02_l" 1.336147 -0.000053 -0.00001 -1.907891 -9.554013 1.137835 0 0 0 0 0 0
+$definebone "middle_01_l" "hand_l" 4.820513 0.509306 0.224863 -7.040105 22.824407 1.918038 0 0 0 0 0 0
+$definebone "middle_02_l" "middle_01_l" 1.827003 0.000099 0.000008 1.136803 12.281816 -2.024886 0 0 0 0 0 0
+$definebone "middle_03_l" "middle_02_l" 1.436584 -0.000008 0.000006 -0.388009 -15.344322 0.779284 0 0 0 0 0 0
+$definebone "pinky_01_l" "hand_l" 3.992355 0.891064 1.827991 -18.934362 20.185304 -18.724084 0 0 0 0 0 0
+$definebone "pinky_02_l" "pinky_01_l" 1.405926 0.000034 -0.000008 -1.315798 11.207972 1.064105 0 0 0 0 0 0
+$definebone "pinky_03_l" "pinky_02_l" 1.175362 -0.000115 0.000002 7.050417 1.063527 0.448059 0 0 0 0 0 0
+$definebone "ring_01_l" "hand_l" 4.526762 0.69043 1.120838 -10.989502 23.292171 -13.50994 0 0 0 0 0 0
+$definebone "ring_02_l" "ring_01_l" 1.744049 -0.000049 -0.000003 -1.670003 13.315601 0.301554 0 0 0 0 0 0
+$definebone "ring_03_l" "ring_02_l" 1.368767 -0.000039 -0.000014 9.085787 -12.938471 -0.365136 0 0 0 0 0 0
+$definebone "thumb_01_l" "hand_l" 1.874863 0.935066 -0.999133 36.91819 27.056502 95.068372 0 0 0 0 0 0
+$definebone "thumb_02_l" "thumb_01_l" 1.523455 -0.000061 -0.000004 9.832419 15.151474 1.6127 0 0 0 0 0 0
+$definebone "thumb_03_l" "thumb_02_l" 1.599281 -0.000025 0.000003 4.129948 -12.231556 2.421543 0 0 0 0 0 0
+$definebone "lowerarm_twist_01_l" "lowerarm_l" 5.511807 -0.000042 0.000003 0.000348 0.000176 -13.510464 0 0 0 0 0 0
+$definebone "upperarm_twist_01_l" "upperarm_l" 0.19685 0.000002 0.000001 0.00098 0.000112 -19.952282 0 0 0 0 0 0
+$definebone "cam_driver" "" 0 0 0 0 -89.999982 0 0 0 0 0 0 0
+$definebone "Base" "" 0.004188 -28.221586 -5.9396 0 89.999982 0 0 0 0 0 0 0
+$definebone "rhand_ikTarget" "Base" 22.427221 11.148872 0.416642 0 0 0 0 0 0 0 0 0
+$definebone "Back" "Base" 8.943741 -0.001448 2.554305 0 0 0 0 0 0 0 0 0
+$definebone "lhand_ikTarget" "Base" -3.388697 -2.142649 -3.667964 -31.015623 -145.724176 95.72799 0 0 0 0 0 0
+
+$bonemerge "root"
+$bonemerge "pelvis"
+$bonemerge "spine_01"
+$bonemerge "spine_02"
+$bonemerge "spine_03"
+$bonemerge "clavicle_r"
+$bonemerge "upperarm_r"
+$bonemerge "lowerarm_r"
+$bonemerge "hand_r"
+$bonemerge "index_01_r"
+$bonemerge "index_02_r"
+$bonemerge "index_03_r"
+$bonemerge "middle_01_r"
+$bonemerge "middle_02_r"
+$bonemerge "middle_03_r"
+$bonemerge "pinky_01_r"
+$bonemerge "pinky_02_r"
+$bonemerge "pinky_03_r"
+$bonemerge "ring_01_r"
+$bonemerge "ring_02_r"
+$bonemerge "ring_03_r"
+$bonemerge "thumb_01_r"
+$bonemerge "thumb_02_r"
+$bonemerge "thumb_03_r"
+$bonemerge "lowerarm_twist_01_r"
+$bonemerge "upperarm_twist_01_r"
+$bonemerge "clavicle_l"
+$bonemerge "upperarm_l"
+$bonemerge "lowerarm_l"
+$bonemerge "hand_l"
+$bonemerge "index_01_l"
+$bonemerge "index_02_l"
+$bonemerge "index_03_l"
+$bonemerge "middle_01_l"
+$bonemerge "middle_02_l"
+$bonemerge "middle_03_l"
+$bonemerge "pinky_01_l"
+$bonemerge "pinky_02_l"
+$bonemerge "pinky_03_l"
+$bonemerge "ring_01_l"
+$bonemerge "ring_02_l"
+$bonemerge "ring_03_l"
+$bonemerge "thumb_01_l"
+$bonemerge "thumb_02_l"
+$bonemerge "thumb_03_l"
+$bonemerge "lowerarm_twist_01_l"
+$bonemerge "upperarm_twist_01_l"
+$bonemerge "Base"
+$bonemerge "rhand_ikTarget"
+$bonemerge "lhand_ikTarget"
+
+$include "../../militaryconflict_vietnam.qci"
+
+
+$sectionframes 30 30
+
+
+
+
+$sequence "equip" {
+	"v_gasmask_anims\equip.smd"
+	activity "ACT_VM_DRAW" 1
+	{ event 3201 20 "" }
+	{ event 5004 5 "Player.BreathingMaskOn" }
+	fadein 0
+	fadeout 0
+	fps 30
+	
+	
+}
+
+$sequence "unequip" {
+	"v_gasmask_anims\unequip.smd"
+	activity "ACT_VM_HOLSTER" 1
+	{ event 3202 10 "" }
+	{ event 5004 11 "Player.BreathingMaskOff" }
+	fadein 0
+	fadeout 0
+	fps 30
+	
+	
+}
+
+$keyvalues
+{
+// CSGO compiler adds the qc_path keyvalue section automatically.
+//	qc_path 
+//	{
+//		"value" "d:\program files (x86)\steam\steamapps\sourcemods\military conflict vietnam\content\vietnam\models\guns\equipment_gasmask\gasmask.qc"
+//	}
+}

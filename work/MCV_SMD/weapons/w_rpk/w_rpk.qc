@@ -1,0 +1,78 @@
+// Created by Crowbar 0.74
+
+$modelname "weapons\mcv\w_rpk.mdl"
+
+$bodygroup "Body"
+{
+	studio "w_rpk_lod0.smd"
+}
+$bodygroup "bipod"
+{
+	studio "w_rpk_bipod1_lod0.smd"
+	studio "w_rpk_bipod2_lod0.smd"
+}
+
+$lod 15
+{
+	replacemodel "w_rpk_lod0.smd" "w_rpk_lod0_lod1.smd"
+	replacemodel "w_rpk_bipod1_lod0.smd" "w_rpk_bipod1_lod0_lod1.smd"
+	replacemodel "w_rpk_bipod2_lod0.smd" "w_rpk_bipod2_lod0_lod1.smd"
+	nofacial
+}
+$lod 30
+{
+	replacemodel "w_rpk_lod0.smd" "w_rpk_lod0_lod2.smd"
+	replacemodel "w_rpk_bipod1_lod0.smd" "w_rpk_bipod1_lod0_lod2.smd"
+	replacemodel "w_rpk_bipod2_lod0.smd" "w_rpk_bipod2_lod0_lod2.smd"
+	nofacial
+}
+
+$surfaceprop "weapon"
+
+$contents "solid"
+
+$illumposition 0 -7.388 -3.676
+
+$cdmaterials "models\weapons\mcv\w_rpk\"
+$cdmaterials ""
+
+$attachment "muzzle" "ValveBiped.weapon_bone" 0 0.5 27.8 rotate -90 -90 0
+$attachment "shell_eject" "ValveBiped.weapon_bone" -1 1 3.3 rotate 0 180 90
+$attachment "mag_eject" "ValveBiped.weapon_bone2" 0 -0.5 3 rotate -90 -90 0
+
+$cbox 0 0 0 0 0 0
+
+$bbox -13.433 -7.063 -9.956 28.038 7.063 2.822
+
+$definebone "ValveBiped.weapon_bone" "" 0 0 -0.064417 0 0 90.00005 0 0 0 0 0 0
+$definebone "ValveBiped.weapon_bone2" "ValveBiped.weapon_bone" 0 0 0 0 0 0 0 0 0 0 0 0
+
+
+$sequence "idle" {
+	"w_rpk_anims\idle.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$collisionmodel "w_rpk_physics.smd"
+{
+	$mass 8
+	$inertia 1
+	$damping 0
+	$rotdamping 0
+	$rootbone " "
+	$concave
+	$maxconvexpieces 9
+
+}
+
+$keyvalues
+{
+// CSGO compiler adds the qc_path keyvalue section automatically.
+//	qc_path 
+//	{
+//		"value" "d:\dev_content2\mcv\mcv-content\vietnam\models\player\animation_iiopn\w_model\rpk\w_rpk.qc"
+//	}
+}

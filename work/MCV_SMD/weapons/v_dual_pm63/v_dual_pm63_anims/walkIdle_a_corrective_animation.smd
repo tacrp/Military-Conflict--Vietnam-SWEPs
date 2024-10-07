@@ -1,0 +1,71 @@
+// Created by Crowbar 0.74
+version 1
+nodes
+  0 "root" -1
+  1 "pelvis" 0
+  2 "spine_01" 1
+  3 "spine_02" 2
+  4 "spine_03" 3
+  5 "clavicle_r" 4
+  6 "upperarm_r" 5
+  7 "lowerarm_r" 6
+  8 "hand_r" 7
+  9 "index_01_r" 8
+  10 "index_02_r" 9
+  11 "index_03_r" 10
+  12 "middle_01_r" 8
+  13 "middle_02_r" 12
+  14 "middle_03_r" 13
+  15 "pinky_01_r" 8
+  16 "pinky_02_r" 15
+  17 "pinky_03_r" 16
+  18 "ring_01_r" 8
+  19 "ring_02_r" 18
+  20 "ring_03_r" 19
+  21 "thumb_01_r" 8
+  22 "thumb_02_r" 21
+  23 "thumb_03_r" 22
+  24 "BaseMesh" 8
+  25 "Mag" 24
+  26 "Trigger" 24
+  27 "Bolt" 24
+  28 "MagRelease" 24
+  29 "rhand_ikTarget" 24
+  30 "LHand_IKtarget" 24
+  31 "lowerarm_twist_01_r" 7
+  32 "upperarm_twist_01_r" 6
+  33 "clavicle_l" 4
+  34 "upperarm_l" 33
+  35 "lowerarm_l" 34
+  36 "hand_l" 35
+  37 "index_01_l" 36
+  38 "index_02_l" 37
+  39 "index_03_l" 38
+  40 "middle_01_l" 36
+  41 "middle_02_l" 40
+  42 "middle_03_l" 41
+  43 "pinky_01_l" 36
+  44 "pinky_02_l" 43
+  45 "pinky_03_l" 44
+  46 "ring_01_l" 36
+  47 "ring_02_l" 46
+  48 "ring_03_l" 47
+  49 "thumb_01_l" 36
+  50 "thumb_02_l" 49
+  51 "thumb_03_l" 50
+  52 "BaseLeftMesh" 36
+  53 "MagLeft" 52
+  54 "MagReleaseLeft" 52
+  55 "lowerarm_twist_01_l" 35
+  56 "upperarm_twist_01_l" 34
+  57 "cam_driver" -1
+  58 "Bullet" 25
+  59 "BulletLeft" 53
+  60 "TriggerLeft" 52
+  61 "BoltLeft" 52
+end
+skeleton
+  time 0
+    0 0.000000 0.000000 0.000000 0.000000 0.000000 -1.570796
+    57 0.000000 0.000000 0.000000 0.000000 0.000000 -1.570796
+end

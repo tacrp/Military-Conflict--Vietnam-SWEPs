@@ -1,0 +1,91 @@
+// Created by Crowbar 0.74
+
+$modelname "weapons\mcv\w_lpo50.mdl"
+
+$bodygroup "Body"
+{
+	studio "w_lpo50_lod0.smd"
+}
+
+$lod 15
+{
+	replacemodel "w_lpo50_lod0.smd" "w_lpo50_lod0_lod1.smd"
+	nofacial
+}
+$lod 30
+{
+	replacemodel "w_lpo50_lod0.smd" "w_lpo50_lod0_lod2.smd"
+	nofacial
+}
+
+$surfaceprop "weapon"
+
+$contents "solid"
+
+$illumposition -4.619 -1.422 -0.94
+
+$cdmaterials "models\weapons\mcv\w_lpo50\"
+$cdmaterials ""
+
+$attachment "muzzle" "ValveBiped.Weapon_bone" 0 1 18.5 rotate -90 -90 0
+$attachment "1" "ValveBiped.Weapon_bone" -2.2 -0.2 -8.3 rotate -90 -90 0
+$attachment "flamethrower_gascable_2" "ValveBiped.Weapon_bone" -2.2 -0.2 -8.3 rotate -90 -90 0
+
+$cbox 0 0 0 0 0 0
+
+$bbox -15.93 -10.219 -5.519 18.673 1.25 3.626
+
+$definebone "ValveBiped" "" 0 0 0 0 0 89.999982 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Hand" "ValveBiped" 0.267086 -2.58952 10.171795 78.841283 -102.773508 -9.262035 0 0 0 0 0 0
+$definebone "ValveBiped.Weapon_bone" "ValveBiped.Bip01_R_Hand" 5 -1.5 -4.999998 0.000002 0 0.000001 0 0 0 0 0 0
+
+
+$sequence "idle" {
+	"w_lpo50_anims\idle.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "attack1" {
+	"w_lpo50_anims\attack1.smd"
+	activity "ACT_RANGE_ATTACK_SMG1" 1
+	{ event AE_NPC_MUZZLEFLASH 0 "SMG1 MUZZLE" }
+	{ event 3002 0 "" }
+	{ event 6001 0 "0" }
+	fadein 0.2
+	fadeout 0.2
+	fps 20
+}
+
+$sequence "attackoffcenter" {
+	"w_lpo50_anims\attackoffcenter.smd"
+	{ event AE_NPC_MUZZLEFLASH 0 "SMG1 MUZZLE" }
+	{ event 3002 0 "lefthand" }
+	{ event 6001 0 "0" }
+	fadein 0.2
+	fadeout 0.2
+	fps 20
+}
+
+$collisionmodel "w_lpo50_physics.smd"
+{
+	$mass 8
+	$inertia 1
+	$damping 0
+	$rotdamping 0
+	$rootbone " "
+	$concave
+	$maxconvexpieces 7
+
+}
+
+$keyvalues
+{
+// CSGO compiler adds the qc_path keyvalue section automatically.
+//	qc_path 
+//	{
+//		"value" "e:\animations\vietnamcontent\vietnam\models\player\animation_iiopn\w_model\lpo50\w_lpo50.qc"
+//	}
+}

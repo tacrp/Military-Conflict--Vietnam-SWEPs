@@ -1,0 +1,96 @@
+// Created by Crowbar 0.74
+
+$modelname "weapons\mcv\w_m91.mdl"
+
+$bodygroup "Body"
+{
+	studio "w_m91_lod0.smd"
+}
+$bodygroup "bayonet"
+{
+	blank
+	studio "w_m38_sniper_akb_lod0.smd"
+	studio "w_m38_sniper_type30_lod0.smd"
+}
+$bodygroup "mount"
+{
+	blank
+	studio "w_m38_sniper_vcm_lod0.smd"
+}
+$bodygroup "grenade"
+{
+	blank
+	studio "w_m38_sniper_vcg_lod0.smd"
+}
+
+$lod 15
+{
+	replacemodel "w_m91_lod0.smd" "w_m91_lod0_lod1.smd"
+	replacemodel "w_m38_sniper_akb_lod0.smd" "w_m38_sniper_akb_lod0_lod1.smd"
+	replacemodel "w_m38_sniper_type30_lod0.smd" "w_m38_sniper_type30_lod0_lod1.smd"
+	replacemodel "w_m38_sniper_vcm_lod0.smd" "w_m38_sniper_vcm_lod0_lod1.smd"
+	replacemodel "w_m38_sniper_vcg_lod0.smd" "w_m38_sniper_vcg_lod0_lod1.smd"
+	nofacial
+}
+$lod 30
+{
+	replacemodel "w_m91_lod0.smd" "w_m91_lod0_lod2.smd"
+	replacemodel "w_m38_sniper_akb_lod0.smd" "w_m38_sniper_akb_lod0_lod2.smd"
+	replacemodel "w_m38_sniper_type30_lod0.smd" "w_m38_sniper_type30_lod0_lod2.smd"
+	replacemodel "w_m38_sniper_vcm_lod0.smd" "w_m38_sniper_vcm_lod0_lod2.smd"
+	replacemodel "w_m38_sniper_vcg_lod0.smd" "w_m38_sniper_vcg_lod0_lod2.smd"
+	nofacial
+}
+
+$surfaceprop "weapon"
+
+$contents "solid"
+
+$illumposition -0.156 -10.884 -1.063
+
+$cdmaterials "models\weapons\mcv\w_ak47_bayonet\"
+$cdmaterials "models\weapons\mcv\w_type30_bayonet\"
+$cdmaterials "models\weapons\mcv\w_m38_s\"
+$cdmaterials "models\weapons\mcv\rif_gl\"
+
+$attachment "muzzle" "ValveBiped.weapon_bone" 0 1.3 22 rotate -90 -90 0
+$attachment "shell_eject" "ValveBiped.weapon_bone" -0.3 1.2 -1.4 rotate 0 -180 90
+$attachment "mag_eject" "ValveBiped.weapon_bone" -0.3 1.2 -1.4 rotate 0 -180 90
+
+$cbox 0 0 0 0 0 0
+
+$bbox -18.475 -1.707 -4.834 39.939 1.395 3.602
+
+$definebone "ValveBiped.weapon_bone" "" 0 0 -0.064417 0 0 89.999982 0 0 0 0 0 0
+$definebone "ValveBiped.weapon_bone3" "ValveBiped.weapon_bone" 0 0 0 0 0 0 0 0 0 0 0 0
+$definebone "ValveBiped.weapon_bone4" "ValveBiped.weapon_bone" 0 0 0 0 0 0 0 0 0 0 0 0
+
+
+$sequence "idle" {
+	"w_m91_anims\idle.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$collisionmodel "w_m91_physics.smd"
+{
+	$mass 8
+	$inertia 1
+	$damping 0
+	$rotdamping 0
+	$rootbone " "
+	$concave
+	$maxconvexpieces 6
+
+}
+
+$keyvalues
+{
+// CSGO compiler adds the qc_path keyvalue section automatically.
+//	qc_path 
+//	{
+//		"value" "e:\animations\vietnamcontent\vietnam\models\player\animation_iiopn\w_model\m38\w_m91.qc"
+//	}
+}

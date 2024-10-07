@@ -1,0 +1,62 @@
+// Created by Crowbar 0.74
+
+$modelname "weapons\mcv\w_m16_flamer.mdl"
+
+$bodygroup "Body"
+{
+	studio "w_m16_flamer_lod0.smd"
+}
+
+
+$surfaceprop "weapon"
+
+$contents "solid"
+
+$illumposition -0.119 -4.924 -1.853
+
+$cdmaterials "models\weapons\mcv\w_bayonet\"
+$cdmaterials "models\weapons\mcv\w_m203\"
+$cdmaterials "models\weapons\mcv\w_m9a1\"
+$cdmaterials "models\player\equipment\"
+
+$attachment "muzzle" "ValveBiped.weapon_bone" 0 0.7 24.5 rotate -90 -90 0
+$attachment "muzzle_equipment" "ValveBiped.weapon_bone" 0 -1.7 18.3 rotate -90 -90 0
+$attachment "shell_eject" "ValveBiped.weapon_bone" -0.75 0.7 1.5 rotate 0 180 90
+$attachment "mag_eject" "ValveBiped.weapon_bone2" 0 0 0 rotate -90 -90 0
+
+$cbox 0 0 0 0 0 0
+
+$bbox -14.827 -1.386 -7.008 24.647 1.386 3.536
+
+$definebone "ValveBiped.weapon_bone" "" 0 0.0005 -0.064417 0 0.000172 89.999982 0 0 0 0 0 0
+$definebone "ValveBiped.weapon_bone2" "ValveBiped.weapon_bone" 0.002441 -2.998411 2.09769 -0.000172 0 0 0 0 0 0 0 0
+
+
+$sequence "idle" {
+	"w_m16_flamer_anims\idle.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$collisionmodel "w_m16_flamer_physics.smd"
+{
+	$mass 8
+	$inertia 1
+	$damping 0
+	$rotdamping 0
+	$rootbone " "
+	$concave
+	$maxconvexpieces 10
+
+}
+
+$keyvalues
+{
+// CSGO compiler adds the qc_path keyvalue section automatically.
+//	qc_path 
+//	{
+//		"value" "models\guns\rifle_m203\wbake\w_m203_flamer.qc"
+//	}
+}

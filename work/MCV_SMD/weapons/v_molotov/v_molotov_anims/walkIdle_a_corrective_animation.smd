@@ -1,0 +1,74 @@
+// Created by Crowbar 0.74
+version 1
+nodes
+  0 "root" -1
+  1 "pelvis" 0
+  2 "spine_01" 1
+  3 "spine_02" 2
+  4 "spine_03" 3
+  5 "clavicle_l" 4
+  6 "upperarm_l" 5
+  7 "lowerarm_l" 6
+  8 "hand_l" 7
+  9 "index_01_l" 8
+  10 "index_02_l" 9
+  11 "index_03_l" 10
+  12 "middle_01_l" 8
+  13 "middle_02_l" 12
+  14 "middle_03_l" 13
+  15 "pinky_01_l" 8
+  16 "pinky_02_l" 15
+  17 "pinky_03_l" 16
+  18 "ring_01_l" 8
+  19 "ring_02_l" 18
+  20 "ring_03_l" 19
+  21 "thumb_01_l" 8
+  22 "thumb_02_l" 21
+  23 "thumb_03_l" 22
+  24 "lowerarm_twist_01_l" 7
+  25 "upperarm_twist_01_l" 6
+  26 "clavicle_r" 4
+  27 "upperarm_r" 26
+  28 "lowerarm_r" 27
+  29 "hand_r" 28
+  30 "index_01_r" 29
+  31 "index_02_r" 30
+  32 "index_03_r" 31
+  33 "middle_01_r" 29
+  34 "middle_02_r" 33
+  35 "middle_03_r" 34
+  36 "pinky_01_r" 29
+  37 "pinky_02_r" 36
+  38 "pinky_03_r" 37
+  39 "ring_01_r" 29
+  40 "ring_02_r" 39
+  41 "ring_03_r" 40
+  42 "thumb_01_r" 29
+  43 "thumb_02_r" 42
+  44 "thumb_03_r" 43
+  45 "lowerarm_twist_01_r" 28
+  46 "upperarm_twist_01_r" 27
+  47 "Object001" -1
+  48 "Object002" 47
+  49 "jf1" 47
+  50 "jf2" 49
+  51 "jf3" 50
+  52 "molotov" -1
+  53 "Cloth1" 52
+  54 "Cloth2" 53
+  55 "Cloth3" 54
+  56 "Cloth4" 55
+  57 "Liquid" 52
+  58 "cam_driver" -1
+  59 "Base" -1
+  60 "rhand_ikTarget" 59
+  61 "lhand_ikTarget" 47
+end
+skeleton
+  time 0
+    0 0.000000 0.000000 0.000000 0.000000 0.000000 -1.570796
+    47 0.000000 0.000000 0.000000 0.000000 0.000000 -1.570796
+    52 0.000000 0.000000 0.000000 0.000000 0.000000 -1.570796
+    58 0.000000 0.000000 0.000000 0.000000 0.000000 -1.570796
+    59 0.000000 0.000000 0.000000 0.000000 0.000000 -1.570796
+end

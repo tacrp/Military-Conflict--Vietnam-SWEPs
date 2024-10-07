@@ -1,0 +1,126 @@
+// Created by Crowbar 0.74
+
+$modelname "weapons\mcv\w_m1g_s.mdl"
+
+$bodygroup "Body"
+{
+	studio "m1g_s_lod0.smd"
+}
+$bodygroup "bayonet"
+{
+	blank
+	studio "m1g_s_w_m7b_lod0.smd"
+	studio "m1g_s_w_m1905_lod0.smd"
+}
+$bodygroup "scope"
+{
+	studio "m1g_s_scope_lod0.smd"
+	blank
+}
+$bodygroup "mount"
+{
+	blank
+	studio "m1g_s_usm_lod0.smd"
+}
+$bodygroup "grenade"
+{
+	blank
+	studio "m1g_s_usg_lod0.smd"
+}
+
+$lod 15
+{
+	replacemodel "m1g_s_lod0.smd" "m1g_s_lod0_lod1.smd"
+	replacemodel "m1g_s_w_m7b_lod0.smd" "m1g_s_w_m7b_lod0_lod1.smd"
+	replacemodel "m1g_s_w_m1905_lod0.smd" "m1g_s_w_m1905_lod0_lod1.smd"
+	replacemodel "m1g_s_scope_lod0.smd" "m1g_s_scope_lod0_lod1.smd"
+	replacemodel "m1g_s_usm_lod0.smd" "m1g_s_usm_lod0_lod1.smd"
+	replacemodel "m1g_s_usg_lod0.smd" "m1g_s_usg_lod0_lod1.smd"
+	nofacial
+}
+$lod 30
+{
+	replacemodel "m1g_s_lod0.smd" "m1g_s_lod0_lod2.smd"
+	replacemodel "m1g_s_w_m7b_lod0.smd" "m1g_s_w_m7b_lod0_lod2.smd"
+	replacemodel "m1g_s_w_m1905_lod0.smd" "m1g_s_w_m1905_lod0_lod2.smd"
+	replacemodel "m1g_s_scope_lod0.smd" "m1g_s_scope_lod0_lod2.smd"
+	replacemodel "m1g_s_usm_lod0.smd" "m1g_s_usm_lod0_lod2.smd"
+	replacemodel "m1g_s_usg_lod0.smd" "m1g_s_usg_lod0_lod2.smd"
+	nofacial
+}
+
+$surfaceprop "weapon"
+
+$contents "solid"
+
+$illumposition -4.168 -9.189 -0.123
+
+$cdmaterials "models\weapons\mcv\w_bayonet\"
+$cdmaterials "models\weapons\mcv\w_m1905_bayonet\"
+$cdmaterials "models\weapons\mcv\w_m1g_s\"
+$cdmaterials "models\weapons\mcv\rif_gl\"
+$cdmaterials ""
+
+$attachment "muzzle" "ValveBiped.Weapon_bone" 0 1.9 24.85 rotate -90 -90 0
+$attachment "shell_eject" "ValveBiped.Weapon_bone" 0 1.5 -1 rotate 0 90 90
+$attachment "mag_eject" "ValveBiped.Weapon_bone" 0 1.5 -1 rotate 0 90 90
+
+$cbox 0 0 0 0 0 0
+
+$bbox -18.725 -10.219 -5.111 37.02 1.883 4.676
+
+$definebone "ValveBiped" "" 0 0 0 0 0 89.999989 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Hand" "ValveBiped" 0.267086 -2.58952 10.171793 78.84129 -102.773508 -9.262035 0 0 0 0 0 0
+$definebone "ValveBiped.Weapon_bone" "ValveBiped.Bip01_R_Hand" 4.999999 -1.5 -4.999998 0.000002 0 0.000001 0 0 0 0 0 0
+$definebone "ValveBiped.weapon_bone4" "ValveBiped.Weapon_bone" 0 0 0 0.000001 0 0.000001 0 0 0 0 0 0
+
+
+$sequence "idle" {
+	"w_m1g_s_anims\idle.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "attack1" {
+	"w_m1g_s_anims\attack1.smd"
+	activity "ACT_RANGE_ATTACK_AR2" 1
+	{ event AE_NPC_MUZZLEFLASH 0 "SMG1 MUZZLE" }
+	{ event 3002 0 "" }
+	{ event 6001 0 "0" }
+	fadein 0.2
+	fadeout 0.2
+	fps 20
+}
+
+$sequence "attackoffcenter" {
+	"w_m1g_s_anims\attackoffcenter.smd"
+	{ event AE_NPC_MUZZLEFLASH 0 "SMG1 MUZZLE" }
+	{ event 3002 0 "lefthand" }
+	{ event 6001 0 "0" }
+	fadein 0.2
+	fadeout 0.2
+	fps 20
+}
+
+$collisionmodel "w_m1g_s_physics.smd"
+{
+	$mass 8
+	$inertia 1
+	$damping 0
+	$rotdamping 0
+	$rootbone " "
+	$concave
+	$maxconvexpieces 4
+
+}
+
+$keyvalues
+{
+// CSGO compiler adds the qc_path keyvalue section automatically.
+//	qc_path 
+//	{
+//		"value" "d:\dev_content2\mcv\mcv-content\vietnam\models\player\animation_iiopn\w_model\m1g\m1g_s_lod0.qc"
+//	}
+}

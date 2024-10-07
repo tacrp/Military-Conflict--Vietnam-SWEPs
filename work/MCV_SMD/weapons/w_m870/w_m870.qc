@@ -1,0 +1,68 @@
+// Created by Crowbar 0.74
+
+$modelname "weapons\mcv\w_m870.mdl"
+
+$bodygroup "Body"
+{
+	studio "w_m870_lod0.smd"
+}
+
+$lod 15
+{
+	replacemodel "w_m870_lod0.smd" "w_m870_lod0_lod1.smd"
+	nofacial
+}
+$lod 30
+{
+	replacemodel "w_m870_lod0.smd" "w_m870_lod0_lod2.smd"
+	nofacial
+}
+
+$surfaceprop "weapon"
+
+$contents "solid"
+
+$illumposition 0 -0.546 -2.079
+
+$cdmaterials "models\weapons\mcv\w_m870\"
+$cdmaterials ""
+
+$attachment "muzzle" "ValveBiped.weapon_bone" 0 1.2 21.7 rotate -90 -90 0
+$attachment "shell_eject" "ValveBiped.weapon_bone" -0.75 1 0.5 rotate 0 180 90
+
+$cbox 0 0 0 0 0 0
+
+$bbox -20.852 -0.801 -6.679 21.804 0.801 2.502
+
+$definebone "ValveBiped.weapon_bone" "" 0 0 -0.064417 0 0 89.999968 0 0 0 0 0 0
+$definebone "ValveBiped.weapon_bone2" "ValveBiped.weapon_bone" 0 0 0 0 0 0 0 0 0 0 0 0
+
+
+$sequence "idle" {
+	"w_m870_anims\idle.smd"
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$collisionmodel "w_m870_physics.smd"
+{
+	$mass 8
+	$inertia 1
+	$damping 0
+	$rotdamping 0
+	$rootbone " "
+	$concave
+	$maxconvexpieces 6
+
+}
+
+$keyvalues
+{
+// CSGO compiler adds the qc_path keyvalue section automatically.
+//	qc_path 
+//	{
+//		"value" "d:\dev_content2\mcv\mcv-content\vietnam\models\player\animation_iiopn\w_model\m870\w_m870.qc"
+//	}
+}

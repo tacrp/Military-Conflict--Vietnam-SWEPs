@@ -1,0 +1,350 @@
+// Created by Crowbar 0.74
+
+$modelname "weapons\mcv\w_bunkergun.mdl"
+
+$bodygroup "studio"
+{
+	studio "w_bunkergun_lod0.smd"
+}
+$bodygroup "bullets"
+{
+	studio "bullets_lod0.smd"
+	blank
+}
+
+$lod 25
+{
+	replacemodel "w_bunkergun_lod0.smd" "w_bunkergun_lod0_lod1.smd"
+	replacemodel "bullets_lod0.smd" "bullets_lod0_lod1.smd"
+	replacebone "Bullet1" "Bullet2"
+	replacebone "RHand" "Barrel"
+	replacebone "LHand" "Barrel"
+	replacebone "Muzzle" "Barrel"
+	nofacial
+}
+$lod 50
+{
+	replacemodel "w_bunkergun_lod0.smd" "w_bunkergun_lod0_lod2.smd"
+	replacemodel "bullets_lod0.smd" "bullets_lod0_lod2.smd"
+	replacebone "Bullet28" "Base"
+	replacebone "Bullet27" "Bullet28"
+	replacebone "Bullet26" "Bullet27"
+	replacebone "Bullet25" "Bullet26"
+	replacebone "Bullet24" "Bullet25"
+	replacebone "Bullet23" "Bullet24"
+	replacebone "Bullet22" "Bullet23"
+	replacebone "Bullet21" "Bullet22"
+	replacebone "Bullet20" "Bullet21"
+	replacebone "Bullet19" "Bullet20"
+	replacebone "Bullet18" "Bullet19"
+	replacebone "Bullet16" "Bullet18"
+	replacebone "Bullet15" "Bullet16"
+	replacebone "Bullet14" "Bullet15"
+	replacebone "Bullet13" "Bullet14"
+	replacebone "Bullet12" "Bullet13"
+	replacebone "Bullet11" "Bullet12"
+	replacebone "Bullet10" "Bullet11"
+	replacebone "Bullet9" "Bullet10"
+	replacebone "Bullet8" "Bullet9"
+	replacebone "Bullet7" "Bullet8"
+	replacebone "Bullet6" "Bullet7"
+	replacebone "Bullet5" "Bullet6"
+	replacebone "Bullet4" "Bullet5"
+	replacebone "Bullet3" "Bullet4"
+	replacebone "Bullet2" "Bullet3"
+	replacebone "Bullet1" "Bullet2"
+	replacebone "RHand" "Barrel"
+	replacebone "LHand" "Barrel"
+	replacebone "Muzzle" "Barrel"
+	nofacial
+}
+
+$surfaceprop "weapon"
+
+$contents "solid"
+
+$illumposition 1.566 -0.634 7.593
+
+$cdmaterials "models\weapons\mcv\w_bunkergun\"
+$cdmaterials "models\weapons\mcv\w_box\"
+$cdmaterials "models\player\equipment\"
+
+$attachment "muzzle" "Muzzle" 0 0 0 rotate 0 0 0
+$attachment "light" "Muzzle" 0 0 0 rotate 0 0 0
+$attachment "L_hand" "LHand" 0 0 0 rotate 0 0 0
+$attachment "R_hand" "RHand" 0 0 0 rotate 0 0 0
+$attachment "aimrotation" "BarrelRotate" 0 0 0 rotate 0 -90 0
+$attachment "shell_eject" "Muzzle" -35 -1 0.7 rotate 0 -90 0
+
+$cbox 0 0 0 0 0 0
+
+$bbox -39.776 -25.665 -0.386 32.075 25.721 17.899
+
+$definebone "Base" "" 0 0 0 0 0 0 0 0 0 0 0 0
+$definebone "Bullet28" "Base" 14.610249 3.364135 4.859497 -0.003667 0.000745 0.000516 0 0 0 0 0 0
+$definebone "Bullet27" "Bullet28" -0.651968 0 0.106682 0 0 0 0 0 0 0 0 0
+$definebone "Bullet26" "Bullet27" -0.766704 0 -0.005197 0 0 0 0 0 0 0 0 0
+$definebone "Bullet25" "Bullet26" -0.766701 0 -0.005196 0 0 0 0 0 0 0 0 0
+$definebone "Bullet24" "Bullet25" -0.766703 0 -0.005197 0 0 0 0 0 0 0 0 0
+$definebone "Bullet23" "Bullet24" -0.766702 0 -0.005196 0 0 0 0 0 0 0 0 0
+$definebone "Bullet22" "Bullet23" -0.766705 0 -0.005196 0 0 0 0 0 0 0 0 0
+$definebone "Bullet21" "Bullet22" -0.767122 0 -0.005197 0 0 0 0 0 0 0 0 0
+$definebone "Bullet20" "Bullet21" -0.760185 0 0.035041 0 0 0 0 0 0 0 0 0
+$definebone "Bullet19" "Bullet20" -0.736328 0 0.205213 0 0 0 0 0 0 0 0 0
+$definebone "Bullet18" "Bullet19" -0.665298 0 0.362176 0 0 0 0 0 0 0 0 0
+$definebone "Bullet16" "Bullet18" -0.581308 0 0.47261 0 0 0 0 0 0 0 0 0
+$definebone "Bullet15" "Bullet16" -0.474395 0 0.607165 0 0 0 0 0 0 0 0 0
+$definebone "Bullet14" "Bullet15" -0.302883 0 0.707193 0 0 0 0 0 0 0 0 0
+$definebone "Bullet13" "Bullet14" -0.225017 0 0.746105 0 0 0 0 0 0 0 0 0
+$definebone "Bullet12" "Bullet13" -0.248028 0 0.728024 0 0 0 0 0 0 0 0 0
+$definebone "Bullet11" "Bullet12" -0.271612 0 0.719234 0 0 0 0 0 0 0 0 0
+$definebone "Bullet10" "Bullet11" -0.294961 0 0.709876 0 0 0 0 0 0 0 0 0
+$definebone "Bullet9" "Bullet10" -0.318069 0 0.699949 0 0 0 0 0 0 0 0 0
+$definebone "Bullet8" "Bullet9" -0.340938 0 0.689449 0 0 0 0 0 0 0 0 0
+$definebone "Bullet7" "Bullet8" -0.363518 0 0.678808 0 0 0 0 0 0 0 0 0
+$definebone "Bullet6" "Bullet7" -0.386759 0 0.664349 0 0 0 0 0 0 0 0 0
+$definebone "Bullet5" "Bullet6" -0.412427 0 0.644674 0 0 0 0 0 0 0 0 0
+$definebone "Bullet4" "Bullet5" -0.432303 0 0.631649 0 0 0 0 0 0 0 0 0
+$definebone "Bullet3" "Bullet4" -0.514726 0 0.521705 0 0 0 0 0 0 0 0 0
+$definebone "Bullet2" "Bullet3" -0.656355 0 0.254696 0 0 0 0 0 0 0 0 0
+$definebone "Bullet1" "Bullet2" -0.750561 0 0.007229 0 0 0 0 0 0 0 0 0
+$definebone "BarrelRotate" "Base" 0.055214 0.966613 13.265642 0 0 0 0 0 0 0 0 0
+$definebone "Barrel" "BarrelRotate" -0.885796 -0.034419 0.060379 0 0 0 0 0 0 0 0 0
+$definebone "RHand" "Barrel" -1.964154 23.390799 0.765127 0 18.935912 0 0 0 0 0 0 0
+$definebone "LHand" "Barrel" 4.223646 23.288401 0.765127 0 -16.506055 0 0 0 0 0 0 0
+$definebone "Muzzle" "Barrel" 0.812007 -33.002659 0.98265 0 -89.999982 0 0 0 0 0 0 0
+
+
+$poseparameter "aim_yaw" -70 70 loop 0
+$poseparameter "aim_pitch" -14.366 17.541 loop 0
+
+$animation "up_right_corrective_animation" "w_bunkergun_anims\up_right_corrective_animation.smd" {
+}
+
+$animation "up_centerright_corrective_animation" "w_bunkergun_anims\up_centerright_corrective_animation.smd" {
+}
+
+$animation "up_center_corrective_animation" "w_bunkergun_anims\up_center_corrective_animation.smd" {
+}
+
+$animation "up_centerleft_corrective_animation" "w_bunkergun_anims\up_centerleft_corrective_animation.smd" {
+}
+
+$animation "up_left_corrective_animation" "w_bunkergun_anims\up_left_corrective_animation.smd" {
+}
+
+$animation "mid_right_corrective_animation" "w_bunkergun_anims\mid_right_corrective_animation.smd" {
+}
+
+$animation "mid_centerright_corrective_animation" "w_bunkergun_anims\mid_centerright_corrective_animation.smd" {
+}
+
+$animation "mid_center_corrective_animation" "w_bunkergun_anims\mid_center_corrective_animation.smd" {
+}
+
+$animation "mid_centerleft_corrective_animation" "w_bunkergun_anims\mid_centerleft_corrective_animation.smd" {
+}
+
+$animation "mid_left_corrective_animation" "w_bunkergun_anims\mid_left_corrective_animation.smd" {
+}
+
+$animation "down_right_corrective_animation" "w_bunkergun_anims\down_right_corrective_animation.smd" {
+}
+
+$animation "down_centerright_corrective_animation" "w_bunkergun_anims\down_centerright_corrective_animation.smd" {
+}
+
+$animation "down_center_corrective_animation" "w_bunkergun_anims\down_center_corrective_animation.smd" {
+}
+
+$animation "down_centerleft_corrective_animation" "w_bunkergun_anims\down_centerleft_corrective_animation.smd" {
+}
+
+$animation "down_left_corrective_animation" "w_bunkergun_anims\down_left_corrective_animation.smd" {
+}
+
+$animation "neutral" "w_bunkergun_anims\neutral.smd" {
+	fps 30
+}
+
+$animation "down_left" "w_bunkergun_anims\down_left.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "down_left_corrective_animation" 0
+}
+
+$animation "down_center" "w_bunkergun_anims\down_center.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "down_center_corrective_animation" 0
+}
+
+$animation "down_right" "w_bunkergun_anims\down_right.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "down_right_corrective_animation" 0
+}
+
+$animation "down_centerright" "w_bunkergun_anims\down_centerright.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "down_centerright_corrective_animation" 0
+}
+
+$animation "down_centerleft" "w_bunkergun_anims\down_centerleft.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "down_centerleft_corrective_animation" 0
+}
+
+$animation "mid_left" "w_bunkergun_anims\mid_left.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "mid_left_corrective_animation" 0
+}
+
+$animation "mid_center" "w_bunkergun_anims\mid_center.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "mid_center_corrective_animation" 0
+}
+
+$animation "mid_right" "w_bunkergun_anims\mid_right.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "mid_right_corrective_animation" 0
+}
+
+$animation "mid_centerright" "w_bunkergun_anims\mid_centerright.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "mid_centerright_corrective_animation" 0
+}
+
+$animation "mid_centerleft" "w_bunkergun_anims\mid_centerleft.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "mid_centerleft_corrective_animation" 0
+}
+
+$animation "up_left" "w_bunkergun_anims\up_left.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "up_left_corrective_animation" 0
+}
+
+$animation "up_center" "w_bunkergun_anims\up_center.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "up_center_corrective_animation" 0
+}
+
+$animation "up_right" "w_bunkergun_anims\up_right.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "up_right_corrective_animation" 0
+}
+
+$animation "up_centerright" "w_bunkergun_anims\up_centerright.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "up_centerright_corrective_animation" 0
+}
+
+$animation "up_centerleft" "w_bunkergun_anims\up_centerleft.smd" {
+	fps 30
+	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "up_centerleft_corrective_animation" 0
+}
+
+$sequence "idle" {
+	"w_bunkergun_anims\idle.smd"
+	activity "ACT_BUNKER_GUN_ACTIVE_IDLE" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+	loop
+}
+
+$sequence "activate" {
+	"w_bunkergun_anims\activate.smd"
+	activity "ACT_BUNKER_GUN_ACTIVATE" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "fire" {
+	"w_bunkergun_anims\fire.smd"
+	activity "ACT_BUNKER_GUN_FIRE" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "retract" {
+	"w_bunkergun_anims\retract.smd"
+	activity "ACT_BUNKER_GUN_RETRACT" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "idle_inactive" {
+	"w_bunkergun_anims\idle_inactive.smd"
+	activity "ACT_BUNKER_GUN_INACTIVE_IDLE" 1
+	fadein 0.2
+	fadeout 0.2
+	fps 30
+}
+
+$sequence "aim" {
+	"up_right"
+	"up_centerright"
+	"up_center"
+	"up_centerleft"
+	"up_left"
+	"mid_right"
+	"mid_centerright"
+	"mid_center"
+	"mid_centerleft"
+	"mid_left"
+	"down_right"
+	"down_centerright"
+	"down_center"
+	"down_centerleft"
+	"down_left"
+	autoplay
+	blend "aim_yaw" -70 70
+	blend "aim_pitch" -14.366 17.541
+	blendwidth 5
+	delta
+	fadein 0.2
+	fadeout 0.2
+	hidden
+}
+
+$collisionmodel "w_bunkergun_physics.smd"
+{
+	$mass 50
+	$inertia 1
+	$damping 0
+	$rotdamping 0
+	$rootbone " "
+	$concave
+	$maxconvexpieces 1
+
+}
+
+$keyvalues
+{
+	bone_followers 
+	{
+		"bone" "BarrelRotate"
+	}
+// CSGO compiler adds the qc_path keyvalue section automatically.
+//	qc_path 
+//	{
+//		"value" "models\guns\equipment_bunkergun\w_bunkergun.qc"
+//	}
+}
