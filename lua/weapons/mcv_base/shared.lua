@@ -25,6 +25,8 @@ SWEP.DamageStomachMultiplier = 1
 SWEP.DamageLegMultiplier = 1
 SWEP.DamageArmMultiplier = 1
 
+SWEP.Num = 1
+
 SWEP.ExplosionDamage = 0
 SWEP.ExplosionRadius = 0
 
