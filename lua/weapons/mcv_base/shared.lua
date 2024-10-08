@@ -120,7 +120,7 @@ SWEP.WoodDamgaeModifier = 1.25
 SWEP.OtherDamageModifier = 1.25
 
 // Sound
-SWEP.SoundSingleShot = "Vietnam_Weapon_SKS.Single"
+SWEP.SoundSingleShot = "MCV_Weapon_SKS.Single"
 SWEP.SoundDoubleShot = ""
 SWEP.SoundReload = ""
 SWEP.SoundSpecial1 = ""

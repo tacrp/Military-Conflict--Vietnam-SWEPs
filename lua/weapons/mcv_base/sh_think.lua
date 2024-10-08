@@ -5,6 +5,10 @@ function SWEP:Think()
     self:Think_Sights()
     self:Think_Reload()
 
+    if self:GetNextIdle() <= CurTime() then
+        self:Idle()
+    end
+
     if !IsValid(vm) then return end
 
     vm:SetPoseParameter("ammo_fraction", 1 - (self:Clip1() / self:GetMaxClip1()))

@@ -36,5 +36,13 @@ function SWEP:PlayAnimation(act, mult, lock)
         -- self:SetNextSecondaryFire(0)
     end
 
+    self:SetNextIdle(CurTime() + time)
+
     return time
+end
+
+function SWEP:Idle()
+    self:PlayAnimation(ACT_VM_IDLE)
+
+    self:SetReady(true)
 end
