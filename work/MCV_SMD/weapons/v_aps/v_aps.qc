@@ -17,9 +17,9 @@ $illumposition -1.909 -9.006 -13.755
 $cdmaterials "models\weapons\mcv\v_aps\"
 $cdmaterials "models\weapons\mcv\shells\"
 
-$attachment "cam" "cam_driver" 0 0 0 rotate 0 0 0
 $attachment "muzzle" "Base" -7.3 0 1.3 rotate 0 180 0
 $attachment "eject" "Base" -1.5 0.4 1.5 rotate -45 90 0
+$attachment "cam" "cam_driver" 0 0 0 rotate 0 0 0
 
 $cbox 0 0 0 0 0 0
 
@@ -768,7 +768,7 @@ $sequence "draw" {
 $sequence "Firstdraw" {
 	"v_aps_anims\Firstdraw.smd"
 	"v_aps_anims\Firstdraw_2.smd"
-	activity "ACT_VM_FIRSTDRAW" 1
+	activity "ACT_VM_READY" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_APS.Draw" }

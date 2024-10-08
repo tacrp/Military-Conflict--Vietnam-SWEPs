@@ -25,9 +25,9 @@ $cdmaterials "models\weapons\mcv\v_akm\"
 $cdmaterials "models\weapons\mcv\shells\"
 $cdmaterials "models\weapons\mcv\v_kbkg60\"
 
-$attachment "cam" "cam_driver" 0 0 0 rotate 0 0 0
 $attachment "muzzle" "Base" -20 0 0.15 rotate 1 180 0
 $attachment "eject" "Base" -1 0 0.7 rotate 0 90 0
+$attachment "cam" "cam_driver" 0 0 0 rotate 0 0 0
 
 $cbox 0 0 0 0 0 0
 
@@ -538,7 +538,7 @@ $sequence "draw" {
 $sequence "Firstdraw" {
 	"v_ak47_anims\Firstdraw.smd"
 	"v_ak47_anims\Firstdraw_2.smd"
-	activity "ACT_VM_FIRSTDRAW" 1
+	activity "ACT_VM_READY" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_AK47.Draw" }
