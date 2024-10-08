@@ -1,5 +1,6 @@
 ## Universal advice:
 - It's sometimes better to remove the walklayers from reload animations, as they cause hands to move out of place if you move during the animation. Removing the layer doesnt adversely affect quality.
+- QC attachments should be in a specific order: Muzzle, Eject, Camera
 
 
 ### Method 1 (SKS):
