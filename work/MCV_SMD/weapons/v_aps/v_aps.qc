@@ -758,7 +758,7 @@ $sequence "draw" {
 	fadein 0
 	fadeout 0.2
 	addlayer "BulletCounter"
-	addlayer "SlidePosition"
+	//addlayer "SlidePosition"
 	addlayer "walklayer"
 	addlayer "runlayer"
 	node "0"
@@ -943,7 +943,7 @@ $sequence "reload" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "BulletCounter"
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	
@@ -968,7 +968,7 @@ $sequence "reload_empty" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "BulletCounter"
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	
@@ -984,7 +984,7 @@ $sequence "idletonearwall" {
 	{ event 5004 1 "MCV_Weapon_Foley_CommonSmall.In" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "SlidePosition"
+	//addlayer "SlidePosition"
 	addlayer "BulletCounter"
 	addlayer "walklayer"
 	node "0"
@@ -998,7 +998,7 @@ $sequence "nearwall" {
 	blendwidth 2
 	fadein 0.2
 	fadeout 0.2
-	addlayer "SlidePosition"
+	//addlayer "SlidePosition"
 	addlayer "BulletCounter"
 	addlayer "walklayer"
 	node "0"
@@ -1013,7 +1013,7 @@ $sequence "nearwalltoidle" {
 	{ event 5004 1 "MCV_Weapon_Foley_CommonSmall.Out" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "SlidePosition"
+	//addlayer "SlidePosition"
 	addlayer "BulletCounter"
 	addlayer "walklayer"
 	node "0"
@@ -1032,7 +1032,7 @@ $sequence "prone" {
 	{ event 5004 10 "MCV_Weapon_Foley_Movement.ProneCrawl_GunLight" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "SlidePosition"
+	//addlayer "SlidePosition"
 	addlayer "BulletCounter"
 	realtime
 }
@@ -1047,7 +1047,7 @@ $sequence "bash" {
 	{ event 5004 1 "MCV_Weapon_Foley_Bash.Fast" }
 	fadein 0
 	fadeout 0.2
-	addlayer "SlidePosition"
+	//addlayer "SlidePosition"
 	addlayer "BulletCounter"
 	addlayer "walklayer"
 	node "0"
@@ -1066,7 +1066,7 @@ $sequence "pickupstart" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
-	addlayer "SlidePosition"
+	//addlayer "SlidePosition"
 	addlayer "BulletCounter"
 }
 
@@ -1079,7 +1079,7 @@ $sequence "pickuploop" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
-	addlayer "SlidePosition"
+	//addlayer "SlidePosition"
 	addlayer "BulletCounter"
 }
 
@@ -1093,7 +1093,7 @@ $sequence "pickupend" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
-	addlayer "SlidePosition"
+	//addlayer "SlidePosition"
 	addlayer "BulletCounter"
 }
 
@@ -1103,7 +1103,7 @@ $sequence "holster" {
 	{ event 5004 1 "MCV_Weapon_Foley_APS.Holster" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "SlidePosition"
+	//addlayer "SlidePosition"
 	addlayer "BulletCounter"
 	addlayer "walklayer"
 	addlayer "runlayer"
@@ -1123,7 +1123,7 @@ $sequence "change_firemode" {
 	fadeout 0.2
 	addlayer "walklayer"
 	addlayer "runlayer"
-	addlayer "SlidePosition"
+	//addlayer "SlidePosition"
 	addlayer "BulletCounter"
 }
 

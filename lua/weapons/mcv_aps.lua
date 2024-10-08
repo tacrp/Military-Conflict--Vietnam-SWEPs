@@ -35,10 +35,11 @@ SWEP.RangeModifier = 0.950
 
 // "auto", "semi", "burst", "singleaction", "doubleaction", "fanning", "bolt", "pump"
 SWEP.Firemodes = {
-    "auto"
+    MCV.FIREMODE_AUTO,
+    MCV.FIREMODE_SEMI
 }
 
-SWEP.LastShotAnimation = true
+SWEP.LastShotAnimation = false
 
 // View slide from recoil
 SWEP.ViewSlideRecoilUp = 1.35
