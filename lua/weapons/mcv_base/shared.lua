@@ -1,5 +1,5 @@
 // Spawnable
-SWEP.Spawnable = true
+SWEP.Spawnable = false
 SWEP.AdminOnly = false
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Base = "weapon_base"

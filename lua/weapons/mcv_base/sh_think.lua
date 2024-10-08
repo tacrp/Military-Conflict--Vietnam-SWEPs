@@ -16,7 +16,8 @@ function SWEP:Think()
     if !IsValid(vm) then return end
 
     if self:GetReloading() then
-        vm:SetPoseParameter("ammo_fraction", 1 - (self:Clip1() / self.Primary.ClipSize))
+        local bullets_to_load = math.min(self.Primary.ClipSize - self:Clip1(), self:Ammo1())
+        vm:SetPoseParameter("ammo_fraction", bullets_to_load / self.Primary.ClipSize)
     else
         vm:SetPoseParameter("ammo_fraction", (self:Clip1() / self.Primary.ClipSize))
     end

@@ -6,3 +6,22 @@ MCV.FIREMODE_DA = 4
 MCV.FIREMODE_FAN = 5
 MCV.FIREMODE_BOLT = 6
 MCV.FIREMODE_PUMP = 7
+
+MCV.CancelMultipliers = {
+    [1] = {
+        [HITGROUP_HEAD]     = 2,
+        [HITGROUP_LEFTARM]  = 0.25,
+        [HITGROUP_RIGHTARM] = 0.25,
+        [HITGROUP_LEFTLEG]  = 0.25,
+        [HITGROUP_RIGHTLEG] = 0.25,
+        [HITGROUP_GEAR]     = 0.25,
+    },
+    ["terrortown"] = {
+        [HITGROUP_HEAD]     = 1,
+        [HITGROUP_LEFTARM]  = 0.55,
+        [HITGROUP_RIGHTARM] = 0.55,
+        [HITGROUP_LEFTLEG]  = 0.55,
+        [HITGROUP_RIGHTLEG] = 0.55,
+        [HITGROUP_GEAR]     = 0.55,
+    },
+}

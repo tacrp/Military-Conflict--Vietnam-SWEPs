@@ -41,7 +41,7 @@ function SWEP:PrimaryAttack()
 
     owner:ViewPunch(Angle(-recoilup, recoilright * math.Rand(-1, 1), 0))
 
-    local firemode = self:GetFiremode()
+    local firemode = self:GetFiremodeValue()
 
     if firemode == MCV.FIREMODE_SEMI then
         self:SetNeedTriggerPress(true)
@@ -80,13 +80,34 @@ function SWEP:BulletAttack()
         Spread = Vector(spread, spread, spread),
         Attacker = owner,
         Callback = function(attacker, tr, dmginfo)
+            local dmg = dmginfo:GetDamage()
+            local range = (tr.HitPos - tr.StartPos):Length()
 
+            dmg = dmg * math.pow(self.RangeModifier, math.max(range / 500, 1))
+
+            if IsValid(tr.Entity) then
+                MCV.CancelBodyDamage(tr.Entity, dmginfo, tr.HitGroup)
+
+                local hitgroup = tr.HitGroup
+
+                if hitgroup == HITGROUP_HEAD then
+                    dmginfo:ScaleDamage(self.DamageHeadMultiplier)
+                elseif hitgroup == HITGROUP_CHEST then
+                    dmginfo:ScaleDamage(self.DamageChestMultiplier)
+                elseif hitgroup == HITGROUP_STOMACH then
+                    dmginfo:ScaleDamage(self.DamageStomachMultiplier)
+                elseif hitgroup == HITGROUP_LEFTARM or hitgroup == HITGROUP_RIGHTARM then
+                    dmginfo:ScaleDamage(self.DamageArmMultiplier)
+                elseif hitgroup == HITGROUP_LEFTLEG or hitgroup == HITGROUP_RIGHTLEG then
+                    dmginfo:ScaleDamage(self.DamageLegMultiplier)
+                end
+            end
         end
     })
 
     owner:LagCompensation(false)
 end
 
-function SWEP:GetFiremode()
+function SWEP:GetFiremodeValue()
     return self.Firemodes[1]
 end
