@@ -112,7 +112,7 @@ SWEP.OtherPenetrationDepth = 12
 SWEP.MetalDamageModifier = 1.55
 SWEP.GlassDamageModifier = 1.15
 SWEP.ConcreteDamageModifier = 1.75
-SWEP.WoodDamgaeModifier = 1.25
+SWEP.WoodDamageModifier = 1.25
 SWEP.OtherDamageModifier = 1.25
 
 // Sound
@@ -132,7 +132,7 @@ SWEP.MuzzleParticleIronsightedSmoke = "vietnam_muzzleflash_rifle_type1_fp_is_smo
 
 SWEP.MuzzleParticle3rdPerson = "vietnam_muzzleflash_rifle_type1_tp"
 
-SWEP.EjectBrassType = 5
+SWEP.EjectBrassType = 1
 SWEP.EjectBrassTrail = "vietnam_weaponeffect_shelleject_trail"
 SWEP.EjectBrassParticle = "vietnam_weaponeffect_shelleject_side"
 SWEP.EjectBrassSound = "Bounce.Shell"

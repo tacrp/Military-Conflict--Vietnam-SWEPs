@@ -39,7 +39,11 @@ function SWEP:PrimaryAttack()
     local recoilup = Lerp(self:GetSightAmount(), self.ViewSlideRecoilUp, self.ViewSlideRecoilIronsightUp)
     local recoilright = Lerp(self:GetSightAmount(), self.ViewSlideRecoilRight, self.ViewSlideRecoilIronsightRight)
 
-    owner:ViewPunch(Angle(-recoilup, recoilright * math.Rand(-1, 1), 0))
+    owner:ViewPunch(Angle(-recoilup, recoilright * util.SharedRandom("MCVRecoilLeftRight", -1, 1), 0))
+
+    if IsFirstTimePredicted() then
+        self:DoEject()
+    end
 
     local firemode = self:GetFiremodeValue()
 
