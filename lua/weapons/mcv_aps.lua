@@ -38,8 +38,7 @@ SWEP.Firemodes = {
     "auto"
 }
 
-// Weapon must be manually cycled
-SWEP.PlayCycleAnimation = false
+SWEP.LastShotAnimation = true
 
 // View slide from recoil
 SWEP.ViewSlideRecoilUp = 1.35

@@ -864,8 +864,6 @@ $sequence "shootlast" {
 $sequence "shoot1_pose" {
 	"shoot1_a"
 	"shoot1_ironsight_a"
-	"shootlast_a"
-	"shootlast_ironsight_a"
 	blend "ironsight" 0 1
 	blend "empty" 0 1
 	delta
@@ -879,8 +877,6 @@ $sequence "shoot1_pose" {
 $sequence "shoot2_pose" {
 	"shoot2_a"
 	"shoot2_ironsight_a"
-	"shootlast_a"
-	"shootlast_ironsight_a"
 	blend "ironsight" 0 1
 	blend "empty" 0 1
 	delta
@@ -894,8 +890,6 @@ $sequence "shoot2_pose" {
 $sequence "shoot3_pose" {
 	"shoot3_a"
 	"shoot3_ironsight_a"
-	"shootlast_a"
-	"shootlast_ironsight_a"
 	blend "ironsight" 0 1
 	blend "empty" 0 1
 	delta
@@ -909,8 +903,6 @@ $sequence "shoot3_pose" {
 $sequence "shoot4_pose" {
 	"shoot4_a"
 	"shoot4_ironsight_a"
-	"shootlast_a"
-	"shootlast_ironsight_a"
 	blend "ironsight" 0 1
 	blend "empty" 0 1
 	delta
