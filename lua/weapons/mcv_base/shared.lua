@@ -34,9 +34,8 @@ SWEP.MuzzleVelocity = 735
 
 SWEP.RangeModifier = 0.950 // Every 500 units the damage is multiplied by rangemodifier
 
-// "auto", "semi", "burst", "singleaction", "doubleaction", "fanning", "bolt", "pump"
 SWEP.Firemodes = {
-    "semi"
+    MCV.FIREMODE_SEMI
 }
 
 // Weapon must be manually cycled
@@ -225,6 +224,7 @@ function SWEP:SetupDataTables()
     self:NetworkVar("Bool", 6, "HoldingBreath")
     self:NetworkVar("Bool", 7, "LastWasSprinting")
     self:NetworkVar("Bool", 8, "EmptyReload")
+    self:NetworkVar("Bool", 9, "NeedTriggerPress")
 
     self:NetworkVar("Angle", 0, "BipodAngle")
 

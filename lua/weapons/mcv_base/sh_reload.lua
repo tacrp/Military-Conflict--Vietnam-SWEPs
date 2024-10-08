@@ -1,5 +1,7 @@
 function SWEP:Reload()
     if self:StillWaiting() then return end
+    if self:Ammo1() == 0 then return end
+    if self:Clip1() >= self:GetClip1Capacity() then return end
 
     if self:Clip1() == 0 then
         self:PlayAnimation(ACT_VM_RELOADEMPTY, 1, true)
