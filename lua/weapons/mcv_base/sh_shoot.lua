@@ -13,7 +13,7 @@ end
 
 function SWEP:PrimaryAttack()
     if self:StillWaiting() then return end
-    if self:Clip1() < 1 then return end
+    if self:Clip1() < 1 then self:Reload() return end
 
     if self:GetNeedTriggerPress() then return end
 

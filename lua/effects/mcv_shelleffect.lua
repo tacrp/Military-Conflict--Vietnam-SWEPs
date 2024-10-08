@@ -44,7 +44,7 @@ function EFFECT:Init(data)
     dir = ang:Forward()
 
     ang:RotateAroundAxis(ang:Forward(), 0)
-    ang:RotateAroundAxis(ang:Up(), 0)
+    ang:RotateAroundAxis(ang:Up(), 90)
 
     self:SetPos(origin)
     self:SetModel(typetbl.Model)
