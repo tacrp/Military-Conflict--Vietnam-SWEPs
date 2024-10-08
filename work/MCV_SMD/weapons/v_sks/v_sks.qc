@@ -835,32 +835,15 @@ $animation "a_idle" "v_sks_anims\basePose_a.smd" {
 $sequence "idle" {
 	"basePose_a"
 	"ironsight_transition"
+	"ironsight"
 	activity "ACT_VM_IDLE" 1
-	blend "ironsight" 0 0.5
-	blendwidth 2
+	blend "ironsight" 0 1
+	blendwidth 3
 	fadein 0.2
-	fadeout 0.2
+	fadeout 1
 	addlayer "walklayer"
 	addlayer "runlayer"
-	blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
 	addlayer "SlidePosition"
-	node "0"
-}
-
-$sequence "idle_shoot" {
-	"basePose_a"
-	"ironsight_transition"
-	activity "ACT_VM_IDLE" 1
-	blend "ironsight" 0 0.5
-	blendwidth 2
-	predelta
-	fadein 0.2
-	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
-	blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
-	addlayer "SlidePosition"
-	hidden
 	node "0"
 }
 
@@ -894,56 +877,62 @@ $sequence "SlidePosition" {
 	node "0"
 }
 
-$sequence "shoot1" {
+$sequence "shootpose1" {
 	"shoot1_a"
 	"shoot1_ironsight_a"
-	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
-	fadein 0
-	fadeout 0.2
-	addlayer "idle_shoot"
-	addlayer "BoltshootMovement"
-	node "Fire"
+	hidden
+	realtime
+	node "0"
 }
 
-$sequence "shoot2" {
-	"shoot2_a"
-	"shoot2_ironsight_a"
+$sequence "shoot1" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
-	blendwidth 2
-	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
-	fadein 0
-	fadeout 0.2
-	addlayer "idle_shoot"
+	blendwidth 3
+	snap
+	addlayer "shootpose1"
 	addlayer "BoltshootMovement"
-	node "Fire"
 }
 
-$sequence "shoot3" {
-	"shoot3_a"
-	"shoot3_ironsight_a"
-	activity "ACT_VM_PRIMARYATTACK" 1
-	blend "ironsight" 0 1
-	blendwidth 2
-	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
-	fadein 0
-	fadeout 0.2
-	addlayer "idle_shoot"
-	addlayer "BoltshootMovement"
-	node "Fire"
-}
+// $sequence "shoot2" {
+// 	"shoot2_a"
+// 	"shoot2_ironsight_a"
+// 	activity "ACT_VM_PRIMARYATTACK" 1
+// 	blend "ironsight" 0 1
+// 	blendwidth 2
+// 	delta
+// 	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
+// 	{ event AE_MUZZLEFLASH 0 "" }
+// 	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
+// 	fadein 0
+// 	fadeout 0.2
+// 	addlayer "idle"
+// 	addlayer "BoltshootMovement"
+// 	node "Fire"
+// }
+
+// $sequence "shoot3" {
+// 	"shoot3_a"
+// 	"shoot3_ironsight_a"
+// 	activity "ACT_VM_PRIMARYATTACK" 1
+// 	blend "ironsight" 0 1
+// 	blendwidth 2
+// 	delta
+// 	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
+// 	{ event AE_MUZZLEFLASH 0 "" }
+// 	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
+// 	fadein 0
+// 	fadeout 0.2
+// 	addlayer "idle"
+// 	addlayer "BoltshootMovement"
+// 	node "Fire"
+// }
 
 $sequence "runlayer" {
 	"runIdle_a"
@@ -969,7 +958,6 @@ $sequence "shootlast" {
 	{ event AE_WPN_CLIP_TO_POSEPARAM 0 "ammo_fraction" }
 	fadein 0
 	fadeout 0.2
-	addlayer "idle_shoot"
 }
 
 $sequence "reload" {
@@ -1158,6 +1146,7 @@ $sequence "BoltshootMovement" {
 	fadein 0.2
 	fadeout 0.2
 	hidden
+	realtime
 	node "0"
 }
 

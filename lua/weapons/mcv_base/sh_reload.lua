@@ -10,12 +10,16 @@ function SWEP:Reload()
     self:SetReloading(true)
 end
 
+function SWEP:GetClip1Capacity()
+    return self.Primary.ClipSize + self.Primary.Chamber
+end
+
 function SWEP:RestoreClip(amt)
     local reserve = self:GetInfiniteAmmo() and math.huge or (self:Clip1() + self:Ammo1())
 
     local lastclip1 = self:Clip1()
 
-    self:SetClip1(math.min(math.min(self:Clip1() + amt, self:GetMaxClip1()), reserve))
+    self:SetClip1(math.min(self:Clip1() + amt, self:GetClip1Capacity(), reserve))
 
     if !self:GetInfiniteAmmo() then
         reserve = reserve - self:Clip1()
@@ -23,10 +27,6 @@ function SWEP:RestoreClip(amt)
     end
 
     return self:Clip1() - lastclip1
-end
-
-function SWEP:GetMaxClip1()
-    return self.Primary.ClipSize + self.Primary.Chamber
 end
 
 function SWEP:GetInfiniteAmmo()

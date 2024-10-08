@@ -9,7 +9,11 @@ function SWEP:PrimaryAttack()
     if self:StillWaiting() then return end
     if self:Clip1() < 1 then return end
 
-    self:PlayAnimation(ACT_VM_PRIMARYATTACK)
+    if self:Clip1() == 1 then
+        self:PlayAnimation(ACT_VM_SHOOTLAST)
+    else
+        self:PlayAnimation(ACT_VM_PRIMARYATTACK)
+    end
 
     self:TakePrimaryAmmo(1)
 
