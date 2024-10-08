@@ -400,12 +400,12 @@ $animation "Bullet0" "v_aps_anims\Bullet0.smd" {
 
 $animation "Slideforward" "v_aps_anims\Slideforward.smd" {
 	fps 30
+	numframes 24
 }
 
 $animation "Slideback" "v_aps_anims\Slideback.smd" {
 	fps 30
 	numframes 24
-	loop
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "Slideback_corrective_animation" 0
 }
@@ -680,8 +680,7 @@ $sequence "SlidePosition" {
 	blend "empty" 0 1
 	blendwidth 2
 	delta
-	fadein 0.2
-	fadeout 0.2
+	snap
 	hidden
 	node "0"
 }
@@ -737,6 +736,7 @@ $sequence "idle" {
 	"ironsight"
 	activity "ACT_VM_IDLE" 1
 	blend "ironsight" 0 0.5
+	blend "empty" 0 1
 	blendwidth 3
 	fadein 0.2
 	fadeout 0.2
@@ -852,13 +852,14 @@ $sequence "shootlast" {
 	"ironsight"
 	activity "ACT_VM_SHOOTLAST" 1
 	blend "ironsight" 0 0.5
+	blend "empty" 0 1
 	blendwidth 3
 	snap
 	addlayer "walklayer"
 	addlayer "runlayer"
 	addlayer "BulletCounter"
 	addlayer "shootlast_pose"
-	//addlayer "SlidePosition"
+	addlayer "SlidePosition"
 }
 
 $sequence "shoot1_pose" {
