@@ -1,6 +1,7 @@
-function SWEP:PlayAnimation(act, mult, lock)
+function SWEP:PlayAnimation(act, mult, lock, noidle)
     mult = mult or 1
     lock = lock or false
+    noidle = noidle or false
     local reverse = false
 
     if mult < 0 then
@@ -38,13 +39,17 @@ function SWEP:PlayAnimation(act, mult, lock)
         -- self:SetNextSecondaryFire(0)
     end
 
-    self:SetNextIdle(CurTime() + time)
+    if !noidle then
+        self:SetNextIdle(CurTime() + time)
+    else
+        self:SetNextIdle(math.huge)
+    end
 
     return time
 end
 
 function SWEP:Idle()
-    self:PlayAnimation(ACT_VM_IDLE)
+    self:PlayAnimation(ACT_VM_IDLE, 1, false, false)
 
     self:SetReady(true)
 end
