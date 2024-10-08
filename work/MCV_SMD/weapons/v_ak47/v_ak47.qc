@@ -633,7 +633,7 @@ $sequence "reload" {
 	{ event AE_WPN_COMPLETE_RELOAD 54 "" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	
@@ -656,7 +656,7 @@ $sequence "reload_empty" {
 	{ event AE_WPN_COMPLETE_RELOAD 81 "" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	
