@@ -211,6 +211,7 @@ function SWEP:SetupDataTables()
     self:NetworkVar("Float", 10, "HolsterTime")
     self:NetworkVar("Float", 11, "NWHoldBreathAmount")
     self:NetworkVar("Float", 12, "Breath")
+    self:NetworkVar("Float", 13, "Speed")
 
     self:NetworkVar("Int", 0, "BurstCount")
     self:NetworkVar("Int", 1, "ScopeLevel")

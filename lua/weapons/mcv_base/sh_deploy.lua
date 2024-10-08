@@ -1,5 +1,10 @@
 function SWEP:Deploy()
-    self:PlayAnimation(ACT_VM_DRAW)
+    if !self:GetReady() then
+        self:PlayAnimation(ACT_VM_READY, 1, true)
+        self:SetReady(true)
+    else
+        self:PlayAnimation(ACT_VM_DRAW, 1, true)
+    end
 
     return true
 end

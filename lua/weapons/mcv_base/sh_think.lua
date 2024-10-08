@@ -4,6 +4,7 @@ function SWEP:Think()
 
     self:Think_Sights()
     self:Think_Reload()
+    self:Think_Speed()
 
     if self:GetNextIdle() <= CurTime() then
         self:Idle()
@@ -24,7 +25,7 @@ function SWEP:Think()
 
     vm:SetPoseParameter("empty", self:Clip1() == 0 and 0 or 1)
 
-    vm:SetPoseParameter("player_movement", (owner:GetVelocity():Length() / owner:GetRunSpeed()) * Lerp(self:GetSightAmount(), 273, 273 * (1 + self.IronsightWalkBobbingStrength)))
+    vm:SetPoseParameter("player_movement", self:GetSpeed() * Lerp(self:GetSightAmount(), 1, (1 + self.IronsightWalkBobbingStrength)))
 
     vm:SetPoseParameter("ironsight", self:GetSightAmount() ^  3)
 end
@@ -46,3 +47,28 @@ function SWEP:Think_Sights()
     self:SetSightAmount(math.Approach(self:GetSightAmount(), target_sight_amount, FrameTime() / 0.2 * self.IronsightSpeedScale))
 end
 
+function SWEP:Think_Speed()
+    local target_speed = 0
+
+    local speed = self:GetSpeed()
+
+    local owner = self:GetOwner()
+
+    if !owner:IsOnGround() then
+        target_speed = 100
+    else
+        if owner:KeyDown(IN_FORWARD) or owner:KeyDown(IN_MOVERIGHT) or owner:KeyDown(IN_MOVELEFT) or owner:KeyDown(IN_BACK) then
+            if owner:KeyDown(IN_SPEED) then
+                target_speed = 273
+            elseif owner:KeyDown(IN_WALK) then
+                target_speed = 25
+            else
+                target_speed = 120
+            end
+        end
+    end
+
+    speed = math.Approach(speed, target_speed, FrameTime() * 1000)
+
+    self:SetSpeed(speed)
+end
