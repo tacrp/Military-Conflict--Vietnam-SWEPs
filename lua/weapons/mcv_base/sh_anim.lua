@@ -14,11 +14,13 @@ function SWEP:PlayAnimation(act, mult, lock)
 
     if act == -1 then return end
 
-    local time = vm:SequenceDuration(vm:SelectWeightedSequence(act))
+    local seq = vm:SelectWeightedSequence(act)
+
+    local time = vm:SequenceDuration(seq)
 
     time = time * mult
 
-    self:SendWeaponAnim(act)
+    vm:SendViewModelMatchingSequence(seq)
 
     if reverse then
         vm:SetCycle(1)

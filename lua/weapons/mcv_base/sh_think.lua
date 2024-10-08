@@ -11,7 +11,12 @@ function SWEP:Think()
 
     if !IsValid(vm) then return end
 
-    vm:SetPoseParameter("ammo_fraction", (self:Clip1() / self.Primary.ClipSize))
+    if self:GetReloading() then
+        vm:SetPoseParameter("ammo_fraction", 1 - (self:Clip1() / self.Primary.ClipSize))
+    else
+        vm:SetPoseParameter("ammo_fraction", (self:Clip1() / self.Primary.ClipSize))
+    end
+
     vm:SetPoseParameter("empty", self:Clip1() == 0 and 0 or 1)
     vm:SetPoseParameter("player_movement", (owner:GetVelocity():Length() / owner:GetRunSpeed()) * 273)
     vm:SetPoseParameter("ironsight", self:GetSightAmount())
