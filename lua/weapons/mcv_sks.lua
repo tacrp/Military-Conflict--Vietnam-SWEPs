@@ -80,7 +80,7 @@ SWEP.WeaponWeight = 3.85
 
 SWEP.Primary.Ammo = "ar2"
 SWEP.Primary.ClipSize = 10
-SWEP.Primary.Chamber = 1
+SWEP.Primary.Chamber = 0
 SWEP.Primary.DefaultClip = 30
 SWEP.Primary.Automatic = true
 
