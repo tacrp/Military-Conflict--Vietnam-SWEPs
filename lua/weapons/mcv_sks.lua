@@ -28,9 +28,6 @@ SWEP.DamageArmMultiplier = 0.75
 
 SWEP.Num = 1
 
-SWEP.ExplosionDamage = 0
-SWEP.ExplosionRadius = 0
-
 SWEP.MuzzleVelocity = 735
 
 SWEP.RangeModifier = 0.950 // Every 500 units the damage is multiplied by rangemodifier
@@ -39,8 +36,7 @@ SWEP.Firemodes = {
     MCV.FIREMODE_SEMI
 }
 
-// Weapon must be manually cycled
-SWEP.PlayCycleAnimation = false
+SWEP.LastShotAnimation = true
 
 // View slide from recoil
 SWEP.ViewSlideRecoilUp = 1.35

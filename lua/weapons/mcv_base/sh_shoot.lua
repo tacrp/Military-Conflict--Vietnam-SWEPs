@@ -17,7 +17,7 @@ function SWEP:PrimaryAttack()
 
     if self:GetNeedTriggerPress() then return end
 
-    if self:Clip1() == 1 then
+    if self.LastShotAnimation and self:Clip1() == 1 then
         self:PlayAnimation(ACT_VM_SHOOTLAST, 0.5)
     else
         self:PlayAnimation(ACT_VM_PRIMARYATTACK, 0.5)

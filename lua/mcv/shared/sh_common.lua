@@ -25,3 +25,10 @@ MCV.CancelMultipliers = {
         [HITGROUP_GEAR]     = 0.55,
     },
 }
+
+MCV.ShellTypes = {
+    [1] = {
+        Model = "models/weapons/shells/shell_762x39sov.mdl",
+        Sound = "MCV_Bounce.Shell"
+    }
+}

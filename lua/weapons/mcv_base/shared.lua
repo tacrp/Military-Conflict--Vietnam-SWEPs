@@ -40,6 +40,7 @@ SWEP.Firemodes = {
 
 // Weapon must be manually cycled
 SWEP.PlayCycleAnimation = false
+SWEP.LastShotAnimation = false
 
 // View slide from recoil
 SWEP.ViewSlideRecoilUp = 1.35
@@ -160,6 +161,7 @@ SWEP.Secondary.DefaultClip = 0
 SWEP.MilitaryConflictVietnam = true
 
 SWEP.BobScale = 0
+SWEP.SwayScale = 0.1
 
 AddCSLuaFile()
 
