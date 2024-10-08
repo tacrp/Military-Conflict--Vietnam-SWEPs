@@ -216,7 +216,7 @@ $bonemerge "Base"
 $bonemerge "rhand_ikTarget"
 $bonemerge "lhand_ikTarget"
 
-$include "../../militaryconflict_vietnam.qci"
+$include "../../militaryconflict_vietnam_v2.qci"
 
 
 $sectionframes 30 30
