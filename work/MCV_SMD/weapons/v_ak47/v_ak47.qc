@@ -185,19 +185,22 @@ $animation "shoot3_ironsight_a_corrective_animation" "v_ak47_anims\shoot3_ironsi
 
 $animation "basePose_a" "v_ak47_anims\basePose_a.smd" {
 	fps 30
-	loop
+	numframes 60
 	
 	
 }
 
 $animation "ironsight" "v_ak47_anims\ironsight.smd" {
-	fps 0.5
+	fps 30
+	frame 1 1
+	numframes 60
 	
 	
 }
 
 $animation "ironsight_transition" "v_ak47_anims\ironsight_transition.smd" {
-	fps 0.5
+	fps 30
+	numframes 60
 	
 	
 }
@@ -508,15 +511,14 @@ $sequence "ironsight_test" {
 $sequence "idle" {
 	"basePose_a"
 	"ironsight_transition"
+	"ironsight"
 	activity "ACT_VM_IDLE" 1
-	blend "ironsight" 0 0.5
-	blendwidth 2
-	fadein 0.2
-	fadeout 0.2
+	blend "ironsight" 0 1
+	blendwidth 3
+	fadein 0.1
+	fadeout 0.4
 	addlayer "walklayer"
 	addlayer "runlayer"
-	blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
-	node "0"
 }
 
 $sequence "draw" {
@@ -552,88 +554,70 @@ $sequence "Firstdraw" {
 	
 }
 
-$sequence "shootpose1" {
-	"basePose_a"
-	"ironsight_transition"
-	activity "ACT_VM_PRIMARYATTACK" 1
-	blend "ironsight" 0 1
-	blendwidth 2
-	fadein 0
-	fadeout 0.2
-	addlayer "walklayerironsight"
-	addlayer "shoot1"
-	//blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
-	node "Fire"
-}
-
-$sequence "shootpose2" {
-	"basePose_a"
-	"ironsight_transition"
-	activity "ACT_VM_PRIMARYATTACK" 1
-	blend "ironsight" 0 1
-	blendwidth 2
-	fadein 0
-	fadeout 0.2
-	addlayer "walklayerironsight"
-	addlayer "shoot2"
-	//blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
-	node "Fire"
-}
-
-$sequence "shootpose3" {
-	"basePose_a"
-	"ironsight_transition"
-	activity "ACT_VM_PRIMARYATTACK" 1
-	blend "ironsight" 0 1
-	blendwidth 2
-	fadein 0
-	fadeout 0.2
-	addlayer "walklayerironsight"
-	addlayer "shoot3"
-	//blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
-	node "Fire"
-}
-
 $sequence "shoot1" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	snap
+	addlayer "walklayerironsight"
+	addlayer "shootpose1"
+}
+
+$sequence "shoot2" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	snap
+	addlayer "walklayerironsight"
+	addlayer "shootpose2"
+}
+
+$sequence "shoot3" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	snap
+	addlayer "walklayerironsight"
+	addlayer "shootpose3"
+}
+
+$sequence "shootpose1" {
 	"shoot1_a"
 	"shoot1_ironsight_a"
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	fadein 0
-	fadeout 0.2
-	//blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
-	node "Fire"
+	snap
+	hidden
 }
 
-$sequence "shoot2" {
+$sequence "shootpose2" {
 	"shoot2_a"
 	"shoot2_ironsight_a"
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	fadein 0
-	fadeout 0.2
-	//blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
-	node "Fire"
+	snap
+	hidden
 }
 
-$sequence "shoot3" {
+$sequence "shootpose3" {
 	"shoot3_a"
 	"shoot3_ironsight_a"
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	fadein 0
-	fadeout 0.2
-	//blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
-	node "Fire"
+	snap
+	hidden
 }
 
 $sequence "reload" {
