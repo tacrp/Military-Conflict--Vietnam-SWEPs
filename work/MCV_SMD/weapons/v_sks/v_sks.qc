@@ -161,7 +161,7 @@ $bonemerge "Base"
 $bonemerge "rhand_ikTarget"
 $bonemerge "lhand_ikTarget"
 
-$include "../../militaryconflict_vietnam.qci"
+$include "../../militaryconflict_vietnam_v2.qci"
 
 
 $sectionframes 30 30
@@ -1020,7 +1020,7 @@ $sequence "reload" {
 	{ event 5004 88 "MCV_Weapon_Foley_SKS_Reload.MetalEnd" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	node "0"
 }
 
@@ -1062,7 +1062,7 @@ $sequence "reload_empty" {
 	{ event AE_WPN_COMPLETE_RELOAD 91 "" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	node "0"
 }
 
