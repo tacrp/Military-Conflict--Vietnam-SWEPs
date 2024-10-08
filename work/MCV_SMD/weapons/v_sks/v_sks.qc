@@ -242,6 +242,7 @@ $animation "Default" "v_sks_anims\Default.smd" {
 
 $animation "Slideback" "v_sks_anims\Slideback.smd" {
 	fps 30
+	numframes 24
 	loop
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "Slideback_corrective_animation" 0
@@ -250,20 +251,17 @@ $animation "Slideback" "v_sks_anims\Slideback.smd" {
 $animation "basePose_a" "v_sks_anims\basePose_a.smd" {
 	fps 30
 	loop
-	
-	
+	numframes 24
 }
 
 $animation "ironsight" "v_sks_anims\ironsight.smd" {
-	fps 0.5
-	
-	
+	fps 30
+	numframes 24
 }
 
 $animation "ironsight_transition" "v_sks_anims\ironsight_transition.smd" {
-	fps 0.5
-	
-	
+	fps 30
+	numframes 24
 }
 
 $animation "runIdle_a" "v_sks_anims\runIdle_a.smd" {
@@ -882,10 +880,9 @@ $sequence "shootpose1" {
 	"shoot1_ironsight_a"
 	blend "ironsight" 0 1
 	blendwidth 2
+	snap
 	delta
 	hidden
-	realtime
-	node "0"
 }
 
 $sequence "shoot1" {
@@ -1146,8 +1143,6 @@ $sequence "BoltshootMovement" {
 	fadein 0.2
 	fadeout 0.2
 	hidden
-	realtime
-	node "0"
 }
 
 $sequence "gren_ironsight_test" {
