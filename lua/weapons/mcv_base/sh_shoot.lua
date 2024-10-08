@@ -9,10 +9,12 @@ function SWEP:PrimaryAttack()
     if self:StillWaiting() then return end
     if self:Clip1() < 1 then return end
 
+    if self:GetNeedTriggerPress() then return end
+
     if self:Clip1() == 1 then
-        self:PlayAnimation(ACT_VM_SHOOTLAST)
+        self:PlayAnimation(ACT_VM_SHOOTLAST, 0.5)
     else
-        self:PlayAnimation(ACT_VM_PRIMARYATTACK)
+        self:PlayAnimation(ACT_VM_PRIMARYATTACK, 0.5)
     end
 
     local owner = self:GetOwner()
@@ -27,6 +29,12 @@ function SWEP:PrimaryAttack()
     self:EmitSound(self.SoundSingleShot)
 
     owner:SetVelocity(owner:GetAimVector() * -self.RecoilPushbackValue)
+
+    local firemode = self:GetFiremode()
+
+    if firemode == MCV.FIREMODE_SEMI then
+        self:SetNeedTriggerPress(true)
+    end
 end
 
 function SWEP:GetSpread()
@@ -51,11 +59,23 @@ function SWEP:BulletAttack()
 
     local spread = self:GetSpread()
 
-    self:FireBullets({
+    owner:LagCompensation(true)
+
+    owner:FireBullets({
         Damage = self.DamageGeneric,
         Num = self.Num,
         Src = owner:GetShootPos(),
         Dir = owner:GetAimVector(),
-        Spread = Vector(spread, spread, spread)
+        Spread = Vector(spread, spread, spread),
+        Attacker = owner,
+        Callback = function(attacker, tr, dmginfo)
+
+        end
     })
+
+    owner:LagCompensation(false)
+end
+
+function SWEP:GetFiremode()
+    return self.Firemodes[1]
 end

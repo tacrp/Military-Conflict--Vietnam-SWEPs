@@ -9,6 +9,10 @@ function SWEP:Think()
         self:Idle()
     end
 
+    if owner:KeyReleased(IN_ATTACK) then
+        self:SetNeedTriggerPress(false)
+    end
+
     if !IsValid(vm) then return end
 
     if self:GetReloading() then
@@ -19,10 +23,9 @@ function SWEP:Think()
 
     vm:SetPoseParameter("empty", self:Clip1() == 0 and 0 or 1)
 
-    vm:SetPoseParameter("player_movement", (owner:GetVelocity():Length() / owner:GetRunSpeed()) * Lerp(self:GetSightAmount(), 273, 100))
+    vm:SetPoseParameter("player_movement", (owner:GetVelocity():Length() / owner:GetRunSpeed()) * Lerp(self:GetSightAmount(), 273, 273 * (1 + self.IronsightWalkBobbingStrength)))
 
-    vm:SetPoseParameter("ironsight", self:GetSightAmount())
-    vm:SetPoseParameter("move_yaw", 0)
+    vm:SetPoseParameter("ironsight", self:GetSightAmount() ^  3)
 end
 
 function SWEP:Think_Sights()
@@ -31,6 +34,12 @@ function SWEP:Think_Sights()
 
     if owner:KeyDown(IN_ATTACK2) then
         target_sight_amount = 1
+    end
+
+    if owner:KeyPressed(IN_ATTACK2) then
+        self:EmitSound("MCV_Weapon_Foley_Ironsights.In")
+    elseif owner:KeyReleased(IN_ATTACK2) then
+        self:EmitSound("MCV_Weapon_Foley_Ironsights.Out")
     end
 
     self:SetSightAmount(math.Approach(self:GetSightAmount(), target_sight_amount, FrameTime() / 0.2 * self.IronsightSpeedScale))
