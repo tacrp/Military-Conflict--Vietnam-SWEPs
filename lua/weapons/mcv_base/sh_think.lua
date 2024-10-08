@@ -18,7 +18,9 @@ function SWEP:Think()
     end
 
     vm:SetPoseParameter("empty", self:Clip1() == 0 and 0 or 1)
-    vm:SetPoseParameter("player_movement", (owner:GetVelocity():Length() / owner:GetRunSpeed()) * 273)
+
+    vm:SetPoseParameter("player_movement", (owner:GetVelocity():Length() / owner:GetRunSpeed()) * Lerp(self:GetSightAmount(), 273, 25))
+
     vm:SetPoseParameter("ironsight", self:GetSightAmount())
     vm:SetPoseParameter("move_yaw", 0)
 end

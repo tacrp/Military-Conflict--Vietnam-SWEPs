@@ -160,6 +160,7 @@ SWEP.Secondary.DefaultClip = 0
 
 SWEP.MilitaryConflictVietnam = true
 
+SWEP.BobScale = 0
 
 AddCSLuaFile()
 
