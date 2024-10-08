@@ -5,6 +5,12 @@ function SWEP:StillWaiting()
     return false
 end
 
+function SWEP:GetAimVector()
+    local owner = self:GetOwner()
+
+    return (owner:EyeAngles() + owner:GetViewPunchAngles()):Forward()
+end
+
 function SWEP:PrimaryAttack()
     if self:StillWaiting() then return end
     if self:Clip1() < 1 then return end
@@ -28,7 +34,12 @@ function SWEP:PrimaryAttack()
 
     self:EmitSound(self.SoundSingleShot)
 
-    owner:SetVelocity(owner:GetAimVector() * -self.RecoilPushbackValue)
+    owner:SetVelocity(self:GetAimVector() * -self.RecoilPushbackValue)
+
+    local recoilup = Lerp(self:GetSightAmount(), self.ViewSlideRecoilUp, self.ViewSlideRecoilIronsightUp)
+    local recoilright = Lerp(self:GetSightAmount(), self.ViewSlideRecoilRight, self.ViewSlideRecoilIronsightRight)
+
+    owner:ViewPunch(Angle(-recoilup, recoilright * math.Rand(-1, 1), 0))
 
     local firemode = self:GetFiremode()
 
@@ -65,7 +76,7 @@ function SWEP:BulletAttack()
         Damage = self.DamageGeneric,
         Num = self.Num,
         Src = owner:GetShootPos(),
-        Dir = owner:GetAimVector(),
+        Dir = self:GetAimVector(),
         Spread = Vector(spread, spread, spread),
         Attacker = owner,
         Callback = function(attacker, tr, dmginfo)
