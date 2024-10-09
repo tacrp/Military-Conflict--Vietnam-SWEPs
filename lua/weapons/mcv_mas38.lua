@@ -35,8 +35,7 @@ SWEP.RangeModifier = 0.73
 
 // "auto", "semi", "burst", "singleaction", "doubleaction", "fanning", "bolt", "pump"
 SWEP.Firemodes = {
-    MCV.FIREMODE_AUTO,
-    MCV.FIREMODE_SEMI
+    MCV.FIREMODE_AUTO
 }
 
 SWEP.LastShotAnimation = false

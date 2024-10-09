@@ -475,9 +475,6 @@ $sequence "walklayer" {
 	"walkIdle_a"
 	"walk_a"
 	"walkIdle_a"
-	"walkIdle_a"
-	"walkIdle_a"
-	"walkIdle_a"
 	blend "player_movement" 0 276
 	blend "ironsight" 0 1
 	blendwidth 3

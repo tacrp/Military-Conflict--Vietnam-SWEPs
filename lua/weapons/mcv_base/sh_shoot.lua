@@ -124,7 +124,7 @@ function SWEP:GetFiremodeValue()
 end
 
 function SWEP:ChangeFiremode()
-    if #self.Firemodes == 0 then return end
+    if #self.Firemodes <= 1 then return end
 
     local fm = self:GetFiremode()
 
