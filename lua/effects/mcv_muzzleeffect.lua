@@ -3,15 +3,7 @@ function EFFECT:Init(data)
 
     if !IsValid(wpn) then self:Remove() return end
 
-    if wpn:GetOwner() == LocalPlayer() and wpn:GetValue("ScopeHideWeapon") and wpn:IsInScope() then
-        self:Remove()
-        return
-    end
-
-    local muzzle = TacRP.MuzzleEffects[data:GetFlags() or 1] or "muzzleflash_pistol"
-    if wpn.GetValue then
-        muzzle = wpn:GetValue("MuzzleEffect")
-    end
+    local muzzle = {wpn.MuzzleParticle, wpn.MuzzleParticleSmoke}
 
     local att = data:GetAttachment() or 1
 
@@ -26,12 +18,13 @@ function EFFECT:Init(data)
 
     if !wm then
         parent = LocalPlayer():GetViewModel()
-    end
 
-    if wpn.GetMuzzleDevice then
-        parent = wpn:GetMuzzleDevice(wm)
+        if wpn:GetSightAmount() >= 1 then
+            muzzle = {wpn.MuzzleParticleIronsighted, wpn.MuzzleParticleIronsightedSmoke}
+        end
     else
         parent = self
+        muzzle = wpn.MuzzleParticle3rdPerson
     end
 
     -- if !IsValid(parent) then return end
@@ -49,7 +42,7 @@ function EFFECT:Init(data)
 
                 if (muz or parent) != vm and !wm then
                     pcf:SetShouldDraw(false)
-                    table.insert(wpn.MuzzPCFs, pcf)
+                    table.insert(wpn.PCFs, pcf)
                 end
             end
         end

@@ -86,21 +86,25 @@ function EFFECT:Init(data)
     local smoke = true
 
     if smoke and IsValid(mdl) then
-        local pcf = CreateParticleSystem(mdl, "port_smoke", PATTACH_POINT_FOLLOW, att)
+        local pcf = CreateParticleSystem(mdl, ent.EjectBrassParticle, PATTACH_POINT_FOLLOW, att)
 
         if IsValid(pcf) then
             pcf:StartEmission()
         end
 
-        local smkpcf = CreateParticleSystem(self, "shellsmoke", PATTACH_ABSORIGIN_FOLLOW, 0)
+        local smkpcf = CreateParticleSystem(self, ent.EjectBrassTrail, PATTACH_ABSORIGIN_FOLLOW, 0)
 
         if IsValid(smkpcf) then
             smkpcf:StartEmission()
         end
 
         if self.VMContext then
-            table.insert(ent.PCFs, pcf)
-            table.insert(ent.PCFs, smkpcf)
+            if pcf then
+                table.insert(ent.PCFs, pcf)
+            end
+            if smkpcf then
+                table.insert(ent.PCFs, smkpcf)
+            end
 
             pcf:SetShouldDraw(false)
             smkpcf:SetShouldDraw(false)

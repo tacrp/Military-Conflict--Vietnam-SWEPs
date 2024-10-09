@@ -14,4 +14,13 @@ function SWEP:Holster()
 end
 
 function SWEP:Initialize()
+    // Precache particles
+    PrecacheParticleSystem( self.MuzzleParticle )
+    PrecacheParticleSystem( self.MuzzleParticleSmoke )
+    PrecacheParticleSystem( self.MuzzleParticleIronsighted )
+    PrecacheParticleSystem( self.MuzzleParticleIronsightedSmoke )
+    PrecacheParticleSystem( self.MuzzleParticle3rdPerson )
+    PrecacheParticleSystem( self.EjectBrassTrail )
+    PrecacheParticleSystem( self.EjectBrassParticle )
+    PrecacheParticleSystem( self.TracerParticle )
 end
