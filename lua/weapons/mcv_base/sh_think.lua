@@ -16,7 +16,17 @@ function SWEP:Think()
 
     if !IsValid(vm) then return end
 
-    if self:GetReloading() then
+    local displayRoundsToLoad = self:GetReloading()
+
+    if displayRoundsToLoad then
+        if self:Clip1() == 0 then
+            displayRoundsToLoad = vm:GetCycle() >= self.MagInTimeEmpty
+        else
+            displayRoundsToLoad = vm:GetCycle() >= self.MagInTime
+        end
+    end
+
+    if displayRoundsToLoad then
         local bullets_to_load = math.min(self.Primary.ClipSize - self:Clip1(), self:Ammo1())
         vm:SetPoseParameter("ammo_fraction", bullets_to_load / self.Primary.ClipSize)
     else

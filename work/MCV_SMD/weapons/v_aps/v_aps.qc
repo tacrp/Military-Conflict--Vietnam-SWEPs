@@ -744,7 +744,7 @@ $sequence "idle" {
 	addlayer "runlayer"
 	//blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
 	addlayer "BulletCounter"
-	//addlayer "SlidePosition"
+	addlayer "SlidePosition"
 }
 
 $sequence "draw" {
