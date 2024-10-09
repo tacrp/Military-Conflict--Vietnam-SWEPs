@@ -27,7 +27,7 @@ function SWEP:TranslateFOV(fov)
     return fov
 end
 
-function SWEP:DrawCrosshair(x, y)
+function SWEP:DoDrawCrosshair(x, y)
     local a = (1 - self:GetSightAmount()) * 150
 
     local dot_size = ScreenScale(1)
@@ -50,7 +50,6 @@ function SWEP:DrawCrosshair(x, y)
 end
 
 function SWEP:DrawHUD()
-    self:DrawCrosshair(ScrW() / 2, ScrH() / 2)
 end
 
 local function boxes(f)
@@ -102,6 +101,10 @@ function SWEP:PrintWeaponInfo(x, y, alpha)
 
         str = str .. title_color .. "Range:</color>\t" .. text_color
         str = str .. boxes(Lerp(range / 10000, 0, 1)) .. "</color>\n"
+
+        if self.Caliber ~= "" then
+            str = str .. title_color .. "Caliber:</color>\t" .. text_color .. self.Caliber .. "</color>\n"
+        end
 
         local d
         if self.SpreadIronsighted == self.Spread then

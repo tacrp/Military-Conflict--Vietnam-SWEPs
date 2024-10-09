@@ -9,6 +9,7 @@ SWEP.PrintName = "SKS"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Soviet Union"
 SWEP.SubCategory = "Carbines"
+SWEP.Caliber = "7.62x39mm"
 
 SWEP.Slot = 3
 

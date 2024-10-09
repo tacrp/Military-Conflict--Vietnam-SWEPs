@@ -9,6 +9,7 @@ SWEP.PrintName = "APS Stechkin"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Soviet Union"
 SWEP.SubCategory = "Machine Pistols"
+SWEP.Caliber = "9x18mm"
 
 SWEP.Slot = 1
 

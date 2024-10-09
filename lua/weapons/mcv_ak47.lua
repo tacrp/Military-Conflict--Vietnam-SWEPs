@@ -9,6 +9,7 @@ SWEP.PrintName = "AK-47"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Soviet Union"
 SWEP.SubCategory = "Assault Rifles"
+SWEP.Caliber = "7.62x39mm"
 
 SWEP.Slot = 3
 

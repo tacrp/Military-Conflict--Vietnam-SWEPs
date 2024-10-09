@@ -8,7 +8,7 @@ SWEP.Base = "weapon_base"
 SWEP.PrintName = ""
 SWEP.Country = ""
 SWEP.SubCategory = ""
-SWEP.Description = ""
+SWEP.Caliber = ""
 
 SWEP.ViewModel = "models/weapons/mcv/v_sks.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_sks.mdl"

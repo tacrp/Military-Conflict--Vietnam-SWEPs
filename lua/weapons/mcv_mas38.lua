@@ -8,10 +8,13 @@ AddCSLuaFile()
 SWEP.PrintName = "MAS 38"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "France"
-SWEP.SubCategory = "Machine Pistol"
+SWEP.SubCategory = "Submachine Guns"
+SWEP.Caliber = "7.65x20mm"
+
+SWEP.Slot = 2
 
 SWEP.ViewModel = "models/weapons/mcv/v_mas38.mdl"
-SWEP.WorldModel = "models/weapons/mcv/w_aps.mdl"
+SWEP.WorldModel = "models/weapons/mcv/w_mas38.mdl"
 
 SWEP.BodyGroups = ""
 
