@@ -7,6 +7,10 @@
 
 - All draw and firstdraw $sequences should use "walklayerironsight" instead of "walklayer"
 
+- Some slide position $sequences will need to have their included $animations inverted to work correctly. i.e. The $animation for the slide going back should be called BEFORE the $animation of the slide going forward.
+
+- If a slide position $animation causes issues with certain bones, try subtracting a corrective animation.
+
 
 ### Method 1 (cross-reference this with the SKS' QC):
 
