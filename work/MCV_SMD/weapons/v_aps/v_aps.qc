@@ -760,8 +760,7 @@ $sequence "draw" {
 	fadeout 0.2
 	addlayer "BulletCounter"
 	addlayer "SlidePosition"
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	node "0"
 	fps 30	
 }
@@ -779,8 +778,7 @@ $sequence "Firstdraw" {
 	fadein 0
 	fadeout 0.2
 	addlayer "BulletCounter"
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	
@@ -945,7 +943,7 @@ $sequence "reload" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "BulletCounter"
-	addlayer "walklayerironsight"
+	// addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	
@@ -970,7 +968,7 @@ $sequence "reload_empty" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "BulletCounter"
-	addlayer "walklayerironsight"
+	// addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	

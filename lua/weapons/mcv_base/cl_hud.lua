@@ -10,11 +10,47 @@ function SWEP:WidescreenFix(target)
     return self:ScaleFOVByWidthRatio(target, ((ScrW and ScrW() or 4) / (ScrH and ScrH() or 3)) / (4 / 3))
 end
 
-function SWEP:DoDrawCrosshair(x, y)
-    return false
+local function drawshadowrect(x, y, w, h, col)
+    local shadow = Color(0, 0, 0, col.a * 100 / 150)
+
+    surface.SetDrawColor(col)
+    surface.DrawRect(x, y, w, h)
+    surface.SetDrawColor(shadow)
+    surface.DrawOutlinedRect(x - 1, y - 1, w + 2, h + 2)
+end
+
+SWEP.TrueFOV = 90
+
+function SWEP:TranslateFOV(fov)
+    self.TrueFOV = fov
+
+    return fov
+end
+
+function SWEP:DrawCrosshair(x, y)
+    local a = (1 - self:GetSightAmount()) * 150
+
+    local dot_size = ScreenScale(1)
+    local line_size = ScreenScale(4)
+
+    local trueFOV = self:WidescreenFix(self.TrueFOV)
+
+    local gap_size = (ScrH() / trueFOV) * self.Spread
+
+    drawshadowrect(x - (dot_size / 2), y - (dot_size / 2), dot_size, dot_size, Color(255, 255, 255, a))
+
+    drawshadowrect(x - (dot_size / 2), y - (dot_size / 2) + gap_size, dot_size, line_size, Color(255, 255, 255, a))
+
+    drawshadowrect(x - (dot_size / 2), y - (dot_size / 2) - gap_size - line_size, dot_size, line_size, Color(255, 255, 255, a))
+
+    drawshadowrect(x + gap_size, y - (dot_size / 2), line_size, dot_size, Color(255, 255, 255, a))
+    drawshadowrect(x - gap_size - line_size, y - (dot_size / 2), line_size, dot_size, Color(255, 255, 255, a))
+
+    return true
 end
 
 function SWEP:DrawHUD()
+    self:DrawCrosshair(ScrW() / 2, ScrH() / 2)
 end
 
 local function boxes(f)

@@ -10,6 +10,8 @@ SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Soviet Union"
 SWEP.SubCategory = "Assault Rifles"
 
+SWEP.Slot = 3
+
 SWEP.ViewModel = "models/weapons/mcv/v_ak47.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_aps.mdl"
 
