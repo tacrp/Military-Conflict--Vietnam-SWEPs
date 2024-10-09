@@ -10,7 +10,7 @@
 	$maxlumframeblend1 "0"
 	$maxlumframeblend2 "1"
 	
-	$DEPTHBLEND "1"
+	$depthblend "0"
 	$DEPTHBLENDSCALE "40"
 	
 	// Vietnam specific

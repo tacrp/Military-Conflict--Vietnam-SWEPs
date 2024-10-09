@@ -28,6 +28,18 @@ function SWEP:Think()
     vm:SetPoseParameter("player_movement", self:GetSpeed() * Lerp(self:GetSightAmount(), 1, (1 + self.IronsightWalkBobbingStrength)))
 
     vm:SetPoseParameter("ironsight", self:GetSightAmount() ^  3)
+
+    if IsValid(self.MuzzleLight) then
+        if (self.MuzzleLightEnd or 0) < UnPredictedCurTime() then
+            self.MuzzleLight:Remove()
+            self.MuzzleLight = nil
+        else
+            local att = vm:GetAttachment(1)
+            self.MuzzleLight:SetPos(att.Pos)
+            self.MuzzleLight:SetAngles(att.Ang)
+            self.MuzzleLight:Update()
+        end
+    end
 end
 
 function SWEP:Think_Sights()

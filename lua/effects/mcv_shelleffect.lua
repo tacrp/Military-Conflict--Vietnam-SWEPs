@@ -92,22 +92,21 @@ function EFFECT:Init(data)
             pcf:StartEmission()
         end
 
-        local smkpcf = CreateParticleSystem(self, ent.EjectBrassTrail, PATTACH_ABSORIGIN_FOLLOW, 0)
+        // local smkpcf = CreateParticleSystem(self, ent.EjectBrassTrail, PATTACH_ABSORIGIN_FOLLOW, 0)
 
-        if IsValid(smkpcf) then
-            smkpcf:StartEmission()
-        end
+        // if IsValid(smkpcf) then
+        //     smkpcf:StartEmission()
+        // end
 
         if self.VMContext then
             if pcf then
                 table.insert(ent.PCFs, pcf)
+                pcf:SetShouldDraw(false)
             end
             if smkpcf then
                 table.insert(ent.PCFs, smkpcf)
+                smkpcf:SetShouldDraw(false)
             end
-
-            pcf:SetShouldDraw(false)
-            smkpcf:SetShouldDraw(false)
         end
     end
 

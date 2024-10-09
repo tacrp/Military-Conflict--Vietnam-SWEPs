@@ -5,6 +5,6 @@
 	$OVERBRIGHTFACTOR "8.75"
 	$STARTFADESIZE ".475"
 	$ENDFADESIZE ".55"
-	$DEPTHBLEND "1"
+	$depthblend "0"
 	$additive "1"
 }

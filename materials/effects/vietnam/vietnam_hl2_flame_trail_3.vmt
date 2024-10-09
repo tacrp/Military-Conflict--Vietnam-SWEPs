@@ -3,7 +3,7 @@
 	$basetexture "effects/Vietnam/Vietnam_HL2_Flame_Trail_3"
 	$powerfunction "[0.8 2.5 5]"
 	$overbrightfactor "1.5"
-	$depthblend "1"
+	$depthblend "0"
 	$vertexcolor "1"
 	$vertexalpha "1"
 	$blendframes "1"

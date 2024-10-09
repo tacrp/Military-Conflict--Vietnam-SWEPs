@@ -5,10 +5,14 @@ function SWEP:StillWaiting()
     return false
 end
 
-function SWEP:GetAimVector()
+function SWEP:GetAimAngle()
     local owner = self:GetOwner()
 
-    return (owner:EyeAngles() + owner:GetViewPunchAngles()):Forward()
+    return owner:EyeAngles() + owner:GetViewPunchAngles()
+end
+
+function SWEP:GetAimVector()
+    return self:GetAimAngle():Forward()
 end
 
 function SWEP:PrimaryAttack()
@@ -44,6 +48,7 @@ function SWEP:PrimaryAttack()
 
     if IsFirstTimePredicted() then
         self:DoEject()
+        self:DoMuzzle()
     end
 
     local firemode = self:GetFiremodeValue()
@@ -84,6 +89,7 @@ function SWEP:BulletAttack()
         Dir = self:GetAimVector(),
         Spread = Vector(spread, spread, spread),
         Attacker = owner,
+        TracerNum = self.TracerFrequency,
         Callback = function(attacker, tr, dmginfo)
             local dmg = dmginfo:GetDamage()
             local range = (tr.HitPos - tr.StartPos):Length()

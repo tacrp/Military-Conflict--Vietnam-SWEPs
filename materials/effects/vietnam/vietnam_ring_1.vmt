@@ -5,6 +5,6 @@
 	$vertexalpha "1"
         $additive "1"
 	$overbrightfactor "15"
-        $depthblend "1"
+        $depthblend "0"
         $depthblendscale "0.5"
 }

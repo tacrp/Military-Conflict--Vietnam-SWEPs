@@ -5,7 +5,7 @@
 	$vertexcolor "1"
 	$vertexalpha "1"
 	$overbrightfactor "12.0"
-	$depthblend "1"
+	$depthblend "0"
 	$depthblendscale "1.5"
 }
 

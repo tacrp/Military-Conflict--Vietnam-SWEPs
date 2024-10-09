@@ -12,7 +12,7 @@
 //	$csm_particle_worldspace_fix "1"
 	
 	// depthblend feature is required when drawing particles to lower resulotion buffer
-	$depthblend "1"
+	$depthblend "0"
     $depthblendscale "50"
 }
 

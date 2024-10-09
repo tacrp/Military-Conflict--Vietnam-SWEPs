@@ -42,6 +42,8 @@ SWEP.Firemodes = {
 SWEP.PlayCycleAnimation = false
 SWEP.LastShotAnimation = false
 
+SWEP.Silencer = false
+
 // View slide from recoil
 SWEP.ViewSlideRecoilUp = 1.35
 SWEP.ViewSlideRecoilRight = 0.48
@@ -139,7 +141,6 @@ SWEP.MuzzleParticle3rdPerson = "vietnam_muzzleflash_rifle_type1_tp"
 SWEP.EjectBrassType = 5
 SWEP.EjectBrassTrail = "vietnam_weaponeffect_shelleject_trail"
 SWEP.EjectBrassParticle = "vietnam_weaponeffect_shelleject_side"
-SWEP.EjectBrassSound = "Bounce.Shell"
 
 SWEP.TracerParticle = "vietnam_tracer_rifle_primary"
 

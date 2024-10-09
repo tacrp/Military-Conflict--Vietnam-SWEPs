@@ -7,7 +7,7 @@
     $maxlumframeblend1 "0"
     $maxlumframeblend2 "1"
     $overbrightfactor "10"
-	$depthblend "1"
+	$depthblend "0"
     $depthblendscale "40"
 	$translucent "1"
     // Vietnam specific
