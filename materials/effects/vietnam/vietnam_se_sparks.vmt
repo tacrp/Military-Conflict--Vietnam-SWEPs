@@ -1,0 +1,12 @@
+"UnlitGeneric"
+{
+	"$basetexture" "effects/vietnam/Vietnam_SE_Sparks"
+	"$additive" 1
+	"$vertexcolor" 1
+	"$vertexalpha" "1"
+	"$overbrightfactor" "5"
+	
+	"$depthblend" "0"
+	"$distancealpha" "1"
+	"$softedges" "0"
+}

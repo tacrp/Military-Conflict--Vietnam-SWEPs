@@ -1,0 +1,20 @@
+unlitgeneric
+{
+$basetexture "effects/Vietnam/Vietnam_Explosion_AE5"
+$additive 1
+$vertexcolor 1
+$vertexalpha 1
+$DEPTHBLEND 1
+$DEPTHBLENDSCALE 40
+
+//$STARTFADESIZE .7
+//$ENDFADESIZE .9
+
+$OVERBRIGHTFACTOR 1.0
+$HDRCOLORSCALE "1"
+
+$SEQUENCE_BLEND_MODE 2
+$MAXLUMFRAMEBLEND1 0
+$MAXLUMFRAMEBLEND2 1
+}
+

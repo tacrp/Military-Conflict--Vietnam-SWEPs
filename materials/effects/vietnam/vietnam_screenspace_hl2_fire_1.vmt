@@ -1,0 +1,10 @@
+"unlitgeneric"
+{
+	$basetexture "effects/Vietnam/Vietnam_HL2_Fire_1"
+//	$ADDSELF 1
+	$BLENDFRAMES "1"
+	$depthblend "0"
+	$ignorez 1
+	$additive "1"
+	$overbrightfactor "5.0"
+}

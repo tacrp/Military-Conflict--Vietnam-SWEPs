@@ -1,0 +1,10 @@
+"SpriteCard"
+{
+	$basetexture "particle/Fire_Particle_8/Fire_Particle_8"
+	$blendframes "1"
+	$overbrightfactor "12.75"
+	$startfadesize ".475"
+	$endfadesize ".55"
+	$depthblend "1"
+	$depthblendscale "0.2"
+}

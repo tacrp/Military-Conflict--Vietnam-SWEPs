@@ -1,0 +1,13 @@
+"unlitgeneric"
+{
+	$basetexture "effects/Vietnam/Vietnam_AE_Water_Blast_01"
+	$vertexcolor "1"
+	$vertexalpha "1"
+	$translucent "1"
+	$additive "1"
+	$startfadesize ".7"
+	$endfadesize ".9"
+	$sequence_blend_mode "1"
+	$maxlumframeblend1 "0"
+	$maxlumframeblend2 "1"
+}

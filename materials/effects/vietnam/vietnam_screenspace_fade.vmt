@@ -1,0 +1,7 @@
+"spritecard"
+{
+	$basetexture "effects/Vietnam/Vietnam_ScreenSpace_Fade"
+
+	$depthblend 0
+	
+}

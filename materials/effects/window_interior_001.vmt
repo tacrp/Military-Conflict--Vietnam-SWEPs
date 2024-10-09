@@ -1,0 +1,12 @@
+"LightmappedGeneric"
+{
+	"$basetexture"				"effects/window_interior_001"
+
+	"$surfaceprop" 				"concrete"
+	
+	//$envmap" 					"env_cubemap"
+	//"$normalmapalphaenvmapmask" "1"
+	//"$envmapcontrast" 			"0"
+	//"$envmapsaturation" 		"1"
+	//"$envmaptint" 				"[ 1 1 1 ]"
+}

@@ -1,0 +1,16 @@
+"SpriteCard"
+{
+	$basetexture "effects/Vietnam/Vietnam_Fume_SmokeStuff_2"
+	$vertexcolor "1"
+	$vertexalpha "1"
+	$blendframes "1"
+	$sequence_blend_mode "0"
+	$translucent "1"
+	$depthblend "1"
+    $depthblendscale "40"
+	// Vietnam specific
+	$allowcsm "1"
+	$csm_particle_worldspace_fix "1"
+}
+
+

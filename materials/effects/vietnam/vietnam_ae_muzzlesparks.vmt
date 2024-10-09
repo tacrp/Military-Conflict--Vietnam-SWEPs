@@ -1,0 +1,9 @@
+"unlitgeneric"
+{
+	$basetexture "effects/Vietnam/Vietnam_AE_MuzzleSparks"
+	$GLOWTEXTURE "effects/vietnam/Vietnam_AE_MuzzleSparks"
+	$additive "1"
+	$vertexcolor "1"
+	$vertexalpha "1"
+	$overbrightfactor "5.5"
+}

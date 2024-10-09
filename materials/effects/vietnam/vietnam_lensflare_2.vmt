@@ -1,0 +1,12 @@
+"spritecard"
+{
+	"$basetexture" "effects\vietnam\Vietnam_LensFlare_2"
+	$translucent 1
+	$additive 1
+	$depthblend 0
+	//$addself .25
+	$overbrightfactor 1.5
+	$ignorez 1
+	$STARTFADESIZE 2
+	$ENDFADESIZE 3
+}

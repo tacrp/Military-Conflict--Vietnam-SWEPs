@@ -1,0 +1,14 @@
+"SpriteCard"
+{
+	$basetexture "effects/Vietnam/Vietnam_SE_SmokeSprite"
+	$vertexcolor "1"
+	$vertexalpha "1"
+	$translucent "1"
+	$depthblend "1"
+	$STARTFADESIZE .35
+	$ENDFADESIZE .55
+	// Vietnam specific
+	$allowcsm "1"
+	$csm_particle_worldspace_fix "1"
+	
+}

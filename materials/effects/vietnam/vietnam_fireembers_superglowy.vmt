@@ -1,0 +1,10 @@
+"unlitgeneric"
+{
+	$basetexture "effects/Vietnam/Vietnam_FireEmbers"
+	$additive "1"
+	$vertexcolor "1"
+	$vertexalpha "1"
+	$overbrightfactor "675.0"
+	$HDRCOLORSCALE "2"
+}
+

@@ -1,0 +1,12 @@
+"SpriteCard"
+{
+    $basetexture "particle\Particle_Glow_05"
+    $additive "1"
+    $vertexcolor "1"
+    $vertexalpha "1"
+    $ignorez "1"
+    $overbrightfactor "3"
+    $depthblend "0"
+    $minsize ".6"
+    $maxsize ".8"
+}

@@ -1,0 +1,12 @@
+"Refract"
+{
+	$bumpmap "effects/Vietnam/Vietnam_RefractRing_2"
+ 	$normalmap "effects/Vietnam/Vietnam_RefractRing_2"
+ 	$Refractamount "-.015"
+ 	$vertexalpha "1"
+ 	$vertexcolor "1"
+ 	$translucent "1"
+ 	$forceRefract "1"
+ 	$bluramount "0.3"
+ 	$vertexcolormodulate "1"
+}

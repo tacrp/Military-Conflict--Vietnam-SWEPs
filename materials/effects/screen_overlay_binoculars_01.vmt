@@ -1,0 +1,31 @@
+"Refract"
+{
+ 	"$model" 0
+ 	"$refractamount" ".15"
+ 	"$bluramount" "1"
+	"$scale" "[1 1]"
+ 	"$normalmap" "effects/screen_overlay_binoculars_01_normal"
+	"$bumpframe" "1"
+	"$translucent" "1"
+	"$ignorez" "1"
+	"$forcerefract" 1
+	"$nofog" "1"
+	"$scopelensmode" "0"
+	"$refracttinttexture" "effects\screen_overlay_binoculars_01_color"
+	
+	"$forcealphawrite" "1"
+	
+	"$scaleamount" "[1 -1]"
+
+	"Proxies"
+	{
+	
+
+		"TextureTransform"
+		{
+			"scaleVar" "$scaleamount"
+			"resultVar" "$bumptransform"
+		}
+	}
+
+}

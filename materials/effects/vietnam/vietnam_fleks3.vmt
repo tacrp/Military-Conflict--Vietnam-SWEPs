@@ -1,0 +1,11 @@
+"SpriteCard"
+{
+	$basetexture "effects/Vietnam/Vietnam_Fleks3"
+	$vertexcolor 1
+	$vertexalpha 1
+	$alphatest 1
+	$blendframes 0
+	// Vietnam specific
+//	$allowcsm "1"
+//	$csm_particle_worldspace_fix "1"
+}

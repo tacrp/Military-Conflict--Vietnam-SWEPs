@@ -1,0 +1,9 @@
+"unlitgeneric"
+{
+    $basetexture "effects/Vietnam/Vietnam_MoltenSlag"
+    $additive "1"
+    $vertexcolor "1"
+    $vertexalpha "1"
+    $overbrightfactor "25"
+	$HDRCOLORSCALE "25"
+}

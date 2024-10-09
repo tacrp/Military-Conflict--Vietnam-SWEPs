@@ -1,0 +1,10 @@
+"unlitgeneric"
+{
+	$basetexture "effects/vietnam/Vietnam_DirtCombined"
+	$vertexcolor "1"
+	$vertexalpha "1"
+	$translucent "1"
+	// Vietnam specific
+//	$allowcsm "1"
+//	$csm_particle_worldspace_fix "1"
+}

@@ -1,0 +1,10 @@
+"SpriteCard"
+{
+	$basetexture "effects/Vietnam/Vietnam_AE_Water_Spray_1"
+	$additive "1"
+	$overbrightfactor "0.5"
+	$blendframes "1"
+	$maxsize ".85"
+	$startfadesize ".675"
+	$endfadesize ".75"
+}

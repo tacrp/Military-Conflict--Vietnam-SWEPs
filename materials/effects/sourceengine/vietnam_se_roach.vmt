@@ -1,0 +1,7 @@
+unlitgeneric
+{
+$basetexture "effects/sourceengine/vietnam_se_roach"
+$translucent 1
+$vertexcolor 1
+$vertexalpha 1
+}

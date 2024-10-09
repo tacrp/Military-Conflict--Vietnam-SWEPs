@@ -1,0 +1,10 @@
+"unlitgeneric"
+{
+	$basetexture "effects/Vietnam/Vietnam_DF_MuzzleFlashes"
+//	$GLOWTEXTURE "effects/vietnam/Vietnam_DF_MuzzleFlashes"
+	$additive "1"
+	$vertexcolor "1"
+	$vertexalpha "1"
+	//$overbrightfactor "2.5"
+	$HDRCOLORSCALE "1.45"
+}

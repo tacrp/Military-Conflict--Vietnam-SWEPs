@@ -1,0 +1,19 @@
+"SpriteCard"
+{
+	$basetexture "effects/Vietnam/Vietnam_Fume_SmokeStuff"
+	$vertexcolor "1"
+	$vertexalpha "1"
+	$blendframes "1"
+	$overbrightfactor "2.5"
+	$translucent "1"
+
+	// Vietnam specific
+//	$allowcsm "1"
+//	$csm_particle_worldspace_fix "1"
+	
+	// depthblend feature is required when drawing particles to lower resulotion buffer
+	$depthblend "1"
+    $depthblendscale "50"
+}
+
+

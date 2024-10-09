@@ -1,0 +1,14 @@
+"Refract"
+{
+ 	"$RefractTintTexture" "effects/Vietnam/Vietnam_ScreenSpace_Fade"
+ 	"$normalmap" "effects/Vietnam/Vietnam_ScreenSpace_Fade_Refract"
+ 	"$refractamount" "0.15"
+	"$vertexalpha" "1"
+	"$vertexcolor" "1"
+	"$translucent" "1"
+	"$forcerefract" 1
+ 	"$bluramount" "1"
+	"$nofog" "1"
+	"$vertexcolormodulate" "1"
+	$NoCull 1
+}

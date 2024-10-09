@@ -1,0 +1,12 @@
+"SpriteCard"
+{
+	$basetexture "particle/fire_particle_2/fire_particle_2"
+        $vertexcolor 1
+        $vertexalpha 1
+	$DEPTHBLEND 5.5
+        $blendframes 1
+	$MAXLUMFRAMEBLEND1 0
+	$MAXLUMFRAMEBLEND2 1
+        $OVERBRIGHTFACTOR 15
+        $additive 1
+}

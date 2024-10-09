@@ -1,0 +1,13 @@
+"Sprite"
+{
+	"$basetexture" "effects/Vietnam/Vietnam_SE_BendiBeam"
+	"$additive" "1"
+	$translucent 1
+	"$vertexcolor"		1
+	"$nocull"			1
+	"$spriterendermode" 5
+	$overbrightfactor 15
+}
+
+
+

@@ -1,0 +1,8 @@
+"SpriteCard"
+{
+	"$basetexture" "effects/vietnam/Vietnam_SE_Paper"
+	$vertexcolor 1
+	$vertexalpha 1
+	$alphatest 1
+	"$blendframes" "0"
+}

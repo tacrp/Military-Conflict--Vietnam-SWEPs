@@ -1,0 +1,10 @@
+"SpriteCard"
+{
+	$basetexture "effects/Vietnam/Vietnam_SmokeCig"
+	$vertexcolor "1"
+	$vertexalpha "1"
+	$translucent "1"
+	$depthblend	 "0"
+	$ignorez 	 "1"
+	
+}

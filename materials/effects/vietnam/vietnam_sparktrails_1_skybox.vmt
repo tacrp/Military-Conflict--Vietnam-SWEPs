@@ -1,0 +1,10 @@
+"unlitgeneric"
+{
+    $basetexture "effects/Vietnam/Vietnam_SparkTrails_1"
+    $additive "1"
+    $vertexcolor "1"
+    $vertexalpha "1"
+    $overbrightfactor "80"
+    $depthblend "0"
+	$HDRCOLORSCALE "99"
+}

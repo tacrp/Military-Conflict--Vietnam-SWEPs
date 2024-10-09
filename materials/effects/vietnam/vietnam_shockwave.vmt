@@ -1,0 +1,9 @@
+"unlitgeneric"
+{
+	$basetexture "effects/Vietnam/Vietnam_Shockwave"
+	$additive "1"
+	$vertexcolor "1"
+	$vertexalpha "1"
+//	$overbrightfactor "1.0"
+}
+

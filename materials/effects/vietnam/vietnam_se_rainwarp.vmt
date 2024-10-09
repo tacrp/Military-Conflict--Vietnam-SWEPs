@@ -1,0 +1,24 @@
+Refract
+{
+
+// "<dx90"
+// {
+// $fallbackmaterial "particle\warp1_dx8"
+// }
+
+$basetexture "effects/Vietnam/Vietnam_SE_RainWarp_Base"
+$normalmap "effects/Vietnam/Vietnam_SE_RainWarp_Normal"
+$translucent 1
+$additive 1
+
+$refractamount "-0.2"
+$vertexalpha 1
+$vertexcolor 1
+
+$forcerefract 1
+
+$nofog 1
+$vertexcolormodulate 1
+$NoCull 1
+$depthblend 0
+}

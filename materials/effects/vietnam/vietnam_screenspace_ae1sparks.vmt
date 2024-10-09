@@ -1,0 +1,11 @@
+"unlitgeneric"
+{
+	$basetexture "effects/Vietnam/Vietnam_Explosion_AE1"
+	$additive "1"
+	$vertexcolor "1"
+	$vertexalpha "1"
+	$overbrightfactor "65.0"
+	$ignorez 1
+	$BLENDFRAMES 1
+}
+

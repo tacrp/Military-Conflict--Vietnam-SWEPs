@@ -1,0 +1,10 @@
+"unlitgeneric"
+{
+	$basetexture "effects/Vietnam/Vietnam_AE_BloodBurst_01"
+	$vertexcolor "1"
+	$vertexalpha "1"
+	$alphatest "1"
+	$allowalphatocoverage "0"
+	$alphatestreference ".4"
+	$overbrightfactor "3"	
+}

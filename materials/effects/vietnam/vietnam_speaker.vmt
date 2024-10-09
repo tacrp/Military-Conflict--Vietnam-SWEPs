@@ -1,0 +1,8 @@
+"spritecard"
+{
+	"$baseTexture" "effects/Vietnam/Vietnam_Speaker"
+	$vertexcolor 1
+	$vertexalpha 1
+	$alphatest 1
+	"$blendframes" "0"
+}

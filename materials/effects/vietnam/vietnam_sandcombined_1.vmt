@@ -1,0 +1,12 @@
+"unlitgeneric"
+{
+	$basetexture "effects/vietnam/Vietnam_SandCombined"
+	$vertexcolor "1"
+	$vertexalpha "1"
+	$alphatest "1"
+	$allowalphatocoverage "0"
+	$alphatestreference ".4"
+	// Vietnam specific
+//	$allowcsm "1"
+//	$csm_particle_worldspace_fix "1"
+}

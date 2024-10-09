@@ -1,0 +1,12 @@
+SpriteCard
+{
+$basetexture "effects/sourceengine/vietnam_se_moth"
+$translucent 1
+$vertexcolor 1
+$overbrightfactor 1
+$depthblend 0
+
+
+
+
+}

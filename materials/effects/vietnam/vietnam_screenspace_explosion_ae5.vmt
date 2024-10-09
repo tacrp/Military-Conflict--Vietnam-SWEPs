@@ -1,0 +1,15 @@
+SpriteCard
+{
+$basetexture "effects/Vietnam/Vietnam_Explosion_AE5"
+$additive 1
+$vertexcolor 1
+$vertexalpha 1
+$OVERBRIGHTFACTOR 1.0
+$SEQUENCE_BLEND_MODE 1
+$MAXLUMFRAMEBLEND1 0
+$MAXLUMFRAMEBLEND2 1
+
+$ignorez 1
+$BLENDFRAMES 1
+}
+
