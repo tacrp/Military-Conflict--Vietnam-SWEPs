@@ -1,0 +1,16 @@
+// Documented for reference to ensure the base feels as close to the original game as possible.
+
+
+- Weapons often restore their clip before the animation has finished playing (like CoD). As soon as the clip has been restored, weapons can enter an ADS stance. The reload animation will play out but your FOV will zoom in and you will be in ironsights when the animation finishes.
+
+- Bashing cancels reloads and can be abused to shorten reload times (albeit, by a negligible amount). Basically CoD reload cancelling.
+
+- Bolt-action rifles, pump-action shotguns and revolvers (but only in DA and SA, for some reason) are actually full-auto in gameplay, and will fire continuously if the fire button is held down.
+
+- All weapons that are full-auto in gameplay can buffer shots when reloading or switching-to if the fire button is held down.
+
+- Weapons will not automatically reload on empty if the fire button is held down and will infinitely dryfire until it is released.
+
+- Shooting interrupts sprinting.
+
+- Reloading does not interrupt sprinting, and vice versa.
