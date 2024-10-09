@@ -13,4 +13,6 @@
 
 - Shooting interrupts sprinting.
 
+- ADS interrupts sprinting.
+
 - Reloading does not interrupt sprinting, and vice versa.

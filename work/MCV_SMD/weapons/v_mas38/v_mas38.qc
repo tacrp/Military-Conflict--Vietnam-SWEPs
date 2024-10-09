@@ -17,9 +17,9 @@ $illumposition -0.791 -11.502 -12.268
 $cdmaterials "models\weapons\mcv\v_mas38\"
 $cdmaterials "models\weapons\mcv\shells\"
 
-$attachment "cam" "cam_driver" 0 0 0 rotate 0 0 0
 $attachment "muzzle" "Base" -15.5 0 1.8 rotate 0 180 0
 $attachment "eject" "Base" -1.5 0 1.6 rotate -20 90 7
+$attachment "cam" "cam_driver" 0 0 0 rotate 0 0 0
 
 $cbox 0 0 0 0 0 0
 
@@ -178,19 +178,22 @@ $animation "shoot3_ironsight_a_corrective_animation" "v_mas38_anims\shoot3_irons
 
 $animation "basePose_a" "v_mas38_anims\basePose_a.smd" {
 	fps 30
-	loop
+	numframes 60
 	
 	
 }
 
 $animation "ironsight" "v_mas38_anims\ironsight.smd" {
-	fps 0.5
+	fps 30
+	frame 1 1
+	numframes 60
 	
 	
 }
 
 $animation "ironsight_transition" "v_mas38_anims\ironsight_transition.smd" {
-	fps 0.5
+	fps 30
+	numframes 60
 	
 	
 }
@@ -412,60 +415,100 @@ $sequence "ironsight_test" {
 $sequence "idle" {
 	"basePose_a"
 	"ironsight_transition"
+	"ironsight"
 	activity "ACT_VM_IDLE" 1
 	blend "ironsight" 0 0.5
-	blendwidth 2
+	blendwidth 3
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
 	addlayer "runlayer"
-	blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
+	//blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
 	node "0"
 }
 
 $sequence "shoot1" {
-	"shoot1_a"
-	"shoot1_ironsight_a"
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
 	activity "ACT_VM_PRIMARYATTACK" 1
-	blend "ironsight" 0 1
-	blendwidth 2
-	delta
-	{ event AE_CLIENT_EJECT_BRASS 1 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 0 "ammo_fraction" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	blend "ironsight" 0 0.5
+	blendwidth 3
+	snap
+	addlayer "walklayer"
+	addlayer "runlayer"
+	addlayer "shootpose1"
+	//blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
+	node "0"
 }
 
 $sequence "shoot2" {
-	"shoot2_a"
-	"shoot2_ironsight_a"
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
 	activity "ACT_VM_PRIMARYATTACK" 1
-	blend "ironsight" 0 1
-	blendwidth 2
-	delta
-	{ event AE_CLIENT_EJECT_BRASS 1 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 0 "ammo_fraction" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	blend "ironsight" 0 0.5
+	blendwidth 3
+	snap
+	addlayer "walklayer"
+	addlayer "runlayer"
+	addlayer "shootpose2"
+	//blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
+	node "0"
 }
 
 $sequence "shoot3" {
-	"shoot3_a"
-	"shoot3_ironsight_a"
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
 	activity "ACT_VM_PRIMARYATTACK" 1
+	blend "ironsight" 0 0.5
+	blendwidth 3
+	snap
+	addlayer "walklayer"
+	addlayer "runlayer"
+	addlayer "shootpose3"
+	//blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
+	node "0"
+}
+
+$sequence "shootpose1" {
+	"shoot1_a"
+	"shoot1_ironsight_a"
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
 	{ event AE_CLIENT_EJECT_BRASS 1 "eject" }
 	{ event AE_MUZZLEFLASH 0 "" }
 	{ event AE_WPN_CLIP_TO_POSEPARAM 0 "ammo_fraction" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	snap
+	hidden
+}
+
+$sequence "shootpose2" {
+	"shoot2_a"
+	"shoot2_ironsight_a"
+	blend "ironsight" 0 1
+	blendwidth 2
+	delta
+	{ event AE_CLIENT_EJECT_BRASS 1 "eject" }
+	{ event AE_MUZZLEFLASH 0 "" }
+	{ event AE_WPN_CLIP_TO_POSEPARAM 0 "ammo_fraction" }
+	snap
+	hidden
+}
+
+$sequence "shootpose3" {
+	"shoot3_a"
+	"shoot3_ironsight_a"
+	blend "ironsight" 0 1
+	blendwidth 2
+	delta
+	{ event AE_CLIENT_EJECT_BRASS 1 "eject" }
+	{ event AE_MUZZLEFLASH 0 "" }
+	{ event AE_WPN_CLIP_TO_POSEPARAM 0 "ammo_fraction" }
+	snap
+	hidden
 }
 
 $sequence "draw" {
@@ -488,7 +531,7 @@ $sequence "draw" {
 $sequence "Firstdraw" {
 	"v_mas38_anims\Firstdraw.smd"
 	"v_mas38_anims\Firstdraw_2.smd"
-	activity "ACT_VM_FIRSTDRAW" 1
+	activity "ACT_VM_READY" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_MAS38.Draw" }
@@ -516,7 +559,7 @@ $sequence "reload" {
 	{ event AE_WPN_COMPLETE_RELOAD 49 "" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	
@@ -538,7 +581,7 @@ $sequence "reload_empty" {
 	{ event AE_WPN_CLIP_TO_POSEPARAM 74 "ammo_fraction" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	
