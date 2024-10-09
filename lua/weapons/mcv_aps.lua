@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "APS Stechkin"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Soviet Union"
-SWEP.SubCategory = "Machine Pistol"
+SWEP.SubCategory = "Machine Pistols"
 
 SWEP.ViewModel = "models/weapons/mcv/v_aps.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_aps.mdl"

@@ -1,5 +1,11 @@
 function SWEP:Reload()
     if self:StillWaiting() then return end
+
+    if self:GetOwner():KeyDown(IN_USE) then
+        self:ChangeFiremode()
+        return
+    end
+
     if self:Ammo1() == 0 then return end
     if self:Clip1() >= self:GetClip1Capacity() then return end
 
@@ -8,6 +14,8 @@ function SWEP:Reload()
     else
         self:PlayAnimation(ACT_VM_RELOAD, 1, true)
     end
+
+    self:ScopeToggle(false)
 
     self:SetReloading(true)
 end
