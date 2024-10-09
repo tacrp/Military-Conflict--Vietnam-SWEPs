@@ -14,7 +14,7 @@ SWEP.Caliber = "7.62x39mm"
 SWEP.Slot = 3
 
 SWEP.ViewModel = "models/weapons/mcv/v_rpd.mdl"
-SWEP.WorldModel = "models/weapons/mcv/w_ak47.mdl"
+SWEP.WorldModel = "models/weapons/mcv/w_rpd.mdl"
 
 SWEP.BodyGroups = ""
 

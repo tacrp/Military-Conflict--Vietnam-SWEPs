@@ -45,10 +45,12 @@ $cbox 0 0 0 0 0 0
 
 $bbox -14.916 -6.218 -12.572 26.852 6.218 3.353
 
-$definebone "ValveBiped.weapon_bone" "" 0 0 -0.064417 0 0 90.000043 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Hand" "" -6 -1 -2 0 0 180 0 0 0 0 0 0
+$definebone "ValveBiped.weapon_bone" "ValveBiped.Bip01_R_Hand" 0 0 -0.064417 0 0 90.000043 0 0 0 0 0 0
 $definebone "ValveBiped.weapon_bone4" "ValveBiped.weapon_bone" 0 0 0 0 0 0 0 0 0 0 0 0
 $definebone "ValveBiped.weapon_bone3" "ValveBiped.weapon_bone" 0 0 0 0 0 0 0 0 0 0 0 0
 $definebone "ValveBiped.weapon_bone2" "ValveBiped.weapon_bone" 0 0 0 0 0 0 0 0 0 0 0 0
+
 
 
 $sequence "idle" {
