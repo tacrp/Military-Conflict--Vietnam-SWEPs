@@ -28,7 +28,7 @@ function SWEP:TranslateFOV(fov)
 end
 
 function SWEP:DoDrawCrosshair(x, y)
-    local a = (1 - self:GetSightAmount()) * 150
+    local a = (1 - self:GetSightAmount()) * 100
 
     local dot_size = ScreenScale(1)
     local line_size = ScreenScale(4)
@@ -39,12 +39,21 @@ function SWEP:DoDrawCrosshair(x, y)
 
     drawshadowrect(x - (dot_size / 2), y - (dot_size / 2), dot_size, dot_size, Color(255, 255, 255, a))
 
-    drawshadowrect(x - (dot_size / 2), y - (dot_size / 2) + gap_size, dot_size, line_size, Color(255, 255, 255, a))
+    if self.Num > 1 then
+        local shadow = Color(0, 0, 0, a * 100 / 150)
 
-    drawshadowrect(x - (dot_size / 2), y - (dot_size / 2) - gap_size - line_size, dot_size, line_size, Color(255, 255, 255, a))
+        surface.DrawCircle(x, y, gap_size, Color(255, 255, 255, a))
+        surface.DrawCircle(x, y, gap_size - 1, Color(255, 255, 255, a))
+        surface.DrawCircle(x, y, gap_size + 1, shadow)
+        surface.DrawCircle(x, y, gap_size - 2, shadow)
+    else
+        drawshadowrect(x - (dot_size / 2), y - (dot_size / 2) + gap_size, dot_size, line_size, Color(255, 255, 255, a))
 
-    drawshadowrect(x + gap_size, y - (dot_size / 2), line_size, dot_size, Color(255, 255, 255, a))
-    drawshadowrect(x - gap_size - line_size, y - (dot_size / 2), line_size, dot_size, Color(255, 255, 255, a))
+        drawshadowrect(x - (dot_size / 2), y - (dot_size / 2) - gap_size - line_size, dot_size, line_size, Color(255, 255, 255, a))
+
+        drawshadowrect(x + gap_size, y - (dot_size / 2), line_size, dot_size, Color(255, 255, 255, a))
+        drawshadowrect(x - gap_size - line_size, y - (dot_size / 2), line_size, dot_size, Color(255, 255, 255, a))
+    end
 
     return true
 end

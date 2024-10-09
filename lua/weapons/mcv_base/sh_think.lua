@@ -14,6 +14,8 @@ function SWEP:Think()
 
     if owner:KeyReleased(IN_ATTACK) then
         self:SetNeedTriggerPress(false)
+    elseif self:GetReloading() and self.ShotgunReload and owner:KeyPressed(IN_ATTACK) then
+        self:SetEndReload(true)
     end
 
     if !IsValid(vm) then return end

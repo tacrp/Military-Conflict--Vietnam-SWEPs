@@ -233,21 +233,18 @@ $animation "basePose_a" "v_browning_auto_anims\basePose_a.smd" {
 	fps 30
 	loop
 	numframes 60
-	
 }
 
 $animation "ironsight" "v_browning_auto_anims\ironsight.smd" {
 	fps 30
 	frame 0 1
 	numframes 60
-	
 }
 
 $animation "ironsight_transition" "v_browning_auto_anims\ironsight_transition.smd" {
 	fps 30
 	frame 0 1
 	numframes 60
-	
 }
 
 $animation "walkDelta" "v_browning_auto_anims\walkDelta.smd" {

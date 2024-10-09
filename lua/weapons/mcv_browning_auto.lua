@@ -95,7 +95,7 @@ SWEP.SneakMoveSpreadMultiplier = 1.4
 SWEP.CrouchMoveSpreadMultiplier = 1.35
 SWEP.JumpSpreadMultiplier = 3.0
 
-SWEP.HasBayonet = true
+SWEP.HasBayonet = false
 SWEP.HasRifleGrenade = false
 
 SWEP.BashDamage = 50
