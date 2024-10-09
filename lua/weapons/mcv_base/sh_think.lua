@@ -31,15 +31,19 @@ function SWEP:Think()
     end
 
     if displayRoundsToLoad then
-        if self.MagInClip then
-            local bullets_to_load = math.min(self.Primary.ClipSize - self:Clip1(), self:Ammo1())
-
-            vm:SetPoseParameter("ammo_fraction", bullets_to_load / self.Primary.ClipSize)
+        if self.ShotgunReload and self:GetReloading() and self:GetEmptyReload() then
+            vm:SetPoseParameter("ammo_fraction", 0)
         else
-            local reserve = self:GetInfiniteAmmo() and math.huge or (self:Clip1() + self:Ammo1())
-            local bullets_to_load = math.min(self.Primary.ClipSize, self:GetClip1Capacity(), reserve)
+            if self.MagInClip then
+                local bullets_to_load = math.min(self.Primary.ClipSize - self:Clip1(), self:Ammo1())
 
-            vm:SetPoseParameter("ammo_fraction", bullets_to_load / self.Primary.ClipSize)
+                vm:SetPoseParameter("ammo_fraction", bullets_to_load / self.Primary.ClipSize)
+            else
+                local reserve = self:GetInfiniteAmmo() and math.huge or (self:Clip1() + self:Ammo1())
+                local bullets_to_load = math.min(self.Primary.ClipSize, self:GetClip1Capacity(), reserve)
+
+                vm:SetPoseParameter("ammo_fraction", bullets_to_load / self.Primary.ClipSize)
+            end
         end
     else
         vm:SetPoseParameter("ammo_fraction", (self:Clip1() / self.Primary.ClipSize))

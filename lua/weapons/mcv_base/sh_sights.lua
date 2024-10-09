@@ -28,7 +28,7 @@ function SWEP:Think_Sights()
         target_sight_amount = 1
     end
 
-    if owner:KeyDown(IN_ATTACK2) and !self:GetIronsight() and !owner:KeyDown(IN_USE) then
+    if owner:KeyDown(IN_ATTACK2) and !self:GetIronsight() and !owner:KeyDown(IN_USE) and !self:StillWaiting() then
         self:ScopeToggle(true)
     elseif !owner:KeyDown(IN_ATTACK2) and self:GetIronsight() then
         self:ScopeToggle(false)

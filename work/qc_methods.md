@@ -34,4 +34,7 @@ to each of them. Make sure their fps is the same as well.
 
  - "draw"
  - "firstdraw"
- - "reload" (and variations)
+ - "holster
+
+
+8. Remove the "walklayerironsight" layer from reload and related animations (Otherwise the hands clip)

@@ -237,13 +237,14 @@ $animation "basePose_a" "v_browning_auto_anims\basePose_a.smd" {
 
 $animation "ironsight" "v_browning_auto_anims\ironsight.smd" {
 	fps 30
-	frame 0 1
+	loop
+	frame 1 1
 	numframes 60
 }
 
 $animation "ironsight_transition" "v_browning_auto_anims\ironsight_transition.smd" {
 	fps 30
-	frame 0 1
+	loop
 	numframes 60
 }
 
@@ -548,10 +549,9 @@ $sequence "idle" {
 	blend "ironsight" 0 1
 	blendwidth 3
 	fadein 0.2
-	fadeout 0.2
+	fadeout 1
 	addlayer "walklayer"
 	addlayer "runlayer"
-	// blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
 	addlayer "SlidePosition"
 	node "0"
 }
@@ -600,13 +600,10 @@ $sequence "shoot1" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0.2
-	fadeout 0.2
-	addlayer "walklayerironsight"
-	// blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
-	addlayer "SlidePosition"
+	snap
 	addlayer "shootpose1"
-	node "0"
+	addlayer "walklayerironsight"
+	addlayer "SlideMovement"
 }
 
 $sequence "shoot2" {
@@ -616,13 +613,10 @@ $sequence "shoot2" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0.2
-	fadeout 0.2
-	addlayer "walklayerironsight"
-	// blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
-	addlayer "SlidePosition"
+	snap
 	addlayer "shootpose2"
-	node "0"
+	addlayer "walklayerironsight"
+	addlayer "SlideMovement"
 }
 
 $sequence "shoot3" {
@@ -632,13 +626,10 @@ $sequence "shoot3" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0.2
-	fadeout 0.2
-	addlayer "walklayerironsight"
-	// blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
-	addlayer "SlidePosition"
+	snap
 	addlayer "shootpose3"
-	node "0"
+	addlayer "walklayerironsight"
+	addlayer "SlideMovement"
 }
 
 $sequence "shootpose1" {
@@ -647,13 +638,8 @@ $sequence "shootpose1" {
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 0 "ammo_fraction" }
-	fadein 0
-	fadeout 0.2
-	addlayer "SlideMovement"
-	node "Fire"
+	snap
+	hidden
 }
 
 $sequence "shootpose2" {
@@ -662,13 +648,8 @@ $sequence "shootpose2" {
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 0 "ammo_fraction" }
-	fadein 0
-	fadeout 0.2
-	addlayer "SlideMovement"
-	node "Fire"
+	snap
+	hidden
 }
 
 $sequence "shootpose3" {
@@ -677,13 +658,8 @@ $sequence "shootpose3" {
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 0 "ammo_fraction" }
-	fadein 0
-	fadeout 0.2
-	addlayer "SlideMovement"
-	node "Fire"
+	snap
+	hidden
 }
 
 $sequence "reload_start" {
@@ -695,7 +671,6 @@ $sequence "reload_start" {
 	{ event 5004 1 "MCV_Weapon_Foley_M870_Reload.Hand" }
 	fadein 0.2
 	fadeout 0
-	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
 	node "0"
 }
@@ -709,7 +684,6 @@ $sequence "reload_insert" {
 	{ event 5004 6 "MCV_Weapon_Foley_M870_Reload.Bullets" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
 	node "0"
 	snap
@@ -725,7 +699,6 @@ $sequence "reload_end" {
 	{ event AE_WPN_CLIP_TO_POSEPARAM 12 "ammo_fraction" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
 	node "0"
 }
@@ -741,7 +714,6 @@ $sequence "reload_endpump" {
 	{ event AE_WPN_CLIP_TO_POSEPARAM 12 "ammo_fraction" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayerironsight"
 	node "0"
 }
 

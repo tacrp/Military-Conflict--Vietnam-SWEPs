@@ -44,6 +44,8 @@ function SWEP:Bash()
     dmginfo:SetAttacker(owner)
     dmginfo:SetInflictor(self)
 
+    self:SetIronsight(false)
+
     self:FireBullets({
         Attacker = self:GetOwner(),
         Damage = 0,
