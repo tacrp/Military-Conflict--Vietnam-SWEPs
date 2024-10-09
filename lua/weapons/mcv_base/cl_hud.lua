@@ -29,6 +29,7 @@ end
 
 function SWEP:DoDrawCrosshair(x, y)
     local a = (1 - self:GetSightAmount()) * 100
+    local col = Color(255, 255, 255, a)
 
     local dot_size = ScreenScale(1)
     local line_size = ScreenScale(4)
@@ -37,22 +38,47 @@ function SWEP:DoDrawCrosshair(x, y)
 
     local gap_size = (ScrH() / trueFOV) * self.Spread
 
-    drawshadowrect(x - (dot_size / 2), y - (dot_size / 2), dot_size, dot_size, Color(255, 255, 255, a))
+    drawshadowrect(x - (dot_size / 2), y - (dot_size / 2), dot_size, dot_size, col)
 
     if self.Num > 1 then
         local shadow = Color(0, 0, 0, a * 100 / 150)
 
-        surface.DrawCircle(x, y, gap_size, Color(255, 255, 255, a))
-        surface.DrawCircle(x, y, gap_size - 1, Color(255, 255, 255, a))
+        surface.DrawCircle(x, y, gap_size, col)
+        surface.DrawCircle(x, y, gap_size - 1, col)
         surface.DrawCircle(x, y, gap_size + 1, shadow)
         surface.DrawCircle(x, y, gap_size - 2, shadow)
     else
-        drawshadowrect(x - (dot_size / 2), y - (dot_size / 2) + gap_size, dot_size, line_size, Color(255, 255, 255, a))
+        drawshadowrect(x - (dot_size / 2), y - (dot_size / 2) + gap_size, dot_size, line_size, col)
 
-        drawshadowrect(x - (dot_size / 2), y - (dot_size / 2) - gap_size - line_size, dot_size, line_size, Color(255, 255, 255, a))
+        drawshadowrect(x - (dot_size / 2), y - (dot_size / 2) - gap_size - line_size, dot_size, line_size, col)
 
-        drawshadowrect(x + gap_size, y - (dot_size / 2), line_size, dot_size, Color(255, 255, 255, a))
-        drawshadowrect(x - gap_size - line_size, y - (dot_size / 2), line_size, dot_size, Color(255, 255, 255, a))
+        drawshadowrect(x + gap_size, y - (dot_size / 2), line_size, dot_size, col)
+        drawshadowrect(x - gap_size - line_size, y - (dot_size / 2), line_size, dot_size, col)
+    end
+
+    if GetConVar("developer"):GetBool() then
+        local vm = self:GetOwner():GetViewModel()
+        surface.SetFont("TargetID")
+
+        local txt = "CYCLE: " .. math.Round(vm:GetCycle(), 2)
+        local tw = surface.GetTextSize(txt)
+        surface.SetTextPos(x - (tw / 2), y + 100)
+        surface.SetTextColor(col)
+        surface.DrawText(txt)
+
+        local txt2 = vm:GetSequenceActivityName(vm:GetSequence())
+        local tw2 = surface.GetTextSize(txt2)
+        surface.SetTextPos(x - (tw2 / 2), y + 100 + 16)
+        surface.SetTextColor(col)
+        surface.DrawText(txt2)
+
+        local tr = self:GetOwner():GetEyeTrace()
+        local dist = (tr.HitPos - self:GetOwner():EyePos()):Length()
+        local txt3 = "RANGE MULT: " .. math.Round(math.pow(self.RangeModifier, math.max(dist / 500, 0)), 3)
+        local tw3 = surface.GetTextSize(txt3)
+        surface.SetTextPos(x - (tw3 / 2), y + 100 + 16 * 2)
+        surface.SetTextColor(col)
+        surface.DrawText(txt3)
     end
 
     return true

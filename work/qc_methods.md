@@ -38,3 +38,4 @@ to each of them. Make sure their fps is the same as well.
 
 
 8. Remove the "walklayerironsight" layer from reload and related animations (Otherwise the hands clip)
+9. Add "snap" to your idle and firing animations (This is to prevent firing animations from jerking after shooting)

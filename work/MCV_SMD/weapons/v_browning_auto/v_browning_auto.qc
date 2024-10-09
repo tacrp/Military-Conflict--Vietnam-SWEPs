@@ -548,8 +548,7 @@ $sequence "idle" {
 	activity "ACT_VM_IDLE" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0.2
-	fadeout 1
+	snap
 	addlayer "walklayer"
 	addlayer "runlayer"
 	addlayer "SlidePosition"
@@ -604,6 +603,8 @@ $sequence "shoot1" {
 	addlayer "shootpose1"
 	addlayer "walklayerironsight"
 	addlayer "SlideMovement"
+
+	numframes 60
 }
 
 $sequence "shoot2" {
@@ -617,6 +618,8 @@ $sequence "shoot2" {
 	addlayer "shootpose2"
 	addlayer "walklayerironsight"
 	addlayer "SlideMovement"
+
+	numframes 60
 }
 
 $sequence "shoot3" {
@@ -630,6 +633,8 @@ $sequence "shoot3" {
 	addlayer "shootpose3"
 	addlayer "walklayerironsight"
 	addlayer "SlideMovement"
+
+	numframes 60
 }
 
 $sequence "shootpose1" {
@@ -686,6 +691,7 @@ $sequence "reload_insert" {
 	fadeout 0.2
 	addlayer "SlidePosition"
 	node "0"
+	loop
 	snap
 }
 

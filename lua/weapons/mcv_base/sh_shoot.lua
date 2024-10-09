@@ -100,7 +100,7 @@ function SWEP:BulletAttack()
             local dmg = dmginfo:GetDamage()
             local range = (tr.HitPos - tr.StartPos):Length()
 
-            dmg = dmg * math.pow(self.RangeModifier, math.max(range / 500, 1))
+            dmg = dmg * math.pow(self.RangeModifier, math.max(range / 500, 0))
 
             if IsValid(tr.Entity) then
                 MCV.CancelBodyDamage(tr.Entity, dmginfo, tr.HitGroup)
