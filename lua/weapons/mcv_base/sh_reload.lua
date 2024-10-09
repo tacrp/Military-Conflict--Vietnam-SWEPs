@@ -9,10 +9,16 @@ function SWEP:Reload()
     if self:Ammo1() == 0 then return end
     if self:Clip1() >= self:GetClip1Capacity() then return end
 
-    if self:Clip1() == 0 then
-        self:PlayAnimation(ACT_VM_RELOADEMPTY, 1, true)
+    if self.ShotgunReload then
+        self:PlayAnimation(ACT_SHOTGUN_RELOAD_START, 1, true)
+
+        self:SetEmptyReload(self:Clip1() == 0)
     else
-        self:PlayAnimation(ACT_VM_RELOAD, 1, true)
+        if self:Clip1() == 0 then
+            self:PlayAnimation(ACT_VM_RELOADEMPTY, 1, true)
+        else
+            self:PlayAnimation(ACT_VM_RELOAD, 1, true)
+        end
     end
 
     self:ScopeToggle(false)
@@ -45,7 +51,26 @@ end
 
 function SWEP:Think_Reload()
     if self:GetReloading() and !self:StillWaiting() then
-        self:SetReloading(false)
-        self:RestoreClip(self.Primary.ClipSize)
+        if self.ShotgunReload then
+            if self:Clip1() >= (self:GetEmptyReload() and self.Primary.ClipSize or self:GetClip1Capacity()) or (!self:GetInfiniteAmmo() and self:Ammo1() == 0) or self:GetEndReload() then
+
+                if (self:Clip1() == self:GetLoadedRounds() or !self:GetEmptyReload()) then
+                    self:PlayAnimation(ACT_SHOTGUN_RELOAD_FINISH, 1, true)
+                else
+                    self:PlayAnimation(ACT_SHOTGUN_PUMP, 1, true)
+                end
+
+                self:SetReloading(false)
+            else
+                local t = self:PlayAnimation(ACT_VM_RELOAD, mult, true)
+
+                self:RestoreClip(1)
+
+                self:SetReloadFinishTime(CurTime() + t - 0.05)
+            end
+        else
+            self:SetReloading(false)
+            self:RestoreClip(self.Primary.ClipSize)
+        end
     end
 end

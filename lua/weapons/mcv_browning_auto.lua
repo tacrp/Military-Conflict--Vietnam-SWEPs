@@ -39,7 +39,7 @@ SWEP.Firemodes = {
     MCV.FIREMODE_SEMI
 }
 
-SWEP.LastShotAnimation = true
+SWEP.LastShotAnimation = false
 SWEP.ShotgunReload = true
 
 // View slide from recoil
