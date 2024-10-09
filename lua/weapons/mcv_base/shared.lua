@@ -275,3 +275,9 @@ local function clunpredictvar(tbl, name, varname, default)
 end
 
 clunpredictvar(SWEP, "HoldBreathAmount", "NWHoldBreathAmount", 0)
+
+function SWEP:GetPingOffsetScale()
+    if game.SinglePlayer() then return 0 end
+
+    return (self:GetOwner():Ping() - 5) / 1000
+end

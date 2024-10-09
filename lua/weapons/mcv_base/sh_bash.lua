@@ -59,19 +59,19 @@ function SWEP:Bash()
         tr.Entity:TakeDamageInfo(dmginfo)
     end
 
-    if self:GetBayonet() then
-        if IsValid(tr.Entity) and (tr.Entity:IsNPC() or tr.Entity:IsPlayer() or tr.Entity:IsNextBot() or tr.Entity:IsRagdoll()) then
+    owner:ViewPunch(Angle(5, -5, 0))
+
+    if IsValid(tr.Entity) and (tr.Entity:IsNPC() or tr.Entity:IsPlayer() or tr.Entity:IsNextBot() or tr.Entity:IsRagdoll()) then
+        if self:GetBayonet() then
             self:EmitSound("MCV_Weapon_Bayonet.Stab")
         else
-            if tr.Hit then
-                self:EmitSound("MCV_Weapon_AK47_Bayonet.Hit")
-            end
+            self:EmitSound("MCV_Weapon_Fists.PowerPunch")
         end
     else
-        if IsValid(tr.Entity) and (tr.Entity:IsNPC() or tr.Entity:IsPlayer() or tr.Entity:IsNextBot() or tr.Entity:IsRagdoll()) then
-            self:EmitSound("MCV_Weapon_Fists.PowerPunch")
-        else
-            if tr.Hit then
+        if tr.Hit then
+            if self:GetBayonet() then
+                self:EmitSound("MCV_Weapon_AK47_Bayonet.Hit")
+            else
                 self:EmitSound("MCV_Weapon_Fists.PowerPunchWall")
             end
         end
