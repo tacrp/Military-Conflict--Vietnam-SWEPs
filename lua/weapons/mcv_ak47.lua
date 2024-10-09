@@ -7,8 +7,10 @@ AddCSLuaFile()
 // Names and basic information
 SWEP.PrintName = "AK-47"
 SWEP.Category = "Military Conflict: Vietnam"
-SWEP.Country = ""
-SWEP.SubCategory = ""
+SWEP.Country = "Soviet Union"
+SWEP.SubCategory = "Assault Rifles"
+
+SWEP.Slot = 3
 
 SWEP.ViewModel = "models/weapons/mcv/v_ak47.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_aps.mdl"
@@ -128,12 +130,12 @@ SWEP.SoundEmpty = "Vietnam_Weapon_Generic.ClipEmpty_01"
 // SWEP.EjectBrassTrail = "vietnam_weaponeffect_shelleject_trail"
 // SWEP.EjectBrassParticle = "vietnam_weaponeffect_shelleject_side"
 
-SWEP.MuzzleParticle = "muzzleflash_1"
+SWEP.MuzzleParticle = "muzzleflash_ak47"
 SWEP.MuzzleParticleSmoke = ""
-SWEP.MuzzleParticleIronsighted = "muzzleflash_1"
+SWEP.MuzzleParticleIronsighted = "muzzleflash_ak47"
 SWEP.MuzzleParticleIronsightedSmoke = ""
 
-SWEP.MuzzleParticle3rdPerson = "muzzleflash_1"
+SWEP.MuzzleParticle3rdPerson = "muzzleflash_ak47"
 
 SWEP.EjectBrassType = 1
 SWEP.EjectBrassTrail = "shellsmoke"

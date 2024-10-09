@@ -120,5 +120,25 @@ function SWEP:BulletAttack()
 end
 
 function SWEP:GetFiremodeValue()
-    return self.Firemodes[1]
+    return self.Firemodes[self:GetFiremode()]
+end
+
+function SWEP:ChangeFiremode()
+    if #self.Firemodes == 0 then return end
+
+    local fm = self:GetFiremode()
+
+    fm = fm + 1
+
+    if fm > #self.Firemodes then
+        fm = 1
+    end
+
+    self:SetFiremode(fm)
+
+    if fm == 1 then
+        self:PlayAnimation(ACT_VM_FIREMODE, -1, true)
+    else
+        self:PlayAnimation(ACT_VM_FIREMODE, 1, true)
+    end
 end

@@ -5,9 +5,10 @@ SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Base = "weapon_base"
 
 // Names and basic information
-SWEP.PrintName = "SKS"
+SWEP.PrintName = ""
 SWEP.Country = ""
 SWEP.SubCategory = ""
+SWEP.Description = ""
 
 SWEP.ViewModel = "models/weapons/mcv/v_sks.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_sks.mdl"
@@ -26,6 +27,7 @@ SWEP.DamageLegMultiplier = 1
 SWEP.DamageArmMultiplier = 1
 
 SWEP.Num = 1
+SWEP.AmmoPerShot = 1
 
 SWEP.ExplosionDamage = 0
 SWEP.ExplosionRadius = 0
@@ -122,7 +124,7 @@ SWEP.OtherPenetrationDepth = 12
 SWEP.MetalDamageModifier = 1.55
 SWEP.GlassDamageModifier = 1.15
 SWEP.ConcreteDamageModifier = 1.75
-SWEP.WoodDamgaeModifier = 1.25
+SWEP.WoodDamageModifier = 1.25
 SWEP.OtherDamageModifier = 1.25
 
 // Sound
@@ -233,12 +235,15 @@ function SWEP:SetupDataTables()
     self:NetworkVar("Bool", 7, "LastWasSprinting")
     self:NetworkVar("Bool", 8, "EmptyReload")
     self:NetworkVar("Bool", 9, "NeedTriggerPress")
+    self:NetworkVar("Bool", 10, "Ironsight")
 
     self:NetworkVar("Angle", 0, "BipodAngle")
 
     self:NetworkVar("Vector", 0, "BipodPos")
 
     self:NetworkVar("Entity", 0, "HolsterEntity")
+
+    self:SetFiremode(1)
 end
 
 function SWEP:SecondaryAttack()

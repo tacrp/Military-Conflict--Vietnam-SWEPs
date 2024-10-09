@@ -60,23 +60,6 @@ function SWEP:Think()
     end
 end
 
-function SWEP:Think_Sights()
-    local owner = self:GetOwner()
-    local target_sight_amount = 0
-
-    if owner:KeyDown(IN_ATTACK2) then
-        target_sight_amount = 1
-    end
-
-    if owner:KeyPressed(IN_ATTACK2) then
-        self:EmitSound("MCV_Weapon_Foley_Ironsights.In")
-    elseif owner:KeyReleased(IN_ATTACK2) then
-        self:EmitSound("MCV_Weapon_Foley_Ironsights.Out")
-    end
-
-    self:SetSightAmount(math.Approach(self:GetSightAmount(), target_sight_amount, FrameTime() / 0.2 * self.IronsightSpeedScale))
-end
-
 function SWEP:Think_Speed()
     local target_speed = 0
 

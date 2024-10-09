@@ -855,8 +855,7 @@ $sequence "draw" {
 	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
 	fps 30
 	  
@@ -1019,7 +1018,7 @@ $sequence "reload" {
 	{ event 5004 88 "MCV_Weapon_Foley_SKS_Reload.MetalEnd" }
 	fadein 0
 	fadeout 0.2
-	//addlayer "walklayerironsight"
+	// addlayer "walklayer"
 	node "0"
 }
 
@@ -1061,7 +1060,7 @@ $sequence "reload_empty" {
 	{ event AE_WPN_COMPLETE_RELOAD 91 "" }
 	fadein 0
 	fadeout 0.2
-	//addlayer "walklayerironsight"
+	// addlayer "walklayer"
 	node "0"
 }
 
@@ -1149,8 +1148,7 @@ $sequence "Firstdraw" {
 	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	fps 30
 	
 	
