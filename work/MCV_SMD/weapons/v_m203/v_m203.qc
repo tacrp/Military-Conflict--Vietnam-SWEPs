@@ -636,7 +636,7 @@ $sequence "prone" {
 
 $sequence "bash" {
 	"v_m203_anims\bash.smd"
-	activity "ACT_VM_BASH" 1
+	activity "ACT_VM_HITCENTER" 1
 	{ event 3200 3 "" }
 	{ event 5004 1 "MCV_Weapon_Foley_Bash.Fast" }
 	fadein 0
@@ -848,7 +848,7 @@ $sequence "prone_grenade" {
 
 $sequence "bash_grenade" {
 	"v_m203_anims\bash_grenade.smd"
-	activity "ACT_VM_BASH_GL" 1
+	activity "ACT_VM_HITCENTER_GL" 1
 	{ event 3200 3 "" }
 	{ event 5004 1 "MCV_Weapon_Foley_Bash.Fast" }
 	fadein 0

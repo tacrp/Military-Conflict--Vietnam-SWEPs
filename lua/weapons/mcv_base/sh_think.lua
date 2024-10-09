@@ -47,6 +47,12 @@ function SWEP:Think()
 
     vm:SetPoseParameter("ironsight", self:GetSightAmount() ^  3)
 
+    if self:GetBayonet() then
+        vm:SetBodygroup(self.BayonetBodygroup, 1)
+    else
+        vm:SetBodygroup(self.BayonetBodygroup, 0)
+    end
+
     if IsValid(self.MuzzleLight) then
         if (self.MuzzleLightEnd or 0) < UnPredictedCurTime() then
             self.MuzzleLight:Remove()

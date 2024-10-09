@@ -17,6 +17,14 @@ end
 
 function SWEP:PrimaryAttack()
     if self:StillWaiting() then return end
+
+    local owner = self:GetOwner()
+
+    if owner:KeyDown(IN_USE) then
+        self:Bash()
+        return
+    end
+
     if self:Clip1() < 1 then self:Reload() return end
     if self:GetSpeed() > 150 then return end
 
@@ -27,8 +35,6 @@ function SWEP:PrimaryAttack()
     else
         self:PlayAnimation(ACT_VM_PRIMARYATTACK, 0.5)
     end
-
-    local owner = self:GetOwner()
 
     self:TakePrimaryAmmo(1)
 

@@ -1025,7 +1025,7 @@ $sequence "bash" {
 	"v_swm10_anims\bash_4.smd"
 	"v_swm10_anims\bash_5.smd"
 	"v_swm10_anims\bash_6.smd"
-	activity "ACT_VM_BASH" 1
+	activity "ACT_VM_HITCENTER" 1
 	blend "ironsight" 0 1
 	blend "revolver_firemode_pose" 0 1
 	blendwidth 2

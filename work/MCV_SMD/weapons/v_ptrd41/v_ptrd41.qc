@@ -569,7 +569,7 @@ $sequence "pronedeploy" {
 
 $sequence "bash" {
 	"v_ptrd41_anims\bash.smd"
-	activity "ACT_VM_BASH" 1
+	activity "ACT_VM_HITCENTER" 1
 	{ event 3200 3 "" }
 	{ event 5004 1 "MCV_Weapon_Foley_Bash.Slow" }
 	fadein 0

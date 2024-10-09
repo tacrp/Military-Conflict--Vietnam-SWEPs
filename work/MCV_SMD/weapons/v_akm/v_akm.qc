@@ -695,7 +695,7 @@ $sequence "prone" {
 $sequence "bash" {
 	"v_akm_anims\bash.smd"
 	"v_akm_anims\bash_2.smd"
-	activity "ACT_VM_BASH" 1
+	activity "ACT_VM_HITCENTER" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 3200 3 "" }
@@ -747,7 +747,7 @@ $sequence "pickupend" {
 $sequence "bayonet_unequip" {
 	"bayonet_e_a"
 	"bayonet_e_a_i"
-	activity "ACT_VM_BAYONET_UNEQUIP" 1
+	activity "ACT_VM_DETACH_SILENCER" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event AE_CL_SETUP_BAYONET 40 "0" }
@@ -761,7 +761,7 @@ $sequence "bayonet_unequip" {
 $sequence "bayonet_equip" {
 	"bayonet_s_a"
 	"bayonet_s_a_i"
-	activity "ACT_VM_BAYONET_EQUIP" 1
+	activity "ACT_VM_ATTACH_SILENCER" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event AE_CL_SETUP_BAYONET 5 "1" }
@@ -801,7 +801,7 @@ $sequence "holster" {
 $sequence "bash_bayonet" {
 	"bayonet_attack_a"
 	"bayonet_attack_a_i"
-	activity "ACT_VM_BASH_BAYONET" 1
+	activity "ACT_VM_HITCENTER_BAYONET" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_Bash.Fast" }

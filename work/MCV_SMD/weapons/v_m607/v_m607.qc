@@ -639,7 +639,7 @@ $sequence "prone" {
 $sequence "bash" {
 	"v_m607_anims\bash.smd"
 	"v_m607_anims\bash_2.smd"
-	activity "ACT_VM_BASH" 1
+	activity "ACT_VM_HITCENTER" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 3200 3 "" }

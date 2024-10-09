@@ -412,7 +412,7 @@ $sequence "draw" {
 
 $sequence "bash" {
 	"v_molotov_anims\bash.smd"
-	activity "ACT_VM_BASH" 1
+	activity "ACT_VM_HITCENTER" 1
 	{ event 3200 3 "" }
 	{ event 5004 1 "MCV_Weapon_Foley_Molotov.Bash" }
 	fadein 0

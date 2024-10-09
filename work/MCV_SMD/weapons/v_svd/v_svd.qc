@@ -735,7 +735,7 @@ $sequence "prone" {
 $sequence "bash" {
 	"v_svd_anims\bash.smd"
 	"v_svd_anims\bash_2.smd"
-	activity "ACT_VM_BASH" 1
+	activity "ACT_VM_HITCENTER" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 3200 3 "" }
@@ -791,7 +791,7 @@ $sequence "pickupend" {
 $sequence "bash_bayonet" {
 	"bash_a"
 	"bash_a_i"
-	activity "ACT_VM_BASH_BAYONET" 1
+	activity "ACT_VM_HITCENTER_BAYONET" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 3200 1 "" }
@@ -821,7 +821,7 @@ $sequence "slash_bayonet" {
 $sequence "bayonet_unequip" {
 	"bayonet_unequip_a"
 	"bayonet_unequip_a_i"
-	activity "ACT_VM_BAYONET_UNEQUIP" 1
+	activity "ACT_VM_DETACH_SILENCER" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event AE_CL_BODYGROUP_SET_VALUE 35 "bayonet 0" }
@@ -836,7 +836,7 @@ $sequence "bayonet_unequip" {
 $sequence "bayonet_equip" {
 	"bayonet_equip_a"
 	"bayonet_equip_a_i"
-	activity "ACT_VM_BAYONET_EQUIP" 1
+	activity "ACT_VM_ATTACH_SILENCER" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event AE_CL_BODYGROUP_SET_VALUE 5 "bayonet 1" }

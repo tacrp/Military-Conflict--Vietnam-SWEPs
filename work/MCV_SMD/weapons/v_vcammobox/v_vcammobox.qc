@@ -320,7 +320,7 @@ $sequence "prone" {
 
 $sequence "bash" {
 	"v_vcammobox_anims\bash.smd"
-	activity "ACT_VM_BASH" 1
+	activity "ACT_VM_HITCENTER" 1
 	{ event 3200 3 "" }
 	{ event 5004 1 "MCV_Weapon_Foley_Bash.Fast" }
 	fadein 0

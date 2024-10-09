@@ -1035,7 +1035,7 @@ $sequence "bash" {
 	"v_dual_m1917_anims\bash_2.smd"
 	"v_dual_m1917_anims\bash_3.smd"
 	"v_dual_m1917_anims\bash_4.smd"
-	activity "ACT_VM_BASH" 1
+	activity "ACT_VM_HITCENTER" 1
 	blend "ironsight" 0 1
 	blend "revolver_firemode_pose" 0 1
 	{ event 3200 3 "" }

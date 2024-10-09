@@ -14,6 +14,7 @@ SWEP.ViewModel = "models/weapons/mcv/v_sks.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_sks.mdl"
 
 SWEP.BodyGroups = ""
+SWEP.BayonetBodygroup = 1
 
 SWEP.WeaponSelectIcon = NULL
 
@@ -110,7 +111,9 @@ SWEP.HasBayonet = false
 SWEP.HasRifleGrenade = false
 
 SWEP.BashDamage = 50
+SWEP.BashRange = 96
 SWEP.BayonetDamage = 100
+SWEP.BayonetRange = 128
 
 SWEP.HasBipod = false
 
@@ -155,7 +158,7 @@ SWEP.TracerFrequency = 1
 
 // Boilerplate
 
-SWEP.DrawCrosshair = false
+SWEP.DrawCrosshair = true
 SWEP.AccurateCrosshair = false
 SWEP.DrawWeaponInfoBox = true
 SWEP.UseHands = true
@@ -224,7 +227,6 @@ function SWEP:SetupDataTables()
     self:NetworkVar("Int", 1, "ScopeLevel")
     self:NetworkVar("Int", 2, "LoadedRounds")
     self:NetworkVar("Int", 3, "Firemode")
-    self:NetworkVar("Int", 3, "MuzzleMode")
 
     self:NetworkVar("Bool", 1, "Reloading")
     self:NetworkVar("Bool", 2, "EndReload")
@@ -236,6 +238,8 @@ function SWEP:SetupDataTables()
     self:NetworkVar("Bool", 8, "EmptyReload")
     self:NetworkVar("Bool", 9, "NeedTriggerPress")
     self:NetworkVar("Bool", 10, "Ironsight")
+    self:NetworkVar("Bool", 11, "Bayonet")
+    self:NetworkVar("Bool", 11, "GrenadeLauncher")
 
     self:NetworkVar("Angle", 0, "BipodAngle")
 
@@ -247,7 +251,11 @@ function SWEP:SetupDataTables()
 end
 
 function SWEP:SecondaryAttack()
-    return
+    local owner = self:GetOwner()
+
+    if owner:KeyDown(IN_USE) then
+        self:ToggleBayonet()
+    end
 end
 
 local function clunpredictvar(tbl, name, varname, default)
