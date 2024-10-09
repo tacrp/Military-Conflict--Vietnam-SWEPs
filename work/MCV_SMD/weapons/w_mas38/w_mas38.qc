@@ -27,6 +27,7 @@ $illumposition -0.272 2.357 -1.808
 $cdmaterials "models\weapons\mcv\w_mas38\"
 $cdmaterials ""
 
+
 $attachment "muzzle" "ValveBiped.weapon_bone" 0 1.8 12.1 rotate -90 -90 0
 $attachment "shell_eject" "ValveBiped.weapon_bone" -0.75 1.7 0.5 rotate 0 -180 90
 $attachment "mag_eject" "ValveBiped.weapon_bone2" 0 0 1 rotate -90 -90 0
@@ -35,7 +36,8 @@ $cbox 0 0 0 0 0 0
 
 $bbox -16.99 -1.627 -7.04 12.228 1.206 3.343
 
-$definebone "ValveBiped.weapon_bone" "" 0 0 -0.064417 0 0 90.000009 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Hand" "" -7 -1 -2 0 0 180 0 0 0 0 0 0
+$definebone "ValveBiped.weapon_bone" "ValveBiped.Bip01_R_Hand" 0 0 -0.064417 0 0 90.000009 0 0 0 0 0 0
 $definebone "ValveBiped.weapon_bone2" "ValveBiped.weapon_bone" 0 0 0 0 0 0 0 0 0 0 0 0
 
 
