@@ -975,6 +975,7 @@ $sequence "shootlast" {
 	snap
 	addlayer "walklayerironsight"
 	addlayer "shootposelast"
+	addlayer "BoltshootMovement"
 	addlayer "SlidePosition"
 }
 
