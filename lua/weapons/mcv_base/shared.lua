@@ -44,6 +44,7 @@ SWEP.LastShotAnimation = false
 
 SWEP.MagInTime = 0
 SWEP.MagInTimeEmpty = 0
+SWEP.MagInClip = false
 
 SWEP.Silencer = false
 

@@ -37,6 +37,7 @@ SWEP.Firemodes = {
 }
 
 SWEP.LastShotAnimation = true
+SWEP.MagInClip = true
 
 // View slide from recoil
 SWEP.ViewSlideRecoilUp = 1.35
