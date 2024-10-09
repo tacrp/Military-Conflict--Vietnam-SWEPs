@@ -555,7 +555,7 @@ $sequence "idle" {
 $sequence "FirstDraw" {
 	"v_m1c_anims\FirstDraw.smd"
 	"v_m1c_anims\FirstDraw_2.smd"
-	activity "ACT_VM_FIRSTDRAW" 1
+	activity "ACT_VM_READY" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_M1C.Draw" }

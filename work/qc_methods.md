@@ -14,14 +14,24 @@
 
 ### Method 1 (cross-reference this with the SKS' QC):
 
-1. Find the weapon's idle $sequence. If it has a blendlayer for ironsights, remove it.
+1. Find the weapon's idle $sequence. If it has a blendlayer for "ironsight_test", remove it.
 
 2. Add the "ironsight" $animation (or equivalent) to the $sequence and change the blendwidth accordingly (3 anims = blendwith of 3).
 
 3. For every firing $sequence, make a copy of the idle $sequence. Rename all your shoot $sequences to something else (i.e. "shootpose1", "shootpose2", etc.) and name all your cloned idle sequences to "shoot", "shoot2", etc. (Or whatever you want to name everything it doesnt matter as long as you set everything up correctly)
 
-4. Ensure all the new shoot $sequences (the ones cloned from the idle $sequence) are properly calling ACT_VM_PRIMARYATTACK. If this a lastshoot animation (used for pistols or any weapon where the bolt will lock back on empty) make sure it calls ACT_VM_LASTSHOOT. Also ensure the old shoot $sequences (your shootposes) aren't calling any activities themselves.
+4. Delete the ACT_VM_PRIMARYATTACK from the old shoot sequences and add them to your new ones (the ones cloned from the idle $sequence) while removing ACT_VM_IDLE. If this a lastshoot animation (used for pistols or any weapon where the bolt will lock back on empty) make sure it calls ACT_VM_LASTSHOOT.
 
 5. Add the old shoot $sequences as layers to your new $sequences. i.e. "addlayer "shootpose1""
 
-6. Go to all the $animations referenced in the idle $sequence and ensure they all have the same framerate and numframes. This is key to animations playing correctly.
+6. Go to all the $animations referenced in the idle $sequence and add:
+
+    numframes 60
+
+to each of them. Make sure their fps is the same as well.
+
+7. Replace "walklayer" "runlayer" with "walklayerironsights" in the following animations:
+
+ - "draw"
+ - "firstdraw"
+ - "reload" (and variations)
