@@ -1,15 +1,25 @@
 function SWEP:Bash()
     local owner = self:GetOwner()
 
-    self:PlayAnimation(ACT_VM_HITCENTER, 1, true)
+    if self:GetBayonet() then
+        self:PlayAnimation(ACT_VM_HITLEFT, 1, true)
+    else
+        self:PlayAnimation(ACT_VM_HITCENTER, 1, true)
+    end
 
     local dir = self:GetAimVector()
 
     local dim = 32
     local pos = owner:GetShootPos() - dir * (dim * 1.732)
+    local range = self.BashRange
+
+    if self:GetBayonet() then
+        range = self.BayonetRange
+    end
+
     local tr = util.TraceHull({
         start = pos,
-        endpos = pos + dir * self.BashRange,
+        endpos = pos + dir * range,
         filter = {owner},
         mask = MASK_SHOT_HULL,
         mins = Vector(-dim, -dim, -dim),
@@ -17,10 +27,16 @@ function SWEP:Bash()
     })
 
     local dmginfo = DamageInfo()
-    dmginfo:SetDamage(self.BashDamage)
-    dmginfo:SetDamageForce(dir * self.BashDamage * 500)
+    if self:GetBayonet() then
+        dmginfo:SetDamage(self.BayonetDamage)
+        dmginfo:SetDamageForce(dir * self.BayonetDamage * 500)
+        dmginfo:SetDamageType(DMG_CLUB)
+    else
+        dmginfo:SetDamage(self.BashDamage)
+        dmginfo:SetDamageForce(dir * self.BashDamage * 500)
+        dmginfo:SetDamageType(DMG_CLUB)
+    end
     dmginfo:SetDamagePosition(tr.HitPos)
-    dmginfo:SetDamageType(DMG_CLUB)
     if dmginfo:GetDamageType() == DMG_GENERIC and engine.ActiveGamemode() == "terrortown" then
         dmginfo:SetDamageType(DMG_CLUB) -- use CLUB so TTT can assign DNA (it does not leave DNA on generic damage)
     end
@@ -32,7 +48,7 @@ function SWEP:Bash()
         Attacker = self:GetOwner(),
         Damage = 0,
         Force = 0,
-        Distance = self.BashRange + (dim * 1.5),
+        Distance = range + (dim * 1.5),
         HullSize = 0,
         Tracer = 0,
         Dir = (tr.HitPos - pos):GetNormalized(),
@@ -43,25 +59,36 @@ function SWEP:Bash()
         tr.Entity:TakeDamageInfo(dmginfo)
     end
 
-    self:EmitSound("MCV_Weapon_Foley_Bash.Slow")
-
-    if IsValid(tr.Entity) and (tr.Entity:IsNPC() or tr.Entity:IsPlayer() or tr.Entity:IsNextBot() or tr.Entity:IsRagdoll()) then
-        self:EmitSound("MCV_Weapon_Fists.PowerPunch")
+    if self:GetBayonet() then
+        if IsValid(tr.Entity) and (tr.Entity:IsNPC() or tr.Entity:IsPlayer() or tr.Entity:IsNextBot() or tr.Entity:IsRagdoll()) then
+            self:EmitSound("MCV_Weapon_Bayonet.Stab")
+        else
+            if tr.Hit then
+                self:EmitSound("MCV_Weapon_AK47_Bayonet.Hit")
+            end
+        end
     else
-        if tr.Hit then
-            self:EmitSound("MCV_Weapon_Fists.PowerPunchWall")
+        if IsValid(tr.Entity) and (tr.Entity:IsNPC() or tr.Entity:IsPlayer() or tr.Entity:IsNextBot() or tr.Entity:IsRagdoll()) then
+            self:EmitSound("MCV_Weapon_Fists.PowerPunch")
+        else
+            if tr.Hit then
+                self:EmitSound("MCV_Weapon_Fists.PowerPunchWall")
+            end
         end
     end
 end
 
 function SWEP:ToggleBayonet()
     if !self.HasBayonet then return end
+    if self:StillWaiting() then return end
 
     if self:GetBayonet() then
-        self:PlayAnimation(ACT_VM_DETACH_SILENCER, 1, true)
+        local t = self:PlayAnimation(ACT_VM_DETACH_SILENCER, 1, true)
+        self:SetTimer(t, function()
+            self:SetBayonet(false)
+        end)
     else
         self:PlayAnimation(ACT_VM_ATTACH_SILENCER, 1, true)
+        self:SetBayonet(true)
     end
-
-    self:SetBayonet(!self:GetBayonet())
 end

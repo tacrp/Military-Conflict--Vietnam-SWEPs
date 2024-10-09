@@ -872,7 +872,7 @@ $sequence "pickupend" {
 $sequence "bash_bayonet" {
 	"bash_a"
 	"bash_a_i"
-	activity "ACT_VM_HITCENTER_BAYONET" 1
+	activity "ACT_VM_HITLEFT" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 3200 1 "" }
@@ -887,7 +887,7 @@ $sequence "bash_bayonet" {
 $sequence "slash_bayonet" {
 	"bash_a"
 	"bash_a_i"
-	activity "ACT_VM_SLASH_BAYONET" 1
+	activity "ACT_VM_HITRIGHT" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 3200 1 "" }
