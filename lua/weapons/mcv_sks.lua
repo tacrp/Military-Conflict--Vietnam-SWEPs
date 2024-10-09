@@ -115,7 +115,7 @@ SWEP.OtherPenetrationDepth = 12
 SWEP.MetalDamageModifier = 1.55
 SWEP.GlassDamageModifier = 1.15
 SWEP.ConcreteDamageModifier = 1.75
-SWEP.WoodDamageModifier = 1.25
+SWEP.WoodDamgaeModifier = 1.25
 SWEP.OtherDamageModifier = 1.25
 
 // Sound

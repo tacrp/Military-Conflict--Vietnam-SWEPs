@@ -33,7 +33,7 @@ SWEP.ExplosionRadius = 0
 
 SWEP.MuzzleVelocity = 735
 
-SWEP.RangeModifier = 0.950
+SWEP.RangeModifier = 0.925
 
 SWEP.Firemodes = {
     MCV.FIREMODE_AUTO,
@@ -44,11 +44,11 @@ SWEP.Firemodes = {
 SWEP.PlayCycleAnimation = false
 
 // View slide from recoil
-SWEP.ViewSlideRecoilUp = 1.35
-SWEP.ViewSlideRecoilRight = 0.48
+SWEP.ViewSlideRecoilUp = 1.64
+SWEP.ViewSlideRecoilRight = 0.32
 
-SWEP.ViewSlideRecoilIronsightUp = 1.35
-SWEP.ViewSlideRecoilIronsightRight = 0.48
+SWEP.ViewSlideRecoilIronsightUp = 0.96
+SWEP.ViewSlideRecoilIronsightRight = 0.16
 
 SWEP.RecoilPushbackValue = 1.5
 
@@ -58,7 +58,7 @@ SWEP.ShakeFreq = 45.0
 SWEP.ShakeDuration = 0.4
 
 SWEP.Ironsight = true
-SWEP.IronsightSpeedScale = 0.85
+SWEP.IronsightSpeedScale = 1.0
 SWEP.IronsightFov = 90 - 15
 SWEP.IronsightWalkBobbingStrength = -0.25
 
@@ -73,8 +73,8 @@ SWEP.IronsightAng = Angle(0, 0, 0)
 SWEP.CustomPos = Vector(0, -2, 0)
 SWEP.CustomAng = Angle(0, 0, 0)
 
-SWEP.Spread = 6.3
-SWEP.SpreadIronsighted = 1.15
+SWEP.Spread = 7.72
+SWEP.SpreadIronsighted = 1.47
 
 SWEP.FireRate = 600 // in rounds per minute
 
@@ -92,17 +92,23 @@ SWEP.Primary.Automatic = true
 SWEP.NearwallDistance = 40
 
 // Bullet spread multiplier according to current stance
-SWEP.CrouchSpreadMultiplier = 0.85
+SWEP.CrouchSpreadMultiplier = 0.8
 SWEP.ProneSpreadMultiplier = 0.75
-SWEP.StandMoveSpreadMultiplier = 1.5
-SWEP.SneakMoveSpreadMultiplier = 1.4
-SWEP.CrouchMoveSpreadMultiplier = 1.35
+SWEP.StandMoveSpreadMultiplier = 1.45
+SWEP.SneakMoveSpreadMultiplier = 1.34
+SWEP.CrouchMoveSpreadMultiplier = 1.25
 SWEP.JumpSpreadMultiplier = 3.0
 
 SWEP.HasBayonet = false
 SWEP.HasBipod = false
 
 // Penetration
+SWEP.MetalPenetrationDepth = 8
+SWEP.GlassPenetrationDepth = 14
+SWEP.ConcretePenetrationDepth = 10
+SWEP.WoodPenetrationDepth = 18
+SWEP.OtherPenetrationDepth = 12
+
 SWEP.MetalDamageModifier = 1.55
 SWEP.GlassDamageModifier = 1.15
 SWEP.ConcreteDamageModifier = 1.75
