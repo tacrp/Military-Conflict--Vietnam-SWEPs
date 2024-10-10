@@ -30,23 +30,38 @@ function SWEP:Think()
         end
     end
 
+    local bodygroupbulletscount = self:Clip1()
+
     if displayRoundsToLoad then
         if self.ShotgunReload and self:GetReloading() and self:GetEmptyReload() then
             vm:SetPoseParameter("ammo_fraction", 0)
+            bodygroupbullets = 0
         else
             if self.MagInClip then
                 local bullets_to_load = math.min(self.Primary.ClipSize - self:Clip1(), self:Ammo1())
 
                 vm:SetPoseParameter("ammo_fraction", bullets_to_load / self.Primary.ClipSize)
+                bodygroupbulletscount = bullets_to_load
             else
                 local reserve = self:GetInfiniteAmmo() and math.huge or (self:Clip1() + self:Ammo1())
                 local bullets_to_load = math.min(self.Primary.ClipSize, self:GetClip1Capacity(), reserve)
 
                 vm:SetPoseParameter("ammo_fraction", bullets_to_load / self.Primary.ClipSize)
+                bodygroupbulletscount = bullets_to_load
             end
         end
     else
         vm:SetPoseParameter("ammo_fraction", (self:Clip1() / self.Primary.ClipSize))
+    end
+
+    if self.BulletBodygroups then
+        for i, bg in pairs(self.BulletBodygroups) do
+            if i > bodygroupbulletscount then
+                vm:SetBodygroup(bg[1], bg[2])
+            else
+                vm:SetBodygroup(bg[1], 0)
+            end
+        end
     end
 
     vm:SetPoseParameter("empty", self:Clip1() == 0 and 0 or 1)

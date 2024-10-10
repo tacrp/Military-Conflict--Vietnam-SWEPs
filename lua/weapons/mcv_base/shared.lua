@@ -16,6 +16,8 @@ SWEP.WorldModel = "models/weapons/mcv/w_sks.mdl"
 SWEP.BodyGroups = ""
 SWEP.BayonetBodygroup = 1
 
+SWEP.BulletBodygroups = nil
+
 SWEP.WeaponSelectIcon = NULL
 
 // Stats

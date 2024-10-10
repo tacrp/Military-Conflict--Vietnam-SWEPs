@@ -20,6 +20,21 @@ SWEP.BodyGroups = ""
 
 SWEP.WeaponSelectIcon = NULL
 
+SWEP.BulletBodygroups = {
+    [1] = {1, 1},
+    [2] = {2, 1},
+    [3] = {3, 1},
+    [4] = {4, 1},
+    [5] = {5, 1},
+    [6] = {6, 1},
+    [7] = {7, 1},
+    [8] = {8, 1},
+    [9] = {9, 1},
+    [10] = {10, 1},
+    [11] = {11, 1},
+    [12] = {12, 1},
+}
+
 // Stats
 
 SWEP.DamageGeneric = 43 // damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)
@@ -42,6 +57,9 @@ SWEP.Firemodes = {
 
 // Weapon must be manually cycled
 SWEP.PlayCycleAnimation = false
+
+SWEP.MagInTime = 0.4
+SWEP.MagInTimeEmpty = 0.4
 
 // View slide from recoil
 SWEP.ViewSlideRecoilUp = 1.64
