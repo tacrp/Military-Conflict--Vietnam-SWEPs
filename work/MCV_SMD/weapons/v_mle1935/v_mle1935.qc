@@ -496,7 +496,6 @@ $sequence "draw" {
 	fadeout 0.2
 	addlayer "SlidePosition"
 	addlayer "walklayerironsight"
-	addlayer "runlayer"
 	node "0"
 	fps 30
 	  
@@ -639,7 +638,7 @@ $sequence "reload" {
 	{ event AE_WPN_COMPLETE_RELOAD 43 "" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	
@@ -660,7 +659,7 @@ $sequence "reload_empty" {
 	{ event AE_WPN_COMPLETE_RELOAD 51 "" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	
@@ -788,8 +787,7 @@ $sequence "holster" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "SlidePosition"
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	fps 30
 	
 	
