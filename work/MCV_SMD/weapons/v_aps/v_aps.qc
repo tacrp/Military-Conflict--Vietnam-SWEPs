@@ -739,7 +739,8 @@ $sequence "idle" {
 	blend "ironsight" 0 0.5
 	blend "empty" 0 1
 	blendwidth 3
-	snap
+	fadein 0.2
+	fadeout 0.2
 	addlayer "walklayer"
 	addlayer "runlayer"
 	//blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
@@ -797,8 +798,6 @@ $sequence "shoot1" {
 	addlayer "BulletCounter"
 	addlayer "shoot1_pose"
 	//addlayer "SlidePosition"
-	
-	numframes 60
 }
 
 $sequence "shoot2" {
@@ -814,8 +813,6 @@ $sequence "shoot2" {
 	addlayer "BulletCounter"
 	addlayer "shoot2_pose"
 	//addlayer "SlidePosition"
-	
-	numframes 60
 }
 
 $sequence "shoot3" {
@@ -831,8 +828,6 @@ $sequence "shoot3" {
 	addlayer "BulletCounter"
 	addlayer "shoot3_pose"
 	//addlayer "SlidePosition"
-	
-	numframes 60
 }
 
 $sequence "shoot4" {
@@ -848,8 +843,6 @@ $sequence "shoot4" {
 	addlayer "BulletCounter"
 	addlayer "shoot4_pose"
 	//addlayer "SlidePosition"
-	
-	numframes 60
 }
 
 $sequence "shootlast" {
@@ -866,8 +859,6 @@ $sequence "shootlast" {
 	addlayer "BulletCounter"
 	addlayer "shootlast_pose"
 	addlayer "SlidePosition"
-	
-	numframes 60
 }
 
 $sequence "shoot1_pose" {
@@ -876,6 +867,9 @@ $sequence "shoot1_pose" {
 	blend "ironsight" 0 1
 	blend "empty" 0 1
 	delta
+	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
+	{ event AE_MUZZLEFLASH 0 "" }
+	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
 	snap
 	hidden
 }
@@ -886,6 +880,9 @@ $sequence "shoot2_pose" {
 	blend "ironsight" 0 1
 	blend "empty" 0 1
 	delta
+	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
+	{ event AE_MUZZLEFLASH 0 "" }
+	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
 	snap
 	hidden
 }
@@ -896,6 +893,9 @@ $sequence "shoot3_pose" {
 	blend "ironsight" 0 1
 	blend "empty" 0 1
 	delta
+	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
+	{ event AE_MUZZLEFLASH 0 "" }
+	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
 	snap
 	hidden
 }
@@ -906,6 +906,9 @@ $sequence "shoot4_pose" {
 	blend "ironsight" 0 1
 	blend "empty" 0 1
 	delta
+	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
+	{ event AE_MUZZLEFLASH 0 "" }
+	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
 	snap
 	hidden
 }
@@ -916,6 +919,10 @@ $sequence "shootlast_pose" {
 	blend "ironsight" 0 1
 	blend "empty" 0 1
 	delta
+	{ event 5004 1 "MCV_Weapon_Foley_APS_ShootLast.Metal" }
+	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
+	{ event AE_MUZZLEFLASH 0 "" }
+	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
 	snap
 	hidden
 }
