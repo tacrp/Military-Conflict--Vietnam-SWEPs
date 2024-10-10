@@ -86,7 +86,47 @@ function SWEP:DoDrawCrosshair(x, y)
     return true
 end
 
+local shoulddraw = {
+    ["CHudAmmo"] = true,
+    ["CHudSecondaryAmmo"] = true,
+}
+
+function SWEP:HUDShouldDraw(element)
+    if shoulddraw[element] then return false end
+end
+
 function SWEP:DrawHUD()
+    local firemode_name = MCV.FiremodeNames[self:GetFiremodeValue()]
+    local col = Color(255, 255, 255, 150)
+
+    surface.SetFont("MCV_8")
+    local tw = surface.GetTextSize(firemode_name)
+    surface.SetTextPos(ScrW() - tw - ScreenScale(16), ScrH() - ScreenScale(48))
+    surface.SetTextColor(col)
+    surface.DrawText(firemode_name)
+
+    // local printname = self.PrintName
+    // surface.SetFont("MCV_14")
+    // local tw2 = surface.GetTextSize(printname)
+    // surface.SetTextPos(ScrW() - tw2 - ScreenScale(12), ScrH() - ScreenScale(60))
+    // surface.SetTextColor(255, 255, 255)
+    // surface.DrawText(printname)
+
+    local ammocount = self:Clip1()
+
+    surface.SetFont("MCV_24")
+    local tw3 = surface.GetTextSize(ammocount)
+    surface.SetTextPos(ScrW() - tw3 - ScreenScale(12 + 32), ScrH() - ScreenScale(40))
+    surface.SetTextColor(col)
+    surface.DrawText(ammocount)
+
+    local reserve = self:Ammo1()
+
+    surface.SetFont("MCV_14")
+    local tw4 = surface.GetTextSize(reserve)
+    surface.SetTextPos(ScrW() - ScreenScale(12 + 22), ScrH() - ScreenScale(32))
+    surface.SetTextColor(col)
+    surface.DrawText(reserve)
 end
 
 local function boxes(f)

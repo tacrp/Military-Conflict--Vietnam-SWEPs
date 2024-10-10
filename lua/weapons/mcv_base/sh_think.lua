@@ -23,10 +23,12 @@ function SWEP:Think()
     local displayRoundsToLoad = self:GetReloading()
 
     if displayRoundsToLoad then
+        local reloadprogress = (self:GetAnimLockTime() - CurTime())
+
         if self:Clip1() == 0 then
-            displayRoundsToLoad = vm:GetCycle() >= self.MagInTimeEmpty
+            displayRoundsToLoad = reloadprogress >= self.MagInTimeEmpty
         else
-            displayRoundsToLoad = vm:GetCycle() >= self.MagInTime
+            displayRoundsToLoad = reloadprogress >= self.MagInTime
         end
     end
 

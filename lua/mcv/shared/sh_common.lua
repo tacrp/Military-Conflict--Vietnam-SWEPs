@@ -7,6 +7,13 @@ MCV.FIREMODE_FAN = 5
 MCV.FIREMODE_BOLT = 6
 MCV.FIREMODE_PUMP = 7
 
+
+MCV.FiremodeNames = {
+    [MCV.FIREMODE_AUTO] = "Automatic",
+    [MCV.FIREMODE_SEMI] = "Single-Fire",
+    [MCV.FIREMODE_BURST] = "3-Round Burst",
+}
+
 MCV.CancelMultipliers = {
     [1] = {
         [HITGROUP_HEAD]     = 2,

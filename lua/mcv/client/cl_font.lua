@@ -1,5 +1,7 @@
 
 local sizes_to_make = {
+    24,
+    14,
     8
 }
 
@@ -10,10 +12,10 @@ local function generatefonts()
 
         surface.CreateFont( "MCV_" .. tostring(i), {
             font = font,
-            size = ScreenScale(i),
+            size = math.Round(ScreenScale(i)),
             weight = i < 16 and 650 or 600,
             antialias = true,
-            additive = true,
+            additive = false,
             extended = true, -- Required for non-latin fonts
         } )
 
@@ -35,7 +37,6 @@ surface.CreateFont( "MCV_HudSelectionDesc", {
     antialias = true,
     extended = true, -- Required for non-latin fonts
 })
-
 
 
 generatefonts()
