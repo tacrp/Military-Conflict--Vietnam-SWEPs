@@ -36,3 +36,23 @@ function SWEP:Think_Sights()
 
     self:SetSightAmount(math.Approach(self:GetSightAmount(), target_sight_amount, FrameTime() / 0.2 * self.IronsightSpeedScale))
 end
+
+function SWEP:GetViewModelPosition(pos, ang)
+    local offsetpos = Vector(0, 0, 0)
+    local offsetang = Angle(0, 0, 0)
+
+    local aim_delta = self:GetSightAmount()
+
+    offsetpos = LerpVector(aim_delta, self.CustomPos, self.IronsightPos)
+    offsetang = LerpAngle(aim_delta, self.CustomAng, self.IronsightAng)
+
+    pos = pos + (ang:Right() * offsetpos.x)
+    pos = pos + (ang:Forward() * offsetpos.y)
+    pos = pos + (ang:Up() * offsetpos.z)
+
+    ang:RotateAroundAxis(ang:Up(), offsetang.p)
+    ang:RotateAroundAxis(ang:Right(), offsetang.y)
+    ang:RotateAroundAxis(ang:Forward(), offsetang.r)
+
+    return pos, ang
+end

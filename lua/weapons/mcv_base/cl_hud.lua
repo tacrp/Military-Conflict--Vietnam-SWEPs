@@ -57,6 +57,8 @@ function SWEP:DoDrawCrosshair(x, y)
     end
 
     if GetConVar("developer"):GetBool() then
+        drawshadowrect(x - (dot_size / 2), y - (dot_size / 2), dot_size, dot_size, Color(255, 255, 255, 255))
+
         local vm = self:GetOwner():GetViewModel()
         surface.SetFont("TargetID")
 
