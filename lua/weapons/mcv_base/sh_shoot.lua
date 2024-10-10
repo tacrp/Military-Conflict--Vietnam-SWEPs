@@ -17,6 +17,7 @@ end
 
 function SWEP:PrimaryAttack()
     if self:StillWaiting() then return end
+    if self:GetNeedCycle() then return end
 
     local owner = self:GetOwner()
 
@@ -61,6 +62,10 @@ function SWEP:PrimaryAttack()
 
     if firemode == MCV.FIREMODE_SEMI then
         self:SetNeedTriggerPress(true)
+    end
+
+    if self.PlayCycleAnimation and self:Clip1() > 0 then
+        self:SetNeedCycle(true)
     end
 end
 

@@ -627,7 +627,7 @@ $sequence "pump" {
 	"pump_ironsight_a_e"
 	"pump_a"
 	"pump_ironsight_a"
-	activity "ACT_VM_BOLTPULL" 1
+	activity "ACT_VM_RELOAD_INSERT_PULL" 1
 	blend "ironsight" 0 1
 	blend "ammo_fraction" 0 0.1
 	delta

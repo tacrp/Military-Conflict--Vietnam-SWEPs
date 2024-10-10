@@ -43,6 +43,7 @@ SWEP.LastShotAnimation = false
 SWEP.MagInClip = true
 SWEP.HybridReload = true
 SWEP.ShotgunReloadEmptyStartAnimation = true
+SWEP.PlayCycleAnimation = true
 
 // View slide from recoil
 SWEP.ViewSlideRecoilUp = 2.85

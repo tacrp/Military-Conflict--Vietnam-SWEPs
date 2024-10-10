@@ -821,10 +821,11 @@ $sequence "shoot1" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	snap
 	addlayer "walklayerironsight"
 	addlayer "shootpose1"
 	node "0"
+	fadein 0.2
+	fadeout 0.2
 }
 
 $sequence "shoot2" {
@@ -834,10 +835,11 @@ $sequence "shoot2" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	snap
 	addlayer "walklayerironsight"
 	addlayer "shootpose2"
 	node "0"
+	fadein 0.2
+	fadeout 0.2
 }
 
 $sequence "shoot3" {
@@ -847,10 +849,11 @@ $sequence "shoot3" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	snap
 	addlayer "walklayerironsight"
 	addlayer "shootpose3"
 	node "0"
+	fadein 0.2
+	fadeout 0.2
 }
 
 $sequence "shootpose1" {
@@ -859,7 +862,6 @@ $sequence "shootpose1" {
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	snap
 	node "Fire"
 }
 
@@ -869,7 +871,6 @@ $sequence "shootpose2" {
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	snap
 	node "Fire"
 }
 
@@ -879,24 +880,34 @@ $sequence "shootpose3" {
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	snap
 	node "Fire"
 }
 
 $sequence "boltpull" {
-	"boltpull_a"
-	"boltpullIron_a"
-	activity "ACT_VM_BOLTPULL" 1
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_RELOAD_INSERT_PULL" 1
 	blend "ironsight" 0 1
-	blendwidth 2
-	delta
+	blendwidth 3
+	addlayer "walklayerironsight"
+	addlayer "boltpullpose"
+	node "0"
 	{ event 5004 1 "MCV_Weapon_Foley_kar98_Reload.Hand" }
 	{ event 5004 7 "MCV_Weapon_Foley_kar98_Reload.MetalStart" }
 	{ event AE_CLIENT_EJECT_BRASS 12 "eject" }
 	{ event 5004 15 "MCV_Weapon_Foley_kar98_Reload.HandEnd" }
 	{ event 5004 16 "MCV_Weapon_Foley_kar98_Reload.MetalEnd" }
 	fadein 0.2
-	fadeout 0
+	fadeout 0.2
+}
+
+$sequence "boltpullpose" {
+	"boltpull_a"
+	"boltpullIron_a"
+	blend "ironsight" 0 1
+	blendwidth 2
+	delta
 }
 
 $sequence "reload" {

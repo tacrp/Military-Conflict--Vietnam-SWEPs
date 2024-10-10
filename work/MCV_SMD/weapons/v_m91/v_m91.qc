@@ -764,7 +764,7 @@ $sequence "shoot3" {
 $sequence "boltpull" {
 	"boltpull_a"
 	"boltpulliron_a"
-	activity "ACT_VM_BOLTPULL" 1
+	activity "ACT_VM_RELOAD_INSERT_PULL" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta

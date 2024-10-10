@@ -242,7 +242,8 @@ function SWEP:SetupDataTables()
     self:NetworkVar("Bool", 9, "NeedTriggerPress")
     self:NetworkVar("Bool", 10, "Ironsight")
     self:NetworkVar("Bool", 11, "Bayonet")
-    self:NetworkVar("Bool", 11, "GrenadeLauncher")
+    self:NetworkVar("Bool", 12, "GrenadeLauncher")
+    self:NetworkVar("Bool", 13, "NeedCycle")
 
     self:NetworkVar("Angle", 0, "BipodAngle")
 
@@ -251,6 +252,7 @@ function SWEP:SetupDataTables()
     self:NetworkVar("Entity", 0, "HolsterEntity")
 
     self:SetFiremode(1)
+    self:SetNeedCycle(false)
 end
 
 function SWEP:SecondaryAttack()

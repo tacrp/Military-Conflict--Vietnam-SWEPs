@@ -18,6 +18,11 @@ function SWEP:Think()
         self:SetEndReload(true)
     end
 
+    if !owner:KeyDown(IN_ATTACK) and self:GetNeedCycle() then
+        self:PlayAnimation(ACT_VM_RELOAD_INSERT_PULL, 0.75, true)
+        self:SetNeedCycle(false)
+    end
+
     if !IsValid(vm) then return end
 
     vm:SetBodyGroups(self.BodyGroups)
