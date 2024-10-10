@@ -18,8 +18,9 @@ function SWEP:Think()
         self:SetEndReload(true)
     end
 
-    if !owner:KeyDown(IN_ATTACK) and self:GetNeedCycle() then
-        self:PlayAnimation(ACT_VM_RELOAD_INSERT_PULL, 0.75, true)
+    if !owner:KeyDown(IN_ATTACK) and self:GetNeedCycle() and IsFirstTimePredicted() then
+        local t = self:PlayAnimation(ACT_VM_RELOAD_INSERT_PULL, 0.75, false)
+        self:SetNextPrimaryFire(CurTime() + t * 0.65)
         self:SetNeedCycle(false)
     end
 
@@ -42,9 +43,16 @@ function SWEP:Think()
     local bodygroupbulletscount = self:Clip1()
 
     if displayRoundsToLoad then
-        if self.ShotgunReload and self:GetReloading() and self:GetEmptyReload() then
-            vm:SetPoseParameter("ammo_fraction", 0)
-            bodygroupbullets = 0
+        if (self.ShotgunReload or (self.HybridReload and self:Clip1() > 0)) and self:GetReloading() and self:GetEmptyReload() then
+            if self.MagInClip then
+                local bullets_to_load = self:Clip1()
+
+                vm:SetPoseParameter("ammo_fraction", bullets_to_load / self.Primary.ClipSize)
+                bodygroupbulletscount = bullets_to_load
+            else
+                vm:SetPoseParameter("ammo_fraction", 0)
+                bodygroupbullets = 0
+            end
         else
             if self.MagInClip then
                 local bullets_to_load = math.min(self.Primary.ClipSize - self:Clip1(), self:Ammo1())
