@@ -105,7 +105,7 @@ function SWEP:Think_Speed()
             elseif owner:KeyDown(IN_WALK) then
                 target_speed = 25
             else
-                target_speed = 120
+                target_speed = 100
             end
         end
     end
