@@ -154,3 +154,113 @@ SWEP.TracerParticle = "tracer"
 
 SWEP.TracerRandomness = 6
 SWEP.TracerFrequency = 1
+
+
+-- Stopgap solution. Remove this when we find a fix for the slow pump animation.
+function SWEP:Think()
+    local owner = self:GetOwner()
+    local vm = owner:GetViewModel()
+
+    self:Think_Sights()
+    self:Think_Reload()
+    self:Think_Speed()
+
+    self:ProcessTimers()
+
+    if self:GetNextIdle() <= CurTime() then
+        self:Idle()
+    end
+
+    if owner:KeyReleased(IN_ATTACK) then
+        self:SetNeedTriggerPress(false)
+    elseif self:GetReloading() and self.ShotgunReload and owner:KeyPressed(IN_ATTACK) then
+        self:SetEndReload(true)
+    end
+
+    if !owner:KeyDown(IN_ATTACK) and self:GetNeedCycle() and IsFirstTimePredicted() then
+        local t = self:PlayAnimation(ACT_VM_RELOAD_INSERT_PULL, 0.45, false)
+        self:SetNextPrimaryFire(CurTime() + t * 0.65)
+        self:SetNeedCycle(false)
+    end
+
+    if !IsValid(vm) then return end
+
+    vm:SetBodyGroups(self.BodyGroups)
+
+    local displayRoundsToLoad = self:GetReloading()
+
+    if displayRoundsToLoad then
+        local reloadprogress = (self:GetAnimLockTime() - CurTime())
+
+        if self:Clip1() == 0 then
+            displayRoundsToLoad = reloadprogress >= self.MagInTimeEmpty
+        else
+            displayRoundsToLoad = reloadprogress >= self.MagInTime
+        end
+    end
+
+    local bodygroupbulletscount = self:Clip1()
+
+    if displayRoundsToLoad then
+        if (self.ShotgunReload or (self.HybridReload and self:Clip1() > 0)) and self:GetReloading() and self:GetEmptyReload() then
+            if self.MagInClip then
+                local bullets_to_load = self:Clip1()
+
+                vm:SetPoseParameter("ammo_fraction", bullets_to_load / self.Primary.ClipSize)
+                bodygroupbulletscount = bullets_to_load
+            else
+                vm:SetPoseParameter("ammo_fraction", 0)
+                bodygroupbullets = 0
+            end
+        else
+            if self.MagInClip then
+                local bullets_to_load = math.min(self.Primary.ClipSize - self:Clip1(), self:Ammo1())
+
+                vm:SetPoseParameter("ammo_fraction", bullets_to_load / self.Primary.ClipSize)
+                bodygroupbulletscount = bullets_to_load
+            else
+                local reserve = self:GetInfiniteAmmo() and math.huge or (self:Clip1() + self:Ammo1())
+                local bullets_to_load = math.min(self.Primary.ClipSize, self:GetClip1Capacity(), reserve)
+
+                vm:SetPoseParameter("ammo_fraction", bullets_to_load / self.Primary.ClipSize)
+                bodygroupbulletscount = bullets_to_load
+            end
+        end
+    else
+        vm:SetPoseParameter("ammo_fraction", (self:Clip1() / self.Primary.ClipSize))
+    end
+
+    if self.BulletBodygroups then
+        for i, bg in pairs(self.BulletBodygroups) do
+            if i > bodygroupbulletscount then
+                vm:SetBodygroup(bg[1], bg[2])
+            else
+                vm:SetBodygroup(bg[1], 0)
+            end
+        end
+    end
+
+    vm:SetPoseParameter("empty", self:Clip1() == 0 and 0 or 1)
+
+    vm:SetPoseParameter("player_movement", self:GetSpeed() * Lerp(self:GetSightAmount(), 1, (1 + self.IronsightWalkBobbingStrength)))
+
+    vm:SetPoseParameter("ironsight", self:GetSightAmount() ^  3)
+
+    if self:GetBayonet() then
+        vm:SetBodygroup(self.BayonetBodygroup, 1)
+    else
+        vm:SetBodygroup(self.BayonetBodygroup, 0)
+    end
+
+    if IsValid(self.MuzzleLight) then
+        if (self.MuzzleLightEnd or 0) < UnPredictedCurTime() then
+            self.MuzzleLight:Remove()
+            self.MuzzleLight = nil
+        else
+            local att = vm:GetAttachment(1)
+            self.MuzzleLight:SetPos(att.Pos)
+            self.MuzzleLight:SetAngles(att.Ang)
+            self.MuzzleLight:Update()
+        end
+    end
+end
