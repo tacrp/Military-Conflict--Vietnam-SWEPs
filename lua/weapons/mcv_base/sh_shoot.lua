@@ -54,7 +54,9 @@ function SWEP:PrimaryAttack()
     owner:ViewPunch(Angle(-recoilup, recoilright * util.SharedRandom("MCVRecoilLeftRight", -1, 1), 0))
 
     if IsFirstTimePredicted() then
-        self:DoEject()
+        if !self.NoEjectOnShoot then
+            self:DoEject()
+        end
         self:DoMuzzle()
     end
 
@@ -66,6 +68,12 @@ function SWEP:PrimaryAttack()
 
     if self.PlayCycleAnimation and self:Clip1() > 0 then
         self:SetNeedCycle(true)
+    end
+end
+
+function SWEP:FireAnimationEvent( pos, ang, event, name )
+    if event == 50 and IsFirstTimePredicted() then
+        self:DoEject()
     end
 end
 
