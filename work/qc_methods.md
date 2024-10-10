@@ -4,7 +4,11 @@ I highly recommend using the version of StudioMDL included with MCV itself. It c
 ## Viewmodel Method 1 -- The OG: 
 (cross-reference this with the SKS' QC if you need a good example of how to do this)
 
-1. Before anything, change the order of the model's QC attachments to be, top-to-bottom: "muzzle", "seject", "cam". This is so effects will work with the way the base is setup.
+1. Before anything, change the order of the model's QC attachments to be, top-to-bottom:
+
+   "muzzle", "eject", "cam"
+   
+   This is so effects will work with the way the base is setup.
 
 2. Find the weapon's idle $sequence. If it has a blendlayer for "ironsight_test", remove it.
 
@@ -22,9 +26,9 @@ I highly recommend using the version of StudioMDL included with MCV itself. It c
 
     numframes 60
 
-to each of them. Make sure their FPS is the same as well.
+   to each of them. Make sure their FPS is the same as well.
 
-9. Replace "walklayer" "runlayer" with "walklayerironsights" in the following $sequences:
+9. Remove the "walklyer" and "runlayer" layers and replace them with just "walklayerironsights" in the following $sequences:
 
  - "draw"
  - "firstdraw"
@@ -33,7 +37,7 @@ to each of them. Make sure their FPS is the same as well.
 
 10. Remove the "walklayerironsight" layer from reload and related animations. (Otherwise the hands clip)
 
-When you're done everything compile your model and see if everything worked out!
+Compile your model and see if everything worked.
 
 
 ## Extra advice:
