@@ -178,10 +178,12 @@ function SWEP:Think()
     end
 
     if !owner:KeyDown(IN_ATTACK) and self:GetNeedCycle() and IsFirstTimePredicted() then
-        local t = self:PlayAnimation(ACT_VM_RELOAD_INSERT_PULL, 0.45, false)
-        self:SetNextPrimaryFire(CurTime() + t * 0.65)
+        local t = self:PlayAnimation(ACT_VM_RELOAD_INSERT_PULL, 0.35, false)
+        self:SetNextPrimaryFire(CurTime() + t * 0.75)
         self:SetNeedCycle(false)
     end
+	
+	-- Should probably make it so the speed of the cycle animation and the delay afterwards can be configured in the SWEP without have to override the Think function. Also would be nice to be able to delay the cycle animation by a specified amount.
 
     if !IsValid(vm) then return end
 
