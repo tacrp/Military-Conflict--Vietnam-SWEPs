@@ -45,17 +45,15 @@ function SWEP:Holster(wep)
     end
 end
 
-local holsteranticrash = false
-
 hook.Add("StartCommand", "MCV_Holster", function(ply, ucmd)
     local wep = ply:GetActiveWeapon()
 
-    if IsValid(wep) and wep.ArcticMCV and wep:GetHolsterTime() != 0 and wep:GetHolsterTime() - wep:GetPingOffsetScale() <= CurTime() and IsValid(wep:GetHolsterEntity()) then
-        wep:SetHolsterTime(-math.huge) -- Pretty much force it to work
-        if !holsteranticrash then
-            holsteranticrash = true
-            ucmd:SelectWeapon(wep:GetHolsterEntity()) -- Call the final holster request
-            holsteranticrash = false
+    if IsValid(wep) and wep.MilitaryConflictVietnam then
+        if wep:GetHolsterTime() != 0 and wep:GetHolsterTime() - wep:GetPingOffsetScale() <= CurTime() then
+            if IsValid(wep:GetHolsterEntity()) then
+                wep:SetHolsterTime(-1)
+                ucmd:SelectWeapon(wep:GetHolsterEntity()) -- Call the final holster request
+            end
         end
     end
 end)
