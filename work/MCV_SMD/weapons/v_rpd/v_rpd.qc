@@ -799,7 +799,7 @@ $sequence "reload_empty" {
 	{ event 5004 158 "MCV_Weapon_Foley_RPD_Reload.CoverEnd" }
 	{ event 5004 170 "MCV_Weapon_Foley_RPD_Reload.HandEnd" }
 	{ event AE_WPN_COMPLETE_RELOAD 148 "" }
-	fadein 0.2
+	fadein 0
 	fadeout 0.2
 	addlayer "walklayerreload"
 	node "0"

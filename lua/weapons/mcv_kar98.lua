@@ -41,8 +41,8 @@ SWEP.Firemodes = {
 
 SWEP.LastShotAnimation = false
 SWEP.MagInClip = true
-SWEP.HybridReload = true
-SWEP.ShotgunReloadEmptyStartAnimation = true
+SWEP.HybridReload = false
+SWEP.ShotgunReloadEmptyStartAnimation = false
 SWEP.PlayCycleAnimation = true
 
 // View slide from recoil
