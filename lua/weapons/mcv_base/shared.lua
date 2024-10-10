@@ -165,7 +165,7 @@ SWEP.AccurateCrosshair = false
 SWEP.DrawWeaponInfoBox = true
 SWEP.UseHands = true
 
-SWEP.Secondary.Automatic = true
+SWEP.Secondary.Automatic = false
 SWEP.Secondary.ClipSize = -1
 SWEP.Secondary.Ammo = ""
 SWEP.Secondary.DefaultClip = 0
