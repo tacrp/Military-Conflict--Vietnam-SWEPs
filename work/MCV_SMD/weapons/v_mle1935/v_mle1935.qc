@@ -476,8 +476,7 @@ $sequence "idle" {
 	activity "ACT_VM_IDLE" 1
 	blend "ironsight" 0 0.5
 	blendwidth 3
-	fadein 0.2
-	fadeout 0.2
+	snap
 	addlayer "walklayer"
 	addlayer "runlayer"
 	//blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
