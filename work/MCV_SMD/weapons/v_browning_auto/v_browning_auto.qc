@@ -715,8 +715,8 @@ $sequence "reload_endpump" {
 	activity "ACT_SHOTGUN_PUMP" 1
 	blend "ironsight" 0 1
 	blendwidth 2
-	{ event 5004 5 "MCV_Weapon_Foley_M870_Reload.MetalStart" }
-	{ event 5004 11 "MCV_Weapon_Foley_M870_Reload.MetalEnd" }
+	{ event 5004 5 "MCV_Weapon_Foley_M870_Reload.MetalEnd" }
+	//{ event 5004 11 "MCV_Weapon_Foley_M870_Reload.MetalEnd" }
 	{ event AE_WPN_CLIP_TO_POSEPARAM 12 "ammo_fraction" }
 	fadein 0
 	fadeout 0.2
