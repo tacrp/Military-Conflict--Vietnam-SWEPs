@@ -64,7 +64,7 @@ function SWEP:Think_Reload()
                 self:SetReloading(false)
                 self:SetEmptyReload(false)
             else
-                local t = self:PlayAnimation(ACT_VM_RELOAD, mult, true)
+                local t = self:PlayAnimation(ACT_VM_RELOAD, mult, true, true)
 
                 self:RestoreClip(1)
 
