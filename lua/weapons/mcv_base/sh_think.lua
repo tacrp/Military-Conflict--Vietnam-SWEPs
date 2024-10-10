@@ -97,7 +97,7 @@ function SWEP:Think_Speed()
     local owner = self:GetOwner()
 
     if !owner:IsOnGround() then
-        target_speed = 100
+        target_speed = 0
     else
         if owner:KeyDown(IN_FORWARD) or owner:KeyDown(IN_MOVERIGHT) or owner:KeyDown(IN_MOVELEFT) or owner:KeyDown(IN_BACK) then
             if owner:KeyDown(IN_SPEED) then
@@ -110,7 +110,7 @@ function SWEP:Think_Speed()
         end
     end
 
-    speed = math.Approach(speed, target_speed, FrameTime() * 1000)
+    speed = math.Approach(speed, target_speed, FrameTime() * 750)
 
     self:SetSpeed(speed)
 end

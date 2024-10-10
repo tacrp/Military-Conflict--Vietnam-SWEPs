@@ -65,14 +65,14 @@ function SWEP:Bash()
 
     if IsValid(tr.Entity) and (tr.Entity:IsNPC() or tr.Entity:IsPlayer() or tr.Entity:IsNextBot() or tr.Entity:IsRagdoll()) then
         if self:GetBayonet() then
-            self:EmitSound("MCV_Weapon_Bayonet.Stab")
+            self:EmitSound("MCV_Weapon_AK47_Bayonet.ThrustStab")
         else
             self:EmitSound("MCV_Weapon_Fists.PowerPunch")
         end
     else
         if tr.Hit then
             if self:GetBayonet() then
-                self:EmitSound("MCV_Weapon_AK47_Bayonet.Hit")
+                self:EmitSound("MCV_Weapon_AK47_Bayonet.ThrustHit")
             else
                 self:EmitSound("MCV_Weapon_Fists.PowerPunchWall")
             end

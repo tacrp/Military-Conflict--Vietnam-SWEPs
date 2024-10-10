@@ -22,12 +22,12 @@ SWEP.WeaponSelectIcon = NULL
 
 // Stats
 
-SWEP.DamageGeneric = 43 // damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)
-SWEP.DamageHeadMultiplier = 1
-SWEP.DamageChestMultiplier = 1
-SWEP.DamageStomachMultiplier = 1
-SWEP.DamageLegMultiplier = 1
-SWEP.DamageArmMultiplier = 1
+SWEP.DamageGeneric = 41 // damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)
+SWEP.DamageHeadMultiplier = 2.5
+SWEP.DamageChestMultiplier = 1.2
+SWEP.DamageStomachMultiplier = 1.15
+SWEP.DamageLegMultiplier = 0.8
+SWEP.DamageArmMultiplier = 0.75
 
 SWEP.ExplosionDamage = 0
 SWEP.ExplosionRadius = 0
