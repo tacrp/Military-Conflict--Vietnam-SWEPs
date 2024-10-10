@@ -20,6 +20,8 @@ function SWEP:Think()
 
     if !IsValid(vm) then return end
 
+    vm:SetBodyGroups(self.BodyGroups)
+
     local displayRoundsToLoad = self:GetReloading()
 
     if displayRoundsToLoad then

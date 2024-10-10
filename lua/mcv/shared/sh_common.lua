@@ -12,6 +12,11 @@ MCV.FiremodeNames = {
     [MCV.FIREMODE_AUTO] = "Automatic",
     [MCV.FIREMODE_SEMI] = "Single-Fire",
     [MCV.FIREMODE_BURST] = "3-Round Burst",
+    [MCV.FIREMODE_SA] = "Single-Action",
+    [MCV.FIREMODE_DA] = "Double-Action",
+    [MCV.FIREMODE_FAN] = "Fan Fire",
+    [MCV.FIREMODE_BOLT] = "Bolt-Action",
+    [MCV.FIREMODE_PUMP] = "Pump-Action"
 }
 
 MCV.CancelMultipliers = {

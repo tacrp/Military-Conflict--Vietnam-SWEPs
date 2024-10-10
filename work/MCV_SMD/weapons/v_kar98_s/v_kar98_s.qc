@@ -44,9 +44,9 @@ $cdmaterials "models\weapons\mcv\shells\"
 $cdmaterials "models\weapons\mcv\optics\"
 $cdmaterials "models\weapons\mcv\rif_gl\"
 
-$attachment "cam" "cam_driver" 0 0 0 rotate 0 0 0
 $attachment "muzzle" "Base" -32.15 0 0.5 rotate 0.6 -180 0
 $attachment "eject" "Base" 0 0 0.5 rotate -20 90 0
+$attachment "cam" "cam_driver" 0 0 0 rotate 0 0 0
 
 $cbox 0 0 0 0 0 0
 
@@ -225,18 +225,19 @@ $animation "gren_shoot1_ironsight_a_corrective_animation" "v_kar98_s_anims\gren_
 $animation "basePose_a" "v_kar98_s_anims\basePose_a.smd" {
 	fps 30
 	loop
-	
+	numframes 60
 	
 }
 
 $animation "ironsight" "v_kar98_s_anims\ironsight.smd" {
-	fps 0.5
-	
-	
+	fps 30
+	frame 1 1
+	numframes 60
 }
 
 $animation "ironsight_transition" "v_kar98_s_anims\ironsight_transition.smd" {
-	fps 0.5
+	fps 30
+	numframes 60
 	
 	
 }
@@ -770,14 +771,13 @@ $sequence "ironsight_test" {
 $sequence "idle" {
 	"basePose_a"
 	"ironsight_transition"
+	"ironsight"
 	activity "ACT_VM_IDLE" 1
-	blend "ironsight" 0 0.5
-	blendwidth 2
-	fadein 0.2
-	fadeout 0.2
+	blend "ironsight" 0 1
+	blendwidth 3
+	snap
 	addlayer "walklayer"
 	addlayer "runlayer"
-	blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
 	node "0"
 }
 
@@ -791,8 +791,7 @@ $sequence "draw" {
 	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	fps 30
 	  
 	
@@ -809,52 +808,78 @@ $sequence "Firstdraw" {
 	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	fps 30
 	
 	
 }
 
 $sequence "shoot1" {
-	"shoot1_a"
-	"shoot1_ironsight_a"
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
-	blendwidth 2
-	delta
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	blendwidth 3
+	snap
+	addlayer "walklayerironsight"
+	addlayer "shootpose1"
+	node "0"
 }
 
 $sequence "shoot2" {
-	"shoot2_a"
-	"shoot2_ironsight_a"
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
-	blendwidth 2
-	delta
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	blendwidth 3
+	snap
+	addlayer "walklayerironsight"
+	addlayer "shootpose2"
+	node "0"
 }
 
 $sequence "shoot3" {
-	"shoot3_a"
-	"shoot3_ironsight_a"
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
 	activity "ACT_VM_PRIMARYATTACK" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	snap
+	addlayer "walklayerironsight"
+	addlayer "shootpose3"
+	node "0"
+}
+
+$sequence "shootpose1" {
+	"shoot1_a"
+	"shoot1_ironsight_a"
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
-	fadein 0
-	fadeout 0.2
+	snap
+	node "Fire"
+}
+
+$sequence "shootpose2" {
+	"shoot2_a"
+	"shoot2_ironsight_a"
+	blend "ironsight" 0 1
+	blendwidth 2
+	delta
+	snap
+	node "Fire"
+}
+
+$sequence "shootpose3" {
+	"shoot3_a"
+	"shoot3_ironsight_a"
+	blend "ironsight" 0 1
+	blendwidth 2
+	delta
+	snap
 	node "Fire"
 }
 
@@ -872,20 +897,6 @@ $sequence "boltpull" {
 	{ event 5004 16 "MCV_Weapon_Foley_kar98_Reload.MetalEnd" }
 	fadein 0.2
 	fadeout 0
-}
-
-$sequence "shootlast" {
-	"shoot3_a"
-	"shoot3_ironsight_a"
-	activity "ACT_VM_SHOOTLAST" 1
-	blend "ironsight" 0 1
-	blendwidth 2
-	delta
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
 }
 
 $sequence "reload" {
@@ -913,7 +924,6 @@ $sequence "reload" {
 	{ event AE_WPN_CLIPLOADED_TO_POSEPARAM 1 "ammo_fraction" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
 	node "0"
 }
 
@@ -943,7 +953,6 @@ $sequence "reload_empty" {
 	{ event AE_WPN_CLIPLOADED_TO_POSEPARAM 1 "ammo_fraction" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
 	node "0"
 }
 
@@ -961,7 +970,6 @@ $sequence "reload_start" {
 	{ event AE_WPN_CLIP_TO_POSEPARAM 0 "ammo_fraction" }
 	fadein 0.05
 	fadeout 0.05
-	addlayer "walklayerironsight"
 	node "0"
 }
 
@@ -970,7 +978,7 @@ $sequence "reload_start_empty" {
 	"reloadstart_full"
 	"reloadstart_empty_i"
 	"reloadstart_full_i"
-	activity "ACT_VM_SHOTGUN_RELOADEMPTY_START" 1
+	activity "ACT_VM_RELOAD_INSERT_EMPTY" 1
 	blend "ammo_fraction" 0 0.1
 	blend "ironsight" 0 1
 	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
@@ -980,7 +988,6 @@ $sequence "reload_start_empty" {
 	{ event AE_WPN_CLIP_TO_POSEPARAM 0 "ammo_fraction" }
 	fadein 0.05
 	fadeout 0.05
-	addlayer "walklayerironsight"
 	node "0"
 }
 
@@ -989,14 +996,13 @@ $sequence "reload_insert" {
 	"reloadinsert_full"
 	"reloadinsert_empty_i"
 	"reloadinsert_full_i"
-	activity "ACT_VM_SHOTGUN_RELOAD" 1
+	activity "ACT_VM_RELOAD_INSERT" 1
 	blend "ammo_fraction" 0 0.1
 	blend "ironsight" 0 1
 	{ event AE_WPN_CLIP_TO_POSEPARAM 9 "ammo_fraction" }
 	{ event 5004 2 "MCV_Weapon_Foley_kar98_Reload.BulletsSingular" }
 	fadein 0.05
 	fadeout 0.2
-	addlayer "walklayerironsight"
 	node "0"
 	snap
 }
@@ -1013,7 +1019,6 @@ $sequence "reload_end" {
 	{ event 5004 9 "MCV_Weapon_Foley_kar98_Reload.MetalEnd" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayerironsight"
 	node "0"
 }
 

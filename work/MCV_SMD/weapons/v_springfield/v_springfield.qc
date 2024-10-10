@@ -905,7 +905,7 @@ $sequence "reload_start_empty" {
 	"reloadstart_full"
 	"reloadstart_empty_i"
 	"reloadstart_full_i"
-	activity "ACT_VM_SHOTGUN_RELOADEMPTY_START" 1
+	activity "ACT_VM_RELOAD_INSERT_EMPTY" 1
 	blend "ammo_fraction" 0 0.1
 	blend "ironsight" 0 1
 	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
@@ -924,7 +924,7 @@ $sequence "reload_insert" {
 	"reloadinsert_full"
 	"reloadinsert_empty_i"
 	"reloadinsert_full_i"
-	activity "ACT_VM_SHOTGUN_RELOAD" 1
+	activity "ACT_VM_RELOAD_INSERT" 1
 	blend "ammo_fraction" 0 0.1
 	blend "ironsight" 0 1
 	{ event AE_WPN_CLIP_TO_POSEPARAM 6 "ammo_fraction" }

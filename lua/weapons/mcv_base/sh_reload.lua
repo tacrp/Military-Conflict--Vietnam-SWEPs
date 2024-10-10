@@ -9,8 +9,12 @@ function SWEP:Reload()
     if self:Ammo1() == 0 then return end
     if self:Clip1() >= self:GetClip1Capacity() then return end
 
-    if self.ShotgunReload then
-        self:PlayAnimation(ACT_SHOTGUN_RELOAD_START, 1, true)
+    if self.ShotgunReload or (self.HybridReload and self:Clip1() > 0) then
+        if self.ShotgunReloadEmptyStartAnimation and self:Clip1() == 0 then
+            self:PlayAnimation(ACT_VM_RELOAD_INSERT_EMPTY)
+        else
+            self:PlayAnimation(ACT_SHOTGUN_RELOAD_START, 1, true)
+        end
 
         self:SetEmptyReload(self:Clip1() == 0)
     else
@@ -52,7 +56,7 @@ end
 
 function SWEP:Think_Reload()
     if self:GetReloading() and !self:StillWaiting() then
-        if self.ShotgunReload then
+        if self.ShotgunReload or (self.HybridReload and self:Clip1() > 0) then
             if self:GetEndReload() or self:Clip1() >= (self:GetEmptyReload() and self.Primary.ClipSize or self:GetClip1Capacity()) or (!self:GetInfiniteAmmo() and self:Ammo1() == 0) or self:GetEndReload() then
 
                 if (self:Clip1() == self:GetLoadedRounds() or !self:GetEmptyReload()) then
@@ -64,7 +68,7 @@ function SWEP:Think_Reload()
                 self:SetReloading(false)
                 self:SetEmptyReload(false)
             else
-                local t = self:PlayAnimation(ACT_VM_RELOAD, mult, true, true)
+                local t = self:PlayAnimation(self.HybridReload and ACT_VM_RELOAD_INSERT or ACT_VM_RELOAD, mult, true, true)
 
                 self:RestoreClip(1)
 

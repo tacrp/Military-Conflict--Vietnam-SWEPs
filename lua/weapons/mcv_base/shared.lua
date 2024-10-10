@@ -46,6 +46,7 @@ SWEP.Firemodes = {
 // Weapon must be manually cycled
 SWEP.PlayCycleAnimation = false
 SWEP.LastShotAnimation = false
+SWEP.ShotgunReloadEmptyStartAnimation = false
 
 SWEP.MagInTime = 0
 SWEP.MagInTimeEmpty = 0
