@@ -88,6 +88,8 @@ SWEP.Spread = 6.3
 SWEP.SpreadIronsighted = 1.15
 
 SWEP.FireRate = 300 // in rounds per minute
+SWEP.CycleSpeed = 0.75 // how long is the cycle animation
+SWEP.CyclePostDelay = 0.65 // how long to wait after cycling before we can fire again
 
 SWEP.CrosshairMinDistance = 8
 SWEP.CrosshairDeltaDistance = 4

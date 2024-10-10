@@ -19,7 +19,9 @@ function SWEP:Think()
     end
 
     if !owner:KeyDown(IN_ATTACK) and self:GetNeedCycle() and IsFirstTimePredicted() then
-        local t = self:PlayAnimation(ACT_VM_RELOAD_INSERT_PULL, 0.75, false)
+		local cyclespeed = self.CycleSpeed
+		local cycledelay = self.CyclePostDelay
+        local t = self:PlayAnimation(ACT_VM_RELOAD_INSERT_PULL, cyclespeed, false)
         self:SetNextPrimaryFire(CurTime() + t * 0.65)
         self:SetNeedCycle(false)
     end
