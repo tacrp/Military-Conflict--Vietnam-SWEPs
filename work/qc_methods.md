@@ -1,47 +1,48 @@
-## Universal advice:
-- It's sometimes better to remove the walklayers from reload animations, as they cause hands to move out of place if you move during the animation. Removing the layer doesnt adversely affect quality. (Subject to change)
-
-- QC attachments should be in a specific order: Muzzle, Eject, Camera
-
-- For firstdraw $sequences ensure they call ACT_VM_READY and not ACT_VM_FIRSTDRAW
-
-- All draw, firstdraw & holster $sequences should use "walklayerironsight" instead of "walklayer"
-
-- Some slide position $sequences will need to have their included $animations inverted to work correctly. i.e. The $animation for the slide going back should be called BEFORE the $animation of the slide going forward. Experiment with this until you get the desired result.
-
-- If a slide position $animation causes issues with certain bones, try subtracting a corrective animation from it.
-
+I highly recommend using the version of StudioMDL included with MCV itself. It compiles significantly faster than GMod's version and gets around certain limitations like the vertex and bone limit.
 
 
 ## Viewmodel Method 1 -- The OG: 
 (cross-reference this with the SKS' QC if you need a good example of how to do this)
 
-1. Find the weapon's idle $sequence. If it has a blendlayer for "ironsight_test", remove it.
+1. Before anything, change the order of the model's QC attachments to be, top-to-bottom: "muzzle", "seject", "cam". This is so effects will work with the way the base is setup.
 
-2. Add the "ironsight" $animation (or equivalent) to the $sequence and change the blendwidth accordingly (3 anims = blendwith of 3).
+2. Find the weapon's idle $sequence. If it has a blendlayer for "ironsight_test", remove it.
 
-3. For every firing $sequence, make a copy of the idle $sequence. Rename all your shoot $sequences to something else (i.e. "shootpose1", "shootpose2", etc.) and name all your cloned idle sequences to "shoot", "shoot2", etc. (Or whatever you want to name everything it doesnt matter as long as you set everything up correctly)
+3. Add the "ironsight" $animation (or equivalent) to the $sequence and change the blendwidth accordingly (3 anims = blendwith of 3).
 
-4. Delete the ACT_VM_PRIMARYATTACK from the old shoot sequences and add them to your new ones (the ones cloned from the idle $sequence) while removing ACT_VM_IDLE. If this a lastshoot animation (used for pistols or any weapon where the bolt will lock back on empty) make sure it calls ACT_VM_LASTSHOOT.
+4. For every firing $sequence, make a copy of the idle $sequence. Rename all your shoot $sequences to something else (i.e. "shootpose1", "shootpose2", etc.) and name all your cloned idle sequences to "shoot", "shoot2", etc. (Or whatever you want to name everything it doesnt matter as long as you set everything up correctly)
 
-5. Add the old shoot $sequences as layers to your new $sequences. i.e. "addlayer "shootpose1""
+5. Delete the ACT_VM_PRIMARYATTACK from the old shoot sequences and add them to your new ones (the ones cloned from the idle $sequence) while removing ACT_VM_IDLE. If this a lastshoot animation (used for pistols or any weapon where the bolt will lock back on empty) make sure it calls ACT_VM_LASTSHOOT.
 
-6. Go to all the $animations referenced in the idle $sequence and add:
+6. Add the old shoot $sequences as layers to your new $sequences. i.e. "addlayer "shootpose1""
+
+7. Add the "snap" command to your shoot $sequences. If the weapon jerks awkwardly after shooting, add "snap" to the idle $sequence as well.
+
+8. Go to all the $animations referenced in the idle $sequence and add:
 
     numframes 60
 
 to each of them. Make sure their FPS is the same as well.
 
-7. Replace "walklayer" "runlayer" with "walklayerironsights" in the following $sequences:
+9. Replace "walklayer" "runlayer" with "walklayerironsights" in the following $sequences:
 
  - "draw"
  - "firstdraw"
  - "holster
 
 
-8. Remove the "walklayerironsight" layer from reload and related animations (Otherwise the hands clip)
+10. Remove the "walklayerironsight" layer from reload and related animations. (Otherwise the hands clip)
 
-9. Add the "snap" command to your shoot $sequences. If the weapon jerks awkwardly after shooting, add "snap" to the idle $sequence as well.
+When you're done everything compile your model and see if everything worked out!
+
+
+## Extra advice:
+
+- For firstdraw $sequences ensure they call ACT_VM_READY and not ACT_VM_FIRSTDRAW
+
+- Some slide position $sequences will need to have their included $animations inverted to work correctly. i.e. The $animation for the slide going back should be called BEFORE the $animation of the slide going forward. Experiment with this until you get the desired result, as this isn't applicable to every weapon.
+
+- If a slide position $animation causes issues with certain bones twisting and looking wrong, try subtracting a corrective animation from it (assuming it doesn't already have one).
 
 
 
