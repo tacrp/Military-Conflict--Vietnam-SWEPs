@@ -7,7 +7,7 @@ AddCSLuaFile()
 // Names and basic information
 SWEP.PrintName = "XM177E2 SOG"
 SWEP.Category = "Military Conflict: Vietnam"
-SWEP.Country = "United States"
+SWEP.Country = "United States of America"
 SWEP.SubCategory = "Carbines"
 SWEP.Caliber = "5.56x45mm"
 

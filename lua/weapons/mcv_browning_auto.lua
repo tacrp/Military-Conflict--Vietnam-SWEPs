@@ -5,7 +5,7 @@ SWEP.Spawnable = true
 AddCSLuaFile()
 
 // Names and basic information
-SWEP.PrintName = "Browning Auto 5"
+SWEP.PrintName = "Auto 5" -- no copyright infringe-erino mister artig!!!!!!!!!!!
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "United States of America"
 SWEP.SubCategory = "Shotguns"
