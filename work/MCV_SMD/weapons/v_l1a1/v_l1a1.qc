@@ -781,6 +781,7 @@ $sequence "slash_bayonet" {
 $sequence "bayonet_unequip" {
 	"bayonet_e_a"
 	"bayonet_e_a_i"
+	activity "ACT_VM_DETACH_SILENCER" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event AE_CL_BODYGROUP_SET_VALUE 35 "bayonet 0" }
