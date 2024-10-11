@@ -5,7 +5,7 @@ SWEP.Spawnable = true
 AddCSLuaFile()
 
 // Names and basic information
-SWEP.PrintName = "Kbkg. 60"
+SWEP.PrintName = "Kbkg 60"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Polish People's Republic"
 SWEP.SubCategory = "Assault Rifles"
@@ -68,8 +68,8 @@ SWEP.ScopeMaterial = NULL
 SWEP.ScopeFOV = 8
 SWEP.ScopeFOV2 = 4
 
-SWEP.IronsightPos = Vector(0.05, -4, 0.025)
-SWEP.IronsightAng = Angle(0.225, 0, 0)
+SWEP.IronsightPos = Vector(0.08, -4, 0.025)
+SWEP.IronsightAng = Angle(0.34, 0, 0)
 
 SWEP.CustomPos = Vector(0, -2, 0)
 SWEP.CustomAng = Angle(0, 0, 0)

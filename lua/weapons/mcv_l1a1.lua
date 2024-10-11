@@ -5,7 +5,7 @@ SWEP.Spawnable = true
 AddCSLuaFile()
 
 // Names and basic information
-SWEP.PrintName = "L1A1 SLR"
+SWEP.PrintName = "L1A1"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Australia"
 SWEP.SubCategory = "Assault Rifles"

@@ -5,7 +5,7 @@ SWEP.Spawnable = true
 AddCSLuaFile()
 
 // Names and basic information
-SWEP.PrintName = "F1 SMG"
+SWEP.PrintName = "F1" // DU DU DU DU MAX VERSTAPEN DU DU DU DU MAX VERSTAPEN
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Australia"
 SWEP.SubCategory = "Submachine Guns"
