@@ -5,16 +5,16 @@ SWEP.Spawnable = true
 AddCSLuaFile()
 
 // Names and basic information
-SWEP.PrintName = "AMD-65"
+SWEP.PrintName = "Kbkg. 60"
 SWEP.Category = "Military Conflict: Vietnam"
-SWEP.Country = "Hungary"
-SWEP.SubCategory = "Carbines"
+SWEP.Country = "Polish People's Republic"
+SWEP.SubCategory = "Assault Rifles"
 SWEP.Caliber = "7.62x39mm"
 
 SWEP.Slot = 3
 
-SWEP.ViewModel = "models/weapons/mcv/v_amd65.mdl"
-SWEP.WorldModel = "models/weapons/mcv/w_amd65.mdl"
+SWEP.ViewModel = "models/weapons/mcv/v_kbkg60.mdl"
+SWEP.WorldModel = "models/weapons/mcv/w_ak47.mdl"
 
 SWEP.BodyGroups = ""
 
@@ -22,8 +22,8 @@ SWEP.WeaponSelectIcon = NULL
 
 // Stats
 
-SWEP.DamageGeneric = 39 // damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)
-SWEP.DamageHeadMultiplier = 2.5
+SWEP.DamageGeneric = 44 // damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)
+SWEP.DamageHeadMultiplier = 2.52
 SWEP.DamageChestMultiplier = 1.2
 SWEP.DamageStomachMultiplier = 1.15
 SWEP.DamageLegMultiplier = 0.8
@@ -32,7 +32,7 @@ SWEP.DamageArmMultiplier = 0.75
 SWEP.ExplosionDamage = 0
 SWEP.ExplosionRadius = 0
 
-SWEP.MuzzleVelocity = 735
+SWEP.MuzzleVelocity = 715
 
 SWEP.RangeModifier = 0.925
 
@@ -54,9 +54,9 @@ SWEP.ViewSlideRecoilIronsightRight = 0.16
 SWEP.RecoilPushbackValue = 1.5
 
 // Camera shake from recoil
-SWEP.ShakeScale = 1
-SWEP.ShakeFreq = 45.0
-SWEP.ShakeDuration = 0.4
+SWEP.ShakeScale = 0.5
+SWEP.ShakeFreq = 50
+SWEP.ShakeDuration = 0.3
 
 SWEP.Ironsight = true
 SWEP.IronsightSpeedScale = 1.0
@@ -68,8 +68,8 @@ SWEP.ScopeMaterial = NULL
 SWEP.ScopeFOV = 8
 SWEP.ScopeFOV2 = 4
 
-SWEP.IronsightPos = Vector(0.055, -4, 0.025)
-SWEP.IronsightAng = Angle(0.3, 0, 0)
+SWEP.IronsightPos = Vector(0.05, -4, 0.025)
+SWEP.IronsightAng = Angle(0.225, 0, 0)
 
 SWEP.CustomPos = Vector(0, -2, 0)
 SWEP.CustomAng = Angle(0, 0, 0)
@@ -77,7 +77,7 @@ SWEP.CustomAng = Angle(0, 0, 0)
 SWEP.Spread = 7.72
 SWEP.SpreadIronsighted = 1.47
 
-SWEP.FireRate = 650 // in rounds per minute
+SWEP.FireRate = 600 // in rounds per minute
 
 SWEP.CrosshairMinDistance = 8
 SWEP.CrosshairDeltaDistance = 4
@@ -96,11 +96,12 @@ SWEP.NearwallDistance = 40
 SWEP.CrouchSpreadMultiplier = 0.8
 SWEP.ProneSpreadMultiplier = 0.75
 SWEP.StandMoveSpreadMultiplier = 1.45
-SWEP.SneakMoveSpreadMultiplier = 1.34
+SWEP.SneakMoveSpreadMultiplier = 1.35
 SWEP.CrouchMoveSpreadMultiplier = 1.25
 SWEP.JumpSpreadMultiplier = 3.0
 
-SWEP.HasBayonet = false
+SWEP.HasBayonet = true
+SWEP.HasRifleGrenade = true
 SWEP.HasBipod = false
 
 // Penetration
@@ -117,7 +118,7 @@ SWEP.WoodDamgaeModifier = 1.25
 SWEP.OtherDamageModifier = 1.25
 
 // Sound
-SWEP.SoundSingleShot = "MCV_Weapon_AMD65.Single"
+SWEP.SoundSingleShot = "MCV_Weapon_AK47.Single"
 SWEP.SoundDoubleShot = ""
 SWEP.SoundReload = ""
 SWEP.SoundSpecial1 = ""
