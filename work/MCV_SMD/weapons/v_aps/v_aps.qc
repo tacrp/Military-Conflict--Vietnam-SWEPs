@@ -817,37 +817,37 @@ $sequence "shoot2" {
 	//addlayer "SlidePosition"
 }
 
-$sequence "shoot3" {
-	"basePose_a"
-	"ironsight_transition"
-	"ironsight"
-	activity "ACT_VM_PRIMARYATTACK" 1
-	blend "ironsight" 0 0.5
-	blendwidth 3
-	fadein 0
-	fadeout 0
-	addlayer "walklayer"
-	addlayer "runlayer"
-	addlayer "BulletCounter"
-	addlayer "shoot3_pose"
+//$sequence "shoot3" {
+	//"basePose_a"
+	//"ironsight_transition"
+	//"ironsight"
+	//activity "ACT_VM_PRIMARYATTACK" 1
+	//blend "ironsight" 0 0.5
+	//blendwidth 3
+	//fadein 0
+	//fadeout 0
+	//addlayer "walklayer"
+	//addlayer "runlayer"
+	//addlayer "BulletCounter"
+	//addlayer "shoot3_pose"
 	//addlayer "SlidePosition"
-}
+//}
 
-$sequence "shoot4" {
-	"basePose_a"
-	"ironsight_transition"
-	"ironsight"
-	activity "ACT_VM_PRIMARYATTACK" 1
-	blend "ironsight" 0 0.5
-	blendwidth 3
-	fadein 0
-	fadeout 0
-	addlayer "walklayer"
-	addlayer "runlayer"
-	addlayer "BulletCounter"
-	addlayer "shoot4_pose"
+//$sequence "shoot4" {
+	//"basePose_a"
+	//"ironsight_transition"
+	//"ironsight"
+	//activity "ACT_VM_PRIMARYATTACK" 1
+	//blend "ironsight" 0 0.5
+	//blendwidth 3
+	//fadein 0
+	//fadeout 0
+	//addlayer "walklayer"
+	//addlayer "runlayer"
+	//addlayer "BulletCounter"
+	//addlayer "shoot4_pose"
 	//addlayer "SlidePosition"
-}
+//}
 
 $sequence "shootlast" {
 	"basePose_a"
