@@ -826,7 +826,7 @@ $sequence "shoot1" {
 	addlayer "shootpose1"
 	node "0"
 	fadein 0.1
-	fadeout 0.1
+	fadeout 0
 }
 
 $sequence "shoot2" {
@@ -840,7 +840,7 @@ $sequence "shoot2" {
 	addlayer "shootpose2"
 	node "0"
 	fadein 0.1
-	fadeout 0.1
+	fadeout 0
 }
 
 $sequence "shoot3" {
@@ -854,7 +854,7 @@ $sequence "shoot3" {
 	addlayer "shootpose3"
 	node "0"
 	fadein 0.1
-	fadeout 0.1
+	fadeout 0
 }
 
 $sequence "shootpose1" {
