@@ -23,9 +23,9 @@ $cdmaterials "models\weapons\mcv\v_akm\"
 $cdmaterials "models\weapons\mcv\v_ak47_bayonet\"
 $cdmaterials "models\weapons\mcv\shells\"
 
-$attachment "cam" "cam_driver" 0 0 0 rotate 0 0 0
 $attachment "muzzle" "Base" -20 0 0.15 rotate 1 180 0
 $attachment "eject" "Base" -1 0 0.7 rotate 0 90 0
+$attachment "cam" "cam_driver" 0 0 0 rotate 0 0 0
 
 $cbox 0 0 0 0 0 0
 

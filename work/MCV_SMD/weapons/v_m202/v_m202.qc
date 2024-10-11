@@ -411,7 +411,7 @@ $sequence "idle" {
 $sequence "Firstdraw" {
 	"v_m202_anims\Firstdraw.smd"
 	"v_m202_anims\Firstdraw_2.smd"
-	activity "ACT_VM_FIRSTDRAW" 1
+	activity "ACT_VM_READY" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event AE_CL_BODYGROUP_SET_TO_CLIP 1 "" }

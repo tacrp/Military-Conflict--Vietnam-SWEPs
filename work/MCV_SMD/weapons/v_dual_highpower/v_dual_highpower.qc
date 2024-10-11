@@ -679,7 +679,7 @@ $sequence "draw" {
 $sequence "Firstdraw" {
 	"FirstDraw_a"
 	"FirstDraw_a_i"
-	activity "ACT_VM_FIRSTDRAW" 1
+	activity "ACT_VM_READY" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_Mk22.Draw" }

@@ -762,7 +762,7 @@ $sequence "idle" {
 $sequence "FirstDraw" {
 	"v_dual_m1895_anims\FirstDraw.smd"
 	"v_dual_m1895_anims\FirstDraw_2.smd"
-	activity "ACT_VM_FIRSTDRAW" 1
+	activity "ACT_VM_READY" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event AE_WPN_SET_POSEPARAM 4 "revolver_firemode_pose 0" }

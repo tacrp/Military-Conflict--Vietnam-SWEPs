@@ -815,7 +815,7 @@ $sequence "FirstDraw" {
 	"v_swm10_anims\FirstDraw_4.smd"
 	"v_swm10_anims\FirstDraw_5.smd"
 	"v_swm10_anims\FirstDraw_6.smd"
-	activity "ACT_VM_FIRSTDRAW" 1
+	activity "ACT_VM_READY" 1
 	blend "ironsight" 0 1
 	blend "revolver_firemode_pose" 0 1
 	blendwidth 2

@@ -388,7 +388,7 @@ $sequence "idle" {
 $sequence "Firstdraw" {
 	"v_m72_anims\Firstdraw.smd"
 	"v_m72_anims\Firstdraw_2.smd"
-	activity "ACT_VM_FIRSTDRAW" 1
+	activity "ACT_VM_READY" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }

@@ -344,7 +344,7 @@ $sequence "draw" {
 
 $sequence "Firstdraw" {
 	"v_m16_flamer_anims\Firstdraw.smd"
-	activity "ACT_VM_FIRSTDRAW" 1
+	activity "ACT_VM_READY" 1
 	{ event 5004 1 "MCV_Weapon_Foley_M16A1.Draw" }
 	{ event 5004 9 "MCV_Weapon_Foley_M16A1.DrawMetalStart" }
 	{ event 5004 15 "MCV_Weapon_Foley_M16A1.DrawMetalEnd" }

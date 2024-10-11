@@ -509,7 +509,7 @@ $sequence "draw" {
 $sequence "Firstdraw" {
 	"v_welrod_anims\Firstdraw.smd"
 	"v_welrod_anims\Firstdraw_2.smd"
-	activity "ACT_VM_FIRSTDRAW" 1
+	activity "ACT_VM_READY" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_PM.Draw" }

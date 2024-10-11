@@ -497,7 +497,7 @@ $sequence "draw" {
 
 $sequence "Firstdraw" {
 	"v_lacoste_pbr_anims\Firstdraw.smd"
-	activity "ACT_VM_FIRSTDRAW" 1
+	activity "ACT_VM_READY" 1
 	{ event 5004 1 "MCV_Weapon_Foley_MAC10.Draw" }
 	{ event 5004 5 "MCV_Weapon_Foley_MAC10_Reload.Metal" }
 	{ event AE_WPN_CLIP_TO_POSEPARAM 0 "ammo_fraction" }

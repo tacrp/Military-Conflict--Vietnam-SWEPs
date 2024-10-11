@@ -459,7 +459,7 @@ $sequence "draw" {
 
 $sequence "Firstdraw" {
 	"v_ptrd41_anims\Firstdraw.smd"
-	activity "ACT_VM_FIRSTDRAW" 1
+	activity "ACT_VM_READY" 1
 	{ event 5004 1 "MCV_Weapon_Foley_PTRD.Draw" }
 	{ event 5004 7 "MCV_Weapon_Foley_PTRD_Reload.MetalStart" }
 	{ event 5004 16 "MCV_Weapon_Foley_PTRD_Reload.MetalEnd" }

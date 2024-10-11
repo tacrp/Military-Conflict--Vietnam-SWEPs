@@ -465,7 +465,7 @@ $sequence "draw" {
 $sequence "Firstdraw" {
 	"v_rpg2_anims\Firstdraw.smd"
 	"v_rpg2_anims\Firstdraw_2.smd"
-	activity "ACT_VM_FIRSTDRAW" 1
+	activity "ACT_VM_READY" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event AE_CL_BODYGROUP_SET_VALUE 1 "bullet01 0" }
