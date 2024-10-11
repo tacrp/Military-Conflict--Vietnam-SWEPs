@@ -497,8 +497,7 @@ $sequence "shoot1" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 0.5
 	blendwidth 3
-	fadein 0
-	fadeout 0.2
+	snap
 	addlayer "walklayer"
 	addlayer "runlayer"
 	addlayer "shootpose1"
@@ -511,6 +510,7 @@ $sequence "shootpose1" {
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
+	snap
 	hidden
 	node "Fire"
 	

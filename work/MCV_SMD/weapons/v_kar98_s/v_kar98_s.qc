@@ -775,7 +775,8 @@ $sequence "idle" {
 	activity "ACT_VM_IDLE" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	snap
+	fadein 0.2
+	fadeout 0.2
 	addlayer "walklayer"
 	addlayer "runlayer"
 	node "0"
@@ -824,8 +825,8 @@ $sequence "shoot1" {
 	addlayer "walklayerironsight"
 	addlayer "shootpose1"
 	node "0"
-	fadein 0.2
-	fadeout 0.2
+	fadein 0.1
+	fadeout 0.1
 }
 
 $sequence "shoot2" {
@@ -838,8 +839,8 @@ $sequence "shoot2" {
 	addlayer "walklayerironsight"
 	addlayer "shootpose2"
 	node "0"
-	fadein 0.2
-	fadeout 0.2
+	fadein 0.1
+	fadeout 0.1
 }
 
 $sequence "shoot3" {
@@ -852,8 +853,8 @@ $sequence "shoot3" {
 	addlayer "walklayerironsight"
 	addlayer "shootpose3"
 	node "0"
-	fadein 0.2
-	fadeout 0.2
+	fadein 0.1
+	fadeout 0.1
 }
 
 $sequence "shootpose1" {
@@ -862,6 +863,8 @@ $sequence "shootpose1" {
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
+	snap
+	hidden
 	node "Fire"
 }
 
@@ -871,6 +874,8 @@ $sequence "shootpose2" {
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
+	snap
+	hidden
 	node "Fire"
 }
 
@@ -880,6 +885,8 @@ $sequence "shootpose3" {
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
+	snap
+	hidden
 	node "Fire"
 }
 
@@ -899,7 +906,7 @@ $sequence "boltpull" {
 	{ event 5004 15 "MCV_Weapon_Foley_kar98_Reload.HandEnd" }
 	{ event 5004 16 "MCV_Weapon_Foley_kar98_Reload.MetalEnd" }
 	fadein 0.2
-	fadeout 0.2
+	fadeout 0
 }
 
 $sequence "boltpullpose" {

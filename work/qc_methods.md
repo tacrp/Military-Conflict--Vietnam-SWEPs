@@ -22,7 +22,7 @@ I highly recommend using the version of StudioMDL included with MCV itself. It c
 
 NOTE: You will also need to do this process for pumping/cycling $sequences on weapons that have them. Do the above steps for your cycle $sequence and make sure you call "ACT_VM_RELOAD_INSERT_PULL" in your new $sequence. 
 
-7. Add the "snap" command to your shoot $sequences. If the weapon jerks awkwardly after shooting, add "snap" to the idle $sequence as well.
+7. Add the "snap" command to your shoot $sequences. If the weapon jerks awkwardly after shooting, instead of adding "snap" to your shoot $sequences, define their fadein and fadeout as both 0 (keep "snap" on the shootposes). 
 
 8. Go to all the $animations referenced in the idle $sequence and add:
 
