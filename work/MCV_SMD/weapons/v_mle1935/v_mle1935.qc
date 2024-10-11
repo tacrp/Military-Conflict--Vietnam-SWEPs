@@ -549,20 +549,20 @@ $sequence "shoot2" {
 	node "0"
 }
 
-$sequence "shoot3" {
-	"basePose_a"
-	"ironsight_transition"
-	"ironsight"
-	activity "ACT_VM_PRIMARYATTACK" 1
-	blend "ironsight" 0 0.5
-	blendwidth 3
-	fadein 0
-	fadeout 0
-	addlayer "walklayer"
-	addlayer "runlayer"
-	addlayer "shootpose3"
-	node "0"
-}
+//$sequence "shoot3" {
+	//"basePose_a"
+	//"ironsight_transition"
+	//"ironsight"
+	//activity "ACT_VM_PRIMARYATTACK" 1
+	//blend "ironsight" 0 0.5
+	//blendwidth 3
+	//fadein 0
+	//fadeout 0
+	//addlayer "walklayer"
+	//addlayer "runlayer"
+	//addlayer "shootpose3"
+	//node "0"
+//}
 
 $sequence "shootlast" {
 	"basePose_a"
