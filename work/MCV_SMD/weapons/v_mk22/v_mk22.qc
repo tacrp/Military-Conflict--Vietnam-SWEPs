@@ -6,6 +6,10 @@ $bodygroup "studio"
 {
 	studio "RefMk22_new.smd"
 }
+$bodygroup "dummy"
+{
+	blank
+}
 $bodygroup "mk22_variants"
 {
 	studio "bg_basic_new.smd"
@@ -22,10 +26,10 @@ $illumposition -3.095 -12.721 -13.755
 $cdmaterials "models\weapons\mcv\v_mk22\"
 $cdmaterials "models\weapons\mcv\shells\"
 
-$attachment "cam" "cam_driver" 0 0 0 rotate 0 0 0
 $attachment "muzzle" "Base" -7.4 0 2.3 rotate 0 -180 0
-$attachment "muzzle2" "Base" -14.4 0 2.3 rotate 0 -180 0
 $attachment "eject" "Base" -2 0 2.1 rotate -20 90 0
+$attachment "cam" "cam_driver" 0 0 0 rotate 0 0 0
+$attachment "muzzle2" "Base" -14.4 0 2.3 rotate 0 -180 0
 
 $cbox 0 0 0 0 0 0
 
@@ -217,18 +221,22 @@ $animation "Slideback" "v_mk22_anims\Slideback.smd" {
 $animation "basePose_a" "v_mk22_anims\basePose_a.smd" {
 	fps 30
 	loop
+	numframes 60
 	
 	
 }
 
 $animation "ironsight" "v_mk22_anims\ironsight.smd" {
-	fps 0.5
+	fps 30
+	frame 1 1
+	numframes 60
 	
 	
 }
 
 $animation "ironsight_transition" "v_mk22_anims\ironsight_transition.smd" {
-	fps 0.5
+	fps 30
+	numframes 60
 	
 	
 }
@@ -415,8 +423,8 @@ $animation "pickup_e_a_i" "v_mk22_anims\pickup_e_a_i.smd" {
 }
 
 $sequence "SlidePosition" {
-	"Default"
 	"Slideback"
+	"Default"
 	blend "empty" 0 1
 	blendwidth 2
 	delta
@@ -474,14 +482,14 @@ $sequence "ironsight_test" {
 $sequence "idle" {
 	"basePose_a"
 	"ironsight_transition"
+	"ironsight"
 	activity "ACT_VM_IDLE" 1
 	blend "ironsight" 0 0.5
-	blendwidth 2
+	blendwidth 3
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
 	addlayer "runlayer"
-	blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
 	addlayer "SlidePosition"
 	node "0"
 }
@@ -496,8 +504,7 @@ $sequence "draw" {
 	fadein 0
 	fadeout 0.2
 	addlayer "SlidePosition"
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	  
@@ -515,8 +522,7 @@ $sequence "Firstdraw" {
 	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	
@@ -524,60 +530,107 @@ $sequence "Firstdraw" {
 }
 
 $sequence "shoot1" {
-	"shoot1_a"
-	"shoot1_ironsight_a"
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
 	activity "ACT_VM_PRIMARYATTACK" 1
-	blend "ironsight" 0 1
-	blendwidth 2
-	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
+	blend "ironsight" 0 0.5
+	blendwidth 3
 	fadein 0
-	fadeout 0.2
-	node "Fire"
+	fadeout 0
+	addlayer "walklayer"
+	addlayer "runlayer"
+	//addlayer "SlidePosition"
+	addlayer "shootpose1"
+	node "0"
 }
 
 $sequence "shoot2" {
-	"shoot2_a"
-	"shoot2_ironsight_a"
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
 	activity "ACT_VM_PRIMARYATTACK" 1
-	blend "ironsight" 0 1
-	blendwidth 2
-	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
+	blend "ironsight" 0 0.5
+	blendwidth 3
 	fadein 0
-	fadeout 0.2
-	node "Fire"
+	fadeout 0
+	addlayer "walklayer"
+	addlayer "runlayer"
+	//addlayer "SlidePosition"
+	addlayer "shootpose2"
+	node "0"
 }
 
-$sequence "shoot3" {
-	"shoot3_a"
-	"shoot3_ironsight_a"
-	activity "ACT_VM_PRIMARYATTACK" 1
-	blend "ironsight" 0 1
-	blendwidth 2
-	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
-}
+//$sequence "shoot3" {
+	//"basePose_a"
+	//"ironsight_transition"
+	//"ironsight"
+	//activity "ACT_VM_PRIMARYATTACK" 1
+	//blend "ironsight" 0 0.5
+	//blendwidth 3
+	//fadein 0
+	//fadeout 0
+	//addlayer "walklayer"
+	//addlayer "runlayer"
+	//addlayer "SlidePosition"
+	//addlayer "shootpose3"
+	//node "0"
+//}
 
 $sequence "shootlast" {
-	"shootlast_a"
-	"shootlast_ironsight_a"
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
 	activity "ACT_VM_SHOOTLAST" 1
+	blend "ironsight" 0 0.5
+	blendwidth 3
+	fadein 0
+	fadeout 0
+	addlayer "walklayer"
+	addlayer "runlayer"
+	addlayer "SlidePosition"
+	addlayer "shootposelast"
+	node "0"
+}
+
+$sequence "shootpose1" {
+	"shoot1_a"
+	"shoot1_ironsight_a"
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event 5004 1 "MCV_Weapon_Foley_MK22_ShootLast.Metal" }
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	snap
+	hidden
+}
+
+$sequence "shootpose2" {
+	"shoot2_a"
+	"shoot2_ironsight_a"
+	blend "ironsight" 0 1
+	blendwidth 2
+	delta
+	snap
+	hidden
+}
+
+$sequence "shootpose3" {
+	"shoot3_a"
+	"shoot3_ironsight_a"
+	blend "ironsight" 0 1
+	blendwidth 2
+	delta
+	snap
+	hidden
+}
+
+$sequence "shootposelast" {
+	"shootlast_a"
+	"shootlast_ironsight_a"
+	blend "ironsight" 0 1
+	blendwidth 2
+	delta
+	snap
+	hidden
 }
 
 $sequence "reload" {
@@ -593,7 +646,7 @@ $sequence "reload" {
 	{ event AE_WPN_COMPLETE_RELOAD 43 "" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	
@@ -614,7 +667,7 @@ $sequence "reload_empty" {
 	{ event AE_WPN_COMPLETE_RELOAD 51 "" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	
@@ -742,8 +795,7 @@ $sequence "holster" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "SlidePosition"
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	fps 30
 	
 	
