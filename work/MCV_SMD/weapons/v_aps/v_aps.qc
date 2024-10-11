@@ -739,8 +739,7 @@ $sequence "idle" {
 	blend "ironsight" 0 0.5
 	blend "empty" 0 1
 	blendwidth 3
-	fadein 0.2
-	fadeout 0.2
+	snap
 	addlayer "walklayer"
 	addlayer "runlayer"
 	//blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
@@ -867,9 +866,6 @@ $sequence "shoot1_pose" {
 	blend "ironsight" 0 1
 	blend "empty" 0 1
 	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
 	snap
 	hidden
 }
@@ -880,9 +876,6 @@ $sequence "shoot2_pose" {
 	blend "ironsight" 0 1
 	blend "empty" 0 1
 	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
 	snap
 	hidden
 }
@@ -893,9 +886,6 @@ $sequence "shoot3_pose" {
 	blend "ironsight" 0 1
 	blend "empty" 0 1
 	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
 	snap
 	hidden
 }
@@ -906,9 +896,6 @@ $sequence "shoot4_pose" {
 	blend "ironsight" 0 1
 	blend "empty" 0 1
 	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
 	snap
 	hidden
 }
@@ -919,10 +906,6 @@ $sequence "shootlast_pose" {
 	blend "ironsight" 0 1
 	blend "empty" 0 1
 	delta
-	{ event 5004 1 "MCV_Weapon_Foley_APS_ShootLast.Metal" }
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
 	snap
 	hidden
 }

@@ -476,11 +476,9 @@ $sequence "idle" {
 	activity "ACT_VM_IDLE" 1
 	blend "ironsight" 0 0.5
 	blendwidth 3
-	fadein 0.2
-	fadeout 0.2
+	snap
 	addlayer "walklayer"
 	addlayer "runlayer"
-	//blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
 	addlayer "SlidePosition"
 	node "0"
 }
@@ -582,10 +580,8 @@ $sequence "shootpose1" {
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_CLIENT_EJECT_BRASS 1 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
 	snap	
-	node "Fire"
+	hidden
 }
 
 $sequence "shootpose2" {
@@ -594,10 +590,8 @@ $sequence "shootpose2" {
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_CLIENT_EJECT_BRASS 1 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
 	snap	
-	node "Fire"
+	hidden
 }
 
 $sequence "shootpose3" {
@@ -606,10 +600,8 @@ $sequence "shootpose3" {
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_CLIENT_EJECT_BRASS 1 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
 	snap	
-	node "Fire"
+	hidden
 }
 
 $sequence "shootposelast" {
@@ -618,11 +610,9 @@ $sequence "shootposelast" {
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_CLIENT_EJECT_BRASS 1 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
 	addlayer "SlidePosition"
 	snap	
-	node "Fire"
+	hidden
 }
 
 $sequence "reload" {
