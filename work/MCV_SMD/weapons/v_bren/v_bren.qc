@@ -17,9 +17,9 @@ $illumposition 6.411 -21.683 -10.423
 $cdmaterials "models\weapons\mcv\v_bren\"
 $cdmaterials "models\weapons\mcv\shells\"
 
-$attachment "cam" "cam_driver" 0 0 0 rotate 0 0 0
 $attachment "muzzle" "Base" -31 0 0.8 rotate 0 180 0
 $attachment "eject" "Base" 0 0 -2 rotate 90 90 0
+$attachment "cam" "cam_driver" 0 0 0 rotate 0 0 0
 
 $cbox 0 0 0 0 0 0
 
@@ -199,18 +199,22 @@ $animation "shoot3_di_a_corrective_animation" "v_bren_anims\shoot3_di_a_correcti
 $animation "basePose_a" "v_bren_anims\basePose_a.smd" {
 	fps 30
 	loop
+	numframes 60
 	
 	
 }
 
 $animation "ironsight" "v_bren_anims\ironsight.smd" {
-	fps 0.5
+	fps 30
+	frame 1 1
+	numframes 60
 	
 	
 }
 
 $animation "ironsight_transition" "v_bren_anims\ironsight_transition.smd" {
-	fps 0.5
+	fps 30
+	numframes 60
 	
 	
 }

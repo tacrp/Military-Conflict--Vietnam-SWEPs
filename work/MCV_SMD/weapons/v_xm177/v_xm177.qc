@@ -6,10 +6,14 @@ $bodygroup "studio"
 {
 	studio "Ref_xm177.smd"
 }
-$bodygroup "scope"
+$bodygroup "dummy"
 {
 	blank
+}
+$bodygroup "scope"
+{
 	studio "car15_scope_new.smd"
+	blank
 	studio "single_point_OEG.smd"
 }
 $bodygroup "magazine"
