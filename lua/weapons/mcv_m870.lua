@@ -77,8 +77,8 @@ SWEP.Spread = 9
 SWEP.SpreadIronsighted = 3
 
 SWEP.FireRate = 70 // in rounds per minute
-SWEP.CycleSpeed = 0.4
-SWEP.CyclePostDelay = 0.75
+SWEP.CycleSpeed = 0.42
+SWEP.CyclePostDelay = 0.8
 
 SWEP.WeaponWeight = 3.85
 

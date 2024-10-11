@@ -22,7 +22,7 @@ function SWEP:Think()
 		local cyclespeed = self.CycleSpeed
 		local cycledelay = self.CyclePostDelay
         local t = self:PlayAnimation(ACT_VM_RELOAD_INSERT_PULL, cyclespeed, false)
-        self:SetNextPrimaryFire(CurTime() + t * 0.65)
+        self:SetNextPrimaryFire(CurTime() + t * cycledelay)
         self:SetNeedCycle(false)
     end
 
