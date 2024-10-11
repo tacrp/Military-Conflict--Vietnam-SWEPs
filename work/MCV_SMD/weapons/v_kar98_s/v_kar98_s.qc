@@ -6,10 +6,6 @@ $bodygroup "studio"
 {
 	studio "ref_new.smd"
 }
-$bodygroup "dummy"
-{
-	blank
-}
 $bodygroup "bayonet"
 {
 	blank

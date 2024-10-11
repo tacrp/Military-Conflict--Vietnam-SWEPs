@@ -51,6 +51,7 @@ Compile your model and see if everything worked.
 - If a slide position $animation causes issues with certain bones twisting and looking wrong, try subtracting a corrective animation from it (assuming it doesn't already have one).
 
 - For weapons that use a single model with bodygroups to represent multiple variants, you may need to add a blank "dummy" bodygroup to the QC to make sure they're set correctly by Lua in-game. Be sure to add the bodygroup as the second one in the list (giving it an ID of 1) and be sure to account for it when defining bodygroups in the weapon's Lua.
+DO NOT do this if the weapon has bayonet functionality. Only do it on weapons which lack a bayonet.
 
 
 ## Setting up worldmodels:
