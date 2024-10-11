@@ -37,8 +37,7 @@ SWEP.MuzzleVelocity = 860
 SWEP.RangeModifier = 0.92
 
 SWEP.Firemodes = {
-	MCV.FIREMODE_AUTO,
-    MCV.FIREMODE_SEMI
+	MCV.FIREMODE_AUTO
 }
 
 // Weapon must be manually cycled
