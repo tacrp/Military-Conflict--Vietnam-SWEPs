@@ -6,7 +6,7 @@ $definebone "ValveBiped.Bip01_R_Clavicle" "clavicle_r" 0 0 0 0 0 0 0 0 0 0 0 0
 $definebone "ValveBiped.Bip01_L_UpperArm" "upperarm_l" 0 0 0 0 0 0 0 0 0 0 0 0
 $definebone "ValveBiped.Bip01_L_Forearm" "lowerarm_l" 0 0 0 0 0 0 0 0 0 0 0 0
 $definebone "ValveBiped.Bip01_L_Hand" "hand_l" 0 0 0 0 0 180 0 0 0 0 0 0 
-$definebone "ValveBiped.Bip01_L_Wrist" "hand_l" 0 0 0 0 0 135 0 0 0 0 0 0 
+//$definebone "ValveBiped.Bip01_L_Wrist" "hand_l" 0 0 0 0 0 135 0 0 0 0 0 0 
 $definebone "ValveBiped.Bip01_L_Finger0" "thumb_01_l" 0 0 0 0 0 0 0 0 0 0 0 0 
 $definebone "ValveBiped.Bip01_L_Finger01" "thumb_02_l" 0 0 0 0 0 0 0 0 0 0 0 0 
 $definebone "ValveBiped.Bip01_L_Finger02" "thumb_03_l" 0 0 0 0 0 0 0 0 0 0 0 0 
@@ -26,7 +26,7 @@ $definebone "ValveBiped.Bip01_L_Finger42" "pinky_03_l" 0 0 0 0 0 180 0 0 0 0 0 0
 $definebone "ValveBiped.Bip01_R_UpperArm" "upperarm_r" 0 0 0 0 0 180 0 0 0 0 0 0
 $definebone "ValveBiped.Bip01_R_Forearm" "lowerarm_r" 0 0 0 0 0 180 0 0 0 0 0 0
 $definebone "ValveBiped.Bip01_R_Hand" "hand_r" 0 0 0 180 0 -15 0 0 0 0 0 0
-$definebone "ValveBiped.Bip01_R_Wrist" "hand_r" 0 0 0 180 0 25 0 0 0 0 0 0
+//$definebone "ValveBiped.Bip01_R_Wrist" "hand_r" 0 0 0 180 0 25 0 0 0 0 0 0
 $definebone "ValveBiped.Bip01_R_Finger0" "thumb_01_r" 0 0 0 0 180 0 0 0 0 0 0 0
 $definebone "ValveBiped.Bip01_R_Finger01" "thumb_02_r" 0 0 0 0 180 0 0 0 0 0 0 0
 $definebone "ValveBiped.Bip01_R_Finger02" "thumb_03_r" 0 0 0 0 180 0 0 0 0 0 0 0
