@@ -6,6 +6,8 @@ MCV.FIREMODE_DA = 4
 MCV.FIREMODE_FAN = 5
 MCV.FIREMODE_BOLT = 6
 MCV.FIREMODE_PUMP = 7
+MCV.FIREMODE_FAST = 8
+MCV.FIREMODE_SLOW = 9
 
 
 MCV.FiremodeNames = {
@@ -16,7 +18,9 @@ MCV.FiremodeNames = {
     [MCV.FIREMODE_DA] = "Double-Action",
     [MCV.FIREMODE_FAN] = "Fan Fire",
     [MCV.FIREMODE_BOLT] = "Bolt-Action",
-    [MCV.FIREMODE_PUMP] = "Pump-Action"
+    [MCV.FIREMODE_PUMP] = "Pump-Action",
+	[MCV.FIREMODE_FAST] = "Fast-Fire",
+	[MCV.FIREMODE_SLOW] = "Slow-Fire",
 }
 
 MCV.CancelMultipliers = {

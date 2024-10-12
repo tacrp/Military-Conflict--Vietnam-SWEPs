@@ -38,8 +38,14 @@ function SWEP:PrimaryAttack()
     end
 
     self:TakePrimaryAmmo(1)
-
-    self:SetNextPrimaryFire(CurTime() + (60 / self.FireRate))
+	
+	if self:GetFiremodeValue() == MCV.FIREMODE_FAST then
+		self:SetNextPrimaryFire(CurTime() + (60 / self.FireRate_Fast))
+	elseif self:GetFiremodeValue() == MCV.FIREMODE_SLOW then
+		self:SetNextPrimaryFire(CurTime() + (60 / self.FireRate_Slow))
+	else
+		self:SetNextPrimaryFire(CurTime() + (60 / self.FireRate))
+	end
     self:SetLastRecoilTime(CurTime())
 
     self:BulletAttack()

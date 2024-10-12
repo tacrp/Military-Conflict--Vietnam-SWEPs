@@ -37,7 +37,8 @@ SWEP.MuzzleVelocity = 735
 SWEP.RangeModifier = 0.925
 
 SWEP.Firemodes = {
-    MCV.FIREMODE_AUTO
+    MCV.FIREMODE_FAST,
+	MCV.FIREMODE_SLOW
 }
 
 // Weapon must be manually cycled
@@ -76,6 +77,8 @@ SWEP.CustomAng = Angle(0, 0, 0)
 SWEP.Spread = 7.72
 SWEP.SpreadIronsighted = 1.47
 
+SWEP.FireRate_Slow = 350 
+SWEP.FireRate_Fast = 600
 SWEP.FireRate = 600 // in rounds per minute
 
 SWEP.CrosshairMinDistance = 8
