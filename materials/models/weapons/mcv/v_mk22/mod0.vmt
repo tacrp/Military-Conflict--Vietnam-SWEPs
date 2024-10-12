@@ -6,5 +6,6 @@
     "$basetexture"                    "models\weapons\mcv\v_mk22\mod0_diffuse"
     "$bumpmap"                         "models\weapons\mcv\v_mk22\mod0_normal"
 	"$PhongExponentTexture" 			"models\weapons\mcv\v_mk22\mod0_exponent"
+	"$nocull" "1"
 	}
 }
