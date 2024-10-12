@@ -604,6 +604,7 @@ $sequence "shoot1" {
 	fadeout 0
 	addlayer "shootpose1"
 	addlayer "walklayerironsight"
+	addlayer "runlayer"
 	addlayer "SlideMovement"
 
 	numframes 60
@@ -620,6 +621,7 @@ $sequence "shoot2" {
 	fadeout 0
 	addlayer "shootpose2"
 	addlayer "walklayerironsight"
+	addlayer "runlayer"
 	addlayer "SlideMovement"
 
 	numframes 60
@@ -636,6 +638,7 @@ $sequence "shoot3" {
 	fadeout 0
 	addlayer "shootpose3"
 	addlayer "walklayerironsight"
+	addlayer "runlayer"
 	addlayer "SlideMovement"
 
 	numframes 60
