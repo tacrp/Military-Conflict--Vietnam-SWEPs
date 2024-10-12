@@ -526,8 +526,8 @@ $sequence "pump" {
 	addlayer "walklayerironsight"
 	addlayer "pumppose"
 	node "0"
-	{ event 5004 7 "MCV_Weapon_Foley_M870_Reload.MetalStart" }
-	{ event 5004 27 "MCV_Weapon_Foley_M870_Reload.MetalEnd" }
+	{ event 5004 11 "MCV_Weapon_Foley_M870_Reload.MetalStart" }
+	{ event 5004 30 "MCV_Weapon_Foley_M870_Reload.MetalEnd" }
 	{ event AE_CLIENT_EJECT_BRASS 4 "eject" }
 	fadein 0.2
 	fadeout 0.2
