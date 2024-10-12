@@ -237,14 +237,14 @@ $animation "shoot1_ironsight_a" "v_m870_anims\shoot1_ironsight_a.smd" {
 	subtract "shoot1_ironsight_a_corrective_animation" 0
 }
 
-$animation "pump_a" "v_m870_anims\pump_a.smd" {
+$animation "pump_a" "anims\pump_a.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "pump_a_corrective_animation" 0
 
 }
 
-$animation "pump_ironsight_a" "v_m870_anims\pump_ironsight_a.smd" {
+$animation "pump_ironsight_a" "anims\pump_ironsight_a.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "pump_ironsight_a_corrective_animation" 0
@@ -526,8 +526,8 @@ $sequence "pump" {
 	addlayer "walklayerironsight"
 	addlayer "pumppose"
 	node "0"
-	{ event 5004 2 "MCV_Weapon_Foley_M870_Reload.MetalStart" }
-	{ event 5004 20 "MCV_Weapon_Foley_M870_Reload.MetalEnd" }
+	{ event 5004 7 "MCV_Weapon_Foley_M870_Reload.MetalStart" }
+	{ event 5004 27 "MCV_Weapon_Foley_M870_Reload.MetalEnd" }
 	{ event AE_CLIENT_EJECT_BRASS 4 "eject" }
 	fadein 0.2
 	fadeout 0.2
