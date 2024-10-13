@@ -183,7 +183,7 @@ $animation "shoot3_a_corrective_animation" "v_md63_anims\shoot3_a_corrective_ani
 $animation "shoot3_ironsight_a_corrective_animation" "v_md63_anims\shoot3_ironsight_a_corrective_animation.smd" {
 }
 
-$animation "basePose_a" "v_md63_anims\basePose_a.smd" {
+$animation "basePose_a" "anims\basePose_a.smd" {
 	fps 30
 	loop
 	numframes 60
@@ -191,7 +191,7 @@ $animation "basePose_a" "v_md63_anims\basePose_a.smd" {
 	
 }
 
-$animation "ironsight" "v_md63_anims\ironsight.smd" {
+$animation "ironsight" "anims\ironsight.smd" {
 	fps 30
 	frame 1 1
 	numframes 60
@@ -199,7 +199,7 @@ $animation "ironsight" "v_md63_anims\ironsight.smd" {
 	
 }
 
-$animation "ironsight_transition" "v_md63_anims\ironsight_transition.smd" {
+$animation "ironsight_transition" "anims\ironsight_transition.smd" {
 	fps 30
 	numframes 60
 	
