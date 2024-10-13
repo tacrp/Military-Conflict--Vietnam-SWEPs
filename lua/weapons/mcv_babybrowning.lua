@@ -41,7 +41,7 @@ SWEP.Firemodes = {
     MCV.FIREMODE_SEMI
 }
 
-SWEP.LastShotAnimation = true
+SWEP.LastShotAnimation = false -- it does has a lastshot anim but it isnt visually different so there's no point. plus it jerks so this is an easy way to fix that
 
 SWEP.MagInTime = 0.4
 SWEP.MagInTimeEmpty = 0.4
