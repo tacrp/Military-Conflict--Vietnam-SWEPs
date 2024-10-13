@@ -153,34 +153,34 @@ $poseparameter "move_yaw" -180 180 loop 0
 
 
 
-$animation "runIdle_a_corrective_animation" "v_md63_anims\runIdle_a_corrective_animation.smd" {
+$animation "runIdle_a_corrective_animation" "anims\runIdle_a_corrective_animation.smd" {
 }
 
-$animation "run_a_corrective_animation" "v_md63_anims\run_a_corrective_animation.smd" {
+$animation "run_a_corrective_animation" "anims\run_a_corrective_animation.smd" {
 }
 
-$animation "walkIdle_a_corrective_animation" "v_md63_anims\walkIdle_a_corrective_animation.smd" {
+$animation "walkIdle_a_corrective_animation" "anims\walkIdle_a_corrective_animation.smd" {
 }
 
-$animation "walk_a_corrective_animation" "v_md63_anims\walk_a_corrective_animation.smd" {
+$animation "walk_a_corrective_animation" "anims\walk_a_corrective_animation.smd" {
 }
 
-$animation "shoot1_a_corrective_animation" "v_md63_anims\shoot1_a_corrective_animation.smd" {
+$animation "shoot1_a_corrective_animation" "anims\shoot1_a_corrective_animation.smd" {
 }
 
-$animation "shoot1_ironsight_a_corrective_animation" "v_md63_anims\shoot1_ironsight_a_corrective_animation.smd" {
+$animation "shoot1_ironsight_a_corrective_animation" "anims\shoot1_ironsight_a_corrective_animation.smd" {
 }
 
-$animation "shoot2_a_corrective_animation" "v_md63_anims\shoot2_a_corrective_animation.smd" {
+$animation "shoot2_a_corrective_animation" "anims\shoot2_a_corrective_animation.smd" {
 }
 
-$animation "shoot2_ironsight_a_corrective_animation" "v_md63_anims\shoot2_ironsight_a_corrective_animation.smd" {
+$animation "shoot2_ironsight_a_corrective_animation" "anims\shoot2_ironsight_a_corrective_animation.smd" {
 }
 
-$animation "shoot3_a_corrective_animation" "v_md63_anims\shoot3_a_corrective_animation.smd" {
+$animation "shoot3_a_corrective_animation" "anims\shoot3_a_corrective_animation.smd" {
 }
 
-$animation "shoot3_ironsight_a_corrective_animation" "v_md63_anims\shoot3_ironsight_a_corrective_animation.smd" {
+$animation "shoot3_ironsight_a_corrective_animation" "anims\shoot3_ironsight_a_corrective_animation.smd" {
 }
 
 $animation "basePose_a" "anims\basePose_a.smd" {
@@ -206,7 +206,7 @@ $animation "ironsight_transition" "anims\ironsight_transition.smd" {
 	
 }
 
-$animation "runIdle_a" "v_md63_anims\runIdle_a.smd" {
+$animation "runIdle_a" "anims\runIdle_a.smd" {
 	fps 30
 	loop
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
@@ -215,7 +215,7 @@ $animation "runIdle_a" "v_md63_anims\runIdle_a.smd" {
 	
 }
 
-$animation "run_a" "v_md63_anims\run_a.smd" {
+$animation "run_a" "anims\run_a.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "run_a_corrective_animation" 0
@@ -223,7 +223,7 @@ $animation "run_a" "v_md63_anims\run_a.smd" {
 	
 }
 
-$animation "walkIdle_a" "v_md63_anims\walkIdle_a.smd" {
+$animation "walkIdle_a" "anims\walkIdle_a.smd" {
 	fps 30
 	loop
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
@@ -232,7 +232,7 @@ $animation "walkIdle_a" "v_md63_anims\walkIdle_a.smd" {
 	
 }
 
-$animation "walk_a" "v_md63_anims\walk_a.smd" {
+$animation "walk_a" "anims\walk_a.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "walk_a_corrective_animation" 0
@@ -240,221 +240,221 @@ $animation "walk_a" "v_md63_anims\walk_a.smd" {
 	
 }
 
-$animation "shoot1_a" "v_md63_anims\shoot1_a.smd" {
+$animation "shoot1_a" "anims\shoot1_a.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "shoot1_a_corrective_animation" 0
 }
 
-$animation "shoot1_ironsight_a" "v_md63_anims\shoot1_ironsight_a.smd" {
+$animation "shoot1_ironsight_a" "anims\shoot1_ironsight_a.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "shoot1_ironsight_a_corrective_animation" 0
 }
 
-$animation "shoot2_a" "v_md63_anims\shoot2_a.smd" {
+$animation "shoot2_a" "anims\shoot2_a.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "shoot2_a_corrective_animation" 0
 }
 
-$animation "shoot2_ironsight_a" "v_md63_anims\shoot2_ironsight_a.smd" {
+$animation "shoot2_ironsight_a" "anims\shoot2_ironsight_a.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "shoot2_ironsight_a_corrective_animation" 0
 }
 
-$animation "shoot3_a" "v_md63_anims\shoot3_a.smd" {
+$animation "shoot3_a" "anims\shoot3_a.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "shoot3_a_corrective_animation" 0
 }
 
-$animation "shoot3_ironsight_a" "v_md63_anims\shoot3_ironsight_a.smd" {
+$animation "shoot3_ironsight_a" "anims\shoot3_ironsight_a.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "shoot3_ironsight_a_corrective_animation" 0
 }
 
-$animation "nearwall_s_a" "v_md63_anims\nearwall_s_a.smd" {
+$animation "nearwall_s_a" "anims\nearwall_s_a.smd" {
 	fps 30
 	
 	
 }
 
-$animation "nearwall_s_a_i" "v_md63_anims\nearwall_s_a_i.smd" {
+$animation "nearwall_s_a_i" "anims\nearwall_s_a_i.smd" {
 	fps 30
 	
 	
 }
 
-$animation "nearwall_a" "v_md63_anims\nearwall_a.smd" {
-	fps 30
-	loop
-	
-	
-}
-
-$animation "nearwall_a_i" "v_md63_anims\nearwall_a_i.smd" {
-	fps 30
-	
-	
-}
-
-$animation "nearwall_e_a" "v_md63_anims\nearwall_e_a.smd" {
-	fps 30
-	
-	
-}
-
-$animation "nearwall_e_a_i" "v_md63_anims\nearwall_e_a_i.smd" {
-	fps 30
-	
-	
-}
-
-$animation "proneF" "v_md63_anims\proneF.smd" {
+$animation "nearwall_a" "anims\nearwall_a.smd" {
 	fps 30
 	loop
 	
 	
 }
 
-$animation "proneB" "v_md63_anims\proneB.smd" {
+$animation "nearwall_a_i" "anims\nearwall_a_i.smd" {
 	fps 30
 	
 	
 }
 
-$animation "proneL" "v_md63_anims\proneL.smd" {
+$animation "nearwall_e_a" "anims\nearwall_e_a.smd" {
 	fps 30
 	
 	
 }
 
-$animation "proneR" "v_md63_anims\proneR.smd" {
+$animation "nearwall_e_a_i" "anims\nearwall_e_a_i.smd" {
 	fps 30
 	
 	
 }
 
-$animation "pickup_s_a" "v_md63_anims\pickup_s_a.smd" {
-	fps 30
-	
-	
-}
-
-$animation "pickup_s_a_i" "v_md63_anims\pickup_s_a_i.smd" {
-	fps 30
-	
-	
-}
-
-$animation "pickup_a" "v_md63_anims\pickup_a.smd" {
+$animation "proneF" "anims\proneF.smd" {
 	fps 30
 	loop
 	
 	
 }
 
-$animation "pickup_a_i" "v_md63_anims\pickup_a_i.smd" {
+$animation "proneB" "anims\proneB.smd" {
 	fps 30
 	
 	
 }
 
-$animation "pickup_e_a" "v_md63_anims\pickup_e_a.smd" {
+$animation "proneL" "anims\proneL.smd" {
 	fps 30
 	
 	
 }
 
-$animation "pickup_e_a_i" "v_md63_anims\pickup_e_a_i.smd" {
+$animation "proneR" "anims\proneR.smd" {
 	fps 30
 	
 	
 }
 
-$animation "bayonet_e_a" "v_md63_anims\bayonet_e_a.smd" {
+$animation "pickup_s_a" "anims\pickup_s_a.smd" {
 	fps 30
 	
 	
 }
 
-$animation "bayonet_e_a_i" "v_md63_anims\bayonet_e_a_i.smd" {
+$animation "pickup_s_a_i" "anims\pickup_s_a_i.smd" {
 	fps 30
 	
 	
 }
 
-$animation "bayonet_s_a" "v_md63_anims\bayonet_s_a.smd" {
-	fps 30
-	
-	
-}
-
-$animation "bayonet_s_a_i" "v_md63_anims\bayonet_s_a_i.smd" {
-	fps 30
-	
-	
-}
-
-$animation "change_firemode_idle" "v_md63_anims\change_firemode_idle.smd" {
-	fps 30
-	
-	
-}
-
-$animation "change_firemode_iron" "v_md63_anims\change_firemode_iron.smd" {
-	fps 30
-	
-	
-}
-
-$animation "bayonet_attack_a" "v_md63_anims\bayonet_attack_a.smd" {
-	fps 30
-	
-	
-}
-
-$animation "bayonet_attack_a_i" "v_md63_anims\bayonet_attack_a_i.smd" {
-	fps 30
-	
-	
-}
-
-$animation "Charge_s_a" "v_md63_anims\Charge_s_a.smd" {
-	fps 30
-	
-	
-}
-
-$animation "Charge_s_a_i" "v_md63_anims\Charge_s_a_i.smd" {
-	fps 30
-	
-	
-}
-
-$animation "Charge_l_a" "v_md63_anims\Charge_l_a.smd" {
+$animation "pickup_a" "anims\pickup_a.smd" {
 	fps 30
 	loop
 	
 	
 }
 
-$animation "Charge_l_a_i" "v_md63_anims\Charge_l_a_i.smd" {
+$animation "pickup_a_i" "anims\pickup_a_i.smd" {
 	fps 30
 	
 	
 }
 
-$animation "Charge_e_a" "v_md63_anims\Charge_e_a.smd" {
+$animation "pickup_e_a" "anims\pickup_e_a.smd" {
 	fps 30
 	
 	
 }
 
-$animation "Charge_e_a_i" "v_md63_anims\Charge_e_a_i.smd" {
+$animation "pickup_e_a_i" "anims\pickup_e_a_i.smd" {
+	fps 30
+	
+	
+}
+
+$animation "bayonet_e_a" "anims\bayonet_e_a.smd" {
+	fps 30
+	
+	
+}
+
+$animation "bayonet_e_a_i" "anims\bayonet_e_a_i.smd" {
+	fps 30
+	
+	
+}
+
+$animation "bayonet_s_a" "anims\bayonet_s_a.smd" {
+	fps 30
+	
+	
+}
+
+$animation "bayonet_s_a_i" "anims\bayonet_s_a_i.smd" {
+	fps 30
+	
+	
+}
+
+$animation "change_firemode_idle" "anims\change_firemode_idle.smd" {
+	fps 30
+	
+	
+}
+
+$animation "change_firemode_iron" "anims\change_firemode_iron.smd" {
+	fps 30
+	
+	
+}
+
+$animation "bayonet_attack_a" "anims\bayonet_attack_a.smd" {
+	fps 30
+	
+	
+}
+
+$animation "bayonet_attack_a_i" "anims\bayonet_attack_a_i.smd" {
+	fps 30
+	
+	
+}
+
+$animation "Charge_s_a" "anims\Charge_s_a.smd" {
+	fps 30
+	
+	
+}
+
+$animation "Charge_s_a_i" "anims\Charge_s_a_i.smd" {
+	fps 30
+	
+	
+}
+
+$animation "Charge_l_a" "anims\Charge_l_a.smd" {
+	fps 30
+	loop
+	
+	
+}
+
+$animation "Charge_l_a_i" "anims\Charge_l_a_i.smd" {
+	fps 30
+	
+	
+}
+
+$animation "Charge_e_a" "anims\Charge_e_a.smd" {
+	fps 30
+	
+	
+}
+
+$animation "Charge_e_a_i" "anims\Charge_e_a_i.smd" {
 	fps 30
 	
 	
@@ -524,8 +524,8 @@ $sequence "idle" {
 }
 
 $sequence "draw" {
-	"v_md63_anims\draw.smd"
-	"v_md63_anims\draw_2.smd"
+	"anims\draw.smd"
+	"anims\draw_2.smd"
 	activity "ACT_VM_DRAW" 1
 	blend "ironsight" 0 1
 	blendwidth 2
@@ -539,8 +539,8 @@ $sequence "draw" {
 }
 
 $sequence "Firstdraw" {
-	"v_md63_anims\Firstdraw.smd"
-	"v_md63_anims\Firstdraw_2.smd"
+	"anims\Firstdraw.smd"
+	"anims\Firstdraw_2.smd"
 	activity "ACT_VM_READY" 1
 	blend "ironsight" 0 1
 	blendwidth 2
@@ -635,8 +635,8 @@ $sequence "shootpose3" {
 }
 
 $sequence "reload" {
-	"v_md63_anims\reload.smd"
-	"v_md63_anims\reload_2.smd"
+	"anims\reload.smd"
+	"anims\reload_2.smd"
 	activity "ACT_VM_RELOAD" 1
 	blend "ironsight" 0 1
 	blendwidth 2
@@ -655,8 +655,8 @@ $sequence "reload" {
 }
 
 $sequence "reload_empty" {
-	"v_md63_anims\reload_empty.smd"
-	"v_md63_anims\reload_empty_2.smd"
+	"anims\reload_empty.smd"
+	"anims\reload_empty_2.smd"
 	activity "ACT_VM_RELOADEMPTY" 1
 	blend "ironsight" 0 1
 	blendwidth 2
@@ -732,8 +732,8 @@ $sequence "prone" {
 }
 
 $sequence "bash" {
-	"v_md63_anims\bash.smd"
-	"v_md63_anims\bash_2.smd"
+	"anims\bash.smd"
+	"anims\bash_2.smd"
 	activity "ACT_VM_HITCENTER" 1
 	blend "ironsight" 0 1
 	blendwidth 2
@@ -825,7 +825,7 @@ $sequence "change_firemode" {
 }
 
 $sequence "holster" {
-	"v_md63_anims\holster.smd"
+	"anims\holster.smd"
 	activity "ACT_VM_HOLSTER" 1
 	{ event 5004 0 "MCV_Weapon_Foley_AK47.Holster" }
 	fadein 0.2
