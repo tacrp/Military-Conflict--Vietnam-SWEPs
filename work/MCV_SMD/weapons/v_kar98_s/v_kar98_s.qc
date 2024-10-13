@@ -224,7 +224,6 @@ $animation "gren_shoot1_ironsight_a_corrective_animation" "v_kar98_s_anims\gren_
 
 $animation "basePose_a" "v_kar98_s_anims\basePose_a.smd" {
 	fps 30
-	loop
 	numframes 60
 	
 }
@@ -278,36 +277,42 @@ $animation "walk_a" "v_kar98_s_anims\walk_a.smd" {
 
 $animation "shoot1_a" "v_kar98_s_anims\shoot1_a.smd" {
 	fps 30
+	numframes 9
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "shoot1_a_corrective_animation" 0
 }
 
 $animation "shoot1_ironsight_a" "v_kar98_s_anims\shoot1_ironsight_a.smd" {
 	fps 30
+	numframes 9
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "shoot1_ironsight_a_corrective_animation" 0
 }
 
 $animation "shoot2_a" "v_kar98_s_anims\shoot2_a.smd" {
 	fps 30
+	numframes 9
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "shoot2_a_corrective_animation" 0
 }
 
 $animation "shoot2_ironsight_a" "v_kar98_s_anims\shoot2_ironsight_a.smd" {
 	fps 30
+	numframes 9
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "shoot2_ironsight_a_corrective_animation" 0
 }
 
 $animation "shoot3_a" "v_kar98_s_anims\shoot3_a.smd" {
 	fps 30
+	numframes 9
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "shoot3_a_corrective_animation" 0
 }
 
 $animation "shoot3_ironsight_a" "v_kar98_s_anims\shoot3_ironsight_a.smd" {
 	fps 30
+	numframes 9
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "shoot3_ironsight_a_corrective_animation" 0
 }
@@ -775,7 +780,8 @@ $sequence "idle" {
 	activity "ACT_VM_IDLE" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	snap
+	fadein 0.2
+	fadeout 0.2
 	addlayer "walklayer"
 	addlayer "runlayer"
 	node "0"
@@ -824,7 +830,7 @@ $sequence "shoot1" {
 	addlayer "walklayerironsight"
 	addlayer "shootpose1"
 	node "0"
-	fadein 0.1
+	fadein 0
 	fadeout 0.2
 }
 
@@ -838,7 +844,7 @@ $sequence "shoot2" {
 	addlayer "walklayerironsight"
 	addlayer "shootpose2"
 	node "0"
-	fadein 0.1
+	fadein 0
 	fadeout 0.2
 }
 
@@ -852,7 +858,7 @@ $sequence "shoot3" {
 	addlayer "walklayerironsight"
 	addlayer "shootpose3"
 	node "0"
-	fadein 0.1
+	fadein 0
 	fadeout 0.2
 }
 
@@ -900,10 +906,10 @@ $sequence "boltpull" {
 	addlayer "boltpullpose"
 	node "0"
 	{ event 5004 1 "MCV_Weapon_Foley_kar98_Reload.Hand" }
-	{ event 5004 7 "MCV_Weapon_Foley_kar98_Reload.MetalStart" }
+	{ event 5004 11 "MCV_Weapon_Foley_kar98_Reload.MetalStart" }
 	{ event AE_CLIENT_EJECT_BRASS 12 "eject" }
-	{ event 5004 15 "MCV_Weapon_Foley_kar98_Reload.HandEnd" }
-	{ event 5004 16 "MCV_Weapon_Foley_kar98_Reload.MetalEnd" }
+	{ event 5004 17 "MCV_Weapon_Foley_kar98_Reload.HandEnd" }
+	{ event 5004 26 "MCV_Weapon_Foley_kar98_Reload.MetalEnd" }
 	fadein 0.2
 	fadeout 0.2
 }
