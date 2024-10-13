@@ -557,7 +557,8 @@ $sequence "shoot1" {
 	blend "ironsight" 0 1
 	blendwidth 3
 	snap
-	addlayer "walklayerironsight"
+	addlayer "walklayer"
+	addlayer "runlayer"
 	addlayer "shootpose1"
 }
 
@@ -569,7 +570,8 @@ $sequence "shoot2" {
 	blend "ironsight" 0 1
 	blendwidth 3
 	snap
-	addlayer "walklayerironsight"
+	addlayer "walklayer"
+	addlayer "runlayer"
 	addlayer "shootpose2"
 }
 
@@ -581,7 +583,8 @@ $sequence "shoot3" {
 	blend "ironsight" 0 1
 	blendwidth 3
 	snap
-	addlayer "walklayerironsight"
+	addlayer "walklayer"
+	addlayer "runlayer"
 	addlayer "shootpose3"
 }
 
