@@ -53,6 +53,8 @@ Compile your model and see if everything worked.
 - For weapons that use a single model with bodygroups to represent multiple variants, you may need to add a blank "dummy" bodygroup to the QC to make sure they're set correctly by Lua in-game. Be sure to add the bodygroup as the second one in the list (giving it an ID of 1) and be sure to account for it when defining bodygroups in the weapon's Lua.
 DO NOT do this if the weapon has bayonet functionality. Only do it on weapons which lack a bayonet.
 
+- This method so far has only worked on the Kar 98 but I'm still noting it here. The jerking at the end of firing anims can be fixed by adding "numframes <length of the animation>" to all shoot $animations. This eliminates the need to add "snap" to your idle or spoof a snap with zeroed fadein and fadeout on your shoot $sequences.
+
 
 ## Setting up worldmodels:
 
