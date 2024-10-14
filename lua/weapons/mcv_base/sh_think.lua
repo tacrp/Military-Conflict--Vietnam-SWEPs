@@ -70,7 +70,7 @@ function SWEP:Think()
             end
         end
     else
-        vm:SetPoseParameter("ammo_fraction", (self:Clip1() / self.Primary.ClipSize))
+        vm:SetPoseParameter("ammo_fraction", self:Clip1() / self.Primary.ClipSize)
     end
 
     if self.BulletBodygroups then

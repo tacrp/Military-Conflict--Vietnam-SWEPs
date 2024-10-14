@@ -21,6 +21,8 @@ SWEP.BodyGroups = "00000"
 
 SWEP.WeaponSelectIcon = NULL
 
+SWEP.ViewModelFOV = 40
+
 // Stats
 
 SWEP.DamageGeneric = 65 // damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)
@@ -67,11 +69,12 @@ SWEP.IronsightFov = 90 - 15
 SWEP.IronsightWalkBobbingStrength = -0.25
 
 SWEP.HasScope = true
-SWEP.ScopeMaterial = NULL
+SWEP.ScopeMaterial = Material("models/weapons/mcv/optics/crosshair_kar98")
 SWEP.ScopeFOV = 8
 SWEP.ScopeFOV2 = 4
+SWEP.RTScopeMaterialIndex = 4
 
-SWEP.IronsightPos = Vector(0.085, -4, -0.02)
+SWEP.IronsightPos = Vector(0.085, -7, -0.75)
 SWEP.IronsightAng = Angle(0.33, 0.15, 0)
 
 SWEP.CustomPos = Vector(0, -2, 0)

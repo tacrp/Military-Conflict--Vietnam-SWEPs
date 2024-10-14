@@ -9,7 +9,7 @@ function SWEP:CalcView(ply, pos, ang, fov)
         ang.r = ang.r + (math.sin(CurTime() * self.ShakeFreq) * rec)
     end
 
-    local mag = Lerp(self:GetSightAmount() ^ 3, 1, 90 / self.IronsightFov)
+    local mag = Lerp(self:GetSightAmount() ^ 3, 1, 90 / self:GetZoomMagnification())
 
     local diff = math.abs(self.SmoothedMagnification - mag)
 
@@ -22,4 +22,16 @@ function SWEP:CalcView(ply, pos, ang, fov)
     fov = fov - rec
 
     return pos, ang, fov
+end
+
+function SWEP:GetZoomMagnification()
+    if self.HasScope then
+        return self.ScopeFOV
+    else
+        return self.IronsightFov
+    end
+end
+
+function SWEP:AdjustMouseSensitivity()
+    return 1 / self.SmoothedMagnification
 end
