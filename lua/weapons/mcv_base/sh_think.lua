@@ -108,6 +108,16 @@ function SWEP:Think()
     end
 end
 
+function SWEP:GetIsSprinting()
+    local owner = self:GetOwner()
+
+    if (owner:KeyDown(IN_FORWARD) or owner:KeyDown(IN_MOVERIGHT) or owner:KeyDown(IN_MOVELEFT) or owner:KeyDown(IN_BACK)) and owner:KeyDown(IN_SPEED) then
+        return true
+    else
+        return false
+    end
+end
+
 function SWEP:Think_Speed()
     local target_speed = 0
 

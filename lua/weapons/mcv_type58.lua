@@ -7,7 +7,7 @@ AddCSLuaFile()
 // Names and basic information
 SWEP.PrintName = "Type 58"
 SWEP.Category = "Military Conflict: Vietnam"
-SWEP.Country = "North Korea"
+SWEP.Country = "Democratic People's Republic of Korea"
 SWEP.SubCategory = "Assault Rifles"
 SWEP.Caliber = "7.62x39mm"
 

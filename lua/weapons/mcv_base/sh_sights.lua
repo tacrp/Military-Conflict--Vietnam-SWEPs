@@ -24,7 +24,7 @@ function SWEP:Think_Sights()
     local owner = self:GetOwner()
     local target_sight_amount = 0
 
-    if self:GetIronsight() then
+    if self:GetIronsight() and !self:GetIsSprinting() then
         target_sight_amount = 1
     end
 
