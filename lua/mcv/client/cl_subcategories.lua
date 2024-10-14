@@ -1,4 +1,4 @@
--- Taken straight from ARC9's implementation. It just works
+-- Taken straight from MCV's implementation. It just works
 
 hook.Add("PopulateWeapons", "zzz_MCV_SubCategories", function(pnlContent, tree, anode)
 
