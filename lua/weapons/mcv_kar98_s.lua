@@ -6,7 +6,7 @@ SWEP.Spawnable = true
 AddCSLuaFile()
 
 // Names and basic information
-SWEP.PrintName = "Karabiner 98K Scoped"
+SWEP.PrintName = "Karabiner 98K ZF39"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Nazi Germany"
 SWEP.SubCategory = "Sniper Rifles"
