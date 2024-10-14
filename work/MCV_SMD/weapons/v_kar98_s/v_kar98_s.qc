@@ -905,11 +905,11 @@ $sequence "boltpull" {
 	addlayer "walklayerironsight"
 	addlayer "boltpullpose"
 	node "0"
-	{ event 5004 1 "MCV_Weapon_Foley_kar98_Reload.Hand" }
-	{ event 5004 11 "MCV_Weapon_Foley_kar98_Reload.MetalStart" }
+	{ event 5004 0 "MCV_Weapon_Foley_kar98_Reload.Hand" }
+	{ event 5004 10 "MCV_Weapon_Foley_kar98_Reload.MetalStart" }
 	{ event AE_CLIENT_EJECT_BRASS 12 "eject" }
 	{ event 5004 17 "MCV_Weapon_Foley_kar98_Reload.HandEnd" }
-	{ event 5004 26 "MCV_Weapon_Foley_kar98_Reload.MetalEnd" }
+	{ event 5004 25 "MCV_Weapon_Foley_kar98_Reload.MetalEnd" }
 	fadein 0.2
 	fadeout 0.2
 }
