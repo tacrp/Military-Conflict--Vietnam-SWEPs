@@ -6,7 +6,7 @@ SWEP.Spawnable = true
 AddCSLuaFile()
 
 // Names and basic information
-SWEP.PrintName = "Karabiner 98K"
+SWEP.PrintName = "Karabiner 98K Scoped"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Nazi Germany"
 SWEP.SubCategory = "Bolt-Action Rifles"
@@ -17,7 +17,7 @@ SWEP.Slot = 3
 SWEP.ViewModel = "models/weapons/mcv/v_kar98_s.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_sks.mdl"
 
-SWEP.BodyGroups = "00100"
+SWEP.BodyGroups = "00000"
 
 SWEP.WeaponSelectIcon = NULL
 
@@ -42,7 +42,8 @@ SWEP.Firemodes = {
 
 SWEP.LastShotAnimation = false
 SWEP.MagInClip = true
-SWEP.HybridReload = false -- As neat as this is, there isn't a single weapon in MCV that actually behaves this way.
+SWEP.ShotgunReload = true
+SWEP.ShotgunAltReload = true
 SWEP.ShotgunReloadEmptyStartAnimation = false
 SWEP.PlayCycleAnimation = true
 

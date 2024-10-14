@@ -48,6 +48,10 @@ SWEP.PlayCycleAnimation = false
 SWEP.LastShotAnimation = false
 SWEP.ShotgunReloadEmptyStartAnimation = false
 
+SWEP.ShotgunReload = false
+SWEP.ShotgunAltReload = false // Clip-loading rifles use this set of anims for bullet loading
+SWEP.HybridReload = false
+
 SWEP.MagInTime = 0
 SWEP.MagInTimeEmpty = 0
 SWEP.MagInClip = false
