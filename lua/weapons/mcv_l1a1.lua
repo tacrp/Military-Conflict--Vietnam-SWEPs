@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "L1A1"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Australia"
-SWEP.SubCategory = "Battle Rifles"
+SWEP.SubCategory = "Assault Rifles"
 SWEP.Caliber = "7.62x51mm"
 
 SWEP.Slot = 3

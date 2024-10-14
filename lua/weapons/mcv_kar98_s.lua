@@ -9,7 +9,7 @@ AddCSLuaFile()
 SWEP.PrintName = "Karabiner 98K Scoped"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Nazi Germany"
-SWEP.SubCategory = "Bolt-Action Rifles"
+SWEP.SubCategory = "Sniper Rifles"
 SWEP.Caliber = "7.92x57mm"
 
 SWEP.Slot = 3
@@ -104,7 +104,7 @@ SWEP.SneakMoveSpreadMultiplier = 1.4
 SWEP.CrouchMoveSpreadMultiplier = 1.35
 SWEP.JumpSpreadMultiplier = 3.0
 
-SWEP.HasBayonet = true
+SWEP.HasBayonet = false -- sniper variants dont get bayos
 SWEP.HasRifleGrenade = false
 
 SWEP.BashDamage = 50
