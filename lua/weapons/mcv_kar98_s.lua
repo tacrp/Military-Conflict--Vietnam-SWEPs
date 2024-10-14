@@ -66,7 +66,7 @@ SWEP.IronsightSpeedScale = 0.95
 SWEP.IronsightFov = 90 - 15
 SWEP.IronsightWalkBobbingStrength = -0.25
 
-SWEP.HasScope = false
+SWEP.HasScope = true
 SWEP.ScopeMaterial = NULL
 SWEP.ScopeFOV = 8
 SWEP.ScopeFOV2 = 4

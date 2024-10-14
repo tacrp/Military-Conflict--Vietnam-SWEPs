@@ -8,6 +8,10 @@ function SWEP:GetScopeFOV()
     return self.ScopeFOV
 end
 
+function SWEP:ShouldDoScope()
+    return self:GetIronsight() and self.HasScope
+end
+
 function SWEP:DoCheapScope(fov, atttbl)
     if !self:ShouldDoScope() then
         render.PushRenderTarget(rtmat, 0, 0, rtsize, rtsize)
