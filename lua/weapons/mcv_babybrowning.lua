@@ -14,6 +14,7 @@ SWEP.Caliber = ".25 ACP"
 SWEP.Slot = 1
 
 SWEP.ViewModel = "models/weapons/mcv/v_babybrowning.mdl"
+SWEP.ViewModelAkimbo = "models/weapons/mcv/v_dual_babybrowning.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_mle1935.mdl"
 
 SWEP.BodyGroups = ""
@@ -104,6 +105,7 @@ SWEP.JumpSpreadMultiplier = 1.35
 
 SWEP.HasBayonet = false
 SWEP.HasBipod = false
+SWEP.HasAkimbo = true
 
 // Penetration
 SWEP.MetalPenetrationDepth = 5

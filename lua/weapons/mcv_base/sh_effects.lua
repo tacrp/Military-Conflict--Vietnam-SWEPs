@@ -3,7 +3,11 @@ SWEP.PCFs = {}
 
 function SWEP:GetTracerOrigin()
     local vm = self:GetOwner():GetViewModel()
-    local att = vm:GetAttachment(1)
+    local muzz_qca = 1
+    if self:GetAkimbo() and self:Clip1() % 2 == 1 then
+        muzz_qca = 4
+    end
+    local att = vm:GetAttachment(muzz_qca)
     return att.Pos
 end
 
@@ -12,6 +16,10 @@ function SWEP:DoMuzzle(alt)
     local muzz_qca, muzz_qca_wm = 1, 1
 
     if self:GetGrenadeLauncher() and self.RifleGrenadeIsUBGL then
+        muzz_qca = 4
+    end
+
+    if self:GetAkimbo() and self:Clip1() % 2 == 1 then
         muzz_qca = 4
     end
 

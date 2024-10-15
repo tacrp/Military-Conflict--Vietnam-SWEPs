@@ -1,4 +1,9 @@
 function SWEP:ToggleUBGL()
+    if self.HasAkimbo then
+        self:ToggleAkimbo()
+        return
+    end
+
     if !self.HasRifleGrenade then return end
     if self:StillWaiting() then return end
 

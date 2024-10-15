@@ -36,20 +36,37 @@ function SWEP:PrimaryAttack()
 
     if self:GetNeedTriggerPress() then return end
 
-    if self.LastShotAnimation and self:Clip1() == 1 then
-        self:PlayAnimation(ACT_VM_SHOOTLAST, 0.5)
+    if self:GetAkimbo() then
+        if self.LastShotAnimation and self:Clip1() == 1 then
+            self:PlayAnimation(ACT_VM_SHOOTLAST, 0.5)
+        elseif self.LastShotAnimation and self:Clip1() == 2 then
+            self:PlayAnimation(ACT_VM_PRIMARYATTACK_EMPTY, 0.5)
+        elseif self:Clip1() % 2 == 0 then
+            self:PlayAnimation(ACT_VM_PRIMARYATTACK, 0.5)
+        else
+            self:PlayAnimation(ACT_VM_SECONDARYATTACK, 0.5)
+        end
     else
-        self:PlayAnimation(ACT_VM_PRIMARYATTACK, 0.5)
+        if self.LastShotAnimation and self:Clip1() == 1 then
+            self:PlayAnimation(ACT_VM_SHOOTLAST, 0.5)
+        else
+            self:PlayAnimation(ACT_VM_PRIMARYATTACK, 0.5)
+        end
     end
 
     local fm = self:GetFiremodeValue()
+    local fmmult = 1
+
+    if self:GetAkimbo() then
+        fmmult = 0.5
+    end
 
     if fm == MCV.FIREMODE_FAST then
-        self:SetNextPrimaryFire(CurTime() + (60 / self.FireRate_Fast))
+        self:SetNextPrimaryFire(CurTime() + (60 / self.FireRate_Fast) * fmmult)
     elseif fm == MCV.FIREMODE_SLOW then
-        self:SetNextPrimaryFire(CurTime() + (60 / self.FireRate_Slow))
+        self:SetNextPrimaryFire(CurTime() + (60 / self.FireRate_Slow) * fmmult)
     else
-        self:SetNextPrimaryFire(CurTime() + (60 / self.FireRate))
+        self:SetNextPrimaryFire(CurTime() + (60 / self.FireRate) * fmmult)
     end
 
     self:SetLastRecoilTime(CurTime())

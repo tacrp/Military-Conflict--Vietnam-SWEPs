@@ -11,6 +11,7 @@ SWEP.SubCategory = ""
 SWEP.Caliber = ""
 
 SWEP.ViewModel = "models/weapons/mcv/v_sks.mdl"
+SWEP.ViewModelAkimbo = ""
 SWEP.WorldModel = "models/weapons/mcv/w_sks.mdl"
 
 SWEP.BodyGroups = ""
@@ -127,6 +128,7 @@ SWEP.JumpSpreadMultiplier = 3.0
 SWEP.HasBayonet = false
 SWEP.HasRifleGrenade = false
 SWEP.RifleGrenadeIsUBGL = false
+SWEP.HasAkimbo = false
 
 SWEP.RifleGrenadeEntity = "mcv_proj_riflegrenade"
 SWEP.RifleGrenadeForce = 5000
@@ -265,6 +267,7 @@ function SWEP:SetupDataTables()
     self:NetworkVar("Bool", 11, "Bayonet")
     self:NetworkVar("Bool", 12, "GrenadeLauncher")
     self:NetworkVar("Bool", 13, "NeedCycle")
+    self:NetworkVar("Bool", 14, "Akimbo")
 
     self:NetworkVar("Angle", 0, "BipodAngle")
 

@@ -19,13 +19,18 @@ function SWEP:DoBodygroups()
     end
 
     local bodygroupbulletscount = self:Clip1()
+    local clipsize = self.Primary.ClipSize
+
+    if self:GetAkimbo() then
+        clipsize = clipsize * 2
+    end
 
     if displayRoundsToLoad then
         if (self.ShotgunReload or (self.HybridReload and self:Clip1() > 0)) and self:GetReloading() and self:GetEmptyReload() then
             if self.MagInClip then
                 local bullets_to_load = self:Clip1()
 
-                vm:SetPoseParameter("ammo_fraction", bullets_to_load / self.Primary.ClipSize)
+                vm:SetPoseParameter("ammo_fraction", bullets_to_load / clipsize)
                 bodygroupbulletscount = bullets_to_load
             else
                 vm:SetPoseParameter("ammo_fraction", 0)
@@ -33,20 +38,20 @@ function SWEP:DoBodygroups()
             end
         else
             if self.MagInClip then
-                local bullets_to_load = math.min(self.Primary.ClipSize - self:Clip1(), self:Ammo1())
+                local bullets_to_load = math.min(clipsize - self:Clip1(), self:Ammo1())
 
-                vm:SetPoseParameter("ammo_fraction", bullets_to_load / self.Primary.ClipSize)
+                vm:SetPoseParameter("ammo_fraction", bullets_to_load / clipsize)
                 bodygroupbulletscount = bullets_to_load
             else
                 local reserve = self:GetInfiniteAmmo() and math.huge or (self:Clip1() + self:Ammo1())
-                local bullets_to_load = math.min(self.Primary.ClipSize, self:GetClip1Capacity(), reserve)
+                local bullets_to_load = math.min(clipsize, self:GetClip1Capacity(), reserve)
 
-                vm:SetPoseParameter("ammo_fraction", bullets_to_load / self.Primary.ClipSize)
+                vm:SetPoseParameter("ammo_fraction", bullets_to_load / clipsize)
                 bodygroupbulletscount = bullets_to_load
             end
         end
     else
-        vm:SetPoseParameter("ammo_fraction", self:Clip1() / self.Primary.ClipSize)
+        vm:SetPoseParameter("ammo_fraction", self:Clip1() / clipsize)
     end
 
     if self.BulletBodygroups then

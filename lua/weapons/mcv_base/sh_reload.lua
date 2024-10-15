@@ -24,10 +24,22 @@ function SWEP:Reload()
 
         self:SetEmptyReload(self:Clip1() == 0)
     else
-        if self:Clip1() == 0 and self.HasEmptyReload then
-            self:PlayAnimation(ACT_VM_RELOADEMPTY, 1, true)
+        if self:GetAkimbo() then
+            if self:Clip1() == 0 then
+                self:PlayAnimation(ACT_VM_RELOADEMPTY, 1, true)
+            elseif self:Clip1() == 1 then
+                self:PlayAnimation(ACT_VM_MISSRIGHT2, 1, true)
+            elseif self:Clip1() >= (self.Primary.ClipSize * 2) + self.Primary.Chamber then
+                self:PlayAnimation(ACT_VM_MISSRIGHT, 1, true)
+            else
+                self:PlayAnimation(ACT_VM_RELOAD, 1, true)
+            end
         else
-            self:PlayAnimation(ACT_VM_RELOAD, 1, true)
+            if self:Clip1() == 0 and self.HasEmptyReload then
+                self:PlayAnimation(ACT_VM_RELOADEMPTY, 1, true)
+            else
+                self:PlayAnimation(ACT_VM_RELOAD, 1, true)
+            end
         end
     end
 
@@ -54,7 +66,11 @@ function SWEP:GetClip2Capacity()
 end
 
 function SWEP:GetClip1Capacity()
-    return self.Primary.ClipSize + self.Primary.Chamber
+    if self:GetAkimbo() then
+        return (self.Primary.ClipSize + self.Primary.Chamber) * 2
+    else
+        return self.Primary.ClipSize + self.Primary.Chamber
+    end
 end
 
 function SWEP:RestoreClip(amt)
@@ -99,7 +115,6 @@ function SWEP:Think_Reload()
         else
             if self.ShotgunReload or (self.HybridReload and self:Clip1() > 0) then
                 if self:GetEndReload() or self:Clip1() >= (self:GetEmptyReload() and self.Primary.ClipSize or self:GetClip1Capacity()) or (!self:GetInfiniteAmmo() and self:Ammo1() == 0) or self:GetEndReload() then
-
                     if !self.HasEmptyReload or (self:Clip1() == self:GetLoadedRounds() or !self:GetEmptyReload()) then
                         self:PlayAnimation(ACT_SHOTGUN_RELOAD_FINISH, 1, true)
                     else
@@ -117,7 +132,12 @@ function SWEP:Think_Reload()
                 end
             else
                 self:SetReloading(false)
-                self:RestoreClip(self.Primary.ClipSize)
+
+                if self:GetAkimbo() then
+                    self:RestoreClip(self.Primary.ClipSize * 2)
+                else
+                    self:RestoreClip(self.Primary.ClipSize)
+                end
             end
         end
     end
