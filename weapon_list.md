@@ -90,7 +90,7 @@ Carbines:
 
 Shotguns:
 
-- M37 Ithaca Trench Gun
+- M37 Ithaca Trench Gun [X]
 - M870 [X]
 
 
@@ -175,7 +175,7 @@ Pistols:
 
 Revolvers:
 
-- Nagant M1895
+- Nagant M1895 [X]
 
 
 Machine Pistols:
