@@ -3,9 +3,9 @@ SWEP.PCFs = {}
 
 function SWEP:GetTracerOrigin()
     local vm = self:GetOwner():GetViewModel()
-    local muzz_qca = 1
+    local muzz_qca = vm:LookupAttachment("muzzle")
     if self:GetAkimbo() and self:Clip1() % 2 == 0 then
-        muzz_qca = 4
+        muzz_qca = vm:LookupAttachment("muzzleleft")
     end
     local att = vm:GetAttachment(muzz_qca)
     return att.Pos
@@ -13,20 +13,20 @@ end
 
 function SWEP:DoMuzzle(alt)
     if !IsFirstTimePredicted() then return end
-    local muzz_qca, muzz_qca_wm = 1, 1
+    local vm = self:GetOwner():GetViewModel()
+    local muzz_qca = vm:LookupAttachment("muzzle")
 
     if self:GetGrenadeLauncher() and self.RifleGrenadeIsUBGL then
-        muzz_qca = 4
+        muzz_qca = vm:LookupAttachment("muzzle2")
     end
 
     if self:GetAkimbo() and self:Clip1() % 2 == 1 and self:GetFiremodeValue() != MCV.FIREMODE_VOLLEY then
-        muzz_qca = 4
+        muzz_qca = vm:LookupAttachment("muzzleleft")
     end
 
     local data = EffectData()
     data:SetEntity(self)
     data:SetAttachment(muzz_qca)
-    data:SetHitBox(muzz_qca_wm or muzz_qca) // unused field (integer between 0-2047)
 
     util.Effect( "mcv_muzzleeffect", data )
 
@@ -49,14 +49,14 @@ end
 function SWEP:DoEject(alt)
     if !IsFirstTimePredicted() then return end
     if self.EjectBrassType == 0 then return end
+    local vm = self:GetOwner():GetViewModel()
 
-    local eject_qca, eject_qca_wm = 2, 2
+    local eject_qca = vm:LookupAttachment("eject")
 
     local data = EffectData()
     data:SetEntity(self)
     data:SetFlags(self.EjectBrassType)
     data:SetAttachment(eject_qca)
-    data:SetHitBox(eject_qca_wm or eject_qca) // unused field (integer between 0-2047)
 
     util.Effect( "mcv_shelleffect", data )
 end
