@@ -49,7 +49,11 @@ function SWEP:PlayAnimation(act, mult, lock, noidle)
 end
 
 function SWEP:Idle()
-    self:PlayAnimation(ACT_VM_IDLE, 1, false, false)
+    if self:GetGrenadeLauncher() and self.RifleGrenadeIsUBGL then
+        self:PlayAnimation(ACT_VM_IIDLE_M203, 1, false, false)
+    else
+        self:PlayAnimation(ACT_VM_IDLE, 1, false, false)
+    end
 
     self:SetReady(true)
 end

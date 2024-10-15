@@ -128,6 +128,7 @@ SWEP.JumpSpreadMultiplier = 3.0
 
 SWEP.HasBayonet = false
 SWEP.HasRifleGrenade = false
+SWEP.RifleGrenadeIsUBGL = false
 
 SWEP.BashDamage = 50
 SWEP.BashRange = 96

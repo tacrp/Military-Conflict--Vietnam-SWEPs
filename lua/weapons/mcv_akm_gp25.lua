@@ -5,15 +5,15 @@ SWEP.Spawnable = true
 AddCSLuaFile()
 
 // Names and basic information
-SWEP.PrintName = "Kbkg 60"
+SWEP.PrintName = "AKM GP25"
 SWEP.Category = "Military Conflict: Vietnam"
-SWEP.Country = "Polish People's Republic"
+SWEP.Country = "Soviet Union"
 SWEP.SubCategory = "Assault Rifles"
 SWEP.Caliber = "7.62x39mm"
 
 SWEP.Slot = 3
 
-SWEP.ViewModel = "models/weapons/mcv/v_kbkg60.mdl"
+SWEP.ViewModel = "models/weapons/mcv/v_gp25.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_ak47.mdl"
 
 SWEP.BodyGroups = ""
@@ -22,7 +22,7 @@ SWEP.WeaponSelectIcon = NULL
 
 // Stats
 
-SWEP.DamageGeneric = 44 // damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)
+SWEP.DamageGeneric = 38 // damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)
 SWEP.DamageHeadMultiplier = 2.52
 SWEP.DamageChestMultiplier = 1.2
 SWEP.DamageStomachMultiplier = 1.15
@@ -34,7 +34,7 @@ SWEP.ExplosionRadius = 0
 
 SWEP.MuzzleVelocity = 715
 
-SWEP.RangeModifier = 0.925
+SWEP.RangeModifier = 0.94
 
 SWEP.Firemodes = {
     MCV.FIREMODE_AUTO,
@@ -45,10 +45,10 @@ SWEP.Firemodes = {
 SWEP.PlayCycleAnimation = false
 
 // View slide from recoil
-SWEP.ViewSlideRecoilUp = 1.64
+SWEP.ViewSlideRecoilUp = 1.36
 SWEP.ViewSlideRecoilRight = 0.32
 
-SWEP.ViewSlideRecoilIronsightUp = 0.96
+SWEP.ViewSlideRecoilIronsightUp = 0.82
 SWEP.ViewSlideRecoilIronsightRight = 0.16
 
 SWEP.RecoilPushbackValue = 1.5
@@ -68,8 +68,8 @@ SWEP.ScopeMaterial = NULL
 SWEP.ScopeFOV = 8
 SWEP.ScopeFOV2 = 4
 
-SWEP.IronsightPos = Vector(0.08, -4, 0.025)
-SWEP.IronsightAng = Angle(0.34, 0, 0)
+SWEP.IronsightPos = Vector(0.05, -4, 0.025)
+SWEP.IronsightAng = Angle(0.225, 0, 0)
 
 SWEP.CustomPos = Vector(0, -2, 0)
 SWEP.CustomAng = Angle(0, 0, 0)
@@ -93,16 +93,16 @@ SWEP.Primary.Automatic = true
 SWEP.NearwallDistance = 40
 
 // Bullet spread multiplier according to current stance
-SWEP.CrouchSpreadMultiplier = 0.8
-SWEP.ProneSpreadMultiplier = 0.75
-SWEP.StandMoveSpreadMultiplier = 1.45
-SWEP.SneakMoveSpreadMultiplier = 1.35
-SWEP.CrouchMoveSpreadMultiplier = 1.25
+SWEP.CrouchSpreadMultiplier = 0.75
+SWEP.ProneSpreadMultiplier = 0.65
+SWEP.StandMoveSpreadMultiplier = 1.35
+SWEP.SneakMoveSpreadMultiplier = 1.25
+SWEP.CrouchMoveSpreadMultiplier = 1.15
 SWEP.JumpSpreadMultiplier = 3.0
 
-SWEP.HasBayonet = true
+SWEP.HasBayonet = false
 SWEP.HasRifleGrenade = true
-SWEP.HasBipod = false
+SWEP.RifleGrenadeIsUBGL = true
 
 // Penetration
 SWEP.MetalPenetrationDepth = 8
@@ -118,11 +118,12 @@ SWEP.WoodDamgaeModifier = 1.25
 SWEP.OtherDamageModifier = 1.25
 
 // Sound
-SWEP.SoundSingleShot = "MCV_Weapon_AK47.Single"
+SWEP.SoundSingleShot = "MCV_Weapon_AKM.Single"
 SWEP.SoundDoubleShot = ""
 SWEP.SoundReload = ""
 SWEP.SoundSpecial1 = ""
 SWEP.SoundSpecial2 = ""
+SWEP.SoundGrenadeShot = "MCV_Weapon_AKMGP25.Single"
 SWEP.SoundNearlyEmpty = "Vietnam_Weapon_Generic.NearlyEmptyClick"
 SWEP.SoundEmpty = "Vietnam_Weapon_Generic.ClipEmpty_01"
 

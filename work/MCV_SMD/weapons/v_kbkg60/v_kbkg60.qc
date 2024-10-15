@@ -973,16 +973,26 @@ $sequence "grenade_idle" {
 }
 
 $sequence "grenade_shoot" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_ISHOOT_M203" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	addlayer "walklayerironsight"
+	addlayer "grenade_shootpose"
+	fadein 0
+	fadeout 0.2
+}
+
+$sequence "grenade_shootpose" {
 	"gren_shoot1_a"
 	"gren_shoot1_ironsight_a"
-	activity "ACT_VM_ISHOOT_M203" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_MUZZLEFLASH 0 "" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	snap
+	hidden
 }
 
 $sequence "grenade_reload" {

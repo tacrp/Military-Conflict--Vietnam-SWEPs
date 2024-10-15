@@ -22,10 +22,10 @@ $illumposition 3.837 -16.424 -12.415
 $cdmaterials "models\weapons\mcv\v_akm\"
 $cdmaterials "models\weapons\mcv\shells\"
 
-$attachment "cam" "cam_driver" 0 0 0 rotate 0 0 0
 $attachment "muzzle" "Base" -20 0 0.15 rotate 0 180 0
-$attachment "muzzle2" "Base" -14 0 -1.95 rotate 0 -180 0
 $attachment "eject" "Base" -1 0 0.7 rotate 0 90 0
+$attachment "cam" "cam_driver" 0 0 0 rotate 0 0 0
+$attachment "muzzle2" "Base" -14 0 -1.95 rotate 0 -180 0
 
 $cbox 0 0 0 0 0 0
 
@@ -186,27 +186,25 @@ $animation "shoot3_a_corrective_animation" "v_gp25_anims\shoot3_a_corrective_ani
 $animation "shoot3_ironsight_a_corrective_animation" "v_gp25_anims\shoot3_ironsight_a_corrective_animation.smd" {
 }
 
-$animation "gl_shoot_a_corrective_animation" "v_gp25_anims\gl_shoot_a_corrective_animation.smd" {
-}
-
-$animation "gl_shoot_ironsight_a_corrective_animation" "v_gp25_anims\gl_shoot_ironsight_a_corrective_animation.smd" {
-}
-
 $animation "basePose_a" "v_gp25_anims\basePose_a.smd" {
 	fps 30
 	loop
+	numframes 60
 	
 	
 }
 
 $animation "ironsight" "v_gp25_anims\ironsight.smd" {
-	fps 0.5
+	fps 30
+	frame 1 1
+	numframes 60
 	
 	
 }
 
 $animation "ironsight_transition" "v_gp25_anims\ironsight_transition.smd" {
-	fps 0.5
+	fps 30
+	numframes 60
 	
 	
 }
@@ -379,7 +377,6 @@ $animation "pickup_e_a_i" "v_gp25_anims\pickup_e_a_i.smd" {
 	
 	
 }
-
 $animation "change_firemode_idle" "v_gp25_anims\change_firemode_idle.smd" {
 	fps 30
 	
@@ -392,18 +389,12 @@ $animation "change_firemode_iron" "v_gp25_anims\change_firemode_iron.smd" {
 	
 }
 
-$animation "gl_a" "v_gp25_anims\gl_a.smd" {
+$animation "irongl" "v_gp25_anims\irongl.smd" {
 	fps 30
-	loop
-	
-	
+	frame 0 1
+	numframes 60
 }
 
-$animation "irongl" "v_gp25_anims\irongl.smd" {
-	fps 0.5
-	
-	
-}
 
 $animation "gl_s_a" "v_gp25_anims\gl_s_a.smd" {
 	fps 30
@@ -427,6 +418,16 @@ $animation "gl_e_a_i" "v_gp25_anims\gl_e_a_i.smd" {
 	fps 30
 	
 	
+}
+
+$animation "gl_a" "v_gp25_anims\gl_a.smd" {
+	fps 30
+}
+
+$animation "gl_shoot_a_corrective_animation" "v_gp25_anims\gl_shoot_a_corrective_animation.smd" {
+}
+
+$animation "gl_shoot_ironsight_a_corrective_animation" "v_gp25_anims\gl_shoot_ironsight_a_corrective_animation.smd" {
 }
 
 $animation "gl_shoot_a" "v_gp25_anims\gl_shoot_a.smd" {
@@ -468,7 +469,7 @@ $animation "gl_draw_a_i" "v_gp25_anims\gl_draw_a_i.smd" {
 $sequence "runlayer" {
 	"runIdle_a"
 	"run_a"
-	blend "player_movement" 131 225
+	blend "player_movement" 138 232
 	blendwidth 2
 	delta
 	fadein 0.2
@@ -517,14 +518,14 @@ $sequence "ironsight_test" {
 $sequence "idle" {
 	"basePose_a"
 	"ironsight_transition"
+	"ironsight"
 	activity "ACT_VM_IDLE" 1
 	blend "ironsight" 0 0.5
-	blendwidth 2
+	blendwidth 3
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
 	addlayer "runlayer"
-	blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
 	node "0"
 }
 
@@ -537,8 +538,7 @@ $sequence "draw" {
 	{ event 5004 1 "MCV_Weapon_Foley_AK47.Draw" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	fps 30
 	  
 	
@@ -556,52 +556,87 @@ $sequence "Firstdraw" {
 	{ event 5004 29 "MCV_Weapon_Foley_AK47_Reload.MetalEnd" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	fps 30
 	
 	
 }
 
 $sequence "shoot1" {
-	"shoot1_a"
-	"shoot1_ironsight_a"
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
 	activity "ACT_VM_PRIMARYATTACK" 1
-	blend "ironsight" 0 1
-	blendwidth 2
-	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
+	blend "ironsight" 0 0.5
+	blendwidth 3
 	fadein 0
-	fadeout 0.2
-	node "Fire"
+	fadeout 0
+	addlayer "walklayer"
+	addlayer "runlayer"
+	addlayer "shootpose1"
+	node "0"
 }
 
 $sequence "shoot2" {
-	"shoot2_a"
-	"shoot2_ironsight_a"
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
 	activity "ACT_VM_PRIMARYATTACK" 1
-	blend "ironsight" 0 1
-	blendwidth 2
-	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
+	blend "ironsight" 0 0.5
+	blendwidth 3
 	fadein 0
-	fadeout 0.2
-	node "Fire"
+	fadeout 0
+	addlayer "walklayer"
+	addlayer "runlayer"
+	addlayer "shootpose2"
+	node "0"
 }
 
 $sequence "shoot3" {
-	"shoot3_a"
-	"shoot3_ironsight_a"
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
 	activity "ACT_VM_PRIMARYATTACK" 1
+	blend "ironsight" 0 0.5
+	blendwidth 3
+	fadein 0
+	fadeout 0
+	addlayer "walklayer"
+	addlayer "runlayer"
+	addlayer "shootpose3"
+	node "0"
+}
+
+$sequence "shootpose1" {
+	"shoot1_a"
+	"shoot1_ironsight_a"
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	fadein 0
-	fadeout 0.2
+	snap
+	hidden
+	node "Fire"
+}
+
+$sequence "shootpose2" {
+	"shoot2_a"
+	"shoot2_ironsight_a"
+	blend "ironsight" 0 1
+	blendwidth 2
+	delta
+	snap
+	hidden
+	node "Fire"
+}
+
+$sequence "shootpose3" {
+	"shoot3_a"
+	"shoot3_ironsight_a"
+	blend "ironsight" 0 1
+	blendwidth 2
+	delta
+	snap
+	hidden
 	node "Fire"
 }
 
@@ -618,7 +653,7 @@ $sequence "reload" {
 	{ event AE_WPN_COMPLETE_RELOAD 54 "" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	
@@ -641,7 +676,7 @@ $sequence "reload_empty" {
 	{ event AE_WPN_COMPLETE_RELOAD 81 "" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	
@@ -780,32 +815,24 @@ $sequence "holster" {
 	
 }
 
-$sequence "gl_ironsight_test" {
-	"irongl"
-	fadein 0.2
-	fadeout 0.2
-	hidden
-	addlayer "walklayerironsight"
-}
-
 $sequence "gl" {
 	"gl_a"
 	"ironsight_transition"
-	activity "ACT_VM_GL" 1
-	blend "ironsight" 0 0.5
-	blendwidth 2
+	"irongl"
+	activity "ACT_VM_IIDLE_M203" 1
+	blend "ironsight" 0 1
+	blendwidth 3
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
 	addlayer "runlayer"
-	blendlayer "gl_ironsight_test" 0 0 1 0 poseparameter ironsight
 	node "0"
 }
 
 $sequence "idle_to_gl" {
 	"gl_s_a"
 	"gl_s_a_i"
-	activity "ACT_VM_IDLETOGL" 1
+	activity "ACT_VM_IIN_M203" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_Ironsights.In" }
@@ -817,7 +844,7 @@ $sequence "idle_to_gl" {
 $sequence "gl_to_idle" {
 	"gl_e_a"
 	"gl_e_a_i"
-	activity "ACT_VM_GLTOIDLE" 1
+	activity "ACT_VM_IOUT_M203" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_Ironsights.Out" }
@@ -827,21 +854,30 @@ $sequence "gl_to_idle" {
 }
 
 $sequence "gl_shoot" {
+	"gl_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_ISHOOT_M203" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	addlayer "walklayerironsight"
+	addlayer "gl_shoot_pose"
+}
+
+$sequence "gl_shoot_pose" {
 	"gl_shoot_a"
 	"gl_shoot_ironsight_a"
-	activity "ACT_VM_SECONDARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	snap
+	hidden
 }
 
 $sequence "reload_secondary" {
 	"gl_reload_a"
 	"gl_reload_a_i"
-	activity "ACT_VM_RELOAD_SECONDARY" 1
+	activity "ACT_VM_RELOAD_M203" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_AK47_Reload.Hand" }
@@ -855,7 +891,7 @@ $sequence "reload_secondary" {
 $sequence "gl_draw" {
 	"gl_draw_a"
 	"gl_draw_a_i"
-	activity "ACT_VM_GL_DRAW" 1
+	activity "ACT_VM_DRAW_M203" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_AK47.Draw" }

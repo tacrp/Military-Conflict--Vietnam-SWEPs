@@ -18,6 +18,9 @@ SWEP.ViewModel = "models/weapons/mcv/v_kar98_s.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_sks.mdl"
 
 SWEP.BodyGroups = "00100"
+SWEP.BayonetBodygroup = 1
+SWEP.GrenadeLauncherBodygroup = 3
+SWEP.GrenadeBodygroup = 4
 
 SWEP.WeaponSelectIcon = NULL
 
@@ -104,7 +107,7 @@ SWEP.CrouchMoveSpreadMultiplier = 1.35
 SWEP.JumpSpreadMultiplier = 3.0
 
 SWEP.HasBayonet = true
-SWEP.HasRifleGrenade = false
+SWEP.HasRifleGrenade = true
 
 SWEP.BashDamage = 50
 SWEP.BayonetDamage = 100
@@ -130,6 +133,7 @@ SWEP.SoundDoubleShot = ""
 SWEP.SoundReload = ""
 SWEP.SoundSpecial1 = ""
 SWEP.SoundSpecial2 = ""
+SWEP.SoundGrenadeShot = "MCV_Weapon_KAR98K.RifleGrenade"
 SWEP.SoundNearlyEmpty = "Vietnam_Weapon_Generic.NearlyEmptyClick"
 SWEP.SoundEmpty = "Vietnam_Weapon_Generic.ClipEmpty_01"
 
@@ -162,3 +166,8 @@ SWEP.TracerParticle = "tracer"
 
 SWEP.TracerRandomness = 6
 SWEP.TracerFrequency = 1
+
+SWEP.Secondary.Automatic = true
+SWEP.Secondary.ClipSize = 1
+SWEP.Secondary.Ammo = "smg1_grenade"
+SWEP.Secondary.DefaultClip = 1

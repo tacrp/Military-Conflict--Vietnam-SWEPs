@@ -11,6 +11,10 @@ function SWEP:DoMuzzle(alt)
     if !IsFirstTimePredicted() then return end
     local muzz_qca, muzz_qca_wm = 1, 1
 
+    if self:GetGrenadeLauncher() and self.RifleGrenadeIsUBGL then
+        muzz_qca = 4
+    end
+
     local data = EffectData()
     data:SetEntity(self)
     data:SetAttachment(muzz_qca)
