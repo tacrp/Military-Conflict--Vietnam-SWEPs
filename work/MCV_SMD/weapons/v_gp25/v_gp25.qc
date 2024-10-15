@@ -856,7 +856,7 @@ $sequence "gl_to_idle" {
 $sequence "gl_shoot" {
 	"gl_a"
 	"ironsight_transition"
-	"ironsight"
+	"irongl"
 	activity "ACT_VM_ISHOOT_M203" 1
 	blend "ironsight" 0 1
 	blendwidth 3

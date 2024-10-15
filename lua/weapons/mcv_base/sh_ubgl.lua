@@ -5,7 +5,7 @@ function SWEP:ToggleUBGL()
     if self:GetBayonet() then return end
 
     if !self.RifleGrenadeIsUBGL then
-        local t = self:PlayAnimation(ACT_VM_HOLSTER, 1, true, true)
+        local t = self:PlayAnimation(ACT_VM_HOLSTER, 0.75, true, true)
 
         self:SetTimer(t + 0.5, function()
             if !IsValid(self) then return end
@@ -25,10 +25,10 @@ function SWEP:ToggleUBGL()
         end)
     else
         if !self:GetGrenadeLauncher() then
-            self:PlayAnimation(ACT_VM_IIN_M203, 1, false)
+            self:PlayAnimation(ACT_VM_IIN_M203, 1, true)
             self:SetGrenadeLauncher(true)
         else
-            self:PlayAnimation(ACT_VM_IOUT_M203, 1, false)
+            self:PlayAnimation(ACT_VM_IOUT_M203, 1, true)
             self:SetGrenadeLauncher(false)
         end
     end

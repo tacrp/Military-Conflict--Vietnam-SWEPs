@@ -3,7 +3,12 @@ function SWEP:Deploy()
         self:PlayAnimation(ACT_VM_READY, 1, true)
         self:SetReady(true)
     else
-        self:PlayAnimation(ACT_VM_DRAW, 1, true)
+        if self:GetGrenadeLauncher() and !self.RifleGrenadeIsUBGL then
+            self:PlayAnimation(ACT_VM_DRAW_M203, 1, true)
+        else
+            self:SetGrenadeLauncher(false)
+            self:PlayAnimation(ACT_VM_DRAW, 1, true)
+        end
     end
 
     self:SetIronsight(false)
