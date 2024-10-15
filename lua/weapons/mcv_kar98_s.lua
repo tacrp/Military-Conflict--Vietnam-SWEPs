@@ -21,7 +21,8 @@ SWEP.BodyGroups = "00000"
 
 SWEP.WeaponSelectIcon = NULL
 
-SWEP.ViewModelFOV = 40
+SWEP.ViewModelFOV = 65
+SWEP.SightedViewModelFOV = 40
 
 // Stats
 
@@ -48,6 +49,7 @@ SWEP.ShotgunReload = true
 SWEP.ShotgunAltReload = true
 SWEP.ShotgunReloadEmptyStartAnimation = false
 SWEP.PlayCycleAnimation = true
+SWEP.HasEmptyReload = false
 
 // View slide from recoil
 SWEP.ViewSlideRecoilUp = 2.85

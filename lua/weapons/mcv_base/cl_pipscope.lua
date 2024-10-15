@@ -54,7 +54,7 @@ function SWEP:PreDrawViewModel()
         self:DoRTScope()
     end
 
-    cam.Start3D(nil, nil, self.ViewModelFOV)
+    cam.Start3D(nil, nil, Lerp(self:GetSightAmount() ^ 3, self.ViewModelFOV, self.SightedViewModelFOV))
     cam.IgnoreZ(true)
 end
 

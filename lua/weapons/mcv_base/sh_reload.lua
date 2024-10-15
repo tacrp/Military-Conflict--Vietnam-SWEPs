@@ -18,7 +18,7 @@ function SWEP:Reload()
 
         self:SetEmptyReload(self:Clip1() == 0)
     else
-        if self:Clip1() == 0 then
+        if self:Clip1() == 0 and self.HasEmptyReload then
             self:PlayAnimation(ACT_VM_RELOADEMPTY, 1, true)
         else
             self:PlayAnimation(ACT_VM_RELOAD, 1, true)
@@ -59,7 +59,7 @@ function SWEP:Think_Reload()
         if self.ShotgunReload or (self.HybridReload and self:Clip1() > 0) then
             if self:GetEndReload() or self:Clip1() >= (self:GetEmptyReload() and self.Primary.ClipSize or self:GetClip1Capacity()) or (!self:GetInfiniteAmmo() and self:Ammo1() == 0) or self:GetEndReload() then
 
-                if (self:Clip1() == self:GetLoadedRounds() or !self:GetEmptyReload()) then
+                if !self.HasEmptyReload or (self:Clip1() == self:GetLoadedRounds() or !self:GetEmptyReload()) then
                     self:PlayAnimation(ACT_SHOTGUN_RELOAD_FINISH, 1, true)
                 else
                     self:PlayAnimation(ACT_SHOTGUN_PUMP, 1, true)

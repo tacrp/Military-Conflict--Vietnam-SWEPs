@@ -20,6 +20,9 @@ SWEP.BulletBodygroups = nil
 
 SWEP.WeaponSelectIcon = NULL
 
+SWEP.ViewModelFOV = 65
+SWEP.SightedViewModelFOV = 40
+
 // Stats
 
 SWEP.DamageGeneric = 43 // damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)
@@ -51,6 +54,7 @@ SWEP.ShotgunReloadEmptyStartAnimation = false
 SWEP.ShotgunReload = false
 SWEP.ShotgunAltReload = false // Clip-loading rifles use this set of anims for bullet loading
 SWEP.HybridReload = false
+SWEP.HasEmptyReload = true
 
 SWEP.MagInTime = 0
 SWEP.MagInTimeEmpty = 0
