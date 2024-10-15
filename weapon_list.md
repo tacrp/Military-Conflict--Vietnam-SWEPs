@@ -258,7 +258,7 @@ Light-Machine Guns:
 - RPD [X]
 - RPK
 - TUL-1
-- DP-28
+- DP-28 [X]
 - RP-46
 - Bren [X]
 
@@ -301,7 +301,7 @@ Melee Weapons:
 Submachine Guns:
 
 - Cobra Mk1 [X]
-- LDP Kommando
+- LDP Kommando [X]
 
 
 Shotguns:
