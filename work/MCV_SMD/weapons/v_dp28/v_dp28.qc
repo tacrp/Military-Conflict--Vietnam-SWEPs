@@ -245,14 +245,14 @@ $animation "magRotate_360" "v_dp28_anims\magRotate_360.smd" {
 
 $animation "basePose_a" "v_dp28_anims\basePose_a.smd" {
 	fps 30
-	loop
+	numframes 60
 	
 	
 }
 
 $animation "ironsight" "v_dp28_anims\ironsight.smd" {
 	fps 30
-	frame 0 1
+	frame 1 1
 	numframes 60
 	
 	
@@ -480,7 +480,7 @@ $animation "deploy_a" "v_dp28_anims\deploy_a.smd" {
 
 $animation "ironsightdeploy" "v_dp28_anims\ironsightdeploy.smd" {
 	fps 30
-	frame 0 1
+	frame 1 1
 	numframes 60
 	
 	
@@ -619,8 +619,7 @@ $sequence "draw" {
 	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	fps 30
 	
 	
@@ -637,56 +636,94 @@ $sequence "Firstdraw" {
 	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	fps 30
 	
 	
 }
 
 $sequence "shoot1" {
-	"shoot1_a"
-	"shoot1_ironsight_a"
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
-	blendwidth 2
-	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 0 "ammo_fraction" }
-	fadein 0
+	blendwidth 3
+	fadein 0.2
 	fadeout 0.2
-	node "Fire"
+	addlayer "walklayer"
+	addlayer "runlayer"
+	addlayer "shootpose1"
+	node "0"
 }
 
 $sequence "shoot2" {
-	"shoot2_a"
-	"shoot2_ironsight_a"
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
-	blendwidth 2
-	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 0 "ammo_fraction" }
-	fadein 0
+	blendwidth 3
+	fadein 0.2
 	fadeout 0.2
-	node "Fire"
+	addlayer "walklayer"
+	addlayer "runlayer"
+	addlayer "shootpose2"
+	node "0"
 }
 
 $sequence "shoot3" {
-	"shoot3_a"
-	"shoot3_ironsight_a"
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
 	activity "ACT_VM_PRIMARYATTACK" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	fadein 0.2
+	fadeout 0.2
+	addlayer "walklayer"
+	addlayer "runlayer"
+	addlayer "shootpose3"
+	node "0"
+}
+
+$sequence "shootpose1" {
+	"shoot1_a"
+	"shoot1_ironsight_a"
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
 	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
 	{ event AE_MUZZLEFLASH 0 "" }
 	{ event AE_WPN_CLIP_TO_POSEPARAM 0 "ammo_fraction" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	snap
+	hidden
+}
+
+$sequence "shootpose2" {
+	"shoot2_a"
+	"shoot2_ironsight_a"
+	blend "ironsight" 0 1
+	blendwidth 2
+	delta
+	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
+	{ event AE_MUZZLEFLASH 0 "" }
+	{ event AE_WPN_CLIP_TO_POSEPARAM 0 "ammo_fraction" }
+	snap
+	hidden
+}
+
+$sequence "shootpose3" {
+	"shoot3_a"
+	"shoot3_ironsight_a"
+	blend "ironsight" 0 1
+	blendwidth 2
+	delta
+	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
+	{ event AE_MUZZLEFLASH 0 "" }
+	{ event AE_WPN_CLIP_TO_POSEPARAM 0 "ammo_fraction" }
+	snap
+	hidden
 }
 
 $sequence "reload" {
@@ -694,6 +731,7 @@ $sequence "reload" {
 	"v_dp28_anims\reload_2.smd"
 	activity "ACT_VM_RELOAD" 1
 	blend "ironsight" 0 1
+	blend "ammo_fraction" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_DP28_Reload.Hand" }
 	{ event 5004 20 "MCV_Weapon_Foley_DP28_Reload.MagOut" }
@@ -703,7 +741,7 @@ $sequence "reload" {
 	{ event AE_WPN_NEXTCLIP_TO_POSEPARAM 44 "ammo_fraction" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	
@@ -715,6 +753,7 @@ $sequence "reload_empty" {
 	"v_dp28_anims\reload_empty_2.smd"
 	activity "ACT_VM_RELOADEMPTY" 1
 	blend "ironsight" 0 1
+	blend "ammo_fraction" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_DP28_Reload.Hand" }
 	{ event 5004 20 "MCV_Weapon_Foley_DP28_Reload.MagOut" }
@@ -725,7 +764,7 @@ $sequence "reload_empty" {
 	{ event AE_WPN_NEXTCLIP_TO_POSEPARAM 44 "ammo_fraction" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	
@@ -989,8 +1028,7 @@ $sequence "holster" {
 	{ event 5004 0 "MCV_Weapon_Foley_DP28.Holster" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	fps 30
 	
 	
