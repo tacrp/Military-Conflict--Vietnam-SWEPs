@@ -139,6 +139,7 @@ $bonemerge "thumb_03_l"
 $bonemerge "lowerarm_twist_01_l"
 $bonemerge "upperarm_twist_01_l"
 
+$include "../../militaryconflict_vietnam_v2.qci"
 
 $sectionframes 30 30
 
@@ -701,9 +702,7 @@ $sequence "shoot1_r" {
 	fadein 0
 	fadeout 0
 	addlayer "walklayerironsight"
-	addlayer "SlidePosition"
-	addlayer "BulletCounter"
-	addlayer "shoot1pose_r"
+	addlayer "SlidePosition"addlayer "shoot1pose_r"
 	node "0"
 }
 
@@ -727,9 +726,7 @@ $sequence "shoot1_l" {
 	fadein 0
 	fadeout 0
 	addlayer "walklayerironsight"
-	addlayer "SlidePosition"
-	addlayer "BulletCounter"
-	addlayer "shoot1pose_l"
+	addlayer "SlidePosition"addlayer "shoot1pose_l"
 	node "0"
 }
 
@@ -753,9 +750,7 @@ $sequence "shoot2_r" {
 	fadein 0
 	fadeout 0
 	addlayer "walklayerironsight"
-	addlayer "SlidePosition"
-	addlayer "BulletCounter"
-	addlayer "shoot2pose_r"
+	addlayer "SlidePosition"addlayer "shoot2pose_r"
 	node "0"
 }
 
@@ -779,9 +774,7 @@ $sequence "shoot2_l" {
 	fadein 0
 	fadeout 0
 	addlayer "walklayerironsight"
-	addlayer "SlidePosition"
-	addlayer "BulletCounter"
-	addlayer "shoot2pose_l"
+	addlayer "SlidePosition"addlayer "shoot2pose_l"
 	node "0"
 }
 

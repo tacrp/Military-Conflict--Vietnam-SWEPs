@@ -156,6 +156,7 @@ $bonemerge "thumb_03_l"
 $bonemerge "lowerarm_twist_01_l"
 $bonemerge "upperarm_twist_01_l"
 
+$include "../../militaryconflict_vietnam_v2.qci"
 
 $sectionframes 30 30
 

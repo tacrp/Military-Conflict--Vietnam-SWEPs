@@ -4,7 +4,7 @@ SWEP.PCFs = {}
 function SWEP:GetTracerOrigin()
     local vm = self:GetOwner():GetViewModel()
     local muzz_qca = 1
-    if self:GetAkimbo() and self:Clip1() % 2 == 1 then
+    if self:GetAkimbo() and self:Clip1() % 2 == 0 then
         muzz_qca = 4
     end
     local att = vm:GetAttachment(muzz_qca)
