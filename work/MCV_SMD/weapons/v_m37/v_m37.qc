@@ -625,7 +625,7 @@ $sequence "pump" {
 	activity "ACT_VM_RELOAD_INSERT_PULL" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	{ event 5004 10 "MCV_Weapon_Foley_M37_Reload.MetalStart" }
+	{ event 5004 9 "MCV_Weapon_Foley_M37_Reload.MetalStart" }
 	{ event 5004 29 "MCV_Weapon_Foley_M37_Reload.MetalEnd" }
 	fadein 0.2
 	fadeout 0.2
