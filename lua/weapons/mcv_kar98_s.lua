@@ -51,6 +51,8 @@ SWEP.ShotgunReloadEmptyStartAnimation = false
 SWEP.PlayCycleAnimation = true
 SWEP.HasEmptyReload = false
 
+SWEP.AdjustableScopes = true
+
 // View slide from recoil
 SWEP.ViewSlideRecoilUp = 2.85
 SWEP.ViewSlideRecoilRight = 0.48
@@ -76,8 +78,8 @@ SWEP.ScopeFOV = 8
 SWEP.ScopeFOV2 = 4
 SWEP.RTScopeMaterialIndex = 4
 
-SWEP.IronsightPos = Vector(0.085, -7, -0.75)
-SWEP.IronsightAng = Angle(0.33, 0.15, 0)
+SWEP.IronsightPos = Vector(0.054, -7, -0.8)
+SWEP.IronsightAng = Angle(0, 0, 0)
 
 SWEP.CustomPos = Vector(0, -2, 0)
 SWEP.CustomAng = Angle(0, 0, 0)
