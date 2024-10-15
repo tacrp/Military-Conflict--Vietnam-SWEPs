@@ -195,14 +195,14 @@ $animation "pump_ironsight_a_corrective_animation" "v_m37_anims\pump_ironsight_a
 
 $animation "basePose_a" "v_m37_anims\basePose_a.smd" {
 	fps 30
-	loop
+	numframes 60
 	
 	
 }
 
 $animation "ironsight" "v_m37_anims\ironsight.smd" {
 	fps 30
-	frame 0 1
+	frame 1 1
 	numframes 60
 	
 	
@@ -210,7 +210,6 @@ $animation "ironsight" "v_m37_anims\ironsight.smd" {
 
 $animation "ironsight_transition" "v_m37_anims\ironsight_transition.smd" {
 	fps 30
-	frame 0 1
 	numframes 60
 	
 	
@@ -276,12 +275,14 @@ $animation "HammerPosReady" "v_m37_anims\HammerPosReady.smd" {
 
 $animation "shoot1_a" "v_m37_anims\shoot1_a.smd" {
 	fps 30
+	numframes 12
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "shoot1_a_corrective_animation" 0
 }
 
 $animation "shoot1_ironsight_a" "v_m37_anims\shoot1_ironsight_a.smd" {
 	fps 30
+	numframes 12
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "shoot1_ironsight_a_corrective_animation" 0
 }
@@ -592,32 +593,55 @@ $sequence "draw" {
 }
 
 $sequence "shoot1" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	{ event AE_MUZZLEFLASH 0 "" }
+	{ event AE_WPN_SET_POSEPARAM 0 "hammerpos 0" }
+	snap
+	addlayer "walklayer"
+	addlayer "runlayer"
+	addlayer "shootpose1"
+	node "0"
+}
+
+$sequence "shootpose1" {
 	"shoot1_a"
 	"shoot1_ironsight_a"
-	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_SET_POSEPARAM 0 "hammerpos 0" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	snap
+	hidden
 }
 
 $sequence "pump" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_RELOAD_INSERT_PULL" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	{ event 5004 10 "MCV_Weapon_Foley_M37_Reload.MetalStart" }
+	{ event 5004 29 "MCV_Weapon_Foley_M37_Reload.MetalEnd" }
+	fadein 0.2
+	fadeout 0.2
+	addlayer "walklayer"
+	addlayer "runlayer"
+	addlayer "pumppose"
+	node "0"
+}
+
+$sequence "pumppose" {
 	"pump_a"
 	"pump_ironsight_a"
-	activity "ACT_VM_RELOAD_INSERT_PULL" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event 5004 1 "MCV_Weapon_Foley_M37_Reload.MetalStart" }
-	{ event 5004 6 "MCV_Weapon_Foley_M37_Reload.MetalEnd" }
-	{ event AE_CLIENT_EJECT_BRASS 4 "eject" }
-	{ event AE_WPN_SET_POSEPARAM 2 "hammerpos 1" }
-	fadein 0.2
-	fadeout 0.2
+	hidden
 }
 
 $sequence "reload_start" {
