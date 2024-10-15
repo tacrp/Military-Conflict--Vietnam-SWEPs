@@ -182,7 +182,7 @@ $animation "basePose_a" "v_izh43_anims\basePose_a.smd" {
 
 $animation "ironsight" "v_izh43_anims\ironsight.smd" {
 	fps 30
-	frame 0 1
+	frame 1 1
 	numframes 60
 	
 	
@@ -190,7 +190,6 @@ $animation "ironsight" "v_izh43_anims\ironsight.smd" {
 
 $animation "ironsight_transition" "v_izh43_anims\ironsight_transition.smd" {
 	fps 30
-	frame 0 1
 	numframes 60
 	
 	
