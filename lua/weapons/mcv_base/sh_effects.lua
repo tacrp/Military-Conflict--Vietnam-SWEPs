@@ -5,7 +5,7 @@ function SWEP:GetTracerOrigin()
     local vm = self:GetOwner():GetViewModel()
     local muzz_qca = vm:LookupAttachment("muzzle")
     if self:GetAkimbo() and self:Clip1() % 2 == 0 then
-        muzz_qca = vm:LookupAttachment("muzzleleft")
+        muzz_qca = vm:LookupAttachment("muzzleleft") > 0 and vm:LookupAttachment("muzzleleft") or vm:LookupAttachment("muzzle2")
     end
     local att = vm:GetAttachment(muzz_qca)
     return att.Pos
@@ -21,7 +21,7 @@ function SWEP:DoMuzzle(alt)
     end
 
     if self:GetAkimbo() and self:Clip1() % 2 == 1 and self:GetFiremodeValue() != MCV.FIREMODE_VOLLEY then
-        muzz_qca = vm:LookupAttachment("muzzleleft")
+        muzz_qca = vm:LookupAttachment("muzzleleft") > 0 and vm:LookupAttachment("muzzleleft") or vm:LookupAttachment("muzzle2")
     end
 
     local data = EffectData()
