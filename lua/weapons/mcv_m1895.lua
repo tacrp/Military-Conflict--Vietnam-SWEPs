@@ -47,6 +47,7 @@ SWEP.LastShotAnimation = false
 SWEP.ShotgunReload = true
 SWEP.RevolverFiremodePose = true
 SWEP.HasEmptyReload = false
+SWEP.AkimboDualSingleActionReload = true
 
 // View slide from recoil
 SWEP.ViewSlideRecoilUp = 1.1

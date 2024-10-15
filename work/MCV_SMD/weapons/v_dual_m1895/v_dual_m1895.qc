@@ -932,7 +932,7 @@ $sequence "reload_end_right" {
 	"reload_e_i"
 	"reload_e_d"
 	"reload_e_d_i"
-	activity "ACT_SHOTGUN_PRIMARY_RELOAD_FINISH" 1
+	activity "ACT_VM_RELOAD_END_EMPTY" 1
 	blend "ironsight" 0 1
 	blend "revolver_firemode_pose" 0 1
 	{ event 5004 1 "MCV_Weapon_Foley_M1895_Reload.End" }
@@ -948,7 +948,7 @@ $sequence "reload_changehand" {
 	"reload_ch_i"
 	"reload_ch_d"
 	"reload_ch_d_i"
-	activity "ACT_SHOTGUN_RELOAD_CHANGE" 1
+	activity "ACT_VM_RELOAD_END" 1
 	blend "ironsight" 0 1
 	blend "revolver_firemode_pose" 0 1
 	{ event 5004 1 "MCV_Weapon_Foley_M1895_Reload.Start" }
@@ -964,7 +964,7 @@ $sequence "reload_insert_left" {
 	"reload_l_l_i"
 	"reload_l_l_d"
 	"reload_l_l_d_i"
-	activity "ACT_VM_SECONDARY_RELOAD" 1
+	activity "ACT_VM_RELOAD2" 1
 	blend "ironsight" 0 1
 	blend "revolver_firemode_pose" 0 1
 	{ event 5004 0 "MCV_Weapon_Foley_M1895_Reload.Mid_Eject" }

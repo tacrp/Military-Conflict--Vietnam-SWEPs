@@ -149,6 +149,8 @@ function SWEP:AttackEffects()
 
     local recoilmult = 1
 
+    local fm = self:GetFiremodeValue()
+
     if fm == MCV.FIREMODE_VOLLEY then
         recoilmult = self:Clip1()
     end

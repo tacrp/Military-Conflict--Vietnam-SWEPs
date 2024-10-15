@@ -43,6 +43,12 @@ function SWEP:Reload()
         end
     end
 
+    self:SetLastClip(self:Clip1())
+
+    if self.AkimboDualSingleActionReload then
+        self:SetEmptyReload(true)
+    end
+
     self:ScopeToggle(false)
 
     self:SetReloading(true)
@@ -113,8 +119,32 @@ function SWEP:Think_Reload()
             self:SetReloading(false)
             self:RestoreClip2(self.Secondary.ClipSize)
         else
-            if self.ShotgunReload or (self.HybridReload and self:Clip1() > 0) then
-                if self:GetEndReload() or self:Clip1() >= (self:GetEmptyReload() and self.Primary.ClipSize or self:GetClip1Capacity()) or (!self:GetInfiniteAmmo() and self:Ammo1() == 0) or self:GetEndReload() then
+            if self.AkimboDualSingleActionReload then
+                if self:GetEndReload() or self:Clip1() >= self:GetClip1Capacity() or (!self:GetInfiniteAmmo() and self:Ammo1() == 0) then
+                    if self:GetEmptyReload() then
+                        self:PlayAnimation(ACT_VM_RELOAD_END_EMPTY, 1, true)
+                    else
+                        self:PlayAnimation(ACT_SHOTGUN_RELOAD_FINISH, 1, true)
+                    end
+
+                    self:SetReloading(false)
+                    self:SetEmptyReload(false)
+                else
+                    if self:Clip1() >= ((self:GetClip1Capacity() - self:GetLastClip()) / 2) + self:GetLastClip() and self:GetEmptyReload() then
+                        self:PlayAnimation(ACT_VM_RELOAD_END, 1, true)
+                        self:SetEmptyReload(false)
+                    else
+                        if self:GetEmptyReload() then
+                            self:PlayAnimation(ACT_VM_RELOAD, 1, true)
+                        else
+                            self:PlayAnimation(ACT_VM_RELOAD2, 1, true)
+                        end
+
+                        self:RestoreClip(1)
+                    end
+                end
+            elseif self.ShotgunReload or (self.HybridReload and self:Clip1() > 0) then
+                if self:GetEndReload() or self:Clip1() >= (self:GetEmptyReload() and self.Primary.ClipSize or self:GetClip1Capacity()) or (!self:GetInfiniteAmmo() and self:Ammo1() == 0) then
                     if !self.HasEmptyReload or (self:Clip1() == self:GetLoadedRounds() or !self:GetEmptyReload()) then
                         self:PlayAnimation(ACT_SHOTGUN_RELOAD_FINISH, 1, true)
                     else

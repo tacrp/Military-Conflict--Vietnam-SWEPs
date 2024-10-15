@@ -96,10 +96,16 @@ function SWEP:DoBodygroups()
 
         local fm = self:GetFiremodeValue()
 
-        if fm == MCV.FIREMODE_FAN then
-            pose = 1
-        elseif fm == MCV.FIREMODE_DA then
-            pose = 0.5
+        if self:GetAkimbo() then
+            if fm == MCV.FIREMODE_DA then
+                pose = 1
+            end
+        else
+            if fm == MCV.FIREMODE_FAN then
+                pose = 1
+            elseif fm == MCV.FIREMODE_DA then
+                pose = 0.5
+            end
         end
 
         vm:SetPoseParameter("revolver_firemode_pose", pose)

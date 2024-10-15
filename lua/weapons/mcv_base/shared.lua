@@ -50,6 +50,7 @@ SWEP.AdjustableScopes = false
 SWEP.PlayCycleAnimation = false
 SWEP.LastShotAnimation = false
 SWEP.ShotgunReloadEmptyStartAnimation = false
+SWEP.AkimboDualSingleActionReload = false // Halfway between reloading, change hand
 
 SWEP.RevolverFiremodePose = false // Adds handling for revolver firemode poses
 
@@ -255,7 +256,7 @@ function SWEP:SetupDataTables()
 
     self:NetworkVar("Int", 0, "BurstCount")
     self:NetworkVar("Int", 1, "ScopeLevel")
-    self:NetworkVar("Int", 2, "LoadedRounds")
+    self:NetworkVar("Int", 2, "LastClip")
     self:NetworkVar("Int", 3, "Firemode")
 
     self:NetworkVar("Bool", 1, "Reloading")
