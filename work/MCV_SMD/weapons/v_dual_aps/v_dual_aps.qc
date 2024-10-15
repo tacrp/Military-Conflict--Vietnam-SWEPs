@@ -482,7 +482,6 @@ $animation "RightEmpty" "v_dual_aps_anims\RightEmpty.smd" {
 
 $animation "BothEmpty" "v_dual_aps_anims\BothEmpty.smd" {
 	fps 30
-	loop
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "BothEmpty_corrective_animation" 0
 }
@@ -705,7 +704,6 @@ $animation "Bullet35" "v_dual_aps_anims\Bullet35.smd" {
 
 $animation "Bullet36" "v_dual_aps_anims\Bullet36.smd" {
 	fps 30
-	loop
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "Bullet36_corrective_animation" 0
 }
@@ -713,14 +711,13 @@ $animation "Bullet36" "v_dual_aps_anims\Bullet36.smd" {
 $animation "basePose_a" "v_dual_aps_anims\basePose_a.smd" {
 	fps 30
 	numframes 60
-	loop
 	
 	
 }
 
 $animation "ironsight" "v_dual_aps_anims\ironsight.smd" {
 	fps 30
-	frame 0 1
+	frame 1 1
 	numframes 60
 	
 	
@@ -1150,8 +1147,7 @@ $sequence "shoot1_r" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	snap
 	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
 	addlayer "BulletCounter"
@@ -1176,8 +1172,7 @@ $sequence "shoot1_l" {
 	activity "ACT_VM_SECONDARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	snap
 	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
 	addlayer "BulletCounter"
@@ -1202,8 +1197,7 @@ $sequence "shoot2_r" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	snap
 	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
 	addlayer "BulletCounter"
@@ -1228,8 +1222,7 @@ $sequence "shoot2_l" {
 	activity "ACT_VM_SECONDARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	snap
 	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
 	addlayer "BulletCounter"
@@ -1254,8 +1247,7 @@ $sequence "shootlast_r" {
 	activity "ACT_VM_PRIMARYATTACK_EMPTY" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	snap
 	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
 	addlayer "BulletCounter"
@@ -1280,8 +1272,7 @@ $sequence "shootlast_l" {
 	activity "ACT_VM_SHOOTLAST" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	snap
 	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
 	addlayer "BulletCounter"
