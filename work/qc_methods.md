@@ -4,40 +4,34 @@ I highly recommend using the version of StudioMDL included with MCV itself. It c
 ## Viewmodel Method 1 -- The OG: 
 (cross-reference this with the SKS' QC if you need a good example of how to do this)
 
-1. Before anything, change the order of the model's QC attachments to be, top-to-bottom:
+1. Find the weapon's idle $sequence. If it has a blendlayer for "ironsight_test", remove it.
 
-   "muzzle", "eject", "cam"
-   
-   This is so effects will work with the way the base is setup.
+2. Add the "ironsight" $animation (or equivalent) to the $sequence and change the blendwidth accordingly (3 anims = blendwith of 3).
 
-2. Find the weapon's idle $sequence. If it has a blendlayer for "ironsight_test", remove it.
+3. For every firing $sequence, make a copy of the idle $sequence. Rename all your shoot $sequences to something else (i.e. "shootpose1", "shootpose2", etc.) and name all your cloned idle sequences to "shoot", "shoot2", etc. (Or whatever you want to name everything it doesnt matter as long as you set everything up correctly)
 
-3. Add the "ironsight" $animation (or equivalent) to the $sequence and change the blendwidth accordingly (3 anims = blendwith of 3).
+4. Delete the ACT_VM_PRIMARYATTACK from the old shoot sequences and add them to your new ones (the ones cloned from the idle $sequence) while removing ACT_VM_IDLE. If this a lastshoot animation (used for pistols or any weapon where the bolt will lock back on empty) make sure it calls ACT_VM_LASTSHOOT.
 
-4. For every firing $sequence, make a copy of the idle $sequence. Rename all your shoot $sequences to something else (i.e. "shootpose1", "shootpose2", etc.) and name all your cloned idle sequences to "shoot", "shoot2", etc. (Or whatever you want to name everything it doesnt matter as long as you set everything up correctly)
-
-5. Delete the ACT_VM_PRIMARYATTACK from the old shoot sequences and add them to your new ones (the ones cloned from the idle $sequence) while removing ACT_VM_IDLE. If this a lastshoot animation (used for pistols or any weapon where the bolt will lock back on empty) make sure it calls ACT_VM_LASTSHOOT.
-
-6. Add the old shoot $sequences as layers to your new $sequences. i.e. "addlayer "shootpose1""
+5. Add the old shoot $sequences as layers to your new $sequences. i.e. "addlayer "shootpose1""
 
 NOTE: You will also need to do this process for pumping/cycling $sequences on weapons that have them. Do the above steps for your cycle $sequence and make sure you call "ACT_VM_RELOAD_INSERT_PULL" in your new $sequence. 
 
-7. Add the "snap" command to your shoot $sequences. If the weapon jerks awkwardly after shooting, instead of adding "snap" to your shoot $sequences, define their fadein and fadeout as both 0 (keep "snap" on the shootposes). 
+6. Add the "snap" command to your shoot $sequences. If the weapon jerks awkwardly after shooting, instead of adding "snap" to your shoot $sequences, define their fadein and fadeout as both 0 (keep "snap" on the shootposes). 
 
-8. Go to all the $animations referenced in the idle $sequence and add:
+7. Go to all the $animations referenced in the idle $sequence and add:
 
     numframes 60
 
    to each of them. Make sure their FPS is the same as well.
 
-9. Remove the "walklyer" and "runlayer" layers and replace them with just "walklayerironsights" in the following $sequences:
+8. Remove the "walklyer" and "runlayer" layers and replace them with just "walklayerironsights" in the following $sequences:
 
  - "draw"
  - "firstdraw"
  - "holster
 
 
-10. Remove the "walklayerironsight" layer from reload and related animations. (Otherwise the hands clip)
+9. Remove the "walklayerironsight" layer from reload and related animations. (Otherwise the hands clip)
 
 Compile your model and see if everything worked.
 
