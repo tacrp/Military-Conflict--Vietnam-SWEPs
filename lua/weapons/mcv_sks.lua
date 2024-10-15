@@ -42,6 +42,9 @@ SWEP.Firemodes = {
 SWEP.LastShotAnimation = true
 SWEP.MagInClip = true
 
+SWEP.RifleGrenadeEntity = "mcv_proj_riflegrenade_vc"
+SWEP.RifleGrenadeForce = 2000
+
 // View slide from recoil
 SWEP.ViewSlideRecoilUp = 1.35
 SWEP.ViewSlideRecoilRight = 0.48

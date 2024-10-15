@@ -92,6 +92,8 @@ function SWEP:RifleGrenadeAttack()
 
     self:PlayAnimation(ACT_VM_ISHOOT_M203, 0.5)
 
+    self:RocketAttack(true)
+
     self:TakeSecondaryAmmo(1)
 
     self:SetNextPrimaryFire(CurTime() + 1)
@@ -114,6 +116,10 @@ function SWEP:RifleGrenadeAttack()
     end
 
     self:SetNeedTriggerPress(true)
+
+    if self.PlayCycleAnimation then
+        self:SetNeedCycle(true)
+    end
 end
 
 function SWEP:FireAnimationEvent( pos, ang, event, name )
@@ -181,6 +187,43 @@ function SWEP:BulletAttack()
     })
 
     owner:LagCompensation(false)
+end
+
+function SWEP:RocketAttack(secondary)
+    if CLIENT then return end
+    local owner = self:GetOwner()
+    local spread = self:GetSpread() / 360
+
+    local src = owner:GetShootPos()
+    dir = self:GetAimAngle()
+
+    dir = dir + (AngleRand() * spread)
+
+    local ent = self.ShootEntity
+    local force = self.ShootEntityForce
+
+    if secondary then
+        ent = self.RifleGrenadeEntity
+        force = self.RifleGrenadeForce
+    end
+
+    local rocket = ents.Create(ent)
+    if !IsValid(rocket) then return end
+
+    rocket:SetPos(src)
+    rocket:SetOwner(owner)
+    rocket.Inflictor = self
+    rocket:SetAngles(dir)
+    if isfunction(rocket.SetWeapon) then
+        rocket:SetWeapon(self)
+    end
+    rocket:Spawn()
+
+    local phys = rocket:GetPhysicsObject()
+
+    if phys:IsValid() and force > 0 then
+        phys:SetVelocityInstantaneous(dir:Forward() * force)
+    end
 end
 
 function SWEP:GetFiremodeValue()

@@ -49,6 +49,9 @@ SWEP.HybridReload = false -- As neat as this is, there isn't a single weapon in 
 SWEP.ShotgunReloadEmptyStartAnimation = false
 SWEP.PlayCycleAnimation = true
 
+SWEP.RifleGrenadeEntity = "mcv_proj_riflegrenade_vc"
+SWEP.RifleGrenadeForce = 2000
+
 // View slide from recoil
 SWEP.ViewSlideRecoilUp = 2.85
 SWEP.ViewSlideRecoilRight = 0.48

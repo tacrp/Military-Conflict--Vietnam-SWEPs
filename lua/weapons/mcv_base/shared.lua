@@ -37,11 +37,6 @@ SWEP.DamageArmMultiplier = 1
 SWEP.Num = 1
 SWEP.AmmoPerShot = 1
 
-SWEP.ExplosionDamage = 0
-SWEP.ExplosionRadius = 0
-
-SWEP.MuzzleVelocity = 735
-
 SWEP.RangeModifier = 0.950 // Every 500 units the damage is multiplied by rangemodifier
 
 SWEP.Firemodes = {
@@ -110,6 +105,9 @@ SWEP.CrosshairDeltaDistance = 4
 
 SWEP.WeaponWeight = 3.85
 
+SWEP.ShootEntity = nil
+SWEP.ShootEntityForce = 5000
+
 SWEP.Primary.Ammo = "ar2"
 SWEP.Primary.ClipSize = 10
 SWEP.Primary.Chamber = 1
@@ -129,6 +127,9 @@ SWEP.JumpSpreadMultiplier = 3.0
 SWEP.HasBayonet = false
 SWEP.HasRifleGrenade = false
 SWEP.RifleGrenadeIsUBGL = false
+
+SWEP.RifleGrenadeEntity = "mcv_proj_riflegrenade"
+SWEP.RifleGrenadeForce = 5000
 
 SWEP.BashDamage = 50
 SWEP.BashRange = 96

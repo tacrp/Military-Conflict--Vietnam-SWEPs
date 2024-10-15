@@ -33,3 +33,44 @@ function SWEP:ToggleUBGL()
         end
     end
 end
+
+
+function SWEP:RifleGrenadeAttack()
+    local owner = self:GetOwner()
+
+    if self:Clip2() < 1 then self:Reload() return end
+    if self:GetSpeed() > 150 then return end
+
+    if self:GetNeedTriggerPress() then return end
+
+    self:PlayAnimation(ACT_VM_ISHOOT_M203, 0.5)
+
+    self:RocketAttack(true)
+
+    self:TakeSecondaryAmmo(1)
+
+    self:SetNextPrimaryFire(CurTime() + 1)
+    self:SetLastRecoilTime(CurTime())
+
+    self:EmitSound(self.SoundGrenadeShot)
+
+    owner:SetVelocity(self:GetAimVector() * -self.RecoilPushbackValue)
+
+    local recoilup = Lerp(self:GetSightAmount(), self.ViewSlideRecoilUp, self.ViewSlideRecoilIronsightUp) * 3
+    local recoilright = Lerp(self:GetSightAmount(), self.ViewSlideRecoilRight, self.ViewSlideRecoilIronsightRight) * 3
+
+    owner:ViewPunch(Angle(-recoilup, recoilright * util.SharedRandom("MCVRecoilLeftRight", -1, 1), 0))
+
+    if IsFirstTimePredicted() then
+        if !self.NoEjectOnShoot then
+            self:DoEject()
+        end
+        self:DoMuzzle()
+    end
+
+    self:SetNeedTriggerPress(true)
+
+    if self.PlayCycleAnimation then
+        self:SetNeedCycle(true)
+    end
+end

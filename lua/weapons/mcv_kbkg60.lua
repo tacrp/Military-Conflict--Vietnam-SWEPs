@@ -44,6 +44,9 @@ SWEP.Firemodes = {
 // Weapon must be manually cycled
 SWEP.PlayCycleAnimation = false
 
+SWEP.RifleGrenadeEntity = "mcv_proj_riflegrenade_vc"
+SWEP.RifleGrenadeForce = 2000
+
 // View slide from recoil
 SWEP.ViewSlideRecoilUp = 1.64
 SWEP.ViewSlideRecoilRight = 0.32
