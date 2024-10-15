@@ -271,14 +271,14 @@ $animation "Default" "v_dual_izh43_anims\Default.smd" {
 
 $animation "basePose_a" "v_dual_izh43_anims\basePose_a.smd" {
 	fps 30
-	loop
+	numframes 60
 	
 	
 }
 
 $animation "ironsight" "v_dual_izh43_anims\ironsight.smd" {
 	fps 30
-	frame 0 1
+	frame 1 1
 	numframes 60
 	
 	
@@ -639,8 +639,7 @@ $sequence "shoot1_r" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	snap
 	addlayer "walklayerironsight"
 	addlayer "shoot1_r_pose"
 }
@@ -662,8 +661,7 @@ $sequence "shoot1_l" {
 	activity "ACT_VM_SECONDARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	snap
 	addlayer "walklayerironsight"
 	addlayer "shoot1_l_pose"
 }
@@ -685,15 +683,14 @@ $sequence "shoot_double_r" {
 	activity "ACT_VM_RECOIL1" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	snap
 	addlayer "walklayerironsight"
 	addlayer "shoot_double_r_pose"
 }
 
 $sequence "shoot_double_r_pose" {
 	"shootlast_r_a"
-	"shootlast_r_a_ironsight"
+	"shootlast_r_ironsight_a"
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
@@ -708,8 +705,7 @@ $sequence "shoot_last" {
 	activity "ACT_VM_PRIMARYATTACK_EMPTY" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	snap
 	addlayer "walklayerironsight"
 	addlayer "shoot_last_pose"
 }
@@ -730,17 +726,19 @@ $sequence "reload" {
 	activity "ACT_VM_RELOAD" 1
 	blend "ironsight" 0 1
 	blendwidth 2
-	{ event 5004 1 "MCV_Weapon_Foley_M1911_Reload.Hand" }
-	{ event 5004 10 "MCV_Weapon_Foley_M1911_Reload.MagOut_Dual" }
-	{ event 5004 37 "MCV_Weapon_Foley_M1911_Reload.MagIn" }
-	{ event 5004 55 "MCV_Weapon_Foley_M1911_Reload.Hand" }
-	{ event 5004 67 "MCV_Weapon_Foley_M1911_Reload.MagIn" }
-	{ event 5004 80 "MCV_Weapon_Foley_M1911_Reload.HandEnd" }
+	{ event 5004 1 "MCV_Weapon_Foley_IZH43_Reload.Hand" }
+	{ event 5004 9 "MCV_Weapon_Foley_IZH43_Reload.UnLock" }
+	{ event 5004 11 "MCV_Weapon_Foley_IZH43_Reload.UnLock" }
+	{ event 5004 49 "MCV_Weapon_Foley_IZH43_Reload.Bullet" }
+	{ event 5004 70 "MCV_Weapon_Foley_IZH43_Reload.Lock" }
+	{ event 5004 108 "MCV_Weapon_Foley_IZH43_Reload.Bullet" }
+	{ event 5004 130 "MCV_Weapon_Foley_IZH43_Reload.Lock" }
+	{ event 5004 147 "MCV_Weapon_Foley_IZH43_Reload.HandEnd" }
 	{ event AE_WPN_NEXTCLIP_TO_POSEPARAM 76 "ammo_fraction" }
 	{ event AE_WPN_COMPLETE_RELOAD 76 "" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	node "0"
 }
 
@@ -750,15 +748,16 @@ $sequence "reloadRightOnly" {
 	activity "ACT_VM_MISSRIGHT" 1
 	blend "ironsight" 0 1
 	blendwidth 2
-	{ event 5004 1 "MCV_Weapon_Foley_M1911_Reload.Hand" }
-	{ event 5004 10 "MCV_Weapon_Foley_M1911_Reload.MagOut" }
-	{ event 5004 37 "MCV_Weapon_Foley_M1911_Reload.MagIn" }
+	{ event 5004 1 "MCV_Weapon_Foley_IZH43_Reload.Hand" }
+	{ event 5004 9 "MCV_Weapon_Foley_IZH43_Reload.UnLock" }
+	{ event 5004 49 "MCV_Weapon_Foley_IZH43_Reload.Bullet" }
+	{ event 5004 70 "MCV_Weapon_Foley_IZH43_Reload.Lock" }
 	{ event 5004 45 "MCV_Weapon_Foley_M1911_Reload.HandEnd" }
 	{ event AE_WPN_NEXTCLIP_TO_POSEPARAM 46 "ammo_fraction" }
 	{ event AE_WPN_COMPLETE_RELOAD 46 "" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	node "0"
 }
 
@@ -768,13 +767,14 @@ $sequence "reload_emptyRightOnly" {
 	activity "ACT_VM_MISSRIGHT2" 1
 	blend "ironsight" 0 1
 	blendwidth 2
-	{ event 5004 1 "MCV_Weapon_Foley_M1911_Reload.Hand" }
-	{ event 5004 10 "MCV_Weapon_Foley_M1911_Reload.MagOut_Dual" }
-	{ event 5004 37 "MCV_Weapon_Foley_M1911_Reload.MagIn" }
-	{ event 5004 55 "MCV_Weapon_Foley_M1911_Reload.Hand" }
-	{ event 5004 67 "MCV_Weapon_Foley_M1911_Reload.MagIn" }
-	{ event 5004 89 "MCV_Weapon_Foley_M1911_Reload.Metal" }
-	{ event 5004 80 "MCV_Weapon_Foley_M1911_Reload.HandEnd" }
+	{ event 5004 1 "MCV_Weapon_Foley_IZH43_Reload.Hand" }
+	{ event 5004 9 "MCV_Weapon_Foley_IZH43_Reload.UnLock" }
+	{ event 5004 11 "MCV_Weapon_Foley_IZH43_Reload.UnLock" }
+	{ event 5004 49 "MCV_Weapon_Foley_IZH43_Reload.Bullet" }
+	{ event 5004 70 "MCV_Weapon_Foley_IZH43_Reload.Lock" }
+	{ event 5004 108 "MCV_Weapon_Foley_IZH43_Reload.Bullet" }
+	{ event 5004 130 "MCV_Weapon_Foley_IZH43_Reload.Lock" }
+	{ event 5004 147 "MCV_Weapon_Foley_IZH43_Reload.HandEnd" }
 	{ event AE_WPN_NEXTCLIP_TO_POSEPARAM 91 "ammo_fraction" }
 	{ event AE_WPN_COMPLETE_RELOAD 91 "" }
 	fadein 0.2
@@ -789,13 +789,14 @@ $sequence "reload_empty" {
 	activity "ACT_VM_RELOADEMPTY" 1
 	blend "ironsight" 0 1
 	blendwidth 2
-	{ event 5004 1 "MCV_Weapon_Foley_M1911_Reload.Hand" }
-	{ event 5004 10 "MCV_Weapon_Foley_M1911_Reload.MagOut_Dual" }
-	{ event 5004 37 "MCV_Weapon_Foley_M1911_Reload.MagIn" }
-	{ event 5004 55 "MCV_Weapon_Foley_M1911_Reload.Hand" }
-	{ event 5004 67 "MCV_Weapon_Foley_M1911_Reload.MagIn" }
-	{ event 5004 89 "MCV_Weapon_Foley_M1911_Reload.Metal_Dual" }
-	{ event 5004 80 "MCV_Weapon_Foley_M1911_Reload.HandEnd" }
+	{ event 5004 1 "MCV_Weapon_Foley_IZH43_Reload.Hand" }
+	{ event 5004 9 "MCV_Weapon_Foley_IZH43_Reload.UnLock" }
+	{ event 5004 11 "MCV_Weapon_Foley_IZH43_Reload.UnLock" }
+	{ event 5004 49 "MCV_Weapon_Foley_IZH43_Reload.Bullet" }
+	{ event 5004 70 "MCV_Weapon_Foley_IZH43_Reload.Lock" }
+	{ event 5004 108 "MCV_Weapon_Foley_IZH43_Reload.Bullet" }
+	{ event 5004 130 "MCV_Weapon_Foley_IZH43_Reload.Lock" }
+	{ event 5004 147 "MCV_Weapon_Foley_IZH43_Reload.HandEnd" }
 	{ event AE_WPN_NEXTCLIP_TO_POSEPARAM 93 "ammo_fraction" }
 	{ event AE_WPN_COMPLETE_RELOAD 93 "" }
 	fadein 0.2
