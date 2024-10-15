@@ -51,6 +51,10 @@ SWEP.PlayCycleAnimation = false
 SWEP.LastShotAnimation = false
 SWEP.ShotgunReloadEmptyStartAnimation = false
 
+SWEP.RevolverFiremodePose = false // Adds handling for revolver firemode poses
+
+SWEP.TriggerDelayTime = 0.25
+
 SWEP.ShotgunReload = false
 SWEP.ShotgunAltReload = false // Clip-loading rifles use this set of anims for bullet loading
 SWEP.HybridReload = false
@@ -242,7 +246,7 @@ function SWEP:SetupDataTables()
     self:NetworkVar("Float", 5, "SprintLockTime")
     self:NetworkVar("Float", 6, "LastScopeTime")
     self:NetworkVar("Float", 7, "LastMeleeTime")
-    self:NetworkVar("Float", 8, "ReloadFinishTime")
+    self:NetworkVar("Float", 8, "LastTriggerTime")
     self:NetworkVar("Float", 9, "SightAmount")
     self:NetworkVar("Float", 10, "HolsterTime")
     self:NetworkVar("Float", 11, "NWHoldBreathAmount")
@@ -268,6 +272,7 @@ function SWEP:SetupDataTables()
     self:NetworkVar("Bool", 12, "GrenadeLauncher")
     self:NetworkVar("Bool", 13, "NeedCycle")
     self:NetworkVar("Bool", 14, "Akimbo")
+    self:NetworkVar("Bool", 15, "PrimedAttack")
 
     self:NetworkVar("Angle", 0, "BipodAngle")
 

@@ -43,57 +43,109 @@ function SWEP:PrimaryAttack()
         fmmult = 0.5
     end
 
+    local t = 0
+
+    if self:GetAkimbo() then
+        if fm == MCV.FIREMODE_VOLLEY then
+            t = self:PlayAnimation(ACT_VM_RECOIL1, 0.5)
+        else
+            if self.LastShotAnimation and self:Clip1() == 1 then
+                t = self:PlayAnimation(ACT_VM_SHOOTLAST, 0.5)
+            elseif self.LastShotAnimation and self:Clip1() == 2 then
+                t = self:PlayAnimation(ACT_VM_PRIMARYATTACK_EMPTY, 0.5)
+            elseif self:Clip1() % 2 == 0 then
+                t = self:PlayAnimation(ACT_VM_PRIMARYATTACK, 0.5)
+            else
+                t = self:PlayAnimation(ACT_VM_SECONDARYATTACK, 0.5)
+            end
+        end
+    else
+        if fm == MCV.FIREMODE_VOLLEY then
+            t = self:PlayAnimation(ACT_VM_RECOIL1, 0.5)
+        elseif fm == MCV.FIREMODE_DA then
+            t = self:PlayAnimation(ACT_VM_HAULBACK, 0.5, true)
+        elseif fm == MCV.FIREMODE_FAN then
+            t = self:PlayAnimation(ACT_VM_PRIMARYATTACK_1, 0.5, false)
+        else
+            if self.LastShotAnimation and self:Clip1() == 1 then
+                t = self:PlayAnimation(ACT_VM_SHOOTLAST, 0.5)
+            else
+                t = self:PlayAnimation(ACT_VM_PRIMARYATTACK, 0.5)
+            end
+        end
+    end
+
     if fm == MCV.FIREMODE_FAST then
         self:SetNextPrimaryFire(CurTime() + (60 / self.FireRate_Fast) * fmmult)
     elseif fm == MCV.FIREMODE_SLOW then
         self:SetNextPrimaryFire(CurTime() + (60 / self.FireRate_Slow) * fmmult)
+    elseif fm == MCV.FIREMODE_SA then
+        self:SetNextPrimaryFire(CurTime() + t * 0.8)
     else
         self:SetNextPrimaryFire(CurTime() + (60 / self.FireRate) * fmmult)
     end
 
-    if self:GetAkimbo() then
-        if fm == MCV.FIREMODE_VOLLEY then
-            self:PlayAnimation(ACT_VM_RECOIL1, 0.5)
-        else
-            if self.LastShotAnimation and self:Clip1() == 1 then
-                self:PlayAnimation(ACT_VM_SHOOTLAST, 0.5)
-            elseif self.LastShotAnimation and self:Clip1() == 2 then
-                self:PlayAnimation(ACT_VM_PRIMARYATTACK_EMPTY, 0.5)
-            elseif self:Clip1() % 2 == 0 then
-                self:PlayAnimation(ACT_VM_PRIMARYATTACK, 0.5)
-            else
-                self:PlayAnimation(ACT_VM_SECONDARYATTACK, 0.5)
-            end
-        end
+    if fm != MCV.FIREMODE_DA then
+        self:BulletAttack()
+        self:AttackEffects()
     else
-        if fm == MCV.FIREMODE_VOLLEY then
-            self:PlayAnimation(ACT_VM_RECOIL1, 0.5)
-        else
-            if self.LastShotAnimation and self:Clip1() == 1 then
-                self:PlayAnimation(ACT_VM_SHOOTLAST, 0.5)
-            else
-                self:PlayAnimation(ACT_VM_PRIMARYATTACK, 0.5)
-            end
-        end
+        self:SetLastTriggerTime(CurTime())
+        self:SetPrimedAttack(true)
     end
 
-    self:SetLastRecoilTime(CurTime())
+    local firemode = self:GetFiremodeValue()
 
-    self:BulletAttack()
+    if firemode == MCV.FIREMODE_SEMI or firemode == MCV.FIREMODE_SA or firemode == MCV.FIREMODE_DA then
+        self:SetNeedTriggerPress(true)
+    end
 
-    if fm == MCV.FIREMODE_VOLLEY and self:Clip1() > 1 then
-        self:EmitSound(self.SoundDoubleShot)
+    if self.PlayCycleAnimation and self:Clip1() > 0 then
+        self:SetNeedCycle(true)
+    end
+end
+
+function SWEP:FireAnimationEvent( pos, ang, event, name )
+    if name == "eject" and IsFirstTimePredicted() then
+        self:DoEject()
+    end
+end
+
+function SWEP:RandomSpread(spread, seed)
+    seed = (seed or 0) + self:EntIndex() + engine.TickCount()
+    local a = util.SharedRandom("mcv_randomspread", 0, 360, seed)
+    local angleRand = Angle(math.sin(a), math.cos(a), 0)
+    angleRand:Mul(spread * util.SharedRandom("mcv_randomspread2", 0, 45, seed) * 1.4142135623730)
+
+    return angleRand
+end
+
+function SWEP:GetSpread()
+    local spread = Lerp(self:GetSightAmount(), self.Spread, self.SpreadIronsighted)
+
+    local owner = self:GetOwner()
+    local move = math.min(owner:GetVelocity():Length() / 273, 1)
+
+    if !owner:IsOnGround() then
+        spread = spread * Lerp(move, 1, self.JumpSpreadMultiplier)
+    elseif owner:Crouching() then
+        spread = spread * Lerp(move, self.CrouchSpreadMultiplier, self.CrouchMoveSpreadMultiplier)
     else
-        self:EmitSound(self.SoundSingleShot)
+        spread = spread * Lerp(move, 1, self.StandMoveSpreadMultiplier)
     end
 
-    local clip_percentage = self:Clip1() / self.Primary.ClipSize
+    local fm = self:GetFiremodeValue()
 
-    if clip_percentage < 0.334 then
-        self:EmitSound(self.SoundNearlyEmpty, 100, 100, 1 - (clip_percentage * 3), CHAN_VOICE)
+    if fm == MCV.FIREMODE_SA then
+        spread = spread * 0.5
+    elseif fm == MCV.FIREMODE_DA then
+        spread = spread * 0.75
     end
 
-    owner:SetVelocity(self:GetAimVector() * -self.RecoilPushbackValue)
+    return spread / 100
+end
+
+function SWEP:AttackEffects()
+    local owner = self:GetOwner()
 
     local recoilmult = 1
 
@@ -104,6 +156,8 @@ function SWEP:PrimaryAttack()
     if self:GetAkimbo() then
         recoilmult = recoilmult * 1.25
     end
+
+    self:SetLastRecoilTime(CurTime())
 
     local recoilup = Lerp(self:GetSightAmount(), self.ViewSlideRecoilUp, self.ViewSlideRecoilIronsightUp) * recoilmult
     local recoilright = Lerp(self:GetSightAmount(), self.ViewSlideRecoilRight, self.ViewSlideRecoilIronsightRight) * recoilmult
@@ -123,38 +177,19 @@ function SWEP:PrimaryAttack()
         self:TakePrimaryAmmo(1)
     end
 
-    local firemode = self:GetFiremodeValue()
-
-    if firemode == MCV.FIREMODE_SEMI then
-        self:SetNeedTriggerPress(true)
-    end
-
-    if self.PlayCycleAnimation and self:Clip1() > 0 then
-        self:SetNeedCycle(true)
-    end
-end
-
-function SWEP:FireAnimationEvent( pos, ang, event, name )
-    if name == "eject" and IsFirstTimePredicted() then
-        self:DoEject()
-    end
-end
-
-function SWEP:GetSpread()
-    local spread = Lerp(self:GetSightAmount(), self.Spread, self.SpreadIronsighted)
-
-    local owner = self:GetOwner()
-    local move = math.min(owner:GetVelocity():Length() / 273, 1)
-
-    if !owner:IsOnGround() then
-        spread = spread * Lerp(move, 1, self.JumpSpreadMultiplier)
-    elseif owner:Crouching() then
-        spread = spread * Lerp(move, self.CrouchSpreadMultiplier, self.CrouchMoveSpreadMultiplier)
+    if fm == MCV.FIREMODE_VOLLEY and self:Clip1() > 1 then
+        self:EmitSound(self.SoundDoubleShot)
     else
-        spread = spread * Lerp(move, 1, self.StandMoveSpreadMultiplier)
+        self:EmitSound(self.SoundSingleShot)
     end
 
-    return spread / 100
+    local clip_percentage = self:Clip1() / self.Primary.ClipSize
+
+    if clip_percentage < 0.334 then
+        self:EmitSound(self.SoundNearlyEmpty, 100, 100, 1 - (clip_percentage * 3), CHAN_VOICE)
+    end
+
+    owner:SetVelocity(self:GetAimVector() * -self.RecoilPushbackValue)
 end
 
 function SWEP:BulletAttack()
@@ -210,12 +245,12 @@ end
 function SWEP:RocketAttack(secondary)
     if CLIENT then return end
     local owner = self:GetOwner()
-    local spread = self:GetSpread() / 360
+    local spread = self:RandomSpread(self:GetSpread())
 
     local src = owner:GetShootPos()
     dir = self:GetAimAngle()
 
-    dir = dir + (AngleRand() * spread)
+    dir = dir + spread
 
     local ent = self.ShootEntity
     local force = self.ShootEntityForce

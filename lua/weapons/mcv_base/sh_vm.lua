@@ -90,6 +90,20 @@ function SWEP:DoBodygroups()
         vm:SetBodygroup(self.GrenadeLauncherBodygroup, 0)
         vm:SetBodygroup(self.GrenadeBodygroup, 0)
     end
+
+    if self.RevolverFiremodePose then
+        local pose = 0
+
+        local fm = self:GetFiremodeValue()
+
+        if fm == MCV.FIREMODE_FAN then
+            pose = 1
+        elseif fm == MCV.FIREMODE_DA then
+            pose = 0.5
+        end
+
+        vm:SetPoseParameter("revolver_firemode_pose", pose)
+    end
 end
 
 function SWEP:PreDrawViewModel()

@@ -16,12 +16,26 @@ function SWEP:Think()
 
     if owner:KeyReleased(IN_ATTACK) then
         self:SetNeedTriggerPress(false)
+
+        if self:GetPrimedAttack() then
+            self:PlayAnimation(ACT_VM_IDLE)
+            self:SetPrimedAttack(false)
+        end
     elseif self:GetReloading() and self.ShotgunReload and owner:KeyPressed(IN_ATTACK) and self:Clip1() > 0 then
         self:SetEndReload(true)
     end
 
     if owner:KeyPressed(IN_USE) and owner:KeyDown(IN_WALK) then
         self:ToggleUBGL()
+    end
+
+    if owner:KeyDown(IN_ATTACK) and self:GetPrimedAttack() and self:GetLastTriggerTime() + self.TriggerDelayTime < CurTime() then
+        if SERVER or !game.SinglePlayer() then
+            self:AttackEffects()
+            self:BulletAttack()
+            self:SetPrimedAttack(false)
+            self:PlayAnimation(ACT_VM_PRIMARYATTACK_2, 0.5)
+        end
     end
 
     if !owner:KeyDown(IN_ATTACK) and self:GetNeedCycle() and IsFirstTimePredicted() then

@@ -127,8 +127,6 @@ function SWEP:Think_Reload()
                     local t = self:PlayAnimation((self.HybridReload or self.ShotgunAltReload) and ACT_VM_RELOAD_INSERT or ACT_VM_RELOAD, mult, true, true)
 
                     self:RestoreClip(1)
-
-                    self:SetReloadFinishTime(CurTime() + t - 0.05)
                 end
             else
                 self:SetReloading(false)

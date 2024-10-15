@@ -36,7 +36,6 @@ function SWEP:Holster(wep)
         -- Picking up props try to switch to NULL, by the way
         self:SetHolsterTime(0)
         self:SetHolsterEntity(NULL)
-        self:SetReloadFinishTime(0)
 
         local vm = self:GetOwner():GetViewModel()
 
