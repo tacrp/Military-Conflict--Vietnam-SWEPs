@@ -685,13 +685,17 @@ $animation "basePose_a" "v_dual_type67_anims\basePose_a.smd" {
 }
 
 $animation "ironsight" "v_dual_type67_anims\ironsight.smd" {
-	fps 0.5
+	fps 30
+	frame 0 1
+	numframes 60
 	
 	
 }
 
 $animation "ironsight_transition" "v_dual_type67_anims\ironsight_transition.smd" {
-	fps 0.5
+	fps 30
+	frame 0 1
+	numframes 60
 	
 	
 }
@@ -1057,14 +1061,14 @@ $sequence "ironsight_test" {
 $sequence "idle" {
 	"basePose_a"
 	"ironsight_transition"
+	"ironsight"
 	activity "ACT_VM_IDLE" 1
-	blend "ironsight" 0 0.5
-	blendwidth 2
+	blend "ironsight" 0 1
+	blendwidth 3
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
 	addlayer "runlayer"
-	blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
 	addlayer "SlidePosition"
 	addlayer "BulletCounterRight"
 	addlayer "BulletCounterLeft"
@@ -1219,7 +1223,7 @@ $sequence "shootlast_l" {
 $sequence "reload" {
 	"reload_a"
 	"reload_a_i"
-	activity "ACT_VM_SECONDARY_RELOAD" 1
+	activity "ACT_VM_RELOAD" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_Type67_Reload.Hand" }
@@ -1267,9 +1271,9 @@ $sequence "reloadRightOnly" {
 }
 
 $sequence "reload_emptyRightOnly" {
-	"reload_er_a"
-	"reload_er_a_i"
-	activity "ACT_VM_RELOADEMPTY" 1
+	"reload_re_a"
+	"reload_re_a_i"
+	activity "ACT_VM_MISSRIGHT2" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_Type67_Reload.Hand" }
@@ -1298,7 +1302,7 @@ $sequence "reload_emptyRightOnly" {
 $sequence "reload_empty" {
 	"reload_e_a"
 	"reload_e_a_i"
-	activity "ACT_VM_SECONDARY_RELOADEMPTY" 1
+	activity "ACT_VM_RELOADEMPTY" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_Type67_Reload.Hand" }

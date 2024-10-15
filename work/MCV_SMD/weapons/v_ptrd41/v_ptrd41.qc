@@ -330,13 +330,17 @@ $animation "deploy_s_a_i" "v_ptrd41_anims\deploy_s_a_i.smd" {
 }
 
 $animation "deploy_a" "v_ptrd41_anims\deploy_a.smd" {
-	fps 0.5
+	fps 30
+	frame 0 1
+	numframes 60
 	
 	
 }
 
 $animation "ironsightdeploy" "v_ptrd41_anims\ironsightdeploy.smd" {
-	fps 0.5
+	fps 30
+	frame 0 1
+	numframes 60
 	
 	
 }

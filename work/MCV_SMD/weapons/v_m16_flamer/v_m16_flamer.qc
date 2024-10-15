@@ -362,7 +362,9 @@ $sequence "ironsight" {
 	fadein 0.2
 	fadeout 0.2
 	node "0"
-	fps 0.5
+	fps 30
+	frame 0 1
+	numframes 60
 	
 	
 }

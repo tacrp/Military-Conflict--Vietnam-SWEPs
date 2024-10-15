@@ -17,9 +17,9 @@ $illumposition 7.051 -6.506 -7.067
 $cdmaterials "models\weapons\mcv\v_babybrowning\"
 $cdmaterials "models\weapons\mcv\shells\"
 
-$attachment "cam" "cam_driver" 0 0 0 rotate 0 0 0
 $attachment "muzzle" "BaseMesh" -2.7 0 0.73 rotate 0 180 0
 $attachment "eject" "BaseMesh" 0.3 0.2 1 rotate -60 90 0
+$attachment "cam" "cam_driver" 0 0 0 rotate 0 0 0
 $attachment "muzzle2" "BaseLeftMesh" -2.7 0 0.73 rotate 0 -180 0
 $attachment "eject2" "BaseLeftMesh" 0.3 0.2 1 rotate -60 90 0
 
@@ -141,6 +141,7 @@ $bonemerge "thumb_03_l"
 $bonemerge "lowerarm_twist_01_l"
 $bonemerge "upperarm_twist_01_l"
 
+$include "../../militaryconflict_vietnam_v2.qci"
 
 $sectionframes 30 30
 
@@ -301,21 +302,20 @@ $animation "BothEmpty" "v_dual_babybrowning_anims\BothEmpty.smd" {
 
 $animation "basePose_a" "v_dual_babybrowning_anims\basePose_a.smd" {
 	fps 30
+	numframes 60
 	loop
-	
-	
 }
 
 $animation "ironsight" "v_dual_babybrowning_anims\ironsight.smd" {
-	fps 0.5
-	
-	
+	fps 30
+	frame 0 1
+	numframes 60
 }
 
 $animation "ironsight_transition" "v_dual_babybrowning_anims\ironsight_transition.smd" {
-	fps 0.5
-	
-	
+	fps 30
+	frame 0 1
+	numframes 60
 }
 
 $animation "runIdle_a" "v_dual_babybrowning_anims\runIdle_a.smd" {
@@ -641,17 +641,18 @@ $sequence "ironsight_test" {
 $sequence "idle" {
 	"basePose_a"
 	"ironsight_transition"
+	"ironsight"
 	activity "ACT_VM_IDLE" 1
-	blend "ironsight" 0 0.5
-	blendwidth 2
+	blend "ironsight" 0 1
+	blendwidth 3
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
 	addlayer "runlayer"
-	blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
 	addlayer "SlidePosition"
 	node "0"
 }
+
 
 $sequence "draw" {
 	"v_dual_babybrowning_anims\draw.smd"
@@ -688,103 +689,163 @@ $sequence "Firstdraw" {
 	addlayer "runlayer"
 	node "0"
 }
-
 $sequence "shoot1_r" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	fadein 0
+	fadeout 0
+	addlayer "walklayerironsight"
+	addlayer "SlidePosition"
+	addlayer "shoot1pose_r"
+	node "0"
+}
+
+$sequence "shoot1pose_r" {
 	"shoot1_r_a"
 	"shoot1_r_ironsight_a"
-	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	snap
+	hidden
 }
 
 $sequence "shoot1_l" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_SECONDARYATTACK" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	fadein 0
+	fadeout 0
+	addlayer "walklayerironsight"
+	addlayer "SlidePosition"
+	addlayer "shoot1pose_l"
+	node "0"
+}
+
+$sequence "shoot1pose_l" {
 	"shoot1_l_a"
 	"shoot1_l_ironsight_a"
-	activity "ACT_VM_SECONDARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject2" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	snap
+	hidden
 }
 
 $sequence "shoot2_r" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	fadein 0
+	fadeout 0
+	addlayer "walklayerironsight"
+	addlayer "SlidePosition"
+	addlayer "shoot2pose_r"
+	node "0"
+}
+
+$sequence "shoot2pose_r" {
 	"shoot2_r_a"
 	"shoot2_r_ironsight_a"
-	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	snap
+	hidden
 }
 
 $sequence "shoot2_l" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_SECONDARYATTACK" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	fadein 0
+	fadeout 0
+	addlayer "walklayerironsight"
+	addlayer "SlidePosition"
+	addlayer "shoot2pose_l"
+	node "0"
+}
+
+$sequence "shoot2pose_l" {
 	"shoot2_l_a"
 	"shoot2_l_ironsight_a"
-	activity "ACT_VM_SECONDARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject2" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	snap
+	hidden
 }
 
 $sequence "shootlast_r" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_PRIMARYATTACK_EMPTY" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	fadein 0
+	fadeout 0
+	addlayer "walklayerironsight"
+	addlayer "SlidePosition"
+	addlayer "shootlast_r_pose"
+	node "0"
+}
+
+
+$sequence "shootlast_r_pose" {
 	"shootlast_r_a"
 	"shootlast_r_ironsight_a"
-	activity "ACT_VM_PRIMARYSHOOTLAST" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
 	{ event 5004 1 "MCV_Weapon_Foley_BabyBrowning_ShootLast.Metal" }
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	snap
+	hidden
 }
 
 $sequence "shootlast_l" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_SHOOTLAST" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	fadein 0
+	fadeout 0
+	addlayer "walklayerironsight"
+	addlayer "SlidePosition"
+	addlayer "shootlast_l_pose"
+	node "0"
+}
+
+$sequence "shootlast_l_pose" {
 	"shootlast_l_a"
 	"shootlast_l_ironsight_a"
-	activity "ACT_VM_SECONDARYSHOOTLAST" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
 	{ event 5004 1 "MCV_Weapon_Foley_BabyBrowning_ShootLast.Metal" }
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject2" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	snap
+	hidden
 }
 
 $sequence "reload" {
 	"reload_a"
 	"reload_a_i"
-	activity "ACT_VM_SECONDARY_RELOAD" 1
+	activity "ACT_VM_RELOAD" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_BabyBrowning_Reload.Hand" }
@@ -811,7 +872,7 @@ $sequence "reload" {
 $sequence "reloadRightOnly" {
 	"reload_r_a"
 	"reload_r_a_i"
-	activity "ACT_VM_RELOAD" 1
+	activity "ACT_VM_MISSRIGHT" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_BabyBrowning_Reload.Hand" }
@@ -831,7 +892,7 @@ $sequence "reloadRightOnly" {
 $sequence "reload_emptyRightOnly" {
 	"reload_re_a"
 	"reload_re_a_i"
-	activity "ACT_VM_RELOADEMPTY" 1
+	activity "ACT_VM_MISSRIGHT2" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_BabyBrowning_Reload.Hand" }
@@ -860,7 +921,7 @@ $sequence "reload_emptyRightOnly" {
 $sequence "reload_empty" {
 	"reload_e_a"
 	"reload_e_a_i"
-	activity "ACT_VM_SECONDARY_RELOADEMPTY" 1
+	activity "ACT_VM_RELOADEMPTY" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_BabyBrowning_Reload.Hand" }

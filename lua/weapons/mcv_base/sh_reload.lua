@@ -29,7 +29,7 @@ function SWEP:Reload()
                 self:PlayAnimation(ACT_VM_RELOADEMPTY, 1, true)
             elseif self:Clip1() == 1 then
                 self:PlayAnimation(ACT_VM_MISSRIGHT2, 1, true)
-            elseif self:Clip1() >= (self.Primary.ClipSize * 2) + self.Primary.Chamber then
+            elseif self:Clip1() >= (self.Primary.ClipSize * 2) + (self.Primary.Chamber * 2) - 1 then
                 self:PlayAnimation(ACT_VM_MISSRIGHT, 1, true)
             else
                 self:PlayAnimation(ACT_VM_RELOAD, 1, true)

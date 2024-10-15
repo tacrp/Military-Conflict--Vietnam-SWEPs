@@ -489,13 +489,17 @@ $animation "basePose_a" "v_dual_pb_anims\basePose_a.smd" {
 }
 
 $animation "ironsight" "v_dual_pb_anims\ironsight.smd" {
-	fps 0.5
+	fps 30
+	frame 0 1
+	numframes 60
 	
 	
 }
 
 $animation "ironsight_transition" "v_dual_pb_anims\ironsight_transition.smd" {
-	fps 0.5
+	fps 30
+	frame 0 1
+	numframes 60
 	
 	
 }
@@ -850,14 +854,14 @@ $sequence "ironsight_test" {
 $sequence "idle" {
 	"basePose_a"
 	"ironsight_transition"
+	"ironsight"
 	activity "ACT_VM_IDLE" 1
-	blend "ironsight" 0 0.5
-	blendwidth 2
+	blend "ironsight" 0 1
+	blendwidth 3
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
 	addlayer "runlayer"
-	blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
 	addlayer "SlidePosition"
 	addlayer "BulletCounter"
 	node "0"
@@ -898,65 +902,108 @@ $sequence "Firstdraw" {
 	addlayer "runlayer"
 	node "0"
 }
-
 $sequence "shoot1_r" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	fadein 0
+	fadeout 0
+	addlayer "walklayerironsight"
+	addlayer "SlidePosition"
+	addlayer "BulletCounter"
+	addlayer "shoot1pose_r"
+	node "0"
+}
+
+$sequence "shoot1pose_r" {
 	"shoot1_r_a"
 	"shoot1_r_ironsight_a"
-	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	snap
+	hidden
 }
 
 $sequence "shoot1_l" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_SECONDARYATTACK" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	fadein 0
+	fadeout 0
+	addlayer "walklayerironsight"
+	addlayer "SlidePosition"
+	addlayer "BulletCounter"
+	addlayer "shoot1pose_l"
+	node "0"
+}
+
+$sequence "shoot1pose_l" {
 	"shoot1_l_a"
 	"shoot1_l_ironsight_a"
-	activity "ACT_VM_SECONDARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject2" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	snap
+	hidden
 }
 
 $sequence "shoot2_r" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	fadein 0
+	fadeout 0
+	addlayer "walklayerironsight"
+	addlayer "SlidePosition"
+	addlayer "BulletCounter"
+	addlayer "shoot2pose_r"
+	node "0"
+}
+
+$sequence "shoot2pose_r" {
 	"shoot2_r_a"
 	"shoot2_r_ironsight_a"
-	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	snap
+	hidden
 }
 
 $sequence "shoot2_l" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_SECONDARYATTACK" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	fadein 0
+	fadeout 0
+	addlayer "walklayerironsight"
+	addlayer "SlidePosition"
+	addlayer "BulletCounter"
+	addlayer "shoot2pose_l"
+	node "0"
+}
+
+$sequence "shoot2pose_l" {
 	"shoot2_l_a"
 	"shoot2_l_ironsight_a"
-	activity "ACT_VM_SECONDARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject2" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	snap
+	hidden
 }
 
 $sequence "shootlast_r" {
@@ -994,7 +1041,7 @@ $sequence "shootlast_l" {
 $sequence "reload" {
 	"reload_a"
 	"reload_a_i"
-	activity "ACT_VM_SECONDARY_RELOAD" 1
+	activity "ACT_VM_RELOAD" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_PB_Reload.Hand" }
@@ -1020,7 +1067,7 @@ $sequence "reload" {
 $sequence "reloadRightOnly" {
 	"reload_r_a"
 	"reload_r_a_i"
-	activity "ACT_VM_RELOAD" 1
+	activity "ACT_VM_MISSRIGHT" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_PB_Reload.Hand" }
@@ -1040,7 +1087,7 @@ $sequence "reloadRightOnly" {
 $sequence "reload_emptyRightOnly" {
 	"reload_re_a"
 	"reload_re_a_i"
-	activity "ACT_VM_RELOADEMPTY" 1
+	activity "ACT_VM_MISSRIGHT2" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_PB_Reload.Hand" }
@@ -1067,7 +1114,7 @@ $sequence "reload_emptyRightOnly" {
 $sequence "reload_empty" {
 	"reload_e_a"
 	"reload_e_a_i"
-	activity "ACT_VM_SECONDARY_RELOADEMPTY" 1
+	activity "ACT_VM_RELOADEMPTY" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_PB_Reload.Hand" }

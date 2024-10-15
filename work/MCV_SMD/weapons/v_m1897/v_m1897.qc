@@ -200,13 +200,17 @@ $animation "basePose_a" "v_m1897_anims\basePose_a.smd" {
 }
 
 $animation "ironsight" "v_m1897_anims\ironsight.smd" {
-	fps 0.5
+	fps 30
+	frame 0 1
+	numframes 60
 	
 	
 }
 
 $animation "ironsight_transition" "v_m1897_anims\ironsight_transition.smd" {
-	fps 0.5
+	fps 30
+	frame 0 1
+	numframes 60
 	
 	
 }
@@ -246,19 +250,25 @@ $animation "walk_a" "v_m1897_anims\walk_a.smd" {
 }
 
 $animation "HammerPosBase" "v_m1897_anims\HammerPosBase.smd" {
-	fps 0.5
+	fps 30
+	frame 0 1
+	numframes 60
 	
 	
 }
 
 $animation "HammerPosEmpty" "v_m1897_anims\HammerPosEmpty.smd" {
-	fps 0.5
+	fps 30
+	frame 0 1
+	numframes 60
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "HammerPosEmpty_corrective_animation" 0
 }
 
 $animation "HammerPosReady" "v_m1897_anims\HammerPosReady.smd" {
-	fps 0.5
+	fps 30
+	frame 0 1
+	numframes 60
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "HammerPosReady_corrective_animation" 0
 }
@@ -543,14 +553,14 @@ $sequence "ironsight_test" {
 $sequence "idle" {
 	"basePose_a"
 	"ironsight_transition"
+	"ironsight"
 	activity "ACT_VM_IDLE" 1
-	blend "ironsight" 0 0.5
-	blendwidth 2
+	blend "ironsight" 0 1
+	blendwidth 3
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
 	addlayer "runlayer"
-	blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
 	node "0"
 }
 

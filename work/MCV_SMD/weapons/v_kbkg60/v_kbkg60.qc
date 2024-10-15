@@ -485,7 +485,9 @@ $animation "Charge_e_a_i" "v_kbkg60_anims\Charge_e_a_i.smd" {
 }
 
 $animation "grenade_ironsight" "v_kbkg60_anims\grenade_ironsight.smd" {
-	fps 0.5
+	fps 30
+	frame 0 1
+	numframes 60
 	
 	
 }

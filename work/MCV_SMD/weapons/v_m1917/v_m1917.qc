@@ -267,13 +267,17 @@ $animation "basePose_a" "v_m1917_anims\basePose_a.smd" {
 }
 
 $animation "ironsight" "v_m1917_anims\ironsight.smd" {
-	fps 0.5
+	fps 30
+	frame 0 1
+	numframes 60
 	
 	
 }
 
 $animation "ironsight_transition" "v_m1917_anims\ironsight_transition.smd" {
-	fps 0.5
+	fps 30
+	frame 0 1
+	numframes 60
 	
 	
 }
@@ -319,13 +323,17 @@ $animation "idle_delayed_a" "v_m1917_anims\idle_delayed_a.smd" {
 }
 
 $animation "ironsight_delayed" "v_m1917_anims\ironsight_delayed.smd" {
-	fps 0.5
+	fps 30
+	frame 0 1
+	numframes 60
 	
 	
 }
 
 $animation "ironsight_transition_delayed" "v_m1917_anims\ironsight_transition_delayed.smd" {
-	fps 0.5
+	fps 30
+	frame 0 1
+	numframes 60
 	
 	
 }
@@ -337,13 +345,17 @@ $animation "idle_western_a" "v_m1917_anims\idle_western_a.smd" {
 }
 
 $animation "ironsight_western" "v_m1917_anims\ironsight_western.smd" {
-	fps 0.5
+	fps 30
+	frame 0 1
+	numframes 60
 	
 	
 }
 
 $animation "ironsight_transition_western" "v_m1917_anims\ironsight_transition_western.smd" {
-	fps 0.5
+	fps 30
+	frame 0 1
+	numframes 60
 	
 	
 }

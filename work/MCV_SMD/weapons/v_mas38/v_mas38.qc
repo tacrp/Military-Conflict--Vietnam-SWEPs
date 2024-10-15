@@ -423,8 +423,7 @@ $sequence "idle" {
 	fadeout 0.2
 	addlayer "walklayer"
 	addlayer "runlayer"
-	//blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
-	node "0"
+	//node "0"
 }
 
 $sequence "shoot1" {
@@ -438,8 +437,7 @@ $sequence "shoot1" {
 	addlayer "walklayer"
 	addlayer "runlayer"
 	addlayer "shootpose1"
-	//blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
-	node "0"
+	//node "0"
 }
 
 $sequence "shoot2" {
@@ -453,8 +451,7 @@ $sequence "shoot2" {
 	addlayer "walklayer"
 	addlayer "runlayer"
 	addlayer "shootpose2"
-	//blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
-	node "0"
+	//node "0"
 }
 
 $sequence "shoot3" {
@@ -468,8 +465,7 @@ $sequence "shoot3" {
 	addlayer "walklayer"
 	addlayer "runlayer"
 	addlayer "shootpose3"
-	//blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
-	node "0"
+	//node "0"
 }
 
 $sequence "shootpose1" {

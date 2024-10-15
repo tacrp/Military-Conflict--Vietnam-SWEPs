@@ -201,13 +201,17 @@ $animation "basePose_a" "v_stoner63_autorifle_anims\basePose_a.smd" {
 }
 
 $animation "ironsight" "v_stoner63_autorifle_anims\ironsight.smd" {
-	fps 0.5
+	fps 30
+	frame 0 1
+	numframes 60
 	
 	
 }
 
 $animation "ironsight_transition" "v_stoner63_autorifle_anims\ironsight_transition.smd" {
-	fps 0.5
+	fps 30
+	frame 0 1
+	numframes 60
 	
 	
 }
@@ -425,13 +429,17 @@ $animation "deploy_s_a_i" "v_stoner63_autorifle_anims\deploy_s_a_i.smd" {
 }
 
 $animation "deploy_a" "v_stoner63_autorifle_anims\deploy_a.smd" {
-	fps 0.5
+	fps 30
+	frame 0 1
+	numframes 60
 	
 	
 }
 
 $animation "ironsightdeploy" "v_stoner63_autorifle_anims\ironsightdeploy.smd" {
-	fps 0.5
+	fps 30
+	frame 0 1
+	numframes 60
 	
 	
 }
@@ -532,14 +540,14 @@ $sequence "ironsight_test" {
 $sequence "idle" {
 	"basePose_a"
 	"ironsight_transition"
+	"ironsight"
 	activity "ACT_VM_IDLE" 1
-	blend "ironsight" 0 0.5
-	blendwidth 2
+	blend "ironsight" 0 1
+	blendwidth 3
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
 	addlayer "runlayer"
-	blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
 	node "0"
 }
 

@@ -36,24 +36,6 @@ function SWEP:PrimaryAttack()
 
     if self:GetNeedTriggerPress() then return end
 
-    if self:GetAkimbo() then
-        if self.LastShotAnimation and self:Clip1() == 1 then
-            self:PlayAnimation(ACT_VM_SHOOTLAST, 0.5)
-        elseif self.LastShotAnimation and self:Clip1() == 2 then
-            self:PlayAnimation(ACT_VM_PRIMARYATTACK_EMPTY, 0.5)
-        elseif self:Clip1() % 2 == 0 then
-            self:PlayAnimation(ACT_VM_PRIMARYATTACK, 0.5)
-        else
-            self:PlayAnimation(ACT_VM_SECONDARYATTACK, 0.5)
-        end
-    else
-        if self.LastShotAnimation and self:Clip1() == 1 then
-            self:PlayAnimation(ACT_VM_SHOOTLAST, 0.5)
-        else
-            self:PlayAnimation(ACT_VM_PRIMARYATTACK, 0.5)
-        end
-    end
-
     local fm = self:GetFiremodeValue()
     local fmmult = 1
 
@@ -67,6 +49,32 @@ function SWEP:PrimaryAttack()
         self:SetNextPrimaryFire(CurTime() + (60 / self.FireRate_Slow) * fmmult)
     else
         self:SetNextPrimaryFire(CurTime() + (60 / self.FireRate) * fmmult)
+    end
+
+    if self:GetAkimbo() then
+        if fm == MCV.FIREMODE_VOLLEY then
+            self:PlayAnimation(ACT_VM_RECOIL1, 0.5)
+        else
+            if self.LastShotAnimation and self:Clip1() == 1 then
+                self:PlayAnimation(ACT_VM_SHOOTLAST, 0.5)
+            elseif self.LastShotAnimation and self:Clip1() == 2 then
+                self:PlayAnimation(ACT_VM_PRIMARYATTACK_EMPTY, 0.5)
+            elseif self:Clip1() % 2 == 0 then
+                self:PlayAnimation(ACT_VM_PRIMARYATTACK, 0.5)
+            else
+                self:PlayAnimation(ACT_VM_SECONDARYATTACK, 0.5)
+            end
+        end
+    else
+        if fm == MCV.FIREMODE_VOLLEY then
+            self:PlayAnimation(ACT_VM_RECOIL1, 0.5)
+        else
+            if self.LastShotAnimation and self:Clip1() == 1 then
+                self:PlayAnimation(ACT_VM_SHOOTLAST, 0.5)
+            else
+                self:PlayAnimation(ACT_VM_PRIMARYATTACK, 0.5)
+            end
+        end
     end
 
     self:SetLastRecoilTime(CurTime())
@@ -91,6 +99,10 @@ function SWEP:PrimaryAttack()
 
     if fm == MCV.FIREMODE_VOLLEY then
         recoilmult = self:Clip1()
+    end
+
+    if self:GetAkimbo() then
+        recoilmult = recoilmult * 1.25
     end
 
     local recoilup = Lerp(self:GetSightAmount(), self.ViewSlideRecoilUp, self.ViewSlideRecoilIronsightUp) * recoilmult

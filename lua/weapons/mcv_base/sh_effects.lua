@@ -19,7 +19,7 @@ function SWEP:DoMuzzle(alt)
         muzz_qca = 4
     end
 
-    if self:GetAkimbo() and self:Clip1() % 2 == 1 then
+    if self:GetAkimbo() and self:Clip1() % 2 == 1 and self:GetFiremodeValue() != MCV.FIREMODE_VOLLEY then
         muzz_qca = 4
     end
 
@@ -29,6 +29,15 @@ function SWEP:DoMuzzle(alt)
     data:SetHitBox(muzz_qca_wm or muzz_qca) // unused field (integer between 0-2047)
 
     util.Effect( "mcv_muzzleeffect", data )
+
+    if self:GetAkimbo() and self:Clip1() > 1 and self:GetFiremodeValue() == MCV.FIREMODE_VOLLEY then
+        local data2 = EffectData()
+        data:SetEntity(self)
+        data:SetAttachment(4)
+        data:SetHitBox(muzz_qca_wm or muzz_qca) // unused field (integer between 0-2047)
+
+        util.Effect( "mcv_muzzleeffect", data2 )
+    end
 
     if CLIENT and self:GetOwner() == LocalPlayer() then
         self:DoMuzzleLight()

@@ -14,6 +14,7 @@ SWEP.Caliber = "12 Gauge Shell"
 SWEP.Slot = 2
 
 SWEP.ViewModel = "models/weapons/mcv/v_izh43_sog.mdl"
+SWEP.ViewModelAkimbo = "models/weapons/mcv/v_dual_izh43.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_izh43_sog.mdl"
 
 SWEP.BodyGroups = ""
@@ -42,6 +43,7 @@ SWEP.Firemodes = {
 
 SWEP.LastShotAnimation = false
 SWEP.ShotgunReload = false
+SWEP.HasAkimbo = true
 
 // View slide from recoil
 SWEP.ViewSlideRecoilUp = 6

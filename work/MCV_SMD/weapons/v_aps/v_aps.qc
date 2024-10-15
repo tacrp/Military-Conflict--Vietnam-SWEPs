@@ -743,8 +743,7 @@ $sequence "idle" {
 	fadeout 0.2
 	addlayer "walklayer"
 	addlayer "runlayer"
-	//blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
-	addlayer "BulletCounter"
+	//addlayer "BulletCounter"
 	addlayer "SlidePosition"
 }
 

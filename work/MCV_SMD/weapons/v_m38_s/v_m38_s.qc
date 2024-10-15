@@ -224,25 +224,33 @@ $animation "basePose_a" "v_m38_s_anims\basePose_a.smd" {
 }
 
 $animation "ironsight" "v_m38_s_anims\ironsight.smd" {
-	fps 0.5
+	fps 30
+	frame 0 1
+	numframes 60
 	
 	
 }
 
 $animation "ironsight_transition" "v_m38_s_anims\ironsight_transition.smd" {
-	fps 0.5
+	fps 30
+	frame 0 1
+	numframes 60
 	
 	
 }
 
 $animation "hammerdefault" "v_m38_s_anims\hammerdefault.smd" {
-	fps 0.5
+	fps 30
+	frame 0 1
+	numframes 60
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "hammerdefault_corrective_animation" 0
 }
 
 $animation "hammerforward" "v_m38_s_anims\hammerforward.smd" {
-	fps 0.5
+	fps 30
+	frame 0 1
+	numframes 60
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "hammerforward_corrective_animation" 0
 }
@@ -496,7 +504,9 @@ $animation "pickup_e_a_i" "v_m38_s_anims\pickup_e_a_i.smd" {
 }
 
 $animation "grenade_ironsight" "v_m38_s_anims\grenade_ironsight.smd" {
-	fps 0.5
+	fps 30
+	frame 0 1
+	numframes 60
 	
 	
 }
@@ -674,14 +684,14 @@ $sequence "ironsight_test" {
 $sequence "idle" {
 	"basePose_a"
 	"ironsight_transition"
+	"ironsight"
 	activity "ACT_VM_IDLE" 1
-	blend "ironsight" 0 0.5
-	blendwidth 2
+	blend "ironsight" 0 1
+	blendwidth 3
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
 	addlayer "runlayer"
-	blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
 	node "0"
 }
 

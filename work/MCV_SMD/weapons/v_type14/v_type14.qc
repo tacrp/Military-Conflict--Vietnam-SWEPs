@@ -222,13 +222,17 @@ $animation "basePose_a" "v_type14_anims\basePose_a.smd" {
 }
 
 $animation "ironsight" "v_type14_anims\ironsight.smd" {
-	fps 0.5
+	fps 30
+	frame 0 1
+	numframes 60
 	
 	
 }
 
 $animation "ironsight_transition" "v_type14_anims\ironsight_transition.smd" {
-	fps 0.5
+	fps 30
+	frame 0 1
+	numframes 60
 	
 	
 }
@@ -488,7 +492,6 @@ $sequence "idle" {
 	fadeout 0.2
 	addlayer "walklayer"
 	addlayer "runlayer"
-	blendlayer "ironsight_test" 0 0 1 0 poseparameter ironsight
 	addlayer "SlidePosition"
 	node "0"
 }

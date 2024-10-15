@@ -610,7 +610,9 @@ $animation "pickup_e_a_i" "v_kar98_s_anims\pickup_e_a_i.smd" {
 }
 
 $animation "grenade_ironsight" "v_kar98_s_anims\grenade_ironsight.smd" {
-	fps 0.5
+	fps 30
+	frame 0 1
+	numframes 60
 	
 	
 }

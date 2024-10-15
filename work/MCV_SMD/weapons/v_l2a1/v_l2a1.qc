@@ -433,7 +433,9 @@ $animation "deploy_a" "v_l2a1_anims\deploy_a.smd" {
 }
 
 $animation "ironsightdeploy" "v_l2a1_anims\ironsightdeploy.smd" {
-	fps 0.5
+	fps 30
+	frame 0 1
+	numframes 60
 	
 	
 }

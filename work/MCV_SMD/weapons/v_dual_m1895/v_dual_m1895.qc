@@ -213,13 +213,17 @@ $animation "basePose_a" "v_dual_m1895_anims\basePose_a.smd" {
 }
 
 $animation "ironsight" "v_dual_m1895_anims\ironsight.smd" {
-	fps 0.5
+	fps 30
+	frame 0 1
+	numframes 60
 	
 	
 }
 
 $animation "ironsight_transition" "v_dual_m1895_anims\ironsight_transition.smd" {
-	fps 0.5
+	fps 30
+	frame 0 1
+	numframes 60
 	
 	
 }
@@ -257,13 +261,17 @@ $animation "idle_delayed_a" "v_dual_m1895_anims\idle_delayed_a.smd" {
 }
 
 $animation "ironsight_delayed" "v_dual_m1895_anims\ironsight_delayed.smd" {
-	fps 0.5
+	fps 30
+	frame 0 1
+	numframes 60
 	
 	
 }
 
 $animation "ironsight_transition_delayed" "v_dual_m1895_anims\ironsight_transition_delayed.smd" {
-	fps 0.5
+	fps 30
+	frame 0 1
+	numframes 60
 	
 	
 }

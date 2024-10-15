@@ -723,7 +723,9 @@ $animation "pickup_end_i" "v_sks_anims\pickup_end_i.smd" {
 }
 
 $animation "grenade_ironsight" "v_sks_anims\grenade_ironsight.smd" {
-	fps 0.5
+	fps 30
+	frame 0 1
+	numframes 60
 	
 	
 }
