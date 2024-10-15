@@ -475,60 +475,70 @@ $animation "walk_a" "v_aps_anims\walk_a.smd" {
 
 $animation "shootlast_a" "v_aps_anims\shootlast_a.smd" {
 	fps 30
+	numframes 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "shootlast_a_corrective_animation" 0
 }
 
 $animation "shootlast_ironsight_a" "v_aps_anims\shootlast_ironsight_a.smd" {
 	fps 30
+	numframes 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "shootlast_ironsight_a_corrective_animation" 0
 }
 
 $animation "shoot1_a" "v_aps_anims\shoot1_a.smd" {
 	fps 30
+	numframes 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "shoot1_a_corrective_animation" 0
 }
 
 $animation "shoot1_ironsight_a" "v_aps_anims\shoot1_ironsight_a.smd" {
 	fps 30
+	numframes 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "shoot1_ironsight_a_corrective_animation" 0
 }
 
 $animation "shoot2_a" "v_aps_anims\shoot2_a.smd" {
 	fps 30
+	numframes 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "shoot2_a_corrective_animation" 0
 }
 
 $animation "shoot2_ironsight_a" "v_aps_anims\shoot2_ironsight_a.smd" {
 	fps 30
+	numframes 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "shoot2_ironsight_a_corrective_animation" 0
 }
 
 $animation "shoot3_a" "v_aps_anims\shoot3_a.smd" {
 	fps 30
+	numframes 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "shoot3_a_corrective_animation" 0
 }
 
 $animation "shoot3_ironsight_a" "v_aps_anims\shoot3_ironsight_a.smd" {
 	fps 30
+	numframes 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "shoot3_ironsight_a_corrective_animation" 0
 }
 
 $animation "shoot4_a" "v_aps_anims\shoot4_a.smd" {
 	fps 30
+	numframes 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "shoot4_a_corrective_animation" 0
 }
 
 $animation "shoot4_ironsight_a" "v_aps_anims\shoot4_ironsight_a.smd" {
 	fps 30
+	numframes 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "shoot4_ironsight_a_corrective_animation" 0
 }
@@ -791,8 +801,7 @@ $sequence "shoot1" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 0.5
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	snap
 	addlayer "walklayer"
 	addlayer "runlayer"
 	addlayer "BulletCounter"
@@ -807,8 +816,7 @@ $sequence "shoot2" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 0.5
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	snap
 	addlayer "walklayer"
 	addlayer "runlayer"
 	addlayer "BulletCounter"
@@ -856,8 +864,7 @@ $sequence "shootlast" {
 	blend "ironsight" 0 0.5
 	blend "empty" 0 1
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	snap
 	addlayer "walklayer"
 	addlayer "runlayer"
 	addlayer "BulletCounter"

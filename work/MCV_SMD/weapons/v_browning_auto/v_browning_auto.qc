@@ -211,7 +211,6 @@ $animation "Default" "v_browning_auto_anims\Default.smd" {
 
 $animation "Slideback" "v_browning_auto_anims\Slideback.smd" {
 	fps 30
-	loop
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "Slideback_corrective_animation" 0
 }
@@ -231,20 +230,17 @@ $animation "ShootStill" "v_browning_auto_anims\ShootStill.smd" {
 
 $animation "basePose_a" "v_browning_auto_anims\basePose_a.smd" {
 	fps 30
-	loop
 	numframes 60
 }
 
 $animation "ironsight" "v_browning_auto_anims\ironsight.smd" {
 	fps 30
-	loop
 	frame 1 1
 	numframes 60
 }
 
 $animation "ironsight_transition" "v_browning_auto_anims\ironsight_transition.smd" {
 	fps 30
-	loop
 	numframes 60
 }
 
@@ -600,8 +596,7 @@ $sequence "shoot1" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	snap
 	addlayer "shootpose1"
 	addlayer "walklayerironsight"
 	addlayer "runlayer"
@@ -617,8 +612,7 @@ $sequence "shoot2" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	snap
 	addlayer "shootpose2"
 	addlayer "walklayerironsight"
 	addlayer "runlayer"
@@ -634,8 +628,7 @@ $sequence "shoot3" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	snap
 	addlayer "shootpose3"
 	addlayer "walklayerironsight"
 	addlayer "runlayer"

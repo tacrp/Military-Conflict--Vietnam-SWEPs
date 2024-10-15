@@ -16,7 +16,12 @@ I highly recommend using the version of StudioMDL included with MCV itself. It c
 
 NOTE: You will also need to do this process for pumping/cycling $sequences on weapons that have them. Do the above steps for your cycle $sequence and make sure you call "ACT_VM_RELOAD_INSERT_PULL" in your new $sequence. 
 
-6. Add the "snap" command to your shoot $sequences. If the weapon jerks awkwardly after shooting, instead of adding "snap" to your shoot $sequences, define their fadein and fadeout as both 0 (keep "snap" on the shootposes). 
+6. Add the "snap" command to your shoot $sequences and remove the "loop" command from the following $animations:
+
+- basePose_a
+- ironsight_transition
+- ironsight
+- Any $animation related to slide/bolt movement (usually called "slideback", "slideforward", "Default" or something close to that. Check whatever the bolt movement $sequence calls)
 
 7. Go to all the $animations referenced in the idle $sequence and add:
 
@@ -47,7 +52,9 @@ Compile your model and see if everything worked.
 - For weapons that use a single model with bodygroups to represent multiple variants, you may need to add a blank "dummy" bodygroup to the QC to make sure they're set correctly by Lua in-game. Be sure to add the bodygroup as the second one in the list (giving it an ID of 1) and be sure to account for it when defining bodygroups in the weapon's Lua.
 DO NOT do this if the weapon has bayonet functionality. Only do it on weapons which lack a bayonet.
 
-- This method so far has only worked on the Kar 98 but I'm still noting it here. The jerking at the end of firing anims can be fixed by adding "numframes <length of the animation>" to all shoot $animations. This eliminates the need to add "snap" to your idle or spoof a snap with zeroed fadein and fadeout on your shoot $sequences.
+- This is the old method for fixing jerky firing anims that might still be useful occasionally: Instead of adding "snap" to your shoot $sequences, define the fadein and fadeout of the $sequences to be 0. This causes pump/bolt-actions to look weird, however and can be very noticable if the firing animations are long.
+
+- If certain firing animations still jerk even with all the afformentioned fixes, simply remove them from the QC so the weapon doesn't call them ingame. Obv only do this if you have working firing anims to use.
 
 
 ## Setting up worldmodels:
