@@ -22,7 +22,7 @@ SWEP.BulletBodygroups = nil
 
 SWEP.WeaponSelectIcon = NULL
 
-SWEP.ViewModelFOV = 90
+SWEP.ViewModelFOV = 80
 SWEP.SightedViewModelFOV = 40
 
 // Stats

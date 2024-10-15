@@ -9,7 +9,13 @@ function SWEP:ToggleUBGL()
     self:SetTimer(t + 0.5, function()
         if !IsValid(self) then return end
         if !self:GetGrenadeLauncher() then
-            self:PlayAnimation(ACT_VM_DRAWFULL_M203, 1, true)
+            self:RestoreClip2(self.Secondary.ClipSize)
+
+            if self:Clip2() > 0 then
+                self:PlayAnimation(ACT_VM_DRAWFULL_M203, 1, true)
+            else
+                self:PlayAnimation(ACT_VM_DRAW_M203, 1, true)
+            end
             self:SetGrenadeLauncher(true)
         else
             self:PlayAnimation(ACT_VM_READY, 1, true)
