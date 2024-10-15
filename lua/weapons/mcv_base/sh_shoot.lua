@@ -42,20 +42,25 @@ function SWEP:PrimaryAttack()
         self:PlayAnimation(ACT_VM_PRIMARYATTACK, 0.5)
     end
 
-    self:TakePrimaryAmmo(1)
+    local fm = self:GetFiremodeValue()
 
-    if self:GetFiremodeValue() == MCV.FIREMODE_FAST then
+    if fm == MCV.FIREMODE_FAST then
         self:SetNextPrimaryFire(CurTime() + (60 / self.FireRate_Fast))
-    elseif self:GetFiremodeValue() == MCV.FIREMODE_SLOW then
+    elseif fm == MCV.FIREMODE_SLOW then
         self:SetNextPrimaryFire(CurTime() + (60 / self.FireRate_Slow))
     else
         self:SetNextPrimaryFire(CurTime() + (60 / self.FireRate))
     end
+
     self:SetLastRecoilTime(CurTime())
 
     self:BulletAttack()
 
-    self:EmitSound(self.SoundSingleShot)
+    if fm == MCV.FIREMODE_VOLLEY and self:Clip1() > 1 then
+        self:EmitSound(self.SoundDoubleShot)
+    else
+        self:EmitSound(self.SoundSingleShot)
+    end
 
     local clip_percentage = self:Clip1() / self.Primary.ClipSize
 
@@ -65,8 +70,14 @@ function SWEP:PrimaryAttack()
 
     owner:SetVelocity(self:GetAimVector() * -self.RecoilPushbackValue)
 
-    local recoilup = Lerp(self:GetSightAmount(), self.ViewSlideRecoilUp, self.ViewSlideRecoilIronsightUp)
-    local recoilright = Lerp(self:GetSightAmount(), self.ViewSlideRecoilRight, self.ViewSlideRecoilIronsightRight)
+    local recoilmult = 1
+
+    if fm == MCV.FIREMODE_VOLLEY then
+        recoilmult = self:Clip1()
+    end
+
+    local recoilup = Lerp(self:GetSightAmount(), self.ViewSlideRecoilUp, self.ViewSlideRecoilIronsightUp) * recoilmult
+    local recoilright = Lerp(self:GetSightAmount(), self.ViewSlideRecoilRight, self.ViewSlideRecoilIronsightRight) * recoilmult
 
     owner:ViewPunch(Angle(-recoilup, recoilright * util.SharedRandom("MCVRecoilLeftRight", -1, 1), 0))
 
@@ -75,6 +86,12 @@ function SWEP:PrimaryAttack()
             self:DoEject()
         end
         self:DoMuzzle()
+    end
+
+    if fm == MCV.FIREMODE_VOLLEY then
+        self:TakePrimaryAmmo(self:Clip1())
+    else
+        self:TakePrimaryAmmo(1)
     end
 
     local firemode = self:GetFiremodeValue()
@@ -118,9 +135,15 @@ function SWEP:BulletAttack()
 
     owner:LagCompensation(true)
 
+    local num = self.Num
+
+    if self:GetFiremodeValue() == MCV.FIREMODE_VOLLEY then
+        num = num * self:Clip1()
+    end
+
     owner:FireBullets({
         Damage = self.DamageGeneric,
-        Num = self.Num,
+        Num = num,
         Src = owner:GetShootPos(),
         Dir = self:GetAimVector(),
         Spread = Vector(spread, spread, spread),
@@ -228,9 +251,14 @@ function SWEP:ChangeFiremode()
 
     self:SetFiremode(fm)
 
-    if fm == 1 then
-        self:PlayAnimation(ACT_VM_FIREMODE, -1, true)
+    if self:HasAnimation(ACT_VM_FIREMODE) then
+        if fm == 1 then
+            self:PlayAnimation(ACT_VM_FIREMODE, -1, true)
+        else
+            self:PlayAnimation(ACT_VM_FIREMODE, 1, true)
+        end
     else
-        self:PlayAnimation(ACT_VM_FIREMODE, 1, true)
+        self:SetAnimLockTime(CurTime() + 0.25)
+        self:EmitSound("MCV_Weapon_Foley_AK47.DrawMetal")
     end
 end

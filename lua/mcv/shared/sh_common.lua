@@ -8,6 +8,7 @@ MCV.FIREMODE_BOLT = 6
 MCV.FIREMODE_PUMP = 7
 MCV.FIREMODE_FAST = 8
 MCV.FIREMODE_SLOW = 9
+MCV.FIREMODE_VOLLEY = 10
 
 
 MCV.FiremodeNames = {
@@ -21,6 +22,7 @@ MCV.FiremodeNames = {
     [MCV.FIREMODE_PUMP] = "Pump-Action",
 	[MCV.FIREMODE_FAST] = "Fast-Fire",
 	[MCV.FIREMODE_SLOW] = "Slow-Fire",
+    [MCV.FIREMODE_VOLLEY] = "Volley"
 }
 
 MCV.CancelMultipliers = {

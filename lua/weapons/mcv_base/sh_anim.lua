@@ -57,3 +57,7 @@ function SWEP:Idle()
 
     self:SetReady(true)
 end
+
+function SWEP:HasAnimation(act)
+    return self:LookupSequence(act) != -1
+end
