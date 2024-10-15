@@ -982,7 +982,7 @@ $sequence "grenade_shoot" {
 	addlayer "walklayerironsight"
 	addlayer "grenade_shootpose"
 	fadein 0
-	fadeout 0.2
+	fadeout 0
 }
 
 $sequence "grenade_shootpose" {

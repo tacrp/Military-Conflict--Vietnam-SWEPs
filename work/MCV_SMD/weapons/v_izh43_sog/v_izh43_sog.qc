@@ -441,6 +441,7 @@ $sequence "Firstdraw" {
 	
 }
 
+
 $sequence "shoot1" {
 	"basePose_a"
 	"ironsight_transition"
@@ -448,8 +449,8 @@ $sequence "shoot1" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0.2
-	fadeout 0.2
+	fadein 0
+	fadeout 0
 	addlayer "walklayer"
 	addlayer "runlayer"
 	addlayer "shoot1_pose"
@@ -473,8 +474,8 @@ $sequence "shoot2" {
 	activity "ACT_VM_RECOIL1" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0.2
-	fadeout 0.2
+	fadein 0
+	fadeout 0
 	addlayer "walklayer"
 	addlayer "runlayer"
 	addlayer "shoot2_pose"
