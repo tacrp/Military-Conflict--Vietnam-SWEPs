@@ -300,8 +300,8 @@ Melee Weapons:
 
 Submachine Guns:
 
-- Cobra SMG
-- Kommando LDP
+- Cobra Mk1 [X]
+- LDP Kommando
 
 
 Shotguns:
