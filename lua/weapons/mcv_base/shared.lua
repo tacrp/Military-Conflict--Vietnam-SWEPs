@@ -14,9 +14,9 @@ SWEP.ViewModel = "models/weapons/mcv/v_sks.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_sks.mdl"
 
 SWEP.BodyGroups = ""
-SWEP.BayonetBodygroup = 1
-SWEP.GrenadeLauncherBodygroup = 2
-SWEP.GrenadeBodygroup = 3
+SWEP.BayonetBodygroup = 0
+SWEP.GrenadeLauncherBodygroup = 0
+SWEP.GrenadeBodygroup = 0
 
 SWEP.BulletBodygroups = nil
 
