@@ -21,6 +21,7 @@ NOTE: You will also need to do this process for pumping/cycling $sequences on we
 - basePose_a
 - ironsight_transition
 - ironsight
+- runIdle_a (if the model has such an animation)
 - Any $animation related to slide/bolt movement (usually called "slideback", "slideforward", "Default" or something close to that. Check whatever the bolt movement $sequence calls)
 
 7. Go to all the $animations referenced in the idle $sequence and add:
