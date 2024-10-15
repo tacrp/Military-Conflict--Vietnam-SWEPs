@@ -1,0 +1,57 @@
+// Dynamite
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"				"#weapon_dynamite"
+	"origin"				"#china"
+	"viewmodel"				"models/weapons/v_dynamite.mdl"
+	"playermodel"				"models/weapons/w_dynamite.mdl"
+	"anim_prefix"				"molotov"
+	"bucket"				"6"
+	"bucket_position"			"0"
+	"item_flags"				"0"
+
+	"WeaponType"				"C4"
+
+	// Set model's bodygroups
+	BodygroupData
+	{		
+		"explosive"		"0"
+	}
+
+	"primary_ammo"				"explosive_charge"
+
+	"clip_size"				"-1/1"
+	"default_clip"				"1"	// ammo given by default
+
+	"weight"				"5"
+
+	"ExplosionDamage"			"500"
+	"ExplosionRadius"			"500"
+
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	SoundData
+	{
+		"single_shot"		""
+		"double_shot"		""
+		"reload"		""
+		"special1"		""
+		"special2"		""
+		"nearlyempty"		""
+		"empty"			"Weapon_Generic.ClipEmpty_01"
+		
+		// 3RD PERSON PLAYER SECTION
+		"player_reload"		""
+		"player_reload_loop"		""
+		"player_reload_cycle"		""
+
+		"player_grenade_pullpin"		""
+		"player_grenade_on"		""
+		"player_equipment_on"		""
+		"player_equipment_off"		""
+		"player_deploy"		"Weapon_Foley_ThirdPerson_Shared.DrawSmall"
+		"player_holster"		"Weapon_Foley_ThirdPerson_Shared.HolsterSmall"
+		"player_bash"		"Weapon_Foley_ThirdPerson_Shared.BashFast"
+	}
+}

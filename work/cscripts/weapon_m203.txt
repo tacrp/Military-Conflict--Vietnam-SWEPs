@@ -1,0 +1,182 @@
+// DUPLICATE OF weapon_m16a1_m203.txt but with different bucket
+// This is useful if player wants to select grenade launcher directly
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"				"#weapon_M203"
+	"origin"				"#united_states_of_america"
+	"viewmodel"				"models/weapons/v_m203.mdl"
+	"playermodel"				"models/weapons/w_m203.mdl"
+	"anim_prefix"				"m203"
+	"bucket"				"3"
+	"bucket_position"			"0"
+	"item_flags"				"0"
+	"SupportedFireModes"		"Auto+Semi"
+
+	"WeaponType"				"GrenadeLauncher"
+
+	"primary_ammo"				"5.56mm" // caliber
+	"secondary_ammo"			"40mm_grenade"
+
+	"clip_size"				"-1/2"	// clip size/max ammo
+	"clip2_size"				"-1/2"	// ditto for secondary ammo (-1 means we don't use clips for this ammo type)
+
+	"default_clip"				"2"	// ammo given by default
+	"default_clip2"				"2"	// ditto for second ammo type
+
+	"FireRate"				"700"	// RPM
+	"SecondaryFireRate"			"50"	// RPM
+
+	"muzzle_velocity"			"960" 	// m/s, or 3.15ft/s
+	"bullet_weight"				"0.23"	// KG
+
+	"gl_velocity"				"60" 	// m/s, grenade launcher shoot velocity
+	
+	"ExplosionDamage"			"125"	// for explosive weapons
+	"ExplosionRadius"			"175"	// units, for explosive weapons
+
+	"BulletSpreadDegrees"			"3"	// degrees
+	"BulletSpreadDegreesIronsighted"	"1"	// degrees
+
+	"IronsightSpeedScale"			"0.7" // how long ironsight transition will last
+	
+	//
+	// Bullet spread multiplier according to current stance
+	//
+	"CrouchSpreadMultiplier"		"1"
+	"ProneSpreadMultiplier"			"0.75"
+	"StandMoveSpreadMultiplier"		"2"
+	"SneakMoveSpreadMultiplier"		"1.5"
+	"CrouchMoveSpreadMultiplier"		"1.25"
+	"JumpSpreadMultiplier"			"4.0"
+
+	// weapon recoil
+	// minimal possible kick
+	//"ViewMinKickPITCH"			"-0.65"	// degrees
+	//"ViewMinKickYAW"			"0.85"	// degrees
+
+	// maximal possible kick
+	//"ViewKickPITCH"				"0.9"	// degrees
+	//"ViewKickYAW"				"-0.7"	// degrees
+
+	"ShakeScale"				"2.5"	// camera shake effect, does not affect accuracy
+	"ShakeFreq"				"20.0" 	// how many shakes per second
+	"ShakeDuration"				"0.4"	// sec
+
+	//
+	// fixed view slide from recoil
+	//
+	ViewSlideRecoil
+	{
+		"Up"	"3"
+		"Right"	"0.5"
+	}
+
+	ViewSlideRecoilIronsight
+	{
+		"Up"	"0.15"
+		"Right"	"0.25"
+	}
+
+	"CrosshairMinDistance"			"4"
+	"CrosshairDeltaDistance"		"4"
+
+	"weight"				"7"
+
+	////////////////////////////
+	// Weapon Particles Start //
+	////////////////////////////
+	
+ 	"MuzzleParticle"			"vietnam_muzzleflash_rifle_type1_fp"
+ 	"MuzzleParticle_Smoke"		"vietnam_muzzleflash_rifle_type1_fp_smoke"
+ 	"MuzzleParticle_Ironsighted"			"vietnam_muzzleflash_rifle_type1_fp_is"
+ 	"MuzzleParticle_IronsightedSmoke"		"vietnam_muzzleflash_rifle_type1_fp_is_smoke"
+	
+    "MuzzleParticle3rdPerson"		"vietnam_muzzleflash_rifle_type1_tp"
+    "ParticleAttachType"			"1"	// 0 - PATTACH_POINT; 1 - PATTACH_POINT_FOLLOW
+
+    "MuzzleSmokeParticle"			"vietnam_muzzleflash_generic_aftersmoke"
+    "MuzzleSmokeShotCount"			"5"
+
+	"EjectBrassType"			"17" // GREN
+	"EjectBrassTrail"			"vietnam_weaponeffect_shelleject_trail"
+	"EjectBrassParticle"			"vietnam_weaponeffect_shelleject_side"
+	"EjectBrassSound"			"Bounce.Shell"
+
+	// tracer particles
+	"TracerParticle"			"null"
+	"TracerParticle2"			"null"
+	"TracerRandomness"			"6"
+	"TracerFrequency"			"1"
+	
+	//////////////////////////
+	// Weapon Particles End //
+	//////////////////////////
+
+	// bullet penetration settings | Depth
+	"MetalPenetrationDepth"			"3.0"	// in units
+	"GlassPenetrationDepth"			"9.0"
+	"ConcretePenetrationDepth"		"5.0"
+	"WoodPenetrationDepth"			"13.0"
+	"OtherPenetrationDepth"			"7.0"
+
+	// bullet penetration settings | Damage Reduction | Higher value - less damage after penetration
+	"MetalDamageModifier"			"2"
+	"GlassDamageModifier"			"1.2"
+	"ConcreteDamageModifier"		"3"
+	"WoodDamageModifier"			"1.5"
+	"OtherDamageModifier"			"1.2"
+
+	"IronSight"				"1"
+	"IronsightedFovOffset"			"-15"
+
+	// viewmodel offset when weapon ironsighted
+	"ironsightforward"			"0"
+	"ironsightright"			"0"
+	"ironsightup"				"0"
+	"ironsightpitch"			"0"
+	"ironsightyaw"				"0"
+	"ironsightroll"				"0"
+
+	// viewmodel offset in non-ironsighted case
+        CustomOffset
+	{
+		"forward"	"0"
+		"right"		"0"
+		"up"		"0"
+		"pitch"		"0"
+		"yaw"		"0"
+		"roll"		"0"
+	}
+
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	SoundData
+	{
+		"single_shot"		"Weapon_M16A1.Single"
+		"double_shot"		"Weapon_M203.Single"
+		"reload"		""
+		"special1"		""
+		"special2"		""
+		"nearlyempty"		"Weapon_Generic.NearlyEmptyClick"
+		"empty"			"Weapon_Generic.ClipEmpty_01"
+
+		// NPC SECTION
+		"single_shot_npc"	""
+		"double_shot_npc"	""
+		"reload_npc"		""
+		
+		// 3RD PERSON PLAYER SECTION
+		"player_reload"		"Weapon_Foley_ThirdPerson_M16A1.Reload"
+		"player_reload_loop"		""
+		"player_reload_cycle"		""
+
+		"player_grenade_pullpin"		""
+		"player_grenade_on"		""
+		"player_equipment_on"		"Weapon_Foley_ThirdPerson_Shared.BayonetOn"
+		"player_equipment_off"		"Weapon_Foley_ThirdPerson_Shared.BayonetOff"
+		"player_deploy"		"Weapon_Foley_ThirdPerson_Shared.Draw"
+		"player_holster"		"Weapon_Foley_ThirdPerson_Shared.Holster"
+		"player_bash"		"Weapon_Foley_ThirdPerson_Shared.BashFast"
+	}
+}

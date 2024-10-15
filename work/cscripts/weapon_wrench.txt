@@ -1,0 +1,59 @@
+// WRENCH
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"				"#weapon_WRENCH"
+	"viewmodel"				"models/weapons/v_wrench.mdl"
+	"playermodel"				"models/weapons/w_wrench.mdl"
+	"anim_prefix"				"knife"
+	"bucket"				"4"
+	"bucket_position"			"0"
+	"item_flags"				"0"
+
+	"WeaponType"				"Melee"
+
+	"primary_ammo"				"None"
+	"secondary_ammo"			"None"
+
+	"clip_size"				"-1"
+
+	"FireRate"				"75"	// RPM
+	
+	"DamageGeneric"				"40"
+
+	"weight"				"5"
+
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	SoundData
+	{
+		"single_shot"		""
+		"double_shot"		""
+		"reload"		""
+		"special1"		""
+		"special2"		""
+		"nearlyempty"		""
+		"empty"			"Weapon_Generic.ClipEmpty_01"
+
+		"melee_hit"		"" // TEMP
+		"melee_hit_world"	"" // TEMP
+
+		// NPC SECTION
+		"single_shot_npc"	""
+		"double_shot_npc"	""
+		"reload_npc"		""
+		
+		// 3RD PERSON PLAYER SECTION
+		"player_reload"		""
+		"player_reload_loop"		""
+		"player_reload_cycle"		""
+
+		"player_grenade_pullpin"		""
+		"player_grenade_on"		""
+		"player_equipment_on"		""
+		"player_equipment_off"		""
+		"player_deploy"		"Weapon_Foley_ThirdPerson_Shared.DrawSmall"
+		"player_holster"		"Weapon_Foley_ThirdPerson_Shared.HolsterSmall"
+		"player_bash"		"Weapon_Foley_ThirdPerson_Shared.BashFast"
+	}
+}
