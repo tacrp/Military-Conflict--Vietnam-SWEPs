@@ -5,7 +5,7 @@ SWEP.Spawnable = true
 AddCSLuaFile()
 
 // Names and basic information
-SWEP.PrintName = "Sawed-Off"
+SWEP.PrintName = "Fusil Robust Sawed-Off"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "France"
 SWEP.SubCategory = "Shotguns"
@@ -34,7 +34,7 @@ SWEP.Num = 6
 
 SWEP.MuzzleVelocity = 403
 
-SWEP.RangeModifier = 0.5 // Every 500 units the damage is multiplied by rangemodifier
+SWEP.RangeModifier = 0.695 // Every 500 units the damage is multiplied by rangemodifier
 
 SWEP.Firemodes = {
     MCV.FIREMODE_SEMI,

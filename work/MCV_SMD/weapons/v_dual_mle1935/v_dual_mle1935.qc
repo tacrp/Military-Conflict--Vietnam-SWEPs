@@ -21,9 +21,9 @@ $illumposition 6.747 -8.758 -7.672
 $cdmaterials "models\weapons\mcv\v_mle1935\"
 $cdmaterials "models\weapons\mcv\shells\"
 
-$attachment "cam" "cam_driver" 0 0 0 rotate 0 0 0
 $attachment "muzzle" "BaseMesh" -7.3 0 2 rotate 0 -180 0
 $attachment "eject" "BaseMesh" -0.2 0 2.1 rotate -20 90 0
+$attachment "cam" "cam_driver" 0 0 0 rotate 0 0 0
 $attachment "muzzle2" "BaseLeftMesh" -7.3 0 2 rotate 0 -180 0
 $attachment "eject2" "BaseLeftMesh" -0.2 0 2.1 rotate -20 90 0
 
@@ -149,6 +149,7 @@ $bonemerge "thumb_03_l"
 $bonemerge "lowerarm_twist_01_l"
 $bonemerge "upperarm_twist_01_l"
 
+$include "../../militaryconflict_vietnam_v2.qci"
 
 $sectionframes 30 30
 
@@ -705,21 +706,6 @@ $sequence "Firstdraw" {
 }
 
 $sequence "shoot1_r" {
-	"shoot1_r_a"
-	"shoot1_r_ironsight_a"
-	activity "ACT_VM_PRIMARYATTACK" 1
-	blend "ironsight" 0 1
-	blendwidth 2
-	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
-}
-
-$sequence "shoot1_r" {
 	"basePose_a"
 	"ironsight_transition"
 	"ironsight"
@@ -730,7 +716,6 @@ $sequence "shoot1_r" {
 	fadeout 0
 	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
-	addlayer "BulletCounter"
 	addlayer "shoot1pose_r"
 	node "0"
 }
@@ -756,7 +741,6 @@ $sequence "shoot1_l" {
 	fadeout 0
 	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
-	addlayer "BulletCounter"
 	addlayer "shoot1pose_l"
 	node "0"
 }
@@ -782,7 +766,6 @@ $sequence "shoot2_r" {
 	fadeout 0
 	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
-	addlayer "BulletCounter"
 	addlayer "shoot2pose_r"
 	node "0"
 }
@@ -808,7 +791,6 @@ $sequence "shoot2_l" {
 	fadeout 0
 	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
-	addlayer "BulletCounter"
 	addlayer "shoot2pose_l"
 	node "0"
 }
@@ -834,7 +816,6 @@ $sequence "shootlast_r" {
 	fadeout 0
 	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
-	addlayer "BulletCounter"
 	addlayer "shootlastpose_r"
 	node "0"
 }
@@ -861,7 +842,6 @@ $sequence "shootlast_l" {
 	fadeout 0
 	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
-	addlayer "BulletCounter"
 	addlayer "shootlastpose_l"
 	node "0"
 }
@@ -916,8 +896,8 @@ $sequence "reloadRightOnly" {
 }
 
 $sequence "reload_emptyRightOnly" {
-	"reload_re_a"
-	"reload_re_a_i"
+	"reload_er_a"
+	"reload_er_a_i"
 	activity "ACT_VM_MISSRIGHT2" 1
 	blend "ironsight" 0 1
 	blendwidth 2

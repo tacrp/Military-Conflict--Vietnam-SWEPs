@@ -14,6 +14,7 @@ SWEP.Caliber = "7.65x20mm"
 SWEP.Slot = 1
 
 SWEP.ViewModel = "models/weapons/mcv/v_mle1935.mdl"
+SWEP.ViewModelAkimbo = "models/weapons/mcv/v_dual_mle1935.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_mle1935.mdl"
 
 SWEP.BodyGroups = ""
@@ -104,6 +105,7 @@ SWEP.JumpSpreadMultiplier = 1.7
 
 SWEP.HasBayonet = false
 SWEP.HasBipod = false
+SWEP.HasAkimbo = true
 
 // Penetration
 SWEP.MetalPenetrationDepth = 5

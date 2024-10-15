@@ -692,6 +692,29 @@ $sequence "shoot_double_r" {
 }
 
 $sequence "shoot_double_r_pose" {
+	"shootlast_r_a"
+	"shootlast_r_a_ironsight"
+	blend "ironsight" 0 1
+	blendwidth 2
+	delta
+	snap
+	hidden
+}
+
+$sequence "shoot_last" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_PRIMARYATTACK_EMPTY" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	fadein 0
+	fadeout 0
+	addlayer "walklayerironsight"
+	addlayer "shoot_last_pose"
+}
+
+$sequence "shoot_last_pose" {
 	"shoot_double"
 	"shoot_double_ironsight"
 	blend "ironsight" 0 1
