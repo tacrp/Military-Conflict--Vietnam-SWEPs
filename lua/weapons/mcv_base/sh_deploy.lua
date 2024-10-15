@@ -38,6 +38,10 @@ function SWEP:Holster(wep)
         self:SetHolsterEntity(NULL)
         self:SetReloadFinishTime(0)
 
+        local vm = self:GetOwner():GetViewModel()
+
+        vm:SetBodyGroups("000000000000000000000")
+
         return true
     else
         local t = self:PlayAnimation(ACT_VM_HOLSTER, 1, true, true)

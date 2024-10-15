@@ -8,6 +8,8 @@ function SWEP:Think()
 
     self:ProcessTimers()
 
+    self:DoBodygroups()
+
     if self:GetNextIdle() <= CurTime() then
         self:Idle()
     end
@@ -28,90 +30,6 @@ function SWEP:Think()
         local t = self:PlayAnimation(ACT_VM_RELOAD_INSERT_PULL, cyclespeed, false)
         self:SetNextPrimaryFire(CurTime() + t * cycledelay)
         self:SetNeedCycle(false)
-    end
-
-    if !IsValid(vm) then return end
-
-    vm:SetBodyGroups(self.BodyGroups)
-
-    local displayRoundsToLoad = self:GetReloading()
-
-    if displayRoundsToLoad then
-        local reloadprogress = vm:SequenceDuration() - (self:GetAnimLockTime() - CurTime())
-
-        if self:Clip1() == 0 then
-            displayRoundsToLoad = reloadprogress >= self.MagInTimeEmpty
-        else
-            displayRoundsToLoad = reloadprogress >= self.MagInTime
-        end
-    end
-
-    local bodygroupbulletscount = self:Clip1()
-
-    if displayRoundsToLoad then
-        if (self.ShotgunReload or (self.HybridReload and self:Clip1() > 0)) and self:GetReloading() and self:GetEmptyReload() then
-            if self.MagInClip then
-                local bullets_to_load = self:Clip1()
-
-                vm:SetPoseParameter("ammo_fraction", bullets_to_load / self.Primary.ClipSize)
-                bodygroupbulletscount = bullets_to_load
-            else
-                vm:SetPoseParameter("ammo_fraction", 0)
-                bodygroupbullets = 0
-            end
-        else
-            if self.MagInClip then
-                local bullets_to_load = math.min(self.Primary.ClipSize - self:Clip1(), self:Ammo1())
-
-                vm:SetPoseParameter("ammo_fraction", bullets_to_load / self.Primary.ClipSize)
-                bodygroupbulletscount = bullets_to_load
-            else
-                local reserve = self:GetInfiniteAmmo() and math.huge or (self:Clip1() + self:Ammo1())
-                local bullets_to_load = math.min(self.Primary.ClipSize, self:GetClip1Capacity(), reserve)
-
-                vm:SetPoseParameter("ammo_fraction", bullets_to_load / self.Primary.ClipSize)
-                bodygroupbulletscount = bullets_to_load
-            end
-        end
-    else
-        vm:SetPoseParameter("ammo_fraction", self:Clip1() / self.Primary.ClipSize)
-    end
-
-    if self.BulletBodygroups then
-        for i, bg in pairs(self.BulletBodygroups) do
-            if i > bodygroupbulletscount then
-                vm:SetBodygroup(bg[1], bg[2])
-            else
-                vm:SetBodygroup(bg[1], 0)
-            end
-        end
-    end
-
-    vm:SetPoseParameter("empty", self:Clip1() == 0 and 0 or 1)
-
-    vm:SetPoseParameter("player_movement", self:GetSpeed() * Lerp(self:GetSightAmount(), 1, (1 + self.IronsightWalkBobbingStrength)))
-
-    vm:SetPoseParameter("ironsight", self:GetSightAmount() ^  3)
-
-    if self:GetBayonet() then
-        vm:SetBodygroup(self.BayonetBodygroup, 1)
-    else
-        vm:SetBodygroup(self.BayonetBodygroup, 0)
-    end
-
-    if self:GetGrenadeLauncher() then
-        vm:SetBodygroup(self.GrenadeLauncherBodygroup, 1)
-
-        local reloadprogress = vm:SequenceDuration() - (self:GetAnimLockTime() - CurTime())
-
-        if self:Clip2() > 0 or (self:GetReloading() and reloadprogress > self.MagInTimeGrenade) then
-            vm:SetBodygroup(self.GrenadeBodygroup, 1)
-        else
-            vm:SetBodygroup(self.GrenadeBodygroup, 0)
-        end
-    else
-        vm:SetBodygroup(self.GrenadeLauncherBodygroup, 0)
-        vm:SetBodygroup(self.GrenadeBodygroup, 0)
     end
 
     if IsValid(self.MuzzleLight) then

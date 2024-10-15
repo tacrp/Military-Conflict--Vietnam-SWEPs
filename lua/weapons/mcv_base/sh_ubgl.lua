@@ -5,6 +5,10 @@ function SWEP:ToggleUBGL()
     if self:GetBayonet() then return end
 
     if !self.RifleGrenadeIsUBGL then
+        if !self:GetGrenadeLauncher() and self:Clip1() == 0 then
+            return
+        end
+
         local t = self:PlayAnimation(ACT_VM_HOLSTER, 0.75, true, true)
 
         self:SetTimer(t + 0.5, function()

@@ -1,7 +1,8 @@
 function SWEP:Reload()
     if self:StillWaiting() then return end
+    if !self:GetOwner():KeyPressed(IN_RELOAD) then return end
 
-    if self:GetOwner():KeyDown(IN_USE) and self:GetOwner():KeyPressed(IN_RELOAD) then
+    if self:GetOwner():KeyDown(IN_USE) then
         self:ChangeFiremode()
         return
     end

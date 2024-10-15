@@ -79,36 +79,3 @@ function SWEP:DoMuzzleLight()
         if IsValid(lamp) then lamp:Remove() end
     end)
 end
-
-function SWEP:ViewModelDrawn()
-    local newactiveeffects = {}
-    for _, effect in ipairs(self.ActiveEffects) do
-        if !IsValid(effect) then continue end
-        if !effect.VMContext then continue end
-
-        effect:DrawModel()
-
-        table.insert(newactiveeffects, effect)
-    end
-
-    self.ActiveEffects = newactiveeffects
-end
-
-function SWEP:PostDrawViewModel()
-    cam.End3D()
-    cam.IgnoreZ(false)
-
-    cam.Start3D()
-        cam.IgnoreZ(false)
-        local newpcfs = {}
-
-        for _, pcf in ipairs(self.PCFs) do
-            if pcf and IsValid(pcf) and pcf.Render then
-                pcf:Render()
-                table.insert(newpcfs, pcf)
-            end
-        end
-
-        if !inrt then self.PCFs = newpcfs end
-    cam.End3D()
-end

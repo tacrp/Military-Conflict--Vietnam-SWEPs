@@ -59,5 +59,6 @@ function SWEP:Idle()
 end
 
 function SWEP:HasAnimation(act)
-    return self:LookupSequence(act) != -1
+    local vm = self:GetOwner():GetViewModel()
+    return vm:SelectWeightedSequence(act) != -1
 end

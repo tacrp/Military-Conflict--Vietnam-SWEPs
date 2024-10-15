@@ -48,16 +48,6 @@ function SWEP:DoCheapScope(fov, atttbl)
     render.UpdateFullScreenDepthTexture()
 end
 
-function SWEP:PreDrawViewModel()
-    self.RenderingRTScope = false
-    if self:GetHolsterTime() < CurTime() then
-        self:DoRTScope()
-    end
-
-    cam.Start3D(nil, nil, Lerp(self:GetSightAmount() ^ 3, self.ViewModelFOV, self.SightedViewModelFOV))
-    cam.IgnoreZ(true)
-end
-
 function SWEP:DoRTScope()
     if !self.HasScope then return end
 
