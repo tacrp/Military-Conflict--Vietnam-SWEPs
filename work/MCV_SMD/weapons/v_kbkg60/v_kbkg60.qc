@@ -209,7 +209,6 @@ $animation "gren_shoot1_ironsight_a_corrective_animation" "v_kbkg60_anims\gren_s
 
 $animation "basePose_a" "v_kbkg60_anims\basePose_a.smd" {
 	fps 30
-	loop
 	numframes 60
 	
 	
@@ -619,8 +618,7 @@ $sequence "shoot1" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 0.5
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	snap
 	addlayer "walklayer"
 	addlayer "runlayer"
 	addlayer "shootpose1"
@@ -634,8 +632,7 @@ $sequence "shoot2" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 0.5
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	snap
 	addlayer "walklayer"
 	addlayer "runlayer"
 	addlayer "shootpose2"
@@ -649,8 +646,7 @@ $sequence "shoot3" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 0.5
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	snap
 	addlayer "walklayer"
 	addlayer "runlayer"
 	addlayer "shootpose3"

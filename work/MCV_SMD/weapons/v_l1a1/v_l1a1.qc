@@ -185,7 +185,6 @@ $animation "shoot3_ironsight_a_corrective_animation" "v_l1a1_anims\shoot3_ironsi
 
 $animation "basePose_a" "v_l1a1_anims\basePose_a.smd" {
 	fps 30
-	loop
 	numframes 60
 	
 	
@@ -526,8 +525,7 @@ $sequence "shoot1" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 0.5
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	snap
 	addlayer "walklayer"
 	addlayer "runlayer"
 	addlayer "shootpose1"
@@ -541,8 +539,7 @@ $sequence "shoot2" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 0.5
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	snap
 	addlayer "walklayer"
 	addlayer "runlayer"
 	addlayer "shootpose2"
@@ -556,8 +553,7 @@ $sequence "shoot3" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 0.5
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	snap
 	addlayer "walklayer"
 	addlayer "runlayer"
 	addlayer "shootpose3"

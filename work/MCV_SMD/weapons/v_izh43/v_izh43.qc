@@ -175,7 +175,7 @@ $animation "shoot2_ironsight_a_corrective_animation" "v_izh43_anims\shoot2_irons
 
 $animation "basePose_a" "v_izh43_anims\basePose_a.smd" {
 	fps 30
-	loop
+	numframes 60
 	
 	
 }
@@ -450,8 +450,7 @@ $sequence "shoot1" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	snap
 	addlayer "walklayer"
 	addlayer "runlayer"
 	addlayer "shoot1_pose"
@@ -475,8 +474,7 @@ $sequence "shoot2" {
 	activity "ACT_VM_RECOIL1" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	snap
 	addlayer "walklayer"
 	addlayer "runlayer"
 	addlayer "shoot2_pose"

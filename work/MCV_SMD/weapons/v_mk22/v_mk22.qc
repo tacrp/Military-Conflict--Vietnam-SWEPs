@@ -207,7 +207,6 @@ $animation "PoseDelta" "v_mk22_anims\PoseDelta.smd" {
 
 $animation "Default" "v_mk22_anims\Default.smd" {
 	fps 30
-	loop
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "Default_corrective_animation" 0
 }
@@ -220,7 +219,6 @@ $animation "Slideback" "v_mk22_anims\Slideback.smd" {
 
 $animation "basePose_a" "v_mk22_anims\basePose_a.smd" {
 	fps 30
-	loop
 	numframes 60
 	
 	
@@ -536,8 +534,7 @@ $sequence "shoot1" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 0.5
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	snap
 	addlayer "walklayer"
 	addlayer "runlayer"
 	//addlayer "SlidePosition"
@@ -552,8 +549,7 @@ $sequence "shoot2" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 0.5
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	snap
 	addlayer "walklayer"
 	addlayer "runlayer"
 	//addlayer "SlidePosition"
@@ -584,8 +580,7 @@ $sequence "shootlast" {
 	activity "ACT_VM_SHOOTLAST" 1
 	blend "ironsight" 0 0.5
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	snap
 	addlayer "walklayer"
 	addlayer "runlayer"
 	addlayer "SlidePosition"

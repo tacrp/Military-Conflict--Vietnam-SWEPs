@@ -186,14 +186,14 @@ $animation "shoot1_ironsight_a_corrective_animation" "v_m1895_anims\shoot1_irons
 
 $animation "basePose_a" "v_m1895_anims\basePose_a.smd" {
 	fps 30
-	loop
+	numframes 60
 	
 	
 }
 
 $animation "ironsight" "v_m1895_anims\ironsight.smd" {
 	fps 30
-	frame 0 1
+	frame 1 1
 	numframes 60
 	
 	
@@ -201,7 +201,6 @@ $animation "ironsight" "v_m1895_anims\ironsight.smd" {
 
 $animation "ironsight_transition" "v_m1895_anims\ironsight_transition.smd" {
 	fps 30
-	frame 0 1
 	numframes 60
 	
 	
@@ -881,9 +880,9 @@ $sequence "shoot_hammer" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blend "revolver_firemode_pose" 0 1
-	fadein 0
-	fadeout 0
-	addlayer "walklayerironsight"
+	snap
+	addlayer "walklayer"
+	addlayer "runlayer"
 	addlayer "shoot_hammer_pose"
 }
 
@@ -914,9 +913,9 @@ $sequence "shoot_western" {
 	activity "ACT_VM_PRIMARYATTACK_1" 1
 	blend "ironsight" 0 1
 	blend "revolver_firemode_pose" 0 1
-	fadein 0
-	fadeout 0
-	addlayer "walklayerironsight"
+	snap
+	addlayer "walklayer"
+	addlayer "runlayer"
 	addlayer "shoot_western_pose"
 }
 
@@ -976,9 +975,9 @@ $sequence "shoot_delayed" {
 	activity "ACT_VM_PRIMARYATTACK_2" 1
 	blend "ironsight" 0 1
 	blend "revolver_firemode_pose" 0 1
-	fadein 0
-	fadeout 0
-	addlayer "walklayerironsight"
+	snap
+	addlayer "walklayer"
+	addlayer "runlayer"
 	addlayer "shoot_delayed_pose"
 }
 
