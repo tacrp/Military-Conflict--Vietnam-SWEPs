@@ -43,8 +43,8 @@ SWEP.Firemodes = {
 
 SWEP.LastShotAnimation = false -- it does has a lastshot anim but it isnt visually different so there's no point. plus it jerks so this is an easy way to fix that
 
-SWEP.MagInTime = 0.4
-SWEP.MagInTimeEmpty = 0.4
+SWEP.MagInTime = 1
+SWEP.MagInTimeEmpty = 1
 
 // View slide from recoil
 SWEP.ViewSlideRecoilUp = 1.1

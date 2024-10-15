@@ -26,6 +26,11 @@ function SWEP:PrimaryAttack()
         return
     end
 
+    if self:GetGrenadeLauncher() then
+        self:RifleGrenadeAttack()
+        return
+    end
+
     if self:Clip1() < 1 then self:Reload() return end
     if self:GetSpeed() > 150 then return end
 
@@ -38,14 +43,14 @@ function SWEP:PrimaryAttack()
     end
 
     self:TakePrimaryAmmo(1)
-	
-	if self:GetFiremodeValue() == MCV.FIREMODE_FAST then
-		self:SetNextPrimaryFire(CurTime() + (60 / self.FireRate_Fast))
-	elseif self:GetFiremodeValue() == MCV.FIREMODE_SLOW then
-		self:SetNextPrimaryFire(CurTime() + (60 / self.FireRate_Slow))
-	else
-		self:SetNextPrimaryFire(CurTime() + (60 / self.FireRate))
-	end
+
+    if self:GetFiremodeValue() == MCV.FIREMODE_FAST then
+        self:SetNextPrimaryFire(CurTime() + (60 / self.FireRate_Fast))
+    elseif self:GetFiremodeValue() == MCV.FIREMODE_SLOW then
+        self:SetNextPrimaryFire(CurTime() + (60 / self.FireRate_Slow))
+    else
+        self:SetNextPrimaryFire(CurTime() + (60 / self.FireRate))
+    end
     self:SetLastRecoilTime(CurTime())
 
     self:BulletAttack()
@@ -75,6 +80,40 @@ function SWEP:PrimaryAttack()
     if self.PlayCycleAnimation and self:Clip1() > 0 then
         self:SetNeedCycle(true)
     end
+end
+
+function SWEP:RifleGrenadeAttack()
+    local owner = self:GetOwner()
+
+    if self:Clip2() < 1 then self:Reload() return end
+    if self:GetSpeed() > 150 then return end
+
+    if self:GetNeedTriggerPress() then return end
+
+    self:PlayAnimation(ACT_VM_ISHOOT_M203, 0.5)
+
+    self:TakeSecondaryAmmo(1)
+
+    self:SetNextPrimaryFire(CurTime() + 1)
+    self:SetLastRecoilTime(CurTime())
+
+    self:EmitSound(self.SoundGrenadeShot)
+
+    owner:SetVelocity(self:GetAimVector() * -self.RecoilPushbackValue)
+
+    local recoilup = Lerp(self:GetSightAmount(), self.ViewSlideRecoilUp, self.ViewSlideRecoilIronsightUp) * 3
+    local recoilright = Lerp(self:GetSightAmount(), self.ViewSlideRecoilRight, self.ViewSlideRecoilIronsightRight) * 3
+
+    owner:ViewPunch(Angle(-recoilup, recoilright * util.SharedRandom("MCVRecoilLeftRight", -1, 1), 0))
+
+    if IsFirstTimePredicted() then
+        if !self.NoEjectOnShoot then
+            self:DoEject()
+        end
+        self:DoMuzzle()
+    end
+
+    self:SetNeedTriggerPress(true)
 end
 
 function SWEP:FireAnimationEvent( pos, ang, event, name )

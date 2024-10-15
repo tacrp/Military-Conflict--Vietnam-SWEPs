@@ -83,6 +83,7 @@ end
 function SWEP:ToggleBayonet()
     if !self.HasBayonet then return end
     if self:StillWaiting() then return end
+    if self:GetGrenadeLauncher() then return end
 
     if self:GetBayonet() then
         local t = self:PlayAnimation(ACT_VM_DETACH_SILENCER, 1, true)

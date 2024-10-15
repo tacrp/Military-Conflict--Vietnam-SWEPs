@@ -58,8 +58,8 @@ SWEP.Firemodes = {
 // Weapon must be manually cycled
 SWEP.PlayCycleAnimation = false
 
-SWEP.MagInTime = 0.4
-SWEP.MagInTimeEmpty = 0.1
+SWEP.MagInTime = 1.5
+SWEP.MagInTimeEmpty = 1.5
 
 // View slide from recoil
 SWEP.ViewSlideRecoilUp = 1.64

@@ -973,7 +973,7 @@ $sequence "gren_ironsight_test" {
 $sequence "grenade_idle" {
 	"basePose_a"
 	"ironsight_transition"
-	activity "ACT_VM_GRENADE" 1
+	activity "ACT_VM_IDLE_M203" 1
 	blend "ironsight" 0 0.5
 	blendwidth 2
 	fadein 0.2
@@ -987,7 +987,7 @@ $sequence "grenade_idle" {
 $sequence "grenade_shoot" {
 	"gren_shoot1_a"
 	"gren_shoot1_ironsight_a"
-	activity "ACT_VM_GRENADE_SHOOT" 1
+	activity "ACT_VM_ISHOOT_M203" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
@@ -1000,7 +1000,7 @@ $sequence "grenade_shoot" {
 $sequence "grenade_reload" {
 	"gren_reload_a"
 	"gren_reload_a_i"
-	activity "ACT_VM_GRENADE_RELOAD" 1
+	activity "ACT_VM_RELOAD_M203" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_RifleGrenade.Raise" }
@@ -1013,7 +1013,7 @@ $sequence "grenade_reload" {
 $sequence "grenade_draw" {
 	"v_mas49_anims\grenade_draw.smd"
 	"v_mas49_anims\grenade_draw_2.smd"
-	activity "ACT_VM_GRENADE_DRAW" 1
+	activity "ACT_VM_DRAWFULL_M203" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_RifleGrenade.Raise" }
@@ -1031,7 +1031,7 @@ $sequence "grenade_draw" {
 $sequence "grenade_draw_empty" {
 	"v_mas49_anims\grenade_draw_empty.smd"
 	"v_mas49_anims\grenade_draw_empty_2.smd"
-	activity "ACT_VM_GRENADE_DRAW_EMPTY" 1
+	activity "ACT_VM_DRAW_M203" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_MAS49.Draw" }

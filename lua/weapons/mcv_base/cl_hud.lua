@@ -97,6 +97,15 @@ end
 
 function SWEP:DrawHUD()
     local firemode_name = MCV.FiremodeNames[self:GetFiremodeValue()]
+    local ammocount = self:Clip1()
+    local reserve = self:Ammo1()
+
+    if self:GetGrenadeLauncher() then
+        firemode_name = "Launcher"
+        ammocount = self:Clip2()
+        reserve = self:Ammo2()
+    end
+
     local col = Color(255, 255, 255, 150)
 
     surface.SetFont("MCV_8")
@@ -105,22 +114,11 @@ function SWEP:DrawHUD()
     surface.SetTextColor(col)
     surface.DrawText(firemode_name)
 
-    // local printname = self.PrintName
-    // surface.SetFont("MCV_14")
-    // local tw2 = surface.GetTextSize(printname)
-    // surface.SetTextPos(ScrW() - tw2 - ScreenScale(12), ScrH() - ScreenScale(60))
-    // surface.SetTextColor(255, 255, 255)
-    // surface.DrawText(printname)
-
-    local ammocount = self:Clip1()
-
     surface.SetFont("MCV_24")
     local tw3 = surface.GetTextSize(ammocount)
     surface.SetTextPos(ScrW() - tw3 - ScreenScale(12 + 32), ScrH() - ScreenScale(40))
     surface.SetTextColor(col)
     surface.DrawText(ammocount)
-
-    local reserve = self:Ammo1()
 
     surface.SetFont("MCV_14")
     local tw4 = surface.GetTextSize(reserve)

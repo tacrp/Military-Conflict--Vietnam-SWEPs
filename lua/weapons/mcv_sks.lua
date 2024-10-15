@@ -99,7 +99,7 @@ SWEP.CrouchMoveSpreadMultiplier = 1.35
 SWEP.JumpSpreadMultiplier = 3.0
 
 SWEP.HasBayonet = true
-SWEP.HasRifleGrenade = false
+SWEP.HasRifleGrenade = true
 
 SWEP.BashDamage = 50
 SWEP.BayonetDamage = 100
@@ -125,6 +125,7 @@ SWEP.SoundDoubleShot = ""
 SWEP.SoundReload = ""
 SWEP.SoundSpecial1 = ""
 SWEP.SoundSpecial2 = ""
+SWEP.SoundGrenadeShot = "Weapon_SKS.RifleGrenade"
 SWEP.SoundNearlyEmpty = "Vietnam_Weapon_Generic.NearlyEmptyClick"
 SWEP.SoundEmpty = "Vietnam_Weapon_Generic.ClipEmpty_01"
 
@@ -155,3 +156,8 @@ SWEP.TracerParticle = "tracer"
 
 SWEP.TracerRandomness = 6
 SWEP.TracerFrequency = 1
+
+SWEP.Secondary.Automatic = true
+SWEP.Secondary.ClipSize = 1
+SWEP.Secondary.Ammo = "smg1_grenade"
+SWEP.Secondary.DefaultClip = 1

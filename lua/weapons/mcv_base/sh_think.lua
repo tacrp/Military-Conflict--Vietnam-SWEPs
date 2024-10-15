@@ -14,13 +14,17 @@ function SWEP:Think()
 
     if owner:KeyReleased(IN_ATTACK) then
         self:SetNeedTriggerPress(false)
-    elseif self:GetReloading() and self.ShotgunReload and owner:KeyPressed(IN_ATTACK) then
+    elseif self:GetReloading() and self.ShotgunReload and owner:KeyPressed(IN_ATTACK) and self:Clip1() > 0 then
         self:SetEndReload(true)
     end
 
+    if owner:KeyPressed(IN_USE) and owner:KeyDown(IN_WALK) then
+        self:ToggleUBGL()
+    end
+
     if !owner:KeyDown(IN_ATTACK) and self:GetNeedCycle() and IsFirstTimePredicted() then
-		local cyclespeed = self.CycleSpeed
-		local cycledelay = self.CyclePostDelay
+        local cyclespeed = self.CycleSpeed
+        local cycledelay = self.CyclePostDelay
         local t = self:PlayAnimation(ACT_VM_RELOAD_INSERT_PULL, cyclespeed, false)
         self:SetNextPrimaryFire(CurTime() + t * cycledelay)
         self:SetNeedCycle(false)
@@ -33,7 +37,7 @@ function SWEP:Think()
     local displayRoundsToLoad = self:GetReloading()
 
     if displayRoundsToLoad then
-        local reloadprogress = (self:GetAnimLockTime() - CurTime())
+        local reloadprogress = vm:SequenceDuration() - (self:GetAnimLockTime() - CurTime())
 
         if self:Clip1() == 0 then
             displayRoundsToLoad = reloadprogress >= self.MagInTimeEmpty
@@ -93,6 +97,21 @@ function SWEP:Think()
         vm:SetBodygroup(self.BayonetBodygroup, 1)
     else
         vm:SetBodygroup(self.BayonetBodygroup, 0)
+    end
+
+    if self:GetGrenadeLauncher() then
+        vm:SetBodygroup(self.GrenadeLauncherBodygroup, 1)
+
+        local reloadprogress = vm:SequenceDuration() - (self:GetAnimLockTime() - CurTime())
+
+        if self:Clip2() > 0 or (self:GetReloading() and reloadprogress > self.MagInTimeGrenade) then
+            vm:SetBodygroup(self.GrenadeBodygroup, 1)
+        else
+            vm:SetBodygroup(self.GrenadeBodygroup, 0)
+        end
+    else
+        vm:SetBodygroup(self.GrenadeLauncherBodygroup, 0)
+        vm:SetBodygroup(self.GrenadeBodygroup, 0)
     end
 
     if IsValid(self.MuzzleLight) then

@@ -15,6 +15,8 @@ SWEP.WorldModel = "models/weapons/mcv/w_sks.mdl"
 
 SWEP.BodyGroups = ""
 SWEP.BayonetBodygroup = 1
+SWEP.GrenadeLauncherBodygroup = 2
+SWEP.GrenadeBodygroup = 3
 
 SWEP.BulletBodygroups = nil
 
@@ -60,6 +62,7 @@ SWEP.HasEmptyReload = true
 
 SWEP.MagInTime = 0
 SWEP.MagInTimeEmpty = 0
+SWEP.MagInTimeGrenade = 0.5
 SWEP.MagInClip = false
 
 SWEP.Silencer = false
@@ -152,6 +155,7 @@ SWEP.SoundDoubleShot = ""
 SWEP.SoundReload = ""
 SWEP.SoundSpecial1 = ""
 SWEP.SoundSpecial2 = ""
+SWEP.SoundGrenadeShot = "Weapon_SKS.RifleGrenade"
 SWEP.SoundNearlyEmpty = "Vietnam_Weapon_Generic.NearlyEmptyClick"
 SWEP.SoundEmpty = "Vietnam_Weapon_Generic.ClipEmpty_01"
 
