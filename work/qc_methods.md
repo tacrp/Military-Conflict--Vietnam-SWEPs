@@ -27,7 +27,7 @@ NOTE: You will also need to do this process for pumping/cycling $sequences on we
 
     numframes 60
 
-   to each of them. Make sure their FPS is the same as well. While here, add "frame 1 1" to the "ironsight" animation *only*.
+   to each of them. Make sure their FPS is the same as well. While here, add "frame 1 1" to the "ironsight" animation *only*. Do not use "frame 0 1" as this will cause the weapon to twitch while in ironsights.
 
 8. Remove the "walklyer" and "runlayer" layers and replace them with just "walklayerironsights" in the following $sequences:
 

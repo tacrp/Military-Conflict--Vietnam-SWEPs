@@ -208,14 +208,14 @@ $animation "shoot_d_l_ironsight_a_corrective_animation" "v_dual_m1895_anims\shoo
 
 $animation "basePose_a" "v_dual_m1895_anims\basePose_a.smd" {
 	fps 30
-	loop
+	numframes 60
 	
 	
 }
 
 $animation "ironsight" "v_dual_m1895_anims\ironsight.smd" {
 	fps 30
-	frame 0 1
+	frame 1 1
 	numframes 60
 	
 	
@@ -818,8 +818,7 @@ $sequence "shoot_hammer_right" {
 	{ event 5004 15 "MCV_Weapon_Foley_Revolver.HammerOut" }
 	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
 	{ event AE_MUZZLEFLASH 0 "" }
-	fadein 0
-	fadeout 0.2
+	snap
 	node "Fire"
 }
 
@@ -834,8 +833,7 @@ $sequence "shoot_hammer_left" {
 	{ event 5004 15 "MCV_Weapon_Foley_Revolver.HammerOut" }
 	{ event AE_CLIENT_EJECT_BRASS 0 "eject2" }
 	{ event AE_MUZZLEFLASH 0 "" }
-	fadein 0
-	fadeout 0.2
+	snap
 	node "Fire"
 }
 
@@ -874,8 +872,7 @@ $sequence "shoot_delayed_right" {
 	delta
 	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
 	{ event AE_MUZZLEFLASH 0 "" }
-	fadein 0
-	fadeout 0.2
+	snap
 	node "Fire"
 }
 
@@ -888,8 +885,7 @@ $sequence "shoot_delayed_left" {
 	delta
 	{ event AE_CLIENT_EJECT_BRASS 0 "eject2" }
 	{ event AE_MUZZLEFLASH 0 "" }
-	fadein 0
-	fadeout 0.2
+	snap
 	node "Fire"
 }
 
