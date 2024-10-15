@@ -166,7 +166,7 @@ Pistols:
 - Walther P38
 - TT-33
 - MAS-35S [X]
-- Mauser C96
+- Mauser C96 [X]
 - Homemade Pistol
 - PB
 - Type 64 Pistol
@@ -260,7 +260,7 @@ Light-Machine Guns:
 - TUL-1
 - DP-28
 - RP-46
-- Bren
+- Bren [X]
 
 
 Launchers/Anti-Armor:
