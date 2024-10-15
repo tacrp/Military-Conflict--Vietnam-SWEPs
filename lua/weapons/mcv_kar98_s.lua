@@ -37,7 +37,7 @@ SWEP.Num = 1
 
 SWEP.MuzzleVelocity = 735
 
-SWEP.RangeModifier = 0.915 // Every 500 units the damage is multiplied by rangemodifier
+SWEP.RangeModifier = 0.985 // Every 500 units the damage is multiplied by rangemodifier
 
 SWEP.Firemodes = {
     MCV.FIREMODE_BOLT
@@ -84,8 +84,8 @@ SWEP.IronsightAng = Angle(0, 0, 0)
 SWEP.CustomPos = Vector(0, -2, 0)
 SWEP.CustomAng = Angle(0, 0, 0)
 
-SWEP.Spread = 5.7
-SWEP.SpreadIronsighted = 0.3
+SWEP.Spread = 7.7
+SWEP.SpreadIronsighted = 0.05
 
 SWEP.FireRate = 60 // in rounds per minute
 SWEP.CyclePostDelay = 0.9
@@ -104,12 +104,12 @@ SWEP.Primary.Automatic = true
 SWEP.NearwallDistance = 40
 
 // Bullet spread multiplier according to current stance
-SWEP.CrouchSpreadMultiplier = 0.85
-SWEP.ProneSpreadMultiplier = 0.75
-SWEP.StandMoveSpreadMultiplier = 1.5
-SWEP.SneakMoveSpreadMultiplier = 1.4
+SWEP.CrouchSpreadMultiplier = 0.75
+SWEP.ProneSpreadMultiplier = 0.5
+SWEP.StandMoveSpreadMultiplier = 1.55
+SWEP.SneakMoveSpreadMultiplier = 1.45
 SWEP.CrouchMoveSpreadMultiplier = 1.35
-SWEP.JumpSpreadMultiplier = 3.0
+SWEP.JumpSpreadMultiplier = 6.0
 
 SWEP.HasBayonet = false -- sniper variants dont get bayos
 SWEP.HasRifleGrenade = false

@@ -91,6 +91,7 @@ function SWEP:ViewModelDrawn()
 end
 
 function SWEP:PostDrawViewModel()
+    cam.End3D()
     cam.IgnoreZ(false)
 
     cam.Start3D()

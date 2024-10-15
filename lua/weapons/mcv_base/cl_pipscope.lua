@@ -58,10 +58,6 @@ function SWEP:PreDrawViewModel()
     cam.IgnoreZ(true)
 end
 
-function SWEP:PostDrawViewModel()
-    cam.End3D()
-end
-
 function SWEP:DoRTScope()
     if !self.HasScope then return end
 

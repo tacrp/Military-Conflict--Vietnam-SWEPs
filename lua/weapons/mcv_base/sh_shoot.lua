@@ -78,7 +78,7 @@ function SWEP:PrimaryAttack()
 end
 
 function SWEP:FireAnimationEvent( pos, ang, event, name )
-    if event == 50 and IsFirstTimePredicted() then
+    if name == "eject" and IsFirstTimePredicted() then
         self:DoEject()
     end
 end
