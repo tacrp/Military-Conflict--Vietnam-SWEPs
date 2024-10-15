@@ -1,0 +1,53 @@
+// M16 Mine
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"				"#weapon_m16mine"
+	"origin"				"#united_states_of_america"
+	"viewmodel"				"models/weapons/v_mine.mdl"
+	"playermodel"				"models/weapons/w_mine.mdl"
+	"anim_prefix"				"mine"
+	"bucket"				"4"
+	"bucket_position"			"0"
+
+	"WeaponType"				"Mine"
+	
+	// Set model's bodygroups
+	BodygroupData
+	{			
+		"mine"		"0"
+	}
+
+	"clip_size"				"-1/1" (-1 means we don't use clips for this ammo type)
+	"primary_ammo"				"mine"
+	"secondary_ammo"			"None"
+	
+	"default_clip"				"1"	// ammo given by default
+	"default_clip2"				"-1"	// ditto for second ammo type
+
+	"weight"				"1"
+	"item_flags"				"2"
+
+	// Zombie Mode
+	"ZMBuyPrice"	 "400"
+	"ZMSellPrice"	 "300"
+	"ZMWeight"		 "2"
+		
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	SoundData
+	{	
+		// 3RD PERSON PLAYER SECTION
+		"player_reload"		""
+		"player_reload_loop"		""
+		"player_reload_cycle"		""
+
+		"player_grenade_pullpin"		""
+		"player_grenade_on"		""
+		"player_equipment_on"		""
+		"player_equipment_off"		""
+		"player_deploy"		"Weapon_Foley_ThirdPerson_Shared.DrawSmall"
+		"player_holster"		"Weapon_Foley_ThirdPerson_Shared.HolsterSmall"
+		"player_bash"		"Weapon_Foley_ThirdPerson_Shared.BashFast"
+	}
+}

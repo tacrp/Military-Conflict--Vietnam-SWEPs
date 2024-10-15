@@ -1,0 +1,205 @@
+// M1917 Revolver
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"				"#weapon_M1917"
+	"origin"				"#united_states_of_america"
+	"viewmodel"				"models/weapons/v_swm10.mdl"
+	"playermodel"				"models/weapons/w_swm10.mdl"
+	"anim_prefix"				"revolver"
+	"bucket"				"1"
+	"bucket_position"			"0"
+	"SupportedFireModes"			"Semi"
+
+	"WeaponType"				"Revolver"
+
+	"primary_ammo"				".45ACP" // caliber
+	"secondary_ammo"			"None"
+
+	"clip_size"				"6/12"	// clip size/max ammo
+	"clip2_size"				"-1"	// max secondary ammo
+
+	"default_clip"				"6"	// ammo given by default
+	"default_clip2"				"-1"	// ditto for second ammo type
+
+	"FireRate"				"400" 	// RPM
+
+	"muzzle_velocity"			"231" 	// m/s
+	"bullet_weight"				"0.0149"	// KG
+
+	
+	"BulletSpreadDegrees"				"8.5"	// degrees // 14.5
+	"BulletSpreadDegreesIronsighted"	"1.3"	// degrees
+
+	"FiremodeSpreadMultiplier" // example: for firemode 2 the spread will be 1.5x bigger. 0 - Double, 1 - Single, 2 Fanning
+	{
+		"0"	"0.75"
+		"1"	"0.5"
+		"2"	"1"
+	}
+
+	"rangemodifier"				"0.85"
+
+	"IronsightSpeedScale"			"1.0" // how long ironsight transition will last
+
+	//
+	// Bullet spread multiplier according to current stance
+	//
+	"CrouchSpreadMultiplier"		"0.8"
+	"ProneSpreadMultiplier"			"0.75"
+	"StandMoveSpreadMultiplier"		"1.2"
+	"SneakMoveSpreadMultiplier"		"1.1"
+	"CrouchMoveSpreadMultiplier"	"1.15"
+	"JumpSpreadMultiplier"			"1.35"
+
+	// damage modifiers
+	"DamageHeadMultiplier"			"3.7"
+	"DamageChestMultiplier"			"2.4"
+	"DamageStomachMultiplier"		"2.3"
+	"DamageLegMultiplier"			"1.3"
+	"DamageArmMultiplier"			"0.95"
+	"DamageGeneric"					"44"	// damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)
+
+	// weapon recoil
+	// minimal possible kick
+	//"ViewMinKickPITCH"			"3.16"	// degrees
+	//"ViewMinKickYAW"			"-0.40"	// degrees
+
+	// maximal possible kick
+	//"ViewKickPITCH"				"3.48"	// degrees
+	//"ViewKickYAW"				"0.40"	// degrees
+
+	"ShakeScale"				"1"	// camera shake effect, does not affect accuracy
+	"ShakeFreq"					"35.0" 	// how many shakes per second
+	"ShakeDuration"				"0.8"	// sec
+
+	//
+	// fixed view slide from recoil
+	//
+	ViewSlideRecoil
+	{
+		"Up"	"1.85"
+		"Right"	"0.40"
+	}
+
+	ViewSlideRecoilIronsight
+	{
+		"Up"	"0.80"
+		"Right"	"0.22"
+	}
+
+	"CrosshairMinDistance"			"4"
+	"CrosshairDeltaDistance"		"4"
+
+	"weight"				"1"
+
+	////////////////////////////
+	// Weapon Particles Start //
+	////////////////////////////
+	
+ 	"MuzzleParticle"			"vietnam_muzzleflash_revolver_type1_fp"
+ 	"MuzzleParticle_Smoke"		"vietnam_muzzleflash_revolver_type1_fp_smoke"
+ 	"MuzzleParticle_Ironsighted"			"vietnam_muzzleflash_revolver_type1_fp_is"
+ 	"MuzzleParticle_IronsightedSmoke"		"vietnam_muzzleflash_revolver_type1_fp_is_smoke"
+	
+    "MuzzleParticle3rdPerson"		"vietnam_muzzleflash_revolver_type1_tp"
+    "ParticleAttachType"			"1"	// 0 - PATTACH_POINT; 1 - PATTACH_POINT_FOLLOW
+
+    "MuzzleSmokeParticle"			"vietnam_muzzleflash_generic_aftersmoke"
+    "MuzzleSmokeShotCount"			"5"
+
+	"EjectBrassType"			"13" // X45APC
+	"EjectBrassTrail"			"vietnam_weaponeffect_shelleject_trail"
+	"EjectBrassParticle"			"vietnam_weaponeffect_shelleject_side"
+	"EjectBrassSound"			"Bounce.Shell"
+
+	// tracer particles
+	"TracerParticle"			"vietnam_tracer_pistol_primary"
+	"TracerParticle2"			"vietnam_tracer_pistol_secondary"
+	"TracerRandomness"			"6"
+	"TracerFrequency"			"1"
+	
+	"MuzzleLight"			"effects/flashlight_muzzleflash" // "None" will disable projected muzzleflash
+	"MuzzleLightBrightnessLower"			"0.5" // Random brightness is chosen between this Lower - Upper range
+	"MuzzleLightBrightnessUpper"			"0.75"
+	"MuzzleLightFOVLower"			"75"
+	"MuzzleLightFOVUpper"			"95"
+	"MuzzleLightDuration"			"0.05"
+	"MuzzleLightFadeOut"			"0.035"
+	"MuzzleLightDistance"			"400"
+	
+	//////////////////////////
+	// Weapon Particles End //
+	//////////////////////////
+
+	// bullet penetration settings | Depth
+	"MetalPenetrationDepth"			"6.0"	// in units
+	"GlassPenetrationDepth"			"12.0"
+	"ConcretePenetrationDepth"		"8.0"
+	"WoodPenetrationDepth"			"16.0"
+	"OtherPenetrationDepth"			"10.0"
+
+	// bullet penetration settings | Damage Reduction | Higher value - less damage after penetration
+	"MetalDamageModifier"			"1.6"
+	"GlassDamageModifier"			"1.2"
+	"ConcreteDamageModifier"		"1.8"
+	"WoodDamageModifier"			"1.3"
+	"OtherDamageModifier"			"1.3"
+
+	"IronSight"				"1"
+	"IronsightedFovOffset"			"-15"
+
+	// viewmodel offset when weapon ironsighted
+	"ironsightforward"			"-2"
+	"ironsightright"			"0"
+	"ironsightup"				"0"
+	"ironsightpitch"			"0"
+	"ironsightyaw"				"0"
+	"ironsightroll"				"0"
+
+	// viewmodel offset in non-ironsighted case
+        CustomOffset
+	{
+		"forward"	"0"
+		"right"		"0"
+		"up"		"0"
+		"pitch"		"0"
+		"yaw"		"0"
+		"roll"		"0"
+	}
+	
+									"NearwallDistance"			"15"
+	"recoilpushbackvalue"			"1.5"
+	"ironsightwalkbobbingstrength"		"-0.6"
+
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	SoundData
+	{
+		"single_shot"		"Weapon_M1917.Single"
+		"double_shot"		""
+		"reload"		""
+		"special1"		""
+		"special2"		""
+		"nearlyempty"		"Weapon_Generic.NearlyEmptyClick_Revolver"
+		"empty"			"Weapon_Generic.ClipEmpty_07"
+
+		// NPC SECTION
+		"single_shot_npc"	""
+		"double_shot_npc"	""
+		"reload_npc"		""
+		
+		// 3RD PERSON PLAYER SECTION
+		"player_reload"		"Weapon_Foley_ThirdPerson_M1917.Reload"
+		"player_reload_loop"		""
+		"player_reload_cycle"		""
+
+		"player_grenade_pullpin"		""
+		"player_grenade_on"		""
+		"player_equipment_on"		""
+		"player_equipment_off"		""
+		"player_deploy"		"Weapon_Foley_ThirdPerson_Shared.DrawSmall"
+		"player_holster"		"Weapon_Foley_ThirdPerson_Shared.HolsterSmall"
+		"player_bash"		"Weapon_Foley_ThirdPerson_Shared.BashFast"
+	}
+}

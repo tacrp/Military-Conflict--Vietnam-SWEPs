@@ -1,0 +1,47 @@
+// DEPLOYABLE TURRET
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"				"#weapon_DEPLOYABLE_TURRET"
+	"viewmodel"				"models/weapons/v_turretwpn.mdl"
+	"playermodel"				"models/weapons/w_bunkergun.mdl"
+	"anim_prefix"				"UNDONE"
+	"bucket"				"3"
+	"bucket_position"			"0"
+	"item_flags"				"18"
+
+	"primary_ammo"				"None"
+	"secondary_ammo"			"None"
+
+	"clip_size"				"-1/1"	// clip size/max ammo
+	"clip2_size"				"-1"	// max secondary ammo
+
+	"default_clip"				"1"	// ammo given by default
+	"default_clip2"				"-1"	// ditto for second ammo type
+
+	"weight"				"50"
+
+	// bullet penetration settings | Depth
+	"MetalPenetrationDepth"			"15.0"	// in units
+	"GlassPenetrationDepth"			"30.0"
+	"ConcretePenetrationDepth"		"18.0"
+	"WoodPenetrationDepth"			"34.0"
+	"OtherPenetrationDepth"			"19.0"
+
+	SoundData
+	{
+		"single_shot"		""
+		"double_shot"		""
+		"reload"		""
+		"special1"		""
+		"special2"		""
+		"nearlyempty"		"Weapon_Generic.NearlyEmptyClick"
+		"empty"			"Weapon_Generic.ClipEmpty_01"
+
+		// NPC SECTION
+		"single_shot_npc"	""
+		"double_shot_npc"	""
+		"reload_npc"		""
+	}
+}

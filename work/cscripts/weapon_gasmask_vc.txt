@@ -1,0 +1,36 @@
+// Gasmask
+// Not a real weapon! Just setup like this for simplicity
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"				"#weapon_GASMASK_vc"
+	"viewmodel"				"models/weapons/v_gasmask.mdl"
+	"playermodel"			"models/player/hats/gasmask_vc.mdl"
+	"anim_prefix"			"gasmask"
+	"bucket"				"5"
+	"bucket_position"		"0"
+	
+	"clip_size"				"-1"
+	"clip2_size"			"-1"
+	"default_clip"			"-1"
+	"default_clip2"			"-1"
+	"primary_ammo"			"None"
+	"secondary_ammo"		"None"
+	
+	"weight"				"0"
+	"item_flags"			"0"
+	
+	"WeaponType"			"Equipment"
+	
+	BodygroupData
+	{
+		"studio"			"1"
+	}
+
+	// Zombie Mode
+	"ZMBuyPrice"	 "250"
+	"ZMSellPrice"	 "200"
+	"ZMWeight"		 "0"
+}
+

@@ -1,0 +1,194 @@
+// M17 SHANXI
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"				"#weapon_Type17"
+	"origin"				"#republic_of_china"
+	"viewmodel"				"models/weapons/v_shanxi_type17.mdl"
+	"playermodel"				"models/weapons/w_shanxi_type17.mdl"
+	"anim_prefix"				"type17"
+	"bucket"				"0"
+	"bucket_position"			"0"
+	"HasBayonet"				"0"
+	"SupportedFireModes"			"Semi"
+
+	"WeaponType"				"Carbine"
+
+	"primary_ammo"				"7.62x33" // caliber
+	"secondary_ammo"			"None"
+
+	"clip_size"				"10/30"	// clip size/max ammo
+	"clip2_size"				"-1"	// max secondary ammo
+
+	"default_clip"				"10"	// ammo given by default
+	"default_clip2"				"-1"	// ditto for second ammo type
+
+	"FireRate"				"120"	// RPM
+
+	"muzzle_velocity"			"607" 	// m/s
+	"bullet_weight"				"0.0071"	// KG
+
+	"BulletSpreadDegrees"			"6.1"	// degrees
+	"BulletSpreadDegreesIronsighted"	"1.55"	// degrees
+
+	"rangemodifier"				"0.945"
+
+	"IronsightSpeedScale"			"0.9" // how long ironsight transition will last
+
+	//
+	// Bullet spread multiplier according to current stance
+	//
+	"CrouchSpreadMultiplier"		"0.95"
+	"ProneSpreadMultiplier"			"0.85"
+	"StandMoveSpreadMultiplier"		"1.35"
+	"SneakMoveSpreadMultiplier"		"1.25"
+	"CrouchMoveSpreadMultiplier"	"1.15"
+	"JumpSpreadMultiplier"			"3"
+
+	// damage modifiers
+	"DamageHeadMultiplier"			"2.4"
+	"DamageChestMultiplier"			"1.2"
+	"DamageStomachMultiplier"		"1.15"
+	"DamageLegMultiplier"			"0.8"
+	"DamageArmMultiplier"			"0.7"
+	"DamageGeneric"					"42"	// damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)
+
+	// weapon recoil
+	// minimal possible kick
+	//"ViewMinKickPITCH"			"1.5"	// degrees
+	//"ViewMinKickYAW"			"0.25"	// degrees
+
+	// maximal possible kick
+	//"ViewKickPITCH"				"2.00"	// degrees
+	//"ViewKickYAW"				"1.00"	// degrees
+
+	"ShakeScale"				"1"	// camera shake effect, does not affect accuracy
+	"ShakeFreq"					"45.0" 	// how many shakes per second
+	"ShakeDuration"				"0.4"	// sec
+
+	//
+	// fixed view slide from recoil
+	//
+	ViewSlideRecoil
+	{
+		"Up"	"1.45"
+		"Right"	"0.62"
+	}
+
+	ViewSlideRecoilIronsight
+	{
+		"Up"	"0.6"
+		"Right"	"0.2"
+	}
+
+	"CrosshairMinDistance"			"8"
+	"CrosshairDeltaDistance"		"4"
+
+	"weight"				"2.4"
+
+	////////////////////////////
+	// Weapon Particles Start //
+	////////////////////////////
+	
+ 	"MuzzleParticle"			"vietnam_muzzleflash_rifle_type1_fp"
+ 	"MuzzleParticle_Smoke"		"vietnam_muzzleflash_rifle_type1_fp_smoke"
+ 	"MuzzleParticle_Ironsighted"			"vietnam_muzzleflash_rifle_type1_fp_is"
+ 	"MuzzleParticle_IronsightedSmoke"		"vietnam_muzzleflash_rifle_type1_fp_is_smoke"
+	
+    "MuzzleParticle3rdPerson"		"vietnam_muzzleflash_rifle_type1_tp"
+    "ParticleAttachType"			"1"	// 0 - PATTACH_POINT; 1 - PATTACH_POINT_FOLLOW
+
+    "MuzzleSmokeParticle"			"vietnam_muzzleflash_generic_aftersmoke"
+    "MuzzleSmokeShotCount"			"5"
+
+	"EjectBrassType"			"13" // X45APC
+	"EjectBrassTrail"			"vietnam_weaponeffect_shelleject_trail"
+	"EjectBrassParticle"			"vietnam_weaponeffect_shelleject_side"
+	"EjectBrassSound"			"Bounce.Shell"
+
+	// tracer particles
+	"TracerParticle"			"vietnam_tracer_rifle_primary"
+	"TracerParticle2"			"vietnam_tracer_rifle_secondary"
+	"TracerRandomness"			"6"
+	"TracerFrequency"			"1"
+	
+	//////////////////////////
+	// Weapon Particles End //
+	//////////////////////////
+
+	// bullet penetration settings | Depth
+	"MetalPenetrationDepth"			"8.0"	// in units
+	"GlassPenetrationDepth"			"14.0"
+	"ConcretePenetrationDepth"		"10.0"
+	"WoodPenetrationDepth"			"18.0"
+	"OtherPenetrationDepth"			"12.0"
+
+	// bullet penetration settings | Damage Reduction | Higher value - less damage after penetration
+	"MetalDamageModifier"			"1.55"
+	"GlassDamageModifier"			"1.15"
+	"ConcreteDamageModifier"		"1.75"
+	"WoodDamageModifier"			"1.25"
+	"OtherDamageModifier"			"1.25"
+
+	"IronSight"				"1"
+	"IronsightedFovOffset"			"-15"
+
+	// viewmodel offset when weapon ironsighted
+	"ironsightforward"			"-8"
+	"ironsightright"			"0"
+	"ironsightup"				"0"
+	"ironsightpitch"			"0"
+	"ironsightyaw"				"0"
+	"ironsightroll"				"0"
+
+	// viewmodel offset in non-ironsighted case
+        CustomOffset
+	{
+		"forward"	"-2"
+		"right"		"0"
+		"up"		"0"
+		"pitch"		"0"
+		"yaw"		"0"
+		"roll"		"0"
+	}
+	
+	"NearwallDistance"			"40"
+	"recoilpushbackvalue"			"1.5"
+	"ironsightwalkbobbingstrength"		"-0.25"
+
+	// Zombie Mode
+	"ZMBuyPrice"	 "2550"
+	"ZMSellPrice"	 "2050"
+	"ZMWeight"		 "3"
+	
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	SoundData
+	{
+		"single_shot"		"Weapon_Type17.Single"
+		"double_shot"		""
+		"reload"		""
+		"special1"		""
+		"special2"		""
+		"nearlyempty"		"Weapon_Generic.NearlyEmptyClick"
+		"empty"			"Weapon_Generic.ClipEmpty_07"
+
+		// NPC SECTION
+		"single_shot_npc"	""
+		"double_shot_npc"	""
+		"reload_npc"		""
+		
+		// 3RD PERSON PLAYER SECTION
+		"player_reload"		"Weapon_Foley_ThirdPerson_Type17.Reload"
+		"player_reload_loop"		""
+		"player_reload_cycle"		""
+
+		"player_grenade_pullpin"		""
+		"player_grenade_on"		"Weapon_Foley_ThirdPerson_Shared.GrenadeOn"
+		"player_equipment_on"		"Weapon_Foley_ThirdPerson_Shared.BayonetOn"
+		"player_equipment_off"		"Weapon_Foley_ThirdPerson_Shared.BayonetOff"
+		"player_deploy"		"Weapon_Foley_ThirdPerson_Shared.Draw"
+		"player_holster"		"Weapon_Foley_ThirdPerson_Shared.Holster"
+		"player_bash"		"Weapon_Foley_ThirdPerson_Shared.BashFast"
+	}
+}

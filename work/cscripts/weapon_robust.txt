@@ -1,0 +1,198 @@
+// IZH 43 Shotgun
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"				"#weapon_ROBUST"
+	"origin"				"#france"
+	"viewmodel"				"models/weapons/v_izh43.mdl"
+	"playermodel"				"models/weapons/w_izh43.mdl"
+	"anim_prefix"				"izh43"
+	"bucket"				"0"
+	"bucket_position"			"0"
+	"SupportedFireModes"			"Semi"
+	
+	
+	// Set model's bodygroups
+	BodygroupData
+	{		
+		"barrel"		"0"
+	}
+
+	"WeaponType"				"Shotgun"
+
+	"primary_ammo"				"12gauge"
+	"secondary_ammo"			"None"
+
+	"clip_size"				"2/16"	// clip size/max ammo
+	"clip2_size"				"-1"	// max secondary ammo
+
+	"default_clip"				"2"	// ammo given by default
+	"default_clip2"				"-1"	// ditto for second ammo type
+
+	"FireRate"				"120"	// RPM
+	"bullets_per_shot"			"6"	// pellets
+
+	"muzzle_velocity"			"403" 	// m/s
+	"bullet_weight"				"0.0007"	// KG
+
+	"BulletSpreadDegrees"			"8"	// degrees
+	"BulletSpreadDegreesIronsighted"	"3"	// degrees
+
+	"rangemodifier"				"0.75"
+
+	"IronsightSpeedScale"			"1.0" // how long ironsight transition will last
+
+	// damage modifiers
+	"DamageHeadMultiplier"			"2.5"
+	"DamageChestMultiplier"			"1.5"
+	"DamageStomachMultiplier"		"1.25"
+	"DamageLegMultiplier"			"0.9"
+	"DamageArmMultiplier"			"0.85"
+	"DamageGeneric"					"23"	// damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)
+
+	// weapon recoil
+	// minimal possible kick
+	//"ViewMinKickPITCH"			"4.90"	// degrees
+	//"ViewMinKickYAW"			"-1.05"	// degrees
+
+	// maximal possible kick
+	//"ViewKickPITCH"				"5.90"	// degrees
+	//"ViewKickYAW"				"1.05"	// degrees
+
+	"ShakeScale"				"3"	// camera shake effect, does not affect accuracy
+	"ShakeFreq"					"30.0" 	// how many shakes per second
+	"ShakeDuration"				"0.6"	// sec
+	
+	//
+	// fixed view slide from recoil
+	//
+	ViewSlideRecoil
+	{
+		"Up"	"3.5"
+		"Right"	"0.16"
+	}
+
+	ViewSlideRecoilIronsight
+	{
+		"Up"	"2.65"
+		"Right"	"0.16"
+	}
+
+	"CrosshairMinDistance"			"6"
+	"CrosshairDeltaDistance"		"8"
+
+	"weight"				"3.2"
+
+	////////////////////////////
+	// Weapon Particles Start //
+	////////////////////////////
+	
+ 	"MuzzleParticle"			"vietnam_muzzleflash_shotgun_type1_fp"
+ 	"MuzzleParticle_Smoke"		"vietnam_muzzleflash_shotgun_type1_fp_smoke"
+ 	"MuzzleParticle_Ironsighted"			"vietnam_muzzleflash_shotgun_type1_fp_is"
+ 	"MuzzleParticle_IronsightedSmoke"		"vietnam_muzzleflash_shotgun_type1_fp_is_smoke"
+	
+    "MuzzleParticle3rdPerson"		"vietnam_muzzleflash_shotgun_type1_tp"
+    "ParticleAttachType"			"1"	// 0 - PATTACH_POINT; 1 - PATTACH_POINT_FOLLOW
+
+    "MuzzleSmokeParticle"			"vietnam_muzzleflash_generic_aftersmoke"
+    "MuzzleSmokeShotCount"			"5"
+
+	"EjectBrassType"			"15" // 12G
+	"EjectBrassTrail"			"vietnam_weaponeffect_shelleject_trail"
+	"EjectBrassParticle"			"vietnam_weaponeffect_shelleject_side"
+	"EjectBrassSound"			"Bounce.ShotgunShell"
+
+	// tracer particles
+	"TracerParticle"			"vietnam_tracer_shotgun_primary"
+	"TracerParticle2"			"vietnam_tracer_shotgun_secondary"
+	"TracerRandomness"			"6"
+	"TracerFrequency"			"1"
+	
+	"MuzzleLight"			"effects/flashlight_muzzleflash_sg" // "None" will disable projected muzzleflash
+	"MuzzleLightBrightnessLower"			"0.75" // Random brightness is chosen between this Lower - Upper range
+	"MuzzleLightBrightnessUpper"			"1.0"
+	"MuzzleLightFOVLower"			"95"
+	"MuzzleLightFOVUpper"			"110"
+	"MuzzleLightDuration"			"0.05"
+	"MuzzleLightFadeOut"			"0.035"
+	"MuzzleLightDistance"			"600"
+	
+	//////////////////////////
+	// Weapon Particles End //
+	//////////////////////////
+
+	// bullet penetration settings | Depth
+	"MetalPenetrationDepth"			"3.0"	// in units
+	"GlassPenetrationDepth"			"8.0"
+	"ConcretePenetrationDepth"		"5.0"
+	"WoodPenetrationDepth"			"13.0"
+	"OtherPenetrationDepth"			"6.0"
+
+	// bullet penetration settings | Damage Reduction | Higher value - less damage after penetration
+	"MetalDamageModifier"			"1.7"
+	"GlassDamageModifier"			"1.3"
+	"ConcreteDamageModifier"		"1.9"
+	"WoodDamageModifier"			"1.4"
+	"OtherDamageModifier"			"1.4"
+
+	"IronSight"				"1"
+	"IronsightedFovOffset"			"-15"
+
+	// viewmodel offset when weapon ironsighted
+	"ironsightforward"			"0"
+	"ironsightright"			"0"
+	"ironsightup"				"0"
+	"ironsightpitch"			"0"
+	"ironsightyaw"				"0"
+	"ironsightroll"				"0"
+
+	// viewmodel offset in non-ironsighted case
+        CustomOffset
+	{
+		"forward"	"0"
+		"right"		"0"
+		"up"		"0"
+		"pitch"		"0"
+		"yaw"		"0"
+		"roll"		"0"
+	}
+	
+	"NearwallDistance"			"50"
+	
+	// Zombie Mode
+	"ZMBuyPrice"	 "950"
+	"ZMSellPrice"	 "750"
+	"ZMWeight"		 "3"
+
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	SoundData
+	{
+		"single_shot"		"Weapon_IZH43.Single"
+		"double_shot"		"Weapon_IZH43.Double"
+		"reload"		""
+		"special1"		""
+		"special2"		""
+		"nearlyempty"		"Weapon_Generic.NearlyEmptyClick"
+		"empty"			"Weapon_Generic.ClipEmpty_09"
+
+		// NPC SECTION
+		"single_shot_npc"	""
+		"double_shot_npc"	""
+		"reload_npc"		""
+		
+		// 3RD PERSON PLAYER SECTION
+		"player_reload"		"Weapon_Foley_ThirdPerson_IZH43.Reload"
+		"player_reload_loop"		""
+		"player_reload_cycle"		""
+
+		"player_grenade_pullpin"		""
+		"player_grenade_on"		""
+		"player_equipment_on"		""
+		"player_equipment_off"		""
+		"player_deploy"		"Weapon_Foley_ThirdPerson_Shared.Draw"
+		"player_holster"		"Weapon_Foley_ThirdPerson_Shared.Holster"
+		"player_bash"		"Weapon_Foley_ThirdPerson_Shared.BashSlow"
+	}
+}

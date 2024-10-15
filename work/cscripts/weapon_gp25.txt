@@ -1,0 +1,175 @@
+// DUPLICATE OF weapon_akm_gp25.txt but with different bucket
+// This is useful if player wants to select grenade launcher directly
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"				"#weapon_GP25"
+	"origin"				"#soviet_union"
+	"viewmodel"				"models/weapons/v_gp25.mdl"
+	"playermodel"				"models/weapons/w_gp25.mdl"
+	"anim_prefix"				"gp25"
+	"bucket"				"3"
+	"bucket_position"			"0"
+	"item_flags"				"0"
+	"SupportedFireModes"		"Auto+Semi"
+
+	"WeaponType"				"GrenadeLauncher"
+
+	"primary_ammo"				"7.62x39" // caliber
+	"secondary_ammo"			"40mm_grenade"
+
+	"clip_size"				"30/90"	// clip size/max ammo
+	"clip2_size"				"-1/2"	// ditto for secondary ammo (-1 means we don't use clips for this ammo type)
+
+	"default_clip"				"30"	// ammo given by default
+	"default_clip2"				"2"	// ditto for second ammo type
+
+	"FireRate"				"600"	// RPM
+	"SecondaryFireRate"			"25"	// RPM
+
+	"muzzle_velocity"			"715" 	// m/s, or 3.15ft/s
+	"bullet_weight"				"0.008"	// KG
+	"gl_velocity"				"76" 	// m/s, grenade launcher shoot velocity
+
+	"BulletSpreadDegrees"			"6"	// degrees
+	"BulletSpreadDegreesIronsighted"	"1.5"	// degrees
+
+	"rangemodifier"				"0.974"
+
+	"IronsightSpeedScale"			"0.9" // how long ironsight transition will last
+
+	//
+	// Bullet spread multiplier according to current stance
+	//
+	"CrouchSpreadMultiplier"		"0.8"
+	"ProneSpreadMultiplier"			"0.6"
+	"StandMoveSpreadMultiplier"		"1.45"
+	"SneakMoveSpreadMultiplier"		"1.35"
+	"CrouchMoveSpreadMultiplier"		"1.25"
+	"JumpSpreadMultiplier"			"4.0"
+
+	// damage modifiers
+	"DamageHeadMultiplier"			"1.4"
+	"DamageChestMultiplier"			"0.88"
+	"DamageStomachMultiplier"		"0.65"
+	"DamageLegMultiplier"			"0.55"
+	"DamageArmMultiplier"			"0.5"
+	"DamageGeneric"				"57"	// damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)
+
+	// weapon recoil
+	// minimal possible kick
+	//"ViewMinKickPITCH"			"-0.79"	// degrees
+	//"ViewMinKickYAW"			"-0.64"	// degrees
+
+	// maximal possible kick
+	//"ViewKickPITCH"				"1.99"	// degrees
+	//"ViewKickYAW"				"0.6"	// degrees
+
+	"ShakeScale"				"2.5"	// camera shake effect, does not affect accuracy
+	"ShakeFreq"				"60" 	// how many shakes per second
+	"ShakeDuration"				"0.175"	// sec
+
+	//
+	// fixed view slide from recoil
+	//
+	ViewSlideRecoil
+	{
+		"Up"	"0.9"
+		"Right"	"0.29"
+	}
+
+	ViewSlideRecoilIronsight
+	{
+		"Up"	"0.26"
+		"Right"	"0.08"
+	}
+
+	"CrosshairMinDistance"			"4"
+	"CrosshairDeltaDistance"		"4"
+
+	"weight"				"4.6"
+
+	////////////////////////////
+	// Weapon Particles Start //
+	////////////////////////////
+	
+ 	"MuzzleParticle"			"vietnam_muzzleflash_machinegun_type2_fp"
+ 	"MuzzleParticle_Smoke"		"vietnam_muzzleflash_machinegun_type1_fp_smoke"
+ 	"MuzzleParticle_Ironsighted"			"vietnam_muzzleflash_machinegun_type2_fp_is"
+ 	"MuzzleParticle_IronsightedSmoke"		"vietnam_muzzleflash_machinegun_type1_fp_is_smoke"
+	
+    "MuzzleParticle3rdPerson"		"vietnam_muzzleflash_machinegun_type2_tp"
+    "ParticleAttachType"			"1"	// 0 - PATTACH_POINT; 1 - PATTACH_POINT_FOLLOW
+
+    "MuzzleSmokeParticle"			"vietnam_muzzleflash_generic_aftersmoke"
+    "MuzzleSmokeShotCount"			"5"
+
+	"EjectBrassType"			"17" // GREN
+	"EjectBrassTrail"			"vietnam_weaponeffect_shelleject_trail"
+	"EjectBrassParticle"			"vietnam_weaponeffect_shelleject_side"
+	"EjectBrassSound"			"Bounce.Shell"
+
+	// tracer particles
+	"TracerParticle"			"null"
+	"TracerParticle2"			"null"
+	"TracerRandomness"			"6"
+	"TracerFrequency"			"1"
+	
+	//////////////////////////
+	// Weapon Particles End //
+	//////////////////////////
+
+	// bullet penetration settings | Depth
+	"MetalPenetrationDepth"			"5.0"	// in units
+	"GlassPenetrationDepth"			"11.0"
+	"ConcretePenetrationDepth"		"7.0"
+	"WoodPenetrationDepth"			"15.0"
+	"OtherPenetrationDepth"			"9.0"
+
+	// bullet penetration settings | Damage Reduction | Higher value - less damage after penetration
+	"MetalDamageModifier"			"2"
+	"GlassDamageModifier"			"1.2"
+	"ConcreteDamageModifier"		"3"
+	"WoodDamageModifier"			"1.5"
+	"OtherDamageModifier"			"1.2"
+
+	"IronSight"				"1"
+	"IronsightedFovOffset"			"-15"
+
+	// viewmodel offset when weapon ironsighted
+	"ironsightforward"			"0"
+	"ironsightright"			"0"
+	"ironsightup"				"0"
+	"ironsightpitch"			"0"
+	"ironsightyaw"				"0"
+	"ironsightroll"				"0"
+
+	// viewmodel offset in non-ironsighted case
+        CustomOffset
+	{
+		"forward"	"0"
+		"right"		"0"
+		"up"		"0"
+		"pitch"		"0"
+		"yaw"		"0"
+		"roll"		"0"
+	}
+
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	SoundData
+	{
+		"single_shot"		"Weapon_AKM.Single"
+		"double_shot"		"Weapon_AKMGP25.Single"
+		"reload"		""
+		"special1"		""
+		"special2"		""
+		"nearlyempty"		"Weapon_Generic.NearlyEmptyClick"
+		"empty"			"Weapon_Generic.ClipEmpty_02"
+
+		// NPC SECTION
+		"single_shot_npc"	""
+		"double_shot_npc"	""
+		"reload_npc"		""
+	}
+}

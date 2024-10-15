@@ -1,0 +1,172 @@
+// M1 Garand Rifle (With Rifle Grenade attached) - Shoots grenades only
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"				"#weapon_M1C_riflegrenade"
+	"origin"				"#united_states_of_america"
+	"viewmodel"				"models/weapons/v_m1c.mdl"
+	"playermodel"				"models/weapons/w_m1c.mdl"
+	"anim_prefix"				"m1a1c"
+	"bucket"				"3"
+	"bucket_position"			"0"
+	"item_flags"				"0"
+	"HasBayonet"				"1"
+	
+	// Set model's bodygroups
+	BodygroupData
+	{		
+		"mount"		"1"
+	}
+	
+	"WeaponType"				"RifleGrenade"
+
+	"primary_ammo"				"riflegrenade"
+	"secondary_ammo"			"None"
+
+	"clip_size"				"-1/2"	// clip size/max ammo (-1 means we don't use clips for this ammo type)
+	"clip2_size"				"-1"	// max secondary ammo
+
+	"default_clip"				"1"	// ammo given by default
+	"default_clip2"				"-1"	// ditto for second ammo type
+
+	"FireRate"				"50"	// RPM
+
+	"gl_velocity"				"70" 	// m/s, grenade launcher shoot velocity
+
+	"ExplosionDamage"			"135"
+	"ExplosionRadius"			"350"
+
+	"FuseTimeMin"				"2.0"
+	"FuseTimeMax"				"4.0"
+	
+	"BulletSpreadDegrees"			"3"	// degrees
+	"BulletSpreadDegreesIronsighted"	"1"	// degrees
+
+	"IronsightSpeedScale"			"0.7" // how long ironsight transition will last
+	
+	//
+	// Bullet spread multiplier according to current stance
+	//
+	"CrouchSpreadMultiplier"		"1"
+	"ProneSpreadMultiplier"			"0.75"
+	"StandMoveSpreadMultiplier"		"2"
+	"SneakMoveSpreadMultiplier"		"1.5"
+	"CrouchMoveSpreadMultiplier"		"1.25"
+	"JumpSpreadMultiplier"			"4.0"
+
+	// weapon recoil
+	// minimal possible kick
+	//"ViewMinKickPITCH"			"-0.65"	// degrees
+	//"ViewMinKickYAW"			"0.85"	// degrees
+
+	// maximal possible kick
+	//"ViewKickPITCH"				"0.9"	// degrees
+	//"ViewKickYAW"				"-0.7"	// degrees
+	
+	"ShakeScale"				"2.5"	// camera shake effect, does not affect accuracy
+	"ShakeFreq"				"20.0" 	// how many shakes per second
+	"ShakeDuration"				"0.4"	// sec
+
+	//
+	// fixed view slide from recoil
+	//
+	ViewSlideRecoil
+	{
+		"Up"	"3"
+		"Right"	"0.65"
+	}
+
+	ViewSlideRecoilIronsight
+	{
+		"Up"	"1.45"
+		"Right"	"0.19"
+	}
+
+	"CrosshairMinDistance"			"4"
+	"CrosshairDeltaDistance"		"4"
+
+	"weight"				"4.31"
+
+	////////////////////////////
+	// Weapon Particles Start //
+	////////////////////////////
+	
+ 	"MuzzleParticle"			"vietnam_muzzleflash_rifle_type2_fp"
+ 	"MuzzleParticle_Smoke"		"vietnam_muzzleflash_rifle_type1_fp_smoke"
+ 	"MuzzleParticle_Ironsighted"			"vietnam_muzzleflash_rifle_type2_fp_is"
+ 	"MuzzleParticle_IronsightedSmoke"		"vietnam_muzzleflash_rifle_type1_fp_is_smoke"
+	
+    "MuzzleParticle3rdPerson"		"vietnam_muzzleflash_rifle_type2_tp"
+    "ParticleAttachType"			"1"	// 0 - PATTACH_POINT; 1 - PATTACH_POINT_FOLLOW
+
+    "MuzzleSmokeParticle"			"vietnam_muzzleflash_generic_aftersmoke"
+    "MuzzleSmokeShotCount"			"5"
+
+	"EjectBrassTrail"			"vietnam_weaponeffect_shelleject_trail"
+	"EjectBrassParticle"			"vietnam_weaponeffect_shelleject_side"
+
+	// tracer particles
+	"TracerParticle"			"vietnam_tracer_rifle_primary"
+	"TracerParticle2"			"vietnam_tracer_rifle_secondary"
+	"TracerRandomness"			"6"
+	"TracerFrequency"			"1"
+	
+	//////////////////////////
+	// Weapon Particles End //
+	//////////////////////////
+
+	"IronSight"				"1"
+	"IronsightedFovOffset"			"-15"
+
+	// viewmodel offset when weapon ironsighted
+    "ironsightforward"				"-7"
+    "ironsightright" 				"0"
+    "ironsightup"					"0"
+    "ironsightpitch"				"0"
+    "ironsightyaw"					"0"
+    "ironsightroll"					"0"
+
+    // viewmodel offset in non-ironsighted case
+	CustomOffset
+	{
+		"forward"	"-2"
+		"right"		"0"
+		"up"		"0"
+		"pitch"		"0"
+		"yaw"		"0"
+		"roll"		"0"
+	}
+	
+								"NearwallDistance"			"45"
+
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	SoundData
+	{
+		"single_shot"		"Weapon_M1C.RifleGrenade"
+		"double_shot"		""
+		"reload"		""
+		"special1"		""
+		"special2"		""
+		"nearlyempty"		""
+		"empty"			"Weapon_Generic.ClipEmpty_06"
+
+		// NPC SECTION
+		"single_shot_npc"	""
+		"double_shot_npc"	""
+		"reload_npc"		""
+		
+		// 3RD PERSON PLAYER SECTION
+		"player_reload"		"Weapon_Foley_ThirdPerson_M1C.Reload"
+		"player_reload_loop"		""
+		"player_reload_cycle"		""
+
+		"player_grenade_pullpin"		""
+		"player_grenade_on"		"Weapon_Foley_ThirdPerson_Shared.GrenadeOn"
+		"player_equipment_on"		"Weapon_Foley_ThirdPerson_Shared.BayonetOn"
+		"player_equipment_off"		"Weapon_Foley_ThirdPerson_Shared.BayonetOff"
+		"player_deploy"		"Weapon_Foley_ThirdPerson_Shared.Draw"
+		"player_holster"		"Weapon_Foley_ThirdPerson_Shared.Holster"
+		"player_bash"		"Weapon_Foley_ThirdPerson_Shared.BashFast"
+	}
+}

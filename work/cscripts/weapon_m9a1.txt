@@ -1,0 +1,112 @@
+// M9A1 Flamethrower
+
+WeaponData
+{
+	// Weapon data is loaded by both the Game and Client DLLs.
+	"printname"				"#weapon_M9A1"
+	"origin"				"#united_states_of_america"
+	"viewmodel"				"models/weapons/v_m9a1.mdl"
+	"playermodel"				"models/weapons/w_m9a1.mdl"
+	"anim_prefix"				"m9a1"
+	"bucket"				"3"
+	"bucket_position"			"0"
+	"item_flags"				"0"
+	"autoswitchfrom"			"1"
+
+	"WeaponType"				"Flamethrower"
+
+	"primary_ammo"				"flamethrower_fuel"
+	"secondary_ammo"			"None"
+
+	"clip_size"				"-1/100"	// clip size/max ammo (-1 means we don't use clips for this ammo type)
+	"clip2_size"				"-1"		// max secondary ammo
+
+	"default_clip"				"100"	// ammo given by default
+	"default_clip2"				"-1"	// ditto for second ammo type
+
+	"FireRate"				"600"	// RPM
+
+	"DamageGeneric"				"15"
+
+	"weight"				"12"
+
+	////////////////////////////
+	// Weapon Particles Start //
+	////////////////////////////
+
+	"MuzzleParticle"       			"lpo50_flame"	
+    "MuzzleParticle3rdPerson"		"lpo50_flame"
+    "ParticleAttachType"			"1"	// 0 - PATTACH_POINT; 1 - PATTACH_POINT_FOLLOW
+
+	"MuzzleLight"			"effects/flashlight_muzzleflash_ft" // "None" will disable projected muzzleflash
+	"MuzzleLightBrightnessLower"		"2.3"
+	"MuzzleLightBrightnessUpper"		"2.5"
+	"MuzzleLightFOVLower"			"125"
+	"MuzzleLightFOVUpper"			"135"
+	"MuzzleLightDuration"			"0.1"
+	"MuzzleLightFadeIn"			"0.25"
+	"MuzzleLightFadeOut"			"0.5"
+	
+	//////////////////////////
+	// Weapon Particles End //
+	//////////////////////////
+
+	"IronSight"				"1"
+	"IronsightedFovOffset"			"-15"
+
+	// viewmodel offset when weapon ironsighted
+	"ironsightforward"			"0"
+	"ironsightright"			"0"
+	"ironsightup"				"0"
+	"ironsightpitch"			"0"
+	"ironsightyaw"				"0"
+	"ironsightroll"				"0"
+
+	// viewmodel offset in non-ironsighted case
+        CustomOffset
+	{
+		"forward"	"0"
+		"right"		"0"
+		"up"		"0"
+		"pitch"		"0"
+		"yaw"		"0"
+		"roll"		"0"
+	}
+	
+	"NearwallDistance"			"25"
+
+	// Zombie Mode
+	"ZMBuyPrice"	 "6000"
+	"ZMSellPrice"	 "5000"
+	"ZMWeight"		 "6"
+	
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	SoundData
+	{
+		"single_shot"		"Weapon_M9A1.Primary_Fire_Start"
+		"double_shot"		""
+		"reload"		""
+		"special1"		"Weapon_M9A1.Primary_Fire_Loop"
+		"special2"		"Weapon_M9A1.Primary_Fire_Stop"
+		"nearlyempty"		"Weapon_Generic.NearlyEmptyClick"
+		"empty"			"Weapon_Generic.ClipEmpty_01"
+
+		// NPC SECTION
+		"single_shot_npc"	""
+		"double_shot_npc"	""
+		"reload_npc"		""
+		
+		// 3RD PERSON PLAYER SECTION
+		"player_reload"		""
+		"player_reload_loop"		""
+		"player_reload_cycle"		""
+
+		"player_grenade_pullpin"		""
+		"player_grenade_on"		""
+		"player_equipment_on"		""
+		"player_equipment_off"		""
+		"player_deploy"		"Weapon_Foley_ThirdPerson_Shared.Draw"
+		"player_holster"		"Weapon_Foley_ThirdPerson_Shared.Holster"
+		"player_bash"		"Weapon_Foley_ThirdPerson_Shared.BashSlow"
+	}
+}
