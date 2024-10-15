@@ -886,7 +886,7 @@ $sequence "ChargeStab" {
 $sequence "Scope_adjust" {
 	"scope_adjust_idle"
 	"scope_adjust_iron"
-	activity "ACT_VM_SCOPE_ADJUST" 1
+	activity "ACT_VM_FIDGET" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	fadein 0.2

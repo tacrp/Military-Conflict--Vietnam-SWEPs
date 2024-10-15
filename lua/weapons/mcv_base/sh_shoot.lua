@@ -149,6 +149,25 @@ function SWEP:GetFiremodeValue()
 end
 
 function SWEP:ChangeFiremode()
+    if self.AdjustableScopes then
+        local scopelevel = self:GetScopeLevel()
+
+        if scopelevel == 2 then
+            self:PlayAnimation(ACT_VM_FIDGET, -1, true)
+        else
+            self:PlayAnimation(ACT_VM_FIDGET, 1, true)
+        end
+
+        scopelevel = scopelevel + 1
+
+        if scopelevel > 2 then
+            scopelevel = 1
+        end
+
+        self:SetScopeLevel(scopelevel)
+        return
+    end
+
     if #self.Firemodes <= 1 then return end
 
     local fm = self:GetFiremode()

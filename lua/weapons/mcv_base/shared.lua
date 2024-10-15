@@ -46,6 +46,8 @@ SWEP.Firemodes = {
     MCV.FIREMODE_SEMI
 }
 
+SWEP.AdjustableScopes = false
+
 // Weapon must be manually cycled
 SWEP.PlayCycleAnimation = false
 SWEP.LastShotAnimation = false
@@ -265,6 +267,7 @@ function SWEP:SetupDataTables()
     self:NetworkVar("Entity", 0, "HolsterEntity")
 
     self:SetFiremode(1)
+    self:SetScopeLevel(1)
     self:SetNeedCycle(false)
 end
 
