@@ -793,9 +793,24 @@ $sequence "shoot2pose_l" {
 }
 
 $sequence "shootlast_r" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_PRIMARYATTACK_EMPTY" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	fadein 0
+	fadeout 0
+	addlayer "walklayerironsight"
+	addlayer "SlidePosition"
+	addlayer "shootlast_r_pose"
+	node "0"
+}
+
+
+$sequence "shootlast_r_pose" {
 	"shootlast_r_a"
 	"shootlast_r_ironsight_a"
-	activity "ACT_VM_PRIMARYSHOOTLAST" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
@@ -808,10 +823,25 @@ $sequence "shootlast_r" {
 	node "Fire"
 }
 
+
 $sequence "shootlast_l" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_SHOOTLAST" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	fadein 0
+	fadeout 0
+	addlayer "walklayerironsight"
+	addlayer "SlidePosition"
+	addlayer "shootlast_l_pose"
+	node "0"
+}
+
+$sequence "shootlast_l_pose" {
 	"shootlast_l_a"
 	"shootlast_l_ironsight_a"
-	activity "ACT_VM_SECONDARYSHOOTLAST" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
