@@ -9,7 +9,7 @@ Pistols:
 
 - S&W M39-2 [X]
 - M1911A1
-- Browning Hi-Power
+- Browning Hi-Power [X]
 - Baby Browning [X]
 - Mk 22 Mod 0 "Hush Puppy" [X]
 - HDM
@@ -61,15 +61,15 @@ Assault Rifles:
 - M601
 - M16A1 M203
 - H&R T223
-- Stoner 63A Rifle
+- Stoner 63A Rifle [X]
 - Stoner 63A Drum
 
 
 Battle Rifles:
 
 - M1918A2 BAR [X]
-- M1 Garand
-- M14
+- M1 Garand [X]
+- M14 [X]
 - L1A1 [X]
 - L1A1 SASR [X]
 
@@ -102,8 +102,8 @@ Bolt-Action Rifles:
 Sniper Rifles:
 
 - M1903A4 Springfield
-- XM21
-- M1D Garand
+- XM21 [X]
+- M1D Garand [X]
 - M40
 - M656
 
@@ -205,7 +205,7 @@ Assault Rifles:
 
 - AK-47 [X]
 - AKM [X]
-- AKM GP25
+- AKM GP25 [X]
 - Type 56-1 
 - Type 58 [X]
 - PM md. 63 [X]
@@ -217,7 +217,7 @@ Assault Rifles:
 
 Battle Rifles:
 
-- MAS-49
+- MAS-49 [X]
 - AVT-40
 
 
@@ -232,8 +232,8 @@ Carbines:
 
 Shotguns:
 
-- Fusil Robust
-- Fusil Robust Sawed-Off
+- Fusil Robust [X]
+- Fusil Robust Sawed-Off [X]
 - M1897 Trench Gun
 
 
@@ -247,7 +247,7 @@ Bolt-Action Rifles:
 Sniper Rifles:
 
 - Karabiner 98k ZF39 [X]
-- MAS-49 APX L806
+- MAS-49 APX L806 [X]
 - SVT-40 PU
 - Mosin-Nagant M91/30 PU
 - SVD
