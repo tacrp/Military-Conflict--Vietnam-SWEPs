@@ -48,8 +48,8 @@ Submachine Guns:
 - M1928 Thompson
 - Owen Gun [X]
 - F1 [X]
-- Sterling L2A3
-- Sterling L34A1
+- Sterling L2A3 [X]
+- Sterling L34A1 [X]
 - Sten Gun
 - Sten Gun SOG
 
