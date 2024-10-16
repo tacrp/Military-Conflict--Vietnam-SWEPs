@@ -189,7 +189,7 @@ Machine Pistols:
 Submachine Guns:
 
 - Vz. 23 [X]
-- K-50M
+- K-50M [X]
 - PPSh-41
 - PPSh-41 Drum
 - PPS-43
