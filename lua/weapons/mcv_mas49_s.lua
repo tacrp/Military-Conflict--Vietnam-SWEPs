@@ -5,7 +5,7 @@ SWEP.Spawnable = true
 AddCSLuaFile()
 
 // Names and basic information
-SWEP.PrintName = "MAS-49 APX L806"
+SWEP.PrintName = "MAS 49 APX L806"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "France"
 SWEP.SubCategory = "Sniper Rifles"
