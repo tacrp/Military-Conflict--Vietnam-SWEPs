@@ -299,21 +299,20 @@ $animation "RightEmpty" "v_dual_highpower_anims\RightEmpty.smd" {
 
 $animation "BothEmpty" "v_dual_highpower_anims\BothEmpty.smd" {
 	fps 30
-	loop
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "BothEmpty_corrective_animation" 0
 }
 
 $animation "basePose_a" "v_dual_highpower_anims\basePose_a.smd" {
 	fps 30
-	loop
+	numframes 60
 	
 	
 }
 
 $animation "ironsight" "v_dual_highpower_anims\ironsight.smd" {
 	fps 30
-	frame 0 1
+	frame 1 1
 	numframes 60
 	
 	
@@ -673,8 +672,7 @@ $sequence "draw" {
 	fadein 0
 	fadeout 0.2
 	addlayer "SlidePosition"
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	  
@@ -692,8 +690,7 @@ $sequence "Firstdraw" {
 	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	node "0"
 }
 $sequence "shoot1_r" {
@@ -703,10 +700,10 @@ $sequence "shoot1_r" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	snap
 	addlayer "walklayerironsight"
-	addlayer "SlidePosition"addlayer "shoot1pose_r"
+	//addlayer "SlidePosition"
+	addlayer "shoot1pose_r"
 	node "0"
 }
 
@@ -727,10 +724,10 @@ $sequence "shoot1_l" {
 	activity "ACT_VM_SECONDARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	snap
 	addlayer "walklayerironsight"
-	addlayer "SlidePosition"addlayer "shoot1pose_l"
+	//addlayer "SlidePosition"
+	addlayer "shoot1pose_l"
 	node "0"
 }
 
@@ -751,10 +748,10 @@ $sequence "shoot2_r" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	snap
 	addlayer "walklayerironsight"
-	addlayer "SlidePosition"addlayer "shoot2pose_r"
+	//addlayer "SlidePosition"
+	addlayer "shoot2pose_r"
 	node "0"
 }
 
@@ -775,10 +772,10 @@ $sequence "shoot2_l" {
 	activity "ACT_VM_SECONDARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	snap
 	addlayer "walklayerironsight"
-	addlayer "SlidePosition"addlayer "shoot2pose_l"
+	addlayer "SlidePosition"
+	addlayer "shoot2pose_l"
 	node "0"
 }
 
@@ -799,8 +796,7 @@ $sequence "shootlast_r" {
 	activity "ACT_VM_PRIMARYATTACK_EMPTY" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	snap
 	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
 	addlayer "shootlast_r_pose"
@@ -831,8 +827,7 @@ $sequence "shootlast_l" {
 	activity "ACT_VM_SHOOTLAST" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	snap
 	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
 	addlayer "shootlast_l_pose"
@@ -868,7 +863,7 @@ $sequence "reload" {
 	{ event AE_WPN_COMPLETE_RELOAD 76 "" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	node "0"
 }
 
@@ -886,13 +881,13 @@ $sequence "reloadRightOnly" {
 	{ event AE_WPN_COMPLETE_RELOAD 46 "" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	node "0"
 }
 
 $sequence "reload_emptyRightOnly" {
-	"reload_re_a"
-	"reload_re_a_i"
+	"reload_er_a"
+	"reload_er_a_i"
 	activity "ACT_VM_MISSRIGHT2" 1
 	blend "ironsight" 0 1
 	blendwidth 2
@@ -905,7 +900,7 @@ $sequence "reload_emptyRightOnly" {
 	{ event AE_WPN_COMPLETE_RELOAD 91 "" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	node "0"
 }
 
@@ -924,7 +919,7 @@ $sequence "reload_empty" {
 	{ event AE_WPN_COMPLETE_RELOAD 93 "" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	node "0"
 }
 
@@ -1049,8 +1044,7 @@ $sequence "holster" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "SlidePosition"
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	fps 30
 	
 	
