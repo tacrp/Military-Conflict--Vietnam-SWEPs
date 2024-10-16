@@ -38,7 +38,7 @@ SWEP.ExplosionRadius = 0
 
 SWEP.MuzzleVelocity = 860
 
-SWEP.RangeModifier = 0.92
+SWEP.RangeModifier = 0.965
 
 SWEP.Firemodes = {
     MCV.FIREMODE_SEMI
@@ -78,8 +78,8 @@ SWEP.IronsightAng = Angle(0.24, 0, 0)
 SWEP.CustomPos = Vector(0, -2, 0)
 SWEP.CustomAng = Angle(0, 0, 0)
 
-SWEP.Spread = 8.35
-SWEP.SpreadIronsighted = 2
+SWEP.Spread = 8.4
+SWEP.SpreadIronsighted = 0.25
 
 SWEP.FireRate = 350 // in rounds per minute
 
