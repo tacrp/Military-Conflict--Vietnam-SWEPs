@@ -210,7 +210,7 @@ Assault Rifles:
 - Type 58 [X]
 - PM md. 63 [X]
 - Kbkg 60 [X]
-- Vz. 58
+- Vz. 58 [X]
 - StG-44
 - StG-44 ZF4
 
