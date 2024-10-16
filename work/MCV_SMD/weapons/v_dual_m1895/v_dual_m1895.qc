@@ -808,85 +808,171 @@ $sequence "draw" {
 }
 
 $sequence "shoot_hammer_right" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	"idle_delayed_a"
+	"ironsight_transition_delayed"
+	"ironsight_delayed"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	blend "ironsight" 0 1
+	blend "revolver_firemode_pose" 0 1
+	blendwidth 3
+	fadein 0.2
+	fadeout 0.2
+	addlayer "walklayerironsight"
+	addlayer "shoot_hammer_right_pose"
+}
+
+$sequence "shoot_hammer_right_pose" {
 	"shoot_r_a"
 	"shoot_r_ironsight_a"
-	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
 	{ event 5004 10 "MCV_Weapon_Foley_Revolver.Hand" }
 	{ event 5004 15 "MCV_Weapon_Foley_Revolver.HammerOut" }
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
 	snap
-	node "Fire"
+	hidden
 }
 
 $sequence "shoot_hammer_left" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	"idle_delayed_a"
+	"ironsight_transition_delayed"
+	"ironsight_delayed"
+	activity "ACT_VM_SECONDARYATTACK" 1
+	blend "ironsight" 0 1
+	blend "revolver_firemode_pose" 0 1
+	blendwidth 3
+	fadein 0.2
+	fadeout 0.2
+	addlayer "walklayerironsight"
+	addlayer "shoot_hammer_left_pose"
+}
+
+$sequence "shoot_hammer_left_pose" {
 	"shoot_l_a"
 	"shoot_l_ironsight_a"
-	activity "ACT_VM_SECONDARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
 	{ event 5004 10 "MCV_Weapon_Foley_Revolver.Hand" }
 	{ event 5004 15 "MCV_Weapon_Foley_Revolver.HammerOut" }
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject2" }
-	{ event AE_MUZZLEFLASH 0 "" }
 	snap
-	node "Fire"
+	hidden
 }
 
 $sequence "prepare_delayed_right" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	"idle_delayed_a"
+	"ironsight_transition_delayed"
+	"ironsight_delayed"
+	activity "ACT_VM_HAULBACK" 1
+	blend "ironsight" 0 1
+	blend "revolver_firemode_pose" 0 1
+	blendwidth 3
+	fadein 0.2
+	fadeout 0.2
+	addlayer "walklayerironsight"
+	addlayer "prepare_delayed_right_pose"
+}
+
+$sequence "prepare_delayed_right_pose" {
 	"shoot_p_r_a"
 	"shoot_p_r_ironsight_a"
-	activity "ACT_VM_HAULBACK" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
 	{ event 5004 0 "MCV_Weapon_Foley_Revolver.HammerOutSlow" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	snap
+	hidden
 }
 
 $sequence "prepare_delayed_left" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	"idle_delayed_a"
+	"ironsight_transition_delayed"
+	"ironsight_delayed"
+	activity "ACT_VM_PULLPIN" 1
+	blend "ironsight" 0 1
+	blend "revolver_firemode_pose" 0 1
+	blendwidth 3
+	fadein 0.2
+	fadeout 0.2
+	addlayer "walklayerironsight"
+	addlayer "prepare_delayed_left_pose"
+}
+
+$sequence "prepare_delayed_left_pose" {
 	"shoot_p_l_a"
 	"shoot_p_l_ironsight_a"
-	activity "ACT_VM_HAULBACK2" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
 	{ event 5004 0 "MCV_Weapon_Foley_Revolver.HammerOutSlow" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	snap
+	hidden
 }
 
 $sequence "shoot_delayed_right" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	"idle_delayed_a"
+	"ironsight_transition_delayed"
+	"ironsight_delayed"
+	activity "ACT_VM_PRIMARYATTACK_2" 1
+	blend "ironsight" 0 1
+	blend "revolver_firemode_pose" 0 1
+	blendwidth 3
+	fadein 0.2
+	fadeout 0.2
+	addlayer "walklayerironsight"
+	addlayer "shoot_delayed_right_pose"
+}
+
+$sequence "shoot_delayed_right_pose" {
 	"shoot_d_r_a"
 	"shoot_d_r_ironsight_a"
-	activity "ACT_VM_PRIMARYATTACK2" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
 	snap
-	node "Fire"
+	hidden
 }
 
 $sequence "shoot_delayed_left" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	"idle_delayed_a"
+	"ironsight_transition_delayed"
+	"ironsight_delayed"
+	activity "ACT_VM_PRIMARYATTACK_3" 1
+	blend "ironsight" 0 1
+	blend "revolver_firemode_pose" 0 1
+	blendwidth 3
+	fadein 0.2
+	fadeout 0.2
+	addlayer "walklayerironsight"
+	addlayer "shoot_delayed_left_pose"
+}
+
+$sequence "shoot_delayed_left_pose" {
 	"shoot_d_l_a"
 	"shoot_d_l_ironsight_a"
-	activity "ACT_VM_SECONDARYATTACK2" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject2" }
-	{ event AE_MUZZLEFLASH 0 "" }
 	snap
-	node "Fire"
+	hidden
 }
 
 $sequence "reload_start" {

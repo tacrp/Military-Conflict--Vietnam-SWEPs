@@ -63,7 +63,11 @@ function SWEP:PrimaryAttack()
         if fm == MCV.FIREMODE_VOLLEY then
             t = self:PlayAnimation(ACT_VM_RECOIL1, 0.5)
         elseif fm == MCV.FIREMODE_DA then
-            t = self:PlayAnimation(ACT_VM_HAULBACK, 0.5, true)
+            if self:GetAkimbo() and self:Clip1() % 2 == 0 then
+                t = self:PlayAnimation(ACT_VM_PULLPIN, 0.5, true)
+            else
+                t = self:PlayAnimation(ACT_VM_HAULBACK, 0.5, true)
+            end
         elseif fm == MCV.FIREMODE_FAN then
             t = self:PlayAnimation(ACT_VM_PRIMARYATTACK_1, 0.5, false)
         else
@@ -310,6 +314,10 @@ function SWEP:ChangeFiremode()
     local fm = self:GetFiremode()
 
     fm = fm + 1
+
+    if self:GetAkimbo() and self.Firemodes[fm] == MCV.FIREMODE_FAN then
+        fm = fm + 1
+    end
 
     if fm > #self.Firemodes then
         fm = 1

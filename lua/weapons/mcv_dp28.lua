@@ -89,6 +89,9 @@ SWEP.Primary.Chamber = 0
 SWEP.Primary.DefaultClip = 96
 SWEP.Primary.Automatic = true
 
+SWEP.MagInTime = 2
+SWEP.MagInTimeEmpty = 2
+
 SWEP.NearwallDistance = 40
 
 // Bullet spread multiplier according to current stance

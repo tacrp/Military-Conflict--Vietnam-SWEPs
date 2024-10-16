@@ -34,7 +34,11 @@ function SWEP:Think()
             self:AttackEffects()
             self:BulletAttack()
             self:SetPrimedAttack(false)
-            self:PlayAnimation(ACT_VM_PRIMARYATTACK_2, 0.5)
+            if self:GetAkimbo() and self:Clip1() % 2 == 0 then
+                self:PlayAnimation(ACT_VM_PRIMARYATTACK_3, 0.5)
+            else
+                self:PlayAnimation(ACT_VM_PRIMARYATTACK_2, 0.5)
+            end
         end
     end
 
