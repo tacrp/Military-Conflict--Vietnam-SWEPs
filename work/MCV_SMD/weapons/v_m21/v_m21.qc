@@ -718,8 +718,7 @@ $sequence "shoot1" {
 	snap
 	addlayer "walklayer"
 	addlayer "runlayer"
-	addlayer "BoltshootMovement"
-	//addlayer "SlidePosition"
+	addlayer "SlidePosition"
 	addlayer "shootpose1"
 	node "0"
 }
@@ -734,8 +733,7 @@ $sequence "shoot2" {
 	snap
 	addlayer "walklayer"
 	addlayer "runlayer"
-	addlayer "BoltshootMovement"
-	//addlayer "SlidePosition"
+	addlayer "SlidePosition"
 	addlayer "shootpose2"
 	node "0"
 }
@@ -750,8 +748,7 @@ $sequence "shoot3" {
 	snap
 	addlayer "walklayer"
 	addlayer "runlayer"
-	addlayer "BoltshootMovement"
-	//addlayer "SlidePosition"
+	addlayer "SlidePosition"
 	addlayer "shootpose3"
 	node "0"
 }
@@ -765,6 +762,7 @@ $sequence "shootpose1" {
 	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
 	{ event AE_MUZZLEFLASH 0 "" }
 	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
+	addlayer "BoltshootMovement"
 	snap
 	hidden
 	node "Fire"
@@ -779,6 +777,7 @@ $sequence "shootpose2" {
 	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
 	{ event AE_MUZZLEFLASH 0 "" }
 	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
+	addlayer "BoltshootMovement"
 	snap
 	hidden
 	node "Fire"
@@ -793,6 +792,7 @@ $sequence "shootpose3" {
 	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
 	{ event AE_MUZZLEFLASH 0 "" }
 	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
+	addlayer "BoltshootMovement"
 	snap
 	hidden
 	node "Fire"
