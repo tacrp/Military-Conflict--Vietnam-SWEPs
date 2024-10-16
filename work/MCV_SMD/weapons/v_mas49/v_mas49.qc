@@ -234,21 +234,20 @@ $animation "Default" "v_mas49_anims\Default.smd" {
 
 $animation "Slideback" "v_mas49_anims\Slideback.smd" {
 	fps 30
-	loop
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "Slideback_corrective_animation" 0
 }
 
 $animation "basePose_a" "v_mas49_anims\basePose_a.smd" {
 	fps 30
-	loop
+	numframes 60
 	
 	
 }
 
 $animation "ironsight" "v_mas49_anims\ironsight.smd" {
 	fps 30
-	frame 0 1
+	frame 1 1
 	numframes 60
 	
 	
@@ -567,8 +566,7 @@ $sequence "SlidePosition" {
 	blend "ammo_fraction" 0 0.05
 	blendwidth 2
 	delta
-	fadein 0.2
-	fadeout 0.2
+	snap
 	hidden
 	node "0"
 }
@@ -644,8 +642,7 @@ $sequence "FirstDraw" {
 	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	fps 30
 	
 	
@@ -661,8 +658,7 @@ $sequence "draw" {
 	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
 	fps 30
 	
@@ -681,51 +677,87 @@ $sequence "BoltshootMovement" {
 }
 
 $sequence "shoot1" {
-	"shoot1_a"
-	"shoot1_ironsight_a"
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
-	blendwidth 2
-	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 0 "ammo_fraction" }
-	fadein 0
-	fadeout 0.2
+	blendwidth 3
+	snap
+	addlayer "walklayer"
+	addlayer "runlayer"
 	addlayer "BoltshootMovement"
-	node "Fire"
+	addlayer "shootpose1"
+	node "0"
 }
 
 $sequence "shoot2" {
-	"shoot2_a"
-	"shoot2_ironsight_a"
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
-	blendwidth 2
-	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 0 "ammo_fraction" }
-	fadein 0
-	fadeout 0.2
+	blendwidth 3
+	snap
+	addlayer "walklayer"
+	addlayer "runlayer"
 	addlayer "BoltshootMovement"
-	node "Fire"
+	addlayer "shootpose2"
+	node "0"
 }
 
 $sequence "shoot3" {
-	"shoot3_a"
-	"shoot3_ironsight_a"
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
 	activity "ACT_VM_PRIMARYATTACK" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	snap
+	addlayer "walklayer"
+	addlayer "runlayer"
+	addlayer "BoltshootMovement"
+	addlayer "shootpose3"
+	node "0"
+}
+
+$sequence "shootpose1" {
+	"shoot1_a"
+	"shoot1_ironsight_a"
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
 	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
 	{ event AE_MUZZLEFLASH 0 "" }
 	{ event AE_WPN_CLIP_TO_POSEPARAM 0 "ammo_fraction" }
-	fadein 0
-	fadeout 0.2
-	addlayer "BoltshootMovement"
-	node "Fire"
+	snap
+	hidden
+}
+
+$sequence "shootpose2" {
+	"shoot2_a"
+	"shoot2_ironsight_a"
+	blend "ironsight" 0 1
+	blendwidth 2
+	delta
+	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
+	{ event AE_MUZZLEFLASH 0 "" }
+	{ event AE_WPN_CLIP_TO_POSEPARAM 0 "ammo_fraction" }
+	snap
+	hidden
+}
+
+$sequence "shootpose3" {
+	"shoot3_a"
+	"shoot3_ironsight_a"
+	blend "ironsight" 0 1
+	blendwidth 2
+	delta
+	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
+	{ event AE_MUZZLEFLASH 0 "" }
+	{ event AE_WPN_CLIP_TO_POSEPARAM 0 "ammo_fraction" }
+	snap
+	hidden
 }
 
 $sequence "reload" {
@@ -743,8 +775,8 @@ $sequence "reload" {
 	{ event AE_WPN_COMPLETE_RELOAD 53 "" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "walklayerironsight"
+	//addlayer "walklayer"
+	//addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	
@@ -767,8 +799,8 @@ $sequence "reload_empty" {
 	{ event AE_WPN_COMPLETE_RELOAD 82 "" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "walklayerironsight"
+	//addlayer "walklayer"
+	//addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	
@@ -960,8 +992,7 @@ $sequence "holster" {
 	{ event 5004 0 "MCV_Weapon_Foley_MAS49.Holster" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
 	fps 30
 	
@@ -991,15 +1022,27 @@ $sequence "grenade_idle" {
 }
 
 $sequence "grenade_shoot" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_ISHOOT_M203" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	snap
+	addlayer "walklayer"
+	addlayer "runlayer"
+	addlayer "grenade_shootpose"
+	node "0"
+}
+
+$sequence "grenade_shootpose" {
 	"gren_shoot1_a"
 	"gren_shoot1_ironsight_a"
-	activity "ACT_VM_ISHOOT_M203" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
 	{ event AE_MUZZLEFLASH 0 "" }
-	fadein 0
-	fadeout 0.2
+	snap
 	node "Fire"
 }
 

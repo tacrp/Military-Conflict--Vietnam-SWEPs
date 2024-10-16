@@ -1,0 +1,6 @@
+"VertexLitGeneric"
+{
+	"$basetexture" "models\weapons\mcv\optics\crosshair_svt40"
+	"$translucent" "1"
+	"$nocsm" "1"
+}
