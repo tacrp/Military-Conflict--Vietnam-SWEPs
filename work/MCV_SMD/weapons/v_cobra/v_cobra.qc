@@ -622,7 +622,7 @@ $sequence "Firstdraw" {
 }
 
 $sequence "reload" {
-	"v_cobra_anims\reload.smd"
+	"anims\reload.smd"
 	"v_cobra_anims\reload_2.smd"
 	activity "ACT_VM_RELOAD" 1
 	blend "ironsight" 0 1
