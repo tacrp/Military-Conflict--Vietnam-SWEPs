@@ -56,10 +56,10 @@ Submachine Guns:
 
 Assault Rifles:
 
-- M16A1
-- Mk 4 Mod 0
-- M601
-- M16A1 M203
+- M16A1 [X]
+- Mk 4 Mod 0 [X]
+- M601 [X]
+- M16A1 M203 [X]
 - H&R T223
 - Stoner 63A Rifle [X]
 - Stoner 63A Drum
@@ -78,9 +78,11 @@ Carbines:
 
 - XM177E2 [X]
 - XM177 SOG [X]
-- XM177E2 4x
-- XM607
-- XM607 4x
+- XM177E2 4x [X]
+- XM177E2 OEG [X]
+- XM607 [X]
+- XM607 4x [X]
+- XM607 OEG [X]
 - Stoner 63A Carbine
 - M1A1 Carbine
 - M1 Carbine SOG
