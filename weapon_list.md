@@ -60,7 +60,7 @@ Assault Rifles:
 - Mk 4 Mod 0 [X]
 - M601 [X]
 - M16A1 M203 [X]
-- H&R T223
+- H&R T223 [X]
 - Stoner 63A Rifle [X]
 - Stoner 63A Drum
 
