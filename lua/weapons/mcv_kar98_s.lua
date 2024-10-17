@@ -21,7 +21,7 @@ SWEP.BodyGroups = "00000"
 
 SWEP.WeaponSelectIcon = NULL
 
-SWEP.ViewModelFOV = 70
+SWEP.ViewModelFOV = 80
 SWEP.SightedViewModelFOV = 40
 
 // Stats
