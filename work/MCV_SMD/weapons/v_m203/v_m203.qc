@@ -226,7 +226,7 @@ $animation "runIdle_a" "v_m203_anims\runIdle_a.smd" {
 	
 }
 
-$animation "run_a" "v_m203_anims\run_a.smd" {
+$animation "run_a" "anims\run_a.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "run_a_corrective_animation" 0
