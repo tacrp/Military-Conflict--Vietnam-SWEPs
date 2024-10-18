@@ -33,8 +33,8 @@ Machine Pistols:
 
 Submachine Guns:
 
-- M3A1 Grease Gun
-- M3A1 Grease Gun SOG
+- M3A1 Grease Gun [X]
+- M3A1 Grease Gun SOG [X]
 - M12 Beretta [X]
 - Madsen M/50
 - Uzi
