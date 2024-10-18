@@ -555,7 +555,7 @@ $animation "shoot3_di_a" "v_stoner63_anims\shoot3_di_a.smd" {
 $sequence "runlayer" {
 	"runIdle_a"
 	"run_a"
-	blend "player_movement" 80 158
+	blend "player_movement" 110 200
 	blendwidth 2
 	delta
 	fadein 0.2
@@ -568,7 +568,7 @@ $sequence "walklayer" {
 	"walkIdle_a"
 	"walk_a"
 	"walkIdle_a"
-	blend "player_movement" 0 160
+	blend "player_movement" 0 220
 	blendwidth 3
 	delta
 	fadein 0.2

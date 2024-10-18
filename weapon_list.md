@@ -118,7 +118,7 @@ Light-Machine Guns:
 - Stoner 63A LMG [X]
 - Stoner 63A Bren [X]
 - M1918A2 BAR LMG [X]
-- M1919A6
+- M1919A6 [X]
 - RPD SOG [X]
 
 
