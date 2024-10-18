@@ -39,10 +39,10 @@ Submachine Guns:
 - Madsen M/50
 - Uzi
 - Uzi SOG
-- Carl Gustaf M/45
-- Carl Gustaf M/45 SOG
-- S&W M76
-- S&W M76 SOG
+- Carl Gustaf M/45 [X]
+- Carl Gustaf M/45 SOG [X]
+- S&W M76 [X]
+- S&W M76 SOG [X]
 - M1A1 Thompson [X]
 - M1A1 Thompson SOG [X]
 - M1928 Thompson [X]
