@@ -5,7 +5,7 @@ SWEP.Spawnable = true
 AddCSLuaFile()
 
 // Names and basic information
-SWEP.PrintName = "RPD"
+SWEP.PrintName = "RPD SOG"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Soviet Union"
 SWEP.SubCategory = "Light-Machine Guns"
@@ -13,7 +13,7 @@ SWEP.Caliber = "7.62x39mm"
 
 SWEP.Slot = 3
 
-SWEP.ViewModel = "models/weapons/mcv/v_rpd.mdl"
+SWEP.ViewModel = "models/weapons/mcv/v_rpd_sog.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_rpd.mdl"
 
 SWEP.BodyGroups = ""
@@ -118,7 +118,7 @@ SWEP.CrouchMoveSpreadMultiplier = 1.25
 SWEP.JumpSpreadMultiplier = 3.0
 
 SWEP.HasBayonet = false
-SWEP.HasBipod = true
+SWEP.HasBipod = false
 
 // Penetration
 SWEP.MetalPenetrationDepth = 8

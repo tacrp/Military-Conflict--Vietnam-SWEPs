@@ -111,15 +111,15 @@ Sniper Rifles:
 
 Light-Machine Guns:
 
-- M60
-- M60 Belt
+- M60 [X]
+- M60 Belt [X]
 - L2A1 [X]
-- Stoner 63A Commando
-- Stoner 63A LMG
-- Stoner 63A Bren
+- Stoner 63A Commando [X]
+- Stoner 63A LMG [X]
+- Stoner 63A Bren [X]
 - M1918A2 BAR LMG [X]
 - M1919A6
-- RPD SOG
+- RPD SOG [X]
 
 
 Launchers/Anti-Armor:

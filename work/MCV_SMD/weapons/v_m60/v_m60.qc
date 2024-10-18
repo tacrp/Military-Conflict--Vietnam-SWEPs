@@ -247,14 +247,14 @@ $animation "idle_delta" "v_m60_anims\idle_delta.smd" {
 
 $animation "basePose_a" "v_m60_anims\basePose_a.smd" {
 	fps 30
-	loop
+	numframes 60
 	
 	
 }
 
 $animation "ironsight" "v_m60_anims\ironsight.smd" {
 	fps 30
-	frame 0 1
+	frame 1 1
 	numframes 60
 	
 	
@@ -587,8 +587,7 @@ $sequence "draw" {
 	{ event AE_CL_BODYGROUP_SET_TO_CLIP 1 "" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	fps 30
 	
 	
@@ -605,57 +604,92 @@ $sequence "Firstdraw" {
 	{ event AE_CL_BODYGROUP_SET_TO_CLIP 1 "" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	fps 30
 	
 	
 }
 
 $sequence "shoot1" {
-	"shoot1_a"
-	"shoot1_ironsight_a"
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
 	activity "ACT_VM_PRIMARYATTACK" 1
-	blend "ironsight" 0 1
-	blendwidth 2
-	delta
-	{ event AE_MUZZLEFLASH 0 "SMG1 MUZZLE" }
-	{ event AE_CL_BODYGROUP_SET_TO_CLIP 0 "" }
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	blend "ironsight" 0 0.5
+	blendwidth 3
 	snap
+	addlayer "walklayer"
+	addlayer "runlayer"
+	addlayer "shootpose1"
+	node "0"
 }
 
 $sequence "shoot2" {
-	"shoot2_a"
-	"shoot2_ironsight_a"
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
 	activity "ACT_VM_PRIMARYATTACK" 1
+	blend "ironsight" 0 0.5
+	blendwidth 3
+	snap
+	addlayer "walklayer"
+	addlayer "runlayer"
+	addlayer "shootpose2"
+	node "0"
+}
+
+$sequence "shoot3" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	blend "ironsight" 0 0.5
+	blendwidth 3
+	snap
+	addlayer "walklayer"
+	addlayer "runlayer"
+	addlayer "shootpose3"
+	node "0"
+}
+
+$sequence "shootpose1" {
+	"shoot1_a"
+	"shoot1_ironsight_a"
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
 	{ event AE_MUZZLEFLASH 0 "SMG1 MUZZLE" }
 	{ event AE_CL_BODYGROUP_SET_TO_CLIP 0 "" }
 	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	fadein 0
-	fadeout 0.2
+	hidden
 	node "Fire"
 	snap
 }
 
-$sequence "shoot3" {
-	"shoot3_a"
-	"shoot3_ironsight_a"
-	activity "ACT_VM_PRIMARYATTACK" 1
+$sequence "shootpose2" {
+	"shoot2_a"
+	"shoot2_ironsight_a"
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
 	{ event AE_MUZZLEFLASH 0 "SMG1 MUZZLE" }
 	{ event AE_CL_BODYGROUP_SET_TO_CLIP 0 "" }
 	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	fadein 0
-	fadeout 0.2
+	hidden
+	node "Fire"
+	snap
+}
+
+$sequence "shootpose3" {
+	"shoot3_a"
+	"shoot3_ironsight_a"
+	blend "ironsight" 0 1
+	blendwidth 2
+	delta
+	{ event AE_MUZZLEFLASH 0 "SMG1 MUZZLE" }
+	{ event AE_CL_BODYGROUP_SET_TO_CLIP 0 "" }
+	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
+	hidden
 	node "Fire"
 	snap
 }
@@ -678,7 +712,7 @@ $sequence "reload" {
 	{ event 5004 134 "MCV_Weapon_Foley_M60_Reload.HandEnd" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	
@@ -703,7 +737,7 @@ $sequence "reload_empty" {
 	{ event AE_WPN_COMPLETE_RELOAD 165 "" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	
@@ -985,8 +1019,7 @@ $sequence "holster" {
 	{ event 5004 0 "MCV_Weapon_Foley_M60.Holster" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	fps 30
 	
 	

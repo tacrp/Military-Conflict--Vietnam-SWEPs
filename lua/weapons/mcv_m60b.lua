@@ -5,15 +5,15 @@ SWEP.Spawnable = true
 AddCSLuaFile()
 
 // Names and basic information
-SWEP.PrintName = "RPD"
+SWEP.PrintName = "M60 Belt"
 SWEP.Category = "Military Conflict: Vietnam"
-SWEP.Country = "Soviet Union"
+SWEP.Country = "United States of America"
 SWEP.SubCategory = "Light-Machine Guns"
-SWEP.Caliber = "7.62x39mm"
+SWEP.Caliber = "7.62x51mm"
 
 SWEP.Slot = 3
 
-SWEP.ViewModel = "models/weapons/mcv/v_rpd.mdl"
+SWEP.ViewModel = "models/weapons/mcv/v_m60b.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_rpd.mdl"
 
 SWEP.BodyGroups = ""
@@ -33,6 +33,7 @@ SWEP.BulletBodygroups = {
     [10] = {10, 1},
     [11] = {11, 1},
     [12] = {12, 1},
+    [13] = {13, 1},
 }
 
 // Stats
@@ -85,7 +86,7 @@ SWEP.ScopeMaterial = NULL
 SWEP.ScopeFOV = 8
 SWEP.ScopeFOV2 = 4
 
-SWEP.IronsightPos = Vector(0.09, -4, -0.1)
+SWEP.IronsightPos = Vector(0.085, -4, 0.05)
 SWEP.IronsightAng = Angle(0.3, 0, 0)
 
 SWEP.CustomPos = Vector(0, -2, 0)
@@ -94,7 +95,7 @@ SWEP.CustomAng = Angle(0, 0, 0)
 SWEP.Spread = 7.72
 SWEP.SpreadIronsighted = 1.47
 
-SWEP.FireRate = 700 // in rounds per minute
+SWEP.FireRate = 550 // in rounds per minute
 
 SWEP.CrosshairMinDistance = 8
 SWEP.CrosshairDeltaDistance = 4
@@ -102,9 +103,9 @@ SWEP.CrosshairDeltaDistance = 4
 SWEP.WeaponWeight = 3.85
 
 SWEP.Primary.Ammo = "ar2"
-SWEP.Primary.ClipSize = 100
+SWEP.Primary.ClipSize = 150
 SWEP.Primary.Chamber = 0
-SWEP.Primary.DefaultClip = 200
+SWEP.Primary.DefaultClip = 300
 SWEP.Primary.Automatic = true
 
 SWEP.NearwallDistance = 40
@@ -134,7 +135,7 @@ SWEP.WoodDamgaeModifier = 1.25
 SWEP.OtherDamageModifier = 1.25
 
 // Sound
-SWEP.SoundSingleShot = "MCV_Weapon_RPD.Single"
+SWEP.SoundSingleShot = "MCV_Weapon_M60.Single"
 SWEP.SoundDoubleShot = ""
 SWEP.SoundReload = ""
 SWEP.SoundSpecial1 = ""
