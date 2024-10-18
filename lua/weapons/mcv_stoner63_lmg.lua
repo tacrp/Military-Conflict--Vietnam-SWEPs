@@ -5,31 +5,44 @@ SWEP.Spawnable = true
 AddCSLuaFile()
 
 // Names and basic information
-SWEP.PrintName = "Stoner 63A Carbine"
+SWEP.PrintName = "Stoner 63 LMG"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "United States of America"
-SWEP.SubCategory = "Carbines"
+SWEP.SubCategory = "Light-Machine Guns"
 SWEP.Caliber = "5.56x45mm"
 
 SWEP.Slot = 3
 
-SWEP.ViewModel = "models/weapons/mcv/v_stoner63a_carbine.mdl"
-SWEP.WorldModel = "models/weapons/mcv/w_ak47.mdl"
+SWEP.ViewModel = "models/weapons/mcv/v_stoner63_lmg.mdl"
+SWEP.WorldModel = "models/weapons/mcv/w_rpd.mdl"
 
 SWEP.BodyGroups = ""
 
 SWEP.WeaponSelectIcon = NULL
 
-SWEP.BayonetBodygroup = 1
+SWEP.BulletBodygroups = {
+    [1] = {1, 1},
+    [2] = {2, 1},
+    [3] = {3, 1},
+    [4] = {4, 1},
+    [5] = {5, 1},
+    [6] = {6, 1},
+    [7] = {7, 1},
+    [8] = {8, 1},
+    [9] = {9, 1},
+    [10] = {10, 1},
+    [11] = {11, 1},
+    [12] = {12, 1},
+}
 
 // Stats
 
-SWEP.DamageGeneric = 41 // damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)
-SWEP.DamageHeadMultiplier = 2.5
-SWEP.DamageChestMultiplier = 1.2
-SWEP.DamageStomachMultiplier = 1.15
-SWEP.DamageLegMultiplier = 0.8
-SWEP.DamageArmMultiplier = 0.75
+SWEP.DamageGeneric = 43 // damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)
+SWEP.DamageHeadMultiplier = 1
+SWEP.DamageChestMultiplier = 1
+SWEP.DamageStomachMultiplier = 1
+SWEP.DamageLegMultiplier = 1
+SWEP.DamageArmMultiplier = 1
 
 SWEP.ExplosionDamage = 0
 SWEP.ExplosionRadius = 0
@@ -39,12 +52,14 @@ SWEP.MuzzleVelocity = 735
 SWEP.RangeModifier = 0.925
 
 SWEP.Firemodes = {
-    MCV.FIREMODE_AUTO,
-    MCV.FIREMODE_SEMI,
+    MCV.FIREMODE_AUTO
 }
 
 // Weapon must be manually cycled
 SWEP.PlayCycleAnimation = false
+
+SWEP.MagInTime = 2.5
+SWEP.MagInTimeEmpty = 2.5
 
 // View slide from recoil
 SWEP.ViewSlideRecoilUp = 1.64
@@ -70,8 +85,8 @@ SWEP.ScopeMaterial = NULL
 SWEP.ScopeFOV = 8
 SWEP.ScopeFOV2 = 4
 
-SWEP.IronsightPos = Vector(0.05, -4, 0.025)
-SWEP.IronsightAng = Angle(0.225, 0, 0)
+SWEP.IronsightPos = Vector(0.06, -4, -0.05)
+SWEP.IronsightAng = Angle(0.22, 0.15, 0)
 
 SWEP.CustomPos = Vector(0, -2, 0)
 SWEP.CustomAng = Angle(0, 0, 0)
@@ -79,7 +94,7 @@ SWEP.CustomAng = Angle(0, 0, 0)
 SWEP.Spread = 7.72
 SWEP.SpreadIronsighted = 1.47
 
-SWEP.FireRate = 700 // in rounds per minute
+SWEP.FireRate = 775 // in rounds per minute
 
 SWEP.CrosshairMinDistance = 8
 SWEP.CrosshairDeltaDistance = 4
@@ -87,9 +102,9 @@ SWEP.CrosshairDeltaDistance = 4
 SWEP.WeaponWeight = 3.85
 
 SWEP.Primary.Ammo = "ar2"
-SWEP.Primary.ClipSize = 30
-SWEP.Primary.Chamber = 1
-SWEP.Primary.DefaultClip = 90
+SWEP.Primary.ClipSize = 100
+SWEP.Primary.Chamber = 0
+SWEP.Primary.DefaultClip = 200
 SWEP.Primary.Automatic = true
 
 SWEP.NearwallDistance = 40
@@ -119,7 +134,7 @@ SWEP.WoodDamgaeModifier = 1.25
 SWEP.OtherDamageModifier = 1.25
 
 // Sound
-SWEP.SoundSingleShot = "MCV_Weapon_Stoner63_Carbine.Single"
+SWEP.SoundSingleShot = "MCV_Weapon_Stoner63_LMG.Single"
 SWEP.SoundDoubleShot = ""
 SWEP.SoundReload = ""
 SWEP.SoundSpecial1 = ""

@@ -5,15 +5,15 @@ SWEP.Spawnable = true
 AddCSLuaFile()
 
 // Names and basic information
-SWEP.PrintName = "Stoner 63A Carbine"
+SWEP.PrintName = "Stoner 63A Drum"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "United States of America"
-SWEP.SubCategory = "Carbines"
+SWEP.SubCategory = "Assault Rifles"
 SWEP.Caliber = "5.56x45mm"
 
 SWEP.Slot = 3
 
-SWEP.ViewModel = "models/weapons/mcv/v_stoner63a_carbine.mdl"
+SWEP.ViewModel = "models/weapons/mcv/v_stoner63a_drum.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_ak47.mdl"
 
 SWEP.BodyGroups = ""
@@ -79,7 +79,7 @@ SWEP.CustomAng = Angle(0, 0, 0)
 SWEP.Spread = 7.72
 SWEP.SpreadIronsighted = 1.47
 
-SWEP.FireRate = 700 // in rounds per minute
+SWEP.FireRate = 750 // in rounds per minute
 
 SWEP.CrosshairMinDistance = 8
 SWEP.CrosshairDeltaDistance = 4
@@ -87,9 +87,9 @@ SWEP.CrosshairDeltaDistance = 4
 SWEP.WeaponWeight = 3.85
 
 SWEP.Primary.Ammo = "ar2"
-SWEP.Primary.ClipSize = 30
+SWEP.Primary.ClipSize = 75
 SWEP.Primary.Chamber = 1
-SWEP.Primary.DefaultClip = 90
+SWEP.Primary.DefaultClip = 150
 SWEP.Primary.Automatic = true
 
 SWEP.NearwallDistance = 40
@@ -102,7 +102,7 @@ SWEP.SneakMoveSpreadMultiplier = 1.34
 SWEP.CrouchMoveSpreadMultiplier = 1.25
 SWEP.JumpSpreadMultiplier = 3.0
 
-SWEP.HasBayonet = false
+SWEP.HasBayonet = true
 SWEP.HasBipod = false
 
 // Penetration
@@ -119,7 +119,7 @@ SWEP.WoodDamgaeModifier = 1.25
 SWEP.OtherDamageModifier = 1.25
 
 // Sound
-SWEP.SoundSingleShot = "MCV_Weapon_Stoner63_Carbine.Single"
+SWEP.SoundSingleShot = "MCV_Weapon_Stoner63.Single"
 SWEP.SoundDoubleShot = ""
 SWEP.SoundReload = ""
 SWEP.SoundSpecial1 = ""

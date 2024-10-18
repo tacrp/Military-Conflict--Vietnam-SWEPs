@@ -5,7 +5,7 @@ SWEP.Spawnable = true
 AddCSLuaFile()
 
 // Names and basic information
-SWEP.PrintName = "Stoner 63A Carbine"
+SWEP.PrintName = "Stoner 63AC Drum"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "United States of America"
 SWEP.SubCategory = "Carbines"
@@ -13,7 +13,7 @@ SWEP.Caliber = "5.56x45mm"
 
 SWEP.Slot = 3
 
-SWEP.ViewModel = "models/weapons/mcv/v_stoner63a_carbine.mdl"
+SWEP.ViewModel = "models/weapons/mcv/v_stoner63a_carbine_drum.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_ak47.mdl"
 
 SWEP.BodyGroups = ""
@@ -87,9 +87,9 @@ SWEP.CrosshairDeltaDistance = 4
 SWEP.WeaponWeight = 3.85
 
 SWEP.Primary.Ammo = "ar2"
-SWEP.Primary.ClipSize = 30
+SWEP.Primary.ClipSize = 75
 SWEP.Primary.Chamber = 1
-SWEP.Primary.DefaultClip = 90
+SWEP.Primary.DefaultClip = 150
 SWEP.Primary.Automatic = true
 
 SWEP.NearwallDistance = 40
