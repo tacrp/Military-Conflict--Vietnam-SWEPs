@@ -5,15 +5,15 @@ SWEP.Spawnable = true
 AddCSLuaFile()
 
 // Names and basic information
-SWEP.PrintName = "MAS-38"
+SWEP.PrintName = "MAT-49"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "France"
 SWEP.SubCategory = "Submachine Guns"
-SWEP.Caliber = "7.65x20mm"
+SWEP.Caliber = "7.62x25mm Tokarev"
 
 SWEP.Slot = 2
 
-SWEP.ViewModel = "models/weapons/mcv/v_mas38.mdl"
+SWEP.ViewModel = "models/weapons/mcv/v_mat49.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_mas38.mdl"
 
 SWEP.BodyGroups = ""
@@ -22,12 +22,12 @@ SWEP.WeaponSelectIcon = NULL
 
 // Stats
 
-SWEP.DamageGeneric = 34 // damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)
+SWEP.DamageGeneric = 33 // damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)
 SWEP.DamageHeadMultiplier = 2.4
 SWEP.DamageChestMultiplier = 1.3
 SWEP.DamageStomachMultiplier = 1.2
-SWEP.DamageLegMultiplier = 0.8
-SWEP.DamageArmMultiplier = 0.75
+SWEP.DamageLegMultiplier = 0.7
+SWEP.DamageArmMultiplier = 0.65
 
 SWEP.ExplosionDamage = 0
 SWEP.ExplosionRadius = 0
@@ -70,16 +70,16 @@ SWEP.ScopeMaterial = NULL
 SWEP.ScopeFOV = 8
 SWEP.ScopeFOV2 = 4
 
-SWEP.IronsightPos = Vector(0, -4, 0)
-SWEP.IronsightAng = Angle(0.1, 0.1, 0)
+SWEP.IronsightPos = Vector(0.05, -2, -0.03)
+SWEP.IronsightAng = Angle(0.2, 0.2, 0)
 
 SWEP.CustomPos = Vector(0, -2, 0)
 SWEP.CustomAng = Angle(0, 0, 0)
 
-SWEP.Spread = 9
-SWEP.SpreadIronsighted = 2.2
+SWEP.Spread = 7
+SWEP.SpreadIronsighted = 2.15
 
-SWEP.FireRate = 650 // in rounds per minute
+SWEP.FireRate = 600 // in rounds per minute
 
 SWEP.CrosshairMinDistance = 8
 SWEP.CrosshairDeltaDistance = 4
@@ -87,9 +87,9 @@ SWEP.CrosshairDeltaDistance = 4
 SWEP.WeaponWeight = 3.85
 
 SWEP.Primary.Ammo = "pistol"
-SWEP.Primary.ClipSize = 32
+SWEP.Primary.ClipSize = 35
 SWEP.Primary.Chamber = 0
-SWEP.Primary.DefaultClip = 64
+SWEP.Primary.DefaultClip = 105
 SWEP.Primary.Automatic = true
 
 SWEP.NearwallDistance = 40
@@ -119,7 +119,7 @@ SWEP.WoodDamageModifier = 1.4
 SWEP.OtherDamageModifier = 1.4
 
 // Sound
-SWEP.SoundSingleShot = "MCV_Weapon_MAS38.Single"
+SWEP.SoundSingleShot = "MCV_Weapon_MAT49.Single"
 SWEP.SoundDoubleShot = ""
 SWEP.SoundReload = ""
 SWEP.SoundSpecial1 = ""
