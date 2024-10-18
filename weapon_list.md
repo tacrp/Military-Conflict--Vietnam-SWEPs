@@ -184,7 +184,7 @@ Machine Pistols:
 - APS [X]
 - Vz. 61e Skorpion
 - Vz. 61e Dac Cong
-- PM-63 RAK
+- PM-63 RAK [X]
 
 
 Submachine Guns:
