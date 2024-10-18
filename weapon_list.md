@@ -37,8 +37,8 @@ Submachine Guns:
 - M3A1 Grease Gun SOG [X]
 - M12 Beretta [X]
 - Madsen M/50
-- Uzi
-- Uzi SOG
+- Uzi [X]
+- Uzi SOG [X]
 - Carl Gustaf M/45 [X]
 - Carl Gustaf M/45 SOG [X]
 - S&W M76 [X]
@@ -194,8 +194,8 @@ Submachine Guns:
 - PPSh-41
 - PPSh-41 Drum
 - PPS-43
-- MAT-49
-- MAT-49 Dac Cong
+- MAT-49 [X]
+- MAT-49 Dac Cong [X]
 - MAS-38 [X]
 - Type 64 SMG
 - MP 40
