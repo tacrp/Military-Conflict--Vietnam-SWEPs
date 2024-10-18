@@ -292,21 +292,18 @@ $animation "Bullet0" "v_type64_pistol_anims\Bullet0.smd" {
 
 $animation "Slideback" "v_type64_pistol_anims\Slideback.smd" {
 	fps 30
-	loop
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "Slideback_corrective_animation" 0
 }
 
 $animation "basePose_a" "v_type64_pistol_anims\basePose_a.smd" {
 	fps 30
-	loop
-	
-	
+	numframes 60
 }
 
 $animation "ironsight" "v_type64_pistol_anims\ironsight.smd" {
 	fps 30
-	frame 0 1
+	frame 1 1
 	numframes 60
 	
 	

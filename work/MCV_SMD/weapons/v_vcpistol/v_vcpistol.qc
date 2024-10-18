@@ -319,14 +319,12 @@ $animation "MagPose1" "v_vcpistol_anims\MagPose1.smd" {
 
 $animation "basePose_a" "v_vcpistol_anims\basePose_a.smd" {
 	fps 30
-	loop
-	
-	
+	numframes 60
 }
 
 $animation "ironsight" "v_vcpistol_anims\ironsight.smd" {
 	fps 30
-	frame 0 1
+	frame 1 1
 	numframes 60
 	
 	

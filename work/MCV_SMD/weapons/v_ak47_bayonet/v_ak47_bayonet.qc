@@ -150,9 +150,7 @@ $animation "walk_a_corrective_animation" "v_ak47_bayonet_anims\walk_a_corrective
 
 $animation "basePose_a" "v_ak47_bayonet_anims\basePose_a.smd" {
 	fps 30
-	loop
-	
-	
+	numframes 60
 }
 
 $animation "runIdle_a" "v_ak47_bayonet_anims\runIdle_a.smd" {

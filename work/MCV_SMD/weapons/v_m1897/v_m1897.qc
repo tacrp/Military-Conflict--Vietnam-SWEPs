@@ -194,14 +194,12 @@ $animation "pump_ironsight_a_corrective_animation" "v_m1897_anims\pump_ironsight
 
 $animation "basePose_a" "v_m1897_anims\basePose_a.smd" {
 	fps 30
-	loop
-	
-	
+	numframes 60
 }
 
 $animation "ironsight" "v_m1897_anims\ironsight.smd" {
 	fps 30
-	frame 0 1
+	frame 1 1
 	numframes 60
 	
 	

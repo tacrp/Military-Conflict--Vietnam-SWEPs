@@ -354,14 +354,12 @@ $animation "Bullet0" "v_dual_swm10_anims\Bullet0.smd" {
 
 $animation "basePose_a" "v_dual_swm10_anims\basePose_a.smd" {
 	fps 30
-	loop
-	
-	
+	numframes 60
 }
 
 $animation "ironsight" "v_dual_swm10_anims\ironsight.smd" {
 	fps 30
-	frame 0 1
+	frame 1 1
 	numframes 60
 	
 	

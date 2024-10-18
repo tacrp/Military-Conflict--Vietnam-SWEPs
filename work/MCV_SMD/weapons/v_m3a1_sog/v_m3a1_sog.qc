@@ -177,14 +177,12 @@ $animation "shoot3_ironsight_a_corrective_animation" "v_m3a1_sog_anims\shoot3_ir
 
 $animation "basePose_a" "v_m3a1_sog_anims\basePose_a.smd" {
 	fps 30
-	loop
-	
-	
+	numframes 60
 }
 
 $animation "ironsight" "v_m3a1_sog_anims\ironsight.smd" {
 	fps 30
-	frame 0 1
+	frame 1 1
 	numframes 60
 	
 	

@@ -246,16 +246,13 @@ $animation "Default" "v_ptrd41_anims\Default.smd" {
 
 $animation "Slideback" "v_ptrd41_anims\Slideback.smd" {
 	fps 30
-	loop
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "Slideback_corrective_animation" 0
 }
 
 $animation "basePose_a" "v_ptrd41_anims\basePose_a.smd" {
 	fps 30
-	loop
-	
-	
+	numframes 60
 }
 
 $animation "runIdle_a" "v_ptrd41_anims\runIdle_a.smd" {

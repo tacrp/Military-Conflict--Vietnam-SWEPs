@@ -165,14 +165,12 @@ $animation "shootend_ironsight_a_corrective_animation" "v_lpo50_anims\shootend_i
 
 $animation "basePose_a" "v_lpo50_anims\basePose_a.smd" {
 	fps 30
-	loop
-	
-	
+	numframes 60
 }
 
 $animation "ironsight" "v_lpo50_anims\ironsight.smd" {
 	fps 30
-	frame 0 1
+	frame 1 1
 	numframes 60
 	
 	

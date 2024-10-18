@@ -157,9 +157,7 @@ $animation "walk_a_corrective_animation" "v_box_anims\walk_a_corrective_animatio
 
 $animation "basePose_a" "v_box_anims\basePose_a.smd" {
 	fps 30
-	loop
-	
-	
+	numframes 60
 }
 
 $animation "runIdle_a" "v_box_anims\runIdle_a.smd" {

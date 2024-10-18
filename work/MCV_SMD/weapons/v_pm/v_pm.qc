@@ -297,14 +297,12 @@ $animation "Slideback" "v_pm_anims\Slideback.smd" {
 
 $animation "basePose_a" "v_pm_anims\basePose_a.smd" {
 	fps 30
-	loop
-	
-	
+	numframes 60
 }
 
 $animation "ironsight" "v_pm_anims\ironsight.smd" {
 	fps 30
-	frame 0 1
+	frame 1 1
 	numframes 60
 	
 	

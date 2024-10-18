@@ -218,14 +218,12 @@ $animation "gren_shoot1_ironsight_a_corrective_animation" "v_m38_s_anims\gren_sh
 
 $animation "basePose_a" "v_m38_s_anims\basePose_a.smd" {
 	fps 30
-	loop
-	
-	
+	numframes 60
 }
 
 $animation "ironsight" "v_m38_s_anims\ironsight.smd" {
 	fps 30
-	frame 0 1
+	frame 1 1
 	numframes 60
 	
 	

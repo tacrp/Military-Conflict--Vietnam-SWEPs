@@ -152,9 +152,7 @@ $animation "walk_a_corrective_animation" "v_c4_demolition_anims\walk_a_correctiv
 
 $animation "basePose_a" "v_c4_demolition_anims\basePose_a.smd" {
 	fps 30
-	loop
-	
-	
+	numframes 60
 }
 
 $animation "runIdle_a" "v_c4_demolition_anims\runIdle_a.smd" {

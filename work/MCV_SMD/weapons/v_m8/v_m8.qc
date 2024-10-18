@@ -163,14 +163,12 @@ $animation "shoot1_ironsight_a_corrective_animation" "v_m8_anims\shoot1_ironsigh
 
 $animation "basePose_a" "v_m8_anims\basePose_a.smd" {
 	fps 30
-	loop
-	
-	
+	numframes 60
 }
 
 $animation "ironsight" "v_m8_anims\ironsight.smd" {
 	fps 30
-	frame 0 1
+	frame 1 1
 	numframes 60
 	
 	

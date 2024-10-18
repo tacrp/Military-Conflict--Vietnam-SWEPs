@@ -186,14 +186,12 @@ $animation "boltpulliron_a_corrective_animation" "v_m40_anims\boltpulliron_a_cor
 
 $animation "basePose_a" "v_m40_anims\basePose_a.smd" {
 	fps 30
-	loop
-	
-	
+	numframes 60
 }
 
 $animation "ironsight" "v_m40_anims\ironsight.smd" {
 	fps 30
-	frame 0 1
+	frame 1 1
 	numframes 60
 	
 	

@@ -208,7 +208,6 @@ $animation "Default" "v_pm63_anims\Default.smd" {
 
 $animation "Slideback" "v_pm63_anims\Slideback.smd" {
 	fps 30
-	loop
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "Slideback_corrective_animation" 0
 }
@@ -228,14 +227,12 @@ $animation "ShootStill" "v_pm63_anims\ShootStill.smd" {
 
 $animation "basePose_a" "v_pm63_anims\basePose_a.smd" {
 	fps 30
-	loop
-	
-	
+	numframes 60
 }
 
 $animation "ironsight" "v_pm63_anims\ironsight.smd" {
 	fps 30
-	frame 0 1
+	frame 1 1
 	numframes 60
 	
 	

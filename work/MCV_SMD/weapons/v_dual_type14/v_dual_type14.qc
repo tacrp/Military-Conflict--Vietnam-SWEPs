@@ -492,14 +492,12 @@ $animation "Bullet16" "v_dual_type14_anims\Bullet16.smd" {
 
 $animation "basePose_a" "v_dual_type14_anims\basePose_a.smd" {
 	fps 30
-	loop
-	
-	
+	numframes 60
 }
 
 $animation "ironsight" "v_dual_type14_anims\ironsight.smd" {
 	fps 30
-	frame 0 1
+	frame 1 1
 	numframes 60
 	
 	

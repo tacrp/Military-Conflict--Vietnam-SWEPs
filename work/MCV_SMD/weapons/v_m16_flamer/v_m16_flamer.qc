@@ -188,9 +188,7 @@ $animation "gl_shoot_ironsight_a_corrective_animation" "v_m16_flamer_anims\gl_sh
 
 $animation "basePose_a" "v_m16_flamer_anims\basePose_a.smd" {
 	fps 30
-	loop
-	
-	
+	numframes 60
 }
 
 $animation "runIdle_a" "v_m16_flamer_anims\runIdle_a.smd" {

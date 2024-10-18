@@ -237,7 +237,7 @@ $animation "basePose_a" "v_shanxi_type17_anims\basePose_a.smd" {
 
 $animation "ironsight" "v_shanxi_type17_anims\ironsight.smd" {
 	fps 30
-	frame 0 1
+	frame 1 1
 	numframes 60
 	
 	

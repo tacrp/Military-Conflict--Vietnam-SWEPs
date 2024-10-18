@@ -152,14 +152,12 @@ $animation "walk_a_corrective_animation" "v_binocular_anims\walk_a_corrective_an
 
 $animation "basePose_a" "v_binocular_anims\basePose_a.smd" {
 	fps 30
-	loop
-	
-	
+	numframes 60
 }
 
 $animation "ironsight" "v_binocular_anims\ironsight.smd" {
 	fps 30
-	frame 0 1
+	frame 1 1
 	numframes 60
 	
 	

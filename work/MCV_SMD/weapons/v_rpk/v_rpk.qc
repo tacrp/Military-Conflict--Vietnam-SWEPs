@@ -204,14 +204,12 @@ $animation "shoot3_d_i_a_corrective_animation" "v_rpk_anims\shoot3_d_i_a_correct
 
 $animation "basePose_a" "v_rpk_anims\basePose_a.smd" {
 	fps 30
-	loop
-	
-	
+	numframes 60
 }
 
 $animation "ironsight" "v_rpk_anims\ironsight.smd" {
 	fps 30
-	frame 0 1
+	frame 1 1
 	numframes 60
 	
 	

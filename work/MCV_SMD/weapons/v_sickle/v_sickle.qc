@@ -150,9 +150,7 @@ $animation "walk_a_corrective_animation" "v_sickle_anims\walk_a_corrective_anima
 
 $animation "basePose_a" "v_sickle_anims\basePose_a.smd" {
 	fps 30
-	loop
-	
-	
+	numframes 60
 }
 
 $animation "runIdle_a" "v_sickle_anims\runIdle_a.smd" {
