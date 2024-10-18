@@ -62,7 +62,6 @@ Assault Rifles:
 - M16A1 M203 [X]
 - H&R T223 [X]
 - Stoner 63A Rifle [X]
-- Stoner 63A Drum
 
 
 Battle Rifles:
@@ -213,8 +212,8 @@ Assault Rifles:
 - PM md. 63 [X]
 - Kbkg 60 [X]
 - Vz. 58 [X]
-- StG-44
-- StG-44 ZF4
+- StG-44 [X]
+- StG-44 ZF4 [X]
 
 
 Battle Rifles:
