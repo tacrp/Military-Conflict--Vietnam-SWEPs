@@ -225,8 +225,8 @@ Battle Rifles:
 Carbines:
 
 - AMD-65 [X]
-- Type 63
-- Type 63 Folding Stock
+- Type 63 [X]
+- Type 63 Folding Stock [X]
 - SKS [X]
 - Shanxi Type 17
 
