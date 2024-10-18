@@ -50,8 +50,8 @@ Submachine Guns:
 - F1 [X]
 - Sterling L2A3 [X]
 - Sterling L34A1 [X]
-- Sten Gun
-- Sten Gun SOG
+- Sten Gun [X]
+- Sten Gun SOG [X]
 
 
 Assault Rifles:

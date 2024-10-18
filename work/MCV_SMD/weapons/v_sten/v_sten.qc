@@ -522,49 +522,91 @@ $sequence "SlideMovement" {
 }
 
 $sequence "shoot1" {
-	"shoot1_a"
-	"shoot1_ironsight_a"
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
-	blendwidth 2
-	delta
-	{ event AE_CLIENT_EJECT_BRASS 1 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 0 "ammo_fraction" }
-	fadein 0
-	fadeout 0.2
-	addlayer "SlideMovement"
-	node "Fire"
+	blendwidth 3
+	snap
+	addlayer "walklayer"
+	addlayer "runlayer"
+	addlayer "SlidePosition"
+	addlayer "shootpose1"
+	node "0"
 }
 
 $sequence "shoot2" {
-	"shoot2_a"
-	"shoot2_ironsight_a"
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
 	activity "ACT_VM_PRIMARYATTACK" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	snap
+	addlayer "walklayer"
+	addlayer "runlayer"
+	addlayer "SlidePosition"
+	addlayer "shootpose2"
+	node "0"
+}
+
+$sequence "shoot3" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	snap
+	addlayer "walklayer"
+	addlayer "runlayer"
+	addlayer "SlidePosition"
+	addlayer "shootpose3"
+	node "0"
+}
+
+$sequence "shootpose1" {
+	"shoot1_a"
+	"shoot1_ironsight_a"
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
 	{ event AE_CLIENT_EJECT_BRASS 1 "eject" }
 	{ event AE_MUZZLEFLASH 0 "" }
 	{ event AE_WPN_CLIP_TO_POSEPARAM 0 "ammo_fraction" }
-	fadein 0
-	fadeout 0.2
+	snap
+	hidden
 	addlayer "SlideMovement"
 	node "Fire"
 }
 
-$sequence "shoot3" {
-	"shoot3_a"
-	"shoot3_ironsight_a"
-	activity "ACT_VM_PRIMARYATTACK" 1
+$sequence "shootpose2" {
+	"shoot2_a"
+	"shoot2_ironsight_a"
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
 	{ event AE_CLIENT_EJECT_BRASS 1 "eject" }
 	{ event AE_MUZZLEFLASH 0 "" }
 	{ event AE_WPN_CLIP_TO_POSEPARAM 0 "ammo_fraction" }
-	fadein 0
-	fadeout 0.2
+	snap
+	hidden
+	addlayer "SlideMovement"
+	node "Fire"
+}
+
+$sequence "shootpose3" {
+	"shoot3_a"
+	"shoot3_ironsight_a"
+	blend "ironsight" 0 1
+	blendwidth 2
+	delta
+	{ event AE_CLIENT_EJECT_BRASS 1 "eject" }
+	{ event AE_MUZZLEFLASH 0 "" }
+	{ event AE_WPN_CLIP_TO_POSEPARAM 0 "ammo_fraction" }
+	snap
+	hidden
 	addlayer "SlideMovement"
 	node "Fire"
 }
@@ -580,8 +622,7 @@ $sequence "draw" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "SlidePosition"
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	fps 30
 	  
 	
@@ -598,8 +639,7 @@ $sequence "Firstdraw" {
 	{ event AE_WPN_CLIP_TO_POSEPARAM 0 "ammo_fraction" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	fps 30
 	
 	
@@ -619,7 +659,7 @@ $sequence "reload" {
 	{ event AE_WPN_CLIP_TO_POSEPARAM 48 "ammo_fraction" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	
@@ -642,7 +682,7 @@ $sequence "reload_empty" {
 	{ event AE_WPN_CLIP_TO_POSEPARAM 91 "ammo_fraction" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	
@@ -769,8 +809,7 @@ $sequence "holster" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "SlidePosition"
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	fps 30
 	
 	
