@@ -27,8 +27,8 @@ Revolvers:
 
 Machine Pistols:
 
-- MAC-10
-- MAC-10 SOG
+- MAC-10 [X]
+- MAC-10 SOG [X]
 
 
 Submachine Guns:
