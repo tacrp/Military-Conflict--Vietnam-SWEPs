@@ -35,7 +35,7 @@ Submachine Guns:
 
 - M3A1 Grease Gun
 - M3A1 Grease Gun SOG
-- M12 Beretta
+- M12 Beretta [X]
 - Madsen M/50
 - Uzi
 - Uzi SOG
@@ -83,10 +83,10 @@ Carbines:
 - XM607 4x [X]
 - XM607 OEG [X]
 - Stoner 63A Carbine [X]
-- M1A1 Carbine
-- M1 Carbine SOG
-- M2 Carbine
-- M2 Carbine SOG
+- M1A1 Carbine [X]
+- M1 Carbine SOG [X]
+- M2 Carbine [X]
+- M2 Carbine SOG [X]
 
 
 Shotguns:
