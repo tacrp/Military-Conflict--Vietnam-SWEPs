@@ -43,9 +43,9 @@ Submachine Guns:
 - Carl Gustaf M/45 SOG
 - S&W M76
 - S&W M76 SOG
-- M1A1 Thompson
-- M1A1 Thompson SOG
-- M1928 Thompson
+- M1A1 Thompson [X]
+- M1A1 Thompson SOG [X]
+- M1928 Thompson [X]
 - Owen Gun [X]
 - F1 [X]
 - Sterling L2A3 [X]
