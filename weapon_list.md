@@ -82,7 +82,7 @@ Carbines:
 - XM607 [X]
 - XM607 4x [X]
 - XM607 OEG [X]
-- Stoner 63A Carbine
+- Stoner 63A Carbine [X]
 - M1A1 Carbine
 - M1 Carbine SOG
 - M2 Carbine
