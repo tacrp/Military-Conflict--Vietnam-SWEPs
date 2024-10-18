@@ -207,7 +207,7 @@ Assault Rifles:
 - AK-47 [X]
 - AKM [X]
 - AKM GP25 [X]
-- Type 56-1 
+- Type 56-1 [X]
 - Type 58 [X]
 - PM md. 63 [X]
 - Kbkg 60 [X]
