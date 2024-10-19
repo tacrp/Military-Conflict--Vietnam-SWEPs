@@ -307,7 +307,6 @@ $animation "RightEmpty" "v_dual_m1911_anims\RightEmpty.smd" {
 
 $animation "BothEmpty" "v_dual_m1911_anims\BothEmpty.smd" {
 	fps 30
-	loop
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "BothEmpty_corrective_animation" 0
 }
@@ -679,8 +678,7 @@ $sequence "draw" {
 	fadein 0
 	fadeout 0.2
 	addlayer "SlidePosition"
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	  
@@ -698,8 +696,7 @@ $sequence "Firstdraw" {
 	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	node "0"
 }
 $sequence "shoot1_r" {
@@ -712,7 +709,8 @@ $sequence "shoot1_r" {
 	fadein 0
 	fadeout 0
 	addlayer "walklayerironsight"
-	addlayer "SlidePosition"addlayer "shoot1pose_r"
+	addlayer "SlidePosition"
+	addlayer "shoot1pose_r"
 	node "0"
 }
 
@@ -736,7 +734,8 @@ $sequence "shoot1_l" {
 	fadein 0
 	fadeout 0
 	addlayer "walklayerironsight"
-	addlayer "SlidePosition"addlayer "shoot1pose_l"
+	addlayer "SlidePosition"
+	addlayer "shoot1pose_l"
 	node "0"
 }
 
@@ -760,7 +759,8 @@ $sequence "shoot2_r" {
 	fadein 0
 	fadeout 0
 	addlayer "walklayerironsight"
-	addlayer "SlidePosition"addlayer "shoot2pose_r"
+	addlayer "SlidePosition"
+	addlayer "shoot2pose_r"
 	node "0"
 }
 
@@ -784,7 +784,8 @@ $sequence "shoot2_l" {
 	fadein 0
 	fadeout 0
 	addlayer "walklayerironsight"
-	addlayer "SlidePosition"addlayer "shoot2pose_l"
+	addlayer "SlidePosition"
+	addlayer "shoot2pose_l"
 	node "0"
 }
 
@@ -876,7 +877,7 @@ $sequence "reload" {
 	{ event AE_WPN_COMPLETE_RELOAD 76 "" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	node "0"
 }
 
@@ -894,13 +895,13 @@ $sequence "reloadRightOnly" {
 	{ event AE_WPN_COMPLETE_RELOAD 46 "" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	node "0"
 }
 
 $sequence "reload_emptyRightOnly" {
-	"reload_re_a"
-	"reload_re_a_i"
+	"reload_er_a"
+	"reload_er_a_i"
 	activity "ACT_VM_MISSRIGHT2" 1
 	blend "ironsight" 0 1
 	blendwidth 2
@@ -915,7 +916,7 @@ $sequence "reload_emptyRightOnly" {
 	{ event AE_WPN_COMPLETE_RELOAD 91 "" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	node "0"
 }
 
@@ -936,7 +937,7 @@ $sequence "reload_empty" {
 	{ event AE_WPN_COMPLETE_RELOAD 93 "" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	node "0"
 }
 
@@ -1061,8 +1062,7 @@ $sequence "holster" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "SlidePosition"
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	fps 30
 	
 	

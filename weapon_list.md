@@ -8,7 +8,7 @@
 Pistols:
 
 - S&W M39-2 [X]
-- M1911A1
+- M1911A1 [X]
 - Browning Hi-Power [X]
 - Baby Browning [X]
 - Mk 22 Mod 0 "Hush Puppy" [X]
