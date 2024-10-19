@@ -121,7 +121,7 @@ SWEP.WoodDamageModifier = 1.4
 SWEP.OtherDamageModifier = 1.4
 
 // Sound
-SWEP.SoundSingleShot = "MCV_Weapon_HP.Single"
+SWEP.SoundSingleShot = "MCV_Weapon_M1911.Single"
 SWEP.SoundDoubleShot = ""
 SWEP.SoundReload = ""
 SWEP.SoundSpecial1 = ""
