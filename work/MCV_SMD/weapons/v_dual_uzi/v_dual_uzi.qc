@@ -291,7 +291,6 @@ $animation "RightEmpty" "v_dual_uzi_anims\RightEmpty.smd" {
 
 $animation "BothEmpty" "v_dual_uzi_anims\BothEmpty.smd" {
 	fps 30
-	loop
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "BothEmpty_corrective_animation" 0
 }
@@ -667,8 +666,7 @@ $sequence "draw" {
 	fadein 0
 	fadeout 0.2
 	addlayer "SlidePosition"
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	  
@@ -686,8 +684,7 @@ $sequence "Firstdraw" {
 	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	node "0"
 }
 $sequence "shoot1_r" {
@@ -1051,8 +1048,7 @@ $sequence "holster" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "SlidePosition"
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	fps 30
 	
 	
