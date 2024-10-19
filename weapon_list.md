@@ -1,5 +1,6 @@
 // This is every weapon in the files that is fully textured and animated and thus, can be made into useable SWEPs.
 
+<X> = Denotes the viewmodel is ingame but has severe visual issues
 [X] = Denotes the viewmodel has been fixed, compiled and is now ingame. Does not denote actual completeness
 {X} = Denotes the SWEP is complete. VM, WM, all features and stats are correct and ingame.
 
@@ -48,8 +49,8 @@ Submachine Guns:
 - M1928 Thompson [X]
 - Owen Gun [X]
 - F1 [X]
-- Sterling L2A3 [X]
-- Sterling L34A1 [X]
+- Sterling L2A3 <X>
+- Sterling L34A1 <X>
 - Sten Gun [X]
 - Sten Gun SOG [X]
 
@@ -219,7 +220,7 @@ Assault Rifles:
 Battle Rifles:
 
 - MAS-49 [X]
-- AVT-40
+- AVT-40 [X]
 
 
 Carbines:
@@ -249,7 +250,7 @@ Sniper Rifles:
 
 - Karabiner 98k ZF39 [X]
 - MAS-49 APX L806 [X]
-- SVT-40 PU
+- SVT-40 PU [X]
 - Mosin-Nagant M91/30 PU
 - SVD
 
