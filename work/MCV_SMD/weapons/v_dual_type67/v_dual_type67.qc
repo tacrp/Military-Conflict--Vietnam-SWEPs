@@ -1300,8 +1300,8 @@ $sequence "reloadRightOnly" {
 }
 
 $sequence "reload_emptyRightOnly" {
-	"reload_re_a"
-	"reload_re_a_i"
+	"reload_er_a"
+	"reload_er_a_i"
 	activity "ACT_VM_MISSRIGHT2" 1
 	blend "ironsight" 0 1
 	blendwidth 2

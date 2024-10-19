@@ -537,8 +537,8 @@ $animation "pickup_e_a_i" "v_shanxi_type17_anims\pickup_e_a_i.smd" {
 }
 
 $sequence "SlidePosition" {
-	"Default"
 	"Slideback"
+	"Default"
 	blend "empty" 0 1
 	blendwidth 2
 	delta
