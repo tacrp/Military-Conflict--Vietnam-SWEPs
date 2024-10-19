@@ -36,7 +36,7 @@ Submachine Guns:
 - M3A1 Grease Gun [X]
 - M3A1 Grease Gun SOG [X]
 - M12 Beretta [X]
-- Madsen M/50
+- Madsen M/50 [X]
 - Uzi [X]
 - Uzi SOG [X]
 - Carl Gustaf M/45 [X]
