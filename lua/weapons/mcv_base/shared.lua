@@ -59,7 +59,7 @@ SWEP.TriggerDelayTime = 0.25
 SWEP.ShotgunReload = false
 SWEP.ShotgunAltReload = false // Clip-loading rifles use this set of anims for bullet loading
 SWEP.HybridReload = false
-SWEP.HasEmptyReload = true
+SWEP.HasEmptyReload = false
 
 SWEP.MagInTime = 0
 SWEP.MagInTimeEmpty = 0
