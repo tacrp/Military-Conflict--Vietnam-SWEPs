@@ -41,6 +41,7 @@ SWEP.Firemodes = {
 
 SWEP.LastShotAnimation = false
 SWEP.ShotgunReload = true
+SWEP.HasEmptyReload = false
 
 // View slide from recoil
 SWEP.ViewSlideRecoilUp = 3.2
