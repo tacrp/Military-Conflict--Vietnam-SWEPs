@@ -98,12 +98,12 @@ Shotguns:
 
 Bolt-Action Rifles:
 
-- M1903 Springfield
+- M1903 Springfield [X]
 
 
 Sniper Rifles:
 
-- M1903A4 Springfield
+- M1903A4 Springfield [X]
 - XM21 [X]
 - M1D Garand [X]
 - M40
