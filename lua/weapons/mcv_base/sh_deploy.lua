@@ -16,6 +16,19 @@ function SWEP:Deploy()
     return true
 end
 
+function SWEP:ClientHolster()
+    if SERVER then return end
+
+    if game.SinglePlayer() then
+        self:CallOnClient("ClientHolster")
+    end
+
+    local vm = self:GetVM()
+
+    vm:SetSubMaterial()
+    vm:SetMaterial()
+end
+
 function SWEP:Holster(wep)
     if game.SinglePlayer() and CLIENT then return end
 
@@ -40,6 +53,8 @@ function SWEP:Holster(wep)
         local vm = self:GetOwner():GetViewModel()
 
         vm:SetBodyGroups("000000000000000000000")
+
+        self:ClientHolster()
 
         return true
     else
