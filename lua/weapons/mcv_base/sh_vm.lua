@@ -123,7 +123,7 @@ function SWEP:PreDrawViewModel()
     cam.Start3D(nil, nil, Lerp(self:GetSightAmount() ^ 3, self.ViewModelFOV, self.SightedViewModelFOV))
     cam.IgnoreZ(true)
 
-    if self.OEGScope then
+    if self.OEGScope and self:GetSightAmount() > 0.6 then
         render.SetBlend(0.2)
     end
 end
