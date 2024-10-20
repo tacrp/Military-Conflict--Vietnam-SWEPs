@@ -16,7 +16,7 @@ SWEP.Slot = 3
 SWEP.ViewModel = "models/weapons/mcv/v_m607.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_car15.mdl"
 
-SWEP.BodyGroups = "021"
+SWEP.BodyGroups = "020"
 
 SWEP.WeaponSelectIcon = NULL
 
@@ -37,8 +37,8 @@ SWEP.MuzzleVelocity = 810
 SWEP.RangeModifier = 0.935
 
 SWEP.Firemodes = {
-    MCV.FIREMODE_SEMI,
     MCV.FIREMODE_AUTO,
+    MCV.FIREMODE_SEMI,
 }
 
 // Weapon must be manually cycled
@@ -64,8 +64,9 @@ SWEP.IronsightFov = 90 - 15
 SWEP.IronsightWalkBobbingStrength = -0.25
 
 SWEP.HasScope = true
+SWEP.OEGScope = true // weird occluded eye optic type
 SWEP.ScopeMaterial = Material("models/weapons/mcv/optics/crosshair_singlepoint")
-SWEP.ScopeFOV = 8
+SWEP.ScopeFOV = 60
 SWEP.ScopeFOV2 = 4
 SWEP.RTScopeMaterialIndex = 6
 
@@ -86,9 +87,9 @@ SWEP.CrosshairDeltaDistance = 4
 SWEP.WeaponWeight = 3.85
 
 SWEP.Primary.Ammo = "ar2"
-SWEP.Primary.ClipSize = 20
+SWEP.Primary.ClipSize = 30
 SWEP.Primary.Chamber = 1
-SWEP.Primary.DefaultClip = 80
+SWEP.Primary.DefaultClip = 90
 SWEP.Primary.Automatic = true
 
 SWEP.NearwallDistance = 40
