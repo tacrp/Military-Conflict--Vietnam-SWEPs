@@ -70,6 +70,8 @@ SWEP.Spread = 3
 SWEP.SpreadIronsighted = 1
 
 SWEP.FireRate = 60 // in rounds per minute
+SWEP.CycleSpeed = 0.45
+SWEP.CyclePostDelay = 1
 
 SWEP.CrosshairMinDistance = 8
 SWEP.CrosshairDeltaDistance = 4

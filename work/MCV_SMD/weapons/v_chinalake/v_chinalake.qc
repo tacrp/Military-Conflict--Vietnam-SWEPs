@@ -516,8 +516,7 @@ $sequence "shoot1" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	snap
 	addlayer "walklayerironsight"
 	addlayer "shoot1_pose"
 	node "0"
@@ -540,13 +539,13 @@ $sequence "pump" {
 	activity "ACT_VM_RELOAD_INSERT_PULL" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	fadein 0.2
+	fadeout 0.2
 	addlayer "walklayerironsight"
 	addlayer "pump_pose"
 	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
-	{ event 5004 1 "MCV_Weapon_Foley_ChinaLake_Reload.MetalStart" }
-	{ event 5004 10 "MCV_Weapon_Foley_ChinaLake_Reload.MetalEnd" }
+	{ event 5004 2 "MCV_Weapon_Foley_ChinaLake_Reload.MetalStart" }
+	{ event 5004 21 "MCV_Weapon_Foley_ChinaLake_Reload.MetalEnd" }
 	{ event AE_CLIENT_EJECT_BRASS 4 "eject" }
 	node "0"
 }
@@ -572,7 +571,7 @@ $sequence "reload_start" {
 	{ event 5004 1 "MCV_Weapon_Foley_ChinaLake_Reload.Hand" }
 	fadein 0.2
 	fadeout 0
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	node "0"
 }
 
@@ -586,7 +585,7 @@ $sequence "reload_insert" {
 	{ event 5004 12 "MCV_Weapon_Foley_ChinaLake_Reload.Bullets" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	node "0"
 	snap
 }
@@ -600,7 +599,7 @@ $sequence "reload_end" {
 	{ event 5004 1 "MCV_Weapon_Foley_ChinaLake_Reload.HandEnd" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	node "0"
 }
 
@@ -615,7 +614,7 @@ $sequence "reload_endpump" {
 	{ event 5004 23 "MCV_Weapon_Foley_ChinaLake_Reload.MetalEnd" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	node "0"
 }
 
