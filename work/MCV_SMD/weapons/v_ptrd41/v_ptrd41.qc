@@ -640,7 +640,7 @@ $sequence "holster" {
 $sequence "idletodeploy" {
 	"deploy_s_a"
 	"deploy_s_a_i"
-	activity "ACT_VM_IDLETODEPLOY" 1
+	activity "ACT_VM_DEPLOYED_IN" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_PTRD.Deploy" }
@@ -686,7 +686,7 @@ $sequence "reload_deploy" {
 $sequence "deploytoidle" {
 	"deploy_e_a"
 	"deploy_e_a_i"
-	activity "ACT_VM_DEPLOYTOIDLE" 1
+	activity "ACT_VM_DEPLOYED_OUT" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_PTRD.UnDeploy" }
@@ -707,7 +707,7 @@ $sequence "SlideMovement" {
 $sequence "deployshoot1" {
 	"shoot1d_a"
 	"shoot1d_ironsight_a"
-	activity "ACT_VM_DEPLOYSHOOT" 1
+	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta

@@ -5,6 +5,7 @@ function SWEP:Think()
     self:Think_Sights()
     self:Think_Reload()
     self:Think_Speed()
+    self:Think_Bipod()
 
     self:ProcessTimers()
 

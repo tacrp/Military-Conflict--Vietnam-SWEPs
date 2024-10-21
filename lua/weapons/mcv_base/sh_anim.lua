@@ -52,7 +52,11 @@ function SWEP:Idle()
     if self:GetGrenadeLauncher() and self.RifleGrenadeIsUBGL then
         self:PlayAnimation(ACT_VM_IIDLE_M203, 1, false, false)
     else
-        self:PlayAnimation(ACT_VM_IDLE, 1, false, false)
+        if self:GetBipod() then
+            self:PlayAnimation(ACT_VM_DEPLOY, 1, false, false)
+        else
+            self:PlayAnimation(ACT_VM_IDLE, 1, false, false)
+        end
     end
 
     self:SetReady(true)

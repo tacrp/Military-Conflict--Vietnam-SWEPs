@@ -928,7 +928,7 @@ $sequence "pickupend" {
 $sequence "idletodeploy" {
 	"deploy_s_a"
 	"deploy_s_a_i"
-	activity "ACT_VM_IDLETODEPLOY" 1
+	activity "ACT_VM_DEPLOYED_IN" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_M16A1_Reload.Hand" }
@@ -974,7 +974,7 @@ $sequence "reload_deploy" {
 $sequence "reload_deploy_empty" {
 	"v_m1919a6_anims\reload_deploy_empty.smd"
 	"v_m1919a6_anims\reload_deploy_empty_2.smd"
-	activity "ACT_VM_RELOADEMPTY_DEPLOYED" 1
+	activity "ACT_VM_DEPLOYED_RELOAD_EMPTY" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_M1919A6_Reload.Hand" }
@@ -998,7 +998,7 @@ $sequence "reload_deploy_empty" {
 $sequence "deploytoidle" {
 	"deploy_e_a"
 	"deploy_e_a_i"
-	activity "ACT_VM_DEPLOYTOIDLE" 1
+	activity "ACT_VM_DEPLOYED_OUT" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_M16A1_Reload.Hand" }
@@ -1011,7 +1011,7 @@ $sequence "deploytoidle" {
 $sequence "deployshoot1" {
 	"shoot1_d_a"
 	"shoot1_d_a"
-	activity "ACT_VM_DEPLOYSHOOT" 1
+	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
@@ -1027,7 +1027,7 @@ $sequence "deployshoot1" {
 $sequence "deployshoot2" {
 	"shoot2_d_a"
 	"shoot2_d_a"
-	activity "ACT_VM_DEPLOYSHOOT" 1
+	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
@@ -1043,7 +1043,7 @@ $sequence "deployshoot2" {
 $sequence "deployshoot3" {
 	"shoot3_d_a"
 	"shoot3_d_a"
-	activity "ACT_VM_DEPLOYSHOOT" 1
+	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
@@ -1059,7 +1059,7 @@ $sequence "deployshoot3" {
 $sequence "deployshoot4" {
 	"shoot3_d_a"
 	"shoot3_d_a"
-	activity "ACT_VM_DEPLOYSHOOT" 1
+	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta

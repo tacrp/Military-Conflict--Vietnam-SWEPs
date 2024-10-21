@@ -74,7 +74,11 @@ function SWEP:PrimaryAttack()
             if self.LastShotAnimation and self:Clip1() == 1 then
                 t = self:PlayAnimation(ACT_VM_SHOOTLAST, 0.5)
             else
-                t = self:PlayAnimation(ACT_VM_PRIMARYATTACK, 0.5)
+                if self:GetBipod() then
+                    t = self:PlayAnimation(ACT_VM_PRIMARYATTACK_DEPLOYED, 0.5)
+                else
+                    t = self:PlayAnimation(ACT_VM_PRIMARYATTACK, 0.5)
+                end
             end
         end
     end

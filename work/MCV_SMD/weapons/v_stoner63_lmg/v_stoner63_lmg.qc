@@ -928,7 +928,7 @@ $sequence "pickupend" {
 $sequence "idletodeploy" {
 	"deploy_s_a"
 	"deploy_s_a_i"
-	activity "ACT_VM_IDLETODEPLOY" 1
+	activity "ACT_VM_DEPLOYED_IN" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_Stoner63_LMG_Reload.Hand" }
@@ -976,7 +976,7 @@ $sequence "reload_deploy" {
 $sequence "reload_deploy_empty" {
 	"v_stoner63_lmg_anims\reload_deploy_empty.smd"
 	"v_stoner63_lmg_anims\reload_deploy_empty_2.smd"
-	activity "ACT_VM_RELOADEMPTY_DEPLOYED" 1
+	activity "ACT_VM_DEPLOYED_RELOAD_EMPTY" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_Stoner63_LMG_Reload.Hand" }
@@ -1004,7 +1004,7 @@ $sequence "reload_deploy_empty" {
 $sequence "deploytoidle" {
 	"deploy_e_a"
 	"deploy_e_a_i"
-	activity "ACT_VM_DEPLOYTOIDLE" 1
+	activity "ACT_VM_DEPLOYED_OUT" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_Stoner63_LMG_Reload.HandEnd" }
@@ -1014,48 +1014,76 @@ $sequence "deploytoidle" {
 }
 
 $sequence "deployshoot1" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	snap
+	addlayer "walklayer"
+	addlayer "runlayer"
+	addlayer "deployshoot1_pose"
+	node "0"
+}
+
+$sequence "deployshoot1_pose" {
 	"shoot1_d_a"
 	"shoot1_di_a"
-	activity "ACT_VM_DEPLOYSHOOT" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_CL_BODYGROUP_SET_TO_CLIP 0 "" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	snap
+	hidden
 }
 
 $sequence "deployshoot2" {
-	"shoot2_d_a"
-	"shoot2_di_a"
-	activity "ACT_VM_DEPLOYSHOOT" 1
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
 	blend "ironsight" 0 1
-	blendwidth 2
-	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_CL_BODYGROUP_SET_TO_CLIP 0 "" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	blendwidth 3
+	snap
+	addlayer "walklayer"
+	addlayer "runlayer"
+	addlayer "deployshoot2_pose"
+	node "0"
 }
 
-$sequence "deployshoot3" {
-	"shoot3_d_a"
-	"shoot3_di_a"
-	activity "ACT_VM_DEPLOYSHOOT" 1
+$sequence "deployshoot2_pose" {
+	"shoot2_d_a"
+	"shoot2_di_a"
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_CL_BODYGROUP_SET_TO_CLIP 0 "" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	snap
+	hidden
+}
+
+
+$sequence "deployshoot3" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	snap
+	addlayer "walklayer"
+	addlayer "runlayer"
+	addlayer "deployshoot3_pose"
+	node "0"
+}
+
+$sequence "deployshoot3_pose" {
+	"shoot3_d_a"
+	"shoot3_di_a"
+	blend "ironsight" 0 1
+	blendwidth 2
+	delta
+	snap
+	hidden
 }
 
 $sequence "holster" {

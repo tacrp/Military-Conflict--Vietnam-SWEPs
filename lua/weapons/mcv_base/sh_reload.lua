@@ -34,9 +34,17 @@ function SWEP:Reload()
             end
         else
             if self:Clip1() == 0 and self.HasEmptyReload then
-                self:PlayAnimation(ACT_VM_RELOADEMPTY, 1, true)
+                if self:GetBipod() then
+                    self:PlayAnimation(ACT_VM_DEPLOYED_RELOAD_EMPTY, 1, true)
+                else
+                    self:PlayAnimation(ACT_VM_RELOADEMPTY, 1, true)
+                end
             else
-                self:PlayAnimation(ACT_VM_RELOAD, 1, true)
+                if self:GetBipod() then
+                    self:PlayAnimation(ACT_VM_RELOAD_DEPLOYED, 1, true)
+                else
+                    self:PlayAnimation(ACT_VM_RELOAD, 1, true)
+                end
             end
         end
     end
