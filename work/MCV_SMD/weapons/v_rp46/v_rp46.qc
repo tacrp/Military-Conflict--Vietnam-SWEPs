@@ -510,7 +510,7 @@ $animation "deploy_a" "v_rp46_anims\deploy_a.smd" {
 
 $animation "ironsightdeploy" "v_rp46_anims\ironsightdeploy.smd" {
 	fps 30
-	frame 0 1
+	frame 1 1
 	numframes 60
 	
 	
