@@ -43,7 +43,7 @@ SWEP.Firemodes = {
 
 SWEP.LastShotAnimation = false
 SWEP.ShotgunReload = true
-SWEP.HasEmptyReload = false
+SWEP.HasEmptyReload = true
 SWEP.PlayCycleAnimation = true
 
 // View slide from recoil
