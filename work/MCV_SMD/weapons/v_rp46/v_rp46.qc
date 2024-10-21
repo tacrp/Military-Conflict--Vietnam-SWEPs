@@ -898,6 +898,7 @@ $sequence "deploy" {
 	blendwidth 2
 	fadein 0.2
 	fadeout 0.2
+	addlayer "walklayerironsight"
 	node "0"
 }
 

@@ -1004,8 +1004,8 @@ $sequence "reload_start" {
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_M1895_Reload.Start" }
 	{ event 5004 2 "MCV_Weapon_Foley_M1895_Reload.Hand" }
-	fadein 0.05
-	fadeout 0.05
+	fadein 0
+	fadeout 0
 	addlayer "walklayerironsight"
 	node "0"
 }
@@ -1023,7 +1023,7 @@ $sequence "reload_end" {
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_M1895_Reload.End" }
 	{ event 5004 2 "MCV_Weapon_Foley_M1895_Reload.HandEnd" }
-	fadein 0.05
+	fadein 0
 	fadeout 0.2
 	addlayer "walklayerironsight"
 	node "0"
@@ -1043,8 +1043,8 @@ $sequence "reload_insert" {
 	{ event 5004 0 "MCV_Weapon_Foley_M1895_Reload.Mid_Eject" }
 	{ event 5004 4 "MCV_Weapon_Foley_M1895_Reload.Mid_Insert" }
 	{ event 5004 8 "MCV_Weapon_Foley_M1895_Reload.Mid_Spin" }
-	fadein 0.2
-	fadeout 0.2
+	fadein 0
+	fadeout 0
 	addlayer "walklayerironsight"
 	node "0"
 	snap

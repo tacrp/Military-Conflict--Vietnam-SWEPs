@@ -617,35 +617,58 @@ $sequence "draw_empty" {
 }
 
 $sequence "shoot1" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	fadein 0
+	fadeout 0
+	addlayer "walklayerironsight"
+	addlayer "shoot1_pose"
+	node "0"
+}
+
+$sequence "shoot1_pose" {
 	"shoot1_a"
 	"shoot1_ironsight_a"
-	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_SET_POSEPARAM 0 "hammerpos 0" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	snap
+	hidden
 }
 
 $sequence "pump" {
-	"pump_a_e"
-	"pump_ironsight_a_e"
-	"pump_a"
-	"pump_ironsight_a"
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
 	activity "ACT_VM_RELOAD_INSERT_PULL" 1
 	blend "ironsight" 0 1
-	blend "ammo_fraction" 0 0.1
-	delta
+	blendwidth 3
+	fadein 0
+	fadeout 0
 	{ event 5004 1 "MCV_Weapon_Foley_M1897_Reload.MetalStart" }
 	{ event 5004 5 "MCV_Weapon_Foley_M1897_Reload.MetalEnd" }
 	{ event AE_CLIENT_EJECT_BRASS 4 "eject" }
 	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
 	{ event AE_WPN_SET_POSEPARAM 2 "hammerpos 1" }
-	fadein 0.2
-	fadeout 0.2
+	addlayer "walklayerironsight"
+	addlayer "pump_pose"
+	node "0"
+}
+
+$sequence "pump_pose" {
+	"pump_a_e"
+	"pump_ironsight_a_e"
+	"pump_a"
+	"pump_ironsight_a"
+	blend "ironsight" 0 1
+	blend "ammo_fraction" 0 0.1
+	delta
+	snap
+	hidden
 }
 
 $sequence "reload_start" {

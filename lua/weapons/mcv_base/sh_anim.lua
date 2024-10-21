@@ -13,9 +13,9 @@ function SWEP:PlayAnimation(act, mult, lock, noidle)
 
     if !IsValid(vm) then return end
 
-    if act == -1 then return end
-
     local seq = vm:SelectWeightedSequence(act)
+
+    if seq == -1 then print("INVALID ACT " .. act) return end
 
     local time = vm:SequenceDuration(seq)
 

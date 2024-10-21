@@ -41,7 +41,7 @@ SWEP.Firemodes = {
 
 SWEP.LastShotAnimation = false
 SWEP.ShotgunReload = true
-SWEP.HasEmptyReload = false
+SWEP.HasEmptyReload = true
 
 // View slide from recoil
 SWEP.ViewSlideRecoilUp = 3.2
@@ -123,7 +123,7 @@ SWEP.SoundDoubleShot = ""
 SWEP.SoundReload = ""
 SWEP.SoundSpecial1 = ""
 SWEP.SoundSpecial2 = ""
-SWEP.SoundNearlyEmpty = "Vietnam_Weapon_Generic.NearlyEmptyClick"
+SWEP.SoundNearlyEmpty = "MCV_Weapon_Generic.NearlyEmptyClick"
 SWEP.SoundEmpty = "Vietnam_Weapon_Generic.ClipEmpty_01"
 
 // Particles

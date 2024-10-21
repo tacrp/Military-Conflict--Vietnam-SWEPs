@@ -103,7 +103,7 @@ SWEP.CrouchMoveSpreadMultiplier = 1.25
 SWEP.JumpSpreadMultiplier = 3.0
 
 SWEP.HasBayonet = false
-SWEP.HasBipod = false
+SWEP.HasBipod = true
 
 // Penetration
 SWEP.MetalPenetrationDepth = 8
@@ -124,7 +124,7 @@ SWEP.SoundDoubleShot = ""
 SWEP.SoundReload = ""
 SWEP.SoundSpecial1 = ""
 SWEP.SoundSpecial2 = ""
-SWEP.SoundNearlyEmpty = "Vietnam_Weapon_Generic.NearlyEmptyClick"
+SWEP.SoundNearlyEmpty = "MCV_Weapon_Generic.NearlyEmptyClick"
 SWEP.SoundEmpty = "Vietnam_Weapon_Generic.ClipEmpty_01"
 
 // Particles

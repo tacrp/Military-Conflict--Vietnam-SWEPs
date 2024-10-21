@@ -142,10 +142,10 @@ function SWEP:Think_Reload()
                         self:PlayAnimation(ACT_VM_RELOAD_END, 1, true)
                         self:SetEmptyReload(false)
                     else
-                        if self:GetEmptyReload() then
-                            self:PlayAnimation(ACT_VM_RELOAD, 1, true)
-                        else
+                        if self:GetAkimbo() then
                             self:PlayAnimation(ACT_VM_RELOAD2, 1, true)
+                        else
+                            self:PlayAnimation(ACT_VM_RELOAD, 1, true)
                         end
 
                         self:RestoreClip(1)

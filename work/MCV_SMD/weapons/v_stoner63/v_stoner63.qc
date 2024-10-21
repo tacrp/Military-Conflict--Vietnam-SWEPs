@@ -920,6 +920,7 @@ $sequence "deploy" {
 	blendwidth 2
 	fadein 0.2
 	fadeout 0.2
+	addlayer "walklayerironsight"
 	node "0"
 }
 
@@ -994,8 +995,7 @@ $sequence "deployshoot1" {
 	blend "ironsight" 0 1
 	blendwidth 3
 	snap
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	addlayer "deployshoot1_pose"
 	node "0"
 }
@@ -1018,8 +1018,7 @@ $sequence "deployshoot2" {
 	blend "ironsight" 0 1
 	blendwidth 3
 	snap
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	addlayer "deployshoot2_pose"
 	node "0"
 }
@@ -1043,8 +1042,7 @@ $sequence "deployshoot3" {
 	blend "ironsight" 0 1
 	blendwidth 3
 	snap
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	addlayer "deployshoot3_pose"
 	node "0"
 }

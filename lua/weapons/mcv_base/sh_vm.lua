@@ -64,6 +64,8 @@ function SWEP:DoBodygroups()
         end
     end
 
+    vm:SetPoseParameter("hammerpos", (self:GetNeedCycle() or self:GetEmptyReload() or self:Clip1() == 0) and 0 or 1)
+
     vm:SetPoseParameter("empty", self:Clip1() == 0 and 0 or 1)
 
     vm:SetPoseParameter("player_movement", self:GetSpeed() * Lerp(self:GetSightAmount(), 1, (1 + self.IronsightWalkBobbingStrength)))
