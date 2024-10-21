@@ -41,6 +41,7 @@ end
 
 function SWEP:Think_Bipod()
     if !self.HasBipod then return end
+    if self:StillWaiting() then return end
 
     local owner = self:GetOwner()
 
@@ -50,7 +51,7 @@ function SWEP:Think_Bipod()
             self:SetBipod(true)
         end
     else
-        if !self:CanBipod() and !self:GetReloading() and !self:StillWaiting() then
+        if !self:CanBipod() then
             self:PlayAnimation(ACT_VM_DEPLOYED_OUT, 1, true)
             self:SetBipod(false)
         end

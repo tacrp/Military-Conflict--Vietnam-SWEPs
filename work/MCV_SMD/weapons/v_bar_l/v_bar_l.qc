@@ -948,48 +948,75 @@ $sequence "deploytoidle" {
 }
 
 $sequence "deployshoot1" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	snap
+	addlayer "walklayer"
+	addlayer "runlayer"
+	addlayer "deployshoot1_pose"
+	node "0"
+}
+
+$sequence "deployshoot1_pose" {
 	"shoot1d_a"
 	"shoot1d_ironsight_a"
-	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 0 "ammo_fraction" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	snap
+	hidden
 }
 
 $sequence "deployshoot2" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	snap
+	addlayer "walklayer"
+	addlayer "runlayer"
+	addlayer "deployshoot2_pose"
+	node "0"
+}
+
+$sequence "deployshoot2_pose" {
 	"shoot2d_a"
 	"shoot2d_ironsight_a"
-	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 0 "ammo_fraction" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	snap
+	hidden
 }
 
 $sequence "deployshoot3" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	snap
+	addlayer "walklayer"
+	addlayer "runlayer"
+	addlayer "deployshoot3_pose"
+	node "0"
+}
+
+$sequence "deployshoot3_pose" {
 	"shoot3d_a"
 	"shoot3d_ironsight_a"
-	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 0 "ammo_fraction" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	snap
+	hidden
 }
 
 $sequence "change_firemode_deploy" {
