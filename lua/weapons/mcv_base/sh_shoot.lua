@@ -171,6 +171,10 @@ function SWEP:AttackEffects()
         recoilmult = recoilmult * 1.25
     end
 
+    if self:GetBipod() then
+        recoilmult = recoilmult * 0
+    end
+
     self:SetLastRecoilTime(CurTime())
 
     local recoilup = Lerp(self:GetSightAmount(), self.ViewSlideRecoilUp, self.ViewSlideRecoilIronsightUp) * recoilmult
