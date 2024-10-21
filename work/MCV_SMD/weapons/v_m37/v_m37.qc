@@ -602,8 +602,7 @@ $sequence "shoot1" {
 	{ event AE_MUZZLEFLASH 0 "" }
 	{ event AE_WPN_SET_POSEPARAM 0 "hammerpos 0" }
 	snap
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	addlayer "shootpose1"
 	node "0"
 }
@@ -629,8 +628,7 @@ $sequence "pump" {
 	{ event 5004 30 "MCV_Weapon_Foley_M37_Reload.MetalEnd" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	addlayer "pumppose"
 	node "0"
 }

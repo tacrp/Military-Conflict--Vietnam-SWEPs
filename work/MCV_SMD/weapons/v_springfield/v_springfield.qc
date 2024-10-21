@@ -772,8 +772,7 @@ $sequence "shoot1" {
 	blend "ironsight" 0 1
 	blendwidth 3
 	snap
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	addlayer "shootpose1"
 	node "0"
 }
@@ -786,8 +785,7 @@ $sequence "shoot2" {
 	blend "ironsight" 0 1
 	blendwidth 3
 	snap
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	addlayer "shootpose2"
 	node "0"
 }
@@ -800,8 +798,7 @@ $sequence "shoot3" {
 	blend "ironsight" 0 1
 	blendwidth 3
 	snap
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	addlayer "shootpose3"
 	node "0"
 }
@@ -862,8 +859,7 @@ $sequence "boltpull" {
 	{ event AE_CLIENT_EJECT_BRASS 11 "eject" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	addlayer "boltpullpose"
 	node "0"
 }
