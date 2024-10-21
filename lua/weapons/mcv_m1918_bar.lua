@@ -103,7 +103,7 @@ SWEP.CrouchMoveSpreadMultiplier = 1.25
 SWEP.JumpSpreadMultiplier = 3.0
 
 SWEP.HasBayonet = false
-SWEP.HasBipod = false
+SWEP.HasBipod = true
 
 // Penetration
 SWEP.MetalPenetrationDepth = 8
