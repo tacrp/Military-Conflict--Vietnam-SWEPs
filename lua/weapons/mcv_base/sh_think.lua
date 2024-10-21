@@ -32,7 +32,11 @@ function SWEP:Think()
     if owner:KeyDown(IN_ATTACK) and self:GetPrimedAttack() and self:GetLastTriggerTime() + self.TriggerDelayTime < CurTime() then
         if SERVER or !game.SinglePlayer() then
             self:AttackEffects()
-            self:BulletAttack()
+            if self.ShootEntity then
+                self:RocketAttack()
+            else
+                self:BulletAttack()
+            end
             self:SetPrimedAttack(false)
             if self:GetAkimbo() and self:Clip1() % 2 == 0 then
                 self:PlayAnimation(ACT_VM_PRIMARYATTACK_3, 0.5)

@@ -1,6 +1,6 @@
 SWEP.Base = "mcv_base"
 
-SWEP.Spawnable = false
+SWEP.Spawnable = true
 
 AddCSLuaFile()
 
@@ -135,7 +135,7 @@ SWEP.SoundEmpty = "Vietnam_Weapon_Generic.ClipEmpty_01"
 
 // SWEP.MuzzleParticle3rdPerson = "vietnam_muzzleflash_rifle_type1_tp"
 
-// SWEP.EjectBrassType = 1
+// SWEP.EjectBrassType = 4
 // SWEP.EjectBrassTrail = "vietnam_weaponeffect_shelleject_trail"
 // SWEP.EjectBrassParticle = "vietnam_weaponeffect_shelleject_side"
 
@@ -146,7 +146,7 @@ SWEP.MuzzleParticleIronsightedSmoke = ""
 
 SWEP.MuzzleParticle3rdPerson = "muzzleflash_ak47"
 
-SWEP.EjectBrassType = 1
+SWEP.EjectBrassType = 4
 SWEP.EjectBrassTrail = "shellsmoke"
 SWEP.EjectBrassParticle = "port_smoke"
 

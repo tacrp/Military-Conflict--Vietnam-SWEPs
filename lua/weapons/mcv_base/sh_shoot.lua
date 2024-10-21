@@ -90,7 +90,11 @@ function SWEP:PrimaryAttack()
     end
 
     if fm != MCV.FIREMODE_DA then
-        self:BulletAttack()
+        if self.ShootEntity then
+            self:RocketAttack()
+        else
+            self:BulletAttack()
+        end
         self:AttackEffects()
     else
         self:SetLastTriggerTime(CurTime())

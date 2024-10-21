@@ -5,63 +5,51 @@ SWEP.Spawnable = true
 AddCSLuaFile()
 
 // Names and basic information
-SWEP.PrintName = "Stoner 63AC Drum"
+SWEP.PrintName = "M79 'Thumper'"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "United States of America"
-SWEP.SubCategory = "Carbines"
-SWEP.Caliber = "5.56x45mm"
+SWEP.SubCategory = "Special Weapons"
+SWEP.Caliber = "40x46mm Grenade"
 
-SWEP.Slot = 3
+SWEP.Slot = 4
 
-SWEP.ViewModel = "models/weapons/mcv/v_stoner63a_carbine_drum.mdl"
-SWEP.WorldModel = "models/weapons/mcv/w_ak47.mdl"
+SWEP.ViewModel = "models/weapons/mcv/v_m79.mdl"
+SWEP.WorldModel = "models/weapons/mcv/w_sks.mdl"
 
 SWEP.BodyGroups = ""
 
 SWEP.WeaponSelectIcon = NULL
 
-SWEP.BayonetBodygroup = 1
-
 // Stats
 
-SWEP.DamageGeneric = 41 // damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)
-SWEP.DamageHeadMultiplier = 2.5
-SWEP.DamageChestMultiplier = 1.2
-SWEP.DamageStomachMultiplier = 1.15
-SWEP.DamageLegMultiplier = 0.8
-SWEP.DamageArmMultiplier = 0.75
-
-SWEP.ExplosionDamage = 0
-SWEP.ExplosionRadius = 0
-
-SWEP.MuzzleVelocity = 735
-
-SWEP.RangeModifier = 0.925
+SWEP.Num = 1
 
 SWEP.Firemodes = {
-    MCV.FIREMODE_AUTO,
-    MCV.FIREMODE_SEMI,
+    MCV.FIREMODE_SEMI
 }
 
-// Weapon must be manually cycled
-SWEP.PlayCycleAnimation = false
+SWEP.LastShotAnimation = false
+SWEP.MagInClip = false
+
+SWEP.ShootEntity = "mcv_proj_40mm"
+SWEP.ShootForce = 2500
 
 // View slide from recoil
-SWEP.ViewSlideRecoilUp = 1.64
-SWEP.ViewSlideRecoilRight = 0.32
+SWEP.ViewSlideRecoilUp = 3.12
+SWEP.ViewSlideRecoilRight = 0.96
 
-SWEP.ViewSlideRecoilIronsightUp = 0.96
-SWEP.ViewSlideRecoilIronsightRight = 0.16
+SWEP.ViewSlideRecoilIronsightUp = 2.64
+SWEP.ViewSlideRecoilIronsightRight = 0.72
 
 SWEP.RecoilPushbackValue = 1.5
 
 // Camera shake from recoil
-SWEP.ShakeScale = 1
-SWEP.ShakeFreq = 45.0
-SWEP.ShakeDuration = 0.4
+SWEP.ShakeScale = 2.5
+SWEP.ShakeFreq = 40.0
+SWEP.ShakeDuration = 0.75
 
 SWEP.Ironsight = true
-SWEP.IronsightSpeedScale = 1.0
+SWEP.IronsightSpeedScale = 0.7
 SWEP.IronsightFov = 90 - 15
 SWEP.IronsightWalkBobbingStrength = -0.25
 
@@ -70,40 +58,46 @@ SWEP.ScopeMaterial = NULL
 SWEP.ScopeFOV = 8
 SWEP.ScopeFOV2 = 4
 
-SWEP.IronsightPos = Vector(0.05, -4, 0.025)
-SWEP.IronsightAng = Angle(0.225, 0, 0)
+SWEP.IronsightPos = Vector(0, 0, 0)
+SWEP.IronsightAng = Angle(0, 0, 0)
 
 SWEP.CustomPos = Vector(0, -2, 0)
 SWEP.CustomAng = Angle(0, 0, 0)
 
-SWEP.Spread = 7.72
-SWEP.SpreadIronsighted = 1.47
+SWEP.Spread = 3
+SWEP.SpreadIronsighted = 1
 
-SWEP.FireRate = 700 // in rounds per minute
+SWEP.FireRate = 120 // in rounds per minute
 
 SWEP.CrosshairMinDistance = 8
 SWEP.CrosshairDeltaDistance = 4
 
 SWEP.WeaponWeight = 3.85
 
-SWEP.Primary.Ammo = "ar2"
-SWEP.Primary.ClipSize = 75
-SWEP.Primary.Chamber = 1
-SWEP.Primary.DefaultClip = 150
+SWEP.Primary.Ammo = "smg1_grenade"
+SWEP.Primary.ClipSize = 1
+SWEP.Primary.Chamber = 0
+SWEP.Primary.DefaultClip = 3
 SWEP.Primary.Automatic = true
 
 SWEP.NearwallDistance = 40
 
 // Bullet spread multiplier according to current stance
-SWEP.CrouchSpreadMultiplier = 0.8
+SWEP.CrouchSpreadMultiplier = 1
 SWEP.ProneSpreadMultiplier = 0.75
-SWEP.StandMoveSpreadMultiplier = 1.45
-SWEP.SneakMoveSpreadMultiplier = 1.34
+SWEP.StandMoveSpreadMultiplier = 2
+SWEP.SneakMoveSpreadMultiplier = 1.5
 SWEP.CrouchMoveSpreadMultiplier = 1.25
-SWEP.JumpSpreadMultiplier = 3.0
+SWEP.JumpSpreadMultiplier = 4.0
 
 SWEP.HasBayonet = false
+SWEP.HasRifleGrenade = false
+
+SWEP.BashDamage = 50
+SWEP.BayonetDamage = 100
+
 SWEP.HasBipod = false
+SWEP.HasEmptyReload = false
 
 // Penetration
 SWEP.MetalPenetrationDepth = 8
@@ -119,7 +113,7 @@ SWEP.WoodDamgaeModifier = 1.25
 SWEP.OtherDamageModifier = 1.25
 
 // Sound
-SWEP.SoundSingleShot = "MCV_Weapon_Stoner63_Carbine.Single"
+SWEP.SoundSingleShot = "MCV_Weapon_M79.Single"
 SWEP.SoundDoubleShot = ""
 SWEP.SoundReload = ""
 SWEP.SoundSpecial1 = ""
@@ -135,18 +129,19 @@ SWEP.SoundEmpty = "Vietnam_Weapon_Generic.ClipEmpty_01"
 
 // SWEP.MuzzleParticle3rdPerson = "vietnam_muzzleflash_rifle_type1_tp"
 
-// SWEP.EjectBrassType = 4
+// SWEP.EjectBrassType = 1
 // SWEP.EjectBrassTrail = "vietnam_weaponeffect_shelleject_trail"
 // SWEP.EjectBrassParticle = "vietnam_weaponeffect_shelleject_side"
 
-SWEP.MuzzleParticle = "muzzleflash_ak47"
+SWEP.MuzzleParticle = "muzzleflash_m79"
 SWEP.MuzzleParticleSmoke = ""
-SWEP.MuzzleParticleIronsighted = "muzzleflash_ak47"
+SWEP.MuzzleParticleIronsighted = "muzzleflash_m79"
 SWEP.MuzzleParticleIronsightedSmoke = ""
 
-SWEP.MuzzleParticle3rdPerson = "muzzleflash_ak47"
+SWEP.MuzzleParticle3rdPerson = "muzzleflash_m79"
 
-SWEP.EjectBrassType = 4
+SWEP.NoEjectOnShoot = true
+SWEP.EjectBrassType = 1
 SWEP.EjectBrassTrail = "shellsmoke"
 SWEP.EjectBrassParticle = "port_smoke"
 

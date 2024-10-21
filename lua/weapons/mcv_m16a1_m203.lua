@@ -105,7 +105,7 @@ SWEP.HasRifleGrenade = true
 SWEP.RifleGrenadeIsUBGL = true
 
 SWEP.RifleGrenadeEntity = "mcv_proj_40mm"
-SWEP.RifleGrenadeForce = 7000
+SWEP.RifleGrenadeForce = 2000
 
 // Penetration
 SWEP.MetalPenetrationDepth = 8

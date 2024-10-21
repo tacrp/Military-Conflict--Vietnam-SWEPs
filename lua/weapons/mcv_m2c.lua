@@ -156,7 +156,7 @@ SWEP.MuzzleParticleIronsightedSmoke = ""
 
 SWEP.MuzzleParticle3rdPerson = "muzzleflash_1"
 
-SWEP.EjectBrassType = 1
+SWEP.EjectBrassType = 17
 SWEP.EjectBrassTrail = "shellsmoke"
 SWEP.EjectBrassParticle = "port_smoke"
 
