@@ -337,11 +337,17 @@ function SWEP:ChangeFiremode()
 
     self:SetFiremode(fm)
 
-    if self:HasAnimation(ACT_VM_FIREMODE) then
+    local anim = ACT_VM_FIREMODE
+
+    if self:GetBipod() then
+        anim = ACT_VM_DFIREMODE
+    end
+
+    if self:HasAnimation(anim) then
         if fm == 1 then
-            self:PlayAnimation(ACT_VM_FIREMODE, -1, false)
+            self:PlayAnimation(anim, -1, false)
         else
-            self:PlayAnimation(ACT_VM_FIREMODE, 1, false)
+            self:PlayAnimation(anim, 1, false)
         end
     else
         self:SetAnimLockTime(CurTime() + 0.25)

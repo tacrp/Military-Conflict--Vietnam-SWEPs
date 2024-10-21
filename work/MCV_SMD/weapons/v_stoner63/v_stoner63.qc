@@ -492,6 +492,9 @@ $animation "deploy_s_a_i" "v_stoner63_anims\deploy_s_a_i.smd" {
 
 $animation "deploy_a" "v_stoner63_anims\deploy_a.smd" {
 	fps 30
+	frame 0 0
+	numframes 60
+	
 	
 	
 }
@@ -984,9 +987,9 @@ $sequence "deploytoidle" {
 }
 
 $sequence "deployshoot1" {
-	"basePose_a"
+	"deploy_a"
 	"ironsight_transition"
-	"ironsight"
+	"ironsightdeploy"
 	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
 	blend "ironsight" 0 1
 	blendwidth 3
@@ -1008,9 +1011,9 @@ $sequence "deployshoot1_pose" {
 }
 
 $sequence "deployshoot2" {
-	"basePose_a"
+	"deploy_a"
 	"ironsight_transition"
-	"ironsight"
+	"ironsightdeploy"
 	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
 	blend "ironsight" 0 1
 	blendwidth 3
@@ -1033,9 +1036,9 @@ $sequence "deployshoot2_pose" {
 
 
 $sequence "deployshoot3" {
-	"basePose_a"
+	"deploy_a"
 	"ironsight_transition"
-	"ironsight"
+	"ironsightdeploy"
 	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
 	blend "ironsight" 0 1
 	blendwidth 3

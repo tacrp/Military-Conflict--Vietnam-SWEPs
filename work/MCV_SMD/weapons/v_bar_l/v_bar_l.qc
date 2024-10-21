@@ -441,6 +441,9 @@ $animation "deploy_s_a_i" "v_bar_l_anims\deploy_s_a_i.smd" {
 
 $animation "deploy_a" "v_bar_l_anims\deploy_a.smd" {
 	fps 30
+	frame 0 0
+	numframes 60
+	
 	frame 0 1
 	numframes 60
 	
@@ -948,9 +951,9 @@ $sequence "deploytoidle" {
 }
 
 $sequence "deployshoot1" {
-	"basePose_a"
+	"deploy_a"
 	"ironsight_transition"
-	"ironsight"
+	"ironsightdeploy"
 	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
 	blend "ironsight" 0 1
 	blendwidth 3
@@ -972,9 +975,9 @@ $sequence "deployshoot1_pose" {
 }
 
 $sequence "deployshoot2" {
-	"basePose_a"
+	"deploy_a"
 	"ironsight_transition"
-	"ironsight"
+	"ironsightdeploy"
 	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
 	blend "ironsight" 0 1
 	blendwidth 3
@@ -996,9 +999,9 @@ $sequence "deployshoot2_pose" {
 }
 
 $sequence "deployshoot3" {
-	"basePose_a"
+	"deploy_a"
 	"ironsight_transition"
-	"ironsight"
+	"ironsightdeploy"
 	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
 	blend "ironsight" 0 1
 	blendwidth 3
@@ -1022,7 +1025,7 @@ $sequence "deployshoot3_pose" {
 $sequence "change_firemode_deploy" {
 	"change_firemode_idle_d"
 	"change_firemode_iron_d"
-	activity "ACT_VM_FIREMODE_DEPLOY" 1
+	activity "ACT_VM_DFIREMODE" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 6 "MCV_Weapon_Foley_AK47.DrawMetal" }

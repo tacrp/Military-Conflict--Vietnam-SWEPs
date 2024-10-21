@@ -508,6 +508,9 @@ $animation "deploy_s_a_i" "v_m60b_anims\deploy_s_a_i.smd" {
 
 $animation "deploy_a" "v_m60b_anims\deploy_a.smd" {
 	fps 30
+	frame 0 0
+	numframes 60
+	
 	
 	
 }

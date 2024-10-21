@@ -4,8 +4,8 @@ function SWEP:CanBipod()
     local pos = owner:EyePos()
     ang = ang or owner:EyeAngles()
 
-    local maxs = Vector(2, 2, 2)
-    local mins = Vector(-2, -2, -48)
+    local maxs = Vector(1, 1, 1)
+    local mins = Vector(-1, -1, -48)
 
     local tr = util.TraceLine({
         start = pos,
@@ -16,13 +16,6 @@ function SWEP:CanBipod()
 
     if tr.Hit then return end
 
-    -- ang:RotateAroundAxis(ang:Right(), -30)
-
-    local d = (tr.HitPos - pos):Length()
-    d = d / 2
-
-    mins.z = -d
-
     local tr2 = util.TraceHull({
         start = pos,
         endpos = pos + (ang:Forward() * 24),
@@ -32,11 +25,7 @@ function SWEP:CanBipod()
         mask = MASK_PLAYERSOLID
     })
 
-    if tr2.Hit then
-        return true
-    else
-        return false
-    end
+    return tr2.Hit
 end
 
 function SWEP:Think_Bipod()
