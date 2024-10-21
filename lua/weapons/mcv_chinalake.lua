@@ -5,7 +5,7 @@ SWEP.Spawnable = true
 AddCSLuaFile()
 
 // Names and basic information
-SWEP.PrintName = "M79 'Thumper'"
+SWEP.PrintName = "China Lake"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "United States of America"
 SWEP.SubCategory = "Special Weapons"
@@ -13,7 +13,7 @@ SWEP.Caliber = "40x46mm Grenade"
 
 SWEP.Slot = 4
 
-SWEP.ViewModel = "models/weapons/mcv/v_m79.mdl"
+SWEP.ViewModel = "models/weapons/mcv/v_chinalake.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_sks.mdl"
 
 SWEP.BodyGroups = "000"
@@ -25,11 +25,13 @@ SWEP.WeaponSelectIcon = NULL
 SWEP.Num = 1
 
 SWEP.Firemodes = {
-    MCV.FIREMODE_SEMI
+    MCV.FIREMODE_PUMP
 }
 
 SWEP.LastShotAnimation = false
-SWEP.MagInClip = false
+SWEP.ShotgunReload = true
+SWEP.PlayCycleAnimation = true
+SWEP.HasEmptyReload = true
 
 SWEP.ShootEntity = "mcv_proj_40mm"
 SWEP.ShootForce = 2500
@@ -67,7 +69,7 @@ SWEP.CustomAng = Angle(0, 0, 0)
 SWEP.Spread = 3
 SWEP.SpreadIronsighted = 1
 
-SWEP.FireRate = 120 // in rounds per minute
+SWEP.FireRate = 60 // in rounds per minute
 
 SWEP.CrosshairMinDistance = 8
 SWEP.CrosshairDeltaDistance = 4
@@ -75,9 +77,9 @@ SWEP.CrosshairDeltaDistance = 4
 SWEP.WeaponWeight = 3.85
 
 SWEP.Primary.Ammo = "smg1_grenade"
-SWEP.Primary.ClipSize = 1
-SWEP.Primary.Chamber = 0
-SWEP.Primary.DefaultClip = 3
+SWEP.Primary.ClipSize = 3
+SWEP.Primary.Chamber = 1
+SWEP.Primary.DefaultClip = 8
 SWEP.Primary.Automatic = true
 
 SWEP.NearwallDistance = 40
@@ -97,7 +99,6 @@ SWEP.BashDamage = 50
 SWEP.BayonetDamage = 100
 
 SWEP.HasBipod = false
-SWEP.HasEmptyReload = false
 
 // Penetration
 SWEP.MetalPenetrationDepth = 8
@@ -113,7 +114,7 @@ SWEP.WoodDamgaeModifier = 1.25
 SWEP.OtherDamageModifier = 1.25
 
 // Sound
-SWEP.SoundSingleShot = "MCV_Weapon_M79.Single"
+SWEP.SoundSingleShot = "MCV_Weapon_ChinaLake.Single"
 SWEP.SoundDoubleShot = ""
 SWEP.SoundReload = ""
 SWEP.SoundSpecial1 = ""
@@ -141,7 +142,7 @@ SWEP.MuzzleParticleIronsightedSmoke = ""
 SWEP.MuzzleParticle3rdPerson = "muzzleflash_m79"
 
 SWEP.NoEjectOnShoot = true
-SWEP.EjectBrassType = 1
+SWEP.EjectBrassType = 14
 SWEP.EjectBrassTrail = "shellsmoke"
 SWEP.EjectBrassParticle = "port_smoke"
 

@@ -21,8 +21,6 @@ function SWEP:Reload()
         else
             self:PlayAnimation(ACT_SHOTGUN_RELOAD_START, 1, true)
         end
-
-        self:SetEmptyReload(self:Clip1() == 0)
     else
         if self:GetAkimbo() then
             if self:Clip1() == 0 then
@@ -47,6 +45,8 @@ function SWEP:Reload()
 
     if self.AkimboDualSingleActionReload then
         self:SetEmptyReload(true)
+    else
+        self:SetEmptyReload(self:Clip1() == 0)
     end
 
     self:ScopeToggle(false)
@@ -145,7 +145,7 @@ function SWEP:Think_Reload()
                 end
             elseif self.ShotgunReload or (self.HybridReload and self:Clip1() > 0) then
                 if self:GetEndReload() or self:Clip1() >= (self:GetEmptyReload() and self.Primary.ClipSize or self:GetClip1Capacity()) or (!self:GetInfiniteAmmo() and self:Ammo1() == 0) then
-                    if !self.HasEmptyReload or (self:Clip1() == self:GetLoadedRounds() or !self:GetEmptyReload()) then
+                    if !self.HasEmptyReload or (self:Clip1() == self:GetLastClip() or !self:GetEmptyReload()) then
                         self:PlayAnimation(ACT_SHOTGUN_RELOAD_FINISH, 1, true)
                     else
                         self:PlayAnimation(ACT_SHOTGUN_PUMP, 1, true)

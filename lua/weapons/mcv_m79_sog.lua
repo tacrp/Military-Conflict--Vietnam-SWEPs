@@ -104,17 +104,17 @@ SWEP.HasBipod = false
 SWEP.HasEmptyReload = false
 
 // Penetration
-SWEP.MetalPenetrationDepth = 8
-SWEP.GlassPenetrationDepth = 14
-SWEP.ConcretePenetrationDepth = 10
-SWEP.WoodPenetrationDepth = 18
-SWEP.OtherPenetrationDepth = 12
+SWEP.MetalPenetrationDepth = 3
+SWEP.GlassPenetrationDepth = 8
+SWEP.ConcretePenetrationDepth = 5
+SWEP.WoodPenetrationDepth = 13
+SWEP.OtherPenetrationDepth = 6
 
-SWEP.MetalDamageModifier = 1.55
-SWEP.GlassDamageModifier = 1.15
-SWEP.ConcreteDamageModifier = 1.75
-SWEP.WoodDamgaeModifier = 1.25
-SWEP.OtherDamageModifier = 1.25
+SWEP.MetalDamageModifier = 1.7
+SWEP.GlassDamageModifier = 1.3
+SWEP.ConcreteDamageModifier = 1.9
+SWEP.WoodDamgaeModifier = 1.4
+SWEP.OtherDamageModifier = 1.4
 
 // Sound
 SWEP.SoundSingleShot = "MCV_Weapon_M79.Single"
