@@ -485,7 +485,7 @@ $animation "deploy_a" "v_m60_anims\deploy_a.smd" {
 
 $animation "ironsightdeploy" "v_m60_anims\ironsightdeploy.smd" {
 	fps 30
-	frame 0 1
+	frame 1 1
 	numframes 60
 	
 	
@@ -888,7 +888,6 @@ $sequence "deploy" {
 	blendwidth 2
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
 	node "0"
 }
 
@@ -955,14 +954,58 @@ $sequence "deploytoidle" {
 
 $sequence "deployshoot1" {
 	"deploy_a"
+	"ironsight_transition"
 	"ironsightdeploy"
 	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
 	blend "ironsight" 0 1
-	blendwidth 2
-	fadein 0
-	fadeout 0
-	addlayer "walklayerironsight"
+	blendwidth 3
+	snap
+	addlayer "walklayer"
+	addlayer "runlayer"
 	addlayer "deployshoot1_pose"
+	node "0"
+}
+
+$sequence "deployshoot2" {
+	"deploy_a"
+	"ironsight_transition"
+	"ironsightdeploy"
+	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	snap
+	addlayer "walklayer"
+	addlayer "runlayer"
+	addlayer "deployshoot2_pose"
+	node "0"
+}
+
+$sequence "deployshoot3" {
+	"deploy_a"
+	"ironsight_transition"
+	"ironsightdeploy"
+	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	snap
+	addlayer "walklayer"
+	addlayer "runlayer"
+	addlayer "deployshoot3_pose"
+	node "0"
+}
+
+$sequence "deployshoot4" {
+	"deploy_a"
+	"ironsight_transition"
+	"ironsightdeploy"
+	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	snap
+	addlayer "walklayer"
+	addlayer "runlayer"
+	addlayer "deployshoot4_pose"
+	node "0"
 }
 
 $sequence "deployshoot1_pose" {
@@ -971,20 +1014,12 @@ $sequence "deployshoot1_pose" {
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	snap
+	{ event AE_MUZZLEFLASH 0 "SMG1 MUZZLE" }
+	{ event AE_CL_BODYGROUP_SET_TO_CLIP 0 "" }
+	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
 	hidden
-}
-
-$sequence "deployshoot2" {
-	"deploy_a"
-	"ironsightdeploy"
-	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
-	blend "ironsight" 0 1
-	blendwidth 2
-	fadein 0
-	fadeout 0
-	addlayer "walklayerironsight"
-	addlayer "deployshoot2_pose"
+	node "Fire"
+	snap
 }
 
 $sequence "deployshoot2_pose" {
@@ -993,20 +1028,12 @@ $sequence "deployshoot2_pose" {
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	snap
+	{ event AE_MUZZLEFLASH 0 "SMG1 MUZZLE" }
+	{ event AE_CL_BODYGROUP_SET_TO_CLIP 0 "" }
+	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
 	hidden
-}
-
-$sequence "deployshoot3" {
-	"deploy_a"
-	"ironsightdeploy"
-	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
-	blend "ironsight" 0 1
-	blendwidth 2
-	fadein 0
-	fadeout 0
-	addlayer "walklayerironsight"
-	addlayer "deployshoot3_pose"
+	node "Fire"
+	snap
 }
 
 $sequence "deployshoot3_pose" {
@@ -1015,20 +1042,12 @@ $sequence "deployshoot3_pose" {
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	snap
+	{ event AE_MUZZLEFLASH 0 "SMG1 MUZZLE" }
+	{ event AE_CL_BODYGROUP_SET_TO_CLIP 0 "" }
+	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
 	hidden
-}
-
-$sequence "deployshoot4" {
-	"deploy_a"
-	"ironsightdeploy"
-	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
-	blend "ironsight" 0 1
-	blendwidth 2
-	fadein 0
-	fadeout 0
-	addlayer "walklayerironsight"
-	addlayer "deployshoot4_pose"
+	node "Fire"
+	snap
 }
 
 $sequence "deployshoot4_pose" {
@@ -1037,8 +1056,12 @@ $sequence "deployshoot4_pose" {
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	snap
+	{ event AE_MUZZLEFLASH 0 "SMG1 MUZZLE" }
+	{ event AE_CL_BODYGROUP_SET_TO_CLIP 0 "" }
+	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
 	hidden
+	node "Fire"
+	snap
 }
 
 $sequence "holster" {

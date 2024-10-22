@@ -440,8 +440,7 @@ $sequence "shoot1" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	snap
 	addlayer "walklayerironsight"
 	addlayer "shoot1_pose"
 	node "0"
@@ -471,7 +470,7 @@ $sequence "reload" {
 	{ event 5004 81 "MCV_Weapon_Foley_M79_Reload.HandEnd" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	

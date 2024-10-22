@@ -498,8 +498,7 @@ $sequence "shoot1" {
 	blend "ironsight" 0 0.5
 	blendwidth 3
 	snap
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	addlayer "shootpose1"
 	node "0"
 }

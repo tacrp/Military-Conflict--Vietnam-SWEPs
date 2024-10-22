@@ -441,7 +441,7 @@ $animation "deploy_a" "v_stoner63_autorifle_anims\deploy_a.smd" {
 
 $animation "ironsightdeploy" "v_stoner63_autorifle_anims\ironsightdeploy.smd" {
 	fps 30
-	frame 0 1
+	frame 1 1
 	numframes 60
 	
 	
