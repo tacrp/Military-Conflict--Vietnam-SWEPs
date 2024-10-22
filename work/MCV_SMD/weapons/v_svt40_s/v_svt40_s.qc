@@ -752,7 +752,7 @@ $sequence "reload" {
 	{ event AE_WPN_COMPLETE_RELOAD 60 "" }
 	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
 	{ event AE_WPN_NEXTCLIP_TO_POSEPARAM 36 "ammo_fraction" }
-	fadein 0.2
+	fadein 0
 	fadeout 0.2
 	//addlayer "walklayerironsight"
 	node "0"
@@ -774,7 +774,7 @@ $sequence "reload_empty" {
 	{ event AE_WPN_COMPLETE_RELOAD 88 "" }
 	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
 	{ event AE_WPN_NEXTCLIP_TO_POSEPARAM 36 "ammo_fraction" }
-	fadein 0.2
+	fadein 0
 	fadeout 0.2
 	//addlayer "walklayerironsight"
 	node "0"

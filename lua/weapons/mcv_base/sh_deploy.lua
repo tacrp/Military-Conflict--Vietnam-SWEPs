@@ -17,13 +17,13 @@ function SWEP:Deploy()
 end
 
 function SWEP:ClientHolster()
-    if SERVER then return end
-
     if game.SinglePlayer() then
         self:CallOnClient("ClientHolster")
     end
 
-    local vm = self:GetVM()
+    if SERVER then return end
+
+    local vm = self:GetOwner():GetViewModel()
 
     vm:SetSubMaterial()
     vm:SetMaterial()
