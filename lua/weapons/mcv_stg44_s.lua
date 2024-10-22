@@ -20,6 +20,8 @@ SWEP.BodyGroups = "001"
 
 SWEP.WeaponSelectIcon = NULL
 
+SWEP.SightedViewModelFOV = 30
+
 // Stats
 
 SWEP.DamageGeneric = 35 // damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)

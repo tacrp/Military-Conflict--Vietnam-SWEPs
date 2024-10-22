@@ -132,7 +132,8 @@ function SWEP:RandomSpread(spread, seed)
 end
 
 function SWEP:GetSpread()
-    local spread = Lerp(self:GetSightAmount(), self.Spread, self.SpreadIronsighted)
+    local sa = self:GetSightAmount()
+    local spread = self.Spread
 
     local owner = self:GetOwner()
     local move = math.min(owner:GetVelocity():Length() / 273, 1)
@@ -144,6 +145,8 @@ function SWEP:GetSpread()
     else
         spread = spread * Lerp(move, 1, self.StandMoveSpreadMultiplier)
     end
+
+    spread = Lerp(sa, spread, self.SpreadIronsighted)
 
     local fm = self:GetFiremodeValue()
 

@@ -116,6 +116,7 @@ SWEP.BashDamage = 50
 SWEP.BayonetDamage = 100
 
 SWEP.HasBipod = false
+SWEP.AdjustableScopes = true
 
 // Penetration
 SWEP.MetalPenetrationDepth = 8

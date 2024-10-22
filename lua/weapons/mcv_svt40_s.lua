@@ -22,6 +22,8 @@ SWEP.WeaponSelectIcon = NULL
 
 SWEP.BayonetBodygroup = 1
 
+SWEP.SightedViewModelFOV = 30
+
 // Stats
 
 SWEP.DamageGeneric = 43 // damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)
@@ -71,6 +73,7 @@ SWEP.ScopeMaterial = Material("models/weapons/mcv/optics/crosshair_svt40")
 SWEP.ScopeFOV = 8
 SWEP.ScopeFOV2 = 4
 SWEP.RTScopeMaterialIndex = 3
+SWEP.AdjustableScopes = true
 
 SWEP.IronsightPos = Vector(0.012, -6.3, -0.527)
 SWEP.IronsightAng = Angle(0.28, 0, -1)

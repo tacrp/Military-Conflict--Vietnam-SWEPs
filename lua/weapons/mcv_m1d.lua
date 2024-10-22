@@ -73,6 +73,7 @@ SWEP.ScopeMaterial = Material("models/weapons/mcv/optics/crosshair_m1g")
 SWEP.ScopeFOV = 8
 SWEP.ScopeFOV2 = 4
 SWEP.RTScopeMaterialIndex = 5
+SWEP.AdjustableScopes = true
 
 SWEP.IronsightPos = Vector(1.623, -10, -0.64)
 SWEP.IronsightAng = Angle(0.33, 0, 0)
