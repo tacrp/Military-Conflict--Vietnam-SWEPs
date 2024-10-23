@@ -258,8 +258,8 @@ Sniper Rifles:
 Light-Machine Guns:
 
 - RPD [X]
-- RPK
-- TUL-1
+- RPK [X]
+- TUL-1 [X]
 - DP-28 [X]
 - RP-46
 - Bren [X]
