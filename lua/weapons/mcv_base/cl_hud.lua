@@ -95,7 +95,16 @@ function SWEP:HUDShouldDraw(element)
     if shoulddraw[element] then return false end
 end
 
+local oeg_mat = Material("sprites/redglow1")
+
 function SWEP:DrawHUD()
+    if self.OEGScope and self:GetSightAmount() > 0.6 then
+        surface.SetMaterial(oeg_mat)
+        surface.SetDrawColor(255, 255, 255, 255)
+        local s = ScreenScale(16)
+        surface.DrawTexturedRect((ScrW() - s) / 2, (ScrH() - s) / 2, s, s)
+    end
+
     local firemode_name = MCV.FiremodeNames[self:GetFiremodeValue()]
     local ammocount = self:Clip1()
     local reserve = self:Ammo1()

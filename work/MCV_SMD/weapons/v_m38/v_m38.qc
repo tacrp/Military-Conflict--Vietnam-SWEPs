@@ -723,65 +723,92 @@ $sequence "Firstdraw" {
 }
 
 $sequence "shoot1" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	addlayer "walklayerironsight"
+	addlayer "shoot1_pose"
+	snap
+}
+
+$sequence "shoot1_pose" {
 	"shoot1_a"
 	"shoot1_ironsight_a"
-	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 0 "ammo_fraction" }
-	{ event AE_WPN_SET_POSEPARAM 0 "hammerpos 1" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	snap
 }
 
 $sequence "shoot2" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	addlayer "walklayerironsight"
+	addlayer "shoot2_pose"
+	snap
+}
+
+$sequence "shoot2_pose" {
 	"shoot2_a"
 	"shoot2_ironsight_a"
-	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 0 "ammo_fraction" }
-	{ event AE_WPN_SET_POSEPARAM 0 "hammerpos 1" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	snap
 }
 
 $sequence "shoot3" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	addlayer "walklayerironsight"
+	addlayer "shoot3_pose"
+	snap
+}
+
+$sequence "shoot3_pose" {
 	"shoot3_a"
 	"shoot3_ironsight_a"
-	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 0 "ammo_fraction" }
-	{ event AE_WPN_SET_POSEPARAM 0 "hammerpos 1" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	snap
 }
 
 $sequence "boltpull" {
-	"boltpull_a"
-	"boltpulliron_a"
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
 	activity "ACT_VM_RELOAD_INSERT_PULL" 1
 	blend "ironsight" 0 1
-	blendwidth 2
-	delta
+	blendwidth 3
 	{ event 5004 1 "MCV_Weapon_Foley_M38_Reload.Hand" }
 	{ event 5004 4 "MCV_Weapon_Foley_M38_Reload.MetalStart" }
 	{ event 5004 20 "MCV_Weapon_Foley_M38_Reload.HandEnd" }
 	{ event 5004 15 "MCV_Weapon_Foley_M38_Reload.MetalEnd" }
 	{ event AE_CLIENT_EJECT_BRASS 10 "eject" }
-	{ event AE_WPN_SET_POSEPARAM 9 "hammerpos 0" }
-	fadein 0.2
-	fadeout 0
+	addlayer "walklayerironsight"
+	addlayer "boltpull_pose"
+	snap
+}
+
+$sequence "boltpull_pose" {
+	"boltpull_a"
+	"boltpulliron_a"
+	blend "ironsight" 0 1
+	blendwidth 2
+	delta
+	snap
 }
 
 $sequence "reload" {
@@ -979,16 +1006,25 @@ $sequence "grenade_idle" {
 }
 
 $sequence "grenade_shoot" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_ISHOOT_M203" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	addlayer "walklayerironsight"
+	addlayer "grenade_shoot_pose"
+	snap
+}
+
+$sequence "grenade_shoot_pose" {
 	"gren_shoot1_a"
 	"gren_shoot1_ironsight_a"
-	activity "ACT_VM_ISHOOT_M203" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_MUZZLEFLASH 0 "" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	snap
+	hidden
 }
 
 $sequence "grenade_reload" {
