@@ -1,6 +1,6 @@
 // This is every weapon in the files that is fully textured and animated and thus, can be made into useable SWEPs.
 
-<X> = Denotes the viewmodel is ingame but has severe visual issues
+[n] = Denotes the viewmodel is ingame but has severe visual issues
 [X] = Denotes the viewmodel has been fixed, compiled and is now ingame. Does not denote actual completeness
 {X} = Denotes the SWEP is complete. VM, WM, all features and stats are correct and ingame.
 
@@ -49,8 +49,8 @@ Submachine Guns:
 - M1928 Thompson [X]
 - Owen Gun [X]
 - F1 [X]
-- Sterling L2A3 <X>
-- Sterling L34A1 <X>
+- Sterling L2A3 [n]
+- Sterling L34A1 [n]
 - Sten Gun [X]
 - Sten Gun SOG [X]
 
@@ -107,7 +107,7 @@ Sniper Rifles:
 - XM21 [X]
 - M1D Garand [X]
 - M40 [X]
-- M656
+- M656 [X]
 
 
 Light-Machine Guns:
