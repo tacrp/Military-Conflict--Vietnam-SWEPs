@@ -13,7 +13,7 @@ Pistols:
 - Browning Hi-Power [X]
 - Baby Browning [X]
 - Mk 22 Mod 0 "Hush Puppy" [X]
-- HDM
+- HDM [X]
 - Walther PPK
 - Welrod
 
@@ -164,9 +164,9 @@ Melee Weapons:
 Pistols:
 
 - Makarov
-- Type 14 Nambu
+- Type 14 Nambu [X]
 - Walther P38
-- TT-33
+- TT-33 [X]
 - MAS-35S [X]
 - Mauser C96 [X]
 - Homemade Pistol
