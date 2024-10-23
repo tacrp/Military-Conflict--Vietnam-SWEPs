@@ -663,8 +663,7 @@ $sequence "draw" {
 	fadein 0
 	fadeout 0.2
 	addlayer "SlidePosition"
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	  
@@ -682,8 +681,7 @@ $sequence "Firstdraw" {
 	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	node "0"
 }
 $sequence "shoot1_r" {
@@ -696,7 +694,8 @@ $sequence "shoot1_r" {
 	fadein 0
 	fadeout 0
 	addlayer "walklayerironsight"
-	addlayer "SlidePosition"addlayer "shoot1pose_r"
+	addlayer "SlidePosition"
+	addlayer "shoot1pose_r"
 	node "0"
 }
 
@@ -720,7 +719,8 @@ $sequence "shoot1_l" {
 	fadein 0
 	fadeout 0
 	addlayer "walklayerironsight"
-	addlayer "SlidePosition"addlayer "shoot1pose_l"
+	addlayer "SlidePosition"
+	addlayer "shoot1pose_l"
 	node "0"
 }
 
@@ -744,7 +744,8 @@ $sequence "shoot2_r" {
 	fadein 0
 	fadeout 0
 	addlayer "walklayerironsight"
-	addlayer "SlidePosition"addlayer "shoot2pose_r"
+	addlayer "SlidePosition"
+	addlayer "shoot2pose_r"
 	node "0"
 }
 
@@ -768,7 +769,8 @@ $sequence "shoot2_l" {
 	fadein 0
 	fadeout 0
 	addlayer "walklayerironsight"
-	addlayer "SlidePosition"addlayer "shoot2pose_l"
+	addlayer "SlidePosition"
+	addlayer "shoot2pose_l"
 	node "0"
 }
 
@@ -870,7 +872,7 @@ $sequence "reload" {
 $sequence "reloadRightOnly" {
 	"reload_ra"
 	"reload_ra_i"
-	activity "ACT_VM_RELOAD" 1
+	activity "ACT_VM_MISSRIGHT" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_VZ61_Reload.Hand" }
@@ -1056,8 +1058,7 @@ $sequence "holster" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "SlidePosition"
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	fps 30
 	
 	

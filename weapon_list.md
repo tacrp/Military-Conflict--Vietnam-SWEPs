@@ -183,8 +183,8 @@ Revolvers:
 Machine Pistols:
 
 - APS [X]
-- Vz. 61e Skorpion
-- Vz. 61e Dac Cong
+- Vz. 61e Skorpion [X]
+- Vz. 61e Dac Cong [X]
 - PM-63 RAK [X]
 
 
