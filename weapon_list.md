@@ -236,7 +236,7 @@ Shotguns:
 
 - Fusil Robust [X]
 - Fusil Robust Sawed-Off [X]
-- M1897 Trench Gun
+- M1897 Trench Gun [X]
 
 
 Bolt-Action Rifles:
