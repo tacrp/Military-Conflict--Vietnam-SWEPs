@@ -818,8 +818,9 @@ $sequence "shoot_hammer_right" {
 	blend "ironsight" 0 1
 	blend "revolver_firemode_pose" 0 1
 	blendwidth 3
-	fadein 0.2
-	fadeout 0.2
+	{ event 5004 10 "MCV_Weapon_Foley_Revolver.Hand" }
+	{ event 5004 15 "MCV_Weapon_Foley_Revolver.HammerOut" }
+	snap
 	addlayer "walklayerironsight"
 	addlayer "shoot_hammer_right_pose"
 }
@@ -830,8 +831,6 @@ $sequence "shoot_hammer_right_pose" {
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event 5004 10 "MCV_Weapon_Foley_Revolver.Hand" }
-	{ event 5004 15 "MCV_Weapon_Foley_Revolver.HammerOut" }
 	snap
 	hidden
 }
@@ -847,8 +846,9 @@ $sequence "shoot_hammer_left" {
 	blend "ironsight" 0 1
 	blend "revolver_firemode_pose" 0 1
 	blendwidth 3
-	fadein 0.2
-	fadeout 0.2
+	{ event 5004 10 "MCV_Weapon_Foley_Revolver.Hand" }
+	{ event 5004 15 "MCV_Weapon_Foley_Revolver.HammerOut" }
+	snap
 	addlayer "walklayerironsight"
 	addlayer "shoot_hammer_left_pose"
 }
@@ -859,8 +859,6 @@ $sequence "shoot_hammer_left_pose" {
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event 5004 10 "MCV_Weapon_Foley_Revolver.Hand" }
-	{ event 5004 15 "MCV_Weapon_Foley_Revolver.HammerOut" }
 	snap
 	hidden
 }
@@ -876,6 +874,7 @@ $sequence "prepare_delayed_right" {
 	blend "ironsight" 0 1
 	blend "revolver_firemode_pose" 0 1
 	blendwidth 3
+	{ event 5004 0 "MCV_Weapon_Foley_Revolver.HammerOutSlow" }
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayerironsight"
@@ -888,7 +887,6 @@ $sequence "prepare_delayed_right_pose" {
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event 5004 0 "MCV_Weapon_Foley_Revolver.HammerOutSlow" }
 	snap
 	hidden
 }
@@ -904,6 +902,7 @@ $sequence "prepare_delayed_left" {
 	blend "ironsight" 0 1
 	blend "revolver_firemode_pose" 0 1
 	blendwidth 3
+	{ event 5004 0 "MCV_Weapon_Foley_Revolver.HammerOutSlow" }
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayerironsight"
@@ -916,7 +915,6 @@ $sequence "prepare_delayed_left_pose" {
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event 5004 0 "MCV_Weapon_Foley_Revolver.HammerOutSlow" }
 	snap
 	hidden
 }
@@ -1208,8 +1206,7 @@ $sequence "holster" {
 	{ event 5004 1 "MCV_Weapon_Foley_M1895.Holster" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	fps 30
 	
 	

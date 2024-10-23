@@ -814,8 +814,7 @@ $sequence "idle" {
 	blend "revolver_firemode_pose" 0 1
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 }
 
 $sequence "FirstDraw" {
@@ -833,8 +832,7 @@ $sequence "FirstDraw" {
 	{ event 5004 10 "MCV_Weapon_Foley_M1917.DrawMetal" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	node "0"
 	fps 30
 }
@@ -862,61 +860,127 @@ $sequence "draw" {
 }
 
 $sequence "shoot_hammer" {
-	"shoot_a"
-	"shoot_ironsight_a"
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	"idle_delayed_a"
+	"ironsight_transition_delayed"
+	"ironsight_delayed"
+	"idle_western_a"
+	"ironsight_transition_western"
+	"ironsight_western"
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
-	blendwidth 2
-	delta
+	blend "revolver_firemode_pose" 0 1
 	{ event 5004 10 "MCV_Weapon_Foley_Revolver.Hand" }
 	{ event 5004 15 "MCV_Weapon_Foley_Revolver.HammerOut" }
 	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
 	{ event AE_MUZZLEFLASH 0 "" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	snap
+	addlayer "walklayer"
+	addlayer "runlayer"
+	addlayer "shoot_hammer_pose"
+}
+
+$sequence "shoot_hammer_pose" {
+	"shoot_a"
+	"shoot_ironsight_a"
+	blend "ironsight" 0 1
+	blendwidth 2
+	delta
+	snap
+	hidden
 }
 
 $sequence "shoot_western" {
-	"shoot_w_a"
-	"shoot_w_ironsight_a"
-	activity "ACT_VM_PRIMARYATTACK1" 1
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	"idle_delayed_a"
+	"ironsight_transition_delayed"
+	"ironsight_delayed"
+	"idle_western_a"
+	"ironsight_transition_western"
+	"ironsight_western"
+	activity "ACT_VM_PRIMARYATTACK_1" 1
 	blend "ironsight" 0 1
-	blendwidth 2
-	delta
+	blend "revolver_firemode_pose" 0 1
 	{ event 5004 0 "MCV_Weapon_Foley_Revolver.HammerStrike" }
 	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
 	{ event AE_MUZZLEFLASH 0 "" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	snap
+	addlayer "walklayer"
+	addlayer "runlayer"
+	addlayer "shoot_western_pose"
+}
+
+$sequence "shoot_western_pose" {
+	"shoot_w_a"
+	"shoot_w_ironsight_a"
+	blend "ironsight" 0 1
+	blendwidth 2
+	delta
+	snap
+	hidden
 }
 
 $sequence "prepare_delayed" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	"idle_delayed_a"
+	"ironsight_transition_delayed"
+	"ironsight_delayed"
+	"idle_western_a"
+	"ironsight_transition_western"
+	"ironsight_western"
+	activity "ACT_VM_HAULBACK" 1
+	blend "ironsight" 0 1
+	blend "revolver_firemode_pose" 0 1
+	{ event 5004 0 "MCV_Weapon_Foley_Revolver.HammerOutSlow" }
+	fadein 0.2
+	fadeout 0.2
+	addlayer "walklayerironsight"
+	addlayer "prepare_delayed_pose"
+}
+
+$sequence "prepare_delayed_pose" {
 	"shoot_p_a"
 	"shoot_p_ironsight_a"
-	activity "ACT_VM_HAULBACK" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event 5004 0 "MCV_Weapon_Foley_Revolver.HammerOutSlow" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	snap
+	hidden
 }
 
 $sequence "shoot_delayed" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	"idle_delayed_a"
+	"ironsight_transition_delayed"
+	"ironsight_delayed"
+	"idle_western_a"
+	"ironsight_transition_western"
+	"ironsight_western"
+	activity "ACT_VM_PRIMARYATTACK_2" 1
+	blend "ironsight" 0 1
+	blend "revolver_firemode_pose" 0 1
+	snap
+	addlayer "walklayer"
+	addlayer "runlayer"
+	addlayer "shoot_delayed_pose"
+}
+
+$sequence "shoot_delayed_pose" {
 	"shoot1_a"
 	"shoot1_ironsight_a"
-	activity "ACT_VM_PRIMARYATTACK2" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	snap
+	hidden
 }
 
 $sequence "reload" {
@@ -1110,8 +1174,7 @@ $sequence "holster" {
 	{ event 5004 1 "MCV_Weapon_Foley_SWM12.Holster" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	fps 30
 	
 	

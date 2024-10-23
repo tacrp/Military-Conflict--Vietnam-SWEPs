@@ -839,8 +839,7 @@ $sequence "FirstDraw" {
 	{ event 5004 10 "MCV_Weapon_Foley_M1895.DrawMetal" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	node "0"
 	fps 30
 }
@@ -859,8 +858,7 @@ $sequence "draw" {
 	{ event 5004 1 "MCV_Weapon_Foley_M1895.Draw" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	  
@@ -880,6 +878,10 @@ $sequence "shoot_hammer" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blend "revolver_firemode_pose" 0 1
+	{ event 5004 10 "MCV_Weapon_Foley_Revolver.Hand" }
+	{ event 5004 15 "MCV_Weapon_Foley_Revolver.HammerOut" }
+	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
+	{ event AE_MUZZLEFLASH 0 "" }
 	snap
 	addlayer "walklayer"
 	addlayer "runlayer"
@@ -892,10 +894,6 @@ $sequence "shoot_hammer_pose" {
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event 5004 10 "MCV_Weapon_Foley_Revolver.Hand" }
-	{ event 5004 15 "MCV_Weapon_Foley_Revolver.HammerOut" }
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
 	snap
 	hidden
 }
@@ -913,6 +911,9 @@ $sequence "shoot_western" {
 	activity "ACT_VM_PRIMARYATTACK_1" 1
 	blend "ironsight" 0 1
 	blend "revolver_firemode_pose" 0 1
+	{ event 5004 0 "MCV_Weapon_Foley_Revolver.HammerStrike" }
+	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
+	{ event AE_MUZZLEFLASH 0 "" }
 	snap
 	addlayer "walklayer"
 	addlayer "runlayer"
@@ -925,9 +926,6 @@ $sequence "shoot_western_pose" {
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event 5004 0 "MCV_Weapon_Foley_Revolver.HammerStrike" }
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
 	snap
 	hidden
 }
@@ -945,6 +943,7 @@ $sequence "prepare_delayed" {
 	activity "ACT_VM_HAULBACK" 1
 	blend "ironsight" 0 1
 	blend "revolver_firemode_pose" 0 1
+	{ event 5004 0 "MCV_Weapon_Foley_Revolver.HammerOutSlow" }
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayerironsight"
@@ -957,7 +956,6 @@ $sequence "prepare_delayed_pose" {
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event 5004 0 "MCV_Weapon_Foley_Revolver.HammerOutSlow" }
 	snap
 	hidden
 }
@@ -1210,8 +1208,7 @@ $sequence "holster" {
 	{ event 5004 1 "MCV_Weapon_Foley_M1895.Holster" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	fps 30
 	
 	

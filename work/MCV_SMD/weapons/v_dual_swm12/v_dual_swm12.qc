@@ -849,8 +849,7 @@ $sequence "FirstDraw" {
 	{ event 5004 12 "MCV_Weapon_Foley_Revolver.HammerOut" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	addlayer "BulletCounter"
 	node "0"
 	fps 30
@@ -869,8 +868,7 @@ $sequence "draw" {
 	{ event 5004 1 "MCV_Weapon_Foley_M1917.Draw" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	addlayer "BulletCounter"
 	node "0"
 	fps 30
@@ -879,35 +877,169 @@ $sequence "draw" {
 }
 
 $sequence "shoot_hammer_right" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	"idle_delayed_a"
+	"ironsight_transition_delayed"
+	"ironsight_delayed"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	blend "ironsight" 0 1
+	blend "revolver_firemode_pose" 0 1
+	blendwidth 3
+	{ event 5004 10 "MCV_Weapon_Foley_Revolver.Hand" }
+	{ event 5004 15 "MCV_Weapon_Foley_Revolver.HammerOut" }
+	snap
+	addlayer "walklayerironsight"
+	addlayer "shoot_hammer_right_pose"
+}
+
+$sequence "shoot_hammer_right_pose" {
 	"shoot_r_a"
 	"shoot_r_ironsight_a"
-	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event 5004 10 "MCV_Weapon_Foley_Revolver.Hand" }
-	{ event 5004 15 "MCV_Weapon_Foley_Revolver.HammerOut" }
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	snap
+	hidden
 }
 
 $sequence "shoot_hammer_left" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	"idle_delayed_a"
+	"ironsight_transition_delayed"
+	"ironsight_delayed"
+	activity "ACT_VM_SECONDARYATTACK" 1
+	blend "ironsight" 0 1
+	blend "revolver_firemode_pose" 0 1
+	blendwidth 3
+	{ event 5004 10 "MCV_Weapon_Foley_Revolver.Hand" }
+	{ event 5004 15 "MCV_Weapon_Foley_Revolver.HammerOut" }
+	snap
+	addlayer "walklayerironsight"
+	addlayer "shoot_hammer_left_pose"
+}
+
+$sequence "shoot_hammer_left_pose" {
 	"shoot_l_a"
 	"shoot_l_ironsight_a"
-	activity "ACT_VM_SECONDARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event 5004 10 "MCV_Weapon_Foley_Revolver.Hand" }
-	{ event 5004 15 "MCV_Weapon_Foley_Revolver.HammerOut" }
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject2" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	fadein 0
+	snap
+	hidden
+}
+
+$sequence "prepare_delayed_right" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	"idle_delayed_a"
+	"ironsight_transition_delayed"
+	"ironsight_delayed"
+	activity "ACT_VM_HAULBACK" 1
+	blend "ironsight" 0 1
+	blend "revolver_firemode_pose" 0 1
+	blendwidth 3
+	{ event 5004 0 "MCV_Weapon_Foley_Revolver.HammerOutSlow" }
+	fadein 0.2
 	fadeout 0.2
-	node "Fire"
+	addlayer "walklayerironsight"
+	addlayer "prepare_delayed_right_pose"
+}
+
+$sequence "prepare_delayed_right_pose" {
+	"shoot_p_r_a"
+	"shoot_p_r_ironsight_a"
+	blend "ironsight" 0 1
+	blendwidth 2
+	delta
+	snap
+	hidden
+}
+
+$sequence "prepare_delayed_left" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	"idle_delayed_a"
+	"ironsight_transition_delayed"
+	"ironsight_delayed"
+	activity "ACT_VM_PULLPIN" 1
+	blend "ironsight" 0 1
+	blend "revolver_firemode_pose" 0 1
+	blendwidth 3
+	{ event 5004 0 "MCV_Weapon_Foley_Revolver.HammerOutSlow" }
+	fadein 0.2
+	fadeout 0.2
+	addlayer "walklayerironsight"
+	addlayer "prepare_delayed_left_pose"
+}
+
+$sequence "prepare_delayed_left_pose" {
+	"shoot_p_l_a"
+	"shoot_p_l_ironsight_a"
+	blend "ironsight" 0 1
+	blendwidth 2
+	delta
+	snap
+	hidden
+}
+
+$sequence "shoot_delayed_right" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	"idle_delayed_a"
+	"ironsight_transition_delayed"
+	"ironsight_delayed"
+	activity "ACT_VM_PRIMARYATTACK_2" 1
+	blend "ironsight" 0 1
+	blend "revolver_firemode_pose" 0 1
+	blendwidth 3
+	fadein 0.2
+	fadeout 0.2
+	addlayer "walklayerironsight"
+	addlayer "shoot_delayed_right_pose"
+}
+
+$sequence "shoot_delayed_right_pose" {
+	"shoot_d_r_a"
+	"shoot_d_r_ironsight_a"
+	blend "ironsight" 0 1
+	blendwidth 2
+	delta
+	snap
+	hidden
+}
+
+$sequence "shoot_delayed_left" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	"idle_delayed_a"
+	"ironsight_transition_delayed"
+	"ironsight_delayed"
+	activity "ACT_VM_PRIMARYATTACK_3" 1
+	blend "ironsight" 0 1
+	blend "revolver_firemode_pose" 0 1
+	blendwidth 3
+	fadein 0.2
+	fadeout 0.2
+	addlayer "walklayerironsight"
+	addlayer "shoot_delayed_left_pose"
+}
+
+$sequence "shoot_delayed_left_pose" {
+	"shoot_d_l_a"
+	"shoot_d_l_ironsight_a"
+	blend "ironsight" 0 1
+	blendwidth 2
+	delta
+	snap
+	hidden
 }
 
 $sequence "reload" {
@@ -915,7 +1047,7 @@ $sequence "reload" {
 	"reload_a_i"
 	"reload_d_a"
 	"reload_d_a_i"
-	activity "ACT_VM_SECONDARY_RELOAD" 1
+	activity "ACT_VM_RELOAD" 1
 	blend "ironsight" 0 1
 	blend "revolver_firemode_pose" 0 1
 	{ event 5004 1 "MCV_Weapon_Foley_SWM12_Reload.Hand" }
@@ -937,7 +1069,7 @@ $sequence "reload" {
 	{ event AE_WPN_COMPLETE_RELOAD 157 "" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	addlayer "BulletCounter"
 	node "0"
 }
@@ -947,7 +1079,7 @@ $sequence "reloadRightOnly" {
 	"reload_r_a_i"
 	"reload_d_r_a"
 	"reload_d_r_a_i"
-	activity "ACT_VM_RELOAD" 1
+	activity "ACT_VM_MISSRIGHT" 1
 	blend "ironsight" 0 1
 	blend "revolver_firemode_pose" 0 1
 	{ event 5004 1 "MCV_Weapon_Foley_SWM12_Reload.Hand" }
@@ -961,7 +1093,7 @@ $sequence "reloadRightOnly" {
 	{ event AE_WPN_COMPLETE_RELOAD 77 "" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	addlayer "BulletCounter"
 	node "0"
 }
@@ -1107,66 +1239,11 @@ $sequence "holster" {
 	{ event 5004 1 "MCV_Weapon_Foley_M1917.Holster" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	addlayer "BulletCounter"
 	fps 30
 	
 	
-}
-
-$sequence "prepare_delayed_right" {
-	"shoot_p_r_a"
-	"shoot_p_r_ironsight_a"
-	activity "ACT_VM_HAULBACK" 1
-	blend "ironsight" 0 1
-	blendwidth 2
-	delta
-	{ event 5004 0 "MCV_Weapon_Foley_Revolver.HammerOutSlow" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
-}
-
-$sequence "prepare_delayed_left" {
-	"shoot_p_l_a"
-	"shoot_p_l_ironsight_a"
-	activity "ACT_VM_HAULBACK2" 1
-	blend "ironsight" 0 1
-	blendwidth 2
-	delta
-	{ event 5004 0 "MCV_Weapon_Foley_Revolver.HammerOutSlow" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
-}
-
-$sequence "shoot_delayed_right" {
-	"shoot_d_r_a"
-	"shoot_d_r_ironsight_a"
-	activity "ACT_VM_PRIMARYATTACK2" 1
-	blend "ironsight" 0 1
-	blendwidth 2
-	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
-}
-
-$sequence "shoot_delayed_left" {
-	"shoot_d_l_a"
-	"shoot_d_l_ironsight_a"
-	activity "ACT_VM_SECONDARYATTACK2" 1
-	blend "ironsight" 0 1
-	blendwidth 2
-	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject2" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
 }
 
 $sequence "changefiremode_todelayed" {

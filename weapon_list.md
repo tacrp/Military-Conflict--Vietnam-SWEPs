@@ -20,10 +20,10 @@ Pistols:
 
 Revolvers:
 
-- S&W M12
-- S&W M10
-- M1917
-- AAI QSPR
+- S&W M12 [X]
+- S&W M10 [X]
+- M1917 [X]
+- AAI QSPR [X]
 
 
 Machine Pistols:
