@@ -252,7 +252,7 @@ Sniper Rifles:
 - MAS-49 APX L806 [X]
 - SVT-40 PU [X]
 - Mosin-Nagant M91/30 PU [X]
-- SVD
+- SVD [X]
 
 
 Light-Machine Guns:
