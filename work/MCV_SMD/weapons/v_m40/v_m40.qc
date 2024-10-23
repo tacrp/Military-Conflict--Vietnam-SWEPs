@@ -565,8 +565,7 @@ $sequence "shoot1" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0.2
-	fadeout 0.2
+	snap
 	addlayer "walklayerironsight"
 	addlayer "shoot1_pose"
 	node "0"
@@ -589,8 +588,7 @@ $sequence "shoot2" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0.2
-	fadeout 0.2
+	snap
 	addlayer "walklayerironsight"
 	addlayer "shoot2_pose"
 	node "0"
@@ -613,8 +611,7 @@ $sequence "shoot3" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0.2
-	fadeout 0.2
+	snap
 	addlayer "walklayerironsight"
 	addlayer "shoot3_pose"
 	node "0"
@@ -640,12 +637,12 @@ $sequence "boltpull" {
 	fadein 0.2
 	fadeout 0.2
 	{ event 5004 0 "MCV_Weapon_Foley_M40_Reload.Hand" }
-	{ event 5004 5 "MCV_Weapon_Foley_M40_Reload.Metal1" }
-	{ event 5004 8 "MCV_Weapon_Foley_M40_Reload.Metal2" }
-	{ event 5004 10 "MCV_Weapon_Foley_M40_Reload.Shell" }
-	{ event 5004 26 "MCV_Weapon_Foley_M40_Reload.HandEnd" }
-	{ event 5004 16 "MCV_Weapon_Foley_M40_Reload.Metal3" }
-	{ event 5004 21 "MCV_Weapon_Foley_M40_Reload.Metal4" }
+	{ event 5004 6 "MCV_Weapon_Foley_M40_Reload.Metal1" }
+	{ event 5004 11 "MCV_Weapon_Foley_M40_Reload.Metal2" }
+	{ event 5004 15 "MCV_Weapon_Foley_M40_Reload.Shell" }
+	{ event 5004 27 "MCV_Weapon_Foley_M40_Reload.Metal3" }
+	{ event 5004 36 "MCV_Weapon_Foley_M40_Reload.Metal4" }
+	{ event 5004 40 "MCV_Weapon_Foley_M40_Reload.HandEnd" }
 	{ event AE_CLIENT_EJECT_BRASS 10 "eject" }
 	addlayer "walklayerironsight"
 	addlayer "boltpull_pose"

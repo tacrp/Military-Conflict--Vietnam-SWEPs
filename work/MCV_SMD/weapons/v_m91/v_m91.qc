@@ -794,10 +794,10 @@ $sequence "boltpull" {
 	activity "ACT_VM_RELOAD_INSERT_PULL" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	{ event 5004 1 "MCV_Weapon_Foley_M38_Reload.Hand" }
-	{ event 5004 4 "MCV_Weapon_Foley_M38_Reload.MetalStart" }
-	{ event 5004 20 "MCV_Weapon_Foley_M38_Reload.HandEnd" }
-	{ event 5004 15 "MCV_Weapon_Foley_M38_Reload.MetalEnd" }
+	{ event 5004 0 "MCV_Weapon_Foley_M38_Reload.Hand" }
+	{ event 5004 9 "MCV_Weapon_Foley_M38_Reload.MetalStart" }
+	{ event 5004 13 "MCV_Weapon_Foley_M38_Reload.HandEnd" }
+	{ event 5004 29 "MCV_Weapon_Foley_M38_Reload.MetalEnd" }
 	{ event AE_CLIENT_EJECT_BRASS 10 "eject" }
 	addlayer "walklayerironsight"
 	addlayer "boltpull_pose"

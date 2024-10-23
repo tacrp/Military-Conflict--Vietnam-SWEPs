@@ -106,7 +106,7 @@ Sniper Rifles:
 - M1903A4 Springfield [X]
 - XM21 [X]
 - M1D Garand [X]
-- M40
+- M40 [X]
 - M656
 
 
@@ -241,8 +241,8 @@ Shotguns:
 
 Bolt-Action Rifles:
 
-- Mosin-Nagant M91/30
-- Mosin-Nagant M38
+- Mosin-Nagant M91/30 [X]
+- Mosin-Nagant M38 [X]
 - Karabiner 98k [X]
 
 
@@ -251,7 +251,7 @@ Sniper Rifles:
 - Karabiner 98k ZF39 [X]
 - MAS-49 APX L806 [X]
 - SVT-40 PU [X]
-- Mosin-Nagant M91/30 PU
+- Mosin-Nagant M91/30 PU [X]
 - SVD
 
 

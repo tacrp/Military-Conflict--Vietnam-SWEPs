@@ -6,7 +6,7 @@ SWEP.Spawnable = true
 AddCSLuaFile()
 
 // Names and basic information
-SWEP.PrintName = "Mosin-Nagant M91"
+SWEP.PrintName = "Mosin-Nagant M91/30"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Russian Empire"
 SWEP.SubCategory = "Bolt-Action Rifles" -- classed as a carbine in MCV but putting it here to pad out the bolt actions category for our sake
