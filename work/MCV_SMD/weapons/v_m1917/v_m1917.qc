@@ -808,7 +808,8 @@ $sequence "idle" {
 	blend "revolver_firemode_pose" 0 1
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	addlayer "walklayer"
+	addlayer "runlayer"
 }
 
 $sequence "FirstDraw" {
@@ -845,8 +846,7 @@ $sequence "draw" {
 	{ event 5004 1 "MCV_Weapon_Foley_M1917.Draw" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	  
