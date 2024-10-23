@@ -125,9 +125,9 @@ Light-Machine Guns:
 
 Launchers/Anti-Armor:
 
-- M79 Grenade Launcher
-- M79 SOG
-- China Lake Grenade Launcher
+- M79 Grenade Launcher [X]
+- M79 SOG [X]
+- China Lake Grenade Launcher [X]
 - M72 LAW
 - M202 FLASH
 
