@@ -667,8 +667,7 @@ $sequence "draw" {
 	fadein 0
 	fadeout 0.2
 	addlayer "SlidePosition"
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	  
@@ -686,10 +685,10 @@ $sequence "Firstdraw" {
 	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	node "0"
 }
+
 $sequence "shoot1_r" {
 	"basePose_a"
 	"ironsight_transition"
@@ -697,10 +696,10 @@ $sequence "shoot1_r" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	snap
 	addlayer "walklayerironsight"
-	addlayer "SlidePosition"addlayer "shoot1pose_r"
+	addlayer "SlidePosition"
+	addlayer "shoot1pose_r"
 	node "0"
 }
 
@@ -721,10 +720,10 @@ $sequence "shoot1_l" {
 	activity "ACT_VM_SECONDARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	snap
 	addlayer "walklayerironsight"
-	addlayer "SlidePosition"addlayer "shoot1pose_l"
+	addlayer "SlidePosition"
+	addlayer "shoot1pose_l"
 	node "0"
 }
 
@@ -745,10 +744,10 @@ $sequence "shoot2_r" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	snap
 	addlayer "walklayerironsight"
-	addlayer "SlidePosition"addlayer "shoot2pose_r"
+	addlayer "SlidePosition"
+	addlayer "shoot2pose_r"
 	node "0"
 }
 
@@ -769,10 +768,10 @@ $sequence "shoot2_l" {
 	activity "ACT_VM_SECONDARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	snap
 	addlayer "walklayerironsight"
-	addlayer "SlidePosition"addlayer "shoot2pose_l"
+	addlayer "SlidePosition"
+	addlayer "shoot2pose_l"
 	node "0"
 }
 
@@ -793,8 +792,7 @@ $sequence "shootlast_r" {
 	activity "ACT_VM_PRIMARYATTACK_EMPTY" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	snap
 	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
 	addlayer "shootlast_r_pose"
@@ -824,8 +822,7 @@ $sequence "shootlast_l" {
 	activity "ACT_VM_SHOOTLAST" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0
-	fadeout 0
+	snap
 	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
 	addlayer "shootlast_l_pose"
@@ -841,8 +838,7 @@ $sequence "shootlast_l_pose" {
 	{ event AE_CLIENT_EJECT_BRASS 0 "eject2" }
 	{ event AE_MUZZLEFLASH 0 "" }
 	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
-	fadein 0
-	fadeout 0.2
+	snap
 	node "Fire"
 }
 
@@ -870,7 +866,7 @@ $sequence "reload" {
 $sequence "reloadRightOnly" {
 	"reload_ra"
 	"reload_ra_i"
-	activity "ACT_VM_RELOAD" 1
+	activity "ACT_VM_MISSRIGHT" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_MAC10_Reload.Hand" }
