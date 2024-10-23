@@ -818,8 +818,7 @@ $sequence "draw" {
 	fadeout 0.2
 	addlayer "SlidePosition"
 	addlayer "BulletCounter"
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	  
@@ -837,8 +836,7 @@ $sequence "Firstdraw" {
 	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	node "0"
 }
 $sequence "shoot1_r" {
@@ -1010,7 +1008,7 @@ $sequence "shootlast_l_pose" {
 $sequence "reload" {
 	"v_dual_hdm_anims\reload.smd"
 	"v_dual_hdm_anims\reload_2.smd"
-	activity "ACT_VM_SECONDARY_RELOAD" 1
+	activity "ACT_VM_RELOAD" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_HDM_Reload.Hand" }
@@ -1028,7 +1026,7 @@ $sequence "reload" {
 	{ event AE_WPN_COMPLETE_RELOAD 98 "" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	addlayer "BulletCounter"
 	node "0"
 	fps 30
@@ -1039,7 +1037,7 @@ $sequence "reload" {
 $sequence "reloadRightOnly" {
 	"v_dual_hdm_anims\reloadRightOnly.smd"
 	"v_dual_hdm_anims\reloadRightOnly_2.smd"
-	activity "ACT_VM_RELOAD" 1
+	activity "ACT_VM_MISSRIGHT" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_HDM_Reload.Hand" }
@@ -1051,7 +1049,7 @@ $sequence "reloadRightOnly" {
 	{ event AE_WPN_COMPLETE_RELOAD 43 "" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	addlayer "BulletCounter"
 	node "0"
 	fps 30
@@ -1062,7 +1060,7 @@ $sequence "reloadRightOnly" {
 $sequence "reload_emptyRightOnly" {
 	"v_dual_hdm_anims\reload_emptyRightOnly.smd"
 	"v_dual_hdm_anims\reload_emptyRightOnly_2.smd"
-	activity "ACT_VM_RELOADEMPTY" 1
+	activity "ACT_VM_MISSRIGHT2" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_HDM_Reload.Hand" }
@@ -1077,7 +1075,7 @@ $sequence "reload_emptyRightOnly" {
 	{ event AE_WPN_COMPLETE_RELOAD 122 "" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	addlayer "BulletCounter"
 	node "0"
 	fps 30
@@ -1088,7 +1086,7 @@ $sequence "reload_emptyRightOnly" {
 $sequence "reload_empty" {
 	"v_dual_hdm_anims\reload_empty.smd"
 	"v_dual_hdm_anims\reload_empty_2.smd"
-	activity "ACT_VM_SECONDARY_RELOADEMPTY" 1
+	activity "ACT_VM_RELOADEMPTY" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_HDM_Reload.Hand" }
@@ -1108,7 +1106,7 @@ $sequence "reload_empty" {
 	{ event AE_WPN_COMPLETE_RELOAD 145 "" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	addlayer "BulletCounter"
 	node "0"
 	fps 30
