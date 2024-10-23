@@ -5,15 +5,15 @@ SWEP.Spawnable = true
 AddCSLuaFile()
 
 // Names and basic information
-SWEP.PrintName = "Sterling L34A1"
+SWEP.PrintName = "M56"
 SWEP.Category = "Military Conflict: Vietnam"
-SWEP.Country = "United Kingdom"
+SWEP.Country = "Yugoslavia"
 SWEP.SubCategory = "Submachine Guns"
 SWEP.Caliber = "9x19mm"
 
 SWEP.Slot = 2
 
-SWEP.ViewModel = "models/weapons/mcv/v_sterling_sog.mdl"
+SWEP.ViewModel = "models/weapons/mcv/v_m56.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_mas38.mdl"
 
 SWEP.BodyGroups = ""
@@ -22,19 +22,19 @@ SWEP.WeaponSelectIcon = NULL
 
 // Stats
 
-SWEP.DamageGeneric = 33 // damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)
+SWEP.DamageGeneric = 36 // damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)
 SWEP.DamageHeadMultiplier = 2.4
 SWEP.DamageChestMultiplier = 1.3
 SWEP.DamageStomachMultiplier = 1.2
-SWEP.DamageLegMultiplier = 0.7
-SWEP.DamageArmMultiplier = 0.65
+SWEP.DamageLegMultiplier = 0.8
+SWEP.DamageArmMultiplier = 0.75
 
 SWEP.ExplosionDamage = 0
 SWEP.ExplosionRadius = 0
 
 SWEP.MuzzleVelocity = 735
 
-SWEP.RangeModifier = 0.73
+SWEP.RangeModifier = 0.95
 
 // "auto", "semi", "burst", "singleaction", "doubleaction", "fanning", "bolt", "pump"
 SWEP.Firemodes = {
@@ -48,11 +48,11 @@ SWEP.MagInTime = 1
 SWEP.MagInTimeEmpty = 1
 
 // View slide from recoil
-SWEP.ViewSlideRecoilUp = 1.1
-SWEP.ViewSlideRecoilRight = 0.8
+SWEP.ViewSlideRecoilUp = 1.32
+SWEP.ViewSlideRecoilRight = 0.69
 
-SWEP.ViewSlideRecoilIronsightUp = 0.59
-SWEP.ViewSlideRecoilIronsightRight = 0.32
+SWEP.ViewSlideRecoilIronsightUp = 0.60
+SWEP.ViewSlideRecoilIronsightRight = 0.30
 
 SWEP.RecoilPushbackValue = 1.5
 
@@ -71,16 +71,16 @@ SWEP.ScopeMaterial = NULL
 SWEP.ScopeFOV = 8
 SWEP.ScopeFOV2 = 4
 
-SWEP.IronsightPos = Vector(0.055, -2, 0)
-SWEP.IronsightAng = Angle(0.2, 0.1, 0)
+SWEP.IronsightPos = Vector(0.11, -2, 0)
+SWEP.IronsightAng = Angle(0.35, 0.1, 0)
 
 SWEP.CustomPos = Vector(0, -2, 0)
 SWEP.CustomAng = Angle(0, 0, 0)
 
-SWEP.Spread = 7
-SWEP.SpreadIronsighted = 2.15
+SWEP.Spread = 7.9
+SWEP.SpreadIronsighted = 2.3
 
-SWEP.FireRate = 550 // in rounds per minute
+SWEP.FireRate = 600 // in rounds per minute
 
 SWEP.CrosshairMinDistance = 8
 SWEP.CrosshairDeltaDistance = 4
@@ -88,9 +88,9 @@ SWEP.CrosshairDeltaDistance = 4
 SWEP.WeaponWeight = 3.85
 
 SWEP.Primary.Ammo = "pistol"
-SWEP.Primary.ClipSize = 34
+SWEP.Primary.ClipSize = 32
 SWEP.Primary.Chamber = 0
-SWEP.Primary.DefaultClip = 102
+SWEP.Primary.DefaultClip = 96
 SWEP.Primary.Automatic = true
 
 SWEP.NearwallDistance = 40
@@ -98,10 +98,10 @@ SWEP.NearwallDistance = 40
 // Bullet spread multiplier according to current stance
 SWEP.CrouchSpreadMultiplier = 0.85
 SWEP.ProneSpreadMultiplier = 0.75
-SWEP.StandMoveSpreadMultiplier = 1.25
-SWEP.SneakMoveSpreadMultiplier = 1.15
-SWEP.CrouchMoveSpreadMultiplier = 1.15
-SWEP.JumpSpreadMultiplier = 1.7
+SWEP.StandMoveSpreadMultiplier = 1.1
+SWEP.SneakMoveSpreadMultiplier = 1.0
+SWEP.CrouchMoveSpreadMultiplier = 1.0
+SWEP.JumpSpreadMultiplier = 2.0
 
 SWEP.HasBayonet = false
 SWEP.HasBipod = false
@@ -120,7 +120,7 @@ SWEP.WoodDamageModifier = 1.4
 SWEP.OtherDamageModifier = 1.4
 
 // Sound
-SWEP.SoundSingleShot = "MCV_Weapon_Sterling_Sog.Single"
+SWEP.SoundSingleShot = "MCV_Weapon_M56.Single"
 SWEP.SoundDoubleShot = ""
 SWEP.SoundReload = ""
 SWEP.SoundSpecial1 = ""
@@ -140,12 +140,12 @@ SWEP.SoundEmpty = "Vietnam_Weapon_Generic.ClipEmpty_01"
 // SWEP.EjectBrassTrail = "vietnam_weaponeffect_shelleject_trail"
 // SWEP.EjectBrassParticle = "vietnam_weaponeffect_shelleject_side"
 
-SWEP.MuzzleParticle = "muzzleflash_suppressed"
+SWEP.MuzzleParticle = "muzzleflash_pistol"
 SWEP.MuzzleParticleSmoke = ""
-SWEP.MuzzleParticleIronsighted = "muzzleflash_suppressed"
+SWEP.MuzzleParticleIronsighted = "muzzleflash_pistol"
 SWEP.MuzzleParticleIronsightedSmoke = ""
 
-SWEP.MuzzleParticle3rdPerson = "muzzleflash_suppressed"
+SWEP.MuzzleParticle3rdPerson = "muzzleflash_pistol"
 
 SWEP.EjectBrassType = 11
 SWEP.EjectBrassTrail = "shellsmoke"

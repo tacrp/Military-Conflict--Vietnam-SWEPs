@@ -167,7 +167,7 @@ function SWEP:AttackEffects()
     local fm = self:GetFiremodeValue()
 
     if fm == MCV.FIREMODE_VOLLEY then
-        recoilmult = self:Clip1()
+        recoilmult = math.min(self:Clip1(), self.VolleyCount)
     end
 
     if self:GetAkimbo() then
@@ -193,7 +193,7 @@ function SWEP:AttackEffects()
     end
 
     if fm == MCV.FIREMODE_VOLLEY then
-        self:TakePrimaryAmmo(self:Clip1())
+        self:TakePrimaryAmmo(math.min(self:Clip1(), self.VolleyCount))
     else
         self:TakePrimaryAmmo(1)
     end
@@ -223,7 +223,7 @@ function SWEP:BulletAttack()
     local num = self.Num
 
     if self:GetFiremodeValue() == MCV.FIREMODE_VOLLEY then
-        num = num * self:Clip1()
+        num = num * math.min(self:Clip1(), self.VolleyCount)
     end
 
     owner:FireBullets({

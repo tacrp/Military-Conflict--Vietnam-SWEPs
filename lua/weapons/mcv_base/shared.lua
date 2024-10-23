@@ -44,6 +44,8 @@ SWEP.Firemodes = {
     MCV.FIREMODE_SEMI
 }
 
+SWEP.VolleyCount = 2
+
 SWEP.AdjustableScopes = false
 
 // Weapon must be manually cycled
