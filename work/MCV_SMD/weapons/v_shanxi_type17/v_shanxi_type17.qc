@@ -218,7 +218,6 @@ $animation "PoseDelta" "v_shanxi_type17_anims\PoseDelta.smd" {
 
 $animation "Default" "v_shanxi_type17_anims\Default.smd" {
 	fps 30
-	loop
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "Default_corrective_animation" 0
 }
