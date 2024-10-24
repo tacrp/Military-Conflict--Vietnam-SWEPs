@@ -881,8 +881,7 @@ $sequence "draw" {
 	fadeout 0.2
 	addlayer "SlidePosition"
 	addlayer "BulletCounter"
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	  
@@ -900,10 +899,10 @@ $sequence "Firstdraw" {
 	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	node "0"
 }
+
 $sequence "shoot1_r" {
 	"basePose_a"
 	"ironsight_transition"
@@ -1091,7 +1090,7 @@ $sequence "reload" {
 	{ event AE_WPN_COMPLETE_RELOAD 114 "" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	addlayer "BulletCounter"
 	node "0"
 }
@@ -1111,14 +1110,14 @@ $sequence "reloadRightOnly" {
 	{ event AE_WPN_COMPLETE_RELOAD 54 "" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	addlayer "BulletCounter"
 	node "0"
 }
 
 $sequence "reload_emptyRightOnly" {
-	"reload_er_a"
-	"reload_er_a_i"
+	"reload_re_a"
+	"reload_re_a_i"
 	activity "ACT_VM_MISSRIGHT2" 1
 	blend "ironsight" 0 1
 	blendwidth 2
@@ -1138,7 +1137,7 @@ $sequence "reload_emptyRightOnly" {
 	{ event AE_WPN_COMPLETE_RELOAD 141 "" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	addlayer "BulletCounter"
 	node "0"
 }
@@ -1166,7 +1165,7 @@ $sequence "reload_empty" {
 	{ event AE_WPN_COMPLETE_RELOAD 165 "" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	addlayer "BulletCounter"
 	node "0"
 }
@@ -1301,8 +1300,7 @@ $sequence "holster" {
 	fadeout 0.2
 	addlayer "SlidePosition"
 	addlayer "BulletCounter"
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	fps 30
 	
 	

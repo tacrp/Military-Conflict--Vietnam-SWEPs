@@ -14,6 +14,7 @@ SWEP.Caliber = "9x18mm"
 SWEP.Slot = 2
 
 SWEP.ViewModel = "models/weapons/mcv/v_pm63.mdl"
+SWEP.ViewModelAkimbo = "models/weapons/mcv/v_dual_pm63.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_mas38.mdl"
 
 SWEP.BodyGroups = ""
@@ -104,6 +105,7 @@ SWEP.JumpSpreadMultiplier = 1.7
 
 SWEP.HasBayonet = false
 SWEP.HasBipod = false
+SWEP.HasAkimbo = true
 
 // Penetration
 SWEP.MetalPenetrationDepth = 5
