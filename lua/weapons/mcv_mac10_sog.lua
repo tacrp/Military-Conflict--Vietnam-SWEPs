@@ -149,6 +149,8 @@ SWEP.MuzzleParticleIronsightedSmoke = ""
 
 SWEP.MuzzleParticle3rdPerson = "muzzleflash_suppressed"
 
+SWEP.MuzzleFlashLightTexture = "effects/flashlight_muzzleflash_sl"
+
 SWEP.EjectBrassType = 11
 SWEP.EjectBrassTrail = "shellsmoke"
 SWEP.EjectBrassParticle = "port_smoke"

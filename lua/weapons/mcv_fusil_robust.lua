@@ -152,5 +152,7 @@ SWEP.EjectBrassParticle = "port_smoke"
 
 SWEP.TracerParticle = "tracer"
 
+SWEP.MuzzleFlashLightTexture = "effects/flashlight_muzzleflash_sg"
+
 SWEP.TracerRandomness = 6
 SWEP.TracerFrequency = 1

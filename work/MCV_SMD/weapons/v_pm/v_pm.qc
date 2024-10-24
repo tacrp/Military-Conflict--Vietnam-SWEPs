@@ -576,79 +576,130 @@ $sequence "SlidePosition" {
 }
 
 $sequence "shoot1" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	fadein 0.2
+	fadeout 0.2
+	addlayer "walklayerironsight"
+	addlayer "BulletCounter"
+	addlayer "shoot1_pose"
+	node "0"
+}
+
+$sequence "shoot1_pose" {
 	"shoot1_a"
 	"shoot1_ironsight_a"
-	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	snap
+	hidden
 }
 
 $sequence "shoot2" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	fadein 0.2
+	fadeout 0.2
+	addlayer "walklayerironsight"
+	addlayer "BulletCounter"
+	addlayer "shoot2_pose"
+	node "0"
+}
+
+$sequence "shoot2_pose" {
 	"shoot2_a"
 	"shoot2_ironsight_a"
-	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	snap
+	hidden
 }
 
 $sequence "shoot3" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	fadein 0.2
+	fadeout 0.2
+	addlayer "walklayerironsight"
+	addlayer "BulletCounter"
+	addlayer "shoot3_pose"
+	node "0"
+}
+
+$sequence "shoot3_pose" {
 	"shoot3_a"
 	"shoot3_ironsight_a"
-	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	snap
+	hidden
 }
 
 $sequence "shoot4" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	fadein 0.2
+	fadeout 0.2
+	addlayer "walklayerironsight"
+	addlayer "BulletCounter"
+	addlayer "shoot4_pose"
+	node "0"
+}
+
+$sequence "shoot4_pose" {
 	"shoot4_a"
 	"shoot4_ironsight_a"
-	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	snap
+	hidden
 }
 
 $sequence "shootlast" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_SHOOTLAST" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	fadein 0.2
+	fadeout 0.2
+	addlayer "walklayerironsight"
+	addlayer "BulletCounter"
+	addlayer "shootlast_pose"
+	addlayer "SlidePosition"
+	{ event 5004 1 "MCV_Weapon_Foley_PM_ShootLast.Metal" }
+	node "0"
+}
+
+$sequence "shootlast_pose" {
 	"shootlast_a"
 	"shootlast_ironsight_a"
-	activity "ACT_VM_SHOOTLAST" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event 5004 1 "MCV_Weapon_Foley_PM_ShootLast.Metal" }
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	snap
+	hidden
 }
 
 $sequence "reload" {

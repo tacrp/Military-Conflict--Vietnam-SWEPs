@@ -5,16 +5,16 @@ SWEP.Spawnable = true
 AddCSLuaFile()
 
 // Names and basic information
-SWEP.PrintName = "HDM"
+SWEP.PrintName = "Makarov PM"
 SWEP.Category = "Military Conflict: Vietnam"
-SWEP.Country = "United States of America"
+SWEP.Country = " "
 SWEP.SubCategory = "Pistols"
-SWEP.Caliber = ".22 Long Rifle"
+SWEP.Caliber = "9x18mm"
 
 SWEP.Slot = 1
 
-SWEP.ViewModel = "models/weapons/mcv/v_hdm.mdl"
-SWEP.ViewModelAkimbo = "models/weapons/mcv/v_dual_hdm.mdl"
+SWEP.ViewModel = "models/weapons/mcv/v_pm.mdl"
+SWEP.ViewModelAkimbo = "models/weapons/mcv/v_dual_pm.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_mle1935.mdl"
 
 SWEP.BodyGroups = ""
@@ -71,8 +71,8 @@ SWEP.ScopeMaterial = NULL
 SWEP.ScopeFOV = 8
 SWEP.ScopeFOV2 = 4
 
-SWEP.IronsightPos = Vector(0.11, -4, 0)
-SWEP.IronsightAng = Angle(0.35, 0.05, 0)
+SWEP.IronsightPos = Vector(0.08, -4, 0)
+SWEP.IronsightAng = Angle(0.27, -0.3, 0)
 
 SWEP.CustomPos = Vector(0, -2, 0)
 SWEP.CustomAng = Angle(0, 0, 0)
@@ -80,7 +80,7 @@ SWEP.CustomAng = Angle(0, 0, 0)
 SWEP.Spread = 6.15
 SWEP.SpreadIronsighted = 2.15
 
-SWEP.FireRate = 250 // in rounds per minute -- the MCV script claims its RPM is 50 but there's no way that's correct so im setting it to this for now
+SWEP.FireRate = 400
 
 SWEP.CrosshairMinDistance = 8
 SWEP.CrosshairDeltaDistance = 4
@@ -88,9 +88,9 @@ SWEP.CrosshairDeltaDistance = 4
 SWEP.WeaponWeight = 3.85
 
 SWEP.Primary.Ammo = "pistol"
-SWEP.Primary.ClipSize = 10
+SWEP.Primary.ClipSize = 8
 SWEP.Primary.Chamber = 1
-SWEP.Primary.DefaultClip = 20
+SWEP.Primary.DefaultClip = 16
 SWEP.Primary.Automatic = true
 
 SWEP.NearwallDistance = 40
@@ -105,7 +105,7 @@ SWEP.JumpSpreadMultiplier = 1.25
 
 SWEP.HasBayonet = false
 SWEP.HasBipod = false
-SWEP.HasAkimbo = true
+SWEP.HasAkimbo = false
 
 // Penetration
 SWEP.MetalPenetrationDepth = 5
@@ -121,7 +121,7 @@ SWEP.WoodDamageModifier = 1.4
 SWEP.OtherDamageModifier = 1.4
 
 // Sound
-SWEP.SoundSingleShot = "MCV_Weapon_HDM.Single"
+SWEP.SoundSingleShot = "MCV_Weapon_PM.Single"
 SWEP.SoundDoubleShot = ""
 SWEP.SoundReload = ""
 SWEP.SoundSpecial1 = ""
