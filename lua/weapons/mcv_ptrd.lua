@@ -5,7 +5,7 @@ SWEP.Spawnable = true
 AddCSLuaFile()
 
 // Names and basic information
-SWEP.PrintName = "PTRD"
+SWEP.PrintName = "PTRD-41"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Soviet Union"
 SWEP.SubCategory = "Special Weapons"

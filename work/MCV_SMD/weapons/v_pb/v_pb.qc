@@ -611,8 +611,7 @@ $sequence "draw" {
 	fadeout 0.2
 	addlayer "BulletCounter"
 	addlayer "SlidePosition"
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	  
@@ -631,8 +630,7 @@ $sequence "Firstdraw" {
 	fadein 0
 	fadeout 0.2
 	addlayer "BulletCounter"
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	
@@ -646,8 +644,7 @@ $sequence "shoot1" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0.2
-	fadeout 0.2
+	snap
 	addlayer "walklayerironsight"
 	addlayer "BulletCounter"
 	addlayer "shoot1_pose"
@@ -671,8 +668,7 @@ $sequence "shoot2" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0.2
-	fadeout 0.2
+	snap
 	addlayer "walklayerironsight"
 	addlayer "BulletCounter"
 	addlayer "shoot2_pose"
@@ -696,8 +692,7 @@ $sequence "shoot3" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0.2
-	fadeout 0.2
+	snap
 	addlayer "walklayerironsight"
 	addlayer "BulletCounter"
 	addlayer "shoot3_pose"
@@ -721,8 +716,7 @@ $sequence "shoot4" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0.2
-	fadeout 0.2
+	snap
 	addlayer "walklayerironsight"
 	addlayer "BulletCounter"
 	addlayer "shoot4_pose"
@@ -746,8 +740,7 @@ $sequence "shootlast" {
 	activity "ACT_VM_SHOOTLAST" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0.2
-	fadeout 0.2
+	snap
 	addlayer "walklayerironsight"
 	addlayer "BulletCounter"
 	addlayer "shootlast_pose"
@@ -782,7 +775,7 @@ $sequence "reload" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "BulletCounter"
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	
@@ -807,7 +800,7 @@ $sequence "reload_empty" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "BulletCounter"
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	
@@ -944,8 +937,7 @@ $sequence "holster" {
 	fadeout 0.2
 	addlayer "SlidePosition"
 	addlayer "BulletCounter"
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	fps 30
 	
 	

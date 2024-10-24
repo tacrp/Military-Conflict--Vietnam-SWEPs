@@ -5,9 +5,9 @@ SWEP.Spawnable = true
 AddCSLuaFile()
 
 // Names and basic information
-SWEP.PrintName = "Makarov PB"
+SWEP.PrintName = "PB"
 SWEP.Category = "Military Conflict: Vietnam"
-SWEP.Country = " "
+SWEP.Country = "Soviet Union"
 SWEP.SubCategory = "Pistols"
 SWEP.Caliber = "9x18mm"
 
@@ -71,8 +71,8 @@ SWEP.ScopeMaterial = NULL
 SWEP.ScopeFOV = 8
 SWEP.ScopeFOV2 = 4
 
-SWEP.IronsightPos = Vector(0.08, -4, 0)
-SWEP.IronsightAng = Angle(0.27, -0.3, 0)
+SWEP.IronsightPos = Vector(0.14, -4, 0.1)
+SWEP.IronsightAng = Angle(0.4, -0.15, 0)
 
 SWEP.CustomPos = Vector(0, -2, 0)
 SWEP.CustomAng = Angle(0, 0, 0)

@@ -163,14 +163,14 @@ Melee Weapons:
 
 Pistols:
 
-- Makarov
+- Makarov [X]
 - Type 14 Nambu [X]
-- Walther P38
+- Walther P38 [X]
 - TT-33 [X]
 - MAS-35S [X]
 - Mauser C96 [X]
 - Homemade Pistol
-- PB
+- PB [X]
 - Type 64 Pistol
 - Type 67
 
@@ -261,7 +261,7 @@ Light-Machine Guns:
 - RPK [X]
 - TUL-1 [X]
 - DP-28 [X]
-- RP-46
+- RP-46 [X]
 - Bren [X]
 
 
@@ -269,7 +269,7 @@ Launchers/Anti-Armor:
 
 - RPG-7
 - RPG-2
-- PTRD-41
+- PTRD-41 [X]
 
 
 Grenades/Explosives:
