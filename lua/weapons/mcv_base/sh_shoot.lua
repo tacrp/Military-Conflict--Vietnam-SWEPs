@@ -19,6 +19,8 @@ function SWEP:PrimaryAttack()
     if self:StillWaiting() then return end
     if self:GetNeedCycle() then return end
 
+    if self.MustBipod and !self:GetBipod() then return end
+
     local owner = self:GetOwner()
 
     if owner:KeyDown(IN_USE) then

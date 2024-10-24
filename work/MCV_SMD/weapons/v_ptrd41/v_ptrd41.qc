@@ -487,7 +487,7 @@ $sequence "reload" {
 	{ event 5004 65 "MCV_Weapon_Foley_PTRD_Reload.HandEnd" }
 	{ event AE_WPN_COMPLETE_RELOAD 65 "" }
 	{ event AE_WPN_NEXTCLIP_TO_POSEPARAM 65 "ammo_fraction" }
-	fadein 0.2
+	fadein 0
 	fadeout 0.2
 	addlayer "walklayer"
 	addlayer "runlayer"
@@ -678,7 +678,7 @@ $sequence "reload_deploy" {
 	{ event 5004 65 "MCV_Weapon_Foley_PTRD_Reload.HandEnd" }
 	{ event AE_WPN_COMPLETE_RELOAD 65 "" }
 	{ event AE_WPN_NEXTCLIP_TO_POSEPARAM 65 "ammo_fraction" }
-	fadein 0.2
+	fadein 0
 	fadeout 0.2
 	node "0"
 	fps 30
@@ -708,20 +708,26 @@ $sequence "SlideMovement" {
 }
 
 $sequence "deployshoot1" {
+	"deploy_a"
+	"ironsightdeploy"
+	blend "ironsight" 0 1
+	blendwidth 2
+	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
+	fadein 0.2
+	fadeout 0
+	addlayer "walklayerironsight"
+	addlayer "deployshoot1_pose"
+	addlayer "SlideMovement"
+}
+
+$sequence "deployshoot1_pose" {
 	"shoot1d_a"
 	"shoot1d_ironsight_a"
-	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 0 "ammo_fraction" }
-	{ event AE_CL_CREATE_PARTICLE_EFFECT 1 "vietnam_weaponeffect_ptrd_eject follow_attachment eject_smoke" }
-	fadein 0
-	fadeout 0.2
-	addlayer "SlideMovement"
-	node "Fire"
+	snap
+	hidden
 }
 
 $includemodel "weapons/gesture_animations.mdl"
