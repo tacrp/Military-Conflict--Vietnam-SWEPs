@@ -133,7 +133,7 @@ $bonemerge "Base"
 $bonemerge "rhand_ikTarget"
 $bonemerge "lhand_ikTarget"
 
-$include "../../militaryconflict_vietnam_v4_ikfix.qci"
+$include "../../militaryconflict_vietnam_v2.qci"
 
 
 $sectionframes 30 30
@@ -465,7 +465,7 @@ $sequence "walklayer" {
 	"walkIdle_a"
 	"walkIdle_a"
 	"walkIdle_a"
-	blend "player_movement" 0 276
+	blend "player_movement" 0 141
 	blend "ironsight" 0 1
 	blendwidth 3
 	delta
