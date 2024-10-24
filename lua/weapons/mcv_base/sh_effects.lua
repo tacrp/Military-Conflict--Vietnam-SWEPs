@@ -67,7 +67,7 @@ function SWEP:DoMuzzleLight()
     if IsValid(self.MuzzleLight) then self.MuzzleLight:Remove() end
 
     local lamp = ProjectedTexture()
-    lamp:SetTexture("effects/flashlight_muzzleflash")
+    lamp:SetTexture(self.MuzzleFlashLightTexture)
     local val1, val2
     if self.Silencer then
         val1, val2 = math.Rand(0.2, 0.4), math.Rand(100, 105)

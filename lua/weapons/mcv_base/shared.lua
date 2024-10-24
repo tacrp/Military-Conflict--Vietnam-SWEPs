@@ -176,6 +176,8 @@ SWEP.MuzzleParticleSmoke = "vietnam_muzzleflash_rifle_type1_fp_smoke"
 SWEP.MuzzleParticleIronsighted = "vietnam_muzzleflash_rifle_type1_fp_is"
 SWEP.MuzzleParticleIronsightedSmoke = "vietnam_muzzleflash_rifle_type1_fp_is_smoke"
 
+SWEP.MuzzleFlashLightTexture = "effects/flashlight_muzzleflash"
+
 SWEP.MuzzleParticle3rdPerson = "vietnam_muzzleflash_rifle_type1_tp"
 
 SWEP.NoEjectOnShoot = false
