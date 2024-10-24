@@ -192,14 +192,14 @@ Submachine Guns:
 
 - Vz. 23 [X]
 - K-50M [X]
-- PPSh-41
-- PPSh-41 Drum
+- PPSh-41 [X]
+- PPSh-41 Drum [X]
 - PPS-43
 - MAT-49 [X]
 - MAT-49 Dac Cong [X]
 - MAS-38 [X]
 - Type 64 SMG
-- MP 40
+- MP 40 [X]
 - M56
 
 
