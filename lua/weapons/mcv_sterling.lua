@@ -1,6 +1,6 @@
 SWEP.Base = "mcv_base"
 
-SWEP.Spawnable = false -- dont fucking change this until we fix it
+SWEP.Spawnable = true
 
 AddCSLuaFile()
 
