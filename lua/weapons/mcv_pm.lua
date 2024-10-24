@@ -141,14 +141,14 @@ SWEP.SoundEmpty = "Vietnam_Weapon_Generic.ClipEmpty_01"
 // SWEP.EjectBrassTrail = "vietnam_weaponeffect_shelleject_trail"
 // SWEP.EjectBrassParticle = "vietnam_weaponeffect_shelleject_side"
 
-SWEP.MuzzleParticle = "muzzleflash_suppressed"
+SWEP.MuzzleParticle = "muzzleflash_pistol"
 SWEP.MuzzleParticleSmoke = ""
-SWEP.MuzzleParticleIronsighted = "muzzleflash_suppressed"
+SWEP.MuzzleParticleIronsighted = "muzzleflash_pistol"
 SWEP.MuzzleParticleIronsightedSmoke = ""
 
-SWEP.MuzzleParticle3rdPerson = "muzzleflash_suppressed"
+SWEP.MuzzleParticle3rdPerson = "muzzleflash_pistol"
 
-SWEP.MuzzleFlashLightTexture = "effects/flashlight_muzzleflash_sl"
+SWEP.MuzzleFlashLightTexture = "effects/flashlight_muzzleflash"
 
 SWEP.EjectBrassType = 11
 SWEP.EjectBrassTrail = "shellsmoke"
