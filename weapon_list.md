@@ -14,7 +14,7 @@ Pistols:
 - Baby Browning [X]
 - Mk 22 Mod 0 "Hush Puppy" [X]
 - HDM [X]
-- Walther PPK
+- Walther PPK [X]
 - Welrod
 
 
@@ -267,7 +267,7 @@ Light-Machine Guns:
 
 Launchers/Anti-Armor:
 
-- RPG-7
+- RPG-7 [X]
 - RPG-2
 - PTRD-41 [X]
 

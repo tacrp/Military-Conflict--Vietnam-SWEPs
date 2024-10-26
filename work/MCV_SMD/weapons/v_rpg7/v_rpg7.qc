@@ -435,8 +435,7 @@ $sequence "draw_empty" {
 	{ event 5004 1 "MCV_Weapon_Foley_RPG7.Draw" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	
@@ -454,8 +453,7 @@ $sequence "draw" {
 	{ event 5004 1 "MCV_Weapon_Foley_RPG7.Draw" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	addlayer "RocketPosition"
 	node "0"
 	fps 30
@@ -476,25 +474,37 @@ $sequence "Firstdraw" {
 	{ event 5004 48 "MCV_Weapon_Foley_RPG7_Reload.HandEnd" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	fps 30
 	
 	
 }
 
 $sequence "shoot1" {
-	"shoot1_a"
-	"shoot1_ironsight_a"
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
-	blendwidth 2
-	delta
+	blendwidth 3
+	snap
 	{ event AE_MUZZLEFLASH 0 "" }
 	{ event AE_WPN_SET_POSEPARAM 0 "ammo_fraction 0" }
 	{ event AE_CL_BODYGROUP_SET_VALUE 1 "bullet01 1" }
-	fadein 0
-	fadeout 0.2
+	addlayer "walklayer"
+	addlayer "runlayer"
+	addlayer "RocketPosition"
+	addlayer "shootpose1"
+	node "0"
+}
+
+$sequence "shootpose1" {
+	"shoot1_a"
+	"shoot1_ironsight_a"
+	blend "ironsight" 0 1
+	blendwidth 2
+	delta
+	snap
 	node "Fire"
 }
 
@@ -517,7 +527,7 @@ $sequence "reload" {
 	{ event AE_WPN_COMPLETE_RELOAD 52 "" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	
@@ -642,8 +652,7 @@ $sequence "holster" {
 	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "runlayer"
+	addlayer "walklayerironsight"
 	addlayer "RocketPosition"
 	fps 30
 	
