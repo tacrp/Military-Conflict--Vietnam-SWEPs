@@ -5,15 +5,15 @@ SWEP.Spawnable = true
 AddCSLuaFile()
 
 // Names and basic information
-SWEP.PrintName = "RPG-7"
+SWEP.PrintName = "M72 LAW"
 SWEP.Category = "Military Conflict: Vietnam"
-SWEP.Country = "Soviet Union"
+SWEP.Country = "United States of America"
 SWEP.SubCategory = "Special Weapons"
-SWEP.Caliber = "40mm Rocket"
+SWEP.Caliber = "66mm Rocket"
 
 SWEP.Slot = 4
 
-SWEP.ViewModel = "models/weapons/mcv/v_rpg7.mdl"
+SWEP.ViewModel = "models/weapons/mcv/v_m72.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_sks.mdl"
 
 SWEP.BodyGroups = "000"
@@ -58,8 +58,8 @@ SWEP.ScopeMaterial = NULL
 SWEP.ScopeFOV = 8
 SWEP.ScopeFOV2 = 4
 
-SWEP.IronsightPos = Vector(-0.02, 0, 0)
-SWEP.IronsightAng = Angle(-0.02, 0.15, 0)
+SWEP.IronsightPos = Vector(0.05, 0, 0)
+SWEP.IronsightAng = Angle(0.25, 0.15, 0)
 
 SWEP.CustomPos = Vector(0, -2, 0)
 SWEP.CustomAng = Angle(0, 0, 0)
@@ -113,7 +113,7 @@ SWEP.WoodDamgaeModifier = 1.25
 SWEP.OtherDamageModifier = 1.25
 
 // Sound
-SWEP.SoundSingleShot = "MCV_Weapon_RPG7.Single"
+SWEP.SoundSingleShot = "MCV_Weapon_M72.Single"
 SWEP.SoundDoubleShot = ""
 SWEP.SoundReload = ""
 SWEP.SoundSpecial1 = ""

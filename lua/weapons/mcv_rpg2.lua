@@ -5,7 +5,7 @@ SWEP.Spawnable = true
 AddCSLuaFile()
 
 // Names and basic information
-SWEP.PrintName = "RPG-7"
+SWEP.PrintName = "RPG-2"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Soviet Union"
 SWEP.SubCategory = "Special Weapons"
@@ -13,7 +13,7 @@ SWEP.Caliber = "40mm Rocket"
 
 SWEP.Slot = 4
 
-SWEP.ViewModel = "models/weapons/mcv/v_rpg7.mdl"
+SWEP.ViewModel = "models/weapons/mcv/v_rpg2.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_sks.mdl"
 
 SWEP.BodyGroups = "000"
@@ -32,7 +32,7 @@ SWEP.LastShotAnimation = false
 SWEP.MagInClip = false
 
 SWEP.ShootEntity = "mcv_proj_rpg"
-SWEP.ShootForce = 5000
+SWEP.ShootForce = 2000
 
 // View slide from recoil
 SWEP.ViewSlideRecoilUp = 3.12
@@ -113,7 +113,7 @@ SWEP.WoodDamgaeModifier = 1.25
 SWEP.OtherDamageModifier = 1.25
 
 // Sound
-SWEP.SoundSingleShot = "MCV_Weapon_RPG7.Single"
+SWEP.SoundSingleShot = "MCV_Weapon_RPG2.Single"
 SWEP.SoundDoubleShot = ""
 SWEP.SoundReload = ""
 SWEP.SoundSpecial1 = ""

@@ -5,18 +5,18 @@ SWEP.Spawnable = true
 AddCSLuaFile()
 
 // Names and basic information
-SWEP.PrintName = "RPG-7"
+SWEP.PrintName = "M202 FLASH"
 SWEP.Category = "Military Conflict: Vietnam"
-SWEP.Country = "Soviet Union"
+SWEP.Country = "United States of America"
 SWEP.SubCategory = "Special Weapons"
-SWEP.Caliber = "40mm Rocket"
+SWEP.Caliber = "66mm Rocket"
 
 SWEP.Slot = 4
 
-SWEP.ViewModel = "models/weapons/mcv/v_rpg7.mdl"
+SWEP.ViewModel = "models/weapons/mcv/v_m202.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_sks.mdl"
 
-SWEP.BodyGroups = "000"
+SWEP.BodyGroups = "0"
 
 SWEP.WeaponSelectIcon = NULL
 
@@ -28,11 +28,23 @@ SWEP.Firemodes = {
     MCV.FIREMODE_SEMI
 }
 
+SWEP.BulletBodygroups = {
+    [1] = {1, 1},
+    [2] = {2, 1},
+    [3] = {3, 1},
+    [4] = {4, 1},
+}
+
+SWEP.VolleyCount = 4
+
 SWEP.LastShotAnimation = false
 SWEP.MagInClip = false
 
-SWEP.ShootEntity = "mcv_proj_rpg"
-SWEP.ShootForce = 5000
+SWEP.MagInTime = 1.5
+SWEP.MagInTimeEmpty = 1.5
+
+SWEP.ShootEntity = "mcv_proj_m202"
+SWEP.ShootForce = 9000
 
 // View slide from recoil
 SWEP.ViewSlideRecoilUp = 3.12
@@ -64,10 +76,10 @@ SWEP.IronsightAng = Angle(-0.02, 0.15, 0)
 SWEP.CustomPos = Vector(0, -2, 0)
 SWEP.CustomAng = Angle(0, 0, 0)
 
-SWEP.Spread = 3
-SWEP.SpreadIronsighted = 1
+SWEP.Spread = 4
+SWEP.SpreadIronsighted = 2
 
-SWEP.FireRate = 120 // in rounds per minute
+SWEP.FireRate = 250 // in rounds per minute
 
 SWEP.CrosshairMinDistance = 8
 SWEP.CrosshairDeltaDistance = 4
@@ -75,9 +87,9 @@ SWEP.CrosshairDeltaDistance = 4
 SWEP.WeaponWeight = 3.85
 
 SWEP.Primary.Ammo = "rpg_round"
-SWEP.Primary.ClipSize = 1
+SWEP.Primary.ClipSize = 4
 SWEP.Primary.Chamber = 0
-SWEP.Primary.DefaultClip = 3
+SWEP.Primary.DefaultClip = 8
 SWEP.Primary.Automatic = true
 
 SWEP.NearwallDistance = 40
@@ -113,7 +125,7 @@ SWEP.WoodDamgaeModifier = 1.25
 SWEP.OtherDamageModifier = 1.25
 
 // Sound
-SWEP.SoundSingleShot = "MCV_Weapon_RPG7.Single"
+SWEP.SoundSingleShot = "MCV_Weapon_M202.Single"
 SWEP.SoundDoubleShot = ""
 SWEP.SoundReload = ""
 SWEP.SoundSpecial1 = ""

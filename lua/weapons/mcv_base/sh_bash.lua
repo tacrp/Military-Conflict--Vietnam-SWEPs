@@ -44,6 +44,8 @@ function SWEP:Bash()
     dmginfo:SetAttacker(owner)
     dmginfo:SetInflictor(self)
 
+    self:GetOwner():DoAnimationEvent(self.BashGesture)
+
     self:SetIronsight(false)
 
     self:FireBullets({

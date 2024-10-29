@@ -447,18 +447,29 @@ $sequence "draw" {
 	
 }
 
+
 $sequence "shoot1" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	fadein 0
+	fadeout 0.2
+	addlayer "walklayerironsight"
+	addlayer "shoot1_pose"
+	node "0"
+}
+
+$sequence "shoot1_pose" {
 	"shoot1_a"
 	"shoot1_ironsight_a"
-	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_CL_BODYGROUP_SET_TO_CLIP 1 "" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	snap
+	hidden
 }
 
 $sequence "reload" {
@@ -467,7 +478,7 @@ $sequence "reload" {
 	activity "ACT_VM_RELOAD" 1
 	blend "ironsight" 0 1
 	blendwidth 2
-	{ event AE_CL_BODYGROUP_SET_TO_NEXTCLIP 62 "" }
+	{ event AE_CL_BODYGROUP_SET_TO_NddEXTCLIP 62 "" }
 	{ event 5004 1 "MCV_Weapon_Foley_M202_Reload.Hand" }
 	{ event 5004 19 "MCV_Weapon_Foley_M202_Reload.MagOut" }
 	{ event 5004 60 "MCV_Weapon_Foley_M202_Reload.HandMid" }

@@ -52,6 +52,7 @@ SWEP.AimHoldType = "rpg"
 
 SWEP.ShootGesture = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.ReloadGesture = ACT_HL2MP_GESTURE_RELOAD_AR2
+SWEP.BashGesture = ACT_GMOD_GESTURE_MELEE_SHOVE_2HAND
 
 SWEP.AdjustableScopes = false
 

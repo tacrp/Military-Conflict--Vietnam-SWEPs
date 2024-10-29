@@ -428,17 +428,29 @@ $sequence "draw" {
 }
 
 $sequence "shoot1" {
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
+	activity "ACT_VM_PRIMARYATTACK" 1
+	blend "ironsight" 0 1
+	blendwidth 3
+	snap
+	{ event AE_MUZZLEFLASH 0 "" }
+	{ event AE_WPN_SET_POSEPARAM 0 "ammo_fraction 0" }
+	{ event AE_CL_BODYGROUP_SET_VALUE 1 "bullet01 1" }
+	addlayer "walklayer"
+	addlayer "runlayer"
+	addlayer "shootpose1"
+	node "0"
+}
+
+$sequence "shootpose1" {
 	"shoot1_a"
 	"shoot1_ironsight_a"
-	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta
-	{ event AE_MUZZLEFLASH 0 "" }
-	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
-	{ event AE_CL_BODYGROUP_SET_VALUE 1 "bullet01 1" }
-	fadein 0
-	fadeout 0.2
+	snap
 	node "Fire"
 }
 
