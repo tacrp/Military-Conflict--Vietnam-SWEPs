@@ -920,9 +920,6 @@ $sequence "prepare_delayed_left_pose" {
 }
 
 $sequence "shoot_delayed_right" {
-	"basePose_a"
-	"ironsight_transition"
-	"ironsight"
 	"idle_delayed_a"
 	"ironsight_transition_delayed"
 	"ironsight_delayed"
@@ -947,9 +944,6 @@ $sequence "shoot_delayed_right_pose" {
 }
 
 $sequence "shoot_delayed_left" {
-	"basePose_a"
-	"ironsight_transition"
-	"ironsight"
 	"idle_delayed_a"
 	"ironsight_transition_delayed"
 	"ironsight_delayed"

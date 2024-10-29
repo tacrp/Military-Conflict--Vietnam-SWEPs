@@ -50,6 +50,12 @@ function SWEP:PrimaryAttack()
     if self:GetAkimbo() then
         if fm == MCV.FIREMODE_VOLLEY then
             t = self:PlayAnimation(ACT_VM_RECOIL1, 0.5)
+        elseif fm == MCV.FIREMODE_DA then
+            if self:Clip1() % 2 == 0 then
+                t = self:PlayAnimation(ACT_VM_PRIMARYATTACK_2, 0.5)
+            else
+                t = self:PlayAnimation(ACT_VM_PRIMARYATTACK_3, 0.5)
+            end
         else
             if self.LastShotAnimation and self:Clip1() == 1 then
                 t = self:PlayAnimation(ACT_VM_SHOOTLAST, 0.5)
@@ -366,7 +372,7 @@ function SWEP:ChangeFiremode()
         mult = 1
     elseif self.Firemodes[fm] == MCV.FIREMODE_SA then
         anim = ACT_VM_IFIREMODE
-        mult = 1
+        mult = -1
     end
 
     if self:HasAnimation(anim) then
