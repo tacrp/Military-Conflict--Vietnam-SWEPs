@@ -46,6 +46,13 @@ SWEP.Firemodes = {
 
 SWEP.VolleyCount = 2
 
+SWEP.HoldType = "ar2"
+SWEP.SprintHoldType = "passive"
+SWEP.AimHoldType = "rpg"
+
+SWEP.ShootGesture = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
+SWEP.ReloadGesture = ACT_HL2MP_GESTURE_RELOAD_AR2
+
 SWEP.AdjustableScopes = false
 
 // Weapon must be manually cycled

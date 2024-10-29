@@ -7,6 +7,8 @@ function SWEP:Think()
     self:Think_Speed()
     self:Think_Bipod()
 
+    self:SetShouldHoldType()
+
     self:ProcessTimers()
 
     self:DoBodygroups()
@@ -105,4 +107,16 @@ function SWEP:Think_Speed()
     speed = math.Approach(speed, target_speed, FrameTime() * 750)
 
     self:SetSpeed(speed)
+end
+
+function SWEP:SetShouldHoldType()
+    local holdtype = self.HoldType
+
+    if self:GetSpeed() >= 150 then
+        holdtype = self.SprintHoldType
+    elseif self:GetSightAmount() >= 1 then
+        holdtype = self.AimHoldType
+    end
+
+    self:SetHoldType(holdtype)
 end

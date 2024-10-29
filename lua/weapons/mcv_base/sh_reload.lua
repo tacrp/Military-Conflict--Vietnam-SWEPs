@@ -15,6 +15,8 @@ function SWEP:Reload()
     if self:Ammo1() == 0 then return end
     if self:Clip1() >= self:GetClip1Capacity() then return end
 
+    self:GetOwner():DoAnimationEvent(self.ReloadGesture)
+
     if self.ShotgunReload or (self.HybridReload and self:Clip1() > 0) then
         if self.ShotgunReloadEmptyStartAnimation and self:Clip1() == 0 then
             self:PlayAnimation(ACT_VM_RELOAD_INSERT_EMPTY)

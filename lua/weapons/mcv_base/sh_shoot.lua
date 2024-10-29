@@ -200,6 +200,8 @@ function SWEP:AttackEffects()
         self:DoMuzzle()
     end
 
+    self:GetOwner():DoAnimationEvent(self.ShootGesture)
+
     if fm == MCV.FIREMODE_VOLLEY then
         self:TakePrimaryAmmo(math.min(self:Clip1(), self.VolleyCount))
     else
