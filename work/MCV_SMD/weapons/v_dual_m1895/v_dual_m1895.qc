@@ -1215,7 +1215,7 @@ $sequence "holster" {
 $sequence "changefiremode_todelayed" {
 	"change_firemode_todelayed_a"
 	"change_firemode_todelayed_iron_a"
-	activity "ACT_VM_FIREMODE1" 1
+	activity "ACT_VM_IFIREMODE" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event AE_WPN_SET_POSEPARAM 4 "revolver_firemode_pose 1" }

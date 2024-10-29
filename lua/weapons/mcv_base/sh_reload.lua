@@ -136,11 +136,15 @@ function SWEP:Think_Reload()
                     end
 
                     self:SetReloading(false)
-                    self:SetEmptyReload(false)
+                    if !self.AnimationHandlesHammer then
+                        self:SetEmptyReload(false)
+                    end
                 else
                     if self:Clip1() >= ((self:GetClip1Capacity() - self:GetLastClip()) / 2) + self:GetLastClip() and self:GetEmptyReload() then
                         self:PlayAnimation(ACT_VM_RELOAD_END, 1, true)
-                        self:SetEmptyReload(false)
+                        if !self.AnimationHandlesHammer then
+                            self:SetEmptyReload(false)
+                        end
                     else
                         if self:GetAkimbo() then
                             self:PlayAnimation(ACT_VM_RELOAD2, 1, true)
@@ -148,7 +152,7 @@ function SWEP:Think_Reload()
                             self:PlayAnimation(ACT_VM_RELOAD, 1, true)
                         end
 
-                        self:RestoreClip(1)
+                        self:RestoreClip(self.ShotgunReloadRounds)
                     end
                 end
             elseif self.ShotgunReload or (self.HybridReload and self:Clip1() > 0) then
@@ -160,11 +164,13 @@ function SWEP:Think_Reload()
                     end
 
                     self:SetReloading(false)
-                    self:SetEmptyReload(false)
+                    if !self.AnimationHandlesHammer then
+                        self:SetEmptyReload(false)
+                    end
                 else
                     local t = self:PlayAnimation((self.HybridReload or self.ShotgunAltReload) and ACT_VM_RELOAD_INSERT or ACT_VM_RELOAD, mult, true, true)
 
-                    self:RestoreClip(1)
+                    self:RestoreClip(self.ShotgunReloadRounds)
                 end
             else
                 self:SetReloading(false)

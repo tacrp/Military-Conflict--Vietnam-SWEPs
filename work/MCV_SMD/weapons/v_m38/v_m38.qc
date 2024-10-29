@@ -797,6 +797,7 @@ $sequence "boltpull" {
 	{ event 5004 12 "MCV_Weapon_Foley_M38_Reload.HandEnd" }
 	{ event 5004 29 "MCV_Weapon_Foley_M38_Reload.MetalEnd" }
 	{ event AE_CLIENT_EJECT_BRASS 10 "eject" }
+	{ event AE_WPN_SET_POSEPARAM 9 "hammerpos 0" }
 	addlayer "walklayerironsight"
 	addlayer "boltpull_pose"
 	fadein 0.2

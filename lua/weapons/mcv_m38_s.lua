@@ -50,6 +50,8 @@ SWEP.ShotgunAltReload = true
 SWEP.ShotgunReloadEmptyStartAnimation = false
 SWEP.PlayCycleAnimation = true
 SWEP.HasEmptyReload = false
+SWEP.AnimationHandlesHammer = true
+SWEP.InvertAnimationHammer = true
 
 SWEP.AdjustableScopes = true
 
@@ -90,7 +92,7 @@ SWEP.CustomAng = Angle(0, 0, 0)
 SWEP.Spread = 7.7
 SWEP.SpreadIronsighted = 0.05
 
-SWEP.FireRate = 60 // in rounds per minute
+SWEP.FireRate = 600 // in rounds per minute
 SWEP.CyclePostDelay = 0.9
 
 SWEP.CrosshairMinDistance = 8

@@ -53,6 +53,8 @@ SWEP.PlayCycleAnimation = false
 SWEP.LastShotAnimation = false
 SWEP.ShotgunReloadEmptyStartAnimation = false
 SWEP.AkimboDualSingleActionReload = false // Halfway between reloading, change hand
+SWEP.AnimationHandlesHammer = false
+SWEP.InvertAnimationHammer = false
 
 SWEP.RevolverFiremodePose = false // Adds handling for revolver firemode poses
 
@@ -62,6 +64,7 @@ SWEP.ShotgunReload = false
 SWEP.ShotgunAltReload = false // Clip-loading rifles use this set of anims for bullet loading
 SWEP.HybridReload = false
 SWEP.HasEmptyReload = true
+SWEP.ShotgunReloadRounds = 1
 
 SWEP.MagInTime = 0
 SWEP.MagInTimeEmpty = 0
@@ -293,7 +296,7 @@ end
 function SWEP:SecondaryAttack()
     local owner = self:GetOwner()
 
-    if owner:KeyDown(IN_USE) then
+    if owner:KeyPressed(IN_ATTACK2) and owner:KeyDown(IN_USE) then
         self:ToggleBayonet()
     end
 end

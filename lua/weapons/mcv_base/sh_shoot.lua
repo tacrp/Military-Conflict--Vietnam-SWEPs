@@ -121,6 +121,12 @@ end
 function SWEP:FireAnimationEvent( pos, ang, event, name )
     if name == "eject" and IsFirstTimePredicted() then
         self:DoEject()
+    elseif name == "hammerpos 1" and !self.InvertAnimationHammer then
+        self:SetNeedCycle(false)
+        self:SetEmptyReload(false)
+    elseif name == "hammerpos 0" and self.InvertAnimationHammer then
+        self:SetNeedCycle(false)
+        self:SetEmptyReload(false)
     end
 end
 
@@ -343,17 +349,26 @@ function SWEP:ChangeFiremode()
     self:SetFiremode(fm)
 
     local anim = ACT_VM_FIREMODE
+    local mult = 1
+
+    if fm == 1 then
+        mult = -1
+    end
 
     if self:GetBipod() then
         anim = ACT_VM_DFIREMODE
     end
 
+    if self.Firemodes[fm] == MCV.FIREMODE_DA then
+        anim = ACT_VM_IFIREMODE
+        mult = 1
+    elseif self.Firemodes[fm] == MCV.FIREMODE_SA then
+        anim = ACT_VM_IFIREMODE
+        mult = 1
+    end
+
     if self:HasAnimation(anim) then
-        if fm == 1 then
-            self:PlayAnimation(anim, -1, false)
-        else
-            self:PlayAnimation(anim, 1, false)
-        end
+        self:PlayAnimation(anim, mult, false)
     else
         self:SetAnimLockTime(CurTime() + 0.25)
         self:EmitSound("MCV_Weapon_Foley_AK47.DrawMetal")

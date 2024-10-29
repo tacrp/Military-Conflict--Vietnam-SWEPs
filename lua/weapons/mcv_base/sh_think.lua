@@ -47,12 +47,15 @@ function SWEP:Think()
         end
     end
 
-    if !owner:KeyDown(IN_ATTACK) and self:GetNeedCycle() and IsFirstTimePredicted() then
+    if !self:StillWaiting() and !owner:KeyDown(IN_ATTACK) and self:GetNeedCycle() and IsFirstTimePredicted() then
         local cyclespeed = self.CycleSpeed
         local cycledelay = self.CyclePostDelay
         local t = self:PlayAnimation(ACT_VM_RELOAD_INSERT_PULL, cyclespeed, false)
         self:SetNextPrimaryFire(CurTime() + t * cycledelay)
-        self:SetNeedCycle(false)
+
+        if !self.AnimationHandlesHammer then
+            self:SetNeedCycle(false)
+        end
     end
 
     if IsValid(self.MuzzleLight) then

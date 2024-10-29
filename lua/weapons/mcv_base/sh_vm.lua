@@ -64,7 +64,13 @@ function SWEP:DoBodygroups()
         end
     end
 
-    vm:SetPoseParameter("hammerpos", (self:GetNeedCycle() or self:GetEmptyReload() or self:Clip1() == 0) and 0 or 1)
+    local shouldhammer = self:GetNeedCycle() or self:GetEmptyReload() or ((self.ShotgunReload or !self:GetReloading()) and self:Clip1() == 0)
+
+    if self.InvertAnimationHammer then
+        shouldhammer = !shouldhammer
+    end
+
+    vm:SetPoseParameter("hammerpos", shouldhammer and 0 or 1)
 
     vm:SetPoseParameter("empty", self:Clip1() == 0 and 0 or 1)
 

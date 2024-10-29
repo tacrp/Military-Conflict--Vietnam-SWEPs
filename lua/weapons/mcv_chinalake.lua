@@ -69,7 +69,7 @@ SWEP.CustomAng = Angle(0, 0, 0)
 SWEP.Spread = 3
 SWEP.SpreadIronsighted = 1
 
-SWEP.FireRate = 60 // in rounds per minute
+SWEP.FireRate = 600 // in rounds per minute
 SWEP.CycleSpeed = 0.45
 SWEP.CyclePostDelay = 1
 

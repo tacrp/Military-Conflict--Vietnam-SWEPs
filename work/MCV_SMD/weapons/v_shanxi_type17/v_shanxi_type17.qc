@@ -595,9 +595,10 @@ $sequence "ironsight_test" {
 $sequence "idle" {
 	"idle_a"
 	"ironsight_transition"
+	"ironsight"
 	activity "ACT_VM_IDLE" 1
-	blend "ironsight" 0 0.5
-	blendwidth 2
+	blend "ironsight" 0 1
+	blendwidth 3
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
@@ -726,19 +727,30 @@ $sequence "shootpose3" {
 }
 
 $sequence "shootlast" {
-	"shootlast_a"
-	"shootlast_ironsight_a"
+	"basePose_a"
+	"ironsight_transition"
+	"ironsight"
 	activity "ACT_VM_SHOOTLAST" 1
 	blend "ironsight" 0 1
-	blendwidth 2
-	delta
+	blendwidth 3
+	snap
+	addlayer "walklayerironsight"
+	addlayer "shootlast_pose"
 	{ event AE_WPN_SET_POSEPARAM 0 "empty 1" }
 	{ event 5004 1 "MCV_Weapon_Foley_HDM_ShootLast.Metal" }
 	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
 	{ event AE_MUZZLEFLASH 0 "" }
-	fadein 0
-	fadeout 0.2
-	node "Fire"
+	node "0"
+}
+
+$sequence "shootlast_pose" {
+	"shootlast_a"
+	"shootlast_ironsight_a"
+	blend "ironsight" 0 1
+	blendwidth 2
+	delta
+	snap
+	hidden
 }
 
 $sequence "reload_start" {
