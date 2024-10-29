@@ -5,18 +5,18 @@ SWEP.Spawnable = true
 AddCSLuaFile()
 
 // Names and basic information
-SWEP.PrintName = "Shanxi Type 17"
+SWEP.PrintName = "Hézipào"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Shanxi Province"
-SWEP.SubCategory = "Carbines"
+SWEP.SubCategory = "Machine Pistols"
 SWEP.Caliber = ".45 ACP"
 
-SWEP.Slot = 3
+SWEP.Slot = 1
 
 SWEP.ViewModel = "models/weapons/mcv/v_shanxi_type17.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_mle1935.mdl"
 
-SWEP.BodyGroups = "0000"
+SWEP.BodyGroups = "0001"
 
 SWEP.WeaponSelectIcon = NULL
 
@@ -38,7 +38,7 @@ SWEP.RangeModifier = 0.945
 
 // "auto", "semi", "burst", "singleaction", "doubleaction", "fanning", "bolt", "pump"
 SWEP.Firemodes = {
-    MCV.FIREMODE_SEMI
+    MCV.FIREMODE_AUTO
 }
 
 SWEP.LastShotAnimation = true
@@ -50,11 +50,11 @@ SWEP.MagInTime = 0.4
 SWEP.MagInTimeEmpty = 0.4
 
 // View slide from recoil
-SWEP.ViewSlideRecoilUp = 1.45
-SWEP.ViewSlideRecoilRight = 0.62
+SWEP.ViewSlideRecoilUp = 2.85
+SWEP.ViewSlideRecoilRight = 2.85
 
-SWEP.ViewSlideRecoilIronsightUp = 0.6
-SWEP.ViewSlideRecoilIronsightRight = 0.2
+SWEP.ViewSlideRecoilIronsightUp = 1.44
+SWEP.ViewSlideRecoilIronsightRight = 1.44
 
 SWEP.RecoilPushbackValue = 1.5
 
@@ -79,10 +79,10 @@ SWEP.IronsightAng = Angle(0.23, 0.09, 0)
 SWEP.CustomPos = Vector(0, -2, 0)
 SWEP.CustomAng = Angle(0, 0, 0)
 
-SWEP.Spread = 6.1
-SWEP.SpreadIronsighted = 1.55
+SWEP.Spread = 9
+SWEP.SpreadIronsighted = 2.2
 
-SWEP.FireRate = 240 // in rounds per minute -- the MCV script claims its RPM is 120 but there's no way that's correct so im setting it to this for now
+SWEP.FireRate = 550 // in rounds per minute -- the MCV script claims its RPM is 120 but there's no way that's correct so im setting it to this for now
 
 SWEP.CrosshairMinDistance = 8
 SWEP.CrosshairDeltaDistance = 4
@@ -98,12 +98,12 @@ SWEP.Primary.Automatic = true
 SWEP.NearwallDistance = 40
 
 // Bullet spread multiplier according to current stance
-SWEP.CrouchSpreadMultiplier = 0.95
-SWEP.ProneSpreadMultiplier = 0.85
-SWEP.StandMoveSpreadMultiplier = 1.35
-SWEP.SneakMoveSpreadMultiplier = 1.25
+SWEP.CrouchSpreadMultiplier = 0.85
+SWEP.ProneSpreadMultiplier = 0.75
+SWEP.StandMoveSpreadMultiplier = 1.25
+SWEP.SneakMoveSpreadMultiplier = 1.15
 SWEP.CrouchMoveSpreadMultiplier = 1.15
-SWEP.JumpSpreadMultiplier = 3
+SWEP.JumpSpreadMultiplier = 1.7
 
 SWEP.HasBayonet = false
 SWEP.HasBipod = false

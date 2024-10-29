@@ -19,6 +19,7 @@ $bodygroup "Bullets"
 $bodygroup "Stock"
 {
 	studio "Stock_shanxi.smd"
+	blank
 }
 
 
@@ -736,6 +737,7 @@ $sequence "shootlast" {
 	snap
 	addlayer "walklayerironsight"
 	addlayer "shootlast_pose"
+	addlayer "SlidePosition"
 	{ event AE_WPN_SET_POSEPARAM 0 "empty 1" }
 	{ event 5004 1 "MCV_Weapon_Foley_HDM_ShootLast.Metal" }
 	{ event AE_CLIENT_EJECT_BRASS 0 "eject" }
@@ -761,7 +763,7 @@ $sequence "reload_start" {
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_Type17_Reload.Hand" }
 	{ event 5004 8 "MCV_Weapon_Foley_Type17_Reload.MetalStart" }
-	{ event AE_WPN_SET_POSEPARAM 1 "empty 0" }
+	{ event AE_WPN_SET_POSEPARdM 1 "empty 0" }
 	fadein 0.2
 	fadeout 0
 	addlayer "walklayerironsight"
@@ -771,7 +773,7 @@ $sequence "reload_start" {
 $sequence "reload_start_empty" {
 	"reload_s_a_e"
 	"reload_s_a_e_i"
-	activity "ACT_SHOTGUN_RELOADEMPTY_START" 1
+	activity "ACT_VM_RELOAD_INSERT_EMPTY" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_Type17_Reload.Hand" }
@@ -823,6 +825,24 @@ $sequence "reload_end" {
 	"reload_e_a"
 	"reload_e_a_i"
 	activity "ACT_SHOTGUN_RELOAD_FINISH" 1
+	blend "ironsight" 0 1
+	blendwidth 2
+	{ event 5004 4 "MCV_Weapon_Foley_Type17_Reload.MetalStart" }
+	{ event 5004 13 "MCV_Weapon_Foley_Type17_Reload.MetalEnd" }
+	{ event 5004 11 "MCV_Weapon_Foley_Type17_Reload.HandEnd" }
+	{ event AE_CL_BODYGROUP_SET_VALUE 1 "Bullets 1" }
+	{ event AE_CL_BODYGROUP_SET_VALUE 1 "clip 1" }
+	{ event AE_WPN_SET_POSEPARAM 1 "empty 0" }
+	fadein 0
+	fadeout 0.2
+	addlayer "walklayerironsight"
+	node "0"
+}
+
+$sequence "reload_end_empty" {
+	"reload_e_a"
+	"reload_e_a_i"
+	activity "ACT_SHOTGUN_PUMP" 1
 	blend "ironsight" 0 1
 	blendwidth 2
 	{ event 5004 4 "MCV_Weapon_Foley_Type17_Reload.MetalStart" }
