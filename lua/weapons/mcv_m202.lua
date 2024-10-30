@@ -40,8 +40,8 @@ SWEP.VolleyCount = 4
 SWEP.LastShotAnimation = false
 SWEP.MagInClip = false
 
-SWEP.MagInTime = 1.5
-SWEP.MagInTimeEmpty = 1.5
+SWEP.MagInTime = 1.75
+SWEP.MagInTimeEmpty = 1.75
 
 SWEP.ShootEntity = "mcv_proj_m202"
 SWEP.ShootForce = 9000
