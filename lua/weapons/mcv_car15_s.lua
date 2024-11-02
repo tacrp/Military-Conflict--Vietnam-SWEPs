@@ -20,6 +20,8 @@ SWEP.BodyGroups = "0001"
 
 SWEP.WeaponSelectIcon = NULL
 
+SWEP.IconOverride = "entities/mcv_car15s.png"
+
 // Stats
 
 SWEP.DamageGeneric = 35 // damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)

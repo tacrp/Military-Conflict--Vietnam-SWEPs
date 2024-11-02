@@ -21,6 +21,8 @@ SWEP.BodyGroups = "00000"
 
 SWEP.WeaponSelectIcon = NULL
 
+SWEP.IconOverride = "entities/mcv_m38s.png"
+
 SWEP.ViewModelFOV = 80
 SWEP.SightedViewModelFOV = 25
 

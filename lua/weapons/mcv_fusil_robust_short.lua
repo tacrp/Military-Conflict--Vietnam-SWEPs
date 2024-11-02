@@ -19,6 +19,8 @@ SWEP.WorldModel = "models/weapons/mcv/w_izh43_sog.mdl"
 
 SWEP.BodyGroups = ""
 
+SWEP.IconOverride = "entities/mcv_robust_sog.png"
+
 SWEP.WeaponSelectIcon = NULL
 
 // Stats

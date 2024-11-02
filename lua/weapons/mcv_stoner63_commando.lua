@@ -19,6 +19,7 @@ SWEP.WorldModel = "models/weapons/mcv/w_rpd.mdl"
 SWEP.BodyGroups = ""
 
 SWEP.WeaponSelectIcon = NULL
+SWEP.IconOverride = "entities/mcv_stoner63.png"
 
 SWEP.BulletBodygroups = {
     [1] = {1, 1},

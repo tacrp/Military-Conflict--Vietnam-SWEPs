@@ -23,6 +23,7 @@ SWEP.WeaponSelectIcon = NULL
 
 SWEP.ViewModelFOV = 80
 SWEP.SightedViewModelFOV = 40
+SWEP.IconOverride = "entities/mcv_kar98k_s.png"
 
 // Stats
 

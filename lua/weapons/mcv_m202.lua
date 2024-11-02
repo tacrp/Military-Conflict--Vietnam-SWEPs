@@ -20,6 +20,8 @@ SWEP.BodyGroups = "0"
 
 SWEP.WeaponSelectIcon = NULL
 
+SWEP.IconOverride = "entities/mcv_xm202.png"
+
 // Stats
 
 SWEP.Num = 1

@@ -20,6 +20,7 @@ SWEP.WorldModel = "models/weapons/mcv/w_sks.mdl"
 SWEP.BodyGroups = "00000"
 
 SWEP.WeaponSelectIcon = NULL
+SWEP.IconOverride = "entities/mcv_m1903s.png"
 
 // Stats
 

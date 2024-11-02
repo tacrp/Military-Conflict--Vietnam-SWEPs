@@ -20,6 +20,8 @@ SWEP.BodyGroups = ""
 
 SWEP.WeaponSelectIcon = NULL
 
+SWEP.IconOverride = "entities/mcv_m1919a6.png"
+
 SWEP.BulletBodygroups = {
     [1] = {1, 1},
     [2] = {2, 1},

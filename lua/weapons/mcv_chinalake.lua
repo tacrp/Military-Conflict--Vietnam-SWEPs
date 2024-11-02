@@ -19,6 +19,7 @@ SWEP.WorldModel = "models/weapons/mcv/w_sks.mdl"
 SWEP.BodyGroups = "000"
 
 SWEP.WeaponSelectIcon = NULL
+SWEP.IconOverride = "entities/mcv_china_lake.png"
 
 // Stats
 

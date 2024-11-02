@@ -21,6 +21,7 @@ SWEP.BodyGroups = "001"
 SWEP.WeaponSelectIcon = NULL
 
 SWEP.BayonetBodygroup = 1
+SWEP.IconOverride = "entities/mcv_svt40.png"
 
 // Stats
 

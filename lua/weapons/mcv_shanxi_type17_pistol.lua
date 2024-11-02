@@ -19,6 +19,7 @@ SWEP.WorldModel = "models/weapons/mcv/w_mle1935.mdl"
 SWEP.BodyGroups = "0001"
 
 SWEP.WeaponSelectIcon = NULL
+SWEP.IconOverride = "entities/mcv_type17_pistol.png"
 
 // Stats
 

@@ -24,6 +24,8 @@ SWEP.BayonetBodygroup = 1
 SWEP.GrenadeLauncherBodygroup = 3
 SWEP.GrenadeBodygroup = 4
 
+SWEP.IconOverride = "entities/mcv_m21s.png"
+
 // Stats
 
 SWEP.DamageGeneric = 44 // damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)

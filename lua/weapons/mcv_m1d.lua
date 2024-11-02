@@ -20,6 +20,8 @@ SWEP.BodyGroups = "000000"
 
 SWEP.WeaponSelectIcon = NULL
 
+SWEP.IconOverride = "entities/mcv_m1gs.png"
+
 SWEP.BayonetBodygroup = 2
 SWEP.GrenadeLauncherBodygroup = 4
 SWEP.GrenadeBodygroup = 5

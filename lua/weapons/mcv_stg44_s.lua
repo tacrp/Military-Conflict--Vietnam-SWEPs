@@ -19,6 +19,7 @@ SWEP.WorldModel = "models/weapons/mcv/w_car15.mdl"
 SWEP.BodyGroups = "001"
 
 SWEP.WeaponSelectIcon = NULL
+SWEP.IconOverride = "entities/mcv_stg44s.png"
 
 SWEP.SightedViewModelFOV = 30
 

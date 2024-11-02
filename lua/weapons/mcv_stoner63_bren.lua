@@ -21,6 +21,7 @@ SWEP.BodyGroups = ""
 SWEP.WeaponSelectIcon = NULL
 
 SWEP.BayonetBodygroup = 1
+SWEP.IconOverride = "entities/mcv_stoner63_b.png"
 
 // Stats
 

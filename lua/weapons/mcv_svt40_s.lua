@@ -24,6 +24,8 @@ SWEP.BayonetBodygroup = 1
 
 SWEP.SightedViewModelFOV = 30
 
+SWEP.IconOverride = "entities/mcv_svt40s.png"
+
 // Stats
 
 SWEP.DamageGeneric = 43 // damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)

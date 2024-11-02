@@ -23,6 +23,7 @@ SWEP.GrenadeLauncherBodygroup = 2
 SWEP.GrenadeBodygroup = 3
 
 SWEP.WeaponSelectIcon = NULL
+SWEP.IconOverride = "entities/mcv_m1903.png"
 
 // Stats
 

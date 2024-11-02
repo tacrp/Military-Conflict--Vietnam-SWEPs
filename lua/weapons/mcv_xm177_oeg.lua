@@ -18,6 +18,8 @@ SWEP.WorldModel = "models/weapons/mcv/w_car15.mdl"
 
 SWEP.BodyGroups = "00200"
 
+SWEP.IconOverride = "entities/mcv_car15s.png"
+
 SWEP.WeaponSelectIcon = NULL
 
 // Stats
