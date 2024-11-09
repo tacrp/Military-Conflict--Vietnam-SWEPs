@@ -21,8 +21,6 @@ SWEP.GrenadeBodygroup = 0
 
 SWEP.BulletBodygroups = nil
 
-SWEP.WeaponSelectIcon = NULL
-
 SWEP.ViewModelFOV = 80
 SWEP.SightedViewModelFOV = 40
 

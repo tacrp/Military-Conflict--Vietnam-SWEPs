@@ -215,3 +215,24 @@ function SWEP:PrintWeaponInfo(x, y, alpha)
     draw.RoundedBox(8, x - 5, y - 6, 260, self.InfoMarkup:GetHeight() + 18, Color(60, 60, 60, alpha))
     self.InfoMarkup:Draw(x + 5, y + 5, nil, nil, alpha)
 end
+
+SWEP.Mat_Select = nil
+
+function SWEP:DrawWeaponSelection(x, y, w, h, a)
+    if !self.Mat_Select then
+        self.Mat_Select = Material(self.IconOverride or  "entities/" .. self:GetClass() .. ".png", "smooth mips")
+
+    end
+
+    surface.SetDrawColor(255, 255, 255, 255)
+    surface.SetMaterial(self.Mat_Select)
+    if self.IconOverride then
+        w = w - 128
+        x = x + 64
+    end
+    if w > h then
+        y = y - ((w - h) / 2)
+    end
+
+    surface.DrawTexturedRect(x, y, w, w)
+end
