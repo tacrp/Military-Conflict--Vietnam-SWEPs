@@ -20,7 +20,9 @@ function SWEP:DoMuzzle(alt)
         muzz_qca = vm:LookupAttachment("muzzle2")
     end
 
-    if self:GetAkimbo() and self:Clip1() % 2 == 1 and self:GetFiremodeValue() != MCV.FIREMODE_VOLLEY then
+    local is_volley = self:GetFiremodeValue() == MCV.FIREMODE_VOLLEY and self:Clip1() >= self.VolleyCount
+
+    if self:GetAkimbo() and self:Clip1() % 2 == 1 and !is_volley then
         muzz_qca = vm:LookupAttachment("muzzleleft") > 0 and vm:LookupAttachment("muzzleleft") or vm:LookupAttachment("muzzle2")
     end
 
@@ -30,7 +32,7 @@ function SWEP:DoMuzzle(alt)
 
     util.Effect( "mcv_muzzleeffect", data )
 
-    if self:GetAkimbo() and self:Clip1() > 1 and self:GetFiremodeValue() == MCV.FIREMODE_VOLLEY then
+    if self:GetAkimbo() and is_volley then
         local data2 = EffectData()
         data:SetEntity(self)
         data:SetAttachment(4)

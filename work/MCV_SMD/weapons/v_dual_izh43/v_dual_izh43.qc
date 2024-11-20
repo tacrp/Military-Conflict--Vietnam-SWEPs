@@ -689,8 +689,8 @@ $sequence "shoot_double_r" {
 }
 
 $sequence "shoot_double_r_pose" {
-	"shootlast_r_a"
-	"shootlast_r_ironsight_a"
+	"shoot_double"
+	"shoot_double_ironsight"
 	blend "ironsight" 0 1
 	blendwidth 2
 	delta

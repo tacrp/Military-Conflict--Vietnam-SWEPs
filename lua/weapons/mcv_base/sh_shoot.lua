@@ -48,7 +48,7 @@ function SWEP:PrimaryAttack()
     local t = 0
 
     if self:GetAkimbo() then
-        if fm == MCV.FIREMODE_VOLLEY then
+        if fm == MCV.FIREMODE_VOLLEY and self:Clip1() >= self.VolleyCount then
             t = self:PlayAnimation(ACT_VM_RECOIL1, 0.5)
         elseif fm == MCV.FIREMODE_DA then
             if self:Clip1() % 2 == 0 then
@@ -68,7 +68,7 @@ function SWEP:PrimaryAttack()
             end
         end
     else
-        if fm == MCV.FIREMODE_VOLLEY then
+        if fm == MCV.FIREMODE_VOLLEY and self:Clip1() >= self.VolleyCount then
             t = self:PlayAnimation(ACT_VM_RECOIL1, 0.5)
         elseif fm == MCV.FIREMODE_DA then
             if self:GetAkimbo() and self:Clip1() % 2 == 0 then

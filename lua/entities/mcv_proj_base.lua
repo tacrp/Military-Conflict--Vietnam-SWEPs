@@ -271,24 +271,6 @@ function ENT:Think()
     if self.ExplodeUnderwater and self:WaterLevel() > 0 then
         self:PreDetonate()
     end
-	
--- Gunship + Chopper fix taken from ARC9 Black Ops Pack
--- This was supposed to fix Zippy's Extended AI Navigation breaking collision checks but ended up not doing anything. Keeping it here for posterity's sake.
-	local gunship = {["npc_combinegunship"] = true, ["npc_combinedropship"] = true}
-	
-	if self.GunshipWorkaround and (self.GunshipCheck or 0 < CurTime()) then
-            self.GunshipCheck = CurTime() + 0.33
-            local tr = util.TraceLine({
-                start = self:GetPos(),
-                endpos = self:GetPos() + (self:GetVelocity() * 6 * engine.TickInterval()),
-                filter = self,
-                mask = MASK_SHOT
-            })
-		if IsValid(tr.Entity) and gunship[tr.Entity:GetClass()] then
-            self:SetPos(tr.HitPos)
-            self:Detonate()
-        end
-	end
 
     self:DoSmokeTrail()
 
@@ -347,9 +329,3 @@ function ENT:Draw()
         render.DrawSprite(self:GetPos() + (self:GetAngles():Forward() * -16), math.Rand(self.FlareSizeMin, self.FlareSizeMax), math.Rand(self.FlareSizeMin, self.FlareSizeMax), self.FlareColor)
     end
 end
-
-hook.Add("EntityTakeDamage", "mcv_proj_collision", function(ent, dmginfo)
-    if IsValid(dmginfo:GetInflictor())
-            and scripted_ents.IsBasedOn(dmginfo:GetInflictor():GetClass(), "mcv_proj_base")
-            and dmginfo:GetDamageType() == DMG_CRUSH then dmginfo:SetDamage(0) return true end
-end)
