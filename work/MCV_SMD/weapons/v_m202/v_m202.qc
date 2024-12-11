@@ -354,7 +354,7 @@ $animation "pickup_e_a_i" "v_m202_anims\pickup_e_a_i.smd" {
 $sequence "runlayer" {
 	"runIdle_a"
 	"run_a"
-	blend "player_movement" 70 135
+	blend "player_movement" 110 200
 	blendwidth 2
 	delta
 	fadein 0.2
@@ -367,7 +367,7 @@ $sequence "walklayer" {
 	"walkIdle_a"
 	"walk_a"
 	"walkIdle_a"
-	blend "player_movement" 0 140
+	blend "player_movement" 0 220
 	blendwidth 3
 	delta
 	fadein 0.2
@@ -379,7 +379,7 @@ $sequence "walklayer" {
 $sequence "walklayerironsight" {
 	"walkIdle_a"
 	"walk_a"
-	blend "player_movement" 0 140
+	blend "player_movement" 0 130
 	blendwidth 2
 	delta
 	fadein 0.2
