@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "F1" // DU DU DU DU MAX VERSTAPEN DU DU DU DU MAX VERSTAPEN
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Australia"
-SWEP.SubCategory = "Submachine Guns"
+SWEP.SubCategory = "ANZAC Forces"
 SWEP.Caliber = "9x19mm"
 
 SWEP.Slot = 2

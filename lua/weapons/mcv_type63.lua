@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "Type 63"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "People's Republic of China"
-SWEP.SubCategory = "Carbines"
+SWEP.SubCategory = "National Liberation Front"
 SWEP.Caliber = "7.62x39mm"
 
 SWEP.Slot = 3

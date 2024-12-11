@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "Carl Gustaf M/45 SOG"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Sweden"
-SWEP.SubCategory = "Submachine Guns"
+SWEP.SubCategory = "United States Army"
 SWEP.Caliber = "9x19mm"
 
 SWEP.Slot = 2

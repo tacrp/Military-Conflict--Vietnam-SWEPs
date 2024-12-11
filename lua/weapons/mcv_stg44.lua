@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "StG-44"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Nazi Germany"
-SWEP.SubCategory = "Assault Rifles"
+SWEP.SubCategory = "National Liberation Front"
 SWEP.Caliber = "7.92x33mm"
 
 SWEP.Slot = 3

@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "Baby Browning"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "United States of America"
-SWEP.SubCategory = "Pistols"
+SWEP.SubCategory = "United States Army"
 SWEP.Caliber = ".25 ACP"
 
 SWEP.Slot = 1

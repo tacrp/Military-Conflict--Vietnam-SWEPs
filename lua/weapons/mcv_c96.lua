@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "Mauser C96"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "German Empire"
-SWEP.SubCategory = "Pistols"
+SWEP.SubCategory = "National Liberation Front"
 SWEP.Caliber = "7.63x25mm"
 
 SWEP.Slot = 1

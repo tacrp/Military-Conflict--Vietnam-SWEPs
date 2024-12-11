@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "LDP Kommando"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Republic of Rhodesia"
-SWEP.SubCategory = "Submachine Guns"
+SWEP.SubCategory = "Rhodesian Forces"
 SWEP.Caliber = "9x19mm"
 
 SWEP.Slot = 2

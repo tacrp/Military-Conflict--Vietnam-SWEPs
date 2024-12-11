@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "M1897"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "United States of America"
-SWEP.SubCategory = "Shotguns"
+SWEP.SubCategory = "People's Army of Vietnam"
 SWEP.Caliber = "12 Gauge Shell"
 
 SWEP.Slot = 2

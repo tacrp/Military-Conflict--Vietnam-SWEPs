@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "Uzi"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Israel"
-SWEP.SubCategory = "Submachine Guns"
+SWEP.SubCategory = "United States Army"
 SWEP.Caliber = "9x19mm"
 
 SWEP.Slot = 2

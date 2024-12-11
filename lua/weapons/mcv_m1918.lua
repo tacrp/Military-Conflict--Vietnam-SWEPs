@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "M1918A2 BAR"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "United States of America"
-SWEP.SubCategory = "Battle Rifles"
+SWEP.SubCategory = "Army of the Republic of Vietnam"
 SWEP.Caliber = ".30-06"
 
 SWEP.Slot = 3

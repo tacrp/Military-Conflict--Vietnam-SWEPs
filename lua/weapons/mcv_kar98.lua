@@ -9,7 +9,7 @@ AddCSLuaFile()
 SWEP.PrintName = "Karabiner 98K"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Nazi Germany"
-SWEP.SubCategory = "Bolt-Action Rifles" -- classed as a carbine in MCV but putting it here to pad out the bolt actions category for our sake
+SWEP.SubCategory = "National Liberation Front" -- classed as a carbine in MCV but putting it here to pad out the bolt actions category for our sake
 SWEP.Caliber = "7.92x57mm"
 
 SWEP.Slot = 3

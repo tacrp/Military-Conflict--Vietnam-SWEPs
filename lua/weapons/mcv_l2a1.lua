@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "L2A1"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Australia"
-SWEP.SubCategory = "Light-Machine Guns"
+SWEP.SubCategory = "ANZAC Forces"
 SWEP.Caliber = "7.62x51mm"
 
 SWEP.Slot = 3

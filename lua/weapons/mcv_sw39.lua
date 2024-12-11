@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "S&W M39-2"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "United States of America"
-SWEP.SubCategory = "Pistols"
+SWEP.SubCategory = "United States Army"
 SWEP.Caliber = "9x19mm"
 
 SWEP.Slot = 1

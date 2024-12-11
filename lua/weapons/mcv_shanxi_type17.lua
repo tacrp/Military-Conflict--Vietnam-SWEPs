@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "Shanxi Type 17"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Shanxi Province"
-SWEP.SubCategory = "Carbines"
+SWEP.SubCategory = "National Liberation Front"
 SWEP.Caliber = ".45 ACP"
 
 SWEP.Slot = 3

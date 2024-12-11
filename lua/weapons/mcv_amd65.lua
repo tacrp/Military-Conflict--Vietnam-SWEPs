@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "AMD-65"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Hungary"
-SWEP.SubCategory = "Carbines"
+SWEP.SubCategory = "People's Army of Vietnam"
 SWEP.Caliber = "7.62x39mm"
 
 SWEP.Slot = 3

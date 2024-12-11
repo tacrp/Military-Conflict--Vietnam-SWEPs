@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "M12 Beretta"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Italy"
-SWEP.SubCategory = "Submachine Guns"
+SWEP.SubCategory = "United States Army"
 SWEP.Caliber = "9x19mm"
 
 SWEP.Slot = 2
