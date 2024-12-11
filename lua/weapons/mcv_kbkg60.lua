@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "Kbkg 60"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Polish People's Republic"
-SWEP.SubCategory = "People's Army of Vietnam"
+SWEP.SubCategory = "Assault Rifles"
 SWEP.Caliber = "7.62x39mm"
 
 SWEP.Slot = 3

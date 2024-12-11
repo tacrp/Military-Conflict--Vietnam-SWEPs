@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "Type 64"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "People's Republic of China"
-SWEP.SubCategory = "People's Army of Vietnam"
+SWEP.SubCategory = "Submachine Guns"
 SWEP.Caliber = "9x19mm"
 
 SWEP.Slot = 2

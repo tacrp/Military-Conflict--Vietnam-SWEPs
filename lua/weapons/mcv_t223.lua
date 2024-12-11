@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "H&R T223"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "United States of America"
-SWEP.SubCategory = "United States Army"
+SWEP.SubCategory = "Assault Rifles"
 SWEP.Caliber = "5.56x45mm"
 
 SWEP.Slot = 3

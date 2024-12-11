@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "M37 Ithaca"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "United States of America"
-SWEP.SubCategory = "Army of the Republic of Vietnam"
+SWEP.SubCategory = "Shotguns"
 SWEP.Caliber = "12 Gauge Shell"
 
 SWEP.Slot = 2

@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "M1A1 Carbine"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "United States of America"
-SWEP.SubCategory = "Army of the Republic of Vietnam"
+SWEP.SubCategory = "Carbines"
 SWEP.Caliber = ".30 Carbine"
 
 SWEP.Slot = 3

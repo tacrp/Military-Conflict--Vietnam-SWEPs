@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "Cobra Mk1"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Republic of Rhodesia"
-SWEP.SubCategory = "Rhodesian Forces"
+SWEP.SubCategory = "Submachine Guns"
 SWEP.Caliber = "9x19mm"
 
 SWEP.Slot = 2

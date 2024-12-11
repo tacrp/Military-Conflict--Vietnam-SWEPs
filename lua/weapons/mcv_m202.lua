@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "M202 FLASH"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "United States of America"
-SWEP.SubCategory = "United States Army"
+SWEP.SubCategory = "Special Weapons"
 SWEP.Caliber = "66mm Rocket"
 
 SWEP.Slot = 4

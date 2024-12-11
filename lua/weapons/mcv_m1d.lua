@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "M1D Garand"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "United States of America"
-SWEP.SubCategory = "Army of the Republic of Vietnam"
+SWEP.SubCategory = "Sniper Rifles"
 SWEP.Caliber = ".30-06"
 
 SWEP.Slot = 3

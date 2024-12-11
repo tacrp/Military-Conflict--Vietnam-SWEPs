@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "TT-33"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Soviet Union"
-SWEP.SubCategory = "National Liberation Front"
+SWEP.SubCategory = "Pistols"
 SWEP.Caliber = "7.62x25mm Tokarev"
 
 SWEP.Slot = 1

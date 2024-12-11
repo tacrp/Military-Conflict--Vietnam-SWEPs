@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "QSPR"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "United States of America"
-SWEP.SubCategory = "United States Army"
+SWEP.SubCategory = "Revolvers"
 SWEP.Caliber = "10mm QSPR"
 
 SWEP.Slot = 1

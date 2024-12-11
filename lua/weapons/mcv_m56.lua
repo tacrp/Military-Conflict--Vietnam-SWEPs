@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "M56"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Yugoslavia"
-SWEP.SubCategory = "National Liberation Front"
+SWEP.SubCategory = "Submachine Guns"
 SWEP.Caliber = "9x19mm"
 
 SWEP.Slot = 2

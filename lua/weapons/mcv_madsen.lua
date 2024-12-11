@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "Madsen M/50"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Kingdom of Denmark"
-SWEP.SubCategory = "United States Army"
+SWEP.SubCategory = "Submachine Guns"
 SWEP.Caliber = "9x19mm"
 
 SWEP.Slot = 2

@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "RPG-7"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Soviet Union"
-SWEP.SubCategory = "People's Army of Vietnam"
+SWEP.SubCategory = "Special Weapons"
 SWEP.Caliber = "40mm Rocket"
 
 SWEP.Slot = 4

@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "PM md. 63"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Romania"
-SWEP.SubCategory = "People's Army of Vietnam"
+SWEP.SubCategory = "Assault Rifles"
 SWEP.Caliber = "7.62x39mm"
 
 SWEP.Slot = 3

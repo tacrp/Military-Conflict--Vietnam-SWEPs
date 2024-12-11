@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "Hézipào"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Shanxi Province"
-SWEP.SubCategory = "National Liberation Front"
+SWEP.SubCategory = "Machine Pistols"
 SWEP.Caliber = ".45 ACP"
 
 SWEP.Slot = 1

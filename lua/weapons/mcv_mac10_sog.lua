@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "MAC-10 SOG"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "United States of America"
-SWEP.SubCategory = "United States Army"
+SWEP.SubCategory = "Machine Pistols"
 SWEP.Caliber = "9x19mm"
 
 SWEP.Slot = 2

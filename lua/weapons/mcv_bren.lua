@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "Bren"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "United Kingdom"
-SWEP.SubCategory = "ANZAC Forces"
+SWEP.SubCategory = "Light-Machine Guns"
 SWEP.Caliber = ".303 British"
 
 SWEP.Slot = 3

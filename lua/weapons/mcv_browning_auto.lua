@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "Auto 5" -- no copyright infringe-erino mister artig!!!!!!!!!!!
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "United States of America"
-SWEP.SubCategory = "Rhodesian Forces"
+SWEP.SubCategory = "Shotguns"
 SWEP.Caliber = "12 Gauge Shell"
 
 SWEP.Slot = 2

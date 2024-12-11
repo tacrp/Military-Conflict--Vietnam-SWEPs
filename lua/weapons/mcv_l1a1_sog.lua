@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "L1A1 SASR" // aka "The Bitch"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Australia"
-SWEP.SubCategory = "ANZAC Forces"
+SWEP.SubCategory = "Battle Rifles"
 SWEP.Caliber = "7.62x51mm"
 
 SWEP.Slot = 3

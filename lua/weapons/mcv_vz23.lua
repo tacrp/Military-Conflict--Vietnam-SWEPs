@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "Vz. 23"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Czechoslovakia"
-SWEP.SubCategory = "National Liberation Front"
+SWEP.SubCategory = "Submachine Guns"
 SWEP.Caliber = "9x19mm"
 
 SWEP.Slot = 2

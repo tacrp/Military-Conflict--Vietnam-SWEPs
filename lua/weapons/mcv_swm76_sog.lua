@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "S&W M76 SOG"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "United States of America"
-SWEP.SubCategory = "United States Army"
+SWEP.SubCategory = "Submachine Guns"
 SWEP.Caliber = "9x19mm"
 
 SWEP.Slot = 2

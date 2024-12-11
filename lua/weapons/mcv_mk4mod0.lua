@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "Mk 4 Mod 0"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "United States of America"
-SWEP.SubCategory = "United States Army"
+SWEP.SubCategory = "Assault Rifles"
 SWEP.Caliber = "5.56x45mm"
 
 SWEP.Slot = 3

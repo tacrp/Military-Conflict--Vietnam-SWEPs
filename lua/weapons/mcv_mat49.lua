@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "MAT-49"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "France"
-SWEP.SubCategory = "National Liberation Front"
+SWEP.SubCategory = "Submachine Guns"
 SWEP.Caliber = "7.62x25mm Tokarev"
 
 SWEP.Slot = 2

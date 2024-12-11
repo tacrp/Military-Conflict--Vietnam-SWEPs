@@ -9,7 +9,7 @@ AddCSLuaFile()
 SWEP.PrintName = "M40"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "United States of America"
-SWEP.SubCategory = "United States Army"
+SWEP.SubCategory = "Sniper Rifles"
 SWEP.Caliber = "7.62x51mm"
 
 SWEP.Slot = 3

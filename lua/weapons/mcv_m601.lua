@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "M601" -- There were only 300 of these made and they were made for the Air Force whats a random Army GI in Nam doing with one?
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "United States of America"
-SWEP.SubCategory = "United States Army"
+SWEP.SubCategory = "Assault Rifles"
 SWEP.Caliber = "5.56x45mm"
 
 SWEP.Slot = 3

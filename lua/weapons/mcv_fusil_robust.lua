@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "Fusil Robust"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "France"
-SWEP.SubCategory = "National Liberation Front"
+SWEP.SubCategory = "Shotguns"
 SWEP.Caliber = "12 Gauge Shell"
 
 SWEP.Slot = 2

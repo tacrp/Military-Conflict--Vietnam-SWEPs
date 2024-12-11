@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "HDM"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "United States of America"
-SWEP.SubCategory = "United States Army"
+SWEP.SubCategory = "Pistols"
 SWEP.Caliber = ".22 Long Rifle"
 
 SWEP.Slot = 1

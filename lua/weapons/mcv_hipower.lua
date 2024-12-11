@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "Browning Hi-Power"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Belgium"
-SWEP.SubCategory = "ANZAC Forces"
+SWEP.SubCategory = "Pistols"
 SWEP.Caliber = "9x19mm"
 
 SWEP.Slot = 1

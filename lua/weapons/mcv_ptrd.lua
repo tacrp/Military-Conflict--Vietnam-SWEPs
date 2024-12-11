@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "PTRD-41"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Soviet Union"
-SWEP.SubCategory = "National Liberation Front"
+SWEP.SubCategory = "Special Weapons"
 SWEP.Caliber = "14.5x114mm"
 
 SWEP.Slot = 4

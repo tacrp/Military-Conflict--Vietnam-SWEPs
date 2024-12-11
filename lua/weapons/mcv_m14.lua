@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "M14"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "United States of America"
-SWEP.SubCategory = "United States Army"
+SWEP.SubCategory = "Battle Rifles"
 SWEP.Caliber = "7.62x51mm"
 
 SWEP.Slot = 3

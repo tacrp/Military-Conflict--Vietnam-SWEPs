@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "TUL-1"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Democratic Republic of Vietnam"
-SWEP.SubCategory = "National Liberation Front"
+SWEP.SubCategory = "Light-Machine Guns"
 SWEP.Caliber = "7.62x39mm"
 
 SWEP.Slot = 3
