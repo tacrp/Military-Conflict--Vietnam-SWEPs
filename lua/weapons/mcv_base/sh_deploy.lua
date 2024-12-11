@@ -1,4 +1,5 @@
 function SWEP:Deploy()
+    self:GetOwner():SetSaveValue("m_flNextAttack", 0)
     if !self:GetReady() then
         self:PlayAnimation(ACT_VM_READY, 1, true)
         self:SetReady(true)
