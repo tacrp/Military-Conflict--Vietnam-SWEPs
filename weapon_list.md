@@ -1,8 +1,7 @@
 // This is every weapon in the files that is fully textured and animated and thus, can be made into useable SWEPs.
 
 [n] = Denotes the viewmodel is ingame but has severe visual issues
-[X] = Denotes the viewmodel has been fixed, compiled and is now ingame. Does not denote actual completeness
-{X} = Denotes the SWEP is complete. VM, WM, all features and stats are correct and ingame.
+[X] = Denotes the viewmodel is ingame and without severe visual issues.
 
 ## US/ARVN/ANZAC Weapons:
 
@@ -58,6 +57,7 @@ Submachine Guns:
 Assault Rifles:
 
 - M16A1 [X]
+- M16A1 M203 [n]
 - Mk 4 Mod 0 [X]
 - M601 [X]
 - M16A1 M203 [X]
@@ -128,8 +128,8 @@ Launchers/Anti-Armor:
 - M79 Grenade Launcher [X]
 - M79 SOG [X]
 - China Lake Grenade Launcher [X]
-- M72 LAW
-- M202 FLASH
+- M72 LAW [X]
+- M202 FLASH [X]
 
 
 Grenades/Explosives:
@@ -171,7 +171,7 @@ Pistols:
 - Mauser C96 [X]
 - Homemade Pistol
 - PB [X]
-- Type 64 Pistol
+- Type 64 Pistol [X]
 - Type 67
 
 
@@ -200,7 +200,7 @@ Submachine Guns:
 - MAS-38 [X]
 - Type 64 SMG
 - MP 40 [X]
-- M56
+- M56 [X]
 
 
 Assault Rifles:
@@ -229,7 +229,7 @@ Carbines:
 - Type 63 [X]
 - Type 63 Folding Stock [X]
 - SKS [X]
-- Shanxi Type 17
+- Shanxi Type 17 [X]
 
 
 Shotguns:
@@ -268,7 +268,7 @@ Light-Machine Guns:
 Launchers/Anti-Armor:
 
 - RPG-7 [X]
-- RPG-2
+- RPG-2 [X]
 - PTRD-41 [X]
 
 
