@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "Vz. 58"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Czechoslovakia"
-SWEP.SubCategory = "Assault Rifles"
+SWEP.SubCategory = "National Liberation Front"
 SWEP.Caliber = "7.62x39mm"
 
 SWEP.Slot = 3

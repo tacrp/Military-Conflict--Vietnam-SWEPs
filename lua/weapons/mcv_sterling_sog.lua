@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "Sterling L34A1"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "United Kingdom"
-SWEP.SubCategory = "Submachine Guns"
+SWEP.SubCategory = "ANZAC Forces"
 SWEP.Caliber = "9x19mm"
 
 SWEP.Slot = 2

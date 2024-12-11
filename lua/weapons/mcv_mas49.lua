@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "MAS-49"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "France"
-SWEP.SubCategory = "Battle Rifles"
+SWEP.SubCategory = "National Liberation Front"
 SWEP.Caliber = "7.5x54mm"
 
 SWEP.Slot = 3

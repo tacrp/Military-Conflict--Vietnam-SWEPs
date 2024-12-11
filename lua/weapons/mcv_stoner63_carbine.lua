@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "Stoner 63A Carbine"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "United States of America"
-SWEP.SubCategory = "Carbines"
+SWEP.SubCategory = "United States Army"
 SWEP.Caliber = "5.56x45mm"
 
 SWEP.Slot = 3

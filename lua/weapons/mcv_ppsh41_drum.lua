@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "PPSh-41 Drum"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Soviet Union"
-SWEP.SubCategory = "Submachine Guns"
+SWEP.SubCategory = "National Liberation Front"
 SWEP.Caliber = "7.62x25mm"
 
 SWEP.Slot = 2

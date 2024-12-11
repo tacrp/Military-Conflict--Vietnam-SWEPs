@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "Mk 22 Mod 0"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "United States of America"
-SWEP.SubCategory = "Pistols"
+SWEP.SubCategory = "United States Army"
 SWEP.Caliber = "9x19mm"
 
 SWEP.Slot = 1

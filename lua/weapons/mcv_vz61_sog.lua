@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "Vz. 61e Đặc Công"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Czechoslovakia"
-SWEP.SubCategory = "Machine Pistols"
+SWEP.SubCategory = "People's Army of Vietnam"
 SWEP.Caliber = ".32 ACP"
 
 SWEP.Slot = 1

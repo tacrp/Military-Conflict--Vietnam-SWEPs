@@ -7,8 +7,8 @@ AddCSLuaFile()
 // Names and basic information
 SWEP.PrintName = "Nagant M1895"
 SWEP.Category = "Military Conflict: Vietnam"
-SWEP.Country = "Belgium"
-SWEP.SubCategory = "Revolvers"
+SWEP.Country = "Russian Empire"
+SWEP.SubCategory = "National Liberation Front"
 SWEP.Caliber = "7.62x38mmR"
 
 SWEP.Slot = 1

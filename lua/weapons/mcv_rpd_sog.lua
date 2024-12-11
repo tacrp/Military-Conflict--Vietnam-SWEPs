@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "RPD SOG"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Soviet Union"
-SWEP.SubCategory = "Light-Machine Guns"
+SWEP.SubCategory = "United States Army"
 SWEP.Caliber = "7.62x39mm"
 
 SWEP.Slot = 3

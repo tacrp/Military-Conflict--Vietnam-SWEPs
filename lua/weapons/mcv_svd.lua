@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "SVD"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Soviet Union"
-SWEP.SubCategory = "Sniper Rifles"
+SWEP.SubCategory = "People's Army of Vietnam"
 SWEP.Caliber = "7.62x54mmR"
 
 SWEP.Slot = 3

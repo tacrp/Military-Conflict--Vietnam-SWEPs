@@ -9,7 +9,7 @@ AddCSLuaFile()
 SWEP.PrintName = "M1903 Springfield"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "United States of America"
-SWEP.SubCategory = "Bolt-Action Rifles"
+SWEP.SubCategory = "Army of the Republic of Vietnam"
 SWEP.Caliber = ".30-06"
 
 SWEP.Slot = 3

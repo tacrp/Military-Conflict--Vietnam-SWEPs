@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "M72 LAW"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "United States of America"
-SWEP.SubCategory = "Special Weapons"
+SWEP.SubCategory = "United States Army"
 SWEP.Caliber = "66mm Rocket"
 
 SWEP.Slot = 4

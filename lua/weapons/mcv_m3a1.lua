@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "M3A1 Grease Gun"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "United States of America"
-SWEP.SubCategory = "Submachine Guns"
+SWEP.SubCategory = "United States Army"
 SWEP.Caliber = ".45 ACP"
 
 SWEP.Slot = 2
