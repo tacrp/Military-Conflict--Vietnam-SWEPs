@@ -8,7 +8,7 @@ AddCSLuaFile()
 SWEP.PrintName = "M79 SOG"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "United States of America"
-SWEP.SubCategory = "Special Weapons"
+SWEP.SubCategory = "Anti-Armor"
 SWEP.Caliber = "40x46mm Grenade"
 
 SWEP.Slot = 4
