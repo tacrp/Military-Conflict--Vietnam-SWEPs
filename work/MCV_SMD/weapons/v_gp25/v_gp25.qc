@@ -820,7 +820,7 @@ $sequence "gl" {
 	blendwidth 3
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
+	//addlayer "walklayer"
 	addlayer "runlayer"
 	node "0"
 }
@@ -834,7 +834,7 @@ $sequence "idle_to_gl" {
 	{ event 5004 1 "MCV_Weapon_Foley_Ironsights.In" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
+	//addlayer "walklayer"
 }
 
 $sequence "gl_to_idle" {
@@ -846,7 +846,7 @@ $sequence "gl_to_idle" {
 	{ event 5004 1 "MCV_Weapon_Foley_Ironsights.Out" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
+	//addlayer "walklayer"
 }
 
 $sequence "gl_shoot" {
@@ -856,7 +856,7 @@ $sequence "gl_shoot" {
 	activity "ACT_VM_ISHOOT_M203" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	addlayer "gl_shoot_pose"
 }
 
@@ -880,7 +880,7 @@ $sequence "reload_secondary" {
 	{ event 5004 33 "MCV_Weapon_Foley_AK47_Reload.Grenade" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
+	//addlayer "walklayer"
 	node "0"
 }
 
@@ -893,7 +893,7 @@ $sequence "gl_draw" {
 	{ event 5004 1 "MCV_Weapon_Foley_AK47.Draw" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
+	//addlayer "walklayer"
 }
 
 $sequence "gl_prone" {

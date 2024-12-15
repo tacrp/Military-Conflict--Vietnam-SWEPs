@@ -767,7 +767,7 @@ $sequence "gl" {
 	blendwidth 3
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	addlayer "runlayer"
 	node "0"
 }
@@ -779,7 +779,7 @@ $sequence "idle_to_gl" {
 	{ event 5004 10 "MCV_Weapon_Foley_M16A1_GrenadeSight.In" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
+	//addlayer "walklayer"
 	fps 30
 	
 	
@@ -792,7 +792,7 @@ $sequence "gl_to_idle" {
 	{ event 5004 10 "MCV_Weapon_Foley_M16A1_GrenadeSight.Out" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
+	//addlayer "walklayer"
 	fps 30
 	
 	
@@ -805,7 +805,7 @@ $sequence "gl_shoot" {
 	activity "ACT_VM_ISHOOT_M203" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	addlayer "walklayerironsight"
+	//addlayer "walklayerironsight"
 	addlayer "gl_shoot_pose"
 }
 
@@ -841,7 +841,7 @@ $sequence "gl_draw" {
 	{ event 5004 1 "MCV_Weapon_Foley_M16A1.Draw" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
+	//addlayer "walklayer"
 	fps 30
 	
 	
