@@ -25,7 +25,7 @@ All oddities, visual bugs and WIP elements that need addressing
 
 - PTRD-41 idle jitters (likely due to not using "frame 1 1" in the QC)
 
-- M14, XM21, M2 Carbine, VZ58 bolts visibly close then reopen on empty reloads.
+- M14, XM21, M2 Carbine, VZ58, MAS-49 bolts visibly close then reopen on empty reloads.
 NOTE: Please do not resort to using "snap" to fix this. "snap" should only be used on firing anims because it causes issues with weapons snapping directly to their sprint/ADS poses and vice versa when used on idles and reloads.
 
 - Shanxi Type 17 + Hezipao lack their empty reload start animation.
