@@ -190,20 +190,37 @@ def step_materials(args, vpk):
     dirs = referenced_material_dirs()
     dst_root = os.path.join(ADDON, "materials", "models", "weapons", "mcv")
     n = 0
+    inverted = kept = 0
     for p in sorted(vpk.entries):
         m = re.match(r'materials/models/weapons/([^/]+)/(.+)$', p, re.I)
         if not m or m.group(1).lower() not in dirs:
+            continue
+        out = os.path.join(dst_root, m.group(1), m.group(2).replace("/", os.sep))
+        # The optics folder holds hand-made lens materials and reticles whose alpha was
+        # inverted for the RT scope; never overwrite what is already there.
+        is_optics = m.group(1).lower() == "optics"
+        if is_optics and os.path.isfile(out):
+            kept += 1
             continue
         data = vpk.read(p)
         if p.lower().endswith(".vmt"):
             txt = data.decode("latin-1")
             txt = re.sub(r'(models)([\\/])(weapons)([\\/])(?!mcv[\\/])', r'\1\2\3\4mcv\4', txt, flags=re.I)
             data = txt.encode("latin-1")
-        out = os.path.join(dst_root, m.group(1), m.group(2).replace("/", os.sep))
         os.makedirs(os.path.dirname(out), exist_ok=True)
         with open(out, "wb") as f:
             f.write(data)
         n += 1
+        if is_optics and re.search(r'(?i)crosshair_[^/]*\.vtf$', p):
+            # the game's reticles are opaque glass / transparent lines; the RT scope paints
+            # black where alpha is high, so invert (exact DXT5 alpha block remap)
+            from vtf_invert_alpha import invert_alpha
+            try:
+                invert_alpha(out); inverted += 1
+            except Exception as e:
+                log("  %s: alpha not inverted (%s)" % (os.path.basename(out), e))
+    if kept or inverted:
+        log("materials: optics: %d existing files kept, %d new reticles alpha-inverted" % (kept, inverted))
     log("materials: %d files for %d weapon material dirs -> materials/models/weapons/mcv" % (n, len(dirs)))
 
 

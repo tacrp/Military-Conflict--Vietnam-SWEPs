@@ -16,9 +16,6 @@
 	"$envmap" "env_cubemap"
 	"$envmaptint" "[0.675 0.675 0.675]"
 	"$envmapfresnel" "1"
-	
-	// DX10+ smooth cubemap transitions - should only be used on viewmodels
-	"$cubemapblend"	"1"
 
 	"$REFRACTTINTTEXTURE" "models\weapons\mcv\optics\crosshair_svd"
 
@@ -32,7 +29,7 @@
 	
 	// for ssao depth rendering hacks, do not modify or delete these lines
 	"$opaque_mode"	"1"
-	"$override_depth_texture" "_rt_FullFrameDepth"
+	"$override_depth_texture" "_rt_SoftwareDepth_NOVM"
 
 	"Proxies"
 	{

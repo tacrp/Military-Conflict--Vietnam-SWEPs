@@ -19,10 +19,11 @@ local screenmat = CreateMaterial("mcv_pipscope_screen", "UnlitGeneric", {
 // Render target orientation relative to the lens mesh; flip per weapon if a model needs it.
 SWEP.RTScopeFlipV = false
 SWEP.RTScopeFlipH = false
-// The game's reticle textures are opaque on the glass and transparent on the crosshair lines,
-// so the dark lines are drawn where the texture alpha is LOW. Set false for a texture authored
-// the other way round.
-SWEP.ReticleInvertAlpha = true
+// Reticle textures in materials/models/weapons/mcv/optics have their alpha inverted on disk
+// (work/vtf_invert_alpha.py, applied by the rip step): opaque on the crosshair lines, which is
+// what the plain draw below paints black. Leave this false unless a texture was dropped in
+// straight from the game.
+SWEP.ReticleInvertAlpha = false
 
 // Alpha-tested copy of the reticle material, so it can mask the stencil buffer
 local reticle_cache = {}
