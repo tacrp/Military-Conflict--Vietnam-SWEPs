@@ -372,7 +372,8 @@ def generate(script_path, args):
     empty_reload = rb("HasEmptyReload", empty_reload)
     has_bayonet = rb("HasBayonet", has_bayonet)
     has_gl = rb("HasRifleGrenade", has_gl)
-    has_akimbo = rb("HasAkimbo", has_akimbo)
+    # HasAkimbo is not taken from the old file: if the game has a weapon_dual_* script for it,
+    # the dual mode belongs to this weapon.
     clipsize = int(num(rv("Primary.ClipSize", clipsize), clipsize))
     chamber = int(num(rv("Primary.Chamber", chamber), chamber))
     maxammo = int(num(rv("Primary.DefaultClip", maxammo), maxammo))
@@ -653,6 +654,11 @@ def main():
     for f in files:
         name = os.path.basename(f)[len("weapon_"):-4]
         lua_name = args.name_map.get(name, name)
+        if name.startswith("dual_"):
+            # Dual wield is a mode of the single-wield weapon in this addon (HasAkimbo +
+            # ViewModelAkimbo, toggled with USE+WALK), never a weapon of its own.
+            print("%-28s folded into the single-wield weapon (HasAkimbo)" % name)
+            continue
         if lua_name in produced:
             # e.g. weapon_sks_riflegrenade shares v_sks with weapon_sks: the addon merges those
             # variants into one weapon (HasRifleGrenade), so only the first script is converted.

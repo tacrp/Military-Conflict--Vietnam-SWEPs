@@ -292,7 +292,7 @@ deterministic converter whose tables were derived by correlating all 141 script/
 | Bayonet / GrenadeLauncher / Grenade bodygroup indices | `$bodygroup` names in the viewmodel QC |
 | HasBayonet | script `HasBayonet` |
 | HasRifleGrenade | script secondary ammo, or the model has grenade animations and a `*_riflegrenade` script variant exists (the addon merges those into the base rifle) |
-| HasAkimbo, ViewModelAkimbo | a `v_dual_*` model or `weapon_dual_*` script exists |
+| HasAkimbo, ViewModelAkimbo | a `v_dual_*` model or `weapon_dual_*` script exists; the `weapon_dual_*` scripts themselves are never converted, dual wield is a mode of the single-wield weapon |
 | damage, spread, recoil, shake, penetration, crosshair, weight | copied |
 | sounds | `SoundData` with the `MCV_` prefix |
 | muzzle flash | GMod stock effect chosen by weapon type (the game's particles need ARC9) |

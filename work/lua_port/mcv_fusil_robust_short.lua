@@ -19,7 +19,6 @@ SWEP.AimHoldType = "shotgun"
 SWEP.SprintHoldType = "passive"
 
 SWEP.ViewModel = "models/weapons/mcv/v_izh43_sog.mdl"
-SWEP.ViewModelAkimbo = "models/weapons/mcv/v_dual_izh43_sog.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_izh43_sog.mdl"
 
 SWEP.BodyGroups = ""
@@ -103,7 +102,6 @@ SWEP.JumpSpreadMultiplier = 1
 
 SWEP.HasBayonet = false
 SWEP.HasRifleGrenade = false
-SWEP.HasAkimbo = true
 
 SWEP.BashDamage = 50
 SWEP.BayonetDamage = 100

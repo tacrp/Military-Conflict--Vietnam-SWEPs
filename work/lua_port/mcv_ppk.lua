@@ -19,6 +19,7 @@ SWEP.AimHoldType = "revolver"
 SWEP.SprintHoldType = "normal"
 
 SWEP.ViewModel = "models/weapons/mcv/v_ppk.mdl"
+SWEP.ViewModelAkimbo = "models/weapons/mcv/v_dual_ppk.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_ppk.mdl"
 
 SWEP.BodyGroups = ""
@@ -100,6 +101,7 @@ SWEP.JumpSpreadMultiplier = 1.25
 
 SWEP.HasBayonet = false
 SWEP.HasRifleGrenade = false
+SWEP.HasAkimbo = true
 
 SWEP.BashDamage = 50
 SWEP.BayonetDamage = 100
