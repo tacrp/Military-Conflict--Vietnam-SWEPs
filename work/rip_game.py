@@ -96,7 +96,39 @@ def step_strings(args, vpk):
 
 def weapon_model_entries(vpk):
     return sorted(p for p in vpk.entries if p.startswith("models/weapons/") and p.count("/") == 2
-                  and re.match(r'models/weapons/[vw]_[^/]+\.(mdl|vvd|vtx|phy|ani)$', p))
+                  and re.match(r'models/weapons/([vw]_[^/]+|gesture_animations)\.(mdl|vvd|vtx|phy|ani)$', p))
+
+
+STUDIO_FRAMEANIM = 0x40
+
+
+def uses_frame_anim(mdl_path):
+    """True when any animation in the .mdl is stored in the frame-based format
+    (mstudio_frame_anim_t, animdesc flag 0x40). The current game models are compiled
+    this way; only Crowbar 0.74+ decodes it. The 0.68 command line fork writes a
+    constant garbage rotation for those bones instead, which shows in GMod as
+    viewmodels frozen in a mangled bind pose."""
+    try:
+        d = open(mdl_path, "rb").read()
+        off = 4 + 4 + 4 + 64 + 4 + 12 * 6
+        numanim, animindex = struct.unpack_from("<ii", d, off + 7 * 4)
+        for i in range(numanim):
+            flags = struct.unpack_from("<i", d, animindex + i * 100 + 12)[0]
+            if flags & STUDIO_FRAMEANIM:
+                return True
+    except Exception:
+        return True
+    return False
+
+
+def import_decompiled(src_root, name, out):
+    """Copy a Crowbar 0.74 GUI batch decompile (folder-for-each-model layout) into OG."""
+    src = os.path.join(src_root, name)
+    if not os.path.isfile(os.path.join(src, name + ".qc")):
+        return False
+    shutil.rmtree(out, ignore_errors=True)
+    shutil.copytree(src, out)
+    return True
 
 
 def step_models(args, vpk):
@@ -114,6 +146,28 @@ def step_models(args, vpk):
             continue
         todo.append((p, name, crc))
     log("models: %d to decompile (%d unchanged)" % (len(todo), len(mdls) - len(todo)))
+    if args.decompiled:
+        n = 0
+        rest = []
+        for p, name, crc in todo:
+            if import_decompiled(args.decompiled, name, os.path.join(OG, name)):
+                manifest[p] = crc
+                n += 1
+            else:
+                rest.append((p, name, crc))
+        save_manifest(manifest)
+        log("models: %d imported from %s" % (n, args.decompiled))
+        todo = rest
+    frame_anim = [(p, name, crc) for p, name, crc in todo
+                  if uses_frame_anim(os.path.join(RIP, p.replace("/", os.sep)))]
+    if frame_anim:
+        log("models: %d models use frame-based animation storage, which the Crowbar 0.68 command line fork "
+            "cannot decode. Batch-decompile work/rip/models/weapons with the Crowbar 0.74 GUI (folder for "
+            "each model) and rerun with --decompiled <that folder>. Skipped: %s"
+            % (len(frame_anim), ", ".join(n for _, n, _ in frame_anim[:15]) + (" ..." if len(frame_anim) > 15 else "")))
+        todo = [t for t in todo if t not in frame_anim]
+    if not todo:
+        return
     if not os.path.isfile(CROWBAR):
         log("models: %s missing" % CROWBAR)
         return
@@ -144,7 +198,7 @@ def step_models(args, vpk):
 def step_port(args, vpk):
     game_dir = os.path.join(HERE, "compile_test_game")
     cmd = [sys.executable, os.path.join(HERE, "port_qc.py"), OG, "--all", "--compile", "--game", game_dir,
-           "--report", os.path.join(RIP, "port_report.json")]
+           "--report", os.path.join(RIP, "port_report.json"), "--jobs", str(args.jobs)]
     log("port: " + " ".join(cmd[1:]))
     with open(os.path.join(RIP, "port.log"), "w") as lf:
         subprocess.run(cmd, stdout=lf, stderr=subprocess.STDOUT, cwd=HERE)
@@ -166,7 +220,15 @@ def step_install(args, vpk):
         name = os.path.basename(f).split(".")[0]
         if ok is not None and name not in ok:
             continue
+        if f.endswith(".ani"):
+            # stale output from before port_qc.py stripped $animblocksize: the animation
+            # data now lives in the .mdl and a leftover .ani must not ship
+            os.remove(f)
+            continue
         shutil.copyfile(f, os.path.join(dst, os.path.basename(f)))
+        stale = os.path.join(dst, name + ".ani")
+        if os.path.isfile(stale):
+            os.remove(stale)
         n += 1
     log("install: %d compiled model files copied into models/weapons/mcv" % n)
     # non-weapon models under models/weapons (shells, grenades...) are used as-is
@@ -607,6 +669,11 @@ def main():
     ap.add_argument("--game", default=r"D:\SteamLibrary\steamapps\common\Military Conflict - Vietnam\vietnam")
     ap.add_argument("--steps", default="all", help="comma separated list, or all")
     ap.add_argument("--force", action="store_true", help="models: decompile even if the CRC is unchanged")
+    ap.add_argument("--jobs", type=int, default=max(1, (os.cpu_count() or 4) - 2),
+                    help="port: parallel port/compile jobs (default: cores - 2)")
+    ap.add_argument("--decompiled", default=None,
+                    help="models: folder holding a Crowbar 0.74 GUI batch decompile of work/rip/models/weapons "
+                         "(folder for each model); imported instead of running the 0.68 command line fork")
     ap.add_argument("--only-new-icons", action="store_true", help="icons: keep existing pngs")
     args = ap.parse_args()
     want = [s for s, _ in STEPS] if args.steps == "all" else [s.strip() for s in args.steps.split(",")]

@@ -281,9 +281,9 @@ reader) and the loose `scripts/` and `resource/` folders, and updates the addon 
 | --- | --- |
 | `scripts` | copies `scripts/weapon_*.txt` into `work/cscripts` |
 | `strings` | reads `resource/vietnam_english.txt` (UTF-16) into `work/strings.json`; `port_weapon.py` uses it for display names and countries |
-| `models` | extracts every `models/weapons/v_*` and `w_*` file into `work/rip` and decompiles the ones whose CRC changed (`tools/CrowbarCommandLineDecomp.exe`, a command-line fork of Crowbar 0.68) into `work/MCV_SMD_OG/weapons` |
-| `port` | `port_qc.py --all --compile` over the decompiled tree, into `work/compile_test_game` |
-| `install` | copies the compiled model sets that succeeded into `models/weapons/mcv`, and the game's `models/weapons/<subdir>` models (shells etc.) as they are |
+| `models` | extracts every `models/weapons/v_*`, `w_*` and `gesture_animations` file into `work/rip`. Models whose CRC changed are imported from a Crowbar 0.74 batch decompile (`--decompiled <folder>`, see below) or, when they use the classic animation storage, decompiled with `tools/CrowbarCommandLineDecomp.exe` (Crowbar 0.68 fork) into `work/MCV_SMD_OG/weapons` |
+| `port` | `port_qc.py --all --compile --jobs N` over the decompiled tree, into `work/compile_test_game` (`--jobs`, default cores minus 2; the serial run takes about three hours, twelve jobs about fifteen minutes) |
+| `install` | copies the compiled model sets that succeeded into `models/weapons/mcv` (deleting any stale `.ani`), and the game's `models/weapons/<subdir>` models (shells etc.) as they are |
 | `materials` | every `materials/models/weapons/<dir>` that a weapon QC references, into `materials/models/weapons/mcv/<dir>` with the texture paths inside the VMTs rewritten |
 | `sounds` | `sound/weapons` and `sound/foley` into `sound/mcv`, then `vietnam_sounds_weapons.txt` and `vietnam_sounds_foley.txt` through `parse_soundscripts.py` (which now drops the `~` and `` ` `` sound characters GMod does not know) |
 | `particles` | all `particles/*.pcf` |
@@ -295,11 +295,39 @@ reader) and the loose `scripts/` and `resource/` folders, and updates the addon 
 `work/rip` and `work/MCV_SMD_OG` are git-ignored (several GB). `work/rip/manifest.json` remembers
 the VPK CRC of every decompiled model so a later run only redoes what the game updated.
 
-Crowbar 0.68 (the command-line fork) has two quirks the port works around: after some `loop`
-animations it drops the closing brace and every later `$animation` definition. The QC parser
-ends a block at the next top-level `$` command, and `step_reconstruct_missing_anims` recreates
-plain `fps 30` definitions (with the `subtract` corrective when one exists) for every animation a
-sequence names that has an SMD on disk but no definition. All 558 game models compile with that.
+### Decompiler: Crowbar 0.74 is required for the current game models
+
+The game's current models (MDL v49) store almost every animation in the frame-based format
+(`mstudio_frame_anim_t`, animdesc flag `0x40`, rotations as Quaternion48S) and split it into
+`.ani` animblocks. Only Crowbar 0.74 decodes that format. Crowbar 0.68 and 0.71 (the two
+command-line builds) silently write a constant garbage rotation for those bone tracks and leave
+the clavicle at its bind position; compiled into GMod that is a viewmodel frozen in a mangled
+bind pose with the gun off screen. The few models still in the classic run-length format (G3,
+H&R T223, `gesture_animations`) decompile fine with any version, which is why those kept working.
+
+`rip_game.py --steps models` detects the frame format in the `.mdl` header and refuses to run the
+0.68 fork on such models. The workflow for them is manual once per game update:
+
+1. run `rip_game.py --steps models` so `work/rip/models/weapons` holds the current files;
+2. in the Crowbar 0.74 GUI, Decompile tab: input = that folder, output = a full path, with
+   "Folder for each model", QC, reference mesh and bone animation SMDs in a subfolder ticked;
+3. `rip_game.py --steps models --decompiled <that output folder>` imports the result into
+   `work/MCV_SMD_OG/weapons` and records the CRCs in the manifest.
+
+Whatever produced the decompile, `port_qc.py` strips `$animblocksize`, `$sectionframes` and
+`$bonesaveframe` (`step_strip_animblocks`), so every compiled model keeps all animation data in
+the `.mdl` and ships no `.ani`. The engine falls back to the bind pose when an animblock is not
+resident, and the earlier working compiles never used them.
+
+`gesture_animations.mdl` (the `$includemodel` every viewmodel pulls in) is ported from the game's
+own copy as mode `other`, so its skeleton matches the current rig (`Base` under `BaseRoot`).
+Compiling it from the 2024 hand port produced `missmatched parent bones on "Base"` on every model.
+
+Crowbar 0.68 (the command-line fork) also has two QC quirks the port works around: after some
+`loop` animations it drops the closing brace and every later `$animation` definition. The QC
+parser ends a block at the next top-level `$` command, and `step_reconstruct_missing_anims`
+recreates plain `fps 30` definitions (with the `subtract` corrective when one exists) for every
+animation a sequence names that has an SMD on disk but no definition.
 
 `port_weapon.py` converts guns only by default (`--all-types` for the rest): the game scripts also
 describe grenades, mines, flamethrowers, melee and equipment, which the mcv_base cannot drive.
