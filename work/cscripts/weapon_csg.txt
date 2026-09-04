@@ -1,79 +1,71 @@
-// Chinese Stick Grenade
-
 WeaponData
 {
-	// Weapon data is loaded by both the Game and Client DLLs.
-	"printname"				"#weapon_CSG"
-	"origin"				"#china"
-	"viewmodel"				"models/weapons/v_csg.mdl"
+	"printname"					"#weapon_CSG"
+	"origin"					"#china"
+
+	"viewmodel"					"models/weapons/v_csg.mdl"
 	"playermodel"				"models/weapons/w_csg.mdl"
 	"anim_prefix"				"csg"
-	"bucket"				"3"
-	"bucket_position"			"0"
-	"item_flags"				"18"	// ITEM_FLAG_NOAUTORELOAD | ITEM_FLAG_EXHAUSTIBLE
 
+	"bucket"					"3" //weapon menu category
+	"bucket_position"			"0" //weapon menu position
+	"item_flags"				"18" //ITEM_FLAG_NOAUTORELOAD | ITEM_FLAG_EXHAUSTIBLE
+	// "autoswitchfrom"			"0"
 	"WeaponType"				"Grenade"
 
-	"primary_ammo"				"grenade"
-	"secondary_ammo"			"None"
+	"weight"					"1" //KG
 
-	"clip_size"				"-1/2"	// clip size/max ammo (-1 means we don't use clips for this ammo type)
-	"clip2_size"				"-1"	// max secondary ammo
+	"HasBayonet"				"0"
+	"HasBipod"					"0"
+	"isSupressed"				"0"
+	"BuiltRightHanded"			"1"
 
-	"default_clip"				"1"	// ammo given by default
-	"default_clip2"				"-1"	// ditto for second ammo type
+	"primary_ammo"				"grenade" //caliber
+	"secondary_ammo"			"None" //caliber
 
-	"weight"				"1"
+	"clip_size"					"-1/2" //clip size/max ammo (-1 means we don't use clips for this ammo type)
+	"clip2_size"				"-1" //max secondary ammo
 
-	"ExplosionDamage"			"135"
-	"ExplosionRadius"			"350"
+	"default_clip"				"1" //ammo given by default
+	"default_clip2"				"-1" //ditto for second ammo type
+
+	"FireRate"					"30" //RPM
+	"SecondaryFireRate"			"-1" //RPM, -1 to disable
+
+	"ExplosionDamage"			"150"
+	"ExplosionRadius"			"350" //hammer units
 
 	"FuseTimeMin"				"3.0"
 	"FuseTimeMax"				"5.0"
 
-	// Zombie Mode
-	"ZMBuyPrice"	 "250"
-	"ZMSellPrice"	 "200"
+	"IronSight"						"0" //0 - not available to ADS with
+
+	CustomOffset
+	{
+		"forward"					"0"
+		"right"						"0"
+		"up"						"0"
+		"pitch"						"0"
+		"yaw"						"0"
+		"roll"						"0"
+	}
+
+	"ZMBuyPrice"	 "300"
 	"ZMWeight"		 "0"
-	
-	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	zombie_stats
+	{
+		"ExplosionDamage"			"200"
+		"ExplosionRadius"			"400"
+	}
+
 	SoundData
 	{
-		"single_shot"		""
-		"double_shot"		""
-		"reload"		""
-		"special1"		""
-		"special2"		""
-		"nearlyempty"		""
-		"empty"			"Weapon_Generic.ClipEmpty_01"
+		"empty"				"Weapon_Generic.ClipEmpty_01"
 
-		// NPC SECTION
-		"single_shot_npc"	""
-		"double_shot_npc"	""
-		"reload_npc"		""
-		
-		// 3RD PERSON PLAYER SECTION
-		"player_reload"		""
-		"player_reload_loop"		""
-		"player_reload_cycle"		""
-
-		"player_grenade_pullpin"		"Weapon_Foley_ThirdPerson_Shared.PullPin"
-		"player_grenade_on"		""
-		"player_equipment_on"		""
-		"player_equipment_off"		""
-		"player_deploy"		"Weapon_Foley_ThirdPerson_Shared.DrawSmall"
-		"player_holster"		"Weapon_Foley_ThirdPerson_Shared.HolsterSmall"
-		"player_bash"		"Weapon_Foley_ThirdPerson_Shared.BashFast"
+		"player_grenade_pullpin"	"Weapon_Foley_ThirdPerson_Shared.PullPin"
+		"player_deploy"				"Weapon_Foley_ThirdPerson_Shared.DrawSmall"
+		"player_holster"			"Weapon_Foley_ThirdPerson_Shared.HolsterSmall"
+		"player_bash"				"Weapon_Foley_ThirdPerson_Shared.BashFast"
 	}
 
-	// viewmodel offset in non-ironsighted case
-        CustomOffset
-	{
-		"forward"	"0"
-		"right"		"0"
-		"up"		"0"
-		"pitch"		"0"
-		"yaw"		"0"
-		"roll"		"0"
-	}
 }

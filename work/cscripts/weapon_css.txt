@@ -1,85 +1,88 @@
-// Chinese Stick Smoke
-
 WeaponData
 {
-	// Weapon data is loaded by both the Game and Client DLLs.
-	"printname"				"#weapon_CSS"
-	"origin"				"#soviet_union"
-	"viewmodel"				"models/weapons/v_css.mdl"
-	"playermodel"				"models/weapons/w_css.mdl"
-	"projectilemodel"			"models/weapons/w_css_ignited.mdl"
-	"anim_prefix"				"csg"
-	"bucket"				"3"
-	"bucket_position"			"1"
-	"item_flags"				"18"	// ITEM_FLAG_NOAUTORELOAD | ITEM_FLAG_EXHAUSTIBLE
-	
-	"skin"					"1"
+	"printname"					"#weapon_CSS"
+	"origin"					"#soviet_union"
 
+	"viewmodel"					"models/weapons/v_css.mdl"
+	"playermodel"				"models/weapons/w_css.mdl"
+	"anim_prefix"				"csg"
+
+	"bucket"					"3" //weapon menu category
+	"bucket_position"			"1" //weapon menu position
+	"item_flags"				"18" //ITEM_FLAG_NOAUTORELOAD | ITEM_FLAG_EXHAUSTIBLE
+	// "autoswitchfrom"			"0"
 	"WeaponType"				"SmokeGrenade"
 
-	"primary_ammo"				"grenade"
-	"secondary_ammo"			"None"
+	"weight"					"1" //KG
 
-	"clip_size"				"-1/2"	// clip size/max ammo (-1 means we don't use clips for this ammo type)
-	"clip2_size"				"-1"	// max secondary ammo
+	"HasBayonet"				"0"
+	"HasBipod"					"0"
+	"isSupressed"				"0"
+	"BuiltRightHanded"			"1"
 
-	"default_clip"				"1"	// ammo given by default
-	"default_clip2"				"-1"	// ditto for second ammo type
+	"skin"						"1"
 
-	"weight"				"1"
+	"primary_ammo"				"grenade" //caliber
+	"secondary_ammo"			"None" //caliber
 
-	"SmokeColors"
-	{
-		"0"				"53 53 51"
-		"1"				"224 224 219"
-	}
+	"clip_size"					"-1/2" //clip size/max ammo (-1 means we don't use clips for this ammo type)
+	"clip2_size"				"-1" //max secondary ammo
+
+	"default_clip"				"1" //ammo given by default
+	"default_clip2"				"-1" //ditto for second ammo type
+
+	"FireRate"					"30" //RPM
+	"SecondaryFireRate"			"-1" //RPM, -1 to disable
+
+	"ExplosionRadius"			"500" //hammer units
 
 	"FuseTimeMin"				"3.0"
 	"FuseTimeMax"				"5.0"
 
-	// Zombie Mode
-	"ZMBuyPrice"	 "75"
-	"ZMSellPrice"	 "25"
+	"IronSight"						"0" //0 - not available to ADS with
+
+	CustomOffset
+	{
+		"forward"					"0"
+		"right"						"0"
+		"up"						"0"
+		"pitch"						"0"
+		"yaw"						"0"
+		"roll"						"0"
+	}
+
+	"ZMBuyPrice"	 "100"
 	"ZMWeight"		 "0"
-	
-	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+
+	dov_stats
+	{
+		"origin"				"#nazi_germany"
+		"weight"				"3"
+		"FuseTimeMin"			"2.0"
+		"FuseTimeMax"			"2.0"
+		"ZMBuyPrice"			"75"
+		SmokeColors
+		{
+			"0"				"211 211 211"
+			"1"				"211 211 211"
+		}
+	}
+
 	SoundData
 	{
-		"single_shot"		""
-		"double_shot"		""
-		"reload"		""
-		"special1"		""
-		"special2"		""
-		"nearlyempty"		""
-		"empty"			"Weapon_Generic.ClipEmpty_01"
+		"empty"				"Weapon_Generic.ClipEmpty_01"
 
-		// NPC SECTION
-		"single_shot_npc"	""
-		"double_shot_npc"	""
-		"reload_npc"		""
-		
-		// 3RD PERSON PLAYER SECTION
-		"player_reload"		""
-		"player_reload_loop"		""
-		"player_reload_cycle"		""
-
-		"player_grenade_pullpin"		"Weapon_Foley_ThirdPerson_Shared.PullPin"
-		"player_grenade_on"		""
-		"player_equipment_on"		""
-		"player_equipment_off"		""
-		"player_deploy"		"Weapon_Foley_ThirdPerson_Shared.DrawSmall"
-		"player_holster"		"Weapon_Foley_ThirdPerson_Shared.HolsterSmall"
-		"player_bash"		"Weapon_Foley_ThirdPerson_Shared.BashFast"
+		"player_grenade_pullpin"	"Weapon_Foley_ThirdPerson_Shared.PullPin"
+		"player_deploy"				"Weapon_Foley_ThirdPerson_Shared.DrawSmall"
+		"player_holster"			"Weapon_Foley_ThirdPerson_Shared.HolsterSmall"
+		"player_bash"				"Weapon_Foley_ThirdPerson_Shared.BashFast"
 	}
 
-	// viewmodel offset in non-ironsighted case
-        CustomOffset
+	"SmokeColors"
 	{
-		"forward"	"0"
-		"right"		"0"
-		"up"		"0"
-		"pitch"		"0"
-		"yaw"		"0"
-		"roll"		"0"
+		"0"					"53 53 51" //R G B
+		"1"					"224 224 219" //R G B
 	}
+
+	"projectilemodel"				"models/weapons/w_css_ignited.mdl"
 }

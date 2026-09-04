@@ -41,14 +41,8 @@ function ENT:Detonate()
         end,
     })
 
-    local fx = EffectData()
-    fx:SetOrigin(self:GetPos())
-
-    if self:WaterLevel() > 0 then
-        util.Effect("WaterSurfaceExplosion", fx)
-    else
-        util.Effect("Explosion", fx)
-    end
+    // Game explosion effect, picked per surface (see lua/mcv/shared/sh_explosions.lua)
+    MCV.ExplosionEffect("xm202", self:GetPos(), -self:GetForward(), self:WaterLevel() > 0)
 
     self:EmitSound("MCV_XM202MissileExplosionEffect.Sound")
 

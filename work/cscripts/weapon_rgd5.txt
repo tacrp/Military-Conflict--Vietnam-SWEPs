@@ -1,0 +1,71 @@
+WeaponData
+{
+	"printname"					"#weapon_RGD5"
+	"origin"					"#soviet_union"
+
+	"viewmodel"					"models/weapons/v_rgd5.mdl"
+	"playermodel"				"models/weapons/w_rgd5.mdl"
+	"anim_prefix"				"csg"
+
+	"bucket"					"3" //weapon menu category
+	"bucket_position"			"0" //weapon menu position
+	"item_flags"				"18" //ITEM_FLAG_NOAUTORELOAD | ITEM_FLAG_EXHAUSTIBLE
+	// "autoswitchfrom"			"0"
+	"WeaponType"				"Grenade"
+
+	"weight"					"1" //KG
+
+	"HasBayonet"				"0"
+	"HasBipod"					"0"
+	"isSupressed"				"0"
+	"BuiltRightHanded"			"1"
+
+	"primary_ammo"				"grenade" //caliber
+	"secondary_ammo"			"None" //caliber
+
+	"clip_size"					"-1/2" //clip size/max ammo (-1 means we don't use clips for this ammo type)
+	"clip2_size"				"-1" //max secondary ammo
+
+	"default_clip"				"1" //ammo given by default
+	"default_clip2"				"-1" //ditto for second ammo type
+
+	"FireRate"					"30" //RPM
+	"SecondaryFireRate"			"-1" //RPM, -1 to disable
+
+	"ExplosionDamage"		"180"
+	"ExplosionRadius"		"300" //hammer units
+
+	"FuseTimeMin"				"3.0"
+	"FuseTimeMax"				"5.0"
+
+	"IronSight"						"0" //0 - not available to ADS with
+
+	CustomOffset
+	{
+		"forward"					"0"
+		"right"						"0"
+		"up"						"0"
+		"pitch"						"0"
+		"yaw"						"0"
+		"roll"						"0"
+	}
+
+	"ZMBuyPrice"	 "350"
+	"ZMWeight"		 "0"
+	zombie_stats
+	{
+		"ExplosionDamage"			"200"
+		"ExplosionRadius"			"400"
+	}
+
+	SoundData
+	{
+		"empty"				"Weapon_Generic.ClipEmpty_01"
+
+		"player_grenade_pullpin"	"Weapon_Foley_ThirdPerson_Shared.PullPin"
+		"player_deploy"				"Weapon_Foley_ThirdPerson_Shared.DrawSmall"
+		"player_holster"			"Weapon_Foley_ThirdPerson_Shared.HolsterSmall"
+		"player_bash"				"Weapon_Foley_ThirdPerson_Shared.BashFast"
+	}
+
+}

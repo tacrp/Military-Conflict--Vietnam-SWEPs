@@ -4,9 +4,9 @@
 	$vertexcolor "1"
 	$vertexalpha "1"
 	$translucent "1"
-	$depthblend "0"
-	$STARTFADESIZE .35
-	$ENDFADESIZE .55
+	$depthblend "1"
+	$STARTFADESIZE .55 //35
+	$ENDFADESIZE .75 //75
 	// Vietnam specific
 	$allowcsm "1"
 	$csm_particle_worldspace_fix "1"

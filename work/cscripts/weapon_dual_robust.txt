@@ -1,0 +1,259 @@
+WeaponData
+{
+	"printname"					"#weapon_dual_robust_sog"
+	"ammo_id_display"			"#ammo_id_09"
+	"origin"					"#france"
+	
+	"viewmodel"					"models/weapons/v_dual_izh43.mdl"
+	"playermodel"				"models/weapons/w_dual_izh43.mdl"
+	"anim_prefix"				"dualshotty"
+	
+	"bucket"					"0" //weapon menu category
+	"bucket_position"			"0" //weapon menu position
+	"item_flags"				"0"
+	// "autoswitchfrom"			"0"
+	"WeaponType"				"Shotgun"
+	"SupportedFireModes"		"Semi"
+
+	"weight"					"4.4" //KG
+//	"point_cost"				""
+
+	"HasBayonet"				"0"
+	"HasBipod"					"0"
+	"isSupressed"				"0" // informational only
+	"BuiltRightHanded"			"1" // if 0 it will automatically flip weapon viewmodel to be lefthanded
+	
+//	"skin"						""
+	BodygroupData
+	{
+		"barrel"		"0"
+	}
+	
+	"primary_ammo"				"12gauge" //caliber
+	"secondary_ammo"			"None" //caliber
+
+	"clip_size"					"4/32" //clip size/max ammo
+	"clip2_size"				"-1" //max secondary ammo
+
+	"default_clip"				"4" //ammo given by default
+	"default_clip2"				"-1" //ditto for second ammo type
+
+	"FireRate"					"160" //RPM
+	"SecondaryFireRate"			"-1" //RPM, -1 to disable
+	"bullet_weight"				"0.0007" //KG
+	
+	// shotguns only - pellet count
+	"bullets_per_shot"			"6" //pellets
+	//---
+	
+	//non-explosive only
+//	"ExtraBulletChamber"		"" // 0 - does NOT have +1 in the chamber
+	"muzzle_velocity"			"403" //m/s
+	"DamageGeneric"				"27" 
+	"DamageHeadMultiplier"		"2.5"
+	"DamageChestMultiplier"		"1.5"
+	"DamageStomachMultiplier"	"1.25"
+	"DamageLegMultiplier"		"1"
+	"DamageArmMultiplier"		"0.9"
+	"rangemodifier"				"0.79" //damage * (rangemodifier ^ distance/500) ; or approx. this multiplier is compounded every 600 units
+
+	// bullet penetration settings | max depth | all in hammer units | after this distance travelled inside stated material the bullet is completely stopped
+	"MetalPenetrationDepth"		"3" //in units
+	"GlassPenetrationDepth"		"8"
+	"ConcretePenetrationDepth"	"5"
+	"WoodPenetrationDepth"		"13"
+	"OtherPenetrationDepth"		"6"
+
+	// bullet penetration settings | Damage Reduction | Higher value - less damage after penetration
+	"MetalDamageModifier"		"1.7"
+	"GlassDamageModifier"		"1.3"
+	"ConcreteDamageModifier"	"1.9"
+	"WoodDamageModifier"		"1.4"
+	"OtherDamageModifier"		"1.4"
+	//---
+	
+	"BulletSpreadDegrees"		"10.5" //degrees
+	"BulletSpreadDegreesIronsighted"		"3.5" //degrees
+//	"BulletSpreadDegreesBipod"				"" // degrees
+//	"BulletSpreadDegreesBipodIronsighted"	"" // degrees
+
+	// Bullet spread multiplier according to current stance; 0-1 will lessen spread; 1-inf will increase spread
+//	"StandMoveSpreadMultiplier"		""
+//	"CrouchSpreadMultiplier"		""
+//	"CrouchMoveSpreadMultiplier"	""
+//	"ProneSpreadMultiplier"			""
+//	"SneakMoveSpreadMultiplier"		""
+//	"JumpSpreadMultiplier"			""
+	//---
+	
+	// camera shake - does not affect accuracy
+	"ShakeScale"				"3" //camera shake effect, does not affect accuracy
+	"ShakeFreq"					"30" //how many shakes per second
+	"ShakeDuration"				"0.6" //sec
+
+	// weapon recoil kick - minimal | all in degrees
+//	"ViewMinKickPITCH"				""
+//	"ViewMinKickYAW"				""
+//	"ViewMinKickROLL"				""
+	// weapon recoil kick - maximal | all in degrees
+//	"ViewKickPITCH"					""
+//	"ViewKickYAW"					""
+//	"ViewKickROLL"					""
+	//---
+
+	// fixed view slide from recoil
+	ViewSlideRecoil
+	{
+		"Up"				"3.84"
+		"Right"				"1.28"
+//		"Up_max" 			""
+//		"Right_max"			""
+	}
+	// fixed view slide from recoil when aiming down sights
+	ViewSlideRecoilIronsight
+	{
+		"Up"				"2.88"
+		"Right"				"0.96"
+//		"Up_max" 			""
+//		"Right_max"			""
+	}
+	"ViewSlideRecoilTransitionTimeSeconds"		"0.25" // how fast the aiming recoil will change when you start/stop ADS
+	//---
+	
+//	"UseScopecamera"			""
+//	"BlurScope"					"" // bool - do we blur around the scope?
+//	"DofFocusDist"				"" // override depth of field focal distance
+//	"DofScale"					"" // override depth of field strength when aiming
+
+	// aiming down sights:	
+	"IronSight"					"1" //0 - not available to ADS with
+	"IronsightSpeedScale"		"1" //how long ironsight transition will last
+	"IronsightedFovOffset"		"-15" //degrees added when ADS
+//	"ScopeLensFov"					"" // degrees fov, absolute value
+//	"ScopeLensFov2"					"" // ditto for second zoom level
+//	"ScopeLensTeleFovScale"			"" // render-target scale for expensive scopes. best to experiment in-game.
+	// viewmodel offsets when ADS - both ironsight and scope - all in units
+	"ironsightforward"			"-6"
+	"ironsightright"			"-.06"
+	"ironsightup"				"0"
+	"ironsightpitch"			"0"
+	"ironsightyaw"				"0"
+	"ironsightroll"				"0"
+	//---
+//	"ironsightwalkbobbingstrength"	"" // strength/amplitude of head-bobbing effect when walking while ADS
+	
+	// non-projectile-based weapons only
+	"CrosshairMinDistance"		"6"
+	"CrosshairDeltaDistance"	"8"
+	//---
+
+	// viewmodel offset in non-ironsighted case
+	CustomOffset
+	{
+		"forward"					"0"
+		"right"						"0"
+		"up"						"0"
+		"pitch"						"0"
+		"yaw"						"0"
+		"roll"						"0"
+	}
+	//---
+	
+	"NearwallDistance"			"50" //hammer units
+//	"recoilpushbackvalue"			""
+
+	// Zombie Mode
+	"ZMBuyPrice"				"2100"
+	"ZMWeight"					"4"
+	// if anything is modified for zombies mode:
+	zombie_stats
+	{
+		"clip_size"				"4/40"
+		"FireRate"				"180"
+		"rangemodifier"				"0.89"
+		"DamageGeneric"				"30"
+	}
+	//---
+	
+	// Day of Victory
+	// if anything is modified for DoV:
+	//dov_stats
+	//{
+	//}
+	//---
+	
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 single_shot sounds)
+	SoundData
+	{
+		"single_shot"				"Weapon_IZH43.Single"
+		"double_shot"				"Weapon_IZH43.Double"
+		"reload"					""
+		"special1"					""
+		"special2"					""
+		"nearlyempty"				"Weapon_Generic.NearlyEmptyClick"
+		"empty"						"Weapon_Generic.ClipEmpty_09"
+		"melee_hit"					""
+		"melee_hit_world"			""
+		
+		// NPC SECTION
+		"single_shot_npc"			""
+		"double_shot_npc"			""
+		"reload_npc"				""
+		
+		// 3RD PERSON PLAYER SECTION
+		"player_reload"				"Weapon_Foley_ThirdPerson_IZH43_Dual.Reload"
+		"player_reload_loop"		""
+		"player_reload_cycle"		""
+
+		"player_grenade_pullpin"	""
+		"player_grenade_on"			""
+		"player_equipment_on"		""
+		"player_equipment_off"		""
+		"player_deploy"				"Weapon_Foley_ThirdPerson_Shared.Draw"
+		"player_holster"			"Weapon_Foley_ThirdPerson_Shared.Holster"
+		"player_bash"				"Weapon_Foley_ThirdPerson_Shared.BashSlow"
+	}
+	//
+	
+	////////////////////////////
+	// Weapon Particles Start //
+	////////////////////////////
+	
+ 	"MuzzleParticle"						"vietnam_muzzleflash_shotgun_type1_fp" //"null" will disable
+ 	"MuzzleParticle_Smoke"					"vietnam_muzzleflash_shotgun_type1_fp_smoke" //"null" will disable
+ 	"MuzzleParticle_Ironsighted"			"vietnam_muzzleflash_shotgun_type1_fp_is" //"null" will disable
+ 	"MuzzleParticle_IronsightedSmoke"		"vietnam_muzzleflash_shotgun_type1_fp_is_smoke" //"null" will disable
+	
+	"MuzzleParticle3rdPerson"	"vietnam_muzzleflash_shotgun_type1_tp"
+	"ParticleAttachType"		"1" //0 - PATTACH_POINT; 1 - PATTACH_POINT_FOLLOW
+
+	"MuzzleSmokeParticle"		"vietnam_muzzleflash_generic_aftersmoke"
+	"MuzzleSmokeShotCount"		"5"
+
+	"EjectBrassType"			"30" //12Gsov
+	"EjectBrassTrail"			"vietnam_weaponeffect_shelleject_trail"
+	"EjectBrassParticle"		"vietnam_weaponeffect_shelleject_side" //"null" will disable
+	"EjectBrassSound"			"Bounce.ShotgunShell"
+	
+	"EjectMiscModel"					""
+	"EjectMiscSound"					""
+	
+	"TracerParticle"			"vietnam_tracer_shotgun_green_primary" //"null" will disable
+	"TracerParticle2"			"vietnam_tracer_shotgun_green_secondary" //"null" will disable
+	"TracerRandomness"			"6"
+	"TracerFrequency"			"1"
+	
+	"MuzzleLight"				"effects/flashlight_muzzleflash_sg" //"None" will disable projected muzzleflash
+	"MuzzleLightBrightnessLower"	"0.75" //Random brightness is chosen between this Lower - Upper range
+	"MuzzleLightBrightnessUpper"	"1.0"
+	"MuzzleLightFOVLower"		"95"
+	"MuzzleLightFOVUpper"		"110"
+	"MuzzleLightDuration"		"0.05"
+//	"MuzzleLightFadeIn"					""
+	"MuzzleLightFadeOut"		"0.035"
+	"MuzzleLightDistance"		"600"
+	
+	//////////////////////////
+	// Weapon Particles End //
+	//////////////////////////
+}

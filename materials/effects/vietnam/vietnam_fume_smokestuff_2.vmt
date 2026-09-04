@@ -6,7 +6,7 @@
 	$blendframes "1"
 	$sequence_blend_mode "0"
 	$translucent "1"
-	$depthblend "0"
+	$depthblend "1"
     $depthblendscale "40"
 	// Vietnam specific
 	$allowcsm "1"

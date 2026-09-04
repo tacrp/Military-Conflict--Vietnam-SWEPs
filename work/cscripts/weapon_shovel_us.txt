@@ -1,81 +1,85 @@
-// Punch people
-
 WeaponData
 {
-	// Weapon data is loaded by both the Game and Client DLLs.
-	"printname"				"#weapon_shovel_us"
-	"origin"				"#united_states_of_america"
-	"viewmodel"				"models/weapons/v_shovel_us.mdl"
+	"printname"					"#weapon_shovel_us"
+	"origin"					"#united_states_of_america"
+
+	"viewmodel"					"models/weapons/v_shovel_us.mdl"
 	"playermodel"				"models/weapons/w_shovel.mdl"
 	"anim_prefix"				"shovel"
-	"bucket"				"2"
-	"bucket_position"			"0"
+
+	"bucket"					"2" //weapon menu category
+	"bucket_position"			"0" //weapon menu position
 	"item_flags"				"0"
-	
-	// Set model's bodygroups
-	BodygroupData
-	{		
-	"studio"		"0"
-	}
-	
+	// "autoswitchfrom"			"0"
 	"WeaponType"				"Melee"
 
-	"primary_ammo"				"None"
-	"secondary_ammo"			"None"
-	"clip_size"				"-1"
+	"weight"					"0" //KG
 
-	"FireRate"				"150" // RPM
+	"HasBayonet"				"0"
+	"HasBipod"					"0"
+	"isSupressed"				"0"
+	"BuiltRightHanded"			"1"
 
-	// weapon recoil
-	// minimal possible kick
-	"ViewMinKickPITCH"			"-1.0"	// degrees
-	"ViewMinKickYAW"			"-2.0"	// degrees
-	"ViewMinKickROLL"			"0.0"	// degrees
+	BodygroupData
+	{
+		"studio"		"0"
+	}
 
-	// maximal possible kick
-	"ViewKickPITCH"				"1.0"	// degrees
-	"ViewKickYAW"				"2.0"	// degrees
-	"ViewKickROLL"				"0.0"	// degrees
+	"primary_ammo"				"None" //caliber
+	"secondary_ammo"			"None" //caliber
 
-	"weight"				"0"
+	"clip_size"					"-1" //clip size/max ammo
+	"clip2_size"				"-1" //max secondary ammo, -1 to disable
 
-	"DamageGeneric"				"30"
+	"default_clip"				"-1" //ammo given by default
+	"default_clip2"				"-1" //ditto for second ammo type, -1 to disable
 
-	// Zombie Mode
-	"ZMBuyPrice"	 "375"
-	"ZMSellPrice"	 "300"
+	"FireRate"					"150" //RPM
+	"SecondaryFireRate"			"-1" //RPM, -1 to disable
+
+	"MeleeRange"				"48" //hammer units
+	"MeleeRangeAlt"				"56" //hammer units
+
+	"DamageGeneric"				"30" //damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)
+
+	"ViewMinKickPITCH"				"-1.0" //degrees
+	"ViewMinKickYAW"				"-2.0" //degrees
+	"ViewMinKickROLL"				"0.0" //degrees
+	"ViewKickPITCH"					"1.0" //degrees
+	"ViewKickYAW"					"2.0" //degrees
+	"ViewKickROLL"					"0.0" //degrees
+
+	"IronSight"						"0" //0 - not available to ADS with
+
+	CustomOffset
+	{
+		"forward"					"0"
+		"right"						"0"
+		"up"						"0"
+		"pitch"						"0"
+		"yaw"						"0"
+		"roll"						"0"
+	}
+
+	"ZMBuyPrice"	 "300"
 	"ZMWeight"		 "1"
-	
-	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	zombie_stats
+	{
+		"DamageGeneric"				"90"
+		"MeleeRange"				"96"
+		"MeleeRangeAlt"				"112"
+	}
+
 	SoundData
 	{
-		"single_shot"		""
-		"double_shot"		""
-		"reload"		""
-		"special1"		"Weapon_Shovel.HitChargeFlesh"
-		"special2"		"Weapon_Shovel.HitChargeWall"
-		"nearlyempty"		""
-		"empty"			""
-
-		"melee_hit"		"Weapon_Shovel.HitFlesh"
+		"special1"			"Weapon_Shovel.HitChargeFlesh"
+		"special2"			"Weapon_Shovel.HitChargeWall"
+		"melee_hit"			"Weapon_Shovel.HitFlesh"
 		"melee_hit_world"	"Weapon_Shovel.HitWall"
 
-		// NPC SECTION
-		"single_shot_npc"	""
-		"double_shot_npc"	""
-		"reload_npc"		""
-		
-		// 3RD PERSON PLAYER SECTION
-		"player_reload"		""
-		"player_reload_loop"		""
-		"player_reload_cycle"		""
-
-		"player_grenade_pullpin"		""
-		"player_grenade_on"		""
-		"player_equipment_on"		""
-		"player_equipment_off"		""
-		"player_deploy"		"Weapon_Foley_ThirdPerson_Shared.DrawSmall"
-		"player_holster"		"Weapon_Foley_ThirdPerson_Shared.HolsterSmall"
-		"player_bash"		"Weapon_Foley_ThirdPerson_Shared.BashFast"
+		"player_deploy"				"Weapon_Foley_ThirdPerson_Shared.DrawSmall"
+		"player_holster"			"Weapon_Foley_ThirdPerson_Shared.HolsterSmall"
+		"player_bash"				"Weapon_Foley_ThirdPerson_Shared.BashFast"
 	}
+
 }

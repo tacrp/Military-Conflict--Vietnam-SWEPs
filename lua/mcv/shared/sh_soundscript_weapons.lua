@@ -3110,6 +3110,645 @@ sound.Add( {
 } )
 
 sound.Add( {
+	name = "MCV_Weapon_MG43.Single",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 75,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_mg43/MG43_GunFire_Single_01.wav",
+		"mcv/weapons/weapon_mg43/MG43_GunFire_Single_02.wav",
+		"mcv/weapons/weapon_mg43/MG43_GunFire_Single_03.wav",
+		"mcv/weapons/weapon_mg43/MG43_GunFire_Single_04.wav",
+		"mcv/weapons/weapon_mg43/MG43_GunFire_Single_05.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_MG43.SingleDistant",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 94,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_mg43/MG43_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_mg43/MG43_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_mg43/MG43_GunFire_Distant_03.wav",
+		"mcv/weapons/weapon_mg43/MG43_GunFire_Distant_04.wav",
+		"mcv/weapons/weapon_mg43/MG43_GunFire_Distant_05.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Kolos.Single",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 75,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_kolos/Kolos_GunFire_Single_01.wav",
+		"mcv/weapons/weapon_kolos/Kolos_GunFire_Single_02.wav",
+		"mcv/weapons/weapon_kolos/Kolos_GunFire_Single_03.wav",
+		"mcv/weapons/weapon_kolos/Kolos_GunFire_Single_04.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Kolos.SingleDistant",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 94,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_kolos/Kolos_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_kolos/Kolos_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_kolos/Kolos_GunFire_Distant_03.wav",
+		"mcv/weapons/weapon_kolos/Kolos_GunFire_Distant_04.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_BlackHawk.Single",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 75,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_blackhawk/BlackHawk_GunFire_Single_01.wav",
+		"mcv/weapons/weapon_blackhawk/BlackHawk_GunFire_Single_02.wav",
+		"mcv/weapons/weapon_blackhawk/BlackHawk_GunFire_Single_03.wav",
+		"mcv/weapons/weapon_blackhawk/BlackHawk_GunFire_Single_04.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_BlackHawk.SingleDistant",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 94,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_blackhawk/BlackHawk_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_blackhawk/BlackHawk_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_blackhawk/BlackHawk_GunFire_Distant_03.wav",
+		"mcv/weapons/weapon_blackhawk/BlackHawk_GunFire_Distant_04.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Auto5.Single",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 75,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_auto5/Auto5_GunFire_Single_01.wav",
+		"mcv/weapons/weapon_auto5/Auto5_GunFire_Single_02.wav",
+		"mcv/weapons/weapon_auto5/Auto5_GunFire_Single_03.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Auto5.SingleDistant",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 94,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_auto5/Auto5_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_auto5/Auto5_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_auto5/Auto5_GunFire_Distant_03.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_FM24.Single",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 75,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_fm24/FM24_GunFire_Single_01.wav",
+		"mcv/weapons/weapon_fm24/FM24_GunFire_Single_02.wav",
+		"mcv/weapons/weapon_fm24/FM24_GunFire_Single_03.wav",
+		"mcv/weapons/weapon_fm24/FM24_GunFire_Single_04.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_FM24.SingleDistant",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 94,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_fm24/FM24_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_fm24/FM24_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_fm24/FM24_GunFire_Distant_03.wav",
+		"mcv/weapons/weapon_fm24/FM24_GunFire_Distant_04.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_MAS36.Single",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 75,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_mas36/MAS36_GunFire_Single_01.wav",
+		"mcv/weapons/weapon_mas36/MAS36_GunFire_Single_02.wav",
+		"mcv/weapons/weapon_mas36/MAS36_GunFire_Single_03.wav",
+		"mcv/weapons/weapon_mas36/MAS36_GunFire_Single_04.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_MAS36.SingleDistant",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 94,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_mas36/MAS36_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_mas36/MAS36_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_mas36/MAS36_GunFire_Distant_03.wav",
+		"mcv/weapons/weapon_mas36/MAS36_GunFire_Distant_04.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Lebel.Single",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 75,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_lebel/Lebel_GunFire_Single_01.wav",
+		"mcv/weapons/weapon_lebel/Lebel_GunFire_Single_02.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Lebel.SingleDistant",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 94,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_lebel/Lebel_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_lebel/Lebel_GunFire_Distant_02.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Ruby.Single",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 75,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_ruby/Ruby_GunFire_Single_01.wav",
+		"mcv/weapons/weapon_ruby/Ruby_GunFire_Single_02.wav",
+		"mcv/weapons/weapon_ruby/Ruby_GunFire_Single_03.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Ruby.SingleDistant",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 94,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_ruby/Ruby_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_ruby/Ruby_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_ruby/Ruby_GunFire_Distant_03.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Reising.Single",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 75,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_reising/Reising_GunFire_Single_01.wav",
+		"mcv/weapons/weapon_reising/Reising_GunFire_Single_02.wav",
+		"mcv/weapons/weapon_reising/Reising_GunFire_Single_03.wav",
+		"mcv/weapons/weapon_reising/Reising_GunFire_Single_04.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Reising.SingleDistant",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 94,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_reising/Reising_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_reising/Reising_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_reising/Reising_GunFire_Distant_03.wav",
+		"mcv/weapons/weapon_reising/Reising_GunFire_Distant_04.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_VCShotgun.Single",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 75,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_vcshotgun/VCShotgun_GunFire_Single_01.wav",
+		"mcv/weapons/weapon_vcshotgun/VCShotgun_GunFire_Single_02.wav",
+		"mcv/weapons/weapon_vcshotgun/VCShotgun_GunFire_Single_03.wav",
+		"mcv/weapons/weapon_vcshotgun/VCShotgun_GunFire_Single_04.wav",
+		"mcv/weapons/weapon_vcshotgun/VCShotgun_GunFire_Single_05.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_VCShotgun.SingleDistant",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 94,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_vcshotgun/VCShotgun_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_vcshotgun/VCShotgun_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_vcshotgun/VCShotgun_GunFire_Distant_03.wav",
+		"mcv/weapons/weapon_vcshotgun/VCShotgun_GunFire_Distant_04.wav",
+		"mcv/weapons/weapon_vcshotgun/VCShotgun_GunFire_Distant_05.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_VCCarbine.Single",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 75,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_vccarbine/VCCarbine_GunFire_Single_01.wav",
+		"mcv/weapons/weapon_vccarbine/VCCarbine_GunFire_Single_02.wav",
+		"mcv/weapons/weapon_vccarbine/VCCarbine_GunFire_Single_03.wav",
+		"mcv/weapons/weapon_vccarbine/VCCarbine_GunFire_Single_04.wav",
+		"mcv/weapons/weapon_vccarbine/VCCarbine_GunFire_Single_05.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_VCCarbine.SingleDistant",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 94,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_vccarbine/VCCarbine_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_vccarbine/VCCarbine_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_vccarbine/VCCarbine_GunFire_Distant_03.wav",
+		"mcv/weapons/weapon_vccarbine/VCCarbine_GunFire_Distant_04.wav",
+		"mcv/weapons/weapon_vccarbine/VCCarbine_GunFire_Distant_05.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_VCPistol2.Single",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 75,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_vcpistol2/VCPistol2_GunFire_Single_01.wav",
+		"mcv/weapons/weapon_vcpistol2/VCPistol2_GunFire_Single_02.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_VCPistol2.SingleDistant",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 94,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_vcpistol2/VCPistol2_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_vcpistol2/VCPistol2_GunFire_Distant_02.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_VCSMG.Single",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 75,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_vcsmg/VCSMG_GunFire_Single_01.wav",
+		"mcv/weapons/weapon_vcsmg/VCSMG_GunFire_Single_02.wav",
+		"mcv/weapons/weapon_vcsmg/VCSMG_GunFire_Single_03.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_VCSMG.SingleDistant",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 94,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_vcsmg/VCSMG_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_vcsmg/VCSMG_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_vcsmg/VCSMG_GunFire_Distant_03.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Luger.Single",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 75,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_luger/Luger_GunFire_Single_01.wav",
+		"mcv/weapons/weapon_luger/Luger_GunFire_Single_02.wav",
+		"mcv/weapons/weapon_luger/Luger_GunFire_Single_03.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Luger.SingleDistant",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 94,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_luger/Luger_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_luger/Luger_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_luger/Luger_GunFire_Distant_03.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Gyrojet_Pistol.Single",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 75,
+	pitch = {96, 101},
+	sound = {
+		"mcv/weapons/weapon_gyrojet_pistol/GyroJetPistol_GunFire_Single_01.wav",
+		"mcv/weapons/weapon_gyrojet_pistol/GyroJetPistol_GunFire_Single_02.wav",
+		"mcv/weapons/weapon_gyrojet_pistol/GyroJetPistol_GunFire_Single_03.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Gyrojet_Pistol.SingleDistant",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 94,
+	pitch = {96, 101},
+	sound = {
+		"mcv/weapons/weapon_gyrojet_pistol/GyroJetPistol_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_gyrojet_pistol/GyroJetPistol_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_gyrojet_pistol/GyroJetPistol_GunFire_Distant_03.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Gyrojet_Carbine.Single",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 75,
+	pitch = {96, 101},
+	sound = {
+		"mcv/weapons/weapon_gyrojet_carbine/GyroJetCarbine_GunFire_Single_01.wav",
+		"mcv/weapons/weapon_gyrojet_carbine/GyroJetCarbine_GunFire_Single_02.wav",
+		"mcv/weapons/weapon_gyrojet_carbine/GyroJetCarbine_GunFire_Single_03.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Gyrojet_Carbine.SingleDistant",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 94,
+	pitch = {96, 101},
+	sound = {
+		"mcv/weapons/weapon_gyrojet_carbine/GyroJetCarbine_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_gyrojet_carbine/GyroJetCarbine_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_gyrojet_carbine/GyroJetCarbine_GunFire_Distant_03.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_M7188.Single",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 75,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_m7188/M7188_GunFire_Single_01.wav",
+		"mcv/weapons/weapon_m7188/M7188_GunFire_Single_02.wav",
+		"mcv/weapons/weapon_m7188/M7188_GunFire_Single_03.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_M7188.SingleDistant",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 94,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_m7188/M7188_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_m7188/M7188_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_m7188/M7188_GunFire_Distant_03.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_PK.Single",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 75,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_pk/PK_GunFire_Single_01.wav",
+		"mcv/weapons/weapon_pk/PK_GunFire_Single_02.wav",
+		"mcv/weapons/weapon_pk/PK_GunFire_Single_03.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_PK.SingleDistant",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 94,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_pk/PK_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_pk/PK_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_pk/PK_GunFire_Distant_03.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_VZ24.Single",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 75,
+	pitch = {96, 103},
+	sound = {
+		"mcv/weapons/weapon_vz24/VZ24_GunFire_Single_01.wav",
+		"mcv/weapons/weapon_vz24/VZ24_GunFire_Single_02.wav",
+		"mcv/weapons/weapon_vz24/VZ24_GunFire_Single_03.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_VZ24.SingleDistant",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 94,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_vz24/VZ24_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_vz24/VZ24_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_vz24/VZ24_GunFire_Distant_03.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_VZ54.Single",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 75,
+	pitch = {96, 103},
+	sound = {
+		"mcv/weapons/weapon_vz54/VZ54_GunFire_Single_01.wav",
+		"mcv/weapons/weapon_vz54/VZ54_GunFire_Single_02.wav",
+		"mcv/weapons/weapon_vz54/VZ54_GunFire_Single_03.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_VZ54.SingleDistant",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 94,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_vz54/VZ54_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_vz54/VZ54_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_vz54/VZ54_GunFire_Distant_03.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_CZ52.Single",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 75,
+	pitch = {96, 103},
+	sound = {
+		"mcv/weapons/weapon_cz52/CZ52_GunFire_Single_01.wav",
+		"mcv/weapons/weapon_cz52/CZ52_GunFire_Single_02.wav",
+		"mcv/weapons/weapon_cz52/CZ52_GunFire_Single_03.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_CZ52.SingleDistant",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 94,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_cz52/CZ52_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_cz52/CZ52_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_cz52/CZ52_GunFire_Distant_03.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_VZ59.Single",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 75,
+	pitch = {96, 103},
+	sound = {
+		"mcv/weapons/weapon_vz59/VZ59_GunFire_Single_01.wav",
+		"mcv/weapons/weapon_vz59/VZ59_GunFire_Single_02.wav",
+		"mcv/weapons/weapon_vz59/VZ59_GunFire_Single_03.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_VZ59.SingleDistant",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 94,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_vz59/VZ59_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_vz59/VZ59_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_vz59/VZ59_GunFire_Distant_03.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_VZ52.Single",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 75,
+	pitch = {96, 103},
+	sound = {
+		"mcv/weapons/weapon_vz52/VZ52_GunFire_Single_01.wav",
+		"mcv/weapons/weapon_vz52/VZ52_GunFire_Single_02.wav",
+		"mcv/weapons/weapon_vz52/VZ52_GunFire_Single_03.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_VZ52.SingleDistant",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 94,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_vz52/VZ52_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_vz52/VZ52_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_vz52/VZ52_GunFire_Distant_03.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_RGD5.FuseSound",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 85,
+	pitch = 100,
+	sound = {
+		")mcv/weapons/weapon_rgd5/RGD5_Grenade_FusePop_01.wav",
+		")mcv/weapons/weapon_rgd5/RGD5_Grenade_FusePop_02.wav",
+		")mcv/weapons/weapon_rgd5/RGD5_Grenade_FusePop_03.wav",
+		")mcv/weapons/weapon_rgd5/RGD5_Grenade_FusePop_04.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_RGD5.FuseSoundDistant",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 110,
+	pitch = 100,
+	sound = ")mcv/weapons/weapon_rgd5/RGD5_Grenade_FusePop_Dist.wav",
+} )
+
+sound.Add( {
 	name = "MCV_Weapon_M7_Bayonet.Deploy",
 	channel = CHAN_AUTO,
 	volume = 0.6,
@@ -3440,6 +4079,99 @@ sound.Add( {
 		"mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_charge_hit_flesh_1.wav",
 		"mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_charge_hit_flesh_2.wav",
 		"mcv/foley/weapon_specific/vietnam_weapon_shovel_foley_charge_hit_flesh_3.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Katana.Deploy",
+	channel = CHAN_AUTO,
+	volume = 0.6,
+	level = 0,
+	pitch = {100, 110},
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_katana_foley_draw_1.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Katana.Holster",
+	channel = CHAN_AUTO,
+	volume = 0.6,
+	level = 0,
+	pitch = {100, 110},
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_katana_foley_holster_1.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Katana.Swing",
+	channel = CHAN_AUTO,
+	volume = 0.5,
+	level = 0,
+	pitch = {96, 110},
+	sound = {
+		"mcv/foley/weapon_specific/vietnam_weapon_katana_foley_swing_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_katana_foley_swing_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_katana_foley_swing_3.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_katana_foley_swing_4.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Katana.Thrust",
+	channel = CHAN_AUTO,
+	volume = 0.6,
+	level = 0,
+	pitch = {96, 110},
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_katana_foley_thrust_1.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Katana.Hit",
+	channel = CHAN_AUTO,
+	volume = 0.8,
+	level = 0,
+	pitch = {105, 107},
+	sound = {
+		"mcv/foley/weapon_specific/vietnam_weapon_katana_foley_hitwall_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_katana_foley_hitwall_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_katana_foley_hitwall_3.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Katana.HitFlesh",
+	channel = CHAN_AUTO,
+	volume = 1.0,
+	level = 0,
+	pitch = {105, 107},
+	sound = {
+		"mcv/foley/weapon_specific/vietnam_weapon_katana_foley_hitflesh_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_katana_foley_hitflesh_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_katana_foley_hitflesh_3.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Katana.ThrustHit",
+	channel = CHAN_AUTO,
+	volume = 0.8,
+	level = 0,
+	pitch = {105, 107},
+	sound = {
+		"mcv/foley/weapon_specific/vietnam_weapon_katana_foley_thrust_hitwall_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_katana_foley_thrust_hitwall_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_katana_foley_thrust_hitwall_3.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Katana.ThrustHitFlesh",
+	channel = CHAN_AUTO,
+	volume = 1.0,
+	level = 0,
+	pitch = {105, 115},
+	sound = {
+		"mcv/foley/weapon_specific/vietnam_weapon_katana_foley_thrust_hitflesh_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_katana_foley_thrust_hitflesh_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_katana_foley_thrust_hitflesh_3.wav",
 	},
 } )
 
@@ -4236,6 +4968,64 @@ sound.Add( {
 } )
 
 sound.Add( {
+	name = "MCV_KolosMissileExplosionEffect.Sound",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 150,
+	pitch = {95, 105},
+	sound = {
+		")mcv/weapons/weapon_kolos/Kolos_Missile_Explosion_01.wav",
+		")mcv/weapons/weapon_kolos/Kolos_Missile_Explosion_02.wav",
+		")mcv/weapons/weapon_kolos/Kolos_Missile_Explosion_03.wav",
+		")mcv/weapons/weapon_kolos/Kolos_Missile_Explosion_04.wav",
+		")mcv/weapons/weapon_kolos/Kolos_Missile_Explosion_05.wav",
+		")mcv/weapons/weapon_kolos/Kolos_Missile_Explosion_06.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_KolosMissileExplosionEffect.SoundDistant",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 0,
+	pitch = {95, 105},
+	sound = {
+		"mcv/weapons/weapon_kolos/Kolos_Missile_ExplosionDistant_01.wav",
+		"mcv/weapons/weapon_kolos/Kolos_Missile_ExplosionDistant_02.wav",
+		"mcv/weapons/weapon_kolos/Kolos_Missile_ExplosionDistant_03.wav",
+		"mcv/weapons/weapon_kolos/Kolos_Missile_ExplosionDistant_04.wav",
+		"mcv/weapons/weapon_kolos/Kolos_Missile_ExplosionDistant_05.wav",
+		"mcv/weapons/weapon_kolos/Kolos_Missile_ExplosionDistant_06.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_M34GrenadeExplosionEffect.Sound",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 150,
+	pitch = {95, 105},
+	sound = {
+		")mcv/weapons/weapon_m202/M202_Missile_Explosion_01.wav",
+		")mcv/weapons/weapon_m202/M202_Missile_Explosion_02.wav",
+		")mcv/weapons/weapon_m202/M202_Missile_Explosion_03.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_M34GrenadeExplosionEffect.SoundDistant",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 0,
+	pitch = {95, 105},
+	sound = {
+		"mcv/weapons/weapon_m202/M202_Missile_ExplosionDistant_01.wav",
+		"mcv/weapons/weapon_m202/M202_Missile_ExplosionDistant_02.wav",
+		"mcv/weapons/weapon_m202/M202_Missile_ExplosionDistant_03.wav",
+	},
+} )
+
+sound.Add( {
 	name = "MCV_Weapon_FlareGun.Burn",
 	channel = CHAN_STATIC,
 	volume = 0.75,
@@ -4325,5 +5115,121 @@ sound.Add( {
 		"mcv/weapons/weapon_common/Common_Flamethrower_CollideBurn_06.wav",
 		"mcv/weapons/weapon_common/Common_Flamethrower_CollideBurn_07.wav",
 	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Turrets_DSHK.Single",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 75,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_turrets/Turret_DSHK_GunFire_Single_01.wav",
+		"mcv/weapons/weapon_turrets/Turret_DSHK_GunFire_Single_02.wav",
+		"mcv/weapons/weapon_turrets/Turret_DSHK_GunFire_Single_03.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Turrets_DSHK.SingleDistant",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 94,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_turrets/Turret_DSHK_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_turrets/Turret_DSHK_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_turrets/Turret_DSHK_GunFire_Distant_03.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Turrets_SPG9.Single",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 75,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_turrets/Turret_SPG9_GunFire_Single_01.wav",
+		"mcv/weapons/weapon_turrets/Turret_SPG9_GunFire_Single_02.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Turrets_SPG9.SingleDistant",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 94,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_turrets/Turret_SPG9_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_turrets/Turret_SPG9_GunFire_Distant_02.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Turrets_M2Browning.Single",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 75,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_turrets/Turret_M2Browning_GunFire_Single_01.wav",
+		"mcv/weapons/weapon_turrets/Turret_M2Browning_GunFire_Single_02.wav",
+		"mcv/weapons/weapon_turrets/Turret_M2Browning_GunFire_Single_03.wav",
+		"mcv/weapons/weapon_turrets/Turret_M2Browning_GunFire_Single_04.wav",
+		"mcv/weapons/weapon_turrets/Turret_M2Browning_GunFire_Single_05.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Turrets_M2Browning.SingleDistant",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 94,
+	pitch = {98, 101},
+	sound = {
+		"mcv/weapons/weapon_turrets/Turret_M2Browning_GunFire_Distant_01.wav",
+		"mcv/weapons/weapon_turrets/Turret_M2Browning_GunFire_Distant_02.wav",
+		"mcv/weapons/weapon_turrets/Turret_M2Browning_GunFire_Distant_03.wav",
+		"mcv/weapons/weapon_turrets/Turret_M2Browning_GunFire_Distant_04.wav",
+		"mcv/weapons/weapon_turrets/Turret_M2Browning_GunFire_Distant_05.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Turrets_M134.SingleLoop",
+	channel = CHAN_WEAPON,
+	volume = 1.0,
+	level = 75,
+	pitch = {98, 101},
+	sound = "mcv/weapons/weapon_turrets/Turret_M134_GunFireAlt_Loop.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Turrets_M134.SingleLoopDistant",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 94,
+	pitch = {98, 101},
+	sound = "mcv/weapons/weapon_turrets/Turret_M134_GunFireDistant_Loop.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Turrets_Generic.Explosion",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 150,
+	pitch = {95, 105},
+	sound = ")mcv/weapons/weapon_turrets/Turret_Generic_Explosion_01.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Turrets_Generic.ExplosionDistant",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 0,
+	pitch = {95, 105},
+	sound = "mcv/weapons/weapon_turrets/Turret_Generic_ExplosionDistant_01.wav",
 } )
 

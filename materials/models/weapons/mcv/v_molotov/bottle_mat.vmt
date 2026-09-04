@@ -21,7 +21,7 @@
 	"$rimlightexponent" "8"
 	"$rimlightboost" "5"
 	
-	"$detail" "models/weapons/mcv/effects/dynamic_detail"
+	"$detail" "models/effects/dynamic_detail"
 	"$detailscale" "1.75"
 	"$detailblendfactor" "0.0"
 	"$detailblendmode" "0"

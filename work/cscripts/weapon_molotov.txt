@@ -1,76 +1,65 @@
-// Molotov Grenade
-
 WeaponData
 {
-	// Weapon data is loaded by both the Game and Client DLLs.
-	"printname"				"#weapon_MOLOTOV"
-	"origin"				"#not_available"
-	"viewmodel"				"models/weapons/v_molotov.mdl"
+	"printname"					"#weapon_MOLOTOV"
+	"origin"					"#finland"
+
+	"viewmodel"					"models/weapons/v_molotov.mdl"
 	"playermodel"				"models/weapons/w_molotov.mdl"
 	"anim_prefix"				"molotov"
-	"bucket"				"3"
-	"bucket_position"			"1"
-	"item_flags"				"18"	// ITEM_FLAG_NOAUTORELOAD | ITEM_FLAG_EXHAUSTIBLE
 
+	"bucket"					"3" //weapon menu category
+	"bucket_position"			"1" //weapon menu position
+	"item_flags"				"18" //ITEM_FLAG_NOAUTORELOAD | ITEM_FLAG_EXHAUSTIBLE
+	// "autoswitchfrom"			"0"
 	"WeaponType"				"Incendiary"
 
-	"primary_ammo"				"molotov"
-	"secondary_ammo"			"None"
+	"weight"					"1" //KG
 
-	"clip_size"				"-1/1"	// clip size/max ammo (-1 means we don't use clips for this ammo type)
-	"clip2_size"				"-1"	// max secondary ammo
+	"HasBayonet"				"0"
+	"HasBipod"					"0"
+	"isSupressed"				"0"
+	"BuiltRightHanded"			"1"
 
-	"default_clip"				"1"	// ammo given by default
-	"default_clip2"				"-1"	// ditto for second ammo type
+	"primary_ammo"				"molotov" //caliber
+	"secondary_ammo"			"None" //caliber
 
-	"weight"				"1"
+	"clip_size"					"-1/1" //clip size/max ammo (-1 means we don't use clips for this ammo type)
+	"clip2_size"				"-1" //max secondary ammo
 
-	"ExplosionDamage"			"35"
-	"ExplosionRadius"			"200"
+	"default_clip"				"1" //ammo given by default
+	"default_clip2"				"-1" //ditto for second ammo type
 
-	// Zombie Mode
-	"ZMBuyPrice"	 "350"
-	"ZMSellPrice"	 "300"
+	"FireRate"					"30" //RPM
+	"SecondaryFireRate"			"-1" //RPM, -1 to disable
+
+	"ExplosionDamage"		"35"
+	"ExplosionRadius"		"200" //hammer units
+
+	"DamageGeneric"				"20" //damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)
+
+	"IronSight"						"0" //0 - not available to ADS with
+
+	CustomOffset
+	{
+		"forward"					"1"
+		"right"						"0"
+		"up"						"0"
+		"pitch"						"0"
+		"yaw"						"0"
+		"roll"						"0"
+	}
+
+	"ZMBuyPrice"	 "1000"
 	"ZMWeight"		 "0"
-	
-	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+
 	SoundData
 	{
-		"single_shot"		""
-		"double_shot"		""
-		"reload"		""
-		"special1"		""
-		"special2"		""
-		"nearlyempty"		""
-		"empty"			"Weapon_Generic.ClipEmpty_01"
+		"empty"				"Weapon_Generic.ClipEmpty_01"
 
-		// NPC SECTION
-		"single_shot_npc"	""
-		"double_shot_npc"	""
-		"reload_npc"		""
-		
-		// 3RD PERSON PLAYER SECTION
-		"player_reload"		""
-		"player_reload_loop"		""
-		"player_reload_cycle"		""
-
-		"player_grenade_pullpin"		"Weapon_Foley_ThirdPerson_Molotov.PullPin"
-		"player_grenade_on"		""
-		"player_equipment_on"		""
-		"player_equipment_off"		""
-		"player_deploy"		"Weapon_Foley_ThirdPerson_Molotov.Draw"
-		"player_holster"		"Weapon_Foley_ThirdPerson_Molotov.Holster"
-		"player_bash"		"Weapon_Foley_ThirdPerson_Molotov.Bash"
+		"player_grenade_pullpin"	"Weapon_Foley_ThirdPerson_Molotov.PullPin"
+		"player_deploy"				"Weapon_Foley_ThirdPerson_Molotov.Draw"
+		"player_holster"			"Weapon_Foley_ThirdPerson_Molotov.Holster"
+		"player_bash"				"Weapon_Foley_ThirdPerson_Molotov.Bash"
 	}
 
-	// viewmodel offset in non-ironsighted case
-        CustomOffset
-	{
-		"forward"	"1"
-		"right"		"0"
-		"up"		"0"
-		"pitch"		"0"
-		"yaw"		"0"
-		"roll"		"0"
-	}
 }

@@ -9,7 +9,7 @@
 	$MAXLUMFRAMEBLEND2 1
 	$overbrightfactor "6.0"
 	
-	$depthblend "0"
+	$DEPTHBLEND "1"
 	$DEPTHBLENDSCALE "40"
 }
 

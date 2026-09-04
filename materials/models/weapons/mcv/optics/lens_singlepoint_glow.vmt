@@ -2,4 +2,27 @@
 {
 	"$basetexture" "models\weapons\mcv\optics\crosshair_singlepoint"
 	"$additive" 1
+	"$color"		"[0 0 0]"
+	
+	//"$envmap" "env_cubemap"
+	//"$envmaptint" "[0.4 0.4 0.4]"
+	//"$envmapfresnel" "1"
+	
+	"Proxies"
+	{
+        "ScopeLensToggle"
+		{
+			//"resultVar" "$color[0]"
+		}
+		"ScopeTintTransition"
+		{
+			"tintvar" "$color"
+			"tint_inscope" "2 2 2"
+		}
+		//"ScopeTintTransition"
+		//{
+		//	"tintvar" "$envmaptint"
+		//	"tint_inscope" "0.1 0.1 0.1"
+		//}
+	}
 }

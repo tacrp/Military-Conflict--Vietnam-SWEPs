@@ -1,0 +1,10 @@
+"patch"
+{
+	"include" "materials\models\weapons\mcv\ppsh41_shared.vmt"
+	"insert"
+	{
+    "$basetexture"                    "models\weapons\mcv\w_ppsh41\w_ppsh41_doubledrum_diffuse"
+    "$bumpmap"                         "models\weapons\mcv\w_ppsh41\w_ppsh41_doubledrum_normal"
+	"$PhongExponentTexture" 			"models\weapons\mcv\w_ppsh41\w_ppsh41_doubledrum_exponent"
+	}
+}

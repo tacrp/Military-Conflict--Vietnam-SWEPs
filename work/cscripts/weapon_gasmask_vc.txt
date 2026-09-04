@@ -1,36 +1,55 @@
-// Gasmask
-// Not a real weapon! Just setup like this for simplicity
-
 WeaponData
 {
-	// Weapon data is loaded by both the Game and Client DLLs.
-	"printname"				"#weapon_GASMASK_vc"
-	"viewmodel"				"models/weapons/v_gasmask.mdl"
-	"playermodel"			"models/player/hats/gasmask_vc.mdl"
-	"anim_prefix"			"gasmask"
-	"bucket"				"5"
-	"bucket_position"		"0"
-	
-	"clip_size"				"-1"
-	"clip2_size"			"-1"
-	"default_clip"			"-1"
-	"default_clip2"			"-1"
-	"primary_ammo"			"None"
-	"secondary_ammo"		"None"
-	
-	"weight"				"0"
-	"item_flags"			"0"
-	
-	"WeaponType"			"Equipment"
-	
+	"printname"					"#weapon_GASMASK_vc"
+	"origin"					"#china"
+
+	"viewmodel"					"models/weapons/v_gasmask.mdl"
+	"playermodel"				"models/player/hats/gasmask_vc.mdl"
+	"anim_prefix"				"gasmask"
+
+	"bucket"					"5" //weapon menu category
+	"bucket_position"			"0" //weapon menu position
+	"item_flags"				"0"
+	// "autoswitchfrom"			"0"
+	"WeaponType"				"Equipment"
+
+	"weight"					"0" //KG
+
+	"HasBayonet"				"0"
+	"HasBipod"					"0"
+	"isSupressed"				"0"
+	"BuiltRightHanded"			"1"
+
 	BodygroupData
 	{
-		"studio"			"1"
+	"studio"		"1"
 	}
 
-	// Zombie Mode
-	"ZMBuyPrice"	 "250"
-	"ZMSellPrice"	 "200"
-	"ZMWeight"		 "0"
-}
+	"primary_ammo"				"None" //caliber
+	"secondary_ammo"			"None" //caliber
 
+	"clip_size"					"-1" //clip size/max ammo
+	"clip2_size"				"-1" //max secondary ammo, -1 to disable
+
+	"default_clip"				"-1" //ammo given by default
+	"default_clip2"				"-1" //ditto for second ammo type, -1 to disable
+
+	"FireRate"					"30" //RPM
+	"SecondaryFireRate"			"-1" //RPM, -1 to disable
+
+	"IronSight"						"0" //0 - not available to ADS with
+
+	CustomOffset
+	{
+		"forward"					"0"
+		"right"						"0"
+		"up"						"0"
+		"pitch"						"0"
+		"yaw"						"0"
+		"roll"						"0"
+	}
+
+	"ZMBuyPrice"	 "350"
+	"ZMWeight"		 "0"
+
+}

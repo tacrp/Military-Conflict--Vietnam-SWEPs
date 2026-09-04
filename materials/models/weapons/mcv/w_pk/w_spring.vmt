@@ -1,0 +1,9 @@
+"VertexLitGeneric"
+{
+	"$basetexture"						"models\weapons\mcv\w_fal\w_spring_diffuse"
+	"$nocull" 1
+	"$alphatest" 1
+	"$alphatocoverage_userdriven" "1" // Follows "Alpha Smoothing" in-game setting, use original $AllowAlphaToCoverage to force it.
+	"$phong" "1"
+}
+

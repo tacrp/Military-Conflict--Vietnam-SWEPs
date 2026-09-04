@@ -1,53 +1,73 @@
-// M16 Mine
-
 WeaponData
 {
-	// Weapon data is loaded by both the Game and Client DLLs.
-	"printname"				"#weapon_m16mine"
-	"origin"				"#united_states_of_america"
-	"viewmodel"				"models/weapons/v_mine.mdl"
+	"printname"					"#weapon_m16mine"
+	"ammo_id_display"			"#ammo_id_35"
+	"origin"					"#united_states_of_america"
+
+	"viewmodel"					"models/weapons/v_mine.mdl"
 	"playermodel"				"models/weapons/w_mine.mdl"
 	"anim_prefix"				"mine"
-	"bucket"				"4"
-	"bucket_position"			"0"
 
-	"WeaponType"				"Mine"
-	
-	// Set model's bodygroups
-	BodygroupData
-	{			
-		"mine"		"0"
-	}
-
-	"clip_size"				"-1/1" (-1 means we don't use clips for this ammo type)
-	"primary_ammo"				"mine"
-	"secondary_ammo"			"None"
-	
-	"default_clip"				"1"	// ammo given by default
-	"default_clip2"				"-1"	// ditto for second ammo type
-
-	"weight"				"1"
+	"bucket"					"4" //weapon menu category
+	"bucket_position"			"0" //weapon menu position
 	"item_flags"				"2"
+	// "autoswitchfrom"			"0"
+	"WeaponType"				"Mine"
 
-	// Zombie Mode
-	"ZMBuyPrice"	 "400"
-	"ZMSellPrice"	 "300"
-	"ZMWeight"		 "2"
-		
-	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
-	SoundData
-	{	
-		// 3RD PERSON PLAYER SECTION
-		"player_reload"		""
-		"player_reload_loop"		""
-		"player_reload_cycle"		""
+	"weight"					"1" //KG
 
-		"player_grenade_pullpin"		""
-		"player_grenade_on"		""
-		"player_equipment_on"		""
-		"player_equipment_off"		""
-		"player_deploy"		"Weapon_Foley_ThirdPerson_Shared.DrawSmall"
-		"player_holster"		"Weapon_Foley_ThirdPerson_Shared.HolsterSmall"
-		"player_bash"		"Weapon_Foley_ThirdPerson_Shared.BashFast"
+	"HasBayonet"				"0"
+	"HasBipod"					"0"
+	"isSupressed"				"0"
+	"BuiltRightHanded"			"1"
+
+	BodygroupData
+	{
+	"mine"			"0"
 	}
+
+	"primary_ammo"				"mine" //caliber
+	"secondary_ammo"			"None" //caliber
+
+	"clip_size"					"-1/1" //clip size/max ammo
+	"clip2_size"				"-1" //max secondary ammo, -1 to disable
+
+	"default_clip"				"1" //ammo given by default
+	"default_clip2"				"-1" //ditto for second ammo type
+
+	"FireRate"					"30" //RPM
+	"SecondaryFireRate"			"-1" //RPM, -1 to disable
+
+	"ExplosionDamage"		"175" //for explosive weapons
+	"ExplosionRadius"		"250" //for explosive weapons
+
+	"DamageGeneric"				"175" //For displayed stats
+
+	"IronSight"						"0" //0 - not available to ADS with
+
+	CustomOffset
+	{
+		"forward"					"0"
+		"right"						"0"
+		"up"						"0"
+		"pitch"						"0"
+		"yaw"						"0"
+		"roll"						"0"
+	}
+
+	"ZMBuyPrice"	 "250"
+	"ZMWeight"		 "0"
+	zombie_stats
+	{
+		"ExplosionDamage"		"225"
+	}
+
+	SoundData
+	{
+
+		"player_deploy"				"Weapon_Foley_ThirdPerson_Shared.DrawSmall"
+		"player_holster"			"Weapon_Foley_ThirdPerson_Shared.HolsterSmall"
+		"player_bash"				"Weapon_Foley_ThirdPerson_Shared.BashFast"
+	}
+
 }

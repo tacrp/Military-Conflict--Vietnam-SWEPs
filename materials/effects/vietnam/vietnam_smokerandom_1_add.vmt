@@ -5,7 +5,7 @@
 	$vertexcolor "1"
 	$vertexalpha "1"
 	$additive "1"
-	$depthblend "0"
+	$depthblend "1"
 	$startfadesize ".4"
 	$endfadesize ".65"
 	// Vietnam specific

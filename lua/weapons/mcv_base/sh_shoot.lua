@@ -279,6 +279,12 @@ function SWEP:BulletAttack()
         num = num * math.min(self:Clip1(), self.VolleyCount)
     end
 
+    // Tracers: the game's particle tracers (vietnam_tracer_*), fired from the world model's
+    // muzzle so every client sees them. GMod's own tracer is disabled (Tracer = 0).
+    local tracer = self.TracerParticle
+    local usetracer = SERVER and tracer and tracer != "" and tracer != "null" and (self.TracerFrequency or 1) > 0
+    self.TracerCounter = (self.TracerCounter or 0) + 1
+
     owner:FireBullets({
         Damage = self.DamageGeneric,
         Num = num,
@@ -286,8 +292,17 @@ function SWEP:BulletAttack()
         Dir = self:GetAimVector(),
         Spread = Vector(spread, spread, spread),
         Attacker = owner,
-        TracerNum = self.TracerFrequency,
+        Tracer = 0,
         Callback = function(attacker, tr, dmginfo)
+            if usetracer and self.TracerCounter % (self.TracerFrequency or 1) == 0 then
+                local att = self:LookupAttachment("muzzle")
+                if att > 0 then
+                    util.ParticleTracerEx(tracer, self:GetAttachment(att).Pos, tr.HitPos, false, self:EntIndex(), att)
+                else
+                    util.ParticleTracer(tracer, owner:GetShootPos(), tr.HitPos, false)
+                end
+            end
+
             local dmg = dmginfo:GetDamage()
             local range = (tr.HitPos - tr.StartPos):Length()
 

@@ -1,0 +1,21 @@
+"VertexLitGeneric"
+{	
+	"$basetexture"                    "models\weapons\mcv\v_dp28\soviet_belt_diffuse"
+    "$bumpmap"                         "models\weapons\mcv\v_dp28\soviet_belt_normal"
+
+	"$phong" "1"
+	"$phongboost"	".4"
+	"$phongexponent"   "48"
+	"$phongfresnelranges"	"[1 1.2 4]"
+	"$PhongAlbedoTint" "1"
+	"$phongalbedoboost" "8"
+	"$surfaceprop" "metal"
+
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[ .06 .06 .06]"
+	"$normalmapalphaenvmapmask" "1"
+	
+	"$alphatest" "1"
+	"$AlphaTestReference" ".2"
+	"$AllowAlphaToCoverage" "1"
+}

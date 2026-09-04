@@ -147,19 +147,19 @@ SWEP.SoundEmpty = "MCV_Weapon_Generic.ClipEmpty_01"
 // SWEP.EjectBrassTrail = "vietnam_weaponeffect_shelleject_trail"
 // SWEP.EjectBrassParticle = "vietnam_weaponeffect_shelleject_side"
 
-SWEP.MuzzleParticle = "muzzleflash_m79"
-SWEP.MuzzleParticleSmoke = ""
-SWEP.MuzzleParticleIronsighted = "muzzleflash_m79"
-SWEP.MuzzleParticleIronsightedSmoke = ""
+SWEP.MuzzleParticle = "vietnam_muzzleflash_rocketlauncher_type1_fp"
+SWEP.MuzzleParticleSmoke = "vietnam_muzzleflash_rocketlauncher_type1_fp_smoke"
+SWEP.MuzzleParticleIronsighted = "vietnam_muzzleflash_rocketlauncher_type1_fp_is"
+SWEP.MuzzleParticleIronsightedSmoke = "vietnam_muzzleflash_rocketlauncher_type1_fp_is_smoke"
 
-SWEP.MuzzleParticle3rdPerson = "muzzleflash_m79"
+SWEP.MuzzleParticle3rdPerson = "vietnam_muzzleflash_rocketlauncher_type1_tp"
 
 SWEP.NoEjectOnShoot = true
 SWEP.EjectBrassType = 1
-SWEP.EjectBrassTrail = "shellsmoke"
-SWEP.EjectBrassParticle = "port_smoke"
+SWEP.EjectBrassTrail = "vietnam_weaponeffect_shelleject_trail"
+SWEP.EjectBrassParticle = "vietnam_weaponeffect_shelleject_side"
 
-SWEP.TracerParticle = "tracer"
+SWEP.TracerParticle = ""
 
 SWEP.TracerRandomness = 6
 SWEP.TracerFrequency = 1

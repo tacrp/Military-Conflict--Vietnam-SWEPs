@@ -1,0 +1,7 @@
+"unlitgeneric"
+{
+	$basetexture "effects/Vietnam/Vietnam_AE_Tracers_02"
+	$additive "1"
+	$overbrightfactor "4"
+	$HDRCOLORSCALE "1.5"
+}

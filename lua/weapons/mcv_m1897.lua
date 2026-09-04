@@ -144,19 +144,19 @@ SWEP.SoundEmpty = "MCV_Weapon_Generic.ClipEmpty_01"
 // SWEP.EjectBrassTrail = "vietnam_weaponeffect_shelleject_trail"
 // SWEP.EjectBrassParticle = "vietnam_weaponeffect_shelleject_side"
 
-SWEP.MuzzleParticle = "muzzleflash_shotgun"
-SWEP.MuzzleParticleSmoke = ""
-SWEP.MuzzleParticleIronsighted = "muzzleflash_shotgun"
-SWEP.MuzzleParticleIronsightedSmoke = ""
+SWEP.MuzzleParticle = "vietnam_muzzleflash_shotgun_type1_fp"
+SWEP.MuzzleParticleSmoke = "vietnam_muzzleflash_shotgun_type1_fp_smoke"
+SWEP.MuzzleParticleIronsighted = "vietnam_muzzleflash_shotgun_type1_fp_is"
+SWEP.MuzzleParticleIronsightedSmoke = "vietnam_muzzleflash_shotgun_type1_fp_is_smoke"
 
-SWEP.MuzzleParticle3rdPerson = "muzzleflash_shotgun"
+SWEP.MuzzleParticle3rdPerson = "vietnam_muzzleflash_shotgun_type1_tp"
 
 SWEP.NoEjectOnShoot = true
 SWEP.EjectBrassType = 2
-SWEP.EjectBrassTrail = "shellsmoke"
-SWEP.EjectBrassParticle = "port_smoke"
+SWEP.EjectBrassTrail = "vietnam_weaponeffect_shelleject_trail"
+SWEP.EjectBrassParticle = "vietnam_weaponeffect_shelleject_side"
 
-SWEP.TracerParticle = "tracer"
+SWEP.TracerParticle = "vietnam_tracer_shotgun_green_primary"
 
 SWEP.MuzzleFlashLightTexture = "effects/flashlight_muzzleflash_sg"
 

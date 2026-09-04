@@ -1,0 +1,10 @@
+"SpriteCard"
+{
+	$basetexture "effects/sourceengine/Vietnam_SE_Fire_1"
+	$BLENDFRAMES "1"
+	$OVERBRIGHTFACTOR "4.0"
+	$STARTFADESIZE ".475"
+	$ENDFADESIZE ".55"
+	$DEPTHBLEND "1"
+	$additive "1"
+}

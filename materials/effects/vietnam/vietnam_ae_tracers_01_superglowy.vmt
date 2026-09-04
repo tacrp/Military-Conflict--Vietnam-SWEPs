@@ -2,6 +2,6 @@
 {
 	$basetexture "effects/Vietnam/Vietnam_AE_Tracers_01"
 	$additive "1"
-	$overbrightfactor "95.0"
-	$HDRCOLORSCALE "3"
+	$overbrightfactor "8"
+	$HDRCOLORSCALE "2.0"
 }

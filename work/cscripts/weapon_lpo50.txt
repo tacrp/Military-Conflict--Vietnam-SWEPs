@@ -1,112 +1,229 @@
-// LPO-50 Flamethrower
-
-WeaponData
+﻿WeaponData
 {
-	// Weapon data is loaded by both the Game and Client DLLs.
-	"printname"				"#weapon_LPO50"
-	"origin"				"#soviet_union"
-	"viewmodel"				"models/weapons/v_lpo50.mdl"
+	"printname"					"#weapon_LPO50"
+	"ammo_id_display"			"#ammo_id_32"
+	"origin"					"#soviet_union"
+	
+	"viewmodel"					"models/weapons/v_lpo50.mdl"
 	"playermodel"				"models/weapons/w_lpo50.mdl"
 	"anim_prefix"				"lpo50"
-	"bucket"				"3"
-	"bucket_position"			"0"
+	
+	"bucket"					"3" //weapon menu category
+	"bucket_position"			"0" //weapon menu position
 	"item_flags"				"0"
 	"autoswitchfrom"			"1"
-
 	"WeaponType"				"Flamethrower"
+//	"SupportedFireModes"		""
 
-	"primary_ammo"				"flamethrower_fuel"
-	"secondary_ammo"			"None"
+	"weight"					"12" //KG
+//	"point_cost"				""
 
-	"clip_size"				"-1/100"	// clip size/max ammo (-1 means we don't use clips for this ammo type)
-	"clip2_size"				"-1"		// max secondary ammo
-
-	"default_clip"				"100"	// ammo given by default
-	"default_clip2"				"-1"	// ditto for second ammo type
-
-	"FireRate"				"600"	// RPM
-
-	"DamageGeneric"				"15"
-
-	"weight"				"12"
+	"HasBayonet"				"0"
+	"HasBipod"					"0"
+	"isSupressed"				"0" // informational only
+	"BuiltRightHanded"			"1" // if 0 it will automatically flip weapon viewmodel to be lefthanded
 	
-	////////////////////////////
-	// Weapon Particles Start //
-	////////////////////////////
-
-	"MuzzleParticle"       			"lpo50_flame"	
-    "MuzzleParticle3rdPerson"		"lpo50_flame"
-    "ParticleAttachType"			"1"	// 0 - PATTACH_POINT; 1 - PATTACH_POINT_FOLLOW
+//	"skin"						""
+//	BodygroupData
+//	{	
+//	}
 	
-	"MuzzleLight"			"effects/flashlight_muzzleflash_ft" // "None" will disable projected muzzleflash
-	"MuzzleLightBrightnessLower"		"2.3"
-	"MuzzleLightBrightnessUpper"		"2.5"
-	"MuzzleLightFOVLower"			"125"
-	"MuzzleLightFOVUpper"			"135"
-	"MuzzleLightDuration"			"0.1"
-	"MuzzleLightFadeIn"			"0.25"
-	"MuzzleLightFadeOut"			"0.5"
+	"primary_ammo"				"flamethrower_fuel" //caliber
+	"secondary_ammo"			"None" //caliber
 
-	//////////////////////////
-	// Weapon Particles End //
-	//////////////////////////
+	"clip_size"					"-1/100" //clip size/max ammo (-1 means we don't use clips for this ammo type)
+	"clip2_size"				"-1" //max secondary ammo
 
-	"IronSight"				"1"
-	"IronsightedFovOffset"			"-15"
+	"default_clip"				"100" //ammo given by default
+	"default_clip2"				"-1" //ditto for second ammo type
 
-	// viewmodel offset when weapon ironsighted
+	"FireRate"					"600" //RPM
+	"SecondaryFireRate"			"-1" //RPM, -1 to disable
+//	"bullet_weight"				"" // KG
+	
+//	"OverheatRate"				"" // added per shot up to 1.0 (overheated)
+//	"OverheatDuration"			"" // how long in seconds your weapon is unusable upon overheating
+//	"CooldownRate"				"" // how much overheat is reduced each second from 1.0 to 0.0
+	
+	//launchers only
+//	"gl_velocity"			"" // m/s, grenade launcher shoot velocity, -1 to disable
+	//---
+	
+	//non-explosive only
+//	"ExtraBulletChamber"		"" // 0 - does NOT have +1 in the chamber
+//	"muzzle_velocity"			"" // m/s
+	"DamageGeneric"				"15" //damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)
+	"DamageHeadMultiplier"		"" // multiplier for head hitbox
+	"DamageChestMultiplier"		"" // multiplier for chest hitbox
+	"DamageStomachMultiplier"	"" // multiplier for stomach/abdomen hitbox
+	"DamageLegMultiplier"		"" // multiplier for any leg hitbox
+	"DamageArmMultiplier"		"" // multiplier for any arm/hand hitbox
+	"rangemodifier"				"" // damage * (rangemodifier ^ distance/500) ; or approx. this multiplier is compounded every 600 units 
+
+	// camera shake - does not affect accuracy
+//	"ShakeScale"					"" // strength; does NOT affect accuracy
+//	"ShakeFreq"						"" // how many shakes per second
+//	"ShakeDuration"					"" // sec
+
+	// weapon recoil kick - minimal | all in degrees
+//	"ViewMinKickPITCH"				""
+//	"ViewMinKickYAW"				""
+//	"ViewMinKickROLL"				""
+	// weapon recoil kick - maximal | all in degrees
+//	"ViewKickPITCH"					""
+//	"ViewKickYAW"					""
+//	"ViewKickROLL"					""
+	//---
+
+	// fixed view slide from recoil
+	ViewSlideRecoil
+	{
+		"Up"				""
+		"Right"				""
+		"Up_max" 			""
+		"Right_max"			""
+	}
+	// fixed view slide from recoil when aiming down sights
+	ViewSlideRecoilIronsight
+	{
+		"Up"				""
+		"Right"				""
+		"Up_max" 			""
+		"Right_max"			""
+	}
+//	"ViewSlideRecoilTransitionTimeSeconds"		"" // how fast the aiming recoil will change when you start/stop ADS
+	//---
+	
+//	"UseScopecamera"			""
+//	"BlurScope"					"" // bool - do we blur around the scope?
+//	"DofFocusDist"				"" // override depth of field focal distance
+//	"DofScale"					"" // override depth of field strength when aiming
+
+	// aiming down sights:	
+	"IronSight"					"1" //0 - not available to ADS with
+//	"IronsightSpeedScale"			"" // how long ADS transition will last in seconds
+	"IronsightedFovOffset"		"-15" //degrees added when ADS
+//	"ScopeLensFov"					"" // degrees fov, absolute value
+//	"ScopeLensFov2"					"" // ditto for second zoom level
+//	"ScopeLensTeleFovScale"			"" // render-target scale for expensive scopes. best to experiment in-game.
+	// viewmodel offsets when ADS - both ironsight and scope - all in units
 	"ironsightforward"			"0"
 	"ironsightright"			"0"
 	"ironsightup"				"0"
 	"ironsightpitch"			"0"
 	"ironsightyaw"				"0"
 	"ironsightroll"				"0"
+	//---
+//	"ironsightwalkbobbingstrength"	"" // strength/amplitude of head-bobbing effect when walking while ADS
+	
+	// non-projectile-based weapons only
+//	"CrosshairMinDistance"			"" // 1-16
+//	"CrosshairDeltaDistance"		"" // 1-16
+	//---
 
 	// viewmodel offset in non-ironsighted case
-        CustomOffset
+	CustomOffset
 	{
-		"forward"	"0"
-		"right"		"0"
-		"up"		"0"
-		"pitch"		"0"
-		"yaw"		"0"
-		"roll"		"0"
+		"forward"					"0"
+		"right"						"0"
+		"up"						"0"
+		"pitch"						"0"
+		"yaw"						"0"
+		"roll"						"0"
 	}
+	//---
 	
-	"NearwallDistance"			"25"
+	"NearwallDistance"			"25" //hammer units
+//	"recoilpushbackvalue"			""
 
 	// Zombie Mode
-	"ZMBuyPrice"	 "6000"
-	"ZMSellPrice"	 "5000"
-	"ZMWeight"		 "6"
+	"ZMBuyPrice"				"4750"
+	"ZMWeight"					"6"
+	// if anything is modified for zombies mode:
+	//zombie_stats
+	//{
+	//}
+	//---
 	
-	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	// Day of Victory
+	// if anything is modified for DoV:
+	//dov_stats
+	//{
+	//}
+	//---
+	
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 single_shot sounds)
 	SoundData
 	{
-		"single_shot"		"Weapon_LPO50.Primary_Fire_Start"
+		"single_shot"				"Weapon_LPO50.Primary_Fire_Start"
 		"double_shot"		""
-		"reload"		""
-		"special1"		"Weapon_LPO50.Primary_Fire_Loop"
-		"special2"		"Weapon_LPO50.Primary_Fire_Stop"
-		"nearlyempty"		"Weapon_Generic.NearlyEmptyClick"
-		"empty"			"Weapon_Generic.ClipEmpty_01"
-
+		"reload"			""
+		"special1"					"Weapon_LPO50.Primary_Fire_Loop"
+		"special2"					"Weapon_LPO50.Primary_Fire_Stop"
+		"nearlyempty"				"Weapon_Generic.NearlyEmptyClick"
+		"empty"						"Weapon_Generic.ClipEmpty_01"
+		"melee_hit"			""
+		"melee_hit_world"	""
+		
 		// NPC SECTION
 		"single_shot_npc"	""
 		"double_shot_npc"	""
 		"reload_npc"		""
 		
 		// 3RD PERSON PLAYER SECTION
-		"player_reload"		""
+		"player_reload"				""
 		"player_reload_loop"		""
 		"player_reload_cycle"		""
 
-		"player_grenade_pullpin"		""
-		"player_grenade_on"		""
+		"player_grenade_pullpin"	""
+		"player_grenade_on"			""
 		"player_equipment_on"		""
 		"player_equipment_off"		""
-		"player_deploy"		"Weapon_Foley_ThirdPerson_Shared.Draw"
-		"player_holster"		"Weapon_Foley_ThirdPerson_Shared.Holster"
-		"player_bash"		"Weapon_Foley_ThirdPerson_Shared.BashSlow"
+		"player_deploy"				"Weapon_Foley_ThirdPerson_Shared.Draw"
+		"player_holster"			"Weapon_Foley_ThirdPerson_Shared.Holster"
+		"player_bash"				"Weapon_Foley_ThirdPerson_Shared.BashSlow"
 	}
+	//
+	
+	////////////////////////////
+	// Weapon Particles Start //
+	////////////////////////////
+		
+ 	"MuzzleParticle"			"lpo50_flame" //"null" will disable
+ 	"MuzzleParticle_Smoke"				"" // "null" will disable
+ 	"MuzzleParticle_Ironsighted"		"" // "null" will disable
+ 	"MuzzleParticle_IronsightedSmoke"	"" // "null" will disable
+	
+	"MuzzleParticle3rdPerson"	"lpo50_flame"
+	"ParticleAttachType"		"1" //0 - PATTACH_POINT; 1 - PATTACH_POINT_FOLLOW
+
+	"MuzzleSmokeParticle"				""
+	"MuzzleSmokeShotCount"				""
+
+	"EjectBrassType"					""
+	"EjectBrassTrail"					""
+	"EjectBrassParticle"				"" // "null" will disable
+	"EjectBrassSound"					""
+	
+	"EjectMiscModel"					""
+	"EjectMiscSound"					""
+	
+	"TracerParticle"					"" // "null" will disable
+	"TracerParticle2"					"" // "null" will disable
+	"TracerRandomness"					""
+	"TracerFrequency"					""
+	
+	"MuzzleLight"					"effects/flashlight_muzzleflash_ft" //"None" will disable projected muzzleflash
+	"MuzzleLightBrightnessLower"	"2.3" //Random brightness is chosen between this Lower - Upper range
+	"MuzzleLightBrightnessUpper"	"2.5"
+	"MuzzleLightFOVLower"		"125"
+	"MuzzleLightFOVUpper"		"135"
+	"MuzzleLightDuration"		"0.1"
+	"MuzzleLightFadeIn"			"0.25"
+	"MuzzleLightFadeOut"		"0.5"
+//	"MuzzleLightDistance"				""
+	
+	//////////////////////////
+	// Weapon Particles End //
+	//////////////////////////
 }

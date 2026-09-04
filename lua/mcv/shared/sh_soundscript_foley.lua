@@ -199,6 +199,14 @@ sound.Add( {
 } )
 
 sound.Add( {
+	name = "MCV_Weapon_Foley_M1C_Reload.Metal",
+	channel = CHAN_STATIC,
+	volume = 0.8,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_m1c_foley_reload_metal.wav",
+} )
+
+sound.Add( {
 	name = "MCV_Weapon_Foley_M1C_Reload.Hand",
 	channel = CHAN_STATIC,
 	volume = 0.5,
@@ -961,7 +969,7 @@ sound.Add( {
 sound.Add( {
 	name = "MCV_Weapon_Foley_M16A1_Reload.Hand",
 	channel = CHAN_STATIC,
-	volume = 0.3,
+	volume = 0.6,
 	level = 60,
 	sound = "mcv/foley/weapon_specific/vietnam_weapon_m21_foley_reload_handstart.wav",
 } )
@@ -969,7 +977,7 @@ sound.Add( {
 sound.Add( {
 	name = "MCV_Weapon_Foley_M16A1_Reload.HandEnd",
 	channel = CHAN_STATIC,
-	volume = 0.3,
+	volume = 0.6,
 	level = 60,
 	sound = "mcv/foley/weapon_specific/vietnam_weapon_m21_foley_reload_handend.wav",
 } )
@@ -1012,6 +1020,22 @@ sound.Add( {
 	volume = 0.8,
 	level = 60,
 	sound = "mcv/foley/weapon_specific/vietnam_weapon_m16a1_foley_sight_out.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_M16A1_Deploy.In",
+	channel = CHAN_STATIC,
+	volume = 0.8,
+	level = 60,
+	sound = "mcv/foley/vietnam_weapon_foley_medium_10.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_M16A1_Deploy.Out",
+	channel = CHAN_STATIC,
+	volume = 0.8,
+	level = 60,
+	sound = "mcv/foley/vietnam_weapon_foley_medium_7.wav",
 } )
 
 sound.Add( {
@@ -1527,6 +1551,14 @@ sound.Add( {
 } )
 
 sound.Add( {
+	name = "MCV_Weapon_Foley_DP28_Reload.Special",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_dp28_foley_reload_special.wav",
+} )
+
+sound.Add( {
 	name = "MCV_Weapon_Foley_RP46_Reload.CoverStart",
 	channel = CHAN_STATIC,
 	volume = 0.75,
@@ -1556,6 +1588,14 @@ sound.Add( {
 	volume = 0.45,
 	level = 60,
 	sound = "mcv/foley/weapon_specific/vietnam_weapon_rp46_foley_reload_bullets_in.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_RP46_Reload.HandMid",
+	channel = CHAN_STATIC,
+	volume = 0.45,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_rp46_foley_reload_handmid.wav",
 } )
 
 sound.Add( {
@@ -1828,6 +1868,87 @@ sound.Add( {
 	volume = 0.3,
 	level = 60,
 	sound = "mcv/foley/weapon_specific/vietnam_weapon_m21_foley_reload_handend.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_IZH43_Dual.Draw",
+	channel = CHAN_STATIC,
+	volume = 0.6,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_izh43_dual_foley_draw_hand.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_IZH43_Dual.Holster",
+	channel = CHAN_STATIC,
+	volume = 0.5,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_izh43_dual_foley_holster_hand.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_IZH43_Dual_Reload.Lock",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_izh43_dual_foley_reload_lock.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_IZH43_Dual_Reload.UnLock",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_izh43_dual_foley_reload_unlock.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_IZH43_Dual_Reload.Bullet",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = {
+		"mcv/foley/weapon_specific/vietnam_weapon_izh43_dual_foley_reload_bullet1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_izh43_dual_foley_reload_bullet2.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_IZH43_Dual_Reload.Bullets",
+	channel = CHAN_STATIC,
+	volume = 0.85,
+	level = 60,
+	sound = {
+		"mcv/foley/weapon_specific/vietnam_weapon_izh43_dual_foley_reload_bullets1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_izh43_dual_foley_reload_bullets2.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_IZH43_Dual_Reload.HandStart",
+	channel = CHAN_STATIC,
+	volume = 0.3,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_izh43_dual_foley_reload_hand_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_IZH43_Dual_Reload.HandMid",
+	channel = CHAN_STATIC,
+	volume = 0.3,
+	level = 60,
+	sound = {
+		"mcv/foley/weapon_specific/vietnam_weapon_izh43_dual_foley_reload_hand_mid1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_izh43_dual_foley_reload_hand_mid2.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_IZH43_Dual_Reload.HandEnd",
+	channel = CHAN_STATIC,
+	volume = 0.3,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_izh43_dual_foley_reload_hand_end.wav",
 } )
 
 sound.Add( {
@@ -2397,7 +2518,7 @@ sound.Add( {
 sound.Add( {
 	name = "MCV_Weapon_Foley_HDM_Reload.Metal",
 	channel = CHAN_STATIC,
-	volume = 0.5,
+	volume = 0.65,
 	level = 60,
 	sound = "mcv/foley/weapon_specific/vietnam_weapon_hdm_foley_reload_metal.wav",
 } )
@@ -2736,6 +2857,22 @@ sound.Add( {
 	volume = 0.65,
 	level = 60,
 	sound = "mcv/foley/weapon_specific/vietnam_weapon_ppsh41_foley_reload_drum_magout.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_PPSH41_DDrum_Reload.MagIn",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_ppsh41_foley_reload_ddrum_magin.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_PPSH41_DDrum_Reload.MagOut",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_ppsh41_foley_reload_ddrum_magout.wav",
 } )
 
 sound.Add( {
@@ -3568,6 +3705,14 @@ sound.Add( {
 	volume = 0.65,
 	level = 60,
 	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz61_foley_reload_metal_dual.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ61_Reload.Eject",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz61_foley_reload_eject.wav",
 } )
 
 sound.Add( {
@@ -4669,6 +4814,14 @@ sound.Add( {
 } )
 
 sound.Add( {
+	name = "MCV_Weapon_Foley_Bren_Reload.Special",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_bren_foley_reload_special.wav",
+} )
+
+sound.Add( {
 	name = "MCV_Weapon_Foley_MAS49.Draw",
 	channel = CHAN_STATIC,
 	volume = 0.6,
@@ -5637,6 +5790,22 @@ sound.Add( {
 } )
 
 sound.Add( {
+	name = "MCV_Weapon_Foley_Stoner63_Carbine_Drum_Reload.MagIn",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_stoner63_carbine_drum_foley_reload_magin.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Stoner63_Carbine_Drum_Reload.MagOut",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_stoner63_carbine_drum_foley_reload_magout.wav",
+} )
+
+sound.Add( {
 	name = "MCV_Weapon_Foley_Stoner63_Rifle.Draw",
 	channel = CHAN_STATIC,
 	volume = 0.6,
@@ -5698,6 +5867,22 @@ sound.Add( {
 	volume = 0.6,
 	level = 60,
 	sound = "mcv/foley/weapon_specific/vietnam_weapon_stoner63_rifle_foley_reload_hand_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Stoner63_Rifle_Drum_Reload.MagIn",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_stoner63_rifle_drum_foley_reload_magin.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Stoner63_Rifle_Drum_Reload.MagOut",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_stoner63_rifle_drum_foley_reload_magout.wav",
 } )
 
 sound.Add( {
@@ -6637,6 +6822,1926 @@ sound.Add( {
 	volume = 0.6,
 	level = 60,
 	sound = "mcv/foley/weapon_specific/vietnam_weapon_m56_foley_reload_hand.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_XM148_Reload.Grenade_MetalIn",
+	channel = CHAN_STATIC,
+	volume = 0.45,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_xm148_foley_reload_grenade_metal_in.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_XM148_Reload.Grenade_MetalOut",
+	channel = CHAN_STATIC,
+	volume = 0.45,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_xm148_foley_reload_grenade_metal_out.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_XM148_Reload.Grenade_Metal",
+	channel = CHAN_STATIC,
+	volume = 0.45,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_xm148_foley_reload_grenade_metal.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_XM148_Reload.Grenade",
+	channel = CHAN_STATIC,
+	volume = 0.8,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_xm148_foley_reload_grenade_insert.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_MG43.Draw",
+	channel = CHAN_STATIC,
+	volume = 0.6,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_mg43_foley_draw_hand.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_MG43.Holster",
+	channel = CHAN_STATIC,
+	volume = 0.5,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_mg43_foley_holster_hand.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_MG43_Reload.MagIn",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_mg43_foley_reload_magin.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_MG43_Reload.MagOut",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_mg43_foley_reload_magout.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_MG43_Reload.MetalStart",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_mg43_foley_reload_metal_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_MG43_Reload.MetalEnd",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_mg43_foley_reload_metal_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_MG43_Reload.CoverStart",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_mg43_foley_reload_cover_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_MG43_Reload.CoverEnd",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_mg43_foley_reload_cover_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_MG43_Reload.Bullets",
+	channel = CHAN_STATIC,
+	volume = 0.45,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_mg43_foley_reload_bullets.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_MG43_Reload.HandStart",
+	channel = CHAN_STATIC,
+	volume = 0.45,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_mg43_foley_reload_hand_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_MG43_Reload.HandMid",
+	channel = CHAN_STATIC,
+	volume = 0.45,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_mg43_foley_reload_hand_mid_1.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_MG43_Reload.HandMid2",
+	channel = CHAN_STATIC,
+	volume = 0.45,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_mg43_foley_reload_hand_mid_2.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_MG43_Reload.HandEnd",
+	channel = CHAN_STATIC,
+	volume = 0.3,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_mg43_foley_reload_hand_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_MG43D_Reload.MagIn",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_mg43d_foley_reload_magin.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_MG43D_Reload.MagOut",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_mg43d_foley_reload_magout.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_MG43D_Reload.MetalStart",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_mg43d_foley_reload_metal_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_MG43D_Reload.MetalEnd",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_mg43d_foley_reload_metal_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_MG43D_Reload.HandStart",
+	channel = CHAN_STATIC,
+	volume = 0.45,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_mg43d_foley_reload_hand_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_MG43D_Reload.HandMid",
+	channel = CHAN_STATIC,
+	volume = 0.45,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_mg43d_foley_reload_hand_mid.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_MG43D_Reload.HandEnd",
+	channel = CHAN_STATIC,
+	volume = 0.3,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_mg43d_foley_reload_hand_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Kolos.Draw",
+	channel = CHAN_STATIC,
+	volume = 0.6,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_kolos_foley_draw_hand.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Kolos.Holster",
+	channel = CHAN_STATIC,
+	volume = 0.5,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_kolos_foley_holster.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Kolos_Reload.MagIn",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_kolos_foley_reload_magin.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Kolos_Reload.MagOut",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_kolos_foley_reload_magout.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Kolos_Reload.MetalStart",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_kolos_foley_reload_metal_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Kolos_Reload.MetalEnd",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_kolos_foley_reload_metal_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Kolos_Reload.HandStart",
+	channel = CHAN_STATIC,
+	volume = 0.45,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_kolos_foley_reload_hand_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Kolos_Reload.HandMid",
+	channel = CHAN_STATIC,
+	volume = 0.45,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_kolos_foley_reload_hand_mid.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Kolos_Reload.HandEnd",
+	channel = CHAN_STATIC,
+	volume = 0.3,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_kolos_foley_reload_hand_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Auto5.Draw",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_auto5_foley_draw_hand.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Auto5.Holster",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_auto5_foley_holster.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Auto5_Reload.MetalStart",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_auto5_foley_reload_metal_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Auto5_Reload.MetalEnd",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_auto5_foley_reload_metal_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Auto5_Reload.Bullets",
+	channel = CHAN_STATIC,
+	volume = 0.85,
+	level = 60,
+	sound = {
+		"mcv/foley/weapon_specific/vietnam_weapon_auto5_foley_reload_shell_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_auto5_foley_reload_shell_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_auto5_foley_reload_shell_3.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Auto5_Reload.Hand",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_auto5_foley_reload_hand_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Auto5_Reload.HandEnd",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_auto5_foley_reload_hand_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_FM24.Draw",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_fm24_foley_draw_hand.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_FM24.Holster",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_fm24_foley_holster.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_FM24_Reload.MetalStart",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_fm24_foley_reload_metal_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_FM24_Reload.MetalEnd",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_fm24_foley_reload_metal_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_FM24_Reload.MagIn",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_fm24_foley_reload_magin.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_FM24_Reload.MagOut",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_fm24_foley_reload_magout.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_FM24_Reload.Hand",
+	channel = CHAN_STATIC,
+	volume = 0.55,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_fm24_foley_reload_hand_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_FM24_Reload.HandMid",
+	channel = CHAN_STATIC,
+	volume = 0.55,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_fm24_foley_reload_hand_mid.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_FM24_Reload.HandEnd",
+	channel = CHAN_STATIC,
+	volume = 0.55,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_fm24_foley_reload_hand_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_FM24_Reload.Special",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_fm24_foley_reload_special.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_MAS36.Draw",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_mas36_foley_draw_hand.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_MAS36.Holster",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_mas36_foley_holster.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_MAS36_Reload.MetalStart",
+	channel = CHAN_STATIC,
+	volume = 0.95,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_mas36_foley_reload_metal_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_MAS36_Reload.MetalStartNoShell",
+	channel = CHAN_STATIC,
+	volume = 0.95,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_mas36_foley_reload_metal_start_noshell.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_MAS36_Reload.MetalEnd",
+	channel = CHAN_STATIC,
+	volume = 0.95,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_mas36_foley_reload_metal_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_MAS36_Reload.Bullets",
+	channel = CHAN_STATIC,
+	volume = 0.95,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_mas36_foley_reload_bullets.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_MAS36_Reload.Ding",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_mas36_foley_reload_bullets_ding.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_MAS36_Reload.Hand",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_mas36_foley_reload_hand_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_MAS36_Reload.HandMid",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_mas36_foley_reload_hand_mid.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_MAS36_Reload.HandEnd",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_mas36_foley_reload_hand_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Lebel.Draw",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_lebel_foley_draw_hand.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Lebel.Holster",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_lebel_foley_holster.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Lebel_Reload.MetalStart",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_lebel_foley_reload_metal_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Lebel_Reload.MetalEnd",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_lebel_foley_reload_metal_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Lebel_Reload.MagIn",
+	channel = CHAN_STATIC,
+	volume = 0.95,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_lebel_foley_reload_magin.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Lebel_Reload.MagOut",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_lebel_foley_reload_magout.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Lebel_Reload.BulletsIn",
+	channel = CHAN_STATIC,
+	volume = 0.95,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_lebel_foley_reload_bullets_in.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Lebel_Reload.BulletsOut",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_lebel_foley_reload_bullets_out.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Lebel_Reload.Hand",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_lebel_foley_reload_hand_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Lebel_Reload.HandMid",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_lebel_foley_reload_hand_mid.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Lebel_Reload.HandEnd",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_lebel_foley_reload_hand_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Ruby.Draw",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_ruby_foley_draw_hand.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Ruby.Holster",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_ruby_foley_holster.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Ruby_Reload.MetalStart",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_ruby_foley_reload_metal_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Ruby_Reload.MetalEnd",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_ruby_foley_reload_metal_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Ruby_Reload.MagIn",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_ruby_foley_reload_magin.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Ruby_Reload.MagOut",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_ruby_foley_reload_magout.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Ruby_Reload.Hand",
+	channel = CHAN_STATIC,
+	volume = 0.55,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_ruby_foley_reload_hand_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Ruby_Reload.HandMid",
+	channel = CHAN_STATIC,
+	volume = 0.55,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_ruby_foley_reload_hand_mid.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Ruby_Reload.HandEnd",
+	channel = CHAN_STATIC,
+	volume = 0.55,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_ruby_foley_reload_hand_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Reising.Draw",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_reising_foley_draw_hand.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Reising.Holster",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_reising_foley_holster.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Reising_Reload.Metal",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_reising_foley_reload_metal.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Reising_Reload.MagIn",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_reising_foley_reload_magin.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Reising_Reload.MagOut",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_reising_foley_reload_magout.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Reising_Reload.Hand",
+	channel = CHAN_STATIC,
+	volume = 0.55,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_reising_foley_reload_hand_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Reising_Reload.HandMid",
+	channel = CHAN_STATIC,
+	volume = 0.55,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_reising_foley_reload_hand_mid.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Reising_Reload.HandEnd",
+	channel = CHAN_STATIC,
+	volume = 0.55,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_reising_foley_reload_hand_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VCShotgun.Draw",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vcshotgun_foley_draw_hand.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VCShotgun.Holster",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vcshotgun_foley_holster_hand.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VCShotgun_Reload.MetalStart",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vcshotgun_foley_reload_metal_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VCShotgun_Reload.MetalMid",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vcshotgun_foley_reload_metal_mid.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VCShotgun_Reload.MetalSpecial",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vcshotgun_foley_reload_metal_mid_special.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VCShotgun_Reload.MetalEnd",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vcshotgun_foley_reload_metal_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VCShotgun_Reload.MagIn",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vcshotgun_foley_reload_magin.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VCShotgun_Reload.Hand",
+	channel = CHAN_STATIC,
+	volume = 0.55,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vcshotgun_foley_reload_hand_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VCShotgun_Reload.HandMid",
+	channel = CHAN_STATIC,
+	volume = 0.55,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vcshotgun_foley_reload_hand_mid.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VCShotgun_Reload.HandEnd",
+	channel = CHAN_STATIC,
+	volume = 0.55,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vcshotgun_foley_reload_hand_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VCSMG.Draw",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vcsmg_foley_draw_hand.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VCSMG.DrawMetal",
+	channel = CHAN_STATIC,
+	volume = 0.8,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vcsmg_foley_draw_metal.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VCSMG.Holster",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vcsmg_foley_holster.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VCSMG_Reload.MetalStart",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vcsmg_foley_reload_metal_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VCSMG_Reload.MetalEnd",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vcsmg_foley_reload_metal_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VCSMG_Reload.MagIn",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vcsmg_foley_reload_magin.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VCSMG_Reload.MagOut",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vcsmg_foley_reload_magout.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VCSMG_Reload.Hand",
+	channel = CHAN_STATIC,
+	volume = 0.55,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vcsmg_foley_reload_hand_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VCSMG_Reload.HandMid",
+	channel = CHAN_STATIC,
+	volume = 0.55,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vcsmg_foley_reload_hand_mid.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VCSMG_Reload.HandEnd",
+	channel = CHAN_STATIC,
+	volume = 0.55,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vcsmg_foley_reload_hand_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VCCarbine.Draw",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vccarbine_foley_draw_hand.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VCCarbine.Holster",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vccarbine_foley_holster.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VCCarbine_Reload.Metal",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vccarbine_foley_reload_metal.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VCCarbine_Reload.MagIn",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vccarbine_foley_reload_magin.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VCCarbine_Reload.MagOut",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vccarbine_foley_reload_magout.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VCCarbine_Reload.Hand",
+	channel = CHAN_STATIC,
+	volume = 0.55,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vccarbine_foley_reload_hand_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VCCarbine_Reload.HandMid",
+	channel = CHAN_STATIC,
+	volume = 0.55,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vccarbine_foley_reload_hand_mid.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VCCarbine_Reload.HandEnd",
+	channel = CHAN_STATIC,
+	volume = 0.55,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vccarbine_foley_reload_hand_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VCPistol2.Draw",
+	channel = CHAN_STATIC,
+	volume = 0.6,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vcpistol2_foley_draw_hand.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VCPistol2.DrawMetal",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vcpistol2_foley_reload_metal.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VCPistol2.Holster",
+	channel = CHAN_STATIC,
+	volume = 0.7,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vcpistol2_foley_holster.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VCPistol2_Reload.MagIn",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vcpistol2_foley_reload_magin.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VCPistol2_Reload.MagOut",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vcpistol2_foley_reload_magout.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VCPistol2_Reload.Metal",
+	channel = CHAN_STATIC,
+	volume = 0.5,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vcpistol2_foley_shootlast_metal.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VCPistol2_Reload.Hand",
+	channel = CHAN_STATIC,
+	volume = 0.3,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vcpistol2_foley_reload_hand_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VCPistol2_Reload.HandMid",
+	channel = CHAN_STATIC,
+	volume = 0.3,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vcpistol2_foley_reload_hand_mid.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VCPistol2_Reload.HandEnd",
+	channel = CHAN_STATIC,
+	volume = 0.3,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vcpistol2_foley_reload_hand_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VCPistol2_ShootLast.Metal",
+	channel = CHAN_STATIC,
+	volume = 0.6,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vcpistol2_foley_shootlast_metal.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Luger.Draw",
+	channel = CHAN_STATIC,
+	volume = 0.6,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_luger_foley_draw_hand.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Luger.Holster",
+	channel = CHAN_STATIC,
+	volume = 0.7,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_luger_foley_holster.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Luger_Reload.MagIn",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_luger_foley_reload_magin.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Luger_Reload.MagOut",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_luger_foley_reload_magout.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Luger_Reload.Metal",
+	channel = CHAN_STATIC,
+	volume = 0.5,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_luger_foley_reload_metal.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Luger_Reload.Hand",
+	channel = CHAN_STATIC,
+	volume = 0.3,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_luger_foley_reload_hand_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Luger_Reload.HandMid",
+	channel = CHAN_STATIC,
+	volume = 0.3,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_luger_foley_reload_hand_mid.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Luger_Reload.HandEnd",
+	channel = CHAN_STATIC,
+	volume = 0.3,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_luger_foley_reload_hand_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Luger_ShootLast.Metal",
+	channel = CHAN_STATIC,
+	volume = 0.6,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_luger_foley_shootlast_metal.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Gyrojet_Pistol.Draw",
+	channel = CHAN_STATIC,
+	volume = 0.6,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_gyrojet_pistol_foley_draw_hand.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Gyrojet_Pistol.Holster",
+	channel = CHAN_STATIC,
+	volume = 0.7,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_gyrojet_pistol_foley_holster.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Gyrojet_Pistol_Reload.Bullets",
+	channel = CHAN_STATIC,
+	volume = 0.7,
+	level = 60,
+	sound = {
+		"mcv/foley/weapon_specific/vietnam_weapon_gyrojet_pistol_foley_reload_bullets_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_gyrojet_pistol_foley_reload_bullets_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_gyrojet_pistol_foley_reload_bullets_3.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_gyrojet_pistol_foley_reload_bullets_4.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_gyrojet_pistol_foley_reload_bullets_5.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Gyrojet_Pistol_Reload.MetalStart",
+	channel = CHAN_STATIC,
+	volume = 0.5,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_gyrojet_pistol_foley_reload_metal_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Gyrojet_Pistol_Reload.MetalEnd",
+	channel = CHAN_STATIC,
+	volume = 0.5,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_gyrojet_pistol_foley_reload_metal_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Gyrojet_Pistol_Reload.Hand",
+	channel = CHAN_STATIC,
+	volume = 0.3,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_gyrojet_pistol_foley_reload_hand_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Gyrojet_Pistol_Reload.HandMid",
+	channel = CHAN_STATIC,
+	volume = 0.3,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_gyrojet_pistol_foley_reload_hand_mid.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Gyrojet_Pistol_Reload.HandEnd",
+	channel = CHAN_STATIC,
+	volume = 0.3,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_gyrojet_pistol_foley_reload_hand_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Gyrojet_Carbine.Draw",
+	channel = CHAN_STATIC,
+	volume = 0.6,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_gyrojet_carbine_foley_draw_hand.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Gyrojet_Carbine.Holster",
+	channel = CHAN_STATIC,
+	volume = 0.7,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_gyrojet_carbine_foley_holster.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Gyrojet_Carbine_Reload.Bullets",
+	channel = CHAN_STATIC,
+	volume = 0.7,
+	level = 60,
+	sound = {
+		"mcv/foley/weapon_specific/vietnam_weapon_gyrojet_pistol_foley_reload_bullets_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_gyrojet_pistol_foley_reload_bullets_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_gyrojet_pistol_foley_reload_bullets_3.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_gyrojet_pistol_foley_reload_bullets_4.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_gyrojet_pistol_foley_reload_bullets_5.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Gyrojet_Carbine_Reload.MetalStart",
+	channel = CHAN_STATIC,
+	volume = 0.5,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_gyrojet_carbine_foley_reload_metal_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Gyrojet_Carbine_Reload.MetalEnd",
+	channel = CHAN_STATIC,
+	volume = 0.5,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_gyrojet_carbine_foley_reload_metal_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Gyrojet_Carbine_Reload.Hand",
+	channel = CHAN_STATIC,
+	volume = 0.3,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_gyrojet_carbine_foley_reload_hand_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Gyrojet_Carbine_Reload.HandMid",
+	channel = CHAN_STATIC,
+	volume = 0.3,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_gyrojet_carbine_foley_reload_hand_mid.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Gyrojet_Carbine_Reload.HandEnd",
+	channel = CHAN_STATIC,
+	volume = 0.3,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_gyrojet_carbine_foley_reload_hand_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_M7188.Draw",
+	channel = CHAN_STATIC,
+	volume = 0.5,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_m7188_foley_draw_hand.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_M7188.Holster",
+	channel = CHAN_STATIC,
+	volume = 0.5,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_m7188_foley_holster_hand.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_M7188_Reload.Metal",
+	channel = CHAN_STATIC,
+	volume = 0.55,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_m7188_foley_reload_metal.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_M7188_Reload.Bullets",
+	channel = CHAN_STATIC,
+	volume = 0.6,
+	level = 60,
+	sound = {
+		"mcv/foley/weapon_specific/vietnam_weapon_m7188_foley_reload_shell_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_m7188_foley_reload_shell_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_m7188_foley_reload_shell_3.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_m7188_foley_reload_shell_4.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_m7188_foley_reload_shell_5.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_M7188_Reload.Hand",
+	channel = CHAN_STATIC,
+	volume = 0.45,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_m7188_foley_reload_hand_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_M7188_Reload.HandMid",
+	channel = CHAN_STATIC,
+	volume = 0.45,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_m7188_foley_reload_hand_mid.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_M7188_Reload.HandEnd",
+	channel = CHAN_STATIC,
+	volume = 0.45,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_m7188_foley_reload_hand_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_PK.Draw",
+	channel = CHAN_STATIC,
+	volume = 0.6,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_pk_foley_draw_hand.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_PK.Holster",
+	channel = CHAN_STATIC,
+	volume = 0.5,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_pk_foley_holster_hand.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_PK_Reload.MagIn",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_pk_foley_reload_magin.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_PK_Reload.MagOut",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_pk_foley_reload_magout.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_PK_Reload.Metal",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_pk_foley_reload_metal.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_PK_Reload.CoverStart",
+	channel = CHAN_STATIC,
+	volume = 0.85,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_pk_foley_reload_cover_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_PK_Reload.CoverEnd",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_pk_foley_reload_cover_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_PK_Reload.MetalSpecial",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_pk_foley_reload_metal_special.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_PK_Reload.Bullets",
+	channel = CHAN_STATIC,
+	volume = 0.45,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_pk_foley_reload_bullets.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_PK_Reload.HandStart",
+	channel = CHAN_STATIC,
+	volume = 0.3,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_pk_foley_reload_hand_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_PK_Reload.HandMid",
+	channel = CHAN_STATIC,
+	volume = 0.3,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_pk_foley_reload_hand_mid.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_PK_Reload.HandMid2",
+	channel = CHAN_STATIC,
+	volume = 0.3,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_pk_foley_reload_hand_mid2.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_PK_Reload.HandEnd",
+	channel = CHAN_STATIC,
+	volume = 0.3,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_pk_foley_reload_hand_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_PKB_Reload.BulletsStart",
+	channel = CHAN_STATIC,
+	volume = 0.85,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_pkb_foley_reload_bullets_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_PKB_Reload.BulletsEnd",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_pkb_foley_reload_bullets_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Wrench.Draw",
+	channel = CHAN_STATIC,
+	volume = 0.7,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_wrench_foley_draw.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Wrench.Holster",
+	channel = CHAN_STATIC,
+	volume = 0.7,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_wrench_foley_holster.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Wrench.Swing",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 60,
+	sound = {
+		"mcv/foley/weapon_specific/vietnam_weapon_wrench_foley_swing_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_wrench_foley_swing_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_wrench_foley_swing_3.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_wrench_foley_swing_4.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Wrench.Repair_In",
+	channel = CHAN_STATIC,
+	volume = 0.7,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_wrench_foley_repair_in.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Wrench.Repair",
+	channel = CHAN_STATIC,
+	volume = 0.7,
+	level = 60,
+	sound = {
+		"mcv/foley/weapon_specific/vietnam_weapon_wrench_foley_repair_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_wrench_foley_repair_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_wrench_foley_repair_3.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_wrench_foley_repair_4.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_wrench_foley_repair_5.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_wrench_foley_repair_6.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Wrench.Repair_Out",
+	channel = CHAN_STATIC,
+	volume = 0.7,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_wrench_foley_repair_out.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ24.Draw",
+	channel = CHAN_STATIC,
+	volume = 0.6,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz24_foley_draw_hand.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ24.Holster",
+	channel = CHAN_STATIC,
+	volume = 0.6,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz24_foley_holster_hand.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ24_Reload.MetalStart",
+	channel = CHAN_STATIC,
+	volume = 0.7,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz24_foley_reload_metal_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ24_Reload.MetalEnd",
+	channel = CHAN_STATIC,
+	volume = 0.7,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz24_foley_reload_metal_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ24_Reload.BulletsStart",
+	channel = CHAN_STATIC,
+	volume = 0.7,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz24_foley_reload_bullets_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ24_Reload.BulletsMid",
+	channel = CHAN_STATIC,
+	volume = 0.7,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz24_foley_reload_bullets_mid.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ24_Reload.BulletsEnd",
+	channel = CHAN_STATIC,
+	volume = 0.7,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz24_foley_reload_bullets_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ24_Reload.BulletsSingular",
+	channel = CHAN_STATIC,
+	volume = 0.7,
+	level = 60,
+	sound = {
+		"mcv/foley/weapon_specific/vietnam_weapon_m40_foley_reload_bullets_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_m40_foley_reload_bullets_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_m40_foley_reload_bullets_3.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_m40_foley_reload_bullets_4.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_m40_foley_reload_bullets_5.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ24_Reload.Hand",
+	channel = CHAN_STATIC,
+	volume = 0.5,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz24_foley_reload_hand_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ24_Reload.HandMid",
+	channel = CHAN_STATIC,
+	volume = 0.5,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz24_foley_reload_hand_mid.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ24_Reload.HandEnd",
+	channel = CHAN_STATIC,
+	volume = 0.5,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz24_foley_reload_hand_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ54.Draw",
+	channel = CHAN_STATIC,
+	volume = 0.6,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz54_foley_draw_hand.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ54.Holster",
+	channel = CHAN_STATIC,
+	volume = 0.6,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz54_foley_holster_hand.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ54_Reload.MetalStart",
+	channel = CHAN_STATIC,
+	volume = 0.7,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz54_foley_reload_metal_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ54_Reload.MetalEnd",
+	channel = CHAN_STATIC,
+	volume = 0.7,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz54_foley_reload_metal_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ54_Reload.BulletsStart",
+	channel = CHAN_STATIC,
+	volume = 0.7,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz54_foley_reload_bullets_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ54_Reload.BulletsMid",
+	channel = CHAN_STATIC,
+	volume = 0.7,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz54_foley_reload_bullets_mid.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ54_Reload.BulletsEnd",
+	channel = CHAN_STATIC,
+	volume = 0.85,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz54_foley_reload_bullets_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ54_Reload.BulletsSingular",
+	channel = CHAN_STATIC,
+	volume = 0.7,
+	level = 60,
+	sound = {
+		"mcv/foley/weapon_specific/vietnam_weapon_m40_foley_reload_bullets_1.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_m40_foley_reload_bullets_2.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_m40_foley_reload_bullets_3.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_m40_foley_reload_bullets_4.wav",
+		"mcv/foley/weapon_specific/vietnam_weapon_m40_foley_reload_bullets_5.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ54_Reload.Hand",
+	channel = CHAN_STATIC,
+	volume = 0.5,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz54_foley_reload_hand_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ54_Reload.HandMid",
+	channel = CHAN_STATIC,
+	volume = 0.5,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz54_foley_reload_hand_mid.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ54_Reload.HandEnd",
+	channel = CHAN_STATIC,
+	volume = 0.5,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz54_foley_reload_hand_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_CZ52.Draw",
+	channel = CHAN_STATIC,
+	volume = 0.6,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_cz52_foley_draw_hand.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_CZ52.Holster",
+	channel = CHAN_STATIC,
+	volume = 0.7,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_cz52_foley_holster_hand.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_CZ52_Reload.MagIn",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_cz52_foley_reload_magin.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_CZ52_Reload.MagOut",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_cz52_foley_reload_magout.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_CZ52_Reload.MetalStart",
+	channel = CHAN_STATIC,
+	volume = 0.5,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_cz52_foley_reload_metal_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_CZ52_Reload.MetalEnd",
+	channel = CHAN_STATIC,
+	volume = 0.5,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_cz52_foley_reload_metal_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_CZ52_Reload.Hand",
+	channel = CHAN_STATIC,
+	volume = 0.3,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_cz52_foley_reload_hand_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_CZ52_Reload.HandMid",
+	channel = CHAN_STATIC,
+	volume = 0.3,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_cz52_foley_reload_hand_mid.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_CZ52_Reload.HandEnd",
+	channel = CHAN_STATIC,
+	volume = 0.3,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_cz52_foley_reload_hand_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_CZ52_ShootLast.Metal",
+	channel = CHAN_STATIC,
+	volume = 0.6,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_cz52_foley_shootlast_metal.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ59.Draw",
+	channel = CHAN_STATIC,
+	volume = 0.6,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz59_foley_draw_hand.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ59.Holster",
+	channel = CHAN_STATIC,
+	volume = 0.5,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz59_foley_holster_hand.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ59_Reload.MagIn",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz59_foley_reload_magin.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ59_Reload.MagOut",
+	channel = CHAN_STATIC,
+	volume = 0.75,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz59_foley_reload_magout.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ59_Reload.MetalStart",
+	channel = CHAN_STATIC,
+	volume = 0.85,
+	level = 60,
+	pitch = 96,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz59_foley_reload_metal_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ59_Reload.MetalEnd",
+	channel = CHAN_STATIC,
+	volume = 0.85,
+	level = 60,
+	pitch = 96,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz59_foley_reload_metal_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ59_Reload.CoverStart",
+	channel = CHAN_STATIC,
+	volume = 0.95,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz59_foley_reload_cover_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ59_Reload.CoverEnd",
+	channel = CHAN_STATIC,
+	volume = 0.95,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz59_foley_reload_cover_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ59_Reload.Bullets",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz59_foley_reload_bullets.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ59_Reload.HandStart",
+	channel = CHAN_STATIC,
+	volume = 0.45,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz59_foley_reload_hand_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ59_Reload.HandMid",
+	channel = CHAN_STATIC,
+	volume = 0.45,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz59_foley_reload_hand_mid.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ59_Reload.HandEnd",
+	channel = CHAN_STATIC,
+	volume = 0.45,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz59_foley_reload_hand_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ59_Reload.SpecialStart",
+	channel = CHAN_STATIC,
+	volume = 0.55,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz59_foley_reload_special_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ59_Reload.SpecialEnd",
+	channel = CHAN_STATIC,
+	volume = 0.55,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz59_foley_reload_special_end.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ52.Draw",
+	channel = CHAN_STATIC,
+	volume = 0.6,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz52_foley_draw_hand.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ52.Holster",
+	channel = CHAN_STATIC,
+	volume = 0.7,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz52_foley_holster_hand.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ52_Reload.MagIn",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz52_foley_reload_magin.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ52_Reload.MagOut",
+	channel = CHAN_STATIC,
+	volume = 0.65,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz52_foley_reload_magout.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ52_Reload.Metal",
+	channel = CHAN_STATIC,
+	volume = 0.85,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz52_foley_reload_metal.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ52_Reload.Metal2",
+	channel = CHAN_STATIC,
+	volume = 0.85,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz52_foley_reload_metal_2.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ52_Reload.Hand",
+	channel = CHAN_STATIC,
+	volume = 0.3,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz52_foley_reload_hand_start.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ52_Reload.HandMid",
+	channel = CHAN_STATIC,
+	volume = 0.3,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz52_foley_reload_hand_mid.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_VZ52_Reload.HandEnd",
+	channel = CHAN_STATIC,
+	volume = 0.3,
+	level = 60,
+	sound = "mcv/foley/weapon_specific/vietnam_weapon_vz52_foley_reload_hand_end.wav",
 } )
 
 sound.Add( {
@@ -7810,6 +9915,14 @@ sound.Add( {
 } )
 
 sound.Add( {
+	name = "MCV_Weapon_Foley_ThirdPerson_PPSH41_DDrum.Reload",
+	channel = CHAN_STATIC,
+	volume = 0.8,
+	level = 60,
+	sound = "mcv/foley/weapon_specific_tp/vietnam_weapon_ppsh41_ddrum_foley_tp_reload.wav",
+} )
+
+sound.Add( {
 	name = "MCV_Weapon_Foley_ThirdPerson_PPS43.Reload",
 	channel = CHAN_STATIC,
 	volume = 0.8,
@@ -8195,6 +10308,14 @@ sound.Add( {
 } )
 
 sound.Add( {
+	name = "MCV_Weapon_Foley_ThirdPerson_STONER63_Carbine_Drum.Reload",
+	channel = CHAN_STATIC,
+	volume = 0.8,
+	level = 60,
+	sound = "mcv/foley/weapon_specific_tp/vietnam_weapon_stoner63_carbine_drum_foley_tp_reload.wav",
+} )
+
+sound.Add( {
 	name = "MCV_Weapon_Foley_ThirdPerson_STONER63_LMG.Reload",
 	channel = CHAN_STATIC,
 	volume = 0.8,
@@ -8208,6 +10329,14 @@ sound.Add( {
 	volume = 0.8,
 	level = 60,
 	sound = "mcv/foley/weapon_specific_tp/vietnam_weapon_stoner63_rifle_foley_tp_reload.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_ThirdPerson_STONER63_Rifle_Drum.Reload",
+	channel = CHAN_STATIC,
+	volume = 0.8,
+	level = 60,
+	sound = "mcv/foley/weapon_specific_tp/vietnam_weapon_stoner63_rifle_drum_foley_tp_reload.wav",
 } )
 
 sound.Add( {
@@ -8344,6 +10473,262 @@ sound.Add( {
 	volume = 0.6,
 	level = 60,
 	sound = "mcv/foley/weapon_specific_tp/vietnam_weapon_m56_foley_tp_reload.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_ThirdPerson_MG43.Reload",
+	channel = CHAN_STATIC,
+	volume = 0.6,
+	level = 60,
+	sound = "mcv/foley/weapon_specific_tp/vietnam_weapon_mg43_foley_tp_reload.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_ThirdPerson_MG43D.Reload",
+	channel = CHAN_STATIC,
+	volume = 0.6,
+	level = 60,
+	sound = "mcv/foley/weapon_specific_tp/vietnam_weapon_mg43d_foley_tp_reload.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_ThirdPerson_Kolos.Reload",
+	channel = CHAN_STATIC,
+	volume = 0.6,
+	level = 60,
+	sound = "mcv/foley/weapon_specific_tp/vietnam_weapon_kolos_foley_tp_reload.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_ThirdPerson_Auto5.Cycle",
+	channel = CHAN_STATIC,
+	volume = 0.8,
+	level = 60,
+	sound = "mcv/foley/weapon_specific_tp/vietnam_weapon_auto5_foley_tp_cycle.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_ThirdPerson_Auto5.ReloadLoop",
+	channel = CHAN_STATIC,
+	volume = 0.8,
+	level = 60,
+	sound = {
+		"mcv/foley/weapon_specific_tp/vietnam_weapon_auto5_foley_tp_reloadloop1.wav",
+		"mcv/foley/weapon_specific_tp/vietnam_weapon_auto5_foley_tp_reloadloop2.wav",
+		"mcv/foley/weapon_specific_tp/vietnam_weapon_auto5_foley_tp_reloadloop3.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_ThirdPerson_FM24.Reload",
+	channel = CHAN_STATIC,
+	volume = 0.6,
+	level = 60,
+	sound = "mcv/foley/weapon_specific_tp/vietnam_weapon_fm24_foley_tp_reload.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_ThirdPerson_MAS36.Cycle",
+	channel = CHAN_STATIC,
+	volume = 0.8,
+	level = 60,
+	sound = "mcv/foley/weapon_specific_tp/vietnam_weapon_mas36_foley_tp_cycle.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_ThirdPerson_MAS36.Reload",
+	channel = CHAN_STATIC,
+	volume = 0.8,
+	level = 60,
+	sound = "mcv/foley/weapon_specific_tp/vietnam_weapon_mas36_foley_tp_reload.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_ThirdPerson_Lebel.Reload",
+	channel = CHAN_STATIC,
+	volume = 0.6,
+	level = 60,
+	sound = "mcv/foley/weapon_specific_tp/vietnam_weapon_lebel_foley_tp_reload.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_ThirdPerson_Ruby.Reload",
+	channel = CHAN_STATIC,
+	volume = 0.6,
+	level = 60,
+	sound = "mcv/foley/weapon_specific_tp/vietnam_weapon_ruby_foley_tp_reload.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_ThirdPerson_Reising.Reload",
+	channel = CHAN_STATIC,
+	volume = 0.6,
+	level = 60,
+	sound = "mcv/foley/weapon_specific_tp/vietnam_weapon_reising_foley_tp_reload.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_ThirdPerson_VCCarbine.Reload",
+	channel = CHAN_STATIC,
+	volume = 0.6,
+	level = 60,
+	sound = "mcv/foley/weapon_specific_tp/vietnam_weapon_vccarbine_foley_tp_reload.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_ThirdPerson_VCPistol2.Reload",
+	channel = CHAN_STATIC,
+	volume = 0.6,
+	level = 60,
+	sound = "mcv/foley/weapon_specific_tp/vietnam_weapon_vcpistol2_foley_tp_reload.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_ThirdPerson_VCShotgun.Reload",
+	channel = CHAN_STATIC,
+	volume = 0.6,
+	level = 60,
+	sound = "mcv/foley/weapon_specific_tp/vietnam_weapon_vcshotgun_foley_tp_reload.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_ThirdPerson_VCSMG.Reload",
+	channel = CHAN_STATIC,
+	volume = 0.6,
+	level = 60,
+	sound = "mcv/foley/weapon_specific_tp/vietnam_weapon_vcsmg_foley_tp_reload.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_ThirdPerson_Luger.Reload",
+	channel = CHAN_STATIC,
+	volume = 0.6,
+	level = 60,
+	sound = "mcv/foley/weapon_specific_tp/vietnam_weapon_luger_foley_tp_reload.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_ThirdPerson_Gyrojet_Pistol.Cycle",
+	channel = CHAN_STATIC,
+	volume = 0.8,
+	level = 60,
+	sound = "mcv/foley/weapon_specific_tp/vietnam_weapon_gyrojet_pistol_foley_tp_cycle.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_ThirdPerson_Gyrojet_Pistol.ReloadLoop",
+	channel = CHAN_STATIC,
+	volume = 0.8,
+	level = 60,
+	sound = {
+		"mcv/foley/weapon_specific_tp/vietnam_weapon_gyrojet_pistol_foley_tp_reloadloop1.wav",
+		"mcv/foley/weapon_specific_tp/vietnam_weapon_gyrojet_pistol_foley_tp_reloadloop2.wav",
+		"mcv/foley/weapon_specific_tp/vietnam_weapon_gyrojet_pistol_foley_tp_reloadloop3.wav",
+		"mcv/foley/weapon_specific_tp/vietnam_weapon_gyrojet_pistol_foley_tp_reloadloop4.wav",
+		"mcv/foley/weapon_specific_tp/vietnam_weapon_gyrojet_pistol_foley_tp_reloadloop5.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_ThirdPerson_IZH43_Dual.Reload",
+	channel = CHAN_STATIC,
+	volume = 0.6,
+	level = 60,
+	sound = "mcv/foley/weapon_specific_tp/vietnam_weapon_izh43_dual_foley_tp_reload.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_ThirdPerson_M7188.Cycle",
+	channel = CHAN_STATIC,
+	volume = 0.7,
+	level = 60,
+	sound = "mcv/foley/weapon_specific_tp/vietnam_weapon_m7188_foley_tp_cycle.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_ThirdPerson_M7188.ReloadLoop",
+	channel = CHAN_STATIC,
+	volume = 0.6,
+	level = 60,
+	sound = {
+		"mcv/foley/weapon_specific_tp/vietnam_weapon_m7188_foley_tp_reloadloop1.wav",
+		"mcv/foley/weapon_specific_tp/vietnam_weapon_m7188_foley_tp_reloadloop2.wav",
+		"mcv/foley/weapon_specific_tp/vietnam_weapon_m7188_foley_tp_reloadloop3.wav",
+		"mcv/foley/weapon_specific_tp/vietnam_weapon_m7188_foley_tp_reloadloop4.wav",
+		"mcv/foley/weapon_specific_tp/vietnam_weapon_m7188_foley_tp_reloadloop5.wav",
+	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_ThirdPerson_PK.Reload",
+	channel = CHAN_STATIC,
+	volume = 0.6,
+	level = 60,
+	sound = "mcv/foley/weapon_specific_tp/vietnam_weapon_pk_foley_tp_reload.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_ThirdPerson_PKB.Reload",
+	channel = CHAN_STATIC,
+	volume = 0.6,
+	level = 60,
+	sound = "mcv/foley/weapon_specific_tp/vietnam_weapon_pkb_foley_tp_reload.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_ThirdPerson_VZ24.Cycle",
+	channel = CHAN_STATIC,
+	volume = 0.8,
+	level = 60,
+	sound = "mcv/foley/weapon_specific_tp/vietnam_weapon_vz24_foley_tp_cycle.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_ThirdPerson_VZ24.Reload",
+	channel = CHAN_STATIC,
+	volume = 0.8,
+	level = 60,
+	sound = "mcv/foley/weapon_specific_tp/vietnam_weapon_vz24_foley_tp_reload.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_ThirdPerson_VZ59.Reload",
+	channel = CHAN_STATIC,
+	volume = 0.6,
+	level = 60,
+	sound = "mcv/foley/weapon_specific_tp/vietnam_weapon_vz59_foley_tp_reload.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_ThirdPerson_VZ54.Cycle",
+	channel = CHAN_STATIC,
+	volume = 0.8,
+	level = 60,
+	sound = "mcv/foley/weapon_specific_tp/vietnam_weapon_vz54_foley_tp_cycle.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_ThirdPerson_VZ54.Reload",
+	channel = CHAN_STATIC,
+	volume = 0.8,
+	level = 60,
+	sound = "mcv/foley/weapon_specific_tp/vietnam_weapon_vz54_foley_tp_reload.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_ThirdPerson_CZ52.Reload",
+	channel = CHAN_STATIC,
+	volume = 0.8,
+	level = 60,
+	sound = "mcv/foley/weapon_specific_tp/vietnam_weapon_cz52_foley_tp_reload.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_ThirdPerson_VZ52.Reload",
+	channel = CHAN_STATIC,
+	volume = 0.8,
+	level = 60,
+	sound = "mcv/foley/weapon_specific_tp/vietnam_weapon_vz52_foley_tp_reload.wav",
 } )
 
 sound.Add( {
@@ -8505,5 +10890,109 @@ sound.Add( {
 		"mcv/foley/weapon_specific/vietnam_weapon_molotov_foley_bash_2.wav",
 		"mcv/foley/weapon_specific/vietnam_weapon_molotov_foley_bash_3.wav",
 	},
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Turrets_DSHK.BeginUse",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 60,
+	sound = "mcv/weapons/weapon_turrets/Turret_DSHK_Foley_BeginUse_01.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Turrets_DSHK.StopUse",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 60,
+	sound = "mcv/weapons/weapon_turrets/Turret_DSHK_Foley_StopUse_01.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Turrets_DSHK.Overheat",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 60,
+	sound = "mcv/weapons/weapon_turrets/Turret_DSHK_Foley_Overheat_01.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Turrets_SPG9.Cycle",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 60,
+	sound = "mcv/weapons/weapon_turrets/Turret_SPG9_Foley_Cycle_01.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Turrets_SPG9.BeginUse",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 60,
+	sound = "mcv/weapons/weapon_turrets/Turret_SPG9_Foley_BeginUse_01.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Turrets_SPG9.StopUse",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 60,
+	sound = "mcv/weapons/weapon_turrets/Turret_SPG9_Foley_StopUse_01.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Turrets_M2Browning.BeginUse",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 60,
+	sound = "mcv/weapons/weapon_turrets/Turret_M2Browning_Foley_BeginUse_01.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Turrets_M2Browning.StopUse",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 60,
+	sound = "mcv/weapons/weapon_turrets/Turret_M2Browning_Foley_StopUse_01.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Turrets_M134.BeginUse",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 60,
+	sound = "mcv/weapons/weapon_turrets/Turret_M134_Foley_BeginUse_01.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Turrets_M134.StopUse",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 60,
+	sound = "mcv/weapons/weapon_turrets/Turret_M134_Foley_StopUse_01.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Turrets_M134.WindUp",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 60,
+	sound = "mcv/weapons/weapon_turrets/Turret_M134_WindUp.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Turrets_M134.WindDown",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 60,
+	sound = "mcv/weapons/weapon_turrets/Turret_M134_WindDown.wav",
+} )
+
+sound.Add( {
+	name = "MCV_Weapon_Foley_Turrets_M134.MotorLoop",
+	channel = CHAN_STATIC,
+	volume = 1.0,
+	level = 60,
+	sound = "mcv/weapons/weapon_turrets/Turret_M134_MotorLoop.wav",
 } )
 

@@ -1,70 +1,198 @@
-// Punch people
-
-WeaponData
+﻿WeaponData
 {
-	// Weapon data is loaded by both the Game and Client DLLs.
-	"printname"				"#weapon_fists"
-	"origin"				"JOHN CENA"
-	"viewmodel"				"models/weapons/v_fist.mdl"
+	"printname"					"#weapon_fists"
+//	"ammo_id_display"			""
+	"origin"					"JOHN CENA"
+	
+	"viewmodel"					"models/weapons/v_fist.mdl"
 	"playermodel"				"models/weapons/w_fist.mdl"
 	"anim_prefix"				"fists"
-	"bucket"				"2"
-	"bucket_position"			"1"
+	
+	"bucket"					"2" //weapon menu category
+	"bucket_position"			"1" //weapon menu position
 	"item_flags"				"0"
-
+	// "autoswitchfrom"			"0"
 	"WeaponType"				"Fists"
+//	"SupportedFireModes"		""
 
-	"primary_ammo"				"None"
-	"secondary_ammo"			"None"
-	"clip_size"				"-1"
+	"weight"					"0" //KG
+//	"point_cost"				""
 
-	"FireRate"				"150" // RPM
+	"HasBayonet"				"0"
+	"HasBipod"					"0"
+	"isSupressed"				"0" // informational only
+	"BuiltRightHanded"			"1" // if 0 it will automatically flip weapon viewmodel to be lefthanded
+	
+//	"skin"						""
+//	BodygroupData
+//	{	
+//	}
+	
+	"primary_ammo"				"None" //caliber
+	"secondary_ammo"			"None" //caliber
 
-	// weapon recoil
-	// minimal possible kick
-	"ViewMinKickPITCH"			"-1.0"	// degrees
-	"ViewMinKickYAW"			"-2.0"	// degrees
-	"ViewMinKickROLL"			"0.0"	// degrees
+	"clip_size"					"-1" //clip size/max ammo
+	"clip2_size"				"-1" //max secondary ammo, -1 to disable
 
-	// maximal possible kick
-	"ViewKickPITCH"				"1.0"	// degrees
-	"ViewKickYAW"				"2.0"	// degrees
-	"ViewKickROLL"				"0.0"	// degrees
+	"default_clip"				"-1" //ammo given by default
+	"default_clip2"				"-1" //ditto for second ammo type, -1 to disable
 
-	"weight"				"0"
+	"FireRate"					"150" //RPM
+	"SecondaryFireRate"			"-1" //RPM, -1 to disable
+//	"bullet_weight"				"" // KG
+	
+	"MeleeRange"				"32" // hammer units; for primary attack
+	"MeleeRangeAlt"				"42" // hammer units; for secondary attack
+	
+	//non-explosive only
+//	"ExtraBulletChamber"		"" // 0 - does NOT have +1 in the chamber
+//	"muzzle_velocity"			"" // m/s
+	"DamageGeneric"				"20" //damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)
+	"DamageHeadMultiplier"		"" // multiplier for head hitbox
+	"DamageChestMultiplier"		"" // multiplier for chest hitbox
+	"DamageStomachMultiplier"	"" // multiplier for stomach/abdomen hitbox
+	"DamageLegMultiplier"		"" // multiplier for any leg hitbox
+	"DamageArmMultiplier"		"" // multiplier for any arm/hand hitbox
+	"rangemodifier"				"" // damage * (rangemodifier ^ distance/500) ; or approx. this multiplier is compounded every 600 units 
 
-	"DamageGeneric"				"25"
+	// weapon recoil kick - minimal | all in degrees
+	"ViewMinKickPITCH"			"-1.0" //degrees
+	"ViewMinKickYAW"				"-2.0" //degrees
+//	"ViewMinKickROLL"				""
+	// weapon recoil kick - maximal | all in degrees
+	"ViewKickPITCH"				"1.0" //degrees
+	"ViewKickYAW"					"2.0" //degrees
+//	"ViewKickROLL"					""
+	//---
 
-	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	// fixed view slide from recoil
+//	ViewSlideRecoil
+//	{
+//		"Up"				""
+//		"Right"				""
+//		"Up_max" 			""
+//		"Right_max"			""
+//	}
+	// fixed view slide from recoil when aiming down sights
+//	ViewSlideRecoilIronsight
+//	{
+//		"Up"				""
+//		"Right"				""
+//		"Up_max" 			""
+//		"Right_max"			""
+//	}
+//	"ViewSlideRecoilTransitionTimeSeconds"		"" // how fast the aiming recoil will change when you start/stop ADS
+	//---
+	
+//	"UseScopecamera"			""
+//	"BlurScope"					"" // bool - do we blur around the scope?
+//	"DofFocusDist"				"" // override depth of field focal distance
+//	"DofScale"					"" // override depth of field strength when aiming
+
+	// viewmodel offset in non-ironsighted case
+	CustomOffset
+	{
+		"forward"					"0"
+		"right"						"0"
+		"up"						"0"
+		"pitch"						"0"
+		"yaw"						"0"
+		"roll"						"0"
+	}
+	//---
+	
+//	"NearwallDistance"				"" // hammer units
+//	"recoilpushbackvalue"			""
+
+	// Zombie Mode
+	"ZMBuyPrice"				"1"
+	"ZMWeight"					"0"
+	// if anything is modified for zombies mode:
+	//zombie_stats
+	//{
+	//}
+	//---
+	
+	// Day of Victory
+	// if anything is modified for DoV:
+	dov_stats
+	{
+		"weight"				"2"
+	}
+	//---
+	
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 single_shot sounds)
 	SoundData
 	{
 		"single_shot"		""
 		"double_shot"		""
-		"reload"		""
-		"special1"		"Weapon_Fists.PowerPunch"
-		"special2"		"Weapon_Fists.PowerPunchWall"
+		"reload"			""
+		"special1"			"Weapon_Fists.PowerPunch"
+		"special2"			"Weapon_Fists.PowerPunchWall"
 		"nearlyempty"		""
-		"empty"			""
-
-		"melee_hit"		"Weapon_Fists.Punch"
+		"empty"				""
+		"melee_hit"			"Weapon_Fists.Punch"
 		"melee_hit_world"	"Weapon_Fists.PunchWall"
-
+		
 		// NPC SECTION
 		"single_shot_npc"	""
 		"double_shot_npc"	""
 		"reload_npc"		""
 		
 		// 3RD PERSON PLAYER SECTION
-		"player_reload"		""
+		"player_reload"				""
 		"player_reload_loop"		""
 		"player_reload_cycle"		""
 
-		"player_grenade_pullpin"		""
-		"player_grenade_on"		""
+		"player_grenade_pullpin"	""
+		"player_grenade_on"			""
 		"player_equipment_on"		""
 		"player_equipment_off"		""
-		"player_deploy"		"Weapon_Foley_ThirdPerson_Shared.DrawSmall"
-		"player_holster"		"Weapon_Foley_ThirdPerson_Shared.HolsterSmall"
-		"player_bash"		"Weapon_Foley_ThirdPerson_Shared.BashFast"
+		"player_deploy"				"Weapon_Foley_ThirdPerson_Shared.DrawSmall"
+		"player_holster"			"Weapon_Foley_ThirdPerson_Shared.HolsterSmall"
+		"player_bash"				"Weapon_Foley_ThirdPerson_Shared.BashFast"
 	}
+	//
+	
+	////////////////////////////
+	// Weapon Particles Start //
+	////////////////////////////
+		
+ 	"MuzzleParticle"					"" // "null" will disable
+ 	"MuzzleParticle_Smoke"				"" // "null" will disable
+ 	"MuzzleParticle_Ironsighted"		"" // "null" will disable
+ 	"MuzzleParticle_IronsightedSmoke"	"" // "null" will disable
+	
+	"MuzzleParticle3rdPerson"			""
+	"ParticleAttachType"				"" // 0 - PATTACH_POINT; 1 - PATTACH_POINT_FOLLOW
+
+	"MuzzleSmokeParticle"				""
+	"MuzzleSmokeShotCount"				""
+
+	"EjectBrassType"					""
+	"EjectBrassTrail"					""
+	"EjectBrassParticle"				"" // "null" will disable
+	"EjectBrassSound"					""
+	
+	"EjectMiscModel"					""
+	"EjectMiscSound"					""
+	
+	"TracerParticle"					"" // "null" will disable
+	"TracerParticle2"					"" // "null" will disable
+	"TracerRandomness"					""
+	"TracerFrequency"					""
+	
+//	"MuzzleLight"						"" // "None" will disable projected muzzleflash
+//	"MuzzleLightBrightnessLower"		"" // Random brightness is chosen between this Lower - Upper range
+//	"MuzzleLightBrightnessUpper"		""
+//	"MuzzleLightFOVLower"				""
+//	"MuzzleLightFOVUpper"				""
+//	"MuzzleLightDuration"				""
+//	"MuzzleLightFadeIn"					""
+//	"MuzzleLightFadeOut"				""
+//	"MuzzleLightDistance"				""
+	
+	//////////////////////////
+	// Weapon Particles End //
+	//////////////////////////
 }

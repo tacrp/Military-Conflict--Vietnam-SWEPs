@@ -1,0 +1,33 @@
+"VertexLitGeneric"
+{
+	"$basetexture"			"models\weapons\mcv\w_katana\w_katana_diffuse"
+    "$bumpmap"				"models\weapons\mcv\w_katana\w_katana_normal"
+	"$PhongExponentTexture"	"models\weapons\mcv\w_katana\w_katana_exponent"
+
+	"$phong" "1"
+	"$phongboost"	"8"
+	"$phongfresnelranges"	"[1 1.3 2]"
+	"$phongalbedotint" "1"
+	"$phongalbedoboost" "25"
+	"$surfaceprop" "metal"
+
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[ .15 .15 .15]"
+	"$normalmapalphaenvmapmask" "1"
+
+	"$detail" "models/effects/dynamic_detail"
+	"$detailscale" "[0.5 0.5]"
+	"$detailblendfactor" "0.0"
+	"$detailblendmode" "0"
+	"$detailframe" "0"
+
+	"Proxies"	
+	{
+		"DynamicDetail"
+		{
+			"frameVar" "$detailFrame"
+			"blendVar" "$detailblendfactor"
+		}
+	}
+}
+

@@ -1,0 +1,13 @@
+"unlitgeneric"
+{
+	$basetexture "effects/vietnam/Vietnam_ZippoFlame"
+	$vertexcolor 1
+	$vertexalpha 1
+	$DEPTHBLEND 5.5
+	$blendframes 1
+	$MAXLUMFRAMEBLEND1 0
+	$MAXLUMFRAMEBLEND2 1
+//	$OVERBRIGHTFACTOR 1.5
+	$additive 1
+}
+

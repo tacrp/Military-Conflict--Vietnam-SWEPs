@@ -1,0 +1,39 @@
+"VertexLitGeneric"
+{
+    "$basetexture"					"models\weapons\mcv\v_ts3\v_TS3_sight_diffuse"
+    "$bumpmap"						"models\weapons\mcv\v_ts3\v_TS3_sight_normal"
+	"$PhongExponentTexture"			"models\weapons\mcv\v_ts3\v_TS3_sight_exponent"
+
+	"$phong"						"1"
+	"$phongboost"					"1.8"
+	"$phongfresnelranges"			"[0.9 1.2 3]"
+	"$PhongAlbedoTint"				"1"
+	"$phongalbedoboost"				"2"
+	"$surfaceprop"					"metal"
+
+	"$envmap"						"env_cubemap"
+	"$envmaptint"					"[ .2 .2 .2]"
+	"$normalmapalphaenvmapmask"		"1"
+
+	
+	"$rimlight"						"0"
+	"$rimlightexponent"				"15"
+	"$rimlightboost"				"0.05"
+	"$rimmask"						"1"
+
+	"$detail"						"models/effects/dynamic_detail"
+	"$detailscale"					"1.50"
+	"$detailblendfactor"			"0.0"
+	"$detailblendmode"				"0"
+	"$detailframe"					"0"
+
+	"Proxies"	
+	{
+		"DynamicDetail"
+		{
+			"frameVar" "$detailFrame"
+			"blendVar" "$detailblendfactor"
+		}
+	}
+}
+

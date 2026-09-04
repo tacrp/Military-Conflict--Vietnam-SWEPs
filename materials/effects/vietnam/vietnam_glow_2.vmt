@@ -6,6 +6,6 @@
 	$translucent "1"
 	$additive "1"
 	$overbrightfactor "2"
-	$depthblend "0"
-	$depthblendscale "0.5"
+	$depthblend "1"
+	$depthblendscale "40"
 }

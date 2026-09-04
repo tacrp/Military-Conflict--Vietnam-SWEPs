@@ -8,11 +8,11 @@
 	$translucent "1"
 
 	// Vietnam specific
-//	$allowcsm "1"
-//	$csm_particle_worldspace_fix "1"
+	$allowcsm "1"
+	$csm_particle_worldspace_fix "1"
 	
 	// depthblend feature is required when drawing particles to lower resulotion buffer
-	$depthblend "0"
+	$depthblend "1"
     $depthblendscale "50"
 }
 

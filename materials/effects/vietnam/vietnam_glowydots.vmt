@@ -6,6 +6,6 @@
 	$overbrightfactor "4.75"
 	$startfadesize ".45"
 	$endfadesize ".575"
-	$depthblend "0"
+	$depthblend "1"
 	$depthblendscale "1"
 }

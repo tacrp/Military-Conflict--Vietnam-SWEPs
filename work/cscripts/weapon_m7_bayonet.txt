@@ -1,87 +1,82 @@
-// M7 Bayonet
-
 WeaponData
 {
-	// Weapon data is loaded by both the Game and Client DLLs.
-	"printname"				"#weapon_M7_BAYONET"
-	"origin"				"#united_states_of_america"
-	"viewmodel"				"models/weapons/v_m7_bayonet.mdl"
+	"printname"					"#weapon_M7_BAYONET"
+	"origin"					"#united_states_of_america"
+
+	"viewmodel"					"models/weapons/v_m7_bayonet.mdl"
 	"playermodel"				"models/weapons/w_m7_bayonet.mdl"
 	"anim_prefix"				"knife"
-	"bucket"				"2"
-	"bucket_position"			"0"
-	"item_flags"				"0"
 
+	"bucket"					"2" //weapon menu category
+	"bucket_position"			"0" //weapon menu position
+	"item_flags"				"0"
+	// "autoswitchfrom"			"0"
 	"WeaponType"				"Melee"
 
-	"primary_ammo"				"None"
-	"secondary_ammo"			"None"
+	"weight"					"0" //KG
 
-	"clip_size"				"-1"
+	"HasBayonet"				"0"
+	"HasBipod"					"0"
+	"isSupressed"				"0"
+	"BuiltRightHanded"			"1"
 
-	"FireRate"				"150" // RPM
+	"primary_ammo"				"None" //caliber
+	"secondary_ammo"			"None" //caliber
 
-	// weapon recoil
-	// minimal possible kick
-	"ViewMinKickPITCH"			"-1.0"	// degrees
-	"ViewMinKickYAW"			"-2.0"	// degrees
-	"ViewMinKickROLL"			"0.0"	// degrees
+	"clip_size"					"-1" //clip size/max ammo
+	"clip2_size"				"-1" //max secondary ammo, -1 to disable
 
-	// maximal possible kick
-	"ViewKickPITCH"				"1.0"	// degrees
-	"ViewKickYAW"				"2.0"	// degrees
-	"ViewKickROLL"				"0.0"	// degrees
+	"default_clip"				"-1" //ammo given by default
+	"default_clip2"				"-1" //ditto for second ammo type, -1 to disable
 
-	"weight"				"0"
+	"FireRate"					"150" //RPM
+	"SecondaryFireRate"			"-1" //RPM, -1 to disable
 
-	"DamageGeneric"				"35"
+	"MeleeRange"				"32" //hammer units
+	"MeleeRangeAlt"				"48" //hammer units
 
-	// Zombie Mode
+	"DamageGeneric"				"35" //damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)
+	"DamageGenericAlt"			"55" //alt damage on rmb attack
+
+	"ViewMinKickPITCH"				"-1.0" //degrees
+	"ViewMinKickYAW"				"-2.0" //degrees
+	"ViewMinKickROLL"				"0.0" //degrees
+	"ViewKickPITCH"					"1.0" //degrees
+	"ViewKickYAW"					"2.0" //degrees
+	"ViewKickROLL"					"0.0" //degrees
+
+	"IronSight"						"0" //0 - not available to ADS with
+
+	CustomOffset
+	{
+		"forward"					"0"
+		"right"						"0"
+		"up"						"0"
+		"pitch"						"0"
+		"yaw"						"0"
+		"roll"						"0"
+	}
+
 	"ZMBuyPrice"	 "250"
-	"ZMSellPrice"	 "175"
-	"ZMWeight"		 "1"
-	
-	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 "single_shot" sounds)
+	"ZMWeight"		 "0"
+	zombie_stats
+	{
+		"DamageGeneric"				"70"
+		"DamageGenericAlt"			"140"
+		"MeleeRange"				"48"
+		"MeleeRangeAlt"				"72"
+	}
+
 	SoundData
 	{
-		"single_shot"		""
-		"double_shot"		""
-		"reload"		""
-		"special1"		"Weapon_M7_Bayonet.ThrustStab"
-		"special2"		"Weapon_M7_Bayonet.ThrustHit"
-		"nearlyempty"		""
-		"empty"			""
-
-		"melee_hit"		"Weapon_M7_Bayonet.Stab"
+		"special1"			"Weapon_M7_Bayonet.ThrustStab"
+		"special2"			"Weapon_M7_Bayonet.ThrustHit"
+		"melee_hit"			"Weapon_M7_Bayonet.Stab"
 		"melee_hit_world"	"Weapon_M7_Bayonet.Hit"
 
-		// NPC SECTION
-		"single_shot_npc"	""
-		"double_shot_npc"	""
-		"reload_npc"		""
-		
-		// 3RD PERSON PLAYER SECTION
-		"player_reload"		""
-		"player_reload_loop"		""
-		"player_reload_cycle"		""
-
-		"player_grenade_pullpin"		""
-		"player_grenade_on"		""
-		"player_equipment_on"		""
-		"player_equipment_off"		""
-		"player_deploy"		"Weapon_Foley_ThirdPerson_Shared.DrawSmall"
-		"player_holster"		"Weapon_Foley_ThirdPerson_Shared.HolsterSmall"
-		"player_bash"		"Weapon_Foley_ThirdPerson_Shared.BashFast"
+		"player_deploy"				"Weapon_Foley_ThirdPerson_Shared.DrawSmall"
+		"player_holster"			"Weapon_Foley_ThirdPerson_Shared.HolsterSmall"
+		"player_bash"				"Weapon_Foley_ThirdPerson_Shared.BashFast"
 	}
 
-	// viewmodel offset in non-ironsighted case
-        CustomOffset
-	{
-		"forward"	"0"
-		"right"		"0"
-		"up"		"0"
-		"pitch"		"0"
-		"yaw"		"0"
-		"roll"		"0"
-	}
 }

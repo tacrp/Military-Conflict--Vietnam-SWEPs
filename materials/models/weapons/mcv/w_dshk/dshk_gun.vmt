@@ -1,0 +1,39 @@
+"VertexLitGeneric"
+{	
+    "$basetexture"			"models\weapons\mcv\w_dshk\dshk_gun_diffuse"
+    "$bumpmap"				"models\weapons\mcv\w_dshk\dshk_gun_normal"
+	"$PhongExponentTexture"	"models\weapons\mcv\w_dshk\dshk_gun_exponent"
+	
+	"$phong" "1"
+	"$phongboost"	".75"
+	"$phongfresnelranges"	"[1 1.4 2]"
+	//"$phongexponent" "4"
+	"$PhongAlbedoTint" "1"
+	"$phongalbedoboost" "25"
+	"$surfaceprop" "metal"
+
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[ .07 .07 .07]"
+	"$normalmapalphaenvmapmask" "1"
+	
+	"$detail"						"models\weapons\mcv\w_dshk\dshk_gun_glow"
+	"$detailscale"					"1"
+	"$detailblendfactor"			".001" 
+	"$detailblendmode"				"5"
+	
+	"$nodecal"						"1"
+
+	"$HeatAmount"					"0"
+	"Proxies"
+	{
+		Heat
+		{
+			resultVar $HeatAmount
+		}
+		Equals
+		{
+			srcVar1 $HeatAmount
+			resultVar $detailblendfactor
+		}
+	}
+}

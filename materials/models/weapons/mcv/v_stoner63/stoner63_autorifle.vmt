@@ -15,7 +15,7 @@
 	"$envmaptint"					"[ 0.27 0.27 0.27]"
 	"$normalmapalphaenvmapmask"		"1"
 
-	"$detail"						"models/weapons/mcv/effects/dynamic_detail"
+	"$detail"						"models/effects/dynamic_detail"
 	"$detailscale"					"1.50"
 	"$detailblendfactor"			"0.0"
 	"$detailblendmode"				"0"

@@ -1,0 +1,39 @@
+"VertexLitGeneric"
+{
+	"$basetexture"						"models\weapons\mcv\v_gewehr43\v_gewehr43_diffuse"
+    "$bumpmap"							"models\weapons\mcv\v_gewehr43\v_gewehr43_normal"
+	"$PhongExponentTexture"				"models\weapons\mcv\v_gewehr43\v_gewehr43_exponent"
+
+	"$phong" "1"
+	"$phongboost"	"1.0"
+	"$phongfresnelranges"	"[1 1.25 1.5]"
+	"$PhongAlbedoTint" "1"
+	"$phongalbedoboost"	"20"
+	"$surfaceprop" "metal"
+
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[ .4 .4 .4]"
+	"$normalmapalphaenvmapmask" "1"
+
+	
+	"$rimlight" "1"
+	"$rimlightexponent" "15"
+	"$rimlightboost" "0.2"
+	"$rimmask" "1"
+
+	"$detail" "models/effects/dynamic_detail"
+	"$detailscale" "1.50"
+	"$detailblendfactor" "0.0"
+	"$detailblendmode" "0"
+	"$detailframe" "0"
+
+	"Proxies"	
+	{
+		"DynamicDetail"
+		{
+			"frameVar" "$detailFrame"
+			"blendVar" "$detailblendfactor"
+		}
+	}
+}
+

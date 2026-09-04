@@ -58,6 +58,10 @@ def process_wave_path(wave_value, path_prefix):
         special_prefix, rest_of_path = prefix_match.groups()
     else:
         special_prefix, rest_of_path = '', wave_value
+
+    # Newer Source branches use '~' (HRTF) and '`' which GMod's engine does not know; they
+    # would end up as part of the filename. Keep only the sound chars GMod understands.
+    special_prefix = ''.join(c for c in special_prefix if c in '*#@><^)(}?!$')
     
     # Clean up the path
     cleaned_path = rest_of_path.replace('\\', '/')

@@ -1,24 +1,69 @@
-// Cubemap visualization tool
-
 WeaponData
 {
-	// Weapon data is loaded by both the Game and Client DLLs.
-	"printname"		"#HL2_Cubemap"
-	"viewmodel"		"models/shadertest/envballs.mdl"
-	"playermodel"		"models/shadertest/envballs.mdl"
-	"anim_prefix"		"tool"
-	"bucket"		"2"
-	"bucket_position"	"0"
+	"printname"					"#weapon_cubemap"
+	"origin"					"#coop"
 
-	"clip_size"			"-1"
-	"clip2_size"			"-1"
+	"viewmodel"					"models/shadertest/envballs.mdl"
+	"playermodel"				"models/shadertest/envballs.mdl"
+	"anim_prefix"				"tool"
 
-	"default_clip"			"-1"
-	"default_clip2"			"-1"
+	"bucket"					"2" //weapon menu category
+	"bucket_position"			"0" //weapon menu position
+	"item_flags"				"0"
+	// "autoswitchfrom"			"0"
 
-	"primary_ammo"			"None"
-	"secondary_ammo"		"None"
+	"weight"					"0" //KG
 
-	"weight"			"0"
-	"item_flags"			"0"
+	"HasBayonet"				"0"
+	"HasBipod"					"0"
+	"isSupressed"				"0"
+	"BuiltRightHanded"			"1"
+
+	"primary_ammo"				"None" //caliber
+	"secondary_ammo"			"None" //caliber
+
+	"clip_size"					"-1" //clip size/max ammo
+	"clip2_size"				"-1" //max secondary ammo, -1 to disable
+
+	"default_clip"				"-1" //ammo given by default
+	"default_clip2"				"-1" //ditto for second ammo type, -1 to disable
+
+	"FireRate"					"600" //RPM
+	"SecondaryFireRate"			"-1" //RPM
+
+	"DamageGeneric"				"1" //damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)
+	"DamageHeadMultiplier"		"1"
+	"DamageChestMultiplier"		"1"
+	"DamageStomachMultiplier"	"1"
+	"DamageLegMultiplier"		"1"
+	"DamageArmMultiplier"		"1"
+
+	"IronSight"						"0" //0 - not available to ADS with
+
+	"CrosshairMinDistance"			"4"
+	"CrosshairDeltaDistance"		"4"
+
+	CustomOffset
+	{
+		"forward"					"0"
+		"right"						"0"
+		"up"						"0"
+		"pitch"						"0"
+		"yaw"						"0"
+		"roll"						"0"
+	}
+
+	"ZMBuyPrice"	 "1"
+	"ZMWeight"		 "0"
+
+	SoundData
+	{
+
+		"player_equipment_on"		"Weapon_Foley_ThirdPerson_Shared.BipodOn"
+		"player_equipment_off"		"Weapon_Foley_ThirdPerson_Shared.BipodOff"
+		"player_deploy"				"Weapon_Foley_ThirdPerson_Shared.Draw"
+		"player_holster"			"Weapon_Foley_ThirdPerson_Shared.Holster"
+		"player_bash"				"Weapon_Foley_ThirdPerson_Shared.BashSlow"
+	}
+
 }

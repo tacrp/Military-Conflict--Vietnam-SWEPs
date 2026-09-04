@@ -1,0 +1,143 @@
+WeaponData
+{
+	"printname"					"#weapon_VZ24_riflegrenade"
+	"origin"					"#poland"
+
+	"viewmodel"					"models/weapons/v_vz24.mdl"
+	"playermodel"				"models/weapons/w_vz24.mdl"
+	"anim_prefix"				"boltaction"
+
+	"bucket"					"3" //weapon menu category
+	"bucket_position"			"0" //weapon menu position
+	"item_flags"				"0"
+	// "autoswitchfrom"			"0"
+	"WeaponType"				"RifleGrenade"
+
+	"weight"					"7" //KG
+
+	"HasBayonet"				"1"
+	"HasBipod"					"0"
+	"isSupressed"				"0"
+	"BuiltRightHanded"			"1"
+
+	BodygroupData
+	{
+//		"scope"			"1"
+		"mount"			"1"
+		"bayonet"		"0"
+	}
+
+	"primary_ammo"				"riflegrenade" //caliber
+	"secondary_ammo"			"None" //caliber
+
+	"clip_size"					"1/2" //clip size/max ammo (-1 means we don't use clips for this ammo type)
+	"clip2_size"				"-1" //max secondary ammo
+
+	"default_clip"				"1" //ammo given by default
+	"default_clip2"				"-1" //ditto for second ammo type
+
+	"FireRate"					"50" //RPM
+	"SecondaryFireRate"			"-1" //RPM, -1 to disable
+
+	"gl_velocity"			"70" //m/s, grenade launcher shoot velocity
+
+	"ExplosionDamage"		"150"
+	"ExplosionRadius"		"350" //hammer units
+
+	"FuseTimeMin"				"2.0"
+	"FuseTimeMax"				"4.0"
+
+	"BulletSpreadDegrees"					"3" //degrees
+	"BulletSpreadDegreesIronsighted"		"1" //degrees
+
+	"StandMoveSpreadMultiplier"		"2"
+	"CrouchSpreadMultiplier"		"1"
+	"CrouchMoveSpreadMultiplier"	"1.25"
+	"ProneSpreadMultiplier"			"0.75"
+	"SneakMoveSpreadMultiplier"		"1.5"
+	"JumpSpreadMultiplier"			"4.0"
+
+	"ShakeScale"					"2.5" //camera shake effect, does not affect accuracy
+	"ShakeFreq"						"20.0" //how many shakes per second
+	"ShakeDuration"					"0.4" //sec
+
+	ViewSlideRecoil
+	{
+		"Up"				"3"
+		"Right"				"0.5"
+	}
+	ViewSlideRecoilIronsight
+	{
+		"Up"				"0.15"
+		"Right"				"0.25"
+	}
+
+	"IronSight"						"1" //0 - not available to ADS with
+	"IronsightSpeedScale"			"0.7" //how long ironsight transition will last
+	"IronsightedFovOffset"			"-15" //degrees added when ADS
+	"ironsightforward"			"-3"
+	"ironsightright"			"0"
+	"ironsightup"				"0.1"
+	"ironsightpitch"			"0.2"
+	"ironsightyaw"				"0"
+	"ironsightroll"				"0"
+
+	"CrosshairMinDistance"			"8"
+	"CrosshairDeltaDistance"		"4"
+
+	CustomOffset
+	{
+		"forward"					"-2"
+		"right"						"0"
+		"up"						"0"
+		"pitch"						"0"
+		"yaw"						"0"
+		"roll"						"0"
+	}
+
+	"NearwallDistance"				"40" //hammer units
+
+	"ZMBuyPrice"	 "400"
+	"ZMWeight"		 "0"
+	zombie_stats
+	{
+		"ExplosionDamage"			"200"
+		"ExplosionRadius"			"400"
+	}
+
+	SoundData
+	{
+		"single_shot"		"Weapon_M38.RifleGrenade"
+		"empty"				"Weapon_Generic.ClipEmpty_07"
+
+		"player_reload"				"Weapon_Foley_ThirdPerson_VZ24.Reload"
+		"player_reload_cycle"		"Weapon_Foley_ThirdPerson_VZ24.Cycle"
+
+		"player_grenade_on"			"Weapon_Foley_ThirdPerson_Shared.GrenadeOn"
+		"player_equipment_on"		"Weapon_Foley_ThirdPerson_Shared.BayonetOn"
+		"player_equipment_off"		"Weapon_Foley_ThirdPerson_Shared.BayonetOff"
+		"player_deploy"				"Weapon_Foley_ThirdPerson_Shared.Draw"
+		"player_holster"			"Weapon_Foley_ThirdPerson_Shared.Holster"
+		"player_bash"				"Weapon_Foley_ThirdPerson_Shared.BashFast"
+	}
+
+ 	"MuzzleParticle"					"vietnam_muzzleflash_sniperrifle_type1_fp" //"null" will disable
+ 	"MuzzleParticle_Smoke"				"vietnam_muzzleflash_sniperrifle_type1_fp_smoke" //"null" will disable
+ 	"MuzzleParticle_Ironsighted"		"vietnam_muzzleflash_sniperrifle_type1_fp_is" //"null" will disable
+ 	"MuzzleParticle_IronsightedSmoke"	"vietnam_muzzleflash_sniperrifle_type1_fp_is_smoke" //"null" will disable
+
+	"MuzzleParticle3rdPerson"			"vietnam_muzzleflash_sniperrifle_type1_tp"
+	"ParticleAttachType"				"1" //0 - PATTACH_POINT; 1 - PATTACH_POINT_FOLLOW
+
+	"MuzzleSmokeParticle"				"vietnam_muzzleflash_generic_aftersmoke"
+	"MuzzleSmokeShotCount"				"5"
+
+	"EjectBrassTrail"					"vietnam_weaponeffect_shelleject_trail"
+	"EjectBrassParticle"				"vietnam_weaponeffect_shelleject_side" //"null" will disable
+
+	"TracerParticle"					"vietnam_tracer_rifle_primary" //"null" will disable
+	"TracerParticle2"					"vietnam_tracer_rifle_secondary" //"null" will disable
+	"TracerRandomness"					"6"
+	"TracerFrequency"					"1"
+
+}

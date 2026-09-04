@@ -1,0 +1,45 @@
+"VertexLitGeneric"
+{	
+    "$basetexture"			"models\weapons\mcv\w_m2browning\m2browning2_base_diffuse"
+    "$bumpmap"				"models\weapons\mcv\w_m2browning\m2browning2_base_normal"
+	"$PhongExponentTexture"	"models\weapons\mcv\w_m2browning\m2browning2_base_exponent"
+	
+	"$phong" "1"
+	"$phongboost"	".75"
+	"$phongfresnelranges"	"[1 1.4 2]"
+	//"$phongexponent" "4"
+	"$PhongAlbedoTint" "1"
+	"$phongalbedoboost" "25"
+	"$surfaceprop" "metal"
+
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[ .07 .07 .07]"
+	"$normalmapalphaenvmapmask" "1"
+	
+	"$detail" "models/effects/dynamic_detail"
+	"$detailscale" "2.00"
+	"$detailblendfactor" "0.0"
+	"$detailblendmode" "0"
+	"$detailframe" "0"
+
+	"$nodecal"						"1"
+
+	"$detail"						"models\weapons\mcv\w_m2browning\m2browning2_base_glow"
+	"$detailscale"					"1"
+	"$detailblendfactor"			".001" 
+	"$detailblendmode"				"5"
+
+	"$HeatAmount"					"0"
+	"Proxies"
+	{
+		Heat
+		{
+			resultVar $HeatAmount
+		}
+		Equals
+		{
+			srcVar1 $HeatAmount
+			resultVar $detailblendfactor
+		}
+	}
+}

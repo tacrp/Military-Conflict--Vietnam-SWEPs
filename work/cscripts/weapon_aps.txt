@@ -1,206 +1,253 @@
-// APS
-
 WeaponData
 {
-	// Weapon data is loaded by both the Game and Client DLLs.
-	"printname"				"#weapon_aps"
-	"origin"				"#soviet_union"
-	"viewmodel"				"models/weapons/v_aps.mdl"
+	"printname"					"#weapon_aps"
+	"ammo_id_display"			"#ammo_id_29"
+	"origin"					"#soviet_union"
+	
+	"viewmodel"					"models/weapons/v_aps.mdl"
 	"playermodel"				"models/weapons/w_aps.mdl"
 	"anim_prefix"				"aps"
-	"bucket"				"0"
-	"bucket_position"			"0"
+	
+	"bucket"					"0" //weapon menu category
+	"bucket_position"			"0" //weapon menu position
+	"item_flags"				"0"
+	// "autoswitchfrom"			"0"
+	"WeaponType"				"MachinePistol"
 	"SupportedFireModes"		"Auto+Semi"
 
-	"WeaponType"				"MachinePistol"
+	"weight"					"1.51" //KG
+//	"point_cost"				""
 
-	"primary_ammo"				".32acp" // caliber
-	"secondary_ammo"			"None"
-
-	"clip_size"				"20/60"	// clip size/max ammo
-	"clip2_size"				"-1"	// ditto for secondary ammo (-1 means we don't use clips for this ammo type)
-
-	"ExtraBulletChamber"			"1"
-
-	"default_clip"				"20"	// ammo given by default
-	"default_clip2"				"-1"	// ditto for second ammo type
-
-	"FireRate"				"750"	// RPM
-	"SecondaryFireRate"			"-1"	// RPM
-
-	"muzzle_velocity"			"320" 	// m/s, or 3.15ft/s
-	"bullet_weight"				"0.0045"	// KG
-	"gl_velocity"				"-1" 	// m/s, grenade launcher shoot velocity
-
-	"BulletSpreadDegrees"				"9"	// degrees // 12.3
-	"BulletSpreadDegreesIronsighted"	"2.2"	// degrees
-
-	"rangemodifier"				"0.73" // 0.78
-
-	"IronsightSpeedScale"			"1.1" // how long ironsight transition will last
-
-	//
-	// Bullet spread multiplier according to current stance
-	//
-	"CrouchSpreadMultiplier"		"0.85"
-	"ProneSpreadMultiplier"			"0.75"
-	"StandMoveSpreadMultiplier"		"1.25"
-	"SneakMoveSpreadMultiplier"		"1.15"
-	"CrouchMoveSpreadMultiplier"	"1.15"
-	"JumpSpreadMultiplier"			"1.7"
-
-	// damage modifiers
-	"DamageHeadMultiplier"			"2.4"
-	"DamageChestMultiplier"			"1.3"
-	"DamageStomachMultiplier"		"1.2"
-	"DamageLegMultiplier"			"0.8"
-	"DamageArmMultiplier"			"0.75"
-	"DamageGeneric"				"34"	// damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)
-
-	// weapon recoil
-	// minimal possible kick
-	//"ViewMinKickPITCH"			"1.65"	// degrees
-	//"ViewMinKickYAW"			"-0.25"	// degrees
-
-	// maximal possible kick
-	//"ViewKickPITCH"				"1.90"	// degrees
-	//"ViewKickYAW"				"0.25"	// degrees
-
-	"ShakeScale"				"0.6"	// camera shake effect, does not affect accuracy
-	"ShakeFreq"					"60.0" 	// how many shakes per second
-	"ShakeDuration"				"0.30"	// sec
-
-	//
-	// fixed view slide from recoil
-	//
-	ViewSlideRecoil
-	{
-		"Up"	"1.1"
-		"Right"	"0.80"
-	}
-
-	ViewSlideRecoilIronsight
-	{
-		"Up"	"0.59"
-		"Right"	"0.32"
-	}
-
-	"CrosshairMinDistance"			"4"
-	"CrosshairDeltaDistance"		"4"
-
-	"weight"				"1.51"
-
-	////////////////////////////
-	// Weapon Particles Start //
-	////////////////////////////
+	"HasBayonet"				"0"
+	"HasBipod"					"0"
+	"isSupressed"				"0" // informational only
+	"BuiltRightHanded"			"1" // if 0 it will automatically flip weapon viewmodel to be lefthanded
 	
- 	"MuzzleParticle"			"vietnam_muzzleflash_pistol_type1_fp"
- 	"MuzzleParticle_Smoke"		"vietnam_muzzleflash_pistol_type1_fp_smoke"
- 	"MuzzleParticle_Ironsighted"			"vietnam_muzzleflash_pistol_type1_fp_is"
- 	"MuzzleParticle_IronsightedSmoke"		"vietnam_muzzleflash_pistol_type1_fp_is_smoke"
+//	"skin"						""
+//	BodygroupData
+//	{	
+//	}
 	
-    "MuzzleParticle3rdPerson"		"vietnam_muzzleflash_pistol_type1_tp"
-    "ParticleAttachType"			"1"	// 0 - PATTACH_POINT; 1 - PATTACH_POINT_FOLLOW
+	"primary_ammo"				"9x18mm" //caliber
+	"secondary_ammo"			"None" //caliber
 
-    "MuzzleSmokeParticle"			"vietnam_muzzleflash_generic_aftersmoke"
-    "MuzzleSmokeShotCount"			"5"
+	"clip_size"					"20/100" //clip size/max ammo
+	"clip2_size"				"-1" //ditto for secondary ammo (-1 means we don't use clips for this ammo type)
 
-	"EjectBrassType"			"0" // 9X18M
-	"EjectBrassTrail"			"vietnam_weaponeffect_shelleject_trail"
-	"EjectBrassParticle"			"vietnam_weaponeffect_shelleject_side"
-	"EjectBrassSound"			"Bounce.Shell"
+	"default_clip"				"20" //ammo given by default
+	"default_clip2"				"-1" //ditto for second ammo type
 
-	// tracer particles
-	"TracerParticle"			"vietnam_tracer_smg_primary"
-	"TracerParticle2"			"vietnam_tracer_smg_secondary"
-	"TracerRandomness"			"6"
-	"TracerFrequency"			"3"
+	"FireRate"					"750" //RPM
+	"SecondaryFireRate"			"-1" //RPM
+	"bullet_weight"				"0.0045" //KG
 	
-	"MuzzleLight"			"effects/flashlight_muzzleflash" // "None" will disable projected muzzleflash
-	"MuzzleLightBrightnessLower"			"0.5" // Random brightness is chosen between this Lower - Upper range
-	"MuzzleLightBrightnessUpper"			"0.75"
-	"MuzzleLightFOVLower"			"75"
-	"MuzzleLightFOVUpper"			"95"
-	"MuzzleLightDuration"			"0.05"
-	"MuzzleLightFadeOut"			"0.035"
-	"MuzzleLightDistance"			"400"
-	
-	//////////////////////////
-	// Weapon Particles End //
-	//////////////////////////
+	//non-explosive only
+	"ExtraBulletChamber"		"1" //0 - does NOT have +1 in the chamber
+	"muzzle_velocity"			"320" //m/s, or 3.15ft/s
+	"DamageGeneric"				"25" 
+	"DamageHeadMultiplier"		"3.2"
+	"DamageChestMultiplier"		"1.75"
+	"DamageStomachMultiplier"	"1.7"
+	"DamageLegMultiplier"		"0.95"
+	"DamageArmMultiplier"		"0.9"
+	"rangemodifier"				"0.805" //0.78
 
-	// bullet penetration settings | Depth
-	"MetalPenetrationDepth"			"5.0"	// in units
-	"GlassPenetrationDepth"			"11.0"
-	"ConcretePenetrationDepth"		"7.0"
-	"WoodPenetrationDepth"			"15.0"
-	"OtherPenetrationDepth"			"9.0"
+	// bullet penetration settings | max depth | all in hammer units | after this distance travelled inside stated material the bullet is completely stopped
+	"MetalPenetrationDepth"		"5" //in units
+	"GlassPenetrationDepth"		"11"
+	"ConcretePenetrationDepth"	"7"
+	"WoodPenetrationDepth"		"15"
+	"OtherPenetrationDepth"		"9"
 
 	// bullet penetration settings | Damage Reduction | Higher value - less damage after penetration
-	"MetalDamageModifier"			"1.7"
-	"GlassDamageModifier"			"1.3"
-	"ConcreteDamageModifier"		"1.9"
-	"WoodDamageModifier"			"1.4"
-	"OtherDamageModifier"			"1.4"
+	"MetalDamageModifier"		"1.7"
+	"GlassDamageModifier"		"1.3"
+	"ConcreteDamageModifier"	"1.9"
+	"WoodDamageModifier"		"1.4"
+	"OtherDamageModifier"		"1.4"
+	//---
+	
+	"BulletSpreadDegrees"		"8" //degrees // 12.3
+	"BulletSpreadDegreesIronsighted"		"2.75" //degrees
+//	"BulletSpreadDegreesBipod"				"" // degrees
+//	"BulletSpreadDegreesBipodIronsighted"	"" // degrees
 
-	"IronSight"				"1"
-	"IronsightedFovOffset"			"-15"
+	// Bullet spread multiplier according to current stance; 0-1 will lessen spread; 1-inf will increase spread
+	"StandMoveSpreadMultiplier"	"1.2"
+	"CrouchSpreadMultiplier"	"0.85"
+	"CrouchMoveSpreadMultiplier"	"1.1"
+	"ProneSpreadMultiplier"		"0.75"
+	"SneakMoveSpreadMultiplier"	"1.15"
+	"JumpSpreadMultiplier"		"1.75"
+	//---
+	
+	// camera shake - does not affect accuracy
+	"ShakeScale"				"0.6" //camera shake effect, does not affect accuracy
+	"ShakeFreq"					"60" //how many shakes per second
+	"ShakeDuration"				"0.3" //sec
 
-	// viewmodel offset when weapon ironsighted
-	"ironsightforward"			"-7"
+	// weapon recoil kick - minimal | all in degrees
+//	"ViewMinKickPITCH"				""
+//	"ViewMinKickYAW"				""
+//	"ViewMinKickROLL"				""
+	// weapon recoil kick - maximal | all in degrees
+//	"ViewKickPITCH"					""
+//	"ViewKickYAW"					""
+//	"ViewKickROLL"					""
+	//---
+
+	// fixed view slide from recoil
+	ViewSlideRecoil
+	{
+		"Up"				"1.28"
+		"Right"				"0.52"
+//		"Up_max" 			""
+//		"Right_max"			""
+	}
+	// fixed view slide from recoil when aiming down sights
+	ViewSlideRecoilIronsight
+	{
+		"Up"				"0.72"
+		"Right"				"0.3"
+//		"Up_max" 			""
+//		"Right_max"			""
+	}
+	"ViewSlideRecoilTransitionTimeSeconds"		"0.3" // how fast the aiming recoil will change when you start/stop ADS
+	//---
+	
+//	"UseScopecamera"			""
+//	"BlurScope"					"" // bool - do we blur around the scope?
+//	"DofFocusDist"				"" // override depth of field focal distance
+//	"DofScale"					"" // override depth of field strength when aiming
+
+	// aiming down sights:	
+	"IronSight"					"1" //0 - not available to ADS with
+	"IronsightSpeedScale"		"1.3" //how long ironsight transition will last
+	"IronsightedFovOffset"		"-15" //degrees added when ADS
+//	"ScopeLensFov"					"" // degrees fov, absolute value
+//	"ScopeLensFov2"					"" // ditto for second zoom level
+//	"ScopeLensTeleFovScale"			"" // render-target scale for expensive scopes. best to experiment in-game.
+	// viewmodel offsets when ADS - both ironsight and scope - all in units
+	"ironsightforward"			"-6"
+	"ironsightforward2"			"-7"
 	"ironsightright"			"0"
 	"ironsightup"				"0"
 	"ironsightpitch"			"0"
 	"ironsightyaw"				"0"
 	"ironsightroll"				"0"
+	//---
+	"ironsightwalkbobbingstrength"			"-0.25"
+	
+	// non-projectile-based weapons only
+	"CrosshairMinDistance"		"4"
+	"CrosshairDeltaDistance"	"4"
+	//---
 
 	// viewmodel offset in non-ironsighted case
-        CustomOffset
+	CustomOffset
 	{
-		"forward"	"-2"
-		"right"		"0"
-		"up"		"0"
-		"pitch"		"0"
-		"yaw"		"0"
-		"roll"		"0"
+		"forward"					"-2"
+		"right"						"0"
+		"up"						"0"
+		"pitch"						"0"
+		"yaw"						"0"
+		"roll"						"0"
 	}
+	//---
 	
-								"NearwallDistance"			"15"
-	"recoilpushbackvalue"			"1.5"
-	"ironsightwalkbobbingstrength"		"-0.25"
+	"NearwallDistance"			"22" //hammer units
+	"recoilpushbackvalue"		"1.5"
 
 	// Zombie Mode
-	"ZMBuyPrice"	 "1600"
-	"ZMSellPrice"	 "1400"
-	"ZMWeight"		 "2"
-
-	// Sounds for the weapon. There is a max of 16 sfounds per category (i.e. max 16 "single_shot" sounds)
+	"ZMBuyPrice"				"1900"
+	"ZMWeight"					"2"
+	// if anything is modified for zombies mode:
+	zombie_stats
+	{
+		"clip_size"					"20/120"
+	}
+	//---
+	
+	// Day of Victory
+	// if anything is modified for DoV:
+	//dov_stats
+	//{
+	//}
+	//---
+	
+	// Sounds for the weapon. There is a max of 16 sounds per category (i.e. max 16 single_shot sounds)
 	SoundData
 	{
-		"single_shot"		"Weapon_APS.Single"
-		"double_shot"		""
-		"reload"		""
-		"special1"		""
-		"special2"		""
-		"nearlyempty"		"Weapon_Generic.NearlyEmptyClick_MachinePistol"
-		"empty"			"Weapon_Generic.ClipEmpty_04"
-
+		"single_shot"				"Weapon_APS.Single"
+		"double_shot"				""
+		"reload"					""
+		"special1"					""
+		"special2"					""
+		"nearlyempty"				"Weapon_Generic.NearlyEmptyClick_MachinePistol"
+		"empty"						"Weapon_Generic.ClipEmpty_04"
+		"melee_hit"					""
+		"melee_hit_world"			""
+		
 		// NPC SECTION
-		"single_shot_npc"	""
-		"double_shot_npc"	""
-		"reload_npc"		""
+		"single_shot_npc"			""
+		"double_shot_npc"			""
+		"reload_npc"				""
 		
 		// 3RD PERSON PLAYER SECTION
-		"player_reload"		"Weapon_Foley_ThirdPerson_APS.Reload"
+		"player_reload"				"Weapon_Foley_ThirdPerson_APS.Reload"
 		"player_reload_loop"		""
 		"player_reload_cycle"		""
 
-		"player_grenade_pullpin"		""
-		"player_grenade_on"		""
+		"player_grenade_pullpin"	""
+		"player_grenade_on"			""
 		"player_equipment_on"		""
 		"player_equipment_off"		""
-		"player_deploy"		"Weapon_Foley_ThirdPerson_Shared.DrawSmall"
-		"player_holster"		"Weapon_Foley_ThirdPerson_Shared.HolsterSmall"
-		"player_bash"		"Weapon_Foley_ThirdPerson_Shared.BashFast"
+		"player_deploy"				"Weapon_Foley_ThirdPerson_Shared.DrawSmall"
+		"player_holster"			"Weapon_Foley_ThirdPerson_Shared.HolsterSmall"
+		"player_bash"				"Weapon_Foley_ThirdPerson_Shared.BashFast"
 	}
+	//
+	
+	////////////////////////////
+	// Weapon Particles Start //
+	////////////////////////////
+	
+ 	"MuzzleParticle"			"vietnam_muzzleflash_pistol_type1_fp" //"null" will disable
+ 	"MuzzleParticle_Smoke"		"vietnam_muzzleflash_pistol_type1_fp_smoke" //"null" will disable
+ 	"MuzzleParticle_Ironsighted"	"vietnam_muzzleflash_pistol_type1_fp_is" //"null" will disable
+ 	"MuzzleParticle_IronsightedSmoke"		"vietnam_muzzleflash_pistol_type1_fp_is_smoke" //"null" will disable
+	
+	"MuzzleParticle3rdPerson"	"vietnam_muzzleflash_pistol_type1_tp"
+	"ParticleAttachType"		"1" //0 - PATTACH_POINT; 1 - PATTACH_POINT_FOLLOW
+
+	"MuzzleSmokeParticle"		"vietnam_muzzleflash_generic_aftersmoke"
+	"MuzzleSmokeShotCount"		"5"
+
+	"EjectBrassType"			"0" //9X18M
+	"EjectBrassTrail"			"vietnam_weaponeffect_shelleject_trail"
+	"EjectBrassParticle"		"vietnam_weaponeffect_shelleject_side" //"null" will disable
+	"EjectBrassSound"			"Bounce.Shell"
+	
+	"EjectMiscModel"					""
+	"EjectMiscSound"					""
+	
+	"TracerParticle"			"vietnam_tracer_smg_green_primary" //"null" will disable
+	"TracerParticle2"			"vietnam_tracer_smg_green_secondary" //"null" will disable
+	"TracerRandomness"			"6"
+	"TracerFrequency"			"3"
+	
+	"MuzzleLight"				"effects/flashlight_muzzleflash" //"None" will disable projected muzzleflash
+	"MuzzleLightBrightnessLower"	"0.5" //Random brightness is chosen between this Lower - Upper range
+	"MuzzleLightBrightnessUpper"	"0.75"
+	"MuzzleLightFOVLower"		"75"
+	"MuzzleLightFOVUpper"		"95"
+	"MuzzleLightDuration"		"0.05"
+//	"MuzzleLightFadeIn"					""
+	"MuzzleLightFadeOut"		"0.035"
+	"MuzzleLightDistance"		"400"
+	
+	//////////////////////////
+	// Weapon Particles End //
+	//////////////////////////
 }
+

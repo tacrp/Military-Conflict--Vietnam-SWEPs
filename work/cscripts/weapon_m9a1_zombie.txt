@@ -1,0 +1,89 @@
+﻿WeaponData
+{
+	"printname"					"#weapon_M9A1"
+	"ammo_id_display"			"#ammo_id_32"
+	"origin"					"#united_states_of_america"
+
+	"viewmodel"					"models/weapons/v_m9a1.mdl"
+	"playermodel"				"models/weapons/w_m9a1.mdl"
+	"anim_prefix"				"m9a1"
+
+	"bucket"					"3" //weapon menu category
+	"bucket_position"			"0" //weapon menu position
+	"item_flags"				"0"
+	"autoswitchfrom"			"1"
+	"WeaponType"				"Flamethrower"
+
+	"weight"					"12" //KG
+
+	"HasBayonet"				"0"
+	"HasBipod"					"0"
+	"isSupressed"				"0"
+	"BuiltRightHanded"			"1"
+
+	"primary_ammo"				"flamethrower_fuel" //caliber
+	"secondary_ammo"			"None" //caliber
+
+	"clip_size"					"-1/200" //clip size/max ammo (-1 means we don't use clips for this ammo type)
+	"clip2_size"				"-1" //max secondary ammo
+
+	"default_clip"				"200" //ammo given by default
+	"default_clip2"				"-1" //ditto for second ammo type
+
+	"FireRate"					"600" //RPM
+	"SecondaryFireRate"			"-1" //RPM, -1 to disable
+
+	"DamageGeneric"				"15" //damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)
+
+	"IronSight"						"1" //0 - not available to ADS with
+	"IronsightedFovOffset"			"-15" //degrees added when ADS
+	"ironsightforward"			"0"
+	"ironsightright"			"0"
+	"ironsightup"				"0"
+	"ironsightpitch"			"0"
+	"ironsightyaw"				"0"
+	"ironsightroll"				"0"
+
+	CustomOffset
+	{
+		"forward"					"0"
+		"right"						"0"
+		"up"						"0"
+		"pitch"						"0"
+		"yaw"						"0"
+		"roll"						"0"
+	}
+
+	"NearwallDistance"				"25" //hammer units
+
+	"ZMBuyPrice"	 "6500"
+	"ZMWeight"		 "6"
+
+	SoundData
+	{
+		"single_shot"		"Weapon_M9A1.Primary_Fire_Start"
+		"special1"			"Weapon_M9A1.Primary_Fire_Loop"
+		"special2"			"Weapon_M9A1.Primary_Fire_Stop"
+		"nearlyempty"		"Weapon_Generic.NearlyEmptyClick"
+		"empty"				"Weapon_Generic.ClipEmpty_01"
+
+		"player_deploy"				"Weapon_Foley_ThirdPerson_Shared.Draw"
+		"player_holster"			"Weapon_Foley_ThirdPerson_Shared.Holster"
+		"player_bash"				"Weapon_Foley_ThirdPerson_Shared.BashSlow"
+	}
+
+ 	"MuzzleParticle"					"lpo50_flame_zombie" //"null" will disable
+
+	"MuzzleParticle3rdPerson"			"lpo50_flame_zombie"
+	"ParticleAttachType"				"1" //0 - PATTACH_POINT; 1 - PATTACH_POINT_FOLLOW
+
+	"MuzzleLight"						"effects/flashlight_muzzleflash_ft" //"None" will disable projected muzzleflash
+	"MuzzleLightBrightnessLower"		"2.3" //Random brightness is chosen between this Lower - Upper range
+	"MuzzleLightBrightnessUpper"		"2.5"
+	"MuzzleLightFOVLower"				"125"
+	"MuzzleLightFOVUpper"				"135"
+	"MuzzleLightDuration"				"0.1"
+	"MuzzleLightFadeIn"					"0.25"
+	"MuzzleLightFadeOut"				"0.5"
+
+}

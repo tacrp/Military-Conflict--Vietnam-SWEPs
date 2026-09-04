@@ -1,0 +1,16 @@
+"VertexlitGeneric"
+{
+	"$basetexture"					"models/weapons/mcv/v_usmdeicine/morphbox_diffuse"
+	"$bumpmap"						"models/weapons/mcv/v_usmdeicine/morphbox_normal"
+	"$phong" 						"1"
+	"$phongexponent"   				"12"
+    "$phongboost"					"0.41"
+	"$phongfresnelranges"  			"[0.5 0.5 0.5]"
+	
+	"$translucent"					"1"
+	
+	"$envmap"						"env_cubemap"
+	"$envmaptint"					"[.82 .82 .82]"
+	"$normalmapalphaenvmapmask"		"1"
+	"$envmapsaturation"				"0.8"
+}

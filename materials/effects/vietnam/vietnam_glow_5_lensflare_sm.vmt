@@ -1,0 +1,12 @@
+"SpriteCard"
+{
+	$basetexture "sprites/light_glow02"
+	$additive "1"
+	$vertexcolor "1"
+	$vertexalpha "1"
+	$ignorez "1"
+	$overbrightfactor "3"
+	$depthblend "0"
+	$minsize ".1"
+	$maxsize ".15"
+}

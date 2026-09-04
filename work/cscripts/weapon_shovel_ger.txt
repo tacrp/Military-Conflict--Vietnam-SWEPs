@@ -1,0 +1,92 @@
+WeaponData
+{
+	"printname"					"#weapon_shovel_ger"
+	"origin"					"#nazi_germany"
+
+	"viewmodel"					"models/weapons/v_shovel_de.mdl"
+	"playermodel"				"models/weapons/w_shovel.mdl"
+	"anim_prefix"				"shovel"
+
+	"bucket"					"2" //weapon menu category
+	"bucket_position"			"0" //weapon menu position
+	"item_flags"				"0"
+	// "autoswitchfrom"			"0"
+	"WeaponType"				"Melee"
+
+	"weight"					"0" //KG
+
+	"HasBayonet"				"0"
+	"HasBipod"					"0"
+	"isSupressed"				"0"
+	"BuiltRightHanded"			"1"
+
+	BodygroupData
+	{
+		"studio"		"2"
+	}
+
+	"primary_ammo"				"None" //caliber
+	"secondary_ammo"			"None" //caliber
+
+	"clip_size"					"-1" //clip size/max ammo
+	"clip2_size"				"-1" //max secondary ammo, -1 to disable
+
+	"default_clip"				"-1" //ammo given by default
+	"default_clip2"				"-1" //ditto for second ammo type, -1 to disable
+
+	"FireRate"					"150" //RPM
+	"SecondaryFireRate"			"-1" //RPM, -1 to disable
+
+	"MeleeRange"				"48" //hammer units
+	"MeleeRangeAlt"				"56" //hammer units
+
+	"DamageGeneric"				"30" //damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)
+
+	"ViewMinKickPITCH"				"-1.0" //degrees
+	"ViewMinKickYAW"				"-2.0" //degrees
+	"ViewMinKickROLL"				"0.0" //degrees
+	"ViewKickPITCH"					"1.0" //degrees
+	"ViewKickYAW"					"2.0" //degrees
+	"ViewKickROLL"					"0.0" //degrees
+
+	"IronSight"						"0" //0 - not available to ADS with
+
+	CustomOffset
+	{
+		"forward"					"0"
+		"right"						"0"
+		"up"						"0"
+		"pitch"						"0"
+		"yaw"						"0"
+		"roll"						"0"
+	}
+
+	"ZMBuyPrice"	 "300"
+	"ZMWeight"		 "1"
+	zombie_stats
+	{
+		"DamageGeneric"				"90"
+		"MeleeRange"				"96"
+		"MeleeRangeAlt"				"112"
+	}
+
+	dov_stats
+	{
+		"MeleeRange"				"50"
+		"MeleeRangeAlt"				"60"
+		"DamageGeneric"				"40"
+	}
+
+	SoundData
+	{
+		"special1"			"Weapon_Shovel.HitChargeFlesh"
+		"special2"			"Weapon_Shovel.HitChargeWall"
+		"melee_hit"			"Weapon_Shovel.HitFlesh"
+		"melee_hit_world"	"Weapon_Shovel.HitWall"
+
+		"player_deploy"				"Weapon_Foley_ThirdPerson_Shared.DrawSmall"
+		"player_holster"			"Weapon_Foley_ThirdPerson_Shared.HolsterSmall"
+		"player_bash"				"Weapon_Foley_ThirdPerson_Shared.BashFast"
+	}
+
+}

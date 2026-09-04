@@ -8,7 +8,7 @@
 	"$phongboost"	"1"
 	"$phongfresnelranges"	"[1 2 4]"
 	"$PhongAlbedoTint" "1"
-	"$phongalbedoboost" "25"
+	"$phongalbedoboost" "5"
 	"$surfaceprop" "metal"
 
 	"$envmap" "env_cubemap"
@@ -18,10 +18,10 @@
 	
 	"$rimlight" "1"
 	"$rimlightexponent" "4"
-	"$rimlightboost" ".4"
+	"$rimlightboost" ".2"
 	"$rimmask" "1"
 
-	"$detail" "models/weapons/mcv/effects/dynamic_detail"
+	"$detail" "models/effects/dynamic_detail"
 	"$detailscale" "1.50"
 	"$detailblendfactor" "0.0"
 	"$detailblendmode" "0"

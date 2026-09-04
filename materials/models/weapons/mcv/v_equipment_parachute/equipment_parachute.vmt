@@ -1,0 +1,16 @@
+"VertexlitGeneric"
+{
+	"$basetexture" 		"models\weapons\mcv\v_equipment_parachute\equipment_parachute"
+	"$bumpmap" 			"models\weapons\mcv\v_equipment_parachute\equipment_parachute_norm"
+	
+	"$basemapluminancephongmask" "1"
+	"$phong"                     "1"
+	"$phongboost"                "0.4"
+	"$phongexponent"             "10"
+	"$phongdisablehalflambert"   "1"
+	
+	"$nocull"			"1"
+
+	$translucent 1
+	$alpha 1
+}
