@@ -1,8 +1,30 @@
-function SWEP:DoBodygroups()
+// Drives viewmodel bodygroups and pose parameters.
+//
+// Called from two places on purpose:
+//  * Think (server, and the predicting client in multiplayer) with the deterministic
+//    gameplay values. Viewmodel bodygroups and pose parameters are networked from the
+//    server, so if the server never wrote them the client would keep receiving zeros
+//    that fight what it draws (visible as a flickering "ghost" viewmodel, worst in
+//    singleplayer where the client does not predict).
+//  * PreDrawViewModel (client, every rendered frame) with `visual = true`, using the
+//    frame-smoothed values so the pose is exact for the frame being drawn.
+function SWEP:DoBodygroups(vm, visual)
     local owner = self:GetOwner()
-    local vm = owner:GetViewModel()
+    if !IsValid(owner) or !owner:IsPlayer() then return end
+
+    vm = vm or owner:GetViewModel()
 
     if !IsValid(vm) then return end
+
+    local sa, speed
+
+    if visual then
+        sa = self:GetSightAmountVisual()
+        speed = self:GetSpeedVisual()
+    else
+        sa = self:GetSightAmount()
+        speed = self:GetSpeed()
+    end
 
     vm:SetBodyGroups(self.BodyGroups)
 
@@ -34,7 +56,7 @@ function SWEP:DoBodygroups()
                 bodygroupbulletscount = bullets_to_load
             else
                 vm:SetPoseParameter("ammo_fraction", 0)
-                bodygroupbullets = 0
+                bodygroupbulletscount = 0
             end
         else
             if self.MagInClip then
@@ -74,9 +96,16 @@ function SWEP:DoBodygroups()
 
     vm:SetPoseParameter("empty", self:Clip1() == 0 and 0 or 1)
 
-    vm:SetPoseParameter("player_movement", self:GetSpeed() * Lerp(self:GetSightAmount(), 1, (1 + self.IronsightWalkBobbingStrength)))
+    vm:SetPoseParameter("player_movement", speed * Lerp(sa, 1, (1 + self.IronsightWalkBobbingStrength)))
 
-    vm:SetPoseParameter("ironsight", self:GetSightAmount() ^  3)
+    vm:SetPoseParameter("ironsight", sa ^ 3)
+
+    // Dual wield pose-driven recoil: 0 = frame 0 of the hand's shoot animation, 1 = at rest.
+    if self:GetAkimbo() and self:HasPoseRecoil() then
+        local len = math.max(self.AkimboRecoilTime, 0.01)
+        vm:SetPoseParameter("recoil_r", math.Clamp((CurTime() - self:GetLastShotTimeR()) / len, 0, 1))
+        vm:SetPoseParameter("recoil_l", math.Clamp((CurTime() - self:GetLastShotTimeL()) / len, 0, 1))
+    end
 
     if self:GetBayonet() then
         vm:SetBodygroup(self.BayonetBodygroup, 1)
@@ -120,18 +149,43 @@ function SWEP:DoBodygroups()
     end
 end
 
-function SWEP:PreDrawViewModel()
+// Keeps the muzzle flash light attached to the muzzle for the few frames it lives.
+// Runs per rendered frame (not per tick) so the light does not lag behind the viewmodel.
+function SWEP:UpdateMuzzleLight(vm)
+    local lamp = self.MuzzleLight
+    if !lamp then return end
+
+    if !IsValid(lamp) or (self.MuzzleLightEnd or 0) < UnPredictedCurTime() then
+        if IsValid(lamp) then lamp:Remove() end
+        self.MuzzleLight = nil
+        return
+    end
+
+    local att = vm:GetAttachment(1)
+    if !att then return end
+
+    lamp:SetPos(att.Pos)
+    lamp:SetAngles(att.Ang)
+    lamp:Update()
+end
+
+function SWEP:PreDrawViewModel(vm)
+    vm = vm or self:GetOwner():GetViewModel()
+
     self.RenderingRTScope = false
     if self:GetHolsterTime() < CurTime() then
         self:DoRTScope()
     end
 
-    self:DoBodygroups()
+    self:DoBodygroups(vm, true)
+    self:UpdateMuzzleLight(vm)
 
-    cam.Start3D(nil, nil, Lerp(self:GetSightAmount() ^ 3, self.ViewModelFOV, self.SightedViewModelFOV))
+    local sa = self:GetSightAmountVisual() ^ 3
+
+    cam.Start3D(nil, nil, Lerp(sa, self.ViewModelFOV, self.SightedViewModelFOV))
     cam.IgnoreZ(true)
 
-    if self.OEGScope and self:GetSightAmount() > 0.6 then
+    if self.OEGScope and sa > 0.216 then // 0.6 ^ 3
         render.SetBlend(0.2)
     end
 end
@@ -154,6 +208,7 @@ end
 function SWEP:PostDrawViewModel()
     cam.End3D()
     cam.IgnoreZ(false)
+    render.SetBlend(1)
 
     cam.Start3D()
         cam.IgnoreZ(false)
@@ -166,6 +221,6 @@ function SWEP:PostDrawViewModel()
             end
         end
 
-        if !inrt then self.PCFs = newpcfs end
+        self.PCFs = newpcfs
     cam.End3D()
 end

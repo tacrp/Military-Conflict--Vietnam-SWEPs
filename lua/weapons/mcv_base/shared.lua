@@ -156,6 +156,16 @@ SWEP.BayonetRange = 128
 
 SWEP.HasBipod = false
 
+// Playback rate multiplier for fire animations. Models ported with the 60-frame idle base
+// (the default of work/port_qc.py) need 0.5; models ported with --base-len match need 1.
+SWEP.ShootAnimRate = 0.5
+
+// Dual wield: drive per-hand recoil through the "recoil_r" / "recoil_l" pose parameters
+// instead of switching sequences (models ported with port_qc.py --pose-recoil). Both hands
+// recoil independently and the idle, walk and run layers keep playing underneath.
+SWEP.AkimboPoseRecoil = false
+SWEP.AkimboRecoilTime = 0.8 // seconds; should match the length of the hand's shoot animation
+
 // Penetration
 SWEP.MetalPenetrationDepth = 8
 SWEP.GlassPenetrationDepth = 14
@@ -252,45 +262,42 @@ autoinclude(searchdir)
 
 
 function SWEP:SetupDataTables()
-    self:NetworkVar("Float", 0, "RecoilAmount")
-    self:NetworkVar("Float", 1, "AnimLockTime")
-    self:NetworkVar("Float", 2, "NextIdle")
-    self:NetworkVar("Float", 3, "LastRecoilTime")
-    self:NetworkVar("Float", 4, "RecoilDirection")
-    self:NetworkVar("Float", 5, "SprintLockTime")
-    self:NetworkVar("Float", 6, "LastScopeTime")
-    self:NetworkVar("Float", 7, "LastMeleeTime")
-    self:NetworkVar("Float", 8, "LastTriggerTime")
-    self:NetworkVar("Float", 9, "SightAmount")
-    self:NetworkVar("Float", 10, "HolsterTime")
-    self:NetworkVar("Float", 11, "NWHoldBreathAmount")
-    self:NetworkVar("Float", 12, "Breath")
-    self:NetworkVar("Float", 13, "Speed")
+    self:NetworkVar("Float", 0, "AnimLockTime")
+    self:NetworkVar("Float", 1, "NextIdle")
+    self:NetworkVar("Float", 2, "LastRecoilTime")
+    self:NetworkVar("Float", 3, "LastTriggerTime")
+    self:NetworkVar("Float", 4, "HolsterTime")
 
-    self:NetworkVar("Int", 0, "BurstCount")
-    self:NetworkVar("Int", 1, "ScopeLevel")
-    self:NetworkVar("Int", 2, "LastClip")
-    self:NetworkVar("Int", 3, "Firemode")
+    // Sight and movement blends are NOT networked as continuously changing floats.
+    // Instead we network when a transition started and where it started from, and
+    // derive the current value from CurTime() (see sh_sights.lua and sh_think.lua).
+    // These only change on state transitions, so they never cause prediction errors
+    // and the derived value advances every rendered frame instead of every tick.
+    self:NetworkVar("Float", 5, "SightTransitionTime")
+    self:NetworkVar("Float", 6, "SightTransitionFrom")
+    self:NetworkVar("Float", 7, "SpeedTransitionTime")
+    self:NetworkVar("Float", 8, "SpeedTransitionFrom")
+    self:NetworkVar("Float", 9, "SpeedTarget")
+    self:NetworkVar("Float", 10, "LastShotTimeR")
+    self:NetworkVar("Float", 11, "LastShotTimeL")
 
-    self:NetworkVar("Bool", 1, "Reloading")
-    self:NetworkVar("Bool", 2, "EndReload")
-    self:NetworkVar("Bool", 3, "Ready")
-    self:NetworkVar("Bool", 4, "Bipod")
-    self:NetworkVar("Bool", 5, "OutOfBreath")
-    self:NetworkVar("Bool", 6, "HoldingBreath")
-    self:NetworkVar("Bool", 7, "LastWasSprinting")
-    self:NetworkVar("Bool", 8, "EmptyReload")
-    self:NetworkVar("Bool", 9, "NeedTriggerPress")
-    self:NetworkVar("Bool", 10, "Ironsight")
-    self:NetworkVar("Bool", 11, "Bayonet")
-    self:NetworkVar("Bool", 12, "GrenadeLauncher")
-    self:NetworkVar("Bool", 13, "NeedCycle")
-    self:NetworkVar("Bool", 14, "Akimbo")
-    self:NetworkVar("Bool", 15, "PrimedAttack")
+    self:NetworkVar("Int", 0, "ScopeLevel")
+    self:NetworkVar("Int", 1, "LastClip")
+    self:NetworkVar("Int", 2, "Firemode")
 
-    self:NetworkVar("Angle", 0, "BipodAngle")
-
-    self:NetworkVar("Vector", 0, "BipodPos")
+    self:NetworkVar("Bool", 0, "Reloading")
+    self:NetworkVar("Bool", 1, "EndReload")
+    self:NetworkVar("Bool", 2, "Ready")
+    self:NetworkVar("Bool", 3, "Bipod")
+    self:NetworkVar("Bool", 4, "EmptyReload")
+    self:NetworkVar("Bool", 5, "NeedTriggerPress")
+    self:NetworkVar("Bool", 6, "Ironsight") // player wants to aim (input state)
+    self:NetworkVar("Bool", 7, "Sighted") // sights are actually up (Ironsight and not sprinting)
+    self:NetworkVar("Bool", 8, "Bayonet")
+    self:NetworkVar("Bool", 9, "GrenadeLauncher")
+    self:NetworkVar("Bool", 10, "NeedCycle")
+    self:NetworkVar("Bool", 11, "Akimbo")
+    self:NetworkVar("Bool", 12, "PrimedAttack")
 
     self:NetworkVar("Entity", 0, "HolsterEntity")
 
@@ -306,24 +313,6 @@ function SWEP:SecondaryAttack()
         self:ToggleBayonet()
     end
 end
-
-local function clunpredictvar(tbl, name, varname, default)
-    local clvar = "CL_" .. name
-
-    tbl[clvar] = default
-
-    tbl["Set" .. name] = function(self, v)
-        if (!game.SinglePlayer() and CLIENT and self:GetOwner() == LocalPlayer()) then self[clvar] = v end
-        self["Set" .. varname](self, v)
-    end
-
-    tbl["Get" .. name] = function(self)
-        if (!game.SinglePlayer() and CLIENT and self:GetOwner() == LocalPlayer()) then return self[clvar] end
-        return self["Get" .. varname](self)
-    end
-end
-
-clunpredictvar(SWEP, "HoldBreathAmount", "NWHoldBreathAmount", 0)
 
 function SWEP:GetPingOffsetScale()
     if game.SinglePlayer() then return 0 end

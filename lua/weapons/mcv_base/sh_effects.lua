@@ -1,3 +1,4 @@
+// Class-level defaults only; SWEP:Initialize creates per-instance tables.
 SWEP.ActiveEffects = {}
 SWEP.PCFs = {}
 
@@ -34,9 +35,8 @@ function SWEP:DoMuzzle(alt)
 
     if self:GetAkimbo() and is_volley then
         local data2 = EffectData()
-        data:SetEntity(self)
-        data:SetAttachment(4)
-        data:SetHitBox(muzz_qca_wm or muzz_qca) // unused field (integer between 0-2047)
+        data2:SetEntity(self)
+        data2:SetAttachment(4)
 
         util.Effect( "mcv_muzzleeffect", data2 )
     end

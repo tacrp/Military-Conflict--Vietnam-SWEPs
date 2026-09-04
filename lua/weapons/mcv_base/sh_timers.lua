@@ -1,5 +1,7 @@
-local tick = 0
-
+// Simple predicted timers. Callbacks run from Think, so they execute in a predicted
+// context on the client and on the server. Timers are only *registered* on the first
+// prediction of a command so that re-predicted commands do not queue duplicates.
+// Note: the per-instance table is created in SWEP:Initialize (sh_deploy.lua).
 SWEP.ActiveTimers = {}
 
 function SWEP:SetTimer(time, callback, id)
@@ -9,7 +11,7 @@ function SWEP:SetTimer(time, callback, id)
 end
 
 function SWEP:TimerExists(id)
-    for _, v in pairs(self.ActiveTimers) do
+    for _, v in ipairs(self.ActiveTimers) do
         if v[2] == id then return true end
     end
 
@@ -19,7 +21,7 @@ end
 function SWEP:KillTimer(id)
     local keeptimers = {}
 
-    for _, v in pairs(self.ActiveTimers) do
+    for _, v in ipairs(self.ActiveTimers) do
         if v[2] != id then table.insert(keeptimers, v) end
     end
 
@@ -31,18 +33,18 @@ function SWEP:KillTimers()
 end
 
 function SWEP:ProcessTimers()
-    local keeptimers, UCT = {}, CurTime()
+    local timers = self.ActiveTimers
+    if #timers == 0 then return end
 
-    if CLIENT and UCT == tick then return end
+    local ct = CurTime()
+    local keeptimers = {}
 
-    if !self.ActiveTimers then self:InitTimers() end
-
-    for _, v in pairs(self.ActiveTimers) do
-        if v[1] <= UCT then v[3]() end
-    end
-
-    for _, v in pairs(self.ActiveTimers) do
-        if v[1] > UCT then table.insert(keeptimers, v) end
+    for _, v in ipairs(timers) do
+        if v[1] <= ct then
+            v[3]()
+        else
+            table.insert(keeptimers, v)
+        end
     end
 
     self.ActiveTimers = keeptimers

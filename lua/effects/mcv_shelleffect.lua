@@ -22,7 +22,7 @@ function EFFECT:Init(data)
     if !IsValid(ent) then self:Remove() return end
     if !IsValid(ent:GetOwner()) then self:Remove() return end
 
-    local origin, ang, dir
+    local origin, ang, dir, mdl
 
     if LocalPlayer():ShouldDrawLocalPlayer() or ent:GetOwner() != LocalPlayer() then
         mdl = ent
@@ -33,13 +33,14 @@ function EFFECT:Init(data)
         table.insert(ent.ActiveEffects, self)
     end
 
-    if !IsValid(ent) then self:Remove() return end
-    if !mdl or !IsValid(mdl) then self:Remove() return end
-    if !mdl:GetAttachment(att) then self:Remove() return end
-    if !typetbl then return end
+    if !IsValid(mdl) then self:Remove() return end
+    if !typetbl then self:Remove() return end
 
-    origin = mdl:GetAttachment(att).Pos
-    ang = mdl:GetAttachment(att).Ang
+    local attdata = mdl:GetAttachment(att)
+    if !attdata then self:Remove() return end
+
+    origin = attdata.Pos
+    ang = attdata.Ang
 
     dir = ang:Forward()
 

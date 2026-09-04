@@ -12,14 +12,22 @@ function SWEP:ShouldDoScope()
     return self:GetIronsight() and self.HasScope
 end
 
+local rt_cleared = false
+
 function SWEP:DoCheapScope(fov, atttbl)
     if !self:ShouldDoScope() then
-        render.PushRenderTarget(rtmat, 0, 0, rtsize, rtsize)
-        render.Clear(0, 0, 0, 255, true, true)
-        render.PopRenderTarget()
+        // Only clear once after leaving the scope instead of every frame.
+        if !rt_cleared then
+            render.PushRenderTarget(rtmat, 0, 0, rtsize, rtsize)
+            render.Clear(0, 0, 0, 255, true, true)
+            render.PopRenderTarget()
+            rt_cleared = true
+        end
 
         return
     end
+
+    rt_cleared = false
 
     render.UpdateScreenEffectTexture()
     render.UpdateFullScreenDepthTexture()
@@ -51,7 +59,7 @@ end
 function SWEP:DoRTScope()
     if !self.HasScope then return end
 
-    local active = self:GetSightAmount() > 0.5
+    local active = self:GetSightAmountVisual() > 0.5
     local model = self:GetOwner():GetViewModel()
 
     if active then
@@ -90,8 +98,6 @@ function SWEP:DoRTScope()
         render.SetToneMappingScaleLinear(Vector(1, 1, 1))
 
         rtsurf:SetTexture("$basetexture", rtmat)
-
-        model:SetSubMaterial()
 
         model:SetSubMaterial(self.RTScopeMaterialIndex, "effects/arc9/rt")
     else

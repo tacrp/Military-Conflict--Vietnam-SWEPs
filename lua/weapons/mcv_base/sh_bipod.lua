@@ -2,7 +2,7 @@ function SWEP:CanBipod()
     local owner = self:GetOwner()
 
     local pos = owner:EyePos()
-    ang = ang or owner:EyeAngles()
+    local ang = owner:EyeAngles()
 
     local maxs = Vector(1, 1, 1)
     local mins = Vector(-1, -1, -48)

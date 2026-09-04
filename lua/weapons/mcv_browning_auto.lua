@@ -114,7 +114,7 @@ SWEP.OtherPenetrationDepth = 6
 SWEP.MetalDamageModifier = 1.7
 SWEP.GlassDamageModifier = 1.3
 SWEP.ConcreteDamageModifier = 1.9
-SWEP.WoodDamgaeModifier = 1.4
+SWEP.WoodDamageModifier = 1.4
 SWEP.OtherDamageModifier = 1.4
 
 // Sound
@@ -124,7 +124,7 @@ SWEP.SoundReload = ""
 SWEP.SoundSpecial1 = ""
 SWEP.SoundSpecial2 = ""
 SWEP.SoundNearlyEmpty = "MCV_Weapon_Generic.NearlyEmptyClick"
-SWEP.SoundEmpty = "Vietnam_Weapon_Generic.ClipEmpty_01"
+SWEP.SoundEmpty = "MCV_Weapon_Generic.ClipEmpty_01"
 
 // Particles
 // SWEP.MuzzleParticle = "vietnam_muzzleflash_rifle_type1_fp"

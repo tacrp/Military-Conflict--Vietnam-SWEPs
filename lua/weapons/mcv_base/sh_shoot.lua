@@ -46,46 +46,54 @@ function SWEP:PrimaryAttack()
     end
 
     local t = 0
+    local rate = self.ShootAnimRate
 
     if self:GetAkimbo() then
         if fm == MCV.FIREMODE_VOLLEY and self:Clip1() >= self.VolleyCount then
-            t = self:PlayAnimation(ACT_VM_RECOIL1, 0.5)
+            t = self:PlayAnimation(ACT_VM_RECOIL1, rate)
         elseif fm == MCV.FIREMODE_DA then
             if self:Clip1() % 2 == 0 then
-                t = self:PlayAnimation(ACT_VM_PRIMARYATTACK_2, 0.5)
+                t = self:PlayAnimation(ACT_VM_PRIMARYATTACK_2, rate)
             else
-                t = self:PlayAnimation(ACT_VM_PRIMARYATTACK_3, 0.5)
+                t = self:PlayAnimation(ACT_VM_PRIMARYATTACK_3, rate)
             end
         else
+            local right = self:Clip1() % 2 == 0
+
             if self.LastShotAnimation and self:Clip1() == 1 then
-                t = self:PlayAnimation(ACT_VM_SHOOTLAST, 0.5)
+                t = self:PlayAnimation(ACT_VM_SHOOTLAST, rate)
             elseif self.LastShotAnimation and self:Clip1() == 2 then
-                t = self:PlayAnimation(ACT_VM_PRIMARYATTACK_EMPTY, 0.5)
-            elseif self:Clip1() % 2 == 0 then
-                t = self:PlayAnimation(ACT_VM_PRIMARYATTACK, 0.5)
+                t = self:PlayAnimation(ACT_VM_PRIMARYATTACK_EMPTY, rate)
+            elseif self:HasPoseRecoil() then
+                // Pose-driven recoil: no sequence change, the hand's recoil layer is scrubbed
+                // from DoBodygroups. See work/PORTING.md.
+                if right then
+                    self:SetLastShotTimeR(CurTime())
+                else
+                    self:SetLastShotTimeL(CurTime())
+                end
+                t = self.AkimboRecoilTime
+            elseif right then
+                t = self:PlayAnimation(ACT_VM_PRIMARYATTACK, rate)
             else
-                t = self:PlayAnimation(ACT_VM_SECONDARYATTACK, 0.5)
+                t = self:PlayAnimation(ACT_VM_SECONDARYATTACK, rate)
             end
         end
     else
         if fm == MCV.FIREMODE_VOLLEY and self:Clip1() >= self.VolleyCount then
-            t = self:PlayAnimation(ACT_VM_RECOIL1, 0.5)
+            t = self:PlayAnimation(ACT_VM_RECOIL1, rate)
         elseif fm == MCV.FIREMODE_DA then
-            if self:GetAkimbo() and self:Clip1() % 2 == 0 then
-                t = self:PlayAnimation(ACT_VM_PULLPIN, 0.5, true)
-            else
-                t = self:PlayAnimation(ACT_VM_HAULBACK, 0.5, true)
-            end
+            t = self:PlayAnimation(ACT_VM_HAULBACK, rate, true)
         elseif fm == MCV.FIREMODE_FAN then
-            t = self:PlayAnimation(ACT_VM_PRIMARYATTACK_1, 0.5, false)
+            t = self:PlayAnimation(ACT_VM_PRIMARYATTACK_1, rate, false)
         else
             if self.LastShotAnimation and self:Clip1() == 1 then
-                t = self:PlayAnimation(ACT_VM_SHOOTLAST, 0.5)
+                t = self:PlayAnimation(ACT_VM_SHOOTLAST, rate)
             else
                 if self:GetBipod() then
-                    t = self:PlayAnimation(ACT_VM_PRIMARYATTACK_DEPLOYED, 0.5)
+                    t = self:PlayAnimation(ACT_VM_PRIMARYATTACK_DEPLOYED, rate)
                 else
-                    t = self:PlayAnimation(ACT_VM_PRIMARYATTACK, 0.5)
+                    t = self:PlayAnimation(ACT_VM_PRIMARYATTACK, rate)
                 end
             end
         end
@@ -122,6 +130,34 @@ function SWEP:PrimaryAttack()
     if self.PlayCycleAnimation and self:Clip1() > 0 then
         self:SetNeedCycle(true)
     end
+end
+
+// True when the current viewmodel was compiled with the recoil_r / recoil_l pose parameters
+// (port_qc.py --pose-recoil) and the weapon opts in with AkimboPoseRecoil.
+function SWEP:HasPoseRecoil()
+    if !self.AkimboPoseRecoil then return false end
+
+    local owner = self:GetOwner()
+    if !IsValid(owner) or !owner:IsPlayer() then return false end
+
+    local vm = owner:GetViewModel()
+    if !IsValid(vm) then return false end
+
+    local model = vm:GetModel()
+
+    if self.PoseRecoilModel != model then
+        self.PoseRecoilModel = model
+        self.PoseRecoilAvailable = false
+
+        for i = 0, vm:GetNumPoseParameters() - 1 do
+            if vm:GetPoseParameterName(i) == "recoil_r" then
+                self.PoseRecoilAvailable = true
+                break
+            end
+        end
+    end
+
+    return self.PoseRecoilAvailable
 end
 
 function SWEP:FireAnimationEvent( pos, ang, event, name )
@@ -194,8 +230,9 @@ function SWEP:AttackEffects()
 
     self:SetLastRecoilTime(CurTime())
 
-    local recoilup = Lerp(self:GetSightAmount(), self.ViewSlideRecoilUp, self.ViewSlideRecoilIronsightUp) * recoilmult
-    local recoilright = Lerp(self:GetSightAmount(), self.ViewSlideRecoilRight, self.ViewSlideRecoilIronsightRight) * recoilmult
+    local sa = self:GetSightAmount()
+    local recoilup = Lerp(sa, self.ViewSlideRecoilUp, self.ViewSlideRecoilIronsightUp) * recoilmult
+    local recoilright = Lerp(sa, self.ViewSlideRecoilRight, self.ViewSlideRecoilIronsightRight) * recoilmult
 
     owner:ViewPunch(Angle(-recoilup, recoilright * util.SharedRandom("MCVRecoilLeftRight", -1, 1), 0))
 
@@ -206,7 +243,7 @@ function SWEP:AttackEffects()
         self:DoMuzzle()
     end
 
-    self:GetOwner():DoAnimationEvent(self.ShootGesture)
+    owner:DoAnimationEvent(self.ShootGesture)
 
     if fm == MCV.FIREMODE_VOLLEY then
         self:TakePrimaryAmmo(math.min(self:Clip1(), self.VolleyCount))
@@ -285,9 +322,7 @@ function SWEP:RocketAttack(secondary)
     local spread = self:RandomSpread(self:GetSpread())
 
     local src = owner:GetShootPos()
-    dir = self:GetAimAngle()
-
-    dir = dir + spread
+    local dir = self:GetAimAngle() + spread
 
     local ent = self.ShootEntity
     local force = self.ShootEntityForce

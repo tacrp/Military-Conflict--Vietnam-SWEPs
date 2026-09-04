@@ -35,12 +35,13 @@ function EFFECT:Init(data)
         end
 
         for _, muzzleeffect in ipairs(muzzle) do
-            local pcf = CreateParticleSystem(muz or parent, muzzleeffect, PATTACH_POINT_FOLLOW, att)
+            local pcf = CreateParticleSystem(parent, muzzleeffect, PATTACH_POINT_FOLLOW, att)
 
             if IsValid(pcf) then
                 pcf:StartEmission()
 
-                if (muz or parent) != vm and !wm then
+                if !wm then
+                    // Viewmodel particles are drawn manually in SWEP:PostDrawViewModel
                     pcf:SetShouldDraw(false)
                     table.insert(wpn.PCFs, pcf)
                 end

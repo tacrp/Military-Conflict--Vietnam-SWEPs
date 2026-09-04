@@ -1,3 +1,6 @@
 
 work/.env
 work/MCV_SMD/weapons/fnr.exe
+work/MCV_SMD_OG/
+work/__pycache__/
+work/compile_test_game/

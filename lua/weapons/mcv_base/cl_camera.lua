@@ -9,7 +9,7 @@ function SWEP:CalcView(ply, pos, ang, fov)
         ang.r = ang.r + (math.sin(CurTime() * self.ShakeFreq) * rec)
     end
 
-    local mag = Lerp(self:GetSightAmount() ^ 3, 1, 90 / self:GetZoomMagnification())
+    local mag = Lerp(self:GetSightAmountVisual() ^ 3, 1, 90 / self:GetZoomMagnification())
 
     local diff = math.abs(self.SmoothedMagnification - mag)
 

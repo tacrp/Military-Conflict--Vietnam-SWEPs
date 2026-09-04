@@ -83,6 +83,12 @@ hook.Add("StartCommand", "MCV_Holster", function(ply, ucmd)
 end)
 
 function SWEP:Initialize()
+    // Per-instance state. The class-level defaults in sh_timers/sh_effects are tables
+    // shared by every weapon of the class, so they must not be mutated directly.
+    self.ActiveTimers = {}
+    self.PCFs = {}
+    self.ActiveEffects = {}
+
     // Precache particles
     PrecacheParticleSystem( self.MuzzleParticle )
     PrecacheParticleSystem( self.MuzzleParticleSmoke )

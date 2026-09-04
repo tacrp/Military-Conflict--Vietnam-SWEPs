@@ -170,7 +170,7 @@ function SWEP:Think_Reload()
                         self:SetEmptyReload(false)
                     end
                 else
-                    local t = self:PlayAnimation((self.HybridReload or self.ShotgunAltReload) and ACT_VM_RELOAD_INSERT or ACT_VM_RELOAD, mult, true, true)
+                    self:PlayAnimation((self.HybridReload or self.ShotgunAltReload) and ACT_VM_RELOAD_INSERT or ACT_VM_RELOAD, 1, true, true)
 
                     self:RestoreClip(self.ShotgunReloadRounds)
                 end

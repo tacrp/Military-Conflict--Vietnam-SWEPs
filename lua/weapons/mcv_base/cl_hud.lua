@@ -11,13 +11,16 @@ function SWEP:WidescreenFix(target)
 end
 
 local function drawshadowrect(x, y, w, h, col)
-    local shadow = Color(0, 0, 0, col.a * 100 / 150)
-
     surface.SetDrawColor(col)
     surface.DrawRect(x, y, w, h)
-    surface.SetDrawColor(shadow)
+    surface.SetDrawColor(0, 0, 0, col.a * 100 / 150)
     surface.DrawOutlinedRect(x - 1, y - 1, w + 2, h + 2)
 end
+
+local cv_developer = GetConVar("developer")
+local crosshair_col = Color(255, 255, 255, 100)
+local crosshair_shadow = Color(0, 0, 0, 0)
+local white = Color(255, 255, 255, 255)
 
 SWEP.TrueFOV = 90
 
@@ -28,8 +31,9 @@ function SWEP:TranslateFOV(fov)
 end
 
 function SWEP:DoDrawCrosshair(x, y)
-    local a = (1 - self:GetSightAmount()) * 100
-    local col = Color(255, 255, 255, a)
+    local a = (1 - self:GetSightAmountVisual()) * 100
+    local col = crosshair_col
+    col.a = a
 
     local dot_size = ScreenScale(1)
     local line_size = ScreenScale(4)
@@ -41,7 +45,8 @@ function SWEP:DoDrawCrosshair(x, y)
     drawshadowrect(x - (dot_size / 2), y - (dot_size / 2), dot_size, dot_size, col)
 
     if self.Num > 1 then
-        local shadow = Color(0, 0, 0, a * 100 / 150)
+        local shadow = crosshair_shadow
+        shadow.a = a * 100 / 150
 
         surface.DrawCircle(x, y, gap_size, col)
         surface.DrawCircle(x, y, gap_size - 1, col)
@@ -56,8 +61,8 @@ function SWEP:DoDrawCrosshair(x, y)
         drawshadowrect(x - gap_size - line_size, y - (dot_size / 2), line_size, dot_size, col)
     end
 
-    if GetConVar("developer"):GetBool() then
-        drawshadowrect(x - (dot_size / 2), y - (dot_size / 2), dot_size, dot_size, Color(255, 255, 255, 255))
+    if cv_developer:GetBool() then
+        drawshadowrect(x - (dot_size / 2), y - (dot_size / 2), dot_size, dot_size, white)
 
         local vm = self:GetOwner():GetViewModel()
         surface.SetFont("TargetID")
@@ -96,9 +101,10 @@ function SWEP:HUDShouldDraw(element)
 end
 
 local oeg_mat = Material("sprites/redglow1")
+local hud_col = Color(255, 255, 255, 150)
 
 function SWEP:DrawHUD()
-    if self.OEGScope and self:GetSightAmount() > 0.6 then
+    if self.OEGScope and self:GetSightAmountVisual() > 0.6 then
         surface.SetMaterial(oeg_mat)
         surface.SetDrawColor(255, 255, 255, 255)
         local s = ScreenScale(16)
@@ -115,7 +121,7 @@ function SWEP:DrawHUD()
         reserve = self:Ammo2()
     end
 
-    local col = Color(255, 255, 255, 150)
+    local col = hud_col
 
     surface.SetFont("MCV_8")
     local tw = surface.GetTextSize(firemode_name)
@@ -153,7 +159,7 @@ SWEP.InfoMarkup = nil
 function SWEP:PrintWeaponInfo(x, y, alpha)
     if self.DrawWeaponInfoBox == false then return end
 
-    self.InfoMarkup = nil
+    // Built once per weapon instance; markup.Parse every frame is expensive.
     if self.InfoMarkup == nil then
         local str
         local title_color = "<color=230,230,230,255>"
