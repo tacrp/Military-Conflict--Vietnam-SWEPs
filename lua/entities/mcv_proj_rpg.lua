@@ -15,8 +15,8 @@ ENT.ImpactFuse = true // projectile explodes on impact.
 ENT.ExplodeOnDamage = false // projectile explodes when it takes damage.
 ENT.ExplodeUnderwater = true
 
-ENT.SmokeTrail = true
-ENT.FlareColor = Color(255, 255, 255)
+ENT.SmokeTrail = false
+ENT.TrailParticle = "rpg_missile_trail"
 
 ENT.Delay = 0
 
@@ -42,7 +42,7 @@ function ENT:Detonate()
     })
 
     // Game explosion effect, picked per surface (see lua/mcv/shared/sh_explosions.lua)
-    MCV.ExplosionEffect("rpg", self:GetPos(), -self:GetForward(), self:WaterLevel() > 0)
+    MCV.ExplosionEffect("rpg", self:GetImpactPos(), self:GetImpactNormal(), self:WaterLevel() > 0)
 
     self:EmitSound("MCV_BaseGrenade.Explode")
 

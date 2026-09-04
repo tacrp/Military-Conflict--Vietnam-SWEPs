@@ -1,8 +1,27 @@
 local rtsize = math.min(1024, ScrW(), ScrH())
 
 local rtmat = GetRenderTarget("mcv_pipscope", rtsize, rtsize, false)
-local rtmat_spare = GetRenderTarget("mcv_rtmat_spare", ScrW(), ScrH(), false)
-local rtsurf = Material("effects/arc9/rt")
+
+// Lens material fed by the render target (no ARC9 dependency). SetSubMaterial takes the
+// "!" prefixed name of a material made with CreateMaterial.
+local lensmat = CreateMaterial("mcv_pipscope_lens", "UnlitGeneric", {
+    ["$basetexture"] = rtmat:GetName(),
+    ["$nolod"] = "1",
+})
+lensmat:SetTexture("$basetexture", rtmat)
+local LENS_NAME = "!" .. lensmat:GetName()
+
+// The screen, as a material, so it can be drawn into the RT with flipped UVs
+local screenmat = CreateMaterial("mcv_pipscope_screen", "UnlitGeneric", {
+    ["$basetexture"] = "_rt_FullFrameFB",
+})
+
+// Render target orientation relative to the lens mesh. The game's lens UVs put the image
+// upside down relative to Source's screen texture; flip per weapon if a model differs.
+SWEP.RTScopeFlipV = true
+SWEP.RTScopeFlipH = false
+// Magnification of the picture-in-picture image relative to the screen
+SWEP.RTScopeZoom = 2.5
 
 function SWEP:GetScopeFOV()
     return self.ScopeFOV
@@ -14,7 +33,7 @@ end
 
 local rt_cleared = false
 
-function SWEP:DoCheapScope(fov, atttbl)
+function SWEP:DoCheapScope()
     if !self:ShouldDoScope() then
         // Only clear once after leaving the scope instead of every frame.
         if !rt_cleared then
@@ -30,30 +49,26 @@ function SWEP:DoCheapScope(fov, atttbl)
     rt_cleared = false
 
     render.UpdateScreenEffectTexture()
-    render.UpdateFullScreenDepthTexture()
-    local screen = render.GetScreenEffectTexture()
+    screenmat:SetTexture("$basetexture", render.GetScreenEffectTexture())
 
-    render.CopyTexture( screen, rtmat_spare )
+    // Draw the screen into the square RT so that a *square* crop of the screen (side
+    // ScrH / zoom, centred) fills it. Circles on screen stay circles on the lens.
+    local scrw, scrh = ScrW(), ScrH()
+    local scale = rtsize * self.RTScopeZoom / scrh
+    local w, h = scrw * scale, scrh * scale
+    local x, y = (rtsize - w) / 2, (rtsize - h) / 2
 
-    local scrw = ScrW()
-    local scrh = ScrH()
-
-    scrw = scrw
-    scrh = scrh * scrh / scrw
-
-    local s = 2.5
-
-    local scrx = (ScrW() - scrw * s) / 2
-    local scry = (ScrH() - scrh * s) / 2
+    local u0, v0, u1, v1 = 0, 0, 1, 1
+    if self.RTScopeFlipV then v0, v1 = 1, 0 end
+    if self.RTScopeFlipH then u0, u1 = 1, 0 end
 
     render.PushRenderTarget(rtmat, 0, 0, rtsize, rtsize)
-
-    render.DrawTextureToScreenRect(screen, scrx, scry, scrw * s, scrh * s)
-
+    cam.Start2D()
+        surface.SetMaterial(screenmat)
+        surface.SetDrawColor(255, 255, 255, 255)
+        surface.DrawTexturedRectUV(x, y, w, h, u0, v0, u1, v1)
+    cam.End2D()
     render.PopRenderTarget()
-
-    render.DrawTextureToScreen(rtmat_spare)
-    render.UpdateFullScreenDepthTexture()
 end
 
 function SWEP:DoRTScope()
@@ -65,43 +80,35 @@ function SWEP:DoRTScope()
     if active then
         if self:ShouldDoScope() then
             self.RenderingRTScope = true
-            render.PushRenderTarget(rtmat)
-            cam.Start2D()
 
             local reticle = self.ScopeMaterial
-            local color = Color(0, 0, 0)
 
-            local size = rtsize
             if reticle then
-                local rtr_x = (rtsize - size) / 2
-                local rtr_y = (rtsize - size) / 2
+                render.PushRenderTarget(rtmat)
+                cam.Start2D()
+                    local size = rtsize
+                    local rtr_x = (rtsize - size) / 2
+                    local rtr_y = (rtsize - size) / 2
 
-                surface.SetDrawColor(0, 0, 0)
-                surface.DrawRect(rtr_x - size * 4, rtr_y - size * 8, size * 8, size * 8) -- top
-                surface.DrawRect(rtr_x - size * 8, rtr_y - size * 4, size * 8, size * 8) -- left
-                surface.DrawRect(rtr_x - size * 4, rtr_y + size - 1, size * 8, size * 8) -- bottom
-                surface.DrawRect(rtr_x + size - 1, rtr_y - size * 4, size * 8, size * 8) -- right
+                    surface.SetDrawColor(0, 0, 0)
+                    surface.DrawRect(rtr_x - size * 4, rtr_y - size * 8, size * 8, size * 8) -- top
+                    surface.DrawRect(rtr_x - size * 8, rtr_y - size * 4, size * 8, size * 8) -- left
+                    surface.DrawRect(rtr_x - size * 4, rtr_y + size - 1, size * 8, size * 8) -- bottom
+                    surface.DrawRect(rtr_x + size - 1, rtr_y - size * 4, size * 8, size * 8) -- right
 
-                surface.SetDrawColor(color)
-                surface.SetMaterial(reticle)
-                surface.DrawTexturedRect(rtr_x, rtr_y, size, size)
+                    surface.SetDrawColor(0, 0, 0)
+                    surface.SetMaterial(reticle)
+                    surface.DrawTexturedRect(rtr_x, rtr_y, size, size)
+                cam.End2D()
+                render.PopRenderTarget()
             end
-        else
-            render.PushRenderTarget(rtmat)
-            cam.Start2D()
         end
-
-        cam.End2D()
-
-        render.PopRenderTarget()
 
         render.SetToneMappingScaleLinear(Vector(1, 1, 1))
 
-        rtsurf:SetTexture("$basetexture", rtmat)
-
-        model:SetSubMaterial(self.RTScopeMaterialIndex, "effects/arc9/rt")
+        model:SetSubMaterial(self.RTScopeMaterialIndex, LENS_NAME)
     else
-        rtsurf:SetTexture("$basetexture", "vgui/black")
-        model:SetSubMaterial(self.RTScopeMaterialIndex, "vgui/black")
+        // Not aiming: the model's own lens material (the game's glass with its reflections)
+        model:SetSubMaterial(self.RTScopeMaterialIndex)
     end
 end

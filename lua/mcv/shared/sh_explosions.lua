@@ -59,6 +59,12 @@ for _, base in pairs(MCV.ExplosionFamilies) do
     end
 end
 
+// In-flight projectile trails
+for _, name in ipairs({"rpg_missile_trail", "kolos_missile_trail", "vietnam_weaponeffect_ubgrenade",
+                       "vietnam_weaponeffect_riflegrenade", "vietnam_weaponeffect_handgrenade"}) do
+    PrecacheParticleSystem(name)
+end
+
 // Returns the particle system name for a family at a position. `normal` is the impact normal
 // (used to orient the effect and to probe the surface).
 function MCV.GetExplosionSystem(family, pos, normal, inwater)

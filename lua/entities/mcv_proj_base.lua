@@ -42,7 +42,8 @@ ENT.Delay = 5 // after being triggered and this amount of time has passed, the p
 
 ENT.Armed = false
 
-ENT.SmokeTrail = false // leaves trail of smoke
+ENT.SmokeTrail = false // leaves trail of smoke (old sprite emitter; unused when TrailParticle is set)
+ENT.TrailParticle = nil // game particle system attached to the projectile in flight (rpg_missile_trail...)
 ENT.FlareColor = nil
 ENT.FlareSizeMin = 200
 ENT.FlareSizeMax = 250
@@ -106,12 +107,57 @@ function ENT:Initialize()
         self.Armed = true
     end
 
+    if CLIENT then
+        self:StartTrail()
+    end
+
     self:OnInitialize()
+end
+
+// In-flight effect: the game's own trail particle, following the projectile origin.
+function ENT:StartTrail()
+    if !CLIENT or self.TrailStarted or !self.TrailParticle then return end
+
+    self.TrailStarted = true
+    ParticleEffectAttach(self.TrailParticle, PATTACH_ABSORIGIN_FOLLOW, self, 0)
+end
+
+// Surface normal at the point of impact, for orienting the explosion effect. Filled in by
+// PhysicsCollide; timed detonations in the air fall back to a short trace along the velocity,
+// then to straight up.
+function ENT:GetImpactNormal()
+    if self.ImpactNormal then return self.ImpactNormal end
+
+    local vel = self:GetVelocity()
+    if vel:LengthSqr() > 1 then
+        local tr = util.TraceLine({
+            start = self:GetPos(),
+            endpos = self:GetPos() + vel:GetNormalized() * 96,
+            filter = self,
+            mask = MASK_SOLID,
+        })
+
+        if tr.Hit then return tr.HitNormal end
+    end
+
+    return vector_up
+end
+
+function ENT:GetImpactPos()
+    if self.ImpactPos then
+        return self.ImpactPos + (self.ImpactNormal or vector_up) * 2
+    end
+
+    return self:GetPos()
 end
 
 function ENT:OnRemove()
     if self.LoopSound then
         self.LoopSound:Stop()
+    end
+
+    if CLIENT and self.TrailStarted then
+        self:StopParticles()
     end
 end
 
@@ -135,6 +181,10 @@ function ENT:OnTakeDamage(dmg)
 end
 
 function ENT:PhysicsCollide(data, collider)
+    // remember where and at what angle we hit, for the explosion effect
+    self.ImpactNormal = data.HitNormal
+    self.ImpactPos = data.HitPos
+
     if IsValid(data.HitEntity) and data.HitEntity:GetClass() == "func_breakable_surf" then
         self:FireBullets({
             Attacker = self:GetOwner(),
@@ -322,6 +372,7 @@ end
 local mat = Material("effects/ar2_altfire1b")
 
 function ENT:Draw()
+    self:StartTrail()
     self:DrawModel()
 
     if self.FlareColor then

@@ -15,6 +15,8 @@ ENT.ImpactFuse = true // projectile explodes on impact.
 ENT.ExplodeOnDamage = false // projectile explodes when it takes damage.
 ENT.ExplodeUnderwater = true
 
+ENT.TrailParticle = "vietnam_weaponeffect_ubgrenade"
+
 ENT.Delay = 0
 
 
@@ -40,7 +42,7 @@ function ENT:Detonate()
     })
 
     // Game explosion effect, picked per surface (see lua/mcv/shared/sh_explosions.lua)
-    MCV.ExplosionEffect("ubgl", self:GetPos(), -self:GetForward(), self:WaterLevel() > 0)
+    MCV.ExplosionEffect("ubgl", self:GetImpactPos(), self:GetImpactNormal(), self:WaterLevel() > 0)
 
     self:EmitSound("MCV_BaseGrenade.Explode")
 
