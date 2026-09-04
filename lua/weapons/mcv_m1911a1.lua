@@ -108,6 +108,8 @@ SWEP.JumpSpreadMultiplier = 1.25
 SWEP.HasBayonet = false
 SWEP.HasBipod = false
 SWEP.HasAkimbo = true
+SWEP.AkimboPoseRecoil = true
+SWEP.AkimboRecoilTime = 0.8
 
 // Penetration
 SWEP.MetalPenetrationDepth = 5

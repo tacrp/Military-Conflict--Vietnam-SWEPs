@@ -21,6 +21,7 @@ with --mode. See --help for the switches that control the improvements over the 
 import argparse
 import collections
 import json
+import math
 import os
 import re
 import shutil
@@ -846,8 +847,13 @@ def step_validate(qc, ctx):
 # re-parented under this bone so the world model bonemerges to the player's right hand. rx is
 # the tilt that pitches the barrel up along the curve of the arms (China Lake uses 15).
 HAND_DEFAULT = (-6, -1, -2, 0, 0, 180)
+# Barrel pitch (degrees, positive = muzzle up) applied on top of the offset, computed from the
+# model's own bone and mesh data by hand_with_tilt(); see PORTING.md "World models".
+HAND_TILT = {
+    "w_sks": 7.5,
+}
 HAND_OFFSETS = {
-    "w_sks": (-10, -1, -2, 7.5, 0, 180),
+    "w_sks": (-10, -1, -2, 0, 0, 180),
     "w_ak47": (-6, -1, -3.25, 0, 0, 180),
     "w_amd65": (-6, -1, -3.25, 0, 0, 180),
     "w_car15": (-6, -1, -3.25, 0, 0, 180),
@@ -858,6 +864,122 @@ HAND_OFFSETS = {
     "w_chinalake": (-10, -1, 0, 15, 0, 180),
     "w_mas38": (-7, -1, -2, 0, 0, 180),
 }
+
+
+# ---- small 3x3 matrix helpers (no numpy) ---------------------------------------------------
+def _rx(a): c, s = math.cos(a), math.sin(a); return [[1, 0, 0], [0, c, -s], [0, s, c]]
+def _ry(a): c, s = math.cos(a), math.sin(a); return [[c, 0, s], [0, 1, 0], [-s, 0, c]]
+def _rz(a): c, s = math.cos(a), math.sin(a); return [[c, -s, 0], [s, c, 0], [0, 0, 1]]
+def _mul(A, B): return [[sum(A[i][k] * B[k][j] for k in range(3)) for j in range(3)] for i in range(3)]
+def _mv(A, v): return [sum(A[i][k] * v[k] for k in range(3)) for i in range(3)]
+def _t(A): return [[A[j][i] for j in range(3)] for i in range(3)]
+def _norm(v):
+    l = math.sqrt(sum(a * a for a in v)) or 1.0
+    return [a / l for a in v]
+def _cross(a, b): return [a[1] * b[2] - a[2] * b[1], a[2] * b[0] - a[0] * b[2], a[0] * b[1] - a[1] * b[0]]
+def _euler_matrix(x, y, z):
+    """Source AngleMatrix for RadianEuler(x, y, z): Rz(yaw) * Ry(pitch) * Rx(roll)."""
+    return _mul(_rz(z), _mul(_ry(y), _rx(x)))
+def _matrix_euler(M):
+    y = math.asin(max(-1.0, min(1.0, -M[2][0])))
+    if abs(math.cos(y)) > 1e-6:
+        x = math.atan2(M[2][1], M[2][2]); z = math.atan2(M[1][0], M[0][0])
+    else:
+        x = math.atan2(-M[1][2], M[1][1]); z = 0.0
+    return x, y, z
+def _axis_rot(n, a):
+    x, y, z = n; c, s = math.cos(a), math.sin(a); C = 1 - c
+    return [[c + x * x * C, x * y * C - z * s, x * z * C + y * s],
+            [y * x * C + z * s, c + y * y * C, y * z * C - x * s],
+            [z * x * C - y * s, z * y * C + x * s, c + z * z * C]]
+
+# Crowbar writes $definebone rotations as (ry, rz, rx) in degrees; SMD skeleton lines are
+# (rx, ry, rz) in radians. Verified against every bone of v_sks.
+def _def_to_matrix(off):
+    ry_, rz_, rx_ = (math.radians(v) for v in off[3:6])
+    return _euler_matrix(rx_, ry_, rz_)
+def _matrix_to_def(M):
+    x, y, z = _matrix_euler(M)
+    return [math.degrees(y), math.degrees(z), math.degrees(x)]
+
+
+def _smd_root_frame_and_mesh(path):
+    """Root bone (index 0) frame from an SMD plus its vertices (world space)."""
+    frame = None; verts = []; sec = None
+    with open(path, encoding="utf-8", errors="replace") as f:
+        for line in f:
+            t = line.split()
+            if not t:
+                continue
+            if t[0] in ("nodes", "skeleton", "triangles"):
+                sec = t[0]; continue
+            if t[0] == "end":
+                sec = None; continue
+            if sec == "skeleton":
+                if t[0] == "time":
+                    if frame is not None:
+                        break
+                    continue
+                if t[0] == "0":
+                    frame = [float(x) for x in t[1:7]]
+            elif sec == "triangles" and len(t) >= 10 and t[0].isdigit():
+                verts.append((float(t[1]), float(t[2]), float(t[3])))
+    return frame, verts
+
+
+def hand_with_tilt(off, tilt_deg, og_dir, raw_qc, ctx):
+    """Compose a barrel pitch of tilt_deg (muzzle up) into the hand bone offset.
+
+    The gun bone's world transform comes from the reference SMD; the barrel direction from the
+    muzzle attachment; the gun's up from the mesh (the stock and magazine hang below the bore, so
+    up is away from the vertex centroid). The gun is attached to the hand as
+    gun = playerHand * inverse(handDef) * gunSMD, so pitching the gun by G means handDef' =
+    handDef * inverse(G) in the hand's own frame."""
+    m = re.search(r'^\$bodygroup[^{]*\{\s*(?:blank\s*)?studio\s+"([^"]+)"', raw_qc, re.M | re.S)
+    ref = m.group(1) if m else None
+    if not ref:
+        m = re.search(r'studio\s+"([^"]+\.smd)"', raw_qc)
+        ref = m.group(1) if m else None
+    if not ref:
+        ctx.warn("tilt: no reference smd found, tilt not applied")
+        return off
+    frame, verts = _smd_root_frame_and_mesh(os.path.join(og_dir, ref.replace("\\", os.sep)))
+    if not frame or len(verts) < 10:
+        ctx.warn("tilt: could not read the reference smd, tilt not applied")
+        return off
+    gun = _euler_matrix(frame[3], frame[4], frame[5])
+    gun_t = _t(gun); p = frame[0:3]
+    loc = [_mv(gun_t, [v[0] - p[0], v[1] - p[1], v[2] - p[2]]) for v in verts]
+    ext = [max(v[i] for v in loc) - min(v[i] for v in loc) for i in range(3)]
+    cen = [sum(v[i] for v in loc) / len(loc) for i in range(3)]
+    fwd_axis = ext.index(max(ext))
+    fwd = [0.0, 0.0, 0.0]; fwd[fwd_axis] = 1.0
+    am = re.search(r'^\$attachment\s+"muzzle"\s+"[^"]+"\s+([-\d.]+)\s+([-\d.]+)\s+([-\d.]+)', raw_qc, re.M)
+    if am:
+        mz = [float(am.group(i)) for i in (1, 2, 3)]
+        if mz[fwd_axis] < 0:
+            fwd[fwd_axis] = -1.0
+    # up: of the other two axes take the taller one. The bore sits above the grip bone, so the
+    # muzzle attachment's offset on that axis points up; failing that, the grip/magazine hang
+    # further below the bone than the sights rise above it.
+    others = [i for i in range(3) if i != fwd_axis]
+    up_axis = max(others, key=lambda i: ext[i])
+    up = [0.0, 0.0, 0.0]
+    if am and abs(mz[up_axis]) > 0.3:
+        up[up_axis] = 1.0 if mz[up_axis] > 0 else -1.0
+    else:
+        lo = min(v[up_axis] for v in loc); hi = max(v[up_axis] for v in loc)
+        up[up_axis] = 1.0 if abs(lo) > abs(hi) else -1.0
+    H = _def_to_matrix(off)
+    G = _mul(_t(H), gun)                 # gun relative to the hand
+    fwd_h = _norm(_mv(G, fwd)); up_h = _norm(_mv(G, up))
+    side = _norm(_cross(fwd_h, up_h))    # rotating about this axis moves the barrel toward up
+    Hn = _mul(H, _axis_rot(side, -math.radians(tilt_deg)))
+    new = list(off[:3]) + _matrix_to_def(Hn)
+    ctx.note("tilt %g: barrel is gun-local %s%s, up %s%s; hand rot %s -> %s" % (
+        tilt_deg, "+-"[fwd[fwd_axis] < 0], "XYZ"[fwd_axis], "+-"[up[up_axis] < 0], "XYZ"[up_axis],
+        " ".join("%g" % v for v in off[3:6]), " ".join("%.3f" % v for v in new[3:6])))
+    return new
 
 
 def port_worldmodel(args, og_dir):
@@ -894,10 +1016,11 @@ def port_worldmodel(args, og_dir):
         fixed_qc = os.path.join(args.fixed_root, "weapons", name, name + ".qc")
         hand_line = None
         off = None
-        if args.hand or args.tilt is not None or name in HAND_OFFSETS:
+        tilt = args.tilt if args.tilt is not None else HAND_TILT.get(name, 0)
+        if args.hand or tilt or name in HAND_OFFSETS:
             off = list(args.hand) if args.hand else list(HAND_OFFSETS.get(name, HAND_DEFAULT))
-            if args.tilt is not None:
-                off[3] = args.tilt
+            if tilt:
+                off = hand_with_tilt(off, tilt, og_dir, raw, ctx)
         elif os.path.isfile(fixed_qc):
             m = re.search(r'^\$definebone\s+"ValveBiped\.Bip01_R_Hand"[^\n]*$', open(fixed_qc, encoding="utf-8", errors="replace").read(), re.M)
             if m:
