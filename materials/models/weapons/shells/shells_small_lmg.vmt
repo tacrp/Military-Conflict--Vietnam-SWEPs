@@ -1,0 +1,18 @@
+"VertexLitGeneric"
+{
+	"$basetexture" 						"models\weapons\shells\shells_small_lmg_diffuse"
+	"$bumpmap" 							"models\weapons\shells\shells_small_lmg_normal"
+	"$PhongExponentTexture" 			"models\weapons\shells\shells_small_lmg_exponent"
+
+	"$phong" "1"
+	"$phongboost"	"1"
+	"$phongfresnelranges"	"[1 3 5]"
+	"$PhongAlbedoTint" "1"
+	"$phongalbedoboost" "15"
+	"$surfaceprop" "metal"
+	"$lightwarptexture" "models\weapons\shells\bullets_wrp"
+	
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[.07 .06 .04]"
+	"$normalmapalphaenvmapmask" "1"
+}

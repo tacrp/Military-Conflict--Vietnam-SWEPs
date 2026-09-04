@@ -1,0 +1,7 @@
+"VertexLitGeneric"
+{
+	"$basetexture"					"models\effects\vietnam\particle_gibs_cardboard_diffuse"
+	"$bumpmap"						"models\effects\vietnam\particle_gibs_cardboard_normal"
+	
+	"$alphatest"					"1"
+}

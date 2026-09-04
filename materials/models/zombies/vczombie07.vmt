@@ -1,0 +1,29 @@
+"VertexLitGeneric"
+{
+	"$basetexture"			"models\zombies\VCzombie07_diffuse"
+	"$bumpmap"				"models\zombies\VCzombie07_normal"
+	"$PhongExponentTexture" "models\zombies\VCzombie07_exponent"
+	"$phong" "1"
+	"$phongboost" "1"
+	"$phongfresnelranges" "[0.2 1.5 3]"
+	"$surfaceprop" "flesh"
+	"$rimlight" "1"
+	"$rimlightexponent" "24"
+	"$rimlightboost" "0.08"
+	"$notint" "1"
+
+	"$selfillum"				"1"
+//	"$selfillumtint"			"[4 4 4]"	
+	
+	"Proxies"
+	{
+        "Sine"
+		{
+			"resultVar" "$selfIllumTint"
+			"sinemin" 2.00
+			"sinemax" 5.00
+			"sineperiod" 2
+			//"timeoffset" 1
+		}
+	}
+}

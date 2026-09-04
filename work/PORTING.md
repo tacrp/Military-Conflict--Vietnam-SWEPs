@@ -272,6 +272,40 @@ Four world models in the fixed tree (`w_lpo50`, `w_m1g_s`, `w_m9a1`, `w_r76`) us
 scheme (a full hand transform parented to a `ValveBiped` root); those lines are reused as they
 are when no table entry exists.
 
+## Ripping the game directly (`rip_game.py`)
+
+`rip_game.py` reads the game's `pak01_dir.vpk` (through `vpklib.py`, a small VPK v1/v2
+reader) and the loose `scripts/` and `resource/` folders, and updates the addon in steps:
+
+| step | what it does |
+| --- | --- |
+| `scripts` | copies `scripts/weapon_*.txt` into `work/cscripts` |
+| `strings` | reads `resource/vietnam_english.txt` (UTF-16) into `work/strings.json`; `port_weapon.py` uses it for display names and countries |
+| `models` | extracts every `models/weapons/v_*` and `w_*` file into `work/rip` and decompiles the ones whose CRC changed (`tools/CrowbarCommandLineDecomp.exe`, a command-line fork of Crowbar 0.68) into `work/MCV_SMD_OG/weapons` |
+| `port` | `port_qc.py --all --compile` over the decompiled tree, into `work/compile_test_game` |
+| `install` | copies the compiled model sets that succeeded into `models/weapons/mcv`, and the game's `models/weapons/<subdir>` models (shells etc.) as they are |
+| `materials` | every `materials/models/weapons/<dir>` that a weapon QC references, into `materials/models/weapons/mcv/<dir>` with the texture paths inside the VMTs rewritten |
+| `sounds` | `sound/weapons` and `sound/foley` into `sound/mcv`, then `vietnam_sounds_weapons.txt` and `vietnam_sounds_foley.txt` through `parse_soundscripts.py` (which now drops the `~` and `` ` `` sound characters GMod does not know) |
+| `particles` | all `particles/*.pcf` |
+| `particle_materials` | scans the pcfs for material names (they are stored as `effects\vietnam\x.vmt`) and pulls those VMTs plus every texture they reference |
+| `icons` | renders `materials/panorama/images/icons/equipment/weapon_*.svg` white on transparent, scaled to fit the middle 256x128 band of a 256x256 png, into `materials/entities/mcv_<lua>.png` |
+| `lua` | `port_weapon.py --only-new` for weapons without a lua file |
+| `effects_lua` | switches every weapon lua's muzzle / brass / tracer fields to the game's particle names and regenerates the pcf list in `lua/mcv/shared/sh_effects.lua` |
+
+`work/rip` and `work/MCV_SMD_OG` are git-ignored (several GB). `work/rip/manifest.json` remembers
+the VPK CRC of every decompiled model so a later run only redoes what the game updated.
+
+### Game effects instead of stock ones
+
+The pack used GMod's stock muzzle flashes because the pcfs shipped without their materials.
+With `particle_materials` in place, `effects_lua` points the weapons at the game's systems
+(`vietnam_muzzleflash_*`, `vietnam_weaponeffect_shelleject_*`, `vietnam_tracer_*`). Tracers are
+fired from `BulletAttack` with `util.ParticleTracerEx` from the world model's muzzle attachment
+(GMod's own tracer is off). Projectiles call `MCV.ExplosionEffect(family, pos, normal, inwater)`
+from `lua/mcv/shared/sh_explosions.lua`, which picks the per-surface variant of the game's
+explosion system (`Vietnam_Explosion_RPGRocket_Brick` and so on) from the material under the
+impact.
+
 ## Weapon Lua from the game scripts (`port_weapon.py`)
 
 ```

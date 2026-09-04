@@ -241,6 +241,22 @@ VMT_TEX_KEYS = ("$basetexture", "$basetexture2", "$bumpmap", "$normalmap", "$det
                 "$texture2", "$flowmap", "$refracttexture")
 
 
+def _vtf_has_sheet(head):
+    """True if a VTF (7.3+) carries a particle sprite sheet resource (tag 0x10 0x00 0x00)."""
+    import struct
+    if len(head) < 80 or head[:4] != b"VTF\0":
+        return False
+    vmaj, vmin = struct.unpack("<II", head[4:12])
+    if vmaj != 7 or vmin < 3:
+        return False
+    nres = struct.unpack("<I", head[68:72])[0]
+    for i in range(min(nres, 16)):
+        tag = head[80 + 8 * i:80 + 8 * i + 3]
+        if tag == b"\x10\x00\x00":
+            return True
+    return False
+
+
 def _vmt_textures(text):
     out = set()
     for key in VMT_TEX_KEYS:
@@ -265,7 +281,7 @@ def step_particle_materials(args, vpk):
             if ("materials/" + s + ".vmt") in lower:
                 mats.add(s)
     log("particle materials: %d material names referenced by %d pcf files" % (len(mats), len(glob.glob(os.path.join(ADDON, "particles", "*.pcf")))))
-    copied = 0
+    copied = sheets = 0
     seen = set()
     queue = list(mats)
     while queue:
@@ -276,8 +292,23 @@ def step_particle_materials(args, vpk):
         vmt = lower.get("materials/" + m + ".vmt")
         if vmt:
             data = vpk.read(vmt)
-            vpk.extract(vmt, ADDON); copied += 1
-            for tex in _vmt_textures(data.decode("latin-1")):
+            txt = data.decode("latin-1")
+            # The game's particle materials are UnlitGeneric, which in GMod ignores the sprite
+            # sheet resource inside the VTF and draws the whole sheet at once. SpriteCard is the
+            # particle shader that samples sheets; switch to it when the base texture has one.
+            bt = re.search(r'(?i)"?\$basetexture"?\s+"?([^"\s]+)"?', txt)
+            if bt and re.match(r'(?i)\s*"?unlitgeneric"?', txt):
+                vtf = lower.get("materials/" + bt.group(1).replace("\\", "/").lower() + ".vtf")
+                if vtf and _vtf_has_sheet(vpk.read(vtf)[:256]):
+                    txt = re.sub(r'(?i)^(\s*)"?unlitgeneric"?', r'\1"SpriteCard"', txt, count=1)
+                    data = txt.encode("latin-1")
+                    sheets += 1
+            out = os.path.join(ADDON, vmt.replace("/", os.sep))
+            os.makedirs(os.path.dirname(out), exist_ok=True)
+            with open(out, "wb") as f:
+                f.write(data)
+            copied += 1
+            for tex in _vmt_textures(txt):
                 vtf = lower.get("materials/" + tex + ".vtf")
                 if vtf and vtf not in seen:
                     vpk.extract(vtf, ADDON); copied += 1; seen.add(vtf)
@@ -286,6 +317,45 @@ def step_particle_materials(args, vpk):
     log("particle materials: %d files copied into materials/" % copied)
     with open(os.path.join(RIP, "particle_materials.txt"), "w") as f:
         f.write("\n".join(sorted(mats)))
+
+
+def step_pcf_models(args, vpk):
+    """Models the particle systems spawn (explosion debris chunks) plus the materials those
+    models use, read straight from the MDL header strings."""
+    lower = {p.lower(): p for p in vpk.entries}
+    mdls = set()
+    for pcf in glob.glob(os.path.join(ADDON, "particles", "*.pcf")):
+        data = open(pcf, "rb").read()
+        for m in re.finditer(rb'[A-Za-z0-9_][A-Za-z0-9_/\\\-.]{3,160}\.mdl', data):
+            s = m.group(0).decode("latin-1").replace("\\", "/").lower()
+            if not s.startswith("models/"):
+                s = "models/" + s
+            if s in lower:
+                mdls.add(s)
+    copied = 0
+    mats = 0
+    for mdl in sorted(mdls):
+        base = mdl[:-4]
+        for ext in (".mdl", ".vvd", ".dx90.vtx", ".dx80.vtx", ".sw.vtx", ".phy", ".ani"):
+            p = lower.get(base + ext)
+            if p:
+                vpk.extract(p, ADDON); copied += 1
+        # cdmaterials dirs and texture names are plain strings in the mdl header
+        head = vpk.read(mdl)
+        dirs = set(m.group(0).decode("latin-1").replace("\\", "/").lower() for m in re.finditer(rb'models[/\\][A-Za-z0-9_/\\\-.]+[/\\]', head))
+        names = set(m.group(0).decode("latin-1").lower() for m in re.finditer(rb'[A-Za-z0-9_\-]{2,64}', head))
+        for d in dirs:
+            for n in names:
+                vmt = lower.get("materials/" + d + n + ".vmt")
+                if vmt:
+                    vpk.extract(vmt, ADDON); mats += 1
+                    for tex in _vmt_textures(vpk.read(vmt).decode("latin-1")):
+                        vtf = lower.get("materials/" + tex + ".vtf")
+                        if vtf:
+                            vpk.extract(vtf, ADDON); mats += 1
+    log("pcf models: %d models referenced by the particle systems, %d model files and %d material files copied" % (len(mdls), copied, mats))
+    with open(os.path.join(RIP, "pcf_models.txt"), "w") as f:
+        f.write("\n".join(sorted(mdls)))
 
 
 def _lua_name_map():
@@ -326,8 +396,16 @@ def step_icons(args, vpk):
     out_dir = os.path.join(ADDON, "materials", "entities")
     os.makedirs(out_dir, exist_ok=True)
     made = skipped = 0
-    for sname, lua_name in sorted(name_map.items()):
+    # several scripts map to one lua (weapon_sks and weapon_sks_riflegrenade both -> mcv_sks);
+    # the icon must come from the base script, which is the shortest name for that lua file
+    primary = {}
+    for sname, lua_name in name_map.items():
         if sname.startswith("dual_"):
+            continue
+        if lua_name not in primary or len(sname) < len(primary[lua_name]):
+            primary[lua_name] = sname
+    for sname, lua_name in sorted(name_map.items()):
+        if sname.startswith("dual_") or primary.get(lua_name) != sname:
             continue
         key = ("weapon_" + sname).lower()
         if key not in svgs:
@@ -425,8 +503,8 @@ def step_lua(args, vpk):
 
 STEPS = [("scripts", step_scripts), ("strings", step_strings), ("models", step_models), ("port", step_port),
          ("install", step_install), ("materials", step_materials), ("sounds", step_sounds),
-         ("particles", step_particles), ("particle_materials", step_particle_materials), ("icons", step_icons),
-         ("lua", step_lua), ("effects_lua", step_effects_lua)]
+         ("particles", step_particles), ("particle_materials", step_particle_materials), ("pcf_models", step_pcf_models),
+         ("icons", step_icons), ("lua", step_lua), ("effects_lua", step_effects_lua)]
 
 
 def main():

@@ -1,0 +1,10 @@
+"VertexLitGeneric"
+{
+	"$basetexture"					"models\effects\vietnam\debris03_diffuse"
+	"$bumpmap"						"models\effects\vietnam\debris03_normal"
+	
+	"$phong"						"1"
+	"$phongexponent"				"40"
+	"$phongboost"					"0.5" 
+	"$phongfresnelranges"			"[0.5 0.5 0.5]"
+}

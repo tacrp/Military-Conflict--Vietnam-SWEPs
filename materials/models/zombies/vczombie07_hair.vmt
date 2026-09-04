@@ -1,0 +1,14 @@
+"VertexLitGeneric"
+{
+	"$basetexture"				"models\zombies\VCzombie07_hair_diffuse"
+	"$bumpmap"					"models\zombies\VCzombie07_hair_normal"
+	"$phongexponenttexture"		"models\zombies\VCzombie07_hair_exponent"
+
+	"$phong" "1"	
+	"$phongboost"	"0.5"
+	"$phongfresnelranges" "[0.2 2 3]"
+		
+	"$translucent" "1"
+	"$nocull" "1"
+	
+}

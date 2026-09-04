@@ -1,0 +1,14 @@
+"patch"
+{
+	"include" "materials\models\weapons\m60_shared.vmt"
+	"insert"
+	{
+    "$basetexture"                    "models\weapons\v_m60\m60_link_diffuse"
+    "$bumpmap"                         "models\weapons\v_m60\m60_link_normal"
+	"$PhongExponentTexture" 			"models\weapons\v_m60\m60_link_exponent"
+	
+	"$alphatest" "1"
+	"$AlphaTestReference" ".2"
+	"$AllowAlphaToCoverage" "1"
+	}
+}

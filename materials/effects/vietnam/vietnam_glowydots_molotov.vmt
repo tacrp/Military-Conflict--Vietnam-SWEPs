@@ -1,4 +1,4 @@
-"UnlitGeneric"
+"SpriteCard"
 {
 	$basetexture "particle/fire_burning_character/fire_burning_character"
 	$addself "1.0"

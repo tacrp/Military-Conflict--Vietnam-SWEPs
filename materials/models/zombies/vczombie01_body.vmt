@@ -1,0 +1,14 @@
+"VertexLitGeneric"
+{
+	"$basetexture" 	"models\zombies\VCzombie01_body_diffuse"
+	"$bumpmap" 		"models\zombies\VCzombie01_body_normal"
+	"$PhongExponentTexture" "models\zombies\VCzombie01_body_exponent"
+	"$phong" "1"
+	"$phongboost" "1"
+	"$phongfresnelranges" "[0.15 1.5 3]"
+	"$surfaceprop" "flesh"
+	"$rimlight" "1"
+	"$rimlightexponent" "24"
+	"$rimlightboost" "0.08"
+	"$blendtintbybasealpha" "1"
+}

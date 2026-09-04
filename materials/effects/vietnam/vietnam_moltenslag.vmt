@@ -1,4 +1,4 @@
-"unlitgeneric"
+"SpriteCard"
 {
     $basetexture "effects/Vietnam/Vietnam_MoltenSlag"
     $additive "1"
