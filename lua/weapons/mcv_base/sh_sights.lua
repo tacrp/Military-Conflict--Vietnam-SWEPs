@@ -78,7 +78,7 @@ if CLIENT then
 
         local target = self:GetSighted() and 1 or 0
 
-        self.VisualSightRaw = math.Approach(cur, target, RealFrameTime() / self:GetSightTime())
+        self.VisualSightRaw = math.Approach(cur, target, FrameTime() / self:GetSightTime())
         self.VisualSightFrame = frame
 
         return self.VisualSightRaw

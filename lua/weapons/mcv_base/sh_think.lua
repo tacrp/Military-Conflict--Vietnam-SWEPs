@@ -131,7 +131,7 @@ if CLIENT then
             cur = speed
         end
 
-        self.VisualSpeed = math.Approach(cur, self:GetSpeedTarget(), RealFrameTime() * self.SpeedAcceleration)
+        self.VisualSpeed = math.Approach(cur, self:GetSpeedTarget(), FrameTime() * self.SpeedAcceleration)
         self.VisualSpeedFrame = frame
 
         return self.VisualSpeed
