@@ -16,10 +16,32 @@ local screenmat = CreateMaterial("mcv_pipscope_screen", "UnlitGeneric", {
     ["$basetexture"] = "_rt_FullFrameFB",
 })
 
-// Render target orientation relative to the lens mesh. The game's lens UVs put the image
-// upside down relative to Source's screen texture; flip per weapon if a model differs.
-SWEP.RTScopeFlipV = true
+// Render target orientation relative to the lens mesh; flip per weapon if a model needs it.
+SWEP.RTScopeFlipV = false
 SWEP.RTScopeFlipH = false
+// The game's reticle textures are opaque on the glass and transparent on the crosshair lines,
+// so the dark lines are drawn where the texture alpha is LOW. Set false for a texture authored
+// the other way round.
+SWEP.ReticleInvertAlpha = true
+
+// Alpha-tested copy of the reticle material, so it can mask the stencil buffer
+local reticle_cache = {}
+
+local function reticleMask(mat)
+    local name = mat:GetName()
+    if reticle_cache[name] then return reticle_cache[name] end
+
+    local m = CreateMaterial("mcv_reticle_mask_" .. name:gsub("[^%w]", "_"), "UnlitGeneric", {
+        ["$basetexture"] = mat:GetString("$basetexture"),
+        ["$alphatest"] = "1",
+        ["$alphatestreference"] = "0.5",
+        ["$vertexcolor"] = "1",
+        ["$vertexalpha"] = "1",
+    })
+    reticle_cache[name] = m
+
+    return m
+end
 // Magnification of the picture-in-picture image relative to the screen
 SWEP.RTScopeZoom = 2.5
 
@@ -96,9 +118,36 @@ function SWEP:DoRTScope()
                     surface.DrawRect(rtr_x - size * 4, rtr_y + size - 1, size * 8, size * 8) -- bottom
                     surface.DrawRect(rtr_x + size - 1, rtr_y - size * 4, size * 8, size * 8) -- right
 
-                    surface.SetDrawColor(0, 0, 0)
-                    surface.SetMaterial(reticle)
-                    surface.DrawTexturedRect(rtr_x, rtr_y, size, size)
+                    if self.ReticleInvertAlpha then
+                        // Mark the opaque part of the texture (the glass) in the stencil, then
+                        // paint black everywhere else inside the lens: the crosshair lines.
+                        render.ClearStencil()
+                        render.SetStencilEnable(true)
+                        render.SetStencilWriteMask(255)
+                        render.SetStencilTestMask(255)
+                        render.SetStencilReferenceValue(1)
+                        render.SetStencilCompareFunction(STENCIL_ALWAYS)
+                        render.SetStencilPassOperation(STENCIL_REPLACE)
+                        render.SetStencilFailOperation(STENCIL_KEEP)
+                        render.SetStencilZFailOperation(STENCIL_KEEP)
+
+                        render.OverrideColorWriteEnable(true, false)
+                        surface.SetDrawColor(255, 255, 255, 255)
+                        surface.SetMaterial(reticleMask(reticle))
+                        surface.DrawTexturedRect(rtr_x, rtr_y, size, size)
+                        render.OverrideColorWriteEnable(false)
+
+                        render.SetStencilCompareFunction(STENCIL_NOTEQUAL)
+                        render.SetStencilPassOperation(STENCIL_KEEP)
+                        surface.SetDrawColor(0, 0, 0, 255)
+                        surface.DrawRect(rtr_x, rtr_y, size, size)
+
+                        render.SetStencilEnable(false)
+                    else
+                        surface.SetDrawColor(0, 0, 0)
+                        surface.SetMaterial(reticle)
+                        surface.DrawTexturedRect(rtr_x, rtr_y, size, size)
+                    end
                 cam.End2D()
                 render.PopRenderTarget()
             end
