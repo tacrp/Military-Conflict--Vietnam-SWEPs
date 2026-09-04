@@ -257,6 +257,50 @@ def _vtf_has_sheet(head):
     return False
 
 
+def _downgrade_sheet(data):
+    """Rewrite a version-2 particle sheet resource (CS:GO era: 4 images per frame, each 4 UVs
+    plus 16 extra floats) to version 1 (4 images per frame, 4 UVs each), which is the newest
+    format GMod's CSheet reads. Returns the new VTF bytes, or None if nothing to do."""
+    import struct
+    if len(data) < 80 or data[:4] != b"VTF\0":
+        return None
+    vmaj, vmin = struct.unpack("<II", data[4:12])
+    if vmaj != 7 or vmin < 3:
+        return None
+    nres = struct.unpack("<I", data[68:72])[0]
+    for i in range(min(nres, 16)):
+        tag = data[80 + 8 * i:80 + 8 * i + 3]
+        if tag != b"\x10\x00\x00":
+            continue
+        off = struct.unpack("<I", data[84 + 8 * i:88 + 8 * i])[0]
+        size = struct.unpack("<I", data[off:off + 4])[0]
+        s = data[off + 4:off + 4 + size]
+        ver, nseq = struct.unpack("<II", s[:8])
+        if ver != 2:
+            return None
+        out = bytearray(struct.pack("<II", 1, nseq))
+        p = 8
+        try:
+            for _ in range(nseq):
+                sid, clamp, nfr, total = struct.unpack("<IIIf", s[p:p + 16]); p += 16
+                out += struct.pack("<IIIf", sid, clamp, nfr, total)
+                for _ in range(nfr):
+                    out += s[p:p + 4]; p += 4                     # duration
+                    for _ in range(4):                          # MAX_IMAGES_PER_FRAME_ON_DISK
+                        out += s[p:p + 16]; p += 80              # 4 uv floats, skip 16 extra floats
+        except struct.error:
+            return None
+        if p != size:
+            return None                                          # layout guess did not fit; leave it
+        if len(out) > size:
+            return None
+        new = bytearray(data)
+        new[off:off + 4] = struct.pack("<I", len(out))
+        new[off + 4:off + 4 + len(out)] = out
+        return bytes(new)
+    return None
+
+
 def _vmt_textures(text):
     out = set()
     for key in VMT_TEX_KEYS:
@@ -311,10 +355,18 @@ def step_particle_materials(args, vpk):
             for tex in _vmt_textures(txt):
                 vtf = lower.get("materials/" + tex + ".vtf")
                 if vtf and vtf not in seen:
-                    vpk.extract(vtf, ADDON); copied += 1; seen.add(vtf)
+                    raw = vpk.read(vtf)
+                    conv = _downgrade_sheet(raw)
+                    if conv:
+                        sheets += 1
+                    dst = os.path.join(ADDON, vtf.replace("/", os.sep))
+                    os.makedirs(os.path.dirname(dst), exist_ok=True)
+                    with open(dst, "wb") as f:
+                        f.write(conv or raw)
+                    copied += 1; seen.add(vtf)
                 elif not vtf:
                     log("  texture missing in vpk: %s (from %s)" % (tex, m))
-    log("particle materials: %d files copied into materials/" % copied)
+    log("particle materials: %d files copied into materials/, %d sprite sheets downgraded to version 1 for GMod" % (copied, sheets))
     with open(os.path.join(RIP, "particle_materials.txt"), "w") as f:
         f.write("\n".join(sorted(mats)))
 
@@ -402,7 +454,10 @@ def step_icons(args, vpk):
     for sname, lua_name in name_map.items():
         if sname.startswith("dual_"):
             continue
-        if lua_name not in primary or len(sname) < len(primary[lua_name]):
+        # the script named like the lua file wins (weapon_akm_gp25 over weapon_gp25), else the
+        # shortest name (weapon_sks over weapon_sks_riflegrenade)
+        cur = primary.get(lua_name)
+        if cur is None or sname == lua_name or (cur != lua_name and len(sname) < len(cur)):
             primary[lua_name] = sname
     for sname, lua_name in sorted(name_map.items()):
         if sname.startswith("dual_") or primary.get(lua_name) != sname:
