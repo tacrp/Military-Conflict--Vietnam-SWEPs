@@ -121,7 +121,14 @@ COUNTRY = {
 
 # Game EjectBrassType id -> MCV.ShellTypes index (lua/mcv/shared/sh_common.lua), by shell model.
 BRASS = {0: 11, 1: 12, 2: 4, 3: 5, 4: 6, 5: 1, 6: 7, 7: 8, 8: 9, 9: 10, 10: 15, 11: 17,
-         12: 16, 13: 18, 14: 3, 15: 2, 16: 13, 17: 14}
+         12: 16, 13: 18, 14: 3, 15: 2, 16: 13, 17: 14,
+         # newer game ids (2025+); the addon has no dedicated shell model for most, nearest case
+         19: 3, 20: 6, 21: 16, 22: 8, 23: 6, 24: 12, 26: 16, 27: 2, 28: 13, 29: 14, 30: 2, 31: 13}
+
+# WeaponTypes the mcv_base can drive. Grenades, mines, flamethrowers, melee and equipment need
+# their own bases and are skipped unless --all-types is given.
+GUN_TYPES = {"SubMachinegun", "Rifle", "Carbine", "Pistol", "Machinegun", "BattleRifle", "MachinePistol", "Shotgun",
+             "Revolver", "GrenadeLauncher", "SniperRifle", "RocketLauncher", "BoltActionRifle", "RifleGrenade"}
 
 # Muzzle flash effect names the addon uses (GMod stock effects; the game's particles need ARC9).
 MUZZLE = {
@@ -277,7 +284,10 @@ def generate(script_path, args):
     def reuse(key):
         return existing.get(key) if args.reuse else None
 
-    wtype = S.get("WeaponType", "Rifle")
+    wtype = S.get("WeaponType")
+    if args.guns_only and wtype not in GUN_TYPES:
+        return None, ["not a gun (WeaponType %s)" % wtype]
+    wtype = wtype or "Rifle"
     slot, subcat, holdtype = WEAPON_TYPE.get(wtype, (3, wtype, "ar2"))
     if wtype not in WEAPON_TYPE:
         warnings.append("unknown WeaponType %s" % wtype)
@@ -629,6 +639,8 @@ def main():
     ap.add_argument("--addon", default=ADDON, help="addon root (for existing lua files)")
     ap.add_argument("--no-reuse", dest="reuse", action="store_false", help="do not copy hand-tuned values from existing lua files")
     ap.add_argument("--only-new", action="store_true", help="skip weapons that already have a lua file")
+    ap.add_argument("--all-types", dest="guns_only", action="store_false",
+                    help="also convert grenades, mines, flamethrowers, melee and equipment (the base cannot drive them)")
     ap.add_argument("--no-merge", dest="merge", action="store_false",
                     help="write scripts that share a viewmodel with another script as their own mcv_<script>.lua")
     args = ap.parse_args()

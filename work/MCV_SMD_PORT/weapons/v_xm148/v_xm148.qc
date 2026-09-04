@@ -335,7 +335,171 @@ $animation "reload_i_a" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\reloa
 
 $animation "reload_e_a" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\reload_e_a.smd" {
 	fps 30
-	$sequence "runlayer" {
+}
+$animation "reload_e_i_a" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\reload_e_i_a.smd" {
+	fps 30
+}
+$animation "idletonearwall_a" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\idletonearwall_a.smd" {
+	fps 30
+}
+$animation "idletonearwall_i_a" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\idletonearwall_i_a.smd" {
+	fps 30
+}
+$animation "nearwall_a" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\nearwall_a.smd" {
+	fps 30
+}
+$animation "nearwall_i_a" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\nearwall_i_a.smd" {
+	fps 30
+}
+$animation "nearwalltoidle_a" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\nearwalltoidle_a.smd" {
+	fps 30
+}
+$animation "nearwalltoidle_i_a" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\nearwalltoidle_i_a.smd" {
+	fps 30
+}
+$animation "proneF" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\proneF.smd" {
+	fps 30
+}
+$animation "proneL" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\proneL.smd" {
+	fps 30
+}
+$animation "proneB" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\proneB.smd" {
+	fps 30
+}
+$animation "proneR" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\proneR.smd" {
+	fps 30
+}
+$animation "bash_a" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\bash_a.smd" {
+	fps 30
+}
+$animation "bash_i_a" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\bash_i_a.smd" {
+	fps 30
+}
+$animation "pickup_s_a" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\pickup_s_a.smd" {
+	fps 30
+}
+$animation "pickup_s_a_i" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\pickup_s_a_i.smd" {
+	fps 30
+}
+$animation "pickup_a" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\pickup_a.smd" {
+	fps 30
+}
+$animation "pickup_a_i" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\pickup_a_i.smd" {
+	fps 30
+}
+$animation "pickup_e_a" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\pickup_e_a.smd" {
+	fps 30
+}
+$animation "pickup_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\pickup_e_a_i.smd" {
+	fps 30
+}
+$animation "change_firemode_idle" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\change_firemode_idle.smd" {
+	fps 30
+}
+$animation "change_firemode_iron" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\change_firemode_iron.smd" {
+	fps 30
+}
+$animation "walkIdle_gren_a" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\walkIdle_gren_a.smd" {
+	fps 30
+	subtract "walkIdle_gren_a_corrective_animation" 0
+}
+$animation "walk_gren_a" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\walk_gren_a.smd" {
+	fps 30
+	subtract "walk_gren_a_corrective_animation" 0
+}
+$animation "irongl" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\irongl.smd" {
+	fps 30
+}
+$animation "gl_a" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\gl_a.smd" {
+	fps 30
+}
+$animation "idle_to_gl_a" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\idle_to_gl_a.smd" {
+	fps 30
+}
+$animation "idle_to_gl_i_a" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\idle_to_gl_i_a.smd" {
+	fps 30
+}
+$animation "gl_to_idle_a" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\gl_to_idle_a.smd" {
+	fps 30
+}
+$animation "gl_to_idle_i_a" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\gl_to_idle_i_a.smd" {
+	fps 30
+}
+$animation "gl_shoot_a" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\gl_shoot_a.smd" {
+	fps 30
+	subtract "gl_shoot_a_corrective_animation" 0
+}
+$animation "gl_shoot_ironsight_a" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\gl_shoot_ironsight_a.smd" {
+	fps 30
+	subtract "gl_shoot_ironsight_a_corrective_animation" 0
+}
+$animation "reload_secondary_a" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\reload_secondary_a.smd" {
+	fps 30
+}
+$animation "reload_secondary_i_a" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\reload_secondary_i_a.smd" {
+	fps 30
+}
+$animation "gl_draw_a" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\gl_draw_a.smd" {
+	fps 30
+}
+$animation "gl_draw_i_a" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\gl_draw_i_a.smd" {
+	fps 30
+}
+$animation "nearwall_gren_s_a" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\nearwall_gren_s_a.smd" {
+	fps 30
+}
+$animation "nearwall_gren_s_i_a" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\nearwall_gren_s_i_a.smd" {
+	fps 30
+}
+$animation "nearwall_gren_a" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\nearwall_gren_a.smd" {
+	fps 30
+}
+$animation "nearwall_gren_i_a" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\nearwall_gren_i_a.smd" {
+	fps 30
+}
+$animation "nearwall_gren_e_a" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\nearwall_gren_e_a.smd" {
+	fps 30
+}
+$animation "nearwall_gren_e_i_a" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\nearwall_gren_e_i_a.smd" {
+	fps 30
+}
+$animation "prone_g_F" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\prone_g_F.smd" {
+	fps 30
+}
+$animation "prone_g_L" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\prone_g_L.smd" {
+	fps 30
+}
+$animation "prone_g_B" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\prone_g_B.smd" {
+	fps 30
+}
+$animation "prone_g_R" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\prone_g_R.smd" {
+	fps 30
+}
+$animation "bashGrenade_a" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\bashGrenade_a.smd" {
+	fps 30
+}
+$animation "bashGrenade_i_a" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\bashGrenade_i_a.smd" {
+	fps 30
+}
+$animation "pickupstart_gren_a" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\pickupstart_gren_a.smd" {
+	fps 30
+}
+$animation "pickupstart_gren_i_a" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\pickupstart_gren_i_a.smd" {
+	fps 30
+}
+$animation "pickupend_gren_a" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\pickupend_gren_a.smd" {
+	fps 30
+}
+$animation "pickupend_gren_i_a" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\pickupend_gren_i_a.smd" {
+	fps 30
+}
+$animation "pickup_gren_a" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\pickup_gren_a.smd" {
+	fps 30
+}
+$animation "pickup_gren_i_a" "..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\pickup_gren_i_a.smd" {
+	fps 30
+}
+$sequence "runlayer" {
 	"runIdle_a"
 	"run_a"
 	blend "player_movement" 134 229

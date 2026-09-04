@@ -533,7 +533,32 @@ $animation "bayonet_s_a" "..\..\..\MCV_SMD_OG\weapons\v_m38_s\v_m38_s_anims\bayo
 
 $animation "bayonet_s_a_i" "..\..\..\MCV_SMD_OG\weapons\v_m38_s\v_m38_s_anims\bayonet_s_a_i.smd" {
 	fps 30
-	$sequence "hammerPosition" {
+}
+$animation "scope_adjust_idle" "..\..\..\MCV_SMD_OG\weapons\v_m38_s\v_m38_s_anims\scope_adjust_idle.smd" {
+	fps 30
+}
+$animation "scope_adjust_iron" "..\..\..\MCV_SMD_OG\weapons\v_m38_s\v_m38_s_anims\scope_adjust_iron.smd" {
+	fps 30
+}
+$animation "Charge_s" "..\..\..\MCV_SMD_OG\weapons\v_m38_s\v_m38_s_anims\Charge_s.smd" {
+	fps 30
+}
+$animation "Charge_s_i" "..\..\..\MCV_SMD_OG\weapons\v_m38_s\v_m38_s_anims\Charge_s_i.smd" {
+	fps 30
+}
+$animation "Charge" "..\..\..\MCV_SMD_OG\weapons\v_m38_s\v_m38_s_anims\Charge.smd" {
+	fps 30
+}
+$animation "Charge_i" "..\..\..\MCV_SMD_OG\weapons\v_m38_s\v_m38_s_anims\Charge_i.smd" {
+	fps 30
+}
+$animation "Charge_e" "..\..\..\MCV_SMD_OG\weapons\v_m38_s\v_m38_s_anims\Charge_e.smd" {
+	fps 30
+}
+$animation "Charge_e_i" "..\..\..\MCV_SMD_OG\weapons\v_m38_s\v_m38_s_anims\Charge_e_i.smd" {
+	fps 30
+}
+$sequence "hammerPosition" {
 	"hammerdefault"
 	"hammerforward"
 	autoplay

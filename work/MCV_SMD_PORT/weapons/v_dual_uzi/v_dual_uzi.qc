@@ -324,7 +324,6 @@ $animation "PoseDelta" "..\..\..\MCV_SMD_OG\weapons\v_dual_uzi\v_dual_uzi_anims\
 
 $animation "Default" "..\..\..\MCV_SMD_OG\weapons\v_dual_uzi\v_dual_uzi_anims\Default.smd" {
 	fps 30
-	loop
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "Default_corrective_animation" 0
 }
@@ -740,7 +739,65 @@ $animation "reload_ra_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_uzi\v_dual_uzi_anim
 
 $animation "reload_er_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_uzi\v_dual_uzi_anims\reload_er_a.smd" {
 	fps 30
-	$sequence "SlidePosition" {
+}
+$animation "reload_er_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_uzi\v_dual_uzi_anims\reload_er_a_i.smd" {
+	fps 30
+}
+$animation "reload_e_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_uzi\v_dual_uzi_anims\reload_e_a.smd" {
+	fps 30
+}
+$animation "reload_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_uzi\v_dual_uzi_anims\reload_e_a_i.smd" {
+	fps 30
+}
+$animation "nearwall_s_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_uzi\v_dual_uzi_anims\nearwall_s_a.smd" {
+	fps 30
+}
+$animation "nearwall_s_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_uzi\v_dual_uzi_anims\nearwall_s_a_i.smd" {
+	fps 30
+}
+$animation "nearwall_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_uzi\v_dual_uzi_anims\nearwall_a.smd" {
+	fps 30
+}
+$animation "nearwall_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_uzi\v_dual_uzi_anims\nearwall_a_i.smd" {
+	fps 30
+}
+$animation "nearwall_e_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_uzi\v_dual_uzi_anims\nearwall_e_a.smd" {
+	fps 30
+}
+$animation "nearwall_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_uzi\v_dual_uzi_anims\nearwall_e_a_i.smd" {
+	fps 30
+}
+$animation "proneF" "..\..\..\MCV_SMD_OG\weapons\v_dual_uzi\v_dual_uzi_anims\proneF.smd" {
+	fps 30
+}
+$animation "proneL" "..\..\..\MCV_SMD_OG\weapons\v_dual_uzi\v_dual_uzi_anims\proneL.smd" {
+	fps 30
+}
+$animation "proneB" "..\..\..\MCV_SMD_OG\weapons\v_dual_uzi\v_dual_uzi_anims\proneB.smd" {
+	fps 30
+}
+$animation "proneR" "..\..\..\MCV_SMD_OG\weapons\v_dual_uzi\v_dual_uzi_anims\proneR.smd" {
+	fps 30
+}
+$animation "pickup_s_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_uzi\v_dual_uzi_anims\pickup_s_a.smd" {
+	fps 30
+}
+$animation "pickup_s_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_uzi\v_dual_uzi_anims\pickup_s_a_i.smd" {
+	fps 30
+}
+$animation "pickup_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_uzi\v_dual_uzi_anims\pickup_a.smd" {
+	fps 30
+}
+$animation "pickup_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_uzi\v_dual_uzi_anims\pickup_a_i.smd" {
+	fps 30
+}
+$animation "pickup_e_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_uzi\v_dual_uzi_anims\pickup_e_a.smd" {
+	fps 30
+}
+$animation "pickup_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_uzi\v_dual_uzi_anims\pickup_e_a_i.smd" {
+	fps 30
+}
+$sequence "SlidePosition" {
 	"Default"
 	"RightEmpty"
 	"RightEmpty"

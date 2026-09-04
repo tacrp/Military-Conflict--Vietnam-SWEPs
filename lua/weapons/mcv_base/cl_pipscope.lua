@@ -44,7 +44,7 @@ local function reticleMask(mat)
     return m
 end
 // Magnification of the picture-in-picture image relative to the screen
-SWEP.RTScopeZoom = 2.5
+SWEP.RTScopeZoom = 1.25
 
 function SWEP:GetScopeFOV()
     return self.ScopeFOV

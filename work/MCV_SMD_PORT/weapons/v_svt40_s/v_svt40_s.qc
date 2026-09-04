@@ -238,7 +238,6 @@ $animation "PoseDelta" "..\..\..\MCV_SMD_OG\weapons\v_svt40_s\v_svt40_s_anims\Po
 
 $animation "Default" "..\..\..\MCV_SMD_OG\weapons\v_svt40_s\v_svt40_s_anims\Default.smd" {
 	fps 30
-	loop
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "Default_corrective_animation" 0
 }
@@ -377,7 +376,92 @@ $animation "nearwall_a" "..\..\..\MCV_SMD_OG\weapons\v_svt40_s\v_svt40_s_anims\n
 
 $animation "nearwall_a_i" "..\..\..\MCV_SMD_OG\weapons\v_svt40_s\v_svt40_s_anims\nearwall_a_i.smd" {
 	fps 30
-	$sequence "SlidePosition" {
+}
+$animation "nearwall_e_a" "..\..\..\MCV_SMD_OG\weapons\v_svt40_s\v_svt40_s_anims\nearwall_e_a.smd" {
+	fps 30
+}
+$animation "nearwall_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_svt40_s\v_svt40_s_anims\nearwall_e_a_i.smd" {
+	fps 30
+}
+$animation "change_firemode_idle" "..\..\..\MCV_SMD_OG\weapons\v_svt40_s\v_svt40_s_anims\change_firemode_idle.smd" {
+	fps 30
+}
+$animation "change_firemode_iron" "..\..\..\MCV_SMD_OG\weapons\v_svt40_s\v_svt40_s_anims\change_firemode_iron.smd" {
+	fps 30
+}
+$animation "proneF" "..\..\..\MCV_SMD_OG\weapons\v_svt40_s\v_svt40_s_anims\proneF.smd" {
+	fps 30
+}
+$animation "proneL" "..\..\..\MCV_SMD_OG\weapons\v_svt40_s\v_svt40_s_anims\proneL.smd" {
+	fps 30
+}
+$animation "proneB" "..\..\..\MCV_SMD_OG\weapons\v_svt40_s\v_svt40_s_anims\proneB.smd" {
+	fps 30
+}
+$animation "proneR" "..\..\..\MCV_SMD_OG\weapons\v_svt40_s\v_svt40_s_anims\proneR.smd" {
+	fps 30
+}
+$animation "pickup_s_a" "..\..\..\MCV_SMD_OG\weapons\v_svt40_s\v_svt40_s_anims\pickup_s_a.smd" {
+	fps 30
+}
+$animation "pickup_s_a_i" "..\..\..\MCV_SMD_OG\weapons\v_svt40_s\v_svt40_s_anims\pickup_s_a_i.smd" {
+	fps 30
+}
+$animation "pickup_a" "..\..\..\MCV_SMD_OG\weapons\v_svt40_s\v_svt40_s_anims\pickup_a.smd" {
+	fps 30
+}
+$animation "pickup_a_i" "..\..\..\MCV_SMD_OG\weapons\v_svt40_s\v_svt40_s_anims\pickup_a_i.smd" {
+	fps 30
+}
+$animation "pickup_e_a" "..\..\..\MCV_SMD_OG\weapons\v_svt40_s\v_svt40_s_anims\pickup_e_a.smd" {
+	fps 30
+}
+$animation "pickup_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_svt40_s\v_svt40_s_anims\pickup_e_a_i.smd" {
+	fps 30
+}
+$animation "bash_a" "..\..\..\MCV_SMD_OG\weapons\v_svt40_s\v_svt40_s_anims\bash_a.smd" {
+	fps 30
+}
+$animation "bash_a_i" "..\..\..\MCV_SMD_OG\weapons\v_svt40_s\v_svt40_s_anims\bash_a_i.smd" {
+	fps 30
+}
+$animation "bayonet_unequip_a" "..\..\..\MCV_SMD_OG\weapons\v_svt40_s\v_svt40_s_anims\bayonet_unequip_a.smd" {
+	fps 30
+}
+$animation "bayonet_unequip_a_i" "..\..\..\MCV_SMD_OG\weapons\v_svt40_s\v_svt40_s_anims\bayonet_unequip_a_i.smd" {
+	fps 30
+}
+$animation "bayonet_equip_a" "..\..\..\MCV_SMD_OG\weapons\v_svt40_s\v_svt40_s_anims\bayonet_equip_a.smd" {
+	fps 30
+}
+$animation "bayonet_equip_a_i" "..\..\..\MCV_SMD_OG\weapons\v_svt40_s\v_svt40_s_anims\bayonet_equip_a_i.smd" {
+	fps 30
+}
+$animation "scope_adjust_idle" "..\..\..\MCV_SMD_OG\weapons\v_svt40_s\v_svt40_s_anims\scope_adjust_idle.smd" {
+	fps 30
+}
+$animation "scope_adjust_iron" "..\..\..\MCV_SMD_OG\weapons\v_svt40_s\v_svt40_s_anims\scope_adjust_iron.smd" {
+	fps 30
+}
+$animation "charge_s_a" "..\..\..\MCV_SMD_OG\weapons\v_svt40_s\v_svt40_s_anims\charge_s_a.smd" {
+	fps 30
+}
+$animation "charge_s_a_i" "..\..\..\MCV_SMD_OG\weapons\v_svt40_s\v_svt40_s_anims\charge_s_a_i.smd" {
+	fps 30
+}
+$animation "charge_a" "..\..\..\MCV_SMD_OG\weapons\v_svt40_s\v_svt40_s_anims\charge_a.smd" {
+	fps 30
+}
+$animation "charge_a_i" "..\..\..\MCV_SMD_OG\weapons\v_svt40_s\v_svt40_s_anims\charge_a_i.smd" {
+	fps 30
+}
+$animation "charge_e" "..\..\..\MCV_SMD_OG\weapons\v_svt40_s\v_svt40_s_anims\charge_e.smd" {
+	fps 30
+}
+$animation "charge_e_i" "..\..\..\MCV_SMD_OG\weapons\v_svt40_s\v_svt40_s_anims\charge_e_i.smd" {
+	fps 30
+}
+$sequence "SlidePosition" {
 	"Default"
 	"Slideback"
 	blend "empty" 0.6 1

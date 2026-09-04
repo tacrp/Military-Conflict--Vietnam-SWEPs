@@ -330,7 +330,118 @@ $animation "nearwall_a" "..\..\..\MCV_SMD_OG\weapons\v_rpk\v_rpk_anims\nearwall_
 
 $animation "nearwall_a_i" "..\..\..\MCV_SMD_OG\weapons\v_rpk\v_rpk_anims\nearwall_a_i.smd" {
 	fps 30
-	$sequence "runlayer" {
+}
+$animation "nearwall_e_a" "..\..\..\MCV_SMD_OG\weapons\v_rpk\v_rpk_anims\nearwall_e_a.smd" {
+	fps 30
+}
+$animation "nearwall_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_rpk\v_rpk_anims\nearwall_e_a_i.smd" {
+	fps 30
+}
+$animation "proneF" "..\..\..\MCV_SMD_OG\weapons\v_rpk\v_rpk_anims\proneF.smd" {
+	fps 30
+}
+$animation "proneL" "..\..\..\MCV_SMD_OG\weapons\v_rpk\v_rpk_anims\proneL.smd" {
+	fps 30
+}
+$animation "proneB" "..\..\..\MCV_SMD_OG\weapons\v_rpk\v_rpk_anims\proneB.smd" {
+	fps 30
+}
+$animation "proneR" "..\..\..\MCV_SMD_OG\weapons\v_rpk\v_rpk_anims\proneR.smd" {
+	fps 30
+}
+$animation "pickup_s_a" "..\..\..\MCV_SMD_OG\weapons\v_rpk\v_rpk_anims\pickup_s_a.smd" {
+	fps 30
+}
+$animation "pickup_s_a_i" "..\..\..\MCV_SMD_OG\weapons\v_rpk\v_rpk_anims\pickup_s_a_i.smd" {
+	fps 30
+}
+$animation "pickup_a" "..\..\..\MCV_SMD_OG\weapons\v_rpk\v_rpk_anims\pickup_a.smd" {
+	fps 30
+}
+$animation "pickup_a_i" "..\..\..\MCV_SMD_OG\weapons\v_rpk\v_rpk_anims\pickup_a_i.smd" {
+	fps 30
+}
+$animation "pickup_e_a" "..\..\..\MCV_SMD_OG\weapons\v_rpk\v_rpk_anims\pickup_e_a.smd" {
+	fps 30
+}
+$animation "pickup_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_rpk\v_rpk_anims\pickup_e_a_i.smd" {
+	fps 30
+}
+$animation "change_firemode_idle" "..\..\..\MCV_SMD_OG\weapons\v_rpk\v_rpk_anims\change_firemode_idle.smd" {
+	fps 30
+}
+$animation "change_firemode_iron" "..\..\..\MCV_SMD_OG\weapons\v_rpk\v_rpk_anims\change_firemode_iron.smd" {
+	fps 30
+}
+$animation "deploy_s_a" "..\..\..\MCV_SMD_OG\weapons\v_rpk\v_rpk_anims\deploy_s_a.smd" {
+	fps 30
+}
+$animation "deploy_s_a_i" "..\..\..\MCV_SMD_OG\weapons\v_rpk\v_rpk_anims\deploy_s_a_i.smd" {
+	fps 30
+}
+$animation "deploy_a" "..\..\..\MCV_SMD_OG\weapons\v_rpk\v_rpk_anims\deploy_a.smd" {
+	fps 30
+}
+$animation "deploy_a__f60" "..\..\..\MCV_SMD_OG\weapons\v_rpk\v_rpk_anims\deploy_a.smd" {
+	fps 30
+	numframes 60
+}
+$animation "ironsightdeploy" "..\..\..\MCV_SMD_OG\weapons\v_rpk\v_rpk_anims\ironsightdeploy.smd" {
+	fps 30
+}
+$animation "ironsightdeploy__f60" "..\..\..\MCV_SMD_OG\weapons\v_rpk\v_rpk_anims\ironsightdeploy.smd" {
+	fps 30
+	numframes 60
+}
+$animation "shoot1_d_a" "..\..\..\MCV_SMD_OG\weapons\v_rpk\v_rpk_anims\shoot1_d_a.smd" {
+	fps 30
+	subtract "shoot1_d_a_corrective_animation" 0
+}
+$animation "shoot1_d_i_a" "..\..\..\MCV_SMD_OG\weapons\v_rpk\v_rpk_anims\shoot1_d_i_a.smd" {
+	fps 30
+	subtract "shoot1_d_i_a_corrective_animation" 0
+}
+$animation "shoot2_d_a" "..\..\..\MCV_SMD_OG\weapons\v_rpk\v_rpk_anims\shoot2_d_a.smd" {
+	fps 30
+	subtract "shoot2_d_a_corrective_animation" 0
+}
+$animation "shoot2_d_i_a" "..\..\..\MCV_SMD_OG\weapons\v_rpk\v_rpk_anims\shoot2_d_i_a.smd" {
+	fps 30
+	subtract "shoot2_d_i_a_corrective_animation" 0
+}
+$animation "shoot3_d_a" "..\..\..\MCV_SMD_OG\weapons\v_rpk\v_rpk_anims\shoot3_d_a.smd" {
+	fps 30
+	subtract "shoot3_d_a_corrective_animation" 0
+}
+$animation "shoot3_d_i_a" "..\..\..\MCV_SMD_OG\weapons\v_rpk\v_rpk_anims\shoot3_d_i_a.smd" {
+	fps 30
+	subtract "shoot3_d_i_a_corrective_animation" 0
+}
+$animation "deploy_e_a" "..\..\..\MCV_SMD_OG\weapons\v_rpk\v_rpk_anims\deploy_e_a.smd" {
+	fps 30
+}
+$animation "deploy_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_rpk\v_rpk_anims\deploy_e_a_i.smd" {
+	fps 30
+}
+$animation "proneF_d" "..\..\..\MCV_SMD_OG\weapons\v_rpk\v_rpk_anims\proneF_d.smd" {
+	fps 30
+}
+$animation "proneL_d" "..\..\..\MCV_SMD_OG\weapons\v_rpk\v_rpk_anims\proneL_d.smd" {
+	fps 30
+}
+$animation "proneB_d" "..\..\..\MCV_SMD_OG\weapons\v_rpk\v_rpk_anims\proneB_d.smd" {
+	fps 30
+}
+$animation "proneR_d" "..\..\..\MCV_SMD_OG\weapons\v_rpk\v_rpk_anims\proneR_d.smd" {
+	fps 30
+}
+$animation "change_firemode_idle_d" "..\..\..\MCV_SMD_OG\weapons\v_rpk\v_rpk_anims\change_firemode_idle_d.smd" {
+	fps 30
+}
+$animation "change_firemode_iron_d" "..\..\..\MCV_SMD_OG\weapons\v_rpk\v_rpk_anims\change_firemode_iron_d.smd" {
+	fps 30
+}
+$sequence "runlayer" {
 	"runIdle_a"
 	"run_a"
 	blend "player_movement" 130 223
@@ -673,8 +784,8 @@ $sequence "deploy" {
 }
 
 $sequence "deployshoot1" {
-	"deploy_a"
-	"ironsightdeploy"
+	"deploy_a__f60"
+	"ironsightdeploy__f60"
 	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
 	blend "ironsight" 0 1
 	blendwidth 2
@@ -693,8 +804,8 @@ $sequence "deployshoot1_pose" {
 }
 
 $sequence "deployshoot2" {
-	"deploy_a"
-	"ironsightdeploy"
+	"deploy_a__f60"
+	"ironsightdeploy__f60"
 	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
 	blend "ironsight" 0 1
 	blendwidth 2
@@ -713,8 +824,8 @@ $sequence "deployshoot2_pose" {
 }
 
 $sequence "deployshoot3" {
-	"deploy_a"
-	"ironsightdeploy"
+	"deploy_a__f60"
+	"ironsightdeploy__f60"
 	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
 	blend "ironsight" 0 1
 	blendwidth 2

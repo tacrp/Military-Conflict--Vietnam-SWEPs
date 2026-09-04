@@ -576,7 +576,6 @@ $animation "PoseDelta" "..\..\..\MCV_SMD_OG\weapons\v_dual_cz52\v_dual_cz52_anim
 
 $animation "DefaultSlide" "..\..\..\MCV_SMD_OG\weapons\v_dual_cz52\v_dual_cz52_anims\DefaultSlide.smd" {
 	fps 30
-	loop
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "DefaultSlide_corrective_animation" 0
 }
@@ -1126,7 +1125,59 @@ $animation "reload_re_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_cz52\v_dual_cz52_
 
 $animation "reload_e_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_cz52\v_dual_cz52_anims\reload_e_a.smd" {
 	fps 30
-	$sequence "SlidePosition" {
+}
+$animation "reload_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_cz52\v_dual_cz52_anims\reload_e_a_i.smd" {
+	fps 30
+}
+$animation "nearwall_s_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_cz52\v_dual_cz52_anims\nearwall_s_a.smd" {
+	fps 30
+}
+$animation "nearwall_s_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_cz52\v_dual_cz52_anims\nearwall_s_a_i.smd" {
+	fps 30
+}
+$animation "nearwall_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_cz52\v_dual_cz52_anims\nearwall_a.smd" {
+	fps 30
+}
+$animation "nearwall_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_cz52\v_dual_cz52_anims\nearwall_a_i.smd" {
+	fps 30
+}
+$animation "nearwall_e_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_cz52\v_dual_cz52_anims\nearwall_e_a.smd" {
+	fps 30
+}
+$animation "nearwall_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_cz52\v_dual_cz52_anims\nearwall_e_a_i.smd" {
+	fps 30
+}
+$animation "proneF" "..\..\..\MCV_SMD_OG\weapons\v_dual_cz52\v_dual_cz52_anims\proneF.smd" {
+	fps 30
+}
+$animation "proneL" "..\..\..\MCV_SMD_OG\weapons\v_dual_cz52\v_dual_cz52_anims\proneL.smd" {
+	fps 30
+}
+$animation "proneB" "..\..\..\MCV_SMD_OG\weapons\v_dual_cz52\v_dual_cz52_anims\proneB.smd" {
+	fps 30
+}
+$animation "proneR" "..\..\..\MCV_SMD_OG\weapons\v_dual_cz52\v_dual_cz52_anims\proneR.smd" {
+	fps 30
+}
+$animation "pickup_s_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_cz52\v_dual_cz52_anims\pickup_s_a.smd" {
+	fps 30
+}
+$animation "pickup_s_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_cz52\v_dual_cz52_anims\pickup_s_a_i.smd" {
+	fps 30
+}
+$animation "pickup_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_cz52\v_dual_cz52_anims\pickup_a.smd" {
+	fps 30
+}
+$animation "pickup_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_cz52\v_dual_cz52_anims\pickup_a_i.smd" {
+	fps 30
+}
+$animation "pickup_e_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_cz52\v_dual_cz52_anims\pickup_e_a.smd" {
+	fps 30
+}
+$animation "pickup_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_cz52\v_dual_cz52_anims\pickup_e_a_i.smd" {
+	fps 30
+}
+$sequence "SlidePosition" {
 	"DefaultSlide"
 	"RightEmpty"
 	"RightEmpty"

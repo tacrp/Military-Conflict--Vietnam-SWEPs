@@ -253,7 +253,6 @@ $animation "PoseDelta" "..\..\..\MCV_SMD_OG\weapons\v_m21\v_m21_anims\PoseDelta.
 
 $animation "Default" "..\..\..\MCV_SMD_OG\weapons\v_m21\v_m21_anims\Default.smd" {
 	fps 30
-	loop
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "Default_corrective_animation" 0
 }
@@ -488,7 +487,41 @@ $animation "bayonet_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_m21\v_m21_anims\bayone
 
 $animation "bayonet_s_a" "..\..\..\MCV_SMD_OG\weapons\v_m21\v_m21_anims\bayonet_s_a.smd" {
 	fps 30
-	$sequence "SlidePosition" {
+}
+$animation "bayonet_s_a_i" "..\..\..\MCV_SMD_OG\weapons\v_m21\v_m21_anims\bayonet_s_a_i.smd" {
+	fps 30
+}
+$animation "scope_adjust_idle" "..\..\..\MCV_SMD_OG\weapons\v_m21\v_m21_anims\scope_adjust_idle.smd" {
+	fps 30
+}
+$animation "scope_adjust_iron" "..\..\..\MCV_SMD_OG\weapons\v_m21\v_m21_anims\scope_adjust_iron.smd" {
+	fps 30
+}
+$animation "change_firemode_idle" "..\..\..\MCV_SMD_OG\weapons\v_m21\v_m21_anims\change_firemode_idle.smd" {
+	fps 30
+}
+$animation "change_firemode_iron" "..\..\..\MCV_SMD_OG\weapons\v_m21\v_m21_anims\change_firemode_iron.smd" {
+	fps 30
+}
+$animation "Charge_s" "..\..\..\MCV_SMD_OG\weapons\v_m21\v_m21_anims\Charge_s.smd" {
+	fps 30
+}
+$animation "Charge_s_i" "..\..\..\MCV_SMD_OG\weapons\v_m21\v_m21_anims\Charge_s_i.smd" {
+	fps 30
+}
+$animation "Charge" "..\..\..\MCV_SMD_OG\weapons\v_m21\v_m21_anims\Charge.smd" {
+	fps 30
+}
+$animation "Charge_i" "..\..\..\MCV_SMD_OG\weapons\v_m21\v_m21_anims\Charge_i.smd" {
+	fps 30
+}
+$animation "Charge_e" "..\..\..\MCV_SMD_OG\weapons\v_m21\v_m21_anims\Charge_e.smd" {
+	fps 30
+}
+$animation "Charge_e_i" "..\..\..\MCV_SMD_OG\weapons\v_m21\v_m21_anims\Charge_e_i.smd" {
+	fps 30
+}
+$sequence "SlidePosition" {
 	"Default"
 	"Slideback"
 	blend "empty" 0.6 1

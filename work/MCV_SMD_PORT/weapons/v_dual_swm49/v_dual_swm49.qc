@@ -385,7 +385,6 @@ $animation "Bullet1" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_anim
 
 $animation "Bullet0" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_anims\Bullet0.smd" {
 	fps 30
-	loop
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "Bullet0_corrective_animation" 0
 }
@@ -812,7 +811,122 @@ $animation "reload_r_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_a
 
 $animation "reload_r_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_anims\reload_r_a_i.smd" {
 	fps 30
-	$sequence "BulletCounter" {
+}
+$animation "reload_d_r_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_anims\reload_d_r_a.smd" {
+	fps 30
+}
+$animation "reload_d_r_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_anims\reload_d_r_a_i.smd" {
+	fps 30
+}
+$animation "nearwall_s_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_anims\nearwall_s_a.smd" {
+	fps 30
+}
+$animation "nearwall_s_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_anims\nearwall_s_a_i.smd" {
+	fps 30
+}
+$animation "nearwall_d_s_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_anims\nearwall_d_s_a.smd" {
+	fps 30
+}
+$animation "nearwall_d_s_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_anims\nearwall_d_s_a_i.smd" {
+	fps 30
+}
+$animation "nearwall_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_anims\nearwall_a.smd" {
+	fps 30
+}
+$animation "nearwall_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_anims\nearwall_a_i.smd" {
+	fps 30
+}
+$animation "nearwall_d_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_anims\nearwall_d_a.smd" {
+	fps 30
+}
+$animation "nearwall_d_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_anims\nearwall_d_a_i.smd" {
+	fps 30
+}
+$animation "nearwall_e_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_anims\nearwall_e_a.smd" {
+	fps 30
+}
+$animation "nearwall_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_anims\nearwall_e_a_i.smd" {
+	fps 30
+}
+$animation "nearwall_d_e_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_anims\nearwall_d_e_a.smd" {
+	fps 30
+}
+$animation "nearwall_d_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_anims\nearwall_d_e_a_i.smd" {
+	fps 30
+}
+$animation "proneF" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_anims\proneF.smd" {
+	fps 30
+}
+$animation "proneL" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_anims\proneL.smd" {
+	fps 30
+}
+$animation "proneB" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_anims\proneB.smd" {
+	fps 30
+}
+$animation "proneR" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_anims\proneR.smd" {
+	fps 30
+}
+$animation "pronedF" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_anims\pronedF.smd" {
+	fps 30
+}
+$animation "pronedL" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_anims\pronedL.smd" {
+	fps 30
+}
+$animation "pronedB" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_anims\pronedB.smd" {
+	fps 30
+}
+$animation "pronedR" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_anims\pronedR.smd" {
+	fps 30
+}
+$animation "pickup_s_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_anims\pickup_s_a.smd" {
+	fps 30
+}
+$animation "pickup_s_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_anims\pickup_s_a_i.smd" {
+	fps 30
+}
+$animation "pickup_d_s_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_anims\pickup_d_s_a.smd" {
+	fps 30
+}
+$animation "pickup_d_s_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_anims\pickup_d_s_a_i.smd" {
+	fps 30
+}
+$animation "pickup_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_anims\pickup_a.smd" {
+	fps 30
+}
+$animation "pickup_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_anims\pickup_a_i.smd" {
+	fps 30
+}
+$animation "pickup_d_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_anims\pickup_d_a.smd" {
+	fps 30
+}
+$animation "pickup_d_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_anims\pickup_d_a_i.smd" {
+	fps 30
+}
+$animation "pickup_e_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_anims\pickup_e_a.smd" {
+	fps 30
+}
+$animation "pickup_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_anims\pickup_e_a_i.smd" {
+	fps 30
+}
+$animation "pickup_d_e_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_anims\pickup_d_e_a.smd" {
+	fps 30
+}
+$animation "pickup_d_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_anims\pickup_d_e_a_i.smd" {
+	fps 30
+}
+$animation "change_firemode_todelayed_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_anims\change_firemode_todelayed_a.smd" {
+	fps 30
+}
+$animation "change_firemode_todelayed_iron_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_anims\change_firemode_todelayed_iron_a.smd" {
+	fps 30
+}
+$animation "change_firemode_tonormal_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_anims\change_firemode_tonormal_a.smd" {
+	fps 30
+}
+$animation "change_firemode_tonormal_iron_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_swm49\v_dual_swm49_anims\change_firemode_tonormal_iron_a.smd" {
+	fps 30
+}
+$sequence "BulletCounter" {
 	"Bullet0"
 	"Bullet1"
 	"Bullet2"

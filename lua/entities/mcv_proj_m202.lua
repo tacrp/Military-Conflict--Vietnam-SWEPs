@@ -20,12 +20,17 @@ ENT.TrailParticle = "rpg_missile_trail"
 
 ENT.Delay = 0
 
+ENT.Detonated = false
+
+ENT.DieTime = 0
+ENT.BurnTime = 3
+
 function ENT:Detonate()
     local attacker = self.Attacker or self:GetOwner() or self
     local mult = 1
     local dmg = 100
 
-    util.BlastDamage(self, attacker, self:GetPos(), 250, dmg * mult)
+    util.BlastDamage(self, attacker, self:GetPos(), 70, dmg * mult)
     self:FireBullets({
         Attacker = attacker,
         Damage = dmg * mult,
@@ -46,5 +51,29 @@ function ENT:Detonate()
 
     self:EmitSound("MCV_XM202MissileExplosionEffect.Sound")
 
-    self:Remove()
+    self:SetRenderMode(RENDERMODE_NONE)
+    self:StopParticles()
+    self:DrawShadow(false)
+
+    SafeRemoveEntityDelayed(self, self.BurnTime)
+    self:SetMoveType(MOVETYPE_NONE)
+    self.DieTime = CurTime()
+end
+
+function ENT:OnThink()
+    if self.Detonated then
+        local d = (CurTime() - self.DieTime) / self.BurnTime
+        d = 1 - d
+
+        local dmginfo = DamageInfo()
+        dmginfo:SetDamageType(DMG_BURN)
+        dmginfo:SetAttacker(self:GetOwner())
+        dmginfo:SetInflictor(self)
+        dmginfo:SetDamage(engine.TickInterval() * 500)
+        dmginfo:SetDamagePosition(self:GetPos())
+        dmginfo:SetDamageForce(Vector(0, 0, 0))
+        dmginfo:SetReportedPosition(self:GetPos())
+
+        util.BlastDamageInfo(dmginfo, self:GetPos(), d * 512)
+    end
 end

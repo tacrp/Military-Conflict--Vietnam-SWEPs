@@ -137,7 +137,7 @@ function ENT:GetImpactNormal()
             mask = MASK_SOLID,
         })
 
-        if tr.Hit then return tr.HitNormal end
+        if tr.Hit then return -tr.HitNormal end
     end
 
     return vector_up
@@ -182,7 +182,7 @@ end
 
 function ENT:PhysicsCollide(data, collider)
     // remember where and at what angle we hit, for the explosion effect
-    self.ImpactNormal = data.HitNormal
+    self.ImpactNormal = -data.HitNormal
     self.ImpactPos = data.HitPos
 
     if IsValid(data.HitEntity) and data.HitEntity:GetClass() == "func_breakable_surf" then
@@ -372,6 +372,8 @@ end
 local mat = Material("effects/ar2_altfire1b")
 
 function ENT:Draw()
+    if self.Detonated then return end
+
     self:StartTrail()
     self:DrawModel()
 

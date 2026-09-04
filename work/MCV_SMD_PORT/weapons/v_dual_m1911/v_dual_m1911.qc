@@ -340,7 +340,6 @@ $animation "PoseDelta" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1911\v_dual_m1911_an
 
 $animation "Default" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1911\v_dual_m1911_anims\Default.smd" {
 	fps 30
-	loop
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "Default_corrective_animation" 0
 }
@@ -823,7 +822,17 @@ $animation "pickup_s_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1911\v_dual_m1911
 $animation "pickup_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1911\v_dual_m1911_anims\pickup_a.smd" {
 	fps 30
 	loop
-	$sequence "SlidePosition" {
+}
+$animation "pickup_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1911\v_dual_m1911_anims\pickup_a_i.smd" {
+	fps 30
+}
+$animation "pickup_e_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1911\v_dual_m1911_anims\pickup_e_a.smd" {
+	fps 30
+}
+$animation "pickup_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1911\v_dual_m1911_anims\pickup_e_a_i.smd" {
+	fps 30
+}
+$sequence "SlidePosition" {
 	"Default"
 	"RightEmpty"
 	"RightEmpty"

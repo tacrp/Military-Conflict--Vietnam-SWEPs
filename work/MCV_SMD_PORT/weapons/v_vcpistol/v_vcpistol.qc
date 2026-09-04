@@ -314,7 +314,6 @@ $animation "Bullet1" "..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\Bu
 
 $animation "Bullet0" "..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\Bullet0.smd" {
 	fps 30
-	loop
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "Bullet0_corrective_animation" 0
 }
@@ -408,7 +407,84 @@ $animation "shoot1_ironsight_a" "..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpist
 
 $animation "boltpull2_d" "..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\boltpull2_d.smd" {
 	fps 30
-	$sequence "BulletCounter" {
+}
+$animation "boltpull1_o" "..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\boltpull1_o.smd" {
+	fps 30
+}
+$animation "boltpull2_o" "..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\boltpull2_o.smd" {
+	fps 30
+}
+$animation "boltpullIron2_o" "..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\boltpullIron2_o.smd" {
+	fps 30
+}
+$animation "boltpullIron1_o" "..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\boltpullIron1_o.smd" {
+	fps 30
+}
+$animation "boltpull1_a" "..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\boltpull1_a.smd" {
+	fps 30
+	subtract "boltpull1_a_corrective_animation" 0
+}
+$animation "boltpull2_a" "..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\boltpull2_a.smd" {
+	fps 30
+	subtract "boltpull2_a_corrective_animation" 0
+}
+$animation "boltpullIron2_a" "..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\boltpullIron2_a.smd" {
+	fps 30
+	subtract "boltpullIron2_a_corrective_animation" 0
+}
+$animation "boltpullIron1_a" "..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\boltpullIron1_a.smd" {
+	fps 30
+	subtract "boltpullIron1_a_corrective_animation" 0
+}
+$animation "nearwall_s_a" "..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\nearwall_s_a.smd" {
+	fps 30
+}
+$animation "nearwall_s_a_i" "..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\nearwall_s_a_i.smd" {
+	fps 30
+}
+$animation "nearwall_a" "..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\nearwall_a.smd" {
+	fps 30
+}
+$animation "nearwall_a_i" "..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\nearwall_a_i.smd" {
+	fps 30
+}
+$animation "nearwall_e_a" "..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\nearwall_e_a.smd" {
+	fps 30
+}
+$animation "nearwall_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\nearwall_e_a_i.smd" {
+	fps 30
+}
+$animation "proneF" "..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\proneF.smd" {
+	fps 30
+}
+$animation "proneL" "..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\proneL.smd" {
+	fps 30
+}
+$animation "proneB" "..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\proneB.smd" {
+	fps 30
+}
+$animation "proneR" "..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\proneR.smd" {
+	fps 30
+}
+$animation "pickup_s_a" "..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\pickup_s_a.smd" {
+	fps 30
+}
+$animation "pickup_s_a_i" "..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\pickup_s_a_i.smd" {
+	fps 30
+}
+$animation "pickup_a" "..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\pickup_a.smd" {
+	fps 30
+}
+$animation "pickup_a_i" "..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\pickup_a_i.smd" {
+	fps 30
+}
+$animation "pickup_e_a" "..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\pickup_e_a.smd" {
+	fps 30
+}
+$animation "pickup_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\pickup_e_a_i.smd" {
+	fps 30
+}
+$sequence "BulletCounter" {
 	"Bullet0"
 	"Bullet1"
 	"Bullet2"

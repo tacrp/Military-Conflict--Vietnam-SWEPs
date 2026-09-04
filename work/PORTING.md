@@ -295,6 +295,16 @@ reader) and the loose `scripts/` and `resource/` folders, and updates the addon 
 `work/rip` and `work/MCV_SMD_OG` are git-ignored (several GB). `work/rip/manifest.json` remembers
 the VPK CRC of every decompiled model so a later run only redoes what the game updated.
 
+Crowbar 0.68 (the command-line fork) has two quirks the port works around: after some `loop`
+animations it drops the closing brace and every later `$animation` definition. The QC parser
+ends a block at the next top-level `$` command, and `step_reconstruct_missing_anims` recreates
+plain `fps 30` definitions (with the `subtract` corrective when one exists) for every animation a
+sequence names that has an SMD on disk but no definition. All 558 game models compile with that.
+
+`port_weapon.py` converts guns only by default (`--all-types` for the rest): the game scripts also
+describe grenades, mines, flamethrowers, melee and equipment, which the mcv_base cannot drive.
+Brass ids the game added after 2024 (19 to 31) map to the nearest shell model the addon has.
+
 ### Game effects instead of stock ones
 
 The pack used GMod's stock muzzle flashes because the pcfs shipped without their materials.

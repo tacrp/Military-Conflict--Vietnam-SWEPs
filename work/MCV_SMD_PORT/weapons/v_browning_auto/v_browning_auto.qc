@@ -228,7 +228,6 @@ $animation "Default" "..\..\..\MCV_SMD_OG\weapons\v_browning_auto\v_browning_aut
 
 $animation "Slideback" "..\..\..\MCV_SMD_OG\weapons\v_browning_auto\v_browning_auto_anims\Slideback.smd" {
 	fps 30
-	loop
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "Slideback_corrective_animation" 0
 }
@@ -373,7 +372,56 @@ $animation "reload_ep_a" "..\..\..\MCV_SMD_OG\weapons\v_browning_auto\v_browning
 
 $animation "reload_ep_a_i" "..\..\..\MCV_SMD_OG\weapons\v_browning_auto\v_browning_auto_anims\reload_ep_a_i.smd" {
 	fps 30
-	$sequence "SlidePosition" {
+}
+$animation "nearwall_s_a" "..\..\..\MCV_SMD_OG\weapons\v_browning_auto\v_browning_auto_anims\nearwall_s_a.smd" {
+	fps 30
+}
+$animation "nearwall_s_a_i" "..\..\..\MCV_SMD_OG\weapons\v_browning_auto\v_browning_auto_anims\nearwall_s_a_i.smd" {
+	fps 30
+}
+$animation "nearwall_a" "..\..\..\MCV_SMD_OG\weapons\v_browning_auto\v_browning_auto_anims\nearwall_a.smd" {
+	fps 30
+}
+$animation "nearwall_a_i" "..\..\..\MCV_SMD_OG\weapons\v_browning_auto\v_browning_auto_anims\nearwall_a_i.smd" {
+	fps 30
+}
+$animation "nearwall_e_a" "..\..\..\MCV_SMD_OG\weapons\v_browning_auto\v_browning_auto_anims\nearwall_e_a.smd" {
+	fps 30
+}
+$animation "nearwall_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_browning_auto\v_browning_auto_anims\nearwall_e_a_i.smd" {
+	fps 30
+}
+$animation "proneF" "..\..\..\MCV_SMD_OG\weapons\v_browning_auto\v_browning_auto_anims\proneF.smd" {
+	fps 30
+}
+$animation "proneL" "..\..\..\MCV_SMD_OG\weapons\v_browning_auto\v_browning_auto_anims\proneL.smd" {
+	fps 30
+}
+$animation "proneB" "..\..\..\MCV_SMD_OG\weapons\v_browning_auto\v_browning_auto_anims\proneB.smd" {
+	fps 30
+}
+$animation "proneR" "..\..\..\MCV_SMD_OG\weapons\v_browning_auto\v_browning_auto_anims\proneR.smd" {
+	fps 30
+}
+$animation "pickup_s_a" "..\..\..\MCV_SMD_OG\weapons\v_browning_auto\v_browning_auto_anims\pickup_s_a.smd" {
+	fps 30
+}
+$animation "pickup_s_a_i" "..\..\..\MCV_SMD_OG\weapons\v_browning_auto\v_browning_auto_anims\pickup_s_a_i.smd" {
+	fps 30
+}
+$animation "pickup_a" "..\..\..\MCV_SMD_OG\weapons\v_browning_auto\v_browning_auto_anims\pickup_a.smd" {
+	fps 30
+}
+$animation "pickup_a_i" "..\..\..\MCV_SMD_OG\weapons\v_browning_auto\v_browning_auto_anims\pickup_a_i.smd" {
+	fps 30
+}
+$animation "pickup_e_a" "..\..\..\MCV_SMD_OG\weapons\v_browning_auto\v_browning_auto_anims\pickup_e_a.smd" {
+	fps 30
+}
+$animation "pickup_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_browning_auto\v_browning_auto_anims\pickup_e_a_i.smd" {
+	fps 30
+}
+$sequence "SlidePosition" {
 	"Slideback"
 	"Default"
 	blend "ammo_fraction" 0 0.01

@@ -234,7 +234,10 @@ class Block:
         return head + " {\n" + "".join("\t%s\n" % l for l in self.lines) + "}\n"
 
 
-BLOCK_RE = re.compile(r'^\$(sequence|animation)\s+"([^"]+)"(?:\s+"([^"]+)")?\s*\{(.*?)^\}[ \t]*\n?', re.S | re.M)
+# A block ends at a line-start "}" or, for the blocks Crowbar 0.68 leaves unterminated (it
+# drops the brace after some `loop` animations and closes it much later), at the next
+# top-level "$" command.
+BLOCK_RE = re.compile(r'^\$(sequence|animation)\s+"([^"]+)"(?:\s+"([^"]+)")?\s*\{(.*?)(?:^\}[ \t]*\n?|(?=^\$))', re.S | re.M)
 
 
 class QC:
@@ -250,7 +253,6 @@ class QC:
             pos = m.end()
         if pos < len(text):
             self.items.append(text[pos:])
-
     def blocks(self, kind=None):
         return [b for b in self.items if isinstance(b, Block) and (kind is None or b.kind == kind)]
 
@@ -421,6 +423,45 @@ def step_paths(qc, ctx):
             m = re.match(r'^"([^"]+\.smd)"$', l)
             if m:
                 b.lines[i] = '"%s"' % ctx.out_smd_path(m.group(1))
+
+
+def step_reconstruct_missing_anims(qc, ctx):
+    """Crowbar 0.68 stops writing $animation blocks after an animation with `loop` (the block is
+    left unterminated and every later definition is missing), while the sequences still refer to
+    them by name and the SMDs are on disk. Recreate a plain definition for each such name."""
+    defined = {b.name for b in qc.blocks("animation")}
+    anim_dirs = []
+    for b in qc.blocks("animation"):
+        d = os.path.dirname(b.path.replace("/", "\\")) if b.path else ""
+        if d and d not in anim_dirs:
+            anim_dirs.append(d)
+    first_seq = next((b for b in qc.blocks("sequence")), None)
+    if first_seq is None:
+        return
+    made = []
+    for seq in qc.blocks("sequence"):
+        for a in seq.anims():
+            if a in defined or a.lower().endswith(".smd"):
+                continue
+            path = None
+            for d in anim_dirs:
+                cand = os.path.normpath(os.path.join(ctx.out_dir, (d + "\\" + a + ".smd").replace("\\", os.sep)))
+                if os.path.isfile(cand):
+                    path = d + "\\" + a + ".smd"
+                    break
+            if path is None:
+                ctx.warn("sequence %s uses animation %s which is neither defined nor on disk" % (seq.name, a))
+                defined.add(a)
+                continue
+            lines = ["fps 30"]
+            corr = a + "_corrective_animation"
+            if corr in defined:
+                lines.append('subtract "%s" 0' % corr)
+            qc.insert_before(first_seq, Block("animation", a, path, lines))
+            defined.add(a)
+            made.append(a)
+    if made:
+        ctx.note("reconstructed %d $animation definitions Crowbar 0.68 dropped: %s" % (len(made), ", ".join(made[:12])))
 
 
 def step_include(qc, ctx):
@@ -1145,6 +1186,7 @@ def port_one(args, og_dir):
     ctx.shell_dual = ctx.mode == "dual" and "ACT_SHOTGUN_RELOAD_START" in acts
 
     step_paths(qc, ctx)
+    step_reconstruct_missing_anims(qc, ctx)
     step_include(qc, ctx)
     step_strip_ik(qc, ctx)
     step_activities(qc, ctx)

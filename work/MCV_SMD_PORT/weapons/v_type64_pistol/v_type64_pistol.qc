@@ -313,7 +313,6 @@ $animation "Bullet1" "..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pisto
 
 $animation "Bullet0" "..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\Bullet0.smd" {
 	fps 30
-	loop
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "Bullet0_corrective_animation" 0
 }
@@ -466,7 +465,47 @@ $animation "nearwall_s_a_i" "..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type6
 $animation "nearwall_a" "..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\nearwall_a.smd" {
 	fps 30
 	loop
-	$sequence "BulletCounter" {
+}
+$animation "nearwall_a_i" "..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\nearwall_a_i.smd" {
+	fps 30
+}
+$animation "nearwall_e_a" "..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\nearwall_e_a.smd" {
+	fps 30
+}
+$animation "nearwall_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\nearwall_e_a_i.smd" {
+	fps 30
+}
+$animation "proneF" "..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\proneF.smd" {
+	fps 30
+}
+$animation "proneL" "..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\proneL.smd" {
+	fps 30
+}
+$animation "proneB" "..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\proneB.smd" {
+	fps 30
+}
+$animation "proneR" "..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\proneR.smd" {
+	fps 30
+}
+$animation "pickup_s_a" "..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\pickup_s_a.smd" {
+	fps 30
+}
+$animation "pickup_s_a_i" "..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\pickup_s_a_i.smd" {
+	fps 30
+}
+$animation "pickup_a" "..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\pickup_a.smd" {
+	fps 30
+}
+$animation "pickup_a_i" "..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\pickup_a_i.smd" {
+	fps 30
+}
+$animation "pickup_e_a" "..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\pickup_e_a.smd" {
+	fps 30
+}
+$animation "pickup_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\pickup_e_a_i.smd" {
+	fps 30
+}
+$sequence "BulletCounter" {
 	"Bullet0"
 	"Bullet1"
 	"Bullet1"

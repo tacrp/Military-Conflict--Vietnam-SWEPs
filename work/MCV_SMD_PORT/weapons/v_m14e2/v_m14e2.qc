@@ -246,7 +246,6 @@ $animation "PoseDelta" "..\..\..\MCV_SMD_OG\weapons\v_m14e2\v_m14e2_anims\PoseDe
 
 $animation "Default" "..\..\..\MCV_SMD_OG\weapons\v_m14e2\v_m14e2_anims\Default.smd" {
 	fps 30
-	loop
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "Default_corrective_animation" 0
 }
@@ -517,7 +516,35 @@ $animation "shoot3_d_i_a" "..\..\..\MCV_SMD_OG\weapons\v_m14e2\v_m14e2_anims\sho
 
 $animation "deploy_e_a" "..\..\..\MCV_SMD_OG\weapons\v_m14e2\v_m14e2_anims\deploy_e_a.smd" {
 	fps 40
-	$sequence "SlidePosition" {
+}
+$animation "deploy_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_m14e2\v_m14e2_anims\deploy_e_a_i.smd" {
+	fps 30
+}
+$animation "proneF_d" "..\..\..\MCV_SMD_OG\weapons\v_m14e2\v_m14e2_anims\proneF_d.smd" {
+	fps 30
+}
+$animation "proneL_d" "..\..\..\MCV_SMD_OG\weapons\v_m14e2\v_m14e2_anims\proneL_d.smd" {
+	fps 30
+}
+$animation "proneB_d" "..\..\..\MCV_SMD_OG\weapons\v_m14e2\v_m14e2_anims\proneB_d.smd" {
+	fps 30
+}
+$animation "proneR_d" "..\..\..\MCV_SMD_OG\weapons\v_m14e2\v_m14e2_anims\proneR_d.smd" {
+	fps 30
+}
+$animation "change_firemode_idle_d" "..\..\..\MCV_SMD_OG\weapons\v_m14e2\v_m14e2_anims\change_firemode_idle_d.smd" {
+	fps 30
+}
+$animation "change_firemode_iron_d" "..\..\..\MCV_SMD_OG\weapons\v_m14e2\v_m14e2_anims\change_firemode_iron_d.smd" {
+	fps 30
+}
+$animation "change_firemode_idle" "..\..\..\MCV_SMD_OG\weapons\v_m14e2\v_m14e2_anims\change_firemode_idle.smd" {
+	fps 30
+}
+$animation "change_firemode_iron" "..\..\..\MCV_SMD_OG\weapons\v_m14e2\v_m14e2_anims\change_firemode_iron.smd" {
+	fps 30
+}
+$sequence "SlidePosition" {
 	"Default"
 	"Slideback"
 	blend "empty" 0.6 1

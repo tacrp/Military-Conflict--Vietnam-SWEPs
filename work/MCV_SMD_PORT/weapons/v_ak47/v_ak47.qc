@@ -352,7 +352,59 @@ $animation "pickup_s_a_i" "..\..\..\MCV_SMD_OG\weapons\v_ak47\v_ak47_anims\picku
 $animation "pickup_a" "..\..\..\MCV_SMD_OG\weapons\v_ak47\v_ak47_anims\pickup_a.smd" {
 	fps 30
 	loop
-	$sequence "runlayer" {
+}
+$animation "pickup_a_i" "..\..\..\MCV_SMD_OG\weapons\v_ak47\v_ak47_anims\pickup_a_i.smd" {
+	fps 30
+}
+$animation "pickup_e_a" "..\..\..\MCV_SMD_OG\weapons\v_ak47\v_ak47_anims\pickup_e_a.smd" {
+	fps 30
+}
+$animation "pickup_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_ak47\v_ak47_anims\pickup_e_a_i.smd" {
+	fps 30
+}
+$animation "bayonet_e_a" "..\..\..\MCV_SMD_OG\weapons\v_ak47\v_ak47_anims\bayonet_e_a.smd" {
+	fps 30
+}
+$animation "bayonet_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_ak47\v_ak47_anims\bayonet_e_a_i.smd" {
+	fps 30
+}
+$animation "bayonet_s_a" "..\..\..\MCV_SMD_OG\weapons\v_ak47\v_ak47_anims\bayonet_s_a.smd" {
+	fps 30
+}
+$animation "bayonet_s_a_i" "..\..\..\MCV_SMD_OG\weapons\v_ak47\v_ak47_anims\bayonet_s_a_i.smd" {
+	fps 30
+}
+$animation "change_firemode_idle" "..\..\..\MCV_SMD_OG\weapons\v_ak47\v_ak47_anims\change_firemode_idle.smd" {
+	fps 30
+}
+$animation "change_firemode_iron" "..\..\..\MCV_SMD_OG\weapons\v_ak47\v_ak47_anims\change_firemode_iron.smd" {
+	fps 30
+}
+$animation "bayonet_attack_a" "..\..\..\MCV_SMD_OG\weapons\v_ak47\v_ak47_anims\bayonet_attack_a.smd" {
+	fps 30
+}
+$animation "bayonet_attack_a_i" "..\..\..\MCV_SMD_OG\weapons\v_ak47\v_ak47_anims\bayonet_attack_a_i.smd" {
+	fps 30
+}
+$animation "Charge_s_a" "..\..\..\MCV_SMD_OG\weapons\v_ak47\v_ak47_anims\Charge_s_a.smd" {
+	fps 30
+}
+$animation "Charge_s_a_i" "..\..\..\MCV_SMD_OG\weapons\v_ak47\v_ak47_anims\Charge_s_a_i.smd" {
+	fps 30
+}
+$animation "Charge_l_a" "..\..\..\MCV_SMD_OG\weapons\v_ak47\v_ak47_anims\Charge_l_a.smd" {
+	fps 30
+}
+$animation "Charge_l_a_i" "..\..\..\MCV_SMD_OG\weapons\v_ak47\v_ak47_anims\Charge_l_a_i.smd" {
+	fps 30
+}
+$animation "Charge_e_a" "..\..\..\MCV_SMD_OG\weapons\v_ak47\v_ak47_anims\Charge_e_a.smd" {
+	fps 30
+}
+$animation "Charge_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_ak47\v_ak47_anims\Charge_e_a_i.smd" {
+	fps 30
+}
+$sequence "runlayer" {
 	"runIdle_a"
 	"run_a"
 	blend "player_movement" 138 232

@@ -249,7 +249,6 @@ $animation "PoseDelta" "..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\PoseDe
 
 $animation "Default" "..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\Default.smd" {
 	fps 30
-	loop
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "Default_corrective_animation" 0
 }
@@ -438,7 +437,61 @@ $animation "bayonet_unequip_a" "..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anim
 
 $animation "bayonet_unequip_a_i" "..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\bayonet_unequip_a_i.smd" {
 	fps 30
-	$sequence "SlidePosition" {
+}
+$animation "bayonet_equip_a" "..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\bayonet_equip_a.smd" {
+	fps 30
+}
+$animation "bayonet_equip_a_i" "..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\bayonet_equip_a_i.smd" {
+	fps 30
+}
+$animation "bayonet_bash_a" "..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\bayonet_bash_a.smd" {
+	fps 30
+}
+$animation "bayonet_bash_a_i" "..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\bayonet_bash_a_i.smd" {
+	fps 30
+}
+$animation "grenade_ironsight" "..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\grenade_ironsight.smd" {
+	fps 30
+}
+$animation "gren_shoot1_a" "..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\gren_shoot1_a.smd" {
+	fps 30
+	subtract "gren_shoot1_a_corrective_animation" 0
+}
+$animation "gren_shoot1_ironsight_a" "..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\gren_shoot1_ironsight_a.smd" {
+	fps 30
+	subtract "gren_shoot1_ironsight_a_corrective_animation" 0
+}
+$animation "gren_reload_a" "..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\gren_reload_a.smd" {
+	fps 30
+}
+$animation "gren_reload_a_i" "..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\gren_reload_a_i.smd" {
+	fps 30
+}
+$animation "scope_adjust_idle" "..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\scope_adjust_idle.smd" {
+	fps 30
+}
+$animation "scope_adjust_iron" "..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\scope_adjust_iron.smd" {
+	fps 30
+}
+$animation "ChargeStart_a" "..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\ChargeStart_a.smd" {
+	fps 30
+}
+$animation "ChargeStart_a_i" "..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\ChargeStart_a_i.smd" {
+	fps 30
+}
+$animation "ChargeLoop_a" "..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\ChargeLoop_a.smd" {
+	fps 30
+}
+$animation "ChargeLoop_a_i" "..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\ChargeLoop_a_i.smd" {
+	fps 30
+}
+$animation "ChargeEnd_a" "..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\ChargeEnd_a.smd" {
+	fps 30
+}
+$animation "ChargeEnd_a_i" "..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\ChargeEnd_a_i.smd" {
+	fps 30
+}
+$sequence "SlidePosition" {
 	"Default"
 	"Slideback"
 	blend "empty" 0.6 1

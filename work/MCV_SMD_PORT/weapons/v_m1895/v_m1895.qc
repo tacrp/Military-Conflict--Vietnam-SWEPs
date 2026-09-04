@@ -481,7 +481,143 @@ $animation "nearwall_a" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\nearw
 
 $animation "w_nearwall_a" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\w_nearwall_a.smd" {
 	fps 30
-	$sequence "runlayer" {
+}
+$animation "nearwall_a_i" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\nearwall_a_i.smd" {
+	fps 30
+}
+$animation "d_nearwall_a_i" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\d_nearwall_a_i.smd" {
+	fps 30
+}
+$animation "w_nearwall_a_i" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\w_nearwall_a_i.smd" {
+	fps 30
+}
+$animation "nearwall_e_a" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\nearwall_e_a.smd" {
+	fps 30
+}
+$animation "nearwall_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\nearwall_e_a_i.smd" {
+	fps 30
+}
+$animation "d_nearwall_e_a" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\d_nearwall_e_a.smd" {
+	fps 30
+}
+$animation "d_nearwall_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\d_nearwall_e_a_i.smd" {
+	fps 30
+}
+$animation "w_nearwall_e_a" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\w_nearwall_e_a.smd" {
+	fps 30
+}
+$animation "w_nearwall_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\w_nearwall_e_a_i.smd" {
+	fps 30
+}
+$animation "proneF" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\proneF.smd" {
+	fps 30
+}
+$animation "proneL" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\proneL.smd" {
+	fps 30
+}
+$animation "proneB" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\proneB.smd" {
+	fps 30
+}
+$animation "proneR" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\proneR.smd" {
+	fps 30
+}
+$animation "d_proneF" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\d_proneF.smd" {
+	fps 30
+}
+$animation "d_proneL" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\d_proneL.smd" {
+	fps 30
+}
+$animation "d_proneB" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\d_proneB.smd" {
+	fps 30
+}
+$animation "d_proneR" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\d_proneR.smd" {
+	fps 30
+}
+$animation "w_proneF" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\w_proneF.smd" {
+	fps 30
+}
+$animation "w_proneL" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\w_proneL.smd" {
+	fps 30
+}
+$animation "w_proneB" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\w_proneB.smd" {
+	fps 30
+}
+$animation "w_proneR" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\w_proneR.smd" {
+	fps 30
+}
+$animation "pickup_s_a" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\pickup_s_a.smd" {
+	fps 30
+}
+$animation "pickup_s_a_i" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\pickup_s_a_i.smd" {
+	fps 30
+}
+$animation "d_pickup_s_a" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\d_pickup_s_a.smd" {
+	fps 30
+}
+$animation "d_pickup_s_a_i" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\d_pickup_s_a_i.smd" {
+	fps 30
+}
+$animation "w_pickup_s_a" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\w_pickup_s_a.smd" {
+	fps 30
+}
+$animation "w_pickup_s_a_i" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\w_pickup_s_a_i.smd" {
+	fps 30
+}
+$animation "pickup_a" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\pickup_a.smd" {
+	fps 30
+}
+$animation "pickup_a_i" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\pickup_a_i.smd" {
+	fps 30
+}
+$animation "d_pickup_a" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\d_pickup_a.smd" {
+	fps 30
+}
+$animation "d_pickup_a_i" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\d_pickup_a_i.smd" {
+	fps 30
+}
+$animation "w_pickup_a" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\w_pickup_a.smd" {
+	fps 30
+}
+$animation "w_pickup_a_i" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\w_pickup_a_i.smd" {
+	fps 30
+}
+$animation "pickup_e_a" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\pickup_e_a.smd" {
+	fps 30
+}
+$animation "pickup_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\pickup_e_a_i.smd" {
+	fps 30
+}
+$animation "d_pickup_e_a" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\d_pickup_e_a.smd" {
+	fps 30
+}
+$animation "d_pickup_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\d_pickup_e_a_i.smd" {
+	fps 30
+}
+$animation "w_pickup_e_a" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\w_pickup_e_a.smd" {
+	fps 30
+}
+$animation "w_pickup_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\w_pickup_e_a_i.smd" {
+	fps 30
+}
+$animation "change_firemode_towestern_a" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\change_firemode_towestern_a.smd" {
+	fps 30
+}
+$animation "change_firemode_towestern_iron_a" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\change_firemode_towestern_iron_a.smd" {
+	fps 30
+}
+$animation "change_firemode_todelayed_a" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\change_firemode_todelayed_a.smd" {
+	fps 30
+}
+$animation "change_firemode_todelayed_iron_a" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\change_firemode_todelayed_iron_a.smd" {
+	fps 30
+}
+$animation "change_firemode_tonormal_a" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\change_firemode_tonormal_a.smd" {
+	fps 30
+}
+$animation "change_firemode_tonormal_iron_a" "..\..\..\MCV_SMD_OG\weapons\v_m1895\v_m1895_anims\change_firemode_tonormal_iron_a.smd" {
+	fps 30
+}
+$sequence "runlayer" {
 	"runIdle_a"
 	"run_a"
 	blend "player_movement" 161 260

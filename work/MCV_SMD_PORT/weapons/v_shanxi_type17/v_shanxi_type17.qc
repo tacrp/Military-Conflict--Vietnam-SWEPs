@@ -243,7 +243,6 @@ $animation "PoseDelta" "..\..\..\MCV_SMD_OG\weapons\v_shanxi_type17\v_shanxi_typ
 
 $animation "Default" "..\..\..\MCV_SMD_OG\weapons\v_shanxi_type17\v_shanxi_type17_anims\Default.smd" {
 	fps 30
-	loop
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "Default_corrective_animation" 0
 }
@@ -481,7 +480,17 @@ $animation "pickup_s_a_i" "..\..\..\MCV_SMD_OG\weapons\v_shanxi_type17\v_shanxi_
 $animation "pickup_a" "..\..\..\MCV_SMD_OG\weapons\v_shanxi_type17\v_shanxi_type17_anims\pickup_a.smd" {
 	fps 30
 	loop
-	$sequence "SlidePosition" {
+}
+$animation "pickup_a_i" "..\..\..\MCV_SMD_OG\weapons\v_shanxi_type17\v_shanxi_type17_anims\pickup_a_i.smd" {
+	fps 30
+}
+$animation "pickup_e_a" "..\..\..\MCV_SMD_OG\weapons\v_shanxi_type17\v_shanxi_type17_anims\pickup_e_a.smd" {
+	fps 30
+}
+$animation "pickup_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_shanxi_type17\v_shanxi_type17_anims\pickup_e_a_i.smd" {
+	fps 30
+}
+$sequence "SlidePosition" {
 	"Default"
 	"Slideback"
 	blend "empty" 0.6 1

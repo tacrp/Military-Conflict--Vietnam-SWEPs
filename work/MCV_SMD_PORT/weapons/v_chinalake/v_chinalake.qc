@@ -341,7 +341,44 @@ $animation "nearwall_a" "..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_ani
 
 $animation "nearwall_a_i" "..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\nearwall_a_i.smd" {
 	fps 30
-	$sequence "runlayer" {
+}
+$animation "nearwall_e_a" "..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\nearwall_e_a.smd" {
+	fps 30
+}
+$animation "nearwall_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\nearwall_e_a_i.smd" {
+	fps 30
+}
+$animation "proneF" "..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\proneF.smd" {
+	fps 30
+}
+$animation "proneL" "..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\proneL.smd" {
+	fps 30
+}
+$animation "proneB" "..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\proneB.smd" {
+	fps 30
+}
+$animation "proneR" "..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\proneR.smd" {
+	fps 30
+}
+$animation "pickup_s_a" "..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\pickup_s_a.smd" {
+	fps 30
+}
+$animation "pickup_s_a_i" "..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\pickup_s_a_i.smd" {
+	fps 30
+}
+$animation "pickup_a" "..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\pickup_a.smd" {
+	fps 30
+}
+$animation "pickup_a_i" "..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\pickup_a_i.smd" {
+	fps 30
+}
+$animation "pickup_e_a" "..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\pickup_e_a.smd" {
+	fps 30
+}
+$animation "pickup_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\pickup_e_a_i.smd" {
+	fps 30
+}
+$sequence "runlayer" {
 	"runIdle_a"
 	"run_a"
 	blend "player_movement" 113 203

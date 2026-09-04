@@ -581,7 +581,35 @@ $animation "bayonet_unequip_a_i" "..\..\..\MCV_SMD_OG\weapons\v_vz24\v_vz24_anim
 
 $animation "bayonet_equip_a" "..\..\..\MCV_SMD_OG\weapons\v_vz24\v_vz24_anims\bayonet_equip_a.smd" {
 	fps 30
-	$sequence "runlayer" {
+}
+$animation "bayonet_equip_a_i" "..\..\..\MCV_SMD_OG\weapons\v_vz24\v_vz24_anims\bayonet_equip_a_i.smd" {
+	fps 30
+}
+$animation "scope_adjust_idle" "..\..\..\MCV_SMD_OG\weapons\v_vz24\v_vz24_anims\scope_adjust_idle.smd" {
+	fps 30
+}
+$animation "scope_adjust_iron" "..\..\..\MCV_SMD_OG\weapons\v_vz24\v_vz24_anims\scope_adjust_iron.smd" {
+	fps 30
+}
+$animation "charge_s_a" "..\..\..\MCV_SMD_OG\weapons\v_vz24\v_vz24_anims\charge_s_a.smd" {
+	fps 30
+}
+$animation "charge_s_a_i" "..\..\..\MCV_SMD_OG\weapons\v_vz24\v_vz24_anims\charge_s_a_i.smd" {
+	fps 30
+}
+$animation "charge_a" "..\..\..\MCV_SMD_OG\weapons\v_vz24\v_vz24_anims\charge_a.smd" {
+	fps 30
+}
+$animation "charge_a_i" "..\..\..\MCV_SMD_OG\weapons\v_vz24\v_vz24_anims\charge_a_i.smd" {
+	fps 30
+}
+$animation "charge_e" "..\..\..\MCV_SMD_OG\weapons\v_vz24\v_vz24_anims\charge_e.smd" {
+	fps 30
+}
+$animation "charge_e_i" "..\..\..\MCV_SMD_OG\weapons\v_vz24\v_vz24_anims\charge_e_i.smd" {
+	fps 30
+}
+$sequence "runlayer" {
 	"runIdle_a"
 	"run_a"
 	blend "player_movement" 138 233

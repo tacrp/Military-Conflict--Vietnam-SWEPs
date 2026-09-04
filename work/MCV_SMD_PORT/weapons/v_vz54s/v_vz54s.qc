@@ -398,7 +398,139 @@ $animation "reloadstart_empty" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anim
 
 $animation "reloadstart_full" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\reloadstart_full.smd" {
 	fps 30
-	$sequence "hammerPosition" {
+}
+$animation "reloadstart_empty_i" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\reloadstart_empty_i.smd" {
+	fps 30
+}
+$animation "reloadstart_full_i" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\reloadstart_full_i.smd" {
+	fps 30
+}
+$animation "reloadinsert_empty" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\reloadinsert_empty.smd" {
+	fps 30
+}
+$animation "reloadinsert_full" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\reloadinsert_full.smd" {
+	fps 30
+}
+$animation "reloadinsert_empty_i" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\reloadinsert_empty_i.smd" {
+	fps 30
+}
+$animation "reloadinsert_full_i" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\reloadinsert_full_i.smd" {
+	fps 30
+}
+$animation "reloadend" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\reloadend.smd" {
+	fps 30
+}
+$animation "reloadend_i" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\reloadend_i.smd" {
+	fps 30
+}
+$animation "nearwall_s_a" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\nearwall_s_a.smd" {
+	fps 30
+}
+$animation "nearwall_s_a_i" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\nearwall_s_a_i.smd" {
+	fps 30
+}
+$animation "nearwall_a" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\nearwall_a.smd" {
+	fps 30
+}
+$animation "nearwall_a_i" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\nearwall_a_i.smd" {
+	fps 30
+}
+$animation "nearwall_e_a" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\nearwall_e_a.smd" {
+	fps 30
+}
+$animation "nearwall_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\nearwall_e_a_i.smd" {
+	fps 30
+}
+$animation "proneF" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\proneF.smd" {
+	fps 30
+}
+$animation "proneL" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\proneL.smd" {
+	fps 30
+}
+$animation "proneB" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\proneB.smd" {
+	fps 30
+}
+$animation "proneR" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\proneR.smd" {
+	fps 30
+}
+$animation "pickup_s_a" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\pickup_s_a.smd" {
+	fps 30
+}
+$animation "pickup_s_a_i" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\pickup_s_a_i.smd" {
+	fps 30
+}
+$animation "pickup_a" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\pickup_a.smd" {
+	fps 30
+}
+$animation "pickup_a_i" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\pickup_a_i.smd" {
+	fps 30
+}
+$animation "pickup_e_a" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\pickup_e_a.smd" {
+	fps 30
+}
+$animation "pickup_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\pickup_e_a_i.smd" {
+	fps 30
+}
+$animation "grenade_ironsight" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\grenade_ironsight.smd" {
+	fps 30
+}
+$animation "gren_shoot1_a" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\gren_shoot1_a.smd" {
+	fps 30
+	subtract "gren_shoot1_a_corrective_animation" 0
+}
+$animation "gren_shoot1_ironsight_a" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\gren_shoot1_ironsight_a.smd" {
+	fps 30
+	subtract "gren_shoot1_ironsight_a_corrective_animation" 0
+}
+$animation "gren_reload_a" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\gren_reload_a.smd" {
+	fps 30
+}
+$animation "gren_reload_a_i" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\gren_reload_a_i.smd" {
+	fps 30
+}
+$animation "bayonet_attack_a" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\bayonet_attack_a.smd" {
+	fps 30
+}
+$animation "bayonet_attack_a_i" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\bayonet_attack_a_i.smd" {
+	fps 30
+}
+$animation "bayonet_e_a" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\bayonet_e_a.smd" {
+	fps 30
+}
+$animation "bayonet_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\bayonet_e_a_i.smd" {
+	fps 30
+}
+$animation "bayonet_s_a" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\bayonet_s_a.smd" {
+	fps 30
+}
+$animation "bayonet_s_a_i" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\bayonet_s_a_i.smd" {
+	fps 30
+}
+$animation "scope_adjust_idle" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\scope_adjust_idle.smd" {
+	fps 30
+}
+$animation "scope_adjust_iron" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\scope_adjust_iron.smd" {
+	fps 30
+}
+$animation "Charge_s" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\Charge_s.smd" {
+	fps 30
+}
+$animation "Charge_s_i" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\Charge_s_i.smd" {
+	fps 30
+}
+$animation "Charge" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\Charge.smd" {
+	fps 30
+}
+$animation "Charge_i" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\Charge_i.smd" {
+	fps 30
+}
+$animation "Charge_e" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\Charge_e.smd" {
+	fps 30
+}
+$animation "Charge_e_i" "..\..\..\MCV_SMD_OG\weapons\v_vz54s\v_vz54s_anims\Charge_e_i.smd" {
+	fps 30
+}
+$sequence "hammerPosition" {
 	"hammerdefault"
 	"hammerforward"
 	autoplay

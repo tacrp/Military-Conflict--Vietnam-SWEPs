@@ -391,7 +391,29 @@ $animation "change_firemode_iron" "..\..\..\MCV_SMD\weapons\v_md63\anims\change_
 
 $animation "bayonet_attack_a" "..\..\..\MCV_SMD\weapons\v_md63\anims\bayonet_attack_a.smd" {
 	fps 30
-	$sequence "runlayer" {
+}
+$animation "bayonet_attack_a_i" "..\..\..\MCV_SMD\weapons\v_md63\anims\bayonet_attack_a_i.smd" {
+	fps 30
+}
+$animation "Charge_s_a" "..\..\..\MCV_SMD\weapons\v_md63\anims\Charge_s_a.smd" {
+	fps 30
+}
+$animation "Charge_s_a_i" "..\..\..\MCV_SMD\weapons\v_md63\anims\Charge_s_a_i.smd" {
+	fps 30
+}
+$animation "Charge_l_a" "..\..\..\MCV_SMD\weapons\v_md63\anims\Charge_l_a.smd" {
+	fps 30
+}
+$animation "Charge_l_a_i" "..\..\..\MCV_SMD\weapons\v_md63\anims\Charge_l_a_i.smd" {
+	fps 30
+}
+$animation "Charge_e_a" "..\..\..\MCV_SMD\weapons\v_md63\anims\Charge_e_a.smd" {
+	fps 30
+}
+$animation "Charge_e_a_i" "..\..\..\MCV_SMD\weapons\v_md63\anims\Charge_e_a_i.smd" {
+	fps 30
+}
+$sequence "runlayer" {
 	"runIdle_a"
 	"run_a"
 	blend "player_movement" 138 232

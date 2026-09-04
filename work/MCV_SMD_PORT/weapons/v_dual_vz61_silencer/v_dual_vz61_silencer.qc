@@ -323,7 +323,6 @@ $animation "PoseDelta" "..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_
 
 $animation "Default" "..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\Default.smd" {
 	fps 30
-	loop
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "Default_corrective_animation" 0
 }
@@ -723,7 +722,77 @@ $animation "shootlast_l_ironsight_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_si
 
 $animation "reload_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\reload_a.smd" {
 	fps 30
-	$sequence "SlidePosition" {
+}
+$animation "reload_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\reload_a_i.smd" {
+	fps 30
+}
+$animation "reload_ra" "..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\reload_ra.smd" {
+	fps 30
+}
+$animation "reload_ra_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\reload_ra_i.smd" {
+	fps 30
+}
+$animation "reload_er_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\reload_er_a.smd" {
+	fps 30
+}
+$animation "reload_er_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\reload_er_a_i.smd" {
+	fps 30
+}
+$animation "reload_e_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\reload_e_a.smd" {
+	fps 30
+}
+$animation "reload_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\reload_e_a_i.smd" {
+	fps 30
+}
+$animation "nearwall_s_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\nearwall_s_a.smd" {
+	fps 30
+}
+$animation "nearwall_s_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\nearwall_s_a_i.smd" {
+	fps 30
+}
+$animation "nearwall_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\nearwall_a.smd" {
+	fps 30
+}
+$animation "nearwall_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\nearwall_a_i.smd" {
+	fps 30
+}
+$animation "nearwall_e_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\nearwall_e_a.smd" {
+	fps 30
+}
+$animation "nearwall_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\nearwall_e_a_i.smd" {
+	fps 30
+}
+$animation "proneF" "..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\proneF.smd" {
+	fps 30
+}
+$animation "proneL" "..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\proneL.smd" {
+	fps 30
+}
+$animation "proneB" "..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\proneB.smd" {
+	fps 30
+}
+$animation "proneR" "..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\proneR.smd" {
+	fps 30
+}
+$animation "pickup_s_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\pickup_s_a.smd" {
+	fps 30
+}
+$animation "pickup_s_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\pickup_s_a_i.smd" {
+	fps 30
+}
+$animation "pickup_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\pickup_a.smd" {
+	fps 30
+}
+$animation "pickup_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\pickup_a_i.smd" {
+	fps 30
+}
+$animation "pickup_e_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\pickup_e_a.smd" {
+	fps 30
+}
+$animation "pickup_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\pickup_e_a_i.smd" {
+	fps 30
+}
+$sequence "SlidePosition" {
 	"Default"
 	"RightEmpty"
 	"RightEmpty"

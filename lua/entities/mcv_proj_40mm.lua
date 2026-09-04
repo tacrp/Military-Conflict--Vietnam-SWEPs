@@ -19,7 +19,6 @@ ENT.TrailParticle = "vietnam_weaponeffect_ubgrenade"
 
 ENT.Delay = 0
 
-
 function ENT:Detonate()
     local attacker = self.Attacker or self:GetOwner() or self
     local mult = 1

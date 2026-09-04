@@ -6,22 +6,18 @@ $modelname "weapons/mcv/v_sks.mdl"
 $bodygroup "studio"
 {
 	studio "..\..\..\MCV_SMD_OG\weapons\v_sks\ref_new.smd"
-}
 $bodygroup "bayonet"
 {
 	blank
 	studio "..\..\..\MCV_SMD_OG\weapons\v_sks\v_bayonet_new.smd"
-}
 $bodygroup "mount"
 {
 	blank
 	studio "..\..\..\MCV_SMD_OG\weapons\v_sks\sks_mount_new.smd"
-}
 $bodygroup "grenade"
 {
 	blank
 	studio "..\..\..\MCV_SMD_OG\weapons\v_sks\sks_grenade_new.smd"
-}
 
 
 $surfaceprop "default"
@@ -38,7 +34,6 @@ $cdmaterials "models\weapons\mcv\rif_gl\"
 $texturegroup "skinfamilies"
 {
 	{ "sks" "shells_small" "ak47_bayonet_d" "rifle_glmounts_vc" "rifle_grenades_vc" }
-}
 
 $attachment "cam" "cam_driver" 0 0 0 rotate 0 0 0
 $attachment "muzzle" "Base" -23.2 0 0.9 rotate 0 180 0
@@ -1317,5 +1312,3 @@ $keyvalues
 	qc_path 
 	{
 		"value"		"d:\dev_content2\mcv\mcv-content\vietnam\models\guns\carbine_sks\sks_new.qc"
-	}
-}

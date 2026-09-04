@@ -322,7 +322,6 @@ $animation "PoseDelta" "..\..\..\MCV_SMD_OG\weapons\v_dual_mac10\v_dual_mac10_an
 
 $animation "Default" "..\..\..\MCV_SMD_OG\weapons\v_dual_mac10\v_dual_mac10_anims\Default.smd" {
 	fps 30
-	loop
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "Default_corrective_animation" 0
 }
@@ -767,7 +766,44 @@ $animation "nearwall_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_mac10\v_dual_mac10_a
 
 $animation "nearwall_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_mac10\v_dual_mac10_anims\nearwall_a_i.smd" {
 	fps 30
-	$sequence "SlidePosition" {
+}
+$animation "nearwall_e_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_mac10\v_dual_mac10_anims\nearwall_e_a.smd" {
+	fps 30
+}
+$animation "nearwall_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_mac10\v_dual_mac10_anims\nearwall_e_a_i.smd" {
+	fps 30
+}
+$animation "proneF" "..\..\..\MCV_SMD_OG\weapons\v_dual_mac10\v_dual_mac10_anims\proneF.smd" {
+	fps 30
+}
+$animation "proneL" "..\..\..\MCV_SMD_OG\weapons\v_dual_mac10\v_dual_mac10_anims\proneL.smd" {
+	fps 30
+}
+$animation "proneB" "..\..\..\MCV_SMD_OG\weapons\v_dual_mac10\v_dual_mac10_anims\proneB.smd" {
+	fps 30
+}
+$animation "proneR" "..\..\..\MCV_SMD_OG\weapons\v_dual_mac10\v_dual_mac10_anims\proneR.smd" {
+	fps 30
+}
+$animation "pickup_s_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_mac10\v_dual_mac10_anims\pickup_s_a.smd" {
+	fps 30
+}
+$animation "pickup_s_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_mac10\v_dual_mac10_anims\pickup_s_a_i.smd" {
+	fps 30
+}
+$animation "pickup_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_mac10\v_dual_mac10_anims\pickup_a.smd" {
+	fps 30
+}
+$animation "pickup_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_mac10\v_dual_mac10_anims\pickup_a_i.smd" {
+	fps 30
+}
+$animation "pickup_e_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_mac10\v_dual_mac10_anims\pickup_e_a.smd" {
+	fps 30
+}
+$animation "pickup_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_mac10\v_dual_mac10_anims\pickup_e_a_i.smd" {
+	fps 30
+}
+$sequence "SlidePosition" {
 	"Default"
 	"RightEmpty"
 	"RightEmpty"
