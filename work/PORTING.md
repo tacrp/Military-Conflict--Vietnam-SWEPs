@@ -255,12 +255,16 @@ things and the script does the same:
    (`ValveBiped.weapon_bone` on most guns) is re-parented under it, so the model bonemerges to
    the player's right hand. Only 15 of the 198 hand-ported world models had this; the rest only
    had the path changes and therefore float at the player's origin.
-3. The hand bone's offset `x y z rx ry rz` positions the gun in the hand. The per-weapon values
-   that were tuned by hand are in `HAND_OFFSETS` in the script; anything else gets the
-   `qc_methods.md` starting value `-6 -1 -2 0 0 180` and a warning. `rx` pitches the barrel up
-   along the curve of the arms: the China Lake uses 15 and the SKS entry is `-10 -1 -2 7.5 0 180`.
-   Override from the command line with `--hand X Y Z RX RY RZ` or just `--tilt DEG`.
-4. Dual-wield world models get a mirrored `ValveBiped.Bip01_L_Hand` and bones named `*_left` /
+3. The hand bone gets the offset `x y z ry rz rx` from `HAND_OFFSETS` (note the order: Crowbar
+   writes `$definebone` rotations as ry, rz, rx), else the `qc_methods.md` starting value
+   `-6 -1 -2 0 0 180` with a warning. Be aware that on a bonemerged model the player's hand
+   replaces this bone entirely, so these values only affect the unmerged (dropped) pose.
+4. Placing the gun in the hand therefore has to move the model data: `--tilt DEG` pitches the
+   barrel up and `--move FWD UP RIGHT` shifts the gun, both in the gun's own frame, by rewriting
+   the root gun bone's frames in every animation SMD the QC plays (written to
+   `<name>_anims_tilted/`). The barrel and up axes are read from the reference mesh and the
+   muzzle attachment. The SKS uses `HAND_TILT["w_sks"] = 7.5`.
+5. Dual-wield world models get a mirrored `ValveBiped.Bip01_L_Hand` and bones named `*_left` /
    `*_l` are parented to it. None of the hand-ported duals did this, so the left offset is a
    guess to be tuned in game.
 

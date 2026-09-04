@@ -927,59 +927,115 @@ def _smd_root_frame_and_mesh(path):
     return frame, verts
 
 
-def hand_with_tilt(off, tilt_deg, og_dir, raw_qc, ctx):
-    """Compose a barrel pitch of tilt_deg (muzzle up) into the hand bone offset.
-
-    The gun bone's world transform comes from the reference SMD; the barrel direction from the
-    muzzle attachment; the gun's up from the mesh (the stock and magazine hang below the bore, so
-    up is away from the vertex centroid). The gun is attached to the hand as
-    gun = playerHand * inverse(handDef) * gunSMD, so pitching the gun by G means handDef' =
-    handDef * inverse(G) in the hand's own frame."""
+def _gun_axes(og_dir, raw_qc, ctx):
+    """Barrel and up directions of the gun in its root bone's local space, from the reference
+    SMD mesh and the muzzle attachment. Returns (fwd, up) unit vectors or None."""
     m = re.search(r'^\$bodygroup[^{]*\{\s*(?:blank\s*)?studio\s+"([^"]+)"', raw_qc, re.M | re.S)
     ref = m.group(1) if m else None
     if not ref:
         m = re.search(r'studio\s+"([^"]+\.smd)"', raw_qc)
         ref = m.group(1) if m else None
     if not ref:
-        ctx.warn("tilt: no reference smd found, tilt not applied")
-        return off
+        ctx.warn("tilt: no reference smd found")
+        return None
     frame, verts = _smd_root_frame_and_mesh(os.path.join(og_dir, ref.replace("\\", os.sep)))
     if not frame or len(verts) < 10:
-        ctx.warn("tilt: could not read the reference smd, tilt not applied")
-        return off
+        ctx.warn("tilt: could not read the reference smd")
+        return None
     gun = _euler_matrix(frame[3], frame[4], frame[5])
     gun_t = _t(gun); p = frame[0:3]
     loc = [_mv(gun_t, [v[0] - p[0], v[1] - p[1], v[2] - p[2]]) for v in verts]
     ext = [max(v[i] for v in loc) - min(v[i] for v in loc) for i in range(3)]
-    cen = [sum(v[i] for v in loc) / len(loc) for i in range(3)]
     fwd_axis = ext.index(max(ext))
     fwd = [0.0, 0.0, 0.0]; fwd[fwd_axis] = 1.0
     am = re.search(r'^\$attachment\s+"muzzle"\s+"[^"]+"\s+([-\d.]+)\s+([-\d.]+)\s+([-\d.]+)', raw_qc, re.M)
-    if am:
-        mz = [float(am.group(i)) for i in (1, 2, 3)]
-        if mz[fwd_axis] < 0:
-            fwd[fwd_axis] = -1.0
+    mz = [float(am.group(i)) for i in (1, 2, 3)] if am else None
+    if mz and mz[fwd_axis] < 0:
+        fwd[fwd_axis] = -1.0
     # up: of the other two axes take the taller one. The bore sits above the grip bone, so the
     # muzzle attachment's offset on that axis points up; failing that, the grip/magazine hang
     # further below the bone than the sights rise above it.
     others = [i for i in range(3) if i != fwd_axis]
     up_axis = max(others, key=lambda i: ext[i])
     up = [0.0, 0.0, 0.0]
-    if am and abs(mz[up_axis]) > 0.3:
+    if mz and abs(mz[up_axis]) > 0.3:
         up[up_axis] = 1.0 if mz[up_axis] > 0 else -1.0
     else:
         lo = min(v[up_axis] for v in loc); hi = max(v[up_axis] for v in loc)
         up[up_axis] = 1.0 if abs(lo) > abs(hi) else -1.0
+    ctx.note("gun axes: barrel gun-local %s%s, up %s%s" % ("+-"[fwd[fwd_axis] < 0], "XYZ"[fwd_axis], "+-"[up[up_axis] < 0], "XYZ"[up_axis]))
+    return fwd, up
+
+
+def transform_anim_smds(qc, ctx, og_dir, raw_qc, tilt_deg, move):
+    """Pitch the gun by tilt_deg (muzzle up) and shift it by `move` (gun-local units, forward /
+    up / right) by rewriting the root bone's frames in every animation SMD the QC plays, and
+    point the QC at the rewritten copies.
+
+    With bonemerge the player's hand replaces the hand bone, so the gun's placement is the root
+    gun bone's own transform from the animation. Editing the hand bone's $definebone does
+    nothing for a merged model; the animation data has to move."""
+    axes = _gun_axes(og_dir, raw_qc, ctx)
+    if axes is None:
+        return
+    fwd, up = axes
+    right = _norm(_cross(fwd, up))
+    side = _norm(_cross(fwd, up))            # rotating about this axis moves the barrel toward up
+    Rt = _axis_rot(side, math.radians(tilt_deg)) if tilt_deg else None
+    shift = [move[0] * fwd[i] + move[1] * up[i] + move[2] * right[i] for i in range(3)] if move and any(move) else None
+    done = 0
+    for seq in qc.blocks("sequence"):
+        for i, l in enumerate(seq.lines):
+            m = re.match(r'^"([^"]+\.smd)"$', l)
+            if not m:
+                continue
+            src_rel = m.group(1)
+            src = os.path.normpath(os.path.join(ctx.out_dir, src_rel.replace("\\", os.sep)))
+            if not os.path.isfile(src):
+                continue
+            base = os.path.basename(src)
+            dst_rel = os.path.join(ctx.name + "_anims_tilted", base)
+            dst = os.path.join(ctx.out_dir, dst_rel)
+            os.makedirs(os.path.dirname(dst), exist_ok=True)
+            with open(src, encoding="utf-8", errors="replace") as fi, open(dst, "w", encoding="utf-8", newline="\n") as fo:
+                sec = None
+                for line in fi:
+                    t = line.split()
+                    if t and t[0] in ("nodes", "skeleton", "triangles"):
+                        sec = t[0]
+                    elif t and t[0] == "end":
+                        sec = None
+                    elif sec == "skeleton" and len(t) == 7 and t[0] == "0":
+                        pos = [float(x) for x in t[1:4]]
+                        R = _euler_matrix(float(t[4]), float(t[5]), float(t[6]))
+                        if Rt:
+                            R = _mul(R, Rt)
+                        if shift:
+                            d = _mv(R, shift)
+                            pos = [pos[k] + d[k] for k in range(3)]
+                        x, y, z = _matrix_euler(R)
+                        line = "    0 %f %f %f %f %f %f\n" % (pos[0], pos[1], pos[2], x, y, z)
+                    fo.write(line)
+            seq.lines[i] = '"%s"' % dst_rel.replace("/", "\\")
+            done += 1
+    ctx.note("tilt %g / move %s applied to %d animation smd(s) (root bone frames rewritten)" % (tilt_deg, move, done))
+
+
+def hand_with_tilt(off, tilt_deg, og_dir, raw_qc, ctx):
+    """Kept for reference: composes the pitch into the hand bone. Has no effect on a bonemerged
+    model (see transform_anim_smds), so it is no longer used by the port."""
+    axes = _gun_axes(og_dir, raw_qc, ctx)
+    if axes is None:
+        return off
+    fwd, up = axes
+    m = re.search(r'studio\s+"([^"]+\.smd)"', raw_qc)
+    frame, _ = _smd_root_frame_and_mesh(os.path.join(og_dir, m.group(1).replace("\\", os.sep)))
+    gun = _euler_matrix(frame[3], frame[4], frame[5])
     H = _def_to_matrix(off)
-    G = _mul(_t(H), gun)                 # gun relative to the hand
-    fwd_h = _norm(_mv(G, fwd)); up_h = _norm(_mv(G, up))
-    side = _norm(_cross(fwd_h, up_h))    # rotating about this axis moves the barrel toward up
+    G = _mul(_t(H), gun)
+    side = _norm(_cross(_norm(_mv(G, fwd)), _norm(_mv(G, up))))
     Hn = _mul(H, _axis_rot(side, -math.radians(tilt_deg)))
-    new = list(off[:3]) + _matrix_to_def(Hn)
-    ctx.note("tilt %g: barrel is gun-local %s%s, up %s%s; hand rot %s -> %s" % (
-        tilt_deg, "+-"[fwd[fwd_axis] < 0], "XYZ"[fwd_axis], "+-"[up[up_axis] < 0], "XYZ"[up_axis],
-        " ".join("%g" % v for v in off[3:6]), " ".join("%.3f" % v for v in new[3:6])))
-    return new
+    return list(off[:3]) + _matrix_to_def(Hn)
 
 
 def port_worldmodel(args, og_dir):
@@ -1017,10 +1073,10 @@ def port_worldmodel(args, og_dir):
         hand_line = None
         off = None
         tilt = args.tilt if args.tilt is not None else HAND_TILT.get(name, 0)
-        if args.hand or tilt or name in HAND_OFFSETS:
+        if tilt or (args.move and any(args.move)):
+            transform_anim_smds(qc, ctx, og_dir, raw, tilt, args.move)
+        if args.hand or name in HAND_OFFSETS:
             off = list(args.hand) if args.hand else list(HAND_OFFSETS.get(name, HAND_DEFAULT))
-            if tilt:
-                off = hand_with_tilt(off, tilt, og_dir, raw, ctx)
         elif os.path.isfile(fixed_qc):
             m = re.search(r'^\$definebone\s+"ValveBiped\.Bip01_R_Hand"[^\n]*$', open(fixed_qc, encoding="utf-8", errors="replace").read(), re.M)
             if m:
@@ -1164,7 +1220,9 @@ def main():
     ap.add_argument("--hand", type=float, nargs=6, metavar=("X", "Y", "Z", "RX", "RY", "RZ"), default=None,
                     help="worldmodels: ValveBiped.Bip01_R_Hand offset (overrides the per-weapon table)")
     ap.add_argument("--tilt", type=float, default=None,
-                    help="worldmodels: rotation on the hand bone's first axis that pitches the barrel up (SKS: 7.5)")
+                    help="worldmodels: pitch the gun's barrel up by this many degrees (SKS: 7.5); applied to the animation data")
+    ap.add_argument("--move", type=float, nargs=3, metavar=("FWD", "UP", "RIGHT"), default=None,
+                    help="worldmodels: shift the gun in its own frame by these units; applied to the animation data")
     args = ap.parse_args()
 
     if args.all:
