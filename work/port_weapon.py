@@ -265,12 +265,35 @@ def pretty_name(printname):
     n = n.replace("_", " ")
     return " ".join(w if w.isupper() or any(c.isdigit() for c in w) else w.capitalize() for w in n.split())
 
+OVERRIDES_DIR = os.path.join(HERE, "overrides")
+
+
+def load_overrides():
+    """work/overrides/weapon_<name>.txt: KeyValues fragments merged over the game's script.
+    Any WeaponData key can be overridden; custom tags:
+        "MergeInto" "<base script name>"   fold this weapon into another (rifle grenade variants)
+    These files are ours, so they survive `rip_game.py --steps scripts`."""
+    out = {}
+    for f in glob.glob(os.path.join(OVERRIDES_DIR, "weapon_*.txt")):
+        name = os.path.basename(f)[len("weapon_"):-4]
+        kv = parse_kv(open(f, encoding="utf-8", errors="replace").read())
+        wd = kv.get("WeaponData") or kv
+        out[name] = flat(wd)
+    return out
+
+
 def generate(script_path, args):
     name = os.path.basename(script_path)[len("weapon_"):-4]
     kv = parse_kv(open(script_path, encoding="utf-8", errors="replace").read())
     wd = kv.get("WeaponData") or next(iter(kv.values()), {})
     S = flat(wd)
     warnings = []
+    ov = args.overrides.get(name, {})
+    for k, v in ov.items():
+        if k != "MergeInto":
+            S[k] = v
+    # weapons folded into this one (weapon_x_riflegrenade with "MergeInto" "x")
+    merged_variants = [vn for vn, o in args.overrides.items() if o.get("MergeInto") == name]
 
     vm = S.get("viewmodel", "").replace("models/weapons/", "").replace(".mdl", "")
     wm = S.get("playermodel", "").replace("models/weapons/", "").replace(".mdl", "")
@@ -342,6 +365,11 @@ def generate(script_path, args):
     # The addon merges the game's separate *_riflegrenade weapons into the base rifle (toggle with USE+WALK).
     has_gl = S.get("secondary_ammo") in ("40mm_grenade", "riflegrenade") or name.endswith("_riflegrenade") or wtype in ("RifleGrenade",) \
         or any(k in name for k in ("gp25", "m203", "xm148")) or (model_has_gl and variant_script)
+    if merged_variants:
+        if model_has_gl:
+            has_gl = True
+        else:
+            warnings.append("%s folded in by override, but the viewmodel has no grenade animations yet (hand-merge pending); HasRifleGrenade left off" % ", ".join(merged_variants))
     if model_has_gl and not has_gl:
         warnings.append("model has grenade launcher animations but no *_riflegrenade script variant was found")
     gl_is_ubgl = "ACT_VM_IIN_M203" in acts
@@ -674,10 +702,28 @@ def main():
     else:
         files = [args.source]
     os.makedirs(args.out, exist_ok=True)
+    args.overrides = load_overrides()
+    # the game's rifle grenade weapons reuse the base rifle's viewmodel; fold them into the base
+    # (same as an explicit "MergeInto" override). Done up front so the base sees its variants.
+    for f in glob.glob(os.path.join(args.scripts_dir, "weapon_*_riflegrenade.txt")):
+        name = os.path.basename(f)[len("weapon_"):-4]
+        if args.overrides.get(name, {}).get("MergeInto"):
+            continue
+        base = name[:-len("_riflegrenade")]
+        bp = os.path.join(args.scripts_dir, "weapon_%s.txt" % base)
+        if os.path.isfile(bp):
+            vm_v = re.search(r'"viewmodel"\s+"([^"]+)"', open(f, encoding="utf-8", errors="replace").read())
+            vm_b = re.search(r'"viewmodel"\s+"([^"]+)"', open(bp, encoding="utf-8", errors="replace").read())
+            if vm_v and vm_b and vm_v.group(1).lower() == vm_b.group(1).lower():
+                args.overrides.setdefault(name, {})["MergeInto"] = base
     produced = {}
     for f in files:
         name = os.path.basename(f)[len("weapon_"):-4]
         lua_name = args.name_map.get(name, name)
+        target = args.overrides.get(name, {}).get("MergeInto")
+        if target:
+            print("%-28s folded into mcv_%s (rifle grenade of %s)" % (name, args.name_map.get(target, target), target))
+            continue
         if name.startswith("dual_"):
             # Dual wield is a mode of the single-wield weapon in this addon (HasAkimbo +
             # ViewModelAkimbo, toggled with USE+WALK), never a weapon of its own.

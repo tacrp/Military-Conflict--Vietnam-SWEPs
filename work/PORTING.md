@@ -305,6 +305,17 @@ sequence names that has an SMD on disk but no definition. All 558 game models co
 describe grenades, mines, flamethrowers, melee and equipment, which the mcv_base cannot drive.
 Brass ids the game added after 2024 (19 to 31) map to the nearest shell model the addon has.
 
+### Overrides and rifle grenade variants
+
+`work/overrides/weapon_<name>.txt` holds KeyValues fragments that are merged over the game's
+script before conversion. They are ours, so `rip_game.py --steps scripts` never touches them.
+Any WeaponData key can be overridden; the custom tag `"MergeInto" "<base>"` folds a weapon into
+another one instead of generating it. The game ships its rifle grenades as separate weapons
+(`weapon_x_riflegrenade`) that reuse the base rifle's viewmodel; those are folded into the base
+automatically (the base gets `HasRifleGrenade` when its viewmodel carries the grenade
+animations, and a warning when it does not yet). The four override files for the M14L, MAS-36,
+vz. 24 and vz. 54 make that explicit for the weapons added in 2025.
+
 ### Game effects instead of stock ones
 
 The pack used GMod's stock muzzle flashes because the pcfs shipped without their materials.

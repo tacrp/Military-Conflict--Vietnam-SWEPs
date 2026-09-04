@@ -1,0 +1,7 @@
+// Folds the game's standalone rifle grenade weapon into the base rifle (HasRifleGrenade),
+// like the SKS. The base viewmodel needs the grenade animations merged in by hand first;
+// until then port_weapon.py leaves HasRifleGrenade off and warns.
+"WeaponData"
+{
+	"MergeInto"	"m14l"
+}
