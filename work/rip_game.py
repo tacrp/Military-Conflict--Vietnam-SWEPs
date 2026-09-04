@@ -410,6 +410,28 @@ def step_pcf_models(args, vpk):
         f.write("\n".join(sorted(mdls)))
 
 
+def step_pcf_nolights(args, vpk):
+    """Strip the 'Render lights' operator from the muzzle flash systems: their omnidirectional
+    dynamic light lights up the rear sight from the muzzle side. Must run after `particles`
+    (which copies the untouched pcfs)."""
+    from dmxlib import DMX, strip_operators
+    total = 0
+    for pcf in sorted(glob.glob(os.path.join(ADDON, "particles", "*.pcf"))):
+        data = open(pcf, "rb").read()
+        try:
+            d = DMX(data)
+        except Exception as e:
+            log("  %s: cannot parse (%s), left alone" % (os.path.basename(pcf), e))
+            continue
+        n = strip_operators(d, lambda name: "muzzleflash" in name.lower(), {"Render lights", "Render Dynamic Light", "render_projected"})
+        if n:
+            with open(pcf, "wb") as f:
+                f.write(d.serialize())
+            total += n
+            log("  %s: %d light renderers removed" % (os.path.basename(pcf), n))
+    log("pcf nolights: %d muzzle flash light renderers removed" % total)
+
+
 def _lua_name_map():
     """script name -> lua name, through the viewmodel path (same rule as port_weapon.py)."""
     vm_to_lua = {}
@@ -558,7 +580,8 @@ def step_lua(args, vpk):
 
 STEPS = [("scripts", step_scripts), ("strings", step_strings), ("models", step_models), ("port", step_port),
          ("install", step_install), ("materials", step_materials), ("sounds", step_sounds),
-         ("particles", step_particles), ("particle_materials", step_particle_materials), ("pcf_models", step_pcf_models),
+         ("particles", step_particles), ("pcf_nolights", step_pcf_nolights), ("particle_materials", step_particle_materials),
+         ("pcf_models", step_pcf_models),
          ("icons", step_icons), ("lua", step_lua), ("effects_lua", step_effects_lua)]
 
 
