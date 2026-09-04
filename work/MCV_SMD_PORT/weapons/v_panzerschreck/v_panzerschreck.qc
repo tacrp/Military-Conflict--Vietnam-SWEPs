@@ -23,7 +23,7 @@ $surfaceprop "default"
 
 $contents "solid"
 
-$illumposition -7.778 16.329 -10.278
+$illumposition 0 0 0
 
 $cdmaterials "models\weapons\mcv\v_panzerschreck\"
 

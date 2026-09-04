@@ -13,7 +13,7 @@ $surfaceprop "default"
 
 $contents "solid"
 
-$illumposition -1.86 -4.889 -11.322
+$illumposition 0 0 0
 
 $cdmaterials "models\weapons\mcv\v_bayonet\"
 

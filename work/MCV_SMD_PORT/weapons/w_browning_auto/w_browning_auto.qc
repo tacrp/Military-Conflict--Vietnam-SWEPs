@@ -23,7 +23,7 @@ $surfaceprop "weapon"
 
 $contents "solid"
 
-$illumposition -0.256 -3.128 -1.628
+$illumposition 0 0 0
 
 $cdmaterials "models\weapons\mcv\w_browning_auto5\"
 $cdmaterials ""

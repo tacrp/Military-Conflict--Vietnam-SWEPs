@@ -46,6 +46,7 @@ SWEP.PlayCycleAnimation = true
 SWEP.ShotgunReload = true
 SWEP.ShotgunAltReload = true
 SWEP.ShotgunReloadEmptyStartAnimation = true
+SWEP.NoEjectOnShoot = true
 SWEP.RifleGrenadeEntity = "mcv_proj_riflegrenade_vc"
 SWEP.RifleGrenadeForce = 2000
 
@@ -73,8 +74,8 @@ SWEP.ScopeMaterial = NULL
 SWEP.ScopeFOV = 8
 SWEP.ScopeFOV2 = 4
 
-SWEP.IronsightPos = Vector(0.06, -4, 0) -- TODO tune (game: forward -4.5 right 0 up 0)
-SWEP.IronsightAng = Angle(0.25, 0.1, 0) -- TODO tune
+SWEP.IronsightPos = Vector(0.06, -4, 0)
+SWEP.IronsightAng = Angle(0.25, 0.1, 0)
 
 SWEP.CustomPos = Vector(0, -2, 0)
 SWEP.CustomAng = Angle(0, 0, 0)
@@ -132,7 +133,7 @@ SWEP.SoundDoubleShot = ""
 SWEP.SoundReload = ""
 SWEP.SoundSpecial1 = ""
 SWEP.SoundSpecial2 = ""
-SWEP.SoundGrenadeShot = "MCV_Weapon_VZ24.RifleGrenade" -- TODO check soundscript name
+SWEP.SoundGrenadeShot = "MCV_Weapon_VZ24.RifleGrenade"
 SWEP.SoundNearlyEmpty = "MCV_Weapon_Generic.NearlyEmptyClick"
 SWEP.SoundEmpty = "MCV_Weapon_Generic.ClipEmpty_07"
 

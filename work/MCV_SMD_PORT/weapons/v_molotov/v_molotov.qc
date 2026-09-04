@@ -13,7 +13,7 @@ $surfaceprop "default"
 
 $contents "solid"
 
-$illumposition 0.336 -8.617 -13.755
+$illumposition 0 0 0
 
 $mostlyopaque
 

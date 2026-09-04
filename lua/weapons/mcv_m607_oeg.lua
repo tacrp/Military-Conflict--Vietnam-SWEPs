@@ -70,7 +70,7 @@ SWEP.OEGScope = true // weird occluded eye optic type
 SWEP.ScopeMaterial = Material("models/weapons/mcv/optics/crosshair_singlepoint")
 SWEP.ScopeFOV = 60
 SWEP.ScopeFOV2 = 4
-SWEP.RTScopeMaterialIndex = 6
+SWEP.RTScopeMaterialIndex = 3
 
 SWEP.IronsightPos = Vector(0.0765, -6, -1.044)
 SWEP.IronsightAng = Angle(0.34, 0.1, 0)

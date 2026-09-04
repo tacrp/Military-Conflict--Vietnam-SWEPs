@@ -48,7 +48,8 @@ SWEP.ShotgunAltReload = true
 SWEP.ShotgunReloadEmptyStartAnimation = true
 SWEP.HasEmptyReload = false
 SWEP.AnimationHandlesHammer = true
-// SWEP.InvertAnimationHammer = true -- TODO check: set if the hammer pose reads backwards in game
+SWEP.InvertAnimationHammer = true
+SWEP.NoEjectOnShoot = true
 
 // View slide from recoil
 SWEP.ViewSlideRecoilUp = 2.84
@@ -70,12 +71,13 @@ SWEP.IronsightFov = 90 - 15
 SWEP.IronsightWalkBobbingStrength = -0.25
 
 SWEP.HasScope = true
-SWEP.ScopeMaterial = Material("models/weapons/mcv/optics/crosshair_vz54s") -- TODO check material exists
+SWEP.ScopeMaterial = Material("models/weapons/mcv/optics/crosshair_meopta256")
 SWEP.ScopeFOV = 8
 SWEP.ScopeFOV2 = 4
+SWEP.RTScopeMaterialIndex = 8
 
-SWEP.IronsightPos = Vector(0.06, -4, 0) -- TODO tune (game: forward -6.5 right 0 up -0.21)
-SWEP.IronsightAng = Angle(0.25, 0.1, 0) -- TODO tune
+SWEP.IronsightPos = Vector(0.06, -4, 0)
+SWEP.IronsightAng = Angle(0.25, 0.1, 0)
 
 SWEP.CustomPos = Vector(0, -2, 0)
 SWEP.CustomAng = Angle(0, 0, 0)

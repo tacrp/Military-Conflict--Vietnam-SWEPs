@@ -13,7 +13,7 @@ $surfaceprop "default"
 
 $contents "solid"
 
-$illumposition -11.237 215.439 -305.265
+$illumposition 0 0 0
 
 $cdmaterials "models\weapons\mcv\v_gyrojet\"
 $cdmaterials "models\weapons\mcv\shells\"

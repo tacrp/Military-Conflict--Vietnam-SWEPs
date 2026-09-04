@@ -13,7 +13,7 @@ $surfaceprop "default"
 
 $contents "solid"
 
-$illumposition -2.82 -7.769 -13.686
+$illumposition 0 0 0
 
 $cdmaterials "models\weapons\mcv\v_crowbar\"
 

@@ -407,10 +407,21 @@ def detect_mode(qc, name):
 # Transform steps
 # --------------------------------------------------------------------------------------------
 
+def step_illumposition(qc, ctx):
+    """Light every weapon from the model origin (the game's per-model value sits off in the
+    arms and lights the gun unevenly in GMod)."""
+    if qc.raw_sub(r'\$illumposition\s+[-0-9.]+\s+[-0-9.]+\s+[-0-9.]+', '$illumposition 0 0 0') == 0:
+        for i, it in enumerate(qc.items):
+            if isinstance(it, str) and "$modelname" in it:
+                qc.items[i] = it.replace("\n", "\n$illumposition 0 0 0\n", 1)
+                break
+
+
 def step_paths(qc, ctx):
     n = qc.raw_sub(r'\$modelname\s+"weapons/', '$modelname "' + MODEL_PREFIX)
     if n == 0:
         ctx.warn("no $modelname weapons/ line found")
+    step_illumposition(qc, ctx)
     qc.raw_sub(r'\$cdmaterials\s+"models\\[Ww]eapons\\', '$cdmaterials "' + MATERIAL_PREFIX.replace("\\", "\\\\"))
     qc.raw_sub(r'\$includemodel\s+"weapons/gesture_animations\.mdl"', '$includemodel "%s"' % GESTURE_MODEL)
     # mesh / physics / any other smd referenced outside animation blocks
@@ -1123,6 +1134,7 @@ def port_worldmodel(args, og_dir):
     n = qc.raw_sub(r'\$modelname\s+"weapons[\\/]', '$modelname "weapons\\\\mcv\\\\')
     if n == 0:
         ctx.warn("no $modelname weapons\\ line found")
+    step_illumposition(qc, ctx)
     qc.raw_sub(r'\$cdmaterials\s+"models\\[Ww]eapons\\', '$cdmaterials "' + MATERIAL_PREFIX.replace("\\", "\\\\"))
     qc.raw_sub(r'"([^"\n]+\.smd)"', lambda m: '"%s"' % ctx.out_smd_path(m.group(1)))
     for b in qc.blocks("animation"):

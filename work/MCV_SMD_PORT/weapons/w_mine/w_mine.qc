@@ -20,7 +20,7 @@ $surfaceprop "weapon"
 
 $contents "solid"
 
-$illumposition 0.012 -0.002 5.472
+$illumposition 0 0 0
 
 $cdmaterials "models\weapons\mcv\w_mine\"
 $cdmaterials ""

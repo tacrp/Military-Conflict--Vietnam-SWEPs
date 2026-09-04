@@ -42,6 +42,7 @@ SWEP.Firemodes = {
 }
 
 SWEP.LastShotAnimation = false
+SWEP.NoEjectOnShoot = false
 SWEP.RifleGrenadeEntity = "mcv_proj_riflegrenade"
 SWEP.RifleGrenadeForce = 2000
 
@@ -65,12 +66,13 @@ SWEP.IronsightFov = 90 - 15
 SWEP.IronsightWalkBobbingStrength = -0.25
 
 SWEP.HasScope = true
-SWEP.ScopeMaterial = Material("models/weapons/mcv/optics/crosshair_m14l") -- TODO check material exists
+SWEP.ScopeMaterial = Material("models/weapons/mcv/optics/crosshair_m21")
 SWEP.ScopeFOV = 8
 SWEP.ScopeFOV2 = 4
+SWEP.RTScopeMaterialIndex = 4
 
-SWEP.IronsightPos = Vector(0.06, -4, 0) -- TODO tune (game: forward -5.5 right 0 up 0)
-SWEP.IronsightAng = Angle(0.25, 0.1, 0) -- TODO tune
+SWEP.IronsightPos = Vector(0.06, -4, 0)
+SWEP.IronsightAng = Angle(0.25, 0.1, 0)
 
 SWEP.CustomPos = Vector(0, -2, 0)
 SWEP.CustomAng = Angle(0, 0, 0)
@@ -128,7 +130,7 @@ SWEP.SoundDoubleShot = ""
 SWEP.SoundReload = ""
 SWEP.SoundSpecial1 = ""
 SWEP.SoundSpecial2 = ""
-SWEP.SoundGrenadeShot = "MCV_Weapon_M14L.RifleGrenade" -- TODO check soundscript name
+SWEP.SoundGrenadeShot = "MCV_Weapon_M14L.RifleGrenade"
 SWEP.SoundNearlyEmpty = "MCV_Weapon_Generic.NearlyEmptyClick"
 SWEP.SoundEmpty = "MCV_Weapon_Generic.ClipEmpty_01"
 

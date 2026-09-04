@@ -20,6 +20,26 @@ SWEP.WorldModel = "models/weapons/mcv/w_pk_belt.mdl"
 
 SWEP.BodyGroups = ""
 
+SWEP.BulletBodygroups = {
+    [1] = {1, 1},
+    [2] = {2, 1},
+    [3] = {3, 1},
+    [4] = {4, 1},
+    [5] = {5, 1},
+    [6] = {6, 1},
+    [7] = {7, 1},
+    [8] = {8, 1},
+    [9] = {9, 1},
+    [10] = {10, 1},
+    [11] = {11, 1},
+    [12] = {12, 1},
+    [13] = {13, 1},
+    [14] = {14, 1},
+    [15] = {15, 1},
+    [16] = {16, 1},
+    [17] = {17, 1},
+}
+
 // Stats
 
 SWEP.DamageGeneric = 45
@@ -38,6 +58,7 @@ SWEP.Firemodes = {
 }
 
 SWEP.LastShotAnimation = false
+SWEP.NoEjectOnShoot = false
 
 // View slide from recoil
 SWEP.ViewSlideRecoilUp = 2.48
@@ -63,8 +84,8 @@ SWEP.ScopeMaterial = NULL
 SWEP.ScopeFOV = 8
 SWEP.ScopeFOV2 = 4
 
-SWEP.IronsightPos = Vector(0.06, -4, 0) -- TODO tune (game: forward -5 right 0 up 0)
-SWEP.IronsightAng = Angle(0.25, 0.1, 0) -- TODO tune
+SWEP.IronsightPos = Vector(0.06, -4, 0)
+SWEP.IronsightAng = Angle(0.25, 0.1, 0)
 
 SWEP.CustomPos = Vector(0, -2, 0)
 SWEP.CustomAng = Angle(0, 0, 0)

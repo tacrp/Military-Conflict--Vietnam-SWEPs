@@ -17,7 +17,7 @@ $surfaceprop "default"
 
 $contents "solid"
 
-$illumposition -0.356 -6.758 -8.42
+$illumposition 0 0 0
 
 $cdmaterials "models\weapons\mcv\v_pm63\"
 $cdmaterials "models\weapons\mcv\shells\"

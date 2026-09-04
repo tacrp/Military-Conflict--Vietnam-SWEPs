@@ -23,6 +23,16 @@ SWEP.WorldModel = "models/weapons/mcv/w_kolos.mdl"
 
 SWEP.BodyGroups = ""
 
+SWEP.BulletBodygroups = {
+    [1] = {1, 1},
+    [2] = {2, 1},
+    [3] = {3, 1},
+    [4] = {4, 1},
+    [5] = {5, 1},
+    [6] = {6, 1},
+    [7] = {7, 1},
+}
+
 // Stats
 
 SWEP.DamageGeneric = 30
@@ -37,10 +47,15 @@ SWEP.Num = 1
 SWEP.RangeModifier = 0.95
 
 SWEP.Firemodes = {
-    MCV.FIREMODE_SEMI
+    MCV.FIREMODE_VOLLEY
 }
+SWEP.VolleyCount = 7
 
 SWEP.LastShotAnimation = false
+SWEP.NoEjectOnShoot = true
+SWEP.ShootEntity = "mcv_proj_kolos"
+SWEP.ShootEntityForce = 5000
+SWEP.AmmoPerShot = 1
 
 // View slide from recoil
 SWEP.ViewSlideRecoilUp = 3.12
@@ -66,8 +81,8 @@ SWEP.ScopeMaterial = NULL
 SWEP.ScopeFOV = 8
 SWEP.ScopeFOV2 = 4
 
-SWEP.IronsightPos = Vector(0.06, -4, 0) -- TODO tune (game: forward 0 right 0 up 0)
-SWEP.IronsightAng = Angle(0.25, 0.1, 0) -- TODO tune
+SWEP.IronsightPos = Vector(0.06, -4, 0)
+SWEP.IronsightAng = Angle(0.25, 0.1, 0)
 
 SWEP.CustomPos = Vector(0, -2, 0)
 SWEP.CustomAng = Angle(0, 0, 0)

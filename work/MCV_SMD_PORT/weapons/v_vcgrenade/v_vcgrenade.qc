@@ -13,7 +13,7 @@ $surfaceprop "default"
 
 $contents "solid"
 
-$illumposition 0.7 -1.278 -15.129
+$illumposition 0 0 0
 
 $cdmaterials "models\weapons\mcv\v_vcgrenade\"
 

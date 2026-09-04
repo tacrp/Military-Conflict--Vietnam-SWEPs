@@ -18,7 +18,7 @@ $surfaceprop "weapon"
 
 $contents "solid"
 
-$illumposition -0.005 -10.191 1.786
+$illumposition 0 0 0
 
 $cdmaterials "models\weapons\mcv\w_katana\"
 $cdmaterials ""

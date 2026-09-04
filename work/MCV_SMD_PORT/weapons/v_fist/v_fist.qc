@@ -13,7 +13,7 @@ $surfaceprop "default"
 
 $contents "solid"
 
-$illumposition 1.843 1.24 -13.844
+$illumposition 0 0 0
 
 $cdmaterials "models\guns\melee_fist\"
 

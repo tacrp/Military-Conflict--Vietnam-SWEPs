@@ -13,7 +13,7 @@ $surfaceprop "default"
 
 $contents "solid"
 
-$illumposition -2.138 -2.03 -12.491
+$illumposition 0 0 0
 
 $cdmaterials "models\weapons\mcv\v_wrench\"
 

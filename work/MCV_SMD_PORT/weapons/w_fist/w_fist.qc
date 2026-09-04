@@ -13,7 +13,7 @@ $surfaceprop "weapon"
 
 $contents "solid"
 
-$illumposition 0.009 0.001 0.006
+$illumposition 0 0 0
 
 $cdmaterials ""
 

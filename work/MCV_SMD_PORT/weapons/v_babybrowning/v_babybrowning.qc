@@ -13,7 +13,7 @@ $surfaceprop "default"
 
 $contents "solid"
 
-$illumposition -3.474 -4.613 -13.755
+$illumposition 0 0 0
 
 $cdmaterials "models\weapons\mcv\v_babybrowning\"
 $cdmaterials "models\weapons\mcv\shells\"

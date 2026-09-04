@@ -7,7 +7,7 @@ $surfaceprop "weapon"
 
 $contents "solid"
 
-$illumposition -4.02 13.872 -15.473
+$illumposition 0 0 0
 
 $cdmaterials "models\guns\gestures\"
 

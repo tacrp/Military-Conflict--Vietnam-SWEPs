@@ -13,7 +13,7 @@ $surfaceprop "default"
 
 $contents "solid"
 
-$illumposition -7.842 -1.646 -21.335
+$illumposition 0 0 0
 
 $cdmaterials "models\weapons\mcv\v_usmdeicine\"
 $cdmaterials "models\weapons\mcv\v_vietnammedicine\"

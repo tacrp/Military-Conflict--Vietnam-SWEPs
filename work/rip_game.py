@@ -231,13 +231,23 @@ def step_install(args, vpk):
             os.remove(stale)
         n += 1
     log("install: %d compiled model files copied into models/weapons/mcv" % n)
-    # non-weapon models under models/weapons (shells, grenades...) are used as-is
+    # non-weapon models under models/weapons (shells, grenades...) are used as-is, together with
+    # their materials: they reference materials/models/weapons/<subdir>/ directly
     m = 0
+    subdirs = set()
     for p in sorted(vpk.entries):
         if p.startswith("models/weapons/") and p.count("/") >= 3 and re.search(r'\.(mdl|vvd|vtx|phy)$', p):
-            d = vpk.extract(p, ADDON)
+            vpk.extract(p, ADDON)
+            subdirs.add(p.split("/")[2].lower())
             m += 1
-    log("install: %d model files under models/weapons/<subdir> copied as-is" % m)
+    mats = 0
+    for p in sorted(vpk.entries):
+        parts = p.lower().split("/")
+        if len(parts) >= 5 and parts[0] == "materials" and parts[1] == "models" and parts[2] == "weapons" \
+                and parts[3] in subdirs and re.search(r'\.(vmt|vtf)$', p):
+            vpk.extract(p, ADDON)
+            mats += 1
+    log("install: %d model files under models/weapons/<subdir> copied as-is, with %d material files" % (m, mats))
 
 
 def referenced_material_dirs():
@@ -512,18 +522,9 @@ def step_pcf_nolights(args, vpk):
 
 
 def _lua_name_map():
-    """script name -> lua name, through the viewmodel path (same rule as port_weapon.py)."""
-    vm_to_lua = {}
-    for lp in glob.glob(os.path.join(ADDON, "lua", "weapons", "mcv_*.lua")):
-        m = re.search(r'SWEP\.ViewModel\s*=\s*"models/weapons/mcv/([^"]+)\.mdl"', open(lp, encoding="utf-8", errors="replace").read())
-        if m:
-            vm_to_lua.setdefault(m.group(1).lower(), os.path.basename(lp)[4:-4])
-    out = {}
-    for sp in glob.glob(os.path.join(HERE, "cscripts", "weapon_*.txt")):
-        sname = os.path.basename(sp)[len("weapon_"):-4]
-        m = re.search(r'"viewmodel"\s+"models/weapons/([^"]+)\.mdl"', open(sp, encoding="utf-8", errors="replace").read())
-        out[sname] = vm_to_lua.get(m.group(1).lower(), sname) if m else sname
-    return out
+    """script name -> lua name (same resolver as port_weapon.py)."""
+    import port_weapon
+    return port_weapon.resolve_lua_names(os.path.join(HERE, "cscripts"), ADDON)
 
 
 def step_icons(args, vpk):
@@ -594,7 +595,25 @@ def step_icons(args, vpk):
         canvas.paste(im, ((256 - im.width) // 2, (256 - im.height) // 2), im)
         canvas.save(os.path.join(out_dir, "mcv_%s.png" % lua_name))
         made += 1
-    log("icons: %d icons written to materials/entities, %d weapons without an svg" % (made, skipped))
+    # variants no game script resolves to (sw39 / mk22, t223_40r / t223 ...) share the viewmodel of a
+    # weapon that did get an icon: reuse that one
+    copied = 0
+    vm_of = {}
+    for lp in glob.glob(os.path.join(ADDON, "lua", "weapons", "mcv_*.lua")):
+        m = re.search(r'SWEP\.ViewModel\s*=\s*"models/weapons/mcv/([^"]+)\.mdl"', open(lp, encoding="utf-8", errors="replace").read())
+        if m:
+            vm_of[os.path.basename(lp)[:-4]] = m.group(1).lower()
+    for lua, vm in vm_of.items():
+        dst_png = os.path.join(out_dir, lua + ".png")
+        if os.path.isfile(dst_png):
+            continue
+        for other, ovm in vm_of.items():
+            src_png = os.path.join(out_dir, other + ".png")
+            if other != lua and ovm == vm and os.path.isfile(src_png):
+                shutil.copyfile(src_png, dst_png)
+                copied += 1
+                break
+    log("icons: %d icons written to materials/entities, %d weapons without an svg, %d variants given their sibling's icon" % (made, skipped, copied))
 
 
 EFFECT_FIELDS = (  # lua field, script key, default

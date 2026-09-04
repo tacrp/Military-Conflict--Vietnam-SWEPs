@@ -13,7 +13,7 @@ $surfaceprop "default"
 
 $contents "solid"
 
-$illumposition -3.095 2.476 -11.847
+$illumposition 0 0 0
 
 $cdmaterials "models\weapons\mcv\v_shovel\"
 

@@ -17,7 +17,7 @@ $surfaceprop "metal"
 
 $contents "solid"
 
-$illumposition 0 3.816 28.509
+$illumposition 0 0 0
 
 $cdmaterials "models\weapons\mcv\w_dshk\"
 $cdmaterials "models\weapons\mcv\w_m2browning\"

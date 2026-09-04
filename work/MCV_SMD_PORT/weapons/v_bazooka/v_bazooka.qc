@@ -18,7 +18,7 @@ $surfaceprop "default"
 
 $contents "solid"
 
-$illumposition -1.098 21.21 -9.677
+$illumposition 0 0 0
 
 $cdmaterials "models\weapons\mcv\v_bazooka\"
 

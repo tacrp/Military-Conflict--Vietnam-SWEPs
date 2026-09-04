@@ -13,7 +13,7 @@ $surfaceprop "default"
 
 $contents "solid"
 
-$illumposition -2.975 -2.526 -9.721
+$illumposition 0 0 0
 
 $cdmaterials "models\weapons\mcv\v_sickle\"
 

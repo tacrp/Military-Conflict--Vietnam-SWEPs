@@ -45,6 +45,8 @@ SWEP.LastShotAnimation = false
 SWEP.ShotgunReload = true
 SWEP.HasEmptyReload = true
 SWEP.PlayCycleAnimation = true
+SWEP.InvertAnimationHammer = true
+SWEP.AnimationHandlesHammer = true
 
 // View slide from recoil
 SWEP.ViewSlideRecoilUp = 3.2

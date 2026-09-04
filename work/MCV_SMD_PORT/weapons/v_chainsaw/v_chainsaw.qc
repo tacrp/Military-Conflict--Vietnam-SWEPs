@@ -17,7 +17,7 @@ $surfaceprop "default"
 
 $contents "solid"
 
-$illumposition 10.714 -6.283 -9.049
+$illumposition 0 0 0
 
 $cdmaterials "models\weapons\mcv\v_chainsaw\"
 $cdmaterials ""

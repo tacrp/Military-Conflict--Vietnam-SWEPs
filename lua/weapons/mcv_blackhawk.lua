@@ -44,9 +44,12 @@ SWEP.Firemodes = {
 }
 
 SWEP.LastShotAnimation = false
+SWEP.ShotgunReload = true
 SWEP.HasEmptyReload = false
 SWEP.RevolverFiremodePose = true
 SWEP.ShotgunReload = true
+SWEP.NoEjectOnShoot = true
+SWEP.AkimboDualSingleActionReload = true
 
 // View slide from recoil
 SWEP.ViewSlideRecoilUp = 2.8
@@ -72,8 +75,8 @@ SWEP.ScopeMaterial = NULL
 SWEP.ScopeFOV = 8
 SWEP.ScopeFOV2 = 4
 
-SWEP.IronsightPos = Vector(0.06, -4, 0) -- TODO tune (game: forward -3 right 0 up 0)
-SWEP.IronsightAng = Angle(0.25, 0.1, 0) -- TODO tune
+SWEP.IronsightPos = Vector(0.06, -4, 0)
+SWEP.IronsightAng = Angle(0.25, 0.1, 0)
 
 SWEP.CustomPos = Vector(0, -2, 0)
 SWEP.CustomAng = Angle(0, 0, 0)

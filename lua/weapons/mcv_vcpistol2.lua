@@ -42,6 +42,7 @@ SWEP.Firemodes = {
 }
 
 SWEP.LastShotAnimation = true
+SWEP.NoEjectOnShoot = false
 
 // View slide from recoil
 SWEP.ViewSlideRecoilUp = 1.92
@@ -67,8 +68,8 @@ SWEP.ScopeMaterial = NULL
 SWEP.ScopeFOV = 8
 SWEP.ScopeFOV2 = 4
 
-SWEP.IronsightPos = Vector(0.06, -4, 0) -- TODO tune (game: forward -5 right 0.01 up -0.1)
-SWEP.IronsightAng = Angle(0.25, 0.1, 0) -- TODO tune
+SWEP.IronsightPos = Vector(0.06, -4, 0)
+SWEP.IronsightAng = Angle(0.25, 0.1, 0)
 
 SWEP.CustomPos = Vector(0, -2, 0)
 SWEP.CustomAng = Angle(0, 0, 0)

@@ -156,6 +156,7 @@ SWEP.MuzzleParticleIronsightedSmoke = "vietnam_muzzleflash_pistol_qspr_fp_is_smo
 SWEP.MuzzleParticle3rdPerson = "vietnam_muzzleflash_pistol_qspr_tp"
 
 SWEP.EjectBrassType = 11
+SWEP.NoEjectOnShoot = true
 SWEP.EjectBrassTrail = "vietnam_weaponeffect_shelleject_trail"
 SWEP.EjectBrassParticle = "vietnam_weaponeffect_shelleject_side"
 

@@ -13,7 +13,7 @@ $surfaceprop "default"
 
 $contents "solid"
 
-$illumposition -6.916 -12.267 -11.59
+$illumposition 0 0 0
 
 $cdmaterials "models\weapons\mcv\v_lpo50\"
 

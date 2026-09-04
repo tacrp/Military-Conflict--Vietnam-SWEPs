@@ -23,7 +23,7 @@ $surfaceprop "weapon"
 
 $contents "solid"
 
-$illumposition -0.052 -2.964 -2.056
+$illumposition 0 0 0
 
 $cdmaterials "models\weapons\mcv\w_k50m\"
 $cdmaterials ""

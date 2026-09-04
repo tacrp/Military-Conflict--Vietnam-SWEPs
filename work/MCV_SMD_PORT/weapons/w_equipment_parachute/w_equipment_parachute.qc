@@ -13,7 +13,7 @@ $surfaceprop "cloth"
 
 $contents "solid"
 
-$illumposition 0.04 -0.159 140.737
+$illumposition 0 0 0
 
 $cdmaterials "models\weapons\mcv\v_equipment_parachute\"
 

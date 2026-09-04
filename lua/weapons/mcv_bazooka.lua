@@ -23,6 +23,10 @@ SWEP.WorldModel = "models/weapons/mcv/w_bazooka.mdl"
 
 SWEP.BodyGroups = ""
 
+SWEP.BulletBodygroups = {
+    [1] = {1, 1},
+}
+
 // Stats
 
 SWEP.DamageGeneric = 30
@@ -42,6 +46,10 @@ SWEP.Firemodes = {
 
 SWEP.LastShotAnimation = false
 SWEP.HasEmptyReload = false
+SWEP.NoEjectOnShoot = true
+SWEP.ShootEntity = "mcv_proj_bazooka"
+SWEP.ShootEntityForce = 5000
+SWEP.AmmoPerShot = 1
 
 // View slide from recoil
 SWEP.ViewSlideRecoilUp = 3.12
@@ -67,8 +75,8 @@ SWEP.ScopeMaterial = NULL
 SWEP.ScopeFOV = 8
 SWEP.ScopeFOV2 = 4
 
-SWEP.IronsightPos = Vector(0.06, -4, 0) -- TODO tune (game: forward 0 right 0 up 0)
-SWEP.IronsightAng = Angle(0.25, 0.1, 0) -- TODO tune
+SWEP.IronsightPos = Vector(0.06, -4, 0)
+SWEP.IronsightAng = Angle(0.25, 0.1, 0)
 
 SWEP.CustomPos = Vector(0, -2, 0)
 SWEP.CustomAng = Angle(0, 0, 0)

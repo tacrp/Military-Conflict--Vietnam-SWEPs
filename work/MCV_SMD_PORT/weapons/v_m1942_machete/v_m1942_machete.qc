@@ -13,7 +13,7 @@ $surfaceprop "default"
 
 $contents "solid"
 
-$illumposition -2.721 -3.153 -9.131
+$illumposition 0 0 0
 
 $cdmaterials "models\weapons\mcv\v_m1942_machete\"
 

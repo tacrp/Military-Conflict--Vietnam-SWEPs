@@ -322,8 +322,22 @@ end
 
 function SWEP:RocketAttack(secondary)
     if CLIENT then return end
+
+    local count = 1
+
+    if !secondary and self:GetFiremodeValue() == MCV.FIREMODE_VOLLEY then
+        // every rocket left in the clip leaves at once, each with its own spread
+        count = math.max(1, math.min(self:Clip1(), self.VolleyCount))
+    end
+
+    for i = 1, count do
+        self:LaunchProjectile(secondary, i)
+    end
+end
+
+function SWEP:LaunchProjectile(secondary, seed)
     local owner = self:GetOwner()
-    local spread = self:RandomSpread(self:GetSpread())
+    local spread = self:RandomSpread(self:GetSpread(), seed)
 
     local src = owner:GetShootPos()
     local dir = self:GetAimAngle() + spread

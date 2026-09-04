@@ -13,7 +13,7 @@ $surfaceprop "default"
 
 $contents "solid"
 
-$illumposition -0.367 -0.538 -13.755
+$illumposition 0 0 0
 
 $cdmaterials "models\weapons\mcv\v_ammobox\"
 

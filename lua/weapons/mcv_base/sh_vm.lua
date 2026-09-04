@@ -94,7 +94,9 @@ function SWEP:DoBodygroups(vm, visual)
 
     vm:SetPoseParameter("hammerpos", shouldhammer and 0 or 1)
 
-    vm:SetPoseParameter("empty", self:Clip1() == 0 and 0 or 1)
+    // 1 = clip empty. The game's SlidePosition / BoltshootMovement layers blend towards the
+    // locked-back bolt (and the non-cycling last shot) as this goes from 0.6 to 1.
+    vm:SetPoseParameter("empty", self:Clip1() == 0 and 1 or 0)
 
     vm:SetPoseParameter("player_movement", speed * Lerp(sa, 1, (1 + self.IronsightWalkBobbingStrength)))
 

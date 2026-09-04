@@ -23,7 +23,7 @@ $surfaceprop "weapon"
 
 $contents "solid"
 
-$illumposition 0.108 -8.213 -0.186
+$illumposition 0 0 0
 
 $cdmaterials "models\weapons\mcv\w_type30_bayonet\"
 

@@ -14,7 +14,7 @@ $surfaceprop "default"
 
 $contents "solid"
 
-$illumposition 2.645 3.875 -13.755
+$illumposition 0 0 0
 
 $cdmaterials "models\weapons\mcv\v_binocular\"
 

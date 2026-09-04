@@ -333,6 +333,44 @@ animation a sequence names that has an SMD on disk but no definition.
 describe grenades, mines, flamethrowers, melee and equipment, which the mcv_base cannot drive.
 Brass ids the game added after 2024 (19 to 31) map to the nearest shell model the addon has.
 
+### What the generator reads from the model and the game (second pass)
+
+* **Script to lua matching** (`resolve_lua_names`): through the viewmodel path, then the
+  `SCRIPT_ALIASES` table, an exact name, or the closest name when several lua files share a
+  viewmodel (kar98 / kar98_s, m1d / m1g). The icons step uses the same function, so a variant's
+  icon comes from its own script (weapon_kar98k_s.svg for mcv_kar98_s). Variants that no script
+  resolves to get their viewmodel sibling's icon. The game ships no icon for the Cobra, R76 and
+  Rhogun; those still need hand-made ones.
+* **Under-barrel launchers** (`launcher_folds`): weapon_m203 / xm148 / gp25 share the rifle's
+  viewmodel and fold into the rifle script; the rifle takes `SoundGrenadeShot` from the launcher's
+  `double_shot` sound and `RifleGrenadeForce` from its `gl_velocity` (m/s to units).
+* **Scopes** (`scope_info`): `RTScopeMaterialIndex` is the index of the first `lens_*` (else
+  `crosshair_*`) material in the compiled model's texture list; the reticle is the matching
+  `crosshair_<suffix>` texture from the optics folder (a VMT is written when the rip only brought
+  the VTF). A reticle a lua file already references and that exists on disk wins. A script that
+  claims a scope for a model without a lens (Vz.54, G43) gets `HasScope = false`. The game
+  reordered the materials of several old models, so `work/fix_lua_flags.py` re-derives the index
+  for every scoped lua.
+* **Belt / clip bullets**: `$bodygroup "bulletNN"` entries become `BulletBodygroups`.
+* **Ejection** (`eject_rule`): `NoEjectOnShoot = true` for revolvers, bolt actions, pumps, rocket
+  launchers and any model whose eject event lives outside the fire sequences (break-action
+  reload). The shot then leaves the shell to the animation's own `eject` event.
+* **Hammer events**: the game's shot animation sets `hammerpos 1`, the bolt / pump animation
+  `hammerpos 0`. The base reads the parameter the other way round, so cycle weapons with hammer
+  events get `AnimationHandlesHammer = true` and `InvertAnimationHammer = true`; without the
+  inverted flag the shot itself releases the action and a bolt rifle fires semi-auto.
+* **Volleys**: `VOLLEY_ALL` (Kolos: 7) makes `FIREMODE_VOLLEY` the only mode; `RocketAttack`
+  launches one projectile per round with its own spread.
+* **Dual single-action revolvers** (`SA_DUAL_RELOAD`: Nagant, Blackhawk) get
+  `AkimboDualSingleActionReload`.
+* The `empty` pose parameter is 1 when the clip is empty (the game's `SlidePosition` and
+  `BoltshootMovement` layers blend from 0.6 to 1 towards the locked-back bolt).
+* `$illumposition 0 0 0` on every model.
+
+`work/fix_lua_flags.py` applies the eject, hammer and scope rules to every existing lua file
+(dry run with `--dry-run`); `work/glua_check.py` syntax-checks GLua with LuaJIT (needs the
+Windows `python` with `lupa`).
+
 ### Overrides and rifle grenade variants
 
 `work/overrides/weapon_<name>.txt` holds KeyValues fragments that are merged over the game's

@@ -23,7 +23,7 @@ $surfaceprop "pottery"
 
 $contents "solid"
 
-$illumposition -0.008 -3.302 0.357
+$illumposition 0 0 0
 
 $cdmaterials "models\weapons\mcv\w_ak47_bayonet\"
 

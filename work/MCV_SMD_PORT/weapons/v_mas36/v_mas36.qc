@@ -29,7 +29,7 @@ $surfaceprop "weapon"
 
 $contents "solid"
 
-$illumposition -25.713 37.334 7.941
+$illumposition 0 0 0
 
 $mostlyopaque
 

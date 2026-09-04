@@ -32,7 +32,7 @@ $surfaceprop "weapon"
 
 $contents "solid"
 
-$illumposition 0.559 -1.47 -6.293
+$illumposition 0 0 0
 
 $cdmaterials "models\weapons\mcv\w_rpd\"
 $cdmaterials "models\player\equipment\"

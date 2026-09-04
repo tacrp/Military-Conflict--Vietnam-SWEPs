@@ -13,7 +13,7 @@ $surfaceprop "default"
 
 $contents "solid"
 
-$illumposition -14.039 9.043 1.061
+$illumposition 0 0 0
 
 $cdmaterials "models\weapons\mcv\v_katana\"
 

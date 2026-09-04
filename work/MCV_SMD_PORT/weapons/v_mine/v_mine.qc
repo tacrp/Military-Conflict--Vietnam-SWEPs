@@ -19,7 +19,7 @@ $surfaceprop "default"
 
 $contents "solid"
 
-$illumposition -0.808 -1.612 -13.208
+$illumposition 0 0 0
 
 $cdmaterials "models\weapons\mcv\v_mine\"
 

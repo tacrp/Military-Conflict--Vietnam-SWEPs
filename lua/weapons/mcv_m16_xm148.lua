@@ -39,9 +39,10 @@ SWEP.Firemodes = {
 }
 
 SWEP.LastShotAnimation = false
+SWEP.NoEjectOnShoot = false
 SWEP.RifleGrenadeIsUBGL = true
 SWEP.RifleGrenadeEntity = "mcv_proj_40mm"
-SWEP.RifleGrenadeForce = 7000
+SWEP.RifleGrenadeForce = 2755
 
 // View slide from recoil
 SWEP.ViewSlideRecoilUp = 1.48
@@ -67,8 +68,8 @@ SWEP.ScopeMaterial = NULL
 SWEP.ScopeFOV = 8
 SWEP.ScopeFOV2 = 4
 
-SWEP.IronsightPos = Vector(0.06, -4, 0) -- TODO tune (game: forward -2 right 0 up 0)
-SWEP.IronsightAng = Angle(0.25, 0.1, 0) -- TODO tune
+SWEP.IronsightPos = Vector(0.06, -4, 0)
+SWEP.IronsightAng = Angle(0.25, 0.1, 0)
 
 SWEP.CustomPos = Vector(0, -2, 0)
 SWEP.CustomAng = Angle(0, 0, 0)
@@ -126,7 +127,7 @@ SWEP.SoundDoubleShot = "MCV_Weapon_M203.Single"
 SWEP.SoundReload = ""
 SWEP.SoundSpecial1 = ""
 SWEP.SoundSpecial2 = ""
-SWEP.SoundGrenadeShot = "MCV_Weapon_M16_XM148.RifleGrenade" -- TODO check soundscript name
+SWEP.SoundGrenadeShot = "MCV_Weapon_M203.Single"
 SWEP.SoundNearlyEmpty = "MCV_Weapon_Generic.NearlyEmptyClick"
 SWEP.SoundEmpty = "MCV_Weapon_Generic.ClipEmpty_01"
 

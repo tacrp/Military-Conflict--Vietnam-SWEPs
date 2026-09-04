@@ -48,7 +48,7 @@ $surfaceprop "default"
 
 $contents "solid"
 
-$illumposition -1.734 21.61 -11.356
+$illumposition 0 0 0
 
 $cdmaterials "models\weapons\mcv\v_kolos\"
 

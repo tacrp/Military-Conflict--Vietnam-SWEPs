@@ -13,7 +13,7 @@ $surfaceprop "default"
 
 $contents "solid"
 
-$illumposition -7.794 -7.186 -9.054
+$illumposition 0 0 0
 
 $cdmaterials "models\weapons\mcv\v_lungemine\"
 

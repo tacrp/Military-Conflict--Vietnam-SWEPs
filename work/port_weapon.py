@@ -18,6 +18,7 @@ Data sources, in priority order:
 See PORTING.md for the tables.
 """
 import argparse
+import struct
 import collections
 import glob
 import os
@@ -146,7 +147,158 @@ VC_ORIGINS = {"#soviet_union", "#china", "#russian_empire", "#france", "#nazi_ge
               "#North_Vietnam", "#czechslovakia", "#hungary", "#republic_of_china", "#north_korea"}
 
 SHOOT_ENTITY = {"rpg2": "mcv_proj_rpg2", "rpg7": "mcv_proj_rpg", "m72": "mcv_proj_rpg", "m202": "mcv_proj_m202",
+                "xm202": "mcv_proj_m202", "bazooka": "mcv_proj_bazooka", "panzerschreck": "mcv_proj_panzerschreck",
+                "kolos": "mcv_proj_kolos",
                 "m79": "mcv_proj_40mm", "m79_short": "mcv_proj_40mm", "china_lake": "mcv_proj_40mm", "chinalake": "mcv_proj_40mm"}
+
+# weapons that empty the whole clip in one trigger pull (the Kolos fires its seven rockets at once)
+VOLLEY_ALL = {"kolos": 7}
+
+# single-action revolvers whose dual wield reload swaps hands halfway (the Nagant does this in the game)
+SA_DUAL_RELOAD = {"m1895", "blackhawk"}
+
+# game script name -> addon lua name where the two cannot be matched through the viewmodel alone
+# (several lua files share one viewmodel, or the model was renamed)
+SCRIPT_ALIASES = {"baby_browning": "babybrowning", "china_lake": "chinalake", "dual_hp": "dual_highpower",
+                  "kar98k": "kar98", "kar98k_s": "kar98_s", "m1903": "springfield", "m1903s": "springfield_s",
+                  "m1918_bar": "m1918_bar", "m1918": "m1918", "m1942": "m1942_machete", "stg44s": "stg44_s",
+                  "svt40s": "svt40_s", "mas49s": "mas49_s", "m607s": "m607_s", "car15s": "car15_s",
+                  "m21s": "m21", "m1gs": "m1d", "type17": "shanxi_type17"}
+
+FIRE_ACT_RE = re.compile(r'ACT_VM_(PRIMARYATTACK|SHOOTLAST|RECOIL|ISHOOT|SHOOT)')
+
+OPTICS_DIR = os.path.join(ADDON, "materials", "models", "weapons", "mcv", "optics")
+
+
+def _norm(n):
+    return re.sub(r'[^a-z0-9]', '', n.lower())
+
+
+def resolve_lua_names(scripts_dir, addon=ADDON):
+    """script name -> lua name (without the mcv_ prefix).
+
+    Matched through the viewmodel path (the lua files were not named after the scripts). When
+    several lua files share a viewmodel (kar98 / kar98_s, m1d / m1g), the alias table decides,
+    then an exact name, then the closest name. A script whose viewmodel no lua uses maps to its
+    own name (a new weapon)."""
+    import difflib
+    vm_to_luas = {}
+    lua_names = set()
+    for lp in glob.glob(os.path.join(addon, "lua", "weapons", "mcv_*.lua")):
+        ln = os.path.basename(lp)[4:-4]
+        lua_names.add(ln)
+        m = re.search(r'SWEP\.ViewModel\s*=\s*"models/weapons/mcv/([^"]+)\.mdl"', open(lp, encoding="utf-8", errors="replace").read())
+        if m:
+            vm_to_luas.setdefault(m.group(1).lower(), []).append(ln)
+    out = {}
+    for sp in glob.glob(os.path.join(scripts_dir, "weapon_*.txt")):
+        sname = os.path.basename(sp)[len("weapon_"):-4]
+        if sname in SCRIPT_ALIASES:
+            out[sname] = SCRIPT_ALIASES[sname]
+            continue
+        if sname in lua_names:
+            out[sname] = sname
+            continue
+        m = re.search(r'"viewmodel"\s+"models/weapons/([^"]+)\.mdl"', open(sp, encoding="utf-8", errors="replace").read())
+        cands = vm_to_luas.get(m.group(1).lower(), []) if m else []
+        if not cands:
+            out[sname] = sname
+        elif len(cands) == 1:
+            out[sname] = cands[0]
+        else:
+            ns = _norm(sname)
+            out[sname] = max(cands, key=lambda c: (round(difflib.SequenceMatcher(None, ns, _norm(c)).ratio(), 3),
+                                                   ns.startswith(_norm(c)), -len(c)))
+    return out
+
+
+def launcher_folds(scripts_dir):
+    """The game's under-barrel launchers (m203, xm148, gp25) are weapons of their own that share
+    the rifle's viewmodel. In the addon the launcher is a mode of the rifle, so the launcher
+    script folds into the rifle script and lends it the grenade values.
+    Returns {launcher script name: rifle script name}."""
+    by_vm = {}
+    types = {}
+    for sp in glob.glob(os.path.join(scripts_dir, "weapon_*.txt")):
+        sname = os.path.basename(sp)[len("weapon_"):-4]
+        src = open(sp, encoding="utf-8", errors="replace").read()
+        m = re.search(r'"viewmodel"\s+"models/weapons/([^"]+)\.mdl"', src)
+        t = re.search(r'"WeaponType"\s+"([^"]+)"', src)
+        if m and t:
+            by_vm.setdefault(m.group(1).lower(), []).append(sname)
+            types[sname] = t.group(1)
+    out = {}
+    for vm, names in by_vm.items():
+        gls = [n for n in names if types[n] == "GrenadeLauncher" and not n.startswith("dual_")]
+        rifles = [n for n in names if types[n] != "GrenadeLauncher" and not n.startswith("dual_")]
+        if gls and rifles:
+            rifle = sorted(rifles, key=len)[0]
+            for g in gls:
+                out[g] = rifle
+    return out
+
+
+def mdl_textures(vm):
+    """Material names of the compiled viewmodel, in submaterial order."""
+    p = os.path.join(ADDON, "models", "weapons", "mcv", vm + ".mdl")
+    if not os.path.isfile(p):
+        return []
+    d = open(p, "rb").read()
+    off = 4 + 4 + 4 + 64 + 4 + 12 * 6
+    ints = struct.unpack_from("<41i", d, off + 44)
+    numtex, texindex = ints[2], ints[3]
+    names = []
+    for i in range(numtex):
+        t = texindex + i * 64
+        nm = struct.unpack_from("<i", d, t)[0]
+        names.append(d[t + nm:d.index(b"\0", t + nm)].decode("latin-1"))
+    return names
+
+
+def ensure_reticle_vmt(base):
+    """The rip copies every crosshair_*.vtf of the game but only some come with a .vmt."""
+    vmt = os.path.join(OPTICS_DIR, base + ".vmt")
+    vtf = os.path.join(OPTICS_DIR, base + ".vtf")
+    if os.path.isfile(vmt) or not os.path.isfile(vtf):
+        return os.path.isfile(vmt)
+    with open(vmt, "w", encoding="utf-8", newline="\n") as f:
+        f.write('"VertexLitGeneric"\n{\n\t"$basetexture" "models\\weapons\\mcv\\optics\\%s"\n\t"$translucent" "1"\n\t"$nocsm" "1"\n}\n' % base)
+    return True
+
+
+def scope_info(vm):
+    """(submaterial index of the lens, reticle material path) from the compiled model, or (None, None).
+
+    The lens is the first material named lens_*; a few models (Vz.54 sniper) carry the reticle
+    itself as a crosshair_* material instead. The reticle drawn into the render target is the
+    matching crosshair_<suffix> texture from the game when the addon has it."""
+    names = mdl_textures(vm)
+    idx = None
+    for i, n in enumerate(names):
+        if n.lower().startswith("lens_"):
+            idx = i
+            break
+    if idx is None:
+        for i, n in enumerate(names):
+            if n.lower().startswith("crosshair_"):
+                idx = i
+                break
+    if idx is None:
+        return None, None
+    lens = names[idx].lower()
+    suffix = lens.split("_", 1)[1] if "_" in lens else lens
+    for cand in ("crosshair_" + suffix, lens):
+        if ensure_reticle_vmt(cand):
+            return idx, "models/weapons/mcv/optics/" + cand
+    return idx, None
+
+
+def eject_rule(qc, is_revolver, is_bolt, is_pump, is_rocket=False):
+    """True when the shell must not be thrown by the shot: the animation set ejects it
+    elsewhere (bolt pull, pump, revolver / break-action reload), or there is no shell."""
+    if is_revolver or is_bolt or is_pump or is_rocket:
+        return True
+    return qc["eject_outside_fire"] and not qc["eject_in_fire"]
 
 # --------------------------------------------------------------------------------------------
 # KeyValues parsing
@@ -197,7 +349,7 @@ def find_qc(vm_name):
 
 def qc_facts(path):
     f = {"acts": set(), "bodygroups": [], "poseparams": [], "ammo_blend_reload": False, "hammer_events": False,
-         "ammo_blend_names": []}
+         "ammo_blend_names": [], "bullet_bodygroups": [], "eject_in_fire": False, "eject_outside_fire": False}
     if not path:
         return f
     src = open(path, encoding="utf-8", errors="replace").read()
@@ -205,8 +357,16 @@ def qc_facts(path):
     f["bodygroups"] = re.findall(r'^\$bodygroup\s+"([^"]+)"', src, re.M)
     f["poseparams"] = re.findall(r'^\$poseparameter\s+"([^"]+)"', src, re.M)
     f["hammer_events"] = "hammerpos" in src
+    # belt / clip bullets modelled as bodygroups "bullet01".."bulletNN": their indices in bodygroup order
+    f["bullet_bodygroups"] = [i for i, b in enumerate(f["bodygroups"]) if re.match(r'bullet\d+$', b.lower())]
     for m in re.finditer(r'^\$sequence\s+"([^"]+)"\s*\{(.*?)^\}', src, re.S | re.M):
         body = m.group(2)
+        if "AE_CLIENT_EJECT_BRASS" in body:
+            acts_here = re.findall(r'activity\s+"([^"]+)"', body)
+            if any(FIRE_ACT_RE.search(a) for a in acts_here):
+                f["eject_in_fire"] = True
+            else:
+                f["eject_outside_fire"] = True
         # clip loaded weapons either blend the reload on ammo_fraction (SKS) or set the loaded
         # count from an event partway through the animation (Garand, SVT-40)
         if "RELOAD" in body and "delta" not in body and (
@@ -223,7 +383,8 @@ REUSE_KEYS = ("PrintName", "IronsightPos", "IronsightAng", "CustomPos", "FireRat
               "ScopeFOV2", "HasScope", "AdjustableScopes", "OEGScope", "Slot", "SubCategory", "Caliber",
               "CycleSpeed", "CyclePostDelay", "TriggerDelayTime", "IconOverride", "ViewModelFOV",
               "SightedViewModelFOV", "MuzzleParticle", "MuzzleParticle3rdPerson", "MuzzleParticleIronsighted",
-              "RTScopeMaterialIndex", "IronsightSpeedScale", "InvertAnimationHammer", "AnimationHandlesHammer")
+              "RTScopeMaterialIndex", "IronsightSpeedScale", "InvertAnimationHammer", "AnimationHandlesHammer",
+              "RifleGrenadeForce", "SoundGrenadeShot")
 
 def read_existing(lua_path):
     d = {}
@@ -238,6 +399,9 @@ def read_existing(lua_path):
     fm = re.search(r'SWEP\.Firemodes\s*=\s*\{(.*?)\}', src, re.S)
     if fm:
         d["Firemodes"] = [x.strip() for x in fm.group(1).replace("\n", " ").split(",") if x.strip()]
+    bb = re.search(r'^SWEP\.BulletBodygroups\s*=\s*\{.*?^\}', src, re.S | re.M)
+    if bb:
+        d["BulletBodygroupsBlock"] = bb.group(0)
     return d
 
 # --------------------------------------------------------------------------------------------
@@ -345,6 +509,9 @@ def generate(script_path, args):
             firemodes = ["MCV.FIREMODE_SEMI"]
     if reuse("Firemodes"):
         firemodes = existing["Firemodes"]
+    if name in VOLLEY_ALL:
+        firemodes = ["MCV.FIREMODE_VOLLEY"]
+        is_volley = True
 
     # ---- fire rate -------------------------------------------------------------------------
     firerate = num(S.get("FireRate"), 0)
@@ -429,6 +596,25 @@ def generate(script_path, args):
     has_scope = "BodygroupData.scope" in S or "ScopeLensFov" in S or name.endswith("_s") and wtype in ("SniperRifle", "BoltActionRifle", "BattleRifle", "Carbine")
     if reuse("HasScope"):
         has_scope = reuse("HasScope") == "true"
+    scope_idx, scope_mat = (None, None)
+    if has_scope:
+        scope_idx, scope_mat = scope_info(vm)
+        if scope_idx is None:
+            warnings.append("script suggests a scope but the compiled model has no lens material; HasScope off")
+            has_scope = False
+        # a hand-made reticle in the optics folder wins over the game's texture
+        r = reuse("ScopeMaterial")
+        rm = re.search(r'Material\("([^"]+)"\)', r or "")
+        if rm and os.path.isfile(os.path.join(ADDON, "materials", rm.group(1).replace("/", os.sep) + ".vmt")):
+            scope_mat = rm.group(1)
+        if scope_mat is None:
+            warnings.append("no reticle material found for the scope")
+    # the launcher script this rifle absorbed (m203 -> m16a1_m203, xm148 -> m16_xm148, gp25 -> akm_gp25)
+    L = {}
+    lp = getattr(args, "launcher_of", {}).get(name)
+    if lp:
+        lkv = parse_kv(open(lp, encoding="utf-8", errors="replace").read())
+        L = flat(lkv.get("WeaponData", lkv))
 
     origin = S.get("origin", "")
     country = COUNTRY.get(origin)
@@ -479,6 +665,16 @@ def generate(script_path, args):
         A(line("GrenadeLauncherBodygroup", gl_bg))
     if gren_bg is not None:
         A(line("GrenadeBodygroup", gren_bg))
+    if existing.get("BulletBodygroupsBlock"):
+        A("")
+        A(existing["BulletBodygroupsBlock"])
+    elif qc["bullet_bodygroups"]:
+        # visible belt / clip rounds: bodygroup i shows round i, hidden (blank) once it is fired
+        A("")
+        A("SWEP.BulletBodygroups = {")
+        for n, idx in enumerate(qc["bullet_bodygroups"], 1):
+            A("    [%d] = {%d, 1}," % (n, idx))
+        A("}")
     A("")
     A("// Stats")
     A("")
@@ -494,7 +690,7 @@ def generate(script_path, args):
     A("    " + ",\n    ".join(firemodes))
     A("}")
     if is_volley:
-        A(line("VolleyCount", 2))
+        A(line("VolleyCount", VOLLEY_ALL.get(name, 2)))
     if "MCV.FIREMODE_FAST" in firemodes:
         A(line("FireRate_Fast", int(firerate)))
         A(line("FireRate_Slow", int(num(S.get("SecondaryFireRate"), num(firerate, 300) * 0.6))))
@@ -519,18 +715,26 @@ def generate(script_path, args):
         if shotgun_reload or "ACT_SHOTGUN_RELOAD_START" in acts:
             A(line("ShotgunReload", "true"))
     if qc["hammer_events"] and (cycle or shotgun_reload):
-        A(line("AnimationHandlesHammer", reuse("AnimationHandlesHammer") or "true"))
-        if reuse("InvertAnimationHammer"):
-            A(line("InvertAnimationHammer", reuse("InvertAnimationHammer")))
-        else:
-            A("// SWEP.InvertAnimationHammer = true -- TODO check: set if the hammer pose reads backwards in game")
+        # The game's animations set "hammerpos 1" when the shot lands and "hammerpos 0" once the
+        # bolt / pump has cycled; the base reads that the other way round, so every game model
+        # needs the inverted flag or the shot itself releases the action (bolt guns fire semi-auto).
+        A(line("AnimationHandlesHammer", "true"))
+        A(line("InvertAnimationHammer", "true"))
+    A(line("NoEjectOnShoot", fmt(eject_rule(qc, is_revolver, is_bolt, is_pump, wtype == "RocketLauncher" or name in SHOOT_ENTITY))))
+    if has_akimbo and name in SA_DUAL_RELOAD:
+        A(line("AkimboDualSingleActionReload", "true"))
     if has_gl and not gl_is_ubgl:
         A(line("RifleGrenadeEntity", fmt("mcv_proj_riflegrenade_vc" if origin in VC_ORIGINS else "mcv_proj_riflegrenade")))
         A(line("RifleGrenadeForce", 2000))
     if has_gl and gl_is_ubgl:
         A(line("RifleGrenadeIsUBGL", "true"))
         A(line("RifleGrenadeEntity", fmt("mcv_proj_40mm")))
-        A(line("RifleGrenadeForce", 7000))
+        # the launcher script's gl_velocity is m/s; the hand-tuned M203 sits close to the 70 m/s value
+        glv = num(L.get("gl_velocity"), 0)
+        rf = reuse("RifleGrenadeForce")
+        if rf in (None, "7000") and glv:
+            rf = int(glv * 39.37)
+        A(line("RifleGrenadeForce", rf or 2750))
     if name in SHOOT_ENTITY:
         A(line("ShootEntity", fmt(SHOOT_ENTITY[name])))
         A(line("ShootEntityForce", int(num(S.get("muzzle_velocity"), 100)) * 50))
@@ -556,12 +760,16 @@ def generate(script_path, args):
     A(line("IronsightWalkBobbingStrength", fmt(num(S.get("ironsightwalkbobbingstrength"), -0.25))))
     A("")
     A(line("HasScope", fmt(has_scope)))
-    A(line("ScopeMaterial", reuse("ScopeMaterial") or ("NULL" if not has_scope else 'Material("models/weapons/mcv/optics/crosshair_%s") -- TODO check material exists' % name)))
+    if has_scope and scope_mat:
+        A(line("ScopeMaterial", 'Material("%s")' % scope_mat))
+    else:
+        A(line("ScopeMaterial", "NULL"))
     A(line("ScopeFOV", reuse("ScopeFOV") or 8))
     A(line("ScopeFOV2", reuse("ScopeFOV2") or 4))
+    if has_scope and scope_idx is not None:
+        A(line("RTScopeMaterialIndex", scope_idx))
     if reuse("AdjustableScopes"): A(line("AdjustableScopes", reuse("AdjustableScopes")))
     if reuse("OEGScope"): A(line("OEGScope", reuse("OEGScope")))
-    if reuse("RTScopeMaterialIndex"): A(line("RTScopeMaterialIndex", reuse("RTScopeMaterialIndex")))
     A("")
     ip = reuse("IronsightPos")
     ia = reuse("IronsightAng")
@@ -623,7 +831,14 @@ def generate(script_path, args):
     A(line("SoundSpecial1", snd("special1")))
     A(line("SoundSpecial2", snd("special2")))
     if has_gl:
-        A(line("SoundGrenadeShot", fmt("MCV_Weapon_%s.RifleGrenade" % name.upper()) + " -- TODO check soundscript name"))
+        gs = L.get("SoundData.double_shot") or L.get("SoundData.single_shot")
+        rs = reuse("SoundGrenadeShot")
+        if rs and ".RifleGrenade" not in rs:
+            A(line("SoundGrenadeShot", rs))
+        elif gs:
+            A(line("SoundGrenadeShot", fmt("MCV_" + gs)))
+        else:
+            A(line("SoundGrenadeShot", fmt("MCV_Weapon_%s.RifleGrenade" % name.upper()) + " -- TODO check soundscript name"))
     A(line("SoundNearlyEmpty", snd("nearlyempty", "MCV_Weapon_Generic.NearlyEmptyClick")))
     A(line("SoundEmpty", snd("empty", "MCV_Weapon_Generic.ClipEmpty_01")))
     A("")
@@ -680,22 +895,7 @@ def main():
         args.strings = {k.lower(): v for k, v in json.load(open(sp, encoding="utf-8")).items()}
     # script name -> existing lua name. Matched through the viewmodel path (the lua files were not
     # named after the scripts), with a few manual pairs for models that were renamed as well.
-    args.name_map = {"baby_browning": "babybrowning", "china_lake": "chinalake", "dual_hp": "dual_highpower",
-                     "kar98k_s": "kar98_s", "m1903s": "springfield_s", "m1918_bar": "bar_l", "m1942": "m1942_machete",
-                     "stg44s": "stg44", "svt40s": "svt40_s", "mas49s": "mas49_s", "m607s": "m607", "car15s": "car15",
-                     "m21s": "m21", "m1gs": "m1g_s"}
-    vm_to_lua = {}
-    for lp in glob.glob(os.path.join(args.addon, "lua", "weapons", "mcv_*.lua")):
-        m = re.search(r'SWEP\.ViewModel\s*=\s*"models/weapons/mcv/([^"]+)\.mdl"', open(lp, encoding="utf-8", errors="replace").read())
-        if m:
-            vm_to_lua.setdefault(m.group(1).lower(), os.path.basename(lp)[4:-4])
-    for sp in glob.glob(os.path.join(args.scripts_dir, "weapon_*.txt")):
-        sname = os.path.basename(sp)[len("weapon_"):-4]
-        if sname in args.name_map:
-            continue
-        m = re.search(r'"viewmodel"\s+"models/weapons/([^"]+)\.mdl"', open(sp, encoding="utf-8", errors="replace").read())
-        if m and m.group(1).lower() in vm_to_lua:
-            args.name_map[sname] = vm_to_lua[m.group(1).lower()]
+    args.name_map = resolve_lua_names(args.scripts_dir, args.addon)
 
     if args.all:
         files = sorted(glob.glob(os.path.join(args.source, "weapon_*.txt")))
@@ -716,13 +916,19 @@ def main():
             vm_b = re.search(r'"viewmodel"\s+"([^"]+)"', open(bp, encoding="utf-8", errors="replace").read())
             if vm_v and vm_b and vm_v.group(1).lower() == vm_b.group(1).lower():
                 args.overrides.setdefault(name, {})["MergeInto"] = base
+    # under-barrel launcher scripts fold into their rifle (see launcher_folds)
+    args.launcher_of = {}
+    for gl, rifle in launcher_folds(args.scripts_dir).items():
+        args.overrides.setdefault(gl, {})["MergeInto"] = rifle
+        args.launcher_of[rifle] = os.path.join(args.scripts_dir, "weapon_%s.txt" % gl)
     produced = {}
     for f in files:
         name = os.path.basename(f)[len("weapon_"):-4]
         lua_name = args.name_map.get(name, name)
         target = args.overrides.get(name, {}).get("MergeInto")
         if target:
-            print("%-28s folded into mcv_%s (rifle grenade of %s)" % (name, args.name_map.get(target, target), target))
+            what = "launcher of" if name in args.launcher_of.values() or target in args.launcher_of else "rifle grenade of"
+            print("%-28s folded into mcv_%s (%s %s)" % (name, args.name_map.get(target, target), what, target))
             continue
         if name.startswith("dual_"):
             # Dual wield is a mode of the single-wield weapon in this addon (HasAkimbo +

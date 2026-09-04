@@ -13,7 +13,7 @@ $surfaceprop "default"
 
 $contents "solid"
 
-$illumposition 0.039 -9.145 -14.676
+$illumposition 0 0 0
 
 $cdmaterials "models\weapons\mcv\v_stielhandgranate\"
 
