@@ -18,6 +18,7 @@ SWEP.ViewModel = "models/weapons/mcv/v_m34.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_m34.mdl"
 SWEP.MovementPoseWalk = 159
 SWEP.MovementPoseSprint = 258
+SWEP.MovementPoseSighted = 159
 
 SWEP.ThrowEntity = "mcv_grenade_wp"
 SWEP.FuseModes = {3, 5}

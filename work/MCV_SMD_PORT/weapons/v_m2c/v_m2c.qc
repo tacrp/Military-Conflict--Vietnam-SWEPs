@@ -511,7 +511,10 @@ $sequence "SlidePosition" {
 $sequence "runlayer" {
 	"runIdle_a"
 	"run_a"
+	"runIdle_a"
+	"runIdle_a"
 	blend "player_movement" 147 245
+	blend "ironsight" 0 1
 	blendwidth 2
 	delta
 	fadein 0.2
@@ -524,7 +527,11 @@ $sequence "walklayer" {
 	"walkIdle_a"
 	"walk_a"
 	"walkIdle_a"
+	"walkIdle_a"
+	"walkIdle_a"
+	"walkIdle_a"
 	blend "player_movement" 0 295
+	blend "ironsight" 0 1
 	blendwidth 3
 	delta
 	fadein 0.2
@@ -535,8 +542,11 @@ $sequence "walklayer" {
 
 $sequence "walklayerironsight" {
 	"walkIdle_a"
+	"walkIdle_a"
+	"walkIdle_a"
 	"walk_a"
 	blend "player_movement" 0 130
+	blend "ironsight" 0 1
 	blendwidth 2
 	delta
 	fadein 0.2
@@ -556,6 +566,7 @@ $sequence "idle" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "SlidePosition"
 	node "0"
@@ -572,8 +583,10 @@ $sequence "FirstDraw" {
 	{ event AE_WPN_CLIP_TO_POSEPARAM 3 "ammo_fraction" }
 	fadein 0
 	fadeout 0.2
-	fps 30
+	addlayer "walklayer"
 	addlayer "walklayerironsight"
+	addlayer "runlayer"
+	fps 30
 }
 
 $sequence "draw" {
@@ -586,9 +599,11 @@ $sequence "draw" {
 	{ event AE_WPN_CLIP_TO_POSEPARAM 3 "ammo_fraction" }
 	fadein 0
 	fadeout 0.2
+	addlayer "walklayer"
+	addlayer "walklayerironsight"
+	addlayer "runlayer"
 	addlayer "SlidePosition"
 	fps 30
-	addlayer "walklayerironsight"
 }
 
 $sequence "BoltshootMovement" {
@@ -611,6 +626,7 @@ $sequence "shoot1" {
 	blendwidth 3
 	snap
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "BoltshootMovement"
 	addlayer "SlidePosition"
@@ -636,6 +652,7 @@ $sequence "shoot2" {
 	blendwidth 3
 	snap
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "BoltshootMovement"
 	addlayer "SlidePosition"
@@ -661,6 +678,7 @@ $sequence "shoot3" {
 	blendwidth 3
 	snap
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "BoltshootMovement"
 	addlayer "SlidePosition"
@@ -725,6 +743,7 @@ $sequence "idletonearwall" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "SlidePosition"
 	node "0"
@@ -739,6 +758,7 @@ $sequence "nearwall" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
 	node "0"
 }
@@ -753,6 +773,7 @@ $sequence "nearwalltoidle" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
 	node "0"
 }
@@ -785,6 +806,7 @@ $sequence "bash" {
 	fadein 0
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
 	node "0"
 	fps 30
@@ -800,6 +822,7 @@ $sequence "pickupstart" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
 }
 
@@ -812,6 +835,7 @@ $sequence "pickuploop" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
 }
 
@@ -825,6 +849,7 @@ $sequence "pickupend" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
 }
 
@@ -840,6 +865,7 @@ $sequence "bayonet_unequip" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
 }
 
@@ -855,6 +881,7 @@ $sequence "bayonet_equip" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
 }
 
@@ -868,6 +895,7 @@ $sequence "bash_bayonet" {
 	fadein 0
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
 	node "0"
 }
@@ -883,6 +911,7 @@ $sequence "slash_bayonet" {
 	fadein 0
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
 	node "0"
 }
@@ -893,9 +922,11 @@ $sequence "holster" {
 	{ event 5004 0 "MCV_Weapon_Foley_M1C.Holster" }
 	fadein 0.2
 	fadeout 0.2
+	addlayer "walklayer"
+	addlayer "walklayerironsight"
+	addlayer "runlayer"
 	addlayer "SlidePosition"
 	fps 30
-	addlayer "walklayerironsight"
 }
 
 $sequence "gren_ironsight_test" {
@@ -915,6 +946,7 @@ $sequence "grenade_idle" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	blendlayer "gren_ironsight_test" 0 0 1 0 poseparameter ironsight
 	addlayer "SlidePosition"
@@ -929,6 +961,7 @@ $sequence "grenade_shoot" {
 	blendwidth 2
 	snap
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "SlidePosition"
 	addlayer "grenade_shoot_pose"
@@ -970,6 +1003,7 @@ $sequence "grenade_draw" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
 	fps 30
 }
@@ -985,6 +1019,7 @@ $sequence "grenade_draw_empty" {
 	fadein 0
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	fps 30
 }
@@ -1035,6 +1070,7 @@ $sequence "change_firemode" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "SlidePosition"
 }

@@ -24,13 +24,13 @@ ADDON = pw.ADDON
 SCRIPTS = os.path.join(HERE, "cscripts")
 KEYS = ("IronsightPos", "IronsightAng", "CustomPos", "CustomAng", "ScopeFOV", "ScopeFOV2", "BodyGroups",
         "SpreadBipod", "SpreadBipodIronsighted", "TracerParticle",
-        "MagInTime", "MagInTimeEmpty", "MagOutTime", "MagOutTimeEmpty", "MovementPoseWalk", "MovementPoseSprint",
+        "MagInTime", "MagInTimeEmpty", "MagOutTime", "MagOutTimeEmpty", "MovementPoseWalk", "MovementPoseSprint", "MovementPoseSighted",
         "AkimboPoseRecoil", "AkimboRecoilTime", "IronsightPosAkimbo", "IronsightAngAkimbo")
 # where a key that the lua file lacks is inserted (after this key; chains keep the order)
 INSERT_AFTER = {"CustomAng": "CustomPos", "SpreadBipod": "SpreadIronsighted", "SpreadBipodIronsighted": "SpreadBipod",
                 "TracerParticle": "TracerFrequency", "MagInTime": "BodyGroups", "MagInTimeEmpty": "MagInTime",
                 "MagOutTime": "MagInTimeEmpty", "MagOutTimeEmpty": "MagOutTime",
-                "MovementPoseWalk": "IronsightWalkBobbingStrength", "MovementPoseSprint": "MovementPoseWalk",
+                "MovementPoseWalk": "IronsightWalkBobbingStrength", "MovementPoseSprint": "MovementPoseWalk", "MovementPoseSighted": "MovementPoseSprint",
                 "AkimboPoseRecoil": "ViewModelAkimbo", "AkimboRecoilTime": "AkimboPoseRecoil",
                 "IronsightPosAkimbo": "IronsightAng", "IronsightAngAkimbo": "IronsightPosAkimbo"}
 

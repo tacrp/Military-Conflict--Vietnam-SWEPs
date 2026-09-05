@@ -18,6 +18,7 @@ SWEP.ViewModel = "models/weapons/mcv/v_c4.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_c4.mdl"
 SWEP.MovementPoseWalk = 128
 SWEP.MovementPoseSprint = 221
+SWEP.MovementPoseSighted = 128
 
 SWEP.PlaceKind = "c4"
 SWEP.PlacedEntityClass = "mcv_placed_c4"

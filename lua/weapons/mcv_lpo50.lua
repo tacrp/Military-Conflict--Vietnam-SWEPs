@@ -18,6 +18,7 @@ SWEP.ViewModel = "models/weapons/mcv/v_lpo50.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_lpo50.mdl"
 SWEP.MovementPoseWalk = 80
 SWEP.MovementPoseSprint = 160
+SWEP.MovementPoseSighted = 80
 SWEP.CustomPos = Vector(0, 0, 0)
 SWEP.CustomAng = Angle(0, 0, 0)
 

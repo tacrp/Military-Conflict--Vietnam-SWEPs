@@ -18,6 +18,7 @@ SWEP.ViewModel = "models/weapons/mcv/v_ak47_bayonet.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_ak47_bayonet.mdl"
 SWEP.MovementPoseWalk = 167
 SWEP.MovementPoseSprint = 268
+SWEP.MovementPoseSighted = 167
 
 
 SWEP.DamageGeneric = 35

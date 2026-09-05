@@ -18,6 +18,7 @@ SWEP.ViewModel = "models/weapons/mcv/v_fist.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_fist.mdl"
 SWEP.MovementPoseWalk = 167
 SWEP.MovementPoseSprint = 268
+SWEP.MovementPoseSighted = 167
 
 SWEP.HoldType = "fist"
 SWEP.AimHoldType = "fist"

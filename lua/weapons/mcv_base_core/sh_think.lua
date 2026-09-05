@@ -50,6 +50,12 @@ SWEP.SpeedAcceleration = 750 // units per second the blend moves at
 SWEP.MovementPoseWalk = 148
 SWEP.MovementPoseSprint = 245
 SWEP.MovementPoseWalkMax = 0.95 // fraction of MovementPoseWalk the walk may reach
+// Sighted: the models' walklayerironsight (walkIdle -> walk over 0..MovementPoseSighted, the
+// game's aimed walk) fades in on the "ironsight" pose while walklayer / runlayer fade to their
+// idle row (port_qc.py step_sighted_walk), so aiming while walking shows that layer at this
+// fraction of its full swing on every gun.
+SWEP.MovementPoseSighted = 130
+SWEP.SightedSwayFraction = 0.5
 
 function SWEP:GetMovementPose(speed, sa)
     local lo, hi = self.MovementPoseWalk, self.MovementPoseSprint
@@ -62,8 +68,10 @@ function SWEP:GetMovementPose(speed, sa)
         pose = Lerp((speed - self.SpeedRun) / math.max(self.SpeedSprint - self.SpeedRun, 1), walk, hi)
     end
 
-    // aiming damps the walk (the game's ironsightwalkbobbingstrength, -0.25 on most guns)
-    return pose * Lerp(sa, 1, 1 + self.IronsightWalkBobbingStrength)
+    // on the sights the movement layers are the sighted walk layer's: a set fraction of its swing
+    local sighted = math.min(speed / self.SpeedRun, 1) * self.MovementPoseSighted * self.SightedSwayFraction
+
+    return Lerp(sa, pose, sighted)
 end
 
 function SWEP:GetTargetSpeed()

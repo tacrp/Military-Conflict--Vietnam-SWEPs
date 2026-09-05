@@ -378,6 +378,14 @@ def qc_facts(path):
         b = re.search(r'blend\s+"player_movement"\s+(-?[\d.]+)\s+(-?[\d.]+)', m.group(1))
         if b:
             f["run_range"] = (float(b.group(1)), float(b.group(2)))
+    # the sighted walk layer's top: full sighted walk at this player_movement (130 on rifles,
+    # 106 M60, 80 LPO-50)
+    f["sighted_top"] = None
+    m = re.search(r'^\$sequence\s+"walklayerironsight"\s*\{(.*?)^\}', src, re.S | re.M)
+    if m:
+        b = re.search(r'blend\s+"player_movement"\s+(-?[\d.]+)\s+(-?[\d.]+)', m.group(1))
+        if b:
+            f["sighted_top"] = float(b.group(2))
     # reload animations: the frame the magazine / belt is swapped (the game's
     # AE_CL_BODYGROUP_SET_TO_NEXTCLIP event, _EMPTY when the old one comes out; the mag-in /
     # mag-out foley sounds as a fallback) and the fps, per reload activity
@@ -549,6 +557,8 @@ def anim_timing(qc):
     if rr:
         out["MovementPoseWalk"] = fmt(rr[0])
         out["MovementPoseSprint"] = fmt(rr[1])
+        st = qc.get("sighted_top") or rr[0]
+        out["MovementPoseSighted"] = fmt(st)
     ev = (qc or {}).get("reload_events") or {}
     times = {}
     for act, kin, kout in (("ACT_VM_RELOAD", "MagInTime", "MagOutTime"),
@@ -1242,6 +1252,7 @@ def generate(script_path, args):
         # the model's run layer range on player_movement: this weapon class's walk and sprint speeds
         A(line("MovementPoseWalk", timing["MovementPoseWalk"]))
         A(line("MovementPoseSprint", timing["MovementPoseSprint"]))
+        A(line("MovementPoseSighted", timing["MovementPoseSighted"]))
     A("")
     A(line("HasScope", fmt(has_scope)))
     if has_scope and scope_mat:

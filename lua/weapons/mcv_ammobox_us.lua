@@ -18,6 +18,7 @@ SWEP.ViewModel = "models/weapons/mcv/v_box.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_box.mdl"
 SWEP.MovementPoseWalk = 167
 SWEP.MovementPoseSprint = 268
+SWEP.MovementPoseSighted = 167
 
 SWEP.BoxKind = "ammo"
 SWEP.Primary.Ammo = "mcv_ammobox"

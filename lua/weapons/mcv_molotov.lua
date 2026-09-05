@@ -18,6 +18,7 @@ SWEP.ViewModel = "models/weapons/mcv/v_molotov.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_molotov.mdl"
 SWEP.MovementPoseWalk = 159
 SWEP.MovementPoseSprint = 258
+SWEP.MovementPoseSighted = 159
 
 SWEP.ThrowEntity = "mcv_grenade_molotov"
 SWEP.FuseImpact = true

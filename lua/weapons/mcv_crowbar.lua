@@ -18,6 +18,7 @@ SWEP.ViewModel = "models/weapons/mcv/v_crowbar.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_crowbar.mdl"
 SWEP.MovementPoseWalk = 167
 SWEP.MovementPoseSprint = 268
+SWEP.MovementPoseSighted = 167
 
 SWEP.HoldType = "melee"
 SWEP.AimHoldType = "melee"

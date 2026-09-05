@@ -697,18 +697,73 @@ def step_idle(qc, ctx):
 
 
 def step_movement_layers(qc, ctx):
-    """draw/firstdraw/holster: walklayer+runlayer -> walklayerironsight. reloads: no walk layer."""
-    have_wli = qc.find("sequence", "walklayerironsight") is not None
+    """reloads: no sighted walk layer (the sights drop for a reload anyway)."""
     for b in qc.blocks("sequence"):
         a = b.activity() or ""
-        if a in ("ACT_VM_DRAW", "ACT_VM_READY", "ACT_VM_HOLSTER", "ACT_VM_DRAW_EMPTY", "ACT_VM_EMPTY_DRAW") and have_wli:
-            layers = b.layers()
-            if "walklayer" in layers or "runlayer" in layers:
-                b.remove(lambda l: l in ('addlayer "walklayer"', 'addlayer "runlayer"'))
-                if "walklayerironsight" not in layers:
-                    b.lines.append('addlayer "walklayerironsight"')
         if "RELOAD" in a and ("ACT_SHOTGUN" not in a):
             b.remove(lambda l: l == 'addlayer "walklayerironsight"')
+
+
+def _two_rows(layer, hip_row, sighted_row):
+    """Rebuild a movement layer as a player_movement x ironsight grid: row 0 (hip) and row 1
+    (sights up), keeping its other options."""
+    opts = [l for l in layer.opts() if not l.startswith('blend "ironsight"') and not l.startswith("blendwidth")]
+    pm = [l for l in opts if l.startswith("blend ")]
+    rest = [l for l in opts if not l.startswith("blend ")]
+    layer.lines = ['"%s"' % a for a in hip_row + sighted_row] + pm + ['blend "ironsight" 0 1', "blendwidth %d" % len(hip_row)] + rest
+
+
+def _rows(layer):
+    """(hip row, sighted row) of a movement layer as authored: one axis = the same row twice."""
+    anims = layer.anims()
+    axes = [l for l in layer.lines if l.startswith("blend ")]
+    if len(axes) >= 2 and len(anims) % 2 == 0:
+        h = len(anims) // 2
+        return anims[:h], anims[h:]
+    return anims, anims
+
+
+def step_sighted_walk(qc, ctx):
+    """Sighted walking sway like the game's. The game aims from its `ironsight_test` sequence,
+    which carries `walklayerironsight` (walkIdle -> walk over 0..walk speed) instead of the
+    hip's walklayer + runlayer. The port merges aiming into the idle through the `ironsight`
+    pose, so the layers get that axis instead: walklayer and runlayer fade to their idle pose as
+    the sights come up (a third of the models already had that row; the others had one axis and
+    swayed as much aimed as from the hip), and walklayerironsight fades in (its hip row is the
+    idle pose). Lua drives player_movement to a fraction of the sighted layer's top when aiming
+    (MovementPoseSighted x SightedSwayFraction), so every gun sways the same, a little."""
+    wl = qc.find("sequence", "walklayer")
+    if wl is None or not wl.anims():
+        return
+    hip, _ = _rows(wl)
+    idle_anim, walk_anim = hip[0], (hip[1] if len(hip) > 1 else None)
+    _two_rows(wl, hip, [idle_anim] * len(hip))
+    rl = qc.find("sequence", "runlayer")
+    if rl is not None and rl.anims():
+        rhip, _ = _rows(rl)
+        _two_rows(rl, rhip, [rhip[0]] * len(rhip))
+    wli = qc.find("sequence", "walklayerironsight")
+    if wli is None:
+        if walk_anim is None:
+            return
+        top = 130.0
+        if rl is not None:
+            m = re.search(r'blend\s+"player_movement"\s+(-?[\d.]+)', " ".join(rl.lines))
+            if m:
+                top = float(m.group(1))
+        wli = Block("sequence", "walklayerironsight", None,
+                    ['"%s"' % idle_anim, '"%s"' % walk_anim, 'blend "player_movement" 0 %g' % top, "blendwidth 2",
+                     "delta", "fadein 0.2", "fadeout 0.2", "hidden", "realtime"])
+        qc.insert_after(wl, wli)
+        ctx.note("walklayerironsight built from the walk layer (0..%g)" % top)
+    _, sighted = _rows(wli)
+    _two_rows(wli, [sighted[0]] * len(sighted), sighted)
+    # every sequence that walks at the hip also walks on the sights
+    for b in qc.blocks("sequence"):
+        layers = b.layers()
+        if "walklayer" in layers and "walklayerironsight" not in layers:
+            i = b.lines.index('addlayer "walklayer"')
+            b.lines.insert(i + 1, 'addlayer "walklayerironsight"')
 
 
 def make_len_variant(qc, ctx, anim_name, nframes, created):
@@ -1346,6 +1401,7 @@ def port_one(args, og_dir):
     if ctx.mode != "other":
         step_idle(qc, ctx)
         step_movement_layers(qc, ctx)
+    step_sighted_walk(qc, ctx)   # guards on a walklayer being present
     step_equalize_static_blends(qc, ctx)
     step_idle_layers(qc, ctx)
     step_pose_split(qc, ctx)

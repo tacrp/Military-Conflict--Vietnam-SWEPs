@@ -547,8 +547,18 @@ pose: the gun points left while walking. `port_weapon.anim_timing` reads the run
 into `MovementPoseWalk` / `MovementPoseSprint` and `SWEP:GetMovementPose`
 (mcv_base_core/sh_think.lua) keeps the walk at 100 but caps it at 95% of the model's run layer
 start, and sprints to the model's top. Blending part of the run layer into plain walking (tried
-first) reads as "starting to sprint" on every gun; do not. Aiming multiplies the pose by
-`1 + IronsightWalkBobbingStrength` (0.75 on most guns), as the hand port did.
+first) reads as "starting to sprint" on every gun; do not.
+
+**Sighted walking** (`step_sighted_walk`): the game aims from `ironsight_test`, which carries
+`walklayerironsight` (walkIdle -> walk over 0..walk speed) instead of walklayer + runlayer, so
+every gun sways a little and the same way on the sights. The port merges aiming into the idle,
+so the layers get the `ironsight` axis instead: walklayer and runlayer become a
+player_movement x ironsight grid whose sighted row is the idle pose, and walklayerironsight
+(built from the walk layer where a model lacks one) a grid whose hip row is the idle pose; it is
+added to every sequence that carries walklayer. Before this, 92 models had a sighted row of
+idles (zero sway aimed: AK-47, SVT-40 family) and 176 had one axis (hip sway aimed: M2
+carbine). Lua drives the pose to `MovementPoseSighted x SightedSwayFraction` (the layer's top,
+read from the QC, times 0.5) when aiming.
 
 ## Hybrid reload (`mcv_hybrid_reload`)
 

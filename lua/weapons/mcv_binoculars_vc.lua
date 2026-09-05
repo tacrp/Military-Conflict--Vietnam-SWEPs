@@ -18,6 +18,7 @@ SWEP.ViewModel = "models/weapons/mcv/v_binocular.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_binocular.mdl"
 SWEP.MovementPoseWalk = 158
 SWEP.MovementPoseSprint = 258
+SWEP.MovementPoseSighted = 130
 SWEP.CustomPos = Vector(0, 0, 0)
 SWEP.CustomAng = Angle(0, 0, 0)
 

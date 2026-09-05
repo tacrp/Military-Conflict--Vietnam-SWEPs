@@ -88,6 +88,7 @@ SWEP.IronsightFov = 90 - 15
 SWEP.IronsightWalkBobbingStrength = -0.25
 SWEP.MovementPoseWalk = 82
 SWEP.MovementPoseSprint = 152
+SWEP.MovementPoseSighted = 164
 
 SWEP.HasScope = false
 SWEP.ScopeMaterial = NULL

@@ -18,6 +18,7 @@ SWEP.ViewModel = "models/weapons/mcv/v_sickle.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_sickle.mdl"
 SWEP.MovementPoseWalk = 167
 SWEP.MovementPoseSprint = 268
+SWEP.MovementPoseSighted = 167
 
 
 SWEP.DamageGeneric = 42

@@ -18,6 +18,7 @@ SWEP.ViewModel = "models/weapons/mcv/v_vcmedicbox.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_vcmedicbox.mdl"
 SWEP.MovementPoseWalk = 167
 SWEP.MovementPoseSprint = 268
+SWEP.MovementPoseSighted = 167
 
 SWEP.BoxKind = "medic"
 SWEP.Primary.Ammo = "mcv_medicbox"

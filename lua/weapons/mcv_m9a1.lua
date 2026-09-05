@@ -18,6 +18,7 @@ SWEP.ViewModel = "models/weapons/mcv/v_m9a1.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_m9a1.mdl"
 SWEP.MovementPoseWalk = 80
 SWEP.MovementPoseSprint = 160
+SWEP.MovementPoseSighted = 80
 
 SWEP.DamageGeneric = 15
 SWEP.FireRate = 600
