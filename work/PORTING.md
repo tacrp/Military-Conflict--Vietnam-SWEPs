@@ -502,6 +502,21 @@ firing, with nothing in the console. Call the intended class explicitly
 harness reproduces a freeze as a job that never logs `done`; instrument with `lua`/`clua`
 wrappers that print before and after each step to find the last one that ran.
 
+## Convars (`lua/mcv/shared/sh_convars.lua`)
+
+Gameplay toggles are server convars (replicated, archived, notify) registered in one place with
+`MCV.RegisterConVar` and read through accessors, so the predicted weapon code sees the same value
+on both realms. `mcv_realistic_shooting` (default 1) picks the addon's own recoil and spread: hip
+fire is barrel-accurate (the sighted spread applies at all times, the miss comes from the gun not
+being lined up with the eye), recoil from the hip kicks in a random direction and harder, CalcView
+takes 75% of the view punch back out so the kick moves the aim rather than the picture, and the
+view pulls back a little through a burst. At 0 the game's numbers apply as the scripts have them:
+`Lerp(sightamount, BulletSpreadDegrees, BulletSpreadDegreesIronsighted)` times the stance and
+movement multipliers, and a fixed view slide of `ViewSlideRecoil.Up` / `.Right` per shot (the
+ironsight pair when aiming). The game's `ViewKick*` random kick keys only exist on the melee
+scripts, so nothing reads them. Client-only preferences (`mcv_hud_hints`) stay
+`CreateClientConVar` in the client files.
+
 ## Movement pose (`player_movement`)
 
 The game's walk / run layers blend on `player_movement` in the game's speed units. The walk

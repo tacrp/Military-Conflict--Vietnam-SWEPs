@@ -189,16 +189,26 @@ function SWEP:GetSpread()
     local owner = self:GetOwner()
     local move = math.min(owner:GetVelocity():Length() / 273, 1)
 
+    // the game's stance and movement multipliers (script StandMoveSpreadMultiplier & co)
+    local stance
     if !owner:IsOnGround() then
-        spread = spread * Lerp(move, 1, self.JumpSpreadMultiplier)
+        stance = Lerp(move, 1, self.JumpSpreadMultiplier)
     elseif owner:Crouching() then
-        spread = spread * Lerp(move, self.CrouchSpreadMultiplier, self.CrouchMoveSpreadMultiplier)
+        stance = Lerp(move, self.CrouchSpreadMultiplier, self.CrouchMoveSpreadMultiplier)
     else
-        spread = spread * Lerp(move, 1, self.StandMoveSpreadMultiplier)
+        stance = Lerp(move, 1, self.StandMoveSpreadMultiplier)
     end
 
-    // spread = Lerp(sa, spread, sighted)
-    spread = sighted
+    if MCV.RealisticShooting() then
+        // realistic (mcv_realistic_shooting 1): the bullet leaves the barrel wherever it points.
+        // Hip fire misses because the gun is not lined up with the eye, not through a cone, so
+        // the sighted spread is the gun's own dispersion and applies at all times
+        spread = sighted
+    else
+        // the game: a hip fire cone that narrows to the sighted spread as the sights come up,
+        // widened by stance and movement
+        spread = Lerp(sa, spread, sighted) * stance
+    end
 
     local fm = self:GetFiremodeValue()
 
@@ -236,7 +246,16 @@ function SWEP:AttackEffects()
     local recoilup = Lerp(sa, self.ViewSlideRecoilUp, self.ViewSlideRecoilIronsightUp) * recoilmult
     local recoilright = Lerp(sa, self.ViewSlideRecoilRight, self.ViewSlideRecoilIronsightRight) * recoilmult
 
-    owner:ViewPunch((2 - (sa * 1.5)) * Angle(((sa * recoilup) + ((1 - sa) * recoilright)) * (-sa + (util.SharedRandom("MCVRecoilUpDown", -1, 1) * (1 - sa))), recoilright * util.SharedRandom("MCVRecoilLeftRight", -1, 1), 0))
+    if MCV.RealisticShooting() then
+        // realistic: from the hip the gun jumps in a random direction and harder; on the sights
+        // it climbs by the script's slide. CalcView takes most of the punch back out of the
+        // view so the kick moves the aim more than the picture.
+        owner:ViewPunch((2 - (sa * 1.5)) * Angle(((sa * recoilup) + ((1 - sa) * recoilright)) * (-sa + (util.SharedRandom("MCVRecoilUpDown", -1, 1) * (1 - sa))), recoilright * util.SharedRandom("MCVRecoilLeftRight", -1, 1), 0))
+    else
+        // the game's fixed view slide: up by ViewSlideRecoil.Up, sideways by .Right (side at
+        // random), the ironsight pair when aiming
+        owner:ViewPunch(Angle(-recoilup, recoilright * util.SharedRandom("MCVRecoilLeftRight", -1, 1), 0))
+    end
 
     if IsFirstTimePredicted() then
         if !self.NoEjectOnShoot then

@@ -1,0 +1,34 @@
+# mcv_realistic_shooting: spread and recoil in both modes
+god
+strip
+ang 0 0 0
+give mcv_m16a1
+wait 1.5
+lua local w = ply:GetActiveWeapon() print("[j] convar", GetConVar("mcv_realistic_shooting"):GetString(), "realistic hip spread", w:GetSpread(), "(Spread", w.Spread, "SpreadIronsighted", w.SpreadIronsighted, ")")
+tap +attack 0.1
+wait 0.05
+lua print("[j] realistic punch after a hip shot", tostring(ply:GetViewPunchAngles()))
+wait 1
+key +attack2
+wait 1.2
+lua print("[j] realistic sighted spread", ply:GetActiveWeapon():GetSpread())
+key -attack2
+wait 1
+lua RunConsoleCommand("mcv_realistic_shooting", "0")
+wait 0.5
+clua print("[j] client sees convar", GetConVar("mcv_realistic_shooting"):GetString())
+lua local w = ply:GetActiveWeapon() print("[j] game-mode hip spread (expect 0.0725)", w:GetSpread())
+key +forward
+wait 0.6
+lua local w = ply:GetActiveWeapon() print("[j] game-mode hip spread while moving (x1.45)", w:GetSpread())
+key -forward
+wait 0.5
+tap +attack 0.1
+wait 0.05
+lua print("[j] game-mode punch after a hip shot (expect pitch -1.48, yaw +-0.36)", tostring(ply:GetViewPunchAngles()))
+wait 1
+key +attack2
+wait 1.2
+lua print("[j] game-mode sighted spread (expect 0.0105)", ply:GetActiveWeapon():GetSpread())
+key -attack2
+lua RunConsoleCommand("mcv_realistic_shooting", "1")

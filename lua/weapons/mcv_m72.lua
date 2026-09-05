@@ -158,8 +158,8 @@ SWEP.TracerFrequency = 1
 // tube (the full first-deploy animation) instead of playing the throw-away-and-new-tube reload.
 function SWEP:DeployAnimation()
     if self:Clip1() == 0 and self:Ammo1() > 0 and !self:GetInfiniteAmmo() then
-        self:SetClip1(1)
         self:TakeRound()
+        self:SetClip1(1)
         self:SetNeedTriggerPress(true)
         return self:PlayAnimation(ACT_VM_READY, 1, true)
     end

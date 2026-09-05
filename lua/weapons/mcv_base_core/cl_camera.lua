@@ -11,7 +11,12 @@ function SWEP:CalcView(ply, pos, ang, fov)
 
     local mag = Lerp(self:GetSightAmountVisual() ^ 3, 1, 90 / self:GetZoomMagnification())
 
-    mag = mag + 0.15 * (1 / ((self:GetBurstCount() / 25) + 1))
+    local realistic = MCV.RealisticShooting()
+
+    if realistic then
+        // the view pulls back a little as a burst goes on
+        mag = mag + 0.15 * (1 / ((self:GetBurstCount() / 25) + 1))
+    end
 
     local diff = math.abs(self.SmoothedMagnification - mag)
 
@@ -23,7 +28,10 @@ function SWEP:CalcView(ply, pos, ang, fov)
 
     fov = fov - rec
 
-    ang = ang - (ply:GetViewPunchAngles() * 0.75)
+    if realistic then
+        // most of the punch comes back out of the picture: the kick moves the aim, not the camera
+        ang = ang - (ply:GetViewPunchAngles() * 0.75)
+    end
 
     return pos, ang, fov
 end
