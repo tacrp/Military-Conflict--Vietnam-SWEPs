@@ -70,10 +70,10 @@ SWEP.ScopeFOV2 = 4
 SWEP.RTScopeMaterialIndex = 2
 SWEP.AdjustableScopes = true
 
-SWEP.IronsightPos = Vector(0.054, -4, 0.015)
-SWEP.IronsightAng = Angle(0.28, 0, 0)
+SWEP.IronsightPos = Vector(-0.041, -6, 0.015)
+SWEP.IronsightAng = Angle(0, 0, 0)
 
-SWEP.CustomPos = Vector(0, -2, 0)
+SWEP.CustomPos = Vector(0, 0, 0)
 SWEP.CustomAng = Angle(0, 0, 0)
 
 SWEP.Spread = 6.3

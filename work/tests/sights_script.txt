@@ -1,0 +1,49 @@
+# Script-derived ironsight offsets (right/forward/up, pitch/yaw/roll) versus the hand-tuned ones
+god
+strip
+ang 0 0 0
+hud 1
+give mcv_m16a1
+wait 1.5
+clua local w = ply:GetActiveWeapon() w.CamDriverCompensation = false
+key +attack2
+wait 1.2
+shot hand_m16a1 marker
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(0.0, -2.0, 0.0) w.IronsightAng = Angle(0.0, 0.0, 0.0)
+wait 0.6
+shot script_m16a1 marker
+key -attack2
+wait 0.7
+give mcv_akm
+wait 1.5
+clua local w = ply:GetActiveWeapon() w.CamDriverCompensation = false
+key +attack2
+wait 1.2
+shot hand_akm marker
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(0.0, -1.5, 0.0) w.IronsightAng = Angle(0.0, 0.0, 0.0)
+wait 0.6
+shot script_akm marker
+key -attack2
+wait 0.7
+give mcv_mp40
+wait 1.5
+clua local w = ply:GetActiveWeapon() w.CamDriverCompensation = false
+key +attack2
+wait 1.2
+shot hand_mp40 marker
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(0.0, -3.0, 0.0) w.IronsightAng = Angle(0.0, 0.0, 0.0)
+wait 0.6
+shot script_mp40 marker
+key -attack2
+wait 0.7
+give mcv_sks
+wait 1.5
+clua local w = ply:GetActiveWeapon() w.CamDriverCompensation = false
+key +attack2
+wait 1.2
+shot hand_sks marker
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(0.0, -7.0, 0.0) w.IronsightAng = Angle(0.0, 0.0, 0.0)
+wait 0.6
+shot script_sks marker
+key -attack2
+wait 0.7

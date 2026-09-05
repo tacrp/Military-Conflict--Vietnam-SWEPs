@@ -391,12 +391,37 @@ def qc_facts(path):
 # Existing lua (hand-tuned values)
 # --------------------------------------------------------------------------------------------
 
-REUSE_KEYS = ("PrintName", "IronsightPos", "IronsightAng", "CustomPos", "FireRate", "ScopeMaterial", "ScopeFOV",
+REUSE_KEYS = ("PrintName", "FireRate", "ScopeMaterial", "ScopeFOV",
               "ScopeFOV2", "HasScope", "AdjustableScopes", "OEGScope", "Slot", "SubCategory", "Caliber",
               "CycleSpeed", "CyclePostDelay", "TriggerDelayTime", "IconOverride", "ViewModelFOV",
               "SightedViewModelFOV", "MuzzleParticle", "MuzzleParticle3rdPerson", "MuzzleParticleIronsighted",
               "RTScopeMaterialIndex", "IronsightSpeedScale", "InvertAnimationHammer", "AnimationHandlesHammer",
               "RifleGrenadeForce", "SoundGrenadeShot")
+
+def sight_offsets(S):
+    """IronsightPos / IronsightAng / CustomPos / CustomAng lua values from the script's viewmodel
+    offset keys (ironsightright/forward/up/pitch/yaw/roll and the CustomOffset block).
+
+    These are the values the game itself applies, and the ironsight animations are authored for
+    them: the current rig puts every gun dead straight in the aimed pose, so any lateral or yaw
+    fudge on top pushes the front sight off the rear sight. The offsets the first port carried
+    were hand-tuned against the previous rig, which had a small per-gun yaw baked into the aimed
+    pose, and mis-centred every sight after the recompile. None when the script has no offsets
+    (equipment)."""
+    if "ironsightforward" not in S and "ironsightright" not in S:
+        return None
+    def g(key, default=0.0):
+        return num(S.get(key), default)
+    def vec(right, forward, up):
+        return "Vector(%s, %s, %s)" % (fmt(right), fmt(forward), fmt(up))
+    def ang(pitch, yaw, roll):
+        return "Angle(%s, %s, %s)" % (fmt(pitch), fmt(yaw), fmt(roll))
+    return {
+        "IronsightPos": vec(g("ironsightright"), g("ironsightforward"), g("ironsightup")),
+        "IronsightAng": ang(g("ironsightpitch"), g("ironsightyaw"), g("ironsightroll")),
+        "CustomPos": vec(g("CustomOffset.right"), g("CustomOffset.forward"), g("CustomOffset.up")),
+        "CustomAng": ang(g("CustomOffset.pitch"), g("CustomOffset.yaw"), g("CustomOffset.roll")),
+    }
 
 def read_existing(lua_path):
     d = {}
@@ -1024,14 +1049,14 @@ def generate(script_path, args):
     if reuse("AdjustableScopes"): A(line("AdjustableScopes", reuse("AdjustableScopes")))
     if reuse("OEGScope"): A(line("OEGScope", reuse("OEGScope")))
     A("")
-    ip = reuse("IronsightPos")
-    ia = reuse("IronsightAng")
-    cp = reuse("CustomPos")
-    A(line("IronsightPos", ip or "Vector(0.06, -4, 0) -- TODO tune (game: forward %s right %s up %s)" % (S.get("ironsightforward"), S.get("ironsightright"), S.get("ironsightup"))))
-    A(line("IronsightAng", ia or "Angle(0.25, 0.1, 0) -- TODO tune"))
+    so = sight_offsets(S) or {}
+    if not so:
+        warnings.append("no viewmodel offsets in the script")
+    A(line("IronsightPos", so.get("IronsightPos", "Vector(0, -4, 0) -- TODO tune")))
+    A(line("IronsightAng", so.get("IronsightAng", "Angle(0, 0, 0)")))
     A("")
-    A(line("CustomPos", cp or "Vector(0, -2, 0)"))
-    A(line("CustomAng", "Angle(0, 0, 0)"))
+    A(line("CustomPos", so.get("CustomPos", "Vector(0, -2, 0)")))
+    A(line("CustomAng", so.get("CustomAng", "Angle(0, 0, 0)")))
     A("")
     A(line("Spread", fmt(num(S.get("BulletSpreadDegrees"), 5))))
     A(line("SpreadIronsighted", fmt(num(S.get("BulletSpreadDegreesIronsighted"), 1))))

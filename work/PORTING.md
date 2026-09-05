@@ -366,6 +366,19 @@ Brass ids the game added after 2024 (19 to 31) map to the nearest shell model th
 * The `empty` pose parameter is 1 when the clip is empty (the game's `SlidePosition` and
   `BoltshootMovement` layers blend from 0.6 to 1 towards the locked-back bolt).
 * `$illumposition 0 0 0` on every model.
+* **Sight offsets** (`sight_offsets`): `IronsightPos` / `IronsightAng` / `CustomPos` /
+  `CustomAng` come straight from the script's `ironsightright/forward/up/pitch/yaw/roll` keys and
+  its `CustomOffset` block; they are no longer copied from the existing lua. The first port's
+  hand-tuned offsets (x around 0.06, a 0.2-0.4 degree yaw) were made against the previous game
+  rig, whose aimed pose had a small per-gun yaw baked into the gun bone (the M16A1's `Base` sat at
+  179.7 instead of 180 degrees). The current rig is dead straight, so those offsets pushed every
+  front sight left of the rear sight after the recompile. The ironsight animations themselves
+  did not change (frame 1 of `ironsight.smd` is identical, bone for bone, in both decompiles, and
+  its five frames differ by 0.02 units vertically and not at all sideways, so the frame choice
+  cannot cause a lateral offset). `GetViewModelPosition` now applies the angles in Source order
+  (pitch around Right, yaw around Up); `work/fix_sight_offsets.py` rewrites the four lines in
+  every existing lua. Measured in the harness at 1600x900, the front post sits within 3 px of
+  the rear sight centre on the M1911, AKM, M16A1, M14, Kar98, MP40 and SKS.
 
 `work/fix_lua_flags.py` applies the eject, hammer and scope rules to every existing lua file
 (dry run with `--dry-run`); `work/glua_check.py` syntax-checks GLua with LuaJIT (needs the

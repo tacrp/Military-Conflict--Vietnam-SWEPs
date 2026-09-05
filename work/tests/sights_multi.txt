@@ -1,4 +1,4 @@
-# Aimed screenshots of several guns with the centre marker.
+# Aimed screenshots of several guns with the centre marker (offsets from the game scripts).
 god
 strip
 ang 0 0 0
@@ -45,10 +45,10 @@ wait 1
 shot aim_mp40 marker
 key -attack2
 wait 0.7
-give mcv_m1917
+give mcv_sks
 wait 1.5
 key +attack2
 wait 1
-shot aim_m1917 marker
+shot aim_sks marker
 key -attack2
 wait 0.7

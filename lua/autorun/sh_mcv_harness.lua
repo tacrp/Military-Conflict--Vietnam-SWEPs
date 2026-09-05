@@ -174,9 +174,9 @@ if CLIENT then
             file.Write(RESULTS .. arg .. ".client.json", util.TableToJSON(H.WeaponState(LocalPlayer()), true))
             file.Write(RESULTS .. arg .. ".client.done.txt", "1")
         elseif kind == "clua" then
-            local fn = CompileString(arg, "harness_clua", false)
+            local fn = CompileString("local ply = ... " .. arg, "harness_clua", false)
             if isfunction(fn) then
-                local ok, err = pcall(fn)
+                local ok, err = pcall(fn, LocalPlayer())
                 if !ok then log("clua error", tostring(err)) end
             else
                 log("clua compile error", tostring(fn))

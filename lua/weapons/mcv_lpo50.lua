@@ -24,7 +24,7 @@ SWEP.SoundFireStart = "MCV_Weapon_LPO50.Primary_Fire_Start"
 SWEP.SoundFireLoop = "MCV_Weapon_LPO50.Primary_Fire_Loop"
 SWEP.SoundFireStop = "MCV_Weapon_LPO50.Primary_Fire_Stop"
 
-SWEP.IronsightPos = Vector(0, -4, 0) -- TODO tune
+SWEP.IronsightPos = Vector(0, 0, 0)
 SWEP.IronsightAng = Angle(0, 0, 0) -- TODO tune
 
 SWEP.Primary.Ammo = "mcv_flamethrower_fuel"
