@@ -1,0 +1,17 @@
+{
+ "w_ak47": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6 -1 -3.25 0 0 180 0 0 0 0 0 0",
+ "w_amd65": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6 -1 -3.25 0 0 180 0 0 0 0 0 0",
+ "w_aps": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.5 -1 -1.5 0 0 180 0 0 0 0 0 0",
+ "w_browning_auto": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -11 -1 -2 0 0 180 0 0 0 0 0 0",
+ "w_car15": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6 -1 -3.25 0 0 180 0 0 0 0 0 0",
+ "w_chinalake": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10 -1 0 15 0 180 0 0 0 0 0 0",
+ "w_lpo50": "$definebone \"ValveBiped.Bip01_R_Hand\" \"ValveBiped\" 0.267086 -2.58952 10.171795 78.841283 -102.773508 -9.262035 0 0 0 0 0 0",
+ "w_m1g_s": "$definebone \"ValveBiped.Bip01_R_Hand\" \"ValveBiped\" 0.267086 -2.58952 10.171793 78.84129 -102.773508 -9.262035 0 0 0 0 0 0",
+ "w_m9a1": "$definebone \"ValveBiped.Bip01_R_Hand\" \"ValveBiped\" 0.267086 -2.58952 10.171795 78.841283 -102.773508 -9.262035 0 0 0 0 0 0",
+ "w_mas38": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7 -1 -2 0 0 180 0 0 0 0 0 0",
+ "w_mle1935": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.5 -1 -1.5 0 0 180 0 0 0 0 0 0",
+ "w_r76": "$definebone \"ValveBiped.Bip01_R_Hand\" \"ValveBiped\" 0.267086 -2.58952 10.171793 78.84129 -102.773508 -9.262035 0 0 0 0 0 0",
+ "w_rpd": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6 -1 -2 0 0 180 0 0 0 0 0 0",
+ "w_sks": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10 -1 -2 0 0 180 0 0 0 0 0 0",
+ "w_xm177": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6 -1 -3.25 0 0 180 0 0 0 0 0 0"
+}

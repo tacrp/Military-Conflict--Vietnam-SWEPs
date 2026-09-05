@@ -1168,6 +1168,13 @@ def port_worldmodel(args, og_dir):
             if m:
                 hand_line = m.group(0)
                 ctx.note("hand bone reused from hand-ported qc")
+        if hand_line is None and off is None:
+            # the hand-ported QCs were removed from the tree; their hand bone lines live on here
+            saved = os.path.join(HERE, "hand_bones.json")
+            if os.path.isfile(saved):
+                hand_line = json.load(open(saved, encoding="utf-8")).get(name)
+                if hand_line:
+                    ctx.note("hand bone reused from work/hand_bones.json")
         if hand_line is None:
             if off is None:
                 off = list(HAND_DEFAULT)

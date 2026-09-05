@@ -5,3 +5,6 @@ work/MCV_SMD_OG/
 work/__pycache__/
 work/compile_test_game/
 work/rip/
+work/lua_port/
+work/tools/
+work/shaders/shaders/
