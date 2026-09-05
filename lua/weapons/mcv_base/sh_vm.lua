@@ -179,6 +179,9 @@ function SWEP:PreDrawViewModelBlend(vm, sa)
 end
 
 function SWEP:PostDrawViewModelWeapon(vm)
+    if self.RenderingRTScope then
+        render.OverrideDepthEnable(false, false)
+    end
     if !self.OEGComposite or vm != self:GetOwner():GetViewModel() then return end
     self.OEGComposite = false
     local a = Lerp(math.Clamp((self:GetSightAmountVisual() - 0.6) / 0.4, 0, 1), 0, self.OEGSceneAlpha)

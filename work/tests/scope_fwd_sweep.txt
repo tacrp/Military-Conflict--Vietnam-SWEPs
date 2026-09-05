@@ -1,0 +1,548 @@
+# forward-offset sweep with the lens shader in debug (uv) mode: how far must the model sit for the lens to render
+god
+strip
+ang 0 0 0
+give mcv_car15_s
+wait 1.3
+clua local w = ply:GetActiveWeapon() w.ScopeDebug = 1 w.ScopeShadowStrength = 0
+key +attack2
+wait 1.2
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.01, -7.0, -1.02)
+wait 0.2
+shot fwd_car15_s_00
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.01, -5.0, -1.02)
+wait 0.2
+shot fwd_car15_s_02
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.01, -3.0, -1.02)
+wait 0.2
+shot fwd_car15_s_04
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.01, -1.0, -1.02)
+wait 0.2
+shot fwd_car15_s_06
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.01, 1.0, -1.02)
+wait 0.2
+shot fwd_car15_s_08
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.01, 3.0, -1.02)
+wait 0.2
+shot fwd_car15_s_10
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.01, 5.0, -1.02)
+wait 0.2
+shot fwd_car15_s_12
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.01, 7.0, -1.02)
+wait 0.2
+shot fwd_car15_s_14
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.01, 9.0, -1.02)
+wait 0.2
+shot fwd_car15_s_16
+key -attack2
+wait 0.5
+give mcv_kar98_s
+wait 1.3
+clua local w = ply:GetActiveWeapon() w.ScopeDebug = 1 w.ScopeShadowStrength = 0
+key +attack2
+wait 1.2
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(0.03, -8.5, -0.8)
+wait 0.2
+shot fwd_kar98_s_00
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(0.03, -6.5, -0.8)
+wait 0.2
+shot fwd_kar98_s_02
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(0.03, -4.5, -0.8)
+wait 0.2
+shot fwd_kar98_s_04
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(0.03, -2.5, -0.8)
+wait 0.2
+shot fwd_kar98_s_06
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(0.03, -0.5, -0.8)
+wait 0.2
+shot fwd_kar98_s_08
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(0.03, 1.5, -0.8)
+wait 0.2
+shot fwd_kar98_s_10
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(0.03, 3.5, -0.8)
+wait 0.2
+shot fwd_kar98_s_12
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(0.03, 5.5, -0.8)
+wait 0.2
+shot fwd_kar98_s_14
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(0.03, 7.5, -0.8)
+wait 0.2
+shot fwd_kar98_s_16
+key -attack2
+wait 0.5
+give mcv_m1d
+wait 1.3
+clua local w = ply:GetActiveWeapon() w.ScopeDebug = 1 w.ScopeShadowStrength = 0
+key +attack2
+wait 1.2
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(1.534, -12.35, -0.6405)
+wait 0.2
+shot fwd_m1d_00
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(1.534, -10.35, -0.6405)
+wait 0.2
+shot fwd_m1d_02
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(1.534, -8.35, -0.6405)
+wait 0.2
+shot fwd_m1d_04
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(1.534, -6.35, -0.6405)
+wait 0.2
+shot fwd_m1d_06
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(1.534, -4.35, -0.6405)
+wait 0.2
+shot fwd_m1d_08
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(1.534, -2.3499999999999996, -0.6405)
+wait 0.2
+shot fwd_m1d_10
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(1.534, -0.34999999999999964, -0.6405)
+wait 0.2
+shot fwd_m1d_12
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(1.534, 1.6500000000000004, -0.6405)
+wait 0.2
+shot fwd_m1d_14
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(1.534, 3.6500000000000004, -0.6405)
+wait 0.2
+shot fwd_m1d_16
+key -attack2
+wait 0.5
+give mcv_m21
+wait 1.3
+clua local w = ply:GetActiveWeapon() w.ScopeDebug = 1 w.ScopeShadowStrength = 0
+key +attack2
+wait 1.2
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.0025, 0.0, -0.84)
+wait 0.2
+shot fwd_m21_00
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.0025, 2.0, -0.84)
+wait 0.2
+shot fwd_m21_02
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.0025, 4.0, -0.84)
+wait 0.2
+shot fwd_m21_04
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.0025, 6.0, -0.84)
+wait 0.2
+shot fwd_m21_06
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.0025, 8.0, -0.84)
+wait 0.2
+shot fwd_m21_08
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.0025, 10.0, -0.84)
+wait 0.2
+shot fwd_m21_10
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.0025, 12.0, -0.84)
+wait 0.2
+shot fwd_m21_12
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.0025, 14.0, -0.84)
+wait 0.2
+shot fwd_m21_14
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.0025, 16.0, -0.84)
+wait 0.2
+shot fwd_m21_16
+key -attack2
+wait 0.5
+give mcv_m38_s
+wait 1.3
+clua local w = ply:GetActiveWeapon() w.ScopeDebug = 1 w.ScopeShadowStrength = 0
+key +attack2
+wait 1.2
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.013, -8.35, -0.605)
+wait 0.2
+shot fwd_m38_s_00
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.013, -6.35, -0.605)
+wait 0.2
+shot fwd_m38_s_02
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.013, -4.35, -0.605)
+wait 0.2
+shot fwd_m38_s_04
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.013, -2.3499999999999996, -0.605)
+wait 0.2
+shot fwd_m38_s_06
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.013, -0.34999999999999964, -0.605)
+wait 0.2
+shot fwd_m38_s_08
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.013, 1.6500000000000004, -0.605)
+wait 0.2
+shot fwd_m38_s_10
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.013, 3.6500000000000004, -0.605)
+wait 0.2
+shot fwd_m38_s_12
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.013, 5.65, -0.605)
+wait 0.2
+shot fwd_m38_s_14
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.013, 7.65, -0.605)
+wait 0.2
+shot fwd_m38_s_16
+key -attack2
+wait 0.5
+give mcv_m40
+wait 1.3
+clua local w = ply:GetActiveWeapon() w.ScopeDebug = 1 w.ScopeShadowStrength = 0
+key +attack2
+wait 1.2
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.005, -8.0, 0.0)
+wait 0.2
+shot fwd_m40_00
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.005, -6.0, 0.0)
+wait 0.2
+shot fwd_m40_02
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.005, -4.0, 0.0)
+wait 0.2
+shot fwd_m40_04
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.005, -2.0, 0.0)
+wait 0.2
+shot fwd_m40_06
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.005, 0.0, 0.0)
+wait 0.2
+shot fwd_m40_08
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.005, 2.0, 0.0)
+wait 0.2
+shot fwd_m40_10
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.005, 4.0, 0.0)
+wait 0.2
+shot fwd_m40_12
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.005, 6.0, 0.0)
+wait 0.2
+shot fwd_m40_14
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.005, 8.0, 0.0)
+wait 0.2
+shot fwd_m40_16
+key -attack2
+wait 0.5
+give mcv_m607_oeg
+wait 1.3
+clua local w = ply:GetActiveWeapon() w.ScopeDebug = 1 w.ScopeShadowStrength = 0
+key +attack2
+wait 1.2
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.01, -2.0, -1.02)
+wait 0.2
+shot fwd_m607_oeg_00
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.01, 0.0, -1.02)
+wait 0.2
+shot fwd_m607_oeg_02
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.01, 2.0, -1.02)
+wait 0.2
+shot fwd_m607_oeg_04
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.01, 4.0, -1.02)
+wait 0.2
+shot fwd_m607_oeg_06
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.01, 6.0, -1.02)
+wait 0.2
+shot fwd_m607_oeg_08
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.01, 8.0, -1.02)
+wait 0.2
+shot fwd_m607_oeg_10
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.01, 10.0, -1.02)
+wait 0.2
+shot fwd_m607_oeg_12
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.01, 12.0, -1.02)
+wait 0.2
+shot fwd_m607_oeg_14
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.01, 14.0, -1.02)
+wait 0.2
+shot fwd_m607_oeg_16
+key -attack2
+wait 0.5
+give mcv_m607_s
+wait 1.3
+clua local w = ply:GetActiveWeapon() w.ScopeDebug = 1 w.ScopeShadowStrength = 0
+key +attack2
+wait 1.2
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.01, -7.0, -1.02)
+wait 0.2
+shot fwd_m607_s_00
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.01, -5.0, -1.02)
+wait 0.2
+shot fwd_m607_s_02
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.01, -3.0, -1.02)
+wait 0.2
+shot fwd_m607_s_04
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.01, -1.0, -1.02)
+wait 0.2
+shot fwd_m607_s_06
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.01, 1.0, -1.02)
+wait 0.2
+shot fwd_m607_s_08
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.01, 3.0, -1.02)
+wait 0.2
+shot fwd_m607_s_10
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.01, 5.0, -1.02)
+wait 0.2
+shot fwd_m607_s_12
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.01, 7.0, -1.02)
+wait 0.2
+shot fwd_m607_s_14
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.01, 9.0, -1.02)
+wait 0.2
+shot fwd_m607_s_16
+key -attack2
+wait 0.5
+give mcv_m656
+wait 1.3
+clua local w = ply:GetActiveWeapon() w.ScopeDebug = 1 w.ScopeShadowStrength = 0
+key +attack2
+wait 1.2
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.0155, 0.0, -0.1)
+wait 0.2
+shot fwd_m656_00
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.0155, 2.0, -0.1)
+wait 0.2
+shot fwd_m656_02
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.0155, 4.0, -0.1)
+wait 0.2
+shot fwd_m656_04
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.0155, 6.0, -0.1)
+wait 0.2
+shot fwd_m656_06
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.0155, 8.0, -0.1)
+wait 0.2
+shot fwd_m656_08
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.0155, 10.0, -0.1)
+wait 0.2
+shot fwd_m656_10
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.0155, 12.0, -0.1)
+wait 0.2
+shot fwd_m656_12
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.0155, 14.0, -0.1)
+wait 0.2
+shot fwd_m656_14
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.0155, 16.0, -0.1)
+wait 0.2
+shot fwd_m656_16
+key -attack2
+wait 0.5
+give mcv_mas49_s
+wait 1.3
+clua local w = ply:GetActiveWeapon() w.ScopeDebug = 1 w.ScopeShadowStrength = 0
+key +attack2
+wait 1.2
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.002, -6.0, -1.35)
+wait 0.2
+shot fwd_mas49_s_00
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.002, -4.0, -1.35)
+wait 0.2
+shot fwd_mas49_s_02
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.002, -2.0, -1.35)
+wait 0.2
+shot fwd_mas49_s_04
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.002, 0.0, -1.35)
+wait 0.2
+shot fwd_mas49_s_06
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.002, 2.0, -1.35)
+wait 0.2
+shot fwd_mas49_s_08
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.002, 4.0, -1.35)
+wait 0.2
+shot fwd_mas49_s_10
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.002, 6.0, -1.35)
+wait 0.2
+shot fwd_mas49_s_12
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.002, 8.0, -1.35)
+wait 0.2
+shot fwd_mas49_s_14
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.002, 10.0, -1.35)
+wait 0.2
+shot fwd_mas49_s_16
+key -attack2
+wait 0.5
+give mcv_springfield_s
+wait 1.3
+clua local w = ply:GetActiveWeapon() w.ScopeDebug = 1 w.ScopeShadowStrength = 0
+key +attack2
+wait 1.2
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(0.01, -5.5, -0.435)
+wait 0.2
+shot fwd_springfield_s_00
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(0.01, -3.5, -0.435)
+wait 0.2
+shot fwd_springfield_s_02
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(0.01, -1.5, -0.435)
+wait 0.2
+shot fwd_springfield_s_04
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(0.01, 0.5, -0.435)
+wait 0.2
+shot fwd_springfield_s_06
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(0.01, 2.5, -0.435)
+wait 0.2
+shot fwd_springfield_s_08
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(0.01, 4.5, -0.435)
+wait 0.2
+shot fwd_springfield_s_10
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(0.01, 6.5, -0.435)
+wait 0.2
+shot fwd_springfield_s_12
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(0.01, 8.5, -0.435)
+wait 0.2
+shot fwd_springfield_s_14
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(0.01, 10.5, -0.435)
+wait 0.2
+shot fwd_springfield_s_16
+key -attack2
+wait 0.5
+give mcv_stg44_s
+wait 1.3
+clua local w = ply:GetActiveWeapon() w.ScopeDebug = 1 w.ScopeShadowStrength = 0
+key +attack2
+wait 1.2
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(0.038, -9.0, -0.97)
+wait 0.2
+shot fwd_stg44_s_00
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(0.038, -7.0, -0.97)
+wait 0.2
+shot fwd_stg44_s_02
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(0.038, -5.0, -0.97)
+wait 0.2
+shot fwd_stg44_s_04
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(0.038, -3.0, -0.97)
+wait 0.2
+shot fwd_stg44_s_06
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(0.038, -1.0, -0.97)
+wait 0.2
+shot fwd_stg44_s_08
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(0.038, 1.0, -0.97)
+wait 0.2
+shot fwd_stg44_s_10
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(0.038, 3.0, -0.97)
+wait 0.2
+shot fwd_stg44_s_12
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(0.038, 5.0, -0.97)
+wait 0.2
+shot fwd_stg44_s_14
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(0.038, 7.0, -0.97)
+wait 0.2
+shot fwd_stg44_s_16
+key -attack2
+wait 0.5
+give mcv_svd
+wait 1.3
+clua local w = ply:GetActiveWeapon() w.ScopeDebug = 1 w.ScopeShadowStrength = 0
+key +attack2
+wait 1.2
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.041, 0.0, 0.015)
+wait 0.2
+shot fwd_svd_00
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.041, 2.0, 0.015)
+wait 0.2
+shot fwd_svd_02
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.041, 4.0, 0.015)
+wait 0.2
+shot fwd_svd_04
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.041, 6.0, 0.015)
+wait 0.2
+shot fwd_svd_06
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.041, 8.0, 0.015)
+wait 0.2
+shot fwd_svd_08
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.041, 10.0, 0.015)
+wait 0.2
+shot fwd_svd_10
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.041, 12.0, 0.015)
+wait 0.2
+shot fwd_svd_12
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.041, 14.0, 0.015)
+wait 0.2
+shot fwd_svd_14
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.041, 16.0, 0.015)
+wait 0.2
+shot fwd_svd_16
+key -attack2
+wait 0.5
+give mcv_svt40_s
+wait 1.3
+clua local w = ply:GetActiveWeapon() w.ScopeDebug = 1 w.ScopeShadowStrength = 0
+key +attack2
+wait 1.2
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.0115, -8.15, -0.53)
+wait 0.2
+shot fwd_svt40_s_00
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.0115, -6.15, -0.53)
+wait 0.2
+shot fwd_svt40_s_02
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.0115, -4.15, -0.53)
+wait 0.2
+shot fwd_svt40_s_04
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.0115, -2.1500000000000004, -0.53)
+wait 0.2
+shot fwd_svt40_s_06
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.0115, -0.15000000000000036, -0.53)
+wait 0.2
+shot fwd_svt40_s_08
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.0115, 1.8499999999999996, -0.53)
+wait 0.2
+shot fwd_svt40_s_10
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.0115, 3.8499999999999996, -0.53)
+wait 0.2
+shot fwd_svt40_s_12
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.0115, 5.85, -0.53)
+wait 0.2
+shot fwd_svt40_s_14
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.0115, 7.85, -0.53)
+wait 0.2
+shot fwd_svt40_s_16
+key -attack2
+wait 0.5
+give mcv_vz54s
+wait 1.3
+clua local w = ply:GetActiveWeapon() w.ScopeDebug = 1 w.ScopeShadowStrength = 0
+key +attack2
+wait 1.2
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(0.0, 0.0, -0.21)
+wait 0.2
+shot fwd_vz54s_00
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(0.0, 2.0, -0.21)
+wait 0.2
+shot fwd_vz54s_02
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(0.0, 4.0, -0.21)
+wait 0.2
+shot fwd_vz54s_04
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(0.0, 6.0, -0.21)
+wait 0.2
+shot fwd_vz54s_06
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(0.0, 8.0, -0.21)
+wait 0.2
+shot fwd_vz54s_08
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(0.0, 10.0, -0.21)
+wait 0.2
+shot fwd_vz54s_10
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(0.0, 12.0, -0.21)
+wait 0.2
+shot fwd_vz54s_12
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(0.0, 14.0, -0.21)
+wait 0.2
+shot fwd_vz54s_14
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(0.0, 16.0, -0.21)
+wait 0.2
+shot fwd_vz54s_16
+key -attack2
+wait 0.5
+give mcv_xm177_oeg
+wait 1.3
+clua local w = ply:GetActiveWeapon() w.ScopeDebug = 1 w.ScopeShadowStrength = 0
+key +attack2
+wait 1.2
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.01, -2.0, -1.02)
+wait 0.2
+shot fwd_xm177_oeg_00
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.01, 0.0, -1.02)
+wait 0.2
+shot fwd_xm177_oeg_02
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.01, 2.0, -1.02)
+wait 0.2
+shot fwd_xm177_oeg_04
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.01, 4.0, -1.02)
+wait 0.2
+shot fwd_xm177_oeg_06
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.01, 6.0, -1.02)
+wait 0.2
+shot fwd_xm177_oeg_08
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.01, 8.0, -1.02)
+wait 0.2
+shot fwd_xm177_oeg_10
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.01, 10.0, -1.02)
+wait 0.2
+shot fwd_xm177_oeg_12
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.01, 12.0, -1.02)
+wait 0.2
+shot fwd_xm177_oeg_14
+clua local w = ply:GetActiveWeapon() w.IronsightPos = Vector(-0.01, 14.0, -1.02)
+wait 0.2
+shot fwd_xm177_oeg_16
+key -attack2
+wait 0.5

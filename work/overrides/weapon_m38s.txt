@@ -1,0 +1,7 @@
+// At the script's ironsightforward the eyepiece lens sits behind GMod's camera near plane and
+// the scope shows the world through its own tube; 3 units further and the lens renders
+// (work/tests/scope_fwd_sweep.txt, lens pixel count per step).
+"WeaponData"
+{
+	"ironsightforward"	"-5.35"
+}

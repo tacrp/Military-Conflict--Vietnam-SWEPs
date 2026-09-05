@@ -11,7 +11,7 @@
 //   c0: x 1/magnification   y pupil slide per unit of axis offset   z pupil radius (lens units)   w pupil softness
 //   c1: x barrel distortion y chromatic aberration                  z edge blur                   w tube radius
 //   c2: x tube softness     y brightness                            z screen aspect (w/h)         w reticle strength
-//   c3: x, y scope axis on screen (0..1, y down)                    z debug (1: show lens uv)
+//   c3: x, y scope axis on screen (0..1, y down)                    z debug (1: show lens uv, 2: solid red)
 sampler SCREEN  : register(s0);
 sampler RETICLE : register(s1);
 float4 C0 : register(c0);
@@ -25,6 +25,7 @@ struct PS_INPUT {
 };
 
 float4 main(PS_INPUT frag) : COLOR {
+    if (C3.z > 1.5) return float4(1.0, 0.0, 0.0, 1.0);
     if (C3.z > 0.5) return float4(frag.uv, 0.0, 1.0);
 
     float aspect = C2.z;

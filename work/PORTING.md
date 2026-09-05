@@ -412,78 +412,53 @@ impact.
 
 ## Scopes (Sep 2026)
 
-`lua/weapons/mcv_base/cl_pipscope.lua`. The scope picture is a second render of the world from the
-eye, turned by the gun's sway, at the script's `ScopeLensFov` (`ScopeFOV`, second level
-`ScopeLensFov2` = `ScopeFOV2`), into a square render target that the lens submaterial shows while
-aiming (`RTScopeMaterialIndex`, the first `lens_*` / `crosshair_*` material of the model). The
-screen keeps the ironsight FOV; mouse sensitivity follows the scope magnification. The render runs
-from the `PreRender` hook (`lua/mcv/client/cl_rendertarget.lua`): a nested `render.RenderView`
-from inside the scene hooks leaves its camera behind for the viewmodel pass.
+`lua/weapons/mcv_base/cl_pipscope.lua` + `materials/mcv/scope_lens.vmt` + `work/shaders/mcv_scope_*.hlsl`.
+The scope picture is a **screen reprojection done by the lens material's own shader**. While
+aiming, the lens submaterial (`RTScopeMaterialIndex`, the first `lens_*` / `crosshair_*` material
+of the model) is swapped for a `screenspace_general` material whose pixel shader samples the frame
+captured just before the viewmodel was drawn (`render.UpdateScreenEffectTexture` in
+`PreDrawViewModels`, `lua/mcv/client/cl_rendertarget.lua`) and magnifies it around the point where
+the scope axis meets the screen. The world is never rendered a second time; per frame that is one
+frame copy and two floats. Magnification is `IronsightFov / ScopeLensFov` (`ScopeFOV`, second level
+`ScopeFOV2` = `ScopeLensFov2`, from the scripts); the screen keeps the ironsight FOV; mouse
+sensitivity follows the scope magnification.
 
-* **Sway** (`CaptureScopeSway`): the muzzle attachment's rotation against the eye, read in
-  PreDrawViewModel (attachments come back in an undefined frame anywhere else), high-pass
-  filtered so only walk bob, recoil and breathing show. The `cam_driver` bone is static per model
-  (0, 1, 1.5 or 2 units behind the origin); it is not the scope camera.
-* **Lens shader** (`work/shaders/mcv_lens_ps2x.hlsl` + `mcv_pass_vs2x.hlsl`,
-  `materials/mcv/lens_pass.vmt`, compiled to `shaders/fxc/*.vcs`): barrel distortion, chromatic
-  aberration, edge blur, a bright exit pupil that slides against the sway, the tube rim.
-  Constants `$c0..$c2` are declared in the VMT (SetFloat only sticks for declared parameters)
-  and set every frame from `ScopeShadow*`, `ScopeDistortion`, `ScopeAberration`, `ScopeEdgeBlur`,
-  `ScopeBrightness`. Things that had to be found out the hard way:
-  - the pass must be `render.DrawScreenQuad` through a material with `$vertextransform 1` and the
-    addon's own vertex shader: surface draws hand the pixel shader one constant texture
-    coordinate, the stock vertex shader hands it zero, and `$vertextransform 0` puts the pixel
-    coordinates into clip space (a quarter of the target);
-  - HDR maps scale everything drawn through a material by the tone map scale, so the render is
-    wrapped in `render.SetToneMappingScaleLinear(Vector(1, 1, 1))`;
-  - `TEXTUREFLAGS_CLAMPS/T` do not exist as globals (use 4 + 8); the scene target needs
-    `MATERIAL_RT_DEPTH_SEPARATE` for the nested view;
-  - a `.vcs` inside the addon's `shaders/fxc` is found; `.hlsl` names end in `_ps2x` / `_vs2x`
-    and compile to `_ps20b` / `_vs20` (ShaderCompile in the gmod_shader_guide addon, see
-    `work/shaders/README.md`). Without the shader the Lua stencil shadow stands in.
+* **Axis point** (`UpdateScopeAxis`): the muzzle attachment's forward (axis closest to the eye's,
+  read in PreDrawViewModel where attachments are in world space) projected 4096 units out and
+  `ToScreen`, sent as `$c3_x/$c3_y`. The pixel under it shows exactly what is behind it, so the
+  picture follows the gun's sway and recoil with no parallax at the centre.
+* **In the shader**: exit pupil (bright disc sliding against the axis point's offset from the
+  screen centre), tube rim, reticle from `$texture1` (the weapon's `ScopeMaterial` texture; the
+  game's crosshair VMTs are model materials, some Refract, so only the texture is read), barrel
+  distortion, chromatic aberration, edge blur. `ScopeDebug = 1` shows the lens uv, `2` solid red.
+  Look constants (`ScopeShadow*`, `ScopeDistortion`, `ScopeAberration`, `ScopeEdgeBlur`,
+  `ScopeBrightness`, `ReticleStrength`, `ScopePupilSlide`) are per weapon and pushed once when the
+  lens is swapped in (`ApplyScopeMaterial`).
+* **Model shader facts found by testing**: `screenspace_general` on a model needs `$model 1`,
+  `$softwareskin 1`, `$vertexnormal 1`; with `$softwareskin 1` the vertices arrive pre-skinned and
+  `SkinPositionAndNormal(false, ...)` is the right call (the hardware-skinned variant with
+  `BLENDWEIGHT/BLENDINDICES` put the lens somewhere else). Its depth state is unreliable: on the
+  SVD the scope body, drawn after the lens, painted over it, so `render.OverrideDepthEnable(true,
+  true)` is set for the viewmodel pass while the lens is active and reset in
+  `PostDrawViewModelWeapon`. `$depthtest 1` alone did not help; `$mostlyopaque` was not the cause.
+  Shader model 3 (`_ps3x`/`_vs3x`, `-ver 30`); every `$cN_x` constant must be declared in the
+  VMT or `SetFloat` is ignored. Build notes in `work/shaders/README.md`.
+* **Camera inside the scope**: if the front sight post is visible through the eyepiece, the lens
+  is behind the camera near plane and you are looking down the tube. The game's
+  `ironsightforward` did that on ten scoped models in GMod. `work/tests/scope_fwd_sweep.txt`
+  sweeps the forward offset with `ScopeDebug = 1` and counts lens pixels per step; the model is
+  moved 3 units further than the first step where the lens appears (`work/overrides/weapon_<script>.txt`
+  sets `ironsightforward`: SVD, Vz.54 Meopta, M21, M656 at 0; Kar98 ZF39, M1D, M38, M40,
+  Springfield, SVT-40 at script + 3). Everything else keeps the script's offsets.
 * **Optics materials** (`work/fix_optics_vmts.py`): the game's `lens_*.vmt` and some
   `crosshair_*.vmt` are `Refract` shaders fed by `_rt_SniperScope`, black in GMod; they become the
-  glass material the game left commented out in its own files, and translucent reticles. The
-  reticle drawn into the render target uses its own material on the texture (`reticleDraw`),
-  never the model's VMT.
-* **Eyepieces that swallow the camera**: the SVD, Vz.54 Meopta, M21 and M656 scripts pull the
-  model so far back that the GMod camera sits inside the rubber eyecup or hood (black screen).
-  `work/overrides/weapon_<script>.txt` sets `ironsightforward 0` for those four; everything else
-  keeps the script's offsets.
+  glass material the game left commented out in its own files, and translucent reticles.
 * **OEG** (`mcv_base/sh_vm.lua`): the frame before the viewmodel is copied into a render target
   and composited over the opaque gun at `OEGSceneAlpha` (0.5), so the gun reads as one
   half-transparent plane instead of a per-face blend that showed its innards. The gun's own
   Refract lens materials refresh `_rt_FullFrameFB` during the draw, hence the private copy.
-* Test: `work/tests/scopes.txt` (all 16 scoped weapons aimed), `scope_sway.txt`,
-  `scope_mats.txt` (material list per model against the lens index).
-
-## Equipment bases (Sep 2026)
-
-`lua/weapons/mcv_base_core` is the shared core (deploy / holster, predicted timers, movement
-blends and hold types, viewmodel pose parameters, HUD, camera, bash). Every weapon type is a
-thin base on top of it that fills in hooks (`ThinkWeapon`, `DoBodygroupsWeapon`, `IdleActivity`
-/ `IdleSequence`, `GetHUDAmmo`, `GetFiremodeName`...). The game's equipment viewmodels use
-activities GMod does not know (`ACT_VM_SLASH`, `ACT_VM_PLANT`, `ACT_VM_GIVE`...), so the
-equipment bases play sequences by name (`PlaySequence`); the names are the same across the
-game's models of one type.
-
-| base | game types | behaviour |
-| --- | --- | --- |
-| `mcv_base` | guns | unchanged, now inherits the core |
-| `mcv_throwable` | Grenade, SmokeGrenade, Incendiary | LMB overhand throw, RMB underhand (roll when crouched), USE+R fuse presets from FuseTimeMin/Max, entities `mcv_grenade_frag/wp/smoke/gas/molotov`, `mcv_firepool` |
-| `mcv_melee` | Melee, Fists, wrench | LMB slash (hit / miss chosen up front), RMB stab, sprint+LMB charge, USE+LMB throws the blade (`mcv_thrown_melee`, pick up with USE), run / walk sequences while sprinting; the wrench repairs LVS (`GetHP/SetHP/GetMaxHP`, `SetDestroyed`, `OnRepaired`), simfphys and plain vehicles on RMB |
-| `mcv_placeable` | C4, Mine | C4: plant (LMB), RMB detonates every charge, the weapon stays as the detonator; dynamite: plant lit or throw lit; mines: two steps, mine then stake, tripwire between them, translucent ghost preview drawn client side |
-| `mcv_flamethrower` | Flamethrower | stream of `lpo50_flame` from the muzzle, hull-trace damage and ignition, fuel in the reserve, tank blows up when shot from behind |
-| `mcv_equipment_box` | Equipment (ammo / medic box) | LMB gives to the player looked at, RMB self, USE+LMB drops `mcv_supply_box` |
-| `mcv_binoculars` | Equipment (binoculars) | RMB zoom through the gun base's sight blend, USE+R steps 4x / 8x |
-| guns with projectiles | Crossbow, Flaregun | `mcv_proj_bolt` (sticks, hitgroup damage, pick up), `mcv_proj_flare` (light, ignites) |
-
-Ammo types `mcv_grenade`, `mcv_molotov`, `mcv_mine`, `mcv_explosive_charge`,
-`mcv_flamethrower_fuel`, `mcv_crossbowbolt`, `mcv_flareround`, `mcv_ammobox`, `mcv_medicbox` are
-registered in `sh_common.lua`. `port_weapon.py` writes all of these from the game scripts
-(`EQUIPMENT_GENERATORS`); not covered: artillery / napalm / barrage binoculars (need a strike
-system), gas masks, parachute, chainsaw, lunge mine, the objective-only C4 and the scripts without
-a WeaponType (stielhandgranate, m18 duplicates).
+* Tests: `work/tests/scopes.txt` (all 16 scoped weapons aimed), `scope_sway.txt`, `scope_mats.txt`
+  (material list per model against the lens index), `scope_fwd_sweep.txt`.
 
 ### `self.BaseClass` is a trap with three levels of inheritance
 

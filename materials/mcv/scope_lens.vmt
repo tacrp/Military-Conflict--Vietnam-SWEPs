@@ -1,0 +1,35 @@
+// Scope lens: screen reprojection in the shader (work/shaders/mcv_scope_*.hlsl). Swapped onto
+// the viewmodel's lens submaterial while aiming (lua/weapons/mcv_base/cl_pipscope.lua), which
+// also sets $texture1 to the weapon's reticle and the constants below.
+screenspace_general
+{
+	$pixshader "mcv_scope_ps30"
+	$vertexshader "mcv_scope_vs30"
+	$basetexture "_rt_FullFrameFB"
+	$texture1 "models/weapons/mcv/optics/crosshair_4x"
+	$model 1
+	$softwareskin 1
+	$vertexnormal 1
+	$depthtest 1
+
+	// c0: 1/magnification, pupil slide, pupil radius, pupil softness
+	$c0_x 0.33
+	$c0_y 2
+	$c0_z 0.42
+	$c0_w 0.1
+	// c1: barrel distortion, chromatic aberration, edge blur, tube radius
+	$c1_x -0.12
+	$c1_y 0.006
+	$c1_z 0.02
+	$c1_w 0.49
+	// c2: tube softness, brightness, screen aspect, reticle strength
+	$c2_x 0.05
+	$c2_y 1
+	$c2_z 1.7778
+	$c2_w 1
+	// c3: scope axis on screen (set every frame), debug
+	$c3_x 0.5
+	$c3_y 0.5
+	$c3_z 0
+	$c3_w 0
+}
