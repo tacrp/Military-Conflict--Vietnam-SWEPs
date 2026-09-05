@@ -4,7 +4,8 @@
     python fix_sight_offsets.py --dry-run  # report only
 
 Rewrites SWEP.IronsightPos / IronsightAng / CustomPos / CustomAng from the script's
-ironsightright/forward/up/pitch/yaw/roll keys and CustomOffset block (port_weapon.sight_offsets).
+ironsightright/forward/up/pitch/yaw/roll keys and CustomOffset block, and ScopeFOV / ScopeFOV2
+from ScopeLensFov / ScopeLensFov2 (port_weapon.sight_offsets).
 The first port's hand-tuned offsets were made against the previous game rig, whose aimed pose
 carried a small per-gun yaw; the current rig is straight, so those offsets put every front sight
 left of the rear sight. Weapons whose script has no offsets (equipment) are left alone.
@@ -21,7 +22,7 @@ import port_weapon as pw  # noqa: E402
 
 ADDON = pw.ADDON
 SCRIPTS = os.path.join(HERE, "cscripts")
-KEYS = ("IronsightPos", "IronsightAng", "CustomPos", "CustomAng")
+KEYS = ("IronsightPos", "IronsightAng", "CustomPos", "CustomAng", "ScopeFOV", "ScopeFOV2")
 
 
 def set_line(src, key, value):
@@ -42,6 +43,7 @@ def main():
     args = ap.parse_args()
 
     name_map = pw.resolve_lua_names(SCRIPTS, ADDON)
+    overrides = pw.load_overrides()
     done = {}
     changed_files = 0
     for f in sorted(glob.glob(os.path.join(SCRIPTS, "weapon_*.txt"))):
@@ -55,6 +57,7 @@ def main():
             continue
         kv = pw.parse_kv(open(f, encoding="utf-8", errors="replace").read())
         S = pw.flat(kv.get("WeaponData", kv))
+        S.update(overrides.get(name, {}))
         so = pw.sight_offsets(S)
         if not so:
             print("%-28s no offsets in script, left alone" % lua_name)
@@ -64,6 +67,8 @@ def main():
         report = []
         touched = False
         for key in KEYS:
+            if key not in so:
+                continue
             src, changed, found = set_line(src, key, so[key])
             if not found:
                 if key == "CustomAng":

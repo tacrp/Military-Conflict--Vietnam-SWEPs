@@ -24,6 +24,11 @@ function SWEP:CalcView(ply, pos, ang, fov)
     return pos, ang, fov
 end
 
+function SWEP:GetLookMagnification()
+    return 90 / self:GetZoomMagnification()
+end
+
 function SWEP:AdjustMouseSensitivity()
-    return 1 / self.SmoothedMagnification
+    local mag = Lerp(self:GetSightAmountVisual() ^ 3, 1, self:GetLookMagnification())
+    return 1 / mag
 end

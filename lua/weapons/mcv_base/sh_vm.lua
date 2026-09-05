@@ -151,8 +151,41 @@ function SWEP:PreDrawViewModelWeapon(vm)
     self:UpdateMuzzleLight(vm)
 end
 
+// Occluded eye gunsight: one eye sees the gun and the dot, the other the scene, and the brain
+// overlays them. Drawn as the opaque viewmodel with a copy of the frame from before the
+// viewmodel composited on top at OEGSceneAlpha, so the gun reads as one half-transparent
+// plane instead of a blend of every face that showed its innards.
+SWEP.OEGSceneAlpha = 0.5
+
+// Own copy of the frame: the gun's Refract lens materials refresh _rt_FullFrameFB while the
+// viewmodel draws, so a plain screen-effect copy ends up containing the gun.
+local scenert = CLIENT and GetRenderTarget("mcv_oeg_scene", ScrW(), ScrH(), false)
+local scenemat = CLIENT and CreateMaterial("mcv_oeg_scene", "UnlitGeneric", {
+    ["$basetexture"] = scenert:GetName(),
+    ["$vertexalpha"] = "1",
+    ["$vertexcolor"] = "1",
+})
+if CLIENT then scenemat:SetTexture("$basetexture", scenert) end
+
 function SWEP:PreDrawViewModelBlend(vm, sa)
+    // the hooks run for all three viewmodels; only the gun's own pass gets the frame copy,
+    // a later pass would copy the drawn gun and composite it over itself
+    if vm != self:GetOwner():GetViewModel() then return end
+    self.OEGComposite = false
     if self.OEGScope and sa > 0.216 then // 0.6 ^ 3
-        render.SetBlend(0.2)
+        render.CopyRenderTargetToTexture(scenert)
+        self.OEGComposite = true
     end
+end
+
+function SWEP:PostDrawViewModelWeapon(vm)
+    if !self.OEGComposite or vm != self:GetOwner():GetViewModel() then return end
+    self.OEGComposite = false
+    local a = Lerp(math.Clamp((self:GetSightAmountVisual() - 0.6) / 0.4, 0, 1), 0, self.OEGSceneAlpha)
+    if a <= 0 then return end
+    cam.Start2D()
+        surface.SetMaterial(scenemat)
+        surface.SetDrawColor(255, 255, 255, a * 255)
+        surface.DrawTexturedRect(0, 0, ScrW(), ScrH())
+    cam.End2D()
 end

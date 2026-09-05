@@ -1,0 +1,23 @@
+# OEG composite and the scope shadow while turning
+god
+strip
+ang 0 0 0
+hud 1
+give mcv_m607_oeg
+wait 1.3
+key +attack2
+wait 1.3
+shot oeg_aim
+key -attack2
+wait 0.5
+give mcv_kar98_s
+wait 1.3
+key +attack2
+wait 1.3
+shot sway_rest
+key +moveleft
+wait 0.25
+shot sway_left
+key -moveleft
+wait 1
+key -attack2

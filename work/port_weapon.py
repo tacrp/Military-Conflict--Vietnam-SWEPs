@@ -391,8 +391,7 @@ def qc_facts(path):
 # Existing lua (hand-tuned values)
 # --------------------------------------------------------------------------------------------
 
-REUSE_KEYS = ("PrintName", "FireRate", "ScopeMaterial", "ScopeFOV",
-              "ScopeFOV2", "HasScope", "AdjustableScopes", "OEGScope", "Slot", "SubCategory", "Caliber",
+REUSE_KEYS = ("PrintName", "FireRate", "ScopeMaterial", "HasScope", "AdjustableScopes", "OEGScope", "Slot", "SubCategory", "Caliber",
               "CycleSpeed", "CyclePostDelay", "TriggerDelayTime", "IconOverride", "ViewModelFOV",
               "SightedViewModelFOV", "MuzzleParticle", "MuzzleParticle3rdPerson", "MuzzleParticleIronsighted",
               "RTScopeMaterialIndex", "IronsightSpeedScale", "InvertAnimationHammer", "AnimationHandlesHammer",
@@ -416,12 +415,18 @@ def sight_offsets(S):
         return "Vector(%s, %s, %s)" % (fmt(right), fmt(forward), fmt(up))
     def ang(pitch, yaw, roll):
         return "Angle(%s, %s, %s)" % (fmt(pitch), fmt(yaw), fmt(roll))
-    return {
+    out = {
         "IronsightPos": vec(g("ironsightright"), g("ironsightforward"), g("ironsightup")),
         "IronsightAng": ang(g("ironsightpitch"), g("ironsightyaw"), g("ironsightroll")),
         "CustomPos": vec(g("CustomOffset.right"), g("CustomOffset.forward"), g("CustomOffset.up")),
         "CustomAng": ang(g("CustomOffset.pitch"), g("CustomOffset.yaw"), g("CustomOffset.roll")),
     }
+    # the lens picture is rendered at the game's scope camera FOV (ScopeLensFov, second zoom
+    # level ScopeLensFov2); the world keeps the ironsight FOV
+    if num(S.get("ScopeLensFov")):
+        out["ScopeFOV"] = fmt(num(S.get("ScopeLensFov")))
+        out["ScopeFOV2"] = fmt(num(S.get("ScopeLensFov2")) or num(S.get("ScopeLensFov")))
+    return out
 
 def read_existing(lua_path):
     d = {}
@@ -1042,8 +1047,9 @@ def generate(script_path, args):
         A(line("ScopeMaterial", 'Material("%s")' % scope_mat))
     else:
         A(line("ScopeMaterial", "NULL"))
-    A(line("ScopeFOV", reuse("ScopeFOV") or 8))
-    A(line("ScopeFOV2", reuse("ScopeFOV2") or 4))
+    so_fov = sight_offsets(S) or {}
+    A(line("ScopeFOV", so_fov.get("ScopeFOV", 8)))
+    A(line("ScopeFOV2", so_fov.get("ScopeFOV2", 4)))
     if has_scope and scope_idx is not None:
         A(line("RTScopeMaterialIndex", scope_idx))
     if reuse("AdjustableScopes"): A(line("AdjustableScopes", reuse("AdjustableScopes")))

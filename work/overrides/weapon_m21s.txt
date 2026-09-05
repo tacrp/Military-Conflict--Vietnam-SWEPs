@@ -1,0 +1,6 @@
+// The script's ironsightforward puts the camera inside the scope's rubber eyepiece hood in GMod
+// (the game clips its viewmodel differently); the eyepiece lens renders with 0.
+"WeaponData"
+{
+	"ironsightforward"	"0"
+}

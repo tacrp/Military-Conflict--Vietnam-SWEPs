@@ -47,7 +47,14 @@ function SWEP:PreDrawViewModel(vm)
 
     local sa = self:GetSightAmountVisual() ^ 3
 
-    cam.Start3D(nil, nil, Lerp(sa, self.ViewModelFOV, self.SightedViewModelFOV))
+    local fov = Lerp(sa, self.ViewModelFOV, self.SightedViewModelFOV)
+    if self.ViewModelZNear then
+        // a closer near plane keeps an eyepiece the aimed pose puts right at the camera from
+        // being cut open (scoped rifles)
+        cam.Start3D(nil, nil, fov, 0, 0, ScrW(), ScrH(), self.ViewModelZNear, 32768)
+    else
+        cam.Start3D(nil, nil, fov)
+    end
     cam.IgnoreZ(true)
 
     self:PreDrawViewModelBlend(vm, sa)
@@ -67,10 +74,12 @@ function SWEP:ViewModelDrawn()
     self.ActiveEffects = newactiveeffects
 end
 
-function SWEP:PostDrawViewModel()
+function SWEP:PostDrawViewModel(vm)
     cam.End3D()
     cam.IgnoreZ(false)
     render.SetBlend(1)
+
+    self:PostDrawViewModelWeapon(vm or self:GetOwner():GetViewModel())
 
     cam.Start3D()
         cam.IgnoreZ(false)

@@ -1,0 +1,27 @@
+// Scope lens pass: custom pixel shader over the scope render target (see work/shaders and
+// lua/weapons/mcv_base/cl_pipscope.lua). The constants are declared here so Lua can set them
+// every frame with IMaterial:SetFloat; the values are only defaults.
+screenspace_general
+{
+	$pixshader "mcv_lens_ps20b"
+	$vertexshader "mcv_pass_vs20"
+	$basetexture "vgui/black"
+	$ignorez 1
+	$vertextransform 1
+
+	// c0: exit pupil centre x, y (uv), radius, edge softness
+	$c0_x 0.5
+	$c0_y 0.5
+	$c0_z 0.45
+	$c0_w 0.08
+	// c1: barrel distortion k, chromatic aberration, edge blur, tube radius
+	$c1_x -0.12
+	$c1_y 0.006
+	$c1_z 0.02
+	$c1_w 0.5
+	// c2: tube centre x, y, tube edge softness, brightness
+	$c2_x 0.5
+	$c2_y 0.5
+	$c2_z 0.05
+	$c2_w 1
+}

@@ -81,8 +81,8 @@ SWEP.IronsightWalkBobbingStrength = -0.25
 
 SWEP.HasScope = true
 SWEP.ScopeMaterial = Material("models/weapons/mcv/optics/crosshair_svt40")
-SWEP.ScopeFOV = 8
-SWEP.ScopeFOV2 = 4
+SWEP.ScopeFOV = 26.7
+SWEP.ScopeFOV2 = 15.8
 SWEP.RTScopeMaterialIndex = 5
 
 SWEP.IronsightPos = Vector(-0.013, -8.35, -0.605)

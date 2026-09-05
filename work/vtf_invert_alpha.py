@@ -6,6 +6,7 @@ formats. DXT1 has no alpha channel to invert. All mip levels and frames are proc
 low-res thumbnail is left alone.
 
     python vtf_invert_alpha.py file.vtf [file2.vtf ...]
+    python vtf_invert_alpha.py --stats file.vtf ...   # alpha coverage of mip 0, flags un-inverted ones
 """
 import struct
 import sys
@@ -81,8 +82,70 @@ def invert_alpha(path):
     return fmt
 
 
+def _dxt5_block_alphas(block):
+    a0, a1 = block[0], block[1]
+    if a0 > a1:
+        table = [a0, a1] + [((8 - k) * a0 + (k - 1) * a1) // 7 for k in range(2, 8)]
+    else:
+        table = [a0, a1] + [((6 - k) * a0 + (k - 1) * a1) // 5 for k in range(2, 6)] + [0, 255]
+    bits = int.from_bytes(block[2:8], "little")
+    return [table[(bits >> (3 * i)) & 7] for i in range(16)]
+
+
+def alpha_stats(path):
+    """(format, width, height, glass alpha, corner alpha) of mip 0.
+
+    A reticle stored the addon's way has transparent glass and an opaque edge; one still in the
+    game's convention (opaque glass, clear lines and edge) paints the whole lens black when
+    drawn into the scope render target."""
+    d = open(path, "rb").read()
+    if d[:4] != b"VTF" + bytes([0]):
+        raise ValueError("not a vtf")
+    w, h = struct.unpack("<HH", d[16:20])
+    fmt = struct.unpack("<I", d[52:56])[0]
+    alphas = []
+    if fmt == FMT_DXT5:
+        n = max(1, (w + 3) // 4) * max(1, (h + 3) // 4) * 16
+        mip0 = d[len(d) - n:]
+        for p in range(0, n, 16):
+            alphas.extend(_dxt5_block_alphas(mip0[p:p + 16]))
+    elif fmt == FMT_DXT3:
+        n = max(1, (w + 3) // 4) * max(1, (h + 3) // 4) * 16
+        mip0 = d[len(d) - n:]
+        for p in range(0, n, 16):
+            v = int.from_bytes(mip0[p:p + 8], "little")
+            alphas.extend([((v >> (4 * i)) & 15) * 17 for i in range(16)])
+    elif fmt in (FMT_RGBA8888, FMT_BGRA8888, FMT_ABGR8888, FMT_ARGB8888):
+        n = w * h * 4
+        mip0 = d[len(d) - n:]
+        a_off = 3 if fmt in (FMT_RGBA8888, FMT_BGRA8888) else 0
+        alphas = list(mip0[a_off::4])
+    elif fmt == FMT_DXT1:
+        return fmt, w, h, None, None
+    else:
+        raise ValueError("unsupported format %d" % fmt)
+    # glass off the crosshair lines (a diagonal sixth out from the centre) against the corner:
+    # the addon's convention has clear glass and an opaque edge, the game's the reverse
+    glass = alphas[(h // 2 + h // 6) * w + w // 2 + w // 6]
+    corner = alphas[8 * w + 8]
+    return fmt, w, h, glass, corner
+
+
 if __name__ == "__main__":
-    for p in sys.argv[1:]:
+    args = sys.argv[1:]
+    if args and args[0] == "--stats":
+        for p in args[1:]:
+            try:
+                fmt, w, h, glass, corner = alpha_stats(p)
+                if glass is None:
+                    print("%-60s fmt %2d %4dx%-4d no alpha (DXT1)" % (p, fmt, w, h))
+                else:
+                    print("%-60s fmt %2d %4dx%-4d glass alpha %3d  edge alpha %3d%s" % (
+                        p, fmt, w, h, glass, corner, "   <- game convention, needs inverting" if glass > corner else ""))
+            except Exception as e:
+                print(p, "skipped:", e)
+        sys.exit(0)
+    for p in args:
         try:
             print(p, "format", invert_alpha(p))
         except Exception as e:

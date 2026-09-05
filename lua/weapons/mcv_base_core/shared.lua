@@ -49,6 +49,7 @@ SWEP.CustomAng = Angle(0, 0, 0)
 SWEP.IronsightPos = Vector(0, 0, 0)
 SWEP.IronsightAng = Angle(0, 0, 0)
 SWEP.IronsightFov = 90 - 15
+SWEP.ViewModelZNear = false // number to override the viewmodel near clip plane
 SWEP.IronsightWalkBobbingStrength = -0.25
 
 // Camera shake from recoil
@@ -212,6 +213,8 @@ function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed) end
 function SWEP:PreDrawViewModelWeapon(vm) end
 // Called after cam.Start3D in PreDrawViewModel; sa is the cubed visual aim blend
 function SWEP:PreDrawViewModelBlend(vm, sa) end
+// after the viewmodel is drawn and its 3D context closed
+function SWEP:PostDrawViewModelWeapon(vm) end
 // Extra HUD drawn under the ammo counter
 function SWEP:DrawHUDExtra() end
 

@@ -1,0 +1,52 @@
+# Print each scoped viewmodel's material list and the lens index in use
+god
+strip
+ang 0 0 0
+give mcv_car15_s
+wait 1.2
+clua local w = ply:GetActiveWeapon() local vm = ply:GetViewModel() local t = {} for i, m in ipairs(vm:GetMaterials()) do t[#t + 1] = (i - 1) .. ":" .. m:gsub("^models/weapons/mcv/", "") end print("[mats] " .. w:GetClass() .. " idx " .. tostring(w.RTScopeMaterialIndex) .. " | " .. table.concat(t, "  "))
+give mcv_kar98_s
+wait 1.2
+clua local w = ply:GetActiveWeapon() local vm = ply:GetViewModel() local t = {} for i, m in ipairs(vm:GetMaterials()) do t[#t + 1] = (i - 1) .. ":" .. m:gsub("^models/weapons/mcv/", "") end print("[mats] " .. w:GetClass() .. " idx " .. tostring(w.RTScopeMaterialIndex) .. " | " .. table.concat(t, "  "))
+give mcv_m1d
+wait 1.2
+clua local w = ply:GetActiveWeapon() local vm = ply:GetViewModel() local t = {} for i, m in ipairs(vm:GetMaterials()) do t[#t + 1] = (i - 1) .. ":" .. m:gsub("^models/weapons/mcv/", "") end print("[mats] " .. w:GetClass() .. " idx " .. tostring(w.RTScopeMaterialIndex) .. " | " .. table.concat(t, "  "))
+give mcv_m21
+wait 1.2
+clua local w = ply:GetActiveWeapon() local vm = ply:GetViewModel() local t = {} for i, m in ipairs(vm:GetMaterials()) do t[#t + 1] = (i - 1) .. ":" .. m:gsub("^models/weapons/mcv/", "") end print("[mats] " .. w:GetClass() .. " idx " .. tostring(w.RTScopeMaterialIndex) .. " | " .. table.concat(t, "  "))
+give mcv_m38_s
+wait 1.2
+clua local w = ply:GetActiveWeapon() local vm = ply:GetViewModel() local t = {} for i, m in ipairs(vm:GetMaterials()) do t[#t + 1] = (i - 1) .. ":" .. m:gsub("^models/weapons/mcv/", "") end print("[mats] " .. w:GetClass() .. " idx " .. tostring(w.RTScopeMaterialIndex) .. " | " .. table.concat(t, "  "))
+give mcv_m40
+wait 1.2
+clua local w = ply:GetActiveWeapon() local vm = ply:GetViewModel() local t = {} for i, m in ipairs(vm:GetMaterials()) do t[#t + 1] = (i - 1) .. ":" .. m:gsub("^models/weapons/mcv/", "") end print("[mats] " .. w:GetClass() .. " idx " .. tostring(w.RTScopeMaterialIndex) .. " | " .. table.concat(t, "  "))
+give mcv_m607_oeg
+wait 1.2
+clua local w = ply:GetActiveWeapon() local vm = ply:GetViewModel() local t = {} for i, m in ipairs(vm:GetMaterials()) do t[#t + 1] = (i - 1) .. ":" .. m:gsub("^models/weapons/mcv/", "") end print("[mats] " .. w:GetClass() .. " idx " .. tostring(w.RTScopeMaterialIndex) .. " | " .. table.concat(t, "  "))
+give mcv_m607_s
+wait 1.2
+clua local w = ply:GetActiveWeapon() local vm = ply:GetViewModel() local t = {} for i, m in ipairs(vm:GetMaterials()) do t[#t + 1] = (i - 1) .. ":" .. m:gsub("^models/weapons/mcv/", "") end print("[mats] " .. w:GetClass() .. " idx " .. tostring(w.RTScopeMaterialIndex) .. " | " .. table.concat(t, "  "))
+give mcv_m656
+wait 1.2
+clua local w = ply:GetActiveWeapon() local vm = ply:GetViewModel() local t = {} for i, m in ipairs(vm:GetMaterials()) do t[#t + 1] = (i - 1) .. ":" .. m:gsub("^models/weapons/mcv/", "") end print("[mats] " .. w:GetClass() .. " idx " .. tostring(w.RTScopeMaterialIndex) .. " | " .. table.concat(t, "  "))
+give mcv_mas49_s
+wait 1.2
+clua local w = ply:GetActiveWeapon() local vm = ply:GetViewModel() local t = {} for i, m in ipairs(vm:GetMaterials()) do t[#t + 1] = (i - 1) .. ":" .. m:gsub("^models/weapons/mcv/", "") end print("[mats] " .. w:GetClass() .. " idx " .. tostring(w.RTScopeMaterialIndex) .. " | " .. table.concat(t, "  "))
+give mcv_springfield_s
+wait 1.2
+clua local w = ply:GetActiveWeapon() local vm = ply:GetViewModel() local t = {} for i, m in ipairs(vm:GetMaterials()) do t[#t + 1] = (i - 1) .. ":" .. m:gsub("^models/weapons/mcv/", "") end print("[mats] " .. w:GetClass() .. " idx " .. tostring(w.RTScopeMaterialIndex) .. " | " .. table.concat(t, "  "))
+give mcv_stg44_s
+wait 1.2
+clua local w = ply:GetActiveWeapon() local vm = ply:GetViewModel() local t = {} for i, m in ipairs(vm:GetMaterials()) do t[#t + 1] = (i - 1) .. ":" .. m:gsub("^models/weapons/mcv/", "") end print("[mats] " .. w:GetClass() .. " idx " .. tostring(w.RTScopeMaterialIndex) .. " | " .. table.concat(t, "  "))
+give mcv_svd
+wait 1.2
+clua local w = ply:GetActiveWeapon() local vm = ply:GetViewModel() local t = {} for i, m in ipairs(vm:GetMaterials()) do t[#t + 1] = (i - 1) .. ":" .. m:gsub("^models/weapons/mcv/", "") end print("[mats] " .. w:GetClass() .. " idx " .. tostring(w.RTScopeMaterialIndex) .. " | " .. table.concat(t, "  "))
+give mcv_svt40_s
+wait 1.2
+clua local w = ply:GetActiveWeapon() local vm = ply:GetViewModel() local t = {} for i, m in ipairs(vm:GetMaterials()) do t[#t + 1] = (i - 1) .. ":" .. m:gsub("^models/weapons/mcv/", "") end print("[mats] " .. w:GetClass() .. " idx " .. tostring(w.RTScopeMaterialIndex) .. " | " .. table.concat(t, "  "))
+give mcv_vz54s
+wait 1.2
+clua local w = ply:GetActiveWeapon() local vm = ply:GetViewModel() local t = {} for i, m in ipairs(vm:GetMaterials()) do t[#t + 1] = (i - 1) .. ":" .. m:gsub("^models/weapons/mcv/", "") end print("[mats] " .. w:GetClass() .. " idx " .. tostring(w.RTScopeMaterialIndex) .. " | " .. table.concat(t, "  "))
+give mcv_xm177_oeg
+wait 1.2
+clua local w = ply:GetActiveWeapon() local vm = ply:GetViewModel() local t = {} for i, m in ipairs(vm:GetMaterials()) do t[#t + 1] = (i - 1) .. ":" .. m:gsub("^models/weapons/mcv/", "") end print("[mats] " .. w:GetClass() .. " idx " .. tostring(w.RTScopeMaterialIndex) .. " | " .. table.concat(t, "  "))

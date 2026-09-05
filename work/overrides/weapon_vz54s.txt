@@ -1,0 +1,6 @@
+// The script's ironsightforward puts the camera inside the eyecup in GMod (the game clips
+// its viewmodel differently); the eyepiece lens sits right at the eye with 0.
+"WeaponData"
+{
+	"ironsightforward"	"0"
+}

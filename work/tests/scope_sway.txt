@@ -1,0 +1,43 @@
+# shader pass, OEG composite via own RT, vz54 reticle, sway while walking
+god
+strip
+ang 0 0 0
+hud 1
+give mcv_m607_oeg
+wait 1.3
+key +attack2
+wait 1.3
+shot p7_oeg
+key -attack2
+wait 0.5
+give mcv_vz54s
+wait 1.3
+key +attack2
+wait 1.3
+shot p7_vz54
+key -attack2
+wait 0.5
+give mcv_kar98_s
+wait 1.3
+key +attack2
+wait 1.3
+shot p7_kar98
+key +forward
+wait 0.45
+clua local w = ply:GetActiveWeapon() print("[sway] kar98 walking", tostring(w.ScopeSway), "rest", tostring(w.ScopeSwayRest))
+shot p7_kar98_walk
+key -forward
+wait 1
+key -attack2
+wait 0.5
+give mcv_svd
+wait 1.3
+key +attack2
+wait 1.3
+shot p7_svd
+key +forward
+wait 0.45
+shot p7_svd_walk
+key -forward
+wait 1
+key -attack2
