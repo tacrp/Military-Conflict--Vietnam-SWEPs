@@ -86,7 +86,7 @@ def next_job_name(prefix="job"):
     return "%s_%08d" % (prefix, n)
 
 
-def send(lines, name=None, wait=True, timeout=120):
+def send(lines, name=None, wait=True, timeout=900):
     ensure_dirs()
     name = name or next_job_name()
     done = os.path.join(RESULTS, name + ".done.txt")

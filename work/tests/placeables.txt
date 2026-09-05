@@ -1,0 +1,48 @@
+# Mines (two steps), C4 plant and detonate, dynamite throw
+god
+strip
+ang 25 0 0
+give mcv_m16mine
+wait 1.5
+shot mine_ghost marker
+report mine_ghost
+tap +attack 0.1
+wait 1.5
+shot mine_step2 marker
+report mine_step2
+ang 25 35 0
+wait 0.3
+shot mine_stake_ghost marker
+tap +attack 0.1
+wait 1.6
+ang 10 15 0
+wait 0.3
+shot mine_done marker
+report mine_done
+lua local n = 0 for _, e in ipairs(ents.FindByClass("mcv_placed_mine")) do n = n + 1 end file.Write("mcv_harness/results/mines.txt", n .. " mines, stakes " .. #ents.FindByClass("mcv_mine_stake"))
+ang 25 0 0
+give mcv_c4
+wait 1.5
+shot c4_ghost marker
+tap +attack 0.1
+wait 1.5
+ang 0 0 0
+wait 0.3
+shot c4_planted marker
+report c4_planted
+tap +attack2 0.1
+wait 0.3
+shot c4_boom marker
+wait 1.5
+give mcv_dynamite
+wait 1.5
+ang 0 0 0
+key +attack2
+wait 0.6
+shot dyn_windup marker
+key -attack2
+wait 0.5
+shot dyn_thrown marker
+report dyn_thrown
+wait 6
+shot dyn_boom marker

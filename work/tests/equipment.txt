@@ -1,0 +1,71 @@
+# First look at the equipment bases: grenade throw, melee, C4 ghost and plant, boxes, flamethrower.
+god
+strip
+ang 0 0 0
+hud 1
+give mcv_m26
+wait 1.5
+shot m26_idle marker
+key +attack
+wait 0.8
+shot m26_windup marker
+report m26_windup
+key -attack
+wait 0.25
+shot m26_throw marker
+wait 2.5
+shot m26_after
+report m26_after
+give mcv_m1942_machete
+wait 1.5
+shot machete_idle
+tap +attack 0.1
+wait 0.15
+shot machete_slash
+report machete_slash
+wait 1
+tap +attack2 0.1
+wait 0.25
+shot machete_stab
+wait 1
+give mcv_c4
+wait 1.5
+ang 25 0 0
+wait 0.3
+shot c4_ghost marker
+tap +attack 0.1
+wait 1.2
+shot c4_planted marker
+report c4_planted
+ang 0 0 0
+give mcv_ammobox_us
+wait 1.5
+shot box_idle marker
+tap +attack2 0.1
+wait 0.5
+shot box_self
+give mcv_lpo50
+wait 1.5
+shot flame_idle marker
+key +attack
+wait 1
+shot flame_firing marker
+report flame_firing
+key -attack
+wait 1
+shot flame_after
+give mcv_m16mine
+wait 1.5
+ang 25 0 0
+wait 0.3
+shot mine_ghost marker
+tap +attack 0.1
+wait 1.5
+shot mine_step2 marker
+ang 25 30 0
+wait 0.3
+shot mine_stake_ghost marker
+tap +attack 0.1
+wait 1.5
+shot mine_done marker
+report mine_done

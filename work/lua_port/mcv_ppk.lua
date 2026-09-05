@@ -26,29 +26,30 @@ SWEP.BodyGroups = ""
 
 // Stats
 
-SWEP.DamageGeneric = 30
-SWEP.DamageHeadMultiplier = 2.4
-SWEP.DamageChestMultiplier = 1.6
+SWEP.DamageGeneric = 23
+SWEP.DamageHeadMultiplier = 5.65
+SWEP.DamageChestMultiplier = 1.55
 SWEP.DamageStomachMultiplier = 1.5
-SWEP.DamageLegMultiplier = 1.15
+SWEP.DamageLegMultiplier = 1.2
 SWEP.DamageArmMultiplier = 1.15
 
 SWEP.Num = 1
 
-SWEP.RangeModifier = 0.72
+SWEP.RangeModifier = 0.745
 
 SWEP.Firemodes = {
     MCV.FIREMODE_SEMI
 }
 
 SWEP.LastShotAnimation = true
+SWEP.NoEjectOnShoot = false
 
 // View slide from recoil
-SWEP.ViewSlideRecoilUp = 0.75
-SWEP.ViewSlideRecoilRight = 0.35
+SWEP.ViewSlideRecoilUp = 0.88
+SWEP.ViewSlideRecoilRight = 0.36
 
-SWEP.ViewSlideRecoilIronsightUp = 0.4
-SWEP.ViewSlideRecoilIronsightRight = 0.15
+SWEP.ViewSlideRecoilIronsightUp = 0.76
+SWEP.ViewSlideRecoilIronsightRight = 0.32
 
 SWEP.RecoilPushbackValue = 1.5
 
@@ -73,8 +74,8 @@ SWEP.IronsightAng = Angle(0.27, -0.3, 0)
 SWEP.CustomPos = Vector(0, -2, 0)
 SWEP.CustomAng = Angle(0, 0, 0)
 
-SWEP.Spread = 6.15
-SWEP.SpreadIronsighted = 2.15
+SWEP.Spread = 5.5
+SWEP.SpreadIronsighted = 1.5
 
 SWEP.FireRate = 250 // in rounds per minute
 
@@ -89,14 +90,14 @@ SWEP.Primary.Chamber = 1
 SWEP.Primary.DefaultClip = 16
 SWEP.Primary.Automatic = true
 
-SWEP.NearwallDistance = 15
+SWEP.NearwallDistance = 26
 
 // Bullet spread multiplier according to current stance
-SWEP.CrouchSpreadMultiplier = 0.8
-SWEP.ProneSpreadMultiplier = 0.75
+SWEP.CrouchSpreadMultiplier = 0.95
+SWEP.ProneSpreadMultiplier = 0.9
 SWEP.StandMoveSpreadMultiplier = 1.1
-SWEP.SneakMoveSpreadMultiplier = 1
-SWEP.CrouchMoveSpreadMultiplier = 1.05
+SWEP.SneakMoveSpreadMultiplier = 1.05
+SWEP.CrouchMoveSpreadMultiplier = 1
 SWEP.JumpSpreadMultiplier = 1.25
 
 SWEP.HasBayonet = false
@@ -130,19 +131,19 @@ SWEP.SoundSpecial2 = ""
 SWEP.SoundNearlyEmpty = "MCV_Weapon_Generic.NearlyEmptyClick_Pistol"
 SWEP.SoundEmpty = "MCV_Weapon_Generic.ClipEmpty_05"
 
-// Particles
-SWEP.MuzzleParticle = "muzzleflash_suppressed"
-SWEP.MuzzleParticleSmoke = ""
-SWEP.MuzzleParticleIronsighted = "muzzleflash_suppressed"
-SWEP.MuzzleParticleIronsightedSmoke = ""
+// Particles (the game's own systems; particles/*.pcf and their materials ship with the addon)
+SWEP.MuzzleParticle = "vietnam_muzzleflash_pistol_type2_fp"
+SWEP.MuzzleParticleSmoke = "vietnam_muzzleflash_pistol_type2_fp_smoke"
+SWEP.MuzzleParticleIronsighted = "vietnam_muzzleflash_pistol_type2_fp_is"
+SWEP.MuzzleParticleIronsightedSmoke = "vietnam_muzzleflash_pistol_type2_fp_is_smoke"
 
-SWEP.MuzzleParticle3rdPerson = "muzzleflash_suppressed"
+SWEP.MuzzleParticle3rdPerson = "vietnam_muzzleflash_pistol_type2_tp"
 
-SWEP.EjectBrassType = 11
-SWEP.EjectBrassTrail = "shellsmoke"
-SWEP.EjectBrassParticle = "port_smoke"
+SWEP.EjectBrassType = 12
+SWEP.EjectBrassTrail = "vietnam_weaponeffect_shelleject_trail"
+SWEP.EjectBrassParticle = "vietnam_weaponeffect_shelleject_side"
 
-SWEP.TracerParticle = "tracer"
+SWEP.TracerParticle = "vietnam_tracer_silenced_primary"
 
 SWEP.TracerRandomness = 4
 SWEP.TracerFrequency = 1

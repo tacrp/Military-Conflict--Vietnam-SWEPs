@@ -283,7 +283,7 @@ local function step(job, ply, line)
     elseif cmd == "ccmd" then
         ply:ConCommand(rest)
     elseif cmd == "lua" then
-        local fn = CompileString(rest, "harness_lua", false)
+        local fn = CompileString("local ply, job = ... " .. rest, "harness_lua", false)
         if isfunction(fn) then
             local ok, err = pcall(fn, ply, job)
             if !ok then table.insert(job.results.errors, "lua: " .. tostring(err)) end

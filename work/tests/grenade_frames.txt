@@ -1,0 +1,25 @@
+# Frame series through a grenade wind-up and throw
+god
+strip
+ang 0 0 0
+give mcv_m26
+wait 1.5
+key +attack
+wait 0.15
+shot g_wind1 marker
+wait 0.2
+shot g_wind2 marker
+wait 0.3
+shot g_wind3 marker
+key -attack
+wait 0.08
+shot g_throw1 marker
+wait 0.12
+shot g_throw2 marker
+wait 0.15
+shot g_throw3 marker
+wait 0.2
+shot g_throw4 marker
+wait 0.3
+shot g_throw5 marker
+report g_after

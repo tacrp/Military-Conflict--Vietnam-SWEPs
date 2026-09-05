@@ -619,11 +619,11 @@ def generate_placeable(name, S, qc, vm, args, existing, warnings):
     """C4 / dynamite / mines -> mcv_placeable."""
     wtype = S.get("WeaponType")
     if wtype == "Mine":
-        kind, ent, ammo = "mine", "mcv_mine", "mcv_mine"
+        kind, ent, ammo = "mine", "mcv_placed_mine", "mcv_mine"
     elif "dynamite" in name:
-        kind, ent, ammo = "dynamite", "mcv_dynamite", "mcv_explosive_charge"
+        kind, ent, ammo = "dynamite", "mcv_placed_dynamite", "mcv_explosive_charge"
     else:
-        kind, ent, ammo = "c4", "mcv_c4", "mcv_explosive_charge"
+        kind, ent, ammo = "c4", "mcv_placed_c4", "mcv_explosive_charge"
     seqs = set(qc["sequences"])
     need = "placemine" if kind == "mine" else "plant"
     if need not in seqs:

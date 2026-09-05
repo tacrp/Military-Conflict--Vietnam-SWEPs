@@ -1,0 +1,54 @@
+# Aimed screenshots of several guns with the centre marker.
+god
+strip
+ang 0 0 0
+hud 1
+give mcv_m1911a1
+wait 1.5
+key +attack2
+wait 1
+shot aim_m1911 marker
+key -attack2
+wait 0.7
+give mcv_akm
+wait 1.5
+key +attack2
+wait 1
+shot aim_akm marker
+key -attack2
+wait 0.7
+give mcv_m16a1
+wait 1.5
+key +attack2
+wait 1
+shot aim_m16a1 marker
+key -attack2
+wait 0.7
+give mcv_m14
+wait 1.5
+key +attack2
+wait 1
+shot aim_m14 marker
+key -attack2
+wait 0.7
+give mcv_kar98
+wait 1.5
+key +attack2
+wait 1
+shot aim_kar98 marker
+key -attack2
+wait 0.7
+give mcv_mp40
+wait 1.5
+key +attack2
+wait 1
+shot aim_mp40 marker
+key -attack2
+wait 0.7
+give mcv_m1917
+wait 1.5
+key +attack2
+wait 1
+shot aim_m1917 marker
+key -attack2
+wait 0.7

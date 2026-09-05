@@ -9,7 +9,7 @@ AddCSLuaFile()
 // Names and basic information
 SWEP.PrintName = "Mosin-Nagant M91/30"
 SWEP.Category = "Military Conflict: Vietnam"
-SWEP.Country = "Russian Empire"
+SWEP.Country = "Soviet Union"
 SWEP.SubCategory = "Bolt-Action Rifles"
 SWEP.Caliber = "7.62x54mmR"
 
@@ -25,16 +25,16 @@ SWEP.GrenadeBodygroup = 3
 
 // Stats
 
-SWEP.DamageGeneric = 65
-SWEP.DamageHeadMultiplier = 2.4
-SWEP.DamageChestMultiplier = 2.15
-SWEP.DamageStomachMultiplier = 1.95
-SWEP.DamageLegMultiplier = 1.15
-SWEP.DamageArmMultiplier = 1.15
+SWEP.DamageGeneric = 45
+SWEP.DamageHeadMultiplier = 3.5
+SWEP.DamageChestMultiplier = 3.1
+SWEP.DamageStomachMultiplier = 3
+SWEP.DamageLegMultiplier = 1.6
+SWEP.DamageArmMultiplier = 1.5
 
 SWEP.Num = 1
 
-SWEP.RangeModifier = 0.985
+SWEP.RangeModifier = 0.975
 
 SWEP.Firemodes = {
     MCV.FIREMODE_BOLT
@@ -46,15 +46,16 @@ SWEP.PlayCycleAnimation = true
 SWEP.CyclePostDelay = 0.9
 SWEP.AnimationHandlesHammer = true
 SWEP.InvertAnimationHammer = true
+SWEP.NoEjectOnShoot = true
 SWEP.RifleGrenadeEntity = "mcv_proj_riflegrenade_vc"
 SWEP.RifleGrenadeForce = 2000
 
 // View slide from recoil
-SWEP.ViewSlideRecoilUp = 2.85
+SWEP.ViewSlideRecoilUp = 2.84
 SWEP.ViewSlideRecoilRight = 0.48
 
-SWEP.ViewSlideRecoilIronsightUp = 1.35
-SWEP.ViewSlideRecoilIronsightRight = 0.16
+SWEP.ViewSlideRecoilIronsightUp = 1.36
+SWEP.ViewSlideRecoilIronsightRight = 0.24
 
 SWEP.RecoilPushbackValue = 1.5
 
@@ -79,8 +80,8 @@ SWEP.IronsightAng = Angle(0.33, 0.1, 0)
 SWEP.CustomPos = Vector(0, -2, 0)
 SWEP.CustomAng = Angle(0, 0, 0)
 
-SWEP.Spread = 7.7
-SWEP.SpreadIronsighted = 0.05
+SWEP.Spread = 7
+SWEP.SpreadIronsighted = 0.15
 
 SWEP.FireRate = 600 // in rounds per minute
 
@@ -98,12 +99,12 @@ SWEP.Primary.Automatic = true
 SWEP.NearwallDistance = 40
 
 // Bullet spread multiplier according to current stance
-SWEP.CrouchSpreadMultiplier = 0.75
-SWEP.ProneSpreadMultiplier = 0.5
-SWEP.StandMoveSpreadMultiplier = 1.55
-SWEP.SneakMoveSpreadMultiplier = 1.45
-SWEP.CrouchMoveSpreadMultiplier = 1.35
-SWEP.JumpSpreadMultiplier = 6
+SWEP.CrouchSpreadMultiplier = 0.85
+SWEP.ProneSpreadMultiplier = 0.75
+SWEP.StandMoveSpreadMultiplier = 1.65
+SWEP.SneakMoveSpreadMultiplier = 1.55
+SWEP.CrouchMoveSpreadMultiplier = 1.45
+SWEP.JumpSpreadMultiplier = 4
 
 SWEP.HasBayonet = true
 SWEP.HasRifleGrenade = true
@@ -136,19 +137,19 @@ SWEP.SoundGrenadeShot = "MCV_Weapon_M91.RifleGrenade" -- TODO check soundscript 
 SWEP.SoundNearlyEmpty = "MCV_Weapon_Generic.NearlyEmptyClick"
 SWEP.SoundEmpty = "MCV_Weapon_Generic.ClipEmpty_07"
 
-// Particles
-SWEP.MuzzleParticle = "muzzleflash_m24"
-SWEP.MuzzleParticleSmoke = ""
-SWEP.MuzzleParticleIronsighted = "muzzleflash_m24"
-SWEP.MuzzleParticleIronsightedSmoke = ""
+// Particles (the game's own systems; particles/*.pcf and their materials ship with the addon)
+SWEP.MuzzleParticle = "vietnam_muzzleflash_sniperrifle_type1_fp"
+SWEP.MuzzleParticleSmoke = "vietnam_muzzleflash_sniperrifle_type1_fp_smoke"
+SWEP.MuzzleParticleIronsighted = "vietnam_muzzleflash_sniperrifle_type1_fp_is"
+SWEP.MuzzleParticleIronsightedSmoke = "vietnam_muzzleflash_sniperrifle_type1_fp_is_smoke"
 
-SWEP.MuzzleParticle3rdPerson = "muzzleflash_m24"
+SWEP.MuzzleParticle3rdPerson = "vietnam_muzzleflash_sniperrifle_type1_tp"
 
-SWEP.EjectBrassType = 6
-SWEP.EjectBrassTrail = "shellsmoke"
-SWEP.EjectBrassParticle = "port_smoke"
+SWEP.EjectBrassType = 8
+SWEP.EjectBrassTrail = "vietnam_weaponeffect_shelleject_trail"
+SWEP.EjectBrassParticle = "vietnam_weaponeffect_shelleject_side"
 
-SWEP.TracerParticle = "tracer"
+SWEP.TracerParticle = "vietnam_tracer_sniperrifle_green_primary"
 
 SWEP.TracerRandomness = 6
 SWEP.TracerFrequency = 1

@@ -18,7 +18,7 @@ SWEP.ViewModel = "models/weapons/mcv/v_mine.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_mine.mdl"
 
 SWEP.PlaceKind = "mine"
-SWEP.PlacedEntityClass = "mcv_mine"
+SWEP.PlacedEntityClass = "mcv_placed_mine"
 SWEP.ExplosionDamage = 175
 SWEP.ExplosionRadius = 250
 

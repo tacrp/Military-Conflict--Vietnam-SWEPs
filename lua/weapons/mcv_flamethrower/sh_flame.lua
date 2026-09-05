@@ -166,7 +166,14 @@ if CLIENT then
         if !IsValid(ent) then return end
         local att = ent:LookupAttachment("muzzle")
         if att <= 0 then att = 1 end
-        self.FlamePS = CreateParticleSystem(ent, self.FlameParticle, PATTACH_POINT_FOLLOW, att)
+        local ps = CreateParticleSystem(ent, self.FlameParticle, PATTACH_POINT_FOLLOW, att)
+        if IsValid(ps) and ent != self then
+            // viewmodel particles are drawn from PostDrawViewModel in the viewmodel camera
+            ps:StartEmission()
+            ps:SetShouldDraw(false)
+            table.insert(self.PCFs, ps)
+        end
+        self.FlamePS = ps
         self.FlamePSEnt = ent
     end
 

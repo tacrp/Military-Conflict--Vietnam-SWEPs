@@ -30,11 +30,11 @@ SWEP.DamageHeadMultiplier = 2.5
 SWEP.DamageChestMultiplier = 1.5
 SWEP.DamageStomachMultiplier = 1.25
 SWEP.DamageLegMultiplier = 0.9
-SWEP.DamageArmMultiplier = 0.85
+SWEP.DamageArmMultiplier = 0.8
 
 SWEP.Num = 6
 
-SWEP.RangeModifier = 0.8
+SWEP.RangeModifier = 0.79
 
 SWEP.Firemodes = {
     MCV.FIREMODE_SEMI
@@ -42,12 +42,13 @@ SWEP.Firemodes = {
 
 SWEP.LastShotAnimation = false
 SWEP.ShotgunReload = true
+SWEP.NoEjectOnShoot = false
 
 // View slide from recoil
-SWEP.ViewSlideRecoilUp = 3.2
-SWEP.ViewSlideRecoilRight = 1.16
+SWEP.ViewSlideRecoilUp = 3.6
+SWEP.ViewSlideRecoilRight = 1.08
 
-SWEP.ViewSlideRecoilIronsightUp = 2.35
+SWEP.ViewSlideRecoilIronsightUp = 2.64
 SWEP.ViewSlideRecoilIronsightRight = 0.8
 
 SWEP.RecoilPushbackValue = 1.5
@@ -121,7 +122,7 @@ SWEP.WoodDamageModifier = 1.4
 SWEP.OtherDamageModifier = 1.4
 
 // Sound
-SWEP.SoundSingleShot = "MCV_Weapon_M1897.Single"
+SWEP.SoundSingleShot = "MCV_Weapon_Auto5.Single"
 SWEP.SoundDoubleShot = ""
 SWEP.SoundReload = ""
 SWEP.SoundSpecial1 = ""
@@ -129,19 +130,19 @@ SWEP.SoundSpecial2 = ""
 SWEP.SoundNearlyEmpty = "MCV_Weapon_Generic.NearlyEmptyClick"
 SWEP.SoundEmpty = "MCV_Weapon_Generic.ClipEmpty_08"
 
-// Particles
-SWEP.MuzzleParticle = "muzzleflash_m3"
-SWEP.MuzzleParticleSmoke = ""
-SWEP.MuzzleParticleIronsighted = "muzzleflash_m3"
-SWEP.MuzzleParticleIronsightedSmoke = ""
+// Particles (the game's own systems; particles/*.pcf and their materials ship with the addon)
+SWEP.MuzzleParticle = "vietnam_muzzleflash_shotgun_type1_fp"
+SWEP.MuzzleParticleSmoke = "vietnam_muzzleflash_shotgun_type1_fp_smoke"
+SWEP.MuzzleParticleIronsighted = "vietnam_muzzleflash_shotgun_type1_fp_is"
+SWEP.MuzzleParticleIronsightedSmoke = "vietnam_muzzleflash_shotgun_type1_fp_is_smoke"
 
-SWEP.MuzzleParticle3rdPerson = "muzzleflash_m3"
+SWEP.MuzzleParticle3rdPerson = "vietnam_muzzleflash_shotgun_type1_tp"
 
 SWEP.EjectBrassType = 2
-SWEP.EjectBrassTrail = "shellsmoke"
-SWEP.EjectBrassParticle = "port_smoke"
+SWEP.EjectBrassTrail = "vietnam_weaponeffect_shelleject_trail"
+SWEP.EjectBrassParticle = "vietnam_weaponeffect_shelleject_side"
 
-SWEP.TracerParticle = "tracer"
+SWEP.TracerParticle = "vietnam_tracer_shotgun_primary"
 
 SWEP.TracerRandomness = 6
 SWEP.TracerFrequency = 1

@@ -9,7 +9,7 @@ AddCSLuaFile()
 // Names and basic information
 SWEP.PrintName = "Nagant M1895"
 SWEP.Category = "Military Conflict: Vietnam"
-SWEP.Country = "Belgium"
+SWEP.Country = "Russian Empire"
 SWEP.SubCategory = "Revolvers"
 SWEP.Caliber = "7.62x38mmR"
 
@@ -26,16 +26,16 @@ SWEP.BodyGroups = ""
 
 // Stats
 
-SWEP.DamageGeneric = 43
-SWEP.DamageHeadMultiplier = 3.7
-SWEP.DamageChestMultiplier = 2.4
-SWEP.DamageStomachMultiplier = 2.3
-SWEP.DamageLegMultiplier = 1.3
-SWEP.DamageArmMultiplier = 0.95
+SWEP.DamageGeneric = 30
+SWEP.DamageHeadMultiplier = 4.8
+SWEP.DamageChestMultiplier = 3.6
+SWEP.DamageStomachMultiplier = 3.5
+SWEP.DamageLegMultiplier = 1.9
+SWEP.DamageArmMultiplier = 1.8
 
 SWEP.Num = 1
 
-SWEP.RangeModifier = 0.85
+SWEP.RangeModifier = 0.805
 
 SWEP.Firemodes = {
     MCV.FIREMODE_SA,
@@ -48,13 +48,15 @@ SWEP.ShotgunReload = true
 SWEP.HasEmptyReload = false
 SWEP.RevolverFiremodePose = true
 SWEP.ShotgunReload = true
+SWEP.NoEjectOnShoot = true
+SWEP.AkimboDualSingleActionReload = true
 
 // View slide from recoil
-SWEP.ViewSlideRecoilUp = 1.85
-SWEP.ViewSlideRecoilRight = 0.4
+SWEP.ViewSlideRecoilUp = 2.2
+SWEP.ViewSlideRecoilRight = 0.36
 
-SWEP.ViewSlideRecoilIronsightUp = 0.8
-SWEP.ViewSlideRecoilIronsightRight = 0.22
+SWEP.ViewSlideRecoilIronsightUp = 1.28
+SWEP.ViewSlideRecoilIronsightRight = 0.2
 
 SWEP.RecoilPushbackValue = 1.5
 
@@ -79,8 +81,8 @@ SWEP.IronsightAng = Angle(0, 0, 0)
 SWEP.CustomPos = Vector(0, -2, 0)
 SWEP.CustomAng = Angle(0, 0, 0)
 
-SWEP.Spread = 8.5
-SWEP.SpreadIronsighted = 1.3
+SWEP.Spread = 8.75
+SWEP.SpreadIronsighted = 1.5
 
 SWEP.FireRate = 300 // in rounds per minute
 
@@ -95,7 +97,7 @@ SWEP.Primary.Chamber = 0
 SWEP.Primary.DefaultClip = 14
 SWEP.Primary.Automatic = true
 
-SWEP.NearwallDistance = 15
+SWEP.NearwallDistance = 22
 
 // Bullet spread multiplier according to current stance
 SWEP.CrouchSpreadMultiplier = 0.8
@@ -136,19 +138,19 @@ SWEP.SoundSpecial2 = ""
 SWEP.SoundNearlyEmpty = "MCV_Weapon_Generic.NearlyEmptyClick_Revolver"
 SWEP.SoundEmpty = "MCV_Weapon_Generic.ClipEmpty_07"
 
-// Particles
-SWEP.MuzzleParticle = "muzzleflash_pistol_rbull"
-SWEP.MuzzleParticleSmoke = ""
-SWEP.MuzzleParticleIronsighted = "muzzleflash_pistol_rbull"
-SWEP.MuzzleParticleIronsightedSmoke = ""
+// Particles (the game's own systems; particles/*.pcf and their materials ship with the addon)
+SWEP.MuzzleParticle = "vietnam_muzzleflash_revolver_type1_fp"
+SWEP.MuzzleParticleSmoke = "vietnam_muzzleflash_revolver_type1_fp_smoke"
+SWEP.MuzzleParticleIronsighted = "vietnam_muzzleflash_revolver_type1_fp_is"
+SWEP.MuzzleParticleIronsightedSmoke = "vietnam_muzzleflash_revolver_type1_fp_is_smoke"
 
-SWEP.MuzzleParticle3rdPerson = "muzzleflash_pistol_rbull"
+SWEP.MuzzleParticle3rdPerson = "vietnam_muzzleflash_revolver_type1_tp"
 
 SWEP.EjectBrassType = 6
-SWEP.EjectBrassTrail = "shellsmoke"
-SWEP.EjectBrassParticle = "port_smoke"
+SWEP.EjectBrassTrail = "vietnam_weaponeffect_shelleject_trail"
+SWEP.EjectBrassParticle = "vietnam_weaponeffect_shelleject_side"
 
-SWEP.TracerParticle = "tracer"
+SWEP.TracerParticle = "vietnam_tracer_pistol_green_primary"
 
 SWEP.TracerRandomness = 6
 SWEP.TracerFrequency = 1

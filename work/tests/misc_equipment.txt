@@ -1,0 +1,49 @@
+# Flamethrower stream, medic box, binoculars, crossbow
+god
+strip
+ang 0 0 0
+give mcv_lpo50
+wait 1.5
+key +attack
+wait 0.8
+shot flame_firing marker
+report flame_firing
+key -attack
+wait 1
+give mcv_medicbox_us
+wait 1.5
+lua ply:SetHealth(40)
+tap +attack2 0.1
+wait 0.6
+shot medic_self marker
+report medic_self
+wait 1
+give mcv_binoculars_us
+wait 1.5
+key +attack2
+wait 1
+shot bino_zoom marker
+report bino_zoom
+key -attack2
+wait 0.8
+give mcv_crossbow
+wait 1.5
+key +attack2
+wait 1
+shot xbow_aim marker
+tap +attack 0.1
+wait 0.4
+shot xbow_shot marker
+key -attack2
+wait 2
+report xbow_after
+give mcv_m1942_machete
+wait 1.5
+key +speed
+key +forward
+wait 0.6
+shot machete_run marker
+key -forward
+key -speed
+wait 0.8
+report machete_idle

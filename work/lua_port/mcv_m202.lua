@@ -23,6 +23,13 @@ SWEP.WorldModel = "models/weapons/mcv/w_m202.mdl"
 
 SWEP.BodyGroups = ""
 
+SWEP.BulletBodygroups = {
+    [1] = {1, 1},
+    [2] = {2, 1},
+    [3] = {3, 1},
+    [4] = {4, 1},
+}
+
 // Stats
 
 SWEP.DamageGeneric = 30
@@ -42,6 +49,10 @@ SWEP.Firemodes = {
 
 SWEP.LastShotAnimation = false
 SWEP.HasEmptyReload = false
+SWEP.NoEjectOnShoot = true
+SWEP.ShootEntity = "mcv_proj_m202"
+SWEP.ShootEntityForce = 5000
+SWEP.AmmoPerShot = 1
 
 // View slide from recoil
 SWEP.ViewSlideRecoilUp = 3.12
@@ -89,7 +100,7 @@ SWEP.Primary.Chamber = 0
 SWEP.Primary.DefaultClip = 8
 SWEP.Primary.Automatic = true
 
-SWEP.NearwallDistance = 25
+SWEP.NearwallDistance = 45
 
 // Bullet spread multiplier according to current stance
 SWEP.CrouchSpreadMultiplier = 1
@@ -129,19 +140,19 @@ SWEP.SoundSpecial2 = ""
 SWEP.SoundNearlyEmpty = "MCV_Weapon_Generic.NearlyEmptyClick"
 SWEP.SoundEmpty = "MCV_Weapon_Generic.ClipEmpty_09"
 
-// Particles
-SWEP.MuzzleParticle = "muzzleflash_m79"
-SWEP.MuzzleParticleSmoke = ""
-SWEP.MuzzleParticleIronsighted = "muzzleflash_m79"
-SWEP.MuzzleParticleIronsightedSmoke = ""
+// Particles (the game's own systems; particles/*.pcf and their materials ship with the addon)
+SWEP.MuzzleParticle = "vietnam_muzzleflash_rocketlauncher_type1_fp"
+SWEP.MuzzleParticleSmoke = "vietnam_muzzleflash_rocketlauncher_type1_fp_smoke"
+SWEP.MuzzleParticleIronsighted = "vietnam_muzzleflash_rocketlauncher_type1_fp_is"
+SWEP.MuzzleParticleIronsightedSmoke = "vietnam_muzzleflash_rocketlauncher_type1_fp_is_smoke"
 
-SWEP.MuzzleParticle3rdPerson = "muzzleflash_m79"
+SWEP.MuzzleParticle3rdPerson = "vietnam_muzzleflash_rocketlauncher_type1_tp"
 
 SWEP.EjectBrassType = 0
-SWEP.EjectBrassTrail = "shellsmoke"
-SWEP.EjectBrassParticle = "port_smoke"
+SWEP.EjectBrassTrail = "vietnam_weaponeffect_shelleject_trail"
+SWEP.EjectBrassParticle = "vietnam_weaponeffect_shelleject_side"
 
-SWEP.TracerParticle = "tracer"
+SWEP.TracerParticle = ""
 
 SWEP.TracerRandomness = 6
 SWEP.TracerFrequency = 1

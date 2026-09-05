@@ -14,7 +14,7 @@ SWEP.AimHoldType = "slam"
 
 // "c4" (plant, right click detonates), "dynamite" (plant lit, or throw lit), "mine" (two steps)
 SWEP.PlaceKind = "c4"
-SWEP.PlacedEntityClass = "mcv_c4"
+SWEP.PlacedEntityClass = "mcv_placed_c4"
 SWEP.StakeEntityClass = "mcv_mine_stake"
 SWEP.PlaceRange = 72
 SWEP.PlaceDelay = 0.5 // seconds into the plant animation at which the charge appears

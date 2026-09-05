@@ -1,0 +1,21 @@
+# Client-side playback of drawbackhigh: does the cycle advance normally?
+strip
+give mcv_m26
+wait 1.5
+lua local w = ply:GetActiveWeapon() w:SetNextIdle(CurTime() + 60)
+clua local vm = LocalPlayer():GetViewModel() vm:SendViewModelMatchingSequence(vm:LookupSequence("drawbackhigh")) vm:SetCycle(0) vm:SetPlaybackRate(1)
+wait 0.1
+shot pb_010 marker
+wait 0.1
+shot pb_020 marker
+wait 0.15
+shot pb_035 marker
+wait 0.2
+shot pb_055 marker
+report pb_end
+clua local vm = LocalPlayer():GetViewModel() vm:SendViewModelMatchingSequence(vm:LookupSequence("throw")) vm:SetCycle(0) vm:SetPlaybackRate(1)
+wait 0.25
+shot pbt_025 marker
+wait 0.25
+shot pbt_050 marker
+lua local w = ply:GetActiveWeapon() w:SetNextIdle(CurTime())

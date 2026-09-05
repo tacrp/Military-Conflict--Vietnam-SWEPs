@@ -9,7 +9,7 @@ AddCSLuaFile()
 // Names and basic information
 SWEP.PrintName = "Baby Browning"
 SWEP.Category = "Military Conflict: Vietnam"
-SWEP.Country = "United States of America"
+SWEP.Country = "Belgium"
 SWEP.SubCategory = "Pistols"
 SWEP.Caliber = ".25 ACP"
 
@@ -26,29 +26,30 @@ SWEP.BodyGroups = ""
 
 // Stats
 
-SWEP.DamageGeneric = 23
-SWEP.DamageHeadMultiplier = 2.6
+SWEP.DamageGeneric = 17
+SWEP.DamageHeadMultiplier = 5
 SWEP.DamageChestMultiplier = 1.7
 SWEP.DamageStomachMultiplier = 1.6
-SWEP.DamageLegMultiplier = 1.1
-SWEP.DamageArmMultiplier = 1.05
+SWEP.DamageLegMultiplier = 1.2
+SWEP.DamageArmMultiplier = 1.1
 
 SWEP.Num = 1
 
-SWEP.RangeModifier = 0.65
+SWEP.RangeModifier = 0.67
 
 SWEP.Firemodes = {
     MCV.FIREMODE_SEMI
 }
 
 SWEP.LastShotAnimation = false
+SWEP.NoEjectOnShoot = false
 
 // View slide from recoil
-SWEP.ViewSlideRecoilUp = 1.07
-SWEP.ViewSlideRecoilRight = 0.42
+SWEP.ViewSlideRecoilUp = 1.08
+SWEP.ViewSlideRecoilRight = 0.44
 
-SWEP.ViewSlideRecoilIronsightUp = 0.45
-SWEP.ViewSlideRecoilIronsightRight = 0.22
+SWEP.ViewSlideRecoilIronsightUp = 0.8
+SWEP.ViewSlideRecoilIronsightRight = 0.32
 
 SWEP.RecoilPushbackValue = 1.5
 
@@ -89,15 +90,15 @@ SWEP.Primary.Chamber = 1
 SWEP.Primary.DefaultClip = 12
 SWEP.Primary.Automatic = true
 
-SWEP.NearwallDistance = 15
+SWEP.NearwallDistance = 22
 
 // Bullet spread multiplier according to current stance
-SWEP.CrouchSpreadMultiplier = 0.8
-SWEP.ProneSpreadMultiplier = 0.75
-SWEP.StandMoveSpreadMultiplier = 1.2
-SWEP.SneakMoveSpreadMultiplier = 1.1
-SWEP.CrouchMoveSpreadMultiplier = 1.15
-SWEP.JumpSpreadMultiplier = 1.35
+SWEP.CrouchSpreadMultiplier = 0.95
+SWEP.ProneSpreadMultiplier = 0.9
+SWEP.StandMoveSpreadMultiplier = 1.1
+SWEP.SneakMoveSpreadMultiplier = 1.05
+SWEP.CrouchMoveSpreadMultiplier = 1
+SWEP.JumpSpreadMultiplier = 1.25
 
 SWEP.HasBayonet = false
 SWEP.HasRifleGrenade = false
@@ -109,17 +110,17 @@ SWEP.BayonetDamage = 100
 SWEP.HasBipod = false
 
 // Penetration
-SWEP.MetalPenetrationDepth = 6
-SWEP.GlassPenetrationDepth = 12
-SWEP.ConcretePenetrationDepth = 8
-SWEP.WoodPenetrationDepth = 16
-SWEP.OtherPenetrationDepth = 10
+SWEP.MetalPenetrationDepth = 4
+SWEP.GlassPenetrationDepth = 10
+SWEP.ConcretePenetrationDepth = 6
+SWEP.WoodPenetrationDepth = 14
+SWEP.OtherPenetrationDepth = 8
 
-SWEP.MetalDamageModifier = 1.65
-SWEP.GlassDamageModifier = 1.25
-SWEP.ConcreteDamageModifier = 1.85
-SWEP.WoodDamageModifier = 1.35
-SWEP.OtherDamageModifier = 1.35
+SWEP.MetalDamageModifier = 1.8
+SWEP.GlassDamageModifier = 1.4
+SWEP.ConcreteDamageModifier = 2
+SWEP.WoodDamageModifier = 1.5
+SWEP.OtherDamageModifier = 1.5
 
 // Sound
 SWEP.SoundSingleShot = "MCV_Weapon_BabyBrowning.Single"
@@ -130,19 +131,19 @@ SWEP.SoundSpecial2 = ""
 SWEP.SoundNearlyEmpty = "MCV_Weapon_Generic.NearlyEmptyClick_Pistol"
 SWEP.SoundEmpty = "MCV_Weapon_Generic.ClipEmpty_03"
 
-// Particles
-SWEP.MuzzleParticle = "muzzleflash_pistol"
-SWEP.MuzzleParticleSmoke = ""
-SWEP.MuzzleParticleIronsighted = "muzzleflash_pistol"
-SWEP.MuzzleParticleIronsightedSmoke = ""
+// Particles (the game's own systems; particles/*.pcf and their materials ship with the addon)
+SWEP.MuzzleParticle = "vietnam_muzzleflash_pistol_type3_fp"
+SWEP.MuzzleParticleSmoke = "vietnam_muzzleflash_pistol_type1_fp_smoke"
+SWEP.MuzzleParticleIronsighted = "vietnam_muzzleflash_pistol_type3_fp_is"
+SWEP.MuzzleParticleIronsightedSmoke = "vietnam_muzzleflash_pistol_type1_fp_is_smoke"
 
-SWEP.MuzzleParticle3rdPerson = "muzzleflash_pistol"
+SWEP.MuzzleParticle3rdPerson = "vietnam_muzzleflash_pistol_type3_tp"
 
-SWEP.EjectBrassType = 18
-SWEP.EjectBrassTrail = "shellsmoke"
-SWEP.EjectBrassParticle = "port_smoke"
+SWEP.EjectBrassType = 15
+SWEP.EjectBrassTrail = "vietnam_weaponeffect_shelleject_trail"
+SWEP.EjectBrassParticle = "vietnam_weaponeffect_shelleject_side"
 
-SWEP.TracerParticle = "tracer"
+SWEP.TracerParticle = "vietnam_tracer_pistol_primary"
 
 SWEP.TracerRandomness = 6
 SWEP.TracerFrequency = 2

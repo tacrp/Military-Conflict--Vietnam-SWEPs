@@ -18,7 +18,7 @@ SWEP.ViewModel = "models/weapons/mcv/v_c4.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_c4.mdl"
 
 SWEP.PlaceKind = "c4"
-SWEP.PlacedEntityClass = "mcv_c4"
+SWEP.PlacedEntityClass = "mcv_placed_c4"
 SWEP.ExplosionDamage = 500
 SWEP.ExplosionRadius = 500
 

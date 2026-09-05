@@ -262,9 +262,9 @@ function ENT:PhysicsCollide(data, collider)
     if data.DeltaTime < 0.1 then return end
     if !self.BounceSounds then return end
 
-    local s = table.Random(self.BounceSounds)
-
-    self:EmitSound(s)
+    local s = self.BounceSounds[math.random(#self.BounceSounds)]
+    if istable(s) then s = s[1] end
+    if isstring(s) then self:EmitSound(s) end
 end
 
 function ENT:OnThink()

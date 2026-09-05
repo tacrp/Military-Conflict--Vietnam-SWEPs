@@ -10,8 +10,8 @@ local HUD = MCV.HUD
 
 HUD.Color = Color(255, 255, 255, 150)
 HUD.ColorBright = Color(255, 255, 255, 230)
-HUD.ColorDim = Color(255, 255, 255, 90)
-HUD.ColorIcon = Color(255, 255, 255, 40) // the spawn icon, mirrored to face left, behind the counter
+HUD.ColorDim = Color(255, 255, 255, 140)
+HUD.ColorIcon = Color(255, 255, 255, 70) // the spawn icon, mirrored to face left, behind the counter
 HUD.InTime = 0.35 // seconds the elements take to slide in
 HUD.OutTimeDefault = 0.3
 HUD.SlideDistance = 24 // ScreenScale units the elements travel while animating

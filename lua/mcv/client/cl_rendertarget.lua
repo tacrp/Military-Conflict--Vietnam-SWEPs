@@ -3,5 +3,5 @@ hook.Add("PreDrawViewModels", "MCV_PreDrawViewModels", function()
 
     if !IsValid(wpn) or !wpn.MilitaryConflictVietnam then return end
 
-    wpn:DoCheapScope()
+    if wpn.DoCheapScope then wpn:DoCheapScope() end
 end)

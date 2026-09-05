@@ -18,7 +18,7 @@ SWEP.ViewModel = "models/weapons/mcv/v_dynamite.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_dynamite.mdl"
 
 SWEP.PlaceKind = "dynamite"
-SWEP.PlacedEntityClass = "mcv_dynamite"
+SWEP.PlacedEntityClass = "mcv_placed_dynamite"
 SWEP.ExplosionDamage = 500
 SWEP.ExplosionRadius = 550
 
