@@ -218,3 +218,11 @@ if SERVER then
         ent:SetAmmo(0, wep:GetPrimaryAmmoType())
     end)
 end
+
+function SWEP:GetControlHints()
+    return {
+        {"hold:+attack", "Flame"},
+        {"+attack2", "Aim"},
+        {"+use +attack", "Bash"},
+    }
+end

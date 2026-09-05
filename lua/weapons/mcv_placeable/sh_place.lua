@@ -394,3 +394,23 @@ if CLIENT then
         if IsValid(self.Ghost) then self.Ghost:Remove() end
     end
 end
+
+function SWEP:GetControlHints()
+    if self.PlaceKind == "mine" then
+        return {
+            {"+attack", "Place mine, then the stake"},
+            {"+use +attack", "Bash"},
+        }
+    elseif self.PlaceKind == "dynamite" then
+        return {
+            {"+attack", "Plant lit"},
+            {"+attack2", "Throw lit"},
+            {"+use +attack", "Bash"},
+        }
+    end
+    return {
+        {"+attack", "Plant"},
+        {"+attack2", "Detonate"},
+        {"+use +attack", "Bash"},
+    }
+end

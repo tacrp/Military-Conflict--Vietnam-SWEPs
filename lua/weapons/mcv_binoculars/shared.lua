@@ -73,3 +73,11 @@ end
 
 function SWEP:ToggleUBGL() end
 function SWEP:ToggleBayonet() end
+
+function SWEP:GetControlHints()
+    return {
+        {"+attack2", "Look"},
+        {"+use +reload", "Magnification"},
+        {"+use +attack", "Bash"},
+    }
+end

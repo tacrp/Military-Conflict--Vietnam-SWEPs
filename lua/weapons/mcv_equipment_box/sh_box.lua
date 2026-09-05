@@ -148,3 +148,11 @@ end
 
 function SWEP:Reload()
 end
+
+function SWEP:GetControlHints()
+    return {
+        {"+attack", self.BoxKind == "medic" and "Heal the player you look at" or "Resupply the player you look at"},
+        {"+attack2", "Use on yourself"},
+        {"+use +attack", "Drop the box"},
+    }
+end

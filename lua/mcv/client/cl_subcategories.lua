@@ -11,7 +11,7 @@ hook.Add("PopulateWeapons", "zzz_MCV_SubCategories", function(pnlContent, tree, 
         -- Build into categories + subcategories
         for k, weapon in pairs(Weapons) do
             if !weapon.Spawnable then continue end
-            if !weapons.IsBasedOn(k, "mcv_base") then continue end
+            if !weapons.IsBasedOn(k, "mcv_base_core") then continue end
 
             -- Get the weapon category as a string
             local Category = weapon.Category or "Other2"

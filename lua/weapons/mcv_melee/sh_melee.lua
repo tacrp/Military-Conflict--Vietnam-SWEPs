@@ -458,3 +458,18 @@ function SWEP:OnDeploy()
     self:SetActionState(STATE_IDLE)
     self.WasRunning = false
 end
+
+function SWEP:GetControlHints()
+    local h = {
+        {"+attack", "Slash"},
+        {"+attack2", "Stab"},
+        {"+speed +attack", "Charge"},
+    }
+    if self.CanThrow then
+        table.insert(h, {"+use +attack", "Throw"})
+    end
+    if self.CanRepair then
+        table.insert(h, {"+attack2", "Repair vehicle (aim at it)"})
+    end
+    return h
+end

@@ -73,3 +73,31 @@ if CLIENT then
         end
     end
 end
+
+// Controls shown by the HUD after a deploy and in the weapon selection info
+function SWEP:GetControlHints()
+    local h = {
+        {"+attack", "Fire"},
+        {"+attack2", "Aim"},
+        {"+reload", "Reload"},
+    }
+    if #self.Firemodes > 1 then
+        table.insert(h, {"+use +reload", "Fire mode"})
+    elseif self.AdjustableScopes then
+        table.insert(h, {"+use +reload", "Scope magnification"})
+    end
+    if self.HasRifleGrenade then
+        table.insert(h, {"+use +walk", self.RifleGrenadeIsUBGL and "Grenade launcher" or "Rifle grenade"})
+    end
+    if self.HasAkimbo then
+        table.insert(h, {"+use +walk", "Dual wield"})
+    end
+    if self.HasBayonet then
+        table.insert(h, {"+use +attack2", "Bayonet"})
+    end
+    if self.HasBipod then
+        table.insert(h, {"+use", "Bipod (at cover)"})
+    end
+    table.insert(h, {"+use +attack", self.HasBayonet and "Bash / stab" or "Bash"})
+    return h
+end

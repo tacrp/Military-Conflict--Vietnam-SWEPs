@@ -213,3 +213,15 @@ end
 function SWEP:OnDeploy()
     self:SetActionState(STATE_IDLE)
 end
+
+function SWEP:GetControlHints()
+    local h = {{"hold:+attack", "Overhand throw"}}
+    if self.HasUnderhand then
+        table.insert(h, {"hold:+attack2", "Underhand throw (roll when crouched)"})
+    end
+    if #self.FuseModes > 1 then
+        table.insert(h, {"+use +reload", "Fuse time"})
+    end
+    table.insert(h, {"+use +attack", "Bash"})
+    return h
+end
