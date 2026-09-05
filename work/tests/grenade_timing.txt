@@ -1,0 +1,26 @@
+# Fine timing of the live wind-up (server-driven), and the same sequence started by activity
+god
+strip
+ang 0 0 0
+give mcv_m26
+wait 1.5
+shot t_idle marker
+key +attack
+shot t_000 marker
+wait 0.05
+shot t_005 marker
+wait 0.1
+shot t_015 marker
+wait 0.1
+shot t_025 marker
+key -attack
+wait 2
+lua local w = ply:GetActiveWeapon() w:PlayAnimation(ACT_VM_PULLBACK_HIGH, 1, false, true)
+wait 0.05
+shot a_005 marker
+wait 0.15
+shot a_020 marker
+wait 0.15
+shot a_035 marker
+wait 2
+lua local w = ply:GetActiveWeapon() w:SetNextIdle(CurTime())

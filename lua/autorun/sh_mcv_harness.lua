@@ -134,10 +134,12 @@ if CLIENT then
         local wep = ply:GetActiveWeapon()
         if IsValid(wep) then
             local vm = ply:GetViewModel()
-            local txt = string.format("%s  sight %.2f  seq %s  cycle %.2f", wep:GetClass(),
+            local txt = string.format("%s  sight %.2f  seq %s  cycle %.2f  rate %.2f  dur %.2f  t %.2f", wep:GetClass(),
                 wep.GetSightAmountVisual and wep:GetSightAmountVisual() or -1,
                 IsValid(vm) and vm:GetSequenceName(vm:GetSequence()) or "?",
-                IsValid(vm) and vm:GetCycle() or -1)
+                IsValid(vm) and vm:GetCycle() or -1,
+                IsValid(vm) and vm:GetPlaybackRate() or -1,
+                IsValid(vm) and vm:SequenceDuration() or -1, CurTime())
             draw.SimpleText(txt, "MCV_8", x, ScrH() - ScreenScale(4), Color(255, 0, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_BOTTOM)
         end
     end

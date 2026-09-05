@@ -1,15 +1,7 @@
-# Flamethrower stream, medic box, binoculars, crossbow
+# Medic box, binoculars, crossbow, machete run (flamethrower has its own test)
 god
 strip
 ang 0 0 0
-give mcv_lpo50
-wait 1.5
-key +attack
-wait 0.8
-shot flame_firing marker
-report flame_firing
-key -attack
-wait 1
 give mcv_medicbox_us
 wait 1.5
 lua ply:SetHealth(40)

@@ -184,6 +184,30 @@ if CLIENT then
         self.FlamePS = nil
     end
 
+    // The game's stream systems aim at control point 1 (where the fuel lands); keep it on the
+    // surface the player is pointing at, every frame, for both the viewmodel and world streams.
+    function SWEP:UpdateFlameControlPoints()
+        local ps = self.FlamePS
+        if !IsValid(ps) then return end
+        local owner = self:GetOwner()
+        if !IsValid(owner) then return end
+        local src = owner:GetShootPos()
+        local dir = owner:GetAimVector()
+        local tr = util.TraceLine({start = src, endpos = src + dir * self.FlameRange, filter = owner, mask = MASK_SHOT})
+        ps:SetControlPoint(1, tr.HitPos)
+        ps:SetControlPointOrientation(1, tr.HitNormal, dir, dir:Cross(tr.HitNormal))
+        ps:SetControlPoint(2, src + dir * self.FlameRange)
+    end
+
+    function SWEP:PreDrawViewModelWeapon(vm)
+        self.RenderingRTScope = false
+        if self:GetHolsterTime() < CurTime() then
+            self:DoRTScope()
+        end
+        self:UpdateMuzzleLight(vm)
+        self:UpdateFlameControlPoints()
+    end
+
     // Other players' streams are driven by the networked flag
     function SWEP:Think_ClientFlame()
         local flaming = self:GetPrimedAttack()
@@ -197,6 +221,7 @@ if CLIENT then
     function SWEP:DrawWorldModel()
         self:DrawModel()
         self:Think_ClientFlame()
+        if self:GetOwner() != LocalPlayer() then self:UpdateFlameControlPoints() end
     end
 end
 
