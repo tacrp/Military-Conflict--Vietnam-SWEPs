@@ -1,0 +1,12 @@
+give mcv_m1917
+wait 1.5
+key +walk
+tap +use 0.1
+key -walk
+wait 4
+key +speed
+key +forward
+wait 0.9
+shot s_dualm1917_sprint
+key -forward
+key -speed

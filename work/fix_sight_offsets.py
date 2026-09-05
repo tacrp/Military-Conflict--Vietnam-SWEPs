@@ -70,6 +70,10 @@ def main():
         S.update(overrides.get(name, {}))
         so = pw.sight_offsets(S)
         vm = S.get("viewmodel", "").replace("models/weapons/", "").replace(".mdl", "")
+        if not vm:
+            # the flamethrower scripts carry no viewmodel key: take the model from the lua file
+            m = re.search(r'SWEP\.ViewModel\s*=\s*"models/weapons/mcv/([^"]+)\.mdl"', open(lp, encoding="utf-8", errors="replace").read())
+            vm = m.group(1) if m else ""
         qc = pw.qc_facts(pw.find_qc(vm)) if vm else None
         # bodygroups from the script's BodygroupData block, in the model's bodygroup order
         if any(k.startswith("BodygroupData.") for k in S) and qc and qc["bodygroups"]:

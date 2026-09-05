@@ -1,0 +1,24 @@
+god
+strip
+ang 0 0 0
+hud 1
+give mcv_blackhawk
+wait 1.5
+key +walk
+tap +use 0.1
+key -walk
+wait 4
+lua local w = ply:GetActiveWeapon() print("[s] akimbo", tostring(w:GetAkimbo()))
+shot s_dualbh_idle
+key +speed
+key +forward
+wait 0.9
+shot s_dualbh_sprint
+lua local vm = ply:GetViewModel() print("[s] sprint pose", vm:GetPoseParameter("player_movement"), "seq", vm:GetSequenceName(vm:GetSequence()))
+key -forward
+key -speed
+wait 1
+key +forward
+wait 0.8
+shot s_dualbh_walk
+key -forward

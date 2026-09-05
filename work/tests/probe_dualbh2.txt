@@ -1,0 +1,20 @@
+give mcv_blackhawk
+wait 1.5
+key +walk
+tap +use 0.1
+key -walk
+wait 4
+lua hook.Add("Think", "mcv_q_seq", function() local vm = ply:GetViewModel() if !IsValid(vm) then return end local s = vm:GetSequenceName(vm:GetSequence()) if s != ply.MCV_LastSeq then ply.MCV_LastSeq = s print("[q] seq", s, math.Round(CurTime(), 2)) end end)
+lua local w = ply:GetActiveWeapon() print("[q] akimbo", tostring(w:GetAkimbo()), "clip", w:Clip1(), "mode", w:GetFiremodeValue())
+tap +attack 0.1
+wait 0.3
+shot q_dualbh_shot
+wait 1.5
+lua ply:GetActiveWeapon():SetClip1(0)
+tap +reload 0.1
+wait 2
+shot q_dualbh_reload_2s
+wait 6
+shot q_dualbh_reload_8s
+wait 6
+lua hook.Remove("Think", "mcv_q_seq") local w = ply:GetActiveWeapon() print("[q] clip after reload", w:Clip1())

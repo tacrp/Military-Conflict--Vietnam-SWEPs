@@ -1,0 +1,31 @@
+god
+strip
+ang 0 0 0
+hud 1
+give mcv_blackhawk
+wait 1.5
+shot s_blackhawk_idle
+key +speed
+key +forward
+wait 0.9
+shot s_blackhawk_sprint
+key -forward
+key -speed
+wait 1
+key +attack2
+wait 1
+shot s_blackhawk_aim
+key -attack2
+give mcv_m1917
+wait 1.5
+key +speed
+key +forward
+wait 0.9
+shot s_m1917_sprint
+key -forward
+key -speed
+wait 1
+key +attack2
+wait 1
+shot s_m1917_aim
+key -attack2

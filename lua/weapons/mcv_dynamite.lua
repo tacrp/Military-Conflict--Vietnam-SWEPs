@@ -16,6 +16,8 @@ SWEP.Slot = 4
 
 SWEP.ViewModel = "models/weapons/mcv/v_dynamite.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_dynamite.mdl"
+SWEP.MovementPoseWalk = 128
+SWEP.MovementPoseSprint = 221
 
 SWEP.PlaceKind = "dynamite"
 SWEP.PlacedEntityClass = "mcv_placed_dynamite"
