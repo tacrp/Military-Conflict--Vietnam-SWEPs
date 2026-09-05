@@ -265,7 +265,10 @@ $animation "pickup_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_binocular\v_binocular_a
 $sequence "runlayer" {
 	"runIdle_a"
 	"run_a"
+	"runIdle_a"
+	"runIdle_a"
 	blend "player_movement" 158 258
+	blend "ironsight" 0 1
 	blendwidth 2
 	delta
 	fadein 0.2
@@ -278,7 +281,11 @@ $sequence "walklayer" {
 	"walkIdle_a"
 	"walk_a"
 	"walkIdle_a"
+	"walkIdle_a"
+	"walkIdle_a"
+	"walkIdle_a"
 	blend "player_movement" 0 316
+	blend "ironsight" 0 1
 	blendwidth 3
 	delta
 	fadein 0.2
@@ -289,8 +296,11 @@ $sequence "walklayer" {
 
 $sequence "walklayerironsight" {
 	"walkIdle_a"
+	"walkIdle_a"
+	"walkIdle_a"
 	"walk_a"
 	blend "player_movement" 0 130
+	blend "ironsight" 0 1
 	blendwidth 2
 	delta
 	fadein 0.2
@@ -310,6 +320,7 @@ $sequence "idle" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	node "0"
 }
@@ -323,9 +334,11 @@ $sequence "draw" {
 	{ event 5004 1 "MCV_Weapon_Foley_Melee.Draw" }
 	fadein 0
 	fadeout 0.2
+	addlayer "walklayer"
+	addlayer "walklayerironsight"
+	addlayer "runlayer"
 	node "0"
 	fps 30
-	addlayer "walklayerironsight"
 }
 
 $sequence "idletonearwall" {
@@ -338,6 +351,7 @@ $sequence "idletonearwall" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	node "0"
 }
 
@@ -350,6 +364,7 @@ $sequence "nearwall" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	node "0"
 }
 
@@ -363,6 +378,7 @@ $sequence "nearwalltoidle" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	node "0"
 }
 
@@ -393,6 +409,7 @@ $sequence "bash" {
 	fadein 0
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	node "0"
 	fps 30
 }
@@ -407,6 +424,7 @@ $sequence "pickupstart" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 }
 
 $sequence "pickuploop" {
@@ -418,6 +436,7 @@ $sequence "pickuploop" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 }
 
 $sequence "pickupend" {
@@ -430,6 +449,7 @@ $sequence "pickupend" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 }
 
 $sequence "holster" {
@@ -438,8 +458,10 @@ $sequence "holster" {
 	{ event 5004 1 "MCV_Weapon_Foley_Melee.Holster" }
 	fadein 0.2
 	fadeout 0.2
-	fps 30
+	addlayer "walklayer"
 	addlayer "walklayerironsight"
+	addlayer "runlayer"
+	fps 30
 }
 
 $sequence "firemode" {
@@ -450,6 +472,7 @@ $sequence "firemode" {
 	fadein 0
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	fps 30
 }
 

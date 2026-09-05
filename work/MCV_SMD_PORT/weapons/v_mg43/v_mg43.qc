@@ -452,8 +452,8 @@ $animation "deploy_a" "..\..\..\MCV_SMD_OG\weapons\v_mg43\v_mg43_anims\deploy_a.
 	numframes 60
 }
 $animation "deploy_a__f60" "..\..\..\MCV_SMD_OG\weapons\v_mg43\v_mg43_anims\deploy_a.smd" {
-	frame 0 0
 	fps 30
+	frame 0 0
 	numframes 60
 }
 
@@ -515,7 +515,10 @@ $animation "shoot3_di_a" "..\..\..\MCV_SMD_OG\weapons\v_mg43\v_mg43_anims\shoot3
 $sequence "runlayer" {
 	"runIdle_a"
 	"run_a"
+	"runIdle_a"
+	"runIdle_a"
 	blend "player_movement" 82 160
+	blend "ironsight" 0 1
 	blendwidth 2
 	delta
 	fadein 0.2
@@ -528,7 +531,11 @@ $sequence "walklayer" {
 	"walkIdle_a"
 	"walk_a"
 	"walkIdle_a"
+	"walkIdle_a"
+	"walkIdle_a"
+	"walkIdle_a"
 	blend "player_movement" 0 164
+	blend "ironsight" 0 1
 	blendwidth 3
 	delta
 	fadein 0.2
@@ -539,8 +546,11 @@ $sequence "walklayer" {
 
 $sequence "walklayerironsight" {
 	"walkIdle_a"
+	"walkIdle_a"
+	"walkIdle_a"
 	"walk_a"
 	blend "player_movement" 0 164
+	blend "ironsight" 0 1
 	blendwidth 2
 	delta
 	fadein 0.2
@@ -572,6 +582,7 @@ $sequence "idle" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	node "0"
 }
@@ -586,8 +597,10 @@ $sequence "draw" {
 	{ event AE_CL_BODYGROUP_SET_TO_CLIP 1 "" }
 	fadein 0.2
 	fadeout 0.2
-	fps 30
+	addlayer "walklayer"
 	addlayer "walklayerironsight"
+	addlayer "runlayer"
+	fps 30
 }
 
 $sequence "Firstdraw" {
@@ -602,8 +615,10 @@ $sequence "Firstdraw" {
 	{ event AE_CL_BODYGROUP_SET_TO_CLIP 1 "" }
 	fadein 0.2
 	fadeout 0.2
-	fps 30
+	addlayer "walklayer"
 	addlayer "walklayerironsight"
+	addlayer "runlayer"
+	fps 30
 }
 
 $sequence "shoot1" {
@@ -616,6 +631,7 @@ $sequence "shoot1" {
 	snap
 	{ event AE_CL_BODYGROUP_SET_TO_CLIP 0 "" }
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "shoot1_pose"
 	node "0"
@@ -640,6 +656,7 @@ $sequence "shoot2" {
 	snap
 	{ event AE_CL_BODYGROUP_SET_TO_CLIP 0 "" }
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "shoot2_pose"
 	node "0"
@@ -664,6 +681,7 @@ $sequence "shoot3" {
 	snap
 	{ event AE_CL_BODYGROUP_SET_TO_CLIP 0 "" }
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "shoot3_pose"
 	node "0"
@@ -749,6 +767,7 @@ $sequence "nearwall" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	node "0"
 }
 
@@ -762,6 +781,7 @@ $sequence "nearwalltoidle" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	node "0"
 }
 
@@ -808,6 +828,7 @@ $sequence "bash" {
 	fadein 0
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	node "0"
 	fps 30
 }
@@ -822,6 +843,7 @@ $sequence "pickupstart" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 }
 
 $sequence "pickuploop" {
@@ -833,6 +855,7 @@ $sequence "pickuploop" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 }
 
 $sequence "pickupend" {
@@ -845,6 +868,7 @@ $sequence "pickupend" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 }
 
 $sequence "idletodeploy" {
@@ -1001,8 +1025,10 @@ $sequence "holster" {
 	{ event 5004 0 "MCV_Weapon_Foley_MG43.Holster" }
 	fadein 0.2
 	fadeout 0.2
-	fps 30
+	addlayer "walklayer"
 	addlayer "walklayerironsight"
+	addlayer "runlayer"
+	fps 30
 }
 
 $includemodel "weapons/mcv/gesture_animations.mdl"

@@ -376,7 +376,10 @@ $animation "pickup_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_a
 $sequence "runlayer" {
 	"runIdle_a"
 	"run_a"
+	"runIdle_a"
+	"runIdle_a"
 	blend "player_movement" 113 203
+	blend "ironsight" 0 1
 	blendwidth 2
 	delta
 	fadein 0.2
@@ -389,7 +392,11 @@ $sequence "walklayer" {
 	"walkIdle_a"
 	"walk_a"
 	"walkIdle_a"
+	"walkIdle_a"
+	"walkIdle_a"
+	"walkIdle_a"
 	blend "player_movement" 0 226
+	blend "ironsight" 0 1
 	blendwidth 3
 	delta
 	fadein 0.2
@@ -400,8 +407,11 @@ $sequence "walklayer" {
 
 $sequence "walklayerironsight" {
 	"walkIdle_a"
+	"walkIdle_a"
+	"walkIdle_a"
 	"walk_a"
 	blend "player_movement" 0 113
+	blend "ironsight" 0 1
 	blendwidth 2
 	delta
 	fadein 0.2
@@ -421,6 +431,7 @@ $sequence "idle" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	node "0"
 }
@@ -436,8 +447,10 @@ $sequence "Firstdraw" {
 	{ event 5004 21 "MCV_Weapon_Foley_ChinaLake_Reload.MetalEnd" }
 	fadein 0.2
 	fadeout 0.2
-	fps 30
+	addlayer "walklayer"
 	addlayer "walklayerironsight"
+	addlayer "runlayer"
+	fps 30
 }
 
 $sequence "draw" {
@@ -449,8 +462,10 @@ $sequence "draw" {
 	{ event 5004 1 "MCV_Weapon_Foley_ChinaLake.Draw" }
 	fadein 0.2
 	fadeout 0.2
-	fps 30
+	addlayer "walklayer"
 	addlayer "walklayerironsight"
+	addlayer "runlayer"
+	fps 30
 }
 
 $sequence "shoot1" {
@@ -462,6 +477,7 @@ $sequence "shoot1" {
 	blendwidth 3
 	snap
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "shoot1_pose"
 	node "0"
@@ -490,6 +506,7 @@ $sequence "pump" {
 	{ event 5004 10 "MCV_Weapon_Foley_ChinaLake_Reload.MetalEnd" }
 	{ event AE_CLIENT_EJECT_BRASS 4 "eject" }
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "pump_pose"
 	node "0"
@@ -571,6 +588,7 @@ $sequence "idletonearwall" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	node "0"
 }
 
@@ -583,6 +601,7 @@ $sequence "nearwall" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	node "0"
 }
 
@@ -596,6 +615,7 @@ $sequence "nearwalltoidle" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	node "0"
 }
 
@@ -626,6 +646,7 @@ $sequence "bash" {
 	fadein 0
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	node "0"
 	fps 30
 }
@@ -640,6 +661,7 @@ $sequence "pickupstart" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 }
 
 $sequence "pickuploop" {
@@ -651,6 +673,7 @@ $sequence "pickuploop" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 }
 
 $sequence "pickupend" {
@@ -663,6 +686,7 @@ $sequence "pickupend" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 }
 
 $sequence "holster" {
@@ -671,8 +695,10 @@ $sequence "holster" {
 	{ event 5004 1 "MCV_Weapon_Foley_ChinaLake.Holster" }
 	fadein 0.2
 	fadeout 0.2
-	fps 30
+	addlayer "walklayer"
 	addlayer "walklayerironsight"
+	addlayer "runlayer"
+	fps 30
 }
 
 $includemodel "weapons/mcv/gesture_animations.mdl"

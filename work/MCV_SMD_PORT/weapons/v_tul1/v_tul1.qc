@@ -474,7 +474,10 @@ $animation "change_firemode_iron_d" "..\..\..\MCV_SMD_OG\weapons\v_tul1\v_tul1_a
 $sequence "runlayer" {
 	"runIdle_a"
 	"run_a"
+	"runIdle_a"
+	"runIdle_a"
 	blend "player_movement" 130 223
+	blend "ironsight" 0 1
 	blendwidth 2
 	delta
 	fadein 0.2
@@ -502,8 +505,11 @@ $sequence "walklayer" {
 
 $sequence "walklayerironsight" {
 	"walkIdle_a"
+	"walkIdle_a"
+	"walkIdle_a"
 	"walk_a"
 	blend "player_movement" 0 130
+	blend "ironsight" 0 1
 	blendwidth 2
 	delta
 	fadein 0.2
@@ -523,6 +529,7 @@ $sequence "idle" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	node "0"
 }
@@ -536,8 +543,10 @@ $sequence "draw" {
 	{ event 5004 1 "MCV_Weapon_Foley_AK47.Draw" }
 	fadein 0.2
 	fadeout 0.2
-	fps 30
+	addlayer "walklayer"
 	addlayer "walklayerironsight"
+	addlayer "runlayer"
+	fps 30
 }
 
 $sequence "Firstdraw" {
@@ -552,8 +561,10 @@ $sequence "Firstdraw" {
 	{ event 5004 29 "MCV_Weapon_Foley_AK47_Reload.MetalEnd" }
 	fadein 0.2
 	fadeout 0.2
-	fps 30
+	addlayer "walklayer"
 	addlayer "walklayerironsight"
+	addlayer "runlayer"
+	fps 30
 }
 
 $sequence "shoot1" {
@@ -565,6 +576,7 @@ $sequence "shoot1" {
 	blendwidth 3
 	snap
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "shoot1_pose"
 	node "0"
@@ -588,6 +600,7 @@ $sequence "shoot2" {
 	blendwidth 3
 	snap
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "shoot2_pose"
 	node "0"
@@ -611,6 +624,7 @@ $sequence "shoot3" {
 	blendwidth 3
 	snap
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "shoot3_pose"
 	node "0"
@@ -672,6 +686,7 @@ $sequence "idletonearwall" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	node "0"
 }
 
@@ -684,6 +699,7 @@ $sequence "nearwall" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	node "0"
 }
 
@@ -697,6 +713,7 @@ $sequence "nearwalltoidle" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	node "0"
 }
 
@@ -727,6 +744,7 @@ $sequence "bash" {
 	fadein 0
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	node "0"
 	fps 30
 }
@@ -741,6 +759,7 @@ $sequence "pickupstart" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 }
 
 $sequence "pickuploop" {
@@ -752,6 +771,7 @@ $sequence "pickuploop" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 }
 
 $sequence "pickupend" {
@@ -764,6 +784,7 @@ $sequence "pickupend" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 }
 
 $sequence "change_firemode" {
@@ -776,6 +797,7 @@ $sequence "change_firemode" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 }
 
@@ -785,8 +807,10 @@ $sequence "holster" {
 	{ event 5004 0 "MCV_Weapon_Foley_AK47.Holster" }
 	fadein 0.2
 	fadeout 0.2
-	fps 30
+	addlayer "walklayer"
 	addlayer "walklayerironsight"
+	addlayer "runlayer"
+	fps 30
 }
 
 $sequence "idletodeploy" {
@@ -949,6 +973,7 @@ $sequence "change_firemode_deploy" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 }
 

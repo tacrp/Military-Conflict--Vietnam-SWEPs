@@ -648,7 +648,10 @@ $sequence "SlidePosition" {
 $sequence "runlayer" {
 	"runIdle_a"
 	"run_a"
+	"runIdle_a"
+	"runIdle_a"
 	blend "player_movement" 161 260
+	blend "ironsight" 0 1
 	blendwidth 2
 	delta
 	fadein 0.2
@@ -661,7 +664,11 @@ $sequence "walklayer" {
 	"walkIdle_a"
 	"walk_a"
 	"walkIdle_a"
+	"walkIdle_a"
+	"walkIdle_a"
+	"walkIdle_a"
 	blend "player_movement" 0 260
+	blend "ironsight" 0 1
 	blendwidth 3
 	delta
 	fadein 0.2
@@ -672,8 +679,11 @@ $sequence "walklayer" {
 
 $sequence "walklayerironsight" {
 	"walkIdle_a"
+	"walkIdle_a"
+	"walkIdle_a"
 	"walk_a"
 	blend "player_movement" 0 130
+	blend "ironsight" 0 1
 	blendwidth 2
 	delta
 	fadein 0.2
@@ -693,6 +703,7 @@ $sequence "idle" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "BulletCounter"
 	addlayer "SlidePosition"
@@ -711,9 +722,11 @@ $sequence "draw" {
 	fadeout 0.2
 	addlayer "BulletCounter"
 	addlayer "SlidePosition"
+	addlayer "walklayer"
+	addlayer "walklayerironsight"
+	addlayer "runlayer"
 	node "0"
 	fps 30
-	addlayer "walklayerironsight"
 }
 
 $sequence "Firstdraw" {
@@ -729,9 +742,11 @@ $sequence "Firstdraw" {
 	fadein 0
 	fadeout 0.2
 	addlayer "BulletCounter"
+	addlayer "walklayer"
+	addlayer "walklayerironsight"
+	addlayer "runlayer"
 	node "0"
 	fps 30
-	addlayer "walklayerironsight"
 }
 
 $sequence "shoot1" {
@@ -743,6 +758,7 @@ $sequence "shoot1" {
 	blendwidth 3
 	snap
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "BulletCounter"
 	addlayer "SlidePosition"
@@ -770,6 +786,7 @@ $sequence "shoot2" {
 	blendwidth 3
 	snap
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "BulletCounter"
 	addlayer "SlidePosition"
@@ -797,6 +814,7 @@ $sequence "shoot3" {
 	blendwidth 3
 	snap
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "BulletCounter"
 	addlayer "SlidePosition"
@@ -824,6 +842,7 @@ $sequence "shoot4" {
 	blendwidth 3
 	snap
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "BulletCounter"
 	addlayer "SlidePosition"
@@ -852,6 +871,7 @@ $sequence "shootlast" {
 	snap
 	{ event 5004 1 "MCV_Weapon_Foley_APS_ShootLast.Metal" }
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "BulletCounter"
 	addlayer "SlidePosition"
@@ -922,6 +942,7 @@ $sequence "idletonearwall" {
 	addlayer "SlidePosition"
 	addlayer "BulletCounter"
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	node "0"
 }
 
@@ -936,6 +957,7 @@ $sequence "nearwall" {
 	addlayer "SlidePosition"
 	addlayer "BulletCounter"
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	node "0"
 }
 
@@ -951,6 +973,7 @@ $sequence "nearwalltoidle" {
 	addlayer "SlidePosition"
 	addlayer "BulletCounter"
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	node "0"
 }
 
@@ -985,6 +1008,7 @@ $sequence "bash" {
 	addlayer "SlidePosition"
 	addlayer "BulletCounter"
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	node "0"
 	fps 30
 }
@@ -999,6 +1023,7 @@ $sequence "pickupstart" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
 	addlayer "BulletCounter"
 }
@@ -1012,6 +1037,7 @@ $sequence "pickuploop" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
 	addlayer "BulletCounter"
 }
@@ -1026,6 +1052,7 @@ $sequence "pickupend" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
 	addlayer "BulletCounter"
 }
@@ -1038,8 +1065,10 @@ $sequence "holster" {
 	fadeout 0.2
 	addlayer "SlidePosition"
 	addlayer "BulletCounter"
-	fps 30
+	addlayer "walklayer"
 	addlayer "walklayerironsight"
+	addlayer "runlayer"
+	fps 30
 }
 
 $sequence "change_firemode" {
@@ -1052,6 +1081,7 @@ $sequence "change_firemode" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "SlidePosition"
 	addlayer "BulletCounter"

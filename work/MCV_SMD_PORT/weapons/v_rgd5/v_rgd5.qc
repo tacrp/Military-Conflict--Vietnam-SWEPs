@@ -204,7 +204,10 @@ $animation "proneR" "..\..\..\MCV_SMD_OG\weapons\v_rgd5\v_rgd5_anims\proneR.smd"
 $sequence "runlayer" {
 	"runIdle_a"
 	"run_a"
+	"runIdle_a"
+	"runIdle_a"
 	blend "player_movement" 159 258
+	blend "ironsight" 0 1
 	blendwidth 2
 	delta
 	fadein 0.2
@@ -217,8 +220,26 @@ $sequence "walklayer" {
 	"walkIdle_a"
 	"walk_a"
 	"walkIdle_a"
+	"walkIdle_a"
+	"walkIdle_a"
+	"walkIdle_a"
 	blend "player_movement" 0 318
+	blend "ironsight" 0 1
 	blendwidth 3
+	delta
+	fadein 0.2
+	fadeout 0.2
+	hidden
+	realtime
+}
+$sequence "walklayerironsight" {
+	"walkIdle_a"
+	"walkIdle_a"
+	"walkIdle_a"
+	"walk_a"
+	blend "player_movement" 0 159
+	blend "ironsight" 0 1
+	blendwidth 2
 	delta
 	fadein 0.2
 	fadeout 0.2
@@ -232,6 +253,7 @@ $sequence "idle" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	node "0"
 	fps 30
@@ -249,6 +271,7 @@ $sequence "drawbackhigh" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	fps 30
 }
 
@@ -263,6 +286,7 @@ $sequence "drawbacklow" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	fps 30
 }
 
@@ -274,6 +298,7 @@ $sequence "throw" {
 	fadein 0
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	fps 30
 }
 
@@ -285,6 +310,7 @@ $sequence "roll" {
 	fadein 0
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	fps 30
 }
 
@@ -296,6 +322,7 @@ $sequence "lob" {
 	fadein 0
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	fps 30
 }
 
@@ -306,6 +333,7 @@ $sequence "draw" {
 	fadein 0
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	node "0"
 	fps 30
@@ -319,6 +347,7 @@ $sequence "bash" {
 	fadein 0
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	node "0"
 	fps 30
 }
@@ -330,6 +359,7 @@ $sequence "pickupstart" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	fps 30
 }
 
@@ -339,6 +369,7 @@ $sequence "pickuploop" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	fps 30
 	loop
 }
@@ -350,6 +381,7 @@ $sequence "pickupend" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	fps 30
 }
 
@@ -360,6 +392,7 @@ $sequence "idletonearwall" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	node "0"
 	fps 30
 }
@@ -381,6 +414,7 @@ $sequence "nearwalltoidle" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	node "0"
 	fps 30
 }
@@ -408,6 +442,7 @@ $sequence "holster" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	fps 30
 }
@@ -420,6 +455,7 @@ $sequence "firemode" {
 	fadein 0
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	fps 30
 }
 

@@ -438,7 +438,10 @@ $sequence "SlideMovement" {
 $sequence "runlayer" {
 	"runIdle_a"
 	"run_a"
+	"runIdle_a"
+	"runIdle_a"
 	blend "player_movement" 142 238
+	blend "ironsight" 0 1
 	blendwidth 2
 	delta
 	fadein 0.2
@@ -451,7 +454,11 @@ $sequence "walklayer" {
 	"walkIdle_a"
 	"walk_a"
 	"walkIdle_a"
+	"walkIdle_a"
+	"walkIdle_a"
+	"walkIdle_a"
 	blend "player_movement" 0 284
+	blend "ironsight" 0 1
 	blendwidth 3
 	delta
 	fadein 0.2
@@ -462,8 +469,11 @@ $sequence "walklayer" {
 
 $sequence "walklayerironsight" {
 	"walkIdle_a"
+	"walkIdle_a"
+	"walkIdle_a"
 	"walk_a"
 	blend "player_movement" 0 130
+	blend "ironsight" 0 1
 	blendwidth 2
 	delta
 	fadein 0.2
@@ -483,6 +493,7 @@ $sequence "idle" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "SlidePosition"
 	node "0"
@@ -498,9 +509,11 @@ $sequence "Firstdraw" {
 	{ event 5004 9 "MCV_Weapon_Foley_M7188_Reload.Metal" }
 	fadein 0.2
 	fadeout 0.2
+	addlayer "walklayer"
+	addlayer "walklayerironsight"
+	addlayer "runlayer"
 	addlayer "SlidePosition"
 	fps 30
-	addlayer "walklayerironsight"
 }
 
 $sequence "draw" {
@@ -512,9 +525,11 @@ $sequence "draw" {
 	{ event 5004 1 "MCV_Weapon_Foley_M7188.Draw" }
 	fadein 0.2
 	fadeout 0.2
+	addlayer "walklayer"
+	addlayer "walklayerironsight"
+	addlayer "runlayer"
 	addlayer "SlidePosition"
 	fps 30
-	addlayer "walklayerironsight"
 }
 
 $sequence "shoot1" {
@@ -526,6 +541,7 @@ $sequence "shoot1" {
 	blendwidth 3
 	snap
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "SlideMovement"
 	addlayer "SlidePosition"
@@ -609,6 +625,7 @@ $sequence "idletonearwall" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
 	node "0"
 }
@@ -622,6 +639,7 @@ $sequence "nearwall" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
 	node "0"
 }
@@ -636,6 +654,7 @@ $sequence "nearwalltoidle" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
 	node "0"
 }
@@ -668,6 +687,7 @@ $sequence "bash" {
 	fadein 0
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
 	node "0"
 	fps 30
@@ -683,6 +703,7 @@ $sequence "pickupstart" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
 }
 
@@ -695,6 +716,7 @@ $sequence "pickuploop" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
 }
 
@@ -708,6 +730,7 @@ $sequence "pickupend" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "SlidePosition"
 }
 
@@ -717,9 +740,11 @@ $sequence "holster" {
 	{ event 5004 0 "MCV_Weapon_Foley_M7188.Holster" }
 	fadein 0.2
 	fadeout 0.2
+	addlayer "walklayer"
+	addlayer "walklayerironsight"
+	addlayer "runlayer"
 	addlayer "SlidePosition"
 	fps 30
-	addlayer "walklayerironsight"
 }
 
 $sequence "bash_bayonet" {
@@ -732,6 +757,7 @@ $sequence "bash_bayonet" {
 	fadein 0
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	node "0"
 }
 
@@ -746,6 +772,7 @@ $sequence "slash_bayonet" {
 	fadein 0
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	node "0"
 }
 
@@ -761,6 +788,7 @@ $sequence "bayonet_unequip" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 }
 
 $sequence "bayonet_equip" {
@@ -775,6 +803,7 @@ $sequence "bayonet_equip" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 }
 
 $includemodel "weapons/mcv/gesture_animations.mdl"

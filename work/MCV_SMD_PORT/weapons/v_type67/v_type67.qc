@@ -496,7 +496,10 @@ $sequence "Hammerpos" {
 $sequence "runlayer" {
 	"runIdle_a"
 	"run_a"
+	"runIdle_a"
+	"runIdle_a"
 	blend "player_movement" 161 260
+	blend "ironsight" 0 1
 	blendwidth 2
 	delta
 	fadein 0.2
@@ -509,7 +512,11 @@ $sequence "walklayer" {
 	"walkIdle_a"
 	"walk_a"
 	"walkIdle_a"
+	"walkIdle_a"
+	"walkIdle_a"
+	"walkIdle_a"
 	blend "player_movement" 0 260
+	blend "ironsight" 0 1
 	blendwidth 3
 	delta
 	fadein 0.2
@@ -520,8 +527,11 @@ $sequence "walklayer" {
 
 $sequence "walklayerironsight" {
 	"walkIdle_a"
+	"walkIdle_a"
+	"walkIdle_a"
 	"walk_a"
 	blend "player_movement" 0 130
+	blend "ironsight" 0 1
 	blendwidth 2
 	delta
 	fadein 0.2
@@ -541,6 +551,7 @@ $sequence "idle" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "BulletCounter"
 	addlayer "Hammerpos"
@@ -560,9 +571,11 @@ $sequence "draw" {
 	fadeout 0.2
 	addlayer "BulletCounter"
 	addlayer "Hammerpos"
+	addlayer "walklayer"
+	addlayer "walklayerironsight"
+	addlayer "runlayer"
 	node "0"
 	fps 30
-	addlayer "walklayerironsight"
 }
 
 $sequence "Firstdraw" {
@@ -577,9 +590,11 @@ $sequence "Firstdraw" {
 	{ event AE_WPN_SET_POSEPARAM 1 "hammerpos 0" }
 	fadein 0
 	fadeout 0.2
+	addlayer "walklayer"
+	addlayer "walklayerironsight"
+	addlayer "runlayer"
 	node "0"
 	fps 30
-	addlayer "walklayerironsight"
 }
 
 $sequence "shoot1" {
@@ -592,6 +607,7 @@ $sequence "shoot1" {
 	snap
 	{ event AE_WPN_SET_POSEPARAM 0 "hammerpos 1" }
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "BulletCounter"
 	addlayer "Hammerpos"
@@ -622,6 +638,7 @@ $sequence "boltpull" {
 	{ event AE_CLIENT_EJECT_BRASS 11 "eject" }
 	{ event AE_WPN_SET_POSEPARAM 10 "hammerpos 0" }
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "BulletCounter"
 	addlayer "Hammerpos"
@@ -695,6 +712,7 @@ $sequence "idletonearwall" {
 	addlayer "BulletCounter"
 	addlayer "Hammerpos"
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	node "0"
 }
 
@@ -709,6 +727,7 @@ $sequence "nearwall" {
 	addlayer "BulletCounter"
 	addlayer "Hammerpos"
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	node "0"
 }
 
@@ -724,6 +743,7 @@ $sequence "nearwalltoidle" {
 	addlayer "BulletCounter"
 	addlayer "Hammerpos"
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	node "0"
 }
 
@@ -758,6 +778,7 @@ $sequence "bash" {
 	addlayer "BulletCounter"
 	addlayer "Hammerpos"
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	node "0"
 	fps 30
 }
@@ -774,6 +795,7 @@ $sequence "pickupstart" {
 	addlayer "BulletCounter"
 	addlayer "Hammerpos"
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 }
 
 $sequence "pickuploop" {
@@ -787,6 +809,7 @@ $sequence "pickuploop" {
 	addlayer "BulletCounter"
 	addlayer "Hammerpos"
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 }
 
 $sequence "pickupend" {
@@ -801,6 +824,7 @@ $sequence "pickupend" {
 	addlayer "BulletCounter"
 	addlayer "Hammerpos"
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 }
 
 $sequence "holster" {
@@ -811,8 +835,10 @@ $sequence "holster" {
 	fadeout 0.2
 	addlayer "BulletCounter"
 	addlayer "Hammerpos"
-	fps 30
+	addlayer "walklayer"
 	addlayer "walklayerironsight"
+	addlayer "runlayer"
+	fps 30
 }
 
 $includemodel "weapons/mcv/gesture_animations.mdl"

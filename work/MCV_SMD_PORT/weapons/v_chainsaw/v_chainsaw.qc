@@ -573,7 +573,10 @@ $animation "proneR" "..\..\..\MCV_SMD_OG\weapons\v_chainsaw\v_chainsaw_anims\pro
 $sequence "runlayer" {
 	"runIdle_a"
 	"run_a"
+	"runIdle_a"
+	"runIdle_a"
 	blend "player_movement" 167 268
+	blend "ironsight" 0 1
 	blendwidth 2
 	delta
 	fadein 0.2
@@ -586,8 +589,26 @@ $sequence "walklayer" {
 	"walkIdle_a"
 	"walk_a"
 	"walkIdle_a"
+	"walkIdle_a"
+	"walkIdle_a"
+	"walkIdle_a"
 	blend "player_movement" 0 334
+	blend "ironsight" 0 1
 	blendwidth 3
+	delta
+	fadein 0.2
+	fadeout 0.2
+	hidden
+	realtime
+}
+$sequence "walklayerironsight" {
+	"walkIdle_a"
+	"walkIdle_a"
+	"walkIdle_a"
+	"walk_a"
+	blend "player_movement" 0 167
+	blend "ironsight" 0 1
+	blendwidth 2
 	delta
 	fadein 0.2
 	fadeout 0.2
@@ -616,6 +637,7 @@ $sequence "idle" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "chainidle"
 	node "0"
@@ -630,6 +652,7 @@ $sequence "draw" {
 	fadein 0
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	node "0"
 	fps 30
@@ -640,6 +663,7 @@ $sequence "shootloop" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	snap
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "chainattack"
 	addlayer "chainidle"
@@ -658,6 +682,7 @@ $sequence "shootend" {
 	activity "ACT_VM_RECOIL1" 1
 	snap
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "chainidle"
 	addlayer "shootend_pose"
@@ -677,6 +702,7 @@ $sequence "idletonearwall" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "chainidle"
 	node "0"
@@ -689,6 +715,7 @@ $sequence "nearwall" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "chainidle"
 	node "0"
@@ -703,6 +730,7 @@ $sequence "nearwalltoidle" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "chainidle"
 	node "0"
@@ -733,6 +761,7 @@ $sequence "pickupstart" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "chainidle"
 	fps 30
@@ -744,6 +773,7 @@ $sequence "pickuploop" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "chainidle"
 	fps 30
@@ -757,6 +787,7 @@ $sequence "pickupend" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "chainidle"
 	fps 30
@@ -769,6 +800,7 @@ $sequence "holster" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	fps 30
 }

@@ -149,13 +149,13 @@ $poseparameter "player_movement" 0 276 loop 0
 $poseparameter "ironsight" 0 1 loop 0
 
 
-$animation "runIdle_a_corrective_animation" "..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\runIdle_a_corrective_animation.smd" {
+$animation "runIdle_a_corrective_animation" "fixed_anims\runIdle_a_corrective_animation.smd" {
 }
 
 $animation "run_a_corrective_animation" "..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\run_a_corrective_animation.smd" {
 }
 
-$animation "walkIdle_a_corrective_animation" "..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\walkIdle_a_corrective_animation.smd" {
+$animation "walkIdle_a_corrective_animation" "fixed_anims\walkIdle_a_corrective_animation.smd" {
 }
 
 $animation "walk_a_corrective_animation" "..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\walk_a_corrective_animation.smd" {
@@ -279,7 +279,10 @@ $animation "gl_shoot_ironsight_a" "..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m1
 $sequence "runlayer" {
 	"runIdle_a"
 	"run_a"
+	"runIdle_a"
+	"runIdle_a"
 	blend "player_movement" 134 229
+	blend "ironsight" 0 1
 	blendwidth 2
 	delta
 	fadein 0.2
@@ -304,6 +307,20 @@ $sequence "walklayer" {
 	hidden
 	realtime
 }
+$sequence "walklayerironsight" {
+	"walkIdle_a"
+	"walkIdle_a"
+	"walkIdle_a"
+	"walk_a"
+	blend "player_movement" 0 134
+	blend "ironsight" 0 1
+	blendwidth 2
+	delta
+	fadein 0.2
+	fadeout 0.2
+	hidden
+	realtime
+}
 
 $sequence "idle" {
 	"basePose_a"
@@ -311,6 +328,7 @@ $sequence "idle" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	node "0"
 }
@@ -325,6 +343,7 @@ $sequence "draw" {
 	fadein 0
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	fps 30
 }
@@ -338,6 +357,7 @@ $sequence "Firstdraw" {
 	fadein 0
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	fps 30
 }
 
@@ -355,6 +375,7 @@ $sequence "shoot1" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	snap
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "shoot1_pose"
 	node "0"
@@ -374,6 +395,7 @@ $sequence "shoot2" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	snap
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "shoot2_pose"
 	node "0"
@@ -393,6 +415,7 @@ $sequence "shoot3" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	snap
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "shoot3_pose"
 	node "0"
@@ -485,6 +508,7 @@ $sequence "nearwalltoidle" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	node "0"
 	fps 30
 }
@@ -524,6 +548,7 @@ $sequence "bash" {
 	fadein 0
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	node "0"
 	fps 30
 }
@@ -535,6 +560,7 @@ $sequence "pickupstart" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	fps 30
 }
 
@@ -545,6 +571,7 @@ $sequence "pickupend" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	fps 30
 }
 
@@ -554,6 +581,7 @@ $sequence "pickuploop" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	fps 30
 	loop
 }
@@ -568,6 +596,7 @@ $sequence "change_firemode" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 }
 
@@ -578,6 +607,7 @@ $sequence "holster" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	fps 30
 }
@@ -588,6 +618,7 @@ $sequence "gl" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	fps 30
 }
@@ -600,6 +631,7 @@ $sequence "idle_to_gl" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	fps 30
 }
 
@@ -611,6 +643,7 @@ $sequence "gl_to_idle" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	fps 30
 }
 
@@ -638,6 +671,7 @@ $sequence "irongl_to_gl" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	fps 30
 }
 
@@ -646,6 +680,7 @@ $sequence "gl_shoot" {
 	activity "ACT_VM_SECONDARYATTACK" 1
 	snap
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "gl_shoot_pose"
 	node "0"
@@ -681,6 +716,7 @@ $sequence "gl_draw" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	fps 30
 }
 
@@ -711,6 +747,7 @@ $sequence "nearwalltoidle_grenade" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	node "0"
 	fps 30
 }
@@ -750,6 +787,7 @@ $sequence "bash_grenade" {
 	fadein 0
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	node "0"
 	fps 30
 }
@@ -761,6 +799,7 @@ $sequence "pickupstart_grenade" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	fps 30
 }
 
@@ -771,6 +810,7 @@ $sequence "pickupend_grenade" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	fps 30
 }
 
@@ -780,6 +820,7 @@ $sequence "pickuploop_grenade" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	fps 30
 	loop
 }
@@ -791,6 +832,7 @@ $sequence "holster_grenade" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	fps 30
 }

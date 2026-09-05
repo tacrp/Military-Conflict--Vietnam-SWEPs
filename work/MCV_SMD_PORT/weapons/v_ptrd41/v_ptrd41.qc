@@ -423,7 +423,10 @@ $sequence "SlidePosition" {
 $sequence "runlayer" {
 	"runIdle_a"
 	"run_a"
+	"runIdle_a"
+	"runIdle_a"
 	blend "player_movement" 141 237
+	blend "ironsight" 0 1
 	blendwidth 2
 	delta
 	fadein 0.2
@@ -451,8 +454,11 @@ $sequence "walklayer" {
 
 $sequence "walklayerironsight" {
 	"walkIdle_a"
+	"walkIdle_a"
+	"walkIdle_a"
 	"walk_a_iron"
 	blend "player_movement" 0 60
+	blend "ironsight" 0 1
 	blendwidth 2
 	delta
 	fadein 0.2
@@ -472,6 +478,7 @@ $sequence "idle" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "SlidePosition"
 	node "0"
@@ -486,8 +493,10 @@ $sequence "draw" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "SlidePosition"
-	fps 30
+	addlayer "walklayer"
 	addlayer "walklayerironsight"
+	addlayer "runlayer"
+	fps 30
 }
 
 $sequence "Firstdraw" {
@@ -501,8 +510,10 @@ $sequence "Firstdraw" {
 	{ event AE_CL_BODYGROUP_SET_VALUE 17 "bulletDisplay 1" }
 	fadein 0.2
 	fadeout 0.2
-	fps 30
+	addlayer "walklayer"
 	addlayer "walklayerironsight"
+	addlayer "runlayer"
+	fps 30
 }
 
 $sequence "SlideMovement" {
@@ -523,6 +534,7 @@ $sequence "shoot1" {
 	{ event AE_CL_BODYGROUP_SET_VALUE 1 "bulletDisplay 1" }
 	{ event AE_CL_CREATE_PARTICLE_EFFECT 1 "vietnam_weaponeffect_ptrd_eject follow_attachment eject_smoke" }
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "SlideMovement"
 	addlayer "SlidePosition"
@@ -557,6 +569,7 @@ $sequence "reload" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	node "0"
 	fps 30
@@ -570,6 +583,7 @@ $sequence "idletonearwall" {
 	fadeout 0.2
 	addlayer "SlidePosition"
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	node "0"
 	fps 30
 }
@@ -581,6 +595,7 @@ $sequence "nearwall" {
 	fadeout 0.2
 	addlayer "SlidePosition"
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	node "0"
 	fps 30
 	loop
@@ -594,6 +609,7 @@ $sequence "nearwalltoidle" {
 	fadeout 0.2
 	addlayer "SlidePosition"
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	node "0"
 	fps 30
 }
@@ -641,6 +657,7 @@ $sequence "bash" {
 	fadeout 0.2
 	addlayer "SlidePosition"
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	node "0"
 	fps 30
 }
@@ -653,6 +670,7 @@ $sequence "pickupstart" {
 	fadeout 0.2
 	addlayer "SlidePosition"
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	fps 30
 }
 
@@ -663,6 +681,7 @@ $sequence "pickuploop" {
 	fadeout 0.2
 	addlayer "SlidePosition"
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	fps 30
 	loop
 }
@@ -675,6 +694,7 @@ $sequence "pickupend" {
 	fadeout 0.2
 	addlayer "SlidePosition"
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	fps 30
 }
 
@@ -686,8 +706,10 @@ $sequence "holster" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "SlidePosition"
-	fps 30
+	addlayer "walklayer"
 	addlayer "walklayerironsight"
+	addlayer "runlayer"
+	fps 30
 }
 
 $sequence "idletodeploy" {

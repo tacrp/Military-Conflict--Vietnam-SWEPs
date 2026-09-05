@@ -680,6 +680,7 @@ $sequence "runlayer" {
 	"runIdle_a"
 	blend "player_movement" 161 260
 	blend "ironsight" 0 1
+	blendwidth 2
 	delta
 	fadein 0.2
 	fadeout 0.2
@@ -692,8 +693,8 @@ $sequence "walklayer" {
 	"walk_a"
 	"walkIdle_a"
 	"walkIdle_a"
-	"walk_a"
-	"walk_a"
+	"walkIdle_a"
+	"walkIdle_a"
 	blend "player_movement" 0 260
 	blend "ironsight" 0 1
 	blendwidth 3
@@ -706,8 +707,11 @@ $sequence "walklayer" {
 
 $sequence "walklayerironsight" {
 	"walkIdle_a"
+	"walkIdle_a"
+	"walkIdle_a"
 	"walk_a"
 	blend "player_movement" 0 130
+	blend "ironsight" 0 1
 	blendwidth 2
 	delta
 	fadein 0.2
@@ -732,6 +736,7 @@ $sequence "idle" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 }
 
@@ -750,9 +755,11 @@ $sequence "FirstDraw" {
 	{ event 5004 10 "MCV_Weapon_Foley_M1917.DrawMetal" }
 	fadein 0
 	fadeout 0.2
+	addlayer "walklayer"
+	addlayer "walklayerironsight"
+	addlayer "runlayer"
 	node "0"
 	fps 30
-	addlayer "walklayerironsight"
 }
 
 $sequence "draw" {
@@ -769,9 +776,11 @@ $sequence "draw" {
 	{ event 5004 1 "MCV_Weapon_Foley_M1917.Draw" }
 	fadein 0
 	fadeout 0.2
+	addlayer "walklayer"
+	addlayer "walklayerironsight"
+	addlayer "runlayer"
 	node "0"
 	fps 30
-	addlayer "walklayerironsight"
 }
 
 $sequence "shoot_hammer" {
@@ -792,6 +801,7 @@ $sequence "shoot_hammer" {
 	{ event 5004 10 "MCV_Weapon_Foley_Revolver.Hand" }
 	{ event 5004 15 "MCV_Weapon_Foley_Revolver.HammerOut" }
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "shoot_hammer_pose"
 	node "0"
@@ -823,6 +833,7 @@ $sequence "shoot_western" {
 	snap
 	{ event 5004 0 "MCV_Weapon_Foley_Revolver.HammerStrike" }
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "shoot_western_pose"
 	node "0"
@@ -855,6 +866,7 @@ $sequence "prepare_delayed" {
 	fadeout 0.2
 	{ event 5004 0 "MCV_Weapon_Foley_Revolver.HammerOutSlow" }
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "prepare_delayed_pose"
 	node "0"
@@ -885,6 +897,7 @@ $sequence "shoot_delayed" {
 	blendwidth 3
 	snap
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "shoot_delayed_pose"
 	node "0"
@@ -948,6 +961,7 @@ $sequence "idletonearwall" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	node "0"
 }
 
@@ -965,6 +979,7 @@ $sequence "nearwall" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	node "0"
 }
 
@@ -983,6 +998,7 @@ $sequence "nearwalltoidle" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	node "0"
 }
 
@@ -1029,6 +1045,7 @@ $sequence "bash" {
 	fadein 0
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	node "0"
 	fps 30
 }
@@ -1048,6 +1065,7 @@ $sequence "pickupstart" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 }
 
 $sequence "pickuploop" {
@@ -1064,6 +1082,7 @@ $sequence "pickuploop" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 }
 
 $sequence "pickupend" {
@@ -1081,6 +1100,7 @@ $sequence "pickupend" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 }
 
 $sequence "holster" {
@@ -1093,8 +1113,10 @@ $sequence "holster" {
 	{ event 5004 1 "MCV_Weapon_Foley_SWM12.Holster" }
 	fadein 0.2
 	fadeout 0.2
-	fps 30
+	addlayer "walklayer"
 	addlayer "walklayerironsight"
+	addlayer "runlayer"
+	fps 30
 }
 
 $sequence "changefiremode_towestern" {
@@ -1110,6 +1132,7 @@ $sequence "changefiremode_towestern" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 }
 
@@ -1124,6 +1147,7 @@ $sequence "changefiremode_todelayed" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 }
 
@@ -1139,6 +1163,7 @@ $sequence "changefiremode_tohammer" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 }
 

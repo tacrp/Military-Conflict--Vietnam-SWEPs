@@ -428,7 +428,10 @@ $animation "scope_adjust_iron" "..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\sc
 $sequence "runlayer" {
 	"runIdle_a"
 	"run_a"
+	"runIdle_a"
+	"runIdle_a"
 	blend "player_movement" 134 228
+	blend "ironsight" 0 1
 	blendwidth 2
 	delta
 	fadein 0.2
@@ -441,7 +444,11 @@ $sequence "walklayer" {
 	"walkIdle_a"
 	"walk_a"
 	"walkIdle_a"
+	"walkIdle_a"
+	"walkIdle_a"
+	"walkIdle_a"
 	blend "player_movement" 0 268
+	blend "ironsight" 0 1
 	blendwidth 3
 	delta
 	fadein 0.2
@@ -452,8 +459,11 @@ $sequence "walklayer" {
 
 $sequence "walklayerironsight" {
 	"walkIdle_a"
+	"walkIdle_a"
+	"walkIdle_a"
 	"walk_a"
 	blend "player_movement" 0 130
+	blend "ironsight" 0 1
 	blendwidth 2
 	delta
 	fadein 0.2
@@ -484,6 +494,7 @@ $sequence "idle" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "BoltCondition"
 	node "0"
@@ -499,9 +510,11 @@ $sequence "draw" {
 	{ event AE_WPN_CLIP_TO_POSEPARAM 0 "ammo_fraction" }
 	fadein 0.2
 	fadeout 0.2
+	addlayer "walklayer"
+	addlayer "walklayerironsight"
+	addlayer "runlayer"
 	addlayer "BoltCondition"
 	fps 30
-	addlayer "walklayerironsight"
 }
 
 $sequence "Firstdraw" {
@@ -515,8 +528,10 @@ $sequence "Firstdraw" {
 	{ event AE_WPN_CLIP_TO_POSEPARAM 0 "ammo_fraction" }
 	fadein 0.2
 	fadeout 0.2
-	fps 30
+	addlayer "walklayer"
 	addlayer "walklayerironsight"
+	addlayer "runlayer"
+	fps 30
 }
 
 $sequence "BoltAction" {
@@ -539,6 +554,7 @@ $sequence "shoot1" {
 	blendwidth 3
 	snap
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "BoltAction"
 	addlayer "BoltCondition"
@@ -564,6 +580,7 @@ $sequence "shoot2" {
 	blendwidth 3
 	snap
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "BoltAction"
 	addlayer "BoltCondition"
@@ -589,6 +606,7 @@ $sequence "shoot3" {
 	blendwidth 3
 	snap
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "BoltAction"
 	addlayer "BoltCondition"
@@ -652,6 +670,7 @@ $sequence "idletonearwall" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "BoltCondition"
 	node "0"
 }
@@ -665,6 +684,7 @@ $sequence "nearwall" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "BoltCondition"
 	node "0"
 }
@@ -679,6 +699,7 @@ $sequence "nearwalltoidle" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "BoltCondition"
 	node "0"
 }
@@ -711,6 +732,7 @@ $sequence "bash" {
 	fadein 0
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "BoltCondition"
 	node "0"
 	fps 30
@@ -726,6 +748,7 @@ $sequence "pickupstart" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "BoltCondition"
 }
 
@@ -738,6 +761,7 @@ $sequence "pickuploop" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "BoltCondition"
 }
 
@@ -751,6 +775,7 @@ $sequence "pickupend" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "BoltCondition"
 }
 
@@ -765,6 +790,7 @@ $sequence "bash_bayonet" {
 	fadein 0
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "BoltCondition"
 	node "0"
 }
@@ -780,6 +806,7 @@ $sequence "slash_bayonet" {
 	fadein 0
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "BoltCondition"
 	node "0"
 }
@@ -796,6 +823,7 @@ $sequence "bayonet_unequip" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "BoltCondition"
 }
 
@@ -811,6 +839,7 @@ $sequence "bayonet_equip" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "BoltCondition"
 }
 
@@ -820,9 +849,11 @@ $sequence "holster" {
 	{ event 5004 0 "MCV_Weapon_Foley_M1G.Holster" }
 	fadein 0.2
 	fadeout 0.2
+	addlayer "walklayer"
+	addlayer "walklayerironsight"
+	addlayer "runlayer"
 	addlayer "BoltCondition"
 	fps 30
-	addlayer "walklayerironsight"
 }
 
 $sequence "Scope_adjust" {
@@ -837,6 +868,7 @@ $sequence "Scope_adjust" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "BoltCondition"
 }
 

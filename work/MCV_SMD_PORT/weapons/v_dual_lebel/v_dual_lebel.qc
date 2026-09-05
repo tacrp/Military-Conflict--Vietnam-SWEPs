@@ -984,7 +984,10 @@ $sequence "BulletCounter" {
 $sequence "runlayer" {
 	"runIdle_a"
 	"run_a"
+	"runIdle_a"
+	"runIdle_a"
 	blend "player_movement" 161 260
+	blend "ironsight" 0 1
 	blendwidth 2
 	delta
 	fadein 0.2
@@ -997,7 +1000,11 @@ $sequence "walklayer" {
 	"walkIdle_a"
 	"walk_a"
 	"walkIdle_a"
+	"walkIdle_a"
+	"walkIdle_a"
+	"walkIdle_a"
 	blend "player_movement" 0 260
+	blend "ironsight" 0 1
 	blendwidth 3
 	delta
 	fadein 0.2
@@ -1008,8 +1015,11 @@ $sequence "walklayer" {
 
 $sequence "walklayerironsight" {
 	"walkIdle_a"
+	"walkIdle_a"
+	"walkIdle_a"
 	"walk_a"
 	blend "player_movement" 0 130
+	blend "ironsight" 0 1
 	blendwidth 2
 	delta
 	fadein 0.2
@@ -1098,6 +1108,7 @@ $sequence "idle" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "BulletCounter"
 	addlayer "recoil_layer_r"
@@ -1116,10 +1127,12 @@ $sequence "FirstDraw" {
 	{ event AE_WPN_SET_POSEPARAM 4 "revolver_firemode_pose 0" }
 	fadein 0
 	fadeout 0.2
+	addlayer "walklayer"
+	addlayer "walklayerironsight"
+	addlayer "runlayer"
 	addlayer "BulletCounter"
 	node "0"
 	fps 30
-	addlayer "walklayerironsight"
 }
 
 $sequence "draw" {
@@ -1133,10 +1146,12 @@ $sequence "draw" {
 	{ event 5004 1 "MCV_Weapon_Foley_Lebel.Draw" }
 	fadein 0
 	fadeout 0.2
+	addlayer "walklayer"
+	addlayer "walklayerironsight"
+	addlayer "runlayer"
 	addlayer "BulletCounter"
 	node "0"
 	fps 30
-	addlayer "walklayerironsight"
 }
 
 $sequence "shoot_hammer_right" {
@@ -1154,6 +1169,7 @@ $sequence "shoot_hammer_right" {
 	{ event 5004 10 "MCV_Weapon_Foley_Revolver.Hand" }
 	{ event 5004 15 "MCV_Weapon_Foley_Revolver.HammerOut" }
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "BulletCounter"
 	addlayer "shoot_hammer_right_pose"
@@ -1184,6 +1200,7 @@ $sequence "shoot_hammer_left" {
 	{ event 5004 10 "MCV_Weapon_Foley_Revolver.Hand" }
 	{ event 5004 15 "MCV_Weapon_Foley_Revolver.HammerOut" }
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "BulletCounter"
 	addlayer "shoot_hammer_left_pose"
@@ -1214,6 +1231,7 @@ $sequence "prepare_delayed_right" {
 	fadeout 0.2
 	{ event 5004 0 "MCV_Weapon_Foley_Revolver.HammerOutSlow" }
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "BulletCounter"
 	addlayer "prepare_delayed_right_pose"
@@ -1244,6 +1262,7 @@ $sequence "prepare_delayed_left" {
 	fadeout 0.2
 	{ event 5004 0 "MCV_Weapon_Foley_Revolver.HammerOutSlow" }
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "BulletCounter"
 	addlayer "prepare_delayed_left_pose"
@@ -1272,6 +1291,7 @@ $sequence "shoot_delayed_right" {
 	blendwidth 3
 	snap
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "BulletCounter"
 	addlayer "shoot_delayed_right_pose"
@@ -1300,6 +1320,7 @@ $sequence "shoot_delayed_left" {
 	blendwidth 3
 	snap
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "BulletCounter"
 	addlayer "shoot_delayed_left_pose"
@@ -1405,6 +1426,7 @@ $sequence "idletonearwall" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "BulletCounter"
 	node "0"
 }
@@ -1420,6 +1442,7 @@ $sequence "nearwall" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "BulletCounter"
 	node "0"
 }
@@ -1436,6 +1459,7 @@ $sequence "nearwalltoidle" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "BulletCounter"
 	node "0"
 }
@@ -1476,6 +1500,7 @@ $sequence "bash" {
 	fadein 0
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "BulletCounter"
 	node "0"
 	fps 30
@@ -1493,6 +1518,7 @@ $sequence "pickupstart" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "BulletCounter"
 }
 
@@ -1507,6 +1533,7 @@ $sequence "pickuploop" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "BulletCounter"
 }
 
@@ -1522,6 +1549,7 @@ $sequence "pickupend" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "BulletCounter"
 }
 
@@ -1534,9 +1562,11 @@ $sequence "holster" {
 	{ event 5004 1 "MCV_Weapon_Foley_M1917.Holster" }
 	fadein 0.2
 	fadeout 0.2
+	addlayer "walklayer"
+	addlayer "walklayerironsight"
+	addlayer "runlayer"
 	addlayer "BulletCounter"
 	fps 30
-	addlayer "walklayerironsight"
 }
 
 $sequence "changefiremode_todelayed" {
@@ -1551,6 +1581,7 @@ $sequence "changefiremode_todelayed" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "BulletCounter"
 }
@@ -1567,6 +1598,7 @@ $sequence "changefiremode_tohammer" {
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
+	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "BulletCounter"
 }
