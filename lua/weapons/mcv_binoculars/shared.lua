@@ -81,3 +81,51 @@ function SWEP:GetControlHints()
         {"+use +attack", "Bash"},
     }
 end
+
+// Looking through them: the model would sit in front of the camera, so it fades out and a
+// binocular mask takes its place.
+function SWEP:PreDrawViewModelBlend(vm, sa)
+    if sa > 0.3 then
+        render.SetBlend(math.Clamp(1 - (sa - 0.3) / 0.3, 0, 1))
+    end
+end
+
+if CLIENT then
+    local mask_col = Color(0, 0, 0, 255)
+
+    function SWEP:DrawHUDExtra()
+        local a = self:GetSightAmountVisual()
+        if a < 0.5 then return end
+        local alpha = math.Clamp((a - 0.5) / 0.3, 0, 1) * 255
+        local w, h = ScrW(), ScrH()
+        local r = h * 0.46
+        local cx1, cx2, cy = w / 2 - r * 0.55, w / 2 + r * 0.55, h / 2
+        mask_col.a = alpha
+
+        // stencil: keep the two eyepieces clear, paint everything else black
+        render.ClearStencil()
+        render.SetStencilEnable(true)
+        render.SetStencilWriteMask(255)
+        render.SetStencilTestMask(255)
+        render.SetStencilReferenceValue(1)
+        render.SetStencilCompareFunction(STENCIL_ALWAYS)
+        render.SetStencilPassOperation(STENCIL_REPLACE)
+        render.SetStencilFailOperation(STENCIL_KEEP)
+        render.SetStencilZFailOperation(STENCIL_KEEP)
+        surface.SetDrawColor(255, 255, 255, 1)
+        draw.NoTexture()
+        for _, cx in ipairs({cx1, cx2}) do
+            local poly = {}
+            for i = 0, 47 do
+                local ang = math.rad(i / 48 * 360)
+                poly[#poly + 1] = {x = cx + math.cos(ang) * r, y = cy + math.sin(ang) * r}
+            end
+            surface.DrawPoly(poly)
+        end
+        render.SetStencilCompareFunction(STENCIL_NOTEQUAL)
+        render.SetStencilPassOperation(STENCIL_KEEP)
+        surface.SetDrawColor(mask_col)
+        surface.DrawRect(0, 0, w, h)
+        render.SetStencilEnable(false)
+    end
+end

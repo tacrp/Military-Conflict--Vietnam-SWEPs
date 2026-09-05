@@ -30,9 +30,6 @@ function SWEP:StartFlame()
     self:PlayAnimation(ACT_VM_PRIMARYATTACK, 1, false, true)
     self:EmitSound(self.SoundFireStart)
     self:EmitSound(self.SoundFireLoop)
-    if CLIENT then
-        self:StartFlameEffect()
-    end
 end
 
 function SWEP:StopFlame()
@@ -44,9 +41,6 @@ function SWEP:StopFlame()
         self:PlayAnimation(ACT_VM_RECOIL1, 1, false)
     else
         self:SetNextIdle(CurTime())
-    end
-    if CLIENT then
-        self:StopFlameEffect()
     end
 end
 
@@ -205,15 +199,18 @@ if CLIENT then
             self:DoRTScope()
         end
         self:UpdateMuzzleLight(vm)
+        self:Think_ClientFlame()
         self:UpdateFlameControlPoints()
     end
 
-    // Other players' streams are driven by the networked flag
+    // The stream follows the networked flag: Think does not run on the client in singleplayer
+    // and other players' weapons never think here, so this is the one place that starts and
+    // stops the client effect for everyone.
     function SWEP:Think_ClientFlame()
-        local flaming = self:GetPrimedAttack()
-        if flaming and !IsValid(self.FlamePS) and self:GetOwner() != LocalPlayer() then
+        local flaming = self:GetPrimedAttack() and IsValid(self:GetOwner()) and self:GetOwner():GetActiveWeapon() == self
+        if flaming and !IsValid(self.FlamePS) then
             self:StartFlameEffect()
-        elseif !flaming and IsValid(self.FlamePS) and self:GetOwner() != LocalPlayer() then
+        elseif !flaming and IsValid(self.FlamePS) then
             self:StopFlameEffect()
         end
     end

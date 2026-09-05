@@ -421,6 +421,22 @@ registered in `sh_common.lua`. `port_weapon.py` writes all of these from the gam
 system), gas masks, parachute, chainsaw, lunge mine, the objective-only C4 and the scripts without
 a WeaponType (stielhandgranate, m18 duplicates).
 
+## Test harness (`work/harness.py`, `lua/autorun/sh_mcv_harness.lua`)
+
+A singleplayer game can be driven from outside: `python work/harness.py start [map]` launches
+GMod with the harness armed (it is inert unless `garrysmod/data/mcv_harness/enable.txt` exists),
+`run tests/<file>.txt` sends a command script and waits, `send "give mcv_sks" "wait 1" "shot x marker"`
+runs ad-hoc commands. Commands: give / select / strip, pos / ang, key +attack2 (real key presses
+through the local player's console), tap, wait, shot <name> [marker] (PNG with a centre cross
+and the sight / sequence state), report <name> (weapon and viewmodel state from both realms as
+JSON), spawn, lua / clua, cmd / ccmd, quit. Results go to `data/mcv_harness/results`, shots to
+`data/mcv_harness/shots`. One GMod instance per account: `start` refuses while gmod.exe runs.
+`work/tests/` holds the scripts used so far (sights, equipment, grenade timing, flame, binoculars).
+
+Lessons: everything client side must be driven by networked state in singleplayer (Think never
+runs on the client there), a `report` while the flamethrower streamed once hung the game, and
+weapon and entity classes must not share a name (`ents.Create("mcv_c4")` made the weapon).
+
 ## Weapon Lua from the game scripts (`port_weapon.py`)
 
 ```

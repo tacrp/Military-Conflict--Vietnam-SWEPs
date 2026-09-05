@@ -1,0 +1,20 @@
+# Binoculars: mask while looking through, magnification step
+god
+strip
+ang 0 0 0
+give mcv_binoculars_us
+wait 1.5
+shot bino_idle marker
+key +attack2
+wait 1
+shot bino_zoom marker
+key -attack2
+wait 0.8
+key +use
+tap +reload 0.1
+key -use
+wait 0.8
+key +attack2
+wait 1
+shot bino_zoom8 marker
+key -attack2
