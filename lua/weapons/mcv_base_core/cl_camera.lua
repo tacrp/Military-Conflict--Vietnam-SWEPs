@@ -24,18 +24,6 @@ function SWEP:CalcView(ply, pos, ang, fov)
     return pos, ang, fov
 end
 
-function SWEP:GetZoomMagnification()
-    if self.HasScope then
-        if self:GetScopeLevel() == 2 then
-            return self.ScopeFOV2
-        else
-            return self.ScopeFOV
-        end
-    else
-        return self.IronsightFov
-    end
-end
-
 function SWEP:AdjustMouseSensitivity()
     return 1 / self.SmoothedMagnification
 end

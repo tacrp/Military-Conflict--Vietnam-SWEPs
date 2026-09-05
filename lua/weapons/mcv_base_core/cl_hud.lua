@@ -100,40 +100,33 @@ function SWEP:HUDShouldDraw(element)
     if shoulddraw[element] then return false end
 end
 
-local oeg_mat = Material("sprites/redglow1")
 local hud_col = Color(255, 255, 255, 150)
 
 function SWEP:DrawHUD()
-    if self.OEGScope and self:GetSightAmountVisual() > 0.6 then
-        surface.SetMaterial(oeg_mat)
-        surface.SetDrawColor(255, 255, 255, 255)
-        local s = ScreenScale(16)
-        surface.DrawTexturedRect((ScrW() - s) / 2, (ScrH() - s) / 2, s, s)
-    end
+    self:DrawHUDExtra()
 
-    local firemode_name = MCV.FiremodeNames[self:GetFiremodeValue()]
-    local ammocount = self:Clip1()
-    local reserve = self:Ammo1()
-
-    if self:GetGrenadeLauncher() then
-        firemode_name = "Launcher"
-        ammocount = self:Clip2()
-        reserve = self:Ammo2()
-    end
+    local firemode_name = self:GetFiremodeName() or ""
+    local ammocount, reserve = self:GetHUDAmmo()
 
     local col = hud_col
 
-    surface.SetFont("MCV_8")
-    local tw = surface.GetTextSize(firemode_name)
-    surface.SetTextPos(ScrW() - tw - ScreenScale(16), ScrH() - ScreenScale(48))
-    surface.SetTextColor(col)
-    surface.DrawText(firemode_name)
+    if firemode_name != "" then
+        surface.SetFont("MCV_8")
+        local tw = surface.GetTextSize(firemode_name)
+        surface.SetTextPos(ScrW() - tw - ScreenScale(16), ScrH() - ScreenScale(48))
+        surface.SetTextColor(col)
+        surface.DrawText(firemode_name)
+    end
+
+    if ammocount == nil then return end
 
     surface.SetFont("MCV_24")
     local tw3 = surface.GetTextSize(ammocount)
     surface.SetTextPos(ScrW() - tw3 - ScreenScale(12 + 32), ScrH() - ScreenScale(40))
     surface.SetTextColor(col)
     surface.DrawText(ammocount)
+
+    if reserve == nil then return end
 
     surface.SetFont("MCV_14")
     local tw4 = surface.GetTextSize(reserve)
@@ -180,36 +173,42 @@ function SWEP:PrintWeaponInfo(x, y, alpha)
 
         str = str .. title_color .. "Damage:</color>\t" .. text_color .. self.DamageGeneric .. (self.Num > 1 and ("x" .. self.Num) or "") .. "</color>\n"
 
-        str = str .. title_color .. "Fire Rate:</color>\t" .. text_color .. self.FireRate .. " RPM</color>\n"
+        if (self.FireRate or 0) > 0 then
+            str = str .. title_color .. "Fire Rate:</color>\t" .. text_color .. self.FireRate .. " RPM</color>\n"
+        end
 
         if self.Primary.ClipSize > 0 then
             local bonus = self.Primary.Chamber or 0
             str = str .. title_color .. "Capacity:</color>\t" .. text_color .. self.Primary.ClipSize .. (bonus > 0 and " (+" .. bonus .. ")" or "") .. "</color>\n"
         end
 
-        local range = math.floor(-346.571 / math.log(self.RangeModifier))
+        if (self.FireRate or 0) > 0 then
+            local range = math.floor(-346.571 / math.log(self.RangeModifier))
 
-        str = str .. title_color .. "Range:</color>\t" .. text_color
-        str = str .. boxes(Lerp(range / 10000, 0, 1)) .. "</color>\n"
+            str = str .. title_color .. "Range:</color>\t" .. text_color
+            str = str .. boxes(Lerp(range / 10000, 0, 1)) .. "</color>\n"
+        end
 
         if self.Caliber ~= "" then
             str = str .. title_color .. "Caliber:</color>\t" .. text_color .. self.Caliber .. "</color>\n"
         end
 
-        local d
-        if self.SpreadIronsighted == self.Spread then
-            str = str .. title_color .. "Spread:</color>\t" .. text_color
-            d = Lerp(math.log(1 + (self.Spread) / 3), 0, 1)
-        else
-            str = str .. title_color .. "Accuracy:</color>\t" .. text_color
-            d = Lerp(math.log(1 + (self.SpreadIronsighted + self.Spread) / 15), 1, 0)
+        if (self.FireRate or 0) > 0 then
+            local d
+            if self.SpreadIronsighted == self.Spread then
+                str = str .. title_color .. "Spread:</color>\t" .. text_color
+                d = Lerp(math.log(1 + (self.Spread) / 3), 0, 1)
+            else
+                str = str .. title_color .. "Accuracy:</color>\t" .. text_color
+                d = Lerp(math.log(1 + (self.SpreadIronsighted + self.Spread) / 15), 1, 0)
+            end
+            str = str .. boxes(d) .. "</color>\n"
+
+            local recoil = ((self.ViewSlideRecoilUp + self.ViewSlideRecoilIronsightUp) / 2) + (self.ViewSlideRecoilRight + self.ViewSlideRecoilIronsightRight)
+
+            str = str .. title_color .. "Recoil:</color>\t\t" .. text_color
+            str = str .. boxes(Lerp(recoil * 0.5, 0, 1)) .. "</color>\n"
         end
-        str = str .. boxes(d) .. "</color>\n"
-
-        local recoil = ((self.ViewSlideRecoilUp + self.ViewSlideRecoilIronsightUp) / 2) + (self.ViewSlideRecoilRight + self.ViewSlideRecoilIronsightRight)
-
-        str = str .. title_color .. "Recoil:</color>\t\t" .. text_color
-        str = str .. boxes(Lerp(recoil * 0.5, 0, 1)) .. "</color>\n"
 
         str = str .. "</font>"
         self.InfoMarkup = markup.Parse(str, 250)

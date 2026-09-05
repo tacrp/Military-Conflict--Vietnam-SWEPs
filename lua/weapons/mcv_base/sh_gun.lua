@@ -1,0 +1,75 @@
+// Gun implementations of the mcv_base_core hooks.
+
+function SWEP:GetPrecacheParticles()
+    return {
+        self.MuzzleParticle, self.MuzzleParticleSmoke, self.MuzzleParticleIronsighted,
+        self.MuzzleParticleIronsightedSmoke, self.MuzzleParticle3rdPerson, self.EjectBrassTrail,
+        self.EjectBrassParticle, self.TracerParticle,
+    }
+end
+
+function SWEP:IdleActivity()
+    if self:GetGrenadeLauncher() and self.RifleGrenadeIsUBGL then
+        return ACT_VM_IIDLE_M203
+    elseif self:GetBipod() then
+        return ACT_VM_DEPLOY
+    end
+
+    return ACT_VM_IDLE
+end
+
+function SWEP:DeployAnimation()
+    if self:GetGrenadeLauncher() and !self.RifleGrenadeIsUBGL then
+        return self:PlayAnimation(ACT_VM_DRAW_M203, 1, true)
+    end
+
+    self:SetGrenadeLauncher(false)
+    return self:PlayAnimation(ACT_VM_DRAW, 1, true)
+end
+
+function SWEP:GetZoomMagnification()
+    if self.HasScope then
+        if self:GetScopeLevel() == 2 then
+            return self.ScopeFOV2
+        else
+            return self.ScopeFOV
+        end
+    else
+        return self.IronsightFov
+    end
+end
+
+function SWEP:GetFiremodeName()
+    if self:GetGrenadeLauncher() then return "Launcher" end
+
+    return MCV.FiremodeNames[self:GetFiremodeValue()] or ""
+end
+
+function SWEP:GetHUDAmmo()
+    if self:GetGrenadeLauncher() then
+        return self:Clip2(), self:Ammo2()
+    end
+
+    return self:Clip1(), self:Ammo1()
+end
+
+function SWEP:SecondaryAttack()
+    local owner = self:GetOwner()
+
+    if owner:KeyPressed(IN_ATTACK2) and owner:KeyDown(IN_USE) then
+        self:ToggleBayonet()
+    end
+end
+
+if CLIENT then
+    local oeg_mat = Material("sprites/redglow1")
+
+    function SWEP:DrawHUDExtra()
+        if self.OEGScope and self:GetSightAmountVisual() > 0.6 then
+            surface.SetMaterial(oeg_mat)
+            surface.SetDrawColor(255, 255, 255, 255)
+            local s = ScreenScale(16)
+            surface.DrawTexturedRect((ScrW() - s) / 2, (ScrH() - s) / 2, s, s)
+        end
+    end
+end

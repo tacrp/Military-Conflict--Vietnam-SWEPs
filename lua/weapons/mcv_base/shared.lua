@@ -2,7 +2,7 @@
 SWEP.Spawnable = false
 SWEP.AdminOnly = false
 SWEP.Category = "Military Conflict: Vietnam"
-SWEP.Base = "weapon_base"
+SWEP.Base = "mcv_base_core"
 
 // Names and basic information
 SWEP.PrintName = ""
@@ -259,63 +259,3 @@ local function autoinclude(dir)
 end
 
 autoinclude(searchdir)
-
-
-function SWEP:SetupDataTables()
-    self:NetworkVar("Float", 0, "AnimLockTime")
-    self:NetworkVar("Float", 1, "NextIdle")
-    self:NetworkVar("Float", 2, "LastRecoilTime")
-    self:NetworkVar("Float", 3, "LastTriggerTime")
-    self:NetworkVar("Float", 4, "HolsterTime")
-
-    // Sight and movement blends are NOT networked as continuously changing floats.
-    // Instead we network when a transition started and where it started from, and
-    // derive the current value from CurTime() (see sh_sights.lua and sh_think.lua).
-    // These only change on state transitions, so they never cause prediction errors
-    // and the derived value advances every rendered frame instead of every tick.
-    self:NetworkVar("Float", 5, "SightTransitionTime")
-    self:NetworkVar("Float", 6, "SightTransitionFrom")
-    self:NetworkVar("Float", 7, "SpeedTransitionTime")
-    self:NetworkVar("Float", 8, "SpeedTransitionFrom")
-    self:NetworkVar("Float", 9, "SpeedTarget")
-    self:NetworkVar("Float", 10, "LastShotTimeR")
-    self:NetworkVar("Float", 11, "LastShotTimeL")
-
-    self:NetworkVar("Int", 0, "ScopeLevel")
-    self:NetworkVar("Int", 1, "LastClip")
-    self:NetworkVar("Int", 2, "Firemode")
-
-    self:NetworkVar("Bool", 0, "Reloading")
-    self:NetworkVar("Bool", 1, "EndReload")
-    self:NetworkVar("Bool", 2, "Ready")
-    self:NetworkVar("Bool", 3, "Bipod")
-    self:NetworkVar("Bool", 4, "EmptyReload")
-    self:NetworkVar("Bool", 5, "NeedTriggerPress")
-    self:NetworkVar("Bool", 6, "Ironsight") // player wants to aim (input state)
-    self:NetworkVar("Bool", 7, "Sighted") // sights are actually up (Ironsight and not sprinting)
-    self:NetworkVar("Bool", 8, "Bayonet")
-    self:NetworkVar("Bool", 9, "GrenadeLauncher")
-    self:NetworkVar("Bool", 10, "NeedCycle")
-    self:NetworkVar("Bool", 11, "Akimbo")
-    self:NetworkVar("Bool", 12, "PrimedAttack")
-
-    self:NetworkVar("Entity", 0, "HolsterEntity")
-
-    self:SetFiremode(1)
-    self:SetScopeLevel(1)
-    self:SetNeedCycle(false)
-end
-
-function SWEP:SecondaryAttack()
-    local owner = self:GetOwner()
-
-    if owner:KeyPressed(IN_ATTACK2) and owner:KeyDown(IN_USE) then
-        self:ToggleBayonet()
-    end
-end
-
-function SWEP:GetPingOffsetScale()
-    if game.SinglePlayer() then return 0 end
-
-    return (self:GetOwner():Ping() - 5) / 1000
-end

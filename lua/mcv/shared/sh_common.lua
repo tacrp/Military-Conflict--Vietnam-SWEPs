@@ -44,6 +44,25 @@ MCV.CancelMultipliers = {
     },
 }
 
+
+// Ammo types for equipment, named after the game's primary_ammo values. Registered on both
+// realms at load so weapons can use them in Primary.Ammo.
+MCV.AmmoTypes = {"mcv_grenade", "mcv_molotov", "mcv_mine", "mcv_explosive_charge", "mcv_flamethrower_fuel",
+                 "mcv_crossbowbolt", "mcv_flareround", "mcv_ammobox", "mcv_medicbox"}
+
+for _, name in ipairs(MCV.AmmoTypes) do
+    game.AddAmmoType({
+        name = name,
+        dmgtype = DMG_GENERIC,
+        tracer = TRACER_NONE,
+        plydmg = 0,
+        npcdmg = 0,
+        force = 0,
+        minsplash = 0,
+        maxsplash = 0,
+    })
+end
+
 MCV.ShellTypes = {
     [1] = {
         Model = "models/weapons/shells/shell_762x39sov.mdl",

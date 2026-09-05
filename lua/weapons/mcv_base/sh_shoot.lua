@@ -1,20 +1,3 @@
-function SWEP:StillWaiting()
-    if self:GetNextPrimaryFire() > CurTime() then return true end
-    if self:GetAnimLockTime() > CurTime() then return true end
-
-    return false
-end
-
-function SWEP:GetAimAngle()
-    local owner = self:GetOwner()
-
-    return owner:EyeAngles() + owner:GetViewPunchAngles()
-end
-
-function SWEP:GetAimVector()
-    return self:GetAimAngle():Forward()
-end
-
 function SWEP:PrimaryAttack()
     if self:StillWaiting() then return end
     if self:GetNeedCycle() then return end
@@ -174,15 +157,6 @@ function SWEP:FireAnimationEvent( pos, ang, event, name )
         self:SetNeedCycle(false)
         self:SetEmptyReload(false)
     end
-end
-
-function SWEP:RandomSpread(spread, seed)
-    seed = (seed or 0) + self:EntIndex() + engine.TickCount()
-    local a = util.SharedRandom("mcv_randomspread", 0, 360, seed)
-    local angleRand = Angle(math.sin(a), math.cos(a), 0)
-    angleRand:Mul(spread * util.SharedRandom("mcv_randomspread2", 0, 45, seed) * 1.4142135623730)
-
-    return angleRand
 end
 
 function SWEP:GetSpread()

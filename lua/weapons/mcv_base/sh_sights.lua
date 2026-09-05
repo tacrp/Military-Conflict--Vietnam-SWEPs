@@ -126,20 +126,3 @@ function SWEP:Think_Sights()
         self:EmitSound(sighted and "MCV_Weapon_Foley_Ironsights.In" or "MCV_Weapon_Foley_Ironsights.Out")
     end
 end
-
-function SWEP:GetViewModelPosition(pos, ang)
-    local aim_delta = self:GetSightAmountVisual()
-
-    local offsetpos = LerpVector(aim_delta, self.CustomPos, self.IronsightPos)
-    local offsetang = LerpAngle(aim_delta, self.CustomAng, self.IronsightAng)
-
-    pos:Add(ang:Right() * offsetpos.x)
-    pos:Add(ang:Forward() * offsetpos.y)
-    pos:Add(ang:Up() * offsetpos.z)
-
-    ang:RotateAroundAxis(ang:Up(), offsetang.p)
-    ang:RotateAroundAxis(ang:Right(), offsetang.y)
-    ang:RotateAroundAxis(ang:Forward(), offsetang.r)
-
-    return pos, ang
-end

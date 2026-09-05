@@ -1,18 +1,19 @@
 function SWEP:Deploy()
     self:GetOwner():SetSaveValue("m_flNextAttack", 0)
-    if !self:GetReady() then
+
+    if !self:GetReady() and self:HasAnimation(ACT_VM_READY) then
         self:PlayAnimation(ACT_VM_READY, 1, true)
         self:SetReady(true)
     else
-        if self:GetGrenadeLauncher() and !self.RifleGrenadeIsUBGL then
-            self:PlayAnimation(ACT_VM_DRAW_M203, 1, true)
-        else
-            self:SetGrenadeLauncher(false)
-            self:PlayAnimation(ACT_VM_DRAW, 1, true)
-        end
+        self:DeployAnimation()
+        self:SetReady(true)
     end
 
     self:SetIronsight(false)
+    self:SetActionState(0)
+    self:SetActionStart(0)
+
+    self:OnDeploy()
 
     return true
 end
@@ -43,7 +44,7 @@ function SWEP:Holster(wep)
         self:SetReloading(false)
     end
 
-    if self:GetHolsterTime() > CurTime() then return false end -- or self:GetPrimedGrenade()
+    if self:GetHolsterTime() > CurTime() then return false end
 
     if (self:GetHolsterTime() != 0 and self:GetHolsterTime() <= CurTime()) or !IsValid(wep) then
         -- Do the final holster request
@@ -64,6 +65,7 @@ function SWEP:Holster(wep)
         self:SetHolsterEntity(wep)
 
         self:SetIronsight(false)
+        self:SetActionState(0)
 
         self:GetOwner():DoAnimationEvent(ACT_HL2MP_GESTURE_RANGE_ATTACK_SLAM)
     end
@@ -83,19 +85,15 @@ hook.Add("StartCommand", "MCV_Holster", function(ply, ucmd)
 end)
 
 function SWEP:Initialize()
-    // Per-instance state. The class-level defaults in sh_timers/sh_effects are tables
-    // shared by every weapon of the class, so they must not be mutated directly.
+    // Per-instance state. The class-level defaults in sh_timers / sh_vm are tables shared
+    // by every weapon of the class, so they must not be mutated directly.
     self.ActiveTimers = {}
     self.PCFs = {}
     self.ActiveEffects = {}
 
-    // Precache particles
-    PrecacheParticleSystem( self.MuzzleParticle )
-    PrecacheParticleSystem( self.MuzzleParticleSmoke )
-    PrecacheParticleSystem( self.MuzzleParticleIronsighted )
-    PrecacheParticleSystem( self.MuzzleParticleIronsightedSmoke )
-    PrecacheParticleSystem( self.MuzzleParticle3rdPerson )
-    PrecacheParticleSystem( self.EjectBrassTrail )
-    PrecacheParticleSystem( self.EjectBrassParticle )
-    PrecacheParticleSystem( self.TracerParticle )
+    for _, p in ipairs(self:GetPrecacheParticles()) do
+        if p and p != "" then
+            PrecacheParticleSystem(p)
+        end
+    end
 end

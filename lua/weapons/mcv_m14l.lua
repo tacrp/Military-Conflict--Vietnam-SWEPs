@@ -65,11 +65,10 @@ SWEP.IronsightSpeedScale = 0.85
 SWEP.IronsightFov = 90 - 15
 SWEP.IronsightWalkBobbingStrength = -0.25
 
-SWEP.HasScope = true
-SWEP.ScopeMaterial = Material("models/weapons/mcv/optics/crosshair_m21")
+SWEP.HasScope = false
+SWEP.ScopeMaterial = NULL
 SWEP.ScopeFOV = 8
 SWEP.ScopeFOV2 = 4
-SWEP.RTScopeMaterialIndex = 4
 
 SWEP.IronsightPos = Vector(0.06, -4, 0)
 SWEP.IronsightAng = Angle(0.25, 0.1, 0)
