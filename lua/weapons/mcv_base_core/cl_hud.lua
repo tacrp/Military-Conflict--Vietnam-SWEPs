@@ -11,7 +11,7 @@ local HUD = MCV.HUD
 HUD.Color = Color(255, 255, 255, 150)
 HUD.ColorBright = Color(255, 255, 255, 230)
 HUD.ColorDim = Color(255, 255, 255, 90)
-HUD.ColorIcon = Color(0, 0, 0, 70) // the white spawn icon drawn inverted behind the counter
+HUD.ColorIcon = Color(255, 255, 255, 40) // the spawn icon, mirrored to face left, behind the counter
 HUD.InTime = 0.35 // seconds the elements take to slide in
 HUD.OutTimeDefault = 0.3
 HUD.SlideDistance = 24 // ScreenScale units the elements travel while animating
@@ -141,7 +141,8 @@ function SWEP:DrawHUDAmmo(blend)
         local cy = sh - ScreenScale(30)
         surface.SetMaterial(icon)
         surface.SetDrawColor(withAlpha(HUD.ColorIcon, blend))
-        surface.DrawTexturedRect(cx - w / 2, cy - h / 2, w, h)
+        // the game's icons all point right; mirrored so the muzzle faces the screen centre
+        surface.DrawTexturedRectUV(cx - w / 2, cy - h / 2, w, h, 1, 0, 0, 1)
     end
 
     if firemode_name != "" then
@@ -259,8 +260,26 @@ function SWEP:TranslateFOV(fov)
     return fov
 end
 
+// Crosshair gap follows the weapon's live spread (stance, movement, air, aim), kicks open on
+// each shot and settles back, and the whole thing bobs with the walk cycle. Purely visual: the
+// spread itself is what GetSpread returns, this only shows it.
+HUD.CrosshairSmooth = 12 // how fast the gap follows the target (per second)
+HUD.CrosshairKick = 1.6 // extra gap right after a shot, in units of the base spread
+HUD.CrosshairKickTime = 0.35
+HUD.CrosshairBob = 2.5 // ScreenScale units of sway at a full sprint
+
+function SWEP:GetCrosshairSpread()
+    if self.GetSpread then
+        return self:GetSpread() * 100
+    end
+    return self.Spread or 0
+end
+
 function SWEP:DoDrawCrosshair(x, y)
-    local a = (1 - self:GetSightAmountVisual()) * 100 * self:GetHUDBlend()
+    local blend = self:GetHUDBlend()
+    local a = (1 - self:GetSightAmountVisual()) * 100 * blend
+    if a <= 0 then return true end
+
     local col = crosshair_col
     col.a = a
 
@@ -268,8 +287,33 @@ function SWEP:DoDrawCrosshair(x, y)
     local line_size = ScreenScale(4)
 
     local trueFOV = self:WidescreenFix(self.TrueFOV)
+    local scale = ScrH() / trueFOV
 
-    local gap_size = (ScrH() / trueFOV) * self.Spread
+    // target gap from the live spread, plus a kick that decays after each shot
+    local spread = self:GetCrosshairSpread()
+    local since = CurTime() - self:GetLastRecoilTime()
+    local kick = math.Clamp(1 - since / HUD.CrosshairKickTime, 0, 1)
+    kick = kick * kick
+    local target = scale * (spread + math.max(self.Spread or 0, 0.5) * HUD.CrosshairKick * kick)
+
+    local ft = FrameTime()
+    if self.CrossGap == nil then self.CrossGap = target end
+    // opens instantly, closes smoothly
+    if target > self.CrossGap then
+        self.CrossGap = Lerp(math.min(ft * HUD.CrosshairSmooth * 3, 1), self.CrossGap, target)
+    else
+        self.CrossGap = Lerp(math.min(ft * HUD.CrosshairSmooth, 1), self.CrossGap, target)
+    end
+    local gap_size = math.max(self.CrossGap, dot_size)
+
+    // walk bob: a figure of eight scaled by how fast the player moves
+    local speed = self:GetSpeedVisual() / math.max(self.SpeedSprint, 1)
+    local owner = self:GetOwner()
+    if IsValid(owner) and !owner:IsOnGround() then speed = math.max(speed, 0.6) end
+    self.CrossBobPhase = (self.CrossBobPhase or 0) + ft * (6 + speed * 6) * math.min(speed * 3, 1)
+    local bob = HUD.CrosshairBob * ScreenScale(1) * speed
+    x = x + math.sin(self.CrossBobPhase) * bob
+    y = y + math.abs(math.cos(self.CrossBobPhase)) * bob * 0.6
 
     drawshadowrect(x - (dot_size / 2), y - (dot_size / 2), dot_size, dot_size, col)
 
@@ -281,7 +325,7 @@ function SWEP:DoDrawCrosshair(x, y)
         surface.DrawCircle(x, y, gap_size - 1, col)
         surface.DrawCircle(x, y, gap_size + 1, shadow)
         surface.DrawCircle(x, y, gap_size - 2, shadow)
-    elseif self.Spread > 0 then
+    elseif (self.Spread or 0) > 0 then
         drawshadowrect(x - (dot_size / 2), y - (dot_size / 2) + gap_size, dot_size, line_size, col)
 
         drawshadowrect(x - (dot_size / 2), y - (dot_size / 2) - gap_size - line_size, dot_size, line_size, col)
