@@ -1,0 +1,17 @@
+# Iron sight check: stand on flatgrass facing the horizon, hip and aimed screenshots with the
+# centre marker, plus state reports. Change the give line to test another gun.
+god
+strip
+ang 0 0 0
+hud 1
+give mcv_sks
+wait 1.5
+report sks_hip
+shot sks_hip marker
+key +attack2
+wait 1
+report sks_aim
+shot sks_aim marker
+key -attack2
+wait 0.8
+shot sks_hip2 marker
