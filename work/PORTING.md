@@ -20,7 +20,8 @@ how the MD63/M203 fixes are picked up; put any future Blender-fixed SMD there an
 prefer it. The 2024 hand-edited pump animations (M1897, M870, M37, China Lake) were made on the
 old rig and, subtracted against the Crowbar 0.74 correctives, threw the gun out of the hands for
 the length of the pump; they sit in `MCV_SMD/disabled_pump_overrides/` and the game's own pump
-deltas are used.
+deltas are used. The 2024 `run_a` overrides for the Sterling, Sterling SOG and M203 broke the
+same way (run animation mangled) and were retired to the same folder.
 
 `--compile` runs `GarrysMod/bin/studiomdl.exe` with a scratch game directory
 (`work/compile_test_game`, created on first use) so nothing is written into the real
