@@ -772,6 +772,10 @@ def step_pose_split(qc, ctx):
         if pose_len <= 0:
             nframes = 60
             ctx.warn("could not determine length of %s; using 60" % seq.name)
+        elif act == "ACT_VM_PRIMARYATTACK_DEPLOYED" and ctx.args.base_len == "60" and ctx.primary_pose_len:
+            # the deployed shot keeps its ratio to the hip shot (RPK / TUL-1 / DP-28 / M60: a 10
+            # or 15 frame pose over a 60 frame base ran the bolt at a third of its speed)
+            nframes = max(2, int(round(pose_len * 60.0 / ctx.primary_pose_len)))
         elif ctx.args.base_len == "match":
             nframes = pose_len
         elif ctx.args.base_len == "normalize":

@@ -1,0 +1,16 @@
+give mcv_m1917
+wait 1.5
+lua hook.Add("Think", "mcv_p_seq", function() local vm = ply:GetViewModel() if !IsValid(vm) then return end local s = vm:GetSequenceName(vm:GetSequence()) if s != ply.MCV_LastSeq then ply.MCV_LastSeq = s print("[p] seq", s) end end)
+key +use
+tap +reload 0.1
+key -use
+wait 1.5
+key +use
+tap +reload 0.1
+key -use
+wait 1.5
+key +use
+tap +reload 0.1
+key -use
+wait 1.5
+lua hook.Remove("Think", "mcv_p_seq") print("[p] mode", ply:GetActiveWeapon():GetFiremodeValue())

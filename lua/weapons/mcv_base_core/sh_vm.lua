@@ -100,8 +100,13 @@ function SWEP:GetViewModelPosition(pos, ang)
     local aim_delta = self:GetSightAmountVisual()
     local aim_punch = self:GetOwner():GetViewPunchAngles()
 
-    local offsetpos = LerpVector(aim_delta, self.CustomPos, self.IronsightPos)
-    local offsetang = LerpAngle(aim_delta, self.CustomAng, self.IronsightAng)
+    local ipos, iang = self.IronsightPos, self.IronsightAng
+    // the dual models aim from their own script offsets where those differ
+    if self.GetAkimbo and self:GetAkimbo() and self.IronsightPosAkimbo then
+        ipos, iang = self.IronsightPosAkimbo, self.IronsightAngAkimbo or iang
+    end
+    local offsetpos = LerpVector(aim_delta, self.CustomPos, ipos)
+    local offsetang = LerpAngle(aim_delta, self.CustomAng, iang)
 
     pos:Add(ang:Right() * offsetpos.x)
     pos:Add(ang:Forward() * offsetpos.y)

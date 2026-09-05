@@ -40,7 +40,9 @@ function SWEP:ThinkWeapon()
         end
     end
 
-    if !self:StillWaiting() and !owner:KeyDown(IN_ATTACK) and self:GetNeedCycle() and IsFirstTimePredicted() then
+    // the cycle waits for the trigger to be released, except on slam-firing shotguns (M1897,
+    // M37): they pump with the trigger held and fire the moment the action closes
+    if !self:StillWaiting() and (!owner:KeyDown(IN_ATTACK) or self.SlamFire) and self:GetNeedCycle() and IsFirstTimePredicted() then
         local t = self:PlayAnimation(ACT_VM_RELOAD_INSERT_PULL, self.CycleSpeed, false)
         self:SetNextPrimaryFire(CurTime() + t * self.CyclePostDelay)
 

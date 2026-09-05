@@ -56,6 +56,7 @@ SWEP.AdjustableScopes = false
 
 // Weapon must be manually cycled
 SWEP.PlayCycleAnimation = false
+SWEP.SlamFire = false // pump with the trigger held and fire as the action closes (M1897, M37)
 SWEP.LastShotAnimation = false
 SWEP.ShotgunReloadEmptyStartAnimation = false
 SWEP.AkimboDualSingleActionReload = false // Halfway between reloading, change hand

@@ -167,6 +167,8 @@ is by design and looks right. It is the cause of the bug-list items where the po
 shorter than a shot:
 
 * RPK / TUL-1 bolt too slow when deployed: the deployed shot pose is 10 frames stretched to 60.
+  Fixed Sep 2026: `ACT_VM_PRIMARYATTACK_DEPLOYED` bases are scaled to keep the pose's ratio to
+  the hip shot (10 over 20 frames gives a 30 frame base), the hip shot stays on 60.
 * The 60 frames are meant at 30 fps. Crowbar writes static poses as `fps 1` (the PTRD's
   `deploy_a` is 5 frames), and a 60-frame copy at 1 fps is a one-minute base: the PTRD's
   deployed shot took a minute. `make_len_variant` now forces `fps 30` on every length variant.
@@ -514,6 +516,15 @@ into `MovementPoseWalk` / `MovementPoseSprint` and `SWEP:GetMovementPose`
 start, and sprints to the model's top. Blending part of the run layer into plain walking (tried
 first) reads as "starting to sprint" on every gun; do not. Aiming multiplies the pose by
 `1 + IronsightWalkBobbingStrength` (0.75 on most guns), as the hand port did.
+
+## Revolver modes and slam fire
+
+Revolvers cycle hammer (single action), western (fan) and delayed (double action) in that
+order, the game's; the switch plays the animation for the target mode (`changefiremode_towestern`
+= `ACT_VM_FIREMODE`, `_todelayed` = `ACT_VM_IFIREMODE`, `_tohammer` = `ACT_VM_FIREMODE2`; the dual
+models have no western and skip fan). `revolver_firemode_pose` is 0 / 1 / 0.5 for hammer / fan /
+delayed (the game's `AE_WPN_SET_POSEPARAM` events). `SWEP.SlamFire` (M1897, M37) lets the pump
+cycle run with the trigger held so the gun fires as the action closes.
 
 ## Magazine / belt swap times
 

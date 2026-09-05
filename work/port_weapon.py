@@ -521,6 +521,24 @@ def akimbo_timing(vm):
     return out
 
 
+def akimbo_sight_offsets(name, scripts_dir=None):
+    """IronsightPosAkimbo / IronsightAngAkimbo from weapon_dual_<name>.txt when the dual model is
+    aimed differently from the single one (13 of the 41 pairs)."""
+    scripts_dir = scripts_dir or os.path.join(HERE, "cscripts")
+    dp = os.path.join(scripts_dir, "weapon_dual_%s.txt" % name)
+    sp = os.path.join(scripts_dir, "weapon_%s.txt" % name)
+    if not (os.path.isfile(dp) and os.path.isfile(sp)):
+        return {}
+    D = flat(parse_kv(open(dp, encoding="utf-8", errors="replace").read()).get("WeaponData", {}))
+    S = flat(parse_kv(open(sp, encoding="utf-8", errors="replace").read()).get("WeaponData", {}))
+    so_d, so_s = sight_offsets(D), sight_offsets(S)
+    if not so_d or not so_s:
+        return {}
+    if so_d["IronsightPos"] == so_s["IronsightPos"] and so_d["IronsightAng"] == so_s["IronsightAng"]:
+        return {}
+    return {"IronsightPosAkimbo": so_d["IronsightPos"], "IronsightAngAkimbo": so_d["IronsightAng"]}
+
+
 def anim_timing(qc):
     """Lua values read off the viewmodel's animations: where the run layer starts and ends
     (MovementPoseWalk / MovementPoseSprint, so walking never bleeds into the sprint pose) and when
@@ -926,7 +944,8 @@ def generate(script_path, args):
     is_pump = "ACT_VM_RELOAD_INSERT_PULL" in acts and wtype in ("Shotgun", "GrenadeLauncher")
     is_volley = "ACT_VM_RECOIL1" in acts
     if is_revolver and "ACT_VM_HAULBACK" in acts:
-        firemodes = ["MCV.FIREMODE_SA", "MCV.FIREMODE_DA", "MCV.FIREMODE_FAN"] if "ACT_VM_PRIMARYATTACK_1" in acts else ["MCV.FIREMODE_SA", "MCV.FIREMODE_DA"]
+        # the game's order: hammer (single action), western (fan), delayed (double action)
+        firemodes = ["MCV.FIREMODE_SA", "MCV.FIREMODE_FAN", "MCV.FIREMODE_DA"] if "ACT_VM_PRIMARYATTACK_1" in acts else ["MCV.FIREMODE_SA", "MCV.FIREMODE_DA"]
     elif is_bolt:
         firemodes = ["MCV.FIREMODE_BOLT"]
     elif is_pump:
@@ -1239,6 +1258,9 @@ def generate(script_path, args):
         warnings.append("no viewmodel offsets in the script")
     A(line("IronsightPos", so.get("IronsightPos", "Vector(0, -4, 0) -- TODO tune")))
     A(line("IronsightAng", so.get("IronsightAng", "Angle(0, 0, 0)")))
+    if akimbo_vm:
+        for k, v in akimbo_sight_offsets(name, args.scripts_dir).items():
+            A(line(k, v))
     A("")
     A(line("CustomPos", so.get("CustomPos", "Vector(0, -2, 0)")))
     A(line("CustomAng", so.get("CustomAng", "Angle(0, 0, 0)")))

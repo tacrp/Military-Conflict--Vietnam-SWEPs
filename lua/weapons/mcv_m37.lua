@@ -45,6 +45,7 @@ SWEP.LastShotAnimation = false
 SWEP.ShotgunReload = true
 SWEP.HasEmptyReload = true
 SWEP.PlayCycleAnimation = true
+SWEP.SlamFire = true // no disconnector: holding the trigger while pumping fires as the action closes
 SWEP.InvertAnimationHammer = false
 SWEP.AnimationHandlesHammer = true
 

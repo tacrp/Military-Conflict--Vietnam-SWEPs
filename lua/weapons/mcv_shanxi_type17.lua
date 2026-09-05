@@ -44,6 +44,7 @@ SWEP.Firemodes = {
 
 SWEP.LastShotAnimation = true
 SWEP.ShotgunReload = true
+SWEP.ShotgunReloadEmptyStartAnimation = true
 SWEP.ShotgunReloadRounds = 5
 SWEP.HasEmptyReload = true
 

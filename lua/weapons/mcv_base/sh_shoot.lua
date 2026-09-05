@@ -438,10 +438,22 @@ function SWEP:ChangeFiremode()
         anim = ACT_VM_DFIREMODE
     end
 
-    if self.Firemodes[fm] == MCV.FIREMODE_DA then
+    // revolvers: the game has one animation per target mode. changefiremode_towestern (fan)
+    // is ACT_VM_FIREMODE, _todelayed (double action) ACT_VM_IFIREMODE, _tohammer (single
+    // action) ACT_VM_FIREMODE2; the dual models have no western
+    local target = self.Firemodes[fm]
+    if target == MCV.FIREMODE_FAN then
+        anim = ACT_VM_FIREMODE
+        mult = 1
+    elseif target == MCV.FIREMODE_DA then
         anim = ACT_VM_IFIREMODE
         mult = 1
-    elseif self.Firemodes[fm] == MCV.FIREMODE_SA then
+    elseif target == MCV.FIREMODE_SA then
+        // ACT_VM_FIREMODE2 is not an activity GMod knows, so the sequence is played by name
+        if self:HasSequence("changefiremode_tohammer") then
+            self:PlaySequence("changefiremode_tohammer", 1, false)
+            return
+        end
         anim = ACT_VM_IFIREMODE
         mult = -1
     end

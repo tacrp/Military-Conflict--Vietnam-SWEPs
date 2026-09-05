@@ -385,10 +385,10 @@ $animation "deploy_a" "..\..\..\MCV_SMD_OG\weapons\v_tul1\v_tul1_anims\deploy_a.
 	fps 30
 	numframes 60
 }
-$animation "deploy_a__f60" "..\..\..\MCV_SMD_OG\weapons\v_tul1\v_tul1_anims\deploy_a.smd" {
-	frame 0 0
+$animation "deploy_a__f30" "..\..\..\MCV_SMD_OG\weapons\v_tul1\v_tul1_anims\deploy_a.smd" {
 	fps 30
-	numframes 60
+	frame 0 0
+	numframes 30
 }
 
 $animation "ironsightdeploy" "..\..\..\MCV_SMD_OG\weapons\v_tul1\v_tul1_anims\ironsightdeploy.smd" {
@@ -396,10 +396,10 @@ $animation "ironsightdeploy" "..\..\..\MCV_SMD_OG\weapons\v_tul1\v_tul1_anims\ir
 	frame 1 1
 	numframes 60
 }
-$animation "ironsightdeploy__f60" "..\..\..\MCV_SMD_OG\weapons\v_tul1\v_tul1_anims\ironsightdeploy.smd" {
+$animation "ironsightdeploy__f30" "..\..\..\MCV_SMD_OG\weapons\v_tul1\v_tul1_anims\ironsightdeploy.smd" {
 	fps 30
 	frame 1 1
-	numframes 60
+	numframes 30
 }
 
 $animation "shoot1_d_a" "..\..\..\MCV_SMD_OG\weapons\v_tul1\v_tul1_anims\shoot1_d_a.smd" {
@@ -814,8 +814,8 @@ $sequence "deploy" {
 }
 
 $sequence "deployshoot1" {
-	"deploy_a__f60"
-	"ironsightdeploy__f60"
+	"deploy_a__f30"
+	"ironsightdeploy__f30"
 	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
 	blend "ironsight" 0 1
 	blendwidth 2
@@ -834,8 +834,8 @@ $sequence "deployshoot1_pose" {
 }
 
 $sequence "deployshoot2" {
-	"deploy_a__f60"
-	"ironsightdeploy__f60"
+	"deploy_a__f30"
+	"ironsightdeploy__f30"
 	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
 	blend "ironsight" 0 1
 	blendwidth 2
@@ -854,8 +854,8 @@ $sequence "deployshoot2_pose" {
 }
 
 $sequence "deployshoot3" {
-	"deploy_a__f60"
-	"ironsightdeploy__f60"
+	"deploy_a__f30"
+	"ironsightdeploy__f30"
 	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
 	blend "ironsight" 0 1
 	blendwidth 2

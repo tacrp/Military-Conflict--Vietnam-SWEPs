@@ -80,6 +80,8 @@ SWEP.ScopeFOV2 = 4
 
 SWEP.IronsightPos = Vector(-0, -5, -0.05)
 SWEP.IronsightAng = Angle(0, 0.05, 0)
+SWEP.IronsightPosAkimbo = Vector(0, -5, -0.07)
+SWEP.IronsightAngAkimbo = Angle(0, 0, 0)
 
 SWEP.CustomPos = Vector(0, -3, 0)
 SWEP.CustomAng = Angle(0, 0, 0)

@@ -490,10 +490,10 @@ $animation "deploy_a" "..\..\..\MCV_SMD_OG\weapons\v_m1919a6\v_m1919a6_anims\dep
 	fps 30
 	numframes 60
 }
-$animation "deploy_a__f60" "..\..\..\MCV_SMD_OG\weapons\v_m1919a6\v_m1919a6_anims\deploy_a.smd" {
-	frame 0 0
+$animation "deploy_a__f50" "..\..\..\MCV_SMD_OG\weapons\v_m1919a6\v_m1919a6_anims\deploy_a.smd" {
 	fps 30
-	numframes 60
+	frame 0 0
+	numframes 50
 }
 
 $animation "ironsightdeploy" "..\..\..\MCV_SMD_OG\weapons\v_m1919a6\v_m1919a6_anims\ironsightdeploy.smd" {
@@ -502,10 +502,10 @@ $animation "ironsightdeploy" "..\..\..\MCV_SMD_OG\weapons\v_m1919a6\v_m1919a6_an
 	numframes 60
 	loop
 }
-$animation "ironsightdeploy__f60" "..\..\..\MCV_SMD_OG\weapons\v_m1919a6\v_m1919a6_anims\ironsightdeploy.smd" {
+$animation "ironsightdeploy__f50" "..\..\..\MCV_SMD_OG\weapons\v_m1919a6\v_m1919a6_anims\ironsightdeploy.smd" {
 	fps 30
 	frame 1 1
-	numframes 60
+	numframes 50
 }
 
 $animation "deploy_e_a" "..\..\..\MCV_SMD_OG\weapons\v_m1919a6\v_m1919a6_anims\deploy_e_a.smd" {
@@ -932,8 +932,8 @@ $sequence "deploytoidle" {
 }
 
 $sequence "deployshoot1" {
-	"deploy_a__f60"
-	"ironsightdeploy__f60"
+	"deploy_a__f50"
+	"ironsightdeploy__f50"
 	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
 	blend "ironsight" 0 1
 	blendwidth 2
@@ -953,8 +953,8 @@ $sequence "deployshoot1_pose" {
 }
 
 $sequence "deployshoot2" {
-	"deploy_a__f60"
-	"ironsightdeploy__f60"
+	"deploy_a__f50"
+	"ironsightdeploy__f50"
 	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
 	blend "ironsight" 0 1
 	blendwidth 2
@@ -974,8 +974,8 @@ $sequence "deployshoot2_pose" {
 }
 
 $sequence "deployshoot3" {
-	"deploy_a__f60"
-	"ironsightdeploy__f60"
+	"deploy_a__f50"
+	"ironsightdeploy__f50"
 	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
 	blend "ironsight" 0 1
 	blendwidth 2
@@ -995,8 +995,8 @@ $sequence "deployshoot3_pose" {
 }
 
 $sequence "deployshoot4" {
-	"deploy_a__f60"
-	"ironsightdeploy__f60"
+	"deploy_a__f50"
+	"ironsightdeploy__f50"
 	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
 	blend "ironsight" 0 1
 	blendwidth 2

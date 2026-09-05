@@ -389,10 +389,10 @@ $animation "deploy_a" "..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner
 	frame 0 1
 	numframes 60
 }
-$animation "deploy_a__f60" "..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\deploy_a.smd" {
+$animation "deploy_a__f48" "..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\deploy_a.smd" {
 	fps 30
 	frame 0 1
-	numframes 60
+	numframes 48
 }
 
 $animation "ironsightdeploy" "..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\ironsightdeploy.smd" {
@@ -400,10 +400,10 @@ $animation "ironsightdeploy" "..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v
 	frame 1 1
 	numframes 60
 }
-$animation "ironsightdeploy__f60" "..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\ironsightdeploy.smd" {
+$animation "ironsightdeploy__f48" "..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\ironsightdeploy.smd" {
 	fps 30
 	frame 1 1
-	numframes 60
+	numframes 48
 }
 
 $animation "deploy_e_a" "..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\deploy_e_a.smd" {
@@ -840,8 +840,8 @@ $sequence "deploytoidle" {
 }
 
 $sequence "deployshoot1" {
-	"deploy_a__f60"
-	"ironsightdeploy__f60"
+	"deploy_a__f48"
+	"ironsightdeploy__f48"
 	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
 	blend "ironsight" 0 1
 	blendwidth 2
@@ -861,8 +861,8 @@ $sequence "deployshoot1_pose" {
 }
 
 $sequence "deployshoot2" {
-	"deploy_a__f60"
-	"ironsightdeploy__f60"
+	"deploy_a__f48"
+	"ironsightdeploy__f48"
 	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
 	blend "ironsight" 0 1
 	blendwidth 2
@@ -882,8 +882,8 @@ $sequence "deployshoot2_pose" {
 }
 
 $sequence "deployshoot3" {
-	"deploy_a__f60"
-	"ironsightdeploy__f60"
+	"deploy_a__f48"
+	"ironsightdeploy__f48"
 	activity "ACT_VM_PRIMARYATTACK_DEPLOYED" 1
 	blend "ironsight" 0 1
 	blendwidth 2
