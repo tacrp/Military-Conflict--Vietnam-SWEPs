@@ -82,6 +82,10 @@ function SWEP:PrimaryAttack()
         end
     end
 
+    // PlayAnimation returns nothing when the model lacks the activity; never let that stall
+    // or error the fire loop
+    t = t or (60 / self.FireRate)
+
     if fm == MCV.FIREMODE_FAST then
         self:SetNextPrimaryFire(CurTime() + (60 / self.FireRate_Fast) * fmmult)
     elseif fm == MCV.FIREMODE_SLOW then

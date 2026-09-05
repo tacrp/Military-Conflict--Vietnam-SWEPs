@@ -725,7 +725,11 @@ def step_pose_split(qc, ctx):
             blends = ['blend "ironsight" 0 1']
         lines.extend(blends)
         if len(base_anims) > 1:
-            lines.append("blendwidth %d" % len(base_anims))
+            # one row per blend axis: a two-axis idle (ironsight x revolver_firemode_pose, 9
+            # anims) is a 3x3 grid; "blendwidth 9" made the ironsight axis run through all
+            # nine poses and the revolvers went wild when aimed during the hammer animation
+            width = len(base_anims) if len(blends) < 2 else int(round(len(base_anims) ** 0.5))
+            lines.append("blendwidth %d" % width)
         if act in FIRE_ACTS:
             lines.append("snap")
         else:

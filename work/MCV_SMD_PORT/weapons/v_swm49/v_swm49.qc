@@ -791,7 +791,7 @@ $sequence "shoot_hammer" {
 	activity "ACT_VM_PRIMARYATTACK" 1
 	blend "ironsight" 0 1
 	blend "revolver_firemode_pose" 0 1
-	blendwidth 9
+	blendwidth 3
 	snap
 	{ event 5004 10 "MCV_Weapon_Foley_Revolver.Hand" }
 	{ event 5004 15 "MCV_Weapon_Foley_Revolver.HammerOut" }
@@ -823,7 +823,7 @@ $sequence "shoot_western" {
 	activity "ACT_VM_PRIMARYATTACK_1" 1
 	blend "ironsight" 0 1
 	blend "revolver_firemode_pose" 0 1
-	blendwidth 9
+	blendwidth 3
 	snap
 	{ event 5004 0 "MCV_Weapon_Foley_Revolver.HammerStrike" }
 	addlayer "walklayer"
@@ -854,7 +854,7 @@ $sequence "prepare_delayed" {
 	activity "ACT_VM_HAULBACK" 1
 	blend "ironsight" 0 1
 	blend "revolver_firemode_pose" 0 1
-	blendwidth 9
+	blendwidth 3
 	fadein 0.1
 	fadeout 0.2
 	{ event 5004 0 "MCV_Weapon_Foley_Revolver.HammerOutSlow" }
@@ -886,7 +886,7 @@ $sequence "shoot_delayed" {
 	activity "ACT_VM_PRIMARYATTACK_2" 1
 	blend "ironsight" 0 1
 	blend "revolver_firemode_pose" 0 1
-	blendwidth 9
+	blendwidth 3
 	snap
 	addlayer "walklayer"
 	addlayer "runlayer"

@@ -1,0 +1,29 @@
+# Revolver double-action and dual revolver: fire twice, aim mid-animation, fire while aimed
+god
+strip
+ang 0 0 0
+hud 1
+give mcv_swm10
+wait 1.5
+tap +attack 0.05
+wait 0.2
+key +attack2
+wait 0.25
+shot da_aim_mid marker
+wait 0.6
+tap +attack 0.05
+wait 0.25
+shot da_aim_shot marker
+key -attack2
+wait 1.2
+give mcv_m1895
+wait 1.5
+lua local w = ply:GetActiveWeapon() if w.HasAkimbo then w:SetAkimbo(true) end
+wait 1
+tap +attack 0.05
+wait 0.2
+key +attack2
+wait 0.3
+shot dual_aim_mid marker
+key -attack2
+wait 1.2

@@ -135,7 +135,9 @@ function SWEP:Holster(wep)
     if self:IsFlaming() then
         self:StopFlame()
     end
-    return self.BaseClass.Holster(self, wep)
+    // Not self.BaseClass: for an LPO-50 (Base = mcv_flamethrower) that is this very class, so
+    // the tail call looped forever and froze the game on every weapon switch after firing.
+    return baseclass.Get("mcv_base").Holster(self, wep)
 end
 
 function SWEP:OnRemove()

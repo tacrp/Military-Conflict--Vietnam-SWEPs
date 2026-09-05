@@ -366,6 +366,10 @@ Brass ids the game added after 2024 (19 to 31) map to the nearest shell model th
 * The `empty` pose parameter is 1 when the clip is empty (the game's `SlidePosition` and
   `BoltshootMovement` layers blend from 0.6 to 1 towards the locked-back bolt).
 * `$illumposition 0 0 0` on every model.
+* **Two-axis blends** (`step_pose_split`): a fire sequence rebuilt from a two-axis idle
+  (`ironsight` x `revolver_firemode_pose`, 9 anims) gets `blendwidth 3`, one row per axis.
+  `blendwidth 9` (the anim count) made the ironsight axis run through all nine poses, which is
+  why the revolvers went wild when aimed during the hammer animation.
 * **Sight offsets** (`sight_offsets`): `IronsightPos` / `IronsightAng` / `CustomPos` /
   `CustomAng` come straight from the script's `ironsightright/forward/up/pitch/yaw/roll` keys and
   its `CustomOffset` block; they are no longer copied from the existing lua. The first port's
@@ -480,6 +484,17 @@ registered in `sh_common.lua`. `port_weapon.py` writes all of these from the gam
 (`EQUIPMENT_GENERATORS`); not covered: artillery / napalm / barrage binoculars (need a strike
 system), gas masks, parachute, chainsaw, lunge mine, the objective-only C4 and the scripts without
 a WeaponType (stielhandgranate, m18 duplicates).
+
+### `self.BaseClass` is a trap with three levels of inheritance
+
+A weapon's `BaseClass` is its *own* base, not the base of the file the function was written
+in. `mcv_flamethrower/sh_flame.lua` called `self.BaseClass.Holster(self, wep)`; for an LPO-50
+(`Base = "mcv_flamethrower"`) `self.BaseClass` is the flamethrower class, so the tail call ran
+into itself forever without growing the stack: the game froze on every weapon switch after
+firing, with nothing in the console. Call the intended class explicitly
+(`baseclass.Get("mcv_base").Holster(self, wep)`) or split the shared code into a helper. The
+harness reproduces a freeze as a job that never logs `done`; instrument with `lua`/`clua`
+wrappers that print before and after each step to find the last one that ran.
 
 ## Test harness (`work/harness.py`, `lua/autorun/sh_mcv_harness.lua`)
 

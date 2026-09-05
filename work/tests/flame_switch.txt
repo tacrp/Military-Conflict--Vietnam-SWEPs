@@ -1,0 +1,14 @@
+# flamethrower: fire, stop, then switch to a placeable (the sequence that hung the game in equipment.txt)
+god
+strip
+ang 0 0 0
+give mcv_lpo50
+wait 1.5
+key +attack
+wait 1
+key -attack
+wait 1
+shot fs_after
+give mcv_m16mine
+wait 1.5
+shot fs_mine

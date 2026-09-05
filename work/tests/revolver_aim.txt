@@ -1,0 +1,20 @@
+# Revolver: fire, then aim while the hammer animation plays; what sequence and rate does the vm run?
+god
+strip
+ang 0 0 0
+hud 1
+give mcv_m1917
+wait 1.5
+clua local vm = ply:GetViewModel() local w = ply:GetActiveWeapon() timer.Create("mcv_revprobe", 0.05, 40, function() if !IsValid(vm) then return end print(string.format("[rev] t=%.2f seq=%s cycle=%.2f rate=%.2f sight=%.2f ironpose=%.2f", CurTime(), vm:GetSequenceName(vm:GetSequence()), vm:GetCycle(), vm:GetPlaybackRate(), w:GetSightAmountVisual(), vm:GetPoseParameter("ironsight"))) end)
+tap +attack 0.05
+wait 0.15
+key +attack2
+shot rev_a marker
+wait 0.15
+shot rev_b marker
+wait 0.2
+shot rev_c marker
+wait 0.5
+shot rev_d marker
+key -attack2
+wait 1.5

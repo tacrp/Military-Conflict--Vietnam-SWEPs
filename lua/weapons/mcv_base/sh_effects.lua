@@ -8,7 +8,11 @@ function SWEP:GetTracerOrigin()
     if self:GetAkimbo() and self:Clip1() % 2 == 0 then
         muzz_qca = vm:LookupAttachment("muzzleleft") > 0 and vm:LookupAttachment("muzzleleft") or vm:LookupAttachment("muzzle2")
     end
-    local att = vm:GetAttachment(muzz_qca)
+    local att = muzz_qca > 0 and vm:GetAttachment(muzz_qca)
+    if !att then
+        // no muzzle attachment on this model (single model forced into akimbo, equipment)
+        return self:GetOwner():GetShootPos()
+    end
     return att.Pos
 end
 
