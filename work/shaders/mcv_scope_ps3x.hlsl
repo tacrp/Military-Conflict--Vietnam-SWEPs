@@ -58,6 +58,11 @@ float4 main(PS_INPUT frag) : COLOR {
                 + tex2D(SCREEN, float2(base.x / aspect, base.y - bl)).rgb;
     col = lerp(col, blur * 0.25, saturate(r * 2.0));
 
+    // outside the captured frame there is nothing to show: black, not the clamped edge pixels
+    // (a hard kick or a wide sway pushes the magnified window past the screen)
+    float2 fuv = float2(base.x / aspect, base.y);
+    col *= step(0.0, fuv.x) * step(fuv.x, 1.0) * step(0.0, fuv.y) * step(fuv.y, 1.0);
+
     // reticle: centred on the aim point on screen (not on the lens mesh, which sways), sized to
     // the lens diameter; opaque where the crosshair lines are
     float2 ruv = 0.5 + (Ps - As) / max(C3.w, 1e-3);

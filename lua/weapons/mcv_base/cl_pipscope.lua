@@ -91,36 +91,12 @@ end
 SWEP.ScopeDebug = 0
 
 function SWEP:UpdateScopeAxis(vm)
+    // The reticle sits where the shot goes: the aim angle (eye angles plus the view punch the
+    // recoil put on the gun), not the lens mesh and not the muzzle attachment. The camera
+    // itself takes most of the punch back out (cl_camera.lua), so the point moves across the
+    // lens with each kick and settles as the punch decays.
     local owner = self:GetOwner()
-    local eyeang = owner:EyeAngles()
-    local fwd = eyeang:Forward()
-    local id = vm:LookupAttachment("muzzle")
-    local att = id > 0 and vm:GetAttachment(id)
-    if att then
-        // the attachment's axes are the bone's: take the one closest to the eye's forward
-        local best, bestdot = fwd, 0
-        for _, a in ipairs({att.Ang:Forward(), att.Ang:Right(), att.Ang:Up()}) do
-            local dot = a:Dot(fwd)
-            if math.abs(dot) > math.abs(bestdot) then best, bestdot = a, dot end
-        end
-        fwd = bestdot < 0 and -best or best
-        // The attachment carries a fixed tilt of its own (the StG44's muzzle sits 0.9 degrees
-        // off, 49 px at 1600x900) that must not count as sway: the rest direction follows
-        // the reading slowly, and only the fast part (walk bob, recoil, breathing) is used.
-        local _, rel = WorldToLocal(vector_origin, fwd:Angle(), vector_origin, eyeang)
-        rel:Normalize()
-        local rest = self.ScopeAxisRest
-        if !rest or self:GetSightAmountVisual() < 0.99 then
-            rest = rel
-        else
-            local t = math.Clamp(FrameTime() * 1.5, 0, 1)
-            rest = Angle(rest.p + math.NormalizeAngle(rel.p - rest.p) * t, rest.y + math.NormalizeAngle(rel.y - rest.y) * t, 0)
-        end
-        self.ScopeAxisRest = rest
-        local sway = Angle(math.NormalizeAngle(rel.p - rest.p), math.NormalizeAngle(rel.y - rest.y), 0)
-        local _, ang = LocalToWorld(vector_origin, sway, vector_origin, eyeang)
-        fwd = ang:Forward()
-    end
+    local fwd = self:GetAimAngle():Forward()
     local scr = (owner:EyePos() + fwd * 4096):ToScreen()
     local x, y = scr.x / ScrW(), scr.y / ScrH()
     if !scr.visible or x != x or y != y then x, y = 0.5, 0.5 end

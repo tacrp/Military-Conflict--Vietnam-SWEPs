@@ -455,10 +455,15 @@ frame copy and two floats. Magnification is `IronsightFov / ScopeLensFov` (`Scop
 `ScopeFOV2` = `ScopeLensFov2`, from the scripts); the screen keeps the ironsight FOV; mouse
 sensitivity follows the scope magnification.
 
-* **Axis point** (`UpdateScopeAxis`): the muzzle attachment's forward (axis closest to the eye's,
-  read in PreDrawViewModel where attachments are in world space) projected 4096 units out and
-  `ToScreen`, sent as `$c3_x/$c3_y`. The pixel under it shows exactly what is behind it, so the
-  picture follows the gun's sway and recoil with no parallax at the centre.
+* **Axis point** (`UpdateScopeAxis`): the shot direction, `GetAimAngle():Forward()` (eye angles
+  plus the view punch the recoil put on the gun), projected 4096 units out and `ToScreen`, sent as
+  `$c3_x/$c3_y`. The reticle and the magnified picture are centred there, so the reticle marks
+  where the bullet goes; with the camera taking most of the punch back out (cl_camera.lua) the
+  point moves across the lens on each kick and settles as the punch decays. It used to be the
+  muzzle attachment's forward with a slow-tracking rest to cancel the attachment's fixed tilt;
+  that filtered part of the kick away and the reticle no longer matched the shot.
+* **Outside the frame**: where the magnified window falls past the captured screen the shader
+  paints black instead of the clamped edge pixels (a hard kick or a wide sway showed the border).
 * **In the shader**: exit pupil (bright disc centred on the eyepiece, so the shadow moves with
   the gun; `ScopePupilSlide` can make it slide against the aim point's offset but that reads as
   the shadow wandering and is 0), tube rim, reticle from `$texture1` drawn centred on the aim
