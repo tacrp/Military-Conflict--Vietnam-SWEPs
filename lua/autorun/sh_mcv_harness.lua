@@ -316,9 +316,9 @@ local function tick()
         local text = file.Read(QUEUE .. fname, "DATA") or ""
         file.Delete(QUEUE .. fname)
         local lines = {}
-        for line in string.gmatch(text, "[^\r\n]+") do
-            line = string.Trim(line)
-            if line != "" and string.sub(line, 1, 1) != "#" then table.insert(lines, line) end
+        for raw in string.gmatch(text, "[^\r\n]+") do
+            local l = string.Trim(raw)
+            if l != "" and string.sub(l, 1, 1) != "#" then table.insert(lines, l) end
         end
         H.Job = {name = string.StripExtension(fname), lines = lines, i = 0, results = {log = {}, errors = {}, shots = {}, reports = {}, spawned = {}}}
         log("job", H.Job.name, #lines .. " commands")
