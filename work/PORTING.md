@@ -532,6 +532,15 @@ start, and sprints to the model's top. Blending part of the run layer into plain
 first) reads as "starting to sprint" on every gun; do not. Aiming multiplies the pose by
 `1 + IronsightWalkBobbingStrength` (0.75 on most guns), as the hand port did.
 
+## Burst fire
+
+`MCV.FIREMODE_BURST` (scripts with `Burst` in `SupportedFireModes`: M605, T223) fires
+`BurstRounds` (3) at the gun's FireRate per trigger pull. It is a runaway burst: the first round
+arms `BurstLeft` and `ThinkWeapon` fires the rest whether or not the trigger is still held, so a
+burst cannot be paused; the burst also ignores the sprint gate and the bash key while it runs and
+stops only when the magazine empties or the weapon is switched. When the last round goes out the
+trigger must be released and pressed again (`NeedTriggerPress`) after `BurstRecovery` (0.2 s).
+
 ## Revolver modes and slam fire
 
 Revolvers cycle hammer (single action), western (fan) and delayed (double action) in that

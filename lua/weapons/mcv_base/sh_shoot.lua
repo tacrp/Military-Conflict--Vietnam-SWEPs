@@ -3,10 +3,11 @@ function SWEP:PrimaryAttack()
     if self:GetNeedCycle() then return end
 
     local owner = self:GetOwner()
+    local bursting = self:GetBurstLeft() > 0 // a runaway burst finishing itself (ThinkWeapon)
 
     // bash with USE + fire; not while deployed on the bipod (the PTRD can bash undeployed
     // even though it only fires deployed)
-    if owner:KeyDown(IN_USE) then
+    if owner:KeyDown(IN_USE) and !bursting then
         if !self:GetBipod() then
             self:Bash()
         end
@@ -22,15 +23,21 @@ function SWEP:PrimaryAttack()
 
     if self:Clip1() < 1 then
         self:SetBurstCount(0)
+        self:SetBurstLeft(0)
         self:Reload()
         return
     end
-    if self:GetSpeed() > 150 then return end
+    if self:GetSpeed() > 150 and !bursting then return end
 
-    if self:GetNeedTriggerPress() then self:SetBurstCount(0) return end
+    if self:GetNeedTriggerPress() and !bursting then self:SetBurstCount(0) return end
 
     local fm = self:GetFiremodeValue()
     local fmmult = 1
+
+    // three-round burst: the first round arms the counter, ThinkWeapon fires the rest
+    if fm == MCV.FIREMODE_BURST and !bursting then
+        self:SetBurstLeft(self.BurstRounds)
+    end
 
     if self:GetAkimbo() then
         fmmult = 0.5
@@ -124,6 +131,16 @@ function SWEP:PrimaryAttack()
 
     if firemode == MCV.FIREMODE_SEMI or firemode == MCV.FIREMODE_SA or firemode == MCV.FIREMODE_DA then
         self:SetNeedTriggerPress(true)
+    end
+
+    if firemode == MCV.FIREMODE_BURST then
+        local left = self:GetBurstLeft() - 1
+        self:SetBurstLeft(math.max(left, 0))
+        if left <= 0 then
+            // burst over: a fresh pull is needed, after a short recovery
+            self:SetNeedTriggerPress(true)
+            self:SetNextPrimaryFire(self:GetNextPrimaryFire() + self.BurstRecovery)
+        end
     end
 
     if self.PlayCycleAnimation and self:Clip1() > 0 then
@@ -431,6 +448,8 @@ function SWEP:ChangeFiremode()
     end
 
     if #self.Firemodes <= 1 then return end
+
+    self:SetBurstLeft(0)
 
     local fm = self:GetFiremode()
 

@@ -13,6 +13,7 @@ function SWEP:Deploy()
     self:SetActionState(0)
     self:SetActionStart(0)
 
+    if self.SetBurstLeft then self:SetBurstLeft(0) end
     self:OnDeploy()
 
     return true

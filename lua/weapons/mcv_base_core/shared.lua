@@ -154,6 +154,7 @@ function SWEP:SetupDataTables()
     // equipment: small state machine (throw wind-up, mine placement step...)
     self:NetworkVar("Int", 3, "ActionState")
     self:NetworkVar("Int", 4, "BurstCount")
+    self:NetworkVar("Int", 5, "BurstLeft") // rounds still to fire in a three-round burst (runaway: it finishes on its own)
 
     self:NetworkVar("Bool", 0, "Reloading")
     self:NetworkVar("Bool", 1, "EndReload")

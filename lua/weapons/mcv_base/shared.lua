@@ -56,6 +56,12 @@ SWEP.AdjustableScopes = false
 
 // Weapon must be manually cycled
 SWEP.PlayCycleAnimation = false
+
+// Burst fire (MCV.FIREMODE_BURST): BurstRounds per trigger pull at the gun's FireRate. Runaway:
+// once the first round is out the burst finishes even if the trigger is released, and the
+// trigger must be released and pressed again for the next one after BurstRecovery seconds.
+SWEP.BurstRounds = 3
+SWEP.BurstRecovery = 0.2
 SWEP.SlamFire = false // pump with the trigger held and fire as the action closes (M1897, M37)
 SWEP.LastShotAnimation = false
 SWEP.ShotgunReloadEmptyStartAnimation = false
