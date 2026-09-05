@@ -32,3 +32,15 @@ MCV.RegisterConVar("mcv_realistic_shooting", "0",
 function MCV.RealisticShooting()
     return MCV.ConVars.mcv_realistic_shooting:GetBool()
 end
+
+// ------------------------------------------------------------------------------------------
+// Hybrid reload on stripper-clip rifles that also have round-by-round loading animations
+// (Kar98k, Springfield, Vz.24): 1 tops a partly loaded magazine up one round at a time and
+// uses the clip only when empty; 0 always reloads with the clip (the game's behaviour). Only
+// guns flagged HybridReloadCapable (the model has both sets of animations) are affected.
+MCV.RegisterConVar("mcv_hybrid_reload", "1",
+    "1: stripper-clip rifles with single-round animations top up round by round when partly loaded. 0: always the clip.")
+
+function MCV.HybridReload()
+    return MCV.ConVars.mcv_hybrid_reload:GetBool()
+end

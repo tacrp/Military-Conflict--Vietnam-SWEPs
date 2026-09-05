@@ -45,7 +45,6 @@ SWEP.Firemodes = {
 
 SWEP.LastShotAnimation = false
 SWEP.MagInClip = true
-SWEP.HybridReload = false -- As neat as this is, there isn't a single weapon in MCV that actually behaves this way.
 SWEP.ShotgunReloadEmptyStartAnimation = false
 SWEP.PlayCycleAnimation = true
 SWEP.AnimationHandlesHammer = true

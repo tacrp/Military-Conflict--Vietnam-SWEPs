@@ -46,7 +46,7 @@ SWEP.Firemodes = {
 
 SWEP.LastShotAnimation = false
 SWEP.MagInClip = true
-SWEP.HybridReload = false -- As neat as this is, there isn't a single weapon in MCV that actually behaves this way.
+SWEP.HybridReloadCapable = true // clip when empty, one round at a time when partly loaded (mcv_hybrid_reload)
 SWEP.ShotgunReloadEmptyStartAnimation = false
 SWEP.PlayCycleAnimation = true
 

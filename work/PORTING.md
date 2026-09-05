@@ -462,6 +462,12 @@ sensitivity follows the scope magnification.
   point moves across the lens on each kick and settles as the punch decays. It used to be the
   muzzle attachment's forward with a slow-tracking rest to cancel the attachment's fixed tilt;
   that filtered part of the kick away and the reticle no longer matched the shot.
+* **Reticle plane**: the reticle, the shadow ring and the black surround are all drawn on a square
+  `ScopeLensSize` of the screen height across, centred on the aim point, so they move together
+  with the kick and the sway and the lens mesh only clips them. The shadow used to sit on the lens
+  mesh; a kick then showed the picture past the reticle's edge on the reticles that ship without a
+  black border. The aim point is the gun base's `GetAimVector` (eye angles plus twice the view
+  punch), the vector the shot is fired along.
 * **Outside the frame**: where the magnified window falls past the captured screen the shader
   paints black instead of the clamped edge pixels (a hard kick or a wide sway showed the border).
 * **In the shader**: exit pupil (bright disc centred on the eyepiece, so the shadow moves with
@@ -542,6 +548,15 @@ into `MovementPoseWalk` / `MovementPoseSprint` and `SWEP:GetMovementPose`
 start, and sprints to the model's top. Blending part of the run layer into plain walking (tried
 first) reads as "starting to sprint" on every gun; do not. Aiming multiplies the pose by
 `1 + IronsightWalkBobbingStrength` (0.75 on most guns), as the hand port did.
+
+## Hybrid reload (`mcv_hybrid_reload`)
+
+Rifles whose model has both the stripper-clip reload (`ACT_VM_RELOAD` / `ACT_VM_RELOADEMPTY`) and
+the round-by-round set (`ACT_SHOTGUN_RELOAD_START`, `ACT_VM_RELOAD_INSERT`,
+`ACT_SHOTGUN_RELOAD_FINISH`) get `HybridReloadCapable` from the generator (Kar98k, silenced
+Kar98k, Springfield, Vz.24). With the server convar on (default 1) a partly loaded rifle tops up
+one round at a time and the clip is used only when empty; at 0 every reload is the clip, as in
+the game. The old `HybridReload` flag (dummied out in 2024) is gone.
 
 ## Burst fire
 

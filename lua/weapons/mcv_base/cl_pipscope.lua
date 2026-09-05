@@ -18,10 +18,10 @@ local HAVE_SHADER = !lensmat:IsError()
 SWEP.ScopeLensMaterial = nil
 
 // Look of the lens; all static, sent to the shader when the weapon is deployed and aimed.
-SWEP.ScopePupilSlide = 0       // how far the bright disc slides per unit the aim point is off screen centre (0: the shadow stays on the eyepiece, only the reticle follows the aim point)
+SWEP.ScopePupilSlide = 0       // unused since the shadow is drawn on the reticle plane; kept for the VMT constant
 SWEP.ScopeLensSize = 0.55      // lens diameter on screen as a fraction of its height (the eyepiece offsets are tuned to this)
 SWEP.ScopeShadowStrength = 1   // 0 disables the exit pupil and tube rim
-SWEP.ScopeShadowSize = 0.84    // clear picture diameter, fraction of the lens
+SWEP.ScopeShadowSize = 0.84    // clear picture diameter, fraction of the reticle plane (the plane is ScopeLensSize of the screen height, centred on the aim point)
 SWEP.ScopeShadowSoftness = 0.1
 SWEP.ScopeDistortion = -0.12   // barrel distortion (negative pulls the edge in)
 SWEP.ScopeAberration = 0.006   // chromatic aberration, lens widths
@@ -96,7 +96,7 @@ function SWEP:UpdateScopeAxis(vm)
     // itself takes most of the punch back out (cl_camera.lua), so the point moves across the
     // lens with each kick and settles as the punch decays.
     local owner = self:GetOwner()
-    local fwd = self:GetAimAngle():Forward()
+    local fwd = self:GetAimVector() // the gun base's: eye angles plus twice the view punch
     local scr = (owner:EyePos() + fwd * 4096):ToScreen()
     local x, y = scr.x / ScrW(), scr.y / ScrH()
     if !scr.visible or x != x or y != y then x, y = 0.5, 0.5 end

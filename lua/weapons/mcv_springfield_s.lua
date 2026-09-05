@@ -43,6 +43,7 @@ SWEP.Firemodes = {
 
 SWEP.LastShotAnimation = false
 SWEP.MagInClip = true
+SWEP.HybridReloadCapable = true // clip when empty, one round at a time when partly loaded (mcv_hybrid_reload)
 SWEP.ShotgunReload = false // clip reload (reload / reload_empty); the single-round animations stay unused, as on the Kar98
 SWEP.ShotgunReloadEmptyStartAnimation = false
 SWEP.PlayCycleAnimation = true

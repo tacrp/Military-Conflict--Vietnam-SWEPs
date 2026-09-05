@@ -82,4 +82,6 @@ NOTE: Please do not resort to using "snap" to fix this. "snap" should only be us
 - [x] M9A1 flamethrower still walked into its sprint pose: its script has no viewmodel key, so the fixer never derived its run layer range (fallback to the lua's ViewModel; 80-160 like the LPO-50)
 - [x] Dual Blackhawks look wrong when sprinting: the run layer moves only the root gun base bones and the game's IK dragged the hands along; the Blackhawk is the one dual whose gun meshes sit on those bones (the others' `Base` is a dummy). Override SMD holds them still; model recompiled
 - [x] Scope reticle did not follow the view punch: it is drawn at the shot direction (aim angle including the punch) now; the lens paints black outside the captured frame instead of showing the border
+- [x] Scope: reticle, shadow ring and black surround drawn on a plane centred on the shot's aim point (gun base GetAimVector, twice the punch); shadow no longer sits on the lens mesh
+- [x] Hybrid reload back as a convar (`mcv_hybrid_reload`) on the stripper-clip rifles that have single-round animations
 

@@ -22,7 +22,7 @@ function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
     end
 
     if displayRoundsToLoad then
-        if (self.ShotgunReload or (self.HybridReload and self:Clip1() > 0)) and self:GetReloading() and self:GetEmptyReload() then
+        if (self.ShotgunReload or (self:GetHybridReload() and self:Clip1() > 0)) and self:GetReloading() and self:GetEmptyReload() then
             if self.MagInClip then
                 local bullets_to_load = self:Clip1()
 

@@ -1,3 +1,9 @@
+// Round-by-round top-up on a stripper-clip rifle: the model must have the animations and the
+// server convar must be on
+function SWEP:GetHybridReload()
+    return self.HybridReloadCapable and MCV.HybridReload()
+end
+
 function SWEP:Reload()
     if self:StillWaiting() then return end
     if !self:GetOwner():KeyPressed(IN_RELOAD) then return end
@@ -17,7 +23,7 @@ function SWEP:Reload()
 
     self:GetOwner():DoAnimationEvent(self.ReloadGesture)
 
-    if self.ShotgunReload or (self.HybridReload and self:Clip1() > 0) then
+    if self.ShotgunReload or (self:GetHybridReload() and self:Clip1() > 0) then
         if self.ShotgunReloadEmptyStartAnimation and self:Clip1() == 0 then
             // locked like the other start: unlocked, the first insert cut it off on its first
             // frame (Gyrojet, Vz.24: "no empty reload start animation")
@@ -164,7 +170,7 @@ function SWEP:Think_Reload()
                         self:RestoreClip(self.ShotgunReloadRounds)
                     end
                 end
-            elseif self.ShotgunReload or (self.HybridReload and self:Clip1() > 0) then
+            elseif self.ShotgunReload or (self:GetHybridReload() and self:Clip1() > 0) then
                 if self:GetEndReload() or self:Clip1() >= (self:GetEmptyReload() and self.Primary.ClipSize or self:GetClip1Capacity()) or (!self:GetInfiniteAmmo() and self:Ammo1() == 0) then
                     // a reload that started empty ends by chambering (the model's ACT_SHOTGUN_PUMP:
                     // reload_endpump) when it has one; the plain finish otherwise
@@ -179,7 +185,7 @@ function SWEP:Think_Reload()
                         self:SetEmptyReload(false)
                     end
                 else
-                    self:PlayAnimation((self.HybridReload or self.ShotgunAltReload) and ACT_VM_RELOAD_INSERT or ACT_VM_RELOAD, 1, true, true)
+                    self:PlayAnimation((self:GetHybridReload() or self.ShotgunAltReload) and ACT_VM_RELOAD_INSERT or ACT_VM_RELOAD, 1, true, true)
 
                     self:RestoreClip(self.ShotgunReloadRounds)
                 end

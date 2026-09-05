@@ -1,14 +1,14 @@
 // Scope lens: screen reprojection, entirely in the shader.
 //
 // The lens submaterial samples the frame captured before the viewmodel was drawn (the world
-// only) and magnifies it around the point where the scope axis meets the screen (A, from Lua
-// each frame: the muzzle direction projected, so it follows the gun's sway). No second render
-// of the world. The pixel at A shows exactly what lies behind it; everything else moves in by
-// the magnification. On top, in lens coordinates: the reticle (second texture), an exit pupil
-// that slides against the axis offset from the screen centre, the eyepiece tube rim, barrel
+// only) and magnifies it around the point where the shot goes (A, from Lua each frame: the
+// gun base's aim vector projected, so it follows the kick and the sway). No second render of
+// the world. The pixel at A shows exactly what lies behind it; everything else moves in by the
+// magnification. On top, on a reticle plane centred on A: the reticle (second texture), the
+// shadow ring and the black surround; in lens coordinates: the eyepiece tube rim, barrel
 // distortion, chromatic aberration and edge blur.
 //
-//   c0: x 1/magnification   y pupil slide per unit of axis offset   z pupil radius (lens units)   w pupil softness
+//   c0: x 1/magnification   y (unused)                             z shadow radius (reticle plane units, 0.5 = its edge)   w shadow softness
 //   c1: x barrel distortion y chromatic aberration                  z edge blur                   w tube radius
 //   c2: x tube softness     y brightness                            z screen aspect (w/h)         w reticle strength
 //   c3: x, y scope axis on screen (0..1, y down)   z debug (1: show lens uv, 2: solid red)   w lens diameter on screen (fraction of height)
@@ -63,23 +63,27 @@ float4 main(PS_INPUT frag) : COLOR {
     float2 fuv = float2(base.x / aspect, base.y);
     col *= step(0.0, fuv.x) * step(fuv.x, 1.0) * step(0.0, fuv.y) * step(fuv.y, 1.0);
 
-    // reticle: centred on the aim point on screen (not on the lens mesh, which sways), sized to
-    // the lens diameter; opaque where the crosshair lines are
-    float2 ruv = 0.5 + (Ps - As) / max(C3.w, 1e-3);
-    float ret = tex2D(RETICLE, ruv).a * C2.w;
-    ret *= step(0.0, ruv.x) * step(ruv.x, 1.0) * step(0.0, ruv.y) * step(ruv.y, 1.0);
+    // The reticle plane: a square C3.w of the screen height across, centred on the aim point
+    // (where the shot goes), so the reticle, the shadow and the black surround all move
+    // together with the kick and the sway; the lens mesh only clips them.
+    float2 pl = (Ps - As) / max(C3.w, 1e-3);
+    float2 ruv = 0.5 + pl;
+    float inplane = step(0.0, ruv.x) * step(ruv.x, 1.0) * step(0.0, ruv.y) * step(ruv.y, 1.0);
+
+    // the shadow: the far end of the tube, a dark ring closing in from the plane's edge, drawn
+    // over the picture; everything past it is black (several reticle textures have no black
+    // border of their own)
+    float dp = length(pl);
+    float pupil = 1.0 - smoothstep(C0.z - C0.w, C0.z, dp);
+    col *= pupil * inplane;
+
+    // reticle on top, opaque where the crosshair lines are, inside the plane only
+    float ret = tex2D(RETICLE, ruv).a * C2.w * inplane;
     col *= 1.0 - ret;
 
-    // exit pupil: the far end of the tube seen through the eyepiece. It is centred on the
-    // lens (moves with the gun); C0.y can slide it against the aim point's offset from the
-    // screen centre, but that reads as the shadow wandering and is off by default.
-    float2 off = As - float2(0.5 * aspect, 0.5);
-    float dp = length(d + off * C0.y);
-    float pupil = 1.0 - smoothstep(C0.z - C0.w, C0.z, dp);
-
-    // eyepiece tube rim
+    // eyepiece tube rim (the physical lens edge, in lens coordinates)
     float tube = 1.0 - smoothstep(C1.w - C2.x, C1.w, r);
 
-    col *= min(pupil, tube) * C2.y;
+    col *= tube * C2.y;
     return float4(col, 1.0);
 }

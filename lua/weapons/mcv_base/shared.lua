@@ -75,7 +75,10 @@ SWEP.TriggerDelayTime = 0.25
 
 SWEP.ShotgunReload = false
 SWEP.ShotgunAltReload = false // Clip-loading rifles use this set of anims for bullet loading
-SWEP.HybridReload = false
+// The model has a clip reload and round-by-round loading animations (Kar98k, Springfield, Vz.24):
+// with mcv_hybrid_reload 1 a partly loaded rifle tops up one round at a time and the clip is
+// used only when empty. Set by the generator from the model's activities (GetHybridReload()).
+SWEP.HybridReloadCapable = false
 SWEP.HasEmptyReload = true
 SWEP.ShotgunReloadRounds = 1
 
