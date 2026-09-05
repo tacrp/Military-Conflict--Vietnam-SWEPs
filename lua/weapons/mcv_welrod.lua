@@ -37,7 +37,7 @@ SWEP.Num = 1
 SWEP.RangeModifier = 0.715
 
 SWEP.Firemodes = {
-    MCV.FIREMODE_SEMI
+    MCV.FIREMODE_BOLT,
 }
 
 SWEP.LastShotAnimation = false
@@ -76,7 +76,8 @@ SWEP.CustomAng = Angle(0, 0, 0)
 SWEP.Spread = 5
 SWEP.SpreadIronsighted = 0.75
 
-SWEP.FireRate = 300 // in rounds per minute
+SWEP.FireRate = 600 // in rounds per minute
+SWEP.PlayCycleAnimation = true
 
 SWEP.CrosshairMinDistance = 4
 SWEP.CrosshairDeltaDistance = 4
@@ -141,7 +142,7 @@ SWEP.EjectBrassType = 12
 SWEP.EjectBrassTrail = "vietnam_weaponeffect_shelleject_trail"
 SWEP.EjectBrassParticle = "vietnam_weaponeffect_shelleject_side"
 
-SWEP.TracerParticle = "vietnam_tracer_silenced_primary"
+SWEP.TracerParticle = ""
 
 SWEP.TracerRandomness = 4
 SWEP.TracerFrequency = 1

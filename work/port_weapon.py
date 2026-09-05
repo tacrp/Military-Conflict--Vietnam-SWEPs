@@ -369,6 +369,16 @@ def qc_facts(path):
     f["sequences"] = re.findall(r'^\$sequence\s+"([^"]+)"', src, re.M)
     f["poseparams"] = re.findall(r'^\$poseparameter\s+"([^"]+)"', src, re.M)
     f["hammer_events"] = "hammerpos" in src
+    # which hammerpos value the cycle animation (bolt pull / pump) carries: that is the event that
+    # must release the action. Shotguns have shoot = 0 / pump = 1, bolt rifles shoot = 1 / bolt = 0.
+    f["cycle_hammerpos"] = None
+    for m in re.finditer(r'\$sequence\s+"[^"]+"\s*\{(.*?)\n\}', src, re.S):
+        body = m.group(1)
+        if re.search(r'activity\s+"(ACT_VM_RELOAD_INSERT_PULL|ACT_SHOTGUN_PUMP)"', body):
+            ev = re.findall(r'hammerpos (\d)', body)
+            if ev:
+                f["cycle_hammerpos"] = int(ev[-1])
+                break
     # belt / clip bullets modelled as bodygroups "bullet01".."bulletNN": their indices in bodygroup order
     f["bullet_bodygroups"] = [i for i, b in enumerate(f["bodygroups"]) if re.match(r'bullet\d+$', b.lower())]
     for m in re.finditer(r'^\$sequence\s+"([^"]+)"\s*\{(.*?)^\}', src, re.S | re.M):
@@ -396,6 +406,17 @@ REUSE_KEYS = ("PrintName", "FireRate", "ScopeMaterial", "HasScope", "AdjustableS
               "SightedViewModelFOV", "MuzzleParticle", "MuzzleParticle3rdPerson", "MuzzleParticleIronsighted",
               "RTScopeMaterialIndex", "IronsightSpeedScale", "InvertAnimationHammer", "AnimationHandlesHammer",
               "RifleGrenadeForce", "SoundGrenadeShot")
+
+def shoot_anim_seconds(vm):
+    """Length of the model's primary shot animation from the OG decompile (30 fps), or None."""
+    for a in ("shoot1_a", "shoot_a", "shoot_hammer_a"):
+        p = os.path.join(HERE, "MCV_SMD_OG", "weapons", vm, vm + "_anims", a + ".smd")
+        if os.path.isfile(p):
+            frames = open(p, encoding="utf-8", errors="replace").read().count("\ntime ")
+            if frames > 1:
+                return frames / 30.0
+    return None
+
 
 def sight_offsets(S):
     """IronsightPos / IronsightAng / CustomPos / CustomAng lua values from the script's viewmodel
@@ -426,6 +447,11 @@ def sight_offsets(S):
     if num(S.get("ScopeLensFov")):
         out["ScopeFOV"] = fmt(num(S.get("ScopeLensFov")))
         out["ScopeFOV2"] = fmt(num(S.get("ScopeLensFov2")) or num(S.get("ScopeLensFov")))
+    if num(S.get("BulletSpreadDegreesBipod")):
+        out["SpreadBipod"] = fmt(num(S.get("BulletSpreadDegreesBipod")))
+        out["SpreadBipodIronsighted"] = fmt(num(S.get("BulletSpreadDegreesBipodIronsighted")) or num(S.get("BulletSpreadDegreesBipod")))
+    if S.get("isSupressed") == "1":
+        out["TracerParticle"] = '""'
     return out
 
 def bodygroups_string(qc_bodygroups, S):
@@ -788,7 +814,11 @@ def generate(script_path, args):
     # ---- fire modes ----------------------------------------------------------------------
     modes = [m for m in S.get("SupportedFireModes", "Semi").split("+") if m]
     is_revolver = wtype == "Revolver" or "revolver_firemode_pose" in qc["poseparams"]
-    is_bolt = "ACT_VM_RELOAD_INSERT_PULL" in acts and wtype in ("BoltActionRifle", "SniperRifle", "Carbine", "BattleRifle", "Rifle") and "Auto" not in modes and "ACT_SHOTGUN_PUMP" not in acts
+    # a cycle animation on anything that is not automatic is a manually operated action; the
+    # Welrod (Pistol) belongs here too. "ManualAction" "1" in an override forces it for models
+    # whose shoot animation contains the cycling (3-round Vietcong pistol).
+    is_bolt = ("ACT_VM_RELOAD_INSERT_PULL" in acts and wtype in ("BoltActionRifle", "SniperRifle", "Carbine", "BattleRifle", "Rifle", "Pistol") and "Auto" not in modes and "ACT_SHOTGUN_PUMP" not in acts) \
+        or S.get("ManualAction") == "1"
     is_pump = "ACT_VM_RELOAD_INSERT_PULL" in acts and wtype in ("Shotgun", "GrenadeLauncher")
     is_volley = "ACT_VM_RECOIL1" in acts
     if is_revolver and "ACT_VM_HAULBACK" in acts:
@@ -811,11 +841,22 @@ def generate(script_path, args):
 
     # ---- fire rate -------------------------------------------------------------------------
     firerate = num(S.get("FireRate"), 0)
+    cycle = "ACT_VM_RELOAD_INSERT_PULL" in acts and (is_bolt or is_pump or ("Auto" not in modes and wtype in ("Shotgun", "BoltActionRifle")))
     if reuse("FireRate"):
         firerate = reuse("FireRate")
-    elif firerate < 100:  # the game stores a cadence cap for semi-auto, not RPM
+    elif cycle:
+        # manually operated action with its own cycle animation: the cycle (NeedCycle, released
+        # by the hammerpos event) is the delay between shots, not the fire rate; the script's
+        # 40-100 RPM would add a dead wait on top of the bolt/pump animation
+        firerate = 600
+    elif firerate < 20:
         firerate = 120 if (is_bolt or is_pump) else (250 if is_revolver else 300)
-        warnings.append("FireRate %s in script is not RPM; using %d" % (S.get("FireRate"), firerate))
+        warnings.append("FireRate %s in script; using %d" % (S.get("FireRate"), firerate))
+    if S.get("ManualAction") == "1":
+        # the shot animation carries the manual cycling: one shot per animation
+        secs = shoot_anim_seconds(vm)
+        if secs:
+            firerate = min(firerate, round(60 / secs, 1))
 
     # ---- flags from the QC -------------------------------------------------------------------
     # The script is authoritative for what the weapon *has*; the model often carries animations for
@@ -853,8 +894,6 @@ def generate(script_path, args):
     empty_reload = "ACT_VM_RELOADEMPTY" in acts
     # clip-loaded rifles (SKS, Kar98, M40...) blend their reload on ammo_fraction so the clip empties visibly
     mag_in_clip = qc["ammo_blend_reload"]
-    cycle = "ACT_VM_RELOAD_INSERT_PULL" in acts and (is_bolt or is_pump or ("Auto" not in modes and wtype in ("Shotgun", "BoltActionRifle")))
-
     has_akimbo = os.path.isdir(os.path.join(HERE, "MCV_SMD_OG", "weapons", "v_dual_" + vm[2:])) or os.path.isfile(os.path.join(args.scripts_dir, "weapon_dual_%s.txt" % name))
 
     # Hand-tuned gameplay decisions in an existing lua file win over the heuristics above
@@ -1012,11 +1051,12 @@ def generate(script_path, args):
         if shotgun_reload or "ACT_SHOTGUN_RELOAD_START" in acts:
             A(line("ShotgunReload", "true"))
     if qc["hammer_events"] and (cycle or shotgun_reload):
-        # The game's animations set "hammerpos 1" when the shot lands and "hammerpos 0" once the
-        # bolt / pump has cycled; the base reads that the other way round, so every game model
-        # needs the inverted flag or the shot itself releases the action (bolt guns fire semi-auto).
+        # The base releases the action on "hammerpos 1" (or on 0 with the inverted flag). Bolt
+        # rifles put 1 on the shot and 0 on the bolt pull, pump shotguns 0 on the shot and 1 on
+        # the pump; whichever the cycle animation carries is the one that must count, otherwise
+        # the shot itself releases the action and the gun fires semi/full-auto.
         A(line("AnimationHandlesHammer", "true"))
-        A(line("InvertAnimationHammer", "true"))
+        A(line("InvertAnimationHammer", "false" if qc.get("cycle_hammerpos") == 1 else "true"))
     A(line("NoEjectOnShoot", fmt(eject_rule(qc, is_revolver, is_bolt, is_pump, wtype == "RocketLauncher" or name in SHOOT_ENTITY))))
     if has_akimbo and name in SA_DUAL_RELOAD:
         A(line("AkimboDualSingleActionReload", "true"))

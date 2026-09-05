@@ -18,7 +18,8 @@ local HAVE_SHADER = !lensmat:IsError()
 SWEP.ScopeLensMaterial = nil
 
 // Look of the lens; all static, sent to the shader when the weapon is deployed and aimed.
-SWEP.ScopePupilSlide = 2       // how far the bright disc slides per unit the lens centre is off screen centre
+SWEP.ScopePupilSlide = 0       // how far the bright disc slides per unit the aim point is off screen centre (0: the shadow stays on the eyepiece, only the reticle follows the aim point)
+SWEP.ScopeLensSize = 0.55      // lens diameter on screen as a fraction of its height (the eyepiece offsets are tuned to this)
 SWEP.ScopeShadowStrength = 1   // 0 disables the exit pupil and tube rim
 SWEP.ScopeShadowSize = 0.84    // clear picture diameter, fraction of the lens
 SWEP.ScopeShadowSoftness = 0.1
@@ -54,7 +55,8 @@ end
 function SWEP:ApplyScopeMaterial()
     if !HAVE_SHADER then return end
     local strength = self.ScopeShadowStrength
-    lensmat:SetFloat("$c0_x", self:GetScopeFOV() / self.IronsightFov)
+    lensmat:SetFloat("$c0_x", self:GetScopeFOV() / self:GetScopeWorldFov())
+    lensmat:SetFloat("$c3_w", self.ScopeLensSize)
     lensmat:SetFloat("$c0_y", self.ScopePupilSlide)
     lensmat:SetFloat("$c0_z", strength > 0 and self.ScopeShadowSize / 2 or 4)
     lensmat:SetFloat("$c0_w", self.ScopeShadowSoftness)
@@ -102,6 +104,22 @@ function SWEP:UpdateScopeAxis(vm)
             if math.abs(dot) > math.abs(bestdot) then best, bestdot = a, dot end
         end
         fwd = bestdot < 0 and -best or best
+        // The attachment carries a fixed tilt of its own (the StG44's muzzle sits 0.9 degrees
+        // off, 49 px at 1600x900) that must not count as sway: the rest direction follows
+        // the reading slowly, and only the fast part (walk bob, recoil, breathing) is used.
+        local _, rel = WorldToLocal(vector_origin, fwd:Angle(), vector_origin, eyeang)
+        rel:Normalize()
+        local rest = self.ScopeAxisRest
+        if !rest or self:GetSightAmountVisual() < 0.99 then
+            rest = rel
+        else
+            local t = math.Clamp(FrameTime() * 1.5, 0, 1)
+            rest = Angle(rest.p + math.NormalizeAngle(rel.p - rest.p) * t, rest.y + math.NormalizeAngle(rel.y - rest.y) * t, 0)
+        end
+        self.ScopeAxisRest = rest
+        local sway = Angle(math.NormalizeAngle(rel.p - rest.p), math.NormalizeAngle(rel.y - rest.y), 0)
+        local _, ang = LocalToWorld(vector_origin, sway, vector_origin, eyeang)
+        fwd = ang:Forward()
     end
     local scr = (owner:EyePos() + fwd * 4096):ToScreen()
     local x, y = scr.x / ScrW(), scr.y / ScrH()

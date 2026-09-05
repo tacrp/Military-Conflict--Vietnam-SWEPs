@@ -22,7 +22,8 @@ import port_weapon as pw  # noqa: E402
 
 ADDON = pw.ADDON
 SCRIPTS = os.path.join(HERE, "cscripts")
-KEYS = ("IronsightPos", "IronsightAng", "CustomPos", "CustomAng", "ScopeFOV", "ScopeFOV2", "BodyGroups")
+KEYS = ("IronsightPos", "IronsightAng", "CustomPos", "CustomAng", "ScopeFOV", "ScopeFOV2", "BodyGroups",
+        "SpreadBipod", "SpreadBipodIronsighted", "TracerParticle")
 
 
 def set_line(src, key, value):
@@ -32,7 +33,7 @@ def set_line(src, key, value):
     if not m:
         return src, False, False
     old = re.sub(r'\s*(//|--).*$', '', m.group(2)).strip()
-    if old == value:
+    if value is None or old == value:
         return src, False, True
     return src[:m.start()] + m.group(1) + value + src[m.end():], True, True
 
@@ -84,6 +85,14 @@ def main():
                     if ins:
                         touched = True
                         report.append("CustomAng added")
+                elif key in ("SpreadBipod", "SpreadBipodIronsighted", "TracerParticle"):
+                    anchor = "TracerFrequency" if key == "TracerParticle" else "SpreadIronsighted"
+                    src, ins, _ = set_line(src, anchor, None)  # probe
+                    m = re.search(r'^SWEP\.%s\s*=.*$' % anchor, src, re.M)
+                    if m:
+                        src = src[:m.end()] + "\nSWEP.%s = %s" % (key, so[key]) + src[m.end():]
+                        touched = True
+                        report.append("%s added" % key)
                 else:
                     report.append("%s missing" % key)
                 continue

@@ -2,14 +2,18 @@ function SWEP:PrimaryAttack()
     if self:StillWaiting() then return end
     if self:GetNeedCycle() then return end
 
-    if self.MustBipod and !self:GetBipod() then return end
-
     local owner = self:GetOwner()
 
+    // bash with USE + fire; not while deployed on the bipod (the PTRD can bash undeployed
+    // even though it only fires deployed)
     if owner:KeyDown(IN_USE) then
-        self:Bash()
+        if !self:GetBipod() then
+            self:Bash()
+        end
         return
     end
+
+    if self.MustBipod and !self:GetBipod() then return end
 
     if self:GetGrenadeLauncher() then
         self:RifleGrenadeAttack()
@@ -163,9 +167,20 @@ function SWEP:FireAnimationEvent( pos, ang, event, name )
     end
 end
 
+function SWEP:GetAimVector()
+    return (self:GetOwner():EyeAngles() + self:GetOwner():GetViewPunchAngles() * 2):Forward()
+end
+
 function SWEP:GetSpread()
     local sa = self:GetSightAmount()
     local spread = self.Spread
+    local sighted = self.SpreadIronsighted
+
+    // a deployed bipod uses the game's bipod spreads (BulletSpreadDegreesBipod*)
+    if self:GetBipod() and self.SpreadBipod then
+        spread = self.SpreadBipod
+        sighted = self.SpreadBipodIronsighted or self.SpreadBipod
+    end
 
     local owner = self:GetOwner()
     local move = math.min(owner:GetVelocity():Length() / 273, 1)
@@ -178,7 +193,7 @@ function SWEP:GetSpread()
         spread = spread * Lerp(move, 1, self.StandMoveSpreadMultiplier)
     end
 
-    spread = Lerp(sa, spread, self.SpreadIronsighted)
+    spread = Lerp(sa, spread, sighted)
 
     local fm = self:GetFiremodeValue()
 
@@ -261,6 +276,12 @@ function SWEP:BulletAttack()
         num = num * math.min(self:Clip1(), self.VolleyCount)
     end
 
+    // The game's tracer particles instead of the stock tracer. Drawn by the shooter's own client
+    // from the viewmodel muzzle; the server sends everyone else the world model's.
+    local tracer = self.TracerParticle
+    local freq = math.max(self.TracerFrequency or 1, 1)
+    local shot = 0
+
     owner:FireBullets({
         Damage = self.DamageGeneric,
         Num = num,
@@ -268,8 +289,20 @@ function SWEP:BulletAttack()
         Dir = self:GetAimVector(),
         Spread = Vector(spread, spread, spread),
         Attacker = owner,
-        TracerNum = self.TracerFrequency,
+        Tracer = 0,
         Callback = function(attacker, tr, dmginfo)
+            shot = shot + 1
+            if tracer and tracer != "" and shot % freq == 0 and !tr.StartSolid then
+                if CLIENT then
+                    if IsFirstTimePredicted() then
+                        util.ParticleTracerEx(tracer, self:GetTracerOrigin(), tr.HitPos, false, self:EntIndex(), 0)
+                    end
+                elseif !game.SinglePlayer() then
+                    SuppressHostEvents(owner)
+                    util.ParticleTracerEx(tracer, self:GetTracerOrigin(), tr.HitPos, false, self:EntIndex(), 0)
+                    SuppressHostEvents(NULL)
+                end
+            end
             local dmg = dmginfo:GetDamage()
             local range = (tr.HitPos - tr.StartPos):Length()
 

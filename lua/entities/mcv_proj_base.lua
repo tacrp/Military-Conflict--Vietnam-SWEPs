@@ -68,6 +68,10 @@ function ENT:Initialize()
             self:PhysicsInitSphere(self.CollisionSphere)
         else
             self:PhysicsInit(SOLID_VPHYSICS)
+            // the game's rocket / bolt models ship without a .phy: a small sphere then
+            if !IsValid(self:GetPhysicsObject()) then
+                self:PhysicsInitSphere(self.FallbackRadius or 2)
+            end
         end
         self:SetMoveType(MOVETYPE_VPHYSICS)
         self:SetSolid(SOLID_VPHYSICS)

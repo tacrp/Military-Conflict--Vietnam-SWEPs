@@ -21,6 +21,8 @@ function SWEP:CalcView(ply, pos, ang, fov)
 
     fov = fov - rec
 
+    ang = ang - (ply:GetViewPunchAngles() * 0.75)
+
     return pos, ang, fov
 end
 

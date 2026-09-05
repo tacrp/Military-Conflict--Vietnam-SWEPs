@@ -721,7 +721,11 @@ def make_len_variant(qc, ctx, anim_name, nframes, created):
     if key in created:
         return created[key]
     new_name = "%s__f%d" % (anim_name, nframes)
-    lines = [l for l in src.lines if not l.startswith("numframes") and l != "loop"]
+    # The frame count is meant at 30 fps (a 60-frame base is two seconds). Static poses come
+    # out of Crowbar as "fps 1" (the PTRD's deploy_a: 5 frames), and a 60-frame variant at
+    # 1 fps is a one-minute base, which stretched the PTRD's deployed shot to a minute.
+    lines = [l for l in src.lines if not l.startswith("numframes") and not l.startswith("fps") and l != "loop"]
+    lines.insert(0, "fps 30")
     lines.append("numframes %d" % nframes)
     nb = Block("animation", new_name, src.path, lines)
     qc.insert_after(src, nb)

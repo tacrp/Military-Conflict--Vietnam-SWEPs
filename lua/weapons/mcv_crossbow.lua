@@ -134,12 +134,12 @@ SWEP.SoundNearlyEmpty = "MCV_Weapon_Generic.NearlyEmptyClick"
 SWEP.SoundEmpty = "MCV_Weapon_Generic.ClipEmpty_09"
 
 // Particles (the game's own systems; particles/*.pcf and their materials ship with the addon)
-SWEP.MuzzleParticle = "vietnam_muzzleflash_flaregun_type1_fp"
-SWEP.MuzzleParticleSmoke = "vietnam_muzzleflash_flaregun_type1_fp_smoke"
-SWEP.MuzzleParticleIronsighted = "vietnam_muzzleflash_flaregun_type1_fp_is"
-SWEP.MuzzleParticleIronsightedSmoke = "vietnam_muzzleflash_flaregun_type1_fp_is_smoke"
+SWEP.MuzzleParticle = ""
+SWEP.MuzzleParticleSmoke = ""
+SWEP.MuzzleParticleIronsighted = ""
+SWEP.MuzzleParticleIronsightedSmoke = ""
 
-SWEP.MuzzleParticle3rdPerson = "vietnam_muzzleflash_flaregun_type1_tp"
+SWEP.MuzzleParticle3rdPerson = ""
 
 SWEP.EjectBrassType = 0
 SWEP.EjectBrassTrail = ""

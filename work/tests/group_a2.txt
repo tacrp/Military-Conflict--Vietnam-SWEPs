@@ -1,0 +1,22 @@
+god
+strip
+ang 0 0 0
+give mcv_rpd
+wait 1.5
+key +duck
+ang 50 0 0
+wait 0.5
+tap +use 0.1
+wait 1.5
+lua local w = ply:GetActiveWeapon() print("[a2] rpd bipod", tostring(w:GetBipod()), "spread", w:GetSpread(), "canbipod", tostring(w:CanBipod()))
+key -duck
+ang 0 0 0
+wait 0.5
+give mcv_crossbow
+wait 1.5
+lua local w = ply:GetActiveWeapon() print("[a2] crossbow clip", w:Clip1(), "ammo", w:Ammo1(), "firemode", tostring(w:GetFiremodeValue()), "entity", tostring(w.ShootEntity), "needtrigger", tostring(w:GetNeedTriggerPress()), "waiting", tostring(w:StillWaiting()))
+key +attack
+wait 0.3
+key -attack
+wait 0.3
+lua local w = ply:GetActiveWeapon() print("[a2] after fire clip", w:Clip1(), "ammo", w:Ammo1(), "bolts", #ents.FindByClass("mcv_proj_bolt"), "all proj", #ents.FindByClass("mcv_proj_*"))

@@ -3,7 +3,14 @@ SWEP.ActiveEffects = {}
 SWEP.PCFs = {}
 
 function SWEP:GetTracerOrigin()
-    local vm = self:GetOwner():GetViewModel()
+    local owner = self:GetOwner()
+    if SERVER or owner != LocalPlayer() or owner:ShouldDrawLocalPlayer() then
+        // world model muzzle
+        local id = self:LookupAttachment("muzzle")
+        local att = id > 0 and self:GetAttachment(id)
+        return att and att.Pos or owner:GetShootPos()
+    end
+    local vm = owner:GetViewModel()
     local muzz_qca = vm:LookupAttachment("muzzle")
     if self:GetAkimbo() and self:Clip1() % 2 == 0 then
         muzz_qca = vm:LookupAttachment("muzzleleft") > 0 and vm:LookupAttachment("muzzleleft") or vm:LookupAttachment("muzzle2")

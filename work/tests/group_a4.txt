@@ -1,0 +1,24 @@
+god
+strip
+ang 0 0 0
+give mcv_crossbow
+wait 1.5
+lua hook.Add("OnEntityCreated", "mcv_boltlog", function(e) if e:GetClass() == "mcv_proj_bolt" then local shoot = ply:GetShootPos() timer.Simple(0, function() if IsValid(e) then print("[a4] bolt spawn pos", tostring(e:GetPos()), "shootpos", tostring(shoot), "vel", tostring(e:GetVelocity()), "model", e:GetModel(), "solid", e:GetSolid(), "movetype", e:GetMoveType()) end end) local oi = e.Impact e.Impact = function(s, data, col) print("[a4] bolt impact with", tostring(data.HitEntity), "at", tostring(data.HitPos), "speed", data.Speed) return oi(s, data, col) end end end)
+key +attack
+wait 0.3
+key -attack
+wait 0.6
+give mcv_m72
+wait 1.5
+tap +attack 0.1
+wait 0.3
+give mcv_m1911a1
+wait 1.2
+select mcv_m72
+wait 0.1
+clua local vm = ply:GetViewModel() print("[a4] m72 quick-holster redeploy t+0.1 seq", vm:GetSequenceName(vm:GetSequence()))
+report a4_m72_quick
+wait 1.2
+clua local vm = ply:GetViewModel() print("[a4] m72 t+1.3 seq", vm:GetSequenceName(vm:GetSequence()))
+wait 2.5
+report a4_m72_late

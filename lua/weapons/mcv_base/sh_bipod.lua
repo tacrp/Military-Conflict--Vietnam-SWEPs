@@ -40,7 +40,10 @@ function SWEP:Think_Bipod()
             self:SetBipod(true)
         end
     else
-        if !self:CanBipod() then
+        // moving (or jumping) folds it, as does losing the surface
+        local moving = owner:KeyDown(IN_FORWARD) or owner:KeyDown(IN_BACK) or owner:KeyDown(IN_MOVELEFT)
+            or owner:KeyDown(IN_MOVERIGHT) or owner:KeyDown(IN_JUMP)
+        if moving or !self:CanBipod() then
             self:PlayAnimation(ACT_VM_DEPLOYED_OUT, 1, true)
             self:SetBipod(false)
         end

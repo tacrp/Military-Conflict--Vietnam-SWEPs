@@ -160,7 +160,7 @@ SWEP.NoEjectOnShoot = true
 SWEP.EjectBrassTrail = "vietnam_weaponeffect_shelleject_trail"
 SWEP.EjectBrassParticle = "vietnam_weaponeffect_shelleject_side"
 
-SWEP.TracerParticle = "vietnam_tracer_shotgun_dots_primary"
+SWEP.TracerParticle = ""
 
 SWEP.TracerRandomness = 6
 SWEP.TracerFrequency = 1

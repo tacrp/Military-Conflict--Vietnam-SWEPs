@@ -11,7 +11,7 @@
 //   c0: x 1/magnification   y pupil slide per unit of axis offset   z pupil radius (lens units)   w pupil softness
 //   c1: x barrel distortion y chromatic aberration                  z edge blur                   w tube radius
 //   c2: x tube softness     y brightness                            z screen aspect (w/h)         w reticle strength
-//   c3: x, y scope axis on screen (0..1, y down)                    z debug (1: show lens uv, 2: solid red)
+//   c3: x, y scope axis on screen (0..1, y down)   z debug (1: show lens uv, 2: solid red)   w lens diameter on screen (fraction of height)
 sampler SCREEN  : register(s0);
 sampler RETICLE : register(s1);
 float4 C0 : register(c0);
@@ -58,11 +58,16 @@ float4 main(PS_INPUT frag) : COLOR {
                 + tex2D(SCREEN, float2(base.x / aspect, base.y - bl)).rgb;
     col = lerp(col, blur * 0.25, saturate(r * 2.0));
 
-    // reticle: opaque where the crosshair lines are
-    float ret = tex2D(RETICLE, frag.uv).a * C2.w;
+    // reticle: centred on the aim point on screen (not on the lens mesh, which sways), sized to
+    // the lens diameter; opaque where the crosshair lines are
+    float2 ruv = 0.5 + (Ps - As) / max(C3.w, 1e-3);
+    float ret = tex2D(RETICLE, ruv).a * C2.w;
+    ret *= step(0.0, ruv.x) * step(ruv.x, 1.0) * step(0.0, ruv.y) * step(ruv.y, 1.0);
     col *= 1.0 - ret;
 
-    // exit pupil slides against the axis offset from the screen centre (eye off the scope axis)
+    // exit pupil: the far end of the tube seen through the eyepiece. It is centred on the
+    // lens (moves with the gun); C0.y can slide it against the aim point's offset from the
+    // screen centre, but that reads as the shadow wandering and is off by default.
     float2 off = As - float2(0.5 * aspect, 0.5);
     float dp = length(d + off * C0.y);
     float pupil = 1.0 - smoothstep(C0.z - C0.w, C0.z, dp);

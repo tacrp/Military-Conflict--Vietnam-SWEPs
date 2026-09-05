@@ -1,0 +1,64 @@
+# shooting core: pump shotguns not full-auto, Welrod cadence, bipod spread, PTRD bash, flamethrower sprint, crossbow bolt, M72 redeploy
+god
+strip
+ang 0 0 0
+give mcv_m1897
+wait 1.5
+key +attack
+wait 3
+key -attack
+wait 0.5
+report a_m1897_held3s
+give mcv_welrod
+wait 1.5
+key +attack
+wait 3
+key -attack
+wait 0.5
+report a_welrod_held3s
+give mcv_rpd
+wait 1.5
+lua local w = ply:GetActiveWeapon() print("[a] rpd spread hip", w:GetSpread(), "bipod", tostring(w:GetBipod()))
+ang 25 0 0
+wait 0.3
+tap +use 0.1
+wait 1.5
+lua local w = ply:GetActiveWeapon() print("[a] rpd spread bipod", w:GetSpread(), "bipod", tostring(w:GetBipod()), "SpreadBipod", tostring(w.SpreadBipod))
+ang 0 0 0
+give mcv_ptrd
+wait 1.5
+key +use
+tap +attack 0.1
+key -use
+wait 0.3
+report a_ptrd_bash
+wait 1.5
+give mcv_lpo50
+wait 1.5
+key +speed
+key +forward
+wait 0.4
+key +attack
+wait 0.6
+lua local w = ply:GetActiveWeapon() print("[a] flamethrower flaming while sprinting", tostring(w:IsFlaming()), "sprinting", tostring(w:GetIsSprinting()))
+key -attack
+key -forward
+key -speed
+wait 0.5
+give mcv_crossbow
+wait 1.5
+tap +attack 0.1
+wait 0.3
+lua print("[a] crossbow bolts", #ents.FindByClass("mcv_proj_bolt"), "flash particle", ply:GetActiveWeapon().MuzzleParticle)
+wait 1.5
+give mcv_m72
+wait 1.5
+tap +attack 0.1
+wait 2.5
+give mcv_m1911a1
+wait 1.5
+select mcv_m72
+wait 0.3
+report a_m72_redeploy
+wait 1.5
+report a_m72_after

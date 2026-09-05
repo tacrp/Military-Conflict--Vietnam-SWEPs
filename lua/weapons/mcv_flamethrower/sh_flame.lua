@@ -112,7 +112,7 @@ function SWEP:ThinkWeapon()
     self:Think_Sights()
 
     local wants = owner:KeyDown(IN_ATTACK) and !owner:KeyDown(IN_USE) and self:GetRoundsLeft() > 0
-        and self:GetAnimLockTime() <= CurTime() and self:GetHolsterTime() == 0
+        and self:GetAnimLockTime() <= CurTime() and self:GetHolsterTime() == 0 and !self:GetIsSprinting()
 
     if wants and !self:IsFlaming() then
         self:StartFlame()

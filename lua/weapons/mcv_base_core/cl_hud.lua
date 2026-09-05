@@ -309,7 +309,7 @@ function SWEP:DoDrawCrosshair(x, y)
     // walk bob: a figure of eight scaled by how fast the player moves
     local speed = self:GetSpeedVisual() / math.max(self.SpeedSprint, 1)
     local owner = self:GetOwner()
-    if IsValid(owner) and !owner:IsOnGround() then speed = math.max(speed, 0.6) end
+    if IsValid(owner) and !owner:IsOnGround() then speed = 0 end
     self.CrossBobPhase = (self.CrossBobPhase or 0) + ft * (6 + speed * 6) * math.min(speed * 3, 1)
     local bob = HUD.CrosshairBob * ScreenScale(1) * speed
     x = x + math.sin(self.CrossBobPhase) * bob

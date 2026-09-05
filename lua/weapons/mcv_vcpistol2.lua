@@ -38,7 +38,7 @@ SWEP.Num = 1
 SWEP.RangeModifier = 0.73
 
 SWEP.Firemodes = {
-    MCV.FIREMODE_SEMI
+    MCV.FIREMODE_BOLT,
 }
 
 SWEP.LastShotAnimation = true
@@ -77,7 +77,7 @@ SWEP.CustomAng = Angle(0, 0, 0)
 SWEP.Spread = 7.75
 SWEP.SpreadIronsighted = 3.75
 
-SWEP.FireRate = 450 // in rounds per minute
+SWEP.FireRate = 90 // in rounds per minute, the shot animation carries the manual cycling
 
 SWEP.CrosshairMinDistance = 4
 SWEP.CrosshairDeltaDistance = 4

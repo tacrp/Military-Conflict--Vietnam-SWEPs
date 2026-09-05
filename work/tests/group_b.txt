@@ -1,0 +1,35 @@
+god
+strip
+ang 0 0 0
+hud 1
+give mcv_kolos
+wait 1.5
+lua hook.Add("OnEntityCreated", "mcv_kololog", function(e) if e:GetClass() == "mcv_proj_kolos" then timer.Simple(0.15, function() if IsValid(e) then print("[b] kolos rocket alive", tostring(e:GetPos())) end end) end end)
+tap +attack 0.1
+wait 0.15
+shot b_kolos_fire
+wait 2
+give mcv_crossbow
+wait 1.5
+tap +attack 0.1
+wait 0.1
+lua print("[b] crossbow bolts in flight", #ents.FindByClass("mcv_proj_bolt"))
+wait 1.5
+give mcv_stg44_s
+wait 1.5
+key +attack2
+wait 1.5
+shot b_stg44_aim marker
+key -attack2
+wait 0.5
+give mcv_svd
+wait 1.5
+shot b_svd_unaimed
+key +attack2
+wait 1.5
+shot b_svd_aim
+key +forward
+wait 0.4
+shot b_svd_walk
+key -forward
+key -attack2

@@ -149,3 +149,15 @@ SWEP.TracerParticle = ""
 
 SWEP.TracerRandomness = 6
 SWEP.TracerFrequency = 1
+
+// A LAW is a one-shot tube: when it comes out empty with rounds left, it comes out as a fresh
+// tube (the full first-deploy animation) instead of playing the throw-away-and-new-tube reload.
+function SWEP:DeployAnimation()
+    if self:Clip1() == 0 and self:Ammo1() > 0 and !self:GetInfiniteAmmo() then
+        self:SetClip1(1)
+        self:TakeRound()
+        self:SetNeedTriggerPress(true)
+        return self:PlayAnimation(ACT_VM_READY, 1, true)
+    end
+    return self.BaseClass.DeployAnimation(self)
+end

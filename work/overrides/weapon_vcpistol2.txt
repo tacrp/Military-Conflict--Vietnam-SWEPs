@@ -1,0 +1,5 @@
+// Manually operated: the shot animation contains the cycling, so one shot per animation.
+"WeaponData"
+{
+	"ManualAction"	"1"
+}

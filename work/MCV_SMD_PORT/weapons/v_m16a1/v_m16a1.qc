@@ -458,8 +458,8 @@ $animation "deploy_a" "..\..\..\MCV_SMD_OG\weapons\v_m16a1\v_m16a1_anims\deploy_
 	numframes 60
 }
 $animation "deploy_a__f60" "..\..\..\MCV_SMD_OG\weapons\v_m16a1\v_m16a1_anims\deploy_a.smd" {
+	fps 30
 	frame 0 0
-	fps 1
 	numframes 60
 }
 

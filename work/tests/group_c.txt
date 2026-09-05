@@ -1,0 +1,64 @@
+# PTRD deployed shot speed, moving folds the bipod, bolt-action cadence (Vz.24 at 600 RPM + cycle), SVD shadow while walking
+god
+strip
+ang 0 0 0
+hud 1
+give mcv_ptrd
+wait 1.5
+key +duck
+wait 0.6
+key +use
+wait 0.3
+key -use
+wait 1.2
+lua local w = ply:GetActiveWeapon() print("[c] ptrd bipod", tostring(w:GetBipod()))
+tap +attack 0.1
+wait 0.2
+lua local vm = ply:GetViewModel() print("[c] ptrd shot seq", vm:GetSequenceName(vm:GetSequence()), "dur", vm:SequenceDuration(), "rate", vm:GetPlaybackRate(), "cycle", vm:GetCycle())
+wait 0.6
+lua local vm = ply:GetViewModel() print("[c] ptrd +0.8s seq", vm:GetSequenceName(vm:GetSequence()), "cycle", vm:GetCycle())
+wait 1.5
+key +forward
+wait 0.3
+key -forward
+lua local w = ply:GetActiveWeapon() print("[c] ptrd bipod after moving", tostring(w:GetBipod()))
+key -duck
+wait 0.5
+give mcv_vz24
+wait 1.5
+lua local w = ply:GetActiveWeapon() print("[c] vz24 clip", w:Clip1(), "FireRate", w.FireRate)
+tap +attack 0.1
+wait 0.25
+tap +attack 0.1
+wait 0.25
+tap +attack 0.1
+wait 0.25
+tap +attack 0.1
+wait 0.25
+tap +attack 0.1
+wait 0.25
+tap +attack 0.1
+wait 0.25
+tap +attack 0.1
+wait 0.25
+tap +attack 0.1
+wait 0.25
+tap +attack 0.1
+wait 0.25
+tap +attack 0.1
+wait 0.25
+tap +attack 0.1
+wait 0.25
+tap +attack 0.1
+wait 0.25
+lua local w = ply:GetActiveWeapon() print("[c] vz24 clip after 3s of tapping", w:Clip1())
+wait 1
+give mcv_svd
+wait 1.5
+key +attack2
+wait 1.5
+key +forward
+wait 0.45
+shot c_svd_walk
+key -forward
+key -attack2

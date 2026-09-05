@@ -87,10 +87,13 @@ def main():
 
         # ---- hammer ----
         if cycle and qc["hammer_events"]:
-            for key in ("AnimationHandlesHammer", "InvertAnimationHammer"):
-                if get(src, key) != "true":
-                    new = set_line(new, key, "true", after="PlayCycleAnimation")
-                    changes.append((name, key, get(src, key), "true"))
+            # release the action on the event the cycle animation carries (see port_weapon)
+            want = {"AnimationHandlesHammer": "true",
+                    "InvertAnimationHammer": "false" if qc.get("cycle_hammerpos") == 1 else "true"}
+            for key, val in want.items():
+                if get(src, key) != val:
+                    new = set_line(new, key, val, after="PlayCycleAnimation")
+                    changes.append((name, key, get(src, key), val))
 
         # ---- scope ----
         if get(src, "HasScope") == "true":

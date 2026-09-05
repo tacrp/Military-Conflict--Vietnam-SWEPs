@@ -376,7 +376,7 @@ $animation "deploy_a" "..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\deplo
 	fps 1
 }
 $animation "deploy_a__f60" "..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\deploy_a.smd" {
-	fps 1
+	fps 30
 	numframes 60
 }
 
@@ -384,7 +384,7 @@ $animation "ironsightdeploy" "..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anim
 	fps 1
 }
 $animation "ironsightdeploy__f60" "..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\ironsightdeploy.smd" {
-	fps 1
+	fps 30
 	numframes 60
 }
 

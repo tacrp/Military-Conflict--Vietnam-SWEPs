@@ -1,0 +1,27 @@
+god
+strip
+ang 0 0 0
+give mcv_crossbow
+wait 1.5
+lua MCV_BoltLog = {} hook.Add("OnEntityCreated", "mcv_boltlog", function(e) if e:GetClass() == "mcv_proj_bolt" then table.insert(MCV_BoltLog, CurTime()) timer.Simple(0.05, function() if IsValid(e) then print("[a3] bolt alive at 0.05s pos", tostring(e:GetPos()), "model", e:GetModel(), "vel", tostring(e:GetVelocity())) else print("[a3] bolt gone by 0.05s") end end) end end)
+key +attack
+wait 0.3
+key -attack
+wait 0.5
+lua print("[a3] bolts created", #MCV_BoltLog)
+give mcv_m72
+wait 1.5
+tap +attack 0.1
+wait 2.5
+give mcv_m1911a1
+wait 1.5
+select mcv_m72
+wait 0.1
+clua local vm = ply:GetViewModel() print("[a3] m72 t+0.1 seq", vm:GetSequenceName(vm:GetSequence()))
+wait 0.4
+clua local vm = ply:GetViewModel() print("[a3] m72 t+0.5 seq", vm:GetSequenceName(vm:GetSequence()))
+wait 1.0
+clua local vm = ply:GetViewModel() print("[a3] m72 t+1.5 seq", vm:GetSequenceName(vm:GetSequence()))
+give mcv_rpd
+wait 1.5
+lua local w = ply:GetActiveWeapon() print("[a3] rpd hip spread", w:GetSpread()) w:SetBipod(true) print("[a3] rpd bipod spread", w:GetSpread())

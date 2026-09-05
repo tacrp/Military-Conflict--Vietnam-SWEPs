@@ -164,6 +164,9 @@ is by design and looks right. It is the cause of the bug-list items where the po
 shorter than a shot:
 
 * RPK / TUL-1 bolt too slow when deployed: the deployed shot pose is 10 frames stretched to 60.
+* The 60 frames are meant at 30 fps. Crowbar writes static poses as `fps 1` (the PTRD's
+  `deploy_a` is 5 frames), and a 60-frame copy at 1 fps is a one-minute base: the PTRD's
+  deployed shot took a minute. `make_len_variant` now forces `fps 30` on every length variant.
 * Manual actions with wrong eject timing: the pump events were re-timed by hand for the
   stretched sequence (M1897 `MetalStart 1 -> 9`, `MetalEnd 5 -> 24`) while the eject frame was
   not.
@@ -441,10 +444,13 @@ sensitivity follows the scope magnification.
   read in PreDrawViewModel where attachments are in world space) projected 4096 units out and
   `ToScreen`, sent as `$c3_x/$c3_y`. The pixel under it shows exactly what is behind it, so the
   picture follows the gun's sway and recoil with no parallax at the centre.
-* **In the shader**: exit pupil (bright disc sliding against the axis point's offset from the
-  screen centre), tube rim, reticle from `$texture1` (the weapon's `ScopeMaterial` texture; the
-  game's crosshair VMTs are model materials, some Refract, so only the texture is read), barrel
-  distortion, chromatic aberration, edge blur. `ScopeDebug = 1` shows the lens uv, `2` solid red.
+* **In the shader**: exit pupil (bright disc centred on the eyepiece, so the shadow moves with
+  the gun; `ScopePupilSlide` can make it slide against the aim point's offset but that reads as
+  the shadow wandering and is 0), tube rim, reticle from `$texture1` drawn centred on the aim
+  point (not on the lens mesh: the crosshair shows where the shot goes while the gun sways
+  around it; the weapon's `ScopeMaterial` texture; the game's crosshair VMTs are model
+  materials, some Refract, so only the texture is read), barrel distortion, chromatic
+  aberration, edge blur. `ScopeDebug = 1` shows the lens uv, `2` solid red.
   Look constants (`ScopeShadow*`, `ScopeDistortion`, `ScopeAberration`, `ScopeEdgeBlur`,
   `ScopeBrightness`, `ReticleStrength`, `ScopePupilSlide`) are per weapon and pushed once when the
   lens is swapped in (`ApplyScopeMaterial`).
@@ -531,7 +537,7 @@ deterministic converter whose tables were derived by correlating all 141 script/
 | Primary.Ammo (GMod ammo type), Caliber | `primary_ammo` table |
 | Country | `origin` table |
 | Firemodes | `SupportedFireModes`, overridden from the model: `ACT_VM_RELOAD_INSERT_PULL` on a rifle = bolt, on a shotgun = pump, `ACT_VM_HAULBACK` on a revolver = SA/DA(/FAN), `ACT_VM_RECOIL1` adds volley |
-| FireRate | script value when it is RPM; for semi-auto the game stores a cadence cap (40-50), replaced by 300 (250 revolvers, 120 bolt/pump) |
+| FireRate | script value when it is RPM; below 20 it is a cadence cap, replaced by 300 (250 revolvers). Bolt/pump guns with a cycle animation get 600: the cycle (`NeedCycle`, released by the hammerpos event) is the delay, the script's 40-100 RPM would add a dead wait on top of it. `ManualAction` guns (cycling inside the shot animation) are capped to one shot per shot animation |
 | ClipSize / DefaultClip / Chamber | `clip_size "a/b"`, `ExtraBulletChamber` |
 | EjectBrassType | game brass id mapped by shell model to `MCV.ShellTypes` |
 | LastShotAnimation, MagInClip, PlayCycleAnimation, ShotgunReload, ShotgunAltReload, HasEmptyReload, ShotgunReloadEmptyStartAnimation, RevolverFiremodePose, AnimationHandlesHammer, RifleGrenadeIsUBGL | presence of the corresponding activities / pose parameters / events in the viewmodel QC |

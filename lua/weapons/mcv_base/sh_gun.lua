@@ -27,10 +27,19 @@ function SWEP:DeployAnimation()
     return self:PlayAnimation(ACT_VM_DRAW, 1, true)
 end
 
-// Screen FOV while aiming. A scope does not zoom the screen: its picture is rendered on the
-// lens at the scope FOV (cl_pipscope.lua), the world around it stays at the ironsight FOV.
+// Screen FOV while aiming. With a scope the screen zooms part of the way towards the scope
+// FOV (ScopeScreenZoom times it, never wider than the ironsight FOV, never below 30 degrees):
+// the lens reprojects the screen (cl_pipscope.lua), so a tighter screen gives it more pixels
+// and a sharper picture; the rest of the magnification happens in the lens.
+SWEP.ScopeScreenZoom = 2
+
+function SWEP:GetScopeWorldFov()
+    if !self.HasScope or self.OEGScope then return self.IronsightFov end
+    return math.Clamp(self:GetScopeFOV() * self.ScopeScreenZoom, 30, self.IronsightFov)
+end
+
 function SWEP:GetZoomMagnification()
-    return self.IronsightFov
+    return self:GetScopeWorldFov()
 end
 
 // Magnification the player is looking through, for the mouse sensitivity

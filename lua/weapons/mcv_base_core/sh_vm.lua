@@ -98,6 +98,7 @@ end
 
 function SWEP:GetViewModelPosition(pos, ang)
     local aim_delta = self:GetSightAmountVisual()
+    local aim_punch = self:GetOwner():GetViewPunchAngles()
 
     local offsetpos = LerpVector(aim_delta, self.CustomPos, self.IronsightPos)
     local offsetang = LerpAngle(aim_delta, self.CustomAng, self.IronsightAng)
@@ -105,6 +106,9 @@ function SWEP:GetViewModelPosition(pos, ang)
     pos:Add(ang:Right() * offsetpos.x)
     pos:Add(ang:Forward() * offsetpos.y)
     pos:Add(ang:Up() * offsetpos.z)
+
+    // offsetang.y = offsetang.y + (aim_punch.p * 0.5)
+    // offsetang.p = offsetang.p + (aim_punch.y * 0.5)
 
     ang:RotateAroundAxis(ang:Up(), offsetang.p)
     ang:RotateAroundAxis(ang:Right(), offsetang.y)

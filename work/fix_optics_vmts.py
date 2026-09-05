@@ -38,9 +38,11 @@ GLASS = '''"VertexLitGeneric"
 	"$phongfresnelranges" "[0.05 0.7 1]"
 	"$normalmapalphaenvmapmask" "1"
 	"$envmap" "env_cubemap"
-	"$envmaptint" "[0.4 0.4 0.4]"
+	"$envmaptint" "[0.5 0.5 0.5]"
 	"$envmapfresnel" "1"
-	"$translucent" "1"
+	// opaque: the glass texture's alpha is 5%, which made the eyepiece vanish when not aiming.
+	// From outside a scope's eyepiece is a dark disc with reflections.
+	"$color2" "[0.35 0.37 0.4]"
 	"$nocsm" "1"
 }
 '''

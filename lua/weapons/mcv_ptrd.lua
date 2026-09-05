@@ -77,6 +77,8 @@ SWEP.CustomAng = Angle(0, 0, 0)
 
 SWEP.Spread = 2.5
 SWEP.SpreadIronsighted = 0.25
+SWEP.SpreadBipodIronsighted = 0.15
+SWEP.SpreadBipod = 3
 
 SWEP.FireRate = 50
 

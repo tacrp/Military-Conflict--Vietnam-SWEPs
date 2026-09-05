@@ -1,0 +1,9 @@
+// The game's crossbow script borrows the flare gun's muzzle flash; a crossbow has none.
+"WeaponData"
+{
+	"MuzzleParticle"	"null"
+	"MuzzleParticle_Smoke"	"null"
+	"MuzzleParticle_Ironsighted"	"null"
+	"MuzzleParticle_IronsightedSmoke"	"null"
+	"MuzzleParticle3rdPerson"	"null"
+}
