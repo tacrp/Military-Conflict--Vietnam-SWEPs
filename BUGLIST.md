@@ -37,37 +37,37 @@ NOTE: Please do not resort to using "snap" to fix this. "snap" should only be us
 ## Reported Sep 5 2026 (after the Crowbar 0.74 recompile, shader scopes and equipment)
 
 - [x] China Lake pump animation glitches: gun position leaves the hands (same for the M870, and the M1897 / M37 did it too). The 2024 hand-edited pump animations do not fit the new rig; the game's own pump deltas are used (overrides parked in `work/MCV_SMD/disabled_pump_overrides/`)
-- [ ] M1897 and Ithaca 37 can fire full-auto
-- [ ] Kolos rockets are missing textures
+- [x] M1897 and Ithaca 37 can fire full-auto (hammer event polarity per model; they slam fire deliberately now)
+- [x] Kolos rockets are missing textures (materials copied to the paths the as-is game models ask for)
 - [x] Crosshair sway should be off in mid-air
-- [ ] Scoped weapons: while the shader lens is not drawn (not aiming) the rear lens is invisible
+- [x] Scoped weapons: while the shader lens is not drawn (not aiming) the rear lens is invisible (glass VMTs opaque)
 - [x] Scope reticle should be drawn at the aim point, not sway with the weapon model
 - [x] Scope shadow stays on the eyepiece (moves with the gun); only the reticle follows the aim point (`ScopePupilSlide = 0`)
 - [x] Welrod and the 3-round Vietcong pistol are not bolt-action; bolt-action guns must be consistently bolt-action. Bolt/pump guns now all run FireRate 600: the cycle animation is the delay (the scripts' 40-100 RPM added a dead wait on top of the bolt)
 - [x] Dual single-action revolvers: empty reload invisible and skipped (no dual empty reload animation: falls back to the reload); double-action used the sighted shoot animation when unsighted (2x3 blend grid compiled 2 wide; revolvers recompiled). Hammer state: the game itself keeps the hammer down in hammer mode and cocks it in the shot; say which model looks wrong
-- [ ] Zooming in should reduce the view FOV so the scope picture is not as blurry
-- [ ] Guns use the default GMod tracers instead of the custom ones; silenced weapons need invisible tracers
+- [x] Zooming in should reduce the view FOV so the scope picture is not as blurry (screen FOV tightens partway towards the scope FOV, `ScopeScreenZoom`)
+- [x] Guns use the default GMod tracers instead of the custom ones; silenced weapons need invisible tracers
 - [x] Crossbow has a muzzle flash and no firing entity (no flash, bolt gets a sphere physics shell since the model has no .phy); its string reverted to drawn back after firing empty because the reload's mag-in time was 0 (now 1.87 s from the animation's ammo event)
 - [x] Grenades can be thrown before the pin-pull animation finishes
 - [x] Dual pistols (semi-autos too): the akimbo pose-based animations are missing (`AkimboPoseRecoil` / `AkimboRecoilTime` now generated for every dual model with the recoil layers). Hammer problems: needs a named pistol
 - [~] Sighted walking sway: should be a little, not zero (AVT-40 zero) and not full (M2 carbine full). The walk pose is back to the hand port's (100, times 0.75 when aiming), capped under each model's run layer; the per-model difference is in the models' walk layers (the SVT-40 family's walk peaks at pose 55 and is idle again by 110, the M2 carbine's peaks at 147)
 - [x] PTRD cannot bash without the bipod and should not bash while bipodded. Moving or jumping folds the bipod.
-- [ ] Bipod accuracy should work
+- [x] Bipod accuracy should work (SpreadBipod / SpreadBipodIronsighted from the scripts)
 - [x] Lit dynamite needs its effect on the entity and the fuse sound, on the fuze attachment (the game ships no dynamite-specific fuse sound; the C4 fuse loop is used)
 - [x] Trip mine ropes should use cable/cable2
-- [ ] Flamethrowers can fire while sprinting
+- [x] Flamethrowers can fire while sprinting
 - [x] Replace Ignite() with the M202-style fire damage method (`lua/mcv/shared/sh_burn.lua`: MCV.Burn ticks DMG_BURN with the game's burning_character particle; incendiary grenades make a short fire pool)
 - [x] Smoke grenades should stop emitting and fade out, not vanish
 - [~] Pistol hammers wrong on many pistols including the Type 67. The Type 67 is a manually cycled silenced pistol in the game (boltpull after every shot, hammerpos 1 on the shot and 0 on the pull): now bolt-action like the Welrod with the hammer polarity inverted. Other pistols: the hammer lives in the animations; needs a named model
 - [x] Flare gun flares should carry their effect, not just a light (env_flare_us_trail / env_flare_trail and the ground effects)
-- [ ] StG-44 ZF-4 scope is off-centre
+- [x] StG-44 ZF-4 scope is off-centre (the muzzle attachment's fixed tilt is filtered out of the scope axis)
 - [x] Gyrojets have no empty-reload-in animation: the empty start (ACT_VM_RELOAD_INSERT_EMPTY) was played unlocked and cut off by the first insert; the empty reload now ends with the chambering animation (reload_endpump)
 - [x] Medkit does not animate back in after the self-heal out animation (draw animation plays after it); dropped boxes serve anyone within 48 units
 - [x] Ammo box only resupplies ammo boxes: it refilled itself, and a fresh gun (M16: 320 in reserve) was over the six-magazine cap so got nothing; boxes skip boxes and the cap is the gun's spawn ammo
 - [x] Binoculars use full sensitivity and should use the game's overlay (`effects/screen_overlay_binoculars_01`; zoom levels are magnifications now)
 - [x] Flamethrowers aim left while walking (animation), fine when sighted (movement pose mapping, above)
 - [x] Vz.24: no empty reload start/finish animation; partial reload bolt position wrong. Clip-fed bolt rifles reload with the clip (reload / reload_empty) like the Kar98; the generator no longer puts them on the shell path (Vz.24, Kar98 silenced, Springfield silenced)
-- [ ] M72 LAW: when deployed empty it should auto-reload with the full first-deploy animation instead of the throw-away-and-new-tube reload
+- [x] M72 LAW: when deployed empty it should auto-reload with the full first-deploy animation instead of the throw-away-and-new-tube reload
 - [x] Grenades should cook: fuse runs from the pin pull, so they explode sooner after the throw or in the hand when overcooked (force throw then instant detonation); crosshair pulses every half second while cooking; gas grenades lack GetPopped() (BaseClass recursion in the smoke grenade's SetupDataTables)
 - [x] WP grenade fire should not linger; a very short post-effect like the M202's (3 s fire pool)
 
