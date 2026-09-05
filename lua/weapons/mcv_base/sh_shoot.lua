@@ -3,7 +3,7 @@ function SWEP:PrimaryAttack()
     if self:GetNeedCycle() then return end
 
     local owner = self:GetOwner()
-    local bursting = self:GetBurstLeft() > 0 // a runaway burst finishing itself (ThinkWeapon)
+    local bursting = self:IsBursting() // a runaway burst finishing itself (ThinkWeapon)
 
     // bash with USE + fire; not while deployed on the bipod (the PTRD can bash undeployed
     // even though it only fires deployed)
@@ -23,7 +23,6 @@ function SWEP:PrimaryAttack()
 
     if self:Clip1() < 1 then
         self:SetBurstCount(0)
-        self:SetBurstLeft(0)
         self:Reload()
         return
     end
@@ -34,9 +33,10 @@ function SWEP:PrimaryAttack()
     local fm = self:GetFiremodeValue()
     local fmmult = 1
 
-    // three-round burst: the first round arms the counter, ThinkWeapon fires the rest
+    // three-round burst: a fresh pull starts counting from this round; ThinkWeapon fires the
+    // rest off BurstCount whether the trigger is held or not
     if fm == MCV.FIREMODE_BURST and !bursting then
-        self:SetBurstLeft(self.BurstRounds)
+        self:SetBurstCount(0)
     end
 
     if self:GetAkimbo() then
@@ -133,13 +133,12 @@ function SWEP:PrimaryAttack()
         self:SetNeedTriggerPress(true)
     end
 
-    if firemode == MCV.FIREMODE_BURST then
-        local left = self:GetBurstLeft() - 1
-        self:SetBurstLeft(math.max(left, 0))
-        if left <= 0 then
-            // burst over: a fresh pull is needed, after a short recovery
+    if firemode == MCV.FIREMODE_BURST and self:GetBurstCount() >= self.BurstRounds then
+        // burst over: a short recovery, and a pull still held has to be let go first (a
+        // trigger released mid-burst already counts as let go)
+        self:SetNextPrimaryFire(self:GetNextPrimaryFire() + self.BurstRecovery)
+        if owner:KeyDown(IN_ATTACK) then
             self:SetNeedTriggerPress(true)
-            self:SetNextPrimaryFire(self:GetNextPrimaryFire() + self.BurstRecovery)
         end
     end
 
@@ -427,6 +426,14 @@ function SWEP:GetFiremodeValue()
     return self.Firemodes[self:GetFiremode()]
 end
 
+// A three-round burst that has started and not finished: BurstCount is only reset once it has
+// reached BurstRounds (or the trigger is pulled afresh), so the burst survives a released trigger
+function SWEP:IsBursting()
+    if self:GetFiremodeValue() != MCV.FIREMODE_BURST then return false end
+    local n = self:GetBurstCount()
+    return n > 0 and n < self.BurstRounds
+end
+
 function SWEP:ChangeFiremode()
     if self.AdjustableScopes then
         local scopelevel = self:GetScopeLevel()
@@ -449,7 +456,7 @@ function SWEP:ChangeFiremode()
 
     if #self.Firemodes <= 1 then return end
 
-    self:SetBurstLeft(0)
+    self:SetBurstCount(0)
 
     local fm = self:GetFiremode()
 

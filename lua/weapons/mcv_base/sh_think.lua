@@ -8,18 +8,21 @@ function SWEP:ThinkWeapon()
     self:Think_Bipod()
 
     // runaway burst: the remaining rounds go out on their own, trigger or not
-    if self:GetBurstLeft() > 0 and !self:StillWaiting() then
-        if self:GetFiremodeValue() == MCV.FIREMODE_BURST and self:Clip1() > 0 and !self:GetReloading() then
+    local bursting = self:IsBursting()
+    if bursting and !self:StillWaiting() then
+        if self:Clip1() > 0 and !self:GetReloading() then
             self:PrimaryAttack()
         else
-            self:SetBurstLeft(0)
+            self:SetBurstCount(0)
         end
     end
 
     if owner:KeyReleased(IN_ATTACK) then
-        // the trigger-press flag clears, but not a burst in progress
+        // the trigger-press flag clears; the round count only when no burst is in progress
         self:SetNeedTriggerPress(false)
-        self:SetBurstCount(0)
+        if !bursting then
+            self:SetBurstCount(0)
+        end
 
         if self:GetPrimedAttack() then
             self:PlayAnimation(ACT_VM_IDLE)

@@ -535,11 +535,14 @@ first) reads as "starting to sprint" on every gun; do not. Aiming multiplies the
 ## Burst fire
 
 `MCV.FIREMODE_BURST` (scripts with `Burst` in `SupportedFireModes`: M605, T223) fires
-`BurstRounds` (3) at the gun's FireRate per trigger pull. It is a runaway burst: the first round
-arms `BurstLeft` and `ThinkWeapon` fires the rest whether or not the trigger is still held, so a
-burst cannot be paused; the burst also ignores the sprint gate and the bash key while it runs and
-stops only when the magazine empties or the weapon is switched. When the last round goes out the
-trigger must be released and pressed again (`NeedTriggerPress`) after `BurstRecovery` (0.2 s).
+`BurstRounds` (3) at the gun's FireRate per trigger pull, counted on the existing `BurstCount`
+(rounds fired on this pull). It is a runaway burst: on a burst-fire gun the release of the
+trigger does not reset `BurstCount` while it is between 1 and `BurstRounds`, and `ThinkWeapon`
+keeps calling `PrimaryAttack` until it gets there, so a burst cannot be paused; it also ignores
+the sprint gate and the bash key while it runs and stops only when the magazine empties, the mode
+changes or the weapon is switched. When the last round goes out there is a `BurstRecovery`
+(0.2 s) wait and, if the trigger is still held, `NeedTriggerPress` (a trigger let go mid-burst
+already counts as released, so the next pull starts a fresh burst at once).
 
 ## Revolver modes and slam fire
 
