@@ -15,6 +15,7 @@ SWEP.Slot = 2
 
 SWEP.ViewModel = "models/weapons/mcv/v_pm63.mdl"
 SWEP.ViewModelAkimbo = "models/weapons/mcv/v_dual_pm63.mdl"
+SWEP.AkimboPoseRecoil = true
 SWEP.WorldModel = "models/weapons/mcv/w_mas38.mdl"
 
 SWEP.BodyGroups = ""
@@ -44,8 +45,8 @@ SWEP.Firemodes = {
 
 SWEP.LastShotAnimation = false
 
-SWEP.MagInTime = 1.33
-SWEP.MagInTimeEmpty = 1.33
+SWEP.MagInTime = 1.57
+SWEP.MagInTimeEmpty = 2.37
 SWEP.MagOutTime = 0.33
 SWEP.MagOutTimeEmpty = 0.33
 

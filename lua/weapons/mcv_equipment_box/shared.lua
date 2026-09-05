@@ -20,6 +20,7 @@ SWEP.DroppedEntity = "mcv_supply_box"
 SWEP.SequenceGive = "give"
 SWEP.SequenceSelf = "self"
 SWEP.SequenceThrow = "throw"
+SWEP.SequenceDraw = "draw"
 SWEP.GiveDelay = 0.4
 SWEP.ThrowDelay = 0.3
 

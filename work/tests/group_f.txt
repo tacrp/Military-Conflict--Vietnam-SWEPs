@@ -1,0 +1,86 @@
+# pumps without the hand overrides, crossbow string, gyrojet + vz24 reloads, binoculars overlay, medkit draw-back, supply box touch
+god
+strip
+ang 0 0 0
+hud 1
+give mcv_chinalake
+wait 1.5
+tap +attack 0.1
+wait 0.45
+shot f_chinalake_pump_a
+wait 0.35
+shot f_chinalake_pump_b
+wait 1.5
+give mcv_m870
+wait 1.5
+tap +attack 0.1
+wait 0.45
+shot f_m870_pump_a
+wait 0.35
+shot f_m870_pump_b
+wait 1.5
+give mcv_m1897
+wait 1.5
+tap +attack 0.1
+wait 0.45
+shot f_m1897_pump_a
+wait 0.35
+shot f_m1897_pump_b
+wait 1.5
+give mcv_m37
+wait 1.5
+tap +attack 0.1
+wait 0.45
+shot f_m37_pump_a
+wait 1.5
+give mcv_crossbow
+wait 1.5
+lua ply:SetAmmo(0, ply:GetActiveWeapon():GetPrimaryAmmoType())
+tap +attack 0.1
+wait 0.6
+shot f_crossbow_fired_empty
+lua local w = ply:GetActiveWeapon() local vm = ply:GetViewModel() print("[f] crossbow clip", w:Clip1(), "ammo_fraction", vm:GetPoseParameter("ammo_fraction"), "seq", vm:GetSequenceName(vm:GetSequence()))
+give mcv_gyrojet_pistol
+wait 1.5
+lua local w = ply:GetActiveWeapon() w:SetClip1(0) print("[f] gyrojet MagInTime", w.MagInTime, w.MagInTimeEmpty)
+lua hook.Add("Think", "mcv_f_seq", function() local vm = ply:GetViewModel() if !IsValid(vm) then return end local s = vm:GetSequenceName(vm:GetSequence()) if s != ply.MCV_LastSeq then ply.MCV_LastSeq = s print("[f] seq", ply:GetActiveWeapon():GetClass(), s, math.Round(CurTime(), 2)) end end)
+tap +reload 0.1
+wait 7
+give mcv_vz24
+wait 1.5
+lua ply:GetActiveWeapon():SetClip1(0)
+tap +reload 0.1
+wait 5
+lua ply:GetActiveWeapon():SetClip1(2)
+wait 0.5
+tap +reload 0.1
+wait 5
+lua hook.Remove("Think", "mcv_f_seq")
+give mcv_binoculars_us
+wait 1.5
+key +attack2
+wait 1.5
+shot f_binoculars
+key -attack2
+wait 0.5
+give mcv_medicbox_us
+wait 1.5
+shot f_medkit_idle
+lua ply:SetHealth(50)
+tap +attack2 0.1
+wait 1.0
+shot f_medkit_self_mid
+wait 1.2
+shot f_medkit_self_return
+wait 1.5
+lua ply:SetHealth(30)
+key +use
+tap +attack 0.1
+key -use
+wait 1.5
+lua print("[f] dropped boxes", #ents.FindByClass("mcv_supply_box"), "health before touch", ply:Health())
+key +forward
+wait 0.6
+key -forward
+wait 0.5
+lua print("[f] health after walking into the box", ply:Health())

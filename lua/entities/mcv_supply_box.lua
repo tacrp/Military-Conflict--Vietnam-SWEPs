@@ -11,6 +11,8 @@ ENT.HealAmount = 50
 ENT.AmmoMagazines = 2
 ENT.Uses = 3
 ENT.Lifetime = 120
+ENT.TouchRadius = 48 // units from the box within which a player is served
+ENT.TouchCooldown = 3 // seconds before the same player is served again by touching
 
 function ENT:Initialize()
     if SERVER then
@@ -22,6 +24,19 @@ function ENT:Initialize()
         self.DieTime = CurTime() + self.Lifetime
         local phys = self:GetPhysicsObject()
         if IsValid(phys) then phys:Wake() end
+        self.NextTouch = {}
+    end
+end
+
+// walking up to it is enough: anyone within TouchRadius is served (trigger bounds on a
+// physics prop never fired for players, so this polls from Think)
+function ENT:TouchTick()
+    for _, ent in ipairs(ents.FindInSphere(self:GetPos(), self.TouchRadius)) do
+        if !ent:IsPlayer() or !ent:Alive() then continue end
+        if (self.NextTouch[ent] or 0) > CurTime() then continue end
+        self.NextTouch[ent] = CurTime() + self.TouchCooldown
+        self:Use(ent)
+        if !IsValid(self) then return end
     end
 end
 
@@ -40,10 +55,13 @@ function ENT:Use(ply)
 end
 
 function ENT:Think()
-    if SERVER and CurTime() > self.DieTime then
-        self:Remove()
-        return
+    if SERVER then
+        if CurTime() > self.DieTime then
+            self:Remove()
+            return
+        end
+        self:TouchTick()
     end
-    self:NextThink(CurTime() + 1)
+    self:NextThink(CurTime() + 0.25)
     return true
 end

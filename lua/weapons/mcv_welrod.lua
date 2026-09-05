@@ -22,8 +22,8 @@ SWEP.ViewModel = "models/weapons/mcv/v_welrod.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_welrod.mdl"
 
 SWEP.BodyGroups = ""
-SWEP.MagInTime = 1.6
-SWEP.MagInTimeEmpty = 1.6
+SWEP.MagInTime = 1.03
+SWEP.MagInTimeEmpty = 1.03
 SWEP.MagOutTime = 0.2
 SWEP.MagOutTimeEmpty = 0.2
 

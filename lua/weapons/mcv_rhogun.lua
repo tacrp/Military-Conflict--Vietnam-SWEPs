@@ -20,11 +20,12 @@ SWEP.SprintHoldType = "normal"
 
 SWEP.ViewModel = "models/weapons/mcv/v_rhogun.mdl"
 SWEP.ViewModelAkimbo = "models/weapons/mcv/v_dual_rhogun.mdl"
+SWEP.AkimboPoseRecoil = true
 SWEP.WorldModel = "models/weapons/mcv/w_rhogun.mdl"
 
 SWEP.BodyGroups = ""
-SWEP.MagInTime = 1.27
-SWEP.MagInTimeEmpty = 1.27
+SWEP.MagInTime = 1.57
+SWEP.MagInTimeEmpty = 2.37
 SWEP.MagOutTime = 0.33
 SWEP.MagOutTimeEmpty = 0.33
 

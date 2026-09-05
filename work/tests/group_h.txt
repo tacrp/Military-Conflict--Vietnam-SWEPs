@@ -1,0 +1,40 @@
+# Type 67 manual cycle, PTRD aim off the bipod, M14 empty reload bolt
+god
+strip
+ang 0 0 0
+hud 1
+give mcv_type67
+wait 1.5
+lua hook.Add("Think", "mcv_h_seq", function() local vm = ply:GetViewModel() if !IsValid(vm) then return end local w = ply:GetActiveWeapon() if !IsValid(w) then return end local s = vm:GetSequenceName(vm:GetSequence()) if s != ply.MCV_LastSeq then ply.MCV_LastSeq = s print("[h] seq", w:GetClass(), s, math.Round(CurTime(), 2), "hammerpos", vm:GetPoseParameter("hammerpos")) end end)
+lua print("[h] type67 clip", ply:GetActiveWeapon():Clip1())
+key +attack
+wait 1.5
+key -attack
+wait 1.5
+lua print("[h] type67 clip after 1.5s hold (expect one shot)", ply:GetActiveWeapon():Clip1())
+tap +attack 0.1
+wait 1.5
+lua print("[h] type67 clip after tap", ply:GetActiveWeapon():Clip1())
+shot h_type67_idle
+give mcv_ptrd
+wait 1.5
+key +attack2
+wait 1
+lua local w = ply:GetActiveWeapon() print("[h] ptrd sighted off bipod (expect false)", tostring(w:GetSighted()), w:GetSightAmount())
+key -attack2
+give mcv_m14
+wait 1.5
+lua ply:GetActiveWeapon():SetClip1(0)
+wait 0.2
+shot h_m14_empty
+tap +reload 0.1
+wait 0.6
+shot h_m14_reload_0.6s
+lua local vm = ply:GetViewModel() print("[h] m14 empty pose at 0.6s", vm:GetPoseParameter("empty"))
+wait 0.7
+shot h_m14_reload_1.3s
+lua local vm = ply:GetViewModel() print("[h] m14 empty pose at 1.3s (mag in at 1.03)", vm:GetPoseParameter("empty"))
+wait 1
+shot h_m14_reload_2.3s
+wait 1.5
+lua hook.Remove("Think", "mcv_h_seq")

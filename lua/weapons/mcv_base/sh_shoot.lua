@@ -197,7 +197,8 @@ function SWEP:GetSpread()
         spread = spread * Lerp(move, 1, self.StandMoveSpreadMultiplier)
     end
 
-    spread = Lerp(sa, spread, sighted)
+    // spread = Lerp(sa, spread, sighted)
+    spread = sighted
 
     local fm = self:GetFiremodeValue()
 

@@ -43,8 +43,8 @@ SWEP.Firemodes = {
 
 SWEP.LastShotAnimation = true
 
-SWEP.MagInTime = 0.4
-SWEP.MagInTimeEmpty = 0.4
+SWEP.MagInTime = 2.9
+SWEP.MagInTimeEmpty = 0.03
 SWEP.MagInClip = true
 
 // View slide from recoil

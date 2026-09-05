@@ -72,8 +72,11 @@ function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
     vm:SetPoseParameter("hammerpos", shouldhammer and 0 or 1)
 
     // 1 = clip empty. The game's SlidePosition / BoltshootMovement layers blend towards the
-    // locked-back bolt (and the non-cycling last shot) as this goes from 0.6 to 1.
-    vm:SetPoseParameter("empty", self:Clip1() == 0 and 1 or 0)
+    // locked-back bolt (and the non-cycling last shot) as this goes from 0.6 to 1. During an
+    // empty reload it drops the moment the new magazine is in (MagInTimeEmpty), as the game
+    // does at its NEXTCLIP event: held to the end, the layer kept the bolt back while the
+    // animation closed it, and the bolt visibly closed and reopened (M14, XM21, M2, vz.58, MAS-49).
+    vm:SetPoseParameter("empty", (self:Clip1() == 0 and !displayRoundsToLoad) and 1 or 0)
 
     vm:SetPoseParameter("ironsight", sa ^ 3)
 

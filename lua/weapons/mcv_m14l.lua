@@ -19,8 +19,8 @@ SWEP.ViewModel = "models/weapons/mcv/v_m14l.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_m14l.mdl"
 
 SWEP.BodyGroups = "00100"
-SWEP.MagInTime = 0.3
-SWEP.MagInTimeEmpty = 0.3
+SWEP.MagInTime = 1.13
+SWEP.MagInTimeEmpty = 1.03
 SWEP.BayonetBodygroup = 1
 SWEP.GrenadeLauncherBodygroup = 3
 SWEP.GrenadeBodygroup = 4
@@ -133,7 +133,7 @@ SWEP.SoundDoubleShot = ""
 SWEP.SoundReload = ""
 SWEP.SoundSpecial1 = ""
 SWEP.SoundSpecial2 = ""
-SWEP.SoundGrenadeShot = "MCV_Weapon_M14L.RifleGrenade"
+SWEP.SoundGrenadeShot = "MCV_Weapon_M14.RifleGrenade" // the game plays another rifle's grenade shot here (its script's single_shot)
 SWEP.SoundNearlyEmpty = "MCV_Weapon_Generic.NearlyEmptyClick"
 SWEP.SoundEmpty = "MCV_Weapon_Generic.ClipEmpty_01"
 

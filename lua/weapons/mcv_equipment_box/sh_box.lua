@@ -20,11 +20,16 @@ function MCV_ApplySupply(kind, target, amount_heal, magazines)
     local gave = false
     for _, wep in ipairs(target:GetWeapons()) do
         if !wep.MilitaryConflictVietnam then continue end
+        // boxes do not refill boxes (it used to hand itself three more)
+        if wep.BoxKind then continue end
         local clip = wep.Primary and wep.Primary.ClipSize or -1
         local ammo = wep:GetPrimaryAmmoType()
         if ammo <= 0 then continue end
         local per = clip > 0 and clip or (wep.Primary.DefaultClip or 1)
-        local cap = per * math.max(magazines, 1) * (clip > 0 and 3 or 1)
+        // up to what the gun spawns with (its DefaultClip is clip + reserve), at least a few
+        // magazines: with only the magazine rule a fresh gun (M16: 320 in reserve) was always
+        // "full" and the box did nothing for it
+        local cap = math.max(per * math.max(magazines, 1) * 3, (wep.Primary.DefaultClip or 0) - math.max(clip, 0))
         local have = target:GetAmmoCount(ammo)
         if have < cap then
             target:GiveAmmo(math.min(per * magazines, cap - have), ammo, true)
@@ -69,7 +74,13 @@ function SWEP:UseBox(target, seq, delay)
     end, "mcv_box_use")
 
     self:SetTimer(t, function()
-        if IsValid(self) then self:CheckEmpty() end
+        if !IsValid(self) then return end
+        // the self animation takes the box out of view and ends there: bring it back with the
+        // draw animation instead of snapping to the idle
+        if seq == self.SequenceSelf and self:HasSequence(self.SequenceDraw) and self:GetRoundsLeft() > 0 then
+            self:PlaySequence(self.SequenceDraw, 1, true)
+        end
+        self:CheckEmpty()
     end, "mcv_box_end")
 end
 

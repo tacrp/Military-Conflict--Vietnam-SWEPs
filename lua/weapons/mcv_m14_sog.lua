@@ -19,8 +19,8 @@ SWEP.ViewModel = "models/weapons/mcv/v_m14_sog.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_m14_sog.mdl"
 
 SWEP.BodyGroups = ""
-SWEP.MagInTime = 0.3
-SWEP.MagInTimeEmpty = 0.3
+SWEP.MagInTime = 1.13
+SWEP.MagInTimeEmpty = 1.03
 
 // Stats
 

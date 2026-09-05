@@ -40,33 +40,30 @@ SWEP.SpeedSprintThreshold = 150
 SWEP.SpeedAcceleration = 750 // units per second the blend moves at
 
 // The game's walk / run layers blend on "player_movement" in the game's own speed units, and
-// the range differs per weapon class: the run layer (the sprint carry, gun swung across the
-// body) starts at that class's walk speed and is full at its sprint speed: 148-245 on rifles,
-// 106-195 on the M60, 80-160 on the LPO-50. Driving it with one fixed speed put walking LMGs
-// and flamethrowers into their sprint pose (the gun points left). The generator reads the
-// model's run layer range into these two (port_weapon.anim_timing) and the blend is mapped
-// onto it: walking sits a little into the run layer (the game jogs), sprinting at its top.
+// the run layer (the sprint carry, gun swung across the body) starts at a per-class speed:
+// 148 on rifles, 106 on the M60, 99 on the PK, 80 on the LPO-50 (MovementPoseWalk, read off the
+// model's runlayer blend by port_weapon.anim_timing) and is full at MovementPoseSprint. The
+// hand port drove it with a flat 100 when walking, which every rifle is happy with but which
+// put the PK and the flamethrowers a way into their sprint pose (the gun points left). Walking
+// stays at 100 and is capped just under the model's run layer start; sprinting goes to the
+// model's top; nothing in between blends into the run layer while merely walking.
 SWEP.MovementPoseWalk = 148
 SWEP.MovementPoseSprint = 245
-SWEP.MovementRunBlend = 0.25 // how far into the run layer plain walking goes
-// aiming slows the game down: the sighted walk sits well inside the walk layer, so every gun
-// sways a little and none of them jog
-SWEP.SightedMovementFraction = 0.55
+SWEP.MovementPoseWalkMax = 0.95 // fraction of MovementPoseWalk the walk may reach
 
 function SWEP:GetMovementPose(speed, sa)
     local lo, hi = self.MovementPoseWalk, self.MovementPoseSprint
-    local run = lo + (hi - lo) * self.MovementRunBlend
+    local walk = math.min(self.SpeedRun, lo * self.MovementPoseWalkMax)
     local pose
 
     if speed <= self.SpeedRun then
-        pose = speed / self.SpeedRun * run
+        pose = speed / self.SpeedRun * walk
     else
-        pose = Lerp((speed - self.SpeedRun) / math.max(self.SpeedSprint - self.SpeedRun, 1), run, hi)
+        pose = Lerp((speed - self.SpeedRun) / math.max(self.SpeedSprint - self.SpeedRun, 1), walk, hi)
     end
 
-    local sighted = math.min(speed / self.SpeedRun, 1) * lo * self.SightedMovementFraction
-
-    return Lerp(sa, pose, sighted)
+    // aiming damps the walk (the game's ironsightwalkbobbingstrength, -0.25 on most guns)
+    return pose * Lerp(sa, 1, 1 + self.IronsightWalkBobbingStrength)
 end
 
 function SWEP:GetTargetSpeed()

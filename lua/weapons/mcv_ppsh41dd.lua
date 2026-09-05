@@ -23,7 +23,7 @@ SWEP.WorldModel = "models/weapons/mcv/w_ppsh41_doubledrum.mdl"
 
 SWEP.BodyGroups = ""
 SWEP.MagInTime = 1.87
-SWEP.MagInTimeEmpty = 1.87
+SWEP.MagInTimeEmpty = 2.53
 SWEP.MagOutTime = 0.33
 SWEP.MagOutTimeEmpty = 0.33
 

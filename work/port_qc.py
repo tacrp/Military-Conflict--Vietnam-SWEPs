@@ -811,7 +811,17 @@ def step_pose_split(qc, ctx):
             # one row per blend axis: a two-axis idle (ironsight x revolver_firemode_pose, 9
             # anims) is a 3x3 grid; "blendwidth 9" made the ironsight axis run through all
             # nine poses and the revolvers went wild when aimed during the hammer animation
-            width = len(base_anims) if len(blends) < 2 else int(round(len(base_anims) ** 0.5))
+            # The ironsight axis always has three knots (basePose, transition, ironsight), so a
+            # two-axis grid (x revolver_firemode_pose: 6 anims for the dual revolvers' two modes,
+            # 9 for the single ones' three) is 3 wide. sqrt() gave 2 for the six-anim grid and
+            # the rows slid: the sighted pose landed in the hip slot of the second mode, which
+            # is why the dual revolvers fired with the aimed animation when not aiming.
+            if len(blends) < 2:
+                width = len(base_anims)
+            elif len(base_anims) % 3 == 0:
+                width = 3
+            else:
+                width = int(round(len(base_anims) ** 0.5))
             lines.append("blendwidth %d" % width)
         if act in FIRE_ACTS:
             lines.append("snap")

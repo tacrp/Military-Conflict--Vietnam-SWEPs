@@ -16,8 +16,11 @@ python port_qc.py MCV_SMD_OG/weapons/v_dual_m1911 --compile # also test-compiles
 
 The generated QC references the SMDs in the OG tree by relative path, so nothing is copied.
 If `MCV_SMD/weapons/<name>/anims/<file>.smd` exists it is used instead of the OG file. That is
-how the hand-edited pump animations (M1897, M870, M37, China Lake) and the MD63/M203 fixes are
-picked up; put any future Blender-fixed SMD there and the script will prefer it.
+how the MD63/M203 fixes are picked up; put any future Blender-fixed SMD there and the script will
+prefer it. The 2024 hand-edited pump animations (M1897, M870, M37, China Lake) were made on the
+old rig and, subtracted against the Crowbar 0.74 correctives, threw the gun out of the hands for
+the length of the pump; they sit in `MCV_SMD/disabled_pump_overrides/` and the game's own pump
+deltas are used.
 
 `--compile` runs `GarrysMod/bin/studiomdl.exe` with a scratch game directory
 (`work/compile_test_game`, created on first use) so nothing is written into the real
@@ -373,6 +376,10 @@ Brass ids the game added after 2024 (19 to 31) map to the nearest shell model th
   block laid over the model's bodygroup order (`"scope" "1"` = blank on the plain CAR-15 / XM177 /
   M14 early, which otherwise carried the scope body over their iron sights). Unlisted groups are 0.
   `work/fix_sight_offsets.py` applies it to existing lua files as well.
+* **Two-axis blend grids**: a pose-split main sequence over an idle that blends `ironsight` x
+  `revolver_firemode_pose` has 6 (dual revolvers) or 9 (single) anims and is 3 wide, the
+  ironsight axis having three knots. `sqrt(6)` rounded to 2 and the rows slid: the dual revolvers
+  fired with the aimed animation when not aiming. Width is 3 whenever the count is a multiple of 3.
 * **Crowbar correctives** (`step_fix_correctives` in `port_qc.py`): the `*_corrective_animation.smd`
   files Crowbar writes are subtracted from the delta animations to cancel the constant -90 degree
   rotation it puts on every root-level bone. On the K-50M, K-50M VC and L1A1 SOG it accumulated
@@ -495,23 +502,29 @@ wrappers that print before and after each step to find the last one that ran.
 
 ## Movement pose (`player_movement`)
 
-The game's walk / run layers blend on `player_movement` in the game's speed units, and the range
-is per weapon class: the run layer (sprint carry) starts at that class's walk speed and is full
-at its sprint speed (148-245 rifles, 106-195 M60, 80-160 LPO-50, from the `runlayer` blend line).
-Driving it with one fixed speed (100 when walking) put walking LMGs and flamethrowers into their
-sprint pose, gun pointing left. `port_weapon.anim_timing` reads the run layer range into
-`MovementPoseWalk` / `MovementPoseSprint` and `SWEP:GetMovementPose` (mcv_base_core/sh_think.lua)
-maps the smoothed movement blend onto it: walking a quarter into the run layer, sprinting at its
-top, the sighted walk at `SightedMovementFraction` (0.55) of the walk speed so every gun sways a
-little and none jog. `work/fix_sight_offsets.py` applies the two keys to existing lua files.
+The game's walk / run layers blend on `player_movement` in the game's speed units. The walk
+layer runs over the whole range, the run layer (the sprint carry, gun swung across the body)
+starts at a per-class speed and is full at that class's sprint speed: 148-245 on rifles, 106-195
+on the M60, 99-186 on the PK, 80-160 on the LPO-50 (the `runlayer` blend line). The hand port
+drove the pose with a flat 100 when walking (and 273 sprinting, above every model's top), which
+every rifle is happy with but which put the PK and the flamethrowers a way into their sprint
+pose: the gun points left while walking. `port_weapon.anim_timing` reads the run layer range
+into `MovementPoseWalk` / `MovementPoseSprint` and `SWEP:GetMovementPose`
+(mcv_base_core/sh_think.lua) keeps the walk at 100 but caps it at 95% of the model's run layer
+start, and sprints to the model's top. Blending part of the run layer into plain walking (tried
+first) reads as "starting to sprint" on every gun; do not. Aiming multiplies the pose by
+`1 + IronsightWalkBobbingStrength` (0.75 on most guns), as the hand port did.
 
 ## Magazine / belt swap times
 
 `MagInTime` / `MagInTimeEmpty` (and `MagOutTime` / `MagOutTimeEmpty`) come from the reload
 animations: the frame of the game's `AE_CL_BODYGROUP_SET_TO_NEXTCLIP` event (`_EMPTY` when the
-old belt comes out; the mag-in / mag-out foley events as a fallback) over the sequence fps. The
-rounds shown on the model (`ammo_fraction`, `BulletBodygroups`) keep the old count until the
-mag-out time, show none until the mag-in time, then the new count. The belt LMGs (PK, MG43,
+old belt comes out; the mag-in / mag-out foley events as a fallback) over the sequence fps. `AE_WPN_NEXTCLIP_TO_POSEPARAM` (M14 family) and a late `AE_WPN_CLIP_TO_POSEPARAM` (the
+crossbow's string is drawn at frame 56) count as mag-in events too. The rounds shown on the
+model (`ammo_fraction`, `BulletBodygroups`) keep the old count until the mag-out time, show none
+until the mag-in time, then the new count; the `empty` pose (locked-back bolt) drops at the
+mag-in time as well, which is what stopped the M14 / XM21 / vz.58 bolts closing and reopening on
+empty reloads. The belt LMGs (PK, MG43,
 vz59...) had no times at all, so the belt refilled at the first frame of the reload.
 
 ## Fire without Ignite() (`lua/mcv/shared/sh_burn.lua`)

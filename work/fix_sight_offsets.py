@@ -24,12 +24,14 @@ ADDON = pw.ADDON
 SCRIPTS = os.path.join(HERE, "cscripts")
 KEYS = ("IronsightPos", "IronsightAng", "CustomPos", "CustomAng", "ScopeFOV", "ScopeFOV2", "BodyGroups",
         "SpreadBipod", "SpreadBipodIronsighted", "TracerParticle",
-        "MagInTime", "MagInTimeEmpty", "MagOutTime", "MagOutTimeEmpty", "MovementPoseWalk", "MovementPoseSprint")
+        "MagInTime", "MagInTimeEmpty", "MagOutTime", "MagOutTimeEmpty", "MovementPoseWalk", "MovementPoseSprint",
+        "AkimboPoseRecoil", "AkimboRecoilTime")
 # where a key that the lua file lacks is inserted (after this key; chains keep the order)
 INSERT_AFTER = {"CustomAng": "CustomPos", "SpreadBipod": "SpreadIronsighted", "SpreadBipodIronsighted": "SpreadBipod",
                 "TracerParticle": "TracerFrequency", "MagInTime": "BodyGroups", "MagInTimeEmpty": "MagInTime",
                 "MagOutTime": "MagInTimeEmpty", "MagOutTimeEmpty": "MagOutTime",
-                "MovementPoseWalk": "IronsightWalkBobbingStrength", "MovementPoseSprint": "MovementPoseWalk"}
+                "MovementPoseWalk": "IronsightWalkBobbingStrength", "MovementPoseSprint": "MovementPoseWalk",
+                "AkimboPoseRecoil": "ViewModelAkimbo", "AkimboRecoilTime": "AkimboPoseRecoil"}
 
 
 def set_line(src, key, value):
@@ -78,6 +80,12 @@ def main():
             if timing:
                 so = dict(so or {})
                 so.update(timing)
+        # dual wield: pose recoil when the dual model has the layers (only for luas that dual wield)
+        if vm and os.path.isfile(lp) and "ViewModelAkimbo" in open(lp, encoding="utf-8", errors="replace").read():
+            ak = pw.akimbo_timing(vm)
+            if ak:
+                so = dict(so or {})
+                so.update(ak)
         if not so:
             print("%-28s no offsets in script, left alone" % lua_name)
             continue

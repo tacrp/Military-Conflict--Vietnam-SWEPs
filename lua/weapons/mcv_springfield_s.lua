@@ -43,11 +43,10 @@ SWEP.Firemodes = {
 
 SWEP.LastShotAnimation = false
 SWEP.MagInClip = true
-SWEP.ShotgunReload = true
-SWEP.ShotgunAltReload = true
+SWEP.ShotgunReload = false // clip reload (reload / reload_empty); the single-round animations stay unused, as on the Kar98
 SWEP.ShotgunReloadEmptyStartAnimation = false
 SWEP.PlayCycleAnimation = true
-SWEP.HasEmptyReload = false
+SWEP.HasEmptyReload = true
 
 SWEP.RifleGrenadeEntity = "mcv_proj_riflegrenade"
 SWEP.RifleGrenadeForce = 2000

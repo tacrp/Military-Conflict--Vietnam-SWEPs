@@ -285,25 +285,25 @@ $animation "shoot1_ironsight_a" "..\..\..\MCV_SMD_OG\weapons\v_m1897\v_m1897_ani
 	subtract "shoot1_ironsight_a_corrective_animation" 0
 }
 
-$animation "pump_a" "..\..\..\MCV_SMD\weapons\v_m1897\anims\pump_a.smd" {
+$animation "pump_a" "..\..\..\MCV_SMD_OG\weapons\v_m1897\v_m1897_anims\pump_a.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "pump_a_corrective_animation" 0
 }
 
-$animation "pump_ironsight_a" "..\..\..\MCV_SMD\weapons\v_m1897\anims\pump_ironsight_a.smd" {
+$animation "pump_ironsight_a" "..\..\..\MCV_SMD_OG\weapons\v_m1897\v_m1897_anims\pump_ironsight_a.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "pump_ironsight_a_corrective_animation" 0
 }
 
-$animation "pump_a_e" "..\..\..\MCV_SMD\weapons\v_m1897\anims\pump_a_e.smd" {
+$animation "pump_a_e" "..\..\..\MCV_SMD_OG\weapons\v_m1897\v_m1897_anims\pump_a_e.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "pump_a_e_corrective_animation" 0
 }
 
-$animation "pump_ironsight_a_e" "..\..\..\MCV_SMD\weapons\v_m1897\anims\pump_ironsight_a_e.smd" {
+$animation "pump_ironsight_a_e" "..\..\..\MCV_SMD_OG\weapons\v_m1897\v_m1897_anims\pump_ironsight_a_e.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "pump_ironsight_a_e_corrective_animation" 0

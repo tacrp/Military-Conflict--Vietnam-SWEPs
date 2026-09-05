@@ -45,8 +45,8 @@ SWEP.Firemodes = {
 
 SWEP.LastShotAnimation = false
 
-SWEP.MagInTime = 1.5
-SWEP.MagInTimeEmpty = 1.5
+SWEP.MagInTime = 1.87
+SWEP.MagInTimeEmpty = 2.63
 SWEP.MagOutTime = 0.6
 SWEP.MagOutTimeEmpty = 0.6
 

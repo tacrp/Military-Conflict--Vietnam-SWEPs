@@ -13,7 +13,8 @@ SWEP.AimHoldType = "slam"
 
 SWEP.Ironsight = true
 SWEP.IronsightSpeedScale = 0.7
-SWEP.ZoomLevels = {4, 8}
+SWEP.ZoomLevels = {4, 8} // magnifications (the base treats GetZoomMagnification as a FOV: 90 / this)
+SWEP.OverlayMaterial = "effects/screen_overlay_binoculars_01" // the game's binocular mask (Refract)
 SWEP.SightedViewModelFOV = 60
 
 SWEP.HasScope = false
@@ -35,11 +36,21 @@ AddCSLuaFile()
 
 function SWEP:GetPrecacheParticles() return {} end
 function SWEP:GetHUDAmmo() return nil, nil end
-function SWEP:GetFiremodeName() return string.format("%dx", self:GetZoomMagnification()) end
+function SWEP:GetFiremodeName() return string.format("%dx", self:GetMagnification()) end
 
-function SWEP:GetZoomMagnification()
+function SWEP:GetMagnification()
     local lvl = math.Clamp(self:GetScopeLevel(), 1, #self.ZoomLevels)
     return self.ZoomLevels[lvl]
+end
+
+// what the camera code wants is the FOV
+function SWEP:GetZoomMagnification()
+    return 90 / self:GetMagnification()
+end
+
+// mouse sensitivity follows the magnification (it followed the ironsight FOV: full speed at 8x)
+function SWEP:GetLookMagnification()
+    return self:GetMagnification()
 end
 
 function SWEP:PrimaryAttack()
@@ -91,41 +102,17 @@ function SWEP:PreDrawViewModelBlend(vm, sa)
 end
 
 if CLIENT then
-    local mask_col = Color(0, 0, 0, 255)
-
+    // Looking through them: the game's binocular overlay (a Refract material tinted by its own
+    // mask texture: black outside the two eyepieces, a little distortion inside)
     function SWEP:DrawHUDExtra()
         local a = self:GetSightAmountVisual()
         if a < 0.5 then return end
         local alpha = math.Clamp((a - 0.5) / 0.3, 0, 1) * 255
-        local w, h = ScrW(), ScrH()
-        local r = h * 0.46
-        local cx1, cx2, cy = w / 2 - r * 0.55, w / 2 + r * 0.55, h / 2
-        mask_col.a = alpha
 
-        // stencil: keep the two eyepieces clear, paint everything else black
-        render.ClearStencil()
-        render.SetStencilEnable(true)
-        render.SetStencilWriteMask(255)
-        render.SetStencilTestMask(255)
-        render.SetStencilReferenceValue(1)
-        render.SetStencilCompareFunction(STENCIL_ALWAYS)
-        render.SetStencilPassOperation(STENCIL_REPLACE)
-        render.SetStencilFailOperation(STENCIL_KEEP)
-        render.SetStencilZFailOperation(STENCIL_KEEP)
-        surface.SetDrawColor(255, 255, 255, 1)
-        draw.NoTexture()
-        for _, cx in ipairs({cx1, cx2}) do
-            local poly = {}
-            for i = 0, 47 do
-                local ang = math.rad(i / 48 * 360)
-                poly[#poly + 1] = {x = cx + math.cos(ang) * r, y = cy + math.sin(ang) * r}
-            end
-            surface.DrawPoly(poly)
-        end
-        render.SetStencilCompareFunction(STENCIL_NOTEQUAL)
-        render.SetStencilPassOperation(STENCIL_KEEP)
-        surface.SetDrawColor(mask_col)
-        surface.DrawRect(0, 0, w, h)
-        render.SetStencilEnable(false)
+        self.OverlayMat = self.OverlayMat or Material(self.OverlayMaterial)
+        render.UpdateScreenEffectTexture()
+        surface.SetMaterial(self.OverlayMat)
+        surface.SetDrawColor(255, 255, 255, alpha)
+        surface.DrawTexturedRect(0, 0, ScrW(), ScrH())
     end
 end

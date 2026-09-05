@@ -20,11 +20,12 @@ SWEP.SprintHoldType = "normal"
 
 SWEP.ViewModel = "models/weapons/mcv/v_type67.mdl"
 SWEP.ViewModelAkimbo = "models/weapons/mcv/v_dual_type67.mdl"
+SWEP.AkimboPoseRecoil = true
 SWEP.WorldModel = "models/weapons/mcv/w_type67.mdl"
 
 SWEP.BodyGroups = ""
-SWEP.MagInTime = 1.2
-SWEP.MagInTimeEmpty = 1.2
+SWEP.MagInTime = 0.73
+SWEP.MagInTimeEmpty = 0.73
 SWEP.MagOutTime = 0.33
 SWEP.MagOutTimeEmpty = 0.33
 
@@ -42,8 +43,12 @@ SWEP.Num = 1
 SWEP.RangeModifier = 0.7
 
 SWEP.Firemodes = {
-    MCV.FIREMODE_SEMI
+    MCV.FIREMODE_BOLT
 }
+// manually cycled after every shot like the Welrod (the model's boltpull; script FireRate 40 RPM)
+SWEP.PlayCycleAnimation = true
+// the pull sets hammerpos 0, the shot 1: the cocked / ready state is 0 on this model
+SWEP.InvertAnimationHammer = true
 
 SWEP.LastShotAnimation = false
 SWEP.NoEjectOnShoot = true
@@ -83,7 +88,7 @@ SWEP.CustomAng = Angle(0, 0, 0)
 SWEP.Spread = 5
 SWEP.SpreadIronsighted = 0.75
 
-SWEP.FireRate = 300 // in rounds per minute
+SWEP.FireRate = 600 // in rounds per minute
 
 SWEP.CrosshairMinDistance = 4
 SWEP.CrosshairDeltaDistance = 4

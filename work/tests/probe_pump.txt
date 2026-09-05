@@ -1,0 +1,26 @@
+strip
+ang 0 0 0
+hud 1
+give mcv_chinalake
+wait 1.5
+tap +attack 0.1
+wait 0.45
+shot x_chinalake_pump_a
+wait 0.35
+shot x_chinalake_pump_b
+wait 1.5
+give mcv_m870
+wait 1.5
+tap +attack 0.1
+wait 0.45
+shot x_m870_pump_a
+wait 0.35
+shot x_m870_pump_b
+wait 1.5
+give mcv_m1897
+wait 1.5
+tap +attack 0.1
+wait 0.45
+shot x_m1897_pump_a
+wait 0.35
+shot x_m1897_pump_b

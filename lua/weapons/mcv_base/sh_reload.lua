@@ -19,21 +19,28 @@ function SWEP:Reload()
 
     if self.ShotgunReload or (self.HybridReload and self:Clip1() > 0) then
         if self.ShotgunReloadEmptyStartAnimation and self:Clip1() == 0 then
-            self:PlayAnimation(ACT_VM_RELOAD_INSERT_EMPTY)
+            // locked like the other start: unlocked, the first insert cut it off on its first
+            // frame (Gyrojet, Vz.24: "no empty reload start animation")
+            self:PlayAnimation(ACT_VM_RELOAD_INSERT_EMPTY, 1, true)
         else
             self:PlayAnimation(ACT_SHOTGUN_RELOAD_START, 1, true)
         end
     else
         if self:GetAkimbo() then
+            local act = ACT_VM_RELOAD
             if self:Clip1() == 0 then
-                self:PlayAnimation(ACT_VM_RELOADEMPTY, 1, true)
+                act = ACT_VM_RELOADEMPTY
             elseif self:Clip1() == 1 then
-                self:PlayAnimation(ACT_VM_MISSRIGHT2, 1, true)
+                act = ACT_VM_MISSRIGHT2
             elseif self:Clip1() >= (self.Primary.ClipSize * 2) + (self.Primary.Chamber * 2) - 1 then
-                self:PlayAnimation(ACT_VM_MISSRIGHT, 1, true)
-            else
-                self:PlayAnimation(ACT_VM_RELOAD, 1, true)
+                act = ACT_VM_MISSRIGHT
             end
+            // the dual revolvers have no empty / right-only-empty reload of their own: without
+            // this the reload had no animation and finished on the spot
+            if !self:HasAnimation(act) then
+                act = (act == ACT_VM_MISSRIGHT2 and self:HasAnimation(ACT_VM_MISSRIGHT)) and ACT_VM_MISSRIGHT or ACT_VM_RELOAD
+            end
+            self:PlayAnimation(act, 1, true)
         else
             if self:Clip1() == 0 and self.HasEmptyReload then
                 if self:GetBipod() then
@@ -159,10 +166,12 @@ function SWEP:Think_Reload()
                 end
             elseif self.ShotgunReload or (self.HybridReload and self:Clip1() > 0) then
                 if self:GetEndReload() or self:Clip1() >= (self:GetEmptyReload() and self.Primary.ClipSize or self:GetClip1Capacity()) or (!self:GetInfiniteAmmo() and self:Ammo1() == 0) then
-                    if !self.HasEmptyReload or (self:Clip1() == self:GetLastClip() or !self:GetEmptyReload()) then
-                        self:PlayAnimation(ACT_SHOTGUN_RELOAD_FINISH, 1, true)
-                    else
+                    // a reload that started empty ends by chambering (the model's ACT_SHOTGUN_PUMP:
+                    // reload_endpump) when it has one; the plain finish otherwise
+                    if self:GetEmptyReload() and self:Clip1() != self:GetLastClip() and self:HasAnimation(ACT_SHOTGUN_PUMP) then
                         self:PlayAnimation(ACT_SHOTGUN_PUMP, 1, true)
+                    else
+                        self:PlayAnimation(ACT_SHOTGUN_RELOAD_FINISH, 1, true)
                     end
 
                     self:SetReloading(false)

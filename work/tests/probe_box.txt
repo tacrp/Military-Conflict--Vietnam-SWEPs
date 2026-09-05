@@ -1,0 +1,18 @@
+strip
+give mcv_m16a1
+wait 1
+give mcv_ammobox_us
+wait 1.5
+lua local w = ply:GetWeapon("mcv_m16a1") print("[x] m16 ammo type", w:GetPrimaryAmmoType(), "reserve", ply:GetAmmoCount(w:GetPrimaryAmmoType()), "clip", w.Primary.ClipSize, "flag", tostring(w.MilitaryConflictVietnam)) ply:SetAmmo(0, w:GetPrimaryAmmoType()) print("[x] box weapons:", #ply:GetWeapons(), "active", ply:GetActiveWeapon():GetClass(), "box rounds", ply:GetActiveWeapon():GetRoundsLeft())
+tap +attack2 0.1
+wait 2
+lua local w = ply:GetWeapon("mcv_m16a1") print("[x] after self-use: m16 reserve", ply:GetAmmoCount(w:GetPrimaryAmmoType()), "box rounds", IsValid(ply:GetWeapon("mcv_ammobox_us")) and ply:GetWeapon("mcv_ammobox_us"):GetRoundsLeft() or "gone")
+give mcv_medicbox_us
+wait 1.5
+lua ply:SetHealth(50)
+tap +attack2 0.1
+wait 0.9
+shot x_medkit_self_mid
+wait 1.5
+shot x_medkit_self_after
+lua print("[x] health after self heal", ply:Health())

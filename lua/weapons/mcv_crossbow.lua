@@ -22,6 +22,8 @@ SWEP.ViewModel = "models/weapons/mcv/v_crossbow.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_crossbow.mdl"
 
 SWEP.BodyGroups = ""
+SWEP.MagInTime = 1.87
+SWEP.MagInTimeEmpty = 1.87
 
 // Stats
 

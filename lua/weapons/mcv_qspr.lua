@@ -51,8 +51,8 @@ SWEP.RevolverFiremodePose = true
 SWEP.HasEmptyReload = false
 SWEP.AkimboDualSingleActionReload = false
 
-SWEP.MagInTime = 1
-SWEP.MagInTimeEmpty = 1
+SWEP.MagInTime = 0.93
+SWEP.MagInTimeEmpty = 0.93
 
 // View slide from recoil
 SWEP.ViewSlideRecoilUp = 0.75

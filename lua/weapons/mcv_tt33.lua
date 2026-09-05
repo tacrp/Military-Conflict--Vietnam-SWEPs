@@ -15,6 +15,7 @@ SWEP.Slot = 1
 
 SWEP.ViewModel = "models/weapons/mcv/v_tt33.mdl"
 SWEP.ViewModelAkimbo = "models/weapons/mcv/v_dual_tt33.mdl"
+SWEP.AkimboPoseRecoil = true
 SWEP.WorldModel = "models/weapons/mcv/w_mle1935.mdl"
 
 SWEP.BodyGroups = ""

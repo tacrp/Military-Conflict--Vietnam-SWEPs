@@ -15,6 +15,7 @@ SWEP.Slot = 1
 
 SWEP.ViewModel = "models/weapons/mcv/v_swm10.mdl"
 SWEP.ViewModelAkimbo = "models/weapons/mcv/v_dual_swm10.mdl"
+SWEP.AkimboPoseRecoil = true
 SWEP.WorldModel = "models/weapons/mcv/w_mle1935.mdl"
 
 SWEP.BodyGroups = ""
@@ -50,8 +51,8 @@ SWEP.RevolverFiremodePose = true
 SWEP.HasEmptyReload = false
 SWEP.AkimboDualSingleActionReload = false
 
-SWEP.MagInTime = 1
-SWEP.MagInTimeEmpty = 1
+SWEP.MagInTime = 0.93
+SWEP.MagInTimeEmpty = 0.93
 
 // View slide from recoil
 SWEP.ViewSlideRecoilUp = 0.75

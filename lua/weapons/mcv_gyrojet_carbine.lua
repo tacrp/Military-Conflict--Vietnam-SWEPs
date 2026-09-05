@@ -19,6 +19,8 @@ SWEP.ViewModel = "models/weapons/mcv/v_gyrojet_carbine.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_gyrojet_carbine.mdl"
 
 SWEP.BodyGroups = ""
+SWEP.MagInTime = 0.27
+SWEP.MagInTimeEmpty = 0.27
 
 // Stats
 

@@ -100,6 +100,8 @@ function SWEP:ScopeToggle(on)
 
     if on and !self.Ironsight then return end
     if on and self:GetReloading() then return end
+    // the PTRD only fires deployed; it does not aim off the bipod either
+    if on and self.MustBipod and !self:GetBipod() then return end
 
     self:SetIronsight(on)
 end
@@ -115,7 +117,7 @@ function SWEP:Think_Sights()
         self:ScopeToggle(false)
     end
 
-    local sighted = self:GetIronsight() and !self:GetIsSprinting()
+    local sighted = self:GetIronsight() and !self:GetIsSprinting() and (!self.MustBipod or self:GetBipod())
 
     if sighted != self:GetSighted() then
         // Stamp the transition. The raw amount must be read before Sighted changes.

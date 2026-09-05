@@ -20,6 +20,7 @@ SWEP.SprintHoldType = "normal"
 
 SWEP.ViewModel = "models/weapons/mcv/v_vcpistol2.mdl"
 SWEP.ViewModelAkimbo = "models/weapons/mcv/v_dual_vcpistol2.mdl"
+SWEP.AkimboPoseRecoil = true
 SWEP.WorldModel = "models/weapons/mcv/w_vcpistol2.mdl"
 
 SWEP.BodyGroups = ""

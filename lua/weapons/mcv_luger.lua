@@ -20,6 +20,7 @@ SWEP.SprintHoldType = "normal"
 
 SWEP.ViewModel = "models/weapons/mcv/v_luger.mdl"
 SWEP.ViewModelAkimbo = "models/weapons/mcv/v_dual_luger.mdl"
+SWEP.AkimboPoseRecoil = true
 SWEP.WorldModel = "models/weapons/mcv/w_luger.mdl"
 
 SWEP.BodyGroups = ""

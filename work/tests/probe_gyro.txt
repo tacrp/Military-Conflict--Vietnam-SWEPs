@@ -1,0 +1,20 @@
+give mcv_gyrojet_pistol
+wait 1.5
+lua local w = ply:GetActiveWeapon() w:SetClip1(0) print("[g] clip", w:Clip1(), "ammo1", w:Ammo1(), "cap", w:GetClip1Capacity(), "waiting", tostring(w:StillWaiting()), "reloading", tostring(w:GetReloading()), "flags", tostring(w.ShotgunReload), tostring(w.ShotgunReloadEmptyStartAnimation), "hasact", tostring(w:HasAnimation(ACT_VM_RELOAD_INSERT_EMPTY)), tostring(w:HasAnimation(ACT_SHOTGUN_RELOAD_START)))
+lua hook.Add("Think", "mcv_g_seq", function() local vm = ply:GetViewModel() if !IsValid(vm) then return end local s = vm:GetSequenceName(vm:GetSequence()) if s != ply.MCV_LastSeq then ply.MCV_LastSeq = s print("[g] seq", s, math.Round(CurTime(), 2)) end end)
+tap +reload 0.15
+wait 0.5
+lua local w = ply:GetActiveWeapon() print("[g] after tap: clip", w:Clip1(), "reloading", tostring(w:GetReloading()), "keydown", tostring(ply:KeyDown(IN_RELOAD)))
+wait 6
+lua hook.Remove("Think", "mcv_g_seq") local w = ply:GetActiveWeapon() print("[g] end clip", w:Clip1())
+give mcv_medicbox_us
+wait 1.5
+key +use
+tap +attack 0.1
+key -use
+wait 1.5
+lua local b = ents.FindByClass("mcv_supply_box")[1] print("[g] box at", IsValid(b) and tostring(b:GetPos()) or "none", "player", tostring(ply:GetPos()), "trigger", IsValid(b) and tostring(b:IsTrigger()) or "") ply:SetHealth(30)
+key +forward
+wait 1.5
+key -forward
+lua local b = ents.FindByClass("mcv_supply_box")[1] print("[g] after walk: player", tostring(ply:GetPos()), "health", ply:Health(), "box uses", IsValid(b) and b.Uses or "gone")

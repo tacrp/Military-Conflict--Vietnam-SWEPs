@@ -93,8 +93,8 @@ SWEP.Primary.Chamber = 0
 SWEP.Primary.DefaultClip = 96
 SWEP.Primary.Automatic = true
 
-SWEP.MagInTime = 2.67
-SWEP.MagInTimeEmpty = 2.67
+SWEP.MagInTime = 1.87
+SWEP.MagInTimeEmpty = 1.87
 SWEP.MagOutTime = 1.23
 SWEP.MagOutTimeEmpty = 1.23
 

@@ -20,9 +20,12 @@ SWEP.SprintHoldType = "normal"
 
 SWEP.ViewModel = "models/weapons/mcv/v_swm49.mdl"
 SWEP.ViewModelAkimbo = "models/weapons/mcv/v_dual_swm49.mdl"
+SWEP.AkimboPoseRecoil = true
 SWEP.WorldModel = "models/weapons/mcv/w_swm49.mdl"
 
 SWEP.BodyGroups = ""
+SWEP.MagInTime = 0.93
+SWEP.MagInTimeEmpty = 0.93
 
 // Stats
 

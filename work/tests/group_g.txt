@@ -1,0 +1,79 @@
+# gyrojet empty reload with ammo, supply box touch, dual revolver DA when unsighted (blend grid), akimbo pose recoil, movement pose values, Vz.54 rifle grenade sound
+god
+strip
+ang 0 0 0
+hud 1
+give mcv_gyrojet_pistol
+wait 1.5
+lua local w = ply:GetActiveWeapon() w:SetClip1(0) ply:GiveAmmo(30, w:GetPrimaryAmmoType(), true)
+lua hook.Add("Think", "mcv_g_seq", function() local vm = ply:GetViewModel() if !IsValid(vm) then return end local s = vm:GetSequenceName(vm:GetSequence()) if s != ply.MCV_LastSeq then ply.MCV_LastSeq = s print("[g] seq", ply:GetActiveWeapon():GetClass(), s, math.Round(CurTime(), 2)) end end)
+tap +reload 0.15
+wait 8
+lua print("[g] gyrojet clip after reload", ply:GetActiveWeapon():Clip1())
+give mcv_medicbox_us
+wait 1.5
+key +use
+tap +attack 0.1
+key -use
+wait 1.5
+lua local b = ents.FindByClass("mcv_supply_box")[1] print("[g] box at", IsValid(b) and tostring(b:GetPos()) or "none", "player", tostring(ply:GetPos())) ply:SetHealth(30)
+key +forward
+wait 1.2
+key -forward
+lua local b = ents.FindByClass("mcv_supply_box")[1] print("[g] after walk: player", tostring(ply:GetPos()), "health", ply:Health(), "box uses", IsValid(b) and b.Uses or "gone")
+give mcv_m1917
+wait 1.5
+key +use
+tap +walk 0.1
+key -use
+wait 3.5
+lua local w = ply:GetActiveWeapon() print("[g] m1917 akimbo", tostring(w:GetAkimbo()), "firemode", w:GetFiremodeValue(), "pose recoil", tostring(w:HasPoseRecoil()))
+key +use
+tap +reload 0.1
+key -use
+wait 1.5
+lua local w = ply:GetActiveWeapon() print("[g] m1917 firemode now", w:GetFiremodeValue(), "(DA =", MCV.FIREMODE_DA, ")")
+key +attack
+wait 0.7
+shot g_dual_da_cocked
+key -attack
+wait 0.25
+shot g_dual_da_fired
+wait 1.5
+give mcv_m1911
+wait 1.5
+key +use
+tap +walk 0.1
+key -use
+wait 3.5
+lua local w = ply:GetActiveWeapon() print("[g] m1911 akimbo", tostring(w:GetAkimbo()), "pose recoil", tostring(w:HasPoseRecoil()))
+tap +attack 0.1
+wait 0.15
+lua local vm = ply:GetViewModel() print("[g] m1911 after shot: recoil_r", vm:GetPoseParameter("recoil_r"), "seq", vm:GetSequenceName(vm:GetSequence()))
+wait 0.3
+lua local vm = ply:GetViewModel() print("[g] m1911 +0.45s: recoil_r", vm:GetPoseParameter("recoil_r"))
+shot g_m1911_akimbo
+lua hook.Remove("Think", "mcv_g_seq")
+give mcv_pk
+wait 1.5
+key +forward
+wait 1
+lua local vm = ply:GetViewModel() print("[g] pk walking player_movement", vm:GetPoseParameter("player_movement"), "(run layer starts", ply:GetActiveWeapon().MovementPoseWalk, ")")
+key -forward
+give mcv_m16a1
+wait 1.5
+key +forward
+wait 1
+lua local vm = ply:GetViewModel() print("[g] m16 walking player_movement", vm:GetPoseParameter("player_movement"))
+key -forward
+give mcv_vz54
+wait 1.5
+lua hook.Add("EntityEmitSound", "mcv_g_snd", function(t) if string.find(t.SoundName, "Grenade") or string.find(t.SoundName, "grenade") then print("[g] vz54 sound", t.SoundName) end end)
+key +use
+tap +reload 0.1
+key -use
+wait 3
+lua local w = ply:GetActiveWeapon() print("[g] vz54 launcher", tostring(w:GetGrenadeLauncher()), "clip2", w:Clip2())
+tap +attack 0.1
+wait 1
+lua hook.Remove("EntityEmitSound", "mcv_g_snd")

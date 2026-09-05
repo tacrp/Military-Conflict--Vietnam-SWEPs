@@ -132,7 +132,7 @@ SWEP.SoundDoubleShot = ""
 SWEP.SoundReload = ""
 SWEP.SoundSpecial1 = ""
 SWEP.SoundSpecial2 = ""
-SWEP.SoundGrenadeShot = "MCV_Weapon_MAS36.RifleGrenade"
+SWEP.SoundGrenadeShot = "MCV_Weapon_M1903.RifleGrenade" // the game plays another rifle's grenade shot here (its script's single_shot)
 SWEP.SoundNearlyEmpty = "MCV_Weapon_Generic.NearlyEmptyClick"
 SWEP.SoundEmpty = "MCV_Weapon_Generic.ClipEmpty_07"
 

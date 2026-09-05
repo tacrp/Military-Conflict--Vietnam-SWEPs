@@ -387,7 +387,7 @@ def qc_facts(path):
         am = re.search(r'activity\s+"(ACT_VM_RELOAD|ACT_VM_RELOADEMPTY)"', body)
         if not am or am.group(1) in f["reload_events"]:
             continue
-        e = {"fps": None, "nextclip": None, "nextclip_empty": None, "magin": None, "magout": None}
+        e = {"fps": None, "nextclip": None, "nextclip_empty": None, "magin": None, "magout": None, "clippose": None}
         fm = re.search(r'^\s*fps\s+([\d.]+)', body, re.M)
         if fm:
             e["fps"] = float(fm.group(1))
@@ -397,6 +397,13 @@ def qc_facts(path):
                 e["nextclip"] = frame
             elif ev == "AE_CL_BODYGROUP_SET_TO_NEXTCLIP_EMPTY" and e["nextclip_empty"] is None:
                 e["nextclip_empty"] = frame
+            elif ev == "AE_WPN_NEXTCLIP_TO_POSEPARAM" and e["nextclip"] is None:
+                # the game's other "the new magazine is in" event (M14 / XM21 family)
+                e["nextclip"] = frame
+            elif ev in ("AE_WPN_CLIP_TO_POSEPARAM", "AE_WPN_CLIPLOADED_TO_POSEPARAM") and frame >= 2:
+                # the game refreshes the rounds shown here (the crossbow's string is drawn at 56);
+                # a frame 0/1 event just primes the blend
+                e["clippose"] = max(e["clippose"] or 0, frame)
             elif ev in ("5004", "AE_CL_PLAYSOUND"):
                 low = arg.lower()
                 if any(k in low for k in ("magin", "clipin", "bulletsin", "mag_in", "clip_in")) and e["magin"] is None:
@@ -489,6 +496,31 @@ def sight_offsets(S):
         out["TracerParticle"] = '""'
     return out
 
+def akimbo_timing(vm):
+    """AkimboPoseRecoil / AkimboRecoilTime for a single-wield viewmodel whose dual model
+    (v_dual_<name>) was compiled with the recoil_r / recoil_l pose layers (port_qc.py
+    --pose-recoil): the recoil time is the hand's shot animation length."""
+    out = {}
+    dual = "v_dual_" + vm[2:] if vm.startswith("v_") else None
+    if not dual:
+        return out
+    qp = find_qc(dual)
+    if not qp:
+        return out
+    dq = qc_facts(qp)
+    if "recoil_r" not in dq["poseparams"]:
+        return out
+    out["AkimboPoseRecoil"] = "true"
+    for a in ("shoot1_r_a", "shoot_hammer_right_a", "shoot1_a"):
+        p = os.path.join(HERE, "MCV_SMD_OG", "weapons", dual, dual + "_anims", a + ".smd")
+        if os.path.isfile(p):
+            frames = open(p, encoding="utf-8", errors="replace").read().count("\ntime ")
+            if frames > 1:
+                out["AkimboRecoilTime"] = fmt(round(frames / 30.0, 2))
+                break
+    return out
+
+
 def anim_timing(qc):
     """Lua values read off the viewmodel's animations: where the run layer starts and ends
     (MovementPoseWalk / MovementPoseSprint, so walking never bleeds into the sprint pose) and when
@@ -507,7 +539,9 @@ def anim_timing(qc):
         if not e:
             continue
         fps = e.get("fps") or 30.0
-        tin = e["nextclip"] if e["nextclip"] is not None else e["magin"]
+        tin = e["nextclip"]
+        if tin is None:
+            tin = e["clippose"] if e["clippose"] is not None else e["magin"]
         tout = e["nextclip_empty"] if e["nextclip_empty"] is not None else e["magout"]
         if tin is None:
             continue
@@ -958,7 +992,9 @@ def generate(script_path, args):
     gren_bg = bg_index("grenade", "riflegrenade")
 
     lastshot = "ACT_VM_SHOOTLAST" in acts
-    shotgun_reload = "ACT_SHOTGUN_RELOAD_START" in acts and not is_revolver
+    # a clip reload that blends on ammo_fraction (Kar98, Vz.24, Springfield, M40...) wins over the
+    # single-round animations the same models also carry: those rifles reload with the clip
+    shotgun_reload = "ACT_SHOTGUN_RELOAD_START" in acts and not is_revolver and not qc["ammo_blend_reload"]
     alt_reload = "ACT_VM_RELOAD_INSERT" in acts
     # HasEmptyReload is the mag-style empty reload only; shell loaders use ShotgunReloadEmptyStartAnimation
     empty_reload = "ACT_VM_RELOADEMPTY" in acts
@@ -1062,6 +1098,10 @@ def generate(script_path, args):
     A(line("ViewModel", fmt("models/weapons/mcv/%s.mdl" % vm)))
     if akimbo_vm:
         A(line("ViewModelAkimbo", fmt("models/weapons/mcv/%s.mdl" % akimbo_vm)))
+        # the dual models carry pose-parameter recoil layers: each hand's shot is scrubbed on
+        # recoil_r / recoil_l instead of a sequence, so both hands recoil independently
+        for k, v in akimbo_timing(vm).items():
+            A(line(k, v))
     A(line("WorldModel", fmt("models/weapons/mcv/%s.mdl" % wm)))
     A("")
     A(line("BodyGroups", fmt(bodygroups_string(qc["bodygroups"], S)) if any(k.startswith("BodygroupData.") for k in S) else '""'))
