@@ -1,0 +1,19 @@
+god
+strip
+ang 0 0 0
+give mcv_m605
+wait 1.5
+lua local w = ply:GetActiveWeapon() print("[b] mode", w:GetFiremodeValue(), "BURST=", MCV.FIREMODE_BURST, "rounds", w.BurstRounds, "clip", w:Clip1())
+key +attack
+wait 1
+key -attack
+wait 0.5
+lua local w = ply:GetActiveWeapon() print("[b] clip after 1s hold (expect 3 fired)", w:Clip1(), "count", w:GetBurstCount(), "ntp", tostring(w:GetNeedTriggerPress()))
+tap +attack 0.05
+wait 1
+lua local w = ply:GetActiveWeapon() print("[b] clip after a 0.05s tap (expect 3 more)", w:Clip1(), "count", w:GetBurstCount())
+key +attack
+wait 2
+key -attack
+wait 0.5
+lua local w = ply:GetActiveWeapon() print("[b] clip after 2s hold (expect 3 more)", w:Clip1())

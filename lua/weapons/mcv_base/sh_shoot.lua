@@ -50,10 +50,13 @@ function SWEP:PrimaryAttack()
         if fm == MCV.FIREMODE_VOLLEY and self:Clip1() >= self.VolleyCount then
             t = self:PlayAnimation(ACT_VM_RECOIL1, rate)
         elseif fm == MCV.FIREMODE_DA then
+            // pulling the trigger cocks the hammer of the hand that is up next (right on an even
+            // count: prepare_delayed_right is ACT_VM_HAULBACK, _left is ACT_VM_PULLPIN); the shot
+            // itself (shoot_delayed_*, ACT_VM_PRIMARYATTACK_2 / _3) plays on release in ThinkWeapon
             if self:Clip1() % 2 == 0 then
-                t = self:PlayAnimation(ACT_VM_PRIMARYATTACK_2, rate)
+                t = self:PlayAnimation(ACT_VM_HAULBACK, rate, true)
             else
-                t = self:PlayAnimation(ACT_VM_PRIMARYATTACK_3, rate)
+                t = self:PlayAnimation(ACT_VM_PULLPIN, rate, true)
             end
         else
             local right = self:Clip1() % 2 == 0
@@ -266,7 +269,7 @@ function SWEP:AttackEffects()
         // realistic: from the hip the gun jumps in a random direction and harder; on the sights
         // it climbs by the script's slide. CalcView takes most of the punch back out of the
         // view so the kick moves the aim more than the picture.
-        owner:ViewPunch((2 - (sa * 1.5)) * Angle(((sa * recoilup) + ((1 - sa) * recoilright)) * (-sa + (util.SharedRandom("MCVRecoilUpDown", -1, 1) * (1 - sa))), recoilright * util.SharedRandom("MCVRecoilLeftRight", -1, 1), 0))
+        owner:ViewPunch((1 - (sa * 0.5)) * Angle(((sa * recoilup) + ((1 - sa) * recoilright)) * (-sa + (util.SharedRandom("MCVRecoilUpDown", -1, 1) * (1 - sa))), recoilright * util.SharedRandom("MCVRecoilLeftRight", -1, 1), 0))
     else
         // the game's fixed view slide: up by ViewSlideRecoil.Up, sideways by .Right (side at
         // random), the ironsight pair when aiming
