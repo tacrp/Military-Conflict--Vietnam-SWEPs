@@ -78,3 +78,7 @@ NOTE: Please do not resort to using "snap" to fix this. "snap" should only be us
 - [x] Mk 22 lacks its silencer and reloads silently; it should share the M39's setup. The script name resolver folded weapon_mk22 (the M39) onto the Mk 22's lua and left the old hand-port `mcv_sw39.lua` (MLE 1935 world model) untouched; aliased mk22 -> sw39, both regenerated, the Mod 0 gets bodygroup 1 (silencer). The reload foley events do play (probe: magout / magin wavs heard)
 - [x] Montagnard crossbow SubCategory "Bows" instead of "Rifle"
 - [x] Vz.54 (and M14L, MAS-36, Vz.24) rifle grenade had no sound: the generator guessed `MCV_Weapon_<GUN>.RifleGrenade`; the game plays another rifle's grenade shot for these (their script's single_shot)
+- [x] Dual double-action revolvers played the shot animation on the pull: the pull now cocks the hammer of the hand that is up (prepare_delayed_right / _left), the shot plays on release
+- [x] M9A1 flamethrower still walked into its sprint pose: its script has no viewmodel key, so the fixer never derived its run layer range (fallback to the lua's ViewModel; 80-160 like the LPO-50)
+- [~] Dual Blackhawks look wrong when sprinting: the guns come up large and close to the camera. The run layer delta moves the gun base bones about 7-9 units on every dual revolver (Blackhawk, M1917, S&W M10 alike, same numbers in the game's own QC, bone hierarchy unchanged by the port), and the dual M1917 sprints the same way. Needs the user's call on whether the game's full run pose is what the game shows; if not, cap MovementPoseSprint on dual models
+
