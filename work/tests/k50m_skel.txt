@@ -1,0 +1,9 @@
+god
+strip
+ang 0 0 0
+give mcv_k50m
+wait 1.5
+clua local vm = ply:GetViewModel() local t = {} for i = 0, vm:GetBoneCount() - 1 do local p = vm:GetBonePosition(i) local l = WorldToLocal(p, angle_zero, vm:GetPos(), vm:GetAngles()) t[vm:GetBoneName(i)] = {math.Round(l.x, 2), math.Round(l.y, 2), math.Round(l.z, 2)} end file.Write("mcv_harness/results/skel_k50m.json", util.TableToJSON(t)) print("[k50m] bones", vm:GetBoneCount(), "seqs", vm:GetSequenceCount(), "model", vm:GetModel())
+give mcv_pps43
+wait 1.5
+clua local vm = ply:GetViewModel() local t = {} for i = 0, vm:GetBoneCount() - 1 do local p = vm:GetBonePosition(i) local l = WorldToLocal(p, angle_zero, vm:GetPos(), vm:GetAngles()) t[vm:GetBoneName(i)] = {math.Round(l.x, 2), math.Round(l.y, 2), math.Round(l.z, 2)} end file.Write("mcv_harness/results/skel_pps43.json", util.TableToJSON(t))

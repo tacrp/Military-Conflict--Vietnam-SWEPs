@@ -1,0 +1,13 @@
+god
+strip
+ang 0 0 0
+hud 1
+give mcv_k50m
+wait 1.5
+shot k50m_hip marker
+clua local vm = ply:GetViewModel() local id = vm:LookupBone("Base") local p = id and vm:GetBonePosition(id) print("[k50m] hip base", tostring(p), "eye", tostring(ply:EyePos()), "model", vm:GetModel(), "seq", vm:GetSequenceName(vm:GetSequence()), "bodygroups", vm:GetNumBodyGroups())
+key +attack2
+wait 1.2
+shot k50m_aim marker
+clua local vm = ply:GetViewModel() local id = vm:LookupBone("Base") local p = id and vm:GetBonePosition(id) print("[k50m] aim base", tostring(p), "eye", tostring(ply:EyePos()), "seq", vm:GetSequenceName(vm:GetSequence()), "ironsight", vm:GetPoseParameter("ironsight"))
+key -attack2

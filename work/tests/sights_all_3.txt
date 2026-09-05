@@ -1,0 +1,301 @@
+# iron sight survey batch 3: every gun aimed, centre marker, axis report
+god
+strip
+ang 0 0 0
+hud 1
+give mcv_m607
+wait 1.2
+key +attack2
+wait 1.1
+shot is_m607 marker
+report is_m607
+key -attack2
+wait 0.4
+give mcv_m60b
+wait 1.2
+key +attack2
+wait 1.1
+shot is_m60b marker
+report is_m60b
+key -attack2
+wait 0.4
+give mcv_m60r
+wait 1.2
+key +attack2
+wait 1.1
+shot is_m60r marker
+report is_m60r
+key -attack2
+wait 0.4
+give mcv_m7188
+wait 1.2
+key +attack2
+wait 1.1
+shot is_m7188 marker
+report is_m7188
+key -attack2
+wait 0.4
+give mcv_m72
+wait 1.2
+key +attack2
+wait 1.1
+shot is_m72 marker
+report is_m72
+key -attack2
+wait 0.4
+give mcv_m79
+wait 1.2
+key +attack2
+wait 1.1
+shot is_m79 marker
+report is_m79
+key -attack2
+wait 0.4
+give mcv_m79_sog
+wait 1.2
+key +attack2
+wait 1.1
+shot is_m79_sog marker
+report is_m79_sog
+key -attack2
+wait 0.4
+give mcv_m8
+wait 1.2
+key +attack2
+wait 1.1
+shot is_m8 marker
+report is_m8
+key -attack2
+wait 0.4
+give mcv_m870
+wait 1.2
+key +attack2
+wait 1.1
+shot is_m870 marker
+report is_m870
+key -attack2
+wait 0.4
+give mcv_m91
+wait 1.2
+key +attack2
+wait 1.1
+shot is_m91 marker
+report is_m91
+key -attack2
+wait 0.4
+give mcv_mac10
+wait 1.2
+key +attack2
+wait 1.1
+shot is_mac10 marker
+report is_mac10
+key -attack2
+wait 0.4
+give mcv_mac10_sog
+wait 1.2
+key +attack2
+wait 1.1
+shot is_mac10_sog marker
+report is_mac10_sog
+key -attack2
+wait 0.4
+give mcv_madsen
+wait 1.2
+key +attack2
+wait 1.1
+shot is_madsen marker
+report is_madsen
+key -attack2
+wait 0.4
+give mcv_mamba
+wait 1.2
+key +attack2
+wait 1.1
+shot is_mamba marker
+report is_mamba
+key -attack2
+wait 0.4
+give mcv_mas36
+wait 1.2
+key +attack2
+wait 1.1
+shot is_mas36 marker
+report is_mas36
+key -attack2
+wait 0.4
+give mcv_mas36_cr39
+wait 1.2
+key +attack2
+wait 1.1
+shot is_mas36_cr39 marker
+report is_mas36_cr39
+key -attack2
+wait 0.4
+give mcv_mas38
+wait 1.2
+key +attack2
+wait 1.1
+shot is_mas38 marker
+report is_mas38
+key -attack2
+wait 0.4
+give mcv_mas49
+wait 1.2
+key +attack2
+wait 1.1
+shot is_mas49 marker
+report is_mas49
+key -attack2
+wait 0.4
+give mcv_mat49
+wait 1.2
+key +attack2
+wait 1.1
+shot is_mat49 marker
+report is_mat49
+key -attack2
+wait 0.4
+give mcv_mat49_sog
+wait 1.2
+key +attack2
+wait 1.1
+shot is_mat49_sog marker
+report is_mat49_sog
+key -attack2
+wait 0.4
+give mcv_mat49k
+wait 1.2
+key +attack2
+wait 1.1
+shot is_mat49k marker
+report is_mat49k
+key -attack2
+wait 0.4
+give mcv_md63
+wait 1.2
+key +attack2
+wait 1.1
+shot is_md63 marker
+report is_md63
+key -attack2
+wait 0.4
+give mcv_mg43
+wait 1.2
+key +attack2
+wait 1.1
+shot is_mg43 marker
+report is_mg43
+key -attack2
+wait 0.4
+give mcv_mg43b
+wait 1.2
+key +attack2
+wait 1.1
+shot is_mg43b marker
+report is_mg43b
+key -attack2
+wait 0.4
+give mcv_mg43d
+wait 1.2
+key +attack2
+wait 1.1
+shot is_mg43d marker
+report is_mg43d
+key -attack2
+wait 0.4
+give mcv_mk22_mod0
+wait 1.2
+key +attack2
+wait 1.1
+shot is_mk22_mod0 marker
+report is_mk22_mod0
+key -attack2
+wait 0.4
+give mcv_mk4mod0
+wait 1.2
+key +attack2
+wait 1.1
+shot is_mk4mod0 marker
+report is_mk4mod0
+key -attack2
+wait 0.4
+give mcv_mle1935
+wait 1.2
+key +attack2
+wait 1.1
+shot is_mle1935 marker
+report is_mle1935
+key -attack2
+wait 0.4
+give mcv_mp40
+wait 1.2
+key +attack2
+wait 1.1
+shot is_mp40 marker
+report is_mp40
+key -attack2
+wait 0.4
+give mcv_owen
+wait 1.2
+key +attack2
+wait 1.1
+shot is_owen marker
+report is_owen
+key -attack2
+wait 0.4
+give mcv_p38
+wait 1.2
+key +attack2
+wait 1.1
+shot is_p38 marker
+report is_p38
+key -attack2
+wait 0.4
+give mcv_panzerschreck
+wait 1.2
+key +attack2
+wait 1.1
+shot is_panzerschreck marker
+report is_panzerschreck
+key -attack2
+wait 0.4
+give mcv_pb
+wait 1.2
+key +attack2
+wait 1.1
+shot is_pb marker
+report is_pb
+key -attack2
+wait 0.4
+give mcv_pk
+wait 1.2
+key +attack2
+wait 1.1
+shot is_pk marker
+report is_pk
+key -attack2
+wait 0.4
+give mcv_pkm
+wait 1.2
+key +attack2
+wait 1.1
+shot is_pkm marker
+report is_pkm
+key -attack2
+wait 0.4
+give mcv_pm
+wait 1.2
+key +attack2
+wait 1.1
+shot is_pm marker
+report is_pm
+key -attack2
+wait 0.4
+give mcv_pm63
+wait 1.2
+key +attack2
+wait 1.1
+shot is_pm63 marker
+report is_pm63
+key -attack2
+wait 0.4

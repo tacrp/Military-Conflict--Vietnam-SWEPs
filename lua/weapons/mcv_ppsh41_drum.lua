@@ -16,7 +16,7 @@ SWEP.Slot = 2
 SWEP.ViewModel = "models/weapons/mcv/v_ppsh41_drum.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_mas38.mdl"
 
-SWEP.BodyGroups = ""
+SWEP.BodyGroups = "01"
 
 SWEP.WeaponSelectIcon = NULL
 

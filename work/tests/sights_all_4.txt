@@ -1,0 +1,301 @@
+# iron sight survey batch 4: every gun aimed, centre marker, axis report
+god
+strip
+ang 0 0 0
+hud 1
+give mcv_ppk
+wait 1.2
+key +attack2
+wait 1.1
+shot is_ppk marker
+report is_ppk
+key -attack2
+wait 0.4
+give mcv_pps43
+wait 1.2
+key +attack2
+wait 1.1
+shot is_pps43 marker
+report is_pps43
+key -attack2
+wait 0.4
+give mcv_ppsh41
+wait 1.2
+key +attack2
+wait 1.1
+shot is_ppsh41 marker
+report is_ppsh41
+key -attack2
+wait 0.4
+give mcv_ppsh41_drum
+wait 1.2
+key +attack2
+wait 1.1
+shot is_ppsh41_drum marker
+report is_ppsh41_drum
+key -attack2
+wait 0.4
+give mcv_ppsh41dd
+wait 1.2
+key +attack2
+wait 1.1
+shot is_ppsh41dd marker
+report is_ppsh41dd
+key -attack2
+wait 0.4
+give mcv_ptrd
+wait 1.2
+key +attack2
+wait 1.1
+shot is_ptrd marker
+report is_ptrd
+key -attack2
+wait 0.4
+give mcv_qspr
+wait 1.2
+key +attack2
+wait 1.1
+shot is_qspr marker
+report is_qspr
+key -attack2
+wait 0.4
+give mcv_rhogun
+wait 1.2
+key +attack2
+wait 1.1
+shot is_rhogun marker
+report is_rhogun
+key -attack2
+wait 0.4
+give mcv_rp46
+wait 1.2
+key +attack2
+wait 1.1
+shot is_rp46 marker
+report is_rp46
+key -attack2
+wait 0.4
+give mcv_rpd
+wait 1.2
+key +attack2
+wait 1.1
+shot is_rpd marker
+report is_rpd
+key -attack2
+wait 0.4
+give mcv_rpd_sog
+wait 1.2
+key +attack2
+wait 1.1
+shot is_rpd_sog marker
+report is_rpd_sog
+key -attack2
+wait 0.4
+give mcv_rpdb
+wait 1.2
+key +attack2
+wait 1.1
+shot is_rpdb marker
+report is_rpdb
+key -attack2
+wait 0.4
+give mcv_rpdb_sog
+wait 1.2
+key +attack2
+wait 1.1
+shot is_rpdb_sog marker
+report is_rpdb_sog
+key -attack2
+wait 0.4
+give mcv_rpg2
+wait 1.2
+key +attack2
+wait 1.1
+shot is_rpg2 marker
+report is_rpg2
+key -attack2
+wait 0.4
+give mcv_rpg7
+wait 1.2
+key +attack2
+wait 1.1
+shot is_rpg7 marker
+report is_rpg7
+key -attack2
+wait 0.4
+give mcv_rpk
+wait 1.2
+key +attack2
+wait 1.1
+shot is_rpk marker
+report is_rpk
+key -attack2
+wait 0.4
+give mcv_ruby
+wait 1.2
+key +attack2
+wait 1.1
+shot is_ruby marker
+report is_ruby
+key -attack2
+wait 0.4
+give mcv_shanxi_type17
+wait 1.2
+key +attack2
+wait 1.1
+shot is_shanxi_type17 marker
+report is_shanxi_type17
+key -attack2
+wait 0.4
+give mcv_shanxi_type17_pistol
+wait 1.2
+key +attack2
+wait 1.1
+shot is_shanxi_type17_pistol marker
+report is_shanxi_type17_pistol
+key -attack2
+wait 0.4
+give mcv_sks
+wait 1.2
+key +attack2
+wait 1.1
+shot is_sks marker
+report is_sks
+key -attack2
+wait 0.4
+give mcv_springfield
+wait 1.2
+key +attack2
+wait 1.1
+shot is_springfield marker
+report is_springfield
+key -attack2
+wait 0.4
+give mcv_sten
+wait 1.2
+key +attack2
+wait 1.1
+shot is_sten marker
+report is_sten
+key -attack2
+wait 0.4
+give mcv_sten_sog
+wait 1.2
+key +attack2
+wait 1.1
+shot is_sten_sog marker
+report is_sten_sog
+key -attack2
+wait 0.4
+give mcv_sterling
+wait 1.2
+key +attack2
+wait 1.1
+shot is_sterling marker
+report is_sterling
+key -attack2
+wait 0.4
+give mcv_sterling_sog
+wait 1.2
+key +attack2
+wait 1.1
+shot is_sterling_sog marker
+report is_sterling_sog
+key -attack2
+wait 0.4
+give mcv_stg44
+wait 1.2
+key +attack2
+wait 1.1
+shot is_stg44 marker
+report is_stg44
+key -attack2
+wait 0.4
+give mcv_stoner63_ar
+wait 1.2
+key +attack2
+wait 1.1
+shot is_stoner63_ar marker
+report is_stoner63_ar
+key -attack2
+wait 0.4
+give mcv_stoner63_ar_drum
+wait 1.2
+key +attack2
+wait 1.1
+shot is_stoner63_ar_drum marker
+report is_stoner63_ar_drum
+key -attack2
+wait 0.4
+give mcv_stoner63_bren
+wait 1.2
+key +attack2
+wait 1.1
+shot is_stoner63_bren marker
+report is_stoner63_bren
+key -attack2
+wait 0.4
+give mcv_stoner63_carbine
+wait 1.2
+key +attack2
+wait 1.1
+shot is_stoner63_carbine marker
+report is_stoner63_carbine
+key -attack2
+wait 0.4
+give mcv_stoner63_carbine_drum
+wait 1.2
+key +attack2
+wait 1.1
+shot is_stoner63_carbine_drum marker
+report is_stoner63_carbine_drum
+key -attack2
+wait 0.4
+give mcv_stoner63_commando
+wait 1.2
+key +attack2
+wait 1.1
+shot is_stoner63_commando marker
+report is_stoner63_commando
+key -attack2
+wait 0.4
+give mcv_stoner63_lmg
+wait 1.2
+key +attack2
+wait 1.1
+shot is_stoner63_lmg marker
+report is_stoner63_lmg
+key -attack2
+wait 0.4
+give mcv_svt40
+wait 1.2
+key +attack2
+wait 1.1
+shot is_svt40 marker
+report is_svt40
+key -attack2
+wait 0.4
+give mcv_sw39
+wait 1.2
+key +attack2
+wait 1.1
+shot is_sw39 marker
+report is_sw39
+key -attack2
+wait 0.4
+give mcv_swm10
+wait 1.2
+key +attack2
+wait 1.1
+shot is_swm10 marker
+report is_swm10
+key -attack2
+wait 0.4
+give mcv_swm12
+wait 1.2
+key +attack2
+wait 1.1
+shot is_swm12 marker
+report is_swm12
+key -attack2
+wait 0.4

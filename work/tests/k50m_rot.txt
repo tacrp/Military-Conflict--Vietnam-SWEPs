@@ -1,0 +1,6 @@
+give mcv_k50m
+wait 1.3
+clua local vm = ply:GetViewModel() for _, b in ipairs({"BaseRoot","Base"}) do local id = vm:LookupBone(b) local p, a = vm:GetBonePosition(id) local lp, la = WorldToLocal(p, a, vm:GetPos(), vm:GetAngles()) print(string.format("[rot] k50m %s pos %s ang %s", b, tostring(lp), tostring(la))) end
+give mcv_pps43
+wait 1.3
+clua local vm = ply:GetViewModel() for _, b in ipairs({"BaseRoot","Base"}) do local id = vm:LookupBone(b) local p, a = vm:GetBonePosition(id) local lp, la = WorldToLocal(p, a, vm:GetPos(), vm:GetAngles()) print(string.format("[rot] pps43 %s pos %s ang %s", b, tostring(lp), tostring(la))) end

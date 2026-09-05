@@ -18,7 +18,7 @@ SWEP.Slot = 3
 SWEP.ViewModel = "models/weapons/mcv/v_vz54s.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_vz54.mdl"
 
-SWEP.BodyGroups = ""
+SWEP.BodyGroups = "00000"
 SWEP.BayonetBodygroup = 1
 SWEP.GrenadeLauncherBodygroup = 2
 SWEP.GrenadeBodygroup = 3
@@ -76,7 +76,7 @@ SWEP.ScopeFOV = 36.8
 SWEP.ScopeFOV2 = 23.5
 SWEP.RTScopeMaterialIndex = 8
 
-SWEP.IronsightPos = Vector(0, 0, -0.21)
+SWEP.IronsightPos = Vector(0, -3.1, -0.21)
 SWEP.IronsightAng = Angle(0, 0, 0)
 
 SWEP.CustomPos = Vector(0, -2, 0)

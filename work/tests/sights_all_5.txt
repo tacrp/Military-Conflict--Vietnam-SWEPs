@@ -1,0 +1,293 @@
+# iron sight survey batch 5: every gun aimed, centre marker, axis report
+god
+strip
+ang 0 0 0
+hud 1
+give mcv_swm49
+wait 1.2
+key +attack2
+wait 1.1
+shot is_swm49 marker
+report is_swm49
+key -attack2
+wait 0.4
+give mcv_swm76
+wait 1.2
+key +attack2
+wait 1.1
+shot is_swm76 marker
+report is_swm76
+key -attack2
+wait 0.4
+give mcv_swm76_sog
+wait 1.2
+key +attack2
+wait 1.1
+shot is_swm76_sog marker
+report is_swm76_sog
+key -attack2
+wait 0.4
+give mcv_t223
+wait 1.2
+key +attack2
+wait 1.1
+shot is_t223 marker
+report is_t223
+key -attack2
+wait 0.4
+give mcv_t223_40r
+wait 1.2
+key +attack2
+wait 1.1
+shot is_t223_40r marker
+report is_t223_40r
+key -attack2
+wait 0.4
+give mcv_thompson
+wait 1.2
+key +attack2
+wait 1.1
+shot is_thompson marker
+report is_thompson
+key -attack2
+wait 0.4
+give mcv_thompson_m1928
+wait 1.2
+key +attack2
+wait 1.1
+shot is_thompson_m1928 marker
+report is_thompson_m1928
+key -attack2
+wait 0.4
+give mcv_thompson_sog
+wait 1.2
+key +attack2
+wait 1.1
+shot is_thompson_sog marker
+report is_thompson_sog
+key -attack2
+wait 0.4
+give mcv_tt33
+wait 1.2
+key +attack2
+wait 1.1
+shot is_tt33 marker
+report is_tt33
+key -attack2
+wait 0.4
+give mcv_tul1
+wait 1.2
+key +attack2
+wait 1.1
+shot is_tul1 marker
+report is_tul1
+key -attack2
+wait 0.4
+give mcv_type14
+wait 1.2
+key +attack2
+wait 1.1
+shot is_type14 marker
+report is_type14
+key -attack2
+wait 0.4
+give mcv_type56
+wait 1.2
+key +attack2
+wait 1.1
+shot is_type56 marker
+report is_type56
+key -attack2
+wait 0.4
+give mcv_type58
+wait 1.2
+key +attack2
+wait 1.1
+shot is_type58 marker
+report is_type58
+key -attack2
+wait 0.4
+give mcv_type63
+wait 1.2
+key +attack2
+wait 1.1
+shot is_type63 marker
+report is_type63
+key -attack2
+wait 0.4
+give mcv_type63b
+wait 1.2
+key +attack2
+wait 1.1
+shot is_type63b marker
+report is_type63b
+key -attack2
+wait 0.4
+give mcv_type64
+wait 1.2
+key +attack2
+wait 1.1
+shot is_type64 marker
+report is_type64
+key -attack2
+wait 0.4
+give mcv_type64p
+wait 1.2
+key +attack2
+wait 1.1
+shot is_type64p marker
+report is_type64p
+key -attack2
+wait 0.4
+give mcv_type67
+wait 1.2
+key +attack2
+wait 1.1
+shot is_type67 marker
+report is_type67
+key -attack2
+wait 0.4
+give mcv_type97
+wait 1.2
+key +attack2
+wait 1.1
+shot is_type97 marker
+report is_type97
+key -attack2
+wait 0.4
+give mcv_uzi
+wait 1.2
+key +attack2
+wait 1.1
+shot is_uzi marker
+report is_uzi
+key -attack2
+wait 0.4
+give mcv_uzi_sog
+wait 1.2
+key +attack2
+wait 1.1
+shot is_uzi_sog marker
+report is_uzi_sog
+key -attack2
+wait 0.4
+give mcv_vccarbine
+wait 1.2
+key +attack2
+wait 1.1
+shot is_vccarbine marker
+report is_vccarbine
+key -attack2
+wait 0.4
+give mcv_vcpistol
+wait 1.2
+key +attack2
+wait 1.1
+shot is_vcpistol marker
+report is_vcpistol
+key -attack2
+wait 0.4
+give mcv_vcpistol2
+wait 1.2
+key +attack2
+wait 1.1
+shot is_vcpistol2 marker
+report is_vcpistol2
+key -attack2
+wait 0.4
+give mcv_vcshotgun
+wait 1.2
+key +attack2
+wait 1.1
+shot is_vcshotgun marker
+report is_vcshotgun
+key -attack2
+wait 0.4
+give mcv_vcsmg
+wait 1.2
+key +attack2
+wait 1.1
+shot is_vcsmg marker
+report is_vcsmg
+key -attack2
+wait 0.4
+give mcv_vz23
+wait 1.2
+key +attack2
+wait 1.1
+shot is_vz23 marker
+report is_vz23
+key -attack2
+wait 0.4
+give mcv_vz24
+wait 1.2
+key +attack2
+wait 1.1
+shot is_vz24 marker
+report is_vz24
+key -attack2
+wait 0.4
+give mcv_vz52
+wait 1.2
+key +attack2
+wait 1.1
+shot is_vz52 marker
+report is_vz52
+key -attack2
+wait 0.4
+give mcv_vz54
+wait 1.2
+key +attack2
+wait 1.1
+shot is_vz54 marker
+report is_vz54
+key -attack2
+wait 0.4
+give mcv_vz58
+wait 1.2
+key +attack2
+wait 1.1
+shot is_vz58 marker
+report is_vz58
+key -attack2
+wait 0.4
+give mcv_vz59
+wait 1.2
+key +attack2
+wait 1.1
+shot is_vz59 marker
+report is_vz59
+key -attack2
+wait 0.4
+give mcv_vz61
+wait 1.2
+key +attack2
+wait 1.1
+shot is_vz61 marker
+report is_vz61
+key -attack2
+wait 0.4
+give mcv_vz61_sog
+wait 1.2
+key +attack2
+wait 1.1
+shot is_vz61_sog marker
+report is_vz61_sog
+key -attack2
+wait 0.4
+give mcv_welrod
+wait 1.2
+key +attack2
+wait 1.1
+shot is_welrod marker
+report is_welrod
+key -attack2
+wait 0.4
+give mcv_xm177
+wait 1.2
+key +attack2
+wait 1.1
+shot is_xm177 marker
+report is_xm177
+key -attack2
+wait 0.4

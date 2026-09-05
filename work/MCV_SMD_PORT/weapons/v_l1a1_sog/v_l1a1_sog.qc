@@ -153,34 +153,34 @@ $poseparameter "ironsight" 0 1 loop 0
 $poseparameter "move_yaw" -180 180 loop 0
 
 
-$animation "runIdle_a_corrective_animation" "..\..\..\MCV_SMD_OG\weapons\v_l1a1_sog\v_l1a1_sog_anims\runIdle_a_corrective_animation.smd" {
+$animation "runIdle_a_corrective_animation" "fixed_anims\runIdle_a_corrective_animation.smd" {
 }
 
-$animation "run_a_corrective_animation" "..\..\..\MCV_SMD_OG\weapons\v_l1a1_sog\v_l1a1_sog_anims\run_a_corrective_animation.smd" {
+$animation "run_a_corrective_animation" "fixed_anims\run_a_corrective_animation.smd" {
 }
 
-$animation "walkIdle_a_corrective_animation" "..\..\..\MCV_SMD_OG\weapons\v_l1a1_sog\v_l1a1_sog_anims\walkIdle_a_corrective_animation.smd" {
+$animation "walkIdle_a_corrective_animation" "fixed_anims\walkIdle_a_corrective_animation.smd" {
 }
 
-$animation "walk_a_corrective_animation" "..\..\..\MCV_SMD_OG\weapons\v_l1a1_sog\v_l1a1_sog_anims\walk_a_corrective_animation.smd" {
+$animation "walk_a_corrective_animation" "fixed_anims\walk_a_corrective_animation.smd" {
 }
 
-$animation "shoot1_a_corrective_animation" "..\..\..\MCV_SMD_OG\weapons\v_l1a1_sog\v_l1a1_sog_anims\shoot1_a_corrective_animation.smd" {
+$animation "shoot1_a_corrective_animation" "fixed_anims\shoot1_a_corrective_animation.smd" {
 }
 
-$animation "shoot1_ironsight_a_corrective_animation" "..\..\..\MCV_SMD_OG\weapons\v_l1a1_sog\v_l1a1_sog_anims\shoot1_ironsight_a_corrective_animation.smd" {
+$animation "shoot1_ironsight_a_corrective_animation" "fixed_anims\shoot1_ironsight_a_corrective_animation.smd" {
 }
 
-$animation "shoot2_a_corrective_animation" "..\..\..\MCV_SMD_OG\weapons\v_l1a1_sog\v_l1a1_sog_anims\shoot2_a_corrective_animation.smd" {
+$animation "shoot2_a_corrective_animation" "fixed_anims\shoot2_a_corrective_animation.smd" {
 }
 
-$animation "shoot2_ironsight_a_corrective_animation" "..\..\..\MCV_SMD_OG\weapons\v_l1a1_sog\v_l1a1_sog_anims\shoot2_ironsight_a_corrective_animation.smd" {
+$animation "shoot2_ironsight_a_corrective_animation" "fixed_anims\shoot2_ironsight_a_corrective_animation.smd" {
 }
 
-$animation "shoot3_a_corrective_animation" "..\..\..\MCV_SMD_OG\weapons\v_l1a1_sog\v_l1a1_sog_anims\shoot3_a_corrective_animation.smd" {
+$animation "shoot3_a_corrective_animation" "fixed_anims\shoot3_a_corrective_animation.smd" {
 }
 
-$animation "shoot3_ironsight_a_corrective_animation" "..\..\..\MCV_SMD_OG\weapons\v_l1a1_sog\v_l1a1_sog_anims\shoot3_ironsight_a_corrective_animation.smd" {
+$animation "shoot3_ironsight_a_corrective_animation" "fixed_anims\shoot3_ironsight_a_corrective_animation.smd" {
 }
 
 $animation "basePose_a" "..\..\..\MCV_SMD_OG\weapons\v_l1a1_sog\v_l1a1_sog_anims\basePose_a.smd" {

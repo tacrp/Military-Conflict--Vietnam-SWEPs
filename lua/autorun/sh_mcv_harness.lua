@@ -106,6 +106,20 @@ function H.WeaponState(ply)
                     end
                 end
             end
+            // where the bore axis (muzzle attachment forward, remapped to the eye's axes) meets
+            // the screen far away: on the centre when the sight picture is aligned
+            local mid = vm:LookupAttachment("muzzle")
+            local ma = mid > 0 and vm:GetAttachment(mid)
+            if ma then
+                local eyeang = ply:EyeAngles()
+                local fwd, best = eyeang:Forward(), 0
+                for _, a in ipairs({ma.Ang:Forward(), ma.Ang:Right(), ma.Ang:Up()}) do
+                    local d = a:Dot(eyeang:Forward())
+                    if math.abs(d) > math.abs(best) then fwd, best = (d < 0 and -a or a), d end
+                end
+                local s = (ply:EyePos() + fwd * 4096):ToScreen()
+                t.vm.axis = {math.Round(s.x), math.Round(s.y), s.visible}
+            end
             t.screen = {ScrW(), ScrH()}
             t.fov = ply:GetFOV()
         end

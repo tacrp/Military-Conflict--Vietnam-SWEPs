@@ -16,7 +16,7 @@ SWEP.Slot = 3
 SWEP.ViewModel = "models/weapons/mcv/v_bar_l.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_bar_l.mdl"
 
-SWEP.BodyGroups = "000"
+SWEP.BodyGroups = "00"
 
 SWEP.WeaponSelectIcon = NULL
 

@@ -22,7 +22,7 @@ import port_weapon as pw  # noqa: E402
 
 ADDON = pw.ADDON
 SCRIPTS = os.path.join(HERE, "cscripts")
-KEYS = ("IronsightPos", "IronsightAng", "CustomPos", "CustomAng", "ScopeFOV", "ScopeFOV2")
+KEYS = ("IronsightPos", "IronsightAng", "CustomPos", "CustomAng", "ScopeFOV", "ScopeFOV2", "BodyGroups")
 
 
 def set_line(src, key, value):
@@ -59,6 +59,13 @@ def main():
         S = pw.flat(kv.get("WeaponData", kv))
         S.update(overrides.get(name, {}))
         so = pw.sight_offsets(S)
+        # bodygroups from the script's BodygroupData block, in the model's bodygroup order
+        if any(k.startswith("BodygroupData.") for k in S):
+            vm = S.get("viewmodel", "").replace("models/weapons/", "").replace(".mdl", "")
+            qc = pw.qc_facts(pw.find_qc(vm)) if vm else None
+            if qc and qc["bodygroups"]:
+                so = dict(so or {})
+                so["BodyGroups"] = '"%s"' % pw.bodygroups_string(qc["bodygroups"], S)
         if not so:
             print("%-28s no offsets in script, left alone" % lua_name)
             continue

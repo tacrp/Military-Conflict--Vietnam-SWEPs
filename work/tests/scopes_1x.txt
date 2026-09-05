@@ -1,0 +1,149 @@
+# every scope at 1x: the lens picture must be seamless with the world around it
+god
+strip
+ang 0 0 0
+hud 1
+give mcv_car15_s
+wait 1.2
+clua local w = ply:GetActiveWeapon() w.ScopeFOV = w.IronsightFov w.ScopeFOV2 = w.IronsightFov w.ScopeShadowStrength = 0 w.ScopeDistortion = 0
+key +attack2
+wait 1.2
+shot s1x_car15_s marker
+report s1x_car15_s
+key -attack2
+wait 0.4
+give mcv_kar98_s
+wait 1.2
+clua local w = ply:GetActiveWeapon() w.ScopeFOV = w.IronsightFov w.ScopeFOV2 = w.IronsightFov w.ScopeShadowStrength = 0 w.ScopeDistortion = 0
+key +attack2
+wait 1.2
+shot s1x_kar98_s marker
+report s1x_kar98_s
+key -attack2
+wait 0.4
+give mcv_m1d
+wait 1.2
+clua local w = ply:GetActiveWeapon() w.ScopeFOV = w.IronsightFov w.ScopeFOV2 = w.IronsightFov w.ScopeShadowStrength = 0 w.ScopeDistortion = 0
+key +attack2
+wait 1.2
+shot s1x_m1d marker
+report s1x_m1d
+key -attack2
+wait 0.4
+give mcv_m21
+wait 1.2
+clua local w = ply:GetActiveWeapon() w.ScopeFOV = w.IronsightFov w.ScopeFOV2 = w.IronsightFov w.ScopeShadowStrength = 0 w.ScopeDistortion = 0
+key +attack2
+wait 1.2
+shot s1x_m21 marker
+report s1x_m21
+key -attack2
+wait 0.4
+give mcv_m38_s
+wait 1.2
+clua local w = ply:GetActiveWeapon() w.ScopeFOV = w.IronsightFov w.ScopeFOV2 = w.IronsightFov w.ScopeShadowStrength = 0 w.ScopeDistortion = 0
+key +attack2
+wait 1.2
+shot s1x_m38_s marker
+report s1x_m38_s
+key -attack2
+wait 0.4
+give mcv_m40
+wait 1.2
+clua local w = ply:GetActiveWeapon() w.ScopeFOV = w.IronsightFov w.ScopeFOV2 = w.IronsightFov w.ScopeShadowStrength = 0 w.ScopeDistortion = 0
+key +attack2
+wait 1.2
+shot s1x_m40 marker
+report s1x_m40
+key -attack2
+wait 0.4
+give mcv_m607_oeg
+wait 1.2
+clua local w = ply:GetActiveWeapon() w.ScopeFOV = w.IronsightFov w.ScopeFOV2 = w.IronsightFov w.ScopeShadowStrength = 0 w.ScopeDistortion = 0
+key +attack2
+wait 1.2
+shot s1x_m607_oeg marker
+report s1x_m607_oeg
+key -attack2
+wait 0.4
+give mcv_m607_s
+wait 1.2
+clua local w = ply:GetActiveWeapon() w.ScopeFOV = w.IronsightFov w.ScopeFOV2 = w.IronsightFov w.ScopeShadowStrength = 0 w.ScopeDistortion = 0
+key +attack2
+wait 1.2
+shot s1x_m607_s marker
+report s1x_m607_s
+key -attack2
+wait 0.4
+give mcv_m656
+wait 1.2
+clua local w = ply:GetActiveWeapon() w.ScopeFOV = w.IronsightFov w.ScopeFOV2 = w.IronsightFov w.ScopeShadowStrength = 0 w.ScopeDistortion = 0
+key +attack2
+wait 1.2
+shot s1x_m656 marker
+report s1x_m656
+key -attack2
+wait 0.4
+give mcv_mas49_s
+wait 1.2
+clua local w = ply:GetActiveWeapon() w.ScopeFOV = w.IronsightFov w.ScopeFOV2 = w.IronsightFov w.ScopeShadowStrength = 0 w.ScopeDistortion = 0
+key +attack2
+wait 1.2
+shot s1x_mas49_s marker
+report s1x_mas49_s
+key -attack2
+wait 0.4
+give mcv_springfield_s
+wait 1.2
+clua local w = ply:GetActiveWeapon() w.ScopeFOV = w.IronsightFov w.ScopeFOV2 = w.IronsightFov w.ScopeShadowStrength = 0 w.ScopeDistortion = 0
+key +attack2
+wait 1.2
+shot s1x_springfield_s marker
+report s1x_springfield_s
+key -attack2
+wait 0.4
+give mcv_stg44_s
+wait 1.2
+clua local w = ply:GetActiveWeapon() w.ScopeFOV = w.IronsightFov w.ScopeFOV2 = w.IronsightFov w.ScopeShadowStrength = 0 w.ScopeDistortion = 0
+key +attack2
+wait 1.2
+shot s1x_stg44_s marker
+report s1x_stg44_s
+key -attack2
+wait 0.4
+give mcv_svd
+wait 1.2
+clua local w = ply:GetActiveWeapon() w.ScopeFOV = w.IronsightFov w.ScopeFOV2 = w.IronsightFov w.ScopeShadowStrength = 0 w.ScopeDistortion = 0
+key +attack2
+wait 1.2
+shot s1x_svd marker
+report s1x_svd
+key -attack2
+wait 0.4
+give mcv_svt40_s
+wait 1.2
+clua local w = ply:GetActiveWeapon() w.ScopeFOV = w.IronsightFov w.ScopeFOV2 = w.IronsightFov w.ScopeShadowStrength = 0 w.ScopeDistortion = 0
+key +attack2
+wait 1.2
+shot s1x_svt40_s marker
+report s1x_svt40_s
+key -attack2
+wait 0.4
+give mcv_vz54s
+wait 1.2
+clua local w = ply:GetActiveWeapon() w.ScopeFOV = w.IronsightFov w.ScopeFOV2 = w.IronsightFov w.ScopeShadowStrength = 0 w.ScopeDistortion = 0
+key +attack2
+wait 1.2
+shot s1x_vz54s marker
+report s1x_vz54s
+key -attack2
+wait 0.4
+give mcv_xm177_oeg
+wait 1.2
+clua local w = ply:GetActiveWeapon() w.ScopeFOV = w.IronsightFov w.ScopeFOV2 = w.IronsightFov w.ScopeShadowStrength = 0 w.ScopeDistortion = 0
+key +attack2
+wait 1.2
+shot s1x_xm177_oeg marker
+report s1x_xm177_oeg
+key -attack2
+wait 0.4

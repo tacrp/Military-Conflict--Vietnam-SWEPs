@@ -17,7 +17,7 @@ SWEP.ViewModel = "models/weapons/mcv/v_izh43_sog.mdl"
 SWEP.ViewModelAkimbo = "models/weapons/mcv/v_dual_izh43.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_izh43_sog.mdl"
 
-SWEP.BodyGroups = ""
+SWEP.BodyGroups = "00"
 
 SWEP.IconOverride = "entities/mcv_robust_sog.png"
 

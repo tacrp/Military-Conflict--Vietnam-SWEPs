@@ -1,0 +1,46 @@
+# the weapons touched by the survey follow-ups: recompiled K-50Ms and L1A1 SOG, bodygroup fixes
+god
+strip
+ang 0 0 0
+hud 1
+give mcv_k50m
+wait 1.2
+key +attack2
+wait 1.1
+shot fx_k50m marker
+key -attack2
+wait 0.4
+give mcv_k50m_vc
+wait 1.2
+key +attack2
+wait 1.1
+shot fx_k50m_vc marker
+key -attack2
+wait 0.4
+give mcv_l1a1_sog
+wait 1.2
+key +attack2
+wait 1.1
+shot fx_l1a1_sog marker
+key -attack2
+wait 0.4
+give mcv_m1918
+wait 1.2
+key +attack2
+wait 1.1
+shot fx_m1918 marker
+key -attack2
+wait 0.4
+give mcv_svt40
+wait 1.2
+key +attack2
+wait 1.1
+shot fx_svt40 marker
+key -attack2
+wait 0.4
+give mcv_t223
+wait 1.2
+key +attack2
+wait 1.1
+shot fx_t223 marker
+key -attack2

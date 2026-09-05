@@ -428,6 +428,23 @@ def sight_offsets(S):
         out["ScopeFOV2"] = fmt(num(S.get("ScopeLensFov2")) or num(S.get("ScopeLensFov")))
     return out
 
+def bodygroups_string(qc_bodygroups, S):
+    """SWEP.BodyGroups digits from the script's BodygroupData block ("scope" "1" ...) laid over
+    the model's bodygroup order. Unlisted groups stay 0. The plain CAR-15 / XM177 / M14 early
+    carry the scope group at 1 (blank) this way; without it the scope body sat over their
+    iron sights."""
+    digits = []
+    for name in qc_bodygroups:
+        v = S.get("BodygroupData." + name)
+        if v is None:
+            v = S.get("BodygroupData." + name.lower())
+        try:
+            digits.append(str(int(float(v))) if v not in (None, "") else "0")
+        except ValueError:
+            digits.append("0")
+    return "".join(digits)
+
+
 def read_existing(lua_path):
     d = {}
     if not lua_path or not os.path.isfile(lua_path):
@@ -938,7 +955,7 @@ def generate(script_path, args):
         A(line("ViewModelAkimbo", fmt("models/weapons/mcv/%s.mdl" % akimbo_vm)))
     A(line("WorldModel", fmt("models/weapons/mcv/%s.mdl" % wm)))
     A("")
-    A(line("BodyGroups", '""'))
+    A(line("BodyGroups", fmt(bodygroups_string(qc["bodygroups"], S)) if any(k.startswith("BodygroupData.") for k in S) else '""'))
     if bayonet_bg is not None:
         A(line("BayonetBodygroup", bayonet_bg))
     if gl_bg is not None:

@@ -20,6 +20,7 @@ with --mode. See --help for the switches that control the improvements over the 
 """
 import argparse
 import collections
+import glob
 import json
 import math
 import os
@@ -349,6 +350,8 @@ class Ctx:
         self.out_dir = out_dir
         self.name = os.path.basename(og_dir)
         self.override_dir = os.path.join(args.fixed_root, "weapons", self.name, "anims")
+        # correctives rewritten by step_fix_correctives land here and win over the OG file
+        self.fixed_dir = os.path.join(out_dir, "fixed_anims")
         self.warnings = []
         self.notes = []
         self.mode = None
@@ -369,6 +372,9 @@ class Ctx:
         ov = os.path.join(self.override_dir, base)
         if os.path.isfile(ov):
             return ov
+        fx = os.path.join(self.fixed_dir, base)
+        if os.path.isfile(fx):
+            return fx
         return os.path.join(self.og_dir, rel)
 
     def out_smd_path(self, rel):
@@ -415,6 +421,79 @@ def step_illumposition(qc, ctx):
             if isinstance(it, str) and "$modelname" in it:
                 qc.items[i] = it.replace("\n", "\n$illumposition 0 0 0\n", 1)
                 break
+
+
+def _smd_first_frame(path):
+    """bone name -> [x y z rx ry rz] of the first skeleton frame, plus whether every listed bone
+    is constant over all frames."""
+    lines = open(path, encoding="utf-8", errors="replace").read().split("\n")
+    i = lines.index("nodes") + 1
+    names = {}
+    while lines[i].strip() != "end":
+        q = lines[i].split()
+        names[int(q[0])] = q[1].strip('"')
+        i += 1
+    i = lines.index("skeleton") + 1
+    first, constant, frame = {}, {}, -1
+    while True:
+        q = lines[i].split()
+        i += 1
+        if not q:
+            continue
+        if q[0] == "end":
+            break
+        if q[0] == "time":
+            frame += 1
+            continue
+        b = names[int(q[0])]
+        v = [float(x) for x in q[1:7]]
+        if frame == 0:
+            first[b] = v
+            constant[b] = True
+        elif b in first and constant[b] and any(abs(a - c) > 1e-4 for a, c in zip(first[b], v)):
+            constant[b] = False
+    return first, constant
+
+
+def step_fix_correctives(qc, ctx):
+    """Crowbar's *_corrective_animation.smd files are subtracted from the delta animations to
+    cancel the constant rotation it writes on the root-level bones (root, cam_driver, BaseRoot:
+    -90 degrees each). On a few models (K-50M, K-50M VC, L1A1 SOG) Crowbar accumulated that
+    angle per root bone instead (-90, -180, -270), so the subtraction left +180 degrees on
+    BaseRoot, applied by both the walk and run layers, and the gun sat behind the camera. Where a
+    corrective disagrees with a bone that is constant in its delta animation, the corrective is
+    rewritten to that bone's value and the fixed file used instead."""
+    fixed = 0
+    for corr in sorted(glob.glob(os.path.join(ctx.og_dir, "*_anims", "*_corrective_animation.smd"))):
+        anim = corr.replace("_corrective_animation", "")
+        if not os.path.isfile(anim):
+            continue
+        cf, _ = _smd_first_frame(corr)
+        af, const = _smd_first_frame(anim)
+        wrong = [b for b, v in cf.items() if b in af and const.get(b) and any(abs(a - c) > 0.01 for a, c in zip(v[3:], af[b][3:]))]
+        if not wrong:
+            continue
+        text = open(corr, encoding="utf-8", errors="replace").read()
+        lines = text.split("\n")
+        i = lines.index("nodes") + 1
+        names = {}
+        while lines[i].strip() != "end":
+            q = lines[i].split()
+            names[int(q[0])] = q[1].strip('"')
+            i += 1
+        i = lines.index("skeleton") + 1
+        while lines[i].strip() != "end":
+            q = lines[i].split()
+            if q and q[0] != "time" and names[int(q[0])] in wrong:
+                v = af[names[int(q[0])]]
+                lines[i] = "%s %s" % (q[0], " ".join("%.6f" % x for x in v))
+            i += 1
+        os.makedirs(ctx.fixed_dir, exist_ok=True)
+        with open(os.path.join(ctx.fixed_dir, os.path.basename(corr)), "w", encoding="utf-8", newline="\n") as f:
+            f.write("\n".join(lines))
+        fixed += 1
+    if fixed:
+        ctx.note("%d corrective animations rewritten to match their delta animation (Crowbar root bone rotation)" % fixed)
 
 
 def step_paths(qc, ctx):
@@ -1238,6 +1317,7 @@ def port_one(args, og_dir):
     acts = {b.activity() for b in qc.blocks("sequence")}
     ctx.shell_dual = ctx.mode == "dual" and "ACT_SHOTGUN_RELOAD_START" in acts
 
+    step_fix_correctives(qc, ctx)
     step_paths(qc, ctx)
     step_reconstruct_missing_anims(qc, ctx)
     step_include(qc, ctx)

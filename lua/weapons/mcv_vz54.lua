@@ -18,7 +18,7 @@ SWEP.Slot = 3
 SWEP.ViewModel = "models/weapons/mcv/v_vz54.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_vz54.mdl"
 
-SWEP.BodyGroups = ""
+SWEP.BodyGroups = "0000"
 SWEP.BayonetBodygroup = 1
 SWEP.GrenadeLauncherBodygroup = 2
 SWEP.GrenadeBodygroup = 3

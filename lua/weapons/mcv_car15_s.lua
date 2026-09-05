@@ -16,7 +16,7 @@ SWEP.Slot = 3
 SWEP.ViewModel = "models/weapons/mcv/v_car15.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_car15.mdl"
 
-SWEP.BodyGroups = "0001"
+SWEP.BodyGroups = "0010"
 
 SWEP.WeaponSelectIcon = NULL
 
@@ -71,7 +71,7 @@ SWEP.ScopeFOV = 31
 SWEP.ScopeFOV2 = 31
 SWEP.RTScopeMaterialIndex = 2
 
-SWEP.IronsightPos = Vector(-0.01, -7, -1.02)
+SWEP.IronsightPos = Vector(-0.01, -6.1, -1.02)
 SWEP.IronsightAng = Angle(0, 0, 0)
 
 SWEP.CustomPos = Vector(0, 0, 0)

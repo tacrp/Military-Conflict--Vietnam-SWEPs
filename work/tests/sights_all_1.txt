@@ -1,0 +1,301 @@
+# iron sight survey batch 1: every gun aimed, centre marker, axis report
+god
+strip
+ang 0 0 0
+hud 1
+give mcv_ak47
+wait 1.2
+key +attack2
+wait 1.1
+shot is_ak47 marker
+report is_ak47
+key -attack2
+wait 0.4
+give mcv_akm
+wait 1.2
+key +attack2
+wait 1.1
+shot is_akm marker
+report is_akm
+key -attack2
+wait 0.4
+give mcv_akm_gp25
+wait 1.2
+key +attack2
+wait 1.1
+shot is_akm_gp25 marker
+report is_akm_gp25
+key -attack2
+wait 0.4
+give mcv_amd65
+wait 1.2
+key +attack2
+wait 1.1
+shot is_amd65 marker
+report is_amd65
+key -attack2
+wait 0.4
+give mcv_aps
+wait 1.2
+key +attack2
+wait 1.1
+shot is_aps marker
+report is_aps
+key -attack2
+wait 0.4
+give mcv_avt40
+wait 1.2
+key +attack2
+wait 1.1
+shot is_avt40 marker
+report is_avt40
+key -attack2
+wait 0.4
+give mcv_babybrowning
+wait 1.2
+key +attack2
+wait 1.1
+shot is_babybrowning marker
+report is_babybrowning
+key -attack2
+wait 0.4
+give mcv_bazooka
+wait 1.2
+key +attack2
+wait 1.1
+shot is_bazooka marker
+report is_bazooka
+key -attack2
+wait 0.4
+give mcv_blackhawk
+wait 1.2
+key +attack2
+wait 1.1
+shot is_blackhawk marker
+report is_blackhawk
+key -attack2
+wait 0.4
+give mcv_bren
+wait 1.2
+key +attack2
+wait 1.1
+shot is_bren marker
+report is_bren
+key -attack2
+wait 0.4
+give mcv_browning_auto
+wait 1.2
+key +attack2
+wait 1.1
+shot is_browning_auto marker
+report is_browning_auto
+key -attack2
+wait 0.4
+give mcv_c96
+wait 1.2
+key +attack2
+wait 1.1
+shot is_c96 marker
+report is_c96
+key -attack2
+wait 0.4
+give mcv_c96_stock
+wait 1.2
+key +attack2
+wait 1.1
+shot is_c96_stock marker
+report is_c96_stock
+key -attack2
+wait 0.4
+give mcv_car15
+wait 1.2
+key +attack2
+wait 1.1
+shot is_car15 marker
+report is_car15
+key -attack2
+wait 0.4
+give mcv_chinalake
+wait 1.2
+key +attack2
+wait 1.1
+shot is_chinalake marker
+report is_chinalake
+key -attack2
+wait 0.4
+give mcv_cobra
+wait 1.2
+key +attack2
+wait 1.1
+shot is_cobra marker
+report is_cobra
+key -attack2
+wait 0.4
+give mcv_crossbow
+wait 1.2
+key +attack2
+wait 1.1
+shot is_crossbow marker
+report is_crossbow
+key -attack2
+wait 0.4
+give mcv_cz52
+wait 1.2
+key +attack2
+wait 1.1
+shot is_cz52 marker
+report is_cz52
+key -attack2
+wait 0.4
+give mcv_dp28
+wait 1.2
+key +attack2
+wait 1.1
+shot is_dp28 marker
+report is_dp28
+key -attack2
+wait 0.4
+give mcv_f1
+wait 1.2
+key +attack2
+wait 1.1
+shot is_f1 marker
+report is_f1
+key -attack2
+wait 0.4
+give mcv_fm24
+wait 1.2
+key +attack2
+wait 1.1
+shot is_fm24 marker
+report is_fm24
+key -attack2
+wait 0.4
+give mcv_fusil_robust
+wait 1.2
+key +attack2
+wait 1.1
+shot is_fusil_robust marker
+report is_fusil_robust
+key -attack2
+wait 0.4
+give mcv_fusil_robust_short
+wait 1.2
+key +attack2
+wait 1.1
+shot is_fusil_robust_short marker
+report is_fusil_robust_short
+key -attack2
+wait 0.4
+give mcv_g3
+wait 1.2
+key +attack2
+wait 1.1
+shot is_g3 marker
+report is_g3
+key -attack2
+wait 0.4
+give mcv_g43
+wait 1.2
+key +attack2
+wait 1.1
+shot is_g43 marker
+report is_g43
+key -attack2
+wait 0.4
+give mcv_gyrojet_carbine
+wait 1.2
+key +attack2
+wait 1.1
+shot is_gyrojet_carbine marker
+report is_gyrojet_carbine
+key -attack2
+wait 0.4
+give mcv_gyrojet_pistol
+wait 1.2
+key +attack2
+wait 1.1
+shot is_gyrojet_pistol marker
+report is_gyrojet_pistol
+key -attack2
+wait 0.4
+give mcv_hdm
+wait 1.2
+key +attack2
+wait 1.1
+shot is_hdm marker
+report is_hdm
+key -attack2
+wait 0.4
+give mcv_hipower
+wait 1.2
+key +attack2
+wait 1.1
+shot is_hipower marker
+report is_hipower
+key -attack2
+wait 0.4
+give mcv_k50m
+wait 1.2
+key +attack2
+wait 1.1
+shot is_k50m marker
+report is_k50m
+key -attack2
+wait 0.4
+give mcv_k50m_vc
+wait 1.2
+key +attack2
+wait 1.1
+shot is_k50m_vc marker
+report is_k50m_vc
+key -attack2
+wait 0.4
+give mcv_kar98
+wait 1.2
+key +attack2
+wait 1.1
+shot is_kar98 marker
+report is_kar98
+key -attack2
+wait 0.4
+give mcv_kbkg60
+wait 1.2
+key +attack2
+wait 1.1
+shot is_kbkg60 marker
+report is_kbkg60
+key -attack2
+wait 0.4
+give mcv_kolos
+wait 1.2
+key +attack2
+wait 1.1
+shot is_kolos marker
+report is_kolos
+key -attack2
+wait 0.4
+give mcv_l1a1
+wait 1.2
+key +attack2
+wait 1.1
+shot is_l1a1 marker
+report is_l1a1
+key -attack2
+wait 0.4
+give mcv_l1a1_sog
+wait 1.2
+key +attack2
+wait 1.1
+shot is_l1a1_sog marker
+report is_l1a1_sog
+key -attack2
+wait 0.4
+give mcv_l2a1
+wait 1.2
+key +attack2
+wait 1.1
+shot is_l2a1 marker
+report is_l2a1
+key -attack2
+wait 0.4

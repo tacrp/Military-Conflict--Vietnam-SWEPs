@@ -1,0 +1,7 @@
+// Eyepiece size on screen: the script's ironsightforward puts the eyepiece larger than the
+// screen in GMod. Chosen so the lens disc is about 0.55 of the screen height
+// (work/tests/scope_fwd_sweep.txt, lens pixel counts, see PORTING.md "Scopes").
+"WeaponData"
+{
+	"ironsightforward"	"-5.6"
+}

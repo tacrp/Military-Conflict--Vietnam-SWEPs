@@ -17,7 +17,7 @@ SWEP.ViewModel = "models/weapons/mcv/v_mk22.mdl"
 SWEP.ViewModelAkimbo = "models/weapons/mcv/v_dual_mk22.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_mle1935.mdl"
 
-SWEP.BodyGroups = "001"
+SWEP.BodyGroups = "00"
 
 SWEP.WeaponSelectIcon = NULL
 

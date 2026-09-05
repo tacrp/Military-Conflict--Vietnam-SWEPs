@@ -18,7 +18,7 @@ SWEP.Slot = 3
 SWEP.ViewModel = "models/weapons/mcv/v_m605.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_m605.mdl"
 
-SWEP.BodyGroups = ""
+SWEP.BodyGroups = "001"
 SWEP.BayonetBodygroup = 1
 
 // Stats

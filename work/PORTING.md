@@ -366,6 +366,20 @@ Brass ids the game added after 2024 (19 to 31) map to the nearest shell model th
 * The `empty` pose parameter is 1 when the clip is empty (the game's `SlidePosition` and
   `BoltshootMovement` layers blend from 0.6 to 1 towards the locked-back bolt).
 * `$illumposition 0 0 0` on every model.
+* **Bodygroups** (`bodygroups_string`): `SWEP.BodyGroups` comes from the script's `BodygroupData`
+  block laid over the model's bodygroup order (`"scope" "1"` = blank on the plain CAR-15 / XM177 /
+  M14 early, which otherwise carried the scope body over their iron sights). Unlisted groups are 0.
+  `work/fix_sight_offsets.py` applies it to existing lua files as well.
+* **Crowbar correctives** (`step_fix_correctives` in `port_qc.py`): the `*_corrective_animation.smd`
+  files Crowbar writes are subtracted from the delta animations to cancel the constant -90 degree
+  rotation it puts on every root-level bone. On the K-50M, K-50M VC and L1A1 SOG it accumulated
+  that angle per root bone (-90, -180, -270), so the subtraction left +180 on `BaseRoot`; the walk
+  and run layers each added it and the gun sat 28 units behind the camera (nothing visible when
+  aimed). Where a corrective disagrees with a bone that is constant in its delta animation, the
+  corrective is rewritten to that value in `MCV_SMD_PORT/weapons/<name>/fixed_anims/` and used
+  instead. A weapon that is invisible or wildly displaced only when its viewmodel is drawn is
+  worth checking against this first (dump the bones with the harness: `BaseRoot` yaw 0 instead
+  of 180).
 * **Two-axis blends** (`step_pose_split`): a fire sequence rebuilt from a two-axis idle
   (`ironsight` x `revolver_firemode_pose`, 9 anims) gets `blendwidth 3`, one row per axis.
   `blendwidth 9` (the anim count) made the ironsight axis run through all nine poses, which is
@@ -443,13 +457,15 @@ sensitivity follows the scope magnification.
   `PostDrawViewModelWeapon`. `$depthtest 1` alone did not help; `$mostlyopaque` was not the cause.
   Shader model 3 (`_ps3x`/`_vs3x`, `-ver 30`); every `$cN_x` constant must be declared in the
   VMT or `SetFloat` is ignored. Build notes in `work/shaders/README.md`.
-* **Camera inside the scope**: if the front sight post is visible through the eyepiece, the lens
-  is behind the camera near plane and you are looking down the tube. The game's
-  `ironsightforward` did that on ten scoped models in GMod. `work/tests/scope_fwd_sweep.txt`
-  sweeps the forward offset with `ScopeDebug = 1` and counts lens pixels per step; the model is
-  moved 3 units further than the first step where the lens appears (`work/overrides/weapon_<script>.txt`
-  sets `ironsightforward`: SVD, Vz.54 Meopta, M21, M656 at 0; Kar98 ZF39, M1D, M38, M40,
-  Springfield, SVT-40 at script + 3). Everything else keeps the script's offsets.
+* **Eyepiece distance**: the script's `ironsightforward` is not usable as is on most scoped
+  models in GMod: on ten of them the eyepiece lens sat behind the camera near plane (you see the
+  front sight post through the tube), on six others the eyepiece was larger than the screen.
+  `work/tests/scope_fwd_sweep.txt` / `scope_near_sweep.txt` step the forward offset with
+  `ScopeDebug = 1` (lens in debug colours) and count lens pixels per step; since the lens disc
+  scales with 1/distance, 1/sqrt(count) is linear in the offset and the offset for a target disc
+  of 0.55 of the screen height falls out (`work/overrides/weapon_<script>.txt`,
+  `ironsightforward`). Every scoped weapon except the two OEGs has one. Judge framing on full
+  frames (`work/sight_survey.py`), never on centre crops.
 * **Optics materials** (`work/fix_optics_vmts.py`): the game's `lens_*.vmt` and some
   `crosshair_*.vmt` are `Refract` shaders fed by `_rt_SniperScope`, black in GMod; they become the
   glass material the game left commented out in its own files, and translucent reticles.
@@ -470,6 +486,17 @@ firing, with nothing in the console. Call the intended class explicitly
 (`baseclass.Get("mcv_base").Holster(self, wep)`) or split the shared code into a helper. The
 harness reproduces a freeze as a job that never logs `done`; instrument with `lua`/`clua`
 wrappers that print before and after each step to find the last one that ran.
+
+## Sight survey (`work/sight_survey.py`)
+
+`work/tests/sights_all_*.txt` aim every iron-sight gun with the centre marker and a report;
+`scopes.txt` does the scoped ones. `python work/sight_survey.py is_` (or `scope_`) writes
+full-frame contact sheets to `work/survey/` and a table of where the bore axis (muzzle attachment
+forward, projected 4096 units) meets the screen relative to the centre, worst first. Iron sights
+sit within about 25 px of centre; grenade and rocket launchers read 30-150 px below because their
+ladder sights are meant to sit above the bore. The Sep 2026 pass found the K-50M invisible when
+aimed (corrective animations, above), the CAR-15 / XM177 / M14 early with a scope body over their
+sights (bodygroups, above), and the six oversized and four undersized scopes (eyepiece distance).
 
 ## Test harness (`work/harness.py`, `lua/autorun/sh_mcv_harness.lua`)
 

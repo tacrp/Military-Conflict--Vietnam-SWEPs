@@ -1,6 +1,7 @@
-// The script's ironsightforward puts the camera inside the scope's rubber eyepiece hood in GMod
-// (the game clips its viewmodel differently); the eyepiece lens renders with 0.
+// Eyepiece size on screen: the script's ironsightforward puts the camera inside the eyecup or
+// hood in GMod, 0 left the picture small. Chosen so the lens disc is about 0.55 of the screen
+// height while still rendering (work/tests/scope_near_sweep.txt, lens pixel counts).
 "WeaponData"
 {
-	"ironsightforward"	"0"
+	"ironsightforward"	"-3.0"
 }

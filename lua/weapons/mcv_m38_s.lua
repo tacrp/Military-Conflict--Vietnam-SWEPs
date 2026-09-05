@@ -17,7 +17,7 @@ SWEP.Slot = 3
 SWEP.ViewModel = "models/weapons/mcv/v_m38_s.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_sks.mdl"
 
-SWEP.BodyGroups = "00000"
+SWEP.BodyGroups = "000"
 
 SWEP.WeaponSelectIcon = NULL
 
@@ -85,7 +85,7 @@ SWEP.ScopeFOV = 26.7
 SWEP.ScopeFOV2 = 15.8
 SWEP.RTScopeMaterialIndex = 5
 
-SWEP.IronsightPos = Vector(-0.013, -5.35, -0.605)
+SWEP.IronsightPos = Vector(-0.013, -2.4, -0.605)
 SWEP.IronsightAng = Angle(0, 0, 0)
 
 SWEP.CustomPos = Vector(0, -2, 0)
