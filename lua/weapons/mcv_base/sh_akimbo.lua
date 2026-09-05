@@ -13,6 +13,10 @@ function SWEP:ToggleAkimbo()
             self.ViewModel = self.ViewModelAkimbo
             vm:SetModel(self.ViewModel)
             self:SetAkimbo(true)
+
+            if self.Firemodes[self:GetFiremode()] == MCV.FIREMODE_FAN then
+                self:ChangeFiremode()
+            end
         else
             local original = weapons.Get(self:GetClass()).ViewModel
             self.ViewModel = original

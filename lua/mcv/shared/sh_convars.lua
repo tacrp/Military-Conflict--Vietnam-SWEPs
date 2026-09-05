@@ -26,7 +26,7 @@ end
 // a little as a burst goes on). 0: the game's numbers as they are in the weapon scripts (a hip
 // fire cone that narrows to the sighted spread as the sights come up, stance multipliers on it,
 // a fixed view slide up and to one side per shot, the optional random ViewKick).
-MCV.RegisterConVar("mcv_realistic_shooting", "1",
+MCV.RegisterConVar("mcv_realistic_shooting", "0",
     "1: the addon's recoil and spread (barrel-accurate hip fire, random kick). 0: the game's own recoil and spread cone.")
 
 function MCV.RealisticShooting()

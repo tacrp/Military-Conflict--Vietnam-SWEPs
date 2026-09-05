@@ -378,6 +378,12 @@ Brass ids the game added after 2024 (19 to 31) map to the nearest shell model th
   block laid over the model's bodygroup order (`"scope" "1"` = blank on the plain CAR-15 / XM177 /
   M14 early, which otherwise carried the scope body over their iron sights). Unlisted groups are 0.
   `work/fix_sight_offsets.py` applies it to existing lua files as well.
+* **Dual Blackhawk run layer**: the dual revolvers' `run_a` animates only the root-level `Base`
+  bone (7-10 units of bob) and the game's IK drags the hands after it. On the M1917 / S&W / Lebel
+  duals `Base` is a dummy, so without IK the run layer moves nothing and the sprint looks right.
+  The dual Blackhawk's gun meshes hang off root-level `BaseLeftMesh` / `BaseMesh`, so the same
+  data flew the guns out of the hands. `MCV_SMD/weapons/v_dual_blackhawk/anims/run_a.smd` holds
+  those two bones at the corrective's frame 0 (zero delta).
 * **Two-axis blend grids**: a pose-split main sequence over an idle that blends `ironsight` x
   `revolver_firemode_pose` has 6 (dual revolvers) or 9 (single) anims and is 3 wide, the
   ironsight axis having three knots. `sqrt(6)` rounded to 2 and the rows slid: the dual revolvers
@@ -506,7 +512,7 @@ wrappers that print before and after each step to find the last one that ran.
 
 Gameplay toggles are server convars (replicated, archived, notify) registered in one place with
 `MCV.RegisterConVar` and read through accessors, so the predicted weapon code sees the same value
-on both realms. `mcv_realistic_shooting` (default 1) picks the addon's own recoil and spread: hip
+on both realms. `mcv_realistic_shooting` (default 0, the game's numbers) at 1 picks the addon's own recoil and spread: hip
 fire is barrel-accurate (the sighted spread applies at all times, the miss comes from the gun not
 being lined up with the eye), recoil from the hip kicks in a random direction and harder, CalcView
 takes 75% of the view punch back out so the kick moves the aim rather than the picture, and the
