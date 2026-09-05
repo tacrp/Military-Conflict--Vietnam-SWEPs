@@ -1,0 +1,63 @@
+// Planted explosives: C4 (remote), dynamite (lit fuse) and tripwire mines placed in two
+// steps, the mine first and then the stake the wire runs to. A translucent ghost shows where
+// the piece will go.
+
+SWEP.Base = "mcv_base_core"
+SWEP.Spawnable = false
+
+SWEP.SubCategory = "Explosives"
+SWEP.Slot = 4
+
+SWEP.HoldType = "slam"
+SWEP.SprintHoldType = "normal"
+SWEP.AimHoldType = "slam"
+
+// "c4" (plant, right click detonates), "dynamite" (plant lit, or throw lit), "mine" (two steps)
+SWEP.PlaceKind = "c4"
+SWEP.PlacedEntityClass = "mcv_c4"
+SWEP.StakeEntityClass = "mcv_mine_stake"
+SWEP.PlaceRange = 72
+SWEP.PlaceDelay = 0.5 // seconds into the plant animation at which the charge appears
+SWEP.ThrowForce = 700
+SWEP.FuseTime = 6 // dynamite
+SWEP.WireLength = 256 // max mine to stake distance
+
+SWEP.ExplosionDamage = 500
+SWEP.ExplosionRadius = 500
+
+SWEP.SequencePlant = "plant"
+SWEP.SequencePlaceMine = "placemine"
+SWEP.SequencePlaceStick = "placestick"
+SWEP.SequenceWindup = "drawbackhigh"
+SWEP.SequenceThrow = "throw"
+
+// world model of the placed piece and of the stake (defaults to the weapon's world model)
+SWEP.PlacedModel = nil
+SWEP.StakeModel = nil
+SWEP.MineBodygroups = {mine = 0, stick = 1} // bodygroup indices on the mine world model
+
+SWEP.Primary.Ammo = "mcv_explosive_charge"
+SWEP.Primary.ClipSize = -1
+SWEP.Primary.DefaultClip = 1
+SWEP.Primary.Automatic = false
+
+SWEP.RemoveWhenEmpty = true
+
+AddCSLuaFile()
+
+local searchdir = "weapons/mcv_placeable"
+
+for _, filename in pairs(file.Find(searchdir .. "/*.lua", "LUA")) do
+    if filename == "shared.lua" then continue end
+    local luatype = string.sub(filename, 1, 2)
+
+    if luatype == "sv" then
+        if SERVER then include(searchdir .. "/" .. filename) end
+    elseif luatype == "cl" then
+        AddCSLuaFile(searchdir .. "/" .. filename)
+        if CLIENT then include(searchdir .. "/" .. filename) end
+    else
+        AddCSLuaFile(searchdir .. "/" .. filename)
+        include(searchdir .. "/" .. filename)
+    end
+end

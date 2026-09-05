@@ -72,7 +72,13 @@ function SWEP:PlaySequence(name, mult, lock, noidle)
 end
 
 function SWEP:Idle()
-    self:PlayAnimation(self:IdleActivity(), 1, false, false)
+    local seq = self:IdleSequence()
+
+    if seq and self:HasSequence(seq) then
+        self:PlaySequence(seq, 1, false, false)
+    else
+        self:PlayAnimation(self:IdleActivity(), 1, false, false)
+    end
 
     self:SetReady(true)
 end

@@ -393,6 +393,34 @@ from `lua/mcv/shared/sh_explosions.lua`, which picks the per-surface variant of 
 explosion system (`Vietnam_Explosion_RPGRocket_Brick` and so on) from the material under the
 impact.
 
+## Equipment bases (Sep 2026)
+
+`lua/weapons/mcv_base_core` is the shared core (deploy / holster, predicted timers, movement
+blends and hold types, viewmodel pose parameters, HUD, camera, bash). Every weapon type is a
+thin base on top of it that fills in hooks (`ThinkWeapon`, `DoBodygroupsWeapon`, `IdleActivity`
+/ `IdleSequence`, `GetHUDAmmo`, `GetFiremodeName`...). The game's equipment viewmodels use
+activities GMod does not know (`ACT_VM_SLASH`, `ACT_VM_PLANT`, `ACT_VM_GIVE`...), so the
+equipment bases play sequences by name (`PlaySequence`); the names are the same across the
+game's models of one type.
+
+| base | game types | behaviour |
+| --- | --- | --- |
+| `mcv_base` | guns | unchanged, now inherits the core |
+| `mcv_throwable` | Grenade, SmokeGrenade, Incendiary | LMB overhand throw, RMB underhand (roll when crouched), USE+R fuse presets from FuseTimeMin/Max, entities `mcv_grenade_frag/wp/smoke/gas/molotov`, `mcv_firepool` |
+| `mcv_melee` | Melee, Fists, wrench | LMB slash (hit / miss chosen up front), RMB stab, sprint+LMB charge, USE+LMB throws the blade (`mcv_thrown_melee`, pick up with USE), run / walk sequences while sprinting; the wrench repairs LVS (`GetHP/SetHP/GetMaxHP`, `SetDestroyed`, `OnRepaired`), simfphys and plain vehicles on RMB |
+| `mcv_placeable` | C4, Mine | C4: plant (LMB), RMB detonates every charge, the weapon stays as the detonator; dynamite: plant lit or throw lit; mines: two steps, mine then stake, tripwire between them, translucent ghost preview drawn client side |
+| `mcv_flamethrower` | Flamethrower | stream of `lpo50_flame` from the muzzle, hull-trace damage and ignition, fuel in the reserve, tank blows up when shot from behind |
+| `mcv_equipment_box` | Equipment (ammo / medic box) | LMB gives to the player looked at, RMB self, USE+LMB drops `mcv_supply_box` |
+| `mcv_binoculars` | Equipment (binoculars) | RMB zoom through the gun base's sight blend, USE+R steps 4x / 8x |
+| guns with projectiles | Crossbow, Flaregun | `mcv_proj_bolt` (sticks, hitgroup damage, pick up), `mcv_proj_flare` (light, ignites) |
+
+Ammo types `mcv_grenade`, `mcv_molotov`, `mcv_mine`, `mcv_explosive_charge`,
+`mcv_flamethrower_fuel`, `mcv_crossbowbolt`, `mcv_flareround`, `mcv_ammobox`, `mcv_medicbox` are
+registered in `sh_common.lua`. `port_weapon.py` writes all of these from the game scripts
+(`EQUIPMENT_GENERATORS`); not covered: artillery / napalm / barrage binoculars (need a strike
+system), gas masks, parachute, chainsaw, lunge mine, the objective-only C4 and the scripts without
+a WeaponType (stielhandgranate, m18 duplicates).
+
 ## Weapon Lua from the game scripts (`port_weapon.py`)
 
 ```

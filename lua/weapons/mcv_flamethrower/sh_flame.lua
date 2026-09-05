@@ -1,0 +1,220 @@
+function SWEP:GetPrecacheParticles()
+    return {self.FlameParticle, self.PilotParticle, "Vietnam_Explosion_Flamethrower_BackPack"}
+end
+
+function SWEP:GetHUDAmmo()
+    return self:Ammo1(), nil
+end
+
+function SWEP:GetFiremodeName()
+    return "Fuel"
+end
+
+// fuel lives in the reserve; nothing to reload
+function SWEP:Reload()
+    local owner = self:GetOwner()
+    if owner:KeyPressed(IN_RELOAD) and owner:KeyDown(IN_USE) then
+        self:ChangeFiremode()
+    end
+end
+
+function SWEP:Think_Reload() end
+
+function SWEP:IsFlaming()
+    return self:GetPrimedAttack()
+end
+
+function SWEP:StartFlame()
+    self:SetPrimedAttack(true)
+    self:SetLastTriggerTime(CurTime())
+    self:PlayAnimation(ACT_VM_PRIMARYATTACK, 1, false, true)
+    self:EmitSound(self.SoundFireStart)
+    self:EmitSound(self.SoundFireLoop)
+    if CLIENT then
+        self:StartFlameEffect()
+    end
+end
+
+function SWEP:StopFlame()
+    if !self:IsFlaming() then return end
+    self:SetPrimedAttack(false)
+    self:StopSound(self.SoundFireLoop)
+    self:EmitSound(self.SoundFireStop)
+    if self:HasAnimation(ACT_VM_RECOIL1) then
+        self:PlayAnimation(ACT_VM_RECOIL1, 1, false)
+    else
+        self:SetNextIdle(CurTime())
+    end
+    if CLIENT then
+        self:StopFlameEffect()
+    end
+end
+
+// One tick of fire: a hull trace along the stream, damage and ignition on what it reaches.
+function SWEP:FlameTick()
+    local owner = self:GetOwner()
+    self:TakeRound(self.FuelPerTick)
+    self:SetNextPrimaryFire(CurTime() + 60 / self.FireRate)
+
+    if CLIENT then return end
+
+    local src = owner:GetShootPos()
+    local dir = self:GetAimVector()
+    local hull = self.FlameHull
+    local hit = {}
+
+    // a few staggered hull traces so the whole stream width burns
+    for i = 0, 2 do
+        local off = (i - 1) * hull * 0.8
+        local right = self:GetAimAngle():Right() * off
+        local tr = util.TraceHull({
+            start = src + right,
+            endpos = src + right + dir * self.FlameRange,
+            filter = owner,
+            mask = MASK_SHOT_HULL,
+            mins = Vector(-hull, -hull, -hull),
+            maxs = Vector(hull, hull, hull),
+        })
+        local ent = tr.Entity
+        if IsValid(ent) and !hit[ent] then
+            hit[ent] = true
+            local dmg = DamageInfo()
+            dmg:SetDamage(self.DamageGeneric)
+            dmg:SetDamageType(DMG_BURN)
+            dmg:SetAttacker(owner)
+            dmg:SetInflictor(self)
+            dmg:SetDamagePosition(tr.HitPos)
+            dmg:SetDamageForce(dir * 200)
+            ent:TakeDamageInfo(dmg)
+            if ent:IsPlayer() or ent:IsNPC() or ent:IsNextBot() or ent:GetClass() == "prop_physics" then
+                ent:Ignite(self.IgniteTime)
+            end
+        end
+    end
+
+    // things standing in the cloud where the stream lands also catch fire
+    local tr = util.TraceLine({start = src, endpos = src + dir * self.FlameRange, filter = owner, mask = MASK_SHOT})
+    for _, ent in ipairs(ents.FindInSphere(tr.HitPos, hull * 3)) do
+        if !hit[ent] and (ent:IsPlayer() or ent:IsNPC() or ent:IsNextBot()) and ent != owner then
+            hit[ent] = true
+            local dmg = DamageInfo()
+            dmg:SetDamage(self.DamageGeneric * 0.5)
+            dmg:SetDamageType(DMG_BURN)
+            dmg:SetAttacker(owner)
+            dmg:SetInflictor(self)
+            ent:TakeDamageInfo(dmg)
+            ent:Ignite(self.IgniteTime * 0.5)
+        end
+    end
+end
+
+function SWEP:PrimaryAttack()
+    // handled in ThinkWeapon so the stream starts and stops with the key
+end
+
+function SWEP:ThinkWeapon()
+    local owner = self:GetOwner()
+
+    self:Think_Sights()
+
+    local wants = owner:KeyDown(IN_ATTACK) and !owner:KeyDown(IN_USE) and self:GetRoundsLeft() > 0
+        and self:GetAnimLockTime() <= CurTime() and self:GetHolsterTime() == 0
+
+    if wants and !self:IsFlaming() then
+        self:StartFlame()
+    elseif !wants and self:IsFlaming() then
+        self:StopFlame()
+    end
+
+    if self:IsFlaming() and self:GetNextPrimaryFire() <= CurTime() then
+        self:FlameTick()
+        self:SetLastRecoilTime(CurTime())
+    end
+
+    if owner:KeyPressed(IN_ATTACK) and owner:KeyDown(IN_USE) and !self:StillWaiting() then
+        self:Bash()
+        self:SetNextPrimaryFire(CurTime() + 0.6)
+    end
+end
+
+function SWEP:Holster(wep)
+    if self:IsFlaming() then
+        self:StopFlame()
+    end
+    return self.BaseClass.Holster(self, wep)
+end
+
+function SWEP:OnRemove()
+    if CLIENT then self:StopFlameEffect() end
+    self:StopSound(self.SoundFireLoop)
+end
+
+if CLIENT then
+    // The stream is a particle system attached to the muzzle attachment: the viewmodel for
+    // the player holding it, the world model for everyone else.
+    function SWEP:FlameEmitter()
+        local owner = self:GetOwner()
+        if owner == LocalPlayer() and !owner:ShouldDrawLocalPlayer() then
+            return owner:GetViewModel()
+        end
+        return self
+    end
+
+    function SWEP:StartFlameEffect()
+        self:StopFlameEffect()
+        local ent = self:FlameEmitter()
+        if !IsValid(ent) then return end
+        local att = ent:LookupAttachment("muzzle")
+        if att <= 0 then att = 1 end
+        self.FlamePS = CreateParticleSystem(ent, self.FlameParticle, PATTACH_POINT_FOLLOW, att)
+        self.FlamePSEnt = ent
+    end
+
+    function SWEP:StopFlameEffect()
+        if IsValid(self.FlamePS) then
+            self.FlamePS:StopEmission(false, false, true)
+        end
+        self.FlamePS = nil
+    end
+
+    // Other players' streams are driven by the networked flag
+    function SWEP:Think_ClientFlame()
+        local flaming = self:GetPrimedAttack()
+        if flaming and !IsValid(self.FlamePS) and self:GetOwner() != LocalPlayer() then
+            self:StartFlameEffect()
+        elseif !flaming and IsValid(self.FlamePS) and self:GetOwner() != LocalPlayer() then
+            self:StopFlameEffect()
+        end
+    end
+
+    function SWEP:DrawWorldModel()
+        self:DrawModel()
+        self:Think_ClientFlame()
+    end
+end
+
+// The tank on the back: a burst hits the wearer's back and the pack goes up.
+if SERVER then
+    hook.Add("EntityTakeDamage", "MCV_FlamethrowerTank", function(ent, dmginfo)
+        if !ent:IsPlayer() then return end
+        local wep = ent:GetActiveWeapon()
+        if !IsValid(wep) or !wep.TankExplodes or !wep.MilitaryConflictVietnam then return end
+        if !dmginfo:IsBulletDamage() then return end
+        if (wep.NextTankCheck or 0) > CurTime() then return end
+        wep.NextTankCheck = CurTime() + 0.1
+
+        // shot from behind, into the pack
+        local from = dmginfo:GetDamagePosition()
+        local back = -ent:GetAimVector()
+        back.z = 0
+        if (from - ent:GetPos()):GetNormalized():Dot(back) < 0.55 then return end
+        if math.random() > 0.35 then return end
+
+        local pos = ent:GetPos() + Vector(0, 0, 48) + back * 10
+        ParticleEffect("Vietnam_Explosion_Flamethrower_BackPack", pos, angle_zero)
+        util.BlastDamage(wep, dmginfo:GetAttacker(), pos, wep.TankExplosionRadius, wep.TankExplosionDamage)
+        ent:EmitSound("MCV_BaseGrenade.Explode")
+        ent:Ignite(10)
+        ent:SetAmmo(0, wep:GetPrimaryAmmoType())
+    end)
+end

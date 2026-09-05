@@ -194,8 +194,9 @@ function SWEP:GetZoomMagnification() return 1 end
 function SWEP:GetFiremodeName() return "" end
 function SWEP:GetHUDAmmo() return nil, nil end
 
-// Activity the idle loop uses
+// Activity the idle loop uses, or a sequence name that takes precedence when not nil
 function SWEP:IdleActivity() return ACT_VM_IDLE end
+function SWEP:IdleSequence() return nil end
 // Sequence played when the weapon comes up after the first READY
 function SWEP:DeployAnimation() return self:PlayAnimation(ACT_VM_DRAW, 1, true) end
 function SWEP:OnDeploy() end

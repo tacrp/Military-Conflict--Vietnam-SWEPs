@@ -42,6 +42,9 @@ WEAPON_TYPE = {  # WeaponType -> (Slot, SubCategory, HoldType)
     "Shotgun": (2, "Shotguns", "shotgun"),
     "Revolver": (1, "Revolvers", "revolver"),
     "GrenadeLauncher": (4, "Anti-Armor", "shotgun"),
+    "Crossbow": (3, "Rifles", "crossbow"),
+    "Flaregun": (1, "Pistols", "pistol"),
+    "Ptrd": (3, "Anti-Armor", "ar2"),
     "SniperRifle": (3, "Sniper Rifles", "ar2"),
     "RocketLauncher": (4, "Anti-Armor", "rpg"),
     "BoltActionRifle": (3, "Bolt-Action Rifles", "ar2"),
@@ -69,6 +72,8 @@ HOLDTYPES = {
 }
 
 AMMO = {  # primary_ammo -> (GMod ammo type, caliber label)
+    "CrossbowBolt": ("mcv_crossbowbolt", "Crossbow Bolt"),
+    "FlareRound": ("mcv_flareround", "26.5mm Flare"),
     "9x19mm": ("pistol", "9x19mm"),
     "5.56mm": ("ar2", "5.56x45mm"),
     "7.62x39": ("ar2", "7.62x39mm"),
@@ -129,7 +134,8 @@ BRASS = {0: 11, 1: 12, 2: 4, 3: 5, 4: 6, 5: 1, 6: 7, 7: 8, 8: 9, 9: 10, 10: 15, 
 # WeaponTypes the mcv_base can drive. Grenades, mines, flamethrowers, melee and equipment need
 # their own bases and are skipped unless --all-types is given.
 GUN_TYPES = {"SubMachinegun", "Rifle", "Carbine", "Pistol", "Machinegun", "BattleRifle", "MachinePistol", "Shotgun",
-             "Revolver", "GrenadeLauncher", "SniperRifle", "RocketLauncher", "BoltActionRifle", "RifleGrenade"}
+             "Revolver", "GrenadeLauncher", "SniperRifle", "RocketLauncher", "BoltActionRifle", "RifleGrenade",
+             "Crossbow", "Flaregun", "Ptrd"}
 
 # Muzzle flash effect names the addon uses (GMod stock effects; the game's particles need ARC9).
 MUZZLE = {
@@ -149,7 +155,11 @@ VC_ORIGINS = {"#soviet_union", "#china", "#russian_empire", "#france", "#nazi_ge
 SHOOT_ENTITY = {"rpg2": "mcv_proj_rpg2", "rpg7": "mcv_proj_rpg", "m72": "mcv_proj_rpg", "m202": "mcv_proj_m202",
                 "xm202": "mcv_proj_m202", "bazooka": "mcv_proj_bazooka", "panzerschreck": "mcv_proj_panzerschreck",
                 "kolos": "mcv_proj_kolos",
+                "crossbow": "mcv_proj_bolt", "m8": "mcv_proj_flare", "type97": "mcv_proj_flare",
                 "m79": "mcv_proj_40mm", "m79_short": "mcv_proj_40mm", "china_lake": "mcv_proj_40mm", "chinalake": "mcv_proj_40mm"}
+
+# projectile guns whose launch speed is the script's gl_velocity (m/s), not muzzle_velocity
+GL_VELOCITY_GUNS = {"crossbow", "m8", "type97"}
 
 # weapons that empty the whole clip in one trigger pull (the Kolos fires its seven rockets at once)
 VOLLEY_ALL = {"kolos": 7}
@@ -526,7 +536,153 @@ def generate_throwable(name, S, qc, vm, args, existing, warnings):
     return "\n".join(out), warnings
 
 
-EQUIPMENT_GENERATORS = {"Grenade": generate_throwable, "SmokeGrenade": generate_throwable, "Incendiary": generate_throwable}
+def generate_melee(name, S, qc, vm, args, existing, warnings):
+    """Melee / Fists scripts -> mcv_melee."""
+    seqs = set(qc["sequences"])
+    if not seqs & {"slash", "swing_a", "stab"}:
+        warnings.append("viewmodel has no slash / stab sequence")
+    dmg = num(S.get("DamageGeneric"), 30)
+    dmg_alt = num(S.get("DamageGenericAlt"), 0)
+    is_fists = S.get("WeaponType") == "Fists" or name == "fists"
+    is_wrench = "repair" in seqs
+    out = _header(name, "mcv_melee", S, args, existing, name, "Melee", 0)
+    A = out.append
+    A('SWEP.ViewModel = "models/weapons/mcv/%s.mdl"' % vm)
+    A('SWEP.WorldModel = "models/weapons/mcv/%s.mdl"' % _wm_of(S, vm))
+    A("")
+    if is_fists:
+        A('SWEP.HoldType = "fist"')
+        A('SWEP.AimHoldType = "fist"')
+    elif "shovel" in name or "crowbar" in name or is_wrench:
+        A('SWEP.HoldType = "melee"')
+        A('SWEP.AimHoldType = "melee"')
+    A("")
+    A("SWEP.DamageGeneric = %s" % fmt(dmg))
+    if dmg_alt:
+        A("SWEP.DamageGenericAlt = %s" % fmt(dmg_alt))
+    A("SWEP.MeleeRange = %s" % fmt(num(S.get("MeleeRange"), 48)))
+    A("SWEP.MeleeRangeAlt = %s" % fmt(num(S.get("MeleeRangeAlt"), num(S.get("MeleeRange"), 48) + 8)))
+    A("SWEP.SlashRate = %s" % fmt(num(S.get("FireRate"), 150)))
+    A("")
+    A("SWEP.CanThrow = %s" % fmt("throw" in seqs and not is_wrench))
+    if is_wrench:
+        A("SWEP.CanRepair = true")
+    A("")
+    def snd(key, default):
+        v = S.get("SoundData." + key, "")
+        return fmt("MCV_" + v) if v and not v.startswith(("Flesh.", "Default.")) else fmt(default)
+    A("SWEP.SoundHitFlesh = %s" % snd("melee_hit", "MCV_Weapon_Fists.Punch" if is_fists else "MCV_Weapon_M1942.Stab"))
+    A("SWEP.SoundHitWorld = %s" % snd("melee_hit_world", "MCV_Weapon_Fists.PunchWall" if is_fists else "MCV_Weapon_M1942.Hit"))
+    A("SWEP.SoundThrustFlesh = %s" % snd("special1", "MCV_Weapon_Fists.PowerPunch" if is_fists else "MCV_Weapon_M1942.ThrustStab"))
+    A("SWEP.SoundThrustWorld = %s" % snd("special2", "MCV_Weapon_Fists.PowerPunchWall" if is_fists else "MCV_Weapon_M1942.ThrustHit"))
+    A("")
+    A("SWEP.WeaponWeight = %s" % fmt(num(S.get("weight"), 1)))
+    if existing.get("IconOverride"):
+        A("SWEP.IconOverride = %s" % existing["IconOverride"])
+    A("")
+    return "\n".join(out), warnings
+
+
+def generate_equipment(name, S, qc, vm, args, existing, warnings):
+    """Equipment scripts: ammo / medic boxes -> mcv_equipment_box, binoculars -> mcv_binoculars."""
+    if name.startswith("binoculars"):
+        if name not in ("binoculars_us", "binoculars_vc"):
+            return None, ["artillery / napalm / barrage binoculars need a strike system; only the plain ones are converted"]
+        out = _header(name, "mcv_binoculars", S, args, existing, name, "Equipment", 4)
+        A = out.append
+        A('SWEP.ViewModel = "models/weapons/mcv/%s.mdl"' % vm)
+        A('SWEP.WorldModel = "models/weapons/mcv/%s.mdl"' % _wm_of(S, vm))
+        A("")
+        A("SWEP.IronsightPos = %s" % (existing.get("IronsightPos") or "Vector(0, -4, 0) -- TODO tune"))
+        A("SWEP.IronsightAng = %s" % (existing.get("IronsightAng") or "Angle(0, 0, 0) -- TODO tune"))
+        A("")
+        return "\n".join(out), warnings
+    if "box" not in name:
+        return None, ["equipment %s is not supported yet" % name]
+    kind = "medic" if "medic" in name else "ammo"
+    clip = (S.get("clip_size") or "-1/3").split("/")
+    carried = int(num(clip[1], 3)) if len(clip) > 1 else 3
+    out = _header(name, "mcv_equipment_box", S, args, existing, name, "Equipment", 4)
+    A = out.append
+    A('SWEP.ViewModel = "models/weapons/mcv/%s.mdl"' % vm)
+    A('SWEP.WorldModel = "models/weapons/mcv/%s.mdl"' % _wm_of(S, vm))
+    A("")
+    A('SWEP.BoxKind = "%s"' % kind)
+    A('SWEP.Primary.Ammo = "%s"' % ("mcv_medicbox" if kind == "medic" else "mcv_ammobox"))
+    A("SWEP.Primary.ClipSize = -1")
+    A("SWEP.Primary.DefaultClip = %d" % carried)
+    A("")
+    return "\n".join(out), warnings
+
+
+def generate_placeable(name, S, qc, vm, args, existing, warnings):
+    """C4 / dynamite / mines -> mcv_placeable."""
+    wtype = S.get("WeaponType")
+    if wtype == "Mine":
+        kind, ent, ammo = "mine", "mcv_mine", "mcv_mine"
+    elif "dynamite" in name:
+        kind, ent, ammo = "dynamite", "mcv_dynamite", "mcv_explosive_charge"
+    else:
+        kind, ent, ammo = "c4", "mcv_c4", "mcv_explosive_charge"
+    seqs = set(qc["sequences"])
+    need = "placemine" if kind == "mine" else "plant"
+    if need not in seqs:
+        warnings.append("viewmodel has no %s sequence" % need)
+    clip = (S.get("clip_size") or "-1/1").split("/")
+    carried = int(num(clip[1], 1)) if len(clip) > 1 else 1
+    out = _header(name, "mcv_placeable", S, args, existing, name, "Explosives", 4)
+    A = out.append
+    A('SWEP.ViewModel = "models/weapons/mcv/%s.mdl"' % vm)
+    A('SWEP.WorldModel = "models/weapons/mcv/%s.mdl"' % _wm_of(S, vm))
+    A("")
+    A('SWEP.PlaceKind = "%s"' % kind)
+    A('SWEP.PlacedEntityClass = "%s"' % ent)
+    A("SWEP.ExplosionDamage = %s" % fmt(num(S.get("ExplosionDamage"), 500)))
+    A("SWEP.ExplosionRadius = %s" % fmt(num(S.get("ExplosionRadius"), 500)))
+    A("")
+    A('SWEP.Primary.Ammo = "%s"' % ammo)
+    A("SWEP.Primary.ClipSize = -1")
+    A("SWEP.Primary.DefaultClip = %d" % carried)
+    A("")
+    A("SWEP.WeaponWeight = %s" % fmt(num(S.get("weight"), 2)))
+    A("")
+    return "\n".join(out), warnings
+
+
+def generate_flamethrower(name, S, qc, vm, args, existing, warnings):
+    """Flamethrower scripts -> mcv_flamethrower (a gun base with a fire stream)."""
+    clip = (S.get("clip_size") or "-1/100").split("/")
+    fuel = int(num(clip[1], 100)) if len(clip) > 1 else 100
+    out = _header(name, "mcv_flamethrower", S, args, existing, name, "Flamethrowers", 3)
+    A = out.append
+    A('SWEP.ViewModel = "models/weapons/mcv/%s.mdl"' % vm)
+    A('SWEP.WorldModel = "models/weapons/mcv/%s.mdl"' % _wm_of(S, vm))
+    A("")
+    A("SWEP.DamageGeneric = %s" % fmt(num(S.get("DamageGeneric"), 15)))
+    A("SWEP.FireRate = %s" % fmt(num(S.get("FireRate"), 600)))
+    A("")
+    def snd(key, default):
+        v = S.get("SoundData." + key, "")
+        return fmt("MCV_" + v) if v else fmt(default)
+    A("SWEP.SoundFireStart = %s" % snd("single_shot", "MCV_Weapon_LPO50.Primary_Fire_Start"))
+    A("SWEP.SoundFireLoop = %s" % snd("special1", "MCV_Weapon_LPO50.Primary_Fire_Loop"))
+    A("SWEP.SoundFireStop = %s" % snd("special2", "MCV_Weapon_LPO50.Primary_Fire_Stop"))
+    A("")
+    A("SWEP.IronsightPos = %s" % (existing.get("IronsightPos") or "Vector(0, -4, 0) -- TODO tune"))
+    A("SWEP.IronsightAng = %s" % (existing.get("IronsightAng") or "Angle(0, 0, 0) -- TODO tune"))
+    A("")
+    A('SWEP.Primary.Ammo = "mcv_flamethrower_fuel"')
+    A("SWEP.Primary.ClipSize = -1")
+    A("SWEP.Primary.DefaultClip = %d" % fuel)
+    A("")
+    A("SWEP.WeaponWeight = %s" % fmt(num(S.get("weight"), 8)))
+    A("")
+    return "\n".join(out), warnings
+
+
+EQUIPMENT_GENERATORS = {"Grenade": generate_throwable, "SmokeGrenade": generate_throwable, "Incendiary": generate_throwable,
+                        "Melee": generate_melee, "Fists": generate_melee, "Equipment": generate_equipment,
+                        "C4": generate_placeable, "Mine": generate_placeable, "Flamethrower": generate_flamethrower}
 
 
 def generate(script_path, args):
@@ -555,6 +711,14 @@ def generate(script_path, args):
         return existing.get(key) if args.reuse else None
 
     wtype = S.get("WeaponType")
+    if not wtype and ("MeleeRange" in S or name in ("wrench", "fists")):
+        wtype = "Melee"
+    if not wtype and S.get("primary_ammo") == "flamethrower_fuel":
+        wtype = "Flamethrower"
+    if not wtype and S.get("primary_ammo") == "explosive_charge":
+        wtype = "C4"
+    if name.endswith("_zombie"):
+        return None, ["zombie mode variant"]
     if wtype in EQUIPMENT_GENERATORS:
         return EQUIPMENT_GENERATORS[wtype](name, S, qc, vm, args, existing, warnings)
     if args.guns_only and wtype not in GUN_TYPES:
@@ -823,7 +987,10 @@ def generate(script_path, args):
         A(line("RifleGrenadeForce", rf or 2750))
     if name in SHOOT_ENTITY:
         A(line("ShootEntity", fmt(SHOOT_ENTITY[name])))
-        A(line("ShootEntityForce", int(num(S.get("muzzle_velocity"), 100)) * 50))
+        if name in GL_VELOCITY_GUNS:
+            A(line("ShootEntityForce", int(num(S.get("gl_velocity"), 100) * 39.37)))
+        else:
+            A(line("ShootEntityForce", int(num(S.get("muzzle_velocity"), 100)) * 50))
         A(line("AmmoPerShot", 1))
     A("")
     A("// View slide from recoil")
