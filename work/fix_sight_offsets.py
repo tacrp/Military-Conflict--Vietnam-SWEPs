@@ -62,6 +62,7 @@ def main():
         done[lua_name] = name
         src = open(lp, encoding="utf-8", errors="replace").read()
         report = []
+        touched = False
         for key in KEYS:
             src, changed, found = set_line(src, key, so[key])
             if not found:
@@ -69,15 +70,18 @@ def main():
                     # insert after CustomPos
                     src, ins, _ = set_line(src, "CustomPos", so["CustomPos"] + "\nSWEP.CustomAng = " + so["CustomAng"])
                     if ins:
+                        touched = True
                         report.append("CustomAng added")
                 else:
                     report.append("%s missing" % key)
                 continue
             if changed:
+                touched = True
                 report.append("%s -> %s" % (key, so[key]))
         if report:
-            changed_files += 1
             print("%-28s %s" % (lua_name, "; ".join(report)))
+        if touched:
+            changed_files += 1
             if not args.dry_run:
                 open(lp, "w", encoding="utf-8", newline="\n").write(src)
     print("%d lua files %s" % (changed_files, "would change" if args.dry_run else "changed"))
