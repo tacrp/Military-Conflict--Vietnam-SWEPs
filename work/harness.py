@@ -89,7 +89,7 @@ def next_job_name(prefix="job"):
 def send(lines, name=None, wait=True, timeout=120):
     ensure_dirs()
     name = name or next_job_name()
-    done = os.path.join(RESULTS, name + ".done")
+    done = os.path.join(RESULTS, name + ".done.txt")
     res = os.path.join(RESULTS, name + ".json")
     for p in (done, res):
         if os.path.exists(p):

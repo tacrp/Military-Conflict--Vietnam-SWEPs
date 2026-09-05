@@ -159,7 +159,7 @@ if CLIENT then
         else
             log("shot", name, "capture failed")
         end
-        file.Write(SHOTS .. name .. ".done", "1")
+        file.Write(SHOTS .. name .. ".done.txt", "1")
     end)
 
     net.Receive("mcv_harness", function()
@@ -170,7 +170,7 @@ if CLIENT then
             H.PendingShot = {name = arg, frames = 2}
         elseif kind == "report" then
             file.Write(RESULTS .. arg .. ".client.json", util.TableToJSON(H.WeaponState(LocalPlayer()), true))
-            file.Write(RESULTS .. arg .. ".client.done", "1")
+            file.Write(RESULTS .. arg .. ".client.done.txt", "1")
         elseif kind == "clua" then
             local fn = CompileString(arg, "harness_clua", false)
             if isfunction(fn) then
@@ -200,13 +200,13 @@ local function send(ply, kind, arg, flag)
     net.Send(ply)
 end
 
-local function player()
+local function firstPlayer()
     return player.GetAll()[1]
 end
 
 local function finishJob(job)
     file.Write(RESULTS .. job.name .. ".json", util.TableToJSON(job.results, true))
-    file.Write(RESULTS .. job.name .. ".done", "1")
+    file.Write(RESULTS .. job.name .. ".done.txt", "1")
     log("job", job.name, "done")
 end
 
@@ -252,17 +252,17 @@ local function step(job, ply, line)
         ply:ConCommand("cl_drawhud " .. rest)
     elseif cmd == "shot" then
         local name = args[1]
-        file.Delete(SHOTS .. name .. ".done")
+        file.Delete(SHOTS .. name .. ".done.txt")
         file.Delete(SHOTS .. name .. ".png")
         send(ply, "shot", name, args[2] == "marker")
-        job.waitfile = SHOTS .. name .. ".done"
+        job.waitfile = SHOTS .. name .. ".done.txt"
         table.insert(job.results.shots, name)
     elseif cmd == "report" then
         local name = args[1]
-        file.Delete(RESULTS .. name .. ".client.done")
+        file.Delete(RESULTS .. name .. ".client.done.txt")
         file.Write(RESULTS .. name .. ".server.json", util.TableToJSON(H.WeaponState(ply), true))
         send(ply, "report", name)
-        job.waitfile = RESULTS .. name .. ".client.done"
+        job.waitfile = RESULTS .. name .. ".client.done.txt"
         table.insert(job.results.reports, name)
     elseif cmd == "spawn" then
         local class = args[1]
@@ -305,7 +305,7 @@ local function step(job, ply, line)
 end
 
 local function tick()
-    local ply = player()
+    local ply = firstPlayer()
     if !IsValid(ply) then return end
 
     if !H.Job then
