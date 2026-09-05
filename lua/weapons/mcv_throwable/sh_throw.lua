@@ -28,6 +28,30 @@ function SWEP:CanStartThrow()
     return true
 end
 
+function SWEP:SetupDataTables()
+    baseclass.Get("mcv_base_core").SetupDataTables(self)
+    self:NetworkVar("Float", 13, "WindupEnd") // when the pin-pull animation is over
+end
+
+// The fuse runs from the pin pull (start of the windup): hold it and it goes off sooner after
+// the throw; hold it past the fuse and it goes off in the hand. Impact-fused ones do not cook.
+function SWEP:GetCookTime()
+    if self.FuseImpact then return 0 end
+    local state = self:GetActionState()
+    if state == STATE_IDLE then return 0 end
+    return CurTime() - self:GetActionStart()
+end
+
+// 0..1 phase of the half-second pulse the crosshair draws while cooking, and how far the fuse
+// has run; nil when not cooking (cl_hud.lua DoDrawCrosshair)
+function SWEP:GetCookPulse()
+    if self.FuseImpact then return nil end
+    local state = self:GetActionState()
+    if state != STATE_WINDUP_HIGH and state != STATE_WINDUP_LOW then return nil end
+    local cook = CurTime() - self:GetActionStart()
+    return (cook % 0.5) / 0.5, math.Clamp(cook / self:GetFuseTime(), 0, 1)
+end
+
 function SWEP:Windup(low)
     self:SetActionState(low and STATE_WINDUP_LOW or STATE_WINDUP_HIGH)
     self:SetActionStart(CurTime())
@@ -36,10 +60,12 @@ function SWEP:Windup(low)
     if !self:HasSequence(seq) then seq = self.SequenceWindupHigh end
 
     // hold the last frame until the button is released
-    self:PlaySequence(seq, 1, false, true)
+    local t = self:PlaySequence(seq, 1, false, true) or 0.5
+    self:SetWindupEnd(CurTime() + t)
 end
 
-function SWEP:Throw(low)
+// overcooked: the throw is forced and the grenade goes off as it leaves the hand
+function SWEP:Throw(low, overcooked)
     local owner = self:GetOwner()
     local roll = low and owner:Crouching() and self:HasSequence(self.SequenceRoll)
 
@@ -55,13 +81,18 @@ function SWEP:Throw(low)
     local release = math.min(low and self.ThrowReleaseTimeUnderhand or self.ThrowReleaseTime, t)
     local kind = roll and "roll" or (low and "low" or "high")
     local fuse = self:GetFuseTime()
+    local cookstart = self:GetActionStart()
 
     owner:DoAnimationEvent(self.ShootGesture)
 
-    self:SetTimer(release, function()
-        if !IsValid(self) then return end
-        self:LaunchThrowable(kind, fuse)
-    end, "mcv_throw")
+    if overcooked then
+        self:LaunchThrowable(kind, fuse, cookstart)
+    else
+        self:SetTimer(release, function()
+            if !IsValid(self) then return end
+            self:LaunchThrowable(kind, fuse, cookstart)
+        end, "mcv_throw")
+    end
 
     self:SetTimer(t, function()
         if !IsValid(self) then return end
@@ -73,13 +104,19 @@ function SWEP:Throw(low)
 end
 
 // Spawns the projectile. Runs from a predicted timer on both realms; only the server creates.
-function SWEP:LaunchThrowable(kind, fuse)
+// `cookstart` is when the pin came out: the time already spent comes off the fuse.
+function SWEP:LaunchThrowable(kind, fuse, cookstart)
     local owner = self:GetOwner()
     if !IsValid(owner) then return end
 
     self:TakeRound(1)
 
     if CLIENT then return end
+
+    local remaining = fuse
+    if !self.FuseImpact and cookstart then
+        remaining = math.max(fuse - (CurTime() - cookstart), 0)
+    end
 
     local ang = self:GetAimAngle()
     local fwd, right, up = ang:Forward(), ang:Right(), ang:Up()
@@ -106,7 +143,7 @@ function SWEP:LaunchThrowable(kind, fuse)
     if !IsValid(ent) then return end
 
     ent.Model = self.ThrowModel or self.WorldModel
-    ent.Delay = fuse
+    ent.Delay = remaining
     if self.FuseImpact then
         ent.ImpactFuse = true
         ent.ExplodeOnImpact = true
@@ -125,6 +162,14 @@ function SWEP:LaunchThrowable(kind, fuse)
     ent:SetOwner(owner)
     ent:Spawn()
     ent:Activate()
+
+    // held too long: it goes off in the hand
+    if remaining <= 0 and !self.FuseImpact then
+        ent.ArmTime = CurTime()
+        ent.Armed = true
+        ent:PreDetonate()
+        return
+    end
 
     local phys = ent:GetPhysicsObject()
     if IsValid(phys) then
@@ -178,13 +223,13 @@ function SWEP:ThinkWeapon()
         elseif owner:KeyPressed(IN_ATTACK2) and self:CanStartThrow() then
             self:Windup(self.HasUnderhand and self:HasSequence(self.SequenceWindupLow))
         end
-    elseif state == STATE_WINDUP_HIGH then
-        if !owner:KeyDown(IN_ATTACK) then
-            self:Throw(false)
-        end
-    elseif state == STATE_WINDUP_LOW then
-        if !owner:KeyDown(IN_ATTACK2) then
-            self:Throw(true)
+    elseif state == STATE_WINDUP_HIGH or state == STATE_WINDUP_LOW then
+        local low = state == STATE_WINDUP_LOW
+        if !self.FuseImpact and self:GetCookTime() >= self:GetFuseTime() then
+            self:Throw(low, true)
+        // the pin has to be out (windup animation over) before it can leave the hand
+        elseif !owner:KeyDown(low and IN_ATTACK2 or IN_ATTACK) and CurTime() >= self:GetWindupEnd() then
+            self:Throw(low)
         end
     end
 end

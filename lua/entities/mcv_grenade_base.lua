@@ -20,6 +20,9 @@ ENT.ImpactDamageSpeed = 600
 ENT.ExplosionDamage = 150
 ENT.ExplosionRadius = 350
 ENT.IgniteRadius = 0
+ENT.BurnDuration = 3 // incendiaries: how long the ground burns (the M34's fire does not linger)
+ENT.BurnDamagePerSecond = 30
+ENT.BurnParticle = nil // the explosion effect carries its own embers
 ENT.ExplosionFamily = "grenade"
 ENT.ExplosionSound = "MCV_BaseGrenade.Explode"
 
@@ -41,11 +44,20 @@ function ENT:Detonate()
 
     util.BlastDamage(self:GetInflictor(), attacker, self:GetPos(), self.ExplosionRadius, self.ExplosionDamage)
 
-    if self.IgniteRadius > 0 then
-        for _, ent in ipairs(ents.FindInSphere(self:GetPos(), self.IgniteRadius)) do
-            if ent != self and (ent:IsPlayer() or ent:IsNPC() or ent:IsNextBot() or ent:GetClass() == "prop_physics") then
-                ent:Ignite(8)
-            end
+    // incendiary (the game's IgniteRadius extends ExplosionRadius): a short patch of fire like
+    // the M202's, damage ticking in sh_burn style, no Ignite()
+    if self.IgniteRadius > 0 and SERVER then
+        local pool = ents.Create("mcv_firepool")
+        if IsValid(pool) then
+            pool:SetPos(self:GetImpactPos() + self:GetImpactNormal() * 4)
+            pool:SetAngles(self:GetImpactNormal():Angle())
+            pool.Attacker = attacker
+            pool.Inflictor = self:GetInflictor()
+            pool.Radius = self.ExplosionRadius + self.IgniteRadius
+            pool.DamagePerSecond = self.BurnDamagePerSecond
+            pool.Duration = self.BurnDuration
+            pool.Particle = self.BurnParticle
+            pool:Spawn()
         end
     end
 

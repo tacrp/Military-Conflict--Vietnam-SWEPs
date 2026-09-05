@@ -19,6 +19,10 @@ SWEP.ViewModel = "models/weapons/mcv/v_reising_m60.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_reising_m60.mdl"
 
 SWEP.BodyGroups = ""
+SWEP.MagInTime = 1.67
+SWEP.MagInTimeEmpty = 1.67
+SWEP.MagOutTime = 0.4
+SWEP.MagOutTimeEmpty = 0.4
 
 // Stats
 
@@ -58,6 +62,8 @@ SWEP.Ironsight = true
 SWEP.IronsightSpeedScale = 1
 SWEP.IronsightFov = 90 - 15
 SWEP.IronsightWalkBobbingStrength = -0.25
+SWEP.MovementPoseWalk = 143
+SWEP.MovementPoseSprint = 239
 
 SWEP.HasScope = false
 SWEP.ScopeMaterial = NULL

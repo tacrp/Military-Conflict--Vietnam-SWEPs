@@ -15,6 +15,7 @@ ENT.ExplosionFamily = "grenade"
 ENT.ExplosionDamage = 500
 ENT.ExplosionRadius = 550
 ENT.FuseParticle = "vietnam_weaponeffect_dynamite_fuse"
+ENT.FuseSound = "MCV_Weapon_C4.FuseBurningLoop"
 
 function ENT:PlantOn(parent)
     if CLIENT then return end
@@ -33,13 +34,20 @@ function ENT:Light()
     self.Armed = true
     if SERVER then
         if self.FuseParticle then
-            ParticleEffectAttach(self.FuseParticle, PATTACH_ABSORIGIN_FOLLOW, self, 0)
+            // on the model's "fuse" attachment (the end of the fuse), not the stick's origin
+            local att = self:LookupAttachment("fuse")
+            if att > 0 then
+                ParticleEffectAttach(self.FuseParticle, PATTACH_POINT_FOLLOW, self, att)
+            else
+                ParticleEffectAttach(self.FuseParticle, PATTACH_ABSORIGIN_FOLLOW, self, 0)
+            end
         end
-        self:EmitSound("MCV_Weapon_C4.FuseBurningLoop")
+        // the game ships one burning-fuse loop (under the C4 name); the dynamite has no other
+        self:EmitSound(self.FuseSound)
     end
 end
 
 function ENT:OnRemove()
-    if SERVER then self:StopSound("MCV_Weapon_C4.FuseBurningLoop") end
-    self.BaseClass.OnRemove(self)
+    if SERVER then self:StopSound(self.FuseSound) end
+    baseclass.Get("mcv_proj_base").OnRemove(self)
 end

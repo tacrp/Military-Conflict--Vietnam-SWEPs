@@ -16,6 +16,10 @@ SWEP.Slot = 3
 
 SWEP.ViewModel = "models/weapons/mcv/v_lpo50.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_lpo50.mdl"
+SWEP.MovementPoseWalk = 80
+SWEP.MovementPoseSprint = 160
+SWEP.CustomPos = Vector(0, 0, 0)
+SWEP.CustomAng = Angle(0, 0, 0)
 
 SWEP.DamageGeneric = 15
 SWEP.FireRate = 600

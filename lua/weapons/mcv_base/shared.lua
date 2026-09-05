@@ -72,8 +72,10 @@ SWEP.HybridReload = false
 SWEP.HasEmptyReload = true
 SWEP.ShotgunReloadRounds = 1
 
-SWEP.MagInTime = 0
+SWEP.MagInTime = 0 // seconds into the reload animation when the new magazine / belt is in (the rounds shown jump to the new count)
 SWEP.MagInTimeEmpty = 0
+SWEP.MagOutTime = 0 // seconds in when the old one comes out (no rounds shown until MagInTime); 0 = off
+SWEP.MagOutTimeEmpty = 0
 SWEP.MagInTimeGrenade = 0.5
 SWEP.MagInClip = false
 

@@ -17,6 +17,10 @@ SWEP.ViewModel = "models/weapons/mcv/v_stoner63a_carbine.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_ak47.mdl"
 
 SWEP.BodyGroups = ""
+SWEP.MagInTime = 1.73
+SWEP.MagInTimeEmpty = 1.73
+SWEP.MagOutTime = 0.47
+SWEP.MagOutTimeEmpty = 0.47
 
 SWEP.WeaponSelectIcon = NULL
 
@@ -65,6 +69,8 @@ SWEP.Ironsight = true
 SWEP.IronsightSpeedScale = 1.0
 SWEP.IronsightFov = 90 - 15
 SWEP.IronsightWalkBobbingStrength = -0.25
+SWEP.MovementPoseWalk = 140
+SWEP.MovementPoseSprint = 235
 
 SWEP.HasScope = false
 SWEP.ScopeMaterial = NULL

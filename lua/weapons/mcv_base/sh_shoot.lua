@@ -20,10 +20,14 @@ function SWEP:PrimaryAttack()
         return
     end
 
-    if self:Clip1() < 1 then self:Reload() return end
+    if self:Clip1() < 1 then
+        self:SetBurstCount(0)
+        self:Reload()
+        return
+    end
     if self:GetSpeed() > 150 then return end
 
-    if self:GetNeedTriggerPress() then return end
+    if self:GetNeedTriggerPress() then self:SetBurstCount(0) return end
 
     local fm = self:GetFiremodeValue()
     local fmmult = 1
@@ -231,7 +235,7 @@ function SWEP:AttackEffects()
     local recoilup = Lerp(sa, self.ViewSlideRecoilUp, self.ViewSlideRecoilIronsightUp) * recoilmult
     local recoilright = Lerp(sa, self.ViewSlideRecoilRight, self.ViewSlideRecoilIronsightRight) * recoilmult
 
-    owner:ViewPunch(Angle(-recoilup, recoilright * util.SharedRandom("MCVRecoilLeftRight", -1, 1), 0))
+    owner:ViewPunch((2 - (sa * 1.5)) * Angle(((sa * recoilup) + ((1 - sa) * recoilright)) * (-sa + (util.SharedRandom("MCVRecoilUpDown", -1, 1) * (1 - sa))), recoilright * util.SharedRandom("MCVRecoilLeftRight", -1, 1), 0))
 
     if IsFirstTimePredicted() then
         if !self.NoEjectOnShoot then
@@ -241,6 +245,8 @@ function SWEP:AttackEffects()
     end
 
     owner:DoAnimationEvent(self.ShootGesture)
+
+    self:SetBurstCount(self:GetBurstCount() + 1)
 
     if fm == MCV.FIREMODE_VOLLEY then
         self:TakePrimaryAmmo(math.min(self:Clip1(), self.VolleyCount))

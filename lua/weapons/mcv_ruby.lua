@@ -23,6 +23,10 @@ SWEP.ViewModelAkimbo = "models/weapons/mcv/v_dual_ruby.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_ruby.mdl"
 
 SWEP.BodyGroups = ""
+SWEP.MagInTime = 1.57
+SWEP.MagInTimeEmpty = 1.57
+SWEP.MagOutTime = 0.33
+SWEP.MagOutTimeEmpty = 0.33
 
 // Stats
 
@@ -62,6 +66,8 @@ SWEP.Ironsight = true
 SWEP.IronsightSpeedScale = 1.3
 SWEP.IronsightFov = 90 - 15
 SWEP.IronsightWalkBobbingStrength = -1
+SWEP.MovementPoseWalk = 161
+SWEP.MovementPoseSprint = 260
 
 SWEP.HasScope = false
 SWEP.ScopeMaterial = NULL

@@ -2,15 +2,16 @@
 // with the gameplay values from Think and the frame-smoothed values from PreDrawViewModel).
 function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
     local displayRoundsToLoad = self:GetReloading()
+    local magOut = false // the old magazine / belt is out and the new one not yet in
 
     if displayRoundsToLoad then
         local reloadprogress = vm:SequenceDuration() - (self:GetAnimLockTime() - CurTime())
+        local empty = self:Clip1() == 0
+        local tin = empty and self.MagInTimeEmpty or self.MagInTime
+        local tout = empty and self.MagOutTimeEmpty or self.MagOutTime
 
-        if self:Clip1() == 0 then
-            displayRoundsToLoad = reloadprogress >= self.MagInTimeEmpty
-        else
-            displayRoundsToLoad = reloadprogress >= self.MagInTime
-        end
+        displayRoundsToLoad = reloadprogress >= tin
+        magOut = !displayRoundsToLoad and !self.MagInClip and tout > 0 and reloadprogress >= tout
     end
 
     local bodygroupbulletscount = self:Clip1()
@@ -45,6 +46,9 @@ function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
                 bodygroupbulletscount = bullets_to_load
             end
         end
+    elseif magOut then
+        vm:SetPoseParameter("ammo_fraction", 0)
+        bodygroupbulletscount = 0
     else
         vm:SetPoseParameter("ammo_fraction", self:Clip1() / clipsize)
     end

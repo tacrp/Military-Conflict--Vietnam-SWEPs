@@ -23,6 +23,10 @@ SWEP.ViewModelAkimbo = "models/weapons/mcv/v_dual_vcpistol2.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_vcpistol2.mdl"
 
 SWEP.BodyGroups = ""
+SWEP.MagInTime = 1.07
+SWEP.MagInTimeEmpty = 1.07
+SWEP.MagOutTime = 0.4
+SWEP.MagOutTimeEmpty = 0.4
 
 // Stats
 
@@ -62,6 +66,8 @@ SWEP.Ironsight = true
 SWEP.IronsightSpeedScale = 1.3
 SWEP.IronsightFov = 90 - 15
 SWEP.IronsightWalkBobbingStrength = -1
+SWEP.MovementPoseWalk = 161
+SWEP.MovementPoseSprint = 260
 
 SWEP.HasScope = false
 SWEP.ScopeMaterial = NULL

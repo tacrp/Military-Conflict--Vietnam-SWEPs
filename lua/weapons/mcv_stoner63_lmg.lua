@@ -62,6 +62,8 @@ SWEP.PlayCycleAnimation = false
 
 SWEP.MagInTime = 2.5
 SWEP.MagInTimeEmpty = 2.5
+SWEP.MagOutTime = 1.83
+SWEP.MagOutTimeEmpty = 1.83
 
 // View slide from recoil
 SWEP.ViewSlideRecoilUp = 1.64
@@ -81,6 +83,8 @@ SWEP.Ironsight = true
 SWEP.IronsightSpeedScale = 1.0
 SWEP.IronsightFov = 90 - 15
 SWEP.IronsightWalkBobbingStrength = -0.25
+SWEP.MovementPoseWalk = 80
+SWEP.MovementPoseSprint = 158
 
 SWEP.HasScope = false
 SWEP.ScopeMaterial = NULL

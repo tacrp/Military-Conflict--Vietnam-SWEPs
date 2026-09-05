@@ -42,7 +42,7 @@ WEAPON_TYPE = {  # WeaponType -> (Slot, SubCategory, HoldType)
     "Shotgun": (2, "Shotguns", "shotgun"),
     "Revolver": (1, "Revolvers", "revolver"),
     "GrenadeLauncher": (4, "Anti-Armor", "shotgun"),
-    "Crossbow": (3, "Rifles", "crossbow"),
+    "Crossbow": (3, "Bows", "crossbow"),
     "Flaregun": (1, "Pistols", "pistol"),
     "Ptrd": (3, "Anti-Armor", "ar2"),
     "SniperRifle": (3, "Sniper Rifles", "ar2"),
@@ -169,7 +169,8 @@ SA_DUAL_RELOAD = {"m1895", "blackhawk"}
 
 # game script name -> addon lua name where the two cannot be matched through the viewmodel alone
 # (several lua files share one viewmodel, or the model was renamed)
-SCRIPT_ALIASES = {"baby_browning": "babybrowning", "china_lake": "chinalake", "dual_hp": "dual_highpower",
+SCRIPT_ALIASES = {
+    "mk22": "sw39",            # S&W M39-2 (the unsuppressed Mk 22); mk22_mod0 is the Hush Puppy"baby_browning": "babybrowning", "china_lake": "chinalake", "dual_hp": "dual_highpower",
                   "kar98k": "kar98", "kar98k_s": "kar98_s", "m1903": "springfield", "m1903s": "springfield_s",
                   "m1918_bar": "m1918_bar", "m1918": "m1918", "m1942": "m1942_machete", "stg44s": "stg44_s",
                   "svt40s": "svt40_s", "mas49s": "mas49_s", "m607s": "m607_s", "car15s": "car15_s",
@@ -369,6 +370,40 @@ def qc_facts(path):
     f["sequences"] = re.findall(r'^\$sequence\s+"([^"]+)"', src, re.M)
     f["poseparams"] = re.findall(r'^\$poseparameter\s+"([^"]+)"', src, re.M)
     f["hammer_events"] = "hammerpos" in src
+    # the run layer's player_movement range: the game's walk speed for this weapon class (where
+    # the run layer starts: 148 rifles, 106 M60, 80 LPO-50) and its sprint speed (where it is full)
+    f["run_range"] = None
+    m = re.search(r'^\$sequence\s+"runlayer"\s*\{(.*?)^\}', src, re.S | re.M)
+    if m:
+        b = re.search(r'blend\s+"player_movement"\s+(-?[\d.]+)\s+(-?[\d.]+)', m.group(1))
+        if b:
+            f["run_range"] = (float(b.group(1)), float(b.group(2)))
+    # reload animations: the frame the magazine / belt is swapped (the game's
+    # AE_CL_BODYGROUP_SET_TO_NEXTCLIP event, _EMPTY when the old one comes out; the mag-in /
+    # mag-out foley sounds as a fallback) and the fps, per reload activity
+    f["reload_events"] = {}
+    for m in re.finditer(r'^\$sequence\s+"([^"]+)"\s*\{(.*?)^\}', src, re.S | re.M):
+        body = m.group(2)
+        am = re.search(r'activity\s+"(ACT_VM_RELOAD|ACT_VM_RELOADEMPTY)"', body)
+        if not am or am.group(1) in f["reload_events"]:
+            continue
+        e = {"fps": None, "nextclip": None, "nextclip_empty": None, "magin": None, "magout": None}
+        fm = re.search(r'^\s*fps\s+([\d.]+)', body, re.M)
+        if fm:
+            e["fps"] = float(fm.group(1))
+        for ev, frame, arg in re.findall(r'\{\s*event\s+(\S+)\s+(\d+)\s+"([^"]*)"', body):
+            frame = int(frame)
+            if ev == "AE_CL_BODYGROUP_SET_TO_NEXTCLIP" and e["nextclip"] is None:
+                e["nextclip"] = frame
+            elif ev == "AE_CL_BODYGROUP_SET_TO_NEXTCLIP_EMPTY" and e["nextclip_empty"] is None:
+                e["nextclip_empty"] = frame
+            elif ev in ("5004", "AE_CL_PLAYSOUND"):
+                low = arg.lower()
+                if any(k in low for k in ("magin", "clipin", "bulletsin", "mag_in", "clip_in")) and e["magin"] is None:
+                    e["magin"] = frame
+                elif any(k in low for k in ("magout", "clipout", "bulletsout", "mag_out", "clip_out")) and e["magout"] is None:
+                    e["magout"] = frame
+        f["reload_events"][am.group(1)] = e
     # which hammerpos value the cycle animation (bolt pull / pump) carries: that is the event that
     # must release the action. Shotguns have shoot = 0 / pump = 1, bolt rifles shoot = 1 / bolt = 0.
     f["cycle_hammerpos"] = None
@@ -453,6 +488,41 @@ def sight_offsets(S):
     if S.get("isSupressed") == "1":
         out["TracerParticle"] = '""'
     return out
+
+def anim_timing(qc):
+    """Lua values read off the viewmodel's animations: where the run layer starts and ends
+    (MovementPoseWalk / MovementPoseSprint, so walking never bleeds into the sprint pose) and when
+    the reload animations swap the magazine or belt (MagInTime / MagOutTime, and the *Empty pair
+    for the empty reload; from AE_CL_BODYGROUP_SET_TO_NEXTCLIP or the mag foley events)."""
+    out = {}
+    rr = qc.get("run_range") if qc else None
+    if rr:
+        out["MovementPoseWalk"] = fmt(rr[0])
+        out["MovementPoseSprint"] = fmt(rr[1])
+    ev = (qc or {}).get("reload_events") or {}
+    times = {}
+    for act, kin, kout in (("ACT_VM_RELOAD", "MagInTime", "MagOutTime"),
+                           ("ACT_VM_RELOADEMPTY", "MagInTimeEmpty", "MagOutTimeEmpty")):
+        e = ev.get(act)
+        if not e:
+            continue
+        fps = e.get("fps") or 30.0
+        tin = e["nextclip"] if e["nextclip"] is not None else e["magin"]
+        tout = e["nextclip_empty"] if e["nextclip_empty"] is not None else e["magout"]
+        if tin is None:
+            continue
+        times[kin] = round(tin / fps, 2)
+        if tout is not None and tout < tin:
+            times[kout] = round(tout / fps, 2)
+    if "MagInTime" in times and "MagInTimeEmpty" not in times:
+        # no separate empty reload animation: the empty reload plays the same one
+        times["MagInTimeEmpty"] = times["MagInTime"]
+        if "MagOutTime" in times:
+            times["MagOutTimeEmpty"] = times["MagOutTime"]
+    for k, v in times.items():
+        out[k] = fmt(v)
+    return out
+
 
 def bodygroups_string(qc_bodygroups, S):
     """SWEP.BodyGroups digits from the script's BodygroupData block ("scope" "1" ...) laid over
@@ -1011,6 +1081,14 @@ def generate(script_path, args):
         for n, idx in enumerate(qc["bullet_bodygroups"], 1):
             A("    [%d] = {%d, 1}," % (n, idx))
         A("}")
+    timing = anim_timing(qc)
+    if any(k.startswith("Mag") for k in timing):
+        A("")
+        A("// When the reload animation swaps the magazine / belt (from its events): the rounds shown")
+        A("// on the model switch from the old count to the new one here, 0 in between when it is out")
+        for k in ("MagInTime", "MagInTimeEmpty", "MagOutTime", "MagOutTimeEmpty"):
+            if k in timing:
+                A(line(k, timing[k]))
     A("")
     A("// Stats")
     A("")
@@ -1098,6 +1176,10 @@ def generate(script_path, args):
     A(line("IronsightSpeedScale", reuse("IronsightSpeedScale") or fmt(num(S.get("IronsightSpeedScale"), 1))))
     A(line("IronsightFov", "90 - %g" % abs(num(S.get("IronsightedFovOffset"), -15))))
     A(line("IronsightWalkBobbingStrength", fmt(num(S.get("ironsightwalkbobbingstrength"), -0.25))))
+    if "MovementPoseWalk" in timing:
+        # the model's run layer range on player_movement: this weapon class's walk and sprint speeds
+        A(line("MovementPoseWalk", timing["MovementPoseWalk"]))
+        A(line("MovementPoseSprint", timing["MovementPoseSprint"]))
     A("")
     A(line("HasScope", fmt(has_scope)))
     if has_scope and scope_mat:

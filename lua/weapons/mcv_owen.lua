@@ -45,8 +45,10 @@ SWEP.Firemodes = {
 
 SWEP.LastShotAnimation = false
 
-SWEP.MagInTime = 1
-SWEP.MagInTimeEmpty = 1
+SWEP.MagInTime = 1.6
+SWEP.MagInTimeEmpty = 1.6
+SWEP.MagOutTime = 0.43
+SWEP.MagOutTimeEmpty = 0.43
 
 // View slide from recoil
 SWEP.ViewSlideRecoilUp = 1.1
@@ -66,6 +68,8 @@ SWEP.Ironsight = true
 SWEP.IronsightSpeedScale = 0.85
 SWEP.IronsightFov = 90 - 15
 SWEP.IronsightWalkBobbingStrength = -0.25
+SWEP.MovementPoseWalk = 142
+SWEP.MovementPoseSprint = 238
 
 SWEP.HasScope = false
 SWEP.ScopeMaterial = NULL

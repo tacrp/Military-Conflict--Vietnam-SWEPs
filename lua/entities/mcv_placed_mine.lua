@@ -19,7 +19,7 @@ ENT.ArmDelay = 2 // seconds after the stake goes in before the wire is live
 ENT.MineBodygroups = {mine = 0, stick = 1}
 
 function ENT:SetupDataTables()
-    self.BaseClass.SetupDataTables(self)
+    baseclass.Get("mcv_proj_base").SetupDataTables(self)
     self:NetworkVar("Entity", 1, "Stake")
 end
 
@@ -77,7 +77,7 @@ end
 function ENT:Detonate()
     local stake = self:GetStake()
     if IsValid(stake) then stake:Remove() end
-    self.BaseClass.Detonate(self)
+    baseclass.Get("mcv_grenade_base").Detonate(self)
 end
 
 function ENT:Use(ply)
@@ -90,14 +90,14 @@ function ENT:Use(ply)
 end
 
 if CLIENT then
-    local wire = Material("cable/rope")
+    local wire = Material("cable/cable2")
 
     function ENT:Draw()
         self:DrawModel()
         local a, b = self:WireEnds()
         if a then
             render.SetMaterial(wire)
-            render.DrawBeam(a, b, 0.6, 0, 1, Color(200, 200, 200, 255))
+            render.DrawBeam(a, b, 1, 0, (a - b):Length() / 16, color_white)
         end
     end
 end

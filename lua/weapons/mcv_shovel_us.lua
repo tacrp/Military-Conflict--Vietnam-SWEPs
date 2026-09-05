@@ -16,6 +16,9 @@ SWEP.Slot = 0
 
 SWEP.ViewModel = "models/weapons/mcv/v_shovel_us.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_shovel.mdl"
+SWEP.MovementPoseWalk = 167
+SWEP.MovementPoseSprint = 268
+SWEP.BodyGroups = "0"
 
 SWEP.HoldType = "melee"
 SWEP.AimHoldType = "melee"

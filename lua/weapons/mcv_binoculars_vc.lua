@@ -16,6 +16,10 @@ SWEP.Slot = 4
 
 SWEP.ViewModel = "models/weapons/mcv/v_binocular.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_binocular.mdl"
+SWEP.MovementPoseWalk = 158
+SWEP.MovementPoseSprint = 258
+SWEP.CustomPos = Vector(0, 0, 0)
+SWEP.CustomAng = Angle(0, 0, 0)
 
 SWEP.IronsightPos = Vector(0, 0, 0)
 SWEP.IronsightAng = Angle(0, 0, 0) -- TODO tune

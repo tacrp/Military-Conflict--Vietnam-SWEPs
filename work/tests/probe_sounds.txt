@@ -1,0 +1,17 @@
+give mcv_mk22_mod0
+wait 1.5
+clua print("[p] clua alive; MagIn soundscript on client:", tostring(sound.GetProperties("MCV_Weapon_Foley_MK22_Reload.MagIn") != nil))
+clua hook.Add("EntityEmitSound", "mcv_probe", function(t) print("[p] snd", t.SoundName, tostring(t.Entity)) end)
+lua hook.Add("EntityEmitSound", "mcv_probe", function(t) print("[p] sv snd", t.SoundName, tostring(t.Entity)) end)
+tap +attack 0.1
+wait 0.5
+tap +reload 0.1
+wait 3
+clua hook.Remove("EntityEmitSound", "mcv_probe")
+lua hook.Remove("EntityEmitSound", "mcv_probe")
+give mcv_m16a1
+wait 1.5
+clua hook.Add("EntityEmitSound", "mcv_probe", function(t) print("[p] m16 snd", t.SoundName) end)
+tap +reload 0.1
+wait 3
+clua hook.Remove("EntityEmitSound", "mcv_probe")

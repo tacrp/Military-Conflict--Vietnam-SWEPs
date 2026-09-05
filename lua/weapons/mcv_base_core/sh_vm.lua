@@ -28,8 +28,8 @@ function SWEP:DoBodygroups(vm, visual)
 
     vm:SetBodyGroups(self.BodyGroups)
 
-    // walk / run layers of every game viewmodel blend on this
-    vm:SetPoseParameter("player_movement", speed * Lerp(sa, 1, (1 + self.IronsightWalkBobbingStrength)))
+    // walk / run layers of every game viewmodel blend on this (sh_think.lua GetMovementPose)
+    vm:SetPoseParameter("player_movement", self:GetMovementPose(speed, sa))
 
     self:DoBodygroupsWeapon(vm, visual, sa, speed)
 end

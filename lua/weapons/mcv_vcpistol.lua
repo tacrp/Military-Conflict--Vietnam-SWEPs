@@ -22,6 +22,10 @@ SWEP.ViewModel = "models/weapons/mcv/v_vcpistol.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_vcpistol.mdl"
 
 SWEP.BodyGroups = ""
+SWEP.MagInTime = 2.5
+SWEP.MagInTimeEmpty = 2.5
+SWEP.MagOutTime = 0.87
+SWEP.MagOutTimeEmpty = 0.87
 
 // Stats
 
@@ -62,6 +66,8 @@ SWEP.Ironsight = true
 SWEP.IronsightSpeedScale = 1.15
 SWEP.IronsightFov = 90 - 15
 SWEP.IronsightWalkBobbingStrength = -0.6
+SWEP.MovementPoseWalk = 161
+SWEP.MovementPoseSprint = 260
 
 SWEP.HasScope = false
 SWEP.ScopeMaterial = NULL

@@ -16,6 +16,8 @@ SWEP.Slot = 0
 
 SWEP.ViewModel = "models/weapons/mcv/v_katana.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_katana.mdl"
+SWEP.MovementPoseWalk = 157
+SWEP.MovementPoseSprint = 255
 
 
 SWEP.DamageGeneric = 45

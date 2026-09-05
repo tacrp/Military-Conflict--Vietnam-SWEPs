@@ -11,6 +11,8 @@ function SWEP:CalcView(ply, pos, ang, fov)
 
     local mag = Lerp(self:GetSightAmountVisual() ^ 3, 1, 90 / self:GetZoomMagnification())
 
+    mag = mag + 0.15 * (1 / ((self:GetBurstCount() / 25) + 1))
+
     local diff = math.abs(self.SmoothedMagnification - mag)
 
     self.SmoothedMagnification = math.Approach(self.SmoothedMagnification, mag, FrameTime() * diff * (self.SmoothedMagnification > mag and 10 or 5))

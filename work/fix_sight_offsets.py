@@ -23,7 +23,13 @@ import port_weapon as pw  # noqa: E402
 ADDON = pw.ADDON
 SCRIPTS = os.path.join(HERE, "cscripts")
 KEYS = ("IronsightPos", "IronsightAng", "CustomPos", "CustomAng", "ScopeFOV", "ScopeFOV2", "BodyGroups",
-        "SpreadBipod", "SpreadBipodIronsighted", "TracerParticle")
+        "SpreadBipod", "SpreadBipodIronsighted", "TracerParticle",
+        "MagInTime", "MagInTimeEmpty", "MagOutTime", "MagOutTimeEmpty", "MovementPoseWalk", "MovementPoseSprint")
+# where a key that the lua file lacks is inserted (after this key; chains keep the order)
+INSERT_AFTER = {"CustomAng": "CustomPos", "SpreadBipod": "SpreadIronsighted", "SpreadBipodIronsighted": "SpreadBipod",
+                "TracerParticle": "TracerFrequency", "MagInTime": "BodyGroups", "MagInTimeEmpty": "MagInTime",
+                "MagOutTime": "MagInTimeEmpty", "MagOutTimeEmpty": "MagOutTime",
+                "MovementPoseWalk": "IronsightWalkBobbingStrength", "MovementPoseSprint": "MovementPoseWalk"}
 
 
 def set_line(src, key, value):
@@ -60,13 +66,18 @@ def main():
         S = pw.flat(kv.get("WeaponData", kv))
         S.update(overrides.get(name, {}))
         so = pw.sight_offsets(S)
+        vm = S.get("viewmodel", "").replace("models/weapons/", "").replace(".mdl", "")
+        qc = pw.qc_facts(pw.find_qc(vm)) if vm else None
         # bodygroups from the script's BodygroupData block, in the model's bodygroup order
-        if any(k.startswith("BodygroupData.") for k in S):
-            vm = S.get("viewmodel", "").replace("models/weapons/", "").replace(".mdl", "")
-            qc = pw.qc_facts(pw.find_qc(vm)) if vm else None
-            if qc and qc["bodygroups"]:
+        if any(k.startswith("BodygroupData.") for k in S) and qc and qc["bodygroups"]:
+            so = dict(so or {})
+            so["BodyGroups"] = '"%s"' % pw.bodygroups_string(qc["bodygroups"], S)
+        # run layer range and reload swap times from the animations
+        if qc:
+            timing = pw.anim_timing(qc)
+            if timing:
                 so = dict(so or {})
-                so["BodyGroups"] = '"%s"' % pw.bodygroups_string(qc["bodygroups"], S)
+                so.update(timing)
         if not so:
             print("%-28s no offsets in script, left alone" % lua_name)
             continue
@@ -79,20 +90,16 @@ def main():
                 continue
             src, changed, found = set_line(src, key, so[key])
             if not found:
-                if key == "CustomAng":
-                    # insert after CustomPos
-                    src, ins, _ = set_line(src, "CustomPos", so["CustomPos"] + "\nSWEP.CustomAng = " + so["CustomAng"])
-                    if ins:
-                        touched = True
-                        report.append("CustomAng added")
-                elif key in ("SpreadBipod", "SpreadBipodIronsighted", "TracerParticle"):
-                    anchor = "TracerFrequency" if key == "TracerParticle" else "SpreadIronsighted"
-                    src, ins, _ = set_line(src, anchor, None)  # probe
-                    m = re.search(r'^SWEP\.%s\s*=.*$' % anchor, src, re.M)
+                m = None
+                # the key's own anchor, else the last line of the model block
+                for anchor in (INSERT_AFTER.get(key), "WorldModel"):
+                    m = re.search(r'^SWEP\.%s\s*=.*$' % anchor, src, re.M) if anchor else None
                     if m:
-                        src = src[:m.end()] + "\nSWEP.%s = %s" % (key, so[key]) + src[m.end():]
-                        touched = True
-                        report.append("%s added" % key)
+                        break
+                if m:
+                    src = src[:m.end()] + "\nSWEP.%s = %s" % (key, so[key]) + src[m.end():]
+                    touched = True
+                    report.append("%s added" % key)
                 else:
                     report.append("%s missing" % key)
                 continue

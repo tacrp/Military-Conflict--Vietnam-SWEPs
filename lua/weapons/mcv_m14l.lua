@@ -19,6 +19,8 @@ SWEP.ViewModel = "models/weapons/mcv/v_m14l.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_m14l.mdl"
 
 SWEP.BodyGroups = "00100"
+SWEP.MagInTime = 0.3
+SWEP.MagInTimeEmpty = 0.3
 SWEP.BayonetBodygroup = 1
 SWEP.GrenadeLauncherBodygroup = 3
 SWEP.GrenadeBodygroup = 4
@@ -64,6 +66,8 @@ SWEP.Ironsight = true
 SWEP.IronsightSpeedScale = 0.85
 SWEP.IronsightFov = 90 - 15
 SWEP.IronsightWalkBobbingStrength = -0.25
+SWEP.MovementPoseWalk = 134
+SWEP.MovementPoseSprint = 228
 
 SWEP.HasScope = false
 SWEP.ScopeMaterial = NULL

@@ -39,6 +39,36 @@ SWEP.SpeedWalk = 25
 SWEP.SpeedSprintThreshold = 150
 SWEP.SpeedAcceleration = 750 // units per second the blend moves at
 
+// The game's walk / run layers blend on "player_movement" in the game's own speed units, and
+// the range differs per weapon class: the run layer (the sprint carry, gun swung across the
+// body) starts at that class's walk speed and is full at its sprint speed: 148-245 on rifles,
+// 106-195 on the M60, 80-160 on the LPO-50. Driving it with one fixed speed put walking LMGs
+// and flamethrowers into their sprint pose (the gun points left). The generator reads the
+// model's run layer range into these two (port_weapon.anim_timing) and the blend is mapped
+// onto it: walking sits a little into the run layer (the game jogs), sprinting at its top.
+SWEP.MovementPoseWalk = 148
+SWEP.MovementPoseSprint = 245
+SWEP.MovementRunBlend = 0.25 // how far into the run layer plain walking goes
+// aiming slows the game down: the sighted walk sits well inside the walk layer, so every gun
+// sways a little and none of them jog
+SWEP.SightedMovementFraction = 0.55
+
+function SWEP:GetMovementPose(speed, sa)
+    local lo, hi = self.MovementPoseWalk, self.MovementPoseSprint
+    local run = lo + (hi - lo) * self.MovementRunBlend
+    local pose
+
+    if speed <= self.SpeedRun then
+        pose = speed / self.SpeedRun * run
+    else
+        pose = Lerp((speed - self.SpeedRun) / math.max(self.SpeedSprint - self.SpeedRun, 1), run, hi)
+    end
+
+    local sighted = math.min(speed / self.SpeedRun, 1) * lo * self.SightedMovementFraction
+
+    return Lerp(sa, pose, sighted)
+end
+
 function SWEP:GetTargetSpeed()
     local owner = self:GetOwner()
 

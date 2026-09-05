@@ -42,8 +42,10 @@ SWEP.VolleyCount = 4
 SWEP.LastShotAnimation = false
 SWEP.MagInClip = false
 
-SWEP.MagInTime = 1.75
-SWEP.MagInTimeEmpty = 1.75
+SWEP.MagInTime = 2.07
+SWEP.MagInTimeEmpty = 2.07
+SWEP.MagOutTime = 0.63
+SWEP.MagOutTimeEmpty = 0.63
 
 SWEP.ShootEntity = "mcv_proj_m202"
 SWEP.ShootForce = 9000
@@ -66,6 +68,8 @@ SWEP.Ironsight = true
 SWEP.IronsightSpeedScale = 0.7
 SWEP.IronsightFov = 90 - 15
 SWEP.IronsightWalkBobbingStrength = -0.25
+SWEP.MovementPoseWalk = 77
+SWEP.MovementPoseSprint = 160
 
 SWEP.HasScope = false
 SWEP.ScopeMaterial = NULL

@@ -19,6 +19,10 @@ SWEP.ViewModel = "models/weapons/mcv/v_vz52.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_vz52.mdl"
 
 SWEP.BodyGroups = ""
+SWEP.MagInTime = 2.07
+SWEP.MagInTimeEmpty = 2.07
+SWEP.MagOutTime = 0.43
+SWEP.MagOutTimeEmpty = 0.43
 SWEP.BayonetBodygroup = 1
 SWEP.GrenadeLauncherBodygroup = 2
 SWEP.GrenadeBodygroup = 3
@@ -61,6 +65,8 @@ SWEP.Ironsight = true
 SWEP.IronsightSpeedScale = 0.85
 SWEP.IronsightFov = 90 - 15
 SWEP.IronsightWalkBobbingStrength = -0.25
+SWEP.MovementPoseWalk = 137
+SWEP.MovementPoseSprint = 232
 
 SWEP.HasScope = false
 SWEP.ScopeMaterial = NULL

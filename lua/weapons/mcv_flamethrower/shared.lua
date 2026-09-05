@@ -17,7 +17,8 @@ SWEP.FireRate = 600 // ticks per minute
 SWEP.DamageGeneric = 15 // per tick
 SWEP.FlameRange = 420
 SWEP.FlameHull = 24
-SWEP.IgniteTime = 6
+SWEP.IgniteTime = 6 // seconds a target keeps burning (sh_burn.lua)
+SWEP.BurnDamagePerSecond = 10
 SWEP.FuelPerTick = 1
 
 SWEP.FlameParticle = "lpo50_flame"

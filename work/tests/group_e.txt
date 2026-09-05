@@ -1,0 +1,44 @@
+# movement pose: LMG / flamethrower walk not in the sprint pose; PK belt depletion and swap timing
+god
+strip
+ang 0 0 0
+hud 1
+give mcv_m60
+wait 1.5
+shot e_m60_idle marker
+key +forward
+wait 0.7
+shot e_m60_walk marker
+key -forward
+wait 0.5
+give mcv_lpo50
+wait 1.5
+key +forward
+wait 0.7
+shot e_lpo50_walk marker
+key -forward
+wait 0.5
+give mcv_m16a1
+wait 1.5
+key +forward
+wait 0.7
+shot e_m16_walk marker
+key -forward
+wait 0.5
+give mcv_pk
+wait 1.5
+lua ply:GetActiveWeapon():SetClip1(6)
+wait 0.3
+shot e_pk_6rounds
+lua ply:GetActiveWeapon():SetClip1(2)
+wait 0.3
+shot e_pk_2rounds
+tap +reload 0.1
+wait 0.8
+shot e_pk_reload_0.8s_old_belt
+wait 1
+shot e_pk_reload_1.8s_belt_out
+wait 0.8
+shot e_pk_reload_2.6s_new_belt
+wait 4
+lua print("[e] pk clip after reload", ply:GetActiveWeapon():Clip1())

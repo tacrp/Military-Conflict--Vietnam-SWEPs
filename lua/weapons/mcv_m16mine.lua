@@ -16,6 +16,9 @@ SWEP.Slot = 4
 
 SWEP.ViewModel = "models/weapons/mcv/v_mine.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_mine.mdl"
+SWEP.MovementPoseWalk = 159
+SWEP.MovementPoseSprint = 258
+SWEP.BodyGroups = "00"
 
 SWEP.PlaceKind = "mine"
 SWEP.PlacedEntityClass = "mcv_placed_mine"

@@ -61,6 +61,8 @@ SWEP.Ironsight = true
 SWEP.IronsightSpeedScale = 1.0
 SWEP.IronsightFov = 90 - 15
 SWEP.IronsightWalkBobbingStrength = -0.25
+SWEP.MovementPoseWalk = 100
+SWEP.MovementPoseSprint = 185
 
 SWEP.HasScope = false
 SWEP.ScopeMaterial = NULL
@@ -91,8 +93,10 @@ SWEP.Primary.Chamber = 0
 SWEP.Primary.DefaultClip = 96
 SWEP.Primary.Automatic = true
 
-SWEP.MagInTime = 2
-SWEP.MagInTimeEmpty = 2
+SWEP.MagInTime = 2.67
+SWEP.MagInTimeEmpty = 2.67
+SWEP.MagOutTime = 1.23
+SWEP.MagOutTimeEmpty = 1.23
 
 SWEP.NearwallDistance = 40
 

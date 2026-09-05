@@ -22,6 +22,10 @@ SWEP.ViewModel = "models/weapons/mcv/v_kolos.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_kolos.mdl"
 
 SWEP.BodyGroups = ""
+SWEP.MagInTime = 2.07
+SWEP.MagInTimeEmpty = 2.07
+SWEP.MagOutTime = 1.3
+SWEP.MagOutTimeEmpty = 1.3
 
 SWEP.BulletBodygroups = {
     [1] = {1, 1},
@@ -75,6 +79,8 @@ SWEP.Ironsight = true
 SWEP.IronsightSpeedScale = 0.7
 SWEP.IronsightFov = 90 - 15
 SWEP.IronsightWalkBobbingStrength = -0.25
+SWEP.MovementPoseWalk = 97
+SWEP.MovementPoseSprint = 184
 
 SWEP.HasScope = false
 SWEP.ScopeMaterial = NULL

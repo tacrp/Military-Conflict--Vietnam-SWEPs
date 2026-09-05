@@ -80,9 +80,7 @@ function SWEP:FlameTick()
             dmg:SetDamagePosition(tr.HitPos)
             dmg:SetDamageForce(dir * 200)
             ent:TakeDamageInfo(dmg)
-            if ent:IsPlayer() or ent:IsNPC() or ent:IsNextBot() or ent:GetClass() == "prop_physics" then
-                ent:Ignite(self.IgniteTime)
-            end
+            MCV.Burn(ent, self.IgniteTime, owner, self, self.BurnDamagePerSecond)
         end
     end
 
@@ -97,7 +95,7 @@ function SWEP:FlameTick()
             dmg:SetAttacker(owner)
             dmg:SetInflictor(self)
             ent:TakeDamageInfo(dmg)
-            ent:Ignite(self.IgniteTime * 0.5)
+            MCV.Burn(ent, self.IgniteTime * 0.5, owner, self, self.BurnDamagePerSecond)
         end
     end
 end
@@ -245,7 +243,7 @@ if SERVER then
         ParticleEffect("Vietnam_Explosion_Flamethrower_BackPack", pos, angle_zero)
         util.BlastDamage(wep, dmginfo:GetAttacker(), pos, wep.TankExplosionRadius, wep.TankExplosionDamage)
         ent:EmitSound("MCV_BaseGrenade.Explode")
-        ent:Ignite(10)
+        MCV.Burn(ent, 10, dmginfo:GetAttacker(), wep, wep.BurnDamagePerSecond)
         ent:SetAmmo(0, wep:GetPrimaryAmmoType())
     end)
 end

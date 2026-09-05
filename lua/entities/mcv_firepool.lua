@@ -10,6 +10,8 @@ ENT.DamagePerSecond = 20
 ENT.Duration = 12
 ENT.Particle = "Molotov_GroundFire"
 ENT.TickRate = 0.25
+ENT.BurnAfter = 3 // seconds a victim keeps burning after leaving the pool
+ENT.BurnAfterDPS = 8
 
 function ENT:Initialize()
     if SERVER then
@@ -64,8 +66,9 @@ function ENT:Think()
             dmg:SetDamagePosition(ent:GetPos())
             ent:TakeDamageInfo(dmg)
 
-            if (ent:IsPlayer() or ent:IsNPC() or ent:IsNextBot()) and !ent:IsOnFire() then
-                ent:Ignite(3)
+            // a few seconds of burning after leaving the fire (sh_burn.lua, no Ignite)
+            if ent:IsPlayer() or ent:IsNPC() or ent:IsNextBot() then
+                MCV.Burn(ent, self.BurnAfter, attacker, inflictor, self.BurnAfterDPS)
             end
         end
     end

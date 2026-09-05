@@ -493,6 +493,44 @@ firing, with nothing in the console. Call the intended class explicitly
 harness reproduces a freeze as a job that never logs `done`; instrument with `lua`/`clua`
 wrappers that print before and after each step to find the last one that ran.
 
+## Movement pose (`player_movement`)
+
+The game's walk / run layers blend on `player_movement` in the game's speed units, and the range
+is per weapon class: the run layer (sprint carry) starts at that class's walk speed and is full
+at its sprint speed (148-245 rifles, 106-195 M60, 80-160 LPO-50, from the `runlayer` blend line).
+Driving it with one fixed speed (100 when walking) put walking LMGs and flamethrowers into their
+sprint pose, gun pointing left. `port_weapon.anim_timing` reads the run layer range into
+`MovementPoseWalk` / `MovementPoseSprint` and `SWEP:GetMovementPose` (mcv_base_core/sh_think.lua)
+maps the smoothed movement blend onto it: walking a quarter into the run layer, sprinting at its
+top, the sighted walk at `SightedMovementFraction` (0.55) of the walk speed so every gun sways a
+little and none jog. `work/fix_sight_offsets.py` applies the two keys to existing lua files.
+
+## Magazine / belt swap times
+
+`MagInTime` / `MagInTimeEmpty` (and `MagOutTime` / `MagOutTimeEmpty`) come from the reload
+animations: the frame of the game's `AE_CL_BODYGROUP_SET_TO_NEXTCLIP` event (`_EMPTY` when the
+old belt comes out; the mag-in / mag-out foley events as a fallback) over the sequence fps. The
+rounds shown on the model (`ammo_fraction`, `BulletBodygroups`) keep the old count until the
+mag-out time, show none until the mag-in time, then the new count. The belt LMGs (PK, MG43,
+vz59...) had no times at all, so the belt refilled at the first frame of the reload.
+
+## Fire without Ignite() (`lua/mcv/shared/sh_burn.lua`)
+
+`Entity:Ignite` hands the damage to an entity_flame that cannot be shortened and draws its own
+sprite. `MCV.Burn(ent, seconds, attacker, inflictor, dps)` keeps a timer per entity, ticks
+DMG_BURN every quarter second (the way the M202's fire does) and plays the game's
+`burning_character` particle; water or death puts it out. The flamethrowers, flares, fire pools and
+incendiary grenades use it. An incendiary grenade (`IgniteRadius` in the script, the M34) spawns a
+short `mcv_firepool` (`BurnDuration` 3 s, the M34 effect does not linger) over
+`ExplosionRadius + IgniteRadius` instead of igniting everything in range.
+
+## Grenade cooking
+
+The fuse runs from the pin pull (start of the windup): `LaunchThrowable` takes the time already
+spent off the fuse, and holding past the fuse forces the throw with detonation in the hand. The
+windup animation has to finish before a release throws (`WindupEnd`), and the crosshair pulses a
+ring every half second while cooking (`GetCookPulse`).
+
 ## Sight survey (`work/sight_survey.py`)
 
 `work/tests/sights_all_*.txt` aim every iron-sight gun with the centre marker and a report;

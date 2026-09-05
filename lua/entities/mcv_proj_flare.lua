@@ -15,8 +15,10 @@ ENT.ImpactFuse = false
 
 ENT.Damage = 50 // on a direct hit, plus fire
 ENT.BurnTime = 25
-ENT.TrailParticle = "vietnam_lensflare_flaregun"
-ENT.GroundParticle = "vietnam_lensflare_flaregun_ground"
+// the game's env_flare effects (trail in flight, burning on the ground); vietnam_lensflare_flaregun
+// is only the lens glow and showed as nothing but the dynamic light
+ENT.TrailParticle = "env_flare_us_trail"
+ENT.GroundParticle = "env_flare_us_ground"
 ENT.LightColor = Color(255, 90, 40)
 ENT.BounceSounds = {"MCV_Bounce.Shell"}
 
@@ -38,7 +40,7 @@ function ENT:Impact(data, collider)
         dmg:SetInflictor(self)
         dmg:SetDamagePosition(data.HitPos)
         ent:TakeDamageInfo(dmg)
-        ent:Ignite(6)
+        MCV.Burn(ent, 6, dmg:GetAttacker(), self, 10)
     end
     if !self.Landed and data.HitEntity:IsWorld() then
         self.Landed = true
@@ -73,8 +75,8 @@ function ENT:OnThink()
     if self.Landed and (self.NextIgnite or 0) < CurTime() then
         self.NextIgnite = CurTime() + 0.5
         for _, ent in ipairs(ents.FindInSphere(self:GetPos(), 48)) do
-            if (ent:IsPlayer() or ent:IsNPC() or ent:IsNextBot()) and !ent:IsOnFire() then
-                ent:Ignite(4)
+            if ent:IsPlayer() or ent:IsNPC() or ent:IsNextBot() then
+                MCV.Burn(ent, 4, IsValid(self:GetOwner()) and self:GetOwner() or self, self, 10)
             end
         end
     end

@@ -17,9 +17,14 @@ ENT.SmokeLoop = "MCV_Weapon_M18.SoundLoop"
 ENT.Hurts = false
 ENT.BounceSounds = {"MCV_SmokeGrenade.Bounce"}
 
+ENT.FadeTime = 12 // seconds the last particles take to clear after the canister runs out
+
 function ENT:SetupDataTables()
-    self.BaseClass.SetupDataTables(self)
+    // not self.BaseClass: on the gas grenade (a subclass) that is this class again and recursed
+    // until the data table was never set up (no GetPopped)
+    baseclass.Get("mcv_proj_base").SetupDataTables(self)
     self:NetworkVar("Bool", 0, "Popped")
+    self:NetworkVar("Bool", 1, "Stopped")
     self:NetworkVar("Vector", 0, "SmokeColorVec")
 end
 
@@ -44,7 +49,14 @@ end
 
 function ENT:OnThink()
     if CLIENT then
-        if self:GetPopped() and !self.ClientSmoke then
+        // the canister ran out: stop emitting and let what is in the air drift off
+        if self:GetStopped() and self.ClientSmoke and !self.ClientSmokeStopped then
+            self.ClientSmokeStopped = true
+            if IsValid(self.ClientSmokePS) then
+                self.ClientSmokePS:StopEmission(false, false, false)
+            end
+        end
+        if self:GetPopped() and !self:GetStopped() and !self.ClientSmoke then
             self.ClientSmoke = true
             local col = self:GetSmokeColorVec()
             local ps
@@ -64,8 +76,13 @@ function ENT:OnThink()
     if !self.StopTime then return end
 
     if CurTime() > self.StopTime then
-        self:StopSound(self.SmokeLoop)
-        self:Remove()
+        if !self:GetStopped() then
+            self:SetStopped(true)
+            self:StopSound(self.SmokeLoop)
+        end
+        if CurTime() > self.StopTime + self.FadeTime then
+            self:Remove()
+        end
         return
     end
 
@@ -84,5 +101,5 @@ function ENT:OnRemove()
     if CLIENT and IsValid(self.ClientSmokePS) then
         self.ClientSmokePS:StopEmissionAndDestroyImmediately()
     end
-    self.BaseClass.OnRemove(self)
+    baseclass.Get("mcv_proj_base").OnRemove(self)
 end

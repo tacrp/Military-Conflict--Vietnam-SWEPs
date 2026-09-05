@@ -43,7 +43,7 @@ SWEP.Firemodes = {
 SWEP.LastShotAnimation = false
 SWEP.HasEmptyReload = false
 SWEP.NoEjectOnShoot = true
-SWEP.ShootEntity = "mcv_proj_flare"
+SWEP.ShootEntity = "mcv_proj_flare_vc"
 SWEP.ShootEntityForce = 2047
 SWEP.AmmoPerShot = 1
 
@@ -65,6 +65,8 @@ SWEP.Ironsight = true
 SWEP.IronsightSpeedScale = 1
 SWEP.IronsightFov = 90 - 15
 SWEP.IronsightWalkBobbingStrength = -0.25
+SWEP.MovementPoseWalk = 159
+SWEP.MovementPoseSprint = 258
 
 SWEP.HasScope = false
 SWEP.ScopeMaterial = NULL

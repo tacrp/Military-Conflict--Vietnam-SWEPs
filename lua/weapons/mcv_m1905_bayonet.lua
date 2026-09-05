@@ -16,6 +16,8 @@ SWEP.Slot = 0
 
 SWEP.ViewModel = "models/weapons/mcv/v_m1905_bayonet.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_m1905_bayonet.mdl"
+SWEP.MovementPoseWalk = 167
+SWEP.MovementPoseSprint = 268
 
 
 SWEP.DamageGeneric = 55

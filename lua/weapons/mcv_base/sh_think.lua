@@ -9,6 +9,7 @@ function SWEP:ThinkWeapon()
 
     if owner:KeyReleased(IN_ATTACK) then
         self:SetNeedTriggerPress(false)
+        self:SetBurstCount(0)
 
         if self:GetPrimedAttack() then
             self:PlayAnimation(ACT_VM_IDLE)

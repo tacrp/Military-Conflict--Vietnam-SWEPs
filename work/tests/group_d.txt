@@ -1,0 +1,82 @@
+# throwables: pin-pull gate, cooking, overcook; smoke stop+fade; gas GetPopped; WP short fire; flare effects; dynamite fuse; Mk 22 silencer + reload sounds
+god
+strip
+ang 0 0 0
+hud 1
+lua hook.Add("OnEntityCreated", "mcv_d", function(e) timer.Simple(0, function() if IsValid(e) and e:GetClass() == "mcv_grenade_frag" then e.MCV_T0 = CurTime() print("[d] frag spawned, delay", e.Delay) end end) end) hook.Add("EntityRemoved", "mcv_d2", function(e) if e:GetClass() == "mcv_grenade_frag" and e.MCV_T0 then print("[d] frag lived", math.Round(CurTime() - e.MCV_T0, 2)) end end)
+give mcv_m26
+wait 1.5
+tap +attack 0.05
+wait 0.1
+lua local w = ply:GetActiveWeapon() print("[d] m26 state after 0.05s tap (1/2 = still winding up, 3 = threw)", w:GetActionState(), "windup left", math.Round(w:GetWindupEnd() - CurTime(), 2))
+wait 2
+lua local w = ply:GetActiveWeapon() print("[d] m26 state 2s later (0 idle)", w:GetActionState(), "rounds", w:GetRoundsLeft())
+wait 4
+key +attack
+wait 1.2
+shot d_cook_pulse
+wait 0.8
+key -attack
+wait 3
+lua local w = ply:GetActiveWeapon() print("[d] m26 rounds after cooked throw", IsValid(w) and w:GetRoundsLeft() or "gone")
+give mcv_m26
+wait 1
+key +attack
+wait 4
+key -attack
+wait 0.5
+lua print("[d] overcook: frag entities left", #ents.FindByClass("mcv_grenade_frag"), "health", ply:Health())
+wait 1
+give mcv_m6a1
+wait 1.5
+tap +attack 0.6
+wait 4
+lua local g = ents.FindByClass("mcv_grenade_gas")[1] print("[d] gas popped", IsValid(g) and tostring(g:GetPopped()) or "no entity")
+give mcv_m34
+wait 1.5
+tap +attack 0.6
+wait 5
+lua print("[d] wp firepools 5s after throw", #ents.FindByClass("mcv_firepool"))
+wait 4
+lua print("[d] wp firepools 9s after throw (expect 0)", #ents.FindByClass("mcv_firepool"))
+give mcv_css
+wait 1.5
+tap +attack 0.6
+wait 5
+shot d_smoke
+wait 24
+lua local g = ents.FindByClass("mcv_grenade_smoke")[1] print("[d] smoke 29s: stopped", IsValid(g) and tostring(g:GetStopped()) or "no entity")
+shot d_smoke_fading
+wait 13
+lua print("[d] smoke 42s: entities left (expect 0)", #ents.FindByClass("mcv_grenade_smoke"))
+ang 0 0 0
+give mcv_m8
+wait 1.5
+tap +attack 0.1
+wait 0.4
+shot d_flare_flight
+wait 3
+lua local f = ents.FindByClass("mcv_proj_flare")[1] print("[d] flare alive", tostring(IsValid(f)), IsValid(f) and tostring(f:GetPos()) or "")
+shot d_flare_ground
+give mcv_dynamite
+wait 1.5
+tap +attack2 0.1
+wait 2
+lua local d = ents.FindByClass("mcv_placed_dynamite")[1] print("[d] dynamite lit", IsValid(d) and tostring(d.Lit) or "no entity", IsValid(d) and tostring(d:GetPos()) or "")
+shot d_dynamite
+wait 5
+give mcv_mk22_mod0
+wait 1.5
+shot d_mk22
+clua hook.Add("EntityEmitSound", "mcv_ds", function(t) if string.find(t.SoundName, "MK22") then print("[d] mk22 sound", t.SoundName) end end)
+tap +attack 0.1
+wait 0.5
+tap +reload 0.1
+wait 3
+give mcv_sw39
+wait 1.5
+shot d_sw39
+tap +attack 0.1
+wait 0.5
+tap +reload 0.1
+wait 3

@@ -16,6 +16,8 @@ SWEP.Slot = 4
 
 SWEP.ViewModel = "models/weapons/mcv/v_css.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_css.mdl"
+SWEP.MovementPoseWalk = 159
+SWEP.MovementPoseSprint = 258
 SWEP.ThrowModel = "models/weapons/mcv/w_css_ignited.mdl"
 
 SWEP.ThrowEntity = "mcv_grenade_smoke"

@@ -17,6 +17,10 @@ SWEP.ViewModel = "models/weapons/mcv/v_amd65.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_amd65.mdl"
 
 SWEP.BodyGroups = ""
+SWEP.MagInTime = 1.5
+SWEP.MagInTimeEmpty = 1.5
+SWEP.MagOutTime = 0.4
+SWEP.MagOutTimeEmpty = 0.4
 
 SWEP.WeaponSelectIcon = NULL
 
@@ -62,6 +66,8 @@ SWEP.Ironsight = true
 SWEP.IronsightSpeedScale = 1.0
 SWEP.IronsightFov = 90 - 15
 SWEP.IronsightWalkBobbingStrength = -0.25
+SWEP.MovementPoseWalk = 138
+SWEP.MovementPoseSprint = 232
 
 SWEP.HasScope = false
 SWEP.ScopeMaterial = NULL

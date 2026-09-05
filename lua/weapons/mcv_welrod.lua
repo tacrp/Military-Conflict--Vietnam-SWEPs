@@ -22,6 +22,10 @@ SWEP.ViewModel = "models/weapons/mcv/v_welrod.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_welrod.mdl"
 
 SWEP.BodyGroups = ""
+SWEP.MagInTime = 1.6
+SWEP.MagInTimeEmpty = 1.6
+SWEP.MagOutTime = 0.2
+SWEP.MagOutTimeEmpty = 0.2
 
 // Stats
 
@@ -61,6 +65,8 @@ SWEP.Ironsight = true
 SWEP.IronsightSpeedScale = 1.15
 SWEP.IronsightFov = 90 - 15
 SWEP.IronsightWalkBobbingStrength = -0.6
+SWEP.MovementPoseWalk = 161
+SWEP.MovementPoseSprint = 260
 
 SWEP.HasScope = false
 SWEP.ScopeMaterial = NULL
