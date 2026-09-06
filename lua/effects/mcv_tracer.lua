@@ -21,7 +21,7 @@ function EFFECT:Init(data)
             end
             if att <= 0 then att = vm:LookupAttachment("muzzle") end
             local a = att > 0 and vm:GetAttachment(att)
-            if a then from = a.Pos end
+            if a then from = self:ViewModelToWorld(a.Pos, wpn) end
         end
     elseif wpn.GetWorldModelAttachment then
         local mdl, att = wpn:GetWorldModelAttachment("muzzle", left)
@@ -44,6 +44,23 @@ function EFFECT:Init(data)
     if bit.band(flags, 2) != 0 then
         self:Trail(tracer, from, to)
     end
+end
+
+// The viewmodel is drawn with its own FOV (cl PreDrawViewModel), so a point on it sits on the
+// screen where the world FOV would put a point with its lateral offsets from the eye scaled
+// by the ratio of the two projections. The trail draws in the world, so its start is moved
+// there; otherwise it leaves from well inside the muzzle's screen position.
+function EFFECT:ViewModelToWorld(pos, wpn)
+    local vs = render.GetViewSetup()
+    local eye, ang = vs and vs.origin or EyePos(), vs and vs.angles or EyeAngles()
+    local worldfov = vs and vs.fov or LocalPlayer():GetFOV()
+    local vmfov = wpn.VMFov or worldfov
+    if !worldfov or !vmfov or worldfov <= 0 or vmfov <= 0 or worldfov == vmfov then return pos end
+    local k = math.tan(math.rad(worldfov * 0.5)) / math.tan(math.rad(vmfov * 0.5))
+    local rel = WorldToLocal(pos, angle_zero, eye, ang)
+    rel.y = rel.y * k
+    rel.z = rel.z * k
+    return LocalToWorld(rel, angle_zero, eye, ang)
 end
 
 // A two-point trail: control point 0 the start, 1 the end (what a tracer particle expects).

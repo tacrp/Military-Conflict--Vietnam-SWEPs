@@ -12,7 +12,7 @@ function SWEP:GetTracerOrigin()
     end
     local vm = owner:GetViewModel()
     local muzz_qca = vm:LookupAttachment("muzzle")
-    if self:GetAkimbo() and self:Clip1() % 2 == 0 then
+    if self:GetAkimbo() and self:Clip1() % 2 == 1 then // the left gun fires on an odd count (DoMuzzle, DoEject)
         muzz_qca = vm:LookupAttachment("muzzleleft") > 0 and vm:LookupAttachment("muzzleleft") or vm:LookupAttachment("muzzle2")
     end
     local att = muzz_qca > 0 and vm:GetAttachment(muzz_qca)

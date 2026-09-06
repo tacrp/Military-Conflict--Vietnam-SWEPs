@@ -50,6 +50,7 @@ function SWEP:PreDrawViewModel(vm)
     local sa = self:GetSightAmountVisual() ^ 3
 
     local fov = Lerp(sa, self.ViewModelFOV, self.SightedViewModelFOV)
+    self.VMFov = fov // effects that start at the viewmodel and draw in the world (the tracer)
     if self.ViewModelZNear then
         // a closer near plane keeps an eyepiece the aimed pose puts right at the camera from
         // being cut open (scoped rifles)

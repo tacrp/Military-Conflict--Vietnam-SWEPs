@@ -1,11 +1,30 @@
 // Gun-specific per-tick work; the shared part (movement, hold type, timers, idle) runs in
 // mcv_base_core/sh_think.lua before this.
+
+// Third person: the world model's "bipod" bodygroup (option 1 is the deployed one on every
+// game model) follows the bipod, and its "belt" bodygroup (the long belt, blank second) goes
+// away with the last round. The drawn copies take the weapon entity's bodygroups
+// (cl_worldmodel.lua), so they are set on the entity, server side and networked.
+function SWEP:Think_WorldBodygroups()
+    if CLIENT then return end
+    local bipod = self:FindBodygroupByName("bipod")
+    if bipod >= 0 then
+        local want = self:GetBipod() and 1 or 0
+        if self:GetBodygroup(bipod) != want then self:SetBodygroup(bipod, want) end
+    end
+    local belt = self:FindBodygroupByName("belt")
+    if belt >= 0 then
+        local want = self:Clip1() > 0 and 0 or 1
+        if self:GetBodygroup(belt) != want then self:SetBodygroup(belt, want) end
+    end
+end
 function SWEP:ThinkWeapon()
     local owner = self:GetOwner()
 
     self:Think_Sights()
     self:Think_Reload()
     self:Think_Bipod()
+    self:Think_WorldBodygroups()
 
     // runaway burst: the remaining rounds go out on their own, trigger or not
     local bursting = self:IsBursting()

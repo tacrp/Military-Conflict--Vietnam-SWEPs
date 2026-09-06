@@ -17,6 +17,8 @@ SWEP.AimHoldType = "revolver"
 SWEP.HoldType = "revolver"
 
 SWEP.ViewModel = "models/weapons/mcv/v_qspr.mdl"
+SWEP.ViewModelAkimbo = "models/weapons/mcv/v_dual_qspr.mdl"
+SWEP.AkimboPoseRecoil = true
 SWEP.WorldModel = "models/weapons/mcv/w_qspr.mdl"
 
 SWEP.BodyGroups = ""
@@ -120,7 +122,7 @@ SWEP.JumpSpreadMultiplier = 1.35
 
 SWEP.HasBayonet = false
 SWEP.HasBipod = false
-SWEP.HasAkimbo = false
+SWEP.HasAkimbo = true
 
 // Penetration
 SWEP.MetalPenetrationDepth = 3

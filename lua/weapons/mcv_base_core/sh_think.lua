@@ -149,6 +149,8 @@ function SWEP:Think_HoldType()
         holdtype = self.SprintHoldType
     elseif akimbo then
         holdtype = "duel" // a pistol in each hand (the second is drawn on the left hand, cl_worldmodel.lua)
+    elseif self.GetBipod and self:GetBipod() then
+        holdtype = "rpg" // deployed on the bipod
     elseif self:GetSightAmount() >= 1 then
         holdtype = self.AimHoldType
     end
