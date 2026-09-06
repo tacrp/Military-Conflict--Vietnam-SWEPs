@@ -439,7 +439,22 @@ def qc_facts(path):
     f["bullet_bodygroups"] = [i for i, b in enumerate(f["bodygroups"]) if re.match(r'bullet\d+$', b.lower())]
     # the belt segment in the feed tray ("clamped*"): hidden with the last round
     # (only on belt-fed guns: the M16 family carries a "clamped1" of its own that is not a belt)
-    f["belt_bodygroups"] = [i for i, b in enumerate(f["bodygroups"]) if re.match(r'clamped\d+$', b.lower())] if f["bullet_bodygroups"] else []
+    # a "clamped" bodygroup whose mesh is most of the gun (the M60's clamped1 is 9 MB, bigger
+    # than its reference mesh) is gun geometry that happens to sit in a bodygroup, not a belt:
+    # hiding it took part of the gun away with the last round. A belt segment is a third of
+    # the gun at most (the M60 bipod's, the Stoner's).
+    f["belt_bodygroups"] = []
+    if f["bullet_bodygroups"]:
+        qdir = os.path.dirname(path)
+        def mesh_kb(name):
+            m = re.search(r'\$bodygroup\s+"%s"\s*\{(.*?)\}' % re.escape(name), src, re.S)
+            st = re.findall(r'studio\s+"([^"]+)"', m.group(1)) if m else []
+            sp = os.path.join(qdir, st[0]) if st else None
+            return os.path.getsize(sp) // 1024 if sp and os.path.isfile(sp) else 0
+        main_kb = max([mesh_kb(b) for b in f["bodygroups"] if not re.match(r'clamped\d+$', b.lower())] or [0])
+        for i, b in enumerate(f["bodygroups"]):
+            if re.match(r'clamped\d+$', b.lower()) and (main_kb == 0 or mesh_kb(b) < 0.6 * main_kb):
+                f["belt_bodygroups"].append(i)
     for m in re.finditer(r'^\$sequence\s+"([^"]+)"\s*\{(.*?)^\}', src, re.S | re.M):
         body = m.group(2)
         if "AE_CLIENT_EJECT_BRASS" in body:
