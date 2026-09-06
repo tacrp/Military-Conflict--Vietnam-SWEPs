@@ -20,6 +20,7 @@ SWEP.GrenadeLauncherBodygroup = 0
 SWEP.GrenadeBodygroup = 0
 
 SWEP.BulletBodygroups = nil
+SWEP.BeltBodygroups = nil // bodygroup indices of the belt segment in the feed tray (the game's "clamped*"), hidden when no rounds are shown
 
 SWEP.ViewModelFOV = 80
 SWEP.SightedViewModelFOV = 40

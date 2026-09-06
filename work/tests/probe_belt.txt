@@ -1,0 +1,27 @@
+ang 0 0 0
+give mcv_m60
+wait 1.5
+lua local w = ply:GetActiveWeapon() w:SetClip1(0) ply:SetAmmo(0, w:GetPrimaryAmmoType()) print("[t] m60 clip", w:Clip1(), "reserve", w:Ammo1(), "MagIn", w.MagInTime, w.MagInTimeEmpty, "MagOut", w.MagOutTime, w.MagOutTimeEmpty)
+wait 0.5
+shot t_m60_empty_noammo
+lua local vm = ply:GetViewModel() local s = "" for i = 1, 7 do s = s .. vm:GetBodygroup(i) end print("[t] bodygroups bullet01..07 (1 = hidden):", s, "reloading", tostring(ply:GetActiveWeapon():GetReloading()))
+lua local w = ply:GetActiveWeapon() ply:GiveAmmo(200, w:GetPrimaryAmmoType(), true)
+tap +reload 0.1
+wait 1.2
+shot t_m60_reload_1.2s
+lua local vm = ply:GetViewModel() local s = "" for i = 1, 7 do s = s .. vm:GetBodygroup(i) end print("[t] 1.2s bodygroups:", s)
+wait 1.3
+shot t_m60_reload_2.5s
+wait 0.8
+shot t_m60_reload_3.3s
+lua local vm = ply:GetViewModel() local s = "" for i = 1, 7 do s = s .. vm:GetBodygroup(i) end print("[t] 3.3s bodygroups:", s)
+wait 3
+lua local w = ply:GetActiveWeapon() w:SetClip1(40)
+wait 0.3
+tap +reload 0.1
+wait 1.0
+shot t_m60_partial_1.0s
+lua local vm = ply:GetViewModel() local s = "" for i = 1, 7 do s = s .. vm:GetBodygroup(i) end print("[t] partial 1.0s bodygroups:", s)
+wait 1.2
+shot t_m60_partial_2.2s
+lua local vm = ply:GetViewModel() local s = "" for i = 1, 7 do s = s .. vm:GetBodygroup(i) end print("[t] partial 2.2s bodygroups:", s)

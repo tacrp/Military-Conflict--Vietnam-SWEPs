@@ -431,6 +431,9 @@ def qc_facts(path):
                 break
     # belt / clip bullets modelled as bodygroups "bullet01".."bulletNN": their indices in bodygroup order
     f["bullet_bodygroups"] = [i for i, b in enumerate(f["bodygroups"]) if re.match(r'bullet\d+$', b.lower())]
+    # the belt segment in the feed tray ("clamped*"): hidden with the last round
+    # (only on belt-fed guns: the M16 family carries a "clamped1" of its own that is not a belt)
+    f["belt_bodygroups"] = [i for i, b in enumerate(f["bodygroups"]) if re.match(r'clamped\d+$', b.lower())] if f["bullet_bodygroups"] else []
     for m in re.finditer(r'^\$sequence\s+"([^"]+)"\s*\{(.*?)^\}', src, re.S | re.M):
         body = m.group(2)
         if "AE_CLIENT_EJECT_BRASS" in body:
@@ -553,6 +556,8 @@ def anim_timing(qc):
     the reload animations swap the magazine or belt (MagInTime / MagOutTime, and the *Empty pair
     for the empty reload; from AE_CL_BODYGROUP_SET_TO_NEXTCLIP or the mag foley events)."""
     out = {}
+    if qc and qc.get("belt_bodygroups"):
+        out["BeltBodygroups"] = "{%s}" % ", ".join(str(i) for i in qc["belt_bodygroups"])
     rr = qc.get("run_range") if qc else None
     if rr:
         out["MovementPoseWalk"] = fmt(rr[0])
@@ -1160,6 +1165,8 @@ def generate(script_path, args):
         for k in ("MagInTime", "MagInTimeEmpty", "MagOutTime", "MagOutTimeEmpty"):
             if k in timing:
                 A(line(k, timing[k]))
+    if qc["belt_bodygroups"]:
+        A(line("BeltBodygroups", "{%s}" % ", ".join(str(i) for i in qc["belt_bodygroups"])) + " // the belt in the feed tray, hidden once no rounds are shown")
     A("")
     A("// Stats")
     A("")

@@ -79,6 +79,7 @@ $bodygroup "bipod"
 $bodygroup "clamped1"
 {
 	studio "..\..\..\MCV_SMD_OG\weapons\v_m60b\body15_model0.smd"
+	blank
 }
 
 

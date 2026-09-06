@@ -17,6 +17,7 @@ SWEP.ViewModel = "models/weapons/mcv/v_stoner63_lmg.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_rpd.mdl"
 
 SWEP.BodyGroups = ""
+SWEP.BeltBodygroups = {14}
 
 SWEP.WeaponSelectIcon = NULL
 

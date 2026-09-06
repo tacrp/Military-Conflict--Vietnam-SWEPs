@@ -49,10 +49,12 @@ $bodygroup "bipod"
 $bodygroup "clamped1"
 {
 	studio "..\..\..\MCV_SMD_OG\weapons\v_m60\body9_model0.smd"
+	blank
 }
 $bodygroup "clamped2"
 {
 	studio "..\..\..\MCV_SMD_OG\weapons\v_m60\body10_model0.smd"
+	blank
 }
 
 

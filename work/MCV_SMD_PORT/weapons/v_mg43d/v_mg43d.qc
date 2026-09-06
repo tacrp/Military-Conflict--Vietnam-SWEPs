@@ -10,6 +10,7 @@ $bodygroup "studio"
 $bodygroup "clamped1"
 {
 	studio "..\..\..\MCV_SMD_OG\weapons\v_mg43d\body1_model0.smd"
+	blank
 }
 
 

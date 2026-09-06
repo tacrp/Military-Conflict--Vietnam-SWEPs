@@ -383,8 +383,13 @@ Brass ids the game added after 2024 (19 to 31) map to the nearest shell model th
   bone (7-10 units of bob) and the game's IK drags the hands after it. On the M1917 / S&W / Lebel
   duals `Base` is a dummy, so without IK the run layer moves nothing and the sprint looks right.
   The dual Blackhawk's gun meshes hang off root-level `BaseLeftMesh` / `BaseMesh`, so the same
-  data flew the guns out of the hands. `MCV_SMD/weapons/v_dual_blackhawk/anims/run_a.smd` holds
-  those two bones at the corrective's frame 0 (zero delta).
+  data flew the guns out of the hands. `MCV_SMD/weapons/v_dual_blackhawk/anims/run_a.smd` turns
+  the guns' authored travel into a swing of the whole rig about `root` (angle = travel / lever,
+  axis = lever x travel) applied to root and both gun bones, so hands and guns move together in
+  position and angle, the way the IK made them.
+* **Belt bodygroups**: the belt LMGs' `clamped*` bodygroups (the belt segment in the feed tray)
+  ship with one submodel and no blank; `step_belt_blank` adds one and Lua hides them with the
+  last round (`BeltBodygroups`, belt-fed guns only: the M16 family has a `clamped1` of its own).
 * **Two-axis blend grids**: a pose-split main sequence over an idle that blends `ironsight` x
   `revolver_firemode_pose` has 6 (dual revolvers) or 9 (single) anims and is 3 wide, the
   ironsight axis having three knots. `sqrt(6)` rounded to 2 and the rows slid: the dual revolvers

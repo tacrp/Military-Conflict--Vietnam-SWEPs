@@ -95,6 +95,7 @@ $bodygroup "bullet17"
 $bodygroup "clamped1"
 {
 	studio "..\..\..\MCV_SMD_OG\weapons\v_pk_belt\body18_model0.smd"
+	blank
 }
 
 

@@ -723,6 +723,26 @@ def _rows(layer):
     return anims, anims
 
 
+def step_belt_blank(qc, ctx):
+    """The belt LMGs' "clamped*" bodygroups (the belt segment in the feed tray) ship with one
+    submodel and no blank, so the belt could never be hidden; give them a blank so Lua can drop
+    the belt with the last round (SWEP.BeltBodygroups)."""
+    def _fix(m):
+        body = m.group(2)
+        if "blank" in body:
+            return m.group(0)
+        return m.group(1) + body.rstrip() + "\n\tblank\n}"
+    n = 0
+    for i, it in enumerate(qc.items):
+        if isinstance(it, str) and '$bodygroup "clamped' in it:
+            new = re.sub(r'(\$bodygroup\s+"clamped\d+"\s*\{)(.*?)\}', _fix, it, flags=re.S)
+            if new != it:
+                qc.items[i] = new
+                n += 1
+    if n:
+        ctx.note("blank added to %d belt bodygroup(s)" % n)
+
+
 def step_sighted_walk(qc, ctx):
     """Sighted walking sway like the game's. The game aims from its `ironsight_test` sequence,
     which carries `walklayerironsight` (walkIdle -> walk over 0..walk speed) instead of the
@@ -1402,6 +1422,7 @@ def port_one(args, og_dir):
         step_idle(qc, ctx)
         step_movement_layers(qc, ctx)
     step_sighted_walk(qc, ctx)   # guards on a walklayer being present
+    step_belt_blank(qc, ctx)
     step_equalize_static_blends(qc, ctx)
     step_idle_layers(qc, ctx)
     step_pose_split(qc, ctx)

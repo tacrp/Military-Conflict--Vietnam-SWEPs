@@ -20,6 +20,7 @@ SWEP.WorldModel = "models/weapons/mcv/w_pk_belt.mdl"
 SWEP.MagOutTimeEmpty = 1.33
 
 SWEP.BodyGroups = ""
+SWEP.BeltBodygroups = {18}
 SWEP.MagInTime = 1.33
 SWEP.MagInTimeEmpty = 6.03
 SWEP.MagOutTime = 0

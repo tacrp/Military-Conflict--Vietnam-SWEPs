@@ -63,6 +63,13 @@ function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
         end
     end
 
+    // the belt itself (the game's "clamped" groups, given a blank by port_qc) goes with the rounds
+    if self.BeltBodygroups then
+        for _, idx in ipairs(self.BeltBodygroups) do
+            vm:SetBodygroup(idx, bodygroupbulletscount > 0 and 0 or 1)
+        end
+    end
+
     local shouldhammer = self:GetNeedCycle() or self:GetEmptyReload() or ((self.ShotgunReload or !self:GetReloading()) and self:Clip1() == 0)
 
     if self.InvertAnimationHammer then
