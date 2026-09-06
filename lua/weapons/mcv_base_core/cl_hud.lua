@@ -160,9 +160,9 @@ function SWEP:DrawHUDAvailability(blend, right, y)
             // dimmer once it is in use, bright while it is on offer
             local col = withAlpha(HUD.Color, blend * (ic[2] and 0.45 or 1))
             if ic[3] then
-                local off = size * 0.22
+                local off = size * 0.1
                 drawIconTilted(ic[1], x - off, y - off, size, withAlpha(HUD.Color, blend * (ic[2] and 0.3 or 0.6)))
-                drawIconTilted(ic[1], x + off, y + off, size, col)
+                drawIconTilted(ic[1], x + (off * 1.25), y + off, size, col)
                 x = x - off * 2
             else
                 drawIconTilted(ic[1], x, y, size, col)

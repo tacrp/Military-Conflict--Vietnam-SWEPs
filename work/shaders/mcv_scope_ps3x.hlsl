@@ -9,8 +9,8 @@
 // distortion, chromatic aberration and edge blur.
 //
 //   c0: x 1/magnification   y (unused)                             z shadow radius (reticle plane units, 0.5 = its edge)   w shadow softness
-//   c1: x barrel distortion y chromatic aberration                  z edge blur                   w tube radius
-//   c2: x tube softness     y brightness                            z screen aspect (w/h)         w reticle strength
+//   c1: x barrel distortion y chromatic aberration                  z edge blur                   w (unused)
+//   c2: x (unused)           y brightness                            z screen aspect (w/h)         w reticle strength
 //   c3: x, y scope axis on screen (0..1, y down)   z debug (1: show lens uv, 2: solid red)   w lens diameter on screen (fraction of height)
 sampler SCREEN  : register(s0);
 sampler RETICLE : register(s1);
@@ -81,9 +81,8 @@ float4 main(PS_INPUT frag) : COLOR {
     float ret = tex2D(RETICLE, ruv).a * C2.w * inplane;
     col *= 1.0 - ret;
 
-    // eyepiece tube rim (the physical lens edge, in lens coordinates)
-    float tube = 1.0 - smoothstep(C1.w - C2.x, C1.w, r);
-
-    col *= tube * C2.y;
+    // no rim in lens coordinates any more: the shadow and the black surround live on the
+    // reticle plane above, so nothing moves with the lens mesh itself
+    col *= C2.y;
     return float4(col, 1.0);
 }

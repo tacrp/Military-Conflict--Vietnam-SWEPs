@@ -469,6 +469,10 @@ sensitivity follows the scope magnification.
   mesh; a kick then showed the picture past the reticle's edge on the reticles that ship without a
   black border. The aim point is the gun base's `GetAimVector` (eye angles plus twice the view
   punch), the vector the shot is fired along.
+* **No lens rim**: nothing is masked in lens coordinates any more; the shadow ring and the black
+  surround are the reticle plane's only. The lens mesh clips the plane and that is all it does.
+* **OEG**: the occluded eye gunsights never get the lens shader (`ShouldDoScope`); their lens is the
+  occluder and the see-through is the viewmodel composite.
 * **Outside the frame**: where the magnified window falls past the captured screen the shader
   paints black instead of the clamped edge pixels (a hard kick or a wide sway showed the border).
 * **In the shader**: exit pupil (bright disc centred on the eyepiece, so the shadow moves with

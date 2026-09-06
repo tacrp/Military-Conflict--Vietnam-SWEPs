@@ -36,8 +36,12 @@ function SWEP:GetScopeFOV()
     return self.ScopeFOV
 end
 
+// The lens shader is for scopes with a picture. An occluded eye gunsight (OEGScope) has no
+// picture: its lens is the occluder, the see-through comes from the half-transparent viewmodel
+// composite (mcv_base/sh_vm.lua) and the dot from DrawHUDExtra. With the shader on it the
+// single-point crosshair texture, opaque over its whole plane, blacked the lens out.
 function SWEP:ShouldDoScope()
-    return self:GetIronsight() and self.HasScope
+    return self:GetIronsight() and self.HasScope and !self.OEGScope
 end
 
 // The reticle texture behind a ScopeMaterial. The game's crosshair_* VMTs are model materials
