@@ -29,7 +29,7 @@ $cbox 0 0 0 0 0 0
 
 $bbox -2.027 -1.854 -4.818 1.854 1.854 7.128
 
-$definebone "ValveBiped.Bip01_R_Hand" "" -6 -1 -2 0 0 180 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Hand" "" -3.919 -1.825 -0.751 -3.891 -5.837 -178.923 0 0 0 0 0 0
 $definebone "ValveBiped.weapon_bone" "ValveBiped.Bip01_R_Hand" 0 0 -0.064417 0 0 90.000009 0 0 0 0 0 0
 
 

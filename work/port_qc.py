@@ -1464,6 +1464,12 @@ HAND_DEFAULT = (-6, -1, -2, 0, 0, 180)
 HAND_TILT = {
     "w_sks": 7.5,
 }
+# Every other world model takes its line from work/hand_offsets_derived.json: the game's own
+# hand-relative weapon bone for the weapon's animation class (anim_prefix in the weapon script,
+# the <prefix>_aim_idle of the player animation sets), inverted and calibrated on the AK-47's
+# tuned line (H = H_ak47 * A_rifle * A_class^-1; reproduces the hand-tuned guns within a unit).
+# Regenerate with work/derive_hand_offsets.py after decompiling the player animation models.
+DERIVED_HANDS = os.path.join(HERE, "hand_offsets_derived.json")
 HAND_OFFSETS = {
     "w_sks": (-10, -1, -2, 0, 0, 180),
     "w_ak47": (-6, -1, -3.25, 0, 0, 180),
@@ -1689,8 +1695,14 @@ def port_worldmodel(args, og_dir):
         tilt = args.tilt if args.tilt is not None else HAND_TILT.get(name, 0)
         if tilt or (args.move and any(args.move)):
             transform_anim_smds(qc, ctx, og_dir, raw, tilt, args.move)
+        derived = None
+        if os.path.isfile(DERIVED_HANDS):
+            derived = json.load(open(DERIVED_HANDS, encoding="utf-8")).get(name)
         if args.hand or name in HAND_OFFSETS:
             off = list(args.hand) if args.hand else list(HAND_OFFSETS.get(name, HAND_DEFAULT))
+        elif derived:
+            off = list(derived["hand"])
+            ctx.note("hand bone derived from the game's %s animations (%s)" % (derived["prefix"], derived["anim"]))
         elif os.path.isfile(fixed_qc):
             m = re.search(r'^\$definebone\s+"ValveBiped\.Bip01_R_Hand"[^\n]*$', open(fixed_qc, encoding="utf-8", errors="replace").read(), re.M)
             if m:
@@ -1714,10 +1726,14 @@ def port_worldmodel(args, og_dir):
         left_roots = [r for r in roots if re.search(r'(_left|_l)$', r, re.I)]
         left_line = None
         if left_roots:
-            base = off if off is not None else list(HAND_DEFAULT)
-            loff = [base[0], -base[1], base[2], base[3], base[4], base[5]]
+            if derived and derived.get("hand_left"):
+                loff = list(derived["hand_left"])
+                ctx.note("dual wield: left gun bones (%s) parented to a left hand derived from the game's animations" % ", ".join(left_roots))
+            else:
+                base = off if off is not None else list(HAND_DEFAULT)
+                loff = [base[0], -base[1], base[2], base[3], base[4], base[5]]
+                ctx.warn("dual wield: left gun bones (%s) parented to a mirrored left hand; tune in game" % ", ".join(left_roots))
             left_line = '$definebone "ValveBiped.Bip01_L_Hand" "" %s 0 0 0 0 0 0' % " ".join("%g" % v for v in loff)
-            ctx.warn("dual wield: left gun bones (%s) parented to a mirrored left hand; tune in game" % ", ".join(left_roots))
         if not roots:
             ctx.warn("no root $definebone found; hand bone not added")
         else:

@@ -1,0 +1,5546 @@
+{
+ "w_ak47": {
+  "prefix": "rifle",
+  "set": "rifles",
+  "anim": "rifle_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.0,
+   -1.0,
+   -3.25,
+   -0.0,
+   0.0,
+   180.0
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_ak47_bayonet": {
+  "prefix": "knife",
+  "set": "equipments",
+  "anim": "knife_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -1.972,
+   -1.191,
+   2.936,
+   87.982,
+   -51.418,
+   132.293
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_akm": {
+  "prefix": "rifle",
+  "set": "rifles",
+  "anim": "rifle_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.0,
+   -1.0,
+   -3.25,
+   -0.0,
+   0.0,
+   180.0
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_amd65": {
+  "prefix": "md63",
+  "set": "rifles",
+  "anim": "md63_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.0,
+   -1.0,
+   -3.25,
+   -0.0,
+   0.0,
+   180.0
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_aps": {
+  "prefix": "aps",
+  "set": "set1",
+  "anim": "aps_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.526,
+   -1.243,
+   -1.26,
+   -1.454,
+   -2.908,
+   -175.373
+  ],
+  "hand_left": [
+   -4.614,
+   -26.902,
+   -39.775,
+   -43.869,
+   -84.581,
+   175.15
+  ]
+ },
+ "w_babybrowning": {
+  "prefix": "pistol",
+  "set": "set1",
+  "anim": "pistol_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_bar_l": {
+  "prefix": "bar",
+  "set": "set2",
+  "anim": "bar_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.79,
+   -1.598,
+   -0.698,
+   18.014,
+   10.616,
+   -170.088
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_bazooka": {
+  "prefix": "rpg",
+  "set": "equipments",
+  "anim": "rpg_aim_idle_aim_mid_center.smd",
+  "hand": [
+   2.177,
+   -1.154,
+   -6.703,
+   -30.91,
+   -4.968,
+   -178.524
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_binocular": {
+  "prefix": "binocular",
+  "set": "equipments",
+  "anim": "binocular_aim_idle_aim_mid_center.smd",
+  "hand": [
+   0.028,
+   -4.341,
+   -4.148,
+   -82.656,
+   27.864,
+   142.113
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_blackhawk": {
+  "prefix": "revolver",
+  "set": "set1",
+  "anim": "revolver_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_box": {
+  "prefix": "box",
+  "set": "equipments",
+  "anim": "box_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -5.342,
+   -6.575,
+   -1.386,
+   -2.151,
+   -1.635,
+   -178.123
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_bren": {
+  "prefix": "bren",
+  "set": "set2",
+  "anim": "bren_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.488,
+   -1.046,
+   -2.759,
+   -7.194,
+   1.382,
+   179.172
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_browning_auto": {
+  "prefix": "auto5",
+  "set": "carbinesnipershotgun",
+  "anim": "auto5_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -11.467,
+   -1.131,
+   -0.368,
+   12.754,
+   6.777,
+   -177.279
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_c4": {
+  "prefix": "c4",
+  "set": "equipments",
+  "anim": "c4_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.794,
+   -2.321,
+   -0.759,
+   -3.891,
+   -5.837,
+   -178.923
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_c96": {
+  "prefix": "c96",
+  "set": "set1",
+  "anim": "c96_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_c96_stock": {
+  "prefix": "type17c96stock",
+  "set": "set1",
+  "anim": "type17c96stock_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_car15": {
+  "prefix": "rifle",
+  "set": "rifles",
+  "anim": "rifle_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.0,
+   -1.0,
+   -3.25,
+   -0.0,
+   0.0,
+   180.0
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_chainsaw": {
+  "prefix": "chainsaw",
+  "set": "equipments",
+  "anim": "chainsaw_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -10.592,
+   -0.625,
+   2.518,
+   32.911,
+   -6.163,
+   -165.187
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_chinalake": {
+  "prefix": "chinalake",
+  "set": "equipments",
+  "anim": "chinalake_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -10.008,
+   -1.361,
+   0.135,
+   20.674,
+   10.666,
+   -169.602
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_cobra": {
+  "prefix": "revolver",
+  "set": "set1",
+  "anim": "revolver_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_crossbow": {
+  "prefix": "crossbow",
+  "set": "equipments",
+  "anim": "crossbow_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -10.164,
+   -2.064,
+   0.947,
+   29.989,
+   23.163,
+   -149.856
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_crowbar": {
+  "prefix": "crowbar",
+  "set": "equipments",
+  "anim": "crowbar_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -1.972,
+   -1.191,
+   2.936,
+   87.982,
+   -51.418,
+   132.293
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_csg": {
+  "prefix": "csg",
+  "set": "equipments",
+  "anim": "csg_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.495,
+   -1.311,
+   -1.369,
+   -3.891,
+   -5.837,
+   -178.923
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_csg2": {
+  "prefix": "csg",
+  "set": "equipments",
+  "anim": "csg_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.495,
+   -1.311,
+   -1.369,
+   -3.891,
+   -5.837,
+   -178.923
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_css": {
+  "prefix": "csg",
+  "set": "equipments",
+  "anim": "csg_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.495,
+   -1.311,
+   -1.369,
+   -3.891,
+   -5.837,
+   -178.923
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_css_ignited": {
+  "prefix": "csg",
+  "set": "equipments",
+  "anim": "csg_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.495,
+   -1.311,
+   -1.369,
+   -3.891,
+   -5.837,
+   -178.923
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_cz52": {
+  "prefix": "pistol",
+  "set": "set1",
+  "anim": "pistol_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_dp28": {
+  "prefix": "dp28",
+  "set": "set2",
+  "anim": "dp28_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -7.344,
+   -1.642,
+   -0.083,
+   12.754,
+   6.777,
+   -177.279
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_dual_aps": {
+  "prefix": "dualweapon",
+  "set": "smg",
+  "anim": "dualweapon_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.987
+  ]
+ },
+ "w_dual_babybrowning": {
+  "prefix": "dualweapon",
+  "set": "smg",
+  "anim": "dualweapon_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.987
+  ]
+ },
+ "w_dual_blackhawk": {
+  "prefix": "dualweapon",
+  "set": "smg",
+  "anim": "dualweapon_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.987
+  ]
+ },
+ "w_dual_cobra": {
+  "prefix": "dualweapon",
+  "set": "smg",
+  "anim": "dualweapon_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.987
+  ]
+ },
+ "w_dual_cz52": {
+  "prefix": "dualweapon",
+  "set": "smg",
+  "anim": "dualweapon_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.987
+  ]
+ },
+ "w_dual_hdm": {
+  "prefix": "dualweapon",
+  "set": "smg",
+  "anim": "dualweapon_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.987
+  ]
+ },
+ "w_dual_highpower": {
+  "prefix": "dualweapon",
+  "set": "smg",
+  "anim": "dualweapon_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.987
+  ]
+ },
+ "w_dual_hp": {
+  "prefix": "dualweapon",
+  "set": "smg",
+  "anim": "dualweapon_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.987
+  ]
+ },
+ "w_dual_izh43": {
+  "prefix": "dualshotty",
+  "set": "carbinesnipershotgun",
+  "anim": "dualshotty_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -11.337,
+   -0.747,
+   -0.075,
+   19.497,
+   2.343,
+   -168.145
+  ],
+  "hand_left": [
+   -10.597,
+   -1.637,
+   1.048,
+   -12.453,
+   -8.013,
+   -164.011
+  ]
+ },
+ "w_dual_lacoste": {
+  "prefix": "dualweapon",
+  "set": "smg",
+  "anim": "dualweapon_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.987
+  ]
+ },
+ "w_dual_lebel": {
+  "prefix": "dualweapon",
+  "set": "smg",
+  "anim": "dualweapon_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.987
+  ]
+ },
+ "w_dual_luger": {
+  "prefix": "dualweapon",
+  "set": "smg",
+  "anim": "dualweapon_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.987
+  ]
+ },
+ "w_dual_m1895": {
+  "prefix": "dualweapon",
+  "set": "smg",
+  "anim": "dualweapon_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.987
+  ]
+ },
+ "w_dual_m1911": {
+  "prefix": "dualweapon",
+  "set": "smg",
+  "anim": "dualweapon_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.987
+  ]
+ },
+ "w_dual_m1917": {
+  "prefix": "dualweapon",
+  "set": "smg",
+  "anim": "dualweapon_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.987
+  ]
+ },
+ "w_dual_mac10": {
+  "prefix": "dualweapon",
+  "set": "smg",
+  "anim": "dualweapon_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.987
+  ]
+ },
+ "w_dual_mac10_sog": {
+  "prefix": "dualweapon",
+  "set": "smg",
+  "anim": "dualweapon_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.987
+  ]
+ },
+ "w_dual_mamba": {
+  "prefix": "dualweapon",
+  "set": "smg",
+  "anim": "dualweapon_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.987
+  ]
+ },
+ "w_dual_mk22": {
+  "prefix": "dualweapon",
+  "set": "smg",
+  "anim": "dualweapon_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.987
+  ]
+ },
+ "w_dual_mk22_mod0": {
+  "prefix": "dualweapon",
+  "set": "smg",
+  "anim": "dualweapon_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.987
+  ]
+ },
+ "w_dual_mle1935": {
+  "prefix": "dualweapon",
+  "set": "smg",
+  "anim": "dualweapon_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.987
+  ]
+ },
+ "w_dual_p38": {
+  "prefix": "dualweapon",
+  "set": "smg",
+  "anim": "dualweapon_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.987
+  ]
+ },
+ "w_dual_pb": {
+  "prefix": "dualweapon",
+  "set": "smg",
+  "anim": "dualweapon_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.987
+  ]
+ },
+ "w_dual_pm": {
+  "prefix": "dualweapon",
+  "set": "smg",
+  "anim": "dualweapon_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.987
+  ]
+ },
+ "w_dual_pm63": {
+  "prefix": "dualweapon",
+  "set": "smg",
+  "anim": "dualweapon_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.987
+  ]
+ },
+ "w_dual_ppk": {
+  "prefix": "dualweapon",
+  "set": "smg",
+  "anim": "dualweapon_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.987
+  ]
+ },
+ "w_dual_qspr": {
+  "prefix": "dualweapon",
+  "set": "smg",
+  "anim": "dualweapon_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.987
+  ]
+ },
+ "w_dual_rhogun": {
+  "prefix": "dualweapon",
+  "set": "smg",
+  "anim": "dualweapon_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.987
+  ]
+ },
+ "w_dual_ruby": {
+  "prefix": "dualweapon",
+  "set": "smg",
+  "anim": "dualweapon_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.987
+  ]
+ },
+ "w_dual_swm10": {
+  "prefix": "dualweapon",
+  "set": "smg",
+  "anim": "dualweapon_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.987
+  ]
+ },
+ "w_dual_swm12": {
+  "prefix": "dualweapon",
+  "set": "smg",
+  "anim": "dualweapon_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.987
+  ]
+ },
+ "w_dual_swm49": {
+  "prefix": "dualweapon",
+  "set": "smg",
+  "anim": "dualweapon_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.987
+  ]
+ },
+ "w_dual_tt33": {
+  "prefix": "dualweapon",
+  "set": "smg",
+  "anim": "dualweapon_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.987
+  ]
+ },
+ "w_dual_type14": {
+  "prefix": "dualweapon",
+  "set": "smg",
+  "anim": "dualweapon_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.987
+  ]
+ },
+ "w_dual_type64_pistol": {
+  "prefix": "dualweapon",
+  "set": "smg",
+  "anim": "dualweapon_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.987
+  ]
+ },
+ "w_dual_type67": {
+  "prefix": "dualweapon",
+  "set": "smg",
+  "anim": "dualweapon_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.987
+  ]
+ },
+ "w_dual_uzi": {
+  "prefix": "dualweapon",
+  "set": "smg",
+  "anim": "dualweapon_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.987
+  ]
+ },
+ "w_dual_uzi_sog": {
+  "prefix": "dualweapon",
+  "set": "smg",
+  "anim": "dualweapon_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.987
+  ]
+ },
+ "w_dual_vcpistol2": {
+  "prefix": "dualweapon",
+  "set": "smg",
+  "anim": "dualweapon_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.987
+  ]
+ },
+ "w_dual_vz23": {
+  "prefix": "dualweapon",
+  "set": "smg",
+  "anim": "dualweapon_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.987
+  ]
+ },
+ "w_dual_vz61": {
+  "prefix": "dualweapon",
+  "set": "smg",
+  "anim": "dualweapon_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.987
+  ]
+ },
+ "w_dual_vz61_silencer": {
+  "prefix": "dualweapon",
+  "set": "smg",
+  "anim": "dualweapon_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.987
+  ]
+ },
+ "w_dynamite": {
+  "prefix": "molotov",
+  "set": "equipments",
+  "anim": "molotov_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.919,
+   -1.825,
+   -0.751,
+   -3.891,
+   -5.837,
+   -178.923
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_f1": {
+  "prefix": "f1",
+  "set": "smg",
+  "anim": "f1_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -2.239,
+   -1.594,
+   -2.122,
+   7.607,
+   -0.629,
+   177.669
+  ],
+  "hand_left": [
+   -3.303,
+   -0.577,
+   1.433,
+   11.824,
+   -12.736,
+   -170.986
+  ]
+ },
+ "w_fist": {
+  "prefix": "fists",
+  "set": "equipments",
+  "anim": "fists_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -0.418,
+   -0.858,
+   1.321,
+   87.982,
+   -51.414,
+   132.297
+  ],
+  "hand_left": [
+   -1.958,
+   22.653,
+   -7.083,
+   -49.977,
+   -34.47,
+   135.498
+  ]
+ },
+ "w_g3": {
+  "prefix": "t223",
+  "set": "rifles",
+  "anim": "t223_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -5.773,
+   -0.85,
+   -3.932,
+   -0.0,
+   0.0,
+   180.0
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_gewehr43": {
+  "prefix": "svt40",
+  "set": "carbinesnipershotgun",
+  "anim": "svt40_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -11.301,
+   -1.148,
+   -0.372,
+   13.152,
+   6.902,
+   -177.185
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_gp25": {
+  "prefix": "gp25",
+  "set": "rifles",
+  "anim": "gp25_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.0,
+   -1.0,
+   -3.25,
+   -0.0,
+   0.0,
+   180.0
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_gyrojet_carbine": {
+  "prefix": "gyrojetc",
+  "set": "carbinesnipershotgun",
+  "anim": "gyrojetc_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -11.014,
+   -0.487,
+   -3.388,
+   -6.319,
+   0.0,
+   -179.602
+  ],
+  "hand_left": [
+   -4.614,
+   -26.902,
+   -39.775,
+   -43.869,
+   -84.581,
+   175.15
+  ]
+ },
+ "w_gyrojet_pepperbox": {
+  "prefix": "gyrojet",
+  "set": "set1",
+  "anim": "gyrojet_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_gyrojet_pistol": {
+  "prefix": "gyrojet",
+  "set": "set1",
+  "anim": "gyrojet_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_hdm": {
+  "prefix": "pistol",
+  "set": "set1",
+  "anim": "pistol_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_highpower": {
+  "prefix": "pistol",
+  "set": "set1",
+  "anim": "pistol_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_izh43": {
+  "prefix": "izh43",
+  "set": "carbinesnipershotgun",
+  "anim": "izh43_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -10.976,
+   -1.12,
+   -0.618,
+   12.754,
+   6.777,
+   -177.279
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_izh43_sog": {
+  "prefix": "izh43",
+  "set": "carbinesnipershotgun",
+  "anim": "izh43_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -10.976,
+   -1.12,
+   -0.618,
+   12.754,
+   6.777,
+   -177.279
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_k50m": {
+  "prefix": "k50m",
+  "set": "smg",
+  "anim": "k50m_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.771,
+   -1.101,
+   -2.477,
+   -6.44,
+   -1.975,
+   -178.873
+  ],
+  "hand_left": [
+   -4.614,
+   -26.902,
+   -39.775,
+   -43.869,
+   -84.581,
+   175.15
+  ]
+ },
+ "w_k50m_vc": {
+  "prefix": "k50m",
+  "set": "smg",
+  "anim": "k50m_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.771,
+   -1.101,
+   -2.477,
+   -6.44,
+   -1.975,
+   -178.873
+  ],
+  "hand_left": [
+   -4.614,
+   -26.902,
+   -39.775,
+   -43.869,
+   -84.581,
+   175.15
+  ]
+ },
+ "w_kar98_dov": {
+  "prefix": "boltaction",
+  "set": "carbinesnipershotgun",
+  "anim": "boltaction_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -10.864,
+   -1.121,
+   -0.656,
+   12.754,
+   6.777,
+   -177.279
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_kar98_s": {
+  "prefix": "boltaction",
+  "set": "carbinesnipershotgun",
+  "anim": "boltaction_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -10.864,
+   -1.121,
+   -0.656,
+   12.754,
+   6.777,
+   -177.279
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_katana": {
+  "prefix": "katana",
+  "set": "equipments",
+  "anim": "katana_aim_idle_aim_mid_center.smd",
+  "hand": [
+   0.47,
+   -1.861,
+   2.357,
+   83.75,
+   50.575,
+   -121.066
+  ],
+  "hand_left": [
+   -2.323,
+   2.494,
+   0.887,
+   14.353,
+   -74.026,
+   176.755
+  ]
+ },
+ "w_kbkg60": {
+  "prefix": "rifle",
+  "set": "rifles",
+  "anim": "rifle_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.0,
+   -1.0,
+   -3.25,
+   -0.0,
+   0.0,
+   180.0
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_kolos": {
+  "prefix": "kolos",
+  "set": "equipments",
+  "anim": "kolos_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -0.025,
+   -1.07,
+   -6.117,
+   -9.609,
+   -4.728,
+   -178.412
+  ],
+  "hand_left": [
+   -4.614,
+   -26.902,
+   -39.775,
+   -43.869,
+   -84.581,
+   175.15
+  ]
+ },
+ "w_l1a1": {
+  "prefix": "l1a1",
+  "set": "rifles",
+  "anim": "l1a1_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -5.773,
+   -0.85,
+   -3.932,
+   -0.0,
+   0.0,
+   180.0
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_l1a1_sog": {
+  "prefix": "l1a1sog",
+  "set": "rifles",
+  "anim": "l1a1sog_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -5.773,
+   -0.85,
+   -3.932,
+   -0.0,
+   0.0,
+   180.0
+  ],
+  "hand_left": [
+   -4.614,
+   -26.902,
+   -39.775,
+   -43.869,
+   -84.581,
+   175.15
+  ]
+ },
+ "w_l2a1": {
+  "prefix": "l1a1l2a1",
+  "set": "set2",
+  "anim": "l1a1l2a1_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -5.773,
+   -0.85,
+   -3.932,
+   -0.0,
+   0.0,
+   180.0
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_lacoste": {
+  "prefix": "lacoste",
+  "set": "smg",
+  "anim": "lacoste_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.155,
+   -0.692,
+   -1.596,
+   -5.367,
+   -11.837,
+   179.969
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_lebel": {
+  "prefix": "revolver",
+  "set": "set1",
+  "anim": "revolver_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_luger": {
+  "prefix": "pistol",
+  "set": "set1",
+  "anim": "pistol_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_lunge_mine": {
+  "prefix": "lungemine",
+  "set": "equipments",
+  "anim": "lungemine_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -7.865,
+   0.516,
+   4.099,
+   63.388,
+   -89.464,
+   92.354
+  ],
+  "hand_left": [
+   -2.319,
+   2.49,
+   0.888,
+   14.354,
+   -74.025,
+   176.754
+  ]
+ },
+ "w_m12": {
+  "prefix": "m12",
+  "set": "smg",
+  "anim": "m12_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -2.974,
+   -1.486,
+   -2.511,
+   1.588,
+   0.053,
+   -178.158
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m14_sog": {
+  "prefix": "m1cm21",
+  "set": "carbinesnipershotgun",
+  "anim": "m1cm21_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -11.301,
+   -1.148,
+   -0.372,
+   13.152,
+   6.902,
+   -177.185
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m14e2": {
+  "prefix": "m14e2",
+  "set": "set2",
+  "anim": "m14e2_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -10.035,
+   -0.54,
+   -3.158,
+   -12.497,
+   -0.68,
+   178.756
+  ],
+  "hand_left": [
+   -4.614,
+   -26.902,
+   -39.775,
+   -43.869,
+   -84.581,
+   175.15
+  ]
+ },
+ "w_m14e2_sog": {
+  "prefix": "m14e2",
+  "set": "set2",
+  "anim": "m14e2_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -10.035,
+   -0.54,
+   -3.158,
+   -12.497,
+   -0.68,
+   178.756
+  ],
+  "hand_left": [
+   -4.614,
+   -26.902,
+   -39.775,
+   -43.869,
+   -84.581,
+   175.15
+  ]
+ },
+ "w_m14l": {
+  "prefix": "m1cm21",
+  "set": "carbinesnipershotgun",
+  "anim": "m1cm21_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -11.301,
+   -1.148,
+   -0.372,
+   13.152,
+   6.902,
+   -177.185
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m16_flamer": {
+  "prefix": "rifle",
+  "set": "rifles",
+  "anim": "rifle_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.0,
+   -1.0,
+   -3.25,
+   -0.0,
+   0.0,
+   180.0
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m16a1": {
+  "prefix": "rifle",
+  "set": "rifles",
+  "anim": "rifle_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.0,
+   -1.0,
+   -3.25,
+   -0.0,
+   0.0,
+   180.0
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m18": {
+  "prefix": "usg",
+  "set": "equipments",
+  "anim": "usg_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.757,
+   -1.651,
+   -0.152,
+   -3.891,
+   -5.837,
+   -178.923
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m1895": {
+  "prefix": "revolver",
+  "set": "set1",
+  "anim": "revolver_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m1897": {
+  "prefix": "m870",
+  "set": "carbinesnipershotgun",
+  "anim": "m870_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -11.467,
+   -1.131,
+   -0.368,
+   12.754,
+   6.777,
+   -177.279
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m1905_bayonet": {
+  "prefix": "knife",
+  "set": "equipments",
+  "anim": "knife_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -1.972,
+   -1.191,
+   2.936,
+   87.982,
+   -51.418,
+   132.293
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m1911": {
+  "prefix": "pistol",
+  "set": "set1",
+  "anim": "pistol_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m1917": {
+  "prefix": "revolver",
+  "set": "set1",
+  "anim": "revolver_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m1919a6": {
+  "prefix": "m1919a6",
+  "set": "set2",
+  "anim": "m1919a6_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -10.115,
+   -1.026,
+   -1.452,
+   4.43,
+   1.157,
+   -179.485
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m1928": {
+  "prefix": "m1928",
+  "set": "smg",
+  "anim": "m1928_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.909,
+   -0.458,
+   -1.752,
+   1.939,
+   -8.371,
+   178.504
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m1942_machete": {
+  "prefix": "knife",
+  "set": "equipments",
+  "anim": "knife_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -1.972,
+   -1.191,
+   2.936,
+   87.982,
+   -51.418,
+   132.293
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m1a1": {
+  "prefix": "m1a1",
+  "set": "smg",
+  "anim": "m1a1_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.909,
+   -0.458,
+   -1.752,
+   1.939,
+   -8.371,
+   178.504
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m1a1_sog": {
+  "prefix": "m1a1",
+  "set": "smg",
+  "anim": "m1a1_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.909,
+   -0.458,
+   -1.752,
+   1.939,
+   -8.371,
+   178.504
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m1c": {
+  "prefix": "m1a1c",
+  "set": "carbinesnipershotgun",
+  "anim": "m1a1c_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -9.766,
+   -0.735,
+   -2.512,
+   -1.836,
+   1.907,
+   -179.99
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m1c_sog": {
+  "prefix": "m1a1c",
+  "set": "carbinesnipershotgun",
+  "anim": "m1a1c_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -9.766,
+   -0.735,
+   -2.512,
+   -1.836,
+   1.907,
+   -179.99
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m202": {
+  "prefix": "m202",
+  "set": "equipments",
+  "anim": "m202_aim_idle_aim_mid_center.smd",
+  "hand": [
+   0.615,
+   -1.118,
+   -6.404,
+   -9.609,
+   -4.728,
+   -178.412
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m203": {
+  "prefix": "m203",
+  "set": "rifles",
+  "anim": "m203_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.0,
+   -1.0,
+   -3.25,
+   -0.0,
+   0.0,
+   180.0
+  ],
+  "hand_left": [
+   -4.614,
+   -26.902,
+   -39.775,
+   -43.869,
+   -84.581,
+   175.15
+  ]
+ },
+ "w_m21": {
+  "prefix": "m1cm21",
+  "set": "carbinesnipershotgun",
+  "anim": "m1cm21_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -11.301,
+   -1.148,
+   -0.372,
+   13.152,
+   6.902,
+   -177.185
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m24": {
+  "prefix": "m24",
+  "set": "set2",
+  "anim": "m24_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.488,
+   -1.046,
+   -2.759,
+   -7.194,
+   1.382,
+   179.172
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m26": {
+  "prefix": "usg",
+  "set": "equipments",
+  "anim": "usg_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.757,
+   -1.651,
+   -0.152,
+   -3.891,
+   -5.837,
+   -178.923
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m2c": {
+  "prefix": "m1cm21",
+  "set": "carbinesnipershotgun",
+  "anim": "m1cm21_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -11.301,
+   -1.148,
+   -0.372,
+   13.152,
+   6.902,
+   -177.185
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m2c_sog": {
+  "prefix": "m1cm21",
+  "set": "carbinesnipershotgun",
+  "anim": "m1cm21_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -11.301,
+   -1.148,
+   -0.372,
+   13.152,
+   6.902,
+   -177.185
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m34": {
+  "prefix": "csg",
+  "set": "equipments",
+  "anim": "csg_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.495,
+   -1.311,
+   -1.369,
+   -3.891,
+   -5.837,
+   -178.923
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m37": {
+  "prefix": "m870",
+  "set": "carbinesnipershotgun",
+  "anim": "m870_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -11.467,
+   -1.131,
+   -0.368,
+   12.754,
+   6.777,
+   -177.279
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m38": {
+  "prefix": "boltaction",
+  "set": "carbinesnipershotgun",
+  "anim": "boltaction_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -10.864,
+   -1.121,
+   -0.656,
+   12.754,
+   6.777,
+   -177.279
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m38_s": {
+  "prefix": "boltaction",
+  "set": "carbinesnipershotgun",
+  "anim": "boltaction_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -10.864,
+   -1.121,
+   -0.656,
+   12.754,
+   6.777,
+   -177.279
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m3a1": {
+  "prefix": "m3a1",
+  "set": "smg",
+  "anim": "m3a1_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.739,
+   -0.799,
+   -2.425,
+   -6.44,
+   -1.975,
+   -178.873
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m3a1_sog": {
+  "prefix": "m3a1",
+  "set": "smg",
+  "anim": "m3a1_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.739,
+   -0.799,
+   -2.425,
+   -6.44,
+   -1.975,
+   -178.873
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m40": {
+  "prefix": "boltaction",
+  "set": "carbinesnipershotgun",
+  "anim": "boltaction_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -10.864,
+   -1.121,
+   -0.656,
+   12.754,
+   6.777,
+   -177.279
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m45": {
+  "prefix": "swm76",
+  "set": "smg",
+  "anim": "swm76_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -7.199,
+   -1.123,
+   -2.179,
+   1.588,
+   0.053,
+   -178.158
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m45_sog": {
+  "prefix": "swm76",
+  "set": "smg",
+  "anim": "swm76_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -7.199,
+   -1.123,
+   -2.179,
+   1.588,
+   0.053,
+   -178.158
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m50": {
+  "prefix": "k50m",
+  "set": "smg",
+  "anim": "k50m_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.771,
+   -1.101,
+   -2.477,
+   -6.44,
+   -1.975,
+   -178.873
+  ],
+  "hand_left": [
+   -4.614,
+   -26.902,
+   -39.775,
+   -43.869,
+   -84.581,
+   175.15
+  ]
+ },
+ "w_m56": {
+  "prefix": "m56",
+  "set": "smg",
+  "anim": "m56_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -7.013,
+   -0.746,
+   -2.573,
+   -13.172,
+   -0.769,
+   176.778
+  ],
+  "hand_left": [
+   -4.614,
+   -26.902,
+   -39.775,
+   -43.869,
+   -84.581,
+   175.15
+  ]
+ },
+ "w_m60": {
+  "prefix": "m60",
+  "set": "set2",
+  "anim": "m60_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -7.121,
+   -0.83,
+   -3.455,
+   -0.0,
+   0.0,
+   180.0
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m601": {
+  "prefix": "rifle",
+  "set": "rifles",
+  "anim": "rifle_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.0,
+   -1.0,
+   -3.25,
+   -0.0,
+   0.0,
+   180.0
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m605": {
+  "prefix": "rifle",
+  "set": "rifles",
+  "anim": "rifle_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.0,
+   -1.0,
+   -3.25,
+   -0.0,
+   0.0,
+   180.0
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m607": {
+  "prefix": "rifle",
+  "set": "rifles",
+  "anim": "rifle_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.0,
+   -1.0,
+   -3.25,
+   -0.0,
+   0.0,
+   180.0
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m60b": {
+  "prefix": "m60b",
+  "set": "set2",
+  "anim": "m60b_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -7.121,
+   -0.83,
+   -3.455,
+   -0.0,
+   0.0,
+   180.0
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m656": {
+  "prefix": "rifle",
+  "set": "rifles",
+  "anim": "rifle_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.0,
+   -1.0,
+   -3.25,
+   -0.0,
+   0.0,
+   180.0
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m7188": {
+  "prefix": "auto5",
+  "set": "carbinesnipershotgun",
+  "anim": "auto5_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -11.467,
+   -1.131,
+   -0.368,
+   12.754,
+   6.777,
+   -177.279
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m72": {
+  "prefix": "m72",
+  "set": "equipments",
+  "anim": "m72_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -5.987,
+   -2.581,
+   -1.023,
+   -78.051,
+   56.525,
+   117.325
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m79": {
+  "prefix": "m79",
+  "set": "equipments",
+  "anim": "m79_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -7.19,
+   -1.806,
+   0.494,
+   18.65,
+   8.733,
+   -175.774
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m79_short": {
+  "prefix": "m79",
+  "set": "equipments",
+  "anim": "m79_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -7.19,
+   -1.806,
+   0.494,
+   18.65,
+   8.733,
+   -175.774
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m7_bayonet": {
+  "prefix": "knife",
+  "set": "equipments",
+  "anim": "knife_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -1.972,
+   -1.191,
+   2.936,
+   87.982,
+   -51.418,
+   132.293
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m8": {
+  "prefix": "flare",
+  "set": "set1",
+  "anim": "flare_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m870": {
+  "prefix": "m870",
+  "set": "carbinesnipershotgun",
+  "anim": "m870_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -11.467,
+   -1.131,
+   -0.368,
+   12.754,
+   6.777,
+   -177.279
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_m91": {
+  "prefix": "boltaction",
+  "set": "carbinesnipershotgun",
+  "anim": "boltaction_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -10.864,
+   -1.121,
+   -0.656,
+   12.754,
+   6.777,
+   -177.279
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_mac10": {
+  "prefix": "mac10uzi",
+  "set": "smg",
+  "anim": "mac10uzi_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.155,
+   -0.692,
+   -1.596,
+   -5.367,
+   -11.837,
+   179.969
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_mac10_sog": {
+  "prefix": "mac10uzi",
+  "set": "smg",
+  "anim": "mac10uzi_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.155,
+   -0.692,
+   -1.596,
+   -5.367,
+   -11.837,
+   179.969
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_mamba": {
+  "prefix": "pistol",
+  "set": "set1",
+  "anim": "pistol_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_mas36": {
+  "prefix": "boltaction",
+  "set": "carbinesnipershotgun",
+  "anim": "boltaction_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -10.864,
+   -1.121,
+   -0.656,
+   12.754,
+   6.777,
+   -177.279
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_mas36_cr39": {
+  "prefix": "boltaction",
+  "set": "carbinesnipershotgun",
+  "anim": "boltaction_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -10.864,
+   -1.121,
+   -0.656,
+   12.754,
+   6.777,
+   -177.279
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_mas38": {
+  "prefix": "mas38",
+  "set": "smg",
+  "anim": "mas38_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.68,
+   -0.674,
+   -2.58,
+   -12.288,
+   -3.413,
+   -179.22
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_mas49": {
+  "prefix": "mas49",
+  "set": "carbinesnipershotgun",
+  "anim": "mas49_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -11.301,
+   -1.148,
+   -0.372,
+   13.152,
+   6.902,
+   -177.185
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_mat49": {
+  "prefix": "mat49",
+  "set": "smg",
+  "anim": "mat49_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.977,
+   -0.849,
+   -1.775,
+   1.588,
+   0.053,
+   -178.158
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_mat49_sog": {
+  "prefix": "mat49",
+  "set": "smg",
+  "anim": "mat49_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.977,
+   -0.849,
+   -1.775,
+   1.588,
+   0.053,
+   -178.158
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_mat49k": {
+  "prefix": "mat49",
+  "set": "smg",
+  "anim": "mat49_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.977,
+   -0.849,
+   -1.775,
+   1.588,
+   0.053,
+   -178.158
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_md63": {
+  "prefix": "md63",
+  "set": "rifles",
+  "anim": "md63_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.0,
+   -1.0,
+   -3.25,
+   -0.0,
+   0.0,
+   180.0
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_medicbox": {
+  "prefix": "medicbox",
+  "set": "equipments",
+  "anim": "medicbox_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -5.276,
+   -5.755,
+   -1.277,
+   -2.151,
+   -1.635,
+   -178.123
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_mg43": {
+  "prefix": "mg34",
+  "set": "set2",
+  "anim": "mg34_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.861,
+   -1.031,
+   -2.775,
+   -7.504,
+   -1.879,
+   179.328
+  ],
+  "hand_left": [
+   -4.614,
+   -26.902,
+   -39.775,
+   -43.869,
+   -84.581,
+   175.15
+  ]
+ },
+ "w_mg43b": {
+  "prefix": "mg34",
+  "set": "set2",
+  "anim": "mg34_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.861,
+   -1.031,
+   -2.775,
+   -7.504,
+   -1.879,
+   179.328
+  ],
+  "hand_left": [
+   -4.614,
+   -26.902,
+   -39.775,
+   -43.869,
+   -84.581,
+   175.15
+  ]
+ },
+ "w_mg43d": {
+  "prefix": "mg34d",
+  "set": "set2",
+  "anim": "mg34d_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.861,
+   -1.031,
+   -2.775,
+   -7.504,
+   -1.879,
+   179.328
+  ],
+  "hand_left": [
+   -4.614,
+   -26.902,
+   -39.775,
+   -43.869,
+   -84.581,
+   175.15
+  ]
+ },
+ "w_mine": {
+  "prefix": "mine",
+  "set": "equipments",
+  "anim": "mine_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.659,
+   -2.672,
+   1.916,
+   -25.419,
+   -9.896,
+   175.813
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_mk2": {
+  "prefix": "usg",
+  "set": "equipments",
+  "anim": "usg_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.757,
+   -1.651,
+   -0.152,
+   -3.891,
+   -5.837,
+   -178.923
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_mk22": {
+  "prefix": "pistol",
+  "set": "set1",
+  "anim": "pistol_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_mk22_mod0": {
+  "prefix": "pistol",
+  "set": "set1",
+  "anim": "pistol_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_mk3a2": {
+  "prefix": "usg",
+  "set": "equipments",
+  "anim": "usg_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.757,
+   -1.651,
+   -0.152,
+   -3.891,
+   -5.837,
+   -178.923
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_mk4mod0": {
+  "prefix": "rifle",
+  "set": "rifles",
+  "anim": "rifle_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.0,
+   -1.0,
+   -3.25,
+   -0.0,
+   0.0,
+   180.0
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_mle1935": {
+  "prefix": "pistol",
+  "set": "set1",
+  "anim": "pistol_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_molotov": {
+  "prefix": "molotov",
+  "set": "equipments",
+  "anim": "molotov_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.919,
+   -1.825,
+   -0.751,
+   -3.891,
+   -5.837,
+   -178.923
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_morph": {
+  "prefix": "morph",
+  "set": "equipments",
+  "anim": "morph_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -5.342,
+   -6.575,
+   -1.386,
+   -2.151,
+   -1.635,
+   -178.123
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_mp40": {
+  "prefix": "mp40",
+  "set": "smg",
+  "anim": "mp40_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -7.447,
+   -0.721,
+   -2.079,
+   1.588,
+   0.053,
+   -178.158
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_owen": {
+  "prefix": "owen",
+  "set": "smg",
+  "anim": "owen_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -2.054,
+   -1.266,
+   -3.747,
+   -11.633,
+   -3.252,
+   -179.189
+  ],
+  "hand_left": [
+   -1.958,
+   22.653,
+   -7.083,
+   -49.977,
+   -34.469,
+   135.497
+  ]
+ },
+ "w_p38": {
+  "prefix": "pistol",
+  "set": "set1",
+  "anim": "pistol_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_panzerschreck": {
+  "prefix": "rpg",
+  "set": "equipments",
+  "anim": "rpg_aim_idle_aim_mid_center.smd",
+  "hand": [
+   2.177,
+   -1.154,
+   -6.703,
+   -30.91,
+   -4.968,
+   -178.524
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_pb": {
+  "prefix": "pistol",
+  "set": "set1",
+  "anim": "pistol_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_pk": {
+  "prefix": "pk",
+  "set": "set2",
+  "anim": "pk_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.375,
+   -0.721,
+   -2.642,
+   -2.973,
+   0.006,
+   -179.813
+  ],
+  "hand_left": [
+   -4.614,
+   -26.902,
+   -39.775,
+   -43.869,
+   -84.581,
+   175.15
+  ]
+ },
+ "w_pk_belt": {
+  "prefix": "pkbelt",
+  "set": "set2",
+  "anim": "pkbelt_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.375,
+   -0.721,
+   -2.642,
+   -2.973,
+   0.006,
+   -179.813
+  ],
+  "hand_left": [
+   -4.614,
+   -26.902,
+   -39.775,
+   -43.869,
+   -84.581,
+   175.15
+  ]
+ },
+ "w_pm": {
+  "prefix": "pistol",
+  "set": "set1",
+  "anim": "pistol_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_pm63": {
+  "prefix": "pm63",
+  "set": "smg",
+  "anim": "pm63_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.155,
+   -0.692,
+   -1.596,
+   -5.367,
+   -11.837,
+   179.969
+  ],
+  "hand_left": [
+   -1.373,
+   3.285,
+   0.154,
+   1.779,
+   -94.127,
+   179.743
+  ]
+ },
+ "w_ppk": {
+  "prefix": "pistol",
+  "set": "set1",
+  "anim": "pistol_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_pps43": {
+  "prefix": "pps43",
+  "set": "smg",
+  "anim": "pps43_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.771,
+   -1.101,
+   -2.477,
+   -6.44,
+   -1.975,
+   -178.873
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_ppsh41": {
+  "prefix": "ppsh41",
+  "set": "smg",
+  "anim": "ppsh41_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -10.846,
+   -0.998,
+   -0.013,
+   17.711,
+   8.406,
+   -176.032
+  ],
+  "hand_left": [
+   -4.614,
+   -26.902,
+   -39.775,
+   -43.869,
+   -84.581,
+   175.15
+  ]
+ },
+ "w_ppsh41_doubledrum": {
+  "prefix": "ppsh41drum",
+  "set": "smg",
+  "anim": "ppsh41drum_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -10.846,
+   -0.998,
+   -0.013,
+   17.711,
+   8.406,
+   -176.032
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_ppsh41_drum": {
+  "prefix": "ppsh41drum",
+  "set": "smg",
+  "anim": "ppsh41drum_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -10.846,
+   -0.998,
+   -0.013,
+   17.711,
+   8.406,
+   -176.032
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_ptrd41": {
+  "prefix": "ptrd41",
+  "set": "equipments",
+  "anim": "ptrd41_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -5.73,
+   -0.637,
+   -4.782,
+   -12.518,
+   -3.105,
+   179.011
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_qspr": {
+  "prefix": "revolver",
+  "set": "set1",
+  "anim": "revolver_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_reising_m55": {
+  "prefix": "k50m",
+  "set": "smg",
+  "anim": "k50m_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.771,
+   -1.101,
+   -2.477,
+   -6.44,
+   -1.975,
+   -178.873
+  ],
+  "hand_left": [
+   -4.614,
+   -26.902,
+   -39.775,
+   -43.869,
+   -84.581,
+   175.15
+  ]
+ },
+ "w_reising_m60": {
+  "prefix": "ppsh41",
+  "set": "smg",
+  "anim": "ppsh41_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -10.846,
+   -0.998,
+   -0.013,
+   17.711,
+   8.406,
+   -176.032
+  ],
+  "hand_left": [
+   -4.614,
+   -26.902,
+   -39.775,
+   -43.869,
+   -84.581,
+   175.15
+  ]
+ },
+ "w_reising_smg": {
+  "prefix": "ppsh41",
+  "set": "smg",
+  "anim": "ppsh41_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -10.846,
+   -0.998,
+   -0.013,
+   17.711,
+   8.406,
+   -176.032
+  ],
+  "hand_left": [
+   -4.614,
+   -26.902,
+   -39.775,
+   -43.869,
+   -84.581,
+   175.15
+  ]
+ },
+ "w_rgd5": {
+  "prefix": "csg",
+  "set": "equipments",
+  "anim": "csg_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.495,
+   -1.311,
+   -1.369,
+   -3.891,
+   -5.837,
+   -178.923
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_rhogun": {
+  "prefix": "revolver",
+  "set": "set1",
+  "anim": "revolver_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_rp46": {
+  "prefix": "rp46",
+  "set": "set2",
+  "anim": "rp46_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -5.998,
+   -0.882,
+   -3.605,
+   -19.727,
+   -1.527,
+   177.825
+  ],
+  "hand_left": [
+   -4.614,
+   -26.902,
+   -39.775,
+   -43.869,
+   -84.581,
+   175.15
+  ]
+ },
+ "w_rpd": {
+  "prefix": "rpd",
+  "set": "set2",
+  "anim": "rpd_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.375,
+   -0.721,
+   -2.642,
+   -2.973,
+   0.006,
+   -179.813
+  ],
+  "hand_left": [
+   -4.614,
+   -26.902,
+   -39.775,
+   -43.869,
+   -84.581,
+   175.15
+  ]
+ },
+ "w_rpd_sog": {
+  "prefix": "rpd",
+  "set": "set2",
+  "anim": "rpd_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.375,
+   -0.721,
+   -2.642,
+   -2.973,
+   0.006,
+   -179.813
+  ],
+  "hand_left": [
+   -4.614,
+   -26.902,
+   -39.775,
+   -43.869,
+   -84.581,
+   175.15
+  ]
+ },
+ "w_rpdb": {
+  "prefix": "rpd",
+  "set": "set2",
+  "anim": "rpd_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.375,
+   -0.721,
+   -2.642,
+   -2.973,
+   0.006,
+   -179.813
+  ],
+  "hand_left": [
+   -4.614,
+   -26.902,
+   -39.775,
+   -43.869,
+   -84.581,
+   175.15
+  ]
+ },
+ "w_rpdb_sog": {
+  "prefix": "rpd",
+  "set": "set2",
+  "anim": "rpd_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.375,
+   -0.721,
+   -2.642,
+   -2.973,
+   0.006,
+   -179.813
+  ],
+  "hand_left": [
+   -4.614,
+   -26.902,
+   -39.775,
+   -43.869,
+   -84.581,
+   175.15
+  ]
+ },
+ "w_rpg2": {
+  "prefix": "rpg2",
+  "set": "equipments",
+  "anim": "rpg2_aim_idle_aim_mid_center.smd",
+  "hand": [
+   2.177,
+   -1.154,
+   -6.703,
+   -30.91,
+   -4.968,
+   -178.524
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_rpg7": {
+  "prefix": "rpg",
+  "set": "equipments",
+  "anim": "rpg_aim_idle_aim_mid_center.smd",
+  "hand": [
+   2.177,
+   -1.154,
+   -6.703,
+   -30.91,
+   -4.968,
+   -178.524
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_rpk": {
+  "prefix": "rifle",
+  "set": "rifles",
+  "anim": "rifle_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.0,
+   -1.0,
+   -3.25,
+   -0.0,
+   0.0,
+   180.0
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_ruby": {
+  "prefix": "pistol",
+  "set": "set1",
+  "anim": "pistol_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_shanxi_type17": {
+  "prefix": "type17",
+  "set": "set1",
+  "anim": "type17_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_shovel": {
+  "prefix": "shovel",
+  "set": "equipments",
+  "anim": "shovel_aim_idle_aim_mid_center.smd",
+  "hand": [
+   3.034,
+   -2.102,
+   1.876,
+   87.982,
+   -51.414,
+   132.297
+  ],
+  "hand_left": [
+   -2.323,
+   2.494,
+   0.887,
+   14.353,
+   -74.026,
+   176.755
+  ]
+ },
+ "w_sickle": {
+  "prefix": "knife",
+  "set": "equipments",
+  "anim": "knife_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -1.972,
+   -1.191,
+   2.936,
+   87.982,
+   -51.418,
+   132.293
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_sks": {
+  "prefix": "sksm1g",
+  "set": "carbinesnipershotgun",
+  "anim": "sksm1g_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -11.301,
+   -1.148,
+   -0.372,
+   13.152,
+   6.902,
+   -177.185
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_springfield": {
+  "prefix": "boltaction",
+  "set": "carbinesnipershotgun",
+  "anim": "boltaction_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -10.864,
+   -1.121,
+   -0.656,
+   12.754,
+   6.777,
+   -177.279
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_sten": {
+  "prefix": "sten",
+  "set": "smg",
+  "anim": "sten_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -10.846,
+   -0.998,
+   -0.013,
+   17.711,
+   8.406,
+   -176.032
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_sten_sog": {
+  "prefix": "sten",
+  "set": "smg",
+  "anim": "sten_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -10.846,
+   -0.998,
+   -0.013,
+   17.711,
+   8.406,
+   -176.032
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_sterling": {
+  "prefix": "sterling",
+  "set": "smg",
+  "anim": "sterling_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -2.667,
+   -1.815,
+   -2.112,
+   -1.612,
+   2.181,
+   -173.096
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_sterling_sog": {
+  "prefix": "sterling",
+  "set": "smg",
+  "anim": "sterling_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -2.667,
+   -1.815,
+   -2.112,
+   -1.612,
+   2.181,
+   -173.096
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_stg44": {
+  "prefix": "stg44",
+  "set": "rifles",
+  "anim": "stg44_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -5.641,
+   -1.125,
+   -2.914,
+   -0.0,
+   0.0,
+   180.0
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_stielhandgranate": {
+  "prefix": "csg",
+  "set": "equipments",
+  "anim": "csg_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.495,
+   -1.311,
+   -1.369,
+   -3.891,
+   -5.837,
+   -178.923
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_stoner63": {
+  "prefix": "stoner",
+  "set": "set2",
+  "anim": "stoner_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -5.773,
+   -0.85,
+   -3.932,
+   -0.0,
+   0.0,
+   180.0
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_stoner63_autorifle": {
+  "prefix": "bren",
+  "set": "set2",
+  "anim": "bren_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.488,
+   -1.046,
+   -2.759,
+   -7.194,
+   1.382,
+   179.172
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_stoner63a": {
+  "prefix": "stoner63a",
+  "set": "rifles",
+  "anim": "stoner63a_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.0,
+   -1.0,
+   -3.25,
+   -0.0,
+   0.0,
+   180.0
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_stoner63a_carbine": {
+  "prefix": "stoner63a",
+  "set": "rifles",
+  "anim": "stoner63a_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.0,
+   -1.0,
+   -3.25,
+   -0.0,
+   0.0,
+   180.0
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_stoner63lmg": {
+  "prefix": "stonerlmg",
+  "set": "set2",
+  "anim": "stonerlmg_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -5.773,
+   -0.85,
+   -3.932,
+   -0.0,
+   0.0,
+   180.0
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_svd": {
+  "prefix": "svd",
+  "set": "carbinesnipershotgun",
+  "anim": "svd_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.893,
+   -1.028,
+   -2.774,
+   2.67,
+   0.692,
+   -179.701
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_svt40_s": {
+  "prefix": "svt40",
+  "set": "carbinesnipershotgun",
+  "anim": "svt40_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -11.301,
+   -1.148,
+   -0.372,
+   13.152,
+   6.902,
+   -177.185
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_swm10": {
+  "prefix": "revolver",
+  "set": "set1",
+  "anim": "revolver_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_swm12": {
+  "prefix": "revolver",
+  "set": "set1",
+  "anim": "revolver_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_swm49": {
+  "prefix": "revolver",
+  "set": "set1",
+  "anim": "revolver_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_swm76": {
+  "prefix": "swm76",
+  "set": "smg",
+  "anim": "swm76_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -7.199,
+   -1.123,
+   -2.179,
+   1.588,
+   0.053,
+   -178.158
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_swm76_sog": {
+  "prefix": "swm76",
+  "set": "smg",
+  "anim": "swm76_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -7.199,
+   -1.123,
+   -2.179,
+   1.588,
+   0.053,
+   -178.158
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_t223": {
+  "prefix": "t223",
+  "set": "rifles",
+  "anim": "t223_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -5.773,
+   -0.85,
+   -3.932,
+   -0.0,
+   0.0,
+   180.0
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_ts3": {
+  "prefix": "ts3",
+  "set": "carbinesnipershotgun",
+  "anim": "ts3_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -2.974,
+   -1.486,
+   -2.511,
+   1.588,
+   0.053,
+   -178.158
+  ],
+  "hand_left": [
+   -4.614,
+   -26.902,
+   -39.775,
+   -43.869,
+   -84.581,
+   175.15
+  ]
+ },
+ "w_tt33": {
+  "prefix": "pistol",
+  "set": "set1",
+  "anim": "pistol_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_tul1": {
+  "prefix": "rifle",
+  "set": "rifles",
+  "anim": "rifle_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.0,
+   -1.0,
+   -3.25,
+   -0.0,
+   0.0,
+   180.0
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_type14": {
+  "prefix": "pistol",
+  "set": "set1",
+  "anim": "pistol_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_type30_bayonet": {
+  "prefix": "knife",
+  "set": "equipments",
+  "anim": "knife_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -1.972,
+   -1.191,
+   2.936,
+   87.982,
+   -51.418,
+   132.293
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_type56": {
+  "prefix": "rifle",
+  "set": "rifles",
+  "anim": "rifle_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.0,
+   -1.0,
+   -3.25,
+   -0.0,
+   0.0,
+   180.0
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_type56xm148": {
+  "prefix": "akxm148",
+  "set": "rifles",
+  "anim": "akxm148_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.0,
+   -1.0,
+   -3.25,
+   -0.0,
+   0.0,
+   180.0
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_type58": {
+  "prefix": "rifle",
+  "set": "rifles",
+  "anim": "rifle_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.0,
+   -1.0,
+   -3.25,
+   -0.0,
+   0.0,
+   180.0
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_type63": {
+  "prefix": "sksm1g",
+  "set": "carbinesnipershotgun",
+  "anim": "sksm1g_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -11.301,
+   -1.148,
+   -0.372,
+   13.152,
+   6.902,
+   -177.185
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_type63b": {
+  "prefix": "type63b",
+  "set": "carbinesnipershotgun",
+  "anim": "type63b_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -11.014,
+   -0.487,
+   -3.388,
+   -6.319,
+   0.0,
+   -179.602
+  ],
+  "hand_left": [
+   -4.614,
+   -26.902,
+   -39.775,
+   -43.869,
+   -84.581,
+   175.15
+  ]
+ },
+ "w_type64": {
+  "prefix": "type64",
+  "set": "smg",
+  "anim": "type64_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.845,
+   -1.242,
+   -3.527,
+   -17.461,
+   -1.908,
+   176.795
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_type64_pistol": {
+  "prefix": "pistol",
+  "set": "set1",
+  "anim": "pistol_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_type67": {
+  "prefix": "type67pistol",
+  "set": "set1",
+  "anim": "type67pistol_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_type79": {
+  "prefix": "flare",
+  "set": "set1",
+  "anim": "flare_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_uzi": {
+  "prefix": "mac10uzi",
+  "set": "smg",
+  "anim": "mac10uzi_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.155,
+   -0.692,
+   -1.596,
+   -5.367,
+   -11.837,
+   179.969
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_uzi_sog": {
+  "prefix": "mac10uzi",
+  "set": "smg",
+  "anim": "mac10uzi_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.155,
+   -0.692,
+   -1.596,
+   -5.367,
+   -11.837,
+   179.969
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_v40": {
+  "prefix": "usg",
+  "set": "equipments",
+  "anim": "usg_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.757,
+   -1.651,
+   -0.152,
+   -3.891,
+   -5.837,
+   -178.923
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_vcammobox": {
+  "prefix": "vcbox",
+  "set": "equipments",
+  "anim": "vcbox_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -4.638,
+   -6.303,
+   -1.184,
+   -2.151,
+   -1.635,
+   -178.123
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_vccarbine": {
+  "prefix": "m1a1c",
+  "set": "carbinesnipershotgun",
+  "anim": "m1a1c_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -9.766,
+   -0.735,
+   -2.512,
+   -1.836,
+   1.907,
+   -179.99
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_vcgrenade": {
+  "prefix": "usg",
+  "set": "equipments",
+  "anim": "usg_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.757,
+   -1.651,
+   -0.152,
+   -3.891,
+   -5.837,
+   -178.923
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_vcmedicbox": {
+  "prefix": "medicbox",
+  "set": "equipments",
+  "anim": "medicbox_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -5.276,
+   -5.755,
+   -1.277,
+   -2.151,
+   -1.635,
+   -178.123
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_vcpistol": {
+  "prefix": "vcpistol",
+  "set": "set1",
+  "anim": "vcpistol_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_vcpistol2": {
+  "prefix": "pistol",
+  "set": "set1",
+  "anim": "pistol_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_vcshotgun": {
+  "prefix": "vcshotgun",
+  "set": "carbinesnipershotgun",
+  "anim": "vcshotgun_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -8.056,
+   -0.426,
+   -5.092,
+   -27.27,
+   -2.61,
+   -177.36
+  ],
+  "hand_left": [
+   -4.614,
+   -26.902,
+   -39.775,
+   -43.869,
+   -84.581,
+   175.15
+  ]
+ },
+ "w_vcsmg": {
+  "prefix": "ppsh41",
+  "set": "smg",
+  "anim": "ppsh41_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -10.846,
+   -0.998,
+   -0.013,
+   17.711,
+   8.406,
+   -176.032
+  ],
+  "hand_left": [
+   -4.614,
+   -26.902,
+   -39.775,
+   -43.869,
+   -84.581,
+   175.15
+  ]
+ },
+ "w_vz23": {
+  "prefix": "vz23",
+  "set": "smg",
+  "anim": "vz23_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.155,
+   -0.692,
+   -1.596,
+   -5.367,
+   -11.837,
+   179.969
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_vz24": {
+  "prefix": "boltaction",
+  "set": "carbinesnipershotgun",
+  "anim": "boltaction_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -10.864,
+   -1.121,
+   -0.656,
+   12.754,
+   6.777,
+   -177.279
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_vz52": {
+  "prefix": "vz52",
+  "set": "carbinesnipershotgun",
+  "anim": "vz52_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -11.301,
+   -1.148,
+   -0.372,
+   13.152,
+   6.902,
+   -177.185
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_vz54": {
+  "prefix": "boltaction",
+  "set": "carbinesnipershotgun",
+  "anim": "boltaction_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -10.864,
+   -1.121,
+   -0.656,
+   12.754,
+   6.777,
+   -177.279
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_vz58": {
+  "prefix": "vz58",
+  "set": "rifles",
+  "anim": "vz58_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.0,
+   -1.0,
+   -3.25,
+   -0.0,
+   0.0,
+   180.0
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_vz59": {
+  "prefix": "pkbelt",
+  "set": "set2",
+  "anim": "pkbelt_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.375,
+   -0.721,
+   -2.642,
+   -2.973,
+   0.006,
+   -179.813
+  ],
+  "hand_left": [
+   -4.614,
+   -26.902,
+   -39.775,
+   -43.869,
+   -84.581,
+   175.15
+  ]
+ },
+ "w_vz61": {
+  "prefix": "vz61",
+  "set": "smg",
+  "anim": "vz61_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -7.26,
+   -0.14,
+   -1.481,
+   3.632,
+   -13.626,
+   171.275
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_vz61_silencer": {
+  "prefix": "vz61",
+  "set": "smg",
+  "anim": "vz61_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -7.26,
+   -0.14,
+   -1.481,
+   3.632,
+   -13.626,
+   171.275
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_welrod": {
+  "prefix": "welrod",
+  "set": "set1",
+  "anim": "welrod_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -3.512,
+   -0.98,
+   -1.298,
+   -1.075,
+   -3.313,
+   -170.164
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_wrench": {
+  "prefix": "knife",
+  "set": "equipments",
+  "anim": "knife_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -1.972,
+   -1.191,
+   2.936,
+   87.982,
+   -51.418,
+   132.293
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ },
+ "w_xm148": {
+  "prefix": "m203",
+  "set": "rifles",
+  "anim": "m203_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.0,
+   -1.0,
+   -3.25,
+   -0.0,
+   0.0,
+   180.0
+  ],
+  "hand_left": [
+   -4.614,
+   -26.902,
+   -39.775,
+   -43.869,
+   -84.581,
+   175.15
+  ]
+ },
+ "w_xm177": {
+  "prefix": "xm177",
+  "set": "rifles",
+  "anim": "xm177_aim_idle_aim_mid_center.smd",
+  "hand": [
+   -6.0,
+   -1.0,
+   -3.25,
+   -0.0,
+   0.0,
+   180.0
+  ],
+  "hand_left": [
+   -1.931,
+   2.977,
+   0.235,
+   2.898,
+   -83.418,
+   178.943
+  ]
+ }
+}

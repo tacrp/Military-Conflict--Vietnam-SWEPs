@@ -23,10 +23,17 @@ MCV.ReloadAnimOffsets = {
     },
 }
 
+local TIMED = {[PLAYERANIMEVENT_RELOAD] = true, [PLAYERANIMEVENT_RELOAD_LOOP] = true, [PLAYERANIMEVENT_RELOAD_END] = true}
+
 hook.Add("DoAnimationEvent", "MCV_AnimEvents", function(ply, event, data)
+    if !TIMED[event] then return end
     local wep = ply:GetActiveWeapon()
-    if !IsValid(wep) or !wep.MilitaryConflictVietnam or !data or data <= 0 then return end
-    local t = data * 0.001
+    if !IsValid(wep) or !wep.MilitaryConflictVietnam then return end
+    // the time comes with the event (milliseconds); when it does not arrive, the weapon's
+    // networked animation lock is the same clock (the reload animation just started)
+    local t = (data or 0) * 0.001
+    if t <= 0 and wep.GetAnimLockTime then t = wep:GetAnimLockTime() - CurTime() end
+    if t <= 0.05 then return end
     local slot = GESTURE_SLOT_ATTACK_AND_RELOAD
 
     if event == PLAYERANIMEVENT_RELOAD then

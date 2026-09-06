@@ -264,18 +264,29 @@ things and the script does the same:
    (`ValveBiped.weapon_bone` on most guns) is re-parented under it, so the model bonemerges to
    the player's right hand. Only 15 of the 198 hand-ported world models had this; the rest only
    had the path changes and therefore float at the player's origin.
-3. The hand bone gets the offset `x y z ry rz rx` from `HAND_OFFSETS` (note the order: Crowbar
-   writes `$definebone` rotations as ry, rz, rx), else the `qc_methods.md` starting value
-   `-6 -1 -2 0 0 180` with a warning. Be aware that on a bonemerged model the player's hand
-   replaces this bone entirely, so these values only affect the unmerged (dropped) pose.
-4. Placing the gun in the hand therefore has to move the model data: `--tilt DEG` pitches the
-   barrel up and `--move FWD UP RIGHT` shifts the gun, both in the gun's own frame, by rewriting
-   the root gun bone's frames in every animation SMD the QC plays (written to
-   `<name>_anims_tilted/`). The barrel and up axes are read from the reference mesh and the
-   muzzle attachment. The SKS uses `HAND_TILT["w_sks"] = 7.5`.
-5. Dual-wield world models get a mirrored `ValveBiped.Bip01_L_Hand` and bones named `*_left` /
-   `*_l` are parented to it. None of the hand-ported duals did this, so the left offset is a
-   guess to be tuned in game.
+3. The hand bone gets the offset `x y z ry rz rx` (note the order: Crowbar writes
+   `$definebone` rotations as ry, rz, rx) from, in order: `--hand`, the hand-tuned
+   `HAND_OFFSETS` table (the AK-47's `-6 -1 -3.25 0 0 180` and the other guns tuned by eye in
+   Crowbar), `work/hand_offsets_derived.json`, the `qc_methods.md` default `-6 -1 -2 0 0 180`
+   with a warning. The line matters on a bonemerged model even though the player's hand
+   replaces the bone: the mesh stays where it is in model space while the bind pose moves, so
+   in the hand the gun sits at the inverse of this line (that is what the Crowbar trial and
+   error tunes).
+4. `work/derive_hand_offsets.py` writes the derived table from the game's own placement rule.
+   The game bonemerges a world model onto the player's `ValveBiped.weapon_bone`, which the
+   player animation set of the weapon's class (`anim_prefix` in the weapon script, one of 118
+   classes across the six `models/player/player_animations_*.mdl`) animates relative to the
+   right hand; the transform in `<prefix>_aim_idle` is inverted and calibrated on the AK-47's
+   tuned line (`H = H_ak47 * A_rifle * A_class^-1`). It reproduces the hand-tuned guns within
+   a unit and the China Lake's 15 degree tilt, so the rotations it gives (the SMG and grenade
+   launcher classes carry 15-20 degrees of pitch) are the game's. The player animation models
+   are pulled from the VPK and decompiled into `work/rip/player_rig` on the first run (a
+   short path: Crowbar hits MAX_PATH under a deep one). `FALLBACK_PREFIX` covers the models no
+   script names (the Cobra's "cobra" class has no animations; the revolver's is used).
+5. Dual-wield world models get a `ValveBiped.Bip01_L_Hand` root for the bones named `*_left` /
+   `*_l`, from the derived table's `hand_left` (the same rule on the left hand-relative bone
+   with the calibration mirrored across the sagittal plane; unverified in game, the Lua draws
+   the single model twice) or else a mirror of the right line.
 
 Four world models in the fixed tree (`w_lpo50`, `w_m1g_s`, `w_m9a1`, `w_r76`) use a different
 scheme (a full hand transform parented to a `ValveBiped` root); those lines are reused as they
@@ -817,8 +828,13 @@ alone since the field has no gameplay effect.
   (`mcv_wm_left_ang`, `mcv_wm_left_pos`) sits on top in the gun's frame. `duel` hold type. Muzzle
   flash and shells attach to the drawn copies (`shell_eject`; a model without one throws the
   case from behind the muzzle). Hold types come from the script's WeaponType, the gestures
-  follow the hold type in use, and a single-animation reload gesture is stretched to the first
-  person reload (`SetLayerDuration`).
+  follow the hold type in use, and the reload gesture is stretched to the first person reload: the weapon fires the player animation
+  events (`DoCustomAnimEvent`, the time in milliseconds as the data; `DoAnimationEvent(x)`
+  plays x as a custom gesture instead) and the hook in `mcv/shared/sh_animevents.lua` restarts
+  the gesture and sets its duration, per-round loops from the insert point. Note GMod's player
+  models have no `ValveBiped.weapon_bone` (only `Anim_Attachment_RH`), so the merge is on
+  `Bip01_R_Hand` and the `mcv_wm_ang` / `mcv_wm_pos` weapon_bone adjustment has nothing to act
+  on; the per-model hand line (above) is the placement.
 * **Hand-edited model files**: a generated qc under `MCV_SMD_PORT/weapons/<name>/` whose first
   six lines contain `KEEP` is left alone by `port_qc.py` (a run just compiles it with
   `--compile`); nothing else in the pipeline deletes generated files (install only drops stale
