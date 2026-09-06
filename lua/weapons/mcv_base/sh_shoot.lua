@@ -258,8 +258,14 @@ function SWEP:GetSpread()
     if MCV.RealisticShooting() then
         // realistic (mcv_realistic_shooting 1): the bullet leaves the barrel wherever it points.
         // Hip fire misses because the gun is not lined up with the eye, not through a cone, so
-        // the sighted spread is the gun's own dispersion and applies at all times
-        spread = sighted
+        // the gun's own dispersion is all there is from the hip, and on the sights a rifle or
+        // pistol puts every round where it points: no spread at all. Shotguns keep their
+        // pattern whatever the stance.
+        if (self.Num or 1) > 1 then
+            spread = sighted
+        else
+            spread = Lerp(sa, sighted, 0)
+        end
     else
         // the game: a hip fire cone that narrows to the sighted spread as the sights come up,
         // widened by stance and movement
