@@ -1,5 +1,14 @@
 // Gun bodygroups and pose parameters (called from mcv_base_core/sh_vm.lua DoBodygroups
 // with the gameplay values from Think and the frame-smoothed values from PreDrawViewModel).
+// The game's ammo_fraction is the magazine's fraction: the chambered round is not in it
+// (the PPK's counter has a knot pair per magazine round and one for "all hidden"; the dual
+// PPK's right gun with a single chambered round still showed a bullet in the magazine).
+function SWEP:MagFraction(count, per)
+    per = per or self.Primary.ClipSize
+    if per <= 0 then return 0 end
+    return math.Clamp(count - self.Primary.Chamber, 0, per) / per
+end
+
 function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
     local displayRoundsToLoad = self:GetReloading()
     local magOut = false // the old magazine / belt is out and the new one not yet in
@@ -36,7 +45,7 @@ function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
     // the cycle's variant is picked by the count after the shot (the game sets ammo_fraction2
     // from the clip at the bolt pull's first frame)
     if self.CycleAmmoPose2 then
-        vm:SetPoseParameter("ammo_fraction2", self:Clip1() / clipsize)
+        vm:SetPoseParameter("ammo_fraction2", self:MagFraction(self:Clip1(), clipsize))
     end
 
     if self:GetAkimbo() then
@@ -48,7 +57,7 @@ function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
             if self.MagInClip then
                 local bullets_to_load = self:Clip1()
 
-                vm:SetPoseParameter("ammo_fraction", bullets_to_load / clipsize)
+                vm:SetPoseParameter("ammo_fraction", self:MagFraction(bullets_to_load, clipsize))
                 bodygroupbulletscount = bullets_to_load
             else
                 vm:SetPoseParameter("ammo_fraction", 0)
@@ -58,13 +67,13 @@ function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
             if self.MagInClip then
                 local bullets_to_load = math.min(clipsize - self:Clip1(), self:Ammo1())
 
-                vm:SetPoseParameter("ammo_fraction", bullets_to_load / clipsize)
+                vm:SetPoseParameter("ammo_fraction", self:MagFraction(bullets_to_load, clipsize))
                 bodygroupbulletscount = bullets_to_load
             else
                 local reserve = self:GetInfiniteAmmo() and math.huge or (self:Clip1() + self:Ammo1())
                 local bullets_to_load = math.min(clipsize, self:GetClip1Capacity(), reserve)
 
-                vm:SetPoseParameter("ammo_fraction", bullets_to_load / clipsize)
+                vm:SetPoseParameter("ammo_fraction", self:MagFraction(bullets_to_load, clipsize))
                 bodygroupbulletscount = bullets_to_load
             end
         end
@@ -72,7 +81,7 @@ function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
         vm:SetPoseParameter("ammo_fraction", 0)
         bodygroupbulletscount = 0
     else
-        vm:SetPoseParameter("ammo_fraction", shown / clipsize)
+        vm:SetPoseParameter("ammo_fraction", self:MagFraction(shown, clipsize))
         bodygroupbulletscount = shown
     end
 
@@ -97,9 +106,8 @@ function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
                 right, left = nright, nleft
             end
         end
-        local per = self.Primary.ClipSize + self.Primary.Chamber
-        vm:SetPoseParameter("ammo_fraction1", right / per)
-        vm:SetPoseParameter("ammo_fraction2", left / per)
+        vm:SetPoseParameter("ammo_fraction1", self:MagFraction(right, self.Primary.ClipSize))
+        vm:SetPoseParameter("ammo_fraction2", self:MagFraction(left, self.Primary.ClipSize))
     end
 
     if self.BulletBodygroups then

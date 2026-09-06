@@ -99,7 +99,7 @@ SWEP.CrosshairDeltaDistance = 4
 SWEP.WeaponWeight = 0.98
 
 SWEP.Primary.Ammo = "pistol"
-SWEP.Primary.ClipSize = 8
+SWEP.Primary.ClipSize = 7 // the script's 7, plus the chambered round (Chamber)
 SWEP.Primary.Chamber = 1
 SWEP.Primary.DefaultClip = 16
 SWEP.Primary.Automatic = true
