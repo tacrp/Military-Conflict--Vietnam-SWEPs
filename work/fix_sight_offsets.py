@@ -50,6 +50,7 @@ def set_line(src, key, value):
 def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument("--dry-run", action="store_true")
+    ap.add_argument("--sights", action="store_true", help="also rewrite IronsightPos/Ang and CustomPos/Ang (hand-tuned sights are kept otherwise)")
     args = ap.parse_args()
 
     name_map = pw.resolve_lua_names(SCRIPTS, ADDON)
@@ -100,6 +101,8 @@ def main():
         report = []
         touched = False
         for key in KEYS:
+            if key in ("IronsightPos", "IronsightAng", "CustomPos", "CustomAng", "IronsightPosAkimbo", "IronsightAngAkimbo") and not args.sights:
+                continue  # the sights are tuned by hand in the lua; --sights to take the script's
             if key not in so:
                 continue
             src, changed, found = set_line(src, key, so[key])

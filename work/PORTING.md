@@ -792,3 +792,13 @@ alone since the field has no gameplay effect.
   those bones outright, and an idle delta layer moving the same bones (`MagPosition`) stacked on
   it: the harmonica went one chamber too far and floated on the second pull. Such idle layers are
   left off that sequence; the game's own qc never had them there either.
+* **Stats and sights** (Sep 2026): the game's numbers are the stats (damage and multipliers,
+  spread and its stance multipliers, recoil, shake, penetration, fire rate, magazine, chamber,
+  reserve, empty sounds, tracer frequency, brass type, world models); `port_weapon` no longer
+  copies FireRate / ClipSize / Chamber / DefaultClip from an existing lua, and cycling guns keep
+  600 RPM (the animation gates the shot). The sight offsets are the one thing tuned by hand in
+  the lua files: the generator reuses an existing lua's IronsightPos / IronsightAng / CustomPos /
+  CustomAng (and the akimbo pair), and `fix_sight_offsets.py` leaves them alone unless run with
+  `--sights`. Regenerating a lua wholesale drops keys the generator never emits (launcher
+  secondaries, rifle-grenade keys, equipment movement poses, PlacedAngleOffset): copy stat
+  values into the committed file instead.

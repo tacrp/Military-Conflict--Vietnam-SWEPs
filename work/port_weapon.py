@@ -1372,11 +1372,16 @@ def generate(script_path, args):
     so = sight_offsets(S) or {}
     if not so:
         warnings.append("no viewmodel offsets in the script")
+    # the sights are tuned by hand in the lua files: an existing value always wins over the
+    # script's (fix_sight_offsets.py --sights is the way to take the script's again)
+    for k in ("IronsightPos", "IronsightAng", "CustomPos", "CustomAng"):
+        if reuse(k):
+            so[k] = reuse(k)
     A(line("IronsightPos", so.get("IronsightPos", "Vector(0, -4, 0) -- TODO tune")))
     A(line("IronsightAng", so.get("IronsightAng", "Angle(0, 0, 0)")))
     if akimbo_vm:
         for k, v in akimbo_sight_offsets(name, args.scripts_dir).items():
-            A(line(k, v))
+            A(line(k, reuse(k) or v))
     A("")
     A(line("CustomPos", so.get("CustomPos", "Vector(0, -2, 0)")))
     A(line("CustomAng", so.get("CustomAng", "Angle(0, 0, 0)")))
