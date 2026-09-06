@@ -536,20 +536,20 @@ $animation "nearwall_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_c96\v_c96_anims\nearw
 	fps 30
 }
 
-$animation "proneF" "fixed_anims\proneF.smd" {
+$animation "proneF" "..\..\..\MCV_SMD_OG\weapons\v_c96\v_c96_anims\proneF.smd" {
 	fps 30
 	loop
 }
 
-$animation "proneB" "fixed_anims\proneB.smd" {
+$animation "proneB" "..\..\..\MCV_SMD_OG\weapons\v_c96\v_c96_anims\proneB.smd" {
 	fps 30
 }
 
-$animation "proneL" "fixed_anims\proneL.smd" {
+$animation "proneL" "..\..\..\MCV_SMD_OG\weapons\v_c96\v_c96_anims\proneL.smd" {
 	fps 30
 }
 
-$animation "proneR" "fixed_anims\proneR.smd" {
+$animation "proneR" "..\..\..\MCV_SMD_OG\weapons\v_c96\v_c96_anims\proneR.smd" {
 	fps 30
 }
 

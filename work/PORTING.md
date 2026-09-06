@@ -391,6 +391,19 @@ Brass ids the game added after 2024 (19 to 31) map to the nearest shell model th
   (zero rows for untouched bones) with the -90 degree corrective only on the root-level bones;
   a delta plays as `final = base * delta` (rotation post-multiplied), position added. The
   hand-made dual Blackhawk overrides are retired (`disabled_pump_overrides/v_dual_blackhawk_handmade`).
+  Two mistakes that each put the arms 180 degrees out (hands off screen the moment you walk):
+  `delta` is declared on the *sequence*, not the `$animation` block (only Crowbar's `subtract`
+  is on the block), so a layer treated as absolute bakes nonsense; and the bake must read the
+  untouched OG layer (or an override), never `fixed_anims/`, which `resolve_smd` prefers and
+  which fed a wrong bake's output back in as the source on the next run. A layer whose hands
+  are already on their targets (most rifles, within 0.01 units) is left alone: no file written.
+  A touch rule is `IK_SELF`: the hand keeps the offset it has from the target bone at the rule's
+  `contact` frame (studiomdl stores the end effector in the target's space there), and it only
+  holds over `range start peak tail end`, fading in and out. Without either, the duals' reloads
+  (`rhand touch hand_l contact 72 range 70 72 125 127` and the like) had the hands glued to each
+  other for the whole reload. Where the authored FK differs from the rule (the dual MAC-10's
+  right hand travels 16 units mid-reload while tied to the left hand) the game's IK won, so the
+  bake follows the rule too. Rules inherited from the idle use the idle pose's offset.
 * **Belt bodygroups**: the belt LMGs' `clamped*` bodygroups (the belt segment in the feed tray)
   ship with one submodel and no blank; `step_belt_blank` adds one and Lua hides them with the
   last round (`BeltBodygroups`, belt-fed guns only: the M16 family has a `clamped1` of its own).

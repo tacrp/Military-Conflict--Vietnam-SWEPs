@@ -100,6 +100,10 @@ function SWEP:PrimaryAttack()
         end
     end
 
+    if fm == MCV.FIREMODE_BURST then
+        t = 60 / (self.FireRate * 1.25)
+    end
+
     // PlayAnimation returns nothing when the model lacks the activity; never let that stall
     // or error the fire loop
     t = t or (60 / self.FireRate)
@@ -179,8 +183,8 @@ function SWEP:HasPoseRecoil()
 end
 
 function SWEP:FireAnimationEvent( pos, ang, event, name )
-    if name == "eject" and IsFirstTimePredicted() then
-        self:DoEject()
+    if (name == "eject" or name == "eject2") and IsFirstTimePredicted() then
+        self:DoEject(name)
     elseif name == "hammerpos 1" and !self.InvertAnimationHammer then
         self:SetNeedCycle(false)
         self:SetEmptyReload(false)

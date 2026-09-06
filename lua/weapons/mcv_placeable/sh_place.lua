@@ -13,6 +13,26 @@ function SWEP:GetHUDAmmo()
     return self:GetRoundsLeft(), nil
 end
 
+// The blank option of a bodygroup is its last one (the mine model: m16m, vc, blank / stick, blank)
+local function blank_of(ent, group)
+    return math.max(ent:GetBodygroupCount(group) - 1, 0)
+end
+
+// The piece's angle on a surface: model up along the normal, facing the way the player looks
+// plus the yaw they turned it by (R: 45 degrees clockwise, USE + R: the other way). The stake
+// faces the mine its wire runs to instead, turned the same way.
+function SWEP:PlaceAngle(normal, base_yaw)
+    local ang = normal:Angle()
+    ang:RotateAroundAxis(ang:Right(), -90)
+    ang:RotateAroundAxis(ang:Up(), (base_yaw or self:GetOwner():EyeAngles().y) + self:GetPlaceYaw())
+    return ang
+end
+
+function SWEP:RotatePlacement(dir)
+    self:SetPlaceYaw((self:GetPlaceYaw() + dir * 45) % 360)
+    self:EmitSound("buttons/lightswitch2.wav", 50, 120, 0.3, CHAN_ITEM)
+end
+
 // Where the piece would go: a surface within reach in front of the player, else the floor.
 function SWEP:PlacementTrace()
     local owner = self:GetOwner()
@@ -122,11 +142,8 @@ function SWEP:SpawnPlaced(pos, normal, parent)
     if !IsValid(ent) then return end
 
     self:ConfigurePlaced(ent)
-    local ang = normal:Angle()
-    ang:RotateAroundAxis(ang:Right(), -90) // model up along the surface normal
-    ang:RotateAroundAxis(ang:Up(), owner:EyeAngles().y)
     ent:SetPos(pos + normal * 0.5)
-    ent:SetAngles(ang)
+    ent:SetAngles(self:PlaceAngle(normal))
     ent:SetOwner(owner)
     ent:Spawn()
     ent:Activate()
@@ -134,7 +151,7 @@ function SWEP:SpawnPlaced(pos, normal, parent)
 
     if self.PlaceKind == "mine" then
         ent.MineBodygroups = self.MineBodygroups
-        ent:SetBodygroup(self.MineBodygroups.stick, 1)
+        ent:SetBodygroup(self.MineBodygroups.stick, blank_of(ent, self.MineBodygroups.stick))
         self:SetPlacedEntity(ent)
     end
 end
@@ -151,8 +168,7 @@ function SWEP:SpawnStake(pos, normal)
     stake.Model = self.StakeModel or self.WorldModel
     stake.MineBodygroups = self.MineBodygroups
     stake:SetPos(pos)
-    local ang = Angle(0, (mine:GetPos() - pos):Angle().y, 0)
-    stake:SetAngles(ang)
+    stake:SetAngles(self:PlaceAngle(normal, (mine:GetPos() - pos):Angle().y))
     stake:SetOwner(self:GetOwner())
     stake:Spawn()
     stake:Activate()
@@ -302,7 +318,13 @@ function SWEP:SecondaryAttack()
     end
 end
 
+// R turns the piece 45 degrees (USE + R the other way); the ghost shows the result
 function SWEP:Reload()
+    local owner = self:GetOwner()
+    if !owner:KeyPressed(IN_RELOAD) then return end
+    local state = self:GetActionState()
+    if state != STATE_IDLE and state != STATE_STAKE then return end
+    self:RotatePlacement(owner:KeyDown(IN_USE) and -1 or 1)
 end
 
 function SWEP:OnDeploy()
@@ -345,19 +367,17 @@ if CLIENT then
             self.GhostModel = model
         end
 
-        local ang = tr.HitNormal:Angle()
-        ang:RotateAroundAxis(ang:Right(), -90)
-        ang:RotateAroundAxis(ang:Up(), owner:EyeAngles().y)
+        local ang = self:PlaceAngle(tr.HitNormal)
         if state == STATE_STAKE then
             local mine = self:GetPlacedEntity()
-            if IsValid(mine) then ang = Angle(0, (mine:GetPos() - tr.HitPos):Angle().y, 0) end
+            if IsValid(mine) then ang = self:PlaceAngle(tr.HitNormal, (mine:GetPos() - tr.HitPos):Angle().y) end
             if self.MineBodygroups then
-                self.Ghost:SetBodygroup(self.MineBodygroups.mine, 1)
+                self.Ghost:SetBodygroup(self.MineBodygroups.mine, blank_of(self.Ghost, self.MineBodygroups.mine))
                 self.Ghost:SetBodygroup(self.MineBodygroups.stick, 0)
             end
         elseif self.PlaceKind == "mine" and self.MineBodygroups then
             self.Ghost:SetBodygroup(self.MineBodygroups.mine, 0)
-            self.Ghost:SetBodygroup(self.MineBodygroups.stick, 1)
+            self.Ghost:SetBodygroup(self.MineBodygroups.stick, blank_of(self.Ghost, self.MineBodygroups.stick))
         end
 
         self.Ghost:SetPos(tr.HitPos + tr.HitNormal * 0.5)
@@ -399,18 +419,21 @@ function SWEP:GetControlHints()
     if self.PlaceKind == "mine" then
         return {
             {"+attack", "Place mine, then the stake"},
+            {"+reload", "Rotate"},
             {"+use +attack", "Bash"},
         }
     elseif self.PlaceKind == "dynamite" then
         return {
             {"+attack", "Plant lit"},
             {"+attack2", "Throw lit"},
+            {"+reload", "Rotate"},
             {"+use +attack", "Bash"},
         }
     end
     return {
         {"+attack", "Plant"},
         {"+attack2", "Detonate"},
+        {"+reload", "Rotate"},
         {"+use +attack", "Bash"},
     }
 end

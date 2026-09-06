@@ -252,7 +252,7 @@ $animation "ironsight_transition__f60" "..\..\..\MCV_SMD_OG\weapons\v_vz23\v_vz2
 	numframes 60
 }
 
-$animation "runIdle_a" "fixed_anims\runIdle_a.smd" {
+$animation "runIdle_a" "..\..\..\MCV_SMD_OG\weapons\v_vz23\v_vz23_anims\runIdle_a.smd" {
 	fps 30
 	loop
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
@@ -265,14 +265,14 @@ $animation "run_a" "fixed_anims\run_a.smd" {
 	subtract "run_a_corrective_animation" 0
 }
 
-$animation "walkIdle_a" "fixed_anims\walkIdle_a.smd" {
+$animation "walkIdle_a" "..\..\..\MCV_SMD_OG\weapons\v_vz23\v_vz23_anims\walkIdle_a.smd" {
 	fps 30
 	loop
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "walkIdle_a_corrective_animation" 0
 }
 
-$animation "walk_a" "fixed_anims\walk_a.smd" {
+$animation "walk_a" "..\..\..\MCV_SMD_OG\weapons\v_vz23\v_vz23_anims\walk_a.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "walk_a_corrective_animation" 0

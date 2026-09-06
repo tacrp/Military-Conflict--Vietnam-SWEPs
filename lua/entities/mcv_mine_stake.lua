@@ -17,8 +17,9 @@ function ENT:Initialize()
         self:SetCollisionGroup(COLLISION_GROUP_WEAPON)
         local phys = self:GetPhysicsObject()
         if IsValid(phys) then phys:EnableMotion(false) end
-        // the mine world model carries both pieces as bodygroups: show only the stake
-        self:SetBodygroup(self.MineBodygroups.mine, 1)
+        // the mine world model carries both pieces as bodygroups: show only the stake (the
+        // mine group is m16m, vc, blank: option 1 was the VC mine, not a blank)
+        self:SetBodygroup(self.MineBodygroups.mine, math.max(self:GetBodygroupCount(self.MineBodygroups.mine) - 1, 0))
         self:SetBodygroup(self.MineBodygroups.stick, 0)
     end
 end

@@ -423,7 +423,7 @@ $animation "prone_deployF" "..\..\..\MCV_SMD_OG\weapons\v_m1919a6\v_m1919a6_anim
 	loop
 }
 
-$animation "prone_deployB" "..\..\..\MCV_SMD_OG\weapons\v_m1919a6\v_m1919a6_anims\prone_deployB.smd" {
+$animation "prone_deployB" "fixed_anims\prone_deployB.smd" {
 	fps 30
 }
 

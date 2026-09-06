@@ -59,19 +59,35 @@ function SWEP:DoMuzzle(alt)
     end
 end
 
-function SWEP:DoEject(alt)
+// `attachment` names the port the shell leaves from: an animation event carries its own
+// ("eject2" on the duals' left-hand shots); the shot itself picks the gun that just fired by the
+// same parity DoMuzzle uses (odd count left, "eject2"), both guns on a volley.
+function SWEP:DoEject(attachment)
     if !IsFirstTimePredicted() then return end
     if self.EjectBrassType == 0 then return end
     local vm = self:GetOwner():GetViewModel()
 
-    local eject_qca = vm:LookupAttachment("eject")
+    local names = {attachment or "eject"}
+    if !attachment and self:GetAkimbo() then
+        local is_volley = self:GetFiremodeValue() == MCV.FIREMODE_VOLLEY and self:Clip1() >= self.VolleyCount
+        if is_volley then
+            names = {"eject", "eject2"}
+        elseif self:Clip1() % 2 == 1 then
+            names = {"eject2"}
+        end
+    end
 
-    local data = EffectData()
-    data:SetEntity(self)
-    data:SetFlags(self.EjectBrassType)
-    data:SetAttachment(eject_qca)
+    for _, name in ipairs(names) do
+        local eject_qca = vm:LookupAttachment(name)
+        if eject_qca <= 0 then eject_qca = vm:LookupAttachment("eject") end
 
-    util.Effect( "mcv_shelleffect", data )
+        local data = EffectData()
+        data:SetEntity(self)
+        data:SetFlags(self.EjectBrassType)
+        data:SetAttachment(eject_qca)
+
+        util.Effect( "mcv_shelleffect", data )
+    end
 end
 
 function SWEP:DoMuzzleLight()

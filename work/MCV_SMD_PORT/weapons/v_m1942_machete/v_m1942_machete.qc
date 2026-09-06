@@ -162,7 +162,7 @@ $animation "runIdle_a" "..\..\..\MCV_SMD_OG\weapons\v_m1942_machete\v_m1942_mach
 	subtract "runIdle_a_corrective_animation" 0
 }
 
-$animation "run_a" "fixed_anims\run_a.smd" {
+$animation "run_a" "..\..\..\MCV_SMD_OG\weapons\v_m1942_machete\v_m1942_machete_anims\run_a.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "run_a_corrective_animation" 0
@@ -175,22 +175,22 @@ $animation "walkIdle_a" "..\..\..\MCV_SMD_OG\weapons\v_m1942_machete\v_m1942_mac
 	subtract "walkIdle_a_corrective_animation" 0
 }
 
-$animation "walk_a" "fixed_anims\walk_a.smd" {
+$animation "walk_a" "..\..\..\MCV_SMD_OG\weapons\v_m1942_machete\v_m1942_machete_anims\walk_a.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "walk_a_corrective_animation" 0
 }
 
-$animation "proneF" "..\..\..\MCV_SMD_OG\weapons\v_m1942_machete\v_m1942_machete_anims\proneF.smd" {
+$animation "proneF" "fixed_anims\proneF.smd" {
 	fps 30
 	loop
 }
 
-$animation "proneB" "..\..\..\MCV_SMD_OG\weapons\v_m1942_machete\v_m1942_machete_anims\proneB.smd" {
+$animation "proneB" "fixed_anims\proneB.smd" {
 	fps 30
 }
 
-$animation "proneL" "..\..\..\MCV_SMD_OG\weapons\v_m1942_machete\v_m1942_machete_anims\proneL.smd" {
+$animation "proneL" "fixed_anims\proneL.smd" {
 	fps 30
 }
 

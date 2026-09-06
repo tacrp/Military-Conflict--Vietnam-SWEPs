@@ -899,11 +899,11 @@ $animation "reload_a_i" "fixed_anims\reload_a_i.smd" {
 	fps 30
 }
 
-$animation "reload_r_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_type14\v_dual_type14_anims\reload_r_a.smd" {
+$animation "reload_r_a" "fixed_anims\reload_r_a.smd" {
 	fps 30
 }
 
-$animation "reload_r_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_type14\v_dual_type14_anims\reload_r_a_i.smd" {
+$animation "reload_r_a_i" "fixed_anims\reload_r_a_i.smd" {
 	fps 30
 }
 

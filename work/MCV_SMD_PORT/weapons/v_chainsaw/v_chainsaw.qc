@@ -505,7 +505,7 @@ $animation "runIdle_a" "..\..\..\MCV_SMD_OG\weapons\v_chainsaw\v_chainsaw_anims\
 	subtract "runIdle_a_corrective_animation" 0
 }
 
-$animation "run_a" "fixed_anims\run_a.smd" {
+$animation "run_a" "..\..\..\MCV_SMD_OG\weapons\v_chainsaw\v_chainsaw_anims\run_a.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "run_a_corrective_animation" 0
@@ -518,7 +518,7 @@ $animation "walkIdle_a" "..\..\..\MCV_SMD_OG\weapons\v_chainsaw\v_chainsaw_anims
 	subtract "walkIdle_a_corrective_animation" 0
 }
 
-$animation "walk_a" "fixed_anims\walk_a.smd" {
+$animation "walk_a" "..\..\..\MCV_SMD_OG\weapons\v_chainsaw\v_chainsaw_anims\walk_a.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "walk_a_corrective_animation" 0
@@ -535,7 +535,7 @@ $animation "chainmovement_idle" "..\..\..\MCV_SMD_OG\weapons\v_chainsaw\v_chains
 	subtract "chainmovement_idle_corrective_animation" 0
 }
 
-$animation "chainmovement_attack" "fixed_anims\chainmovement_attack.smd" {
+$animation "chainmovement_attack" "..\..\..\MCV_SMD_OG\weapons\v_chainsaw\v_chainsaw_anims\chainmovement_attack.smd" {
 	fps 30
 	loop
 	weightlist "weights_chainattack"
@@ -554,7 +554,7 @@ $animation "shootend_a" "..\..\..\MCV_SMD_OG\weapons\v_chainsaw\v_chainsaw_anims
 	subtract "shootend_a_corrective_animation" 0
 }
 
-$animation "proneF" "..\..\..\MCV_SMD_OG\weapons\v_chainsaw\v_chainsaw_anims\proneF.smd" {
+$animation "proneF" "fixed_anims\proneF.smd" {
 	fps 30
 	loop
 }

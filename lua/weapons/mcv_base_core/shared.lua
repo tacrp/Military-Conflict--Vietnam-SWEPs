@@ -153,6 +153,7 @@ function SWEP:SetupDataTables()
     self:NetworkVar("Int", 2, "Firemode")
     // equipment: small state machine (throw wind-up, mine placement step...)
     self:NetworkVar("Int", 3, "ActionState")
+    self:NetworkVar("Int", 5, "PlaceYaw") // placeables: yaw the player turned the piece by (45 degree steps)
     self:NetworkVar("Int", 4, "BurstCount") // rounds fired on this trigger pull (a burst-fire gun keeps it until the burst is done)
 
     self:NetworkVar("Bool", 0, "Reloading")

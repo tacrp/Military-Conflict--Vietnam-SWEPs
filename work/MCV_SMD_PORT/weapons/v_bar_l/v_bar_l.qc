@@ -335,7 +335,7 @@ $animation "proneB" "..\..\..\MCV_SMD_OG\weapons\v_bar_l\v_bar_l_anims\proneB.sm
 	fps 30
 }
 
-$animation "proneL" "..\..\..\MCV_SMD_OG\weapons\v_bar_l\v_bar_l_anims\proneL.smd" {
+$animation "proneL" "fixed_anims\proneL.smd" {
 	fps 30
 }
 
@@ -352,7 +352,7 @@ $animation "proneB_d" "..\..\..\MCV_SMD_OG\weapons\v_bar_l\v_bar_l_anims\proneB_
 	fps 30
 }
 
-$animation "proneL_d" "..\..\..\MCV_SMD_OG\weapons\v_bar_l\v_bar_l_anims\proneL_d.smd" {
+$animation "proneL_d" "fixed_anims\proneL_d.smd" {
 	fps 30
 }
 

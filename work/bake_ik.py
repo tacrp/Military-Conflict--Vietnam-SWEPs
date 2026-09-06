@@ -154,15 +154,33 @@ def solve_two_bone(world, nodes, pose, upper, lower, hand, target):
     return up_local, low_local, W2
 
 
+def rule_weight(rng, frame):
+    """How much of an ikrule applies at `frame`: `range start peak tail end` fades the rule in
+    from start to peak and out from tail to end (a reload's hand is glued to the gun only while
+    it holds it); `range 0 0 0 0` never applies. None means the whole animation."""
+    if rng is None:
+        return 1.0
+    start, peak, tail, end = rng
+    if end <= 0 and start <= 0 and peak <= 0 and tail <= 0:
+        return 0.0
+    if frame < start or frame > end:
+        return 0.0
+    if frame < peak:
+        return (frame - start) / max(peak - start, 1e-6)
+    if frame > tail:
+        return (end - frame) / max(end - tail, 1e-6)
+    return 1.0
+
+
 def bake_animation(anim_path, corrective_path, base_path, chains, out_path, is_delta=True, log=None):
-    """Bake the IK touch of `chains` ([(upper, lower, hand, target) bone names]) into the animation
+    """Bake the IK touch of `chains` ([(upper, lower, hand, target[, range, contact]) bone names]) into the animation
     at `anim_path`, writing `out_path`. Delta layers play over the idle at `base_path` (the
     corrective at `corrective_path` is what studiomdl subtracts); an absolute animation is its
     own final pose. Returns (worst distance before, worst after) over the frames, or None."""
     nodes, aframes, alines = load_smd(anim_path)
     idx = {n: b for b, (n, _) in nodes.items()}
     try:
-        chains_b = [tuple(idx[n] for n in c) for c in chains]
+        chains_b = [tuple(idx[n] for n in c[:4]) + tuple(c[4:]) for c in chains]
     except KeyError as e:
         if log:
             log("bake_ik: bone %s missing in %s" % (e, os.path.basename(anim_path)))
@@ -177,17 +195,39 @@ def bake_animation(anim_path, corrective_path, base_path, chains, out_path, is_d
             if log:
                 log("bake_ik: base %s lacks bones of %s" % (os.path.basename(base_path), os.path.basename(anim_path)))
             return None
+    def pose_at(fi):
+        af = aframes[min(max(fi, 0), len(aframes) - 1)]
+        return final_pose(nodes, base, ref, af) if is_delta else {b: np.array(af[b]) for b in nodes}
+
+    # a touch rule (IK_SELF) keeps the hand where it sits relative to the target bone at the
+    # rule's contact frame: that offset, in the target's space, is what every frame reproduces.
+    # A rule inherited from the idle (contact None) measures it on the idle pose itself.
+    offsets = []
+    for chain in chains_b:
+        upper, lower, hand, target = chain[:4]
+        contact = chain[5] if len(chain) > 5 else None
+        if contact is None and is_delta:
+            wc = fk(nodes, {b: np.array(base[b]) for b in nodes})
+        else:
+            wc = fk(nodes, pose_at(int(round(contact or 0))))
+        offsets.append(np.linalg.inv(wc[target]) @ np.append(wc[hand][:3, 3], 1.0))
     worst_before = worst_after = 0.0
     new_rows = {}
     for fi, af in enumerate(aframes):
-        pose = final_pose(nodes, base, ref, af) if is_delta else {b: np.array(af[b]) for b in nodes}
-        for (upper, lower, hand, target) in chains_b:
+        pose = pose_at(fi)
+        for chain, offset in zip(chains_b, offsets):
+            upper, lower, hand, target = chain[:4]
+            weight = rule_weight(chain[4], fi) if len(chain) > 4 else 1.0
+            if weight <= 0.001:
+                continue
             w = fk(nodes, pose)
-            before = np.linalg.norm(w[hand][:3, 3] - w[target][:3, 3])
-            worst_before = max(worst_before, before)
+            want = (w[target] @ offset)[:3]
+            before = np.linalg.norm(w[hand][:3, 3] - want)
+            worst_before = max(worst_before, before * weight)
             if before < 0.01:
                 continue
-            up_local, low_local, _ = solve_two_bone(w, nodes, pose, upper, lower, hand, w[target][:3, 3])
+            goal = w[hand][:3, 3] + (want - w[hand][:3, 3]) * weight
+            up_local, low_local, _ = solve_two_bone(w, nodes, pose, upper, lower, hand, goal)
             for b, Rl in ((upper, up_local), (lower, low_local)):
                 if is_delta:
                     Rb = rmat(base[b][3:6])
@@ -198,7 +238,7 @@ def bake_animation(anim_path, corrective_path, base_path, chains, out_path, is_d
                     new_rows[(fi, b)] = np.concatenate([af[b][:3], euler(Rl)])
                 pose[b] = np.concatenate([pose[b][:3], euler(Rl)])
             w2 = fk(nodes, pose)
-            worst_after = max(worst_after, np.linalg.norm(w2[hand][:3, 3] - w2[target][:3, 3]))
+            worst_after = max(worst_after, np.linalg.norm(w2[hand][:3, 3] - (w2[target] @ offset)[:3]) * weight)
     if not new_rows:
         return (worst_before, worst_after)
     out = []

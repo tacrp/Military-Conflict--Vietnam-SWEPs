@@ -519,7 +519,19 @@ def step_bake_ik(qc, ctx):
     # Source solves IK on the final blended pose with the playing sequence's rules, so the idle's
     # touch rules also hold while a movement layer swings the gun: the layers over the idle get
     # the idle's rules on top of their own (the dual Blackhawk's run layer has none of its own)
-    idle_rules = re.findall(r'ikrule\s+"([^"]+)"\s+touch\s+"([^"]+)"', "\n".join(base_block.lines)) if base_block else []
+    rule_re = re.compile(r'ikrule\s+"([^"]+)"\s+touch\s+"([^"]+)"(?:\s+contact\s+([\d.-]+))?(?:[^\n]*?range\s+([\d.-]+)\s+([\d.-]+)\s+([\d.-]+)\s+([\d.-]+))?')
+    def touch_rules(lines, whole=False):
+        # (chain, target, range, contact): the rule holds over `range start peak tail end` frames
+        # only (a reload's hand is on the gun for part of it) and keeps the hand's offset from the
+        # target as of the `contact` frame; the idle's rules inherited by a layer hold for the
+        # whole layer (range None) with the offset of the idle pose (contact None)
+        out = []
+        for m in rule_re.finditer("\n".join(lines)):
+            rng = None if whole or not m.group(4) else tuple(float(m.group(i)) for i in (4, 5, 6, 7))
+            contact = None if whole or not m.group(3) else float(m.group(3))
+            out.append((m.group(1), m.group(2), rng, contact))
+        return out
+    idle_rules = touch_rules(base_block.lines, True) if base_block else []
     layered = set()
     delta_anims = set()
     for sq in qc.blocks("sequence"):
@@ -530,26 +542,32 @@ def step_bake_ik(qc, ctx):
     done = 0
     worst = 0.0
     for b in qc.blocks("animation"):
-        rules = re.findall(r'ikrule\s+"([^"]+)"\s+touch\s+"([^"]+)"', "\n".join(b.lines))
+        rules = touch_rules(b.lines, b.name in layered)
         if b.name in layered:
             rules = list(dict.fromkeys(rules + idle_rules))
         if not rules or not b.path:
             continue
+        # always bake from the untouched animation (override or OG), never from a previous run's
+        # fixed_anims copy: resolve_smd prefers fixed_dir, which once fed the stale output of a
+        # wrong bake back in as the source and skipped it as "already baked"
         src = ctx.resolve_smd(b.path)
+        if os.path.abspath(os.path.dirname(src)) == os.path.abspath(ctx.fixed_dir):
+            ov = os.path.join(ctx.override_dir, os.path.basename(src))
+            src = ov if os.path.isfile(ov) else os.path.join(ctx.og_dir, b.path.replace("\\", os.sep).replace("/", os.sep))
         if not os.path.isfile(src):
             continue
         # chain bones: the ikchain's end bone and its two parents, from the smd's own hierarchy
         nodes = bake_ik.load_smd(src)[0]
         byname = {n: (i, par) for i, (n, par) in nodes.items()}
         ik = []
-        for chain, target in rules:
+        for chain, target, rng, contact in rules:
             hand = chains.get(chain)
             if hand not in byname or target not in byname:
                 continue
             lower = nodes[byname[hand][1]][0] if byname[hand][1] != -1 else None
             upper = nodes[byname[lower][1]][0] if lower and byname[lower][1] != -1 else None
             if upper and lower:
-                ik.append((upper, lower, hand, target))
+                ik.append((upper, lower, hand, target, rng, contact))
         if not ik:
             continue
         # `delta` is declared on the sequence that plays the animation, not on the $animation
@@ -564,10 +582,8 @@ def step_bake_ik(qc, ctx):
         elif os.path.isfile(os.path.join(ctx.fixed_dir, os.path.basename(corr))):
             corr = os.path.join(ctx.fixed_dir, os.path.basename(corr))
         out = os.path.join(ctx.fixed_dir, os.path.basename(src))
-        if os.path.abspath(src) == os.path.abspath(out):
-            continue
         r = bake_ik.bake_animation(src, corr, base_path, ik, out, is_delta, ctx.warn)
-        if r:
+        if r and os.path.isfile(out):
             done += 1
             worst = max(worst, r[0])
     if done:

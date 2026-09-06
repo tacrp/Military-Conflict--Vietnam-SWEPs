@@ -730,11 +730,11 @@ $animation "reload_er_a_i" "fixed_anims\reload_er_a_i.smd" {
 	fps 30
 }
 
-$animation "reload_e_a" "fixed_anims\reload_e_a.smd" {
+$animation "reload_e_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_pm63\v_dual_pm63_anims\reload_e_a.smd" {
 	fps 30
 }
 
-$animation "reload_e_a_i" "fixed_anims\reload_e_a_i.smd" {
+$animation "reload_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_pm63\v_dual_pm63_anims\reload_e_a_i.smd" {
 	fps 30
 }
 
