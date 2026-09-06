@@ -803,12 +803,19 @@ alone since the field has no gameplay effect.
   secondaries, rifle-grenade keys, equipment movement poses, PlacedAngleOffset): copy stat
   values into the committed file instead.
 * **Third person** (`mcv_base_core/cl_worldmodel.lua`): the game's world models are rigged to
-  ValveBiped.weapon_bone for the game's own player rig and sit tilted on GMod players. The
-  weapon draws its own clientside copy at the entity's place (the right hand attachment), turned
-  up by `WorldModelTilt` (7.5) and moved by `WorldModelOffset`; a dual draws a second copy on
-  `anim_attachment_LH` with `WorldModelOffsetLeft` and the `duel` hold type. Third person muzzle
-  flash and shells attach to those drawn models (the game's port is `shell_eject`; a model
-  without one throws the case from behind the muzzle). Hold types come from the script's
-  WeaponType (67 luas were missing theirs), the gestures follow the hold type in use, and the
-  reload gesture is stretched to the first person reload (`SetLayerDuration`). Tuning convars:
-  `mcv_wm_tilt`, `mcv_wm_left_pos "x y z"`, `mcv_wm_left_ang "p y r"`.
+  ValveBiped.weapon_bone, and the engine places a held weapon by merging its bones onto the
+  player's (EF_BONEMERGE). The weapon draws a clientside copy of its world model merged the
+  same way (a copy placed at the entity's position sat at the player's origin: "crotch gun"),
+  and the difference between the game's player rig and GMod's is taken out on the player's
+  weapon_bone itself: `WorldModelBoneAng` / `WorldModelBonePos`, one adjustment shared by every
+  gun, tuned live with `mcv_wm_ang "p y r"` / `mcv_wm_pos "x y z"`, plus a per-weapon
+  `WorldModelOffset`. A dual draws a second copy on ValveBiped.Bip01_L_Hand with
+  `WorldModelOffsetLeft` (`mcv_wm_left_ang`, `mcv_wm_left_pos`) and the `duel` hold type. Muzzle
+  flash and shells attach to the drawn copies (`shell_eject`; a model without one throws the
+  case from behind the muzzle). Hold types come from the script's WeaponType, the gestures
+  follow the hold type in use, and a single-animation reload gesture is stretched to the first
+  person reload (`SetLayerDuration`).
+* **Hand-edited model files**: a generated qc under `MCV_SMD_PORT/weapons/<name>/` whose first
+  six lines contain `KEEP` is left alone by `port_qc.py` (a run just compiles it with
+  `--compile`); nothing else in the pipeline deletes generated files (install only drops stale
+  `.ani`).

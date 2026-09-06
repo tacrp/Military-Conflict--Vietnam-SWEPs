@@ -1797,8 +1797,28 @@ def borrow_inserts(text, name, og_dir, ctx):
     return text + "\n\n// single-round reload borrowed from " + donor + " (port_qc INSERT_DONORS)\n" + "\n\n".join(blocks + seqs) + "\n"
 
 
+KEEP_MARK = "KEEP"
+
+
+def kept_qc(args, name):
+    """The generated qc for `name` if its first lines carry the KEEP marker: hand-edited, the
+    port leaves it alone (and just compiles it)."""
+    p = os.path.join(args.out, "weapons", name, name + ".qc")
+    if not os.path.isfile(p):
+        return None
+    with open(p, encoding="utf-8", errors="replace") as f:
+        head = "".join(f.readline() for _ in range(6))
+    return p if KEEP_MARK in head else None
+
+
 def port_one(args, og_dir):
     name = os.path.basename(og_dir.rstrip("/\\"))
+    kept = kept_qc(args, name)
+    if kept:
+        r = {"name": name, "status": "kept (hand-edited qc)", "qc": kept, "notes": [], "warnings": []}
+        if args.compile:
+            r["compile"] = compile_qc(args, kept)
+        return r
     if name.startswith("w_"):
         return port_worldmodel(args, og_dir)
     og_qc = os.path.join(og_dir, name + ".qc")
