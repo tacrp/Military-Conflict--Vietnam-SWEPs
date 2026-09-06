@@ -1,8 +1,10 @@
 // Picking up another copy of a weapon the player already carries (a second pistol) is what
-// allows dual wielding; the engine calls this instead of giving the weapon.
+// allows dual wielding. The engine calls this on the copy being picked up, not on the carried
+// one, so the flag goes on the carried one (lua/mcv/server/sv_second_weapon.lua does the same
+// from the pickup and spawn-menu hooks).
 function SWEP:EquipAmmo(ply)
-    if self.HasAkimbo and !self:GetHasSecond() then
-        self:SetHasSecond(true)
+    if SERVER and self.HasAkimbo and MCV.UnlockSecondWeapon then
+        MCV.UnlockSecondWeapon(ply, self:GetClass())
     end
 end
 

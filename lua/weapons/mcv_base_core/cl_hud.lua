@@ -122,6 +122,47 @@ function SWEP:GetHUDIcon()
     return self.Mat_HUDIcon or nil
 end
 
+// A weapon icon mirrored (the game's icons face right) and turned so it faces up-left
+local function drawIconTilted(mat, cx, cy, size, col)
+    local c, s = math.cos(math.rad(45)), math.sin(math.rad(45))
+    local h = size / 2
+    local corners = {{-h, -h, 1, 0}, {h, -h, 0, 0}, {h, h, 0, 1}, {-h, h, 1, 1}} // u runs 1 -> 0: mirrored
+    local poly = {}
+    for i, p in ipairs(corners) do
+        poly[i] = {x = cx + p[1] * c - p[2] * s, y = cy + p[1] * s + p[2] * c, u = p[3], v = p[4]}
+    end
+    surface.SetMaterial(mat)
+    surface.SetDrawColor(col)
+    surface.DrawPoly(poly)
+end
+
+// Icons under the ammo counter for what this gun could do right now: dual wield (its own icon,
+// once a second one has been picked up) and a bayonet (the carried bayonet's icon)
+function SWEP:DrawHUDAvailability(blend, right, y)
+    local icons = {}
+    if self.HasAkimbo and self.GetHasSecond and self:GetHasSecond() then
+        icons[#icons + 1] = {self:GetHUDIcon(), self:GetAkimbo()}
+    end
+    if self.HasBayonet and self.OwnerHasBayonet and self:OwnerHasBayonet() then
+        local owner = self:GetOwner()
+        for _, w in ipairs(owner:GetWeapons()) do
+            if w.IsBayonet and w.GetHUDIcon then
+                icons[#icons + 1] = {w:GetHUDIcon(), self:GetBayonet()}
+                break
+            end
+        end
+    end
+    local size = ScreenScale(14)
+    local x = right - size / 2
+    for _, ic in ipairs(icons) do
+        if ic[1] then
+            // dimmer once it is in use, bright while it is on offer
+            drawIconTilted(ic[1], x, y, size, withAlpha(HUD.Color, blend * (ic[2] and 0.45 or 1)))
+        end
+        x = x - size - ScreenScale(2)
+    end
+end
+
 // The ammo block: firemode label, big count, reserve, icon behind it all
 function SWEP:DrawHUDAmmo(blend)
     local sw, sh = ScrW(), ScrH()
@@ -148,6 +189,8 @@ function SWEP:DrawHUDAmmo(blend)
     if firemode_name != "" then
         textRight("MCV_8", firemode_name, right, sh - ScreenScale(48), withAlpha(HUD.Color, blend))
     end
+
+    self:DrawHUDAvailability(blend, right, sh - ScreenScale(10))
 
     if ammocount == nil then return end
 

@@ -36,3 +36,12 @@ SWEP.SoundThrustFlesh = "MCV_Weapon_Fists.PowerPunch"
 SWEP.SoundThrustWorld = "MCV_Weapon_Fists.PowerPunchWall"
 
 SWEP.WeaponWeight = 0
+
+function SWEP:GetControlHints()
+    return {
+        {"+attack", "Jab"},
+        {"+attack2", "Hook"},
+        {"+speed +attack", "Charge"},
+    }
+end
+
