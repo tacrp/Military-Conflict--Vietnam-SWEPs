@@ -14,7 +14,7 @@ SWEP.Caliber = "5.56x45mm"
 SWEP.Slot = 3
 
 SWEP.ViewModel = "models/weapons/mcv/v_m607.mdl"
-SWEP.WorldModel = "models/weapons/mcv/w_car15.mdl"
+SWEP.WorldModel = "models/weapons/mcv/w_m607.mdl"
 
 SWEP.BodyGroups = "001"
 SWEP.MagInTime = 1.47
@@ -29,9 +29,9 @@ SWEP.WeaponSelectIcon = NULL
 // Stats
 
 SWEP.DamageGeneric = 35 // damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)
-SWEP.DamageHeadMultiplier = 2.5
-SWEP.DamageChestMultiplier = 1.2
-SWEP.DamageStomachMultiplier = 1.15
+SWEP.DamageHeadMultiplier = 2.2
+SWEP.DamageChestMultiplier = 1.1
+SWEP.DamageStomachMultiplier = 1.05
 SWEP.DamageLegMultiplier = 0.8
 SWEP.DamageArmMultiplier = 0.75
 
@@ -40,7 +40,7 @@ SWEP.ExplosionRadius = 0
 
 SWEP.MuzzleVelocity = 810
 
-SWEP.RangeModifier = 0.935
+SWEP.RangeModifier = 0.94
 
 SWEP.Firemodes = {
     MCV.FIREMODE_SEMI,
@@ -51,18 +51,18 @@ SWEP.Firemodes = {
 SWEP.PlayCycleAnimation = false
 
 // View slide from recoil
-SWEP.ViewSlideRecoilUp = 1.64
-SWEP.ViewSlideRecoilRight = 0.32
+SWEP.ViewSlideRecoilUp = 1.6
+SWEP.ViewSlideRecoilRight = 0.48
 
 SWEP.ViewSlideRecoilIronsightUp = 0.96
-SWEP.ViewSlideRecoilIronsightRight = 0.16
+SWEP.ViewSlideRecoilIronsightRight = 0.28
 
 SWEP.RecoilPushbackValue = 1.5
 
 // Camera shake from recoil
 SWEP.ShakeScale = 1
-SWEP.ShakeFreq = 45.0
-SWEP.ShakeDuration = 0.4
+SWEP.ShakeFreq = 50
+SWEP.ShakeDuration = 0.3
 
 SWEP.Ironsight = true
 SWEP.IronsightSpeedScale = 1.0
@@ -84,47 +84,47 @@ SWEP.IronsightAng = Angle(0, 0, 0)
 SWEP.CustomPos = Vector(0, 0, 0)
 SWEP.CustomAng = Angle(0, 0, 0)
 
-SWEP.Spread = 7.77
-SWEP.SpreadIronsighted = 1.62
+SWEP.Spread = 7.75
+SWEP.SpreadIronsighted = 1.2
 
 SWEP.FireRate = 750 // in rounds per minute
 
-SWEP.CrosshairMinDistance = 8
+SWEP.CrosshairMinDistance = 4
 SWEP.CrosshairDeltaDistance = 4
 
-SWEP.WeaponWeight = 3.85
+SWEP.WeaponWeight = 2.76
 
 SWEP.Primary.Ammo = "ar2"
 SWEP.Primary.ClipSize = 20
 SWEP.Primary.Chamber = 1
-SWEP.Primary.DefaultClip = 80
+SWEP.Primary.DefaultClip = 100
 SWEP.Primary.Automatic = true
 
-SWEP.NearwallDistance = 40
+SWEP.NearwallDistance = 30
 
 // Bullet spread multiplier according to current stance
 SWEP.CrouchSpreadMultiplier = 0.75
 SWEP.ProneSpreadMultiplier = 0.65
-SWEP.StandMoveSpreadMultiplier = 1.15
-SWEP.SneakMoveSpreadMultiplier = 1.05
+SWEP.StandMoveSpreadMultiplier = 1.3
+SWEP.SneakMoveSpreadMultiplier = 1.2
 SWEP.CrouchMoveSpreadMultiplier = 1.1
-SWEP.JumpSpreadMultiplier = 3.0
+SWEP.JumpSpreadMultiplier = 3
 
 SWEP.HasBayonet = false
 SWEP.HasBipod = false
 
 // Penetration
-SWEP.MetalPenetrationDepth = 8
-SWEP.GlassPenetrationDepth = 14
-SWEP.ConcretePenetrationDepth = 10
-SWEP.WoodPenetrationDepth = 18
-SWEP.OtherPenetrationDepth = 12
+SWEP.MetalPenetrationDepth = 7
+SWEP.GlassPenetrationDepth = 13
+SWEP.ConcretePenetrationDepth = 9
+SWEP.WoodPenetrationDepth = 17
+SWEP.OtherPenetrationDepth = 11
 
-SWEP.MetalDamageModifier = 1.55
-SWEP.GlassDamageModifier = 1.15
-SWEP.ConcreteDamageModifier = 1.75
-SWEP.WoodDamageModifier = 1.25
-SWEP.OtherDamageModifier = 1.25
+SWEP.MetalDamageModifier = 1.6
+SWEP.GlassDamageModifier = 1.2
+SWEP.ConcreteDamageModifier = 1.8
+SWEP.WoodDamageModifier = 1.3
+SWEP.OtherDamageModifier = 1.3
 
 // Sound
 SWEP.SoundSingleShot = "MCV_Weapon_CAR15.Single"
@@ -154,7 +154,7 @@ SWEP.MuzzleParticleIronsightedSmoke = ""
 
 SWEP.MuzzleParticle3rdPerson = "muzzleflash_ak47"
 
-SWEP.EjectBrassType = 1
+SWEP.EjectBrassType = 4
 SWEP.EjectBrassTrail = "shellsmoke"
 SWEP.EjectBrassParticle = "port_smoke"
 

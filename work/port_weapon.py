@@ -1077,9 +1077,9 @@ def generate(script_path, args):
     # ---- fire rate -------------------------------------------------------------------------
     firerate = num(S.get("FireRate"), 0)
     cycle = "ACT_VM_RELOAD_INSERT_PULL" in acts and (is_bolt or is_pump or ("Auto" not in modes and wtype in ("Shotgun", "BoltActionRifle")))
-    if reuse("FireRate"):
-        firerate = reuse("FireRate")
-    elif cycle:
+    # the stats are the game's: the fire rate, magazine, chamber and reserve come from the script
+    # every time (they used to be copied from the existing lua and drifted)
+    if cycle:
         # manually operated action with its own cycle animation: the cycle (NeedCycle, released
         # by the hammerpos event) is the delay between shots, not the fire rate; the script's
         # 40-100 RPM would add a dead wait on top of the bolt/pump animation
@@ -1151,9 +1151,7 @@ def generate(script_path, args):
     has_gl = rb("HasRifleGrenade", has_gl)
     # HasAkimbo is not taken from the old file: if the game has a weapon_dual_* script for it,
     # the dual mode belongs to this weapon.
-    clipsize = int(num(rv("Primary.ClipSize", clipsize), clipsize))
-    chamber = int(num(rv("Primary.Chamber", chamber), chamber))
-    maxammo = int(num(rv("Primary.DefaultClip", maxammo), maxammo))
+    # ClipSize / Chamber / DefaultClip stay the script's (no reuse)
     ammo_type = rv("Primary.Ammo", ammo_type)
     akimbo_vm = "v_dual_" + vm[2:] if has_akimbo else None
 

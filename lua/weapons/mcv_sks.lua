@@ -30,18 +30,18 @@ SWEP.GrenadeBodygroup = 3
 
 // Stats
 
-SWEP.DamageGeneric = 43 // damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)
-SWEP.DamageHeadMultiplier = 2.52
-SWEP.DamageChestMultiplier = 1.2
-SWEP.DamageStomachMultiplier = 1.15
-SWEP.DamageLegMultiplier = 0.8
-SWEP.DamageArmMultiplier = 0.75
+SWEP.DamageGeneric = 40 // damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)
+SWEP.DamageHeadMultiplier = 3.05
+SWEP.DamageChestMultiplier = 1.45
+SWEP.DamageStomachMultiplier = 1.4
+SWEP.DamageLegMultiplier = 1
+SWEP.DamageArmMultiplier = 0.95
 
 SWEP.Num = 1
 
 SWEP.MuzzleVelocity = 735
 
-SWEP.RangeModifier = 0.950 // Every 500 units the damage is multiplied by rangemodifier
+SWEP.RangeModifier = 0.955 // Every 500 units the damage is multiplied by rangemodifier
 
 SWEP.Firemodes = {
     MCV.FIREMODE_SEMI
@@ -54,17 +54,17 @@ SWEP.RifleGrenadeEntity = "mcv_proj_riflegrenade_vc"
 SWEP.RifleGrenadeForce = 2000
 
 // View slide from recoil
-SWEP.ViewSlideRecoilUp = 1.35
-SWEP.ViewSlideRecoilRight = 0.48
+SWEP.ViewSlideRecoilUp = 2.12
+SWEP.ViewSlideRecoilRight = 0.56
 
-SWEP.ViewSlideRecoilIronsightUp = 1.35
-SWEP.ViewSlideRecoilIronsightRight = 0.48
+SWEP.ViewSlideRecoilIronsightUp = 1.36
+SWEP.ViewSlideRecoilIronsightRight = 0.36
 
 SWEP.RecoilPushbackValue = 1.5
 
 // Camera shake from recoil
 SWEP.ShakeScale = 1
-SWEP.ShakeFreq = 45.0
+SWEP.ShakeFreq = 45
 SWEP.ShakeDuration = 0.4
 
 SWEP.Ironsight = true
@@ -86,31 +86,31 @@ SWEP.IronsightAng = Angle(0, 0, 0)
 SWEP.CustomPos = Vector(0, -2, 0)
 SWEP.CustomAng = Angle(0, 0, 0)
 
-SWEP.Spread = 6.3
-SWEP.SpreadIronsighted = 1.15
+SWEP.Spread = 7.75
+SWEP.SpreadIronsighted = 1.05
 
-SWEP.FireRate = 300 // in rounds per minute
+SWEP.FireRate = 450 // in rounds per minute
 
 SWEP.CrosshairMinDistance = 8
 SWEP.CrosshairDeltaDistance = 4
 
-SWEP.WeaponWeight = 3.85
+SWEP.WeaponWeight = 3.75
 
 SWEP.Primary.Ammo = "ar2"
 SWEP.Primary.ClipSize = 10
 SWEP.Primary.Chamber = 0
-SWEP.Primary.DefaultClip = 30
+SWEP.Primary.DefaultClip = 80
 SWEP.Primary.Automatic = true
 
 SWEP.NearwallDistance = 40
 
 // Bullet spread multiplier according to current stance
-SWEP.CrouchSpreadMultiplier = 0.85
-SWEP.ProneSpreadMultiplier = 0.75
-SWEP.StandMoveSpreadMultiplier = 1.5
-SWEP.SneakMoveSpreadMultiplier = 1.4
+SWEP.CrouchSpreadMultiplier = 0.7
+SWEP.ProneSpreadMultiplier = 0.6
+SWEP.StandMoveSpreadMultiplier = 1.55
+SWEP.SneakMoveSpreadMultiplier = 1.45
 SWEP.CrouchMoveSpreadMultiplier = 1.35
-SWEP.JumpSpreadMultiplier = 3.0
+SWEP.JumpSpreadMultiplier = 3
 
 SWEP.HasBayonet = true
 SWEP.HasRifleGrenade = true

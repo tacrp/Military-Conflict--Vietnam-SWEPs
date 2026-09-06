@@ -25,18 +25,18 @@ SWEP.WeaponSelectIcon = NULL
 
 // Stats
 
-SWEP.DamageGeneric = 36 // damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)
+SWEP.DamageGeneric = 27 // damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)
 SWEP.DamageHeadMultiplier = 2.5
 SWEP.DamageChestMultiplier = 1.5
 SWEP.DamageStomachMultiplier = 1.25
-SWEP.DamageLegMultiplier = 0.9
-SWEP.DamageArmMultiplier = 0.85
+SWEP.DamageLegMultiplier = 1
+SWEP.DamageArmMultiplier = 0.9
 
 SWEP.Num = 6
 
 SWEP.MuzzleVelocity = 403
 
-SWEP.RangeModifier = 0.695 // Every 500 units the damage is multiplied by rangemodifier
+SWEP.RangeModifier = 0.79 // Every 500 units the damage is multiplied by rangemodifier
 
 SWEP.Firemodes = {
     MCV.FIREMODE_SEMI,
@@ -48,17 +48,17 @@ SWEP.ShotgunReload = false
 SWEP.HasAkimbo = true
 
 // View slide from recoil
-SWEP.ViewSlideRecoilUp = 6
-SWEP.ViewSlideRecoilRight = 0.16
+SWEP.ViewSlideRecoilUp = 3.6
+SWEP.ViewSlideRecoilRight = 1.08
 
-SWEP.ViewSlideRecoilIronsightUp = 4.5
-SWEP.ViewSlideRecoilIronsightRight = 0.16
+SWEP.ViewSlideRecoilIronsightUp = 2.64
+SWEP.ViewSlideRecoilIronsightRight = 0.8
 
 SWEP.RecoilPushbackValue = 1.5
 
 // Camera shake from recoil
 SWEP.ShakeScale = 3
-SWEP.ShakeFreq = 30.0
+SWEP.ShakeFreq = 30
 SWEP.ShakeDuration = 0.6
 
 SWEP.Ironsight = true
@@ -80,28 +80,28 @@ SWEP.IronsightAng = Angle(0, 0, 0)
 SWEP.CustomPos = Vector(0, 0, 0)
 SWEP.CustomAng = Angle(0, 0, 0)
 
-SWEP.Spread = 8
-SWEP.SpreadIronsighted = 6
+SWEP.Spread = 9
+SWEP.SpreadIronsighted = 3
 
-SWEP.FireRate = 120 // in rounds per minute
+SWEP.FireRate = 160 // in rounds per minute
 
-SWEP.WeaponWeight = 3.85
+SWEP.WeaponWeight = 2.2
 
 SWEP.Primary.Ammo = "buckshot"
 SWEP.Primary.ClipSize = 2
 SWEP.Primary.Chamber = 0
-SWEP.Primary.DefaultClip = 16
+SWEP.Primary.DefaultClip = 26
 SWEP.Primary.Automatic = true
 
-SWEP.NearwallDistance = 40
+SWEP.NearwallDistance = 30
 
 // Bullet spread multiplier according to current stance
-SWEP.CrouchSpreadMultiplier = 0.85
-SWEP.ProneSpreadMultiplier = 0.75
-SWEP.StandMoveSpreadMultiplier = 1.5
-SWEP.SneakMoveSpreadMultiplier = 1.4
-SWEP.CrouchMoveSpreadMultiplier = 1.35
-SWEP.JumpSpreadMultiplier = 3.0
+SWEP.CrouchSpreadMultiplier = 1
+SWEP.ProneSpreadMultiplier = 1
+SWEP.StandMoveSpreadMultiplier = 1
+SWEP.SneakMoveSpreadMultiplier = 1
+SWEP.CrouchMoveSpreadMultiplier = 1
+SWEP.JumpSpreadMultiplier = 1
 
 SWEP.HasBayonet = false
 SWEP.HasRifleGrenade = false
@@ -131,7 +131,7 @@ SWEP.SoundReload = ""
 SWEP.SoundSpecial1 = ""
 SWEP.SoundSpecial2 = ""
 SWEP.SoundNearlyEmpty = "MCV_Weapon_Generic.NearlyEmptyClick"
-SWEP.SoundEmpty = "MCV_Weapon_Generic.ClipEmpty_01"
+SWEP.SoundEmpty = "MCV_Weapon_Generic.ClipEmpty_09"
 
 // Particles
 // SWEP.MuzzleParticle = "vietnam_muzzleflash_rifle_type1_fp"

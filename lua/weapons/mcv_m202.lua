@@ -14,7 +14,7 @@ SWEP.Caliber = "66mm Rocket"
 SWEP.Slot = 4
 
 SWEP.ViewModel = "models/weapons/mcv/v_m202.mdl"
-SWEP.WorldModel = "models/weapons/mcv/w_sks.mdl"
+SWEP.WorldModel = "models/weapons/mcv/w_m202.mdl"
 
 SWEP.BodyGroups = "0"
 
@@ -61,8 +61,8 @@ SWEP.RecoilPushbackValue = 1.5
 
 // Camera shake from recoil
 SWEP.ShakeScale = 2.5
-SWEP.ShakeFreq = 40.0
-SWEP.ShakeDuration = 0.75
+SWEP.ShakeFreq = 40
+SWEP.ShakeDuration = 1
 
 SWEP.Ironsight = true
 SWEP.IronsightSpeedScale = 0.7
@@ -86,20 +86,20 @@ SWEP.CustomAng = Angle(0, 0, 0)
 SWEP.Spread = 4
 SWEP.SpreadIronsighted = 2
 
-SWEP.FireRate = 250 // in rounds per minute
+SWEP.FireRate = 70 // in rounds per minute
 
 SWEP.CrosshairMinDistance = 8
 SWEP.CrosshairDeltaDistance = 4
 
-SWEP.WeaponWeight = 3.85
+SWEP.WeaponWeight = 12
 
 SWEP.Primary.Ammo = "rpg_round"
 SWEP.Primary.ClipSize = 4
 SWEP.Primary.Chamber = 0
-SWEP.Primary.DefaultClip = 8
+SWEP.Primary.DefaultClip = 4
 SWEP.Primary.Automatic = true
 
-SWEP.NearwallDistance = 40
+SWEP.NearwallDistance = 45
 
 // Bullet spread multiplier according to current stance
 SWEP.CrouchSpreadMultiplier = 1
@@ -107,7 +107,7 @@ SWEP.ProneSpreadMultiplier = 0.75
 SWEP.StandMoveSpreadMultiplier = 2
 SWEP.SneakMoveSpreadMultiplier = 1.5
 SWEP.CrouchMoveSpreadMultiplier = 1.25
-SWEP.JumpSpreadMultiplier = 4.0
+SWEP.JumpSpreadMultiplier = 4
 
 SWEP.HasBayonet = false
 SWEP.HasRifleGrenade = false
@@ -119,15 +119,15 @@ SWEP.HasBipod = false
 SWEP.HasEmptyReload = false
 
 // Penetration
-SWEP.MetalPenetrationDepth = 8
-SWEP.GlassPenetrationDepth = 14
+SWEP.MetalPenetrationDepth = 10
+SWEP.GlassPenetrationDepth = 10
 SWEP.ConcretePenetrationDepth = 10
-SWEP.WoodPenetrationDepth = 18
-SWEP.OtherPenetrationDepth = 12
+SWEP.WoodPenetrationDepth = 10
+SWEP.OtherPenetrationDepth = 10
 
-SWEP.MetalDamageModifier = 1.55
-SWEP.GlassDamageModifier = 1.15
-SWEP.ConcreteDamageModifier = 1.75
+SWEP.MetalDamageModifier = 1.25
+SWEP.GlassDamageModifier = 1.25
+SWEP.ConcreteDamageModifier = 1.25
 SWEP.WoodDamageModifier = 1.25
 SWEP.OtherDamageModifier = 1.25
 
@@ -138,7 +138,7 @@ SWEP.SoundReload = ""
 SWEP.SoundSpecial1 = ""
 SWEP.SoundSpecial2 = ""
 SWEP.SoundNearlyEmpty = "MCV_Weapon_Generic.NearlyEmptyClick"
-SWEP.SoundEmpty = "MCV_Weapon_Generic.ClipEmpty_01"
+SWEP.SoundEmpty = "MCV_Weapon_Generic.ClipEmpty_09"
 
 // Particles
 // SWEP.MuzzleParticle = "vietnam_muzzleflash_rifle_type1_fp"
@@ -160,7 +160,7 @@ SWEP.MuzzleParticleIronsightedSmoke = "vietnam_muzzleflash_rocketlauncher_type1_
 SWEP.MuzzleParticle3rdPerson = "vietnam_muzzleflash_rocketlauncher_type1_tp"
 
 SWEP.NoEjectOnShoot = true
-SWEP.EjectBrassType = 1
+SWEP.EjectBrassType = 0
 SWEP.EjectBrassTrail = "vietnam_weaponeffect_shelleject_trail"
 SWEP.EjectBrassParticle = "vietnam_weaponeffect_shelleject_side"
 

@@ -15,7 +15,7 @@ SWEP.Caliber = "7.62x51mm"
 SWEP.Slot = 3
 
 SWEP.ViewModel = "models/weapons/mcv/v_m40.mdl"
-SWEP.WorldModel = "models/weapons/mcv/w_sks.mdl"
+SWEP.WorldModel = "models/weapons/mcv/w_m40.mdl"
 
 SWEP.BodyGroups = "00000"
 
@@ -26,12 +26,12 @@ SWEP.SightedViewModelFOV = 25
 
 // Stats
 
-SWEP.DamageGeneric = 65 // damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)
-SWEP.DamageHeadMultiplier = 2.4
-SWEP.DamageChestMultiplier = 2.15
-SWEP.DamageStomachMultiplier = 1.95
-SWEP.DamageLegMultiplier = 1.15
-SWEP.DamageArmMultiplier = 1.15
+SWEP.DamageGeneric = 45 // damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)
+SWEP.DamageHeadMultiplier = 3.5
+SWEP.DamageChestMultiplier = 3.1
+SWEP.DamageStomachMultiplier = 3
+SWEP.DamageLegMultiplier = 1.6
+SWEP.DamageArmMultiplier = 1.5
 
 SWEP.Num = 1
 
@@ -54,17 +54,17 @@ SWEP.HasEmptyReload = false
 SWEP.AdjustableScopes = true
 
 // View slide from recoil
-SWEP.ViewSlideRecoilUp = 2.85
+SWEP.ViewSlideRecoilUp = 2.84
 SWEP.ViewSlideRecoilRight = 0.48
 
-SWEP.ViewSlideRecoilIronsightUp = 1.35
-SWEP.ViewSlideRecoilIronsightRight = 0.16
+SWEP.ViewSlideRecoilIronsightUp = 1.36
+SWEP.ViewSlideRecoilIronsightRight = 0.24
 
 SWEP.RecoilPushbackValue = 1.5
 
 // Camera shake from recoil
 SWEP.ShakeScale = 1
-SWEP.ShakeFreq = 30.0
+SWEP.ShakeFreq = 30
 SWEP.ShakeDuration = 0.5
 
 SWEP.Ironsight = true
@@ -87,32 +87,32 @@ SWEP.IronsightAng = Angle(0, 0, 0)
 SWEP.CustomPos = Vector(0, 0, 0)
 SWEP.CustomAng = Angle(0, 0, 0)
 
-SWEP.Spread = 7.7
+SWEP.Spread = 8
 SWEP.SpreadIronsighted = 0.05
 
 SWEP.FireRate = 600 // in rounds per minute
 SWEP.CyclePostDelay = 0.9
 
-SWEP.CrosshairMinDistance = 8
+SWEP.CrosshairMinDistance = 4
 SWEP.CrosshairDeltaDistance = 4
 
-SWEP.WeaponWeight = 3.85
+SWEP.WeaponWeight = 6.57
 
 SWEP.Primary.Ammo = "ar2"
 SWEP.Primary.ClipSize = 5
 SWEP.Primary.Chamber = 0
-SWEP.Primary.DefaultClip = 15
+SWEP.Primary.DefaultClip = 20
 SWEP.Primary.Automatic = true
 
-SWEP.NearwallDistance = 40
+SWEP.NearwallDistance = 45
 
 // Bullet spread multiplier according to current stance
-SWEP.CrouchSpreadMultiplier = 0.65
-SWEP.ProneSpreadMultiplier = 0.4
-SWEP.StandMoveSpreadMultiplier = 1.45
-SWEP.SneakMoveSpreadMultiplier = 1.35
-SWEP.CrouchMoveSpreadMultiplier = 1.25
-SWEP.JumpSpreadMultiplier = 4.0
+SWEP.CrouchSpreadMultiplier = 0.95
+SWEP.ProneSpreadMultiplier = 0.85
+SWEP.StandMoveSpreadMultiplier = 1.8
+SWEP.SneakMoveSpreadMultiplier = 1.75
+SWEP.CrouchMoveSpreadMultiplier = 1.65
+SWEP.JumpSpreadMultiplier = 5
 
 SWEP.HasBayonet = false
 SWEP.HasRifleGrenade = false
@@ -142,7 +142,7 @@ SWEP.SoundReload = ""
 SWEP.SoundSpecial1 = ""
 SWEP.SoundSpecial2 = ""
 SWEP.SoundNearlyEmpty = "MCV_Weapon_Generic.NearlyEmptyClick"
-SWEP.SoundEmpty = "MCV_Weapon_Generic.ClipEmpty_01"
+SWEP.SoundEmpty = "MCV_Weapon_Generic.ClipEmpty_06"
 
 // Particles
 // SWEP.MuzzleParticle = "vietnam_muzzleflash_rifle_type1_fp"

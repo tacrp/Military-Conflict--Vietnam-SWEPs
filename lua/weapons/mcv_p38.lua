@@ -16,7 +16,7 @@ SWEP.Slot = 1
 SWEP.ViewModel = "models/weapons/mcv/v_p38.mdl"
 SWEP.ViewModelAkimbo = "models/weapons/mcv/v_dual_p38.mdl"
 SWEP.AkimboPoseRecoil = true
-SWEP.WorldModel = "models/weapons/mcv/w_mle1935.mdl"
+SWEP.WorldModel = "models/weapons/mcv/w_p38.mdl"
 SWEP.AkimboMagInTimes = {[ACT_VM_RELOAD] = {1.17, 3}, [ACT_VM_MISSRIGHT] = {1.17, nil}, [ACT_VM_MISSRIGHT2] = {1.17, 3.83}, [ACT_VM_RELOADEMPTY] = {1.17, 3.83}}
 
 SWEP.BodyGroups = ""
@@ -25,11 +25,11 @@ SWEP.WeaponSelectIcon = NULL
 
 // Stats
 
-SWEP.DamageGeneric = 30 // damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)
-SWEP.DamageHeadMultiplier = 2.4
-SWEP.DamageChestMultiplier = 1.6
-SWEP.DamageStomachMultiplier = 1.5
-SWEP.DamageLegMultiplier = 1.15
+SWEP.DamageGeneric = 25 // damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)
+SWEP.DamageHeadMultiplier = 3.6
+SWEP.DamageChestMultiplier = 1.95
+SWEP.DamageStomachMultiplier = 1.9
+SWEP.DamageLegMultiplier = 1.2
 SWEP.DamageArmMultiplier = 1.15
 
 SWEP.ExplosionDamage = 0
@@ -37,7 +37,7 @@ SWEP.ExplosionRadius = 0
 
 SWEP.MuzzleVelocity = 315
 
-SWEP.RangeModifier = 0.72
+SWEP.RangeModifier = 0.775
 
 // "auto", "semi", "burst", "singleaction", "doubleaction", "fanning", "bolt", "pump"
 SWEP.Firemodes = {
@@ -52,18 +52,18 @@ SWEP.MagOutTime = 0
 SWEP.MagOutTimeEmpty = 0
 
 // View slide from recoil
-SWEP.ViewSlideRecoilUp = 0.75
-SWEP.ViewSlideRecoilRight = 0.35
+SWEP.ViewSlideRecoilUp = 1.36
+SWEP.ViewSlideRecoilRight = 0.52
 
-SWEP.ViewSlideRecoilIronsightUp = 0.35
-SWEP.ViewSlideRecoilIronsightRight = 0.25
+SWEP.ViewSlideRecoilIronsightUp = 1.16
+SWEP.ViewSlideRecoilIronsightRight = 0.44
 
 SWEP.RecoilPushbackValue = 1.5
 
 // Camera shake from recoil
 SWEP.ShakeScale = 0.75
-SWEP.ShakeFreq = 60.0
-SWEP.ShakeDuration = 0.30
+SWEP.ShakeFreq = 50
+SWEP.ShakeDuration = 0.3
 
 SWEP.Ironsight = true
 SWEP.IronsightSpeedScale = 0.85
@@ -86,31 +86,31 @@ SWEP.IronsightAngAkimbo = Angle(0, 0, 0)
 SWEP.CustomPos = Vector(0, -3, 0)
 SWEP.CustomAng = Angle(0, 0, 0)
 
-SWEP.Spread = 6.35
-SWEP.SpreadIronsighted = 2.35
+SWEP.Spread = 6.5
+SWEP.SpreadIronsighted = 2.25
 
-SWEP.FireRate = 250 // in rounds per minute -- the MCV script claims its RPM is 50 but there's no way that's correct so im setting it to this for now
+SWEP.FireRate = 540 // in rounds per minute -- the MCV script claims its RPM is 50 but there's no way that's correct so im setting it to this for now
 
-SWEP.CrosshairMinDistance = 8
+SWEP.CrosshairMinDistance = 4
 SWEP.CrosshairDeltaDistance = 4
 
-SWEP.WeaponWeight = 3.85
+SWEP.WeaponWeight = 0.8
 
 SWEP.Primary.Ammo = "pistol"
 SWEP.Primary.ClipSize = 8
 SWEP.Primary.Chamber = 1
-SWEP.Primary.DefaultClip = 16
+SWEP.Primary.DefaultClip = 24
 SWEP.Primary.Automatic = true
 
-SWEP.NearwallDistance = 40
+SWEP.NearwallDistance = 22
 
 // Bullet spread multiplier according to current stance
-SWEP.CrouchSpreadMultiplier = 0.8
-SWEP.ProneSpreadMultiplier = 0.75
-SWEP.StandMoveSpreadMultiplier = 1.1
-SWEP.SneakMoveSpreadMultiplier = 1
+SWEP.CrouchSpreadMultiplier = 0.95
+SWEP.ProneSpreadMultiplier = 0.9
+SWEP.StandMoveSpreadMultiplier = 1.15
+SWEP.SneakMoveSpreadMultiplier = 1.1
 SWEP.CrouchMoveSpreadMultiplier = 1.05
-SWEP.JumpSpreadMultiplier = 1.25
+SWEP.JumpSpreadMultiplier = 1.3
 
 SWEP.HasBayonet = false
 SWEP.HasBipod = false
@@ -135,8 +135,8 @@ SWEP.SoundDoubleShot = ""
 SWEP.SoundReload = ""
 SWEP.SoundSpecial1 = ""
 SWEP.SoundSpecial2 = ""
-SWEP.SoundNearlyEmpty = "MCV_Weapon_Generic.NearlyEmptyClick"
-SWEP.SoundEmpty = "MCV_Weapon_Generic.ClipEmpty_01"
+SWEP.SoundNearlyEmpty = "MCV_Weapon_Generic.NearlyEmptyClick_Pistol"
+SWEP.SoundEmpty = "MCV_Weapon_Generic.ClipEmpty_05"
 
 // Particles
 // SWEP.MuzzleParticle = "vietnam_muzzleflash_rifle_type1_fp"
@@ -157,7 +157,7 @@ SWEP.MuzzleParticleIronsightedSmoke = "vietnam_muzzleflash_pistol_type1_fp_is_sm
 
 SWEP.MuzzleParticle3rdPerson = "vietnam_muzzleflash_pistol_type1_tp"
 
-SWEP.EjectBrassType = 11
+SWEP.EjectBrassType = 12
 SWEP.EjectBrassTrail = "vietnam_weaponeffect_shelleject_trail"
 SWEP.EjectBrassParticle = "vietnam_weaponeffect_shelleject_side"
 
