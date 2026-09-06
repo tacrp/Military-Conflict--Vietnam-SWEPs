@@ -521,9 +521,12 @@ def step_bake_ik(qc, ctx):
     # the idle's rules on top of their own (the dual Blackhawk's run layer has none of its own)
     idle_rules = re.findall(r'ikrule\s+"([^"]+)"\s+touch\s+"([^"]+)"', "\n".join(base_block.lines)) if base_block else []
     layered = set()
+    delta_anims = set()
     for sq in qc.blocks("sequence"):
         if sq.name in ("walklayer", "runlayer", "walklayerironsight") or "prone" in sq.name.lower():
             layered.update(sq.anims())
+        if sq.has("delta"):
+            delta_anims.update(sq.anims())
     done = 0
     worst = 0.0
     for b in qc.blocks("animation"):
@@ -549,7 +552,10 @@ def step_bake_ik(qc, ctx):
                 ik.append((upper, lower, hand, target))
         if not ik:
             continue
-        is_delta = b.has("delta")
+        # `delta` is declared on the sequence that plays the animation, not on the $animation
+        # block; Crowbar's `subtract` on the block is the other mark of a delta layer. Treating a
+        # delta layer as an absolute pose bakes a nonsense arm (hands off screen when walking).
+        is_delta = b.has("subtract") or b.name in delta_anims
         if is_delta and not base_path:
             continue
         corr = os.path.join(os.path.dirname(src), os.path.basename(src)[:-4] + "_corrective_animation.smd")
