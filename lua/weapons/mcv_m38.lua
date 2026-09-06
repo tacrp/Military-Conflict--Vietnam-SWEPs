@@ -49,6 +49,7 @@ SWEP.ShotgunReloadEmptyStartAnimation = false
 SWEP.PlayCycleAnimation = true
 SWEP.AnimationHandlesHammer = true
 SWEP.InvertAnimationHammer = true
+SWEP.HybridReloadCapable = true
 
 SWEP.RifleGrenadeEntity = "mcv_proj_riflegrenade_vc"
 SWEP.RifleGrenadeForce = 2000

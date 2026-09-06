@@ -117,3 +117,4 @@ NOTE: Please do not resort to using "snap" to fix this. "snap" should only be us
 - [x] M60: part of the gun vanished with the last round; its `clamped1` bodygroup is a 9 MB gun mesh, not the belt (`clamped2`, 172 KB, is). A clamped mesh over 60% of the reference mesh is left out of BeltBodygroups
 - [x] Realistic shooting: no spread in the sights (the hip dispersion fades out with the sight amount); shotguns keep their pattern
 - [x] Game-accurate mode: the aim angle is the view direction (eye angles plus the punch the camera shows), no doubled punch and no sway; those stay realistic-mode only
+- [x] Homemade Pistol (VC pistol 1) never worked its bolt: the lua predates the generator's bolt rule and lacked `PlayCycleAnimation`; it cycles like the Welrod now (boltpull, shell out at frame 42)

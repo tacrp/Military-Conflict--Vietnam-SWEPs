@@ -46,6 +46,7 @@ SWEP.Firemodes = {
 
 SWEP.LastShotAnimation = false
 SWEP.NoEjectOnShoot = true
+SWEP.PlayCycleAnimation = true // the bolt is worked after every shot (boltpull, ACT_VM_RELOAD_INSERT_PULL), like the Welrod
 SWEP.MagInClip = true
 SWEP.NoEjectOnShoot = true
 

@@ -43,11 +43,15 @@ SWEP.Firemodes = {
 SWEP.LastShotAnimation = false
 SWEP.MagInClip = true
 SWEP.PlayCycleAnimation = true
+SWEP.ShotgunReload = true
+SWEP.ShotgunAltReload = true
+SWEP.ShotgunReloadEmptyStartAnimation = true
 SWEP.AnimationHandlesHammer = true
 SWEP.InvertAnimationHammer = true
 SWEP.NoEjectOnShoot = true
 SWEP.RifleGrenadeEntity = "mcv_proj_riflegrenade_vc"
 SWEP.RifleGrenadeForce = 2000
+SWEP.HybridReloadCapable = true
 
 // View slide from recoil
 SWEP.ViewSlideRecoilUp = 2.84
