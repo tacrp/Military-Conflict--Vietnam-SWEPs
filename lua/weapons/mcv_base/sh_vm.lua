@@ -24,9 +24,12 @@ function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
     // next chamber looked empty the moment the shot went off
     local shown = self:Clip1()
     if self.CycleClipPoseTime and !self:GetReloading() then
+        // NeedCycle from the shot until the cycle starts, then the networked start time
+        // (ActionStart, sh_think.lua) until the refresh point; a Lua-side start time differed
+        // between the realms and the server's networked pose parameter fought the client's
         local cycling = self:GetNeedCycle()
-        if !cycling and self.CycleStart then
-            cycling = CurTime() < self.CycleStart + self.CycleClipPoseTime * (self.CycleSpeed or 1)
+        if !cycling and self:GetActionStart() > 0 then
+            cycling = CurTime() < self:GetActionStart() + self.CycleClipPoseTime * (self.CycleSpeed or 1)
         end
         if cycling then shown = math.min(shown + 1, clipsize) end
     end

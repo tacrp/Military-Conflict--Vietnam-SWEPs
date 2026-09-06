@@ -58,7 +58,9 @@ function SWEP:ThinkWeapon()
     if !self:StillWaiting() and (!owner:KeyDown(IN_ATTACK) or self.SlamFire) and self:GetNeedCycle() and IsFirstTimePredicted() then
         local t = self:PlayAnimation(ACT_VM_RELOAD_INSERT_PULL, self.CycleSpeed, false)
         self:SetNextPrimaryFire(CurTime() + t * self.CyclePostDelay)
-        self.CycleStart = CurTime() // the rounds shown catch up part-way through (CycleClipPoseTime)
+        // networked so both realms show the same rounds through the cycle (CycleClipPoseTime);
+        // guns have no other use for ActionStart
+        self:SetActionStart(CurTime())
 
         if !self.AnimationHandlesHammer then
             self:SetNeedCycle(false)

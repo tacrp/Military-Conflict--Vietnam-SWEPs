@@ -49,7 +49,7 @@ SWEP.Firemodes = {
 SWEP.LastShotAnimation = false
 SWEP.NoEjectOnShoot = true
 SWEP.PlayCycleAnimation = true // the bolt is worked after every shot (boltpull, ACT_VM_RELOAD_INSERT_PULL), like the Welrod
-SWEP.MagInClip = true
+SWEP.MagInClip = false // the three-round harmonica magazine is swapped whole: the reload shows a full one, not the rounds added to what is left
 SWEP.NoEjectOnShoot = true
 
 // View slide from recoil
