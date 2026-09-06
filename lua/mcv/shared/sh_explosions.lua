@@ -104,7 +104,7 @@ end
 // had them shooting sideways.
 function MCV.SurfaceAngle(normal)
     local ang = (normal or vector_up):Angle()
-    ang:RotateAroundAxis(ang:Right(), 90)
+    ang:RotateAroundAxis(ang:Right(), -90) // +90 put the normal on the angle's down axis
     return ang
 end
 
