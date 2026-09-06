@@ -25,6 +25,7 @@ import json
 import math
 import os
 import re
+import numpy as np
 import shutil
 import subprocess
 import sys
@@ -496,6 +497,98 @@ def step_fix_correctives(qc, ctx):
         ctx.note("%d corrective animations rewritten to match their delta animation (Crowbar root bone rotation)" % fixed)
 
 
+def step_glue_guns(qc, ctx):
+    """The dual Blackhawk's guns are root-level bones of their own (BaseMesh, BaseLeftMesh, the
+    hands' ikTargets under them) and its run layer carries them a constant 12 units away from
+    the animated hands, the game's IK dragging the arms after them. Solving the arms onto the
+    guns swung the upper arms 49 degrees and looked broken; instead the guns follow the hands:
+    in every delta layer the gun bone is rewritten so the hand keeps the grip it has in the
+    idle. Only root-level bones whose ikTargets all belong to one hand qualify (the revolvers'
+    empty `Base` helper carries both hands' targets and is left to the IK bake). The rewritten
+    layer goes to fixed_anims/ and step_bake_ik reads it from there (ctx.glued)."""
+    import bake_ik
+    raw = qc.raw_text()
+    chains = dict(re.findall(r'^\$ikchain\s+"([^"]+)"\s+"([^"]+)"', raw, re.M))
+    if not chains:
+        return
+    idle = qc.find_by_activity("ACT_VM_IDLE")
+    base_anim = idle.anims()[0] if idle and idle.anims() else None
+    base_block = qc.find("animation", base_anim) if base_anim else None
+    if not base_block:
+        return
+    base_path = ctx.resolve_smd(base_block.path)
+    if not os.path.isfile(base_path):
+        return
+    rules = re.findall(r'ikrule\s+"([^"]+)"\s+touch\s+"([^"]+)"', "\n".join(base_block.lines))
+    nodes, bframes, _ = bake_ik.load_smd(base_path)
+    byname = {n: b for b, (n, _) in nodes.items()}
+    def top(b):
+        while nodes[b][1] != -1:
+            b = nodes[b][1]
+        return b
+    # gun root bone -> the hand glued to it
+    guns = {}
+    for chain, target in rules:
+        hand = chains.get(chain)
+        if hand not in byname or target not in byname:
+            continue
+        g = top(byname[target])
+        if nodes[g][0] in ("root", "cam_driver", "BaseRoot") or g == top(byname[hand]):
+            continue
+        guns.setdefault(g, set()).add(byname[hand])
+    guns = {g: hands.pop() for g, hands in guns.items() if len(hands) == 1}
+    if not guns:
+        return
+    layered = set()
+    for sq in qc.blocks("sequence"):
+        if sq.name in ("walklayer", "runlayer", "walklayerironsight"):
+            layered.update(sq.anims())
+    base = bframes[0]
+    wb = bake_ik.fk(nodes, {b: np.array(base[b]) for b in nodes})
+    grip = {g: np.linalg.inv(wb[h]) @ wb[g] for g, h in guns.items()}
+    ctx.glued = getattr(ctx, "glued", {})
+    done = 0
+    for b in qc.blocks("animation"):
+        if b.name not in layered or not b.path:
+            continue
+        src = ctx.resolve_smd(b.path)
+        if os.path.abspath(os.path.dirname(src)) == os.path.abspath(ctx.fixed_dir):
+            ov = os.path.join(ctx.override_dir, os.path.basename(src))
+            src = ov if os.path.isfile(ov) else os.path.join(ctx.og_dir, b.path.replace("\\", os.sep).replace("/", os.sep))
+        if not os.path.isfile(src):
+            continue
+        corr = os.path.join(os.path.dirname(src), os.path.basename(src)[:-4] + "_corrective_animation.smd")
+        if os.path.isfile(os.path.join(ctx.fixed_dir, os.path.basename(corr))):
+            corr = os.path.join(ctx.fixed_dir, os.path.basename(corr))
+        anodes, aframes, alines = bake_ik.load_smd(src)
+        if set(anodes) != set(nodes):
+            continue
+        cframes = bake_ik.load_smd(corr)[1] if os.path.isfile(corr) else [{}]
+        ref = {bb: np.zeros(6) for bb in nodes}
+        ref.update(cframes[0])
+        new_rows = {}
+        worst = 0.0
+        for fi, af in enumerate(aframes):
+            pose = bake_ik.final_pose(nodes, base, ref, af)
+            w = bake_ik.fk(nodes, pose)
+            for g, h in guns.items():
+                want = w[h] @ grip[g]
+                worst = max(worst, float(np.linalg.norm(want[:3, 3] - w[g][:3, 3])))
+                Rb = bake_ik.rmat(base[g][3:6])
+                Rr = bake_ik.rmat(ref[g][3:6])
+                Ra = Rr @ (Rb.T @ want[:3, :3])
+                pos = ref[g][:3] + (want[:3, 3] - base[g][:3])
+                new_rows[(fi, g)] = np.concatenate([pos, bake_ik.euler(Ra)])
+        out = os.path.join(ctx.fixed_dir, os.path.basename(src))
+        bake_ik.write_rows(alines, new_rows, out)
+        ctx.glued[os.path.basename(src)] = out
+        done += 1
+        ctx.note("%s: %s glued to the hand (moved up to %.1f units)" % (
+            b.name, ", ".join(nodes[g][0] for g in guns), worst))
+    if done:
+        ctx.note("guns glued to the hands in %d movement layers" % done)
+
+
 def step_bake_ik(qc, ctx):
     """The game's viewmodels glue the hands to target bones on the gun with `$ikchain` +
     `ikrule ... touch` (273 of 278 models: the movement and prone layers, the duals' reloads and
@@ -554,6 +647,10 @@ def step_bake_ik(qc, ctx):
         if os.path.abspath(os.path.dirname(src)) == os.path.abspath(ctx.fixed_dir):
             ov = os.path.join(ctx.override_dir, os.path.basename(src))
             src = ov if os.path.isfile(ov) else os.path.join(ctx.og_dir, b.path.replace("\\", os.sep).replace("/", os.sep))
+        # a layer step_glue_guns rewrote this run is the one to bake over; its corrective is
+        # still the original's (next to the OG layer, or the rewritten one in fixed_anims)
+        corr_src = src
+        src = getattr(ctx, "glued", {}).get(os.path.basename(src), src)
         if not os.path.isfile(src):
             continue
         # chain bones: the ikchain's end bone and its two parents, from the smd's own hierarchy
@@ -576,7 +673,7 @@ def step_bake_ik(qc, ctx):
         is_delta = b.has("subtract") or b.name in delta_anims
         if is_delta and not base_path:
             continue
-        corr = os.path.join(os.path.dirname(src), os.path.basename(src)[:-4] + "_corrective_animation.smd")
+        corr = os.path.join(os.path.dirname(corr_src), os.path.basename(corr_src)[:-4] + "_corrective_animation.smd")
         if not os.path.isfile(corr):
             corr = None
         elif os.path.isfile(os.path.join(ctx.fixed_dir, os.path.basename(corr))):
@@ -1505,6 +1602,7 @@ def port_one(args, og_dir):
     ctx.shell_dual = ctx.mode == "dual" and "ACT_SHOTGUN_RELOAD_START" in acts
 
     step_fix_correctives(qc, ctx)
+    step_glue_guns(qc, ctx)
     step_bake_ik(qc, ctx)
     step_paths(qc, ctx)
     step_reconstruct_missing_anims(qc, ctx)

@@ -19,8 +19,11 @@ hook.Add("PlayerCanPickupWeapon", "mcv_second_weapon", function(ply, wep)
     end
 end)
 
+// sandbox passes the list.Get("Weapon") entry here (class name, print name, category...), not
+// the weapon table, so the stored SWEP table is what says whether the gun can be dual wielded
 hook.Add("PlayerGiveSWEP", "mcv_second_weapon", function(ply, class, swep)
-    if swep and swep.HasAkimbo and ply:HasWeapon(class) then
+    local stored = weapons.GetStored(class)
+    if stored and stored.HasAkimbo and ply:HasWeapon(class) then
         unlockSecond(ply, class)
     end
 end)

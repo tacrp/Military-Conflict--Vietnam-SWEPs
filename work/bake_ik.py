@@ -269,6 +269,12 @@ def bake_animation(anim_path, corrective_path, base_path, chains, out_path, is_d
             worst_after = max(worst_after, np.linalg.norm(w2[hand][:3, 3] - (w2[target] @ offset)[:3]) * weight)
     if not new_rows:
         return (worst_before, worst_after)
+    write_rows(alines, new_rows, out_path)
+    return (worst_before, worst_after)
+
+
+def write_rows(alines, new_rows, out_path):
+    """Copy of the smd lines with the skeleton rows in new_rows {(frame, bone): [pos, rot]} replaced."""
     out = []
     sec = None
     fi = -1
@@ -294,7 +300,6 @@ def bake_animation(anim_path, corrective_path, base_path, chains, out_path, is_d
         out.append(l)
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     open(out_path, "w", encoding="utf-8", newline="\n").write("\n".join(out))
-    return (worst_before, worst_after)
 
 
 def main():

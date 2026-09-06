@@ -69,6 +69,31 @@ function SWEP:CanPlaceAt(tr)
     return true
 end
 
+// The C4 with every charge planted stays as the detonator: empty hands, nothing to draw
+function SWEP:ViewModelHidden()
+    return self.PlaceKind == "c4" and self:GetRoundsLeft() <= 0 and self:GetActionState() == STATE_IDLE
+end
+
+function SWEP:DrawWorldModel()
+    if !self:ViewModelHidden() then self:DrawModel() end
+end
+
+// The dynamite's fuse burns from the pull of the trigger until the stick leaves the hand
+function SWEP:GetLitParticle()
+    if self.PlaceKind != "dynamite" then return nil end
+    return self.LitParticle or "vietnam_weaponeffect_dynamite_fuse"
+end
+
+function SWEP:IsLit()
+    local state = self:GetActionState()
+    return state == STATE_WINDUP or (state == STATE_BUSY and CurTime() < (self.LitUntil or 0))
+end
+
+function SWEP:GetPrecacheParticles()
+    local p = self:GetLitParticle()
+    return p and {p} or {}
+end
+
 function SWEP:CountPlanted()
     local owner = self:GetOwner()
     local n = 0
@@ -99,6 +124,7 @@ function SWEP:Plant()
 
     local pos, normal = tr.HitPos, tr.HitNormal
     local parent = IsValid(tr.Entity) and !tr.Entity:IsWorld() and tr.Entity or nil
+    self.LitUntil = CurTime() + math.min(self.PlaceDelay, t)
 
     self:SetTimer(math.min(self.PlaceDelay, t), function()
         if !IsValid(self) then return end
@@ -192,6 +218,7 @@ function SWEP:ThrowLit()
     local t = self:HasSequence(self.SequenceThrow) and self:PlaySequence(self.SequenceThrow, 1, true) or 0.5
     self:SetNextPrimaryFire(CurTime() + t)
     self:GetOwner():DoAnimationEvent(ACT_HL2MP_GESTURE_RANGE_ATTACK_GRENADE)
+    self.LitUntil = CurTime() + math.min(0.2, t)
 
     self:SetTimer(math.min(0.2, t), function()
         if !IsValid(self) then return end
@@ -283,7 +310,7 @@ function SWEP:PrimaryAttack()
     local state = self:GetActionState()
 
     if owner:KeyDown(IN_USE) then
-        if state == STATE_IDLE then
+        if state == STATE_IDLE and !self:ViewModelHidden() then
             self:Bash()
             self:SetNextPrimaryFire(CurTime() + 0.6)
         end
@@ -425,6 +452,9 @@ function SWEP:GetControlHints()
             {"+attack2", "Throw lit"},
             {"+use +attack", "Bash"},
         }
+    end
+    if self:ViewModelHidden() then
+        return {{"+attack2", "Detonate"}}
     end
     return {
         {"+attack", "Plant"},

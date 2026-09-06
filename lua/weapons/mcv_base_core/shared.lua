@@ -207,6 +207,15 @@ function SWEP:OnDeploy() end
 // Particle systems to precache in Initialize
 function SWEP:GetPrecacheParticles() return {} end
 
+// Empty hands: nothing drawn, no deploy animation (the C4 kept as a detonator)
+function SWEP:ViewModelHidden() return false end
+
+// A flame or fuse on the viewmodel while the thing in hand is lit (molotov rag, dynamite
+// fuse): the particle and the attachment it burns on, and whether it is lit right now
+SWEP.LitAttachment = "Wick"
+function SWEP:GetLitParticle() return nil end
+function SWEP:IsLit() return false end
+
 // Called from Think after the shared work (movement, hold type, timers, idle)
 function SWEP:ThinkWeapon() end
 // Called from DoBodygroups after the shared pose parameters

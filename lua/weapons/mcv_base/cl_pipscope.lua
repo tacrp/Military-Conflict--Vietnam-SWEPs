@@ -45,8 +45,20 @@ function SWEP:ShouldDoScope()
     return self:GetIronsight() and self.HasScope
 end
 
-local oeg_glow = Material("models/weapons/mcv/optics/lens_singlepoint_glow")
-if !oeg_glow:IsError() then oeg_glow:SetVector("$color", Vector(0, 0, 0)) end
+// the model's glow mesh (lens_singlepoint_glow, additive): drawn with a material that adds
+// nothing, since the dot comes from the lens shader on the reticle plane instead
+local NODRAW = CreateMaterial("mcv_nodraw", "UnlitGeneric", {["$basetexture"] = "vgui/white", ["$additive"] = "1", ["$color"] = "[0 0 0]", ["$color2"] = "[0 0 0]"})
+
+function SWEP:HideOEGGlow(vm)
+    if !self.OEGScope or !IsValid(vm) then return end
+    if self.OEGGlowIndex == nil then
+        self.OEGGlowIndex = false
+        for i, name in ipairs(vm:GetMaterials()) do
+            if name:lower():find("singlepoint_glow", 1, true) then self.OEGGlowIndex = i - 1 break end
+        end
+    end
+    if self.OEGGlowIndex then vm:SetSubMaterial(self.OEGGlowIndex, "!mcv_nodraw") end
+end
 
 // The reticle texture behind a ScopeMaterial. The game's crosshair_* VMTs are model materials
 // (some of them Refract lens shaders), so the texture is read off the material rather than
@@ -119,6 +131,7 @@ function SWEP:DoRTScope()
 
     local active = self:GetSightAmountVisual() > 0.5
     local model = self:GetOwner():GetViewModel()
+    self:HideOEGGlow(model)
 
     if active and self:ShouldDoScope() and HAVE_SHADER then
         if !self.RenderingRTScope or self.ScopeLevelApplied != self:GetScopeLevel() then

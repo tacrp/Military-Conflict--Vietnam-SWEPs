@@ -196,7 +196,7 @@ function SWEP:DrawHUDAmmo(blend)
     end
 
     if firemode_name != "" then
-        textRight("MCV_8", firemode_name, right, sh - ScreenScale(48), withAlpha(HUD.Color, blend))
+        textRight("MCV_8", firemode_name, right, sh - ScreenScale(20), withAlpha(HUD.Color, blend))
     end
 
     self:DrawHUDAvailability(blend, right, sh - ScreenScale(10))

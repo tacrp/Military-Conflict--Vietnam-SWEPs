@@ -20,6 +20,24 @@ function SWEP:GetHUDAmmo()
     return self:GetRoundsLeft(), nil
 end
 
+// The molotov's rag burns from the pull of the trigger until the bottle leaves the hand
+// (the game has no rag flame of its own; the zippo's is the one small flame it ships)
+function SWEP:GetLitParticle()
+    if !self.FuseImpact then return nil end
+    return self.LitParticle or "vietnam_entityeffect_zippo_flame"
+end
+
+function SWEP:IsLit()
+    local state = self:GetActionState()
+    if state == STATE_WINDUP_HIGH or state == STATE_WINDUP_LOW then return true end
+    return state == STATE_THROWING and CurTime() < (self.ThrowReleaseAt or 0)
+end
+
+function SWEP:GetPrecacheParticles()
+    local p = self:GetLitParticle()
+    return p and {p} or {}
+end
+
 function SWEP:CanStartThrow()
     if self:StillWaiting() then return false end
     if self:GetActionState() != STATE_IDLE then return false end
@@ -69,6 +87,7 @@ function SWEP:Throw(low, overcooked)
 
     local t = self:PlaySequence(seq, 1, true) or 0.5
     local release = math.min(low and self.ThrowReleaseTimeUnderhand or self.ThrowReleaseTime, t)
+    self.ThrowReleaseAt = CurTime() + release
     local kind = roll and "roll" or (low and "low" or "high")
     local fuse = self:GetFuseTime()
     local cookstart = self:GetActionStart()

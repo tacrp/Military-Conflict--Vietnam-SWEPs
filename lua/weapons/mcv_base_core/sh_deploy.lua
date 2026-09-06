@@ -1,7 +1,9 @@
 function SWEP:Deploy()
     self:GetOwner():SetSaveValue("m_flNextAttack", 0)
 
-    if !self:GetReady() and self:HasAnimation(ACT_VM_READY) then
+    if self:ViewModelHidden() then
+        self:SetReady(true)
+    elseif !self:GetReady() and self:HasAnimation(ACT_VM_READY) then
         self:PlayAnimation(ACT_VM_READY, 1, true)
         self:SetReady(true)
     else
@@ -30,6 +32,8 @@ function SWEP:ClientHolster()
 
     vm:SetSubMaterial()
     vm:SetMaterial()
+    vm:StopParticles()
+    self.VMLit = false
 end
 
 function SWEP:Holster(wep)

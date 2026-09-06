@@ -15,6 +15,15 @@ ENT.BounceSounds = nil
 ENT.ExplosionDamage = 35
 ENT.ExplosionRadius = 200
 ENT.FireParticle = "Molotov_GroundFire"
+ENT.WickParticle = "vietnam_entityeffect_zippo_flame"
+
+function ENT:Initialize()
+    baseclass.Get("mcv_proj_base").Initialize(self)
+    if SERVER and self.WickParticle then
+        local att = self:LookupAttachment("Wick")
+        ParticleEffectAttach(self.WickParticle, PATTACH_POINT_FOLLOW, self, att > 0 and att or 0)
+    end
+end
 
 function ENT:Detonate()
     local attacker = self:GetAttacker()

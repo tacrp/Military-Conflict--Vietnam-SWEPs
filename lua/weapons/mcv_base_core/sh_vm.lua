@@ -40,8 +40,10 @@ SWEP.PCFs = {}
 
 function SWEP:PreDrawViewModel(vm)
     vm = vm or self:GetOwner():GetViewModel()
+    if self:ViewModelHidden() then return true end
 
     self:PreDrawViewModelWeapon(vm)
+    self:UpdateLitParticle(vm)
 
     self:DoBodygroups(vm, true)
 
@@ -72,6 +74,22 @@ function SWEP:ViewModelDrawn()
     end
 
     self.ActiveEffects = newactiveeffects
+end
+
+// the lit flame follows the viewmodel's attachment; started when the item lights, stopped
+// when it leaves the hand or the weapon is put away (ClientHolster)
+function SWEP:UpdateLitParticle(vm)
+    if vm != self:GetOwner():GetViewModel() then return end
+    local particle = self:GetLitParticle()
+    local lit = particle != nil and self:IsLit()
+    if lit == (self.VMLit or false) then return end
+    self.VMLit = lit
+    if lit then
+        local att = vm:LookupAttachment(self.LitAttachment)
+        ParticleEffectAttach(particle, PATTACH_POINT_FOLLOW, vm, att > 0 and att or 0)
+    else
+        vm:StopParticles()
+    end
 end
 
 function SWEP:PostDrawViewModel(vm)

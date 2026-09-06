@@ -30,3 +30,5 @@ SWEP.Primary.ClipSize = -1
 SWEP.Primary.DefaultClip = 1
 
 SWEP.WeaponWeight = 5
+
+SWEP.PlacedAngleOffset = Angle(90, 0, 90)

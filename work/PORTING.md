@@ -406,7 +406,16 @@ Brass ids the game added after 2024 (19 to 31) map to the nearest shell model th
   wrong in game ("the right hands are all kinda fucked"), so an animation's own rule that would
   move the hand more than `MAX_PULL` (4 units) is dropped with a log line; the left hands' rules
   (a unit or two of drift onto the gun's target bone) and every rule inherited from the idle
-  (the movement layers, any distance: the dual Blackhawk's run needs 12) are kept.
+  (the movement layers) are kept.
+* **Guns glued to the hands** (`step_glue_guns`, before the bake): the dual Blackhawk's guns are
+  root-level bones of their own (BaseMesh / BaseLeftMesh, 13k verts each, the hands' ikTargets
+  under them) and its run layer holds them a constant 12 units from the animated hands, the
+  game's IK dragging the arms after them; solving the arms onto the guns swung the upper arms
+  49 degrees and looked broken. Instead each such gun bone is rewritten in every movement layer
+  so the hand keeps its idle grip (gun world = hand world x idle offset), the arms staying as
+  animated. Only root-level bones whose ikTargets all belong to one hand qualify; the revolvers'
+  empty `Base` helper holds both hands' targets and is left alone. The bake then reads the glued
+  layer (`ctx.glued`) with the original's corrective.
 * **Belt bodygroups**: the belt LMGs' `clamped*` bodygroups (the belt segment in the feed tray)
   ship with one submodel and no blank; `step_belt_blank` adds one and Lua hides them with the
   last round (`BeltBodygroups`, belt-fed guns only: the M16 family has a `clamped1` of its own).
