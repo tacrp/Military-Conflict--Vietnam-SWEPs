@@ -24,7 +24,7 @@ $attachment "eject" "Base" 13.7 -0.1 2.4 rotate 0 0 0
 
 $cbox 0 0 0 0 0 0
 
-$bbox -1640.47 -14.564 -921.891 32.019 8.414 0
+$bbox -96 -96 -96 96 96 96
 
 $definebone "root" "" 0 7.450089 -27.509027 0 0 0 0 0 0 0 0 0
 $definebone "pelvis" "root" -0.000002 0 0 -89.790623 -89.997175 89.997175 0 0 0 0 0 0
@@ -709,7 +709,6 @@ $sequence "boltpull" {
 	addlayer "runlayer"
 	addlayer "boltpull_magoverride"
 	addlayer "BulletCounter"
-	addlayer "MagPosition"
 	addlayer "boltpull_pose"
 	node "0"
 }

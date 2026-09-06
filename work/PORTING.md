@@ -785,3 +785,10 @@ alone since the field has no gameplay effect.
   animates. Lua shows the pre-shot count until that point (from the shot through the cycle's
   first 1.83 x CycleSpeed seconds) and drives ammo_fraction2 from the post-shot count. Only
   this model has the second parameter.
+* **Idle layers vs a sequence's own override** (`layer_owned_bones` / `layer_delta_bones`): the
+  pose-split conversion carries the idle's layers (slide, hammer, bullet counter...) onto the
+  shot-like sequence so the gun keeps its state while it plays. A layer the sequence carries
+  itself with a `$weightlist` (the homemade pistol's `boltpull_magoverride`, Mag bone at 1) sets
+  those bones outright, and an idle delta layer moving the same bones (`MagPosition`) stacked on
+  it: the harmonica went one chamber too far and floated on the second pull. Such idle layers are
+  left off that sequence; the game's own qc never had them there either.

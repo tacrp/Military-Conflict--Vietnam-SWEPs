@@ -1173,8 +1173,17 @@ def step_pose_split(qc, ctx):
         for xl in extra_layers:
             if xl not in movement:
                 lines.append('addlayer "%s"' % xl)
+        # bones the sequence's own layers drive outright (a weightlisted, non-delta layer such as
+        # the homemade pistol's boltpull_magoverride on the Mag bone)
+        owned = set()
+        for xl in extra_layers:
+            owned |= layer_owned_bones(qc, xl)
         for bl in base.layers():
             if bl not in movement and bl not in extra_layers and bl != pose_name:
+                if owned and layer_delta_bones(qc, ctx, bl) & owned:
+                    # the idle's delta layer would stack on the override (one slot too far)
+                    ctx.note("%s: idle layer %s left off, its bones are driven by the sequence's own layer" % (seq.name, bl))
+                    continue
                 lines.append('addlayer "%s"' % bl)     # SlidePosition, BulletCounter, hammer layers
         lines.append('addlayer "%s"' % pose_name)
         lines.append('node "0"')
@@ -1259,6 +1268,50 @@ def step_pose_recoil(qc, ctx):
         if n == 0:
             qc.items.insert(0, pp)
         ctx.note("pose recoil layers added for hands: %s" % ", ".join(added))
+
+
+def layer_owned_bones(qc, lname):
+    """Bones a non-delta layer sets outright: the weight-1 entries of the $weightlist its
+    animations carry (empty for delta layers and layers without a weightlist)."""
+    layer = qc.find("sequence", lname)
+    if layer is None or layer.has("delta"):
+        return set()
+    raw = qc.raw_text()
+    bones = set()
+    for a in layer.anims():
+        ab = qc.find("animation", a)
+        if ab is None:
+            continue
+        for wl in re.findall(r'^\s*weightlist\s+"([^"]+)"', "\n".join(ab.lines), re.M):
+            m = re.search(r'\$weightlist\s+"%s"\s*\{(.*?)\}' % re.escape(wl), raw, re.S)
+            if m:
+                bones |= {b for b, w in re.findall(r'"([^"]+)"\s+([\d.]+)', m.group(1)) if float(w) > 0}
+    return bones
+
+
+def layer_delta_bones(qc, ctx, lname):
+    """Bones a delta layer moves: rows of its first animation's first frame that are not zero
+    (root-level bones excluded, they carry Crowbar's corrective)."""
+    import bake_ik
+    layer = qc.find("sequence", lname)
+    if layer is None:
+        return set()
+    bones = set()
+    for a in layer.anims():
+        ab = qc.find("animation", a)
+        if ab is None or not ab.path:
+            continue
+        src = ctx.resolve_smd(ab.path)
+        if not os.path.isfile(src):
+            continue
+        nodes, frames, _ = bake_ik.load_smd(src)
+        for b, row in frames[0].items():
+            name, par = nodes[b]
+            if par == -1:
+                continue
+            if max(abs(float(v)) for v in row[:3]) > 0.01 or max(abs(float(v)) for v in row[3:6]) > 0.02:
+                bones.add(name)
+    return bones
 
 
 def step_idle_layers(qc, ctx):
