@@ -283,6 +283,17 @@ function SWEP:DoDrawCrosshair(x, y)
     local col = crosshair_col
     col.a = a
 
+    // the crosshair marks where the shot goes (hip sway, view punch), not the screen centre
+    if self.GetAimVector and MCV.RealisticShooting() then
+        local owner = self:GetOwner()
+        if IsValid(owner) then
+            local scr = (owner:EyePos() + self:GetAimVector(true) * 4096):ToScreen()
+            if scr.visible and scr.x == scr.x then
+                x, y = scr.x, scr.y
+            end
+        end
+    end
+
     local dot_size = ScreenScale(1)
     local line_size = ScreenScale(4)
 

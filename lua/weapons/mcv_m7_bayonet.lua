@@ -1,4 +1,5 @@
 SWEP.Base = "mcv_melee"
+SWEP.IsBayonet = true // carrying it lets the rifles fix their bayonet
 
 SWEP.Spawnable = true
 

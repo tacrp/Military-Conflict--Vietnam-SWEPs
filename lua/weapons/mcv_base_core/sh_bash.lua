@@ -82,10 +82,21 @@ function SWEP:Bash()
     end
 end
 
+// The player has to carry a bayonet (one of the bayonet melee weapons, IsBayonet) to fix one
+function SWEP:OwnerHasBayonet()
+    local owner = self:GetOwner()
+    if !IsValid(owner) or !owner.GetWeapons then return false end
+    for _, w in ipairs(owner:GetWeapons()) do
+        if w.IsBayonet then return true end
+    end
+    return false
+end
+
 function SWEP:ToggleBayonet()
     if !self.HasBayonet then return end
     if self:StillWaiting() then return end
     if self:GetGrenadeLauncher() then return end
+    if !self:GetBayonet() and !self:OwnerHasBayonet() then return end
 
     if self:GetBayonet() then
         local t = self:PlayAnimation(ACT_VM_DETACH_SILENCER, 1, true)

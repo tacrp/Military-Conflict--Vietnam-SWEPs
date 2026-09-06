@@ -108,6 +108,15 @@ function SWEP:GetViewModelPosition(pos, ang)
     local offsetpos = LerpVector(aim_delta, self.CustomPos, ipos)
     local offsetang = LerpAngle(aim_delta, self.CustomAng, iang)
 
+    // the gun points where it shoots: the hip sway of realistic mode turns the whole viewmodel
+    if self.GetAimSway then
+        local sw = self:GetAimSway(true)
+        if sw != angle_zero then
+            ang:RotateAroundAxis(ang:Right(), -sw.p)
+            ang:RotateAroundAxis(ang:Up(), sw.y)
+        end
+    end
+
     pos:Add(ang:Right() * offsetpos.x)
     pos:Add(ang:Forward() * offsetpos.y)
     pos:Add(ang:Up() * offsetpos.z)

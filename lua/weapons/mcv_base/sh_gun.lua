@@ -101,10 +101,10 @@ function SWEP:GetControlHints()
         table.insert(h, {"+use +walk", self.RifleGrenadeIsUBGL and "Grenade launcher" or "Rifle grenade"})
     end
     if self.HasAkimbo then
-        table.insert(h, {"+use +walk", "Dual wield"})
+        table.insert(h, {"+use +walk", self:GetHasSecond() and "Dual wield" or "Dual wield (pick up a second one)"})
     end
     if self.HasBayonet then
-        table.insert(h, {"+use +attack2", "Bayonet"})
+        table.insert(h, {"+use +attack2", self:OwnerHasBayonet() and "Bayonet" or "Bayonet (carry a bayonet)"})
     end
     if self.HasBipod then
         table.insert(h, {"+use", "Bipod (at cover)"})

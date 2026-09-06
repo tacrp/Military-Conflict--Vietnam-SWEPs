@@ -524,7 +524,14 @@ wrappers that print before and after each step to find the last one that ran.
 
 Gameplay toggles are server convars (replicated, archived, notify) registered in one place with
 `MCV.RegisterConVar` and read through accessors, so the predicted weapon code sees the same value
-on both realms. `mcv_realistic_shooting` (default 0, the game's numbers) at 1 picks the addon's own recoil and spread: hip
+on both realms. `mcv_realistic_shooting` (default 0, the game's numbers) at 1 picks the addon's own recoil and spread. It also
+adds hip sway: the barrel wanders off the screen centre by up to `HipSwayScale` (0.25) times the
+gun's hip spread in degrees, half that on shotguns, damped by the sight amount; bullets,
+projectiles, the crosshair, the scope reticle and the viewmodel all follow `GetAimAngle`
+(eye angles + twice the view punch + sway), so the crosshair drifts instead of the shot missing a
+centred crosshair. Also: dual wielding needs a second copy of the pistol picked up (`EquipAmmo`
+sets `HasSecond`), and fixing a bayonet needs a bayonet melee weapon (`IsBayonet`) in the
+inventory. The rest of the mode: it picks the addon's own recoil and spread: hip
 fire is barrel-accurate (the sighted spread applies at all times, the miss comes from the gun not
 being lined up with the eye), recoil from the hip kicks in a random direction and harder, CalcView
 takes 75% of the view punch back out so the kick moves the aim rather than the picture, and the

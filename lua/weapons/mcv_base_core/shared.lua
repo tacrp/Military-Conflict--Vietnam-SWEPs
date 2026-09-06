@@ -168,6 +168,7 @@ function SWEP:SetupDataTables()
     self:NetworkVar("Bool", 10, "NeedCycle")
     self:NetworkVar("Bool", 11, "Akimbo")
     self:NetworkVar("Bool", 12, "PrimedAttack")
+    self:NetworkVar("Bool", 13, "HasSecond") // a second copy of this weapon was picked up: dual wield allowed
 
     self:NetworkVar("Entity", 0, "HolsterEntity")
     // equipment: the entity a two-step placement is working on (mine waiting for its stake)

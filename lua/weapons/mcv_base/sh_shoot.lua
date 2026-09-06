@@ -190,8 +190,35 @@ function SWEP:FireAnimationEvent( pos, ang, event, name )
     end
 end
 
-function SWEP:GetAimVector()
-    return (self:GetOwner():EyeAngles() + self:GetOwner():GetViewPunchAngles() * 2):Forward()
+// Realistic mode (mcv_realistic_shooting 1): hip fire is barrel-accurate, so the inaccuracy is
+// the barrel wandering off the screen centre. A slow two-tone drift in pitch and yaw with a peak
+// of HipSwayScale times the gun's hip spread (degrees), halved on shotguns, damped to nothing by
+// the sight amount. Deterministic in CurTime, so client and server agree; `visual` uses the
+// frame-smoothed sight amount for drawing.
+SWEP.HipSwayScale = 0.25
+
+function SWEP:GetAimSway(visual)
+    if !MCV.RealisticShooting() then return angle_zero end
+    local sa = visual and self:GetSightAmountVisual() or self:GetSightAmount()
+    local amp = (self.Spread or 0) * self.HipSwayScale * (1 - sa)
+    if (self.Num or 1) > 1 then amp = amp * 0.5 end // shotguns
+    if amp <= 0.0001 then return angle_zero end
+    local t = CurTime() + self:EntIndex() * 7.3
+    local p = (math.sin(t * 1.1) * 0.6 + math.sin(t * 2.3 + 1.7) * 0.4) * amp
+    local y = (math.sin(t * 0.8 + 0.9) * 0.6 + math.sin(t * 1.9 + 3.1) * 0.4) * amp
+    return Angle(p, y, 0)
+end
+
+// The direction a shot leaves along: eye angles, twice the view punch the recoil put on the gun,
+// and the hip sway. Bullets, projectiles, the crosshair, the scope reticle and the viewmodel all
+// read this.
+function SWEP:GetAimAngle(visual)
+    local owner = self:GetOwner()
+    return owner:EyeAngles() + owner:GetViewPunchAngles() * 2 + self:GetAimSway(visual)
+end
+
+function SWEP:GetAimVector(visual)
+    return self:GetAimAngle(visual):Forward()
 end
 
 function SWEP:GetSpread()

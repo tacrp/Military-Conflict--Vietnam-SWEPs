@@ -1,5 +1,14 @@
+// Picking up another copy of a weapon the player already carries (a second pistol) is what
+// allows dual wielding; the engine calls this instead of giving the weapon.
+function SWEP:EquipAmmo(ply)
+    if self.HasAkimbo and !self:GetHasSecond() then
+        self:SetHasSecond(true)
+    end
+end
+
 function SWEP:ToggleAkimbo()
     if self:StillWaiting() then return end
+    if !self:GetHasSecond() and !self:GetAkimbo() then return end // one pistol only
 
     self:ScopeToggle(false)
 
