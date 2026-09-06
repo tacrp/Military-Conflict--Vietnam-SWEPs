@@ -57,6 +57,7 @@ function SWEP:PreDrawViewModel(vm)
     else
         cam.Start3D(nil, nil, fov)
     end
+    self.VMCamOpen = true // PostDrawViewModel closes it; nothing to close if this never ran
     cam.IgnoreZ(true)
 
     self:PreDrawViewModelBlend(vm, sa)
@@ -102,6 +103,10 @@ end
 function SWEP:PostDrawViewModel(vm, ply, wep, flags)
     flags = flags or 0
     local depthpass = bit.band(flags, STUDIO_SSAODEPTHTEXTURE) != 0 or bit.band(flags, STUDIO_SHADOWDEPTHTEXTURE) != 0
+    // the pre-draw did not get as far as opening its camera (hidden viewmodel, or an error
+    // in a weapon hook): nothing to draw into or close
+    if !self.VMCamOpen then return end
+    self.VMCamOpen = false
 
     // the viewmodel particle systems (muzzle flash and smoke, shell puffs and trails) are drawn
     // here by hand, still inside the camera PreDrawViewModel started, so they sit exactly on
@@ -115,7 +120,7 @@ function SWEP:PostDrawViewModel(vm, ply, wep, flags)
 
         for _, pcf in ipairs(self.PCFs) do
             if pcf and IsValid(pcf) and pcf.Render then
-                if pcf.WorldContext then
+                if self.WorldPCFs and self.WorldPCFs[pcf] then
                     table.insert(worldpcfs, pcf)
                 else
                     pcf:Render()

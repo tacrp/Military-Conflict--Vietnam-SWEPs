@@ -166,8 +166,9 @@ if CLIENT then
             // world, so it keeps the world's projection rather than the viewmodel's
             ps:StartEmission()
             ps:SetShouldDraw(false)
-            ps.WorldContext = true
             table.insert(self.PCFs, ps)
+            self.WorldPCFs = self.WorldPCFs or {}
+            self.WorldPCFs[ps] = true // a particle handle cannot carry a field of its own
         end
         self.FlamePS = ps
         self.FlamePSEnt = ent
