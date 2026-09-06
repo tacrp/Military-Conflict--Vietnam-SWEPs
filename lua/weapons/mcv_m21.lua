@@ -165,7 +165,7 @@ SWEP.EjectBrassType = 1
 SWEP.EjectBrassTrail = "shellsmoke"
 SWEP.EjectBrassParticle = "port_smoke"
 
-SWEP.TracerParticle = "tracer"
+SWEP.TracerParticle = "vietnam_tracer_sniperrifle_primary"
 
 SWEP.TracerRandomness = 6
 SWEP.TracerFrequency = 1

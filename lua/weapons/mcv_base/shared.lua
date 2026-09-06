@@ -79,6 +79,10 @@ SWEP.ShotgunAltReload = false // Clip-loading rifles use this set of anims for b
 // with mcv_hybrid_reload 1 a partly loaded rifle tops up one round at a time and the clip is
 // used only when empty. Set by the generator from the model's activities (GetHybridReload()).
 SWEP.HybridReloadCapable = false
+
+// Tracers: TracerParticle (the game's vietnam_tracer_<class>_primary) every TracerFrequency-th
+// round; the matching _smoke trail (TracerSmokeParticle, or _primary -> _smoke) on every round
+SWEP.TracerSmokeParticle = nil
 SWEP.HasEmptyReload = true
 SWEP.ShotgunReloadRounds = 1
 

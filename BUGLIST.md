@@ -85,4 +85,5 @@ NOTE: Please do not resort to using "snap" to fix this. "snap" should only be us
 - [x] Scope: reticle, shadow ring and black surround drawn on a plane centred on the shot's aim point (gun base GetAimVector, twice the punch); shadow no longer sits on the lens mesh
 - [x] Hybrid reload back as a convar (`mcv_hybrid_reload`) on the stripper-clip rifles that have single-round animations
 - [x] Both Sterlings had broken run animations: 2024 hand-edited run_a overrides on the new rig, retired like the pump ones (the M203's run_a override too); the three models recompiled
+- [x] Tracers gone: the tracer was drawn from the client's FireBullets callback, which never runs in singleplayer. The server sends them now with the weapon's muzzle attachment as origin (viewmodel for the shooter), the `_smoke` trail on every round and the bright `_primary` every TracerFrequency-th; 16 luas still on the stock "tracer" name fixed (silenced ones: none)
 

@@ -354,11 +354,25 @@ function SWEP:BulletAttack()
         num = num * math.min(self:Clip1(), self.VolleyCount)
     end
 
-    // The game's tracer particles instead of the stock tracer. Drawn by the shooter's own client
-    // from the viewmodel muzzle; the server sends everyone else the world model's.
+    // The game's tracer particles instead of the stock tracer: the `_smoke` trail on every round
+    // and the bright `_primary` every TracerFrequency-th. Sent by the server (in singleplayer the
+    // client never runs FireBullets, which is why nothing showed) with the weapon and its muzzle
+    // attachment as the origin: the client's weapon entity redirects that to the viewmodel's
+    // attachment for the local player, so the trail leaves the gun on screen and everyone else
+    // sees it leave the world model.
     local tracer = self.TracerParticle
+    local smoke = (tracer and tracer != "") and (self.TracerSmokeParticle or string.gsub(tracer, "_primary$", "_smoke")) or nil
     local freq = math.max(self.TracerFrequency or 1, 1)
     local shot = 0
+    local tracer_att = 0
+    if SERVER and tracer and tracer != "" then
+        if game.SinglePlayer() and IsValid(owner:GetViewModel()) then
+            tracer_att = owner:GetViewModel():LookupAttachment("muzzle")
+        else
+            tracer_att = self:LookupAttachment("muzzle")
+        end
+        if tracer_att < 0 then tracer_att = 0 end
+    end
 
     owner:FireBullets({
         Damage = self.DamageGeneric,
@@ -370,15 +384,13 @@ function SWEP:BulletAttack()
         Tracer = 0,
         Callback = function(attacker, tr, dmginfo)
             shot = shot + 1
-            if tracer and tracer != "" and shot % freq == 0 and !tr.StartSolid then
-                if CLIENT then
-                    if IsFirstTimePredicted() then
-                        util.ParticleTracerEx(tracer, self:GetTracerOrigin(), tr.HitPos, false, self:EntIndex(), 0)
-                    end
-                elseif !game.SinglePlayer() then
-                    SuppressHostEvents(owner)
-                    util.ParticleTracerEx(tracer, self:GetTracerOrigin(), tr.HitPos, false, self:EntIndex(), 0)
-                    SuppressHostEvents(NULL)
+            if SERVER and tracer and tracer != "" and !tr.StartSolid then
+                local from = self:GetTracerOrigin()
+                if smoke and smoke != tracer then
+                    util.ParticleTracerEx(smoke, from, tr.HitPos, false, self:EntIndex(), tracer_att)
+                end
+                if shot % freq == 0 then
+                    util.ParticleTracerEx(tracer, from, tr.HitPos, false, self:EntIndex(), tracer_att)
                 end
             end
             local dmg = dmginfo:GetDamage()
