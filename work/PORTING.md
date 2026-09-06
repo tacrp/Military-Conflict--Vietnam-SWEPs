@@ -778,3 +778,10 @@ alone since the field has no gameplay effect.
   `$animation` blocks are appended to the qc text before parsing, so every step treats them as
   the model's own; the paths point into the donor's directory. The MAS-36 pair has a different
   bullet and bolt rig and no donor; Lua's hybrid gate also requires ACT_VM_RELOAD_INSERT.
+* **Cycle refresh point** (`cycle_clip_pose` / `CycleClipPoseTime`, `CycleAmmoPose2`): the homemade
+  pistol's bolt pull slides its three-round harmonica on itself (`boltpull_magoverride`) and the
+  game only refreshes `ammo_fraction` (the BulletCounter and MagPosition layers) at frame 55 of it;
+  `ammo_fraction2`, set from the clip at the pull's first frame, picks which chamber the pull
+  animates. Lua shows the pre-shot count until that point (from the shot through the cycle's
+  first 1.83 x CycleSpeed seconds) and drives ammo_fraction2 from the post-shot count. Only
+  this model has the second parameter.

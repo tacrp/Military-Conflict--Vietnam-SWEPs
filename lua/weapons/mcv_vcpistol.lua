@@ -26,6 +26,8 @@ SWEP.MagInTime = 1.67
 SWEP.MagInTimeEmpty = 1.67
 SWEP.MagOutTime = 0
 SWEP.MagOutTimeEmpty = 0
+SWEP.CycleClipPoseTime = 1.83
+SWEP.CycleAmmoPose2 = true
 
 // Stats
 

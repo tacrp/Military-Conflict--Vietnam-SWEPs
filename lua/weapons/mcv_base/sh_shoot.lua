@@ -317,7 +317,7 @@ function SWEP:AttackEffects()
         // realistic: from the hip the gun jumps in a random direction and harder; on the sights
         // it climbs by the script's slide. CalcView takes most of the punch back out of the
         // view so the kick moves the aim more than the picture.
-        owner:ViewPunch((1 - (sa * 0.5)) * Angle(((sa * recoilup) + ((1 - sa) * recoilright)) * (-sa + (util.SharedRandom("MCVRecoilUpDown", -1, 1) * (1 - sa))), recoilright * util.SharedRandom("MCVRecoilLeftRight", -1, 1), 0))
+        owner:ViewPunch((1 - (sa * 0.5)) * Angle(((sa * recoilup) + ((1 - sa) * recoilright)) * (-sa + (util.SharedRandom("MCVRecoilUpDown", -1, 1) * (util.SharedRandom("MCVRecoilUpDown", 0.5, 1) - sa))), recoilright * util.SharedRandom("MCVRecoilLeftRight", -1, 1), 0))
     else
         // the game's fixed view slide: up by ViewSlideRecoil.Up, sideways by .Right (side at
         // random), the ironsight pair when aiming

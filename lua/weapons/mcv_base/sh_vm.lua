@@ -17,6 +17,25 @@ function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
     local bodygroupbulletscount = self:Clip1()
     local clipsize = self.Primary.ClipSize
 
+    // A gun whose cycle animation moves the magazine on itself (the homemade pistol's harmonica:
+    // the bolt pull slides it to the next chamber and throws the case at frame 42) keeps
+    // showing the count from before the shot until the cycle's own refresh point
+    // (CycleClipPoseTime, the game's AE_WPN_CLIP_TO_POSEPARAM at frame 55); shown earlier, the
+    // next chamber looked empty the moment the shot went off
+    local shown = self:Clip1()
+    if self.CycleClipPoseTime and !self:GetReloading() then
+        local cycling = self:GetNeedCycle()
+        if !cycling and self.CycleStart then
+            cycling = CurTime() < self.CycleStart + self.CycleClipPoseTime * (self.CycleSpeed or 1)
+        end
+        if cycling then shown = math.min(shown + 1, clipsize) end
+    end
+    // the cycle's variant is picked by the count after the shot (the game sets ammo_fraction2
+    // from the clip at the bolt pull's first frame)
+    if self.CycleAmmoPose2 then
+        vm:SetPoseParameter("ammo_fraction2", self:Clip1() / clipsize)
+    end
+
     if self:GetAkimbo() then
         clipsize = clipsize * 2
     end
@@ -50,7 +69,8 @@ function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
         vm:SetPoseParameter("ammo_fraction", 0)
         bodygroupbulletscount = 0
     else
-        vm:SetPoseParameter("ammo_fraction", self:Clip1() / clipsize)
+        vm:SetPoseParameter("ammo_fraction", shown / clipsize)
+        bodygroupbulletscount = shown
     end
 
     // Dual wield: the dual models show each gun's magazine through its own bullet counter,

@@ -425,6 +425,21 @@ def qc_facts(path):
                 elif any(k in low for k in ("magout", "clipout", "bulletsout", "mag_out", "clip_out")) and e["magout"] is None:
                     e["magout"] = frame
         f["reload_events"][am.group(1)] = e
+    # a cycle animation that refreshes the rounds shown part-way through (AE_WPN_CLIP_TO_POSEPARAM
+    # "ammo_fraction" past frame 1: the homemade pistol's harmonica magazine only moves on at
+    # frame 55 of the bolt pull) and a second ammo pose parameter that picks the cycle's variant
+    f["cycle_clip_pose"] = None
+    for m in re.finditer(r'\$sequence\s+"[^"]+"\s*\{(.*?)\n\}', src, re.S):
+        body = m.group(1)
+        if not re.search(r'activity\s+"(ACT_VM_RELOAD_INSERT_PULL|ACT_VM_BOLTPULL)"', body):
+            continue
+        fm = re.search(r'^\s*fps\s+([\d.]+)', body, re.M)
+        fps = float(fm.group(1)) if fm else 30.0
+        frames = [int(fr) for fr in re.findall(r'\{\s*event\s+AE_WPN_CLIP_TO_POSEPARAM\s+(\d+)\s+"ammo_fraction"', body) if int(fr) > 1]
+        if frames:
+            f["cycle_clip_pose"] = round(max(frames) / fps, 2)
+        break
+    f["cycle_ammo_pose2"] = "ammo_fraction2" in f["poseparams"]
     # which hammerpos value the cycle animation (bolt pull / pump) carries: that is the event that
     # must release the action. Shotguns have shoot = 0 / pump = 1, bolt rifles shoot = 1 / bolt = 0.
     f["cycle_hammerpos"] = None
@@ -666,6 +681,10 @@ def anim_timing(qc):
             times["MagOutTimeEmpty"] = times["MagOutTime"]
     for k, v in times.items():
         out[k] = fmt(v)
+    if qc and qc.get("cycle_clip_pose"):
+        out["CycleClipPoseTime"] = fmt(qc["cycle_clip_pose"])
+    if qc and qc.get("cycle_ammo_pose2"):
+        out["CycleAmmoPose2"] = "true"
     return out
 
 
