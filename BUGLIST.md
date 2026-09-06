@@ -116,3 +116,4 @@ NOTE: Please do not resort to using "snap" to fix this. "snap" should only be us
 - [x] PK / PKM belt came back far too late on an empty reload (the SET_TO_NEXTCLIP event sits after the cover closes); the swap is the SET_TO_NEXTCLIP_EMPTY event now (PK 2.97 s, PKM 1.33 s), which only the PK family uses
 - [x] M60: part of the gun vanished with the last round; its `clamped1` bodygroup is a 9 MB gun mesh, not the belt (`clamped2`, 172 KB, is). A clamped mesh over 60% of the reference mesh is left out of BeltBodygroups
 - [x] Realistic shooting: no spread in the sights (the hip dispersion fades out with the sight amount); shotguns keep their pattern
+- [x] Game-accurate mode: the aim angle is the view direction (eye angles plus the punch the camera shows), no doubled punch and no sway; those stay realistic-mode only

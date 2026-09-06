@@ -46,6 +46,7 @@ SWEP.PlayCycleAnimation = true
 SWEP.NoEjectOnShoot = true
 SWEP.RifleGrenadeEntity = "mcv_proj_riflegrenade_vc"
 SWEP.RifleGrenadeForce = 2000
+SWEP.HybridReloadCapable = false
 
 // View slide from recoil
 SWEP.ViewSlideRecoilUp = 2.84

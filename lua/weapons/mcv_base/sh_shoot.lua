@@ -224,6 +224,11 @@ end
 // read this.
 function SWEP:GetAimAngle(visual)
     local owner = self:GetOwner()
+    if !MCV.RealisticShooting() then
+        // the game: the shot goes where the view points. The camera carries the whole punch
+        // (cl_camera.lua takes none of it out in this mode), so this is the screen centre
+        return owner:EyeAngles() + owner:GetViewPunchAngles()
+    end
     return owner:EyeAngles() + owner:GetViewPunchAngles() * 2 + self:GetAimSway(visual)
 end
 
