@@ -1,5 +1,19 @@
 // Round-by-round top-up on a stripper-clip rifle: the model must have the animations and the
 // server convar must be on
+// Third person: the reload gesture of the hold type in use, stretched to the first person
+// animation. A per-round loop plays it once per shell so the hands move with every insert.
+function SWEP:PlayReloadGesture(t)
+    self:GetOwner():DoAnimationEvent(self:GetReloadGesture())
+    if t then self:StretchReloadGesture(t) end
+end
+
+function SWEP:StretchReloadGesture(t)
+    if !t or t <= 0.1 then return end
+    local owner = self:GetOwner()
+    if !IsValid(owner) or !owner:IsPlayer() then return end
+    owner:SetLayerDuration(GESTURE_SLOT_ATTACK_AND_RELOAD, t)
+end
+
 function SWEP:GetHybridReload()
     // the model has to carry the single-round loop (the MAS-36 pair does not: clip only)
     return self.HybridReloadCapable and MCV.HybridReload() and self:HasAnimation(ACT_VM_RELOAD_INSERT)
@@ -22,7 +36,7 @@ function SWEP:Reload()
     if self:Ammo1() == 0 then return end
     if self:Clip1() >= self:GetClip1Capacity() then return end
 
-    self:GetOwner():DoAnimationEvent(self:GetReloadGesture())
+    self:PlayReloadGesture()
 
     if self.ShotgunReload or (self:GetHybridReload() and self:Clip1() > 0) then
         if self.ShotgunReloadEmptyStartAnimation and self:Clip1() == 0 then
@@ -67,14 +81,9 @@ function SWEP:Reload()
 
     self:SetLastClip(self:Clip1())
 
-    // the third person reload gesture runs for as long as the first person animation (a
-    // single locked animation; the per-round loops keep the gesture's own length)
-    if !(self.ShotgunReload or self:GetHybridReload()) then
-        local t = self:GetAnimLockTime() - CurTime()
-        if t > 0.1 then
-            self:GetOwner():SetLayerDuration(GESTURE_SLOT_ATTACK_AND_RELOAD, t)
-        end
-    end
+    // the third person gesture lasts as long as the first person animation just started (the
+    // whole reload, or the start of a per-round loop; each insert retriggers it below)
+    self:StretchReloadGesture(self:GetAnimLockTime() - CurTime())
 
     if self.AkimboDualSingleActionReload then
         self:SetEmptyReload(true)
@@ -172,9 +181,9 @@ function SWEP:Think_Reload()
                         end
                     else
                         if self:GetAkimbo() then
-                            self:PlayAnimation(ACT_VM_RELOAD2, 1, true)
+                            self:PlayReloadGesture(self:PlayAnimation(ACT_VM_RELOAD2, 1, true))
                         else
-                            self:PlayAnimation(ACT_VM_RELOAD, 1, true)
+                            self:PlayReloadGesture(self:PlayAnimation(ACT_VM_RELOAD, 1, true))
                         end
 
                         self:RestoreClip(self.ShotgunReloadRounds)
@@ -195,7 +204,7 @@ function SWEP:Think_Reload()
                         self:SetEmptyReload(false)
                     end
                 else
-                    self:PlayAnimation((self:GetHybridReload() or self.ShotgunAltReload) and ACT_VM_RELOAD_INSERT or ACT_VM_RELOAD, 1, true, true)
+                    self:PlayReloadGesture(self:PlayAnimation((self:GetHybridReload() or self.ShotgunAltReload) and ACT_VM_RELOAD_INSERT or ACT_VM_RELOAD, 1, true, true))
 
                     self:RestoreClip(self.ShotgunReloadRounds)
                 end
