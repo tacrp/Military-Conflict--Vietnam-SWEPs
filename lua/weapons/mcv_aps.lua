@@ -18,6 +18,7 @@ SWEP.ViewModelAkimbo = "models/weapons/mcv/v_dual_aps.mdl"
 SWEP.AkimboPoseRecoil = true
 
 SWEP.WorldModel = "models/weapons/mcv/w_aps.mdl"
+SWEP.AkimboMagInTimes = {[ACT_VM_RELOAD] = {1.17, 3}, [ACT_VM_MISSRIGHT] = {1.17, nil}, [ACT_VM_MISSRIGHT2] = {1.17, 3.83}, [ACT_VM_RELOADEMPTY] = {1.17, 3.83}}
 
 SWEP.BodyGroups = ""
 

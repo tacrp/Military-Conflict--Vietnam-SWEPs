@@ -764,3 +764,10 @@ alone since the field has no gameplay effect.
   (`walklayer_grenade`) already carry the ironsight axis; the aimed-walk variant
   (`walklayergrenironsight`) is not attached, so there is no walk sway while aimed with the
   launcher up.
+* **Dual magazines** (`akimbo_reload_times`): eight dual models (APS, CZ 52, P38, PB, PM, Ruby,
+  Type 64, Type 67) show each gun's rounds through a bullet-counter layer blended on
+  `ammo_fraction1` (right gun) / `ammo_fraction2` (left), and their reload sequences carry an
+  `AE_WPN_NEXTCLIP_TO_POSEPARAM` per gun (the right magazine at frame 35, the left at 90 or
+  115). `AkimboMagInTimes` in the lua maps each reload activity to those two seconds; Lua splits
+  the shared clip floor / ceil (the right gun fires on an even count) and hands each gun its new
+  count on its own cue. The other duals declare no ammo pose parameter.

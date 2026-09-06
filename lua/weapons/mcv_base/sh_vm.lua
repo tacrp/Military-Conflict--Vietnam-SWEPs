@@ -53,6 +53,32 @@ function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
         vm:SetPoseParameter("ammo_fraction", self:Clip1() / clipsize)
     end
 
+    // Dual wield: the dual models show each gun's magazine through its own bullet counter,
+    // blended on ammo_fraction1 (right gun) and ammo_fraction2 (left gun). The shared count
+    // splits floor / ceil, since the right gun fires on an even count; a reload's per-gun
+    // swap times (AkimboMagInTimes, from the dual model's next-clip events per activity: the
+    // right magazine first, the left one later) hand each gun its new count on its own cue.
+    if self:GetAkimbo() then
+        local n = self:Clip1()
+        local right, left = math.floor(n / 2), math.ceil(n / 2)
+        if self:GetReloading() then
+            local reserve = self:GetInfiniteAmmo() and math.huge or (n + self:Ammo1())
+            local total = math.min(self:GetClip1Capacity(), reserve)
+            local nright, nleft = math.floor(total / 2), math.ceil(total / 2)
+            local times = self.AkimboMagInTimes and self.AkimboMagInTimes[vm:GetSequenceActivity(vm:GetSequence())]
+            if times then
+                local progress = vm:SequenceDuration() - (self:GetAnimLockTime() - CurTime())
+                if times[1] and progress >= times[1] then right = nright end
+                if times[2] and progress >= times[2] then left = nleft end
+            elseif displayRoundsToLoad then
+                right, left = nright, nleft
+            end
+        end
+        local per = self.Primary.ClipSize + self.Primary.Chamber
+        vm:SetPoseParameter("ammo_fraction1", right / per)
+        vm:SetPoseParameter("ammo_fraction2", left / per)
+    end
+
     if self.BulletBodygroups then
         for i, bg in pairs(self.BulletBodygroups) do
             if i > bodygroupbulletscount then
