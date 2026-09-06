@@ -58,6 +58,19 @@ ENT.GunshipWorkaround = true
 
 function ENT:SetupDataTables()
     self:NetworkVar("Entity", 0, "Weapon")
+    self:NetworkVar("Entity", 1, "Planter") // who planted a charge (its owner is cleared once planted)
+end
+
+// A planted charge is shot to set it off, and a bullet passes through anything its shooter
+// owns (the engine's trace filter skips entities owned by the pass entity), so a charge cannot
+// keep its planter as the owner: the planter moves to Planter (the remote and the pickup look
+// at it) and to Attacker (the damage credit) and the owner is cleared.
+function ENT:ReleaseOwner()
+    local o = self:GetOwner()
+    if !IsValid(o) then return end
+    self:SetPlanter(o)
+    if !IsValid(self.Attacker) then self.Attacker = o end
+    self:SetOwner(NULL)
 end
 
 function ENT:Initialize()

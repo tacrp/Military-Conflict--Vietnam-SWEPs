@@ -20,7 +20,7 @@ ENT.MineBodygroups = {mine = 0, stick = 1}
 
 function ENT:SetupDataTables()
     baseclass.Get("mcv_proj_base").SetupDataTables(self)
-    self:NetworkVar("Entity", 1, "Stake")
+    self:NetworkVar("Entity", 2, "Stake")
 end
 
 function ENT:PlantOn(parent)
@@ -31,6 +31,7 @@ function ENT:PlantOn(parent)
     local phys = self:GetPhysicsObject()
     if IsValid(phys) then phys:EnableMotion(false) end
     if IsValid(parent) then self:SetParent(parent) end
+    self:ReleaseOwner() // shootable by the planter too
     self:EmitSound("MCV_Weapon_C4_Demolition.Plant")
 end
 

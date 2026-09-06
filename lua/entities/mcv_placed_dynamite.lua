@@ -23,6 +23,7 @@ function ENT:PlantOn(parent)
     local phys = self:GetPhysicsObject()
     if IsValid(phys) then phys:EnableMotion(false) end
     if IsValid(parent) then self:SetParent(parent) end
+    self:ReleaseOwner() // shootable by the planter too
     self:EmitSound("MCV_Weapon_Dynamite_Demolition.Plant")
     self:Light()
 end

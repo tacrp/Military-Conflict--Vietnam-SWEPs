@@ -29,6 +29,7 @@ function ENT:PlantOn(parent)
     if IsValid(parent) then
         self:SetParent(parent)
     end
+    self:ReleaseOwner() // shootable by the planter too
     self:EmitSound("MCV_Weapon_C4_Demolition.Plant")
     if self.BlinkParticle then
         ParticleEffectAttach(self.BlinkParticle, PATTACH_ABSORIGIN_FOLLOW, self, 0)
@@ -47,8 +48,8 @@ end
 
 function ENT:Use(ply)
     if !IsValid(ply) or !ply:IsPlayer() then return end
-    if ply != self:GetOwner() then return end
-    // the owner can pick a planted charge back up
+    if ply != self:GetPlanter() then return end
+    // the planter can pick a planted charge back up
     ply:GiveAmmo(1, "mcv_explosive_charge", true)
     self:EmitSound("MCV_Weapon_C4_Demolition.Defuse")
     self:Remove()

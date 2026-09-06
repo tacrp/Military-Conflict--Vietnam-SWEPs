@@ -98,7 +98,7 @@ function SWEP:CountPlanted()
     local owner = self:GetOwner()
     local n = 0
     for _, ent in ipairs(ents.FindByClass(self.PlacedEntityClass)) do
-        if ent:GetOwner() == owner and ent.RemoteFuse and !ent.Detonated then n = n + 1 end
+        if ent:GetPlanter() == owner and ent.RemoteFuse and !ent.Detonated then n = n + 1 end
     end
     return n
 end
@@ -257,7 +257,7 @@ function SWEP:Detonate()
     local owner = self:GetOwner()
     local any = false
     for _, ent in ipairs(ents.FindByClass(self.PlacedEntityClass)) do
-        if ent:GetOwner() == owner and ent.RemoteFuse and !ent.Detonated then
+        if ent:GetPlanter() == owner and ent.RemoteFuse and !ent.Detonated then
             ent:RemoteDetonate()
             any = true
         end

@@ -8,7 +8,7 @@
 function SWEP:PlayReloadGesture(t, event)
     local owner = self:GetOwner()
     if !IsValid(owner) or !owner:IsPlayer() then return end
-    owner:DoAnimationEvent(event or PLAYERANIMEVENT_RELOAD, math.max(1, math.floor((t or 0) * 1000)))
+    owner:DoCustomAnimEvent(event or PLAYERANIMEVENT_RELOAD, math.max(1, math.floor((t or 0) * 1000)))
 end
 
 function SWEP:GetHybridReload()
