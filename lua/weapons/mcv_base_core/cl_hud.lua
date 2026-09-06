@@ -283,11 +283,13 @@ function SWEP:DoDrawCrosshair(x, y)
     local col = crosshair_col
     col.a = a
 
-    // the crosshair marks where the shot goes (hip sway, view punch), not the screen centre
-    if self.GetAimVector and MCV.RealisticShooting() then
+    // The crosshair follows the view punch (twice it, as the shot does) but not the hip sway:
+    // it stays put and grows by the sway's peak instead, so the shot always lands inside it
+    if self.GetAimSway and MCV.RealisticShooting() then
         local owner = self:GetOwner()
         if IsValid(owner) then
-            local scr = (owner:EyePos() + self:GetAimVector(true) * 4096):ToScreen()
+            local aim = owner:EyeAngles() + owner:GetViewPunchAngles() * 2
+            local scr = (owner:EyePos() + aim:Forward() * 4096):ToScreen()
             if scr.visible and scr.x == scr.x then
                 x, y = scr.x, scr.y
             end
@@ -305,7 +307,10 @@ function SWEP:DoDrawCrosshair(x, y)
     local since = CurTime() - self:GetLastRecoilTime()
     local kick = math.Clamp(1 - since / HUD.CrosshairKickTime, 0, 1)
     kick = kick * kick
-    local target = scale * (spread + math.max(self.Spread or 0, 0.5) * HUD.CrosshairKick * kick)
+    // the hip sway's peak (degrees, both axes: 1.2 covers the diagonal) widens the gap so the
+    // wandering barrel stays inside the crosshair
+    local sway = self.GetAimSwayAmplitude and self:GetAimSwayAmplitude(true) * 1.2 or 0
+    local target = scale * (spread + sway + math.max(self.Spread or 0, 0.5) * HUD.CrosshairKick * kick)
 
     local ft = FrameTime()
     if self.CrossGap == nil then self.CrossGap = target end

@@ -197,11 +197,17 @@ end
 // frame-smoothed sight amount for drawing.
 SWEP.HipSwayScale = 0.25
 
-function SWEP:GetAimSway(visual)
-    if !MCV.RealisticShooting() then return angle_zero end
+// peak of the sway in degrees (each axis), 0 when the mode is off or the sights are up
+function SWEP:GetAimSwayAmplitude(visual)
+    if !MCV.RealisticShooting() then return 0 end
     local sa = visual and self:GetSightAmountVisual() or self:GetSightAmount()
     local amp = (self.Spread or 0) * self.HipSwayScale * (1 - sa)
     if (self.Num or 1) > 1 then amp = amp * 0.5 end // shotguns
+    return amp
+end
+
+function SWEP:GetAimSway(visual)
+    local amp = self:GetAimSwayAmplitude(visual)
     if amp <= 0.0001 then return angle_zero end
     local t = CurTime() + self:EntIndex() * 7.3
     local p = (math.sin(t * 1.1) * 0.6 + math.sin(t * 2.3 + 1.7) * 0.4) * amp
