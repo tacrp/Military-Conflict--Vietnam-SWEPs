@@ -30,7 +30,7 @@ $attachment "eject2" "BaseLeftMesh" -1.5 0.4 1 rotate 0 90 0
 
 $cbox 0 0 0 0 0 0
 
-$bbox -10.063 -29.38 -27.51 32.761 42.875 12.166
+$bbox -96 -96 -96 96 96 96
 
 $definebone "root" "" 0 7.450089 -27.509027 0 0 0 0 0 0 0 0 0
 $definebone "pelvis" "root" -0.000002 0 0 -89.790623 -89.997175 89.997175 0 0 0 0 0 0
@@ -615,6 +615,7 @@ $animation "Bullet11" "..\..\..\MCV_SMD_OG\weapons\v_dual_ppk\v_dual_ppk_anims\B
 
 $animation "Bullet13" "..\..\..\MCV_SMD_OG\weapons\v_dual_ppk\v_dual_ppk_anims\Bullet13.smd" {
 	fps 30
+	loop
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "Bullet13_corrective_animation" 0
 	weightlist "weights_BulletCounterRight"
@@ -675,6 +676,7 @@ $animation "Bullet12" "..\..\..\MCV_SMD_OG\weapons\v_dual_ppk\v_dual_ppk_anims\B
 
 $animation "Bullet14" "..\..\..\MCV_SMD_OG\weapons\v_dual_ppk\v_dual_ppk_anims\Bullet14.smd" {
 	fps 30
+	loop
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "Bullet14_corrective_animation" 0
 	weightlist "weights_BulletCounterLeft"
@@ -1179,7 +1181,7 @@ $sequence "SlidePosition" {
 }
 
 $sequence "BulletCounterLeft" {
-	"Bullet14"
+	"Bullet16"
 	"Bullet12"
 	"Bullet12"
 	"Bullet10"
@@ -1793,7 +1795,7 @@ $sequence "holster" {
 }
 
 $sequence "BulletCounterRight" {
-	"Bullet13"
+	"Bullet15"
 	"Bullet11"
 	"Bullet11"
 	"Bullet09"

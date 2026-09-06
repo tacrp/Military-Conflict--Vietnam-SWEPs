@@ -140,7 +140,14 @@ function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
     // empty reload it drops the moment the new magazine is in (MagInTimeEmpty), as the game
     // does at its NEXTCLIP event: held to the end, the layer kept the bolt back while the
     // animation closed it, and the bolt visibly closed and reopened (M14, XM21, M2, vz.58, MAS-49).
-    vm:SetPoseParameter("empty", (self:Clip1() == 0 and !displayRoundsToLoad) and 1 or 0)
+    local empty = (self:Clip1() == 0 and !displayRoundsToLoad) and 1 or 0
+    if self:GetAkimbo() and !displayRoundsToLoad then
+        // the dual models' SlidePosition has three states: none, the right gun empty (it fires
+        // first, so it runs dry first), both empty (knots at 0, 1/3-2/3, 1)
+        local n = self:Clip1()
+        empty = n == 0 and 1 or (math.floor(n / 2) == 0 and 0.5 or 0)
+    end
+    vm:SetPoseParameter("empty", empty)
 
     vm:SetPoseParameter("ironsight", sa ^ 3)
 

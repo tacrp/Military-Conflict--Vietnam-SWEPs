@@ -947,6 +947,41 @@ def step_mode_idles(qc, ctx):
         ctx.note("%d mode idle(s) blend their aimed pose on ironsight instead of a full-weight blendlayer" % done)
 
 
+def step_counter_zero(qc, ctx):
+    """A bullet-counter layer (BulletCounter*, blended on an ammo fraction) whose first knot,
+    the empty magazine, still leaves a bullet bone showing while the model carries a deeper
+    Bullet<NN+2> pose that hides them all (dual PPK: Bullet13 hides 7 of 8, Bullet15 all 8;
+    dual Type 67 the same one step up) takes that deeper pose as its empty knot."""
+    import bake_ik
+    n = 0
+    for sq in qc.blocks("sequence"):
+        if not sq.name.lower().startswith("bulletcounter"):
+            continue
+        anims = sq.anims()
+        if not anims:
+            continue
+        m = re.match(r'^(Bullet)(\d+)$', anims[0])
+        if not m:
+            continue
+        deeper = "%s%02d" % (m.group(1), int(m.group(2)) + 2)
+        first_b, deep_b = qc.find("animation", anims[0]), qc.find("animation", deeper)
+        if first_b is None or deep_b is None:
+            continue
+        def hidden(b):
+            src = ctx.resolve_smd(b.path)
+            if not os.path.isfile(src):
+                return -1
+            nodes, frames, _ = bake_ik.load_smd(src)
+            return sum(1 for bone, row in frames[0].items()
+                       if nodes[bone][0].lower().startswith("bullet") and max(abs(float(v)) for v in row[:3]) > 0.05)
+        if hidden(deep_b) > hidden(first_b) >= 0:
+            i = sq.lines.index('"%s"' % anims[0])
+            sq.lines[i] = '"%s"' % deeper
+            n += 1
+            ctx.note("%s: empty knot %s -> %s (hides every bullet)" % (sq.name, anims[0], deeper))
+    return n
+
+
 def step_snap_draws(qc, ctx):
     """Throwables: the draw after a throw blended from the throw's end pose (hand out, empty)
     into the draw's first frame over the old sequence's fade-out, so the next grenade slid back
@@ -1793,6 +1828,7 @@ def port_one(args, og_dir):
         step_idle(qc, ctx)
         step_mode_idles(qc, ctx)
         step_snap_draws(qc, ctx)
+        step_counter_zero(qc, ctx)
         step_movement_layers(qc, ctx)
     step_sighted_walk(qc, ctx)   # guards on a walklayer being present
     step_belt_blank(qc, ctx)
