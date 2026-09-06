@@ -755,3 +755,12 @@ alone since the field has no gameplay effect.
   sets the same bounds in PreDrawViewModels. Note for anyone chasing "the windup hides the
   hands": the game's pullback animations end with the arm cocked beside the head, off screen
   (drawbackhigh frame 18: hand 5 units ahead, 16 to the side); that is authored, not a bug.
+* **Mode idles** (`step_mode_idles`): the launcher and rifle-grenade idles (`gl`, `grenade_idle`)
+  bring the aimed pose in with `blendlayer "<x>_ironsight_test" 0 0 1 0 poseparameter
+  ironsight`; with start equal to end Source skips the ramp and plays the layer at full weight,
+  so the M203, XM148 and GP-25 sat in their sights whenever the launcher was up (the 24
+  rifle-grenade rifles the same in grenade mode). The aimed pose is now a row of an ironsight
+  blend on the sequence itself, as step_idle does for the main idle. The grenade walk layers
+  (`walklayer_grenade`) already carry the ironsight axis; the aimed-walk variant
+  (`walklayergrenironsight`) is not attached, so there is no walk sway while aimed with the
+  launcher up.

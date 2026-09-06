@@ -38,7 +38,7 @@ $attachment "eject" "Base" -1 0 0.7 rotate 0 90 0
 
 $cbox 0 0 0 0 0 0
 
-$bbox -33.22 -16.32 -27.51 44.565 24.248 2.47
+$bbox -96 -96 -96 96 96 96
 
 $definebone "root" "" 0 7.450089 -27.509027 0 0 0 0 0 0 0 0 0
 $definebone "pelvis" "root" -0.000002 0 0 -89.790336 -89.996943 89.996943 0 0 0 0 0 0
@@ -382,7 +382,7 @@ $animation "change_firemode_iron" "..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_t
 
 $animation "gl_a" "..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\gl_a.smd" {
 	fps 30
-	loop
+	numframes 60
 }
 
 $animation "irongl" "..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\irongl.smd" {
@@ -893,22 +893,17 @@ $sequence "walklayergrenironsight" {
 	realtime
 }
 
-$sequence "gl_ironsight_test" {
-	"irongl"
-	fadein 0.2
-	fadeout 0.2
-	hidden
-	addlayer "walklayergrenironsight"
-}
 
 $sequence "gl" {
 	"gl_a"
+	"irongl"
+	blend "ironsight" 0 1
+	blendwidth 2
 	activity "ACT_VM_IIDLE_M203" 1
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer_grenade"
 	addlayer "runlayer"
-	blendlayer "gl_ironsight_test" 0 0 1 0 poseparameter ironsight
 	node "0"
 }
 

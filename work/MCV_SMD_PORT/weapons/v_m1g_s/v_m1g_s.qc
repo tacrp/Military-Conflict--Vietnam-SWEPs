@@ -56,7 +56,7 @@ $attachment "eject_misc" "Mag" 0 0 0 rotate 0 90 0
 
 $cbox 0 0 0 0 0 0
 
-$bbox -9.182 -12.609 -27.51 66.637 9.914 1.039
+$bbox -96 -96 -96 96 96 96
 
 $definebone "root" "" 0 7.450089 -27.509027 0 0 0 0 0 0 0 0 0
 $definebone "pelvis" "root" -0.000002 0 0 -89.790623 -89.997175 89.997175 0 0 0 0 0 0
@@ -540,6 +540,11 @@ $animation "grenade_ironsight" "..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anim
 	frame 1 1
 	numframes 60
 }
+$animation "grenade_ironsight__f60" "..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\grenade_ironsight.smd" {
+	fps 30
+	frame 1 1
+	numframes 60
+}
 
 $animation "gren_shoot1_a" "..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\gren_shoot1_a.smd" {
 	fps 30
@@ -1014,35 +1019,29 @@ $sequence "pickupend" {
 	addlayer "walklayerironsight"
 }
 
-$sequence "gren_ironsight_test" {
-	"grenade_ironsight"
-	fadein 0.2
-	fadeout 0.2
-	hidden
-	addlayer "walklayerironsight"
-}
 
 $sequence "grenade_idle" {
 	"basePose_a"
 	"ironsight_transition"
+	"grenade_ironsight"
+	blend "ironsight" 0 1
+	blendwidth 3
 	activity "ACT_VM_IDLE_M203" 1
-	blend "ironsight" 0 0.5
-	blendwidth 2
 	fadein 0.2
 	fadeout 0.2
 	addlayer "walklayer"
 	addlayer "walklayerironsight"
 	addlayer "runlayer"
-	blendlayer "gren_ironsight_test" 0 0 1 0 poseparameter ironsight
 	node "0"
 }
 
 $sequence "grenade_shoot" {
 	"basePose_a__f60"
 	"ironsight_transition__f60"
+	"grenade_ironsight__f60"
 	activity "ACT_VM_ISHOOT_M203" 1
-	blend "ironsight" 0 0.5
-	blendwidth 2
+	blend "ironsight" 0 1
+	blendwidth 3
 	snap
 	addlayer "walklayer"
 	addlayer "walklayerironsight"

@@ -902,6 +902,51 @@ def step_idle(qc, ctx):
         qc.items.remove(t)
 
 
+def step_mode_idles(qc, ctx):
+    """The launcher and rifle-grenade idles (gl, gren...) bring their aimed pose in with
+    `blendlayer "<x>_ironsight_test" 0 0 1 0 poseparameter ironsight`. With start equal to end
+    Source skips the ramp and plays the layer at full weight, so the gun sat in its sights the
+    whole time the launcher was up. The aimed pose becomes a row of an ironsight blend on the
+    sequence itself, like the main idle (step_idle)."""
+    pat = re.compile(r'^blendlayer\s+"(\w+_ironsight_test)"\s+[-0-9.]+\s+[-0-9.]+\s+[-0-9.]+\s+[-0-9.]+.*poseparameter\s+ironsight')
+    done = 0
+    for sq in qc.blocks("sequence"):
+        m = None
+        for l in sq.lines:
+            m = pat.match(l.strip())
+            if m:
+                break
+        if not m:
+            continue
+        test = qc.find("sequence", m.group(1))
+        if not test or not test.anims():
+            continue
+        aimed = test.anims()[0]
+        anims = sq.anims()
+        if aimed in anims:
+            sq.remove(lambda l, pat=pat: pat.match(l.strip()) is not None)
+            continue
+        # the anims are the first lines of the block; the aimed pose goes after them
+        sq.lines.insert(len(anims), '"%s"' % aimed)
+        sq.remove_key("blend")
+        sq.remove_key("blendwidth")
+        sq.lines.insert(len(anims) + 1, 'blend "ironsight" 0 1')
+        sq.lines.insert(len(anims) + 2, 'blendwidth %d' % (len(anims) + 1))
+        sq.remove(lambda l, pat=pat: pat.match(l.strip()) is not None)
+        for a in sq.anims():
+            b = qc.find("animation", a)
+            if b is None:
+                continue
+            b.remove_key("loop")
+            if not b.has("numframes"):
+                b.lines.append("numframes 60")
+        if test in qc.items:
+            qc.items.remove(test)
+        done += 1
+    if done:
+        ctx.note("%d mode idle(s) blend their aimed pose on ironsight instead of a full-weight blendlayer" % done)
+
+
 def step_movement_layers(qc, ctx):
     """reloads: no sighted walk layer (the sights drop for a reload anyway)."""
     for b in qc.blocks("sequence"):
@@ -1629,6 +1674,7 @@ def port_one(args, og_dir):
     step_static_anims(qc, ctx)
     if ctx.mode != "other":
         step_idle(qc, ctx)
+        step_mode_idles(qc, ctx)
         step_movement_layers(qc, ctx)
     step_sighted_walk(qc, ctx)   # guards on a walklayer being present
     step_belt_blank(qc, ctx)

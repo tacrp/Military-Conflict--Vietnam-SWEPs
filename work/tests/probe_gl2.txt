@@ -1,0 +1,18 @@
+strip
+give mcv_m16a1_m203
+wait 2
+key +walk
+tap +use 0.1
+key -walk
+wait 4
+clua local w = LocalPlayer():GetActiveWeapon() local vm = LocalPlayer():GetViewModel() print("[c] gl2: launcher", tostring(w:GetGrenadeLauncher()), "seq", vm:GetSequenceName(vm:GetSequence()), "ironsight pose", vm:GetPoseParameter("ironsight"), "sa", w:GetSightAmountVisual())
+shot s_gl2_idle_hip
+key +attack2
+wait 0.8
+shot s_gl2_idle_aimed
+key -attack2
+wait 1
+strip
+give mcv_molotov
+wait 1.5
+clua local w = LocalPlayer():GetActiveWeapon() local h = {} for _, x in ipairs(w:GetControlHints()) do h[#h+1] = x[2] end print("[c] molotov2 modes", #w:GetFuseModes(), "name", w:GetFiremodeName(), "hints", table.concat(h, " | "))

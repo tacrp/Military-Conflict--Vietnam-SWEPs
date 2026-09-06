@@ -3,15 +3,24 @@ local STATE_WINDUP_HIGH = 1
 local STATE_WINDUP_LOW = 2
 local STATE_THROWING = 3
 
-function SWEP:GetFuseTime()
-    local fm = math.Clamp(self:GetFiremode(), 1, #self.FuseModes)
+// GMod inherits nested tables index by index, so a weapon's shorter FuseModes still sees
+// the base's later entries (the molotov's {0} read as {0, 5}); an impact-fused throwable
+// has exactly one mode, with no fuse at all
+function SWEP:GetFuseModes()
+    if self.FuseImpact then return {0} end
+    return self.FuseModes
+end
 
-    return self.FuseModes[fm]
+function SWEP:GetFuseTime()
+    local modes = self:GetFuseModes()
+    local fm = math.Clamp(self:GetFiremode(), 1, #modes)
+
+    return modes[fm]
 end
 
 function SWEP:GetFiremodeName()
     if self.FuseImpact then return "Impact" end
-    if #self.FuseModes <= 1 then return "" end
+    if #self:GetFuseModes() <= 1 then return "" end
 
     return string.format("Fuse %gs", self:GetFuseTime())
 end
@@ -206,11 +215,11 @@ function SWEP:AfterThrow()
 end
 
 function SWEP:ChangeFuseMode()
-    if #self.FuseModes <= 1 then return end
+    if #self:GetFuseModes() <= 1 then return end
     if self:StillWaiting() or self:GetActionState() != STATE_IDLE then return end
 
     local fm = self:GetFiremode() + 1
-    if fm > #self.FuseModes then fm = 1 end
+    if fm > #self:GetFuseModes() then fm = 1 end
     self:SetFiremode(fm)
 
     if self:HasSequence(self.SequenceFiremode) then
@@ -273,7 +282,7 @@ function SWEP:GetControlHints()
     if self.HasUnderhand then
         table.insert(h, {"hold:+attack2", "Underhand throw (roll when crouched)"})
     end
-    if #self.FuseModes > 1 then
+    if #self:GetFuseModes() > 1 then
         table.insert(h, {"+use +reload", "Fuse time"})
     end
     table.insert(h, {"+use +attack", "Bash"})

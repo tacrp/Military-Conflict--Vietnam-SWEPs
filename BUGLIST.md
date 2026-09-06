@@ -104,3 +104,5 @@ NOTE: Please do not resort to using "snap" to fix this. "snap" should only be us
 - [x] C4 with every charge planted is empty hands: no viewmodel, no world model, no deploy animation, only the detonate hint
 - [x] Molotov and dynamite viewmodels never drew: culled by the model's own `$bbox` (ends at eye height). Bounds widened from Lua every frame and by the port; both recompiled. With them visible, the lit flames show (zippo to the rag, burning fuse)
 - [x] Dynamite windup on right click threw at once: the release check watched the left button; it watches the button that started the windup
+- [x] M203 / XM148 / GP-25 launcher mode always sighted: the launcher idle's aimed pose was a blendlayer with start == end, which Source plays at full weight; it is an ironsight blend row now (`step_mode_idles`), same for the 24 rifle-grenade rifles' grenade idle; 28 models recompiled
+- [x] Molotov showed a "Fuse time" hint: GMod inherits nested tables index by index, so its `FuseModes = {0}` read as `{0, 5}` through the base; impact-fused throwables report one mode now
