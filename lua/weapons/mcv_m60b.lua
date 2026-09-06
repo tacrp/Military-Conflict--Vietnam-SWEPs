@@ -17,7 +17,6 @@ SWEP.ViewModel = "models/weapons/mcv/v_m60b.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_m60b.mdl"
 
 SWEP.BodyGroups = ""
-SWEP.BeltBodygroups = {15}
 
 SWEP.WeaponSelectIcon = NULL
 
