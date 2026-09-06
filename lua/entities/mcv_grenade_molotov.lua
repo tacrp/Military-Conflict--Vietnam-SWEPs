@@ -32,12 +32,12 @@ function ENT:Detonate()
 
     util.BlastDamage(self:GetInflictor(), attacker, pos, self.ExplosionRadius * 0.5, self.ExplosionDamage)
 
-    ParticleEffect("Molotov_Explosion", pos, normal:Angle())
+    ParticleEffect("Molotov_Explosion", pos, MCV.SurfaceAngle(normal))
 
     local pool = ents.Create("mcv_firepool")
     if IsValid(pool) then
         pool:SetPos(pos + normal * 4)
-        pool:SetAngles(normal:Angle())
+        pool:SetAngles(MCV.SurfaceAngle(normal))
         pool.Attacker = attacker
         pool.Inflictor = self:GetInflictor()
         pool.Radius = self.ExplosionRadius

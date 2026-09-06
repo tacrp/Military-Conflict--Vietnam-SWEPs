@@ -99,6 +99,15 @@ function MCV.GetExplosionSystem(family, pos, normal, inwater)
     return base .. "_" .. surface
 end
 
+// Angle whose up axis is the surface normal. The game's explosion and fire systems build their
+// column along the control point's up, so a normal passed as the angle's forward (normal:Angle())
+// had them shooting sideways.
+function MCV.SurfaceAngle(normal)
+    local ang = (normal or vector_up):Angle()
+    ang:RotateAroundAxis(ang:Right(), 90)
+    return ang
+end
+
 // Spawns the explosion effect for a projectile. Shared: calling it on the server dispatches
 // the particle system to every client.
 function MCV.ExplosionEffect(family, pos, normal, inwater)
@@ -106,5 +115,5 @@ function MCV.ExplosionEffect(family, pos, normal, inwater)
 
     local name = MCV.GetExplosionSystem(family, pos, normal, inwater)
 
-    ParticleEffect(name, pos, normal:Angle())
+    ParticleEffect(name, pos, MCV.SurfaceAngle(normal))
 end

@@ -50,7 +50,7 @@ function ENT:Detonate()
         local pool = ents.Create("mcv_firepool")
         if IsValid(pool) then
             pool:SetPos(self:GetImpactPos() + self:GetImpactNormal() * 4)
-            pool:SetAngles(self:GetImpactNormal():Angle())
+            pool:SetAngles(MCV.SurfaceAngle(self:GetImpactNormal()))
             pool.Attacker = attacker
             pool.Inflictor = self:GetInflictor()
             pool.Radius = self.ExplosionRadius + self.IgniteRadius
