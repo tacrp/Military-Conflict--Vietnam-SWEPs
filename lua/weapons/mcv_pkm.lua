@@ -17,12 +17,12 @@ SWEP.Slot = 3
 
 SWEP.ViewModel = "models/weapons/mcv/v_pk_belt.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_pk_belt.mdl"
-SWEP.MagOutTimeEmpty = 1.33
+SWEP.MagOutTimeEmpty = 0
 
 SWEP.BodyGroups = ""
 SWEP.BeltBodygroups = {18}
 SWEP.MagInTime = 1.33
-SWEP.MagInTimeEmpty = 6.03
+SWEP.MagInTimeEmpty = 1.33
 SWEP.MagOutTime = 0
 
 SWEP.BulletBodygroups = {

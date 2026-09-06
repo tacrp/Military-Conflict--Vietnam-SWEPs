@@ -632,12 +632,14 @@ def anim_timing(qc):
             continue
         fps = e.get("fps") or 30.0
         tin = e["nextclip"]
+        tout = None
+        if act == "ACT_VM_RELOADEMPTY" and e["nextclip_empty"] is not None:
+            # AE_CL_BODYGROUP_SET_TO_NEXTCLIP_EMPTY is the belt swap of the PK family's empty
+            # reload (the new box goes on at frame 89, the belt is laid in at 115); the plain
+            # SET_TO_NEXTCLIP that follows sits after the cover has closed (193), far too late
+            tin = e["nextclip_empty"]
         if tin is None:
             tin = e["clippose"] if e["clippose"] is not None else e["magin"]
-        # the rounds shown only go to zero between the game's own "old belt out" event
-        # (AE_CL_BODYGROUP_SET_TO_NEXTCLIP_EMPTY) and the swap; the mag-out foley fires while the
-        # magazine is still on screen, which emptied the belt in the player's hand
-        tout = e["nextclip_empty"]
         if tin is None:
             continue
         times[kin] = round(tin / fps, 2)
