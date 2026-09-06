@@ -141,7 +141,8 @@ end
 function SWEP:DrawHUDAvailability(blend, right, y)
     local icons = {}
     if self.HasAkimbo and self.GetHasSecond and self:GetHasSecond() then
-        icons[#icons + 1] = {self:GetHUDIcon(), self:GetAkimbo()}
+        // two of them, one a little behind the other: a pair of pistols
+        icons[#icons + 1] = {self:GetHUDIcon(), self:GetAkimbo(), true}
     end
     if self.HasBayonet and self.OwnerHasBayonet and self:OwnerHasBayonet() then
         local owner = self:GetOwner()
@@ -157,7 +158,15 @@ function SWEP:DrawHUDAvailability(blend, right, y)
     for _, ic in ipairs(icons) do
         if ic[1] then
             // dimmer once it is in use, bright while it is on offer
-            drawIconTilted(ic[1], x, y, size, withAlpha(HUD.Color, blend * (ic[2] and 0.45 or 1)))
+            local col = withAlpha(HUD.Color, blend * (ic[2] and 0.45 or 1))
+            if ic[3] then
+                local off = size * 0.22
+                drawIconTilted(ic[1], x - off, y - off, size, withAlpha(HUD.Color, blend * (ic[2] and 0.3 or 0.6)))
+                drawIconTilted(ic[1], x + off, y + off, size, col)
+                x = x - off * 2
+            else
+                drawIconTilted(ic[1], x, y, size, col)
+            end
         end
         x = x - size - ScreenScale(2)
     end
