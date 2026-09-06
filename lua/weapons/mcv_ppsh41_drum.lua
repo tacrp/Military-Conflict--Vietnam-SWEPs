@@ -12,6 +12,9 @@ SWEP.SubCategory = "Submachine Guns"
 SWEP.Caliber = "7.62x25mm"
 
 SWEP.Slot = 2
+SWEP.SprintHoldType = "passive"
+SWEP.AimHoldType = "smg"
+SWEP.HoldType = "smg"
 
 SWEP.ViewModel = "models/weapons/mcv/v_ppsh41_drum.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_ppsh41_drum.mdl"

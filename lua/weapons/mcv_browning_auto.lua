@@ -12,6 +12,9 @@ SWEP.SubCategory = "Shotguns"
 SWEP.Caliber = "12 Gauge Shell"
 
 SWEP.Slot = 2
+SWEP.SprintHoldType = "passive"
+SWEP.AimHoldType = "shotgun"
+SWEP.HoldType = "shotgun"
 
 SWEP.ViewModel = "models/weapons/mcv/v_browning_auto.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_browning_auto.mdl"

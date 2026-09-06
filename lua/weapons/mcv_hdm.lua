@@ -12,6 +12,9 @@ SWEP.SubCategory = "Pistols"
 SWEP.Caliber = ".22 Long Rifle"
 
 SWEP.Slot = 1
+SWEP.SprintHoldType = "normal"
+SWEP.AimHoldType = "revolver"
+SWEP.HoldType = "pistol"
 
 SWEP.ViewModel = "models/weapons/mcv/v_hdm.mdl"
 SWEP.ViewModelAkimbo = "models/weapons/mcv/v_dual_hdm.mdl"

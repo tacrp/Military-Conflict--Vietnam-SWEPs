@@ -802,3 +802,13 @@ alone since the field has no gameplay effect.
   `--sights`. Regenerating a lua wholesale drops keys the generator never emits (launcher
   secondaries, rifle-grenade keys, equipment movement poses, PlacedAngleOffset): copy stat
   values into the committed file instead.
+* **Third person** (`mcv_base_core/cl_worldmodel.lua`): the game's world models are rigged to
+  ValveBiped.weapon_bone for the game's own player rig and sit tilted on GMod players. The
+  weapon draws its own clientside copy at the entity's place (the right hand attachment), turned
+  up by `WorldModelTilt` (7.5) and moved by `WorldModelOffset`; a dual draws a second copy on
+  `anim_attachment_LH` with `WorldModelOffsetLeft` and the `duel` hold type. Third person muzzle
+  flash and shells attach to those drawn models (the game's port is `shell_eject`; a model
+  without one throws the case from behind the muzzle). Hold types come from the script's
+  WeaponType (67 luas were missing theirs), the gestures follow the hold type in use, and the
+  reload gesture is stretched to the first person reload (`SetLayerDuration`). Tuning convars:
+  `mcv_wm_tilt`, `mcv_wm_left_pos "x y z"`, `mcv_wm_left_ang "p y r"`.

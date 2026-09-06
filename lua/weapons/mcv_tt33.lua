@@ -12,6 +12,9 @@ SWEP.SubCategory = "Pistols"
 SWEP.Caliber = "7.62x25mm Tokarev"
 
 SWEP.Slot = 1
+SWEP.SprintHoldType = "normal"
+SWEP.AimHoldType = "revolver"
+SWEP.HoldType = "pistol"
 
 SWEP.ViewModel = "models/weapons/mcv/v_tt33.mdl"
 SWEP.ViewModelAkimbo = "models/weapons/mcv/v_dual_tt33.mdl"

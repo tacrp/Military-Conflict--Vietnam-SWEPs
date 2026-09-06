@@ -12,6 +12,9 @@ SWEP.SubCategory = "Pistols"
 SWEP.Caliber = "7.65x20mm"
 
 SWEP.Slot = 1
+SWEP.SprintHoldType = "normal"
+SWEP.AimHoldType = "revolver"
+SWEP.HoldType = "pistol"
 
 SWEP.ViewModel = "models/weapons/mcv/v_mle1935.mdl"
 SWEP.ViewModelAkimbo = "models/weapons/mcv/v_dual_mle1935.mdl"

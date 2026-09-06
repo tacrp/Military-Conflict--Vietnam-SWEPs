@@ -12,6 +12,9 @@ SWEP.SubCategory = "Submachine Guns"
 SWEP.Caliber = "9x19mm"
 
 SWEP.Slot = 2
+SWEP.SprintHoldType = "passive"
+SWEP.AimHoldType = "smg"
+SWEP.HoldType = "smg"
 
 SWEP.ViewModel = "models/weapons/mcv/v_uzi_sog.mdl"
 SWEP.ViewModelAkimbo = "models/weapons/mcv/v_dual_uzi_sog.mdl"

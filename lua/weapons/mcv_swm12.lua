@@ -12,6 +12,9 @@ SWEP.SubCategory = "Revolvers"
 SWEP.Caliber = ".38 Special"
 
 SWEP.Slot = 1
+SWEP.SprintHoldType = "normal"
+SWEP.AimHoldType = "revolver"
+SWEP.HoldType = "revolver"
 
 SWEP.ViewModel = "models/weapons/mcv/v_swm12.mdl"
 SWEP.ViewModelAkimbo = "models/weapons/mcv/v_dual_swm12.mdl"

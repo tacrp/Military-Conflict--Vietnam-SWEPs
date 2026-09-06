@@ -12,6 +12,9 @@ SWEP.SubCategory = "Anti-Armor"
 SWEP.Caliber = "66mm Rocket"
 
 SWEP.Slot = 4
+SWEP.SprintHoldType = "passive"
+SWEP.AimHoldType = "rpg"
+SWEP.HoldType = "rpg"
 
 SWEP.ViewModel = "models/weapons/mcv/v_m202.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_m202.mdl"

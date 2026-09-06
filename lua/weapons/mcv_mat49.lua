@@ -12,6 +12,9 @@ SWEP.SubCategory = "Submachine Guns"
 SWEP.Caliber = "7.62x25mm Tokarev"
 
 SWEP.Slot = 2
+SWEP.SprintHoldType = "passive"
+SWEP.AimHoldType = "smg"
+SWEP.HoldType = "smg"
 
 SWEP.ViewModel = "models/weapons/mcv/v_mat49.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_mat49.mdl"

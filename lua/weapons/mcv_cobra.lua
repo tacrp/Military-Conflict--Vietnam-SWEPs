@@ -12,6 +12,9 @@ SWEP.SubCategory = "Submachine Guns"
 SWEP.Caliber = "9x19mm"
 
 SWEP.Slot = 2
+SWEP.SprintHoldType = "normal"
+SWEP.AimHoldType = "revolver"
+SWEP.HoldType = "pistol"
 
 SWEP.ViewModel = "models/weapons/mcv/v_cobra.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_cobra.mdl"

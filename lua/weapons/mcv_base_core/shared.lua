@@ -28,6 +28,32 @@ SWEP.AimHoldType = "rpg"
 
 SWEP.ShootGesture = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 SWEP.ReloadGesture = ACT_HL2MP_GESTURE_RELOAD_AR2
+
+// Third person gestures follow the hold type in use (a pistol reload on a pistol pose, the
+// duel set with a gun in each hand); the two fields above are the fallback
+local GESTURES = {
+    ar2 = {ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2, ACT_HL2MP_GESTURE_RELOAD_AR2},
+    smg = {ACT_HL2MP_GESTURE_RANGE_ATTACK_SMG1, ACT_HL2MP_GESTURE_RELOAD_SMG1},
+    pistol = {ACT_HL2MP_GESTURE_RANGE_ATTACK_PISTOL, ACT_HL2MP_GESTURE_RELOAD_PISTOL},
+    revolver = {ACT_HL2MP_GESTURE_RANGE_ATTACK_REVOLVER, ACT_HL2MP_GESTURE_RELOAD_REVOLVER},
+    duel = {ACT_HL2MP_GESTURE_RANGE_ATTACK_DUEL, ACT_HL2MP_GESTURE_RELOAD_DUEL},
+    shotgun = {ACT_HL2MP_GESTURE_RANGE_ATTACK_SHOTGUN, ACT_HL2MP_GESTURE_RELOAD_SHOTGUN},
+    rpg = {ACT_HL2MP_GESTURE_RANGE_ATTACK_RPG, ACT_HL2MP_GESTURE_RELOAD_RPG},
+    crossbow = {ACT_HL2MP_GESTURE_RANGE_ATTACK_CROSSBOW, ACT_HL2MP_GESTURE_RELOAD_CROSSBOW},
+    melee = {ACT_HL2MP_GESTURE_RANGE_ATTACK_MELEE, ACT_HL2MP_GESTURE_RELOAD_MELEE},
+    grenade = {ACT_HL2MP_GESTURE_RANGE_ATTACK_GRENADE, ACT_HL2MP_GESTURE_RELOAD_AR2},
+    slam = {ACT_HL2MP_GESTURE_RANGE_ATTACK_SLAM, ACT_HL2MP_GESTURE_RELOAD_AR2},
+}
+
+function SWEP:GetShootGesture()
+    local g = GESTURES[self.CurrentHoldType or self.HoldType]
+    return g and g[1] or self.ShootGesture
+end
+
+function SWEP:GetReloadGesture()
+    local g = GESTURES[self.CurrentHoldType or self.HoldType]
+    return g and g[2] or self.ReloadGesture
+end
 SWEP.BashGesture = ACT_GMOD_GESTURE_MELEE_SHOVE_2HAND
 
 // Generic stats every kind of weapon has (guns extend these)

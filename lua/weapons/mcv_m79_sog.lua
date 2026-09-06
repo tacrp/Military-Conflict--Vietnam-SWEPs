@@ -12,6 +12,9 @@ SWEP.SubCategory = "Anti-Armor"
 SWEP.Caliber = "40x46mm Grenade"
 
 SWEP.Slot = 4
+SWEP.SprintHoldType = "passive"
+SWEP.AimHoldType = "shotgun"
+SWEP.HoldType = "shotgun"
 
 SWEP.ViewModel = "models/weapons/mcv/v_m79_short.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_m79_short.mdl"

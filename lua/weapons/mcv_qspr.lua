@@ -12,6 +12,9 @@ SWEP.SubCategory = "Revolvers"
 SWEP.Caliber = "10mm QSPR"
 
 SWEP.Slot = 1
+SWEP.SprintHoldType = "normal"
+SWEP.AimHoldType = "revolver"
+SWEP.HoldType = "revolver"
 
 SWEP.ViewModel = "models/weapons/mcv/v_qspr.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_qspr.mdl"

@@ -439,6 +439,7 @@ if CLIENT then
 
     function SWEP:OnRemove()
         if IsValid(self.Ghost) then self.Ghost:Remove() end
+        if self.RemoveWorldModels then self:RemoveWorldModels() end
     end
 end
 

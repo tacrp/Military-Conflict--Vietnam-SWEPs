@@ -331,7 +331,7 @@ function SWEP:AttackEffects()
         self:DoMuzzle()
     end
 
-    owner:DoAnimationEvent(self.ShootGesture)
+    owner:DoAnimationEvent(self:GetShootGesture())
 
     self:SetBurstCount(self:GetBurstCount() + 1)
 

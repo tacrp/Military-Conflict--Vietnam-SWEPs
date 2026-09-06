@@ -44,8 +44,8 @@ SWEP.MuzzleVelocity = 735
 SWEP.RangeModifier = 0.955 // Every 500 units the damage is multiplied by rangemodifier
 
 SWEP.Firemodes = {
-    MCV.FIREMODE_SEMI,
-    MCV.FIREMODE_AUTO
+    MCV.FIREMODE_AUTO,
+    MCV.FIREMODE_SEMI
 }
 
 SWEP.LastShotAnimation = true

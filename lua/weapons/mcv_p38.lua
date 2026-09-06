@@ -12,6 +12,9 @@ SWEP.SubCategory = "Pistols"
 SWEP.Caliber = "9x19mm"
 
 SWEP.Slot = 1
+SWEP.SprintHoldType = "normal"
+SWEP.AimHoldType = "revolver"
+SWEP.HoldType = "pistol"
 
 SWEP.ViewModel = "models/weapons/mcv/v_p38.mdl"
 SWEP.ViewModelAkimbo = "models/weapons/mcv/v_dual_p38.mdl"

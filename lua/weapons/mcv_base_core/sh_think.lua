@@ -143,9 +143,12 @@ end
 
 function SWEP:Think_HoldType()
     local holdtype = self.HoldType
+    local akimbo = self.GetAkimbo and self:GetAkimbo()
 
     if self:GetSpeed() >= self.SpeedSprintThreshold then
         holdtype = self.SprintHoldType
+    elseif akimbo then
+        holdtype = "duel" // a pistol in each hand (the second is drawn on the left hand, cl_worldmodel.lua)
     elseif self:GetSightAmount() >= 1 then
         holdtype = self.AimHoldType
     end

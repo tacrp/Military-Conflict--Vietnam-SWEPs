@@ -24,19 +24,34 @@ function EFFECT:Init(data)
 
     local origin, ang, dir, mdl
 
+    local attdata
     if LocalPlayer():ShouldDrawLocalPlayer() or ent:GetOwner() != LocalPlayer() then
-        mdl = ent
-        att = data:GetHitBox()
+        // third person: the world model drawn by hand (cl_worldmodel.lua), the left gun of a
+        // dual on magnitude 1. The game names the port shell_eject; the few models without
+        // one throw the case from a point behind the muzzle
+        mdl = ent.GetWorldModelFor and ent:GetWorldModelFor(data:GetMagnitude() == 1) or ent
         self.VMContext = false
+        att = mdl:LookupAttachment("shell_eject")
+        if att <= 0 then att = mdl:LookupAttachment("eject") end
+        if att > 0 then
+            attdata = mdl:GetAttachment(att)
+        else
+            local muzz = mdl:LookupAttachment("muzzle")
+            local m = muzz > 0 and mdl:GetAttachment(muzz)
+            if m then
+                local a = Angle(m.Ang)
+                a:RotateAroundAxis(a:Up(), -90)
+                attdata = {Pos = m.Pos - m.Ang:Forward() * 12 + m.Ang:Right() * 1.5 + m.Ang:Up() * 1, Ang = a}
+            end
+        end
     else
         mdl = LocalPlayer():GetViewModel()
         table.insert(ent.ActiveEffects, self)
+        if IsValid(mdl) then attdata = mdl:GetAttachment(att) end
     end
 
     if !IsValid(mdl) then self:Remove() return end
     if !typetbl then self:Remove() return end
-
-    local attdata = mdl:GetAttachment(att)
     if !attdata then self:Remove() return end
 
     origin = attdata.Pos

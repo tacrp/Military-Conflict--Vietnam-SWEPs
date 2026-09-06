@@ -46,7 +46,6 @@ SWEP.RangeModifier = 0.955
 
 SWEP.Firemodes = {
     MCV.FIREMODE_SEMI,
-	MCV.FIREMODE_AUTO
 }
 
 // Weapon must be manually cycled

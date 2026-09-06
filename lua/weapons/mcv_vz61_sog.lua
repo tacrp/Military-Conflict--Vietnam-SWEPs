@@ -12,6 +12,9 @@ SWEP.SubCategory = "Machine Pistols"
 SWEP.Caliber = ".32 ACP"
 
 SWEP.Slot = 1
+SWEP.SprintHoldType = "normal"
+SWEP.AimHoldType = "revolver"
+SWEP.HoldType = "pistol"
 
 SWEP.ViewModel = "models/weapons/mcv/v_vz61_silencer.mdl"
 SWEP.ViewModelAkimbo = "models/weapons/mcv/v_dual_vz61_silencer.mdl"

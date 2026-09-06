@@ -22,7 +22,7 @@ function SWEP:Reload()
     if self:Ammo1() == 0 then return end
     if self:Clip1() >= self:GetClip1Capacity() then return end
 
-    self:GetOwner():DoAnimationEvent(self.ReloadGesture)
+    self:GetOwner():DoAnimationEvent(self:GetReloadGesture())
 
     if self.ShotgunReload or (self:GetHybridReload() and self:Clip1() > 0) then
         if self.ShotgunReloadEmptyStartAnimation and self:Clip1() == 0 then
@@ -66,6 +66,15 @@ function SWEP:Reload()
     end
 
     self:SetLastClip(self:Clip1())
+
+    // the third person reload gesture runs for as long as the first person animation (a
+    // single locked animation; the per-round loops keep the gesture's own length)
+    if !(self.ShotgunReload or self:GetHybridReload()) then
+        local t = self:GetAnimLockTime() - CurTime()
+        if t > 0.1 then
+            self:GetOwner():SetLayerDuration(GESTURE_SLOT_ATTACK_AND_RELOAD, t)
+        end
+    end
 
     if self.AkimboDualSingleActionReload then
         self:SetEmptyReload(true)

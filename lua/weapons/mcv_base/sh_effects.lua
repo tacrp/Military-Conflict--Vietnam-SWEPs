@@ -41,6 +41,7 @@ function SWEP:DoMuzzle(alt)
     local data = EffectData()
     data:SetEntity(self)
     data:SetAttachment(muzz_qca)
+    data:SetMagnitude((self:GetAkimbo() and self:Clip1() % 2 == 1 and !is_volley) and 1 or 0) // third person: left gun
 
     util.Effect( "mcv_muzzleeffect", data )
 
@@ -48,6 +49,7 @@ function SWEP:DoMuzzle(alt)
         local data2 = EffectData()
         data2:SetEntity(self)
         data2:SetAttachment(4)
+        data2:SetMagnitude(1)
 
         util.Effect( "mcv_muzzleeffect", data2 )
     end
@@ -85,6 +87,7 @@ function SWEP:DoEject(attachment)
         data:SetEntity(self)
         data:SetFlags(self.EjectBrassType)
         data:SetAttachment(eject_qca)
+        data:SetMagnitude(name == "eject2" and 1 or 0) // third person: left gun
 
         util.Effect( "mcv_shelleffect", data )
     end

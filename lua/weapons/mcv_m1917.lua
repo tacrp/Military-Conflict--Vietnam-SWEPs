@@ -12,6 +12,9 @@ SWEP.SubCategory = "Revolvers"
 SWEP.Caliber = ".45 ACP"
 
 SWEP.Slot = 1
+SWEP.SprintHoldType = "normal"
+SWEP.AimHoldType = "revolver"
+SWEP.HoldType = "revolver"
 
 SWEP.ViewModel = "models/weapons/mcv/v_m1917.mdl"
 SWEP.ViewModelAkimbo = "models/weapons/mcv/v_dual_m1917.mdl"
