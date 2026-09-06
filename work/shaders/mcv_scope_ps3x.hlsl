@@ -25,7 +25,7 @@ struct PS_INPUT {
 };
 
 float4 main(PS_INPUT frag) : COLOR {
-    if (C3.z > 1.5) return float4(1.0, 0.0, 0.0, 1.0);
+    if (C3.z > 1.5 && C3.z < 2.5) return float4(1.0, 0.0, 0.0, 1.0);
     if (C3.z > 0.5) return float4(frag.uv, 0.0, 1.0);
 
     float aspect = C2.z;

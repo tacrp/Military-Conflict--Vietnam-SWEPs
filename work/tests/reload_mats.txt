@@ -1,0 +1,3 @@
+clua RunConsoleCommand("mat_reloadallmaterials")
+wait 3
+clua print("[r] materials reloaded; scope shader material valid:", tostring(!Material("mcv/scope_lens"):IsError()))

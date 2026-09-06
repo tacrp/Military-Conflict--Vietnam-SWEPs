@@ -1,0 +1,8 @@
+clua RunConsoleCommand("mat_reloadallmaterials")
+wait 3
+clua local w = LocalPlayer():GetActiveWeapon() w.ScopeDebug = 3 w:ApplyScopeMaterial()
+key +attack2
+wait 1.5
+shot v_shader_check2
+key -attack2
+clua local w = LocalPlayer():GetActiveWeapon() w.ScopeDebug = 0 w:ApplyScopeMaterial()

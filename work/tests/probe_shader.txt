@@ -1,0 +1,9 @@
+lua local w = ply:GetActiveWeapon() print("[v] active", w:GetClass(), "scoped", tostring(w.HasScope), "oeg", tostring(w.OEGScope))
+lua local w = ply:GetActiveWeapon() if !w.HasScope or w.OEGScope then ply:Give("mcv_svd") ply:SelectWeapon("mcv_svd") end
+wait 1.5
+clua local w = LocalPlayer():GetActiveWeapon() w.ScopeDebug = 3 w:ApplyScopeMaterial() print("[v] debug 3 on", w:GetClass())
+key +attack2
+wait 1.5
+shot v_shader_check
+key -attack2
+clua local w = LocalPlayer():GetActiveWeapon() w.ScopeDebug = 0 w:ApplyScopeMaterial()
