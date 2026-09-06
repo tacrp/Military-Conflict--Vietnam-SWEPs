@@ -1,0 +1,18 @@
+"VertexLitGeneric"
+{
+	"$basetexture" 	"models\player\equipment\VCeq_ammobelt_diffuse"
+	"$bumpmap" 		"models\player\equipment\VCeq_ammobelt_normal"
+	"$alphatest" "1"
+	"$nocull" "1"
+		
+	"$phong" "1"
+	"$phongboost" "2"
+	"$phongfresnelranges" "[2 4 8]"
+	"$PhongExponentTexture" "models\player\equipment\VCeq_ammobelt_exponent"
+	"$PhongAlbedoTint" "1"
+	"$surfaceprop" "metal"
+
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[ .2 .2 .2]"
+	"$normalmapalphaenvmapmask" "1"
+}

@@ -379,15 +379,10 @@ function SWEP:BulletAttack()
     local smoke = (tracer and tracer != "") and (self.TracerSmokeParticle or string.gsub(tracer, "_primary$", "_smoke")) or nil
     local freq = math.max(self.TracerFrequency or 1, 1)
     local shot = 0
-    local tracer_att = 0
-    if SERVER and tracer and tracer != "" then
-        if game.SinglePlayer() and IsValid(owner:GetViewModel()) then
-            tracer_att = owner:GetViewModel():LookupAttachment("muzzle")
-        else
-            tracer_att = self:LookupAttachment("muzzle")
-        end
-        if tracer_att < 0 then tracer_att = 0 end
-    end
+    // the gun this shot leaves (a dual's left gun on an odd count, as the muzzle flash): the
+    // client effect (effects/mcv_tracer.lua) starts the trail at that gun's muzzle, viewmodel
+    // or drawn world model; the count is still the pre-shot one here
+    local left = self:GetAkimbo() and self:Clip1() % 2 == 1
 
     owner:FireBullets({
         Damage = self.DamageGeneric,
@@ -400,12 +395,15 @@ function SWEP:BulletAttack()
         Callback = function(attacker, tr, dmginfo)
             shot = shot + 1
             if SERVER and tracer and tracer != "" and !tr.StartSolid then
-                local from = self:GetTracerOrigin()
-                if smoke and smoke != tracer then
-                    util.ParticleTracerEx(smoke, from, tr.HitPos, false, self:EntIndex(), tracer_att)
-                end
-                if shot % freq == 0 then
-                    util.ParticleTracerEx(tracer, from, tr.HitPos, false, self:EntIndex(), tracer_att)
+                local flags = (smoke and smoke != tracer) and 1 or 0
+                if shot % freq == 0 then flags = flags + 2 end
+                if flags > 0 then
+                    local fx = EffectData()
+                    fx:SetEntity(self)
+                    fx:SetOrigin(tr.HitPos)
+                    fx:SetFlags(flags)
+                    fx:SetMagnitude(left and 1 or 0)
+                    util.Effect("mcv_tracer", fx, true, true)
                 end
             end
             local dmg = dmginfo:GetDamage()

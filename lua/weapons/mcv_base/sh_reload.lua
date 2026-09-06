@@ -1,17 +1,14 @@
 // Round-by-round top-up on a stripper-clip rifle: the model must have the animations and the
 // server convar must be on
-// Third person: the reload gesture of the hold type in use, stretched to the first person
-// animation. A per-round loop plays it once per shell so the hands move with every insert.
-function SWEP:PlayReloadGesture(t)
-    self:GetOwner():DoAnimationEvent(self:GetReloadGesture())
-    if t then self:StretchReloadGesture(t) end
-end
-
-function SWEP:StretchReloadGesture(t)
-    if !t or t <= 0.1 then return end
+// Third person: the reload gesture of the hold type in use, timed to the first person
+// animation. TacRP's scheme: the player animation event carries the time in milliseconds and
+// the DoAnimationEvent hook (mcv/shared/sh_animevents.lua) restarts the gesture and stretches
+// it; a per-round loop fires the loop event per shell (the gesture starts at the insert) and
+// the end event when the action closes.
+function SWEP:PlayReloadGesture(t, event)
     local owner = self:GetOwner()
     if !IsValid(owner) or !owner:IsPlayer() then return end
-    owner:SetLayerDuration(GESTURE_SLOT_ATTACK_AND_RELOAD, t)
+    owner:DoAnimationEvent(event or PLAYERANIMEVENT_RELOAD, math.max(1, math.floor((t or 0) * 1000)))
 end
 
 function SWEP:GetHybridReload()
@@ -36,7 +33,6 @@ function SWEP:Reload()
     if self:Ammo1() == 0 then return end
     if self:Clip1() >= self:GetClip1Capacity() then return end
 
-    self:PlayReloadGesture()
 
     if self.ShotgunReload or (self:GetHybridReload() and self:Clip1() > 0) then
         if self.ShotgunReloadEmptyStartAnimation and self:Clip1() == 0 then
@@ -81,9 +77,9 @@ function SWEP:Reload()
 
     self:SetLastClip(self:Clip1())
 
-    // the third person gesture lasts as long as the first person animation just started (the
-    // whole reload, or the start of a per-round loop; each insert retriggers it below)
-    self:StretchReloadGesture(self:GetAnimLockTime() - CurTime())
+    // the third person gesture: the start of the reload, timed to the animation just started
+    // (the whole reload, or the start of a per-round loop; the inserts and the end follow)
+    self:PlayReloadGesture(self:GetAnimLockTime() - CurTime(), PLAYERANIMEVENT_RELOAD)
 
     if self.AkimboDualSingleActionReload then
         self:SetEmptyReload(true)
@@ -164,9 +160,9 @@ function SWEP:Think_Reload()
             if self.AkimboDualSingleActionReload then
                 if self:GetEndReload() or self:Clip1() >= self:GetClip1Capacity() or (!self:GetInfiniteAmmo() and self:Ammo1() == 0) then
                     if self:GetEmptyReload() then
-                        self:PlayAnimation(ACT_VM_RELOAD_END_EMPTY, 1, true)
+                        self:PlayReloadGesture(self:PlayAnimation(ACT_VM_RELOAD_END_EMPTY, 1, true), PLAYERANIMEVENT_RELOAD_END)
                     else
-                        self:PlayAnimation(ACT_SHOTGUN_RELOAD_FINISH, 1, true)
+                        self:PlayReloadGesture(self:PlayAnimation(ACT_SHOTGUN_RELOAD_FINISH, 1, true), PLAYERANIMEVENT_RELOAD_END)
                     end
 
                     self:SetReloading(false)
@@ -181,9 +177,9 @@ function SWEP:Think_Reload()
                         end
                     else
                         if self:GetAkimbo() then
-                            self:PlayReloadGesture(self:PlayAnimation(ACT_VM_RELOAD2, 1, true))
+                            self:PlayReloadGesture(self:PlayAnimation(ACT_VM_RELOAD2, 1, true), PLAYERANIMEVENT_RELOAD_LOOP)
                         else
-                            self:PlayReloadGesture(self:PlayAnimation(ACT_VM_RELOAD, 1, true))
+                            self:PlayReloadGesture(self:PlayAnimation(ACT_VM_RELOAD, 1, true), PLAYERANIMEVENT_RELOAD_LOOP)
                         end
 
                         self:RestoreClip(self.ShotgunReloadRounds)
@@ -194,9 +190,9 @@ function SWEP:Think_Reload()
                     // a reload that started empty ends by chambering (the model's ACT_SHOTGUN_PUMP:
                     // reload_endpump) when it has one; the plain finish otherwise
                     if self:GetEmptyReload() and self:Clip1() != self:GetLastClip() and self:HasAnimation(ACT_SHOTGUN_PUMP) then
-                        self:PlayAnimation(ACT_SHOTGUN_PUMP, 1, true)
+                        self:PlayReloadGesture(self:PlayAnimation(ACT_SHOTGUN_PUMP, 1, true), PLAYERANIMEVENT_RELOAD_END)
                     else
-                        self:PlayAnimation(ACT_SHOTGUN_RELOAD_FINISH, 1, true)
+                        self:PlayReloadGesture(self:PlayAnimation(ACT_SHOTGUN_RELOAD_FINISH, 1, true), PLAYERANIMEVENT_RELOAD_END)
                     end
 
                     self:SetReloading(false)
@@ -204,7 +200,7 @@ function SWEP:Think_Reload()
                         self:SetEmptyReload(false)
                     end
                 else
-                    self:PlayReloadGesture(self:PlayAnimation((self:GetHybridReload() or self.ShotgunAltReload) and ACT_VM_RELOAD_INSERT or ACT_VM_RELOAD, 1, true, true))
+                    self:PlayReloadGesture(self:PlayAnimation((self:GetHybridReload() or self.ShotgunAltReload) and ACT_VM_RELOAD_INSERT or ACT_VM_RELOAD, 1, true, true), PLAYERANIMEVENT_RELOAD_LOOP)
 
                     self:RestoreClip(self.ShotgunReloadRounds)
                 end

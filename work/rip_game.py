@@ -294,6 +294,55 @@ def step_materials(args, vpk):
     if kept or inverted:
         log("materials: optics: %d existing files kept, %d new reticles alpha-inverted" % (kept, inverted))
     log("materials: %d files for %d weapon material dirs -> materials/models/weapons/mcv" % (n, len(dirs)))
+    step_extra_materials(args, vpk)
+
+
+def step_extra_materials(args, vpk):
+    """Materials a compiled weapon model names from a directory outside models/weapons (the
+    belt guns' world models use the player-equipment ammo belts, models/player/equipment/):
+    the vmt and its textures are ripped to that same path, since the model keeps it, and the
+    game-only Character shader becomes VertexLitGeneric."""
+    import struct
+    wanted = {}
+    for mdl in glob.glob(os.path.join(ADDON, "models", "weapons", "mcv", "*.mdl")):
+        try:
+            d = open(mdl, "rb").read()
+            ntex, texidx = struct.unpack_from("<ii", d, 204)
+            ncd, cdidx = struct.unpack_from("<ii", d, 212)
+        except Exception:
+            continue
+        names = []
+        for i in range(ntex):
+            off = texidx + i * 64 + struct.unpack_from("<i", d, texidx + i * 64)[0]
+            names.append(d[off:].split(b"\0")[0].decode("latin-1"))
+        for i in range(ncd):
+            off = struct.unpack_from("<i", d, cdidx + i * 4)[0]
+            cd = d[off:].split(b"\0")[0].decode("latin-1").replace("\\", "/").strip("/").lower()
+            if cd and not cd.startswith("models/weapons"):
+                for nm in names:
+                    wanted[(cd + "/" + nm).lower()] = True
+    if not wanted:
+        return
+    entries = {p.lower(): p for p in vpk.entries}
+    n = 0
+    for key in sorted(wanted):
+        vmt = entries.get("materials/" + key + ".vmt")
+        if not vmt:
+            continue
+        txt = vpk.read(vmt).decode("latin-1")
+        txt = re.sub(r'^\s*"?Character"?\s*$', '"VertexLitGeneric"', txt, count=1, flags=re.M | re.I)
+        files = [(vmt, txt.encode("latin-1"))]
+        for tex in re.findall(r'"\$\w+"\s+"([^"]+)"', txt):
+            tp = "materials/" + tex.replace("\\", "/").lower() + ".vtf"
+            if tp in entries:
+                files.append((entries[tp], None))
+        for src, data in files:
+            out = os.path.join(ADDON, src.replace("/", os.sep))
+            os.makedirs(os.path.dirname(out), exist_ok=True)
+            with open(out, "wb") as f:
+                f.write(data if data is not None else vpk.read(src))
+            n += 1
+    log("materials: %d files for %d materials outside models/weapons (player equipment belts)" % (n, len(wanted)))
 
 
 def step_sounds(args, vpk):

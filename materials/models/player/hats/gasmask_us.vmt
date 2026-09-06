@@ -1,0 +1,12 @@
+"VertexLitGeneric"
+{
+	"$basetexture" 	"models\player\hats\gasmask_us_diffuse"
+	"$bumpmap" 		"models\player\hats\gasmask_us_normal"
+	
+	"$phong" "1"
+	"$phongboost" "1"
+	"$phongfresnelranges" "[0.5 1 2]"
+	"$surfaceprop" "rubber"
+	"$phongexponent" "80"
+}
+
