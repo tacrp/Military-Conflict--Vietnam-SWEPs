@@ -62,7 +62,14 @@ function SWEP:PreDrawViewModel(vm)
     self:PreDrawViewModelBlend(vm, sa)
 end
 
-function SWEP:ViewModelDrawn()
+// Runs inside the viewmodel's own render pass (the camera PreDrawViewModel set up: the weapon's
+// viewmodel FOV and near plane, the engine's viewmodel depth range), so the in-flight shells
+// share the gun's projection and sort against it. TacRP's system: a shell lives here until it
+// hits something, then draws itself in the world. Nothing is drawn into the depth passes.
+function SWEP:ViewModelDrawn(vm, flags)
+    flags = flags or 0
+    if bit.band(flags, STUDIO_SSAODEPTHTEXTURE) != 0 or bit.band(flags, STUDIO_SHADOWDEPTHTEXTURE) != 0 then return end
+
     local newactiveeffects = {}
     for _, effect in ipairs(self.ActiveEffects) do
         if !IsValid(effect) then continue end
@@ -92,26 +99,50 @@ function SWEP:UpdateLitParticle(vm)
     end
 end
 
-function SWEP:PostDrawViewModel(vm)
-    cam.End3D()
-    cam.IgnoreZ(false)
-    render.SetBlend(1)
+function SWEP:PostDrawViewModel(vm, ply, wep, flags)
+    flags = flags or 0
+    local depthpass = bit.band(flags, STUDIO_SSAODEPTHTEXTURE) != 0 or bit.band(flags, STUDIO_SHADOWDEPTHTEXTURE) != 0
 
-    self:PostDrawViewModelWeapon(vm or self:GetOwner():GetViewModel())
-
-    cam.Start3D()
+    // the viewmodel particle systems (muzzle flash and smoke, shell puffs and trails) are drawn
+    // here by hand, still inside the camera PreDrawViewModel started, so they sit exactly on
+    // the gun's attachments at its FOV and depth-test against it; they used to be drawn after
+    // that camera was closed, in a plain 3D context at the world FOV, which put the flash off
+    // the muzzle whenever the two FOVs differed and let the gun paint over it
+    local worldpcfs = {}
+    if !depthpass then
         cam.IgnoreZ(false)
         local newpcfs = {}
 
         for _, pcf in ipairs(self.PCFs) do
             if pcf and IsValid(pcf) and pcf.Render then
-                pcf:Render()
+                if pcf.WorldContext then
+                    table.insert(worldpcfs, pcf)
+                else
+                    pcf:Render()
+                end
                 table.insert(newpcfs, pcf)
             end
         end
 
         self.PCFs = newpcfs
+    end
+
     cam.End3D()
+    cam.IgnoreZ(false)
+    render.SetBlend(1)
+
+    if depthpass then return end
+
+    // systems that reach out into the world (the flamethrower's jet) keep the world's
+    // projection, or they would not land where they burn
+    if #worldpcfs > 0 then
+        cam.Start3D()
+            cam.IgnoreZ(false)
+            for _, pcf in ipairs(worldpcfs) do pcf:Render() end
+        cam.End3D()
+    end
+
+    self:PostDrawViewModelWeapon(vm or self:GetOwner():GetViewModel())
 end
 
 function SWEP:GetViewModelPosition(pos, ang)

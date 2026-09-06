@@ -162,9 +162,11 @@ if CLIENT then
         if att <= 0 then att = 1 end
         local ps = CreateParticleSystem(ent, self.FlameParticle, PATTACH_POINT_FOLLOW, att)
         if IsValid(ps) and ent != self then
-            // viewmodel particles are drawn from PostDrawViewModel in the viewmodel camera
+            // viewmodel particles are drawn from PostDrawViewModel; the jet reaches into the
+            // world, so it keeps the world's projection rather than the viewmodel's
             ps:StartEmission()
             ps:SetShouldDraw(false)
+            ps.WorldContext = true
             table.insert(self.PCFs, ps)
         end
         self.FlamePS = ps

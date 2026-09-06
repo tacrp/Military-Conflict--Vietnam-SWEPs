@@ -316,8 +316,8 @@ end
 // each shot and settles back, and the whole thing bobs with the walk cycle. Purely visual: the
 // spread itself is what GetSpread returns, this only shows it.
 HUD.CrosshairSmooth = 12 // how fast the gap follows the target (per second)
-HUD.CrosshairKick = 1.6 // extra gap right after a shot, in units of the base spread
-HUD.CrosshairKickTime = 0.35
+HUD.CrosshairKick = 0.75 // extra gap right after a shot, in units of the base spread
+HUD.CrosshairKickTime = 0.15
 HUD.CrosshairBob = 2.5 // ScreenScale units of sway at a full sprint
 
 function SWEP:GetCrosshairSpread()
