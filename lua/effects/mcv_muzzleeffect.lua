@@ -24,7 +24,7 @@ function EFFECT:Init(data)
     else
         // the world model drawn by hand (cl_worldmodel.lua): its muzzle is where the gun is;
         // magnitude 1 marks the left-hand gun of a dual
-        parent = wpn.GetWorldModelFor and wpn:GetWorldModelFor(data:GetMagnitude() == 1) or wpn
+        parent = wpn.GetWorldModelFor and wpn:GetWorldModelFor(data:GetMagnitude() >= 0.5) or wpn
         att = parent:LookupAttachment("muzzle")
         if att <= 0 then att = 1 end
         muzzle = wpn.MuzzleParticle3rdPerson

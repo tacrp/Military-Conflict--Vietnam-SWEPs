@@ -200,6 +200,21 @@ function SWEP:GetWorldModelFor(left)
     return self
 end
 
+// Model and attachment id for a third person effect: kind "muzzle" or "eject", left gun or
+// right. The game names the muzzle "muzzle" and the port "shell_eject" (a few models "eject");
+// a model without the attachment returns 0 and the effect falls back.
+function SWEP:GetWorldModelAttachment(kind, left)
+    local mdl = self:GetWorldModelFor(left)
+    if kind == "muzzle" then
+        return mdl, math.max(mdl:LookupAttachment("muzzle"), 0)
+    end
+    for _, name in ipairs({"shell_eject", "eject", "eject2", "shell_eject2"}) do
+        local id = mdl:LookupAttachment(name)
+        if id > 0 then return mdl, id end
+    end
+    return mdl, 0
+end
+
 function SWEP:OnRemove()
     if CLIENT then self:RemoveWorldModels() end
 end

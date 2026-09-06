@@ -7,7 +7,7 @@ function EFFECT:Init(data)
     if !IsValid(wpn) then return end
     local owner = wpn:GetOwner()
     local to = data:GetOrigin()
-    local left = data:GetMagnitude() == 1
+    local left = data:GetMagnitude() >= 0.5
     local flags = data:GetFlags()
 
     local from
@@ -25,8 +25,11 @@ function EFFECT:Init(data)
         end
     elseif wpn.GetWorldModelAttachment then
         local mdl, att = wpn:GetWorldModelAttachment("muzzle", left)
-        local a = att > 0 and mdl:GetAttachment(att)
-        if a then from = a.Pos end
+        if IsValid(mdl) and att > 0 then
+            mdl:SetupBones()
+            local a = mdl:GetAttachment(att)
+            if a then from = a.Pos end
+        end
     end
     if !from then
         from = IsValid(owner) and owner.GetShootPos and owner:GetShootPos() or wpn:GetPos()
@@ -36,11 +39,24 @@ function EFFECT:Init(data)
     if !tracer or tracer == "" then return end
     local smoke = wpn.TracerSmokeParticle or string.gsub(tracer, "_primary$", "_smoke")
     if bit.band(flags, 1) != 0 and smoke and smoke != tracer then
-        util.ParticleTracerEx(smoke, from, to, false, 0, 0)
+        self:Trail(smoke, from, to)
     end
     if bit.band(flags, 2) != 0 then
-        util.ParticleTracerEx(tracer, from, to, false, 0, 0)
+        self:Trail(tracer, from, to)
     end
+end
+
+// A two-point trail: control point 0 the start, 1 the end (what a tracer particle expects).
+// util.ParticleTracerEx binds the start to the entity it is given, and with no entity that is
+// the world's origin, so the system is made here with its points set outright.
+function EFFECT:Trail(name, from, to)
+    local ps = CreateParticleSystemNoEntity and CreateParticleSystemNoEntity(name, from)
+    if ps then
+        ps:SetControlPoint(0, from)
+        ps:SetControlPoint(1, to)
+        return
+    end
+    util.ParticleTracerEx(name, from, to, false, -1, 0)
 end
 
 function EFFECT:Think() return false end

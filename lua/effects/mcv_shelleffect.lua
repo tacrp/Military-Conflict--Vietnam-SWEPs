@@ -29,7 +29,7 @@ function EFFECT:Init(data)
         // third person: the world model drawn by hand (cl_worldmodel.lua), the left gun of a
         // dual on magnitude 1. The game names the port shell_eject; the few models without
         // one throw the case from a point behind the muzzle
-        mdl = ent.GetWorldModelFor and ent:GetWorldModelFor(data:GetMagnitude() == 1) or ent
+        mdl = ent.GetWorldModelFor and ent:GetWorldModelFor(data:GetMagnitude() >= 0.5) or ent
         self.VMContext = false
         att = mdl:LookupAttachment("shell_eject")
         if att <= 0 then att = mdl:LookupAttachment("eject") end
