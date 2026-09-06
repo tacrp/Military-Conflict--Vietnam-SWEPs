@@ -1,0 +1,12 @@
+strip
+give mcv_molotov
+wait 1.5
+key +attack
+wait 0.25
+clua local vm = LocalPlayer():GetViewModel() local w = LocalPlayer():GetActiveWeapon() print("[c] t=0.25 seq", vm:GetSequenceName(vm:GetSequence()), "cycle", vm:GetCycle(), "rate", vm:GetPlaybackRate(), "bg0", vm:GetBodygroup(0), "skin", vm:GetSkin(), "nodraw", tostring(vm:GetNoDraw()), "color", tostring(vm:GetColor()), "hidden", tostring(w:ViewModelHidden()), "state", w:GetActionState(), "windupend", w:GetWindupEnd() - CurTime())
+shot s_windup_025
+wait 0.6
+clua local vm = LocalPlayer():GetViewModel() local w = LocalPlayer():GetActiveWeapon() print("[c] t=0.85 seq", vm:GetSequenceName(vm:GetSequence()), "cycle", vm:GetCycle(), "rate", vm:GetPlaybackRate(), "bg0", vm:GetBodygroup(0), "animlock", w:GetAnimLockTime() - CurTime(), "windupend", w:GetWindupEnd() - CurTime())
+shot s_windup_085
+key -attack
+wait 2

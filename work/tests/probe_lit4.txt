@@ -1,0 +1,29 @@
+strip
+give mcv_molotov
+wait 1.5
+clua LocalPlayer():GetActiveWeapon().GetLitParticle = function() return nil end
+key +attack
+wait 0.8
+clua local vm = LocalPlayer():GetViewModel() local mn, mx = vm:GetRenderBounds() print("[c] windup no particle: seq", vm:GetSequenceName(vm:GetSequence()), "bounds", tostring(mn), tostring(mx))
+shot s_molotov_windup_noparticle
+key -attack
+wait 2
+strip
+give mcv_molotov
+wait 1.5
+clua local vm = LocalPlayer():GetViewModel() ParticleEffectAttach("vietnam_entityeffect_zippo_flame", PATTACH_POINT_FOLLOW, vm, vm:LookupAttachment("Wick")) print("[c] attached particle at idle")
+wait 0.5
+shot s_molotov_idle_particle
+clua LocalPlayer():GetViewModel():StopParticles() print("[c] stopped")
+wait 0.5
+shot s_molotov_idle_stopped
+strip
+give mcv_dynamite
+wait 2
+clua local w = LocalPlayer():GetActiveWeapon() print("[c] dyn class", w:GetClass(), "state", w:GetActionState(), "rounds", w:GetRoundsLeft())
+key +attack2
+wait 0.8
+clua local w = LocalPlayer():GetActiveWeapon() print("[c] dyn holding: state", w:GetActionState(), "IsLit", tostring(w:IsLit()), "VMLit", tostring(w.VMLit))
+shot s_dynamite_lit4
+key -attack2
+wait 2

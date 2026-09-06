@@ -1,0 +1,19 @@
+strip
+give mcv_m16a1
+wait 1.5
+key +attack
+wait 0.3
+shot s_m16_attack_held
+key -attack
+wait 1
+strip
+give mcv_m26
+wait 1.5
+lua local w = ply:GetActiveWeapon() w.ThinkWeapon = function() end w:Windup(false)
+clua local w = LocalPlayer():GetActiveWeapon() w.ThinkWeapon = function() end
+wait 0.6
+clua local vm = LocalPlayer():GetViewModel() local w = LocalPlayer():GetActiveWeapon() print("[c] m26 lua windup: state", w:GetActionState(), "seq", vm:GetSequenceName(vm:GetSequence()), "nodraw", tostring(vm:IsEffectActive(EF_NODRAW)), "viewent", tostring(LocalPlayer():GetViewEntity()), "drawlocal", tostring(LocalPlayer():ShouldDrawLocalPlayer()))
+shot s_m26_windup_lua
+lua local w = ply:GetActiveWeapon() w.ThinkWeapon = nil w:SetActionState(0) w:Idle()
+clua LocalPlayer():GetActiveWeapon().ThinkWeapon = nil
+wait 1

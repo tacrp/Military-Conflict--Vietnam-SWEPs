@@ -1,0 +1,22 @@
+god
+strip
+ang 0 0 0
+hud 1
+give mcv_molotov
+wait 2
+clua local w = LocalPlayer():GetActiveWeapon() local vm = LocalPlayer():GetViewModel() print("[c] molotov wick att", vm:LookupAttachment("Wick"), "lit particle", tostring(w.GetLitParticle and w:GetLitParticle()), "state", w:GetActionState())
+key +attack
+wait 0.8
+clua local w = LocalPlayer():GetActiveWeapon() print("[c] holding: state", w:GetActionState(), "IsLit", tostring(w:IsLit()), "VMLit", tostring(w.VMLit))
+shot s_molotov_lit
+key -attack
+wait 2
+give mcv_dynamite
+wait 2
+clua local w = LocalPlayer():GetActiveWeapon() local vm = LocalPlayer():GetViewModel() print("[c] dynamite wick att", vm:LookupAttachment("Wick"), "lit particle", tostring(w:GetLitParticle()))
+key +attack2
+wait 0.8
+clua local w = LocalPlayer():GetActiveWeapon() print("[c] dyn holding: state", w:GetActionState(), "IsLit", tostring(w:IsLit()), "VMLit", tostring(w.VMLit))
+shot s_dynamite_lit
+key -attack2
+wait 1.5

@@ -1,0 +1,21 @@
+strip
+give mcv_m26
+wait 1.5
+clua LocalPlayer():GetActiveWeapon():PlaySequence("drawbackhigh", 1, false, true)
+wait 0.1
+shot s_m26_ps_010
+wait 0.2
+shot s_m26_ps_030
+wait 0.5
+clua local vm = LocalPlayer():GetViewModel() print("[c] client PlaySequence: seq", vm:GetSequenceName(vm:GetSequence()), "cycle", vm:GetCycle())
+shot s_m26_ps_080
+strip
+give mcv_m26
+wait 1.5
+key +attack
+wait 0.05
+shot s_m26_windup_005
+wait 0.1
+shot s_m26_windup_015
+key -attack
+wait 2.5

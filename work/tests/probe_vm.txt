@@ -1,17 +1,8 @@
-# Why does the grenade viewmodel vanish during drawbackhigh / throw? Durations, icon material, forced poses.
-strip
-give mcv_m26
-wait 1.5
-clua local vm = LocalPlayer():GetViewModel() local out = {} for _, n in ipairs({"idle", "drawbackhigh", "throw", "lob", "roll", "firemode", "bash", "draw", "walklayer"}) do local s = vm:LookupSequence(n) out[#out + 1] = n .. " seq=" .. s .. " dur=" .. (s >= 0 and vm:SequenceDuration(s) or -1) end local m = Material("entities/mcv_m26.png", "smooth") out[#out + 1] = "icon error=" .. tostring(m:IsError()) .. " exists=" .. tostring(file.Exists("materials/entities/mcv_m26.png", "GAME")) out[#out + 1] = "model=" .. vm:GetModel() .. " seqcount=" .. vm:GetSequenceCount() file.Write("mcv_harness/results/probe_m26.txt", table.concat(out, "\n"))
-lua local w = ply:GetActiveWeapon() w:SetNextIdle(CurTime() + 60)
-clua local vm = LocalPlayer():GetViewModel() vm:SendViewModelMatchingSequence(vm:LookupSequence("drawbackhigh")) vm:SetCycle(0.5) vm:SetPlaybackRate(0)
-wait 0.3
-shot probe_drawback_half marker
-clua local vm = LocalPlayer():GetViewModel() vm:SendViewModelMatchingSequence(vm:LookupSequence("drawbackhigh")) vm:SetCycle(0.95) vm:SetPlaybackRate(0)
-wait 0.3
-shot probe_drawback_end marker
-clua local vm = LocalPlayer():GetViewModel() vm:SendViewModelMatchingSequence(vm:LookupSequence("throw")) vm:SetCycle(0.3) vm:SetPlaybackRate(0)
-wait 0.3
-shot probe_throw_03 marker
-clua local vm = LocalPlayer():GetViewModel() vm:SendViewModelMatchingSequence(vm:LookupSequence("idle")) vm:SetPlaybackRate(1)
-lua local w = ply:GetActiveWeapon() w:SetNextIdle(CurTime())
+give mcv_m16a1
+wait 2
+shot s_vm_m16a1
+clua local vm = LocalPlayer():GetViewModel() print("[c] m16 vm pos", tostring(vm:GetPos()), "seq", vm:GetSequenceName(vm:GetSequence()), "wep hidden", tostring(LocalPlayer():GetActiveWeapon():ViewModelHidden()))
+give mcv_dynamite
+wait 2
+shot s_vm_dynamite
+clua local vm = LocalPlayer():GetViewModel() local w = LocalPlayer():GetActiveWeapon() print("[c] dyn vm pos", tostring(vm:GetPos()), "seq", vm:GetSequenceName(vm:GetSequence()), "hidden", tostring(w:ViewModelHidden()), "state", w:GetActionState(), "rounds", w:GetRoundsLeft())

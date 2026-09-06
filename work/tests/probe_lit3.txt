@@ -1,0 +1,25 @@
+god
+strip
+ang 0 0 0
+hud 1
+give mcv_molotov
+wait 2
+shot s_molotov_idle3
+key +attack
+wait 0.8
+shot s_molotov_lit3
+key -attack
+wait 2
+strip
+give mcv_dynamite
+wait 2.5
+key +attack2
+wait 0.05
+key -attack2
+wait 0.5
+key +attack2
+wait 0.7
+clua local w = LocalPlayer():GetActiveWeapon() print("[c] dyn: state", w:GetActionState(), "IsLit", tostring(w:IsLit()), "VMLit", tostring(w.VMLit))
+shot s_dynamite_lit3
+key -attack2
+wait 2

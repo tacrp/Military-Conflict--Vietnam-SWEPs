@@ -414,6 +414,20 @@ def detect_mode(qc, name):
 # Transform steps
 # --------------------------------------------------------------------------------------------
 
+def step_bbox(qc, ctx):
+    """The $bbox is the viewmodel's render box, and a box that ends at eye height (the molotov's
+    and the dynamite's, max z 0) had the whole viewmodel culled in GMod. A generous box costs
+    nothing on a viewmodel (Lua sets the same bounds every frame, mcv_base_core/sh_vm.lua)."""
+    if not ctx.name.startswith("v_"):
+        return
+    box = "$bbox -96 -96 -96 96 96 96"
+    if qc.raw_sub(r'^\$bbox(\s+[-0-9.]+){6}', box, re.M) == 0:
+        for i, it in enumerate(qc.items):
+            if isinstance(it, str) and "$cdmaterials" in it:
+                qc.items[i] = it.replace("$cdmaterials", box + "\n$cdmaterials", 1)
+                break
+
+
 def step_illumposition(qc, ctx):
     """Light every weapon from the model origin (the game's per-model value sits off in the
     arms and lights the gun unevenly in GMod)."""
@@ -692,6 +706,7 @@ def step_paths(qc, ctx):
     if n == 0:
         ctx.warn("no $modelname weapons/ line found")
     step_illumposition(qc, ctx)
+    step_bbox(qc, ctx)
     qc.raw_sub(r'\$cdmaterials\s+"models\\[Ww]eapons\\', '$cdmaterials "' + MATERIAL_PREFIX.replace("\\", "\\\\"))
     qc.raw_sub(r'\$includemodel\s+"weapons/gesture_animations\.mdl"', '$includemodel "%s"' % GESTURE_MODEL)
     # mesh / physics / any other smd referenced outside animation blocks
@@ -1502,6 +1517,7 @@ def port_worldmodel(args, og_dir):
     if n == 0:
         ctx.warn("no $modelname weapons\\ line found")
     step_illumposition(qc, ctx)
+    step_bbox(qc, ctx)
     qc.raw_sub(r'\$cdmaterials\s+"models\\[Ww]eapons\\', '$cdmaterials "' + MATERIAL_PREFIX.replace("\\", "\\\\"))
     qc.raw_sub(r'"([^"\n]+\.smd)"', lambda m: '"%s"' % ctx.out_smd_path(m.group(1)))
     for b in qc.blocks("animation"):

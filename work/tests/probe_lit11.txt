@@ -1,0 +1,13 @@
+strip
+give mcv_m26
+wait 1.5
+lua local w = ply:GetActiveWeapon() w.ThinkWeapon = function() end w:Windup(false)
+clua local w = LocalPlayer():GetActiveWeapon() w.ThinkWeapon = function() end w.PreDrawViewModel = function() end
+wait 0.6
+shot s_m26_windup_nopredraw
+clua local w = LocalPlayer():GetActiveWeapon() w.PreDrawViewModel = nil local vm = LocalPlayer():GetViewModel() print("[c] predraw returns", tostring(w:PreDrawViewModel(vm)), "nextidle", w:GetNextIdle(), "animlock", w:GetAnimLockTime())
+wait 0.3
+shot s_m26_windup_predraw_back
+lua local w = ply:GetActiveWeapon() w.ThinkWeapon = nil w:SetActionState(0) w:Idle()
+clua LocalPlayer():GetActiveWeapon().ThinkWeapon = nil
+wait 1

@@ -1,0 +1,17 @@
+strip
+give mcv_molotov
+wait 1.5
+clua local vm = LocalPlayer():GetViewModel() local e = LocalPlayer():EyePos() local a = LocalPlayer():EyeAngles() local out = {} for _, n in ipairs({"root", "cam_driver", "hand_r", "hand_l", "Base", "molotov", "Object001", "Cloth4"}) do local i = vm:LookupBone(n) if i then local p = vm:GetBonePosition(i) local d = WorldToLocal(p, angle_zero, e, a) out[#out+1] = n .. "=" .. tostring(d) end end print("[c] idle bones (eye-local): " .. table.concat(out, " | ") .. " | vm pos " .. tostring(vm:GetPos()) .. " ang " .. tostring(vm:GetAngles()))
+key +attack
+wait 0.8
+clua local vm = LocalPlayer():GetViewModel() local e = LocalPlayer():EyePos() local a = LocalPlayer():EyeAngles() local out = {} for _, n in ipairs({"root", "cam_driver", "hand_r", "hand_l", "Base", "molotov", "Object001", "Cloth4"}) do local i = vm:LookupBone(n) if i then local p = vm:GetBonePosition(i) local d = WorldToLocal(p, angle_zero, e, a) out[#out+1] = n .. "=" .. tostring(d) end end print("[c] windup bones (eye-local): " .. table.concat(out, " | ") .. " | vm pos " .. tostring(vm:GetPos()) .. " ang " .. tostring(vm:GetAngles()) .. " seq " .. vm:GetSequenceName(vm:GetSequence()) .. " cycle " .. vm:GetCycle())
+key -attack
+wait 2
+strip
+give mcv_dynamite
+wait 2
+clua local w = LocalPlayer():GetActiveWeapon() print("[c] dyn windup seq", tostring(w.SequenceWindup), "has", tostring(w:HasSequence(w.SequenceWindup)), "throw", tostring(w:HasSequence(w.SequenceThrow)), "kind", w.PlaceKind, "waiting", tostring(w:StillWaiting()))
+tap +attack2 0.3
+wait 0.3
+clua local w = LocalPlayer():GetActiveWeapon() print("[c] dyn after tap: state", w:GetActionState(), "rounds", w:GetRoundsLeft())
+wait 2

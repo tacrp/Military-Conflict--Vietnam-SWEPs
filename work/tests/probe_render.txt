@@ -1,0 +1,11 @@
+strip
+give mcv_m26
+wait 1.5
+clua local vm = LocalPlayer():GetViewModel() print("[c] drawbackhigh duration", vm:SequenceDuration(vm:LookupSequence("drawbackhigh")), "idle", vm:SequenceDuration(vm:LookupSequence("idle")))
+clua hook.Add("PostDrawViewModel", "mcv_probe", function(vm, ply, wep) if !vm.mcv_probe_t or CurTime() - vm.mcv_probe_t > 0.1 then vm.mcv_probe_t = CurTime() local e, a = ply:EyePos(), ply:EyeAngles() local out = {} for _, n in ipairs({"hand_r", "hand_l", "Handle", "BaseRoot"}) do local i = vm:LookupBone(n) local m = i and vm:GetBoneMatrix(i) if m then local d = WorldToLocal(m:GetTranslation(), angle_zero, e, a) out[#out+1] = string.format("%s=(%.1f %.1f %.1f)", n, d.x, d.y, d.z) end end print(string.format("[c] render seq %s cycle %.2f: %s", vm:GetSequenceName(vm:GetSequence()), vm:GetCycle(), table.concat(out, " "))) end end)
+wait 0.3
+key +attack
+wait 1
+key -attack
+wait 1.5
+clua hook.Remove("PostDrawViewModel", "mcv_probe")

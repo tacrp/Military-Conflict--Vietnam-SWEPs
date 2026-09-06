@@ -1,0 +1,10 @@
+strip
+give mcv_m26
+wait 1.5
+clua local vm = LocalPlayer():GetViewModel() vm:SetSequence("drawbackhigh") vm:SetCycle(0.5) vm:SetPlaybackRate(0)
+wait 0.3
+shot s_m26_cycle05
+clua local vm = LocalPlayer():GetViewModel() vm:SetSequence("drawbackhigh") vm:SetCycle(0.98) vm:SetPlaybackRate(0)
+wait 0.3
+shot s_m26_cycle098
+clua local vm = LocalPlayer():GetViewModel() vm:SetSequence("idle") vm:SetPlaybackRate(1)

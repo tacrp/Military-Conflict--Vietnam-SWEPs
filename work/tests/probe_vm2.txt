@@ -1,0 +1,4 @@
+give mcv_molotov
+wait 2
+clua local vm = LocalPlayer():GetViewModel() local e = LocalPlayer():EyePos() local out = {} for i = 0, vm:GetBoneCount() - 1 do local p = vm:GetBonePosition(i) if p then out[#out+1] = vm:GetBoneName(i) .. "=" .. tostring(math.Round((p - e):Length())) end end print("[c] molotov bone dist from eye: " .. table.concat(out, " "))
+clua local vm = LocalPlayer():GetViewModel() print("[c] molotov render bounds", tostring(vm:GetRenderBounds()), "seq", vm:GetSequenceName(vm:GetSequence()), "cycle", vm:GetCycle(), "playback", vm:GetPlaybackRate())

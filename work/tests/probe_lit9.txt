@@ -1,0 +1,18 @@
+strip
+give mcv_m26
+wait 1.5
+key +attack
+wait 0.5
+shot s_m26_windup
+key -attack
+wait 2.5
+strip
+give mcv_molotov
+wait 1.5
+lua ply:GetActiveWeapon():Windup(false)
+wait 0.5
+lua local vm = ply:GetViewModel() print("[s] server vm seq", vm:GetSequenceName(vm:GetSequence()), "cycle", vm:GetCycle(), "state", ply:GetActiveWeapon():GetActionState())
+clua local vm = LocalPlayer():GetViewModel() print("[c] client vm seq", vm:GetSequenceName(vm:GetSequence()), "cycle", vm:GetCycle(), "state", LocalPlayer():GetActiveWeapon():GetActionState())
+shot s_molotov_windup_lua
+lua ply:GetActiveWeapon():SetActionState(0) ply:GetActiveWeapon():Idle()
+wait 1

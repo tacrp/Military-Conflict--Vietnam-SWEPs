@@ -1,0 +1,8 @@
+strip
+give mcv_m26
+wait 1.5
+key +attack
+wait 0.5
+shot s_m26_windup_oldlua
+key -attack
+wait 2.5

@@ -102,3 +102,5 @@ NOTE: Please do not resort to using "snap" to fix this. "snap" should only be us
 - [x] Clicking a dual-wieldable pistol's spawn icon twice did not unlock dual wield: sandbox hands PlayerGiveSWEP the spawn-list entry, which has no HasAkimbo; the stored weapon table is checked instead
 - [x] Molotov rag and dynamite fuse burn while lit: on the viewmodel's Wick attachment from the trigger pull until the item leaves the hand (zippo flame for the rag, the dynamite fuse particle), and on the thrown bottle's wick
 - [x] C4 with every charge planted is empty hands: no viewmodel, no world model, no deploy animation, only the detonate hint
+- [x] Molotov and dynamite viewmodels never drew: culled by the model's own `$bbox` (ends at eye height). Bounds widened from Lua every frame and by the port; both recompiled. With them visible, the lit flames show (zippo to the rag, burning fuse)
+- [x] Dynamite windup on right click threw at once: the release check watched the left button; it watches the button that started the windup

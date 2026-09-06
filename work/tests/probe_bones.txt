@@ -1,0 +1,10 @@
+strip
+give mcv_m26
+wait 1.5
+clua local vm = LocalPlayer():GetViewModel() vm:SetupBones() local e, a = LocalPlayer():EyePos(), LocalPlayer():EyeAngles() local out = {} for _, n in ipairs({"root", "hand_r", "hand_l", "Handle"}) do local i = vm:LookupBone(n) if i then local m = vm:GetBoneMatrix(i) if m then out[#out+1] = n .. "=" .. tostring(WorldToLocal(m:GetTranslation(), angle_zero, e, a)) end end end print("[c] idle bones: " .. table.concat(out, " | "))
+clua LocalPlayer():GetActiveWeapon():PlaySequence("drawbackhigh", 1, false, true)
+wait 0.12
+clua local vm = LocalPlayer():GetViewModel() vm:SetupBones() local e, a = LocalPlayer():EyePos(), LocalPlayer():EyeAngles() local out = {} for _, n in ipairs({"root", "hand_r", "hand_l", "Handle"}) do local i = vm:LookupBone(n) if i then local m = vm:GetBoneMatrix(i) if m then out[#out+1] = n .. "=" .. tostring(WorldToLocal(m:GetTranslation(), angle_zero, e, a)) end end end print("[c] t=0.12 bones: " .. table.concat(out, " | ") .. " cycle " .. vm:GetCycle())
+wait 0.25
+clua local vm = LocalPlayer():GetViewModel() vm:SetupBones() local e, a = LocalPlayer():EyePos(), LocalPlayer():EyeAngles() local out = {} for _, n in ipairs({"root", "hand_r", "hand_l", "Handle"}) do local i = vm:LookupBone(n) if i then local m = vm:GetBoneMatrix(i) if m then out[#out+1] = n .. "=" .. tostring(WorldToLocal(m:GetTranslation(), angle_zero, e, a)) end end end print("[c] t=0.37 bones: " .. table.concat(out, " | ") .. " cycle " .. vm:GetCycle())
+wait 1

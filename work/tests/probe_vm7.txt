@@ -1,0 +1,12 @@
+strip
+give mcv_molotov
+wait 1.5
+clua local vm = LocalPlayer():GetViewModel() vm:SetRenderBounds(Vector(-64, -64, -64), Vector(64, 64, 64)) print("[c] bounds set", tostring(vm:GetRenderBounds()))
+wait 0.3
+shot s_molotov_bigbounds
+strip
+give mcv_dynamite
+wait 1.5
+clua local vm = LocalPlayer():GetViewModel() vm:SetRenderBounds(Vector(-64, -64, -64), Vector(64, 64, 64))
+wait 0.3
+shot s_dynamite_bigbounds

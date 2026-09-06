@@ -1,0 +1,3 @@
+give mcv_molotov
+wait 2
+clua local vm = LocalPlayer():GetViewModel() local bg = {} for i = 0, vm:GetNumBodyGroups() - 1 do bg[#bg+1] = vm:GetBodygroupName(i) .. "=" .. vm:GetBodygroup(i) .. "/" .. vm:GetBodygroupCount(i) end local mins, maxs = vm:GetRenderBounds() print("[c] molotov bg " .. table.concat(bg, " ") .. " | mats " .. table.concat(vm:GetMaterials(), ",") .. " | color " .. tostring(vm:GetColor()) .. " mode " .. vm:GetRenderMode() .. " | bounds " .. tostring(mins) .. " / " .. tostring(maxs) .. " | skin " .. vm:GetSkin() .. " | nodraw " .. tostring(vm:GetNoDraw()) .. " | mat " .. tostring(vm:GetMaterial()) .. " | fov " .. tostring(LocalPlayer():GetFOV()))

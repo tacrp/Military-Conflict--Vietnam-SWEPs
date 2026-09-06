@@ -1,0 +1,19 @@
+strip
+give mcv_molotov
+wait 1.5
+clua LocalPlayer():GetViewModel():SetModel("models/weapons/mcv/v_m26.mdl")
+wait 0.5
+shot s_swap_molotov_with_m26model
+strip
+give mcv_m26
+wait 1.5
+clua LocalPlayer():GetViewModel():SetModel("models/weapons/mcv/v_molotov.mdl")
+wait 0.5
+clua local vm = LocalPlayer():GetViewModel() print("[c] m26 wep, molotov model: seq", vm:GetSequenceName(vm:GetSequence()), "mats", table.concat(vm:GetMaterials(), ","))
+shot s_swap_m26_with_molotovmodel
+strip
+give mcv_m26
+wait 1.5
+clua LocalPlayer():GetViewModel():SetModel("models/weapons/mcv/v_dynamite.mdl")
+wait 0.5
+shot s_swap_m26_with_dynamitemodel

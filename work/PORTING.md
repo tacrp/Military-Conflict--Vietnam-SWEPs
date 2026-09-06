@@ -748,3 +748,10 @@ soundscripts (only the `MCV_` names are), and 86 spelled `WoodDamageModifier` wr
 existing `EjectBrassType` values also copy the game's brass ids without remapping, so about 80
 guns eject the wrong shell model; the generator's values are right, the old files were left
 alone since the field has no gameplay effect.
+* **Viewmodels culled by their own box** (`step_bbox`, and `MCV_ViewModelBounds` in
+  `lua/mcv/client/cl_rendertarget.lua`): the game's `$bbox` on the molotov and the dynamite ends
+  at eye height and GMod culled the whole viewmodel (nothing drawn, and no PreDrawViewModel
+  hook runs for a culled viewmodel). The port writes a 96-unit box on every viewmodel and Lua
+  sets the same bounds in PreDrawViewModels. Note for anyone chasing "the windup hides the
+  hands": the game's pullback animations end with the arm cocked beside the head, off screen
+  (drawbackhigh frame 18: hand 5 units ahead, 16 to the side); that is authored, not a bug.

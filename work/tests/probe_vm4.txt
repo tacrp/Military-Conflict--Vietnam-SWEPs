@@ -1,0 +1,7 @@
+give mcv_m16a1
+wait 1.5
+clua local vm = LocalPlayer():GetViewModel() local mins, maxs = vm:GetRenderBounds() print("[c] m16 mats " .. table.concat(vm:GetMaterials(), ",") .. " | bounds " .. tostring(mins) .. " / " .. tostring(maxs) .. " | bones " .. vm:GetBoneCount())
+give mcv_dynamite
+wait 1.5
+clua local vm = LocalPlayer():GetViewModel() local mins, maxs = vm:GetRenderBounds() print("[c] dyn mats " .. table.concat(vm:GetMaterials(), ",") .. " | bounds " .. tostring(mins) .. " / " .. tostring(maxs) .. " | bones " .. vm:GetBoneCount() .. " | nodraw effect " .. tostring(vm:IsEffectActive(EF_NODRAW)) .. " r_drawviewmodel " .. GetConVar("r_drawviewmodel"):GetString())
+shot s_vm_dyn2

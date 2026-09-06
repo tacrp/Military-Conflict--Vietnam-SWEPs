@@ -1,0 +1,9 @@
+strip
+give mcv_molotov
+wait 1.5
+clua local w = LocalPlayer():GetActiveWeapon() local vm = LocalPlayer():GetViewModel() local e, a = LocalPlayer():EyePos(), LocalPlayer():EyeAngles() local p, an = w:GetViewModelPosition(e, a) print("[c] idle vm view offset", tostring(WorldToLocal(p, an, e, a)), "dang", tostring(an - a), "sa", w:GetSightAmountVisual(), "speed", w:GetSpeedVisual())
+key +attack
+wait 0.5
+clua local w = LocalPlayer():GetActiveWeapon() local vm = LocalPlayer():GetViewModel() local e, a = LocalPlayer():EyePos(), LocalPlayer():EyeAngles() local p, an = w:GetViewModelPosition(e, a) print("[c] windup vm view offset", tostring(WorldToLocal(p, an, e, a)), "dang", tostring(an - a), "sa", w:GetSightAmountVisual(), "speed", w:GetSpeedVisual(), "pose", vm:GetPoseParameter("player_movement"))
+key -attack
+wait 2

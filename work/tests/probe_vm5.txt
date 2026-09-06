@@ -1,0 +1,21 @@
+strip
+give mcv_m26
+wait 1.5
+clua local vm = LocalPlayer():GetViewModel() print("[c] m26 mats " .. table.concat(vm:GetMaterials(), ","))
+shot s_vm_m26
+strip
+give mcv_c4
+wait 1.5
+shot s_vm_c4
+strip
+give mcv_m16mine
+wait 1.5
+shot s_vm_mine
+strip
+give mcv_m16a1
+wait 1.5
+clua local vm = LocalPlayer():GetViewModel() print("[c] m16 mats " .. table.concat(vm:GetMaterials(), ","))
+strip
+give mcv_molotov
+wait 1.5
+shot s_vm_molotov2

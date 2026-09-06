@@ -1,0 +1,11 @@
+give mcv_molotov
+wait 2
+shot s_molotov_idle
+clua local w = LocalPlayer():GetActiveWeapon() print("[c] idle hidden", tostring(w:ViewModelHidden()), "vm nodraw", tostring(LocalPlayer():GetViewModel():GetNoDraw()), "vm model", LocalPlayer():GetViewModel():GetModel(), "seq", LocalPlayer():GetViewModel():GetSequenceName(LocalPlayer():GetViewModel():GetSequence()))
+clua local w = LocalPlayer():GetActiveWeapon() local old = w.PreDrawViewModel w.PreDrawViewModel = function(s, vm) local ok, r = pcall(old, s, vm) if !ok then print("[c] predraw error", r) end w._pd = tostring(r) return r end
+key +attack
+wait 0.8
+clua local w = LocalPlayer():GetActiveWeapon() local vm = LocalPlayer():GetViewModel() print("[c] holding predraw ret", tostring(w._pd), "seq", vm:GetSequenceName(vm:GetSequence()), "cycle", vm:GetCycle(), "vm pos", tostring(vm:GetPos()), "eye", tostring(LocalPlayer():EyePos()))
+shot s_molotov_hold
+key -attack
+wait 2

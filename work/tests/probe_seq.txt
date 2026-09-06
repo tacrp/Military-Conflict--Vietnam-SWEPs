@@ -1,0 +1,10 @@
+strip
+give mcv_molotov
+wait 1.5
+clua local vm = LocalPlayer():GetViewModel() vm:SetSequence("drawbackhigh") vm:SetCycle(0) print("[c] forced seq", vm:GetSequenceName(vm:GetSequence()))
+wait 0.3
+shot s_seq_drawback_forced
+clua local vm = LocalPlayer():GetViewModel() vm:SetSequence("throw") vm:SetCycle(0.3)
+wait 0.3
+shot s_seq_throw_forced
+clua local vm = LocalPlayer():GetViewModel() vm:SetSequence("idle")

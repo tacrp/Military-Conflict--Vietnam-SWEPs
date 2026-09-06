@@ -1,0 +1,5 @@
+strip
+give mcv_molotov
+wait 1.5
+clua local vm = LocalPlayer():GetViewModel() local mn, mx = vm:GetRenderBounds() print("[c] bounds now", tostring(mn), "/", tostring(mx), "hook", tostring(hook.GetTable().PreDrawViewModels and hook.GetTable().PreDrawViewModels.MCV_ViewModelBounds != nil), "wep flag", tostring(LocalPlayer():GetActiveWeapon().MilitaryConflictVietnam))
+shot s_molotov_bounds_hook

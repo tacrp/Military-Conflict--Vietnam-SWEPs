@@ -206,8 +206,9 @@ function SWEP:SpawnStake(pos, normal)
 end
 
 // Dynamite can be thrown lit instead of planted
-function SWEP:Windup()
+function SWEP:Windup(key)
     self:SetActionState(STATE_WINDUP)
+    self.WindupKey = key or IN_ATTACK
     if self:HasSequence(self.SequenceWindup) then
         self:PlaySequence(self.SequenceWindup, 1, false, true)
     end
@@ -289,7 +290,7 @@ function SWEP:ThinkWeapon()
     local owner = self:GetOwner()
     local state = self:GetActionState()
 
-    if state == STATE_WINDUP and !owner:KeyDown(IN_ATTACK) then
+    if state == STATE_WINDUP and !owner:KeyDown(self.WindupKey or IN_ATTACK) then
         self:ThrowLit()
     end
 
@@ -343,7 +344,7 @@ function SWEP:SecondaryAttack()
         self:Detonate()
         self:SetNextSecondaryFire(CurTime() + 0.5)
     elseif self.PlaceKind == "dynamite" and self:GetActionState() == STATE_IDLE and self:GetRoundsLeft() > 0 then
-        if self:HasSequence(self.SequenceWindup) then self:Windup() else self:ThrowLit() end
+        if self:HasSequence(self.SequenceWindup) then self:Windup(IN_ATTACK2) else self:ThrowLit() end
     end
 end
 
