@@ -107,16 +107,48 @@ local function copyLook(self, mdl)
     end
 end
 
-// The left-hand gun of a dual: the left hand bone, mirrored placement, then the left offset
-function SWEP:GetWorldModelTransformLeft()
+// The left-hand gun of a dual is the right one's mirror image: the merged right gun's
+// weapon_bone frame is reflected across the player's sagittal plane (the left hand is the
+// right hand's reflection), then the gun's own lateral axis is flipped back so the result is
+// a proper rotation of the same, unmirrored mesh. The second copy is placed so that its own
+// weapon_bone lands on that frame. WorldModelOffsetLeft (mcv_wm_left_pos / _ang) sits on top
+// in the gun's frame for the odd one out.
+local WEAPON_BONE = "ValveBiped.weapon_bone"
+local REFLECT = Matrix()
+REFLECT:Scale(Vector(1, -1, 1))          // across the owner's x-z plane
+local FLIP_LATERAL = Matrix()
+FLIP_LATERAL:Scale(Vector(-1, 1, 1))     // the bone's x is the gun's left-right axis
+
+function SWEP:GetWorldModelTransformLeft(right, left)
     local owner = self:GetOwner()
-    local id = owner:LookupBone("ValveBiped.Bip01_L_Hand")
-    local m = id and owner:GetBoneMatrix(id)
-    if !m then return nil end
-    local pos, ang = m:GetTranslation(), m:GetAngles()
+    local rb = IsValid(right) and right:LookupBone(WEAPON_BONE)
+    local W = rb and right:GetBoneMatrix(rb)
+    if !W then return nil end
+    local P = Matrix()
+    P:SetTranslation(owner:GetPos())
+    P:SetAngles(owner:GetAngles())
+    local Wl = P * REFLECT * P:GetInverse() * W * FLIP_LATERAL
     local offpos = readTriple(cv_left_pos, Vector) or (self.WorldModelOffsetLeft and self.WorldModelOffsetLeft.pos) or vector_origin
     local offang = readTriple(cv_left_ang, Angle) or (self.WorldModelOffsetLeft and self.WorldModelOffsetLeft.ang) or angle_zero
-    return LocalToWorld(offpos, offang, pos, ang)
+    if offpos != vector_origin or offang != angle_zero then
+        local O = Matrix()
+        O:SetTranslation(offpos)
+        O:SetAngles(offang)
+        Wl = Wl * O
+    end
+    // the copy's origin: its own weapon_bone bind transform taken back out
+    if !self.WMLeftBind and IsValid(left) then
+        local lb = left:LookupBone(WEAPON_BONE)
+        if lb then
+            left:SetPos(vector_origin)
+            left:SetAngles(angle_zero)
+            left:SetupBones()
+            local B = left:GetBoneMatrix(lb)
+            if B then self.WMLeftBind = B:GetInverse() end
+        end
+    end
+    local E = self.WMLeftBind and (Wl * self.WMLeftBind) or Wl
+    return E:GetTranslation(), E:GetAngles()
 end
 
 function SWEP:DrawWorldModel(flags)
@@ -139,7 +171,7 @@ function SWEP:DrawWorldModel(flags)
 
     if self.GetAkimbo and self:GetAkimbo() then
         local left = self:GetWorldModelEntity(true)
-        local pos, ang = self:GetWorldModelTransformLeft()
+        local pos, ang = self:GetWorldModelTransformLeft(right, left)
         if left and pos then
             left:SetPos(pos)
             left:SetAngles(ang)
