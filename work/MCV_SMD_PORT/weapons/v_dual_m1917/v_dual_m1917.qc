@@ -771,35 +771,35 @@ $animation "shoot_d_l_ironsight_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_d
 	subtract "shoot_d_l_ironsight_a_corrective_animation" 0
 }
 
-$animation "reload_a" "fixed_anims\reload_a.smd" {
+$animation "reload_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\reload_a.smd" {
 	fps 30
 }
 
-$animation "reload_a_i" "fixed_anims\reload_a_i.smd" {
+$animation "reload_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\reload_a_i.smd" {
 	fps 30
 }
 
-$animation "reload_d_a" "fixed_anims\reload_d_a.smd" {
+$animation "reload_d_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\reload_d_a.smd" {
 	fps 30
 }
 
-$animation "reload_d_a_i" "fixed_anims\reload_d_a_i.smd" {
+$animation "reload_d_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\reload_d_a_i.smd" {
 	fps 30
 }
 
-$animation "reload_r_a" "fixed_anims\reload_r_a.smd" {
+$animation "reload_r_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\reload_r_a.smd" {
 	fps 30
 }
 
-$animation "reload_r_a_i" "fixed_anims\reload_r_a_i.smd" {
+$animation "reload_r_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\reload_r_a_i.smd" {
 	fps 30
 }
 
-$animation "reload_d_r_a" "fixed_anims\reload_d_r_a.smd" {
+$animation "reload_d_r_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\reload_d_r_a.smd" {
 	fps 30
 }
 
-$animation "reload_d_r_a_i" "fixed_anims\reload_d_r_a_i.smd" {
+$animation "reload_d_r_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\reload_d_r_a_i.smd" {
 	fps 30
 }
 

@@ -154,6 +154,9 @@ def solve_two_bone(world, nodes, pose, upper, lower, hand, target):
     return up_local, low_local, W2
 
 
+MAX_PULL = 4.0  # units an animation's own touch rule may move the hand before it is dropped
+
+
 def rule_weight(rng, frame):
     """How much of an ikrule applies at `frame`: `range start peak tail end` fades the rule in
     from start to peak and out from tail to end (a reload's hand is glued to the gun only while
@@ -211,6 +214,31 @@ def bake_animation(anim_path, corrective_path, base_path, chains, out_path, is_d
         else:
             wc = fk(nodes, pose_at(int(round(contact or 0))))
         offsets.append(np.linalg.inv(wc[target]) @ np.append(wc[hand][:3, 3], 1.0))
+    # An animation's own rule that would haul the hand more than MAX_PULL units from where it
+    # was animated (the duals' reloads tie the right hand to the left one while the animation
+    # takes it 16 units away) is dropped: in game those reloads read as the animation, and the
+    # solved arm looked wrong. Rules inherited from the idle (the movement layers swinging the
+    # gun out of the hands) are kept whatever the distance.
+    keep = []
+    for chain, offset in zip(chains_b, offsets):
+        upper, lower, hand, target = chain[:4]
+        own = len(chain) > 5 and chain[5] is not None
+        if own:
+            pull = 0.0
+            for fi in range(len(aframes)):
+                weight = rule_weight(chain[4], fi) if len(chain) > 4 else 1.0
+                if weight <= 0.001:
+                    continue
+                w = fk(nodes, pose_at(fi))
+                pull = max(pull, np.linalg.norm(w[hand][:3, 3] - (w[target] @ offset)[:3]) * weight)
+            if pull > MAX_PULL:
+                if log:
+                    log("bake_ik: %s: rule %s -> %s dropped, it pulls the hand %.1f units" % (
+                        os.path.basename(anim_path), nodes[hand][0], nodes[target][0], pull))
+                continue
+        keep.append((chain, offset))
+    chains_b = [c for c, _ in keep]
+    offsets = [o for _, o in keep]
     worst_before = worst_after = 0.0
     new_rows = {}
     for fi, af in enumerate(aframes):

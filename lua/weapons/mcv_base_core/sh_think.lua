@@ -55,7 +55,7 @@ SWEP.MovementPoseWalkMax = 0.95 // fraction of MovementPoseWalk the walk may rea
 // idle row (port_qc.py step_sighted_walk), so aiming while walking shows that layer at this
 // fraction of its full swing on every gun.
 SWEP.MovementPoseSighted = 130
-SWEP.SightedSwayFraction = 0.5
+SWEP.SightedSwayFraction = 0.2
 
 function SWEP:GetMovementPose(speed, sa)
     local lo, hi = self.MovementPoseWalk, self.MovementPoseSprint
@@ -71,7 +71,7 @@ function SWEP:GetMovementPose(speed, sa)
     // on the sights the movement layers are the sighted walk layer's: a set fraction of its swing
     local sighted = math.min(speed / self.SpeedRun, 1) * self.MovementPoseSighted * self.SightedSwayFraction
 
-    return Lerp(sa, pose, sighted * 0.25)
+    return Lerp(sa, pose, sighted)
 end
 
 function SWEP:GetTargetSpeed()

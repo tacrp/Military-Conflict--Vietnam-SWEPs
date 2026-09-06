@@ -19,13 +19,13 @@ SWEP.ScopeLensMaterial = nil
 
 // Look of the lens; all static, sent to the shader when the weapon is deployed and aimed.
 SWEP.ScopePupilSlide = 0       // unused since the shadow is drawn on the reticle plane; kept for the VMT constant
-SWEP.ScopeLensSize = 0.55      // lens diameter on screen as a fraction of its height (the eyepiece offsets are tuned to this)
+SWEP.ScopeLensSize = 0.75      // lens diameter on screen as a fraction of its height (the eyepiece offsets are tuned to this)
 SWEP.ScopeShadowStrength = 1   // 0 disables the exit pupil and tube rim
 SWEP.ScopeShadowSize = 0.84    // clear picture diameter, fraction of the reticle plane (the plane is ScopeLensSize of the screen height, centred on the aim point)
 SWEP.ScopeShadowSoftness = 0.1
 SWEP.ScopeDistortion = -0.12   // barrel distortion (negative pulls the edge in)
 SWEP.ScopeAberration = 0.006   // chromatic aberration, lens widths
-SWEP.ScopeEdgeBlur = 0.02      // softening towards the edge, lens widths
+SWEP.ScopeEdgeBlur = 0.005      // softening towards the edge, lens widths
 SWEP.ScopeBrightness = 1
 SWEP.ReticleStrength = 1
 
@@ -36,13 +36,17 @@ function SWEP:GetScopeFOV()
     return self.ScopeFOV
 end
 
-// The lens shader is for scopes with a picture. An occluded eye gunsight (OEGScope) has no
-// picture: its lens is the occluder, the see-through comes from the half-transparent viewmodel
-// composite (mcv_base/sh_vm.lua) and the dot from DrawHUDExtra. With the shader on it the
-// single-point crosshair texture, opaque over its whole plane, blacked the lens out.
+// The occluded eye gunsight (OEGScope) is a scope too: the game's lens_singlepoint is a
+// scope-lens Refract showing the scope picture, and its dot is an additive glow mesh lit up
+// while aimed. Here the lens shader draws the picture and adds the glow texture's dot on the
+// reticle plane (additive mode, $c2_x), so the dot sits where the shot goes; the model's own
+// glow mesh stays dark. The see-through comes from the viewmodel composite (mcv_base/sh_vm.lua).
 function SWEP:ShouldDoScope()
-    return self:GetIronsight() and self.HasScope and !self.OEGScope
+    return self:GetIronsight() and self.HasScope
 end
+
+local oeg_glow = Material("models/weapons/mcv/optics/lens_singlepoint_glow")
+if !oeg_glow:IsError() then oeg_glow:SetVector("$color", Vector(0, 0, 0)) end
 
 // The reticle texture behind a ScopeMaterial. The game's crosshair_* VMTs are model materials
 // (some of them Refract lens shaders), so the texture is read off the material rather than
@@ -68,7 +72,7 @@ function SWEP:ApplyScopeMaterial()
     lensmat:SetFloat("$c1_y", self.ScopeAberration)
     lensmat:SetFloat("$c1_z", self.ScopeEdgeBlur)
     lensmat:SetFloat("$c1_w", strength > 0 and 0.49 or 4)
-    lensmat:SetFloat("$c2_x", 0.05)
+    lensmat:SetFloat("$c2_x", self.OEGScope and 1 or 0) // additive (glowing) reticle
     lensmat:SetFloat("$c2_y", self.ScopeBrightness)
     lensmat:SetFloat("$c2_z", ScrW() / ScrH())
 

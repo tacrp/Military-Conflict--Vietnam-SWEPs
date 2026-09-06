@@ -707,11 +707,11 @@ $animation "shootlast_l_ironsight_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_lacoste
 	subtract "shootlast_l_ironsight_a_corrective_animation" 0
 }
 
-$animation "reload_a" "fixed_anims\reload_a.smd" {
+$animation "reload_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_lacoste\v_dual_lacoste_anims\reload_a.smd" {
 	fps 30
 }
 
-$animation "reload_a_i" "fixed_anims\reload_a_i.smd" {
+$animation "reload_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_lacoste\v_dual_lacoste_anims\reload_a_i.smd" {
 	fps 30
 }
 
@@ -723,19 +723,19 @@ $animation "reload_ra_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_lacoste\v_dual_laco
 	fps 30
 }
 
-$animation "reload_er_a" "fixed_anims\reload_er_a.smd" {
+$animation "reload_er_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_lacoste\v_dual_lacoste_anims\reload_er_a.smd" {
 	fps 30
 }
 
-$animation "reload_er_a_i" "fixed_anims\reload_er_a_i.smd" {
+$animation "reload_er_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_lacoste\v_dual_lacoste_anims\reload_er_a_i.smd" {
 	fps 30
 }
 
-$animation "reload_e_a" "fixed_anims\reload_e_a.smd" {
+$animation "reload_e_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_lacoste\v_dual_lacoste_anims\reload_e_a.smd" {
 	fps 30
 }
 
-$animation "reload_e_a_i" "fixed_anims\reload_e_a_i.smd" {
+$animation "reload_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_lacoste\v_dual_lacoste_anims\reload_e_a_i.smd" {
 	fps 30
 }
 

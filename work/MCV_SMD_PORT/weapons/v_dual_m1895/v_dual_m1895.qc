@@ -631,19 +631,19 @@ $animation "shoot_d_l_ironsight_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_d
 	subtract "shoot_d_l_ironsight_a_corrective_animation" 0
 }
 
-$animation "reload_s" "fixed_anims\reload_s.smd" {
+$animation "reload_s" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_s.smd" {
 	fps 30
 }
 
-$animation "reload_s_i" "fixed_anims\reload_s_i.smd" {
+$animation "reload_s_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_s_i.smd" {
 	fps 30
 }
 
-$animation "reload_s_d" "fixed_anims\reload_s_d.smd" {
+$animation "reload_s_d" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_s_d.smd" {
 	fps 30
 }
 
-$animation "reload_s_d_i" "fixed_anims\reload_s_d_i.smd" {
+$animation "reload_s_d_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_s_d_i.smd" {
 	fps 30
 }
 
@@ -664,35 +664,35 @@ $animation "reload_l_d_i" "fixed_anims\reload_l_d_i.smd" {
 	fps 30
 }
 
-$animation "reload_e" "fixed_anims\reload_e.smd" {
+$animation "reload_e" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_e.smd" {
 	fps 30
 }
 
-$animation "reload_e_i" "fixed_anims\reload_e_i.smd" {
+$animation "reload_e_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_e_i.smd" {
 	fps 30
 }
 
-$animation "reload_e_d" "fixed_anims\reload_e_d.smd" {
+$animation "reload_e_d" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_e_d.smd" {
 	fps 30
 }
 
-$animation "reload_e_d_i" "fixed_anims\reload_e_d_i.smd" {
+$animation "reload_e_d_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_e_d_i.smd" {
 	fps 30
 }
 
-$animation "reload_ch" "fixed_anims\reload_ch.smd" {
+$animation "reload_ch" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_ch.smd" {
 	fps 30
 }
 
-$animation "reload_ch_i" "fixed_anims\reload_ch_i.smd" {
+$animation "reload_ch_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_ch_i.smd" {
 	fps 30
 }
 
-$animation "reload_ch_d" "fixed_anims\reload_ch_d.smd" {
+$animation "reload_ch_d" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_ch_d.smd" {
 	fps 30
 }
 
-$animation "reload_ch_d_i" "fixed_anims\reload_ch_d_i.smd" {
+$animation "reload_ch_d_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_ch_d_i.smd" {
 	fps 30
 }
 
@@ -713,19 +713,19 @@ $animation "reload_l_l_d_i" "fixed_anims\reload_l_l_d_i.smd" {
 	fps 30
 }
 
-$animation "reload_e_l" "fixed_anims\reload_e_l.smd" {
+$animation "reload_e_l" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_e_l.smd" {
 	fps 30
 }
 
-$animation "reload_e_l_i" "fixed_anims\reload_e_l_i.smd" {
+$animation "reload_e_l_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_e_l_i.smd" {
 	fps 30
 }
 
-$animation "reload_e_l_d" "fixed_anims\reload_e_l_d.smd" {
+$animation "reload_e_l_d" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_e_l_d.smd" {
 	fps 30
 }
 
-$animation "reload_e_l_d_i" "fixed_anims\reload_e_l_d_i.smd" {
+$animation "reload_e_l_d_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_e_l_d_i.smd" {
 	fps 30
 }
 

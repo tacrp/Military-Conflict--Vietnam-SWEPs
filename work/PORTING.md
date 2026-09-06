@@ -402,8 +402,11 @@ Brass ids the game added after 2024 (19 to 31) map to the nearest shell model th
   holds over `range start peak tail end`, fading in and out. Without either, the duals' reloads
   (`rhand touch hand_l contact 72 range 70 72 125 127` and the like) had the hands glued to each
   other for the whole reload. Where the authored FK differs from the rule (the dual MAC-10's
-  right hand travels 16 units mid-reload while tied to the left hand) the game's IK won, so the
-  bake follows the rule too. Rules inherited from the idle use the idle pose's offset.
+  right hand travels 16 units mid-reload while tied to the left hand) the solved arm looked
+  wrong in game ("the right hands are all kinda fucked"), so an animation's own rule that would
+  move the hand more than `MAX_PULL` (4 units) is dropped with a log line; the left hands' rules
+  (a unit or two of drift onto the gun's target bone) and every rule inherited from the idle
+  (the movement layers, any distance: the dual Blackhawk's run needs 12) are kept.
 * **Belt bodygroups**: the belt LMGs' `clamped*` bodygroups (the belt segment in the feed tray)
   ship with one submodel and no blank; `step_belt_blank` adds one and Lua hides them with the
   last round (`BeltBodygroups`, belt-fed guns only: the M16 family has a `clamped1` of its own).
@@ -493,8 +496,14 @@ sensitivity follows the scope magnification.
   punch), the vector the shot is fired along.
 * **No lens rim**: nothing is masked in lens coordinates any more; the shadow ring and the black
   surround are the reticle plane's only. The lens mesh clips the plane and that is all it does.
-* **OEG**: the occluded eye gunsights never get the lens shader (`ShouldDoScope`); their lens is the
-  occluder and the see-through is the viewmodel composite.
+* **OEG**: the occluded eye gunsights are scopes in the game too: `lens_singlepoint` is a
+  scope-lens Refract showing the scope picture tinted by `crosshair_singlepoint_scope`, and the
+  dot is `lens_singlepoint_glow`, an additive mesh of the `crosshair_singlepoint` texture (a
+  red-orange dot 27 px wide on 1024) tinted `2 2 2` by a proxy while aimed. Here the lens
+  shader draws the picture and adds that texture twice over on the reticle plane (`$c2_x 1`,
+  additive reticle mode), so the dot sits where the shot goes; the model's glow mesh is set to
+  `$color 0` from Lua. The M607 / XM177 model carries both the 4x lens and the OEG's, so
+  `scope_info` takes `prefer="singlepoint"` for an OEG (M607: index 6, XM177: 5).
 * **Outside the frame**: where the magnified window falls past the captured screen the shader
   paints black instead of the clamped edge pixels (a hard kick or a wide sway showed the border).
 * **In the shader**: exit pupil (bright disc centred on the eyepiece, so the shadow moves with

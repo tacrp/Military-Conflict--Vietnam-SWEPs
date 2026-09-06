@@ -43,7 +43,7 @@ SWEP.Num = 1
 SWEP.RangeModifier = 0.73
 
 SWEP.Firemodes = {
-    MCV.FIREMODE_BOLT,
+    MCV.FIREMODE_SEMI,
 }
 
 SWEP.LastShotAnimation = true

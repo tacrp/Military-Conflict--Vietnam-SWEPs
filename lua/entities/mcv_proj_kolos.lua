@@ -11,7 +11,7 @@ ENT.TrailParticle = "kolos_missile_trail"
 // Game script: ExplosionDamage 125, ExplosionRadius 200 per rocket (seven leave at once)
 function ENT:Detonate()
     local attacker = self.Attacker or self:GetOwner() or self
-    local dmg = 125
+    local dmg = 60
 
     util.BlastDamage(self, attacker, self:GetPos(), 200, dmg)
     self:FireBullets({

@@ -35,6 +35,12 @@ SWEP.SequenceThrow = "throw"
 SWEP.PlacedModel = nil
 SWEP.StakeModel = nil
 SWEP.MineBodygroups = {mine = 0, stick = 1} // bodygroup indices on the mine world model
+// creator-side placement angles: the piece is set model-up on the surface facing the player,
+// then turned by these (pitch, yaw, roll in its own frame). The stake mesh is authored point
+// up, so it is rolled over and its origin (now the top) lifted StakeRaise units off the ground
+SWEP.PlacedAngleOffset = nil
+SWEP.StakeAngleOffset = Angle(0, 0, 180)
+SWEP.StakeRaise = 6
 
 SWEP.Primary.Ammo = "mcv_explosive_charge"
 SWEP.Primary.ClipSize = -1

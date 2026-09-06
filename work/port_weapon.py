@@ -277,16 +277,22 @@ def ensure_reticle_vmt(base):
     return True
 
 
-def scope_info(vm):
+def scope_info(vm, prefer=None):
     """(submaterial index of the lens, reticle material path) from the compiled model, or (None, None).
 
-    The lens is the first material named lens_*; a few models (Vz.54 sniper) carry the reticle
-    itself as a crosshair_* material instead. The reticle drawn into the render target is the
-    matching crosshair_<suffix> texture from the game when the addon has it."""
+    The lens is the first material named lens_* (lens_<prefer> when given: the M607 / XM177
+    model carries both the 4x lens and the OEG's lens_singlepoint); a few models (Vz.54 sniper)
+    carry the reticle itself as a crosshair_* material instead. The reticle drawn into the
+    render target is the matching crosshair_<suffix> texture from the game when the addon has it."""
     names = mdl_textures(vm)
     idx = None
+    if prefer:
+        for i, n in enumerate(names):
+            if n.lower() == "lens_" + prefer:
+                idx = i
+                break
     for i, n in enumerate(names):
-        if n.lower().startswith("lens_"):
+        if idx is None and n.lower().startswith("lens_"):
             idx = i
             break
     if idx is None:
@@ -1076,7 +1082,7 @@ def generate(script_path, args):
         has_scope = reuse("HasScope") == "true"
     scope_idx, scope_mat = (None, None)
     if has_scope:
-        scope_idx, scope_mat = scope_info(vm)
+        scope_idx, scope_mat = scope_info(vm, "singlepoint" if reuse("OEGScope") else None)
         if scope_idx is None:
             warnings.append("script suggests a scope but the compiled model has no lens material; HasScope off")
             has_scope = False

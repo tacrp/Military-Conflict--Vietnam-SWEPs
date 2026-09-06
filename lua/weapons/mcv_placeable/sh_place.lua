@@ -18,19 +18,21 @@ local function blank_of(ent, group)
     return math.max(ent:GetBodygroupCount(group) - 1, 0)
 end
 
-// The piece's angle on a surface: model up along the normal, facing the way the player looks
-// plus the yaw they turned it by (R: 45 degrees clockwise, USE + R: the other way). The stake
-// faces the mine its wire runs to instead, turned the same way.
-function SWEP:PlaceAngle(normal, base_yaw)
+// The piece's angle on a surface: model up along the normal, facing the way the player looks,
+// then the weapon's PlacedAngleOffset (pitch, yaw, roll in the piece's own frame). The stake
+// faces the mine its wire runs to instead and takes StakeAngleOffset; the stake mesh has its
+// point at the top, so the default rolls it over and StakeRaise lifts it out of the ground.
+function SWEP:PlaceAngle(normal, base_yaw, offset)
     local ang = normal:Angle()
     ang:RotateAroundAxis(ang:Right(), -90)
-    ang:RotateAroundAxis(ang:Up(), (base_yaw or self:GetOwner():EyeAngles().y) + self:GetPlaceYaw())
+    ang:RotateAroundAxis(ang:Up(), base_yaw or self:GetOwner():EyeAngles().y)
+    offset = offset or self.PlacedAngleOffset
+    if offset then
+        ang:RotateAroundAxis(ang:Up(), offset.y)
+        ang:RotateAroundAxis(ang:Right(), offset.p)
+        ang:RotateAroundAxis(ang:Forward(), offset.r)
+    end
     return ang
-end
-
-function SWEP:RotatePlacement(dir)
-    self:SetPlaceYaw((self:GetPlaceYaw() + dir * 45) % 360)
-    self:EmitSound("buttons/lightswitch2.wav", 50, 120, 0.3, CHAN_ITEM)
 end
 
 // Where the piece would go: a surface within reach in front of the player, else the floor.
@@ -167,8 +169,8 @@ function SWEP:SpawnStake(pos, normal)
     if !IsValid(stake) then return end
     stake.Model = self.StakeModel or self.WorldModel
     stake.MineBodygroups = self.MineBodygroups
-    stake:SetPos(pos)
-    stake:SetAngles(self:PlaceAngle(normal, (mine:GetPos() - pos):Angle().y))
+    stake:SetPos(pos + normal * self.StakeRaise)
+    stake:SetAngles(self:PlaceAngle(normal, (mine:GetPos() - pos):Angle().y, self.StakeAngleOffset))
     stake:SetOwner(self:GetOwner())
     stake:Spawn()
     stake:Activate()
@@ -318,13 +320,7 @@ function SWEP:SecondaryAttack()
     end
 end
 
-// R turns the piece 45 degrees (USE + R the other way); the ghost shows the result
 function SWEP:Reload()
-    local owner = self:GetOwner()
-    if !owner:KeyPressed(IN_RELOAD) then return end
-    local state = self:GetActionState()
-    if state != STATE_IDLE and state != STATE_STAKE then return end
-    self:RotatePlacement(owner:KeyDown(IN_USE) and -1 or 1)
 end
 
 function SWEP:OnDeploy()
@@ -368,9 +364,11 @@ if CLIENT then
         end
 
         local ang = self:PlaceAngle(tr.HitNormal)
+        local raise = 0.5
         if state == STATE_STAKE then
             local mine = self:GetPlacedEntity()
-            if IsValid(mine) then ang = self:PlaceAngle(tr.HitNormal, (mine:GetPos() - tr.HitPos):Angle().y) end
+            raise = self.StakeRaise
+            ang = self:PlaceAngle(tr.HitNormal, IsValid(mine) and (mine:GetPos() - tr.HitPos):Angle().y or nil, self.StakeAngleOffset)
             if self.MineBodygroups then
                 self.Ghost:SetBodygroup(self.MineBodygroups.mine, blank_of(self.Ghost, self.MineBodygroups.mine))
                 self.Ghost:SetBodygroup(self.MineBodygroups.stick, 0)
@@ -380,7 +378,7 @@ if CLIENT then
             self.Ghost:SetBodygroup(self.MineBodygroups.stick, blank_of(self.Ghost, self.MineBodygroups.stick))
         end
 
-        self.Ghost:SetPos(tr.HitPos + tr.HitNormal * 0.5)
+        self.Ghost:SetPos(tr.HitPos + tr.HitNormal * raise)
         self.Ghost:SetAngles(ang)
 
         local col = ok and ghost_col or bad_col
@@ -395,7 +393,7 @@ if CLIENT then
             local mine = self:GetPlacedEntity()
             if IsValid(mine) then
                 render.SetMaterial(Material("cable/rope"))
-                render.DrawBeam(mine:GetPos() + Vector(0, 0, 4), tr.HitPos + Vector(0, 0, 8), 0.6, 0, 1, col)
+                render.DrawBeam(mine:GetPos() + Vector(0, 0, 4), tr.HitPos + tr.HitNormal * self.StakeRaise, 0.6, 0, 1, col)
             end
         end
     end
@@ -419,21 +417,18 @@ function SWEP:GetControlHints()
     if self.PlaceKind == "mine" then
         return {
             {"+attack", "Place mine, then the stake"},
-            {"+reload", "Rotate"},
             {"+use +attack", "Bash"},
         }
     elseif self.PlaceKind == "dynamite" then
         return {
             {"+attack", "Plant lit"},
             {"+attack2", "Throw lit"},
-            {"+reload", "Rotate"},
             {"+use +attack", "Bash"},
         }
     end
     return {
         {"+attack", "Plant"},
         {"+attack2", "Detonate"},
-        {"+reload", "Rotate"},
         {"+use +attack", "Bash"},
     }
 end

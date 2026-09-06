@@ -385,18 +385,6 @@ function SWEP:DoDrawCrosshair(x, y)
 
     drawshadowrect(x - (dot_size / 2), y - (dot_size / 2), dot_size, dot_size, col)
 
-    // a grenade being cooked: a ring pulses out every half second, reddening as the fuse runs down
-    if self.GetCookPulse then
-        local p, frac = self:GetCookPulse()
-        if p then
-            local r = gap_size + ScreenScale(2) + p * ScreenScale(10)
-            local pc = Color(255, 255 - 200 * frac, 60, math.min(a * (1 - p) * 2.5, 255))
-            surface.DrawCircle(x, y, r, pc)
-            surface.DrawCircle(x, y, r + 1, pc)
-            surface.DrawCircle(x, y, r + 2, pc)
-        end
-    end
-
     if self.Num > 1 then
         local shadow = crosshair_shadow
         shadow.a = a * 100 / 150

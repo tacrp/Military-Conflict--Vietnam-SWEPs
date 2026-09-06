@@ -42,16 +42,6 @@ function SWEP:GetCookTime()
     return CurTime() - self:GetActionStart()
 end
 
-// 0..1 phase of the half-second pulse the crosshair draws while cooking, and how far the fuse
-// has run; nil when not cooking (cl_hud.lua DoDrawCrosshair)
-function SWEP:GetCookPulse()
-    if self.FuseImpact then return nil end
-    local state = self:GetActionState()
-    if state != STATE_WINDUP_HIGH and state != STATE_WINDUP_LOW then return nil end
-    local cook = CurTime() - self:GetActionStart()
-    return (cook % 0.5) / 0.5, math.Clamp(cook / self:GetFuseTime(), 0, 1)
-end
-
 function SWEP:Windup(low)
     self:SetActionState(low and STATE_WINDUP_LOW or STATE_WINDUP_HIGH)
     self:SetActionStart(CurTime())

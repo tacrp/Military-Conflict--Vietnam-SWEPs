@@ -22,8 +22,8 @@ screenspace_general
 	$c1_y 0.006
 	$c1_z 0.02
 	$c1_w 0.49
-	// c2: tube softness, brightness, screen aspect, reticle strength
-	$c2_x 0.05
+	// c2: additive reticle (1 on the OEG), brightness, screen aspect, reticle strength
+	$c2_x 0
 	$c2_y 1
 	$c2_z 1.7778
 	$c2_w 1

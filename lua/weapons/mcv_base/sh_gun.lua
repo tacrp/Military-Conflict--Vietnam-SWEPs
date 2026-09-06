@@ -72,19 +72,6 @@ function SWEP:SecondaryAttack()
     end
 end
 
-if CLIENT then
-    local oeg_mat = Material("sprites/redglow1")
-
-    function SWEP:DrawHUDExtra()
-        if self.OEGScope and self:GetSightAmountVisual() > 0.6 then
-            surface.SetMaterial(oeg_mat)
-            surface.SetDrawColor(255, 255, 255, 255)
-            local s = ScreenScale(16)
-            surface.DrawTexturedRect((ScrW() - s) / 2, (ScrH() - s) / 2, s, s)
-        end
-    end
-end
-
 // Controls shown by the HUD after a deploy and in the weapon selection info
 function SWEP:GetControlHints()
     local h = {

@@ -10,7 +10,7 @@
 //
 //   c0: x 1/magnification   y (unused)                             z shadow radius (reticle plane units, 0.5 = its edge)   w shadow softness
 //   c1: x barrel distortion y chromatic aberration                  z edge blur                   w (unused)
-//   c2: x (unused)           y brightness                            z screen aspect (w/h)         w reticle strength
+//   c2: x 1: additive reticle y brightness                            z screen aspect (w/h)         w reticle strength
 //   c3: x, y scope axis on screen (0..1, y down)   z debug (1: show lens uv, 2: solid red, 3: outline the reticle plane)   w lens diameter on screen (fraction of height)
 sampler SCREEN  : register(s0);
 sampler RETICLE : register(s1);
@@ -80,9 +80,13 @@ float4 main(PS_INPUT frag) : COLOR {
     float box = 1.0 - smoothstep(0.47, 0.5, dp);
     col *= pupil * box * inplane;
 
-    // reticle on top, opaque where the crosshair lines are, inside the plane only
-    float ret = tex2D(RETICLE, ruv).a * C2.w * inplane;
-    col *= 1.0 - ret;
+    // reticle on top, inside the plane only: opaque black where the crosshair lines are
+    // (texture alpha), or, with C2.x set, the texture's colour added twice over (the occluded
+    // eye gunsight's glowing dot, the game's additive glow material tinted 2 2 2 while aimed)
+    float4 rt = tex2D(RETICLE, ruv);
+    float3 dark = col * (1.0 - rt.a * C2.w * inplane);
+    float3 glow = col + rt.rgb * 2.0 * C2.w * inplane;
+    col = lerp(dark, glow, step(0.5, C2.x));
 
     // debug 3: the reticle plane's square (magenta) and inscribed circle (cyan) outlined
     if (C3.z > 2.5) {

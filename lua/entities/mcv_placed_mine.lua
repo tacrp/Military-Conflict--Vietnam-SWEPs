@@ -47,7 +47,7 @@ end
 function ENT:WireEnds()
     local stake = self:GetStake()
     if !IsValid(stake) then return nil end
-    return self:GetPos() + Vector(0, 0, 4), stake:GetPos() + Vector(0, 0, 8)
+    return self:GetPos() + Vector(0, 0, 4), stake:GetPos()
 end
 
 function ENT:Think()
