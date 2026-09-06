@@ -947,6 +947,22 @@ def step_mode_idles(qc, ctx):
         ctx.note("%d mode idle(s) blend their aimed pose on ironsight instead of a full-weight blendlayer" % done)
 
 
+def step_snap_draws(qc, ctx):
+    """Throwables: the draw after a throw blended from the throw's end pose (hand out, empty)
+    into the draw's first frame over the old sequence's fade-out, so the next grenade slid back
+    into the hand. `snap` starts the draw on its own first frame."""
+    acts = {b.activity() for b in qc.blocks("sequence")}
+    if "ACT_VM_PULLBACK_HIGH" not in acts:
+        return
+    n = 0
+    for b in qc.blocks("sequence"):
+        if b.activity() in ("ACT_VM_DRAW", "ACT_VM_FIRSTDRAW") and not b.has("snap"):
+            b.lines.append("snap")
+            n += 1
+    if n:
+        ctx.note("%d draw sequence(s) snap in (throwable)" % n)
+
+
 def step_movement_layers(qc, ctx):
     """reloads: no sighted walk layer (the sights drop for a reload anyway)."""
     for b in qc.blocks("sequence"):
@@ -1776,6 +1792,7 @@ def port_one(args, og_dir):
     if ctx.mode != "other":
         step_idle(qc, ctx)
         step_mode_idles(qc, ctx)
+        step_snap_draws(qc, ctx)
         step_movement_layers(qc, ctx)
     step_sighted_walk(qc, ctx)   # guards on a walklayer being present
     step_belt_blank(qc, ctx)
