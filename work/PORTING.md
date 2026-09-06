@@ -811,8 +811,9 @@ alone since the field has no gameplay effect.
   gun, tuned live with `mcv_wm_ang "p y r"` / `mcv_wm_pos "x y z"`, plus a per-weapon
   `WorldModelOffset`. A dual draws a second copy on ValveBiped.Bip01_L_Hand with
   the left-hand gun derived from the right one: the merged right gun's weapon_bone frame
-  reflected across the player's sagittal plane with the gun's lateral (bone x) axis flipped
-  back, the second copy placed so its own weapon_bone lands there; `WorldModelOffsetLeft`
+  taken relative to the right hand bone, mirrored into the left hand bone's frame (a flip of
+  one hand-local axis, `mcv_wm_left_mirror` x/y/z, z by default) with the gun's lateral (bone
+  x) axis flipped back, the second copy placed so its own weapon_bone lands there; `WorldModelOffsetLeft`
   (`mcv_wm_left_ang`, `mcv_wm_left_pos`) sits on top in the gun's frame. `duel` hold type. Muzzle
   flash and shells attach to the drawn copies (`shell_eject`; a model without one throws the
   case from behind the muzzle). Hold types come from the script's WeaponType, the gestures

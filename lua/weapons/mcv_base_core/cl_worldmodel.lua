@@ -107,27 +107,35 @@ local function copyLook(self, mdl)
     end
 end
 
-// The left-hand gun of a dual is the right one's mirror image: the merged right gun's
-// weapon_bone frame is reflected across the player's sagittal plane (the left hand is the
-// right hand's reflection), then the gun's own lateral axis is flipped back so the result is
-// a proper rotation of the same, unmirrored mesh. The second copy is placed so that its own
-// weapon_bone lands on that frame. WorldModelOffsetLeft (mcv_wm_left_pos / _ang) sits on top
-// in the gun's frame for the odd one out.
+// The left-hand gun of a dual: the merged right gun's weapon_bone frame is taken relative to
+// the player's right hand bone, that hand-relative transform is mirrored into the left hand
+// bone's frame (the left hand bone is the right one's mirror image, so the mirror is a flip of
+// one of the hand's local axes), and the gun's own lateral (bone x) axis is flipped back so
+// the result is a proper rotation of the same, unmirrored mesh. The second copy is placed so
+// that its own weapon_bone lands on that frame. WorldModelOffsetLeft (mcv_wm_left_pos / _ang)
+// sits on top in the gun's frame.
 local WEAPON_BONE = "ValveBiped.weapon_bone"
-local REFLECT = Matrix()
-REFLECT:Scale(Vector(1, -1, 1))          // across the owner's x-z plane
+local R_HAND, L_HAND = "ValveBiped.Bip01_R_Hand", "ValveBiped.Bip01_L_Hand"
+local cv_mirror = CreateClientConVar("mcv_wm_left_mirror", "z", false, false, "Which hand-local axis the left hand mirrors the right across: x, y or z")
 local FLIP_LATERAL = Matrix()
-FLIP_LATERAL:Scale(Vector(-1, 1, 1))     // the bone's x is the gun's left-right axis
+FLIP_LATERAL:Scale(Vector(-1, 1, 1))
+
+local function handMirror()
+    local axis = cv_mirror:GetString():lower()
+    local M = Matrix()
+    M:Scale(Vector(axis == "x" and -1 or 1, axis == "y" and -1 or 1, (axis != "x" and axis != "y") and -1 or 1))
+    return M
+end
 
 function SWEP:GetWorldModelTransformLeft(right, left)
     local owner = self:GetOwner()
     local rb = IsValid(right) and right:LookupBone(WEAPON_BONE)
     local W = rb and right:GetBoneMatrix(rb)
-    if !W then return nil end
-    local P = Matrix()
-    P:SetTranslation(owner:GetPos())
-    P:SetAngles(owner:GetAngles())
-    local Wl = P * REFLECT * P:GetInverse() * W * FLIP_LATERAL
+    local rh, lh = owner:LookupBone(R_HAND), owner:LookupBone(L_HAND)
+    local R, L = rh and owner:GetBoneMatrix(rh), lh and owner:GetBoneMatrix(lh)
+    if !W or !R or !L then return nil end
+    local localGun = R:GetInverse() * W
+    local Wl = L * handMirror() * localGun * FLIP_LATERAL
     local offpos = readTriple(cv_left_pos, Vector) or (self.WorldModelOffsetLeft and self.WorldModelOffsetLeft.pos) or vector_origin
     local offang = readTriple(cv_left_ang, Angle) or (self.WorldModelOffsetLeft and self.WorldModelOffsetLeft.ang) or angle_zero
     if offpos != vector_origin or offang != angle_zero then
