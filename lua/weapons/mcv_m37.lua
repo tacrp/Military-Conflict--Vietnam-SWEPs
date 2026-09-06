@@ -165,6 +165,7 @@ SWEP.EjectBrassTrail = "vietnam_weaponeffect_shelleject_trail"
 SWEP.EjectBrassParticle = "vietnam_weaponeffect_shelleject_side"
 
 SWEP.TracerParticle = "vietnam_tracer_shotgun_primary"
+SWEP.TracerParticle2 = "vietnam_tracer_shotgun_secondary"
 
 SWEP.MuzzleFlashLightTexture = "effects/flashlight_muzzleflash_sg"
 

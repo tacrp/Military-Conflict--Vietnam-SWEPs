@@ -985,13 +985,19 @@ def step_counter_zero(qc, ctx):
 def step_snap_draws(qc, ctx):
     """Throwables: the draw after a throw blended from the throw's end pose (hand out, empty)
     into the draw's first frame over the old sequence's fade-out, so the next grenade slid back
-    into the hand. `snap` starts the draw on its own first frame."""
+    into the hand. `snap` starts the draw on its own first frame (the sequence transitioner
+    reads STUDIO_SNAP; a zero `fadein` does not stop it).
+
+    Runs in every mode. A throwable has no `ironsight` pose parameter, so detect_mode calls it
+    "other" and the mode-gated steps skip it; the throw activities below are the real guard."""
     acts = {b.activity() for b in qc.blocks("sequence")}
-    if "ACT_VM_PULLBACK_HIGH" not in acts:
+    # the grenade windup, which only a throwable has; melee models carry ACT_VM_THROW too
+    # (it is their swing), so that activity cannot be part of the guard
+    if not acts & {"ACT_VM_PULLBACK_HIGH", "ACT_VM_PULLBACK_LOW"}:
         return
     n = 0
     for b in qc.blocks("sequence"):
-        if b.activity() in ("ACT_VM_DRAW", "ACT_VM_FIRSTDRAW") and not b.has("snap"):
+        if b.activity() in ("ACT_VM_DRAW", "ACT_VM_FIRSTDRAW", "ACT_VM_READY") and not b.has("snap"):
             b.lines.append("snap")
             n += 1
     if n:
@@ -1768,7 +1774,9 @@ def port_worldmodel(args, og_dir):
 
 # Plain bolt rifles whose game model has only the clip reload, and the sniper twin (same
 # skeleton, the plain model's extra Grenade bone just keeps its bind pose) whose single-round
-# loop they borrow for the hybrid reload. The MAS-36 pair has no twin with its rig.
+# loop they borrow. The MAS-36 pair has no twin with its rig. Nothing plays the borrowed loop
+# now that the hybrid reload is gone; the step is kept because it is the only way back to a
+# single-round reload on these three, and the animations cost nothing where they sit.
 INSERT_DONORS = {
     "v_m38": "v_m38_s",
     "v_m91": "v_m38_s",
@@ -1860,10 +1868,10 @@ def port_one(args, og_dir):
     step_activities(qc, ctx)
     step_sounds(qc, ctx)
     step_static_anims(qc, ctx)
+    step_snap_draws(qc, ctx)   # throwables are mode "other" (no ironsight pose parameter)
     if ctx.mode != "other":
         step_idle(qc, ctx)
         step_mode_idles(qc, ctx)
-        step_snap_draws(qc, ctx)
         step_counter_zero(qc, ctx)
         step_movement_layers(qc, ctx)
     step_sighted_walk(qc, ctx)   # guards on a walklayer being present

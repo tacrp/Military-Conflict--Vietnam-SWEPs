@@ -77,13 +77,12 @@ SWEP.TriggerDelayTime = 0.25
 SWEP.ShotgunReload = false
 SWEP.ShotgunAltReload = false // Clip-loading rifles use this set of anims for bullet loading
 // The model has a clip reload and round-by-round loading animations (Kar98k, Springfield, Vz.24):
-// with mcv_hybrid_reload 1 a partly loaded rifle tops up one round at a time and the clip is
-// used only when empty. Set by the generator from the model's activities (GetHybridReload()).
-SWEP.HybridReloadCapable = false
 
-// Tracers: TracerParticle (the game's vietnam_tracer_<class>_primary) every TracerFrequency-th
-// round; the matching _smoke trail (TracerSmokeParticle, or _primary -> _smoke) on every round
-SWEP.TracerSmokeParticle = nil
+// Tracers: TracerParticle (the game's vietnam_tracer_<class>_primary) plays on every round for
+// the smoke it trails, and the glowing streak is drawn by effects/mcv_tracer.lua on every
+// TracerFrequency-th. TracerParticle2 is the game's _secondary, the streak with no smoke; both
+// fields come from the weapon script and are kept as the game has them, but the streak is drawn
+// rather than played, so nothing reads the second one at the moment.
 SWEP.HasEmptyReload = true
 SWEP.ShotgunReloadRounds = 1
 
@@ -159,6 +158,10 @@ SWEP.CrouchMoveSpreadMultiplier = 1.35
 SWEP.JumpSpreadMultiplier = 3.0
 
 SWEP.HasBayonet = false
+
+// Deferred actions this base can have waiting (mcv_base_core/sh_timers.lua). The order is what
+// travels between the realms, so it is fixed: append, never insert.
+SWEP.DeferredActions = {"BayonetOff", "AkimboSwap", "LauncherSwap"}
 SWEP.HasRifleGrenade = false
 SWEP.RifleGrenadeIsUBGL = false
 SWEP.HasAkimbo = false
@@ -223,6 +226,7 @@ SWEP.EjectBrassTrail = "vietnam_weaponeffect_shelleject_trail"
 SWEP.EjectBrassParticle = "vietnam_weaponeffect_shelleject_side"
 
 SWEP.TracerParticle = "vietnam_tracer_rifle_primary"
+SWEP.TracerParticle2 = "vietnam_tracer_rifle_secondary"
 
 SWEP.TracerRandomness = 6
 SWEP.TracerFrequency = 1

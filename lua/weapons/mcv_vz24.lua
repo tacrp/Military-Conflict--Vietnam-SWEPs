@@ -42,7 +42,6 @@ SWEP.Firemodes = {
 
 SWEP.LastShotAnimation = true
 SWEP.MagInClip = true
-SWEP.HybridReloadCapable = true // clip when empty, one round at a time when partly loaded (mcv_hybrid_reload)
 SWEP.PlayCycleAnimation = true
 SWEP.ShotgunReload = false // clip reload (reload / reload_empty); the single-round animations stay unused, as on the Kar98
 SWEP.NoEjectOnShoot = true
@@ -152,6 +151,7 @@ SWEP.EjectBrassTrail = "vietnam_weaponeffect_shelleject_trail"
 SWEP.EjectBrassParticle = "vietnam_weaponeffect_shelleject_side"
 
 SWEP.TracerParticle = "vietnam_tracer_sniperrifle_green_primary"
+SWEP.TracerParticle2 = "vietnam_tracer_sniperrifle_green_secondary"
 
 SWEP.TracerRandomness = 6
 SWEP.TracerFrequency = 1

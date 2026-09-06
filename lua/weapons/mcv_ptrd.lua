@@ -87,7 +87,7 @@ SWEP.SpreadIronsighted = 0.45
 SWEP.SpreadBipodIronsighted = 0.15
 SWEP.SpreadBipod = 3
 
-SWEP.FireRate = 20
+SWEP.FireRate = 600
 
 SWEP.CrosshairMinDistance = 8
 SWEP.CrosshairDeltaDistance = 4
@@ -162,6 +162,7 @@ SWEP.EjectBrassTrail = "vietnam_weaponeffect_shelleject_trail"
 SWEP.EjectBrassParticle = "vietnam_weaponeffect_shelleject_side"
 
 SWEP.TracerParticle = "vietnam_tracer_ptrd_green_primary"
+SWEP.TracerParticle2 = "vietnam_tracer_ptrd_green_secondary"
 
 SWEP.TracerRandomness = 6
 SWEP.TracerFrequency = 1

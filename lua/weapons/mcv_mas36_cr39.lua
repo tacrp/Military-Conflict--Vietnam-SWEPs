@@ -44,7 +44,6 @@ SWEP.LastShotAnimation = true
 SWEP.MagInClip = true
 SWEP.PlayCycleAnimation = true
 SWEP.NoEjectOnShoot = true
-SWEP.HybridReloadCapable = true
 
 // View slide from recoil
 SWEP.ViewSlideRecoilUp = 2.84
@@ -148,6 +147,7 @@ SWEP.EjectBrassTrail = "vietnam_weaponeffect_shelleject_trail"
 SWEP.EjectBrassParticle = "vietnam_weaponeffect_shelleject_side"
 
 SWEP.TracerParticle = "vietnam_tracer_rifle_primary"
+SWEP.TracerParticle2 = "vietnam_tracer_rifle_secondary"
 
 SWEP.TracerRandomness = 6
 SWEP.TracerFrequency = 1

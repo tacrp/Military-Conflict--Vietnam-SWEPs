@@ -622,15 +622,6 @@ idles (zero sway aimed: AK-47, SVT-40 family) and 176 had one axis (hip sway aim
 carbine). Lua drives the pose to `MovementPoseSighted x SightedSwayFraction` (the layer's top,
 read from the QC, times 0.5) when aiming.
 
-## Hybrid reload (`mcv_hybrid_reload`)
-
-Rifles whose model has both the stripper-clip reload (`ACT_VM_RELOAD` / `ACT_VM_RELOADEMPTY`) and
-the round-by-round set (`ACT_SHOTGUN_RELOAD_START`, `ACT_VM_RELOAD_INSERT`,
-`ACT_SHOTGUN_RELOAD_FINISH`) get `HybridReloadCapable` from the generator (Kar98k, silenced
-Kar98k, Springfield, Vz.24). With the server convar on (default 1) a partly loaded rifle tops up
-one round at a time and the clip is used only when empty; at 0 every reload is the clip, as in
-the game. The old `HybridReload` flag (dummied out in 2024) is gone.
-
 ## Burst fire
 
 `MCV.FIREMODE_BURST` (scripts with `Burst` in `SupportedFireModes`: M605, T223) fires
@@ -788,7 +779,8 @@ alone since the field has no gameplay effect.
   plain model's Grenade bone, which keeps its bind pose). The donor's four sequences and their
   `$animation` blocks are appended to the qc text before parsing, so every step treats them as
   the model's own; the paths point into the donor's directory. The MAS-36 pair has a different
-  bullet and bolt rig and no donor; Lua's hybrid gate also requires ACT_VM_RELOAD_INSERT.
+  bullet and bolt rig and no donor. Nothing plays the borrowed loop any more: it was there for
+  the hybrid reload, which is gone, and the models keep it until they are next rebuilt.
 * **Cycle refresh point** (`cycle_clip_pose` / `CycleClipPoseTime`, `CycleAmmoPose2`): the homemade
   pistol's bolt pull slides its three-round harmonica on itself (`boltpull_magoverride`) and the
   game only refreshes `ammo_fraction` (the BulletCounter and MagPosition layers) at frame 55 of it;

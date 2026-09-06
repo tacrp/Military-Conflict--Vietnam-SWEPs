@@ -691,6 +691,9 @@ EFFECT_FIELDS = (  # lua field, script key, default
     ("EjectBrassTrail", "EjectBrassTrail", "vietnam_weaponeffect_shelleject_trail"),
     ("EjectBrassParticle", "EjectBrassParticle", "vietnam_weaponeffect_shelleject_side"),
     ("TracerParticle", "TracerParticle", "vietnam_tracer_rifle_primary"),
+    # the streak without the smoke child, played on the rounds between tracers; a
+    # silenced weapon has no _secondary system and the script leaves the key out
+    ("TracerParticle2", "TracerParticle2", ""),
 )
 
 
@@ -742,11 +745,61 @@ def step_lua(args, vpk):
         print("   " + l.strip())
 
 
+def step_particle_vertexcolor(args, vpk):
+    """SpriteCard materials drawn by render_sprite_trail need $vertexcolor and $vertexalpha, or
+    the colour and alpha the particle system gives each particle never reach the shader. Of the
+    41 materials the game's sprite-trail systems use, the four tracer ones are the only ones that
+    ship without both keys, and the tracers are the one sprite-trail effect that does not show up
+    in GMod. Reads the addon's own pcfs and materials, so it runs without a game install."""
+    from dmxlib import DMX
+    wanted = set()
+    for pcf in sorted(glob.glob(os.path.join(ADDON, "particles", "*.pcf"))):
+        try:
+            dmx = DMX(open(pcf, "rb").read())
+        except Exception:
+            continue
+        els = dmx.elements
+        for e in els:
+            if e.type != "DmeParticleSystemDefinition":
+                continue
+            rend = e.get("renderers")
+            if not isinstance(rend, list):
+                continue
+            names = [els[i].get("functionName") for i in rend if isinstance(i, int) and 0 <= i < len(els)]
+            if "render_sprite_trail" not in names:
+                continue
+            mat = (e.get("material") or "").replace("\\", "/").strip().lower()
+            if mat:
+                wanted.add(mat)
+
+    fixed = 0
+    for mat in sorted(wanted):
+        path = os.path.join(ADDON, "materials", mat.replace("/", os.sep))
+        if not os.path.isfile(path):
+            continue
+        txt = open(path, encoding="latin-1", newline="").read()
+        if not re.match(r'(?i)\s*"?spritecard"?', txt) or "{" not in txt:
+            continue
+        add = [k for k in ("$vertexcolor", "$vertexalpha") if not re.search(re.escape(k), txt, re.I)]
+        if not add:
+            continue
+        nl = "\r\n" if "\r\n" in txt else "\n"
+        i = txt.index("{")
+        txt = txt[:i + 1] + "".join('%s\t"%s" "1"' % (nl, k) for k in add) + txt[i + 1:]
+        open(path, "w", encoding="latin-1", newline="").write(txt)
+        fixed += 1
+    log("particle_vertexcolor: %d sprite-trail material(s) given $vertexcolor / $vertexalpha" % fixed)
+
+
 STEPS = [("scripts", step_scripts), ("strings", step_strings), ("models", step_models), ("port", step_port),
          ("install", step_install), ("materials", step_materials), ("sounds", step_sounds),
          ("particles", step_particles), ("pcf_nolights", step_pcf_nolights), ("particle_materials", step_particle_materials),
+         ("particle_vertexcolor", step_particle_vertexcolor),
          ("pcf_models", step_pcf_models),
          ("icons", step_icons), ("lua", step_lua), ("effects_lua", step_effects_lua)]
+
+NEEDS_VPK = {"models", "install", "materials", "extra_materials", "sounds", "particles",
+             "particle_materials", "pcf_models", "icons"}
 
 
 def main():
@@ -762,11 +815,14 @@ def main():
     ap.add_argument("--only-new-icons", action="store_true", help="icons: keep existing pngs")
     args = ap.parse_args()
     want = [s for s, _ in STEPS] if args.steps == "all" else [s.strip() for s in args.steps.split(",")]
-    vpk = VPK(os.path.join(args.game, "pak01_dir.vpk"))
+    # only the steps that read the game's own files need the pak; the ones that work on what the
+    # addon already ships run without an install
+    vpk = VPK(os.path.join(args.game, "pak01_dir.vpk")) if (set(want) & NEEDS_VPK) else None
     for name, fn in STEPS:
         if name in want:
             fn(args, vpk)
-    vpk.close()
+    if vpk:
+        vpk.close()
 
 
 if __name__ == "__main__":

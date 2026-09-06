@@ -17,9 +17,16 @@ function SWEP:ToggleAkimbo()
     local t = self:PlayAnimation(ACT_VM_HOLSTER, 1, true, true)
     self:SetAnimLockTime(CurTime() + t + 0.75)
 
-    self:SetTimer(t + 0.5, function()
-        if !IsValid(self) then return end
-        local vm = self:GetOwner():GetViewModel()
+    self:Defer("AkimboSwap", t + 0.5)
+end
+
+// The gun is swapped for its dual (or back) part way through the holster it plays for it
+function SWEP:Deferred_AkimboSwap()
+    local owner = self:GetOwner()
+    if !IsValid(owner) then return end
+
+    local vm = owner:GetViewModel()
+    if IsValid(vm) then
         if !self:GetAkimbo() then
             self.ViewModel = self.ViewModelAkimbo
             vm:SetModel(self.ViewModel)
@@ -36,13 +43,11 @@ function SWEP:ToggleAkimbo()
 
             self:RestoreClip(0)
         end
+    end
 
-        if self:Clip1() > 0 then
-            self:PlayAnimation(ACT_VM_READY, 1, true)
-        elseif self:Clip1() == 1 and !self:GetAkimbo() then
-            self:PlayAnimation(ACT_VM_DRAW, 1, true)
-        else
-            self:PlayAnimation(ACT_VM_DRAW, 1, true)
-        end
-    end)
+    if self:Clip1() > 0 then
+        self:PlayAnimation(ACT_VM_READY, 1, true)
+    else
+        self:PlayAnimation(ACT_VM_DRAW, 1, true)
+    end
 end

@@ -10,6 +10,7 @@ ENT.InstantFuse = false
 ENT.TimeFuse = false
 ENT.Delay = 0
 ENT.Sticky = true
+ENT.StickyPlace = false
 ENT.ImpactDamage = 0
 
 ENT.Damage = 60

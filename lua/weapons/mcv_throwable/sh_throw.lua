@@ -197,7 +197,10 @@ function SWEP:LaunchThrowable(kind, fuse, cookstart)
 end
 
 function SWEP:AfterThrow()
-    if self:GetRoundsLeft() > 0 or !self.RemoveWhenEmpty then return end
+    if self:GetRoundsLeft() > 0 or !self.RemoveWhenEmpty then
+        self:PlayAnimation(ACT_VM_DRAW, 1, true)
+        return
+    end
     if CLIENT then return end
 
     local owner = self:GetOwner()

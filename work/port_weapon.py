@@ -1283,9 +1283,6 @@ def generate(script_path, args):
     A(line("LastShotAnimation", fmt(lastshot)))
     if mag_in_clip:
         A(line("MagInClip", "true"))
-        if not shotgun_reload and {"ACT_VM_RELOADEMPTY", "ACT_VM_RELOAD_INSERT", "ACT_SHOTGUN_RELOAD_START", "ACT_SHOTGUN_RELOAD_FINISH"} <= acts:
-            # clip when empty, one round at a time when partly loaded (server convar mcv_hybrid_reload)
-            A(line("HybridReloadCapable", "true"))
     if cycle:
         A(line("PlayCycleAnimation", "true"))
         if reuse("CycleSpeed"): A(line("CycleSpeed", reuse("CycleSpeed")))
@@ -1464,6 +1461,7 @@ def generate(script_path, args):
     A(line("EjectBrassParticle", part("EjectBrassParticle", "vietnam_weaponeffect_shelleject_side")))
     A("")
     A(line("TracerParticle", part("TracerParticle", "vietnam_tracer_rifle_primary")))
+    A(line("TracerParticle2", part("TracerParticle2")))
     A("")
     A(line("TracerRandomness", int(num(S.get("TracerRandomness"), 6))))
     A(line("TracerFrequency", int(num(S.get("TracerFrequency"), 1))))

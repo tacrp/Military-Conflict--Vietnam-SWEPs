@@ -20,23 +20,9 @@ function SWEP:GetSightEase()
     return smoothstep
 end
 
-// Linear sight progress: 0 = hip, 1 = fully aimed.
-// Derived purely from CurTime() and the transition stamps written in Think_Sights, so
-// client and server always agree, no per-tick network traffic is generated, and on the
-// client it advances every rendered frame rather than stepping once per tick.
-// This is the value stored in SightTransitionFrom so interrupted transitions stay continuous.
-function SWEP:GetSightAmountRaw()
-    local target = self:GetSighted() and 1 or 0
-    local from = self:GetSightTransitionFrom()
-
-    if from == target then return target end
-
-    local elapsed = CurTime() - self:GetSightTransitionTime()
-
-    if elapsed <= 0 then return from end
-
-    return math.Approach(from, target, elapsed / self:GetSightTime())
-end
+// Linear sight progress: 0 = hip, 1 = fully aimed. A networked float, integrated one tick at
+// a time by Think_Sights on both realms; GetSightAmountRaw / SetSightAmountRaw come from the
+// NetworkVar itself (mcv_base_core/shared.lua, which says why it is stored this way).
 
 local function applyEase(self, raw)
     if raw <= 0 then return 0 end
@@ -52,17 +38,19 @@ function SWEP:GetSightAmount()
 end
 
 if CLIENT then
-    // Visual copy of the sight progress, advanced once per rendered frame at the same
-    // speed the gameplay value moves at.
+    // Visual copy of the sight progress, advanced once per rendered frame.
     //
-    // Why this exists: the transition stamp is written at the predicted command's tick
-    // time, but the previous frame was rendered up to a tick later than that. When a
-    // transition is reversed mid-way the new curve has already advanced for that
-    // fraction while the old one kept going the other way, so sampling the stamped
-    // curve directly pops the viewmodel by up to two ticks of travel in one frame.
-    // Integrating per frame toward the target instead is continuous by construction.
-    // It stays within a tick of the gameplay value and is resynced if it ever drifts.
-    SWEP.VisualSightResyncThreshold = 0.3
+    // The gameplay value is the predicted one and it is what the shot reads. The client writes
+    // its transition stamps during prediction and the engine restores them whenever the server
+    // disagrees, which is correct, but a restored stamp moves the whole curve at once: two
+    // networked numbers define it, so a correction of a tick lands as a step in the amount
+    // rather than as a slower or faster transition.
+    //
+    // So what is drawn never reads the stamps directly. It chases the gameplay value at a
+    // bounded rate: at least as fast as a transition itself, so once the two agree this tracks
+    // it exactly, and fast enough to close any gap within CatchUp seconds, so a correction is
+    // absorbed over a few frames instead of appearing. Nothing snaps, at any gap size.
+    SWEP.VisualSightCatchUp = 0.08
 
     function SWEP:GetSightAmountRawVisual()
         local frame = FrameNumber()
@@ -72,16 +60,17 @@ if CLIENT then
         local raw = self:GetSightAmountRaw()
         local cur = self.VisualSightRaw
 
-        if cur == nil or math.abs(cur - raw) > self.VisualSightResyncThreshold then
+        if cur == nil then
             cur = raw
+        else
+            local rate = math.max(1 / self:GetSightTime(), math.abs(raw - cur) / self.VisualSightCatchUp)
+            cur = math.Approach(cur, raw, rate * FrameTime())
         end
 
-        local target = self:GetSighted() and 1 or 0
-
-        self.VisualSightRaw = math.Approach(cur, target, FrameTime() / self:GetSightTime())
+        self.VisualSightRaw = cur
         self.VisualSightFrame = frame
 
-        return self.VisualSightRaw
+        return cur
     end
 
     // Eased sight blend for VISUALS (viewmodel offset, FOV, pose parameters, HUD).
@@ -120,11 +109,20 @@ function SWEP:Think_Sights()
     local sighted = self:GetIronsight() and !self:GetIsSprinting() and (!self.MustBipod or self:GetBipod())
 
     if sighted != self:GetSighted() then
-        // Stamp the transition. The raw amount must be read before Sighted changes.
-        self:SetSightTransitionFrom(self:GetSightAmountRaw())
-        self:SetSightTransitionTime(CurTime())
         self:SetSighted(sighted)
 
         self:EmitSound(sighted and "MCV_Weapon_Foley_Ironsights.In" or "MCV_Weapon_Foley_Ironsights.Out")
+    end
+
+    // Advance the blend by exactly one tick toward the target, the same step on both realms.
+    // Integrating the value the shot reads is what makes this predict: on an error the engine
+    // puts the amount back to the server's and the next tick carries on from there, and the
+    // client's re-simulation of the commands it has not had acknowledged reproduces the same
+    // path a tick at a time.
+    local target = sighted and 1 or 0
+    local cur = self:GetSightAmountRaw()
+
+    if cur != target then
+        self:SetSightAmountRaw(math.Approach(cur, target, engine.TickInterval() / self:GetSightTime()))
     end
 end

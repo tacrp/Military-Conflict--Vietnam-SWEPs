@@ -46,12 +46,12 @@ local GESTURES = {
 }
 
 function SWEP:GetShootGesture()
-    local g = GESTURES[self.CurrentHoldType or self.HoldType]
+    local g = GESTURES[self:GetHoldType() or self.HoldType]
     return g and g[1] or self.ShootGesture
 end
 
 function SWEP:GetReloadGesture()
-    local g = GESTURES[self.CurrentHoldType or self.HoldType]
+    local g = GESTURES[self:GetHoldType() or self.HoldType]
     return g and g[2] or self.ReloadGesture
 end
 SWEP.BashGesture = ACT_GMOD_GESTURE_MELEE_SHOVE_2HAND
@@ -159,20 +159,22 @@ function SWEP:SetupDataTables()
     self:NetworkVar("Float", 3, "LastTriggerTime")
     self:NetworkVar("Float", 4, "HolsterTime")
 
-    // Sight and movement blends are NOT networked as continuously changing floats.
-    // Instead we network when a transition started and where it started from, and
-    // derive the current value from CurTime() (see mcv_base/sh_sights.lua and sh_think.lua).
-    // These only change on state transitions, so they never cause prediction errors
-    // and the derived value advances every rendered frame instead of every tick.
-    self:NetworkVar("Float", 5, "SightTransitionTime")
-    self:NetworkVar("Float", 6, "SightTransitionFrom")
-    self:NetworkVar("Float", 7, "SpeedTransitionTime")
-    self:NetworkVar("Float", 8, "SpeedTransitionFrom")
-    self:NetworkVar("Float", 9, "SpeedTarget")
-    self:NetworkVar("Float", 10, "LastShotTimeR")
-    self:NetworkVar("Float", 11, "LastShotTimeL")
+    // The sight blend is the predicted state itself, integrated a tick at a time in
+    // Think_Sights and held here. It is deliberately not a start time and a start value with
+    // the blend derived from CurTime(): a stamped curve turns any disagreement about *when*
+    // into a step in the amount, and the stamp then keeps the two realms apart until the next
+    // transition. An integrated amount is restored to the server's on a prediction error and
+    // simply carries on from there, so an error costs one tick of travel and heals itself.
+    // What is drawn chases this rather than reading it (mcv_base/sh_sights.lua).
+    self:NetworkVar("Float", 5, "SightAmountRaw")
+    // the movement blend, for the same reason and in the same way
+    self:NetworkVar("Float", 6, "Speed")
+    self:NetworkVar("Float", 7, "LastShotTimeR")
+    self:NetworkVar("Float", 8, "LastShotTimeL")
     // equipment: when the current hold / charge / plant started (0 = none)
-    self:NetworkVar("Float", 12, "ActionStart")
+    self:NetworkVar("Float", 9, "ActionStart")
+    // the one deferred action waiting to run, and when it is due (sh_timers.lua)
+    self:NetworkVar("Float", 10, "DeferredTime")
 
     self:NetworkVar("Int", 0, "ScopeLevel")
     self:NetworkVar("Int", 1, "LastClip")
@@ -180,6 +182,7 @@ function SWEP:SetupDataTables()
     // equipment: small state machine (throw wind-up, mine placement step...)
     self:NetworkVar("Int", 3, "ActionState")
     self:NetworkVar("Int", 4, "BurstCount") // rounds fired on this trigger pull (a burst-fire gun keeps it until the burst is done)
+    self:NetworkVar("Int", 5, "DeferredAction") // index into SWEP.DeferredActions, 0 = nothing
 
     self:NetworkVar("Bool", 0, "Reloading")
     self:NetworkVar("Bool", 1, "EndReload")
@@ -218,6 +221,14 @@ function SWEP:ScopeToggle(on) end
 
 // World FOV divisor while aimed (see cl_camera.lua)
 function SWEP:GetZoomMagnification() return 1 end
+
+// The game's own impact for the surface a shot hit, in place of the engine's dust puff
+// (mcv/shared/sh_impacts.lua). Returning true is what takes the engine's off, and its bullet
+// hole with it, so that file puts a hole back; returning false leaves the shot to the engine,
+// which is what the convar being off and a hit on flesh both do.
+function SWEP:DoImpactEffect(tr, dmgtype)
+    return MCV.SurfaceImpact(tr)
+end
 
 // Text shown above the ammo counter, and the two numbers of the counter (nil hides them)
 function SWEP:GetFiremodeName() return "" end

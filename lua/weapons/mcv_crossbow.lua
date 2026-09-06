@@ -153,6 +153,7 @@ SWEP.EjectBrassTrail = ""
 SWEP.EjectBrassParticle = ""
 
 SWEP.TracerParticle = ""
+SWEP.TracerParticle2 = ""
 
 SWEP.TracerRandomness = 6
 SWEP.TracerFrequency = 1

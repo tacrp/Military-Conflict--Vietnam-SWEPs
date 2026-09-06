@@ -152,6 +152,7 @@ SWEP.EjectBrassTrail = ""
 SWEP.EjectBrassParticle = ""
 
 SWEP.TracerParticle = "vietnam_tracer_gyrojet_primary"
+SWEP.TracerParticle2 = "vietnam_tracer_gyrojet_secondary"
 
 SWEP.TracerRandomness = 6
 SWEP.TracerFrequency = 1

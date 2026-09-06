@@ -44,8 +44,8 @@ SWEP.MuzzleVelocity = 810
 SWEP.RangeModifier = 0.955
 
 SWEP.Firemodes = {
-    MCV.FIREMODE_SEMI,
     MCV.FIREMODE_AUTO,
+    MCV.FIREMODE_SEMI,
 }
 
 // Weapon must be manually cycled
@@ -159,7 +159,8 @@ SWEP.EjectBrassType = 9
 SWEP.EjectBrassTrail = "shellsmoke"
 SWEP.EjectBrassParticle = "port_smoke"
 
-SWEP.TracerParticle = ""
+SWEP.TracerParticle = "vietnam_tracer_assaultrifle_green_primary"
+SWEP.TracerParticle2 = "vietnam_tracer_assaultrifle_green_secondary"
 
 SWEP.TracerRandomness = 6
 SWEP.TracerFrequency = 1

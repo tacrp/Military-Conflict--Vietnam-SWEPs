@@ -38,9 +38,25 @@ end
 SWEP.ActiveEffects = {}
 SWEP.PCFs = {}
 
-function SWEP:PreDrawViewModel(vm)
+// A depth pass draws the viewmodel a second time to fill the SSAO or shadow depth texture.
+// None of the composite below belongs in one: the gun would be written into that buffer at the
+// weapon's own field of view and near plane instead of the world's, and PostDrawViewModel
+// returns before the reset that closes the scope's depth override, so the override stays on and
+// depth-tests the gun out of the main view. Stock GMod asks for no depth pass, so this only
+// shows with an addon that turns one on (gShader answers NeedsDepthPass true every frame).
+function SWEP:IsDepthPass(flags)
+    flags = flags or 0
+    return bit.band(flags, STUDIO_SSAODEPTHTEXTURE) != 0 or bit.band(flags, STUDIO_SHADOWDEPTHTEXTURE) != 0
+end
+
+// the pre draw takes (vm, weapon, ply, flags) and the post draw (vm, ply, weapon, flags); the
+// render flags are the fourth argument either way
+function SWEP:PreDrawViewModel(vm, weapon, ply, flags)
     vm = vm or self:GetOwner():GetViewModel()
     if self:ViewModelHidden() then return true end
+    // draw nothing of our own into a depth buffer, and leave the gun to the engine so it lands
+    // in there with the world's projection
+    if self:IsDepthPass(flags) then return end
 
     self:PreDrawViewModelWeapon(vm)
     self:UpdateLitParticle(vm)
@@ -50,7 +66,6 @@ function SWEP:PreDrawViewModel(vm)
     local sa = self:GetSightAmountVisual() ^ 3
 
     local fov = Lerp(sa, self.ViewModelFOV, self.SightedViewModelFOV)
-    self.VMFov = fov // effects that start at the viewmodel and draw in the world (the tracer)
     if self.ViewModelZNear then
         // a closer near plane keeps an eyepiece the aimed pose puts right at the camera from
         // being cut open (scoped rifles)
@@ -69,8 +84,7 @@ end
 // share the gun's projection and sort against it. TacRP's system: a shell lives here until it
 // hits something, then draws itself in the world. Nothing is drawn into the depth passes.
 function SWEP:ViewModelDrawn(vm, flags)
-    flags = flags or 0
-    if bit.band(flags, STUDIO_SSAODEPTHTEXTURE) != 0 or bit.band(flags, STUDIO_SHADOWDEPTHTEXTURE) != 0 then return end
+    if self:IsDepthPass(flags) then return end
 
     local newactiveeffects = {}
     for _, effect in ipairs(self.ActiveEffects) do
@@ -102,8 +116,7 @@ function SWEP:UpdateLitParticle(vm)
 end
 
 function SWEP:PostDrawViewModel(vm, ply, wep, flags)
-    flags = flags or 0
-    local depthpass = bit.band(flags, STUDIO_SSAODEPTHTEXTURE) != 0 or bit.band(flags, STUDIO_SHADOWDEPTHTEXTURE) != 0
+    local depthpass = self:IsDepthPass(flags)
     // the pre-draw did not get as far as opening its camera (hidden viewmodel, or an error
     // in a weapon hook): nothing to draw into or close
     if !self.VMCamOpen then return end

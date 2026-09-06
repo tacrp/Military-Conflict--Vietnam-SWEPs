@@ -11,11 +11,6 @@ function SWEP:PlayReloadGesture(t, event)
     owner:DoCustomAnimEvent(event or PLAYERANIMEVENT_RELOAD, math.max(1, math.floor((t or 0) * 1000)))
 end
 
-function SWEP:GetHybridReload()
-    // the model has to carry the single-round loop (the MAS-36 pair does not: clip only)
-    return self.HybridReloadCapable and MCV.HybridReload() and self:HasAnimation(ACT_VM_RELOAD_INSERT)
-end
-
 function SWEP:Reload()
     if self:StillWaiting() then return end
     if !self:GetOwner():KeyPressed(IN_RELOAD) then return end
@@ -34,7 +29,7 @@ function SWEP:Reload()
     if self:Clip1() >= self:GetClip1Capacity() then return end
 
 
-    if self.ShotgunReload or (self:GetHybridReload() and self:Clip1() > 0) then
+    if self.ShotgunReload then
         if self.ShotgunReloadEmptyStartAnimation and self:Clip1() == 0 then
             // locked like the other start: unlocked, the first insert cut it off on its first
             // frame (Gyrojet, Vz.24: "no empty reload start animation")
@@ -185,7 +180,7 @@ function SWEP:Think_Reload()
                         self:RestoreClip(self.ShotgunReloadRounds)
                     end
                 end
-            elseif self.ShotgunReload or (self:GetHybridReload() and self:Clip1() > 0) then
+            elseif self.ShotgunReload then
                 if self:GetEndReload() or self:Clip1() >= (self:GetEmptyReload() and self.Primary.ClipSize or self:GetClip1Capacity()) or (!self:GetInfiniteAmmo() and self:Ammo1() == 0) then
                     // a reload that started empty ends by chambering (the model's ACT_SHOTGUN_PUMP:
                     // reload_endpump) when it has one; the plain finish otherwise
@@ -200,7 +195,7 @@ function SWEP:Think_Reload()
                         self:SetEmptyReload(false)
                     end
                 else
-                    self:PlayReloadGesture(self:PlayAnimation((self:GetHybridReload() or self.ShotgunAltReload) and ACT_VM_RELOAD_INSERT or ACT_VM_RELOAD, 1, true, true), PLAYERANIMEVENT_RELOAD_LOOP)
+                    self:PlayReloadGesture(self:PlayAnimation(self.ShotgunAltReload and ACT_VM_RELOAD_INSERT or ACT_VM_RELOAD, 1, true, true), PLAYERANIMEVENT_RELOAD_LOOP)
 
                     self:RestoreClip(self.ShotgunReloadRounds)
                 end

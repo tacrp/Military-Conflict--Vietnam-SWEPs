@@ -76,7 +76,7 @@ function H.WeaponState(ply)
         t.holster_time = wep:GetHolsterTime()
         t.next_idle = math.Round(wep:GetNextIdle() - CurTime(), 3)
         t.anim_lock = math.Round(wep:GetAnimLockTime() - CurTime(), 3)
-        t.hold_type = wep.CurrentHoldType
+        t.hold_type = wep.GetHoldType and wep:GetHoldType()
         t.ironsight_pos = wep.IronsightPos and vecs(wep.IronsightPos)
         t.ironsight_ang = wep.IronsightAng and angs(wep.IronsightAng)
     end

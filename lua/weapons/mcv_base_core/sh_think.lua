@@ -9,10 +9,12 @@ function SWEP:Think()
 
     self:Think_Speed()
     self:Think_HoldType()
+    self:Think_Bayonet()
 
     // Keep the networked viewmodel state in step with what the client draws (see sh_vm.lua).
     self:DoBodygroups(nil, false)
 
+    self:ProcessDeferred()
     self:ProcessTimers()
 
     if self:GetNextIdle() <= CurTime() then
@@ -89,26 +91,20 @@ function SWEP:GetTargetSpeed()
     return self.SpeedRun
 end
 
-// Smoothed movement blend. Like GetSightAmount, this is derived from CurTime() and
-// transition stamps rather than integrated per tick, so it is prediction-safe and
-// frame-smooth.
-function SWEP:GetSpeed()
-    local target = self:GetSpeedTarget()
-    local from = self:GetSpeedTransitionFrom()
-
-    if from == target then return target end
-
-    local elapsed = CurTime() - self:GetSpeedTransitionTime()
-
-    if elapsed <= 0 then return from end
-
-    return math.Approach(from, target, elapsed * self.SpeedAcceleration)
-end
+// The movement blend is the predicted state itself, integrated a tick at a time by
+// Think_Speed and held in the NetworkVar; GetSpeed / SetSpeed come from there. It used to be a
+// start time and a start value with the blend derived from CurTime(), which is the shape that
+// turns a disagreement about *when* into a step in the value and then holds the two realms
+// apart until the next transition. Integrating heals instead: an error costs one tick of
+// travel. That also takes the sting out of the target below being read a tick apart on the two
+// realms, since the weapon's think runs before player movement on the client and after it on
+// the server, so whether the owner is on the ground can differ for exactly one tick.
 
 if CLIENT then
-    // Per-frame visual copy of GetSpeed(), for the same reason as GetSightAmountRawVisual:
-    // sampling the stamped curve pops when the movement target flips mid-transition.
-    SWEP.VisualSpeedResyncThreshold = 60
+    // What is drawn chases the predicted value at a bounded rate and never snaps: at least as
+    // fast as the blend itself, so it tracks exactly once the two agree, and fast enough to
+    // close any gap within CatchUp seconds so a correction is absorbed over a few frames.
+    SWEP.VisualSpeedCatchUp = 0.08
 
     function SWEP:GetSpeedVisual()
         local frame = FrameNumber()
@@ -118,14 +114,17 @@ if CLIENT then
         local speed = self:GetSpeed()
         local cur = self.VisualSpeed
 
-        if cur == nil or math.abs(cur - speed) > self.VisualSpeedResyncThreshold then
+        if cur == nil then
             cur = speed
+        else
+            local rate = math.max(self.SpeedAcceleration, math.abs(speed - cur) / self.VisualSpeedCatchUp)
+            cur = math.Approach(cur, speed, rate * FrameTime())
         end
 
-        self.VisualSpeed = math.Approach(cur, self:GetSpeedTarget(), FrameTime() * self.SpeedAcceleration)
+        self.VisualSpeed = cur
         self.VisualSpeedFrame = frame
 
-        return self.VisualSpeed
+        return cur
     end
 else
     SWEP.GetSpeedVisual = SWEP.GetSpeed
@@ -133,12 +132,11 @@ end
 
 function SWEP:Think_Speed()
     local target = self:GetTargetSpeed()
+    local cur = self:GetSpeed()
 
-    if target == self:GetSpeedTarget() then return end
+    if cur == target then return end
 
-    self:SetSpeedTransitionFrom(self:GetSpeed())
-    self:SetSpeedTransitionTime(CurTime())
-    self:SetSpeedTarget(target)
+    self:SetSpeed(math.Approach(cur, target, engine.TickInterval() * self.SpeedAcceleration))
 end
 
 function SWEP:Think_HoldType()
@@ -155,9 +153,11 @@ function SWEP:Think_HoldType()
         holdtype = self.AimHoldType
     end
 
-    // SetHoldType is networked; only call it when something changed.
-    if self.CurrentHoldType == holdtype then return end
+    // SetHoldType is networked; only call it when something changed. Asking the weapon what it
+    // is now rather than remembering it in a plain field keeps this right through a prediction
+    // error: a field is never put back, so it would claim to have set a hold type the server
+    // had since replaced.
+    if self:GetHoldType() == holdtype then return end
 
-    self.CurrentHoldType = holdtype
     self:SetHoldType(holdtype)
 end

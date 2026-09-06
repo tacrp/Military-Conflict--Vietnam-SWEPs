@@ -74,14 +74,25 @@ function SWEP:ThinkWeapon()
 
     // the cycle waits for the trigger to be released, except on slam-firing shotguns (M1897,
     // M37): they pump with the trigger held and fire the moment the action closes
-    if !self:StillWaiting() and (!owner:KeyDown(IN_ATTACK) or self.SlamFire) and self:GetNeedCycle() and IsFirstTimePredicted() then
+    // No IsFirstTimePredicted gate here: everything below is state, and state left out of the
+    // commands the client re-simulates is state the client and the server stop agreeing on.
+    // PlayAnimation and the sounds under it handle prediction themselves.
+    if !self:StillWaiting() and (!owner:KeyDown(IN_ATTACK) or self.SlamFire) and self:GetNeedCycle() then
+        // A dual model can have no separate bolt pull even though the single does: the dual
+        // Type 67 works its bolts inside its own shot animations, since a hand holding a gun
+        // cannot also pull the other gun's bolt. The cycle still happens, because the state is
+        // what makes a bolt action one (it blocks the next shot until the trigger is released,
+        // see CanPrimaryAttack); there is just no animation of its own to play or wait for.
         local t = self:PlayAnimation(ACT_VM_RELOAD_INSERT_PULL, self.CycleSpeed, false)
-        self:SetNextPrimaryFire(CurTime() + t * self.CyclePostDelay)
-        // networked so both realms show the same rounds through the cycle (CycleClipPoseTime);
-        // guns have no other use for ActionStart
-        self:SetActionStart(CurTime())
 
-        if !self.AnimationHandlesHammer then
+        if t then
+            self:SetNextPrimaryFire(CurTime() + t * self.CyclePostDelay)
+            // networked so both realms show the same rounds through the cycle
+            // (CycleClipPoseTime); guns have no other use for ActionStart
+            self:SetActionStart(CurTime())
+        end
+
+        if t == nil or !self.AnimationHandlesHammer then
             self:SetNeedCycle(false)
         end
     end

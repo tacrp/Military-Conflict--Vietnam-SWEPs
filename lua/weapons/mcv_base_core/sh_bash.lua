@@ -92,6 +92,21 @@ function SWEP:OwnerHasBayonet()
     return false
 end
 
+// A fixed bayonet needs the bayonet still to be in the inventory: drop it, or lose it on a
+// loadout change, and the one on the gun comes off. Silently, with no animation and no sound,
+// because there is nothing in the player's hands to take it off with.
+function SWEP:Think_Bayonet()
+    if !self:GetBayonet() then return end
+    if self:OwnerHasBayonet() then return end
+
+    self:SetBayonet(false)
+end
+
+// The bayonet comes off at the end of the animation that takes it off
+function SWEP:Deferred_BayonetOff()
+    self:SetBayonet(false)
+end
+
 function SWEP:ToggleBayonet()
     if !self.HasBayonet then return end
     if self:StillWaiting() then return end
@@ -100,9 +115,7 @@ function SWEP:ToggleBayonet()
 
     if self:GetBayonet() then
         local t = self:PlayAnimation(ACT_VM_DETACH_SILENCER, 1, true)
-        self:SetTimer(t, function()
-            self:SetBayonet(false)
-        end)
+        self:Defer("BayonetOff", t)
     else
         self:PlayAnimation(ACT_VM_ATTACH_SILENCER, 1, true)
         self:SetBayonet(true)

@@ -39,7 +39,7 @@ hook.Add("DoAnimationEvent", "MCV_AnimEvents", function(ply, event, data)
     if event == PLAYERANIMEVENT_RELOAD then
         local gest = wep:GetReloadGesture()
         ply:AnimRestartGesture(slot, gest, true)
-        if wep.ShotgunReload or (wep.GetHybridReload and wep:GetHybridReload()) then
+        if wep.ShotgunReload then
             local offset = MCV.ReloadAnimOffsets[event][gest] or 0.5
             ply:SetLayerDuration(slot, t / offset)
         else

@@ -172,6 +172,53 @@ function SWEP:DrawHUDAvailability(blend, right, y)
     end
 end
 
+// A count that changes rolls instead of appearing: the number on screen chases the real one
+// and covers the whole jump in CountUpTime, never slower than CountUpMin a second so that a
+// small pickup is not sluggish. `rolldown` also rolls a falling count, which is what the
+// reserve does, so a reload empties the reserve in step with the magazine filling. The
+// magazine itself is left to snap downwards: a shot has to read at once or the counter lags
+// behind the gun being fired.
+HUD.CountUpTime = 0.25
+HUD.CountUpMin = 30
+HUD.CountUpResume = 0.25 // a longer gap means the weapon was away: start from the count it has now
+
+function SWEP:RollHUDNumber(key, target, rolldown)
+    if target == nil then
+        self[key] = nil
+        return nil
+    end
+
+    local now = RealTime()
+    local st = self[key]
+    // nothing drawn for a while (the gun was holstered, the HUD was hidden): no roll, the
+    // count that comes back is simply the count
+    if !st or now - (st.seen or 0) > HUD.CountUpResume then
+        st = {shown = target, target = target, rate = 0, seen = now}
+        self[key] = st
+    end
+    st.seen = now
+
+    if target != st.target then
+        st.target = target
+        if target < st.shown and !rolldown then
+            st.shown = target
+        else
+            st.rate = math.max(math.abs(target - st.shown) / HUD.CountUpTime, HUD.CountUpMin)
+        end
+    end
+
+    local step = st.rate * RealFrameTime()
+    if st.shown < st.target then
+        st.shown = math.min(st.shown + step, st.target)
+        return math.floor(st.shown)
+    elseif st.shown > st.target then
+        st.shown = math.max(st.shown - step, st.target)
+        return math.ceil(st.shown)
+    end
+
+    return st.target
+end
+
 // The ammo block: firemode label, big count, reserve, icon behind it all
 function SWEP:DrawHUDAmmo(blend)
     local sw, sh = ScrW(), ScrH()
@@ -180,6 +227,8 @@ function SWEP:DrawHUDAmmo(blend)
 
     local firemode_name = self:GetFiremodeName() or ""
     local ammocount, reserve = self:GetHUDAmmo()
+    ammocount = self:RollHUDNumber("HUDAmmoRoll", ammocount)
+    reserve = self:RollHUDNumber("HUDReserveRoll", reserve, true)
 
     // icon: the spawn icon has its glyph in the middle 256x128 band of a 256x256 image, so
     // a 128 wide box shows the whole band with no dead space

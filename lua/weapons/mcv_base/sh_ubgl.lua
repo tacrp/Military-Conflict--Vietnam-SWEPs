@@ -1,3 +1,22 @@
+// A rifle whose launcher is a separate weapon swaps to it part way through the holster it
+// plays for the swap
+function SWEP:Deferred_LauncherSwap()
+    if !self:GetGrenadeLauncher() then
+        self:RestoreClip2(self.Secondary.ClipSize)
+
+        if self:Clip2() > 0 then
+            self:PlayAnimation(ACT_VM_DRAWFULL_M203, 1, true)
+        else
+            self:PlayAnimation(ACT_VM_DRAW_M203, 1, true)
+        end
+
+        self:SetGrenadeLauncher(true)
+    else
+        self:PlayAnimation(ACT_VM_READY, 1, true)
+        self:SetGrenadeLauncher(false)
+    end
+end
+
 function SWEP:ToggleUBGL()
     if self.HasAkimbo then
         self:ToggleAkimbo()
@@ -16,22 +35,7 @@ function SWEP:ToggleUBGL()
 
         local t = self:PlayAnimation(ACT_VM_HOLSTER, 0.75, true, true)
 
-        self:SetTimer(t + 0.5, function()
-            if !IsValid(self) then return end
-            if !self:GetGrenadeLauncher() then
-                self:RestoreClip2(self.Secondary.ClipSize)
-
-                if self:Clip2() > 0 then
-                    self:PlayAnimation(ACT_VM_DRAWFULL_M203, 1, true)
-                else
-                    self:PlayAnimation(ACT_VM_DRAW_M203, 1, true)
-                end
-                self:SetGrenadeLauncher(true)
-            else
-                self:PlayAnimation(ACT_VM_READY, 1, true)
-                self:SetGrenadeLauncher(false)
-            end
-        end)
+        self:Defer("LauncherSwap", t + 0.5)
     else
         if !self:GetGrenadeLauncher() then
             self:PlayAnimation(ACT_VM_IIN_M203, 1, true)

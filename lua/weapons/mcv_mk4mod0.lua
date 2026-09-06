@@ -109,7 +109,7 @@ SWEP.SneakMoveSpreadMultiplier = 1.35
 SWEP.CrouchMoveSpreadMultiplier = 1.25
 SWEP.JumpSpreadMultiplier = 3
 
-SWEP.HasBayonet = true
+SWEP.HasBayonet = false
 SWEP.HasBipod = false
 
 // Penetration
@@ -160,6 +160,7 @@ SWEP.EjectBrassTrail = "vietnam_weaponeffect_shelleject_trail"
 SWEP.EjectBrassParticle = "vietnam_weaponeffect_shelleject_side"
 
 SWEP.TracerParticle = ""
+SWEP.TracerParticle2 = ""
 
 SWEP.TracerRandomness = 6
 SWEP.TracerFrequency = 1

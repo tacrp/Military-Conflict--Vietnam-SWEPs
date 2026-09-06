@@ -44,7 +44,10 @@ SWEP.Firemodes = {
 }
 
 SWEP.LastShotAnimation = true
-SWEP.MagInClip = true
+// false: the en-bloc clip goes in whole, so the counter jumps to the loaded magazine at the
+// model's NEXTCLIP event (frame 30) rather than counting the rounds on their way in, which
+// is how a stripper clip reads. The generator keeps a value set here over its own guess.
+SWEP.MagInClip = false
 
 SWEP.RifleGrenadeEntity = "mcv_proj_riflegrenade"
 SWEP.RifleGrenadeForce = 2000
@@ -168,6 +171,7 @@ SWEP.EjectBrassTrail = "shellsmoke"
 SWEP.EjectBrassParticle = "port_smoke"
 
 SWEP.TracerParticle = "vietnam_tracer_rifle_primary"
+SWEP.TracerParticle2 = "vietnam_tracer_rifle_secondary"
 
 SWEP.TracerRandomness = 6
 SWEP.TracerFrequency = 1

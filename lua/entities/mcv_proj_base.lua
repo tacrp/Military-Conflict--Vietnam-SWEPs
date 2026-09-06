@@ -20,6 +20,7 @@ ENT.Material = false // custom material
 ENT.IsRocket = false // projectile has a booster and will not drop.
 
 ENT.Sticky = false // projectile sticks on impact
+ENT.StickyPlace = true // projectile adopts normal of surface
 
 ENT.InstantFuse = true // projectile is armed immediately after firing.
 ENT.TimeFuse = false // projectile will arm after this amount of time
@@ -247,7 +248,9 @@ function ENT:PhysicsCollide(data, collider)
         self:SetCollisionGroup(COLLISION_GROUP_DEBRIS)
         self:SetPos(data.HitPos)
 
-        self:SetAngles((-data.HitNormal):Angle())
+        if self.StickyPlace then
+            self:SetAngles((-data.HitNormal):Angle())
+        end
 
         if data.HitEntity:IsWorld() or data.HitEntity:GetSolid() == SOLID_BSP then
             self:SetMoveType(MOVETYPE_NONE)

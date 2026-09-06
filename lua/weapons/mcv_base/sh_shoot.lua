@@ -194,11 +194,58 @@ function SWEP:FireAnimationEvent( pos, ang, event, name )
     end
 end
 
+// How far the stance opens the gun up: the game's own multipliers (the weapon script's
+// StandMoveSpreadMultiplier & co), blended by how fast the owner is moving. 1 is standing
+// still, above 1 is moving or in the air, below 1 is crouched. Both models of inaccuracy read
+// it, so a run or a jump throws the shot wider whichever one is on, and the crosshair grows
+// with it because the crosshair is drawn from the same two numbers.
+function SWEP:GetStanceSpreadMultiplier()
+    local owner = self:GetOwner()
+    if !IsValid(owner) then return 1 end
+
+    local move = math.min(owner:GetVelocity():Length() / 273, 1)
+
+    if !owner:IsOnGround() then
+        return Lerp(move, 1, self.JumpSpreadMultiplier)
+    elseif owner:Crouching() then
+        return Lerp(move, self.CrouchSpreadMultiplier, self.CrouchMoveSpreadMultiplier)
+    end
+    return Lerp(move, 1, self.StandMoveSpreadMultiplier)
+end
+
+if CLIENT then
+    // Visual copy of the stance multiplier, advanced once per rendered frame toward the real
+    // one, the way the sight blend is (sh_sights.lua). The gameplay value steps: leaving the
+    // ground swaps a 1 for the jump multiplier inside one tick, and the drawn barrel drift
+    // jumps with it. Only what is drawn is eased. The shot still leaves along the real value,
+    // so the two differ for a fraction of a second after a stance changes.
+    SWEP.StanceSmoothRate = 6      // multiplier a second: the default jump, 1 to 3, in a third of one
+    SWEP.StanceResyncThreshold = 4 // further apart than that and it snaps instead of crawling
+
+    function SWEP:GetStanceSpreadMultiplierVisual()
+        local frame = FrameNumber()
+        if self.VisualStanceFrame == frame then return self.VisualStance end
+
+        local target = self:GetStanceSpreadMultiplier()
+        local cur = self.VisualStance
+        if cur == nil or math.abs(cur - target) > self.StanceResyncThreshold then
+            cur = target
+        end
+
+        self.VisualStance = math.Approach(cur, target, self.StanceSmoothRate * FrameTime())
+        self.VisualStanceFrame = frame
+
+        return self.VisualStance
+    end
+else
+    SWEP.GetStanceSpreadMultiplierVisual = SWEP.GetStanceSpreadMultiplier
+end
+
 // Realistic mode (mcv_realistic_shooting 1): hip fire is barrel-accurate, so the inaccuracy is
 // the barrel wandering off the screen centre. A slow two-tone drift in pitch and yaw with a peak
-// of HipSwayScale times the gun's hip spread (degrees), halved on shotguns, damped to nothing by
-// the sight amount. Deterministic in CurTime, so client and server agree; `visual` uses the
-// frame-smoothed sight amount for drawing.
+// of HipSwayScale times the gun's hip spread (degrees), halved on shotguns, scaled by the
+// stance and damped to nothing by the sight amount. Deterministic in CurTime, so client and
+// server agree; `visual` uses the frame-smoothed sight amount for drawing.
 SWEP.HipSwayScale = 0.25
 
 // peak of the sway in degrees (each axis), 0 when the mode is off or the sights are up
@@ -207,7 +254,12 @@ function SWEP:GetAimSwayAmplitude(visual)
     local sa = visual and self:GetSightAmountVisual() or self:GetSightAmount()
     local amp = (self.Spread or 0) * self.HipSwayScale * (1 - sa)
     if (self.Num or 1) > 1 then amp = amp * 0.5 end // shotguns
-    return amp
+    // the stance swings the barrel the way it opens the game's cone: a jump or a run widens
+    // the drift, a crouch steadies it. This mode has no cone to grow, so the sway is what the
+    // crosshair reads to show the stance. What is drawn eases between stances; the shot reads
+    // the real multiplier
+    local stance = visual and self:GetStanceSpreadMultiplierVisual() or self:GetStanceSpreadMultiplier()
+    return amp * stance
 end
 
 function SWEP:GetAimSway(visual)
@@ -247,18 +299,7 @@ function SWEP:GetSpread()
         sighted = self.SpreadBipodIronsighted or self.SpreadBipod
     end
 
-    local owner = self:GetOwner()
-    local move = math.min(owner:GetVelocity():Length() / 273, 1)
-
-    // the game's stance and movement multipliers (script StandMoveSpreadMultiplier & co)
-    local stance
-    if !owner:IsOnGround() then
-        stance = Lerp(move, 1, self.JumpSpreadMultiplier)
-    elseif owner:Crouching() then
-        stance = Lerp(move, self.CrouchSpreadMultiplier, self.CrouchMoveSpreadMultiplier)
-    else
-        stance = Lerp(move, 1, self.StandMoveSpreadMultiplier)
-    end
+    local stance = self:GetStanceSpreadMultiplier()
 
     if MCV.RealisticShooting() then
         // realistic (mcv_realistic_shooting 1): the bullet leaves the barrel wherever it points.
@@ -269,7 +310,7 @@ function SWEP:GetSpread()
         if (self.Num or 1) > 1 then
             spread = sighted
         else
-            spread = Lerp(sa, sighted, 0)
+            spread = sighted * Lerp(sa, 1, 0.25)
         end
     else
         // the game: a hip fire cone that narrows to the sighted spread as the sights come up,
@@ -342,9 +383,9 @@ function SWEP:AttackEffects()
     end
 
     if fm == MCV.FIREMODE_VOLLEY and self:Clip1() > 1 then
-        self:EmitSound(self.SoundDoubleShot)
+        self:EmitSound(self.SoundDoubleShot, nil, nil, nil, CHAN_WEAPON)
     else
-        self:EmitSound(self.SoundSingleShot)
+        self:EmitSound(self.SoundSingleShot, nil, nil, nil, CHAN_WEAPON)
     end
 
     local clip_percentage = self:Clip1() / self.Primary.ClipSize
@@ -369,21 +410,6 @@ function SWEP:BulletAttack()
         num = num * math.min(self:Clip1(), self.VolleyCount)
     end
 
-    // The game's tracer particles instead of the stock tracer: the `_smoke` trail on every round
-    // and the bright `_primary` every TracerFrequency-th. Sent by the server (in singleplayer the
-    // client never runs FireBullets, which is why nothing showed) with the weapon and its muzzle
-    // attachment as the origin: the client's weapon entity redirects that to the viewmodel's
-    // attachment for the local player, so the trail leaves the gun on screen and everyone else
-    // sees it leave the world model.
-    local tracer = self.TracerParticle
-    local smoke = (tracer and tracer != "") and (self.TracerSmokeParticle or string.gsub(tracer, "_primary$", "_smoke")) or nil
-    local freq = math.max(self.TracerFrequency or 1, 1)
-    local shot = 0
-    // the gun this shot leaves (a dual's left gun on an odd count, as the muzzle flash): the
-    // client effect (effects/mcv_tracer.lua) starts the trail at that gun's muzzle, viewmodel
-    // or drawn world model; the count is still the pre-shot one here
-    local left = self:GetAkimbo() and self:Clip1() % 2 == 1
-
     owner:FireBullets({
         Damage = self.DamageGeneric,
         Num = num,
@@ -391,21 +417,9 @@ function SWEP:BulletAttack()
         Dir = self:GetAimVector(),
         Spread = Vector(spread, spread, spread),
         Attacker = owner,
-        Tracer = 0,
+        Tracer = 1,
+        TracerName = "mcv_tracer",
         Callback = function(attacker, tr, dmginfo)
-            shot = shot + 1
-            if SERVER and tracer and tracer != "" and !tr.StartSolid then
-                local flags = (smoke and smoke != tracer) and 1 or 0
-                if shot % freq == 0 then flags = flags + 2 end
-                if flags > 0 then
-                    local fx = EffectData()
-                    fx:SetEntity(self)
-                    fx:SetOrigin(tr.HitPos)
-                    fx:SetFlags(flags)
-                    fx:SetMagnitude(left and 1 or 0)
-                    util.Effect("mcv_tracer", fx, true, true)
-                end
-            end
             local dmg = dmginfo:GetDamage()
             local range = (tr.HitPos - tr.StartPos):Length()
 
