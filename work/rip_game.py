@@ -528,8 +528,10 @@ def _lua_name_map():
 
 
 def step_icons(args, vpk):
-    """Weapon selection / spawn icons from the game's panorama SVGs: rendered white on
-    transparent, scaled to fit the middle 256x128 band of a 256x256 png."""
+    """Weapon selection / spawn icons from the game's panorama SVGs, rendered as drawn (white
+    fills, black outlines: the game's outlined style) at 1024 px, scaled to fit the middle
+    512x256 band of a 512x512 png. Turning every fill and stroke white, as this used to, gave a
+    white silhouette with none of the outlines (the "blobby" icons)."""
     try:
         import cairosvg
         from PIL import Image
@@ -571,9 +573,6 @@ def step_icons(args, vpk):
         if args.only_new_icons and os.path.isfile(os.path.join(out_dir, "mcv_%s.png" % lua_name)):
             continue
         svg = vpk.read(svgs[key]).decode("utf-8", "replace")
-        # everything white
-        svg = re.sub(r'(?i)(fill|stroke)\s*:\s*#[0-9a-f]{3,8}', r'\1:#ffffff', svg)
-        svg = re.sub(r'(?i)(fill|stroke)="(?!none)(?!transparent)[^"]*"', r'\1="#ffffff"', svg)
         try:
             png = cairosvg.svg2png(bytestring=svg.encode("utf-8"), output_width=1024)
         except Exception as e:
@@ -584,17 +583,35 @@ def step_icons(args, vpk):
         if not bbox:
             continue
         im = im.crop(bbox)
-        # force pure white with the rendered alpha
-        alpha = im.split()[3]
-        im = Image.new("RGBA", im.size, (255, 255, 255, 0))
-        im.putalpha(alpha)
-        box_w, box_h = 256, 128
+        size = 512
+        box_w, box_h = size, size // 2
         scale = min(box_w / im.width, box_h / im.height)
         im = im.resize((max(1, round(im.width * scale)), max(1, round(im.height * scale))), Image.LANCZOS)
-        canvas = Image.new("RGBA", (256, 256), (255, 255, 255, 0))
-        canvas.paste(im, ((256 - im.width) // 2, (256 - im.height) // 2), im)
+        canvas = Image.new("RGBA", (size, size), (255, 255, 255, 0))
+        canvas.paste(im, ((size - im.width) // 2, (size - im.height) // 2), im)
         canvas.save(os.path.join(out_dir, "mcv_%s.png" % lua_name))
         made += 1
+    # icons named after game scripts rather than lua files (IconOverride targets such as
+    # mcv_stoner63_r.png, mcv_kar98k.png): re-rendered from their svg so they keep the same style
+    for png_path in glob.glob(os.path.join(out_dir, "mcv_*.png")):
+        key = "weapon_" + os.path.basename(png_path)[4:-4].lower()
+        if key in svgs and not os.path.basename(png_path)[4:-4] in name_map.values():
+            try:
+                svg = vpk.read(svgs[key]).decode("utf-8", "replace")
+                png = cairosvg.svg2png(bytestring=svg.encode("utf-8"), output_width=1024)
+                im = Image.open(io.BytesIO(png)).convert("RGBA")
+                bbox = im.getbbox()
+                if bbox:
+                    im = im.crop(bbox)
+                    size = 512
+                    scale = min(size / im.width, (size // 2) / im.height)
+                    im = im.resize((max(1, round(im.width * scale)), max(1, round(im.height * scale))), Image.LANCZOS)
+                    canvas = Image.new("RGBA", (size, size), (255, 255, 255, 0))
+                    canvas.paste(im, ((size - im.width) // 2, (size - im.height) // 2), im)
+                    canvas.save(png_path)
+                    made += 1
+            except Exception as e:
+                log("  %s: svg render failed: %s" % (key, e))
     # variants no game script resolves to (sw39 / mk22, t223_40r / t223 ...) share the viewmodel of a
     # weapon that did get an icon: reuse that one
     copied = 0

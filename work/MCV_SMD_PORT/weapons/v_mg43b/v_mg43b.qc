@@ -341,7 +341,7 @@ $animation "runIdle_a" "..\..\..\MCV_SMD_OG\weapons\v_mg43b\v_mg43b_anims\runIdl
 	subtract "runIdle_a_corrective_animation" 0
 }
 
-$animation "run_a" "..\..\..\MCV_SMD_OG\weapons\v_mg43b\v_mg43b_anims\run_a.smd" {
+$animation "run_a" "fixed_anims\run_a.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "run_a_corrective_animation" 0
@@ -354,13 +354,13 @@ $animation "walkIdle_a" "..\..\..\MCV_SMD_OG\weapons\v_mg43b\v_mg43b_anims\walkI
 	subtract "walkIdle_a_corrective_animation" 0
 }
 
-$animation "walk_a" "..\..\..\MCV_SMD_OG\weapons\v_mg43b\v_mg43b_anims\walk_a.smd" {
+$animation "walk_a" "fixed_anims\walk_a.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "walk_a_corrective_animation" 0
 }
 
-$animation "walk_a_r" "..\..\..\MCV_SMD_OG\weapons\v_mg43b\v_mg43b_anims\walk_a_r.smd" {
+$animation "walk_a_r" "fixed_anims\walk_a_r.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "walk_a_r_corrective_animation" 0
@@ -427,37 +427,37 @@ $animation "nearwall_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_mg43b\v_mg43b_anims\n
 	fps 30
 }
 
-$animation "prone_deployF" "..\..\..\MCV_SMD_OG\weapons\v_mg43b\v_mg43b_anims\prone_deployF.smd" {
+$animation "prone_deployF" "fixed_anims\prone_deployF.smd" {
 	fps 30
 	loop
 }
 
-$animation "prone_deployB" "..\..\..\MCV_SMD_OG\weapons\v_mg43b\v_mg43b_anims\prone_deployB.smd" {
+$animation "prone_deployB" "fixed_anims\prone_deployB.smd" {
 	fps 30
 }
 
-$animation "prone_deployL" "..\..\..\MCV_SMD_OG\weapons\v_mg43b\v_mg43b_anims\prone_deployL.smd" {
+$animation "prone_deployL" "fixed_anims\prone_deployL.smd" {
 	fps 30
 }
 
-$animation "prone_deployR" "..\..\..\MCV_SMD_OG\weapons\v_mg43b\v_mg43b_anims\prone_deployR.smd" {
+$animation "prone_deployR" "fixed_anims\prone_deployR.smd" {
 	fps 30
 }
 
-$animation "proneF" "..\..\..\MCV_SMD_OG\weapons\v_mg43b\v_mg43b_anims\proneF.smd" {
+$animation "proneF" "fixed_anims\proneF.smd" {
 	fps 30
 	loop
 }
 
-$animation "proneB" "..\..\..\MCV_SMD_OG\weapons\v_mg43b\v_mg43b_anims\proneB.smd" {
+$animation "proneB" "fixed_anims\proneB.smd" {
 	fps 30
 }
 
-$animation "proneL" "..\..\..\MCV_SMD_OG\weapons\v_mg43b\v_mg43b_anims\proneL.smd" {
+$animation "proneL" "fixed_anims\proneL.smd" {
 	fps 30
 }
 
-$animation "proneR" "..\..\..\MCV_SMD_OG\weapons\v_mg43b\v_mg43b_anims\proneR.smd" {
+$animation "proneR" "fixed_anims\proneR.smd" {
 	fps 30
 }
 

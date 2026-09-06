@@ -245,7 +245,7 @@ $animation "runIdle_a" "..\..\..\MCV_SMD_OG\weapons\v_vcpistol2\v_vcpistol2_anim
 	subtract "runIdle_a_corrective_animation" 0
 }
 
-$animation "run_a" "..\..\..\MCV_SMD_OG\weapons\v_vcpistol2\v_vcpistol2_anims\run_a.smd" {
+$animation "run_a" "fixed_anims\run_a.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "run_a_corrective_animation" 0
@@ -258,7 +258,7 @@ $animation "walkIdle_a" "..\..\..\MCV_SMD_OG\weapons\v_vcpistol2\v_vcpistol2_ani
 	subtract "walkIdle_a_corrective_animation" 0
 }
 
-$animation "walk_a" "..\..\..\MCV_SMD_OG\weapons\v_vcpistol2\v_vcpistol2_anims\walk_a.smd" {
+$animation "walk_a" "fixed_anims\walk_a.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "walk_a_corrective_animation" 0

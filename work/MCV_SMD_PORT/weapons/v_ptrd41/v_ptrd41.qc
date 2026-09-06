@@ -301,7 +301,7 @@ $animation "runIdle_a" "..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\runI
 	subtract "runIdle_a_corrective_animation" 0
 }
 
-$animation "run_a" "..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\run_a.smd" {
+$animation "run_a" "fixed_anims\run_a.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "run_a_corrective_animation" 0
@@ -314,13 +314,13 @@ $animation "walkIdle_a" "..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\wal
 	subtract "walkIdle_a_corrective_animation" 0
 }
 
-$animation "walk_a" "..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\walk_a.smd" {
+$animation "walk_a" "fixed_anims\walk_a.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "walk_a_corrective_animation" 0
 }
 
-$animation "walk_a_iron" "..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\walk_a_iron.smd" {
+$animation "walk_a_iron" "fixed_anims\walk_a_iron.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "walk_a_iron_corrective_animation" 0
@@ -396,13 +396,13 @@ $animation "deploy_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\d
 	fps 40
 }
 
-$animation "shoot1d_a" "..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\shoot1d_a.smd" {
+$animation "shoot1d_a" "fixed_anims\shoot1d_a.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "shoot1d_a_corrective_animation" 0
 }
 
-$animation "shoot1d_ironsight_a" "..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\shoot1d_ironsight_a.smd" {
+$animation "shoot1d_ironsight_a" "fixed_anims\shoot1d_ironsight_a.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "shoot1d_ironsight_a_corrective_animation" 0

@@ -639,6 +639,16 @@ spent off the fuse, and holding past the fuse forces the throw with detonation i
 windup animation has to finish before a release throws (`WindupEnd`), and the crosshair pulses a
 ring every half second while cooking (`GetCookPulse`).
 
+## Icons
+
+`rip_game.py --steps icons` renders the game's panorama SVGs (`materials/panorama/images/icons/
+equipment/`, 320 of them, plus 3 in `new/` that win) as drawn: white fills with black outlines,
+the game's outlined style, at 1024 px, scaled into the middle 512x256 band of a 512x512 png in
+`materials/entities/`. The first pass turned every fill and stroke white and kept only the
+alpha, which reduced them to silhouettes (the "blobby" icons). Icons named after game scripts
+rather than lua files (IconOverride targets) are re-rendered by the same step; the four without
+an svg (AVT-40, Type 17 pistol, T223 40-round) are copies of their sibling's.
+
 ## Sight survey (`work/sight_survey.py`)
 
 `work/tests/sights_all_*.txt` aim every iron-sight gun with the centre marker and a report;

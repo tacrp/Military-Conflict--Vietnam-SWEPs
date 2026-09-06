@@ -1065,11 +1065,11 @@ $animation "shootlast_l_ironsight_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_ppk\v_d
 	subtract "shootlast_l_ironsight_a_corrective_animation" 0
 }
 
-$animation "reload_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_ppk\v_dual_ppk_anims\reload_a.smd" {
+$animation "reload_a" "fixed_anims\reload_a.smd" {
 	fps 30
 }
 
-$animation "reload_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_ppk\v_dual_ppk_anims\reload_a_i.smd" {
+$animation "reload_a_i" "fixed_anims\reload_a_i.smd" {
 	fps 30
 }
 
@@ -1081,19 +1081,19 @@ $animation "reload_r_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_ppk\v_dual_ppk_ani
 	fps 30
 }
 
-$animation "reload_re_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_ppk\v_dual_ppk_anims\reload_re_a.smd" {
+$animation "reload_re_a" "fixed_anims\reload_re_a.smd" {
 	fps 30
 }
 
-$animation "reload_re_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_ppk\v_dual_ppk_anims\reload_re_a_i.smd" {
+$animation "reload_re_a_i" "fixed_anims\reload_re_a_i.smd" {
 	fps 30
 }
 
-$animation "reload_e_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_ppk\v_dual_ppk_anims\reload_e_a.smd" {
+$animation "reload_e_a" "fixed_anims\reload_e_a.smd" {
 	fps 30
 }
 
-$animation "reload_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_ppk\v_dual_ppk_anims\reload_e_a_i.smd" {
+$animation "reload_e_a_i" "fixed_anims\reload_e_a_i.smd" {
 	fps 30
 }
 
