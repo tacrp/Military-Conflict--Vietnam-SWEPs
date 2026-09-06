@@ -53,6 +53,8 @@ SWEP.AkimboDualSingleActionReload = false
 
 SWEP.MagInTime = 1.27
 SWEP.MagInTimeEmpty = 1.27
+SWEP.MagOutTime = 0
+SWEP.MagOutTimeEmpty = 0
 
 // View slide from recoil
 SWEP.ViewSlideRecoilUp = 0.75

@@ -24,8 +24,8 @@ SWEP.WorldModel = "models/weapons/mcv/w_k50m_vc.mdl"
 SWEP.BodyGroups = ""
 SWEP.MagInTime = 1.87
 SWEP.MagInTimeEmpty = 2.53
-SWEP.MagOutTime = 0.33
-SWEP.MagOutTimeEmpty = 0.33
+SWEP.MagOutTime = 0
+SWEP.MagOutTimeEmpty = 0
 
 // Stats
 

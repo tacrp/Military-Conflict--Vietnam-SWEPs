@@ -22,6 +22,7 @@ SWEP.MagOutTimeEmpty = 1.33
 SWEP.BodyGroups = ""
 SWEP.MagInTime = 1.33
 SWEP.MagInTimeEmpty = 6.03
+SWEP.MagOutTime = 0
 
 SWEP.BulletBodygroups = {
     [1] = {1, 1},

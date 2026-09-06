@@ -29,8 +29,8 @@ SWEP.BodyGroups = "01"
 // on the model switch from the old count to the new one here, 0 in between when it is out
 SWEP.MagInTime = 1.07
 SWEP.MagInTimeEmpty = 1.07
-SWEP.MagOutTime = 0.4
-SWEP.MagOutTimeEmpty = 0.4
+SWEP.MagOutTime = 0
+SWEP.MagOutTimeEmpty = 0
 
 // Stats
 

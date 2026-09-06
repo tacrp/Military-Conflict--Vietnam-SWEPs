@@ -26,8 +26,8 @@ SWEP.WorldModel = "models/weapons/mcv/w_luger.mdl"
 SWEP.BodyGroups = ""
 SWEP.MagInTime = 1.53
 SWEP.MagInTimeEmpty = 1.53
-SWEP.MagOutTime = 0.5
-SWEP.MagOutTimeEmpty = 0.5
+SWEP.MagOutTime = 0
+SWEP.MagOutTimeEmpty = 0
 
 // Stats
 

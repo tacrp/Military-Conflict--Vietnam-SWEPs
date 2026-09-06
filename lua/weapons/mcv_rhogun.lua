@@ -26,8 +26,8 @@ SWEP.WorldModel = "models/weapons/mcv/w_rhogun.mdl"
 SWEP.BodyGroups = ""
 SWEP.MagInTime = 1.57
 SWEP.MagInTimeEmpty = 2.37
-SWEP.MagOutTime = 0.33
-SWEP.MagOutTimeEmpty = 0.33
+SWEP.MagOutTime = 0
+SWEP.MagOutTimeEmpty = 0
 
 // Stats
 

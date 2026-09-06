@@ -19,8 +19,8 @@ SWEP.WorldModel = "models/weapons/mcv/w_car15.mdl"
 SWEP.BodyGroups = "010"
 SWEP.MagInTime = 1.47
 SWEP.MagInTimeEmpty = 1.47
-SWEP.MagOutTime = 0.2
-SWEP.MagOutTimeEmpty = 0.2
+SWEP.MagOutTime = 0
+SWEP.MagOutTimeEmpty = 0
 
 SWEP.WeaponSelectIcon = NULL
 

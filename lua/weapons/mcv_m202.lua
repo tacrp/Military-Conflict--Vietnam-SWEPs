@@ -44,8 +44,8 @@ SWEP.MagInClip = false
 
 SWEP.MagInTime = 2.07
 SWEP.MagInTimeEmpty = 2.07
-SWEP.MagOutTime = 0.63
-SWEP.MagOutTimeEmpty = 0.63
+SWEP.MagOutTime = 0
+SWEP.MagOutTimeEmpty = 0
 
 SWEP.ShootEntity = "mcv_proj_m202"
 SWEP.ShootForce = 9000

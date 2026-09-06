@@ -104,6 +104,8 @@ SWEP.Primary.Automatic = true
 
 SWEP.MagInTime = 1
 SWEP.MagInTimeEmpty = 1
+SWEP.MagOutTime = 0
+SWEP.MagOutTimeEmpty = 0
 
 SWEP.NearwallDistance = 40
 

@@ -21,8 +21,8 @@ SWEP.WorldModel = "models/weapons/mcv/w_vz59.mdl"
 SWEP.BodyGroups = ""
 SWEP.MagInTime = 2.13
 SWEP.MagInTimeEmpty = 2.97
-SWEP.MagOutTime = 1.53
-SWEP.MagOutTimeEmpty = 2.6
+SWEP.MagOutTime = 0
+SWEP.MagOutTimeEmpty = 0
 
 SWEP.BulletBodygroups = {
     [1] = {1, 1},

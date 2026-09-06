@@ -570,12 +570,14 @@ def anim_timing(qc):
         tin = e["nextclip"]
         if tin is None:
             tin = e["clippose"] if e["clippose"] is not None else e["magin"]
-        tout = e["nextclip_empty"] if e["nextclip_empty"] is not None else e["magout"]
+        # the rounds shown only go to zero between the game's own "old belt out" event
+        # (AE_CL_BODYGROUP_SET_TO_NEXTCLIP_EMPTY) and the swap; the mag-out foley fires while the
+        # magazine is still on screen, which emptied the belt in the player's hand
+        tout = e["nextclip_empty"]
         if tin is None:
             continue
         times[kin] = round(tin / fps, 2)
-        if tout is not None and tout < tin:
-            times[kout] = round(tout / fps, 2)
+        times[kout] = round(tout / fps, 2) if (tout is not None and tout < tin) else 0
     if "MagInTime" in times and "MagInTimeEmpty" not in times:
         # no separate empty reload animation: the empty reload plays the same one
         times["MagInTimeEmpty"] = times["MagInTime"]

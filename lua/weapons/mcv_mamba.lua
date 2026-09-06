@@ -26,8 +26,8 @@ SWEP.WorldModel = "models/weapons/mcv/w_mamba.mdl"
 SWEP.BodyGroups = ""
 SWEP.MagInTime = 1.07
 SWEP.MagInTimeEmpty = 1.07
-SWEP.MagOutTime = 0.4
-SWEP.MagOutTimeEmpty = 0.4
+SWEP.MagOutTime = 0
+SWEP.MagOutTimeEmpty = 0
 
 // Stats
 

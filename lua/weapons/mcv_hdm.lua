@@ -47,8 +47,8 @@ SWEP.LastShotAnimation = true
 
 SWEP.MagInTime = 1.17
 SWEP.MagInTimeEmpty = 1.17
-SWEP.MagOutTime = 0.53
-SWEP.MagOutTimeEmpty = 0.53
+SWEP.MagOutTime = 0
+SWEP.MagOutTimeEmpty = 0
 
 // View slide from recoil
 SWEP.ViewSlideRecoilUp = 0.75

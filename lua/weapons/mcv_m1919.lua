@@ -67,6 +67,8 @@ SWEP.PlayCycleAnimation = false
 
 SWEP.MagInTime = 1.8
 SWEP.MagInTimeEmpty = 1.8
+SWEP.MagOutTime = 0
+SWEP.MagOutTimeEmpty = 0
 
 // View slide from recoil
 SWEP.ViewSlideRecoilUp = 1.64
