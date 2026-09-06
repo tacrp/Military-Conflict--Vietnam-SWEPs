@@ -771,3 +771,10 @@ alone since the field has no gameplay effect.
   115). `AkimboMagInTimes` in the lua maps each reload activity to those two seconds; Lua splits
   the shared clip floor / ceil (the right gun fires on an even count) and hands each gun its new
   count on its own cue. The other duals declare no ammo pose parameter.
+* **Borrowed single-round reloads** (`borrow_inserts`, `INSERT_DONORS`): the plain M38, M91 and
+  vz.54 ship only the clip reload while their sniper twins carry the single-round loop
+  (reload_start / reload_start_empty / reload_insert / reload_end, the same skeleton bar the
+  plain model's Grenade bone, which keeps its bind pose). The donor's four sequences and their
+  `$animation` blocks are appended to the qc text before parsing, so every step treats them as
+  the model's own; the paths point into the donor's directory. The MAS-36 pair has a different
+  bullet and bolt rig and no donor; Lua's hybrid gate also requires ACT_VM_RELOAD_INSERT.

@@ -1646,6 +1646,53 @@ def port_worldmodel(args, og_dir):
 # Driver
 # --------------------------------------------------------------------------------------------
 
+# Plain bolt rifles whose game model has only the clip reload, and the sniper twin (same
+# skeleton, the plain model's extra Grenade bone just keeps its bind pose) whose single-round
+# loop they borrow for the hybrid reload. The MAS-36 pair has no twin with its rig.
+INSERT_DONORS = {
+    "v_m38": "v_m38_s",
+    "v_m91": "v_m38_s",
+    "v_vz54": "v_vz54s",
+}
+INSERT_SEQUENCES = ("reload_start", "reload_start_empty", "reload_insert", "reload_end")
+
+
+def borrow_inserts(text, name, og_dir, ctx):
+    """Append the donor's single-round reload sequences and their $animation blocks to the qc
+    text, before it is parsed, so every later step treats them like the model's own. The
+    animation paths point into the donor's directory (relative to this model's)."""
+    donor = INSERT_DONORS.get(name)
+    if not donor or re.search(r'\$sequence\s+"reload_insert"', text):
+        return text
+    donor_qc = os.path.join(os.path.dirname(og_dir.rstrip("/\\")), donor, donor + ".qc")
+    if not os.path.isfile(donor_qc):
+        ctx.warn("insert donor %s has no qc" % donor)
+        return text
+    dsrc = open(donor_qc, encoding="utf-8", errors="replace").read().replace("\r\n", "\n")
+    seqs = []
+    anims = []
+    for sq in INSERT_SEQUENCES:
+        m = re.search(r'^\$sequence\s+"%s"\s*\{.*?^\}' % sq, dsrc, re.S | re.M)
+        if not m:
+            ctx.warn("insert donor %s lacks %s" % (donor, sq))
+            return text
+        seqs.append(m.group(0))
+        anims += re.findall(r'^\s*"([^"\\]+)"\s*$', m.group(0), re.M)
+    own = set(re.findall(r'^\$animation\s+"([^"]+)"', text, re.M))
+    blocks = []
+    for a in dict.fromkeys(anims):
+        if a in own:
+            continue
+        m = re.search(r'^\$animation\s+"%s"\s+"([^"]+)"\s*\{.*?^\}' % re.escape(a), dsrc, re.S | re.M)
+        if not m:
+            ctx.warn("insert donor %s lacks animation %s" % (donor, a))
+            return text
+        rel = "..\\" + donor + "\\" + m.group(1).replace("/", "\\")
+        blocks.append(m.group(0).replace('"%s"' % m.group(1), '"%s"' % rel, 1))
+    ctx.note("single-round reload borrowed from %s (%d sequences, %d animations)" % (donor, len(seqs), len(blocks)))
+    return text + "\n\n// single-round reload borrowed from " + donor + " (port_qc INSERT_DONORS)\n" + "\n\n".join(blocks + seqs) + "\n"
+
+
 def port_one(args, og_dir):
     name = os.path.basename(og_dir.rstrip("/\\"))
     if name.startswith("w_"):
@@ -1657,6 +1704,7 @@ def port_one(args, og_dir):
     os.makedirs(out_dir, exist_ok=True)
     ctx = Ctx(args, og_dir, out_dir)
     text = open(og_qc, encoding="utf-8", errors="replace").read().replace("\r\n", "\n")
+    text = borrow_inserts(text, name, og_dir, ctx)
     qc = QC(text)
     ctx.mode = args.mode if args.mode != "auto" else detect_mode(qc, name)
     acts = {b.activity() for b in qc.blocks("sequence")}

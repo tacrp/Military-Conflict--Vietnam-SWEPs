@@ -1,7 +1,8 @@
 // Round-by-round top-up on a stripper-clip rifle: the model must have the animations and the
 // server convar must be on
 function SWEP:GetHybridReload()
-    return self.HybridReloadCapable and MCV.HybridReload()
+    // the model has to carry the single-round loop (the MAS-36 pair does not: clip only)
+    return self.HybridReloadCapable and MCV.HybridReload() and self:HasAnimation(ACT_VM_RELOAD_INSERT)
 end
 
 function SWEP:Reload()
