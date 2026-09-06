@@ -92,7 +92,7 @@ end
 // Where the scope axis meets the screen (0..1, y down): the muzzle attachment's forward, read
 // while the viewmodel is set up for drawing, projected far ahead. The shader magnifies the
 // screen around this point, so the picture follows the gun's sway.
-SWEP.ScopeDebug = 0
+SWEP.ScopeDebug = 0            // 1 lens uv, 2 solid red, 3 outline the reticle plane (magenta square, cyan circle)
 
 function SWEP:UpdateScopeAxis(vm)
     // The reticle sits where the shot goes: the aim angle (eye angles plus the view punch the

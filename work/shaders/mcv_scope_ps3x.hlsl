@@ -11,7 +11,7 @@
 //   c0: x 1/magnification   y (unused)                             z shadow radius (reticle plane units, 0.5 = its edge)   w shadow softness
 //   c1: x barrel distortion y chromatic aberration                  z edge blur                   w (unused)
 //   c2: x (unused)           y brightness                            z screen aspect (w/h)         w reticle strength
-//   c3: x, y scope axis on screen (0..1, y down)   z debug (1: show lens uv, 2: solid red)   w lens diameter on screen (fraction of height)
+//   c3: x, y scope axis on screen (0..1, y down)   z debug (1: show lens uv, 2: solid red, 3: outline the reticle plane)   w lens diameter on screen (fraction of height)
 sampler SCREEN  : register(s0);
 sampler RETICLE : register(s1);
 float4 C0 : register(c0);
@@ -75,11 +75,21 @@ float4 main(PS_INPUT frag) : COLOR {
     // border of their own)
     float dp = length(pl);
     float pupil = 1.0 - smoothstep(C0.z - C0.w, C0.z, dp);
-    col *= pupil * inplane;
+    // the black box: nothing but black outside the circle inscribed in the reticle image, so
+    // the image's square edges and corners can never show, whatever the shadow settings
+    float box = 1.0 - smoothstep(0.47, 0.5, dp);
+    col *= pupil * box * inplane;
 
     // reticle on top, opaque where the crosshair lines are, inside the plane only
     float ret = tex2D(RETICLE, ruv).a * C2.w * inplane;
     col *= 1.0 - ret;
+
+    // debug 3: the reticle plane's square (magenta) and inscribed circle (cyan) outlined
+    if (C3.z > 2.5) {
+        float edge = max(abs(pl.x), abs(pl.y));
+        if (edge > 0.49 && edge < 0.5) return float4(1.0, 0.0, 1.0, 1.0);
+        if (dp > 0.49 && dp < 0.5) return float4(0.0, 1.0, 1.0, 1.0);
+    }
 
     // no rim in lens coordinates any more: the shadow and the black surround live on the
     // reticle plane above, so nothing moves with the lens mesh itself
