@@ -142,8 +142,11 @@ function SWEP:GetViewModelPosition(pos, ang)
     // offsetang.y = offsetang.y + (aim_punch.p * 0.5)
     // offsetang.p = offsetang.p + (aim_punch.y * 0.5)
 
-    ang:RotateAroundAxis(ang:Up(), offsetang.p)
-    ang:RotateAroundAxis(ang:Right(), offsetang.y)
+    // the script's ironsightpitch / yaw / roll: pitch turns about the viewmodel's right axis,
+    // yaw about up (they were the other way round, which left the P38's 0.9 degree sight
+    // pitch applied as a yaw and its front post below the notch)
+    ang:RotateAroundAxis(ang:Right(), offsetang.p)
+    ang:RotateAroundAxis(ang:Up(), offsetang.y)
     ang:RotateAroundAxis(ang:Forward(), offsetang.r)
 
     return pos, ang

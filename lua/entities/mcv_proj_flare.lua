@@ -26,6 +26,8 @@ function ENT:OnInitialize()
     if SERVER then
         self.DieTime = CurTime() + self.BurnTime
         self:EmitSound("ambient/fire/ignite.wav", 70)
+        // the flare burns from the moment it leaves the gun, not only once it has landed
+        ParticleEffectAttach(self.GroundParticle, PATTACH_ABSORIGIN_FOLLOW, self, 0)
     end
 end
 
@@ -44,10 +46,8 @@ function ENT:Impact(data, collider)
     end
     if !self.Landed and data.HitEntity:IsWorld() then
         self.Landed = true
-        if SERVER then
-            self:StopParticles()
-            ParticleEffectAttach(self.GroundParticle, PATTACH_ABSORIGIN_FOLLOW, self, 0)
-        end
+        // the burning effect is already on it; the flight trail keeps going a moment and dies
+        // with the client's trail check (mcv_proj_base)
     end
 end
 

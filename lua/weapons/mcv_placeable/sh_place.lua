@@ -170,6 +170,7 @@ function SWEP:SpawnPlaced(pos, normal, parent)
     if !IsValid(ent) then return end
 
     self:ConfigurePlaced(ent)
+    ent.PlacedNormal = normal // the explosion goes off normal to the surface it sits on
     ent:SetPos(pos + normal * 0.5)
     ent:SetAngles(self:PlaceAngle(normal))
     ent:SetOwner(owner)

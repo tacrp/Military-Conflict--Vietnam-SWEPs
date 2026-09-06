@@ -107,3 +107,6 @@ NOTE: Please do not resort to using "snap" to fix this. "snap" should only be us
 - [x] M203 / XM148 / GP-25 launcher mode always sighted: the launcher idle's aimed pose was a blendlayer with start == end, which Source plays at full weight; it is an ironsight blend row now (`step_mode_idles`), same for the 24 rifle-grenade rifles' grenade idle; 28 models recompiled
 - [x] Molotov showed a "Fuse time" hint: GMod inherits nested tables index by index, so its `FuseModes = {0}` read as `{0, 5}` through the base; impact-fused throwables report one mode now
 - [x] C4 and dynamite explode with the mortar shell family (was the hand grenade's)
+- [x] Flare gun flares burn from the moment they leave the gun (the burning effect was only attached on landing)
+- [ ] Walther P38 sights: the script's values were already in the lua (up 0.125, pitch 0.9); the base applied the pitch about the up axis and the yaw about the right axis, so the pitch never reached the sight picture. Swapped to pitch about right, yaw about up. Also moves the Hi-Power (0.5), Chinalake (0.5), M72 (1.4), M8 (-3) and Type 97 (-4.5). Needs a look; if the post now sits too high the sign is the other way
+- [x] Planted C4, dynamite and mines explode normal to the surface they were placed on (`PlacedNormal`); thrown and dropped explosives always straight up instead of whatever they last bounced off

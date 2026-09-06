@@ -1,0 +1,13 @@
+give mcv_p38
+wait 1.5
+key +attack2
+wait 1
+shot s_p38_aim_now marker
+clua LocalPlayer():GetActiveWeapon().IronsightAng = Angle(0, 0.9, 0)
+wait 0.3
+shot s_p38_aim_swapped marker
+clua LocalPlayer():GetActiveWeapon().IronsightAng = Angle(0, 0, 0)
+wait 0.3
+shot s_p38_aim_zero marker
+clua LocalPlayer():GetActiveWeapon().IronsightAng = Angle(0.9, 0, 0)
+key -attack2
