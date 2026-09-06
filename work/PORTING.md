@@ -379,14 +379,18 @@ Brass ids the game added after 2024 (19 to 31) map to the nearest shell model th
   block laid over the model's bodygroup order (`"scope" "1"` = blank on the plain CAR-15 / XM177 /
   M14 early, which otherwise carried the scope body over their iron sights). Unlisted groups are 0.
   `work/fix_sight_offsets.py` applies it to existing lua files as well.
-* **Dual Blackhawk run layer**: the dual revolvers' `run_a` animates only the root-level `Base`
-  bone (7-10 units of bob) and the game's IK drags the hands after it. On the M1917 / S&W / Lebel
-  duals `Base` is a dummy, so without IK the run layer moves nothing and the sprint looks right.
-  The dual Blackhawk's gun meshes hang off root-level `BaseLeftMesh` / `BaseMesh`, so the same
-  data flew the guns out of the hands. `MCV_SMD/weapons/v_dual_blackhawk/anims/run_a.smd` turns
-  the guns' authored travel into a swing of the whole rig about `root` (angle = travel / lever,
-  axis = lever x travel) applied to root and both gun bones, so hands and guns move together in
-  position and angle, the way the IK made them.
+* **IK baked** (`step_bake_ik`, `work/bake_ik.py`): 273 of the 278 viewmodels glue the hands
+  to target bones on the gun with `$ikchain` + `ikrule ... touch` (movement and prone layers,
+  the duals' reloads and draws), and Source solves it on the final blended pose, so the idle's
+  rules hold while a layer swings the gun. GMod's studiomdl strips IK, which is why the Sterling's
+  left hand left its magazine when sprinting and the dual Blackhawk's guns flew out of the hands.
+  The port now solves a two-bone IK per frame for every animation with a touch rule (movement
+  layers inherit the idle's rules) and writes the corrected arm rotations to `fixed_anims/`.
+  Conventions that made it work, verified (the idle's hands land on their targets to 0.00):
+  SMD rotation (x, y, z) is Rz Ry Rx; Crowbar writes a delta layer as the deltas themselves
+  (zero rows for untouched bones) with the -90 degree corrective only on the root-level bones;
+  a delta plays as `final = base * delta` (rotation post-multiplied), position added. The
+  hand-made dual Blackhawk overrides are retired (`disabled_pump_overrides/v_dual_blackhawk_handmade`).
 * **Belt bodygroups**: the belt LMGs' `clamped*` bodygroups (the belt segment in the feed tray)
   ship with one submodel and no blank; `step_belt_blank` adds one and Lua hides them with the
   last round (`BeltBodygroups`, belt-fed guns only: the M16 family has a `clamped1` of its own).

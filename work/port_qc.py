@@ -496,6 +496,78 @@ def step_fix_correctives(qc, ctx):
         ctx.note("%d corrective animations rewritten to match their delta animation (Crowbar root bone rotation)" % fixed)
 
 
+def step_bake_ik(qc, ctx):
+    """The game's viewmodels glue the hands to target bones on the gun with `$ikchain` +
+    `ikrule ... touch` (273 of 278 models: the movement and prone layers, the duals' reloads and
+    draws too). GMod's studiomdl strips the IK, so a hand drifts off the gun wherever a layer
+    moves the gun (the Sterling's left hand off its magazine when sprinting, the dual Blackhawk's
+    guns out of the hands). Every animation with a touch rule is solved per frame (two-bone IK,
+    bake_ik.py) and the corrected arm rotations written to fixed_anims/, which resolve_smd
+    prefers; the touch rules themselves go with the rest of the IK."""
+    import bake_ik
+    raw = qc.raw_text()
+    chains = {}
+    for m in re.finditer(r'^\$ikchain\s+"([^"]+)"\s+"([^"]+)"', raw, re.M):
+        chains[m.group(1)] = m.group(2)
+    if not chains:
+        return
+    # the idle the delta layers play over
+    idle = qc.find_by_activity("ACT_VM_IDLE")
+    base_anim = idle.anims()[0] if idle and idle.anims() else None
+    base_block = qc.find("animation", base_anim) if base_anim else None
+    base_path = ctx.resolve_smd(base_block.path) if base_block else None
+    # Source solves IK on the final blended pose with the playing sequence's rules, so the idle's
+    # touch rules also hold while a movement layer swings the gun: the layers over the idle get
+    # the idle's rules on top of their own (the dual Blackhawk's run layer has none of its own)
+    idle_rules = re.findall(r'ikrule\s+"([^"]+)"\s+touch\s+"([^"]+)"', "\n".join(base_block.lines)) if base_block else []
+    layered = set()
+    for sq in qc.blocks("sequence"):
+        if sq.name in ("walklayer", "runlayer", "walklayerironsight") or "prone" in sq.name.lower():
+            layered.update(sq.anims())
+    done = 0
+    worst = 0.0
+    for b in qc.blocks("animation"):
+        rules = re.findall(r'ikrule\s+"([^"]+)"\s+touch\s+"([^"]+)"', "\n".join(b.lines))
+        if b.name in layered:
+            rules = list(dict.fromkeys(rules + idle_rules))
+        if not rules or not b.path:
+            continue
+        src = ctx.resolve_smd(b.path)
+        if not os.path.isfile(src):
+            continue
+        # chain bones: the ikchain's end bone and its two parents, from the smd's own hierarchy
+        nodes = bake_ik.load_smd(src)[0]
+        byname = {n: (i, par) for i, (n, par) in nodes.items()}
+        ik = []
+        for chain, target in rules:
+            hand = chains.get(chain)
+            if hand not in byname or target not in byname:
+                continue
+            lower = nodes[byname[hand][1]][0] if byname[hand][1] != -1 else None
+            upper = nodes[byname[lower][1]][0] if lower and byname[lower][1] != -1 else None
+            if upper and lower:
+                ik.append((upper, lower, hand, target))
+        if not ik:
+            continue
+        is_delta = b.has("delta")
+        if is_delta and not base_path:
+            continue
+        corr = os.path.join(os.path.dirname(src), os.path.basename(src)[:-4] + "_corrective_animation.smd")
+        if not os.path.isfile(corr):
+            corr = None
+        elif os.path.isfile(os.path.join(ctx.fixed_dir, os.path.basename(corr))):
+            corr = os.path.join(ctx.fixed_dir, os.path.basename(corr))
+        out = os.path.join(ctx.fixed_dir, os.path.basename(src))
+        if os.path.abspath(src) == os.path.abspath(out):
+            continue
+        r = bake_ik.bake_animation(src, corr, base_path, ik, out, is_delta, ctx.warn)
+        if r:
+            done += 1
+            worst = max(worst, r[0])
+    if done:
+        ctx.note("IK baked into %d animations (worst hand-target drift before %.1f units)" % (done, worst))
+
+
 def step_paths(qc, ctx):
     n = qc.raw_sub(r'\$modelname\s+"weapons/', '$modelname "' + MODEL_PREFIX)
     if n == 0:
@@ -1411,6 +1483,7 @@ def port_one(args, og_dir):
     ctx.shell_dual = ctx.mode == "dual" and "ACT_SHOTGUN_RELOAD_START" in acts
 
     step_fix_correctives(qc, ctx)
+    step_bake_ik(qc, ctx)
     step_paths(qc, ctx)
     step_reconstruct_missing_anims(qc, ctx)
     step_include(qc, ctx)

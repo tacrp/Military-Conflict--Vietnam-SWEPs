@@ -252,7 +252,7 @@ $animation "runIdle_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blac
 	subtract "runIdle_a_corrective_animation" 0
 }
 
-$animation "run_a" "..\..\..\MCV_SMD\weapons\v_dual_blackhawk\anims\run_a.smd" {
+$animation "run_a" "fixed_anims\run_a.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "run_a_corrective_animation" 0
@@ -269,7 +269,7 @@ $animation "walkDelta2" "..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_bla
 	fps 30
 }
 
-$animation "walk_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\walk_a.smd" {
+$animation "walk_a" "fixed_anims\walk_a.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "walk_a_corrective_animation" 0
@@ -555,53 +555,53 @@ $animation "rc_l_shoot_l_ironsight_a_f00" "..\..\..\MCV_SMD_OG\weapons\v_dual_bl
 	subtract "shoot_l_ironsight_a_corrective_animation" 0
 }
 
-$animation "reload_s" "..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\reload_s.smd" {
+$animation "reload_s" "fixed_anims\reload_s.smd" {
 	fps 30
 }
 
-$animation "reload_s_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\reload_s_i.smd" {
+$animation "reload_s_i" "fixed_anims\reload_s_i.smd" {
 	fps 30
 }
 
-$animation "reload_l" "..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\reload_l.smd" {
-	fps 30
-	loop
-}
-
-$animation "reload_l_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\reload_l_i.smd" {
-	fps 30
-}
-
-$animation "reload_e" "..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\reload_e.smd" {
-	fps 30
-}
-
-$animation "reload_e_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\reload_e_i.smd" {
-	fps 30
-}
-
-$animation "reload_ch" "..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\reload_ch.smd" {
-	fps 30
-}
-
-$animation "reload_ch_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\reload_ch_i.smd" {
-	fps 30
-}
-
-$animation "reload_l_l" "..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\reload_l_l.smd" {
+$animation "reload_l" "fixed_anims\reload_l.smd" {
 	fps 30
 	loop
 }
 
-$animation "reload_l_l_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\reload_l_l_i.smd" {
+$animation "reload_l_i" "fixed_anims\reload_l_i.smd" {
 	fps 30
 }
 
-$animation "reload_e_l" "..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\reload_e_l.smd" {
+$animation "reload_e" "fixed_anims\reload_e.smd" {
 	fps 30
 }
 
-$animation "reload_e_l_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\reload_e_l_i.smd" {
+$animation "reload_e_i" "fixed_anims\reload_e_i.smd" {
+	fps 30
+}
+
+$animation "reload_ch" "fixed_anims\reload_ch.smd" {
+	fps 30
+}
+
+$animation "reload_ch_i" "fixed_anims\reload_ch_i.smd" {
+	fps 30
+}
+
+$animation "reload_l_l" "fixed_anims\reload_l_l.smd" {
+	fps 30
+	loop
+}
+
+$animation "reload_l_l_i" "fixed_anims\reload_l_l_i.smd" {
+	fps 30
+}
+
+$animation "reload_e_l" "fixed_anims\reload_e_l.smd" {
+	fps 30
+}
+
+$animation "reload_e_l_i" "fixed_anims\reload_e_l_i.smd" {
 	fps 30
 }
 

@@ -3,7 +3,7 @@ All oddities, visual bugs and WIP elements that need addressing
 
 - Pack is still dependent on ARC9/ArcCW/TacRP for muzzleflashes. ARC9 dependency for RT scope textures.
 
-- Certain animations (especially sprint and ADS transitions) are affected by lack of IK chains. Unlikely to be fixed unless a breakthrough is made.
+- ~~Certain animations (especially sprint and ADS transitions) are affected by lack of IK chains. Unlikely to be fixed unless a breakthrough is made.~~ (Sep 6 2026: the IK touch rules are baked into the animations by the port, `work/bake_ik.py`)
 
 - ~~Revolver firemodes are in the incorrect order and switch animations are buggy-looking. Right now it is single-double-fan when in MCV it is single-fan-double.~~ (Sep 6 2026: single-fan-double, each switch plays the animation for its target mode)
 
@@ -11,11 +11,11 @@ All oddities, visual bugs and WIP elements that need addressing
 
 - ~~Dual-wielded revolvers have no reload animation when in double-action.~~ (Sep 6 2026: the dual reload falls back to the plain reload when the model lacks the empty variant)
 
-- M16A1 M203 and AKM GP25 have noticably disconnected hands when the underbarrel weapon is active. IK chain issue.
+- M16A1 M203 and AKM GP25 have noticably disconnected hands when the underbarrel weapon is active. IK chain issue. (Sep 6 2026: the IK bake covers animations with touch rules; check these after the recompile)
 
 - ~~Ithaca 37 and M1897 Trench Gun lack slam-fire.~~ (Sep 6 2026: `SlamFire`)
 
-- Sterling's animations are completely ruined by lack of IK chains.
+- ~~Sterling's animations are completely ruined by lack of IK chains.~~ (Sep 6 2026: IK baked)
 
 - Certain manual-action weapons do not have proper shell ejection delay.
 
@@ -90,4 +90,5 @@ NOTE: Please do not resort to using "snap" to fix this. "snap" should only be us
 - [x] OEG sights were black: the scope lens shader was applied to them and the single-point crosshair texture is opaque across the reticle plane; OEGs keep the model's own lens now. Scope shader: the lens-mesh rim is gone, the shadow ring and black surround are on the reticle plane only
 - [~] Stoner 63 / belt LMGs: rounds vanished mid-reload (mag-out foley, fixed above) and the belt stayed when empty: the `clamped*` belt groups had no blank option; they get one (port_qc `step_belt_blank`) and hide with the last round. M60, M60 (bipod), MG43 (D), PK, PKM, RPD, Stoner 63 LMG, vz.59 recompiled; what exactly the M60's two clamped meshes are (the second is 9 MB) needs a look in game
 - [~] Dual Blackhawk run: the rig now swings about its root (position and angle) following the guns' authored travel; needs a look after a restart
+- [x] Sterling left hand off the magazine when sprinting, dual Blackhawk guns out of the hands: IK touch rules baked into every animation that has them (273 models), all viewmodels recompiled
 
