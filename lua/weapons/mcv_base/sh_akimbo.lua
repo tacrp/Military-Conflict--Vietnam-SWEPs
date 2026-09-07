@@ -32,7 +32,9 @@ function SWEP:Deferred_AkimboSwap()
             vm:SetModel(self.ViewModel)
             self:SetAkimbo(true)
 
-            if self.Firemodes[self:GetFiremode()] == MCV.FIREMODE_FAN then
+            // the dual model animates fewer modes than the single one (no fanning on either
+            // revolver, and the dual Blackhawk has no double action either)
+            if !self:FiremodeAvailable(self.Firemodes[self:GetFiremode()]) then
                 self:ChangeFiremode()
             end
         else

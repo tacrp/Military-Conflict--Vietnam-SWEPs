@@ -84,6 +84,7 @@ function SWEP:Idle()
 end
 
 function SWEP:HasAnimation(act)
+    if !act then return false end // an activity GMod does not define is simply not there
     local vm = self:GetOwner():GetViewModel()
     return IsValid(vm) and vm:SelectWeightedSequence(act) != -1
 end

@@ -531,6 +531,24 @@ function SWEP:IsBursting()
     return n > 0 and n < self.BurstRounds
 end
 
+// The game's dual models carry fewer firemodes than the single ones: the dual Blackhawk fires
+// single action only, and neither dual revolver fans. Offering a mode the model cannot animate
+// left the guns doing nothing at all, so a mode counts only where its animation exists.
+function SWEP:FiremodeAvailable(mode)
+    if mode == MCV.FIREMODE_FAN then
+        return self:HasAnimation(ACT_VM_PRIMARYATTACK_1)
+    elseif mode == MCV.FIREMODE_DA then
+        if self:GetAkimbo() then
+            // one hand each: the right gun's prepare and the left gun's
+            return self:HasAnimation(ACT_VM_HAULBACK) and self:HasAnimation(ACT_VM_PULLPIN)
+        end
+
+        return self:HasAnimation(ACT_VM_HAULBACK)
+    end
+
+    return true
+end
+
 function SWEP:ChangeFiremode()
     if self.AdjustableScopes then
         local scopelevel = self:GetScopeLevel()
@@ -555,16 +573,17 @@ function SWEP:ChangeFiremode()
 
     self:SetBurstCount(0)
 
+    // on to the next mode the viewmodel in hand can actually animate
     local fm = self:GetFiremode()
 
-    fm = fm + 1
-
-    if self:GetAkimbo() and self.Firemodes[fm] == MCV.FIREMODE_FAN then
+    for _ = 1, #self.Firemodes do
         fm = fm + 1
-    end
 
-    if fm > #self.Firemodes then
-        fm = 1
+        if fm > #self.Firemodes then
+            fm = 1
+        end
+
+        if self:FiremodeAvailable(self.Firemodes[fm]) then break end
     end
 
     self:SetFiremode(fm)
