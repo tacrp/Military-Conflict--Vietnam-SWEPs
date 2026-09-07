@@ -418,6 +418,13 @@ Brass ids the game added after 2024 (19 to 31) map to the nearest shell model th
   move the hand more than `MAX_PULL` (4 units) is dropped with a log line; the left hands' rules
   (a unit or two of drift onto the gun's target bone) and every rule inherited from the idle
   (the movement layers) are kept.
+  On a single gun the two hands hold the same one, so an animation's own rules stand or fall
+  together (`paired`, off for `mode dual`): correcting one arm onto the gun and leaving the
+  other skews the grip. The PTRD's deployed shot was the only single-gun animation this hit
+  (right hand 7.1 units, dropped; left hand 3.6, baked), and it is the gun's only firing
+  animation, since it fires deployed only. A dual's hands hold a gun each, so those stay judged
+  one at a time. When a bake ends up writing nothing it deletes any earlier copy in
+  `fixed_anims/`, which `resolve_smd` would otherwise keep preferring over the source.
 * **Guns glued to the hands** (`step_glue_guns`, before the bake): the dual Blackhawk's guns are
   root-level bones of their own (BaseMesh / BaseLeftMesh, 13k verts each, the hands' ikTargets
   under them) and its run layer holds them a constant 12 units from the animated hands, the

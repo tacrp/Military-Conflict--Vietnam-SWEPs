@@ -30,7 +30,7 @@ $attachment "eject_smoke" "Base" -2 0 1 rotate 0 -180 0
 
 $cbox 0 0 0 0 0 0
 
-$bbox -133.037 -33.673 -27.51 87.27 33.752 2.079
+$bbox -96 -96 -96 96 96 96
 
 $definebone "root" "" 0 7.450089 -27.509027 0 0 0 0 0 0 0 0 0
 $definebone "pelvis" "root" -0.000002 0 0 -89.790336 -89.996943 89.996943 0 0 0 0 0 0
@@ -396,13 +396,13 @@ $animation "deploy_e_a_i" "..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\d
 	fps 40
 }
 
-$animation "shoot1d_a" "fixed_anims\shoot1d_a.smd" {
+$animation "shoot1d_a" "..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\shoot1d_a.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "shoot1d_a_corrective_animation" 0
 }
 
-$animation "shoot1d_ironsight_a" "fixed_anims\shoot1d_ironsight_a.smd" {
+$animation "shoot1d_ironsight_a" "..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\shoot1d_ironsight_a.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "shoot1d_ironsight_a_corrective_animation" 0
@@ -537,7 +537,6 @@ $sequence "shoot1" {
 	addlayer "walklayerironsight"
 	addlayer "runlayer"
 	addlayer "SlideMovement"
-	addlayer "SlidePosition"
 	addlayer "shoot1_pose"
 	node "0"
 }
@@ -781,7 +780,6 @@ $sequence "deployshoot1" {
 	{ event AE_CL_BODYGROUP_SET_VALUE 0 "bulletDisplay 1" }
 	{ event AE_CL_CREATE_PARTICLE_EFFECT 1 "vietnam_weaponeffect_ptrd_eject follow_attachment eject_smoke" }
 	addlayer "SlideMovement"
-	addlayer "SlidePosition"
 	addlayer "deployshoot1_pose"
 	node "0"
 }

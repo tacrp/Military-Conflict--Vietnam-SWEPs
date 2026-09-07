@@ -175,11 +175,14 @@ def rule_weight(rng, frame):
     return 1.0
 
 
-def bake_animation(anim_path, corrective_path, base_path, chains, out_path, is_delta=True, log=None):
+def bake_animation(anim_path, corrective_path, base_path, chains, out_path, is_delta=True, log=None,
+                   paired=True):
     """Bake the IK touch of `chains` ([(upper, lower, hand, target[, range, contact]) bone names]) into the animation
     at `anim_path`, writing `out_path`. Delta layers play over the idle at `base_path` (the
     corrective at `corrective_path` is what studiomdl subtracts); an absolute animation is its
-    own final pose. Returns (worst distance before, worst after) over the frames, or None."""
+    own final pose. `paired`: both hands hold the same gun, so the animation's own rules are
+    kept or dropped together (see MAX_PULL). Returns (worst distance before, worst after) over
+    the frames, or None."""
     nodes, aframes, alines = load_smd(anim_path)
     idx = {n: b for b, (n, _) in nodes.items()}
     try:
@@ -219,23 +222,32 @@ def bake_animation(anim_path, corrective_path, base_path, chains, out_path, is_d
     # takes it 16 units away) is dropped: in game those reloads read as the animation, and the
     # solved arm looked wrong. Rules inherited from the idle (the movement layers swinging the
     # gun out of the hands) are kept whatever the distance.
-    keep = []
-    for chain, offset in zip(chains_b, offsets):
-        upper, lower, hand, target = chain[:4]
-        own = len(chain) > 5 and chain[5] is not None
-        if own:
-            pull = 0.0
-            for fi in range(len(aframes)):
-                weight = rule_weight(chain[4], fi) if len(chain) > 4 else 1.0
-                if weight <= 0.001:
-                    continue
-                w = fk(nodes, pose_at(fi))
-                pull = max(pull, np.linalg.norm(w[hand][:3, 3] - (w[target] @ offset)[:3]) * weight)
-            if pull > MAX_PULL:
-                if log:
-                    log("bake_ik: %s: rule %s -> %s dropped, it pulls the hand %.1f units" % (
-                        os.path.basename(anim_path), nodes[hand][0], nodes[target][0], pull))
+    # With `paired` (one gun in both hands) the animation's own rules go together: half a
+    # correction skews the grip, so if one hand's rule is over the line the other goes too and
+    # the animation is read as authored. A dual's hands hold a gun each and are judged singly.
+    pulls = {}
+    for i, (chain, offset) in enumerate(zip(chains_b, offsets)):
+        if not (len(chain) > 5 and chain[5] is not None):
+            continue  # inherited from the idle: kept whatever the distance
+        hand, target = chain[2], chain[3]
+        pull = 0.0
+        for fi in range(len(aframes)):
+            weight = rule_weight(chain[4], fi) if len(chain) > 4 else 1.0
+            if weight <= 0.001:
                 continue
+            w = fk(nodes, pose_at(fi))
+            pull = max(pull, np.linalg.norm(w[hand][:3, 3] - (w[target] @ offset)[:3]) * weight)
+        pulls[i] = pull
+    over = {i for i, p in pulls.items() if p > MAX_PULL}
+    drop = set(pulls) if (paired and over) else over
+    keep = []
+    for i, (chain, offset) in enumerate(zip(chains_b, offsets)):
+        if i in drop:
+            if log:
+                log("bake_ik: %s: rule %s -> %s dropped, it pulls the hand %.1f units%s" % (
+                    os.path.basename(anim_path), nodes[chain[2]][0], nodes[chain[3]][0], pulls[i],
+                    "" if i in over else " (the other hand on the same gun is over the line)"))
+            continue
         keep.append((chain, offset))
     chains_b = [c for c, _ in keep]
     offsets = [o for _, o in keep]
@@ -268,6 +280,11 @@ def bake_animation(anim_path, corrective_path, base_path, chains, out_path, is_d
             w2 = fk(nodes, pose)
             worst_after = max(worst_after, np.linalg.norm(w2[hand][:3, 3] - (w2[target] @ offset)[:3]) * weight)
     if not new_rows:
+        # nothing to correct (every rule dropped, or the hands already sit on the gun): an
+        # earlier run's copy would otherwise stay behind and keep being compiled, since
+        # resolve_smd prefers fixed_anims over the source
+        if os.path.isfile(out_path):
+            os.remove(out_path)
         return (worst_before, worst_after)
     write_rows(alines, new_rows, out_path)
     return (worst_before, worst_after)

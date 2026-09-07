@@ -693,7 +693,9 @@ def step_bake_ik(qc, ctx):
         elif os.path.isfile(os.path.join(ctx.fixed_dir, os.path.basename(corr))):
             corr = os.path.join(ctx.fixed_dir, os.path.basename(corr))
         out = os.path.join(ctx.fixed_dir, os.path.basename(src))
-        r = bake_ik.bake_animation(src, corr, base_path, ik, out, is_delta, ctx.warn)
+        # a dual holds a gun in each hand, so its rules are judged one hand at a time
+        r = bake_ik.bake_animation(src, corr, base_path, ik, out, is_delta, ctx.warn,
+                                   paired=ctx.mode != "dual")
         if r and os.path.isfile(out):
             done += 1
             worst = max(worst, r[0])
