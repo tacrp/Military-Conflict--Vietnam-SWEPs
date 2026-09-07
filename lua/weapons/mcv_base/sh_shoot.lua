@@ -420,6 +420,14 @@ function SWEP:BulletAttack()
         Tracer = 1,
         TracerName = "mcv_tracer",
         Callback = function(attacker, tr, dmginfo)
+            // A load of pellets is buckshot: the shotguns, the SOG M79's canister and the
+            // QSPR's shot cartridge all fire more than one, and that pellet count is the test
+            // rather than the hold type, which the two grenade launchers share while firing a
+            // single projectile. The bullet bit stays on, as the engine's own shotguns do it.
+            if (self.Num or 1) > 1 then
+                dmginfo:SetDamageType(bit.bor(dmginfo:GetDamageType(), DMG_BUCKSHOT))
+            end
+
             local dmg = dmginfo:GetDamage()
             local range = (tr.HitPos - tr.StartPos):Length()
 
