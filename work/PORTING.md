@@ -755,9 +755,11 @@ A singleplayer game can be driven from outside: `python work/harness.py start [m
 GMod with the harness armed (it is inert unless `garrysmod/data/mcv_harness/enable.txt` exists),
 `run tests/<file>.txt` sends a command script and waits, `send "give mcv_sks" "wait 1" "shot x marker"`
 runs ad-hoc commands. Commands: give / select / strip, pos / ang, key +attack2 (real key presses
-through the local player's console), tap, wait, shot <name> [marker] (PNG with a centre cross
-and the sight / sequence state), report <name> (weapon and viewmodel state from both realms as
-JSON), spawn, lua / clua, cmd / ccmd, quit. Results go to `data/mcv_harness/results`, shots to
+through the local player's console), tap, wait, shot <name> [marker] (PNG with the development
+readout on it, a centre cross and the weapon's animation state), report <name> (weapon and
+viewmodel state from both realms as JSON), spawn, lua / clua, cmd / ccmd, quit. That readout is
+`mcv/client/cl_devhud.lua` and comes up on its own with `developer 1`, harness or no harness;
+the marker flag just forces it on for the shot. Results go to `data/mcv_harness/results`, shots to
 `data/mcv_harness/shots`. One GMod instance per account: `start` refuses while gmod.exe runs.
 `work/tests/` holds the scripts used so far (sights, equipment, grenade timing, flame, binoculars).
 

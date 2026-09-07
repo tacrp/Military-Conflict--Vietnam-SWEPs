@@ -13,7 +13,8 @@
 //   ang p y r               set the view angles                  noclip / god   toggle
 //   key +attack2            press (or release with -) a key      tap +attack [seconds]
 //   wait <seconds>          pause                                hud 0|1        cl_drawhud
-//   shot <name> [marker]    screenshot, marker draws a centre cross and the sight state
+//   shot <name> [marker]    screenshot, marker draws the development readout (a centre cross
+//                           and the weapon's animation state; `developer 1` shows the same)
 //   report <name>           dump weapon / viewmodel state to results/<name>.json
 //   spawn <class> [dist]    entity <dist> units in front of the player (npc_citizen 300)
 //   cmd <console command>   server console                       ccmd <command>  client console
@@ -135,29 +136,8 @@ if CLIENT then
     H.PendingShot = nil
     H.Marker = false
 
-    local function drawMarker()
-        if !H.Marker then return end
-        local x, y = ScrW() / 2, ScrH() / 2
-        surface.SetDrawColor(255, 0, 255, 255)
-        surface.DrawRect(x - 1, y - 40, 2, 30)
-        surface.DrawRect(x - 1, y + 10, 2, 30)
-        surface.DrawRect(x - 40, y - 1, 30, 2)
-        surface.DrawRect(x + 10, y - 1, 30, 2)
-        surface.DrawOutlinedRect(x - 3, y - 3, 6, 6)
-        local ply = LocalPlayer()
-        local wep = ply:GetActiveWeapon()
-        if IsValid(wep) then
-            local vm = ply:GetViewModel()
-            local txt = string.format("%s  sight %.2f  seq %s  cycle %.2f  rate %.2f  dur %.2f  t %.2f", wep:GetClass(),
-                wep.GetSightAmountVisual and wep:GetSightAmountVisual() or -1,
-                IsValid(vm) and vm:GetSequenceName(vm:GetSequence()) or "?",
-                IsValid(vm) and vm:GetCycle() or -1,
-                IsValid(vm) and vm:GetPlaybackRate() or -1,
-                IsValid(vm) and vm:SequenceDuration() or -1, CurTime())
-            draw.SimpleText(txt, "MCV_8", x, ScrH() - ScreenScale(4), Color(255, 0, 255), TEXT_ALIGN_CENTER, TEXT_ALIGN_BOTTOM)
-        end
-    end
-    hook.Add("HUDPaint", "MCV_HarnessMarker", drawMarker)
+    // H.Marker forces the development readout on for a marked screenshot; it is drawn by
+    // mcv/client/cl_devhud.lua, which also brings it up on its own with `developer 1`
 
     hook.Add("PostRender", "MCV_HarnessCapture", function()
         if !H.PendingShot then return end
