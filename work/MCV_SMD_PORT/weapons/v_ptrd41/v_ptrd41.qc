@@ -482,6 +482,7 @@ $sequence "idle" {
 	addlayer "runlayer"
 	addlayer "SlidePosition"
 	node "0"
+	snap
 }
 
 $sequence "draw" {
@@ -734,6 +735,7 @@ $sequence "deploy" {
 	fadeout 0.2
 	addlayer "SlidePosition"
 	node "0"
+	snap
 }
 
 $sequence "reload_deploy" {

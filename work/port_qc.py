@@ -984,6 +984,31 @@ def step_counter_zero(qc, ctx):
     return n
 
 
+# Models whose idle must not be interpolated into. The sequence transitioner blends the whole
+# pose over the fade, so a bone that changes hands exactly at that moment slides across it: the
+# PTRD's bolt is thrown open by the shot's own SlideMovement layer (absolute, weightlisted) and
+# then held open by the idle's SlidePosition layer (a delta on ammo_fraction), and the two
+# crossfade past each other even though they agree on where the bolt ends up. `snap` drops the
+# outgoing sequence outright (STUDIO_SNAP; a zero `fadein` does not stop it, see
+# step_snap_draws). Per model, since it makes every animation that ends in the idle a hard cut.
+SNAP_IDLE = {"v_ptrd41"}
+
+IDLE_ACTS = ("ACT_VM_IDLE", "ACT_VM_DEPLOY", "ACT_VM_IIDLE_M203")
+
+
+def step_snap_idles(qc, ctx):
+    """`snap` on the idles of the SNAP_IDLE models, so nothing blends into them."""
+    if ctx.name not in SNAP_IDLE:
+        return
+    n = 0
+    for b in qc.blocks("sequence"):
+        if b.activity() in IDLE_ACTS and not b.has("snap"):
+            b.lines.append("snap")
+            n += 1
+    if n:
+        ctx.note("snap on %d idle sequences: nothing interpolates into the idle" % n)
+
+
 def step_snap_draws(qc, ctx):
     """Throwables: the draw after a throw blended from the throw's end pose (hand out, empty)
     into the draw's first frame over the old sequence's fade-out, so the next grenade slid back
@@ -1882,6 +1907,7 @@ def port_one(args, og_dir):
     step_idle_layers(qc, ctx)
     step_pose_split(qc, ctx)
     step_pose_recoil(qc, ctx)
+    step_snap_idles(qc, ctx)
     step_tidy(qc, ctx)
     step_validate(qc, ctx)
 

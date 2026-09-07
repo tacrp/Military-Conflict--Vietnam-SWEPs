@@ -418,6 +418,12 @@ Brass ids the game added after 2024 (19 to 31) map to the nearest shell model th
   move the hand more than `MAX_PULL` (4 units) is dropped with a log line; the left hands' rules
   (a unit or two of drift onto the gun's target bone) and every rule inherited from the idle
   (the movement layers) are kept.
+  A model in `SNAP_IDLE` gets `snap` on its idles (`step_snap_idles`), so nothing interpolates
+  into them: the transitioner blends the whole pose over the fade, and a bone that changes
+  hands right there slides across it even when both sides agree on where it ends up (the PTRD's
+  bolt, thrown open by the shot's own weightlisted `SlideMovement` and held open afterwards by
+  the idle's `SlidePosition` on ammo_fraction). It is per model, since it makes every animation
+  that ends in the idle a hard cut.
   On a single gun the two hands hold the same one, so an animation's own rules stand or fall
   together (`paired`, off for `mode dual`): correcting one arm onto the gun and leaving the
   other skews the grip. The PTRD's deployed shot was the only single-gun animation this hit
