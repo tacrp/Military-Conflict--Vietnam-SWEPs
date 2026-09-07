@@ -76,7 +76,10 @@ function SWEP:Reload()
     // (the whole reload, or the start of a per-round loop; the inserts and the end follow)
     self:PlayReloadGesture(self:GetAnimLockTime() - CurTime(), PLAYERANIMEVENT_RELOAD)
 
-    if self.AkimboDualSingleActionReload then
+    // only a pair of them loads a gun at a time: on its own the revolver is a plain
+    // round-by-round reload, and the single viewmodels carry only the start, the insert and
+    // the finish (asking for the dual model's stages printed INVALID ACT)
+    if self.AkimboDualSingleActionReload and self:GetAkimbo() then
         self:SetEmptyReload(true)
         self:SetReloadHand(0) // the right gun loads first
     else
@@ -153,7 +156,7 @@ function SWEP:Think_Reload()
             self:SetReloading(false)
             self:RestoreClip2(self.Secondary.ClipSize)
         else
-            if self.AkimboDualSingleActionReload then
+            if self.AkimboDualSingleActionReload and self:GetAkimbo() then
                 // Two revolvers loaded a round at a time, the right gun first. The models carry
                 // the game's six stages: a start, an insert per round, the right gun's finish,
                 // a change of hands, the left gun's insert and its finish. Each gun has its own

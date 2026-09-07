@@ -119,7 +119,7 @@ function SWEP:PrimaryAttack()
             self:SetNextPrimaryFire(CurTime() + t * 0.8)
         end
     else
-        self:SetNextPrimaryFire(CurTime() + (60 / self.FireRate) * fmmult)
+        self:SetNextPrimaryFire(CurTime() + (60 / self:GetFiremodeRate(fm)) * fmmult)
     end
 
     if fm != MCV.FIREMODE_DA then
@@ -395,6 +395,18 @@ function SWEP:AttackEffects()
     end
 
     owner:SetVelocity(self:GetAimVector() * -self.RecoilPushbackValue)
+end
+
+// Rounds per minute for the firemode in hand. A revolver fans and pulls double action at
+// their own rates (the game's tertiary and secondary); everything else fires at FireRate.
+function SWEP:GetFiremodeRate(fm)
+    if fm == MCV.FIREMODE_FAN and (self.FireRate_Fan or 0) > 0 then
+        return self.FireRate_Fan
+    elseif fm == MCV.FIREMODE_DA and (self.FireRate_DA or 0) > 0 then
+        return self.FireRate_DA
+    end
+
+    return self.FireRate
 end
 
 function SWEP:BulletAttack()

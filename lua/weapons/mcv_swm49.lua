@@ -44,7 +44,6 @@ SWEP.RangeModifier = 0.79
 
 SWEP.Firemodes = {
     MCV.FIREMODE_SA,
-    MCV.FIREMODE_FAN,
     MCV.FIREMODE_DA
 }
 
@@ -90,6 +89,7 @@ SWEP.Spread = 7.5
 SWEP.SpreadIronsighted = 2.5
 
 SWEP.FireRate = 60 // in rounds per minute
+SWEP.FireRate_DA = 135 // double action pull
 
 SWEP.CrosshairMinDistance = 4
 SWEP.CrosshairDeltaDistance = 4

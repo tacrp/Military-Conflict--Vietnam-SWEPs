@@ -90,6 +90,8 @@ SWEP.Spread = 9
 SWEP.SpreadIronsighted = 2
 
 SWEP.FireRate = 70 // in rounds per minute
+SWEP.FireRate_DA = 135 // double action pull
+SWEP.FireRate_Fan = 330 // fanning the hammer
 
 SWEP.CrosshairMinDistance = 4
 SWEP.CrosshairDeltaDistance = 4

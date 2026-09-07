@@ -96,6 +96,8 @@ SWEP.Spread = 8.75
 SWEP.SpreadIronsighted = 1.5
 
 SWEP.FireRate = 70 // in rounds per minute -- the MCV script claims its RPM is 50 but there's no way that's correct so im setting it to this for now
+SWEP.FireRate_DA = 135 // double action pull
+SWEP.FireRate_Fan = 330 // fanning the hammer
 
 SWEP.CrosshairMinDistance = 4
 SWEP.CrosshairDeltaDistance = 4

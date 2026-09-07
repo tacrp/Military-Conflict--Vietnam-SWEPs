@@ -130,6 +130,11 @@ SWEP.Spread = 6.3
 SWEP.SpreadIronsighted = 1.15
 
 SWEP.FireRate = 300 // in rounds per minute
+// A revolver fires at three rates: FireRate is the hammer-back single action, these two are
+// the double action pull and fanning (the game's SecondaryFireRate and TertiaryFireRate).
+// Zero falls back to FireRate.
+SWEP.FireRate_DA = 0
+SWEP.FireRate_Fan = 0
 SWEP.CycleSpeed = 0.75 // how long is the cycle animation
 SWEP.CyclePostDelay = 0.65 // how long to wait after cycling before we can fire again
 

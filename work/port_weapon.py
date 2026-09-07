@@ -1056,8 +1056,11 @@ def generate(script_path, args):
     is_pump = "ACT_VM_RELOAD_INSERT_PULL" in acts and wtype in ("Shotgun", "GrenadeLauncher")
     is_volley = "ACT_VM_RECOIL1" in acts
     if is_revolver and "ACT_VM_HAULBACK" in acts:
-        # the game's order: hammer (single action), western (fan), delayed (double action)
-        firemodes = ["MCV.FIREMODE_SA", "MCV.FIREMODE_FAN", "MCV.FIREMODE_DA"] if "ACT_VM_PRIMARYATTACK_1" in acts else ["MCV.FIREMODE_SA", "MCV.FIREMODE_DA"]
+        # the game's order: hammer (single action), western (fan), delayed (double action).
+        # A model can carry the fan animation while the script switches fanning off (the S&W
+        # M49), so the key decides, not the animation.
+        fans = "ACT_VM_PRIMARYATTACK_1" in acts and str(S.get("fanning", "1")).strip() != "0"
+        firemodes = ["MCV.FIREMODE_SA", "MCV.FIREMODE_FAN", "MCV.FIREMODE_DA"] if fans else ["MCV.FIREMODE_SA", "MCV.FIREMODE_DA"]
     elif is_bolt:
         firemodes = ["MCV.FIREMODE_BOLT"]
     elif is_pump:
@@ -1387,6 +1390,11 @@ def generate(script_path, args):
     A(line("SpreadIronsighted", fmt(num(S.get("BulletSpreadDegreesIronsighted"), 1))))
     A("")
     A(line("FireRate", fmt(firerate) if not isinstance(firerate, str) else firerate) + " // in rounds per minute")
+    # a revolver's other two rates: the double action pull and fanning
+    if "MCV.FIREMODE_DA" in firemodes and num(S.get("SecondaryFireRate"), 0) > 0:
+        A(line("FireRate_DA", int(num(S.get("SecondaryFireRate"), 0))) + " // double action pull")
+    if "MCV.FIREMODE_FAN" in firemodes and num(S.get("TertiaryFireRate"), 0) > 0:
+        A(line("FireRate_Fan", int(num(S.get("TertiaryFireRate"), 0))) + " // fanning the hammer")
     A("")
     A(line("CrosshairMinDistance", fmt(num(S.get("CrosshairMinDistance"), 8))))
     A(line("CrosshairDeltaDistance", fmt(num(S.get("CrosshairDeltaDistance"), 4))))
