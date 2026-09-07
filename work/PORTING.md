@@ -418,6 +418,12 @@ Brass ids the game added after 2024 (19 to 31) map to the nearest shell model th
   move the hand more than `MAX_PULL` (4 units) is dropped with a log line; the left hands' rules
   (a unit or two of drift onto the gun's target bone) and every rule inherited from the idle
   (the movement layers) are kept.
+  `step_counter_zero` takes a deeper `Bullet<NN+2>` pose as a counter's empty knot where the
+  game's own knot still leaves a round showing (the dual PPK and the dual Type 67). That pose
+  is one the counter never used, so Crowbar wrote it as a plain animation; the knot has to
+  carry the replaced knot's `subtract` and `weightlist` lines or its whole raw pose becomes the
+  layer's delta on every bone, and the hands and guns whip 90 degrees wherever the counter
+  reaches empty.
   A model in `SNAP_IDLE` gets `snap` on its idles (`step_snap_idles`), so nothing interpolates
   into them: the transitioner blends the whole pose over the fade, and a bone that changes
   hands right there slides across it even when both sides agree on where it ends up (the PTRD's

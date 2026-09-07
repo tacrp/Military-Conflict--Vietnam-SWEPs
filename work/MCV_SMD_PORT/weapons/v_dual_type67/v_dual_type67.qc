@@ -644,6 +644,8 @@ $animation "Bullet15" "..\..\..\MCV_SMD_OG\weapons\v_dual_type67\v_dual_type67_a
 
 $animation "Bullet17" "..\..\..\MCV_SMD_OG\weapons\v_dual_type67\v_dual_type67_anims\Bullet17.smd" {
 	fps 30
+	subtract "Bullet15_corrective_animation" 0
+	weightlist "weights_BulletCounterRight"
 }
 
 $animation "DefaultLeft" "..\..\..\MCV_SMD_OG\weapons\v_dual_type67\v_dual_type67_anims\DefaultLeft.smd" {
@@ -712,6 +714,8 @@ $animation "Bullet16" "..\..\..\MCV_SMD_OG\weapons\v_dual_type67\v_dual_type67_a
 
 $animation "Bullet18" "..\..\..\MCV_SMD_OG\weapons\v_dual_type67\v_dual_type67_anims\Bullet18.smd" {
 	fps 30
+	subtract "Bullet16_corrective_animation" 0
+	weightlist "weights_BulletCounterLeft"
 }
 
 $animation "basePose_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_type67\v_dual_type67_anims\basePose_a.smd" {

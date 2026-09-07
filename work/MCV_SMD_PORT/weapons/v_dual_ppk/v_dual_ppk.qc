@@ -623,6 +623,8 @@ $animation "Bullet13" "..\..\..\MCV_SMD_OG\weapons\v_dual_ppk\v_dual_ppk_anims\B
 
 $animation "Bullet15" "..\..\..\MCV_SMD_OG\weapons\v_dual_ppk\v_dual_ppk_anims\Bullet15.smd" {
 	fps 30
+	subtract "Bullet13_corrective_animation" 0
+	weightlist "weights_BulletCounterRight"
 }
 
 $animation "DefaultLeft" "..\..\..\MCV_SMD_OG\weapons\v_dual_ppk\v_dual_ppk_anims\DefaultLeft.smd" {
@@ -684,6 +686,8 @@ $animation "Bullet14" "..\..\..\MCV_SMD_OG\weapons\v_dual_ppk\v_dual_ppk_anims\B
 
 $animation "Bullet16" "..\..\..\MCV_SMD_OG\weapons\v_dual_ppk\v_dual_ppk_anims\Bullet16.smd" {
 	fps 30
+	subtract "Bullet14_corrective_animation" 0
+	weightlist "weights_BulletCounterLeft"
 }
 
 $animation "basePose_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_ppk\v_dual_ppk_anims\basePose_a.smd" {

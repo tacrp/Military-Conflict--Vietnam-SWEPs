@@ -980,7 +980,22 @@ def step_counter_zero(qc, ctx):
             i = sq.lines.index('"%s"' % anims[0])
             sq.lines[i] = '"%s"' % deeper
             n += 1
-            ctx.note("%s: empty knot %s -> %s (hides every bullet)" % (sq.name, anims[0], deeper))
+            # The counter's own knots are deltas confined to the magazine: each subtracts its
+            # corrective and carries the layer's weightlist. The deeper pose is one the game's
+            # counter never used, so Crowbar wrote it plain, and without those two lines its
+            # whole raw pose became the layer's delta on every bone (the dual PPK's hands and
+            # guns took a 90 degree whip at the last and second-to-last shot, and through the
+            # reload). Carrying them over leaves just the extra hidden bullet.
+            carried = []
+            for key in ("subtract", "weightlist"):
+                line = next((l for l in first_b.lines if l.strip().startswith(key + " ")), None)
+                if line and not any(l.strip().startswith(key + " ") for l in deep_b.lines):
+                    deep_b.lines.append(line.strip())
+                    carried.append(line.strip())
+            ctx.note("%s: empty knot %s -> %s (hides every bullet)%s" % (
+                sq.name, anims[0], deeper,
+                ("; %s carried over from %s" % (", ".join(c.split()[0] for c in carried), anims[0]))
+                if carried else ""))
     return n
 
 
