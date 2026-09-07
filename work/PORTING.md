@@ -439,6 +439,9 @@ Brass ids the game added after 2024 (19 to 31) map to the nearest shell model th
   bolt, thrown open by the shot's own weightlisted `SlideMovement` and held open afterwards by
   the idle's `SlidePosition` on ammo_fraction). It is per model, since it makes every animation
   that ends in the idle a hard cut.
+  A pose-split sequence keeps a `snap` its game sequence carried, rather than taking the usual
+  fade: the homemade pistol's bolt pull has one, and blending into it let the idle's magazine
+  layer overlap the pull's own override.
   **Override layers come last** (`step_pose_split`): the game plays an action as a delta over
   the idle and hangs an override layer on it, weightlisted and absolute, which therefore wins
   for its bones. A pose-split sequence plays the base outright, so the override has to be added

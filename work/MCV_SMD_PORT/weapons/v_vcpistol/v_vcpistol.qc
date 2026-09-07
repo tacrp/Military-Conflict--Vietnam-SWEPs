@@ -603,6 +603,7 @@ $sequence "idle" {
 	addlayer "BulletCounter"
 	addlayer "MagPosition"
 	node "0"
+	snap
 }
 
 $sequence "draw" {
@@ -691,8 +692,7 @@ $sequence "boltpull" {
 	activity "ACT_VM_RELOAD_INSERT_PULL" 1
 	blend "ironsight" 0 1
 	blendwidth 3
-	fadein 0.1
-	fadeout 0.2
+	snap
 	{ event AE_CLIENT_EJECT_BRASS 42 "eject" }
 	{ event 5004 1 "MCV_Weapon_Foley_VCPistol_Reload.Hand" }
 	{ event 5004 9 "MCV_Weapon_Foley_VCPistol_Reload.Mid_SpinIn" }

@@ -1023,7 +1023,7 @@ def step_counter_zero(qc, ctx):
 # crossfade past each other even though they agree on where the bolt ends up. `snap` drops the
 # outgoing sequence outright (STUDIO_SNAP; a zero `fadein` does not stop it, see
 # step_snap_draws). Per model, since it makes every animation that ends in the idle a hard cut.
-SNAP_IDLE = {"v_ptrd41"}
+SNAP_IDLE = {"v_ptrd41", "v_vcpistol"}
 
 IDLE_ACTS = ("ACT_VM_IDLE", "ACT_VM_DEPLOY", "ACT_VM_IIDLE_M203")
 
@@ -1269,7 +1269,9 @@ def step_pose_split(qc, ctx):
             else:
                 width = int(round(len(base_anims) ** 0.5))
             lines.append("blendwidth %d" % width)
-        if act in FIRE_ACTS:
+        # the game's own snap is kept: the homemade pistol's bolt pull carries one, and blending
+        # into it let the idle's magazine layer overlap the sequence's own override
+        if act in FIRE_ACTS or base.has("snap") or pose.has("snap"):
             lines.append("snap")
         else:
             lines.append("fadein 0.1")
