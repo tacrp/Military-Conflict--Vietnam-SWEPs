@@ -41,7 +41,6 @@ SWEP.RangeModifier = 0.895
 SWEP.Firemodes = {
     MCV.FIREMODE_SA,
     MCV.FIREMODE_FAN,
-    MCV.FIREMODE_DA
 }
 
 SWEP.LastShotAnimation = false

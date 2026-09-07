@@ -18,13 +18,13 @@ local COLOR_STD = Color(235, 175, 51)
 local COLOR_GREEN = Color(96, 235, 51)
 local SPEED = 10000 // units a second, the speed those systems carry a round at
 // the radius those systems give a particle reads about three times too wide as a drawn beam
-local STREAK_SCALE = 1 / 3
+local STREAK_SCALE = 1 / 10
 
 local FAMILY = {
     assaultrifle = {150, 2},
     gyrojet      = {200, 3},
     machinegun   = {170, 4},
-    pistol       = {125, 2},
+    pistol       = {125, 3},
     ptrd         = {200, 4},
     rifle        = {200, 3},
     shotgun      = {125, 2},
@@ -116,10 +116,26 @@ function EFFECT:Init(data)
     self.Travel = dist
     self.Tail = fam[1]
     self.Width = fam[2] * 2 * STREAK_SCALE
-    self.Color = green and COLOR_GREEN or COLOR_STD
+    self.Color = self:StreakColor(owner, wpn, green)
     self.StartTime = UnPredictedCurTime()
     self.LifeTime = dist / SPEED
     self.DieTime = self.StartTime + self.LifeTime
+end
+
+// The streak's colour. The shooter picks it (mcv_tracer_color, mcv/client/cl_tracercolor.lua),
+// and since that convar is userinfo the choice is read off the shooter here rather than off the
+// person watching: everyone sees a player's rounds in the colour that player asked for. The
+// game's own colour is the default, so a server where nobody has touched it looks unchanged.
+function EFFECT:StreakColor(owner, wpn, green)
+    local mode = MCV.TracerColorMode(owner)
+
+    if mode == MCV.TRACER_COLOR_PLAYER then
+        return MCV.BrightColor(owner:GetPlayerColor())
+    elseif mode == MCV.TRACER_COLOR_WEAPON then
+        return MCV.WeaponColor(wpn:GetClass())
+    end
+
+    return green and COLOR_GREEN or COLOR_STD
 end
 
 // A two-point trail: control point 0 the start, 1 the end, which is what a tracer particle
