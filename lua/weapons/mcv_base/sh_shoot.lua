@@ -428,10 +428,12 @@ function SWEP:BulletAttack()
                 dmginfo:SetDamageType(bit.bor(dmginfo:GetDamageType(), DMG_BUCKSHOT))
             end
 
-            local dmg = dmginfo:GetDamage()
+            // Range falloff: the damage is multiplied by RangeModifier every 500 units (the
+            // HUD reads the same curve). It goes back on the damage info here, before the
+            // hitgroup multipliers scale what is left.
             local range = (tr.HitPos - tr.StartPos):Length()
 
-            dmg = dmg * math.pow(self.RangeModifier, math.max(range / 500, 0))
+            dmginfo:SetDamage(dmginfo:GetDamage() * math.pow(self.RangeModifier, math.max(range / 500, 0)))
 
             if IsValid(tr.Entity) then
                 MCV.CancelBodyDamage(tr.Entity, dmginfo, tr.HitGroup)
