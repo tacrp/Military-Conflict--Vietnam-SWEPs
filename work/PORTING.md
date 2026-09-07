@@ -439,6 +439,10 @@ Brass ids the game added after 2024 (19 to 31) map to the nearest shell model th
   bolt, thrown open by the shot's own weightlisted `SlideMovement` and held open afterwards by
   the idle's `SlidePosition` on ammo_fraction). It is per model, since it makes every animation
   that ends in the idle a hard cut.
+  A dual's cross-hand rules are left alone whatever the distance: the game's dual reloads tie
+  the off hand to the hand doing the loading, and a two-bone solve drags the whole arm after
+  the other hand (the revolvers' insert loops, where the pull is short enough to slip under
+  MAX_PULL). A rule whose target is another ikchain's end bone is the test.
   On a single gun the two hands hold the same one, so an animation's own rules stand or fall
   together (`paired`, off for `mode dual`): correcting one arm onto the gun and leaving the
   other skews the grip. The PTRD's deployed shot was the only single-gun animation this hit

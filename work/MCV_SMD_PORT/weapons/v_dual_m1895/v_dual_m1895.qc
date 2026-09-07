@@ -26,7 +26,7 @@ $attachment "eject2" "BaseLeftMesh" 10 -4.3 -3.1 rotate 0 0 0
 
 $cbox 0 0 0 0 0 0
 
-$bbox -17.129 -19.789 -31.979 28.274 21.416 24.911
+$bbox -96 -96 -96 96 96 96
 
 $definebone "root" "" 0 7.450089 -27.509027 0 0 0 0 0 0 0 0 0
 $definebone "pelvis" "root" -0.000002 0 0 -89.790336 -89.996943 89.996943 0 0 0 0 0 0
@@ -647,20 +647,20 @@ $animation "reload_s_d_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895
 	fps 30
 }
 
-$animation "reload_l" "fixed_anims\reload_l.smd" {
+$animation "reload_l" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_l.smd" {
 	fps 30
 	loop
 }
 
-$animation "reload_l_i" "fixed_anims\reload_l_i.smd" {
+$animation "reload_l_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_l_i.smd" {
 	fps 30
 }
 
-$animation "reload_l_d" "fixed_anims\reload_l_d.smd" {
+$animation "reload_l_d" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_l_d.smd" {
 	fps 30
 }
 
-$animation "reload_l_d_i" "fixed_anims\reload_l_d_i.smd" {
+$animation "reload_l_d_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_l_d_i.smd" {
 	fps 30
 }
 
@@ -696,20 +696,20 @@ $animation "reload_ch_d_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m189
 	fps 30
 }
 
-$animation "reload_l_l" "fixed_anims\reload_l_l.smd" {
+$animation "reload_l_l" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_l_l.smd" {
 	fps 30
 	loop
 }
 
-$animation "reload_l_l_i" "fixed_anims\reload_l_l_i.smd" {
+$animation "reload_l_l_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_l_l_i.smd" {
 	fps 30
 }
 
-$animation "reload_l_l_d" "fixed_anims\reload_l_l_d.smd" {
+$animation "reload_l_l_d" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_l_l_d.smd" {
 	fps 30
 }
 
-$animation "reload_l_l_d_i" "fixed_anims\reload_l_l_d_i.smd" {
+$animation "reload_l_l_d_i" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_l_l_d_i.smd" {
 	fps 30
 }
 

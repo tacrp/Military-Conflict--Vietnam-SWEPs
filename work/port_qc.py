@@ -671,15 +671,32 @@ def step_bake_ik(qc, ctx):
         nodes = bake_ik.load_smd(src)[0]
         byname = {n: (i, par) for i, (n, par) in nodes.items()}
         ik = []
+        cross = []
         for chain, target, rng, contact in rules:
             hand = chains.get(chain)
             if hand not in byname or target not in byname:
+                continue
+            # A dual's reloads tie the off hand to the hand doing the loading (the revolvers'
+            # insert loops carry `ikrule "lhand" touch "hand_r"` and its mirror). Solving that
+            # with two bones drags the whole arm after the other hand and reads wrong in game,
+            # which is what MAX_PULL was added for; the short ones slip under its four units,
+            # so a rule aimed at another chain's hand is left alone whatever the distance.
+            if ctx.mode == "dual" and target in set(chains.values()) and target != hand:
+                cross.append("%s -> %s" % (chain, target))
                 continue
             lower = nodes[byname[hand][1]][0] if byname[hand][1] != -1 else None
             upper = nodes[byname[lower][1]][0] if lower and byname[lower][1] != -1 else None
             if upper and lower:
                 ik.append((upper, lower, hand, target, rng, contact))
+        if cross:
+            ctx.note("%s: cross-hand touch rules left as animated (%s)" % (os.path.basename(src), ", ".join(cross)))
         if not ik:
+            # an earlier run may have baked this one before the rules were reconsidered; its
+            # copy has to go, since resolve_smd prefers fixed_anims over the source
+            stale = os.path.join(ctx.fixed_dir, os.path.basename(src))
+            if os.path.isfile(stale) and os.path.abspath(stale) != os.path.abspath(src):
+                os.remove(stale)
+                ctx.note("%s: dropped an earlier bake, it has no rules to solve now" % os.path.basename(src))
             continue
         # `delta` is declared on the sequence that plays the animation, not on the $animation
         # block; Crowbar's `subtract` on the block is the other mark of a delta layer. Treating a

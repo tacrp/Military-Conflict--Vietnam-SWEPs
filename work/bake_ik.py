@@ -282,8 +282,10 @@ def bake_animation(anim_path, corrective_path, base_path, chains, out_path, is_d
     if not new_rows:
         # nothing to correct (every rule dropped, or the hands already sit on the gun): an
         # earlier run's copy would otherwise stay behind and keep being compiled, since
-        # resolve_smd prefers fixed_anims over the source
-        if os.path.isfile(out_path):
+        # resolve_smd prefers fixed_anims over the source. Never when the output is the source:
+        # step_glue_guns writes its rewritten layer into fixed_anims and the bake reads it from
+        # there, so removing it would throw the glue away (the dual Blackhawk's run layer).
+        if os.path.isfile(out_path) and os.path.abspath(out_path) != os.path.abspath(anim_path):
             os.remove(out_path)
         return (worst_before, worst_after)
     write_rows(alines, new_rows, out_path)

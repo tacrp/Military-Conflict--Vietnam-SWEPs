@@ -157,34 +157,28 @@ function SWEP:Think_Reload()
             self:RestoreClip2(self.Secondary.ClipSize)
         else
             if self.AkimboDualSingleActionReload and self:GetAkimbo() then
-                // Two revolvers loaded a round at a time, the right gun first. The models carry
-                // the game's six stages: a start, an insert per round, the right gun's finish,
-                // a change of hands, the left gun's insert and its finish. Each gun has its own
-                // insert animation (ACT_VM_RELOAD right, ACT_VM_RELOAD2 left), so the gun in
-                // hand has to be tracked: GetReloadHand is 0 while the right one loads, 1 once
-                // it is closed and the hands are about to swap, 2 while the left one loads.
+                // Two revolvers loaded a round at a time, the right gun first. The stages the
+                // models carry: a start, an insert per round (one animation per gun), the
+                // change of hands halfway, then the left gun's inserts and the finish. The
+                // right gun's own finish is the put-back, for stopping while still on it, and
+                // never comes between the inserts and the change of hands. GetReloadHand says
+                // which gun is loading, 0 the right and 2 the left.
                 local capacity = self:GetClip1Capacity()
                 local half = self:GetLastClip() + (capacity - self:GetLastClip()) / 2
                 local hand = self:GetReloadHand()
 
                 if self:GetEndReload() or self:Clip1() >= capacity or (!self:GetInfiniteAmmo() and self:Ammo1() == 0) then
-                    if hand >= 2 then
-                        self:PlayReloadGesture(self:PlayAnimation(ACT_SHOTGUN_RELOAD_FINISH, 1, true), PLAYERANIMEVENT_RELOAD_END)
-                    elseif hand == 0 then
-                        self:PlayReloadGesture(self:PlayAnimation(ACT_VM_RELOAD_END_EMPTY, 1, true), PLAYERANIMEVENT_RELOAD_END)
-                    end
-                    // hand 1: the right gun's finish has just played, there is nothing left to close
+                    // the guns go back down from whichever hand is loading
+                    self:PlayReloadGesture(self:PlayAnimation(
+                        hand >= 2 and ACT_SHOTGUN_RELOAD_FINISH or ACT_VM_RELOAD_END_EMPTY, 1, true),
+                        PLAYERANIMEVENT_RELOAD_END)
 
                     self:SetReloading(false)
                     if !self.AnimationHandlesHammer then
                         self:SetEmptyReload(false)
                     end
                 elseif hand == 0 and self:Clip1() >= half then
-                    // the right gun holds its share: close it
-                    self:PlayReloadGesture(self:PlayAnimation(ACT_VM_RELOAD_END_EMPTY, 1, true), PLAYERANIMEVENT_RELOAD_LOOP)
-                    self:SetReloadHand(1)
-                elseif hand == 1 then
-                    // and swap the guns over
+                    // the right gun holds its share: swap the guns over
                     self:PlayReloadGesture(self:PlayAnimation(ACT_VM_RELOAD_END, 1, true), PLAYERANIMEVENT_RELOAD_LOOP)
                     self:SetReloadHand(2)
                     if !self.AnimationHandlesHammer then
