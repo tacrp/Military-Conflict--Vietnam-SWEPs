@@ -35,10 +35,6 @@ function ENT:GetAttacker()
     return game.GetWorld()
 end
 
-function ENT:GetInflictor()
-    return IsValid(self.Inflictor) and self.Inflictor or self
-end
-
 function ENT:Detonate()
     local attacker = self:GetAttacker()
 

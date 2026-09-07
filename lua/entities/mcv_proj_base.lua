@@ -179,6 +179,14 @@ function ENT:OnRemove()
     end
 end
 
+// What the damage names as its cause: the weapon that fired or threw this, while it is still
+// around, so the kill icon is the weapon's own (mcv/client/cl_killicons.lua). The weapons set
+// it on what they create; a projectile whose weapon has gone names itself, and the icon falls
+// back to the alias registered for its class.
+function ENT:GetInflictor()
+    return IsValid(self.Inflictor) and self.Inflictor or self
+end
+
 function ENT:OnTakeDamage(dmg)
     if self.Detonated then return end
 
@@ -206,7 +214,7 @@ function ENT:PhysicsCollide(data, collider)
     if IsValid(data.HitEntity) and data.HitEntity:GetClass() == "func_breakable_surf" then
         self:FireBullets({
             Attacker = self:GetOwner(),
-            Inflictor = self,
+            Inflictor = self:GetInflictor(),
             Damage = 0,
             Distance = 32,
             Tracer = 0,
@@ -234,7 +242,7 @@ function ENT:PhysicsCollide(data, collider)
     elseif self.ImpactDamage > 0 and IsValid(data.HitEntity) and (engine.ActiveGamemode() != "terrortown" or !data.HitEntity:IsPlayer()) then
         local dmg = DamageInfo()
         dmg:SetAttacker(IsValid(self:GetOwner()) and self:GetOwner() or self.Attacker)
-        dmg:SetInflictor(self)
+        dmg:SetInflictor(self:GetInflictor())
         dmg:SetDamage(Lerp((data.OurOldVelocity:Length() - 0.6 * self.ImpactDamageSpeed) / 0.4 * self.ImpactDamageSpeed, self.ImpactDamage / 5, self.ImpactDamage))
         dmg:SetDamageType(DMG_CRUSH + DMG_CLUB)
         dmg:SetDamageForce(data.OurOldVelocity)

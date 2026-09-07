@@ -233,6 +233,7 @@ function SWEP:LaunchBlade()
 
     ent.Model = self.WorldModel
     ent.WeaponClass = self:GetClass()
+    ent.Inflictor = self // the kill icon is the weapon's, not the blade in flight
     ent.Damage = self.ThrowDamage or self:GetStabDamage()
     ent.SoundFlesh = self.SoundThrustFlesh
     ent.SoundWorld = self.SoundThrustWorld

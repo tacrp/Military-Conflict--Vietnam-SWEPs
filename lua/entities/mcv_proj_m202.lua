@@ -30,7 +30,7 @@ function ENT:Detonate()
     local mult = 1
     local dmg = 100
 
-    util.BlastDamage(self, attacker, self:GetPos(), 70, dmg * mult)
+    util.BlastDamage(self:GetInflictor(), attacker, self:GetPos(), 70, dmg * mult)
     self:FireBullets({
         Attacker = attacker,
         Damage = dmg * mult,
@@ -68,7 +68,7 @@ function ENT:OnThink()
         local dmginfo = DamageInfo()
         dmginfo:SetDamageType(DMG_BURN)
         dmginfo:SetAttacker(self:GetOwner())
-        dmginfo:SetInflictor(self)
+        dmginfo:SetInflictor(self:GetInflictor())
         dmginfo:SetDamage(engine.TickInterval() * 500)
         dmginfo:SetDamagePosition(self:GetPos())
         dmginfo:SetDamageForce(Vector(0, 0, 0))
