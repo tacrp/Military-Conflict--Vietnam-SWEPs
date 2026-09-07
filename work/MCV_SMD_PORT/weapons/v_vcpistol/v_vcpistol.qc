@@ -707,9 +707,9 @@ $sequence "boltpull" {
 	addlayer "walklayer"
 	addlayer "walklayerironsight"
 	addlayer "runlayer"
-	addlayer "boltpull_magoverride"
 	addlayer "BulletCounter"
 	addlayer "boltpull_pose"
+	addlayer "boltpull_magoverride"
 	node "0"
 }
 $sequence "boltpull_pose" {

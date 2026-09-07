@@ -439,6 +439,13 @@ Brass ids the game added after 2024 (19 to 31) map to the nearest shell model th
   bolt, thrown open by the shot's own weightlisted `SlideMovement` and held open afterwards by
   the idle's `SlidePosition` on ammo_fraction). It is per model, since it makes every animation
   that ends in the idle a hard cut.
+  **Override layers come last** (`step_pose_split`): the game plays an action as a delta over
+  the idle and hangs an override layer on it, weightlisted and absolute, which therefore wins
+  for its bones. A pose-split sequence plays the base outright, so the override has to be added
+  after the pose delta or the delta is simply added to it (the homemade pistol's harmonica took
+  the override's step and the pose layer's on top, a slot too far every shot). Five sequences in
+  the set carry one: the homemade pistol's bolt pull, the chainsaw's shoot loop, the crossbow's
+  and the PTRD's shots.
   **Pose-driven recoil tails** (`recoil_tail_knots`): the recoil layer samples the shot pose
   and ends on a zero knot, so pose value 1 is the resting pose. A shot that ends away from rest
   (the game covers the last of the return with the shoot sequence's 0.2 second fade-out) would

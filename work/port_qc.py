@@ -1286,14 +1286,18 @@ def step_pose_split(qc, ctx):
         movement = [l for l in base.layers() if l in ("walklayer", "runlayer", "walklayerironsight")]
         for ml in movement:
             lines.append('addlayer "%s"' % ml)
-        for xl in extra_layers:
-            if xl not in movement:
-                lines.append('addlayer "%s"' % xl)
         # bones the sequence's own layers drive outright (a weightlisted, non-delta layer such as
         # the homemade pistol's boltpull_magoverride on the Mag bone)
         owned = set()
+        overrides = []
         for xl in extra_layers:
-            owned |= layer_owned_bones(qc, xl)
+            bones = layer_owned_bones(qc, xl)
+            owned |= bones
+            if bones and xl not in movement:
+                overrides.append(xl)
+        for xl in extra_layers:
+            if xl not in movement and xl not in overrides:
+                lines.append('addlayer "%s"' % xl)
         for bl in base.layers():
             if bl not in movement and bl not in extra_layers and bl != pose_name:
                 if owned and layer_delta_bones(qc, ctx, bl) & owned:
@@ -1302,6 +1306,12 @@ def step_pose_split(qc, ctx):
                     continue
                 lines.append('addlayer "%s"' % bl)     # SlidePosition, BulletCounter, hammer layers
         lines.append('addlayer "%s"' % pose_name)
+        # An override sets its bones outright, so it has to come after the pose delta: the game
+        # plays the action as a delta over the idle with the override on top, and a layer added
+        # before the delta is simply added to instead (the homemade pistol's harmonica took the
+        # override's step and the pose layer's on top of it, a slot too far every shot).
+        for xl in overrides:
+            lines.append('addlayer "%s"' % xl)
         lines.append('node "0"')
         main = Block("sequence", seq.name if False else pose_name[:-5], None, lines)
         qc.insert_before(pose, main)
