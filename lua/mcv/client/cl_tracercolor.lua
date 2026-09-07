@@ -7,12 +7,14 @@
 
 MCV = MCV or {}
 
+// 1 and 2 are the two colours a player already carries: the one on their playermodel and the
+// one on their physgun, both set in the player menu.
 MCV.TRACER_COLOR_GUN = 0     // the colour the gun's own tracer carries in the game
-MCV.TRACER_COLOR_PLAYER = 1  // the shooter's player colour
-MCV.TRACER_COLOR_WEAPON = 2  // a colour of the weapon's own, one per class
+MCV.TRACER_COLOR_PLAYER = 1  // Player:GetPlayerColor, the playermodel's
+MCV.TRACER_COLOR_WEAPON = 2  // Player:GetWeaponColor, the physgun's
 
 CreateClientConVar("mcv_tracer_color", "0", true, true,
-    "Tracer colour: 0 the gun's own, 1 your player colour, 2 one colour per weapon. Other players see the one you pick.")
+    "Tracer colour: 0 the gun's own, 1 your player colour, 2 your physgun colour. Other players see the one you pick.")
 
 // What `ply` has chosen. Reading it off the player rather than off our own convar is the whole
 // point: a tracer someone else fires is coloured by their setting.
@@ -30,26 +32,4 @@ function MCV.BrightColor(v)
 
     local s = 255 / m
     return Color(v.x * s, v.y * s, v.z * s)
-end
-
-// One hue per weapon class, so a gun is known by the colour of its tracers. The class name is
-// hashed onto the wheel; saturation and value are fixed, which keeps every gun's colour equally
-// readable against the sky and the ground.
-local weaponcolours = {}
-
-function MCV.WeaponColor(class)
-    if !class or class == "" then return color_white end
-
-    local c = weaponcolours[class]
-    if !c then
-        local h = 0
-        for i = 1, #class do
-            h = (h * 31 + class:byte(i)) % 360
-        end
-
-        c = HSVToColor(h, 0.55, 1)
-        weaponcolours[class] = c
-    end
-
-    return c
 end

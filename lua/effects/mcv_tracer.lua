@@ -132,7 +132,7 @@ function EFFECT:StreakColor(owner, wpn, green)
     if mode == MCV.TRACER_COLOR_PLAYER then
         return MCV.BrightColor(owner:GetPlayerColor())
     elseif mode == MCV.TRACER_COLOR_WEAPON then
-        return MCV.WeaponColor(wpn:GetClass())
+        return MCV.BrightColor(owner:GetWeaponColor())
     end
 
     return green and COLOR_GREEN or COLOR_STD

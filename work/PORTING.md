@@ -648,8 +648,8 @@ scripts, so nothing reads them. Client-only preferences (`mcv_hud_hints`) stay
 `mcv_tracer_color` (`mcv/client/cl_tracercolor.lua`) is a preference of a different kind: it is
 userinfo, so a player's choice travels with them and everyone sees that player's rounds in the
 colour they picked, not the colour the watcher picked. 0 is the colour the gun's own tracer
-carries in the game, 1 the shooter's player colour, 2 one hue per weapon class, hashed from the
-class name at a fixed saturation so every gun reads equally well. The streak is drawn by
+carries in the game, 1 the shooter's player colour and 2 their physgun colour, the two a player
+already sets in the player menu (`GetPlayerColor` and `GetWeaponColor`). The streak is drawn by
 `effects/mcv_tracer.lua`, which reads the mode off the shooter, so a shot needs nothing
 networked beyond what the engine sends for the tracer already.
 
