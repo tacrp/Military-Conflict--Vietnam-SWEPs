@@ -49,7 +49,7 @@ function EFFECT:Init(data)
     local owner = wpn:GetOwner()
     local to = data:GetOrigin()
     // off the gun: a dual's left gun fires on an odd count, the same rule the muzzle flash uses
-    local left = wpn.GetAkimbo and wpn:GetAkimbo() and wpn:Clip1() % 2 == 1
+    local left = wpn.GetAkimbo and wpn:GetAkimbo() and wpn:Clip1() % 2 == 0
 
     local from, bind_ent, bind_att
     if IsValid(owner) and owner == LocalPlayer() and !owner:ShouldDrawLocalPlayer() then

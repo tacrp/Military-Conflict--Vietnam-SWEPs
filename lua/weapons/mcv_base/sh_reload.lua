@@ -78,6 +78,7 @@ function SWEP:Reload()
 
     if self.AkimboDualSingleActionReload then
         self:SetEmptyReload(true)
+        self:SetReloadHand(0) // the right gun loads first
     else
         self:SetEmptyReload(self:Clip1() == 0)
     end
@@ -153,32 +154,44 @@ function SWEP:Think_Reload()
             self:RestoreClip2(self.Secondary.ClipSize)
         else
             if self.AkimboDualSingleActionReload then
-                if self:GetEndReload() or self:Clip1() >= self:GetClip1Capacity() or (!self:GetInfiniteAmmo() and self:Ammo1() == 0) then
-                    if self:GetEmptyReload() then
-                        self:PlayReloadGesture(self:PlayAnimation(ACT_VM_RELOAD_END_EMPTY, 1, true), PLAYERANIMEVENT_RELOAD_END)
-                    else
+                // Two revolvers loaded a round at a time, the right gun first. The models carry
+                // the game's six stages: a start, an insert per round, the right gun's finish,
+                // a change of hands, the left gun's insert and its finish. Each gun has its own
+                // insert animation (ACT_VM_RELOAD right, ACT_VM_RELOAD2 left), so the gun in
+                // hand has to be tracked: GetReloadHand is 0 while the right one loads, 1 once
+                // it is closed and the hands are about to swap, 2 while the left one loads.
+                local capacity = self:GetClip1Capacity()
+                local half = self:GetLastClip() + (capacity - self:GetLastClip()) / 2
+                local hand = self:GetReloadHand()
+
+                if self:GetEndReload() or self:Clip1() >= capacity or (!self:GetInfiniteAmmo() and self:Ammo1() == 0) then
+                    if hand >= 2 then
                         self:PlayReloadGesture(self:PlayAnimation(ACT_SHOTGUN_RELOAD_FINISH, 1, true), PLAYERANIMEVENT_RELOAD_END)
+                    elseif hand == 0 then
+                        self:PlayReloadGesture(self:PlayAnimation(ACT_VM_RELOAD_END_EMPTY, 1, true), PLAYERANIMEVENT_RELOAD_END)
                     end
+                    // hand 1: the right gun's finish has just played, there is nothing left to close
 
                     self:SetReloading(false)
                     if !self.AnimationHandlesHammer then
                         self:SetEmptyReload(false)
                     end
-                else
-                    if self:Clip1() >= ((self:GetClip1Capacity() - self:GetLastClip()) / 2) + self:GetLastClip() and self:GetEmptyReload() then
-                        self:PlayAnimation(ACT_VM_RELOAD_END, 1, true)
-                        if !self.AnimationHandlesHammer then
-                            self:SetEmptyReload(false)
-                        end
-                    else
-                        if self:GetAkimbo() then
-                            self:PlayReloadGesture(self:PlayAnimation(ACT_VM_RELOAD2, 1, true), PLAYERANIMEVENT_RELOAD_LOOP)
-                        else
-                            self:PlayReloadGesture(self:PlayAnimation(ACT_VM_RELOAD, 1, true), PLAYERANIMEVENT_RELOAD_LOOP)
-                        end
-
-                        self:RestoreClip(self.ShotgunReloadRounds)
+                elseif hand == 0 and self:Clip1() >= half then
+                    // the right gun holds its share: close it
+                    self:PlayReloadGesture(self:PlayAnimation(ACT_VM_RELOAD_END_EMPTY, 1, true), PLAYERANIMEVENT_RELOAD_LOOP)
+                    self:SetReloadHand(1)
+                elseif hand == 1 then
+                    // and swap the guns over
+                    self:PlayReloadGesture(self:PlayAnimation(ACT_VM_RELOAD_END, 1, true), PLAYERANIMEVENT_RELOAD_LOOP)
+                    self:SetReloadHand(2)
+                    if !self.AnimationHandlesHammer then
+                        self:SetEmptyReload(false)
                     end
+                else
+                    self:PlayReloadGesture(self:PlayAnimation(hand >= 2 and ACT_VM_RELOAD2 or ACT_VM_RELOAD, 1, true),
+                                           PLAYERANIMEVENT_RELOAD_LOOP)
+
+                    self:RestoreClip(self.ShotgunReloadRounds)
                 end
             elseif self.ShotgunReload then
                 if self:GetEndReload() or self:Clip1() >= (self:GetEmptyReload() and self.Primary.ClipSize or self:GetClip1Capacity()) or (!self:GetInfiniteAmmo() and self:Ammo1() == 0) then

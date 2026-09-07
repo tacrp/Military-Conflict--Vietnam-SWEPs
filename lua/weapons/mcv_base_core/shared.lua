@@ -182,6 +182,9 @@ function SWEP:SetupDataTables()
     // equipment: small state machine (throw wind-up, mine placement step...)
     self:NetworkVar("Int", 3, "ActionState")
     self:NetworkVar("Int", 4, "BurstCount") // rounds fired on this trigger pull (a burst-fire gun keeps it until the burst is done)
+    // which gun a dual revolver's round-by-round reload is loading: 0 the right, 1 the right
+    // one just closed (the hands swap next), 2 the left (mcv_base/sh_reload.lua)
+    self:NetworkVar("Int", 6, "ReloadHand")
     self:NetworkVar("Int", 5, "DeferredAction") // index into SWEP.DeferredActions, 0 = nothing
 
     self:NetworkVar("Bool", 0, "Reloading")
