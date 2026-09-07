@@ -737,7 +737,7 @@ $sequence "reload" {
 
 $sequence "reload_empty" {
 	"..\..\..\MCV_SMD\weapons\v_m21\anims\reload_empty.smd"
-	"..\..\..\MCV_SMD_OG\weapons\v_m21\v_m21_anims\reload_empty_2.smd"
+	"..\..\..\MCV_SMD\weapons\v_m21\anims\reload_empty_2.smd"
 	activity "ACT_VM_RELOADEMPTY" 1
 	blend "ironsight" 0 1
 	blendwidth 2

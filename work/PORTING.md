@@ -418,6 +418,15 @@ Brass ids the game added after 2024 (19 to 31) map to the nearest shell model th
   move the hand more than `MAX_PULL` (4 units) is dropped with a log line; the left hands' rules
   (a unit or two of drift onto the gun's target bone) and every rule inherited from the idle
   (the movement layers) are kept.
+  **Hand-edited overrides on one blend knot** (`work/copy_hand_edit.py`): an override in
+  `MCV_SMD/weapons/<model>/anims/` replaces the game animation of that name, and a sequence
+  that blends a hip animation against its `_2` ironsighted twin then carries the edit on one
+  knot only, so the edited bones slide as the aim blend moves (the M21's empty reload, whose
+  2024 edit reaches the right hand to the bolt release over its last fifteen frames). The tool
+  reads the change per frame and per bone out of the override and applies it to the sibling,
+  writing the result next to the override. Bones the override holds under a different parent
+  are skipped: the 2024 overrides predate the `BaseRoot` the rig gained, so their `Base` folds
+  its parent in and differs on every frame without having been edited.
   `step_counter_zero` takes a deeper `Bullet<NN+2>` pose as a counter's empty knot where the
   game's own knot still leaves a round showing (the dual PPK and the dual Type 67). That pose
   is one the counter never used, so Crowbar wrote it as a plain animation; the knot has to
