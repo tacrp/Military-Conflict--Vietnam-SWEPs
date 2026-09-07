@@ -439,6 +439,12 @@ Brass ids the game added after 2024 (19 to 31) map to the nearest shell model th
   bolt, thrown open by the shot's own weightlisted `SlideMovement` and held open afterwards by
   the idle's `SlidePosition` on ammo_fraction). It is per model, since it makes every animation
   that ends in the idle a hard cut.
+  **Pose-driven recoil tails** (`recoil_tail_knots`): the recoil layer samples the shot pose
+  and ends on a zero knot, so pose value 1 is the resting pose. A shot that ends away from rest
+  (the game covers the last of the return with the shoot sequence's 0.2 second fade-out) would
+  otherwise make that return one sample interval long and it reads as a snap, so three knots
+  scaling the last frame back towards the corrective are added first. It costs nothing on a
+  model whose shot already ends at rest, which is most of them.
   A dual's cross-hand rules are left alone whatever the distance: the game's dual reloads tie
   the off hand to the hand doing the loading, and a two-bone solve drags the whole arm after
   the other hand (the revolvers' insert loops, where the pull is short enough to slip under

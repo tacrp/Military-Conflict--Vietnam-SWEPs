@@ -1308,6 +1308,74 @@ def step_pose_split(qc, ctx):
         ctx.note("%s: pose split, base %d frames%s" % (main.name, nframes, "" if nframes == pose_len else " (pose is %d)" % pose_len))
 
 
+RECOIL_TAIL = 3          # knots easing the last frame back to rest
+RECOIL_TAIL_POS = 0.1    # units, and degrees below: a residual smaller than this needs no tail
+RECOIL_TAIL_ROT = 1.0
+
+
+def _scale_toward(row, base, t):
+    """The pose `t` of the way from `base` to `row` (t=0 is base), rotations scaled about the
+    axis that separates them."""
+    import numpy as np
+    import bake_ik
+    pos = [base[i] + (row[i] - base[i]) * t for i in range(3)]
+    Rb = bake_ik.rmat(base[3:6])
+    R = bake_ik.rmat(row[3:6]) @ Rb.T
+    c = max(-1.0, min(1.0, (np.trace(R) - 1.0) / 2.0))
+    ang = math.acos(c)
+    if ang > 1e-6:
+        axis = np.array([R[2][1] - R[1][2], R[0][2] - R[2][0], R[1][0] - R[0][1]])
+        n = np.linalg.norm(axis)
+        if n > 1e-9:
+            axis = axis / n
+            a = ang * t
+            K = np.array([[0, -axis[2], axis[1]], [axis[2], 0, -axis[0]], [-axis[1], axis[0], 0]])
+            R = np.eye(3) + math.sin(a) * K + (1 - math.cos(a)) * (K @ K)
+        else:
+            R = np.eye(3)
+    else:
+        R = np.eye(3)
+    return list(pos) + list(bake_ik.euler(R @ Rb))
+
+
+def recoil_tail_knots(qc, ctx, src, corrective, last):
+    """Files for the eased tail of a recoil layer, or [] when the shot already ends at rest.
+    Each is the source animation with frame `last` scaled back towards the corrective."""
+    import numpy as np
+    import bake_ik
+    if corrective is None or not src.path:
+        return []
+    sp, cp = ctx.resolve_smd(src.path), ctx.resolve_smd(corrective.path)
+    if not (os.path.isfile(sp) and os.path.isfile(cp)):
+        return []
+    nodes, frames, lines = bake_ik.load_smd(sp)
+    cnodes, cframes, _ = bake_ik.load_smd(cp)
+    names = {i: n for i, (n, _) in nodes.items()}
+    cbyname = {cnodes[i][0]: cframes[0][i] for i in cframes[0]} if cframes else {}
+    fi = min(last, len(frames) - 1)
+    shared = [(b, names[b]) for b in frames[fi] if names.get(b) in cbyname]
+    worst_p = worst_r = 0.0
+    for b, nm in shared:
+        row, base = frames[fi][b], cbyname[nm]
+        worst_p = max(worst_p, max(abs(row[k] - base[k]) for k in range(3)))
+        R = bake_ik.rmat(row[3:6]) @ bake_ik.rmat(base[3:6]).T
+        c = max(-1.0, min(1.0, (np.trace(R) - 1.0) / 2.0))
+        worst_r = max(worst_r, math.degrees(math.acos(c)))
+    if worst_p < RECOIL_TAIL_POS and worst_r < RECOIL_TAIL_ROT:
+        return []
+    out = []
+    for i in range(RECOIL_TAIL, 0, -1):
+        t = i / float(RECOIL_TAIL + 1)
+        rows = {(fi, b): _scale_toward(frames[fi][b], cbyname[nm], t) for b, nm in shared}
+        name = "%s_tail%02d" % (os.path.basename(sp)[:-4], i)
+        path = os.path.join(ctx.fixed_dir, name + ".smd")
+        bake_ik.write_rows(lines, rows, path)
+        out.append((name, os.path.relpath(path, ctx.out_dir).replace("/", "\\")))
+    ctx.note("%s: recoil layer eased out over %d knots (it ends %.1f degrees, %.2f units from rest)"
+             % (os.path.basename(sp), RECOIL_TAIL, worst_r, worst_p))
+    return out
+
+
 def step_pose_recoil(qc, ctx):
     """Optional: pose-parameter driven recoil layers for dual wield (see PORTING.md)."""
     if ctx.args.pose_recoil == "off":
@@ -1346,16 +1414,23 @@ def step_pose_recoil(qc, ctx):
                 rows = []
                 break
             row = []
+            subtract_lines = [l for l in src.lines if l.startswith("subtract")]
             for k in idx:
                 nm = "rc_%s_%s_f%02d" % (hand, src_name, k)
-                lines = [l for l in src.lines if l.startswith("subtract")]
-                lines = ["fps 30", "frame %d %d" % (k, k)] + lines
+                lines = ["fps 30", "frame %d %d" % (k, k)] + subtract_lines
                 nb = Block("animation", nm, src.path, lines)
                 qc.insert_after(src, nb)
                 row.append(nm)
+            corrective = qc.find("animation", src_name + "_corrective_animation")
+            # a shot that ends away from rest gets a short eased tail, so the return is not
+            # crammed into the last sample interval (see recoil_tail_knots)
+            for tname, tpath in recoil_tail_knots(qc, ctx, src, corrective, idx[-1]):
+                nm = "rc_%s_%s" % (hand, tname)
+                lines = ["fps 30", "frame %d %d" % (idx[-1], idx[-1])] + subtract_lines
+                qc.insert_after(src, Block("animation", nm, tpath, lines))
+                row.append(nm)
             # trailing zero-delta pose so pose value 1.0 == rest: an animation minus itself
             zero_name = "rc_%s_%s_zero" % (hand, src_name)
-            corrective = qc.find("animation", src_name + "_corrective_animation")
             zero_src = corrective if corrective is not None else src
             zero_lines = ["fps 30", "frame 0 0", 'subtract "%s" 0' % zero_src.name]
             qc.insert_after(zero_src, Block("animation", zero_name, zero_src.path, zero_lines))
