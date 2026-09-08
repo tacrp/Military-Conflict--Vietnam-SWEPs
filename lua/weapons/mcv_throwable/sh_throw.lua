@@ -167,8 +167,8 @@ function SWEP:LaunchThrowable(kind, fuse, cookstart)
         ent.ExplodeOnImpact = true
         ent.TimeFuse = false
     end
-    ent.ExplosionDamage = self.ExplosionDamage
-    ent.ExplosionRadius = self.ExplosionRadius
+    ent.ExplosionDamage = self.ExplosionDamage * self:StatMult("explosion_damage")
+    ent.ExplosionRadius = self.ExplosionRadius * self:StatMult("explosion_radius")
     ent.IgniteRadius = self.IgniteRadius
     ent.EffectDuration = self.EffectDuration
     ent.SmokeColor = self.SmokeColor

@@ -35,6 +35,26 @@ local SETTINGS = {
 local cv_category = CreateClientConVar("mcv_cat_menu", "1", true, false,
     "Q menu only: the weapon category whose stat multipliers the settings tab is showing")
 
+// Which categories hold a weapon that launches something. The three projectile stats are
+// shown for those only, so a pistol's page is not padded with dials that do nothing. Read off
+// the weapons themselves rather than a list to keep, and the rifle grenades are always in.
+local function launchingCategories()
+    local out = {[MCV.CATEGORY_RIFLE_GRENADE] = true}
+
+    for _, wep in ipairs(weapons.GetList()) do
+        if !wep.SubCategory then continue end
+
+        for _, key in ipairs({"ShootEntity", "ThrowEntity", "ThrownEntity", "PlacedEntityClass", "RifleGrenadeEntity"}) do
+            if isstring(wep[key]) and wep[key] != "" then
+                out[wep.SubCategory] = true
+                break
+            end
+        end
+    end
+
+    return out
+end
+
 local function categoryBlock(panel, rebuild)
     panel:Help("Category stats")
     panel:ControlHelp("A multiplier per weapon category, shared by everyone on the server. " ..
@@ -58,7 +78,11 @@ local function categoryBlock(panel, rebuild)
         end)
     end
 
+    local launches = launchingCategories()[category]
+
     for _, stat in ipairs(MCV.CategoryStats) do
+        if stat.projectile and !launches then continue end
+
         panel:NumSlider(stat.label, MCV.CategoryConVarName(category, stat.key), 0, 3, 2)
         panel:ControlHelp(stat.help)
     end

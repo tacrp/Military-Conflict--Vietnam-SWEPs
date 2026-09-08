@@ -21,7 +21,15 @@ Vietnam**, so nothing has to be typed into the console. Adding one is two steps:
 category and stat, `mcv_cat_<category>_<stat>`, all defaulting to 1. Adding a stat is an entry
 in `MCV.CategoryStats` plus the one line in the weapon code that reads it through
 `SWEP:StatMult`; adding a category is an entry in `MCV.Categories`. The menu builds its
-dropdown and sliders from those two tables, so it needs nothing further.
+dropdown and sliders from those two tables, so it needs nothing further. A stat marked
+`projectile = true` is only shown for categories that hold a weapon which launches something,
+worked out from the weapons themselves.
+
+A projectile's basic numbers, explosion damage, explosion radius and launch speed, belong to
+the weapon that fires it, not to the entity: the entity has no category for a multiplier to
+reach. The entity keeps them as defaults and `LaunchProjectile` overrides and scales them, the
+way the thrown grenades and planted charges already work. A rifle grenade or underbarrel round
+answers to `MCV.CATEGORY_RIFLE_GRENADE` rather than the host rifle's category.
 
 Anything registering a convar through `MCV.RegisterConVar` must be loaded after
 `sh_convars.lua`. The autorun loader takes the shared files in name order and loads that one

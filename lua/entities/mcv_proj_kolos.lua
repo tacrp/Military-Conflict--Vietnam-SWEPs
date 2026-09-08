@@ -9,11 +9,15 @@ ENT.Model                    = "models/weapons/shells/kolos_rocket.mdl"
 ENT.TrailParticle = "kolos_missile_trail"
 
 // Game script: ExplosionDamage 125, ExplosionRadius 200 per rocket (seven leave at once)
+// what it does unless the weapon that launched it says otherwise
+ENT.ExplosionDamage = 60
+ENT.ExplosionRadius = 200
+
 function ENT:Detonate()
     local attacker = self.Attacker or self:GetOwner() or self
-    local dmg = 60
+    local dmg = self.ExplosionDamage
 
-    util.BlastDamage(self:GetInflictor(), attacker, self:GetPos(), 200, dmg)
+    util.BlastDamage(self:GetInflictor(), attacker, self:GetPos(), self.ExplosionRadius, dmg)
     self:FireBullets({
         Attacker = attacker,
         Damage = dmg,

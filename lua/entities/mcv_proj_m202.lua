@@ -25,12 +25,16 @@ ENT.Detonated = false
 ENT.DieTime = 0
 ENT.BurnTime = 3
 
+// what it does unless the weapon that launched it says otherwise
+ENT.ExplosionDamage = 100
+ENT.ExplosionRadius = 70
+
 function ENT:Detonate()
     local attacker = self.Attacker or self:GetOwner() or self
     local mult = 1
-    local dmg = 100
+    local dmg = self.ExplosionDamage
 
-    util.BlastDamage(self:GetInflictor(), attacker, self:GetPos(), 70, dmg * mult)
+    util.BlastDamage(self:GetInflictor(), attacker, self:GetPos(), self.ExplosionRadius, dmg * mult)
     self:FireBullets({
         Attacker = attacker,
         Damage = dmg * mult,

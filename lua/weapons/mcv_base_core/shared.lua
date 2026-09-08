@@ -19,8 +19,8 @@ SWEP.WorldModel = "models/weapons/mcv/w_sks.mdl"
 
 // The multiplier the server has set for this weapon's category and a given stat
 // (mcv/shared/sh_categories.lua), 1 unless someone has turned a dial.
-function SWEP:StatMult(stat)
-    return MCV.CategoryMult(self.SubCategory, stat)
+function SWEP:StatMult(stat, category)
+    return MCV.CategoryMult(category or self.SubCategory, stat)
 end
 
 SWEP.BodyGroups = ""

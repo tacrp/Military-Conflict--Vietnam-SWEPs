@@ -149,8 +149,8 @@ function SWEP:Plant()
 end
 
 function SWEP:ConfigurePlaced(ent)
-    ent.ExplosionDamage = self.ExplosionDamage
-    ent.ExplosionRadius = self.ExplosionRadius
+    ent.ExplosionDamage = self.ExplosionDamage * self:StatMult("explosion_damage")
+    ent.ExplosionRadius = self.ExplosionRadius * self:StatMult("explosion_radius")
     ent.Attacker = self:GetOwner()
     ent.Inflictor = self
     ent.Model = self.PlacedModel or self.WorldModel

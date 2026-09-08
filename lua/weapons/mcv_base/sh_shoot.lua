@@ -544,6 +544,18 @@ function SWEP:LaunchProjectile(secondary, seed)
     local rocket = ents.Create(ent)
     if !IsValid(rocket) then return end
 
+    // The weapon owns the blast: its own numbers where it has them, the projectile's own as
+    // the fallback, and the category multipliers over the top. A rifle grenade and an
+    // underbarrel round answer to their own category rather than the rifle carrying them.
+    local category = secondary and MCV.CATEGORY_RIFLE_GRENADE or nil
+    local dmg = (self.ExplosionDamage or 0) > 0 and self.ExplosionDamage or rocket.ExplosionDamage
+    local radius = (self.ExplosionRadius or 0) > 0 and self.ExplosionRadius or rocket.ExplosionRadius
+
+    if dmg then rocket.ExplosionDamage = dmg * self:StatMult("explosion_damage", category) end
+    if radius then rocket.ExplosionRadius = radius * self:StatMult("explosion_radius", category) end
+
+    force = force * self:StatMult("projectile_speed", category)
+
     rocket:SetPos(src)
     rocket:SetOwner(owner)
     rocket.Inflictor = self

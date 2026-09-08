@@ -19,12 +19,16 @@ ENT.TrailParticle = "vietnam_weaponeffect_ubgrenade"
 
 ENT.Delay = 0
 
+// what it does unless the weapon that launched it says otherwise
+ENT.ExplosionDamage = 100
+ENT.ExplosionRadius = 300
+
 function ENT:Detonate()
     local attacker = self.Attacker or self:GetOwner() or self
     local mult = 1
-    local dmg = 100
+    local dmg = self.ExplosionDamage
 
-    util.BlastDamage(self:GetInflictor(), attacker, self:GetPos(), 300, dmg * mult)
+    util.BlastDamage(self:GetInflictor(), attacker, self:GetPos(), self.ExplosionRadius, dmg * mult)
     self:FireBullets({
         Attacker = attacker,
         Damage = dmg * mult,

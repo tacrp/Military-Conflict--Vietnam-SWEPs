@@ -12,6 +12,11 @@
 
 MCV = MCV or {}
 
+// A rifle grenade and an underbarrel round are their own category, not the host rifle's: the
+// rifles that carry one sit across five categories and it is the same grenade out of any of
+// them. The launchers that fire on the primary trigger keep their own category.
+MCV.CATEGORY_RIFLE_GRENADE = "Rifle Grenades"
+
 // the order the menu lists them in
 MCV.Categories = {
     "Pistols", "Machine Pistols", "Revolvers",
@@ -19,6 +24,7 @@ MCV.Categories = {
     "Bolt-Action Rifles", "Sniper Rifles", "Shotguns", "Light-Machine Guns",
     "Anti-Armor", "Explosives", "Grenades", "Flamethrowers",
     "Bows", "Melee", "Equipment",
+    MCV.CATEGORY_RIFLE_GRENADE,
 }
 
 MCV.CategoryStats = {
@@ -32,6 +38,12 @@ MCV.CategoryStats = {
      help = "How hard a shot kicks the view."},
     {key = "firerate", label = "Fire rate",
      help = "Rounds a minute. Does not touch anything paced by its own animation, a bolt or a pump."},
+    {key = "explosion_damage", projectile = true, label = "Explosion damage",
+     help = "What a blast takes off at its centre. Rockets, grenades and charges alike."},
+    {key = "explosion_radius", projectile = true, label = "Explosion radius",
+     help = "How far the blast reaches."},
+    {key = "projectile_speed", projectile = true, label = "Projectile speed",
+     help = "How fast a rocket, grenade or bolt leaves the weapon."},
 }
 
 // mcv_cat_<category>_<stat>: "Light-Machine Guns" damage is mcv_cat_light_machine_guns_damage

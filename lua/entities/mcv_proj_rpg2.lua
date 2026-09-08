@@ -20,12 +20,16 @@ ENT.TrailParticle = "rpg_missile_trail"
 
 ENT.Delay = 0
 
+// what it does unless the weapon that launched it says otherwise
+ENT.ExplosionDamage = 105
+ENT.ExplosionRadius = 512
+
 function ENT:Detonate()
     local attacker = self.Attacker or self:GetOwner() or self
     local mult = 1
-    local dmg = 105
+    local dmg = self.ExplosionDamage
 
-    util.BlastDamage(self:GetInflictor(), attacker, self:GetPos(), 512, dmg * mult)
+    util.BlastDamage(self:GetInflictor(), attacker, self:GetPos(), self.ExplosionRadius, dmg * mult)
     self:FireBullets({
         Attacker = attacker,
         Damage = dmg * mult,
