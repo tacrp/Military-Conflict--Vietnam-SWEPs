@@ -95,6 +95,14 @@ end
 // Attacks
 // ---------------------------------------------------------------------------------------
 
+// Seconds between one attack and the next. A melee weapon's cadence is its rate: the
+// animations are as long as they are, and waiting on them made even a quick knife feel slow.
+function SWEP:SwingDelay(rate)
+    rate = math.max((rate or self.SlashRate or 150) * self:StatMult("firerate"), 1)
+
+    return 60 / rate
+end
+
 function SWEP:Slash()
     local owner = self:GetOwner()
     self.SlashCount = (self.SlashCount or 0) + 1
@@ -104,7 +112,7 @@ function SWEP:Slash()
     local seq = tr.Hit and self:PickSequence(self.SequencesSlash, self.SlashCount) or self:PickSequence(self.SequencesMiss, self.SlashCount)
     seq = seq or self:PickSequence(self.SequencesSlash, self.SlashCount)
 
-    local t = seq and self:PlaySequence(seq, 1, true) or 0.5
+    local t = seq and self:PlaySequence(seq, 1, false) or 0.5
     owner:DoAnimationEvent(self.ShootGesture)
 
     if self.SoundSwing != "" then self:EmitSound(self.SoundSwing) end
@@ -116,7 +124,7 @@ function SWEP:Slash()
         end, "mcv_melee_hit")
     end
 
-    self:SetNextPrimaryFire(CurTime() + math.max(60 / self.SlashRate, t * 0.7))
+    self:SetNextPrimaryFire(CurTime() + self:SwingDelay(self.SlashRate))
 end
 
 function SWEP:Stab()
@@ -124,7 +132,7 @@ function SWEP:Stab()
     local seq = self:PickSequence(self.SequencesStab)
     if !seq then return self:Slash() end
 
-    local t = self:PlaySequence(seq, 1, true) or 0.6
+    local t = self:PlaySequence(seq, 1, false) or 0.6
     owner:DoAnimationEvent(self.ShootGesture)
 
     self:SetTimer(math.min(self.StabHitDelay, t), function()
@@ -132,8 +140,9 @@ function SWEP:Stab()
         self:MeleeHit(self.MeleeRangeAlt, self:GetStabDamage(), true)
     end, "mcv_melee_hit")
 
-    self:SetNextPrimaryFire(CurTime() + t)
-    self:SetNextSecondaryFire(CurTime() + t)
+    local delay = self:SwingDelay(self.StabRate)
+    self:SetNextPrimaryFire(CurTime() + delay)
+    self:SetNextSecondaryFire(CurTime() + delay)
 end
 
 // Sprint + attack: wind up, run with the blade forward, hit whatever comes in reach.
@@ -156,7 +165,7 @@ function SWEP:ChargeAttack()
     self:SetActionState(STATE_IDLE)
 
     local seq = self:PickSequence(self.SequencesChargeAttack)
-    local t = seq and self:PlaySequence(seq, 1, true) or 0.6
+    local t = seq and self:PlaySequence(seq, 1, false) or 0.6
     owner:DoAnimationEvent(self.ChargeGesture)
 
     self:SetTimer(math.min(0.1, t), function()
@@ -164,8 +173,9 @@ function SWEP:ChargeAttack()
         self:MeleeHit(self.MeleeRangeAlt, self:GetStabDamage() * self.ChargeDamageMultiplier, true)
     end, "mcv_melee_hit")
 
-    self:SetNextPrimaryFire(CurTime() + t)
-    self:SetNextSecondaryFire(CurTime() + t)
+    local delay = self:SwingDelay(self.StabRate)
+    self:SetNextPrimaryFire(CurTime() + delay)
+    self:SetNextSecondaryFire(CurTime() + delay)
 end
 
 function SWEP:EndCharge()

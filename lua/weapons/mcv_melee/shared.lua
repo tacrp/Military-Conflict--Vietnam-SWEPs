@@ -24,6 +24,7 @@ SWEP.ChargeDamageMultiplier = 2
 SWEP.MeleeHullSize = 12
 
 SWEP.SlashRate = 150 // swings per minute
+SWEP.StabRate = nil  // stabs and charge hits per minute; the swing rate when it is not set
 SWEP.HitDelay = 0.12 // seconds into the swing animation when the blade connects
 SWEP.StabHitDelay = 0.2
 
