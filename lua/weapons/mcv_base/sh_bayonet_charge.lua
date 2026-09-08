@@ -43,6 +43,9 @@ function SWEP:StartBayonetCharge()
 
     local t = self:PlaySequence(self.SequenceBayonetChargeStart, 1, true) or 0.4
 
+    // the thrust waits for the wind-up to finish, however long this model's is
+    self.BayonetChargeReady = CurTime() + t
+
     self:SetTimer(t, function()
         if !IsValid(self) or self:GetActionState() != STATE_CHARGE then return end
         if self:HasSequence(self.SequenceBayonetChargeLoop) then
@@ -53,6 +56,7 @@ end
 
 function SWEP:BayonetChargeAttack()
     self:SetActionState(STATE_IDLE)
+    self.BayonetChargeReady = nil
 
     local seq
     for _, s in ipairs(self.SequencesBayonetChargeAttack) do
@@ -74,8 +78,10 @@ function SWEP:BayonetChargeAttack()
     self:SetNextSecondaryFire(CurTime() + t)
 end
 
+// Only for a charge abandoned rather than finished: the blade gone, or a reload over the top.
 function SWEP:EndBayonetCharge()
     self:SetActionState(STATE_IDLE)
+    self.BayonetChargeReady = nil
     self:SetNextIdle(CurTime())
     self:SetNextPrimaryFire(CurTime() + 0.3)
 end
@@ -88,25 +94,32 @@ function SWEP:IdleSequence()
 end
 
 function SWEP:Think_BayonetCharge()
-    if self:GetActionState() != STATE_CHARGE then return end
+    if !self:IsBayonetCharging() then return end
 
     local owner = self:GetOwner()
 
-    // the charge is over the moment anything holding it up stops being true: the trigger, the
-    // sprint, the bayonet itself (dropped, or taken off mid-run), or a reload started over it
-    if !owner:KeyDown(IN_ATTACK) or !self:GetIsSprinting() or !self:GetBayonet()
-       or self:GetReloading() then
+    // Losing the blade, or starting a reload over the top, is the one way out with no thrust:
+    // there is nothing left to stab with, or both hands are busy.
+    if !self:GetBayonet() or self:GetReloading() then
         self:EndBayonetCharge()
         return
     end
 
-    if CurTime() < self:GetActionStart() + self.BayonetChargeWindup then return end
+    // the wind-up plays out first, whatever else happens over it
+    if CurTime() < (self.BayonetChargeReady or self:GetActionStart() + self.BayonetChargeWindup) then
+        return
+    end
 
+    // Running the blade into someone thrusts on the spot. Otherwise the thrust is what ends the
+    // charge: the trigger coming up, the sprint dropping, or the run going on long enough. The
+    // wind-up always resolves into the stab rather than sliding back to the idle, so a charge
+    // that finds nobody still finishes the move.
     local tr = self:BashTrace(self.BayonetRange)
 
-    if tr.Hit and IsValid(tr.Entity) then
+    if (tr.Hit and IsValid(tr.Entity))
+       or !owner:KeyDown(IN_ATTACK)
+       or !self:GetIsSprinting()
+       or CurTime() > self:GetActionStart() + self.BayonetChargeMaxTime then
         self:BayonetChargeAttack()
-    elseif CurTime() > self:GetActionStart() + self.BayonetChargeMaxTime then
-        self:EndBayonetCharge()
     end
 end
