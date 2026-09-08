@@ -1,5 +1,12 @@
 import re
 
+# what the game's firing tiers and third person foley become in GMod (see the note below)
+LEVEL_OVERRIDES = {
+    75: 100,   # the near report
+    94: 125,   # the distant one
+    60: 80,    # foley meant for the people around the player
+}
+
 # Mapping for soundlevel to numerical level
 soundlevel_mapping = {
     'SNDLVL_NONE': 0,
@@ -138,6 +145,12 @@ def process_entries(entries, prefix, path_prefix):
             except (ValueError, TypeError):
                 entry['level'] = 75
         entry.pop('soundlevel', None)
+
+        # GMod attenuates a soundlevel far more steeply than the game does, so the mix that
+        # came out of the game's own scripts put a rifle shot out of earshot within a few
+        # metres. The firing tiers and the third person foley move up to suit; everything else
+        # (melee, explosions, the first person foley riding the viewmodel) keeps its number.
+        entry['level'] = LEVEL_OVERRIDES.get(entry['level'], entry['level'])
 
         # Process volume
         volume = entry.get('volume', '1.0')

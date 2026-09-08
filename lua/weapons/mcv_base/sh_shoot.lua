@@ -428,9 +428,9 @@ function SWEP:AttackEffects()
     end
 
     if fm == MCV.FIREMODE_VOLLEY and self:Clip1() > 1 then
-        self:EmitSound(self.SoundDoubleShot, nil, nil, nil, CHAN_WEAPON)
+        self:EmitShotSound(self.SoundDoubleShot)
     else
-        self:EmitSound(self.SoundSingleShot, nil, nil, nil, CHAN_WEAPON)
+        self:EmitShotSound(self.SoundSingleShot)
     end
 
     local clip_percentage = self:Clip1() / self.Primary.ClipSize
@@ -440,6 +440,68 @@ function SWEP:AttackEffects()
     end
 
     owner:SetVelocity(self:GetAimVector() * -self.RecoilPushbackValue)
+end
+
+// The game records every weapon twice: the report from where the shot is fired, and the same
+// shot heard from a long way off. The second recording is named for the first with "Distant" on
+// the end, and 192 of the 199 weapons have one. Worked out once per sound name rather than
+// written into every weapon file, and remembered so the lookup happens once.
+local distant_of = {}
+
+local function distantShot(near)
+    local found = distant_of[near]
+
+    if found == nil then
+        local name = near .. "Distant"
+        found = (!sound.GetProperties or sound.GetProperties(name) != nil) and name or false
+        distant_of[near] = found
+    end
+
+    return found or nil
+end
+
+// Units past which a shot reaches a listener as its distant report rather than its near one.
+SWEP.DistantShotDistance = 1600
+
+function SWEP:EmitShotSound(name)
+    if (name or "") == "" then return end
+
+    // The shooter's own report, played on the client that predicted the shot so it lands with
+    // it. The server leaves the owner out of both filters below.
+    if CLIENT then
+        self:EmitSound(name, nil, nil, nil, CHAN_WEAPON)
+        return
+    end
+
+    local far = distantShot(name)
+
+    if !far then
+        self:EmitSound(name, nil, nil, nil, CHAN_WEAPON)
+        return
+    end
+
+    local owner = self:GetOwner()
+    local pos = self:GetPos()
+    local cutoff = self.DistantShotDistance * self.DistantShotDistance
+    local near_filter, far_filter = RecipientFilter(), RecipientFilter()
+
+    for _, ply in ipairs(player.GetAll()) do
+        if ply == owner then continue end
+
+        if ply:GetPos():DistToSqr(pos) > cutoff then
+            far_filter:AddPlayer(ply)
+        else
+            near_filter:AddPlayer(ply)
+        end
+    end
+
+    if near_filter:GetCount() > 0 then
+        self:EmitSound(name, nil, nil, nil, CHAN_WEAPON, 0, 0, near_filter)
+    end
+
+    if far_filter:GetCount() > 0 then
+        self:EmitSound(far, nil, nil, nil, CHAN_WEAPON, 0, 0, far_filter)
+    end
 end
 
 // Rounds per minute for the firemode in hand. A revolver fans and pulls double action at

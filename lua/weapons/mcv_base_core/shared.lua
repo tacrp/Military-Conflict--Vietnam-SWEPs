@@ -24,15 +24,23 @@ SWEP.WorldModel = "models/weapons/mcv/w_sks.mdl"
 function SWEP:EmitThirdPersonSound(name)
     if CLIENT or !name or name == "" then return end
 
-    local filter = RecipientFilter()
-    filter:AddPVS(self:GetPos())
-
+    // Out of the player rather than the weapon. A carried weapon is not where the player is as
+    // far as sound is concerned, and this was going out from wherever it thought it was.
     local owner = self:GetOwner()
+    local from = IsValid(owner) and owner or self
+
+    local filter = RecipientFilter()
+    filter:AddPVS(from:GetPos())
+
     if IsValid(owner) and owner:IsPlayer() then
         filter:RemovePlayer(owner)
     end
 
-    self:EmitSound(name, 75, 100, 1, CHAN_ITEM, 0, 0, filter)
+    if filter:GetCount() == 0 then return end
+
+    // no level, pitch, volume or channel of our own: the soundscript carries all four, and
+    // anything passed here would override it
+    from:EmitSound(name, nil, nil, nil, nil, 0, 0, filter)
 end
 
 function SWEP:StatMult(stat, category)
