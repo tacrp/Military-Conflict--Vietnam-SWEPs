@@ -97,5 +97,8 @@ function SWEP:GetControlHints()
         table.insert(h, {"+use", "Bipod (at cover)"})
     end
     table.insert(h, {"+use +attack", self.HasBayonet and "Bash / stab" or "Bash"})
+    if self.HasBayonet and self:GetBayonet() and self:CanBayonetCharge() then
+        table.insert(h, {"+speed +attack", "Charge"})
+    end
     return h
 end

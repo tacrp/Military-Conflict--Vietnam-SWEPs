@@ -42,6 +42,7 @@ function SWEP:ThinkWeapon()
     self:Think_Sights()
     self:Think_Reload()
     self:Think_Bipod()
+    self:Think_BayonetCharge()
     self:Think_WorldBodygroups()
 
     // runaway burst: the remaining rounds go out on their own, trigger or not

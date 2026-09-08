@@ -1,58 +1,81 @@
-function SWEP:Bash()
-    local owner = self:GetOwner()
+local BASH_HULL = 32
 
-    if self:GetBayonet() then
-        self:PlayAnimation(ACT_VM_HITLEFT, 1, true)
+// The two swings the game animates for a fixed bayonet: a butt-stroke across and a slash back.
+// Which one comes out is a coin toss, drawn from a seed both realms share so the viewmodel the
+// player sees and the timing the server keeps agree on it.
+SWEP.SequencesBayonetSwing = {"bash_bayonet", "slash_bayonet"}
+
+function SWEP:BayonetSwing()
+    local have = {}
+    for _, s in ipairs(self.SequencesBayonetSwing) do
+        if self:HasSequence(s) then table.insert(have, s) end
+    end
+    if #have == 0 then return nil end
+
+    local i = math.floor(util.SharedRandom("mcv_bayonet_swing", 1, #have + 1, CurTime()))
+    return have[math.Clamp(i, 1, #have)]
+end
+
+function SWEP:Bash()
+    local bayonet = self:GetBayonet()
+
+    if bayonet then
+        local seq = self:BayonetSwing()
+        if seq then
+            self:PlaySequence(seq, 1, true)
+        else
+            self:PlayAnimation(ACT_VM_HITLEFT, 1, true)   // models with only the one swing
+        end
     else
         self:PlayAnimation(ACT_VM_HITCENTER, 1, true)
     end
 
+    self:GetOwner():DoAnimationEvent(self.BashGesture)
+    self:SetIronsight(false)
+
+    self:BashStrike(bayonet and self.BayonetRange or self.BashRange,
+                    bayonet and self.BayonetDamage or self.BashDamage)
+end
+
+// Where a bash reaches. Its own function because the bayonet charge asks the same question
+// every tick to decide whether it has run into someone yet.
+function SWEP:BashTrace(range)
+    local owner = self:GetOwner()
     local dir = self:GetAimVector()
-
-    local dim = 32
-    local pos = owner:GetShootPos() - dir * (dim * 1.732)
-    local range = self.BashRange
-
-    if self:GetBayonet() then
-        range = self.BayonetRange
-    end
+    local pos = owner:GetShootPos() - dir * (BASH_HULL * 1.732)
 
     local tr = util.TraceHull({
         start = pos,
         endpos = pos + dir * range,
         filter = {owner},
         mask = MASK_SHOT_HULL,
-        mins = Vector(-dim, -dim, -dim),
-        maxs = Vector(dim, dim, dim)
+        mins = Vector(-BASH_HULL, -BASH_HULL, -BASH_HULL),
+        maxs = Vector(BASH_HULL, BASH_HULL, BASH_HULL)
     })
 
-    local dmginfo = DamageInfo()
-    if self:GetBayonet() then
-        dmginfo:SetDamage(self.BayonetDamage)
-        dmginfo:SetDamageForce(dir * self.BayonetDamage * 500)
-        dmginfo:SetDamageType(DMG_CLUB)
-    else
-        dmginfo:SetDamage(self.BashDamage)
-        dmginfo:SetDamageForce(dir * self.BashDamage * 500)
-        dmginfo:SetDamageType(DMG_CLUB)
-    end
-    dmginfo:SetDamagePosition(tr.HitPos)
-    if dmginfo:GetDamageType() == DMG_GENERIC and engine.ActiveGamemode() == "terrortown" then
-        dmginfo:SetDamageType(DMG_CLUB) -- use CLUB so TTT can assign DNA (it does not leave DNA on generic damage)
-    end
+    return tr, pos, dir
+end
 
+// The damage and the impact of a bash, given its reach. Split from the swing so the bayonet
+// charge lands the same hit with its own reach and its own damage.
+function SWEP:BashStrike(range, damage)
+    local owner = self:GetOwner()
+    local tr, pos, dir = self:BashTrace(range)
+
+    local dmginfo = DamageInfo()
+    dmginfo:SetDamage(damage)
+    dmginfo:SetDamageForce(dir * damage * 500)
+    // CLUB rather than GENERIC so TTT can assign DNA; it leaves none on generic damage
+    dmginfo:SetDamageType(DMG_CLUB)
+    dmginfo:SetDamagePosition(tr.HitPos)
     dmginfo:SetAttacker(owner)
     dmginfo:SetInflictor(self)
 
-    self:GetOwner():DoAnimationEvent(self.BashGesture)
-
-    self:SetIronsight(false)
-
     self:FireBullets({
-        Attacker = self:GetOwner(),
+        Attacker = owner,
         Damage = 0,
         Force = 0,
-        Distance = range + (dim * 1.5),
+        Distance = range + (BASH_HULL * 1.5),
         HullSize = 0,
         Tracer = 0,
         Dir = (tr.HitPos - pos):GetNormalized(),
@@ -65,21 +88,16 @@ function SWEP:Bash()
 
     owner:ViewPunch(Angle(5, -5, 0))
 
-    if IsValid(tr.Entity) and (tr.Entity:IsNPC() or tr.Entity:IsPlayer() or tr.Entity:IsNextBot() or tr.Entity:IsRagdoll()) then
-        if self:GetBayonet() then
-            self:EmitSound("MCV_Weapon_AK47_Bayonet.ThrustStab")
-        else
-            self:EmitSound("MCV_Weapon_Fists.PowerPunch")
-        end
-    else
-        if tr.Hit then
-            if self:GetBayonet() then
-                self:EmitSound("MCV_Weapon_AK47_Bayonet.ThrustHit")
-            else
-                self:EmitSound("MCV_Weapon_Fists.PowerPunchWall")
-            end
-        end
+    local bayonet = self:GetBayonet()
+    local ent = tr.Entity
+
+    if IsValid(ent) and (ent:IsNPC() or ent:IsPlayer() or ent:IsNextBot() or ent:IsRagdoll()) then
+        self:EmitSound(bayonet and "MCV_Weapon_AK47_Bayonet.ThrustStab" or "MCV_Weapon_Fists.PowerPunch")
+    elseif tr.Hit then
+        self:EmitSound(bayonet and "MCV_Weapon_AK47_Bayonet.ThrustHit" or "MCV_Weapon_Fists.PowerPunchWall")
     end
+
+    return tr
 end
 
 // The player has to carry a bayonet (one of the bayonet melee weapons, IsBayonet) to fix one
