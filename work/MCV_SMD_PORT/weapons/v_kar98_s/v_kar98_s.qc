@@ -788,7 +788,6 @@ $sequence "boltpull" {
 	{ event 5004 16 "MCV_Weapon_Foley_kar98_Reload.MetalEnd" }
 	addlayer "walklayer"
 	addlayer "walklayerironsight"
-	addlayer "runlayer"
 	addlayer "boltpull_pose"
 	node "0"
 }

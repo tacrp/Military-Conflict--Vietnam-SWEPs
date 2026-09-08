@@ -24,7 +24,7 @@ $attachment "eject" "Base" 0 0.4 1 rotate 0 90 0
 
 $cbox 0 0 0 0 0 0
 
-$bbox -142.17 -14.357 -101.012 28.701 29.569 0
+$bbox -96 -96 -96 96 96 96
 
 $definebone "root" "" 0 7.450089 -27.509027 0 0 0 0 0 0 0 0 0
 $definebone "pelvis" "root" -0.000002 0 0 -89.790623 -89.997175 89.997175 0 0 0 0 0 0
@@ -639,7 +639,6 @@ $sequence "boltpull" {
 	{ event AE_WPN_SET_POSEPARAM 10 "hammerpos 0" }
 	addlayer "walklayer"
 	addlayer "walklayerironsight"
-	addlayer "runlayer"
 	addlayer "BulletCounter"
 	addlayer "Hammerpos"
 	addlayer "boltpull_pose"

@@ -747,7 +747,6 @@ $sequence "boltpull" {
 	{ event AE_WPN_SET_POSEPARAM 9 "hammerpos 0" }
 	addlayer "walklayer"
 	addlayer "walklayerironsight"
-	addlayer "runlayer"
 	addlayer "boltpull_pose"
 	node "0"
 }

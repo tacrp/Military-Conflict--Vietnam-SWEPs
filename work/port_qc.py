@@ -1106,6 +1106,27 @@ def step_snap_gate_reload(qc, ctx):
         ctx.note("snap on %d reload sequence(s): the cylinder does not blend between chambers" % n)
 
 
+# Working a bolt takes the support hand off the fore-end and both hands off the sprint, so the
+# run layer has no business swinging the gun through it. The walk layers stay: a player can walk
+# a bolt closed, and does. The pump shotguns never carried a run layer here to begin with.
+CYCLE_ACTS = ("ACT_VM_RELOAD_INSERT_PULL",)
+
+
+def step_cycle_no_sprint(qc, ctx):
+    """No run layer on a bolt cycle.
+
+    Runs after step_pose_split, which re-adds the idle's movement layers to every sequence it
+    rebuilds and so puts back anything an earlier step took off."""
+    n = 0
+    for b in qc.blocks("sequence"):
+        if b.activity() not in CYCLE_ACTS or not b.has('addlayer "runlayer"'):
+            continue
+        b.remove(lambda l: l == 'addlayer "runlayer"')
+        n += 1
+    if n:
+        ctx.note("%d bolt cycle sequence(s) no longer take the sprint layer" % n)
+
+
 def step_snap_draws(qc, ctx):
     """Throwables: the draw after a throw blended from the throw's end pose (hand out, empty)
     into the draw's first frame over the old sequence's fade-out, so the next grenade slid back
@@ -2120,6 +2141,7 @@ def port_one(args, og_dir):
     step_snap_idles(qc, ctx)
     step_da_start_fadein(qc, ctx)    # after the pose split, which writes its own fade-in
     step_snap_gate_reload(qc, ctx)
+    step_cycle_no_sprint(qc, ctx)
     step_tidy(qc, ctx)
     step_validate(qc, ctx)
 

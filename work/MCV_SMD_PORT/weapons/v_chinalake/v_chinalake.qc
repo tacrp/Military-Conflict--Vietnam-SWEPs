@@ -24,7 +24,7 @@ $attachment "eject" "Base" 1 0.4 0.5 rotate -45 90 0
 
 $cbox 0 0 0 0 0 0
 
-$bbox -38.894 -19.984 -27.51 44.512 25.991 10.336
+$bbox -96 -96 -96 96 96 96
 
 $definebone "Shell" "" -3.473403 12.16658 -18.451651 0 89.999989 0 0 0 0 0 0 0
 $definebone "ShellTip" "Shell" -0.89213 0 0 0 0 0 0 0 0 0 0 0
@@ -507,7 +507,6 @@ $sequence "pump" {
 	{ event AE_CLIENT_EJECT_BRASS 4 "eject" }
 	addlayer "walklayer"
 	addlayer "walklayerironsight"
-	addlayer "runlayer"
 	addlayer "pump_pose"
 	node "0"
 }

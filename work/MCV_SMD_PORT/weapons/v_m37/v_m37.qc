@@ -42,7 +42,7 @@ $attachment "eject" "Base" 2.2 -0.3 -1.2 rotate 90 90 0
 
 $cbox 0 0 0 0 0 0
 
-$bbox -15.903 -26.733 -29.296 60.424 35.226 5.432
+$bbox -96 -96 -96 96 96 96
 
 $definebone "root" "" 0 7.450089 -27.509027 0 0 0 0 0 0 0 0 0
 $definebone "pelvis" "root" -0.000002 0 0 -89.790336 -89.996943 89.996943 0 0 0 0 0 0
@@ -574,7 +574,6 @@ $sequence "pump" {
 	{ event AE_WPN_SET_POSEPARAM 2 "hammerpos 1" }
 	addlayer "walklayer"
 	addlayer "walklayerironsight"
-	addlayer "runlayer"
 	addlayer "pump_pose"
 	node "0"
 }

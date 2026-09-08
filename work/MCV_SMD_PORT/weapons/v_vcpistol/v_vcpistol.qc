@@ -706,7 +706,6 @@ $sequence "boltpull" {
 	{ event AE_WPN_CLIP_TO_POSEPARAM 55 "ammo_fraction" }
 	addlayer "walklayer"
 	addlayer "walklayerironsight"
-	addlayer "runlayer"
 	addlayer "BulletCounter"
 	addlayer "boltpull_pose"
 	addlayer "boltpull_magoverride"

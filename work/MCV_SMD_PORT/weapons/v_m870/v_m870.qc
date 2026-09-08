@@ -24,7 +24,7 @@ $attachment "eject" "Base" 1.6 0.4 0.5 rotate 0 90 0
 
 $cbox 0 0 0 0 0 0
 
-$bbox -17.361 -26.733 -29.296 52.179 29.055 6.189
+$bbox -96 -96 -96 96 96 96
 
 $definebone "root" "" 0 7.450089 -27.509027 0 0 0 0 0 0 0 0 0
 $definebone "pelvis" "root" -0.000002 0 0 -89.790336 -89.996943 89.996943 0 0 0 0 0 0
@@ -485,7 +485,6 @@ $sequence "pump" {
 	{ event AE_CLIENT_EJECT_BRASS 4 "eject" }
 	addlayer "walklayer"
 	addlayer "walklayerironsight"
-	addlayer "runlayer"
 	addlayer "pump_pose"
 	node "0"
 }

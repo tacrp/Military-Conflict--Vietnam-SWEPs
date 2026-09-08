@@ -753,7 +753,6 @@ $sequence "boltpull" {
 	{ event AE_CLIENT_EJECT_BRASS 11 "eject" }
 	addlayer "walklayer"
 	addlayer "walklayerironsight"
-	addlayer "runlayer"
 	addlayer "boltpull_pose"
 	node "0"
 }

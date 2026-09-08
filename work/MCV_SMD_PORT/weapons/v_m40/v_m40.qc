@@ -27,7 +27,7 @@ $attachment "eject" "Base" 0 0.5 1.2 rotate 0 90 0
 
 $cbox 0 0 0 0 0 0
 
-$bbox -42.127 -24.961 -33.331 58.248 33.924 8.118
+$bbox -96 -96 -96 96 96 96
 
 $definebone "root" "" 0 7.450089 -27.509027 0 0 0 0 0 0 0 0 0
 $definebone "pelvis" "root" -0.000002 0 0 -89.790623 -89.997175 89.997175 0 0 0 0 0 0
@@ -595,7 +595,6 @@ $sequence "boltpull" {
 	{ event AE_CLIENT_EJECT_BRASS 10 "eject" }
 	addlayer "walklayer"
 	addlayer "walklayerironsight"
-	addlayer "runlayer"
 	addlayer "boltpull_pose"
 	node "0"
 }
