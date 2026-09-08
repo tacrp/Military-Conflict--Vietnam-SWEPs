@@ -47,6 +47,11 @@ SWEP.Primary.ClipSize = -1
 SWEP.Primary.DefaultClip = 1
 SWEP.Primary.Automatic = false
 
+// A fuse burning in the player's own hand, between lighting the charge and throwing it. The
+// viewmodel grows a flame over the same stretch (SWEP:IsLit drives both); this is what it
+// sounds like. Only the dynamite is ever held lit.
+SWEP.SoundFuseLoop = ""
+
 SWEP.RemoveWhenEmpty = true
 
 AddCSLuaFile()

@@ -32,3 +32,7 @@ SWEP.Primary.DefaultClip = 1
 SWEP.WeaponWeight = 5
 
 SWEP.PlacedAngleOffset = Angle(90, 0, 90)
+
+// The game ships one burning-fuse loop, under the C4's name, and no dynamite of its own; the
+// planted stick borrows it too (mcv_placed_dynamite)
+SWEP.SoundFuseLoop = "MCV_Weapon_C4.FuseBurningLoop"

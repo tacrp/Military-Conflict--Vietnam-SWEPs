@@ -287,9 +287,30 @@ end
 // Input
 // ---------------------------------------------------------------------------------------
 
+// The fuse in hand, following the same lit state as the viewmodel's flame. On the weapon
+// rather than the viewmodel so the people around the player hear it burning too, and it stops
+// the moment the stick leaves the hand or the weapon starts being put away.
+function SWEP:Think_Fuse()
+    // server side only: the weapon is a networked entity, so one loop from here reaches the
+    // owner as well as everyone near them, where emitting on both realms would double it up
+    if CLIENT or (self.SoundFuseLoop or "") == "" then return end
+
+    local lit = self:IsLit()
+    if lit == (self.FuseBurning or false) then return end
+    self.FuseBurning = lit
+
+    if lit then
+        self:EmitSound(self.SoundFuseLoop)
+    else
+        self:StopSound(self.SoundFuseLoop)
+    end
+end
+
 function SWEP:ThinkWeapon()
     local owner = self:GetOwner()
     local state = self:GetActionState()
+
+    self:Think_Fuse()
 
     if state == STATE_WINDUP and !owner:KeyDown(self.WindupKey or IN_ATTACK) then
         self:ThrowLit()
@@ -355,6 +376,12 @@ end
 function SWEP:OnDeploy()
     if self:GetActionState() != STATE_STAKE then
         self:SetActionState(STATE_IDLE)
+    end
+
+    // nothing is alight in a weapon just drawn, whatever the last one left behind
+    if SERVER and (self.SoundFuseLoop or "") != "" then
+        self:StopSound(self.SoundFuseLoop)
+        self.FuseBurning = false
     end
 end
 
