@@ -5,6 +5,7 @@ EFFECT.Pitch = 100
 EFFECT.Model = "models/shells/shell_57.mdl"
 
 EFFECT.AlreadyPlayedSound = false
+// seconds at rest before it fades; the player's own (mcv_shell_time), read as the case spawns
 EFFECT.ShellTime = 0.5
 EFFECT.SpawnTime = 0
 
@@ -98,16 +99,19 @@ function EFFECT:Init(data)
     phys:AddAngleVelocity(VectorRand() * 100)
     phys:AddAngleVelocity(ang:Up() * -2500 * math.Rand(0.75, 1.25))
 
-    local smoke = true
+    self.ShellTime = MCV.ShellTime()
 
-    if smoke and IsValid(mdl) then
+    if IsValid(mdl) then
+        // the puff at the ejection port belongs to the shot; the trail is the one that follows
+        // the case through the air, and the one the player can turn off
         local pcf = CreateParticleSystem(mdl, ent.EjectBrassParticle, PATTACH_POINT_FOLLOW, att)
 
         if IsValid(pcf) then
             pcf:StartEmission()
         end
 
-        local smkpcf = CreateParticleSystem(self, ent.EjectBrassTrail, PATTACH_ABSORIGIN_FOLLOW, 0)
+        local smkpcf = MCV.ShellSmoke() and
+            CreateParticleSystem(self, ent.EjectBrassTrail, PATTACH_ABSORIGIN_FOLLOW, 0) or nil
 
         if IsValid(smkpcf) then
             smkpcf:StartEmission()

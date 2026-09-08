@@ -5,16 +5,20 @@ reference for the porting pipeline; `BUGLIST.md` is the running log of what has 
 
 ## Convars
 
-Every convar the addon has must appear in the Q menu tab, **Options > Military Conflict:
-Vietnam**, so nothing has to be typed into the console. Adding one is two steps:
+Every convar the addon has must appear in the Q menu, under **Options > Military Conflict:
+Vietnam**, so nothing has to be typed into the console. There are two pages there, **Server**
+and **Client**, because the two kinds answer to different people: the server ones are replicated
+and shared by everyone playing, the client ones are that player's own. Adding one is two steps:
 
 1. Register it. Gameplay convars that both realms read go in `lua/mcv/shared/sh_convars.lua`
    through `MCV.RegisterConVar` (archived, replicated, notify) with an accessor beside it.
    A client's own preference is a `CreateClientConVar` in a file under `lua/mcv/client/`;
    pass `true` for userinfo where other players need to see the choice, as the tracer colour
-   does.
-2. Add one entry to `SETTINGS` in `lua/mcv/client/cl_settings.lua`. An entry with `choices` is
-   a dropdown, anything else a checkbox; `section` starts a heading. Give every entry a `help`
+   does. The effect preferences live together in `cl_effectsettings.lua` with an accessor each,
+   so shared files that read them (`sh_effects.lua`) never have to guess at a convar name.
+2. Add one entry to `SERVER_SETTINGS` or `CLIENT_SETTINGS` in `lua/mcv/client/cl_settings.lua`,
+   whichever page it belongs on. An entry with `choices` is a dropdown, one with `slider` a
+   number, anything else a checkbox; `section` starts a heading. Give every entry a `help`
    line saying what it does in plain words.
 
 `lua/mcv/shared/sh_categories.lua` holds the per-category stat multipliers: one convar per

@@ -100,6 +100,24 @@ function SWEP:DoMuzzleLight()
     // nothing either: the crossbow is the only one, and a gun that flashes always has one.
     if (self.MuzzleParticle or "") == "" and (self.MuzzleParticleIronsighted or "") == "" then return end
 
+    local mode = MCV.MuzzleLightMode()
+    if mode == MCV.MUZZLE_LIGHT_OFF then return end
+
+    // The cheap one: the engine's round glow, no shadows and nothing to follow the muzzle
+    // frame by frame, so it is fired and forgotten.
+    if mode == MCV.MUZZLE_LIGHT_DYNAMIC then
+        local dl = DynamicLight(self:EntIndex())
+        if dl then
+            dl.pos = self:GetTracerOrigin()
+            dl.r, dl.g, dl.b = 255, 226, 170
+            dl.brightness = self.Silencer and 1 or 3
+            dl.size = self.Silencer and 128 or 300
+            dl.decay = 3000
+            dl.dietime = CurTime() + 0.06
+        end
+        return
+    end
+
     if IsValid(self.MuzzleLight) then self.MuzzleLight:Remove() end
 
     local lamp = ProjectedTexture()

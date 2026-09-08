@@ -1,34 +1,45 @@
-// The Q menu tab: Options > Military Conflict: Vietnam.
+// The Q menu tabs: Options > Military Conflict: Vietnam > Server and > Client.
 //
-// Everything the addon can be told to do lives in SETTINGS below, so adding a convar is one
-// entry here and nothing else. A `section` entry starts a heading; an entry with `choices` is a
-// dropdown, anything else a checkbox. See CLAUDE.md.
+// Two pages, because the two kinds of convar answer to different people. The server ones are
+// replicated and shared by everyone playing, so on someone else's server they are the host's to
+// set and a client changing them is ignored. The client ones are that player's own and reach
+// nobody else, with the one exception noted on the tracer colour.
 //
-// The gameplay convars are replicated, so on a server only the host can change them and a
-// client's choice is ignored; the ones under Yours are that client's own.
+// Adding a convar is one entry in SERVER_SETTINGS or CLIENT_SETTINGS and nothing else. A
+// `section` entry starts a heading; an entry with `choices` is a dropdown, one with `slider` a
+// number, anything else a checkbox. See CLAUDE.md.
 
 MCV = MCV or {}
 
-local SETTINGS = {
-    {section = "Gameplay",
-     help = "Shared by everyone on the server. On a server other than your own these are the host's to set."},
-
+local SERVER_SETTINGS = {
     {convar = "mcv_realistic_shooting", label = "Realistic shooting",
      help = "The addon's own recoil and spread: the bullet leaves the barrel where it points, so hip fire misses because the gun is not lined up with your eye rather than through a cone. Off is the game's own numbers."},
 
     {convar = "mcv_surface_impacts", label = "The game's bullet impacts",
      help = "Impact effects per surface as the game has them. Off falls back to the engine's."},
+}
 
-    {section = "Yours",
-     help = "Your own settings. Other players see the tracer colour you pick; the rest are local."},
-
+local CLIENT_SETTINGS = {
     {convar = "mcv_tracer_color", label = "Tracer colour",
-     help = "Everyone sees your rounds in the colour you choose here.",
+     help = "The one setting here other people see: everyone watching sees your rounds in the colour you choose.",
      choices = {{"The gun's own", "0"}, {"Your player colour", "1"}, {"Your physgun colour", "2"}}},
 
     {convar = "mcv_hud_hints", label = "Control hints",
      help = "The line of controls shown when a weapon is drawn.",
      choices = {{"Off", "0"}, {"Every time a weapon is drawn", "1"}, {"The first time each weapon is drawn", "2"}}},
+
+    {section = "Effects",
+     help = "What you see of gunfire, yours and everyone else's. Turning these down costs nobody else anything."},
+
+    {convar = "mcv_muzzle_light", label = "Muzzle flash light",
+     help = "What a muzzle flash lights up around it. The projected light casts shadows and is the expensive one; the dynamic light is the engine's cheap glow.",
+     choices = {{"Full, with shadows", "2"}, {"Dynamic light", "1"}, {"Off", "0"}}},
+
+    {convar = "mcv_shell_smoke", label = "Shell smoke trail",
+     help = "The smoke trailing a hot case out of the gun. The puff at the ejection port stays either way."},
+
+    {convar = "mcv_shell_time", label = "Shells stay for", slider = {0, 60, 1},
+     help = "How long an ejected case lies where it landed before fading out, in seconds. The count starts once it stops rolling."},
 }
 
 // which category the sliders below are showing, an index into MCV.Categories
@@ -100,12 +111,8 @@ local function categoryBlock(panel, rebuild)
     end
 end
 
-local build
-
-build = function(panel)
-    panel:ClearControls()
-
-    for _, s in ipairs(SETTINGS) do
+local function controls(panel, settings)
+    for _, s in ipairs(settings) do
         if s.section then
             panel:Help(s.section)
 
@@ -127,17 +134,38 @@ build = function(panel)
                 // show what is set without firing the selection back at the convar
                 if c[2] == now then combo:SetValue(c[1]) end
             end
+        elseif s.slider then
+            panel:NumSlider(s.label, s.convar, s.slider[1], s.slider[2], s.slider[3] or 2)
         else
             panel:CheckBox(s.label, s.convar)
         end
 
         if s.help then panel:ControlHelp(s.help) end
     end
+end
 
-    categoryBlock(panel, build)
+local buildServer
+
+buildServer = function(panel)
+    panel:ClearControls()
+    panel:Help("Shared by everyone on the server. On a server other than your own these are " ..
+        "the host's to set, and changing them here does nothing.")
+
+    controls(panel, SERVER_SETTINGS)
+    categoryBlock(panel, buildServer)
+end
+
+local function buildClient(panel)
+    panel:ClearControls()
+    panel:Help("Yours alone, saved on this machine.")
+
+    controls(panel, CLIENT_SETTINGS)
 end
 
 hook.Add("PopulateToolMenu", "MCV_Settings", function()
-    spawnmenu.AddToolMenuOption("Options", "Military Conflict: Vietnam", "mcv_settings",
-        "Settings", "", "", build)
+    spawnmenu.AddToolMenuOption("Options", "Military Conflict: Vietnam", "mcv_settings_server",
+        "Server", "", "", buildServer)
+
+    spawnmenu.AddToolMenuOption("Options", "Military Conflict: Vietnam", "mcv_settings_client",
+        "Client", "", "", buildClient)
 end)
