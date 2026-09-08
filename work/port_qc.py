@@ -1023,7 +1023,7 @@ def step_counter_zero(qc, ctx):
 # crossfade past each other even though they agree on where the bolt ends up. `snap` drops the
 # outgoing sequence outright (STUDIO_SNAP; a zero `fadein` does not stop it, see
 # step_snap_draws). Per model, since it makes every animation that ends in the idle a hard cut.
-SNAP_IDLE = {"v_ptrd41", "v_vcpistol"}
+SNAP_IDLE = {"v_ptrd41", "v_vcpistol", "v_crossbow"}
 
 IDLE_ACTS = ("ACT_VM_IDLE", "ACT_VM_DEPLOY", "ACT_VM_IIDLE_M203")
 

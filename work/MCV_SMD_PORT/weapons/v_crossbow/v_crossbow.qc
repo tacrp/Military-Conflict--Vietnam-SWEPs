@@ -516,6 +516,7 @@ $sequence "idle" {
 	addlayer "runlayer"
 	addlayer "SlidePosition"
 	node "0"
+	snap
 }
 
 $sequence "SlideMovement" {
