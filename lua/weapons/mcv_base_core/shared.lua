@@ -18,6 +18,11 @@ SWEP.ViewModel = "models/weapons/mcv/v_sks.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_sks.mdl"
 
 SWEP.BodyGroups = ""
+// The same set remapped onto the world model's own bodypart order, which is not always the
+// viewmodel's (work/port_weapon.py writes it by matching the bodypart names). Without it a gun
+// that switches a part off shows it in the world: the M14 is the M21's model with the scope
+// off, and it kept the scope in third person.
+SWEP.WorldModelBodyGroups = nil
 
 SWEP.ViewModelFOV = 80
 SWEP.SightedViewModelFOV = 40

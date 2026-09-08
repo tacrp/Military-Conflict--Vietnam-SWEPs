@@ -20,6 +20,7 @@ SWEP.MovementPoseWalk = 159
 SWEP.MovementPoseSprint = 258
 SWEP.MovementPoseSighted = 159
 SWEP.BodyGroups = "10"
+SWEP.WorldModelBodyGroups = "10"
 
 SWEP.PlaceKind = "mine"
 SWEP.PlacedEntityClass = "mcv_placed_mine"

@@ -7,6 +7,24 @@
 // (cl_worldmodel.lua), so they are set on the entity, server side and networked.
 function SWEP:Think_WorldBodygroups()
     if CLIENT then return end
+
+    // the two the player changes with the weapon in hand; the rest are set once at Initialize
+    if self.HasBayonet then
+        local b = self:FindBodygroupByName("bayonet")
+        if b >= 0 then
+            local want = self:GetBayonet() and 1 or 0
+            if self:GetBodygroup(b) != want then self:SetBodygroup(b, want) end
+        end
+    end
+
+    if self.HasRifleGrenade then
+        local g = self:FindBodygroupByName("grenade")
+        if g >= 0 then
+            local want = self:GetGrenadeLauncher() and 1 or 0
+            if self:GetBodygroup(g) != want then self:SetBodygroup(g, want) end
+        end
+    end
+
     local bipod = self:FindBodygroupByName("bipod")
     if bipod >= 0 then
         local want = self:GetBipod() and 1 or 0

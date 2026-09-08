@@ -390,6 +390,14 @@ Brass ids the game added after 2024 (19 to 31) map to the nearest shell model th
   block laid over the model's bodygroup order (`"scope" "1"` = blank on the plain CAR-15 / XM177 /
   M14 early, which otherwise carried the scope body over their iron sights). Unlisted groups are 0.
   `work/fix_sight_offsets.py` applies it to existing lua files as well.
+  `SWEP.WorldModelBodyGroups` (`world_bodygroups_string`) is the same set remapped onto the
+  world model's own bodypart order, which is not always the viewmodel's: the M1 Garand's scope
+  is the fourth group on one and the third on the other. It is matched by bodypart name, since
+  both models carry the same names, and only written where something needs switching off (22
+  weapons). The weapon entity takes it at Initialize, server side so it networks, and the
+  copies drawn on a player inherit it. Without it the M14 wore the M21's scope in the world.
+  The two that change in the hand, the bayonet and the grenade launcher, are looked up on the
+  world model by name in `Think_WorldBodygroups` instead.
 * **IK baked** (`step_bake_ik`, `work/bake_ik.py`): 273 of the 278 viewmodels glue the hands
   to target bones on the gun with `$ikchain` + `ikrule ... touch` (movement and prone layers,
   the duals' reloads and draws), and Source solves it on the final blended pose, so the idle's

@@ -17,6 +17,7 @@ SWEP.ViewModel = "models/weapons/mcv/v_m1g_s.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_m1g_s.mdl"
 
 SWEP.BodyGroups = "000100"
+SWEP.WorldModelBodyGroups = "00100"
 
 SWEP.WeaponSelectIcon = NULL
 

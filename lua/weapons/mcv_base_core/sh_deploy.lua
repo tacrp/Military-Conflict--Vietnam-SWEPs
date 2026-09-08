@@ -101,4 +101,10 @@ function SWEP:Initialize()
             PrecacheParticleSystem(p)
         end
     end
+
+    // the world model's own bodygroups, on the weapon entity so they network: the dropped
+    // weapon and the copies drawn on a player both take them from here
+    if SERVER and self.WorldModelBodyGroups then
+        self:SetBodyGroups(self.WorldModelBodyGroups)
+    end
 end

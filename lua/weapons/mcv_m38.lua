@@ -18,6 +18,7 @@ SWEP.ViewModel = "models/weapons/mcv/v_m38.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_m38.mdl"
 
 SWEP.BodyGroups = "00100"
+SWEP.WorldModelBodyGroups = "0010"
 SWEP.BayonetBodygroup = 1
 SWEP.GrenadeLauncherBodygroup = 2
 SWEP.GrenadeBodygroup = 3

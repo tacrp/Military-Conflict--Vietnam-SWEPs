@@ -705,6 +705,41 @@ def bodygroups_string(qc_bodygroups, S):
     return "".join(digits)
 
 
+def mdl_bodyparts(path):
+    """[(name, option count)] of a compiled mdl, or [] when it is not there yet."""
+    import struct
+    if not os.path.isfile(path):
+        return []
+    d = open(path, "rb").read()
+    try:
+        n, idx = struct.unpack_from("<ii", d, 232)
+        out = []
+        for i in range(n):
+            o = idx + i * 16
+            szname, nummodels = struct.unpack_from("<ii", d, o)
+            out.append((d[o + szname:].split(b"\0")[0].decode("latin-1"), nummodels))
+        return out
+    except Exception:
+        return []
+
+
+def world_bodygroups_string(vm, wm, values):
+    """`values` is SWEP.BodyGroups, a digit per bodygroup of the viewmodel. The world model
+    carries the same bodyparts under the same names but not always in the same order (the M1
+    Garand's scope is the fourth group on one and the third on the other), so the string is
+    remapped by name. Empty when nothing needs switching off, which is most guns."""
+    vparts = mdl_bodyparts(os.path.join(ADDON, "models", "weapons", "mcv", vm + ".mdl"))
+    wparts = mdl_bodyparts(os.path.join(ADDON, "models", "weapons", "mcv", wm + ".mdl"))
+    if not (vparts and wparts and values):
+        return ""
+    want = {}
+    for i, (name, count) in enumerate(vparts):
+        if i < len(values) and count > 1:
+            want[name.lower()] = values[i]
+    out = "".join(want.get(name.lower(), "0") for name, _ in wparts)
+    return out if out.strip("0") else ""
+
+
 def read_existing(lua_path):
     d = {}
     if not lua_path or not os.path.isfile(lua_path):
@@ -1236,7 +1271,11 @@ def generate(script_path, args):
             A(line(k, v))
     A(line("WorldModel", fmt("models/weapons/mcv/%s.mdl" % wm)))
     A("")
-    A(line("BodyGroups", fmt(bodygroups_string(qc["bodygroups"], S)) if any(k.startswith("BodygroupData.") for k in S) else '""'))
+    bodygroups = bodygroups_string(qc["bodygroups"], S) if any(k.startswith("BodygroupData.") for k in S) else ""
+    A(line("BodyGroups", fmt(bodygroups)))
+    world_bg = world_bodygroups_string(vm, wm, bodygroups)
+    if world_bg:
+        A(line("WorldModelBodyGroups", fmt(world_bg)))
     if bayonet_bg is not None:
         A(line("BayonetBodygroup", bayonet_bg))
     if gl_bg is not None:

@@ -24,6 +24,7 @@ SWEP.AkimboPoseRecoil = true
 SWEP.WorldModel = "models/weapons/mcv/w_mk22.mdl"
 
 SWEP.BodyGroups = "01"
+SWEP.WorldModelBodyGroups = "01"
 
 // When the reload animation swaps the magazine / belt (from its events): the rounds shown
 // on the model switch from the old count to the new one here, 0 in between when it is out
