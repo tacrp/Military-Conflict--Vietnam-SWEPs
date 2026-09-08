@@ -443,9 +443,9 @@ function SWEP:DoDrawCrosshair(x, y)
         surface.DrawCircle(x, y, gap_size + 1, shadow)
         surface.DrawCircle(x, y, gap_size - 2, shadow)
     elseif (self.Spread or 0) > 0 then
-        drawshadowrect(x - (dot_size / 2), y - (dot_size / 2) + gap_size, dot_size, line_size, col)
+        drawshadowrect(x - (dot_size / 2), y + (dot_size / 4) + gap_size, dot_size, line_size, col)
 
-        drawshadowrect(x - (dot_size / 2), y - (dot_size / 2) - gap_size - line_size, dot_size, line_size, col)
+        drawshadowrect(x - (dot_size / 2), y - (dot_size / 4) - gap_size - line_size, dot_size, line_size, col)
 
         drawshadowrect(x + gap_size, y - (dot_size / 2), line_size, dot_size, col)
         drawshadowrect(x - gap_size - line_size, y - (dot_size / 2), line_size, dot_size, col)

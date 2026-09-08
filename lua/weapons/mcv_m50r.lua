@@ -14,8 +14,8 @@ SWEP.SubCategory = "Submachine Guns"
 SWEP.Caliber = ".45 ACP"
 
 SWEP.Slot = 2
-SWEP.HoldType = "smg"
-SWEP.AimHoldType = "smg"
+SWEP.HoldType = "ar2"
+SWEP.AimHoldType = "ar2"
 SWEP.SprintHoldType = "passive"
 
 SWEP.ViewModel = "models/weapons/mcv/v_reising_smg.mdl"

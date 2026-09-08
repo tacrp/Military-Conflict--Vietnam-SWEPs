@@ -33,22 +33,15 @@ MCV.Categories = {
 }
 
 MCV.CategoryStats = {
-    {key = "damage", label = "Damage",
-     help = "What a hit takes off, before the hitgroup multipliers."},
-    {key = "spread", label = "Hip spread",
-     help = "The cone from the hip. In realistic shooting it is how far the barrel wanders instead."},
-    {key = "spread_sights", label = "Aimed spread",
-     help = "The cone on the sights, and what the hip cone narrows to."},
-    {key = "recoil", label = "Recoil",
-     help = "How hard a shot kicks the view."},
+    {key = "damage", label = "Damage"},
+    {key = "spread", label = "Hip spread"},
+    {key = "spread_sights", label = "Aimed spread"},
+    {key = "recoil", label = "Recoil"},
     {key = "firerate", label = "Fire rate",
-     help = "Rounds a minute. Does not touch anything paced by its own animation, a bolt or a pump."},
-    {key = "explosion_damage", projectile = true, label = "Explosion damage",
-     help = "What a blast takes off at its centre. Rockets, grenades and charges alike."},
-    {key = "explosion_radius", projectile = true, label = "Explosion radius",
-     help = "How far the blast reaches."},
-    {key = "projectile_speed", projectile = true, label = "Projectile speed",
-     help = "How fast a rocket, grenade or bolt leaves the weapon."},
+     help = "Does not affect animation-paced weapons"},
+    {key = "explosion_damage", projectile = true, label = "Explosion damage"},
+    {key = "explosion_radius", projectile = true, label = "Explosion radius"},
+    {key = "projectile_speed", projectile = true, label = "Projectile speed"},
 }
 
 // mcv_cat_<category>_<stat>: "Light-Machine Guns" damage is mcv_cat_light_machine_guns_damage

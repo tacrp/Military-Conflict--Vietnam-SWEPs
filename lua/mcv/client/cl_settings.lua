@@ -13,33 +13,29 @@ MCV = MCV or {}
 
 local SERVER_SETTINGS = {
     {convar = "mcv_realistic_shooting", label = "Realistic shooting",
-     help = "The addon's own recoil and spread: the bullet leaves the barrel where it points, so hip fire misses because the gun is not lined up with your eye rather than through a cone. Off is the game's own numbers."},
+     help = "Alternate weapon handling schema inspired by Modern Warfare 4"},
 
     {convar = "mcv_surface_impacts", label = "The game's bullet impacts",
-     help = "Impact effects per surface as the game has them. Off falls back to the engine's."},
+     help = "Use the game's bullet impact particles"},
 }
 
 local CLIENT_SETTINGS = {
     {convar = "mcv_tracer_color", label = "Tracer colour",
-     help = "The one setting here other people see: everyone watching sees your rounds in the colour you choose.",
-     choices = {{"The gun's own", "0"}, {"Your player colour", "1"}, {"Your physgun colour", "2"}}},
+     help = "Other players see this too",
+     choices = {{"Default", "0"}, {"Player colour", "1"}, {"Weapon colour", "2"}}},
 
     {convar = "mcv_hud_hints", label = "Control hints",
-     help = "The line of controls shown when a weapon is drawn.",
-     choices = {{"Off", "0"}, {"Every time a weapon is drawn", "1"}, {"The first time each weapon is drawn", "2"}}},
+     help = "Show control hints",
+     choices = {{"Off", "0"}, {"Always", "1"}, {"First Draw", "2"}}},
 
-    {section = "Effects",
-     help = "What you see of gunfire, yours and everyone else's. Turning these down costs nobody else anything."},
+    {section = "Effects",},
 
     {convar = "mcv_muzzle_light", label = "Muzzle flash light",
-     help = "What a muzzle flash lights up around it. The projected light casts shadows and is the expensive one; the dynamic light is the engine's cheap glow.",
-     choices = {{"Full, with shadows", "2"}, {"Dynamic light", "1"}, {"Off", "0"}}},
+     choices = {{"Lamp with shadows", "2"}, {"Simple light", "1"}, {"Off", "0"}}},
 
-    {convar = "mcv_shell_smoke", label = "Shell smoke trail",
-     help = "The smoke trailing a hot case out of the gun. The puff at the ejection port stays either way."},
+    {convar = "mcv_shell_smoke", label = "Shell smoke trail"},
 
-    {convar = "mcv_shell_time", label = "Shells stay for", slider = {0, 60, 1},
-     help = "How long an ejected case lies where it landed before fading out, in seconds. The count starts once it stops rolling."},
+    {convar = "mcv_shell_time", label = "Shells stay for", slider = {0, 60, 1}},
 }
 
 // which category the sliders below are showing, an index into MCV.Categories
@@ -68,9 +64,6 @@ end
 
 local function categoryBlock(panel, rebuild)
     panel:Help("Category stats")
-    panel:ControlHelp("A multiplier per weapon category, shared by everyone on the server. " ..
-        "1 is the stat as the game has it. Pick a category, then set its stats below. " ..
-        "All reaches every weapon and multiplies with whatever its own category is set to.")
 
     local idx = math.Clamp(cv_category:GetInt(), 1, #MCV.Categories)
     local category = MCV.Categories[idx]
@@ -96,7 +89,9 @@ local function categoryBlock(panel, rebuild)
         if stat.projectile and !launches then continue end
 
         panel:NumSlider(stat.label, MCV.CategoryConVarName(category, stat.key), 0, 3, 2)
-        panel:ControlHelp(stat.help)
+        if stat.help then
+            panel:ControlHelp(stat.help)
+        end
     end
 
     local reset = panel:Button("Reset " .. category)
@@ -148,8 +143,6 @@ local buildServer
 
 buildServer = function(panel)
     panel:ClearControls()
-    panel:Help("Shared by everyone on the server. On a server other than your own these are " ..
-        "the host's to set, and changing them here does nothing.")
 
     controls(panel, SERVER_SETTINGS)
     categoryBlock(panel, buildServer)
@@ -157,7 +150,6 @@ end
 
 local function buildClient(panel)
     panel:ClearControls()
-    panel:Help("Yours alone, saved on this machine.")
 
     controls(panel, CLIENT_SETTINGS)
 end

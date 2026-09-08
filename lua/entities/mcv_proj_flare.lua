@@ -19,7 +19,7 @@ ENT.BurnTime = 25
 // is only the lens glow and showed as nothing but the dynamic light
 ENT.TrailParticle = "env_flare_us_trail"
 ENT.GroundParticle = "env_flare_us_ground"
-ENT.LightColor = Color(255, 90, 40)
+ENT.LightColor = Color(40, 255, 40)
 ENT.BounceSounds = {"MCV_Bounce.Shell"}
 
 function ENT:OnInitialize()
@@ -55,13 +55,12 @@ function ENT:OnThink()
     if CLIENT then
         local dl = DynamicLight(self:EntIndex())
         if dl then
-            local flicker = 0.85 + 0.15 * math.sin(CurTime() * 23)
             dl.pos = self:GetPos()
             dl.r, dl.g, dl.b = self.LightColor.r, self.LightColor.g, self.LightColor.b
-            dl.brightness = 3 * flicker
-            dl.decay = 1000
-            dl.size = 384 * flicker
-            dl.dietime = CurTime() + 0.1
+            dl.brightness = 3
+            dl.decay = 2048
+            dl.size = 2048
+            dl.dietime = CurTime() + 1
         end
         return
     end
