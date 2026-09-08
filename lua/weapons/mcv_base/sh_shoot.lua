@@ -14,16 +14,6 @@ function SWEP:PrimaryAttack()
         return
     end
 
-    // sprinting on the trigger with a bayonet fixed: charge, as the melee weapons do. The gun
-    // will not fire at a sprint anyway, so the input is free. Once it is up the think loop owns
-    // the weapon until it lands or the player lets go.
-    if self:IsBayonetCharging() then return end
-
-    if self:GetIsSprinting() and self:CanBayonetCharge() then
-        self:StartBayonetCharge()
-        return
-    end
-
     if self.MustBipod and !self:GetBipod() then return end
 
     if self:GetGrenadeLauncher() then
@@ -664,19 +654,16 @@ function SWEP:ChangeFiremode()
 
     // revolvers: the game has one animation per target mode. changefiremode_towestern (fan)
     // is ACT_VM_FIREMODE, _todelayed (double action) ACT_VM_IFIREMODE, _tohammer (single
-    // action) ACT_VM_FIREMODE2; the dual models have no western
+    // action) ACT_VM_DIFIREMODE; the dual models have no western
     local target = self.Firemodes[fm]
     if target == MCV.FIREMODE_FAN then
-        if self:HasSequence("changefiremode_tohammer") then
-            self:PlaySequence("changefiremode_tohammer", 1, false)
-            return
-        end
+        anim = ACT_VM_FIREMODE
         mult = 1
     elseif target == MCV.FIREMODE_DA then
         anim = ACT_VM_IFIREMODE
         mult = 1
     elseif target == MCV.FIREMODE_SA then
-        anim = ACT_VM_FIREMODE
+        anim = ACT_VM_DIFIREMODE
         mult = 1
     end
 
