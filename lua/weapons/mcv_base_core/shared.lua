@@ -32,7 +32,10 @@ function SWEP:EmitThirdPersonSound(name)
     local filter = RecipientFilter()
     filter:AddPVS(from:GetPos())
 
-    if IsValid(owner) and owner:IsPlayer() then
+    // The holder is left out because their viewmodel is already playing the first person foley,
+    // which means a player alone in a server can never hear any of this. mcv_sound_foley_self
+    // puts them back in, so it can be heard without a second player to stand next to.
+    if IsValid(owner) and owner:IsPlayer() and !(MCV.FoleyToSelf and MCV.FoleyToSelf()) then
         filter:RemovePlayer(owner)
     end
 

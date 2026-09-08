@@ -17,6 +17,9 @@ local SERVER_SETTINGS = {
 
     {convar = "mcv_surface_impacts", label = "The game's bullet impacts",
      help = "Use the game's bullet impact particles"},
+
+    {convar = "mcv_sound_foley_self", label = "Hear your own third-person foley",
+     help = "The set the people around you hear, played to you as well. Off unless you want to hear it without a second player"},
 }
 
 local CLIENT_SETTINGS = {

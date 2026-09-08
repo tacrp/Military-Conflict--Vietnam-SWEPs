@@ -32,3 +32,16 @@ MCV.RegisterConVar("mcv_realistic_shooting", "0",
 function MCV.RealisticShooting()
     return MCV.ConVars.mcv_realistic_shooting:GetBool()
 end
+
+// ------------------------------------------------------------------------------------------
+// The game's third person foley, the duller set the people around a player hear, is deliberately
+// not played to the player holding the weapon: their viewmodel's own animation events are
+// already playing the first person set, and both at once is the same sound twice. That also
+// means a player alone in a server never hears any of it. 1 plays it to them as well, which is
+// how to hear it without a second player to stand next to.
+MCV.RegisterConVar("mcv_sound_foley_self", "0",
+    "1: also play the third person weapon foley to the player holding the weapon. 0: only to everyone else.")
+
+function MCV.FoleyToSelf()
+    return MCV.ConVars.mcv_sound_foley_self:GetBool()
+end

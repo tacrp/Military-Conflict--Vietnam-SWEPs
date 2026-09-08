@@ -467,7 +467,8 @@ function SWEP:EmitShotSound(name)
     if (name or "") == "" then return end
 
     // The shooter's own report, played on the client that predicted the shot so it lands with
-    // it. The server leaves the owner out of both filters below.
+    // it, and the server leaves them out below. In singleplayer nothing is predicted and this
+    // never runs there, so the server serves them like everyone else.
     if CLIENT then
         self:EmitSound(name, nil, nil, nil, CHAN_WEAPON)
         return
@@ -485,8 +486,11 @@ function SWEP:EmitShotSound(name)
     local cutoff = self.DistantShotDistance * self.DistantShotDistance
     local near_filter, far_filter = RecipientFilter(), RecipientFilter()
 
+    // their client played it already, unless there is no prediction to have done it
+    local shooter_heard_it = !game.SinglePlayer()
+
     for _, ply in ipairs(player.GetAll()) do
-        if ply == owner then continue end
+        if ply == owner and shooter_heard_it then continue end
 
         if ply:GetPos():DistToSqr(pos) > cutoff then
             far_filter:AddPlayer(ply)
