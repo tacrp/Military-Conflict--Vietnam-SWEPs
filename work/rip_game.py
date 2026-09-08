@@ -661,7 +661,7 @@ def step_icons(args, vpk):
                     made += 1
             except Exception as e:
                 log("  %s: svg render failed: %s" % (key, e))
-    # variants no game script resolves to (sw39 / mk22, t223_40r / t223 ...) share the viewmodel of a
+    # variants no game script resolves to (sw39 / mk22 ...) share the viewmodel of a
     # weapon that did get an icon: reuse that one
     copied = 0
     vm_of = {}

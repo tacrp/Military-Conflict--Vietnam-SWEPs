@@ -35,14 +35,6 @@ shot is_t223 marker
 report is_t223
 key -attack2
 wait 0.4
-give mcv_t223_40r
-wait 1.2
-key +attack2
-wait 1.1
-shot is_t223_40r marker
-report is_t223_40r
-key -attack2
-wait 0.4
 give mcv_thompson
 wait 1.2
 key +attack2
