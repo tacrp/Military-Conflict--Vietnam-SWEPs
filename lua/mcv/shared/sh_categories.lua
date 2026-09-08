@@ -17,8 +17,13 @@ MCV = MCV or {}
 // them. The launchers that fire on the primary trigger keep their own category.
 MCV.CATEGORY_RIFLE_GRENADE = "Rifle Grenades"
 
+// Every weapon answers to this one as well as to its own category, the two multiplying
+// together, so a stat can be moved across the board without setting nineteen of them.
+MCV.CATEGORY_ALL = "All"
+
 // the order the menu lists them in
 MCV.Categories = {
+    MCV.CATEGORY_ALL,
     "Pistols", "Machine Pistols", "Revolvers",
     "Submachine Guns", "Assault Rifles", "Carbines", "Battle Rifles",
     "Bolt-Action Rifles", "Sniper Rifles", "Shotguns", "Light-Machine Guns",
@@ -56,19 +61,32 @@ function MCV.CategoryConVarName(category, stat)
 end
 
 for _, category in ipairs(MCV.Categories) do
+    local everything = category == MCV.CATEGORY_ALL
+
     for _, stat in ipairs(MCV.CategoryStats) do
         MCV.RegisterConVar(MCV.CategoryConVarName(category, stat.key), "1",
-            string.format("%s of every %s, times this. 1 is the stat as the game has it.",
-                stat.label, category))
+            everything
+                and string.format("%s of every weapon, times this, on top of whatever its own " ..
+                    "category is set to. 1 is the stat as the game has it.", stat.label)
+                or string.format("%s of every %s, times this. 1 is the stat as the game has it.",
+                    stat.label, category))
     end
 end
 
-// The multiplier in force for a category, 1 for anything unlisted (a weapon with no
-// SubCategory, or one added to a category the table does not name yet).
-function MCV.CategoryMult(category, stat)
+// A stat's multiplier as one number: the All dial times the weapon's own category. Anything
+// unlisted counts as 1, so a weapon with no SubCategory, or one in a category the table does
+// not name yet, still follows All.
+local function readMult(category, stat)
     local cv = MCV.ConVars[MCV.CategoryConVarName(category, stat)]
     if !cv then return 1 end
 
     local v = cv:GetFloat()
     return v >= 0 and v or 1
+end
+
+function MCV.CategoryMult(category, stat)
+    local mult = readMult(MCV.CATEGORY_ALL, stat)
+    if category == MCV.CATEGORY_ALL then return mult end
+
+    return mult * readMult(category, stat)
 end

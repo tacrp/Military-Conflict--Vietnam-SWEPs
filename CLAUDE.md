@@ -25,6 +25,11 @@ dropdown and sliders from those two tables, so it needs nothing further. A stat 
 `projectile = true` is only shown for categories that hold a weapon which launches something,
 worked out from the weapons themselves.
 
+`MCV.CATEGORY_ALL` is a category in that same table but not one any weapon sits in: every
+weapon reads it as well as its own, the two multiplying together, so a stat can be moved across
+the board without setting nineteen of them. `MCV.CategoryMult` folds it in, so nothing calling
+`SWEP:StatMult` has to know it exists.
+
 A projectile's basic numbers, explosion damage, explosion radius and launch speed, belong to
 the weapon that fires it, not to the entity: the entity has no category for a multiplier to
 reach. The entity keeps them as defaults and `LaunchProjectile` overrides and scales them, the

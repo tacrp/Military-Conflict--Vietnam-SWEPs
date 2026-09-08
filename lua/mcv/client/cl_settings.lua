@@ -39,7 +39,7 @@ local cv_category = CreateClientConVar("mcv_cat_menu", "1", true, false,
 // shown for those only, so a pistol's page is not padded with dials that do nothing. Read off
 // the weapons themselves rather than a list to keep, and the rifle grenades are always in.
 local function launchingCategories()
-    local out = {[MCV.CATEGORY_RIFLE_GRENADE] = true}
+    local out = {[MCV.CATEGORY_RIFLE_GRENADE] = true, [MCV.CATEGORY_ALL] = true}
 
     for _, wep in ipairs(weapons.GetList()) do
         if !wep.SubCategory then continue end
@@ -58,7 +58,8 @@ end
 local function categoryBlock(panel, rebuild)
     panel:Help("Category stats")
     panel:ControlHelp("A multiplier per weapon category, shared by everyone on the server. " ..
-        "1 is the stat as the game has it. Pick a category, then set its stats below.")
+        "1 is the stat as the game has it. Pick a category, then set its stats below. " ..
+        "All reaches every weapon and multiplies with whatever its own category is set to.")
 
     local idx = math.Clamp(cv_category:GetInt(), 1, #MCV.Categories)
     local category = MCV.Categories[idx]
