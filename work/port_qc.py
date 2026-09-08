@@ -69,6 +69,10 @@ ACT_MAP_COMMON = {
     "ACT_VM_BOLTPULL": "ACT_VM_RELOAD_INSERT_PULL",
     "ACT_VM_FIREMODE1": "ACT_VM_IFIREMODE",
     "ACT_VM_FIREMODE_DEPLOY": "ACT_VM_DFIREMODE",
+    # the revolvers' switch to single action. GMod has no ACT_VM_FIREMODE2, so the sequence was
+    # unreachable from Lua and had to be played by name; DIFIREMODE is real and unused, and
+    # DFIREMODE was taken by the deployed switch on the five bipod guns
+    "ACT_VM_FIREMODE2": "ACT_VM_DIFIREMODE",
     "ACT_VM_PRIMARYATTACK1": "ACT_VM_PRIMARYATTACK_1",
     "ACT_VM_PRIMARYATTACK2": "ACT_VM_PRIMARYATTACK_2",
     "ACT_VM_SECONDARYATTACK2": "ACT_VM_PRIMARYATTACK_3",
