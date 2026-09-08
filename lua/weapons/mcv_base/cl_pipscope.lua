@@ -146,9 +146,14 @@ function SWEP:DoRTScope()
         // the viewmodel pass; PostDrawViewModelWeapon (mcv_base/sh_vm.lua) resets it.
         render.OverrideDepthEnable(true, true)
     else
-        // Not aiming: the model's own lens material (glass with its reflections)
+        // Not aiming: glass with its reflections, the model's own unless it hasn't any
         self.RenderingRTScope = false
-        model:SetSubMaterial(self.RTScopeMaterialIndex)
+
+        if (self.ScopeIdleLensMaterial or "") != "" then
+            model:SetSubMaterial(self.RTScopeMaterialIndex, self.ScopeIdleLensMaterial)
+        else
+            model:SetSubMaterial(self.RTScopeMaterialIndex)
+        end
     end
 end
 

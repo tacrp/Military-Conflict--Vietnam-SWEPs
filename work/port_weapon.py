@@ -281,6 +281,39 @@ def ensure_reticle_vmt(base):
     return True
 
 
+def ensure_lens_vmt(base):
+    """A glass eyepiece for a model whose lens mesh carries no lens_* of its own. Copied from
+    one that has one; fix_optics_vmts writes them all from the same body."""
+    vmt = os.path.join(OPTICS_DIR, base + ".vmt")
+    if os.path.isfile(vmt):
+        return True
+    for src in sorted(glob.glob(os.path.join(OPTICS_DIR, "lens_*.vmt"))):
+        with open(src, encoding="utf-8", errors="replace") as f:
+            body = f.read()
+        if "scope_glass_diffuse" not in body:
+            continue
+        with open(vmt, "w", encoding="utf-8", newline="\n") as f:
+            f.write(body)
+        return True
+    return False
+
+
+def scope_idle_lens(vm):
+    """The material the eyepiece falls back to when not aimed, for a model whose lens mesh wears
+    a reticle instead of glass (the Vz.54 Meopta). None where the model's own will do."""
+    names = mdl_textures(vm)
+    if any(n.lower().startswith("lens_") for n in names):
+        return None
+    for n in names:
+        if not n.lower().startswith("crosshair_"):
+            continue
+        base = "lens_" + n.lower().split("_", 1)[1].rstrip("0123456789")
+        if ensure_lens_vmt(base):
+            return "models/weapons/mcv/optics/" + base
+        return None
+    return None
+
+
 def scope_info(vm, prefer=None):
     """(submaterial index of the lens, reticle material path) from the compiled model, or (None, None).
 
@@ -1433,6 +1466,11 @@ def generate(script_path, args):
     A(line("ScopeFOV2", so_fov.get("ScopeFOV2", 4)))
     if has_scope and scope_idx is not None:
         A(line("RTScopeMaterialIndex", scope_idx))
+        # a model whose lens mesh wears the reticle rather than glass has nothing to show
+        # through the eyepiece when the scope is not being looked through
+        idle_lens = scope_idle_lens(vm)
+        if idle_lens:
+            A(line("ScopeIdleLensMaterial", fmt(idle_lens)))
     if reuse("AdjustableScopes"): A(line("AdjustableScopes", reuse("AdjustableScopes")))
     if reuse("OEGScope"): A(line("OEGScope", reuse("OEGScope")))
     A("")

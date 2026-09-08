@@ -79,6 +79,9 @@ SWEP.ScopeMaterial = Material("models/weapons/mcv/optics/crosshair_meopta256")
 SWEP.ScopeFOV = 36.8
 SWEP.ScopeFOV2 = 23.5
 SWEP.RTScopeMaterialIndex = 8
+// This model's lens mesh wears crosshair_meopta256, the reticle, where the other scoped rifles
+// wear a lens_*; without this the eyepiece is a translucent decal rather than glass
+SWEP.ScopeIdleLensMaterial = "models/weapons/mcv/optics/lens_meopta"
 
 SWEP.IronsightPos = Vector(0, -3.1, -0.21)
 SWEP.IronsightAng = Angle(0, 0, 0)

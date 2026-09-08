@@ -1,0 +1,19 @@
+"VertexLitGeneric"
+{
+	// GMod form of the game's Refract scope lens (see work/fix_optics_vmts.py)
+	"$basetexture" "models\\weapons\\mcv\\optics\\scope_glass_diffuse"
+	"$bumpmap" "models\\weapons\\mcv\\optics\\scope_glass_normal"
+	"$surfaceprop" "glass"
+	"$phong" "1"
+	"$phongboost" "2"
+	"$phongexponent" "7"
+	"$phongfresnelranges" "[0.05 0.7 1]"
+	"$normalmapalphaenvmapmask" "1"
+	"$envmap" "env_cubemap"
+	"$envmaptint" "[0.5 0.5 0.5]"
+	"$envmapfresnel" "1"
+	// opaque: the glass texture's alpha is 5%, which made the eyepiece vanish when not aiming.
+	// From outside a scope's eyepiece is a dark disc with reflections.
+	"$color2" "[0.35 0.37 0.4]"
+	"$nocsm" "1"
+}

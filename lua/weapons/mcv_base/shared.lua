@@ -122,6 +122,10 @@ SWEP.ScopeMaterial = NULL
 SWEP.ScopeFOV = 8
 SWEP.ScopeFOV2 = 4
 SWEP.RTScopeMaterialIndex = 1
+// What the eyepiece shows when it is not being looked through. Empty leaves the model's own
+// material, which on all but one scoped rifle is the glass lens; the Vz.54 Meopta's lens mesh
+// wears the reticle texture, and needs to be told where its glass is.
+SWEP.ScopeIdleLensMaterial = ""
 
 SWEP.IronsightPos = Vector(0, 0, 0)
 SWEP.IronsightAng = Angle(0, 0, 0)
