@@ -453,58 +453,29 @@ local function distantShot(near)
 
     if found == nil then
         local name = near .. "Distant"
-        found = (!sound.GetProperties or sound.GetProperties(name) != nil) and name or false
+        // only when the soundscript is really there: seven weapons have no distant recording
+        // (the Uzi family, the SOG Sterling, the Vz.23) and asking for one logs a warning
+        found = sound.GetProperties and sound.GetProperties(name) != nil and name or false
         distant_of[near] = found
     end
 
     return found or nil
 end
 
-// Units past which a shot reaches a listener as its distant report rather than its near one.
-SWEP.DistantShotDistance = 1600
-
+// A shot is two recordings, not two audiences: the near report and the same shot heard from a
+// long way off. Both go to everyone and their soundlevels do the separating, the near one at 100
+// dying off within a stone's throw and the far one at 125 still there well beyond it. Close up
+// you hear the report with the far layer filling in underneath; further out only the far layer
+// is left. Splitting the listeners by distance instead meant the far recording only reached
+// someone already standing far away, and never the shooter.
 function SWEP:EmitShotSound(name)
     if (name or "") == "" then return end
 
-    // The shooter's own report, played on the client that predicted the shot so it lands with
-    // it, and the server leaves them out below. In singleplayer nothing is predicted and this
-    // never runs there, so the server serves them like everyone else.
-    if CLIENT then
-        self:EmitSound(name, nil, nil, nil, CHAN_WEAPON)
-        return
-    end
+    self:EmitSound(name, nil, nil, nil, CHAN_WEAPON)
 
     local far = distantShot(name)
-
-    if !far then
-        self:EmitSound(name, nil, nil, nil, CHAN_WEAPON)
-        return
-    end
-
-    local owner = self:GetOwner()
-    local pos = self:GetPos()
-    local cutoff = self.DistantShotDistance * self.DistantShotDistance
-    local near_filter, far_filter = RecipientFilter(), RecipientFilter()
-
-    // their client played it already, unless there is no prediction to have done it
-    local shooter_heard_it = !game.SinglePlayer()
-
-    for _, ply in ipairs(player.GetAll()) do
-        if ply == owner and shooter_heard_it then continue end
-
-        if ply:GetPos():DistToSqr(pos) > cutoff then
-            far_filter:AddPlayer(ply)
-        else
-            near_filter:AddPlayer(ply)
-        end
-    end
-
-    if near_filter:GetCount() > 0 then
-        self:EmitSound(name, nil, nil, nil, CHAN_WEAPON, 0, 0, near_filter)
-    end
-
-    if far_filter:GetCount() > 0 then
-        self:EmitSound(far, nil, nil, nil, CHAN_WEAPON, 0, 0, far_filter)
+    if far then
+        self:EmitSound(far, nil, nil, nil, CHAN_WEAPON)
     end
 end
 
