@@ -2,9 +2,11 @@ import re
 
 # what the game's firing tiers and third person foley become in GMod (see the note below)
 # Reach in units is 50 * (level - 50), so a level is 50 + units/50, and a metre is 39.37 units.
+# 180 is where Source's named soundlevels stop and is also a real ceiling: a distant report set
+# to 286, which the arithmetic puts at 300 m, did not play at all. 179 is as far as this goes.
 LEVEL_OVERRIDES = {
     75: 109,   # the near report, about 75 m
-    94: 286,   # the distant one, about 300 m
+    94: 179,   # the distant one, about 164 m, the furthest the engine will carry one
     60: 80,    # foley meant for the people around the player, about 38 m
 }
 
