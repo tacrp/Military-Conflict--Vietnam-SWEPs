@@ -96,6 +96,10 @@ end
 function SWEP:DoMuzzleLight()
     if !IsFirstTimePredicted() and !game.SinglePlayer() then return end
 
+    // Nothing burns at the muzzle of a weapon that carries no muzzle particle, so it lights
+    // nothing either: the crossbow is the only one, and a gun that flashes always has one.
+    if (self.MuzzleParticle or "") == "" and (self.MuzzleParticleIronsighted or "") == "" then return end
+
     if IsValid(self.MuzzleLight) then self.MuzzleLight:Remove() end
 
     local lamp = ProjectedTexture()

@@ -24,7 +24,7 @@ $attachment "eject" "Base" -4.2 0 1.3 rotate -80 90 0
 
 $cbox 0 0 0 0 0 0
 
-$bbox -202.79 -22.711 -27.51 36.652 14.809 0
+$bbox -96 -96 -96 96 96 96
 
 $definebone "root" "" 0 7.450089 -27.509027 0 0 0 0 0 0 0 0 0
 $definebone "pelvis" "root" -0.000002 0 0 -89.790336 -89.996943 89.996943 0 0 0 0 0 0
@@ -536,9 +536,8 @@ $sequence "shoot1" {
 	addlayer "walklayer"
 	addlayer "walklayerironsight"
 	addlayer "runlayer"
-	addlayer "SlideMovement"
-	addlayer "SlidePosition"
 	addlayer "shoot1_pose"
+	addlayer "SlideMovement"
 	node "0"
 }
 $sequence "shoot1_pose" {
