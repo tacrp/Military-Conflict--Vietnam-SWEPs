@@ -21,22 +21,46 @@ SWEP.WorldModel = "models/weapons/mcv/w_sks.mdl"
 // (mcv/shared/sh_categories.lua), 1 unless someone has turned a dial.
 // A sound for everyone in earshot except the player holding the weapon: their own foley comes
 // off the viewmodel's animation events, and hearing both at once is the same sound twice.
+// The holder's half of the above, decided where the answer is: their viewmodel is playing the
+// first person foley, so this would be the same sound twice, unless the viewmodel is off screen.
+function SWEP:PlayOwnThirdPersonSound(name)
+    if SERVER or !name or name == "" then return end
+
+    local owner = self:GetOwner()
+    if !IsValid(owner) or owner != LocalPlayer() then return end
+    if !owner:ShouldDrawLocalPlayer() then return end
+
+    owner:EmitSound(name)
+end
+
 function SWEP:EmitThirdPersonSound(name)
-    if CLIENT or !name or name == "" then return end
+    if !name or name == "" then return end
+
+    local owner = self:GetOwner()
+
+    // In multiplayer the holder's own client runs this, predicted, and is the one that can see
+    // whether the viewmodel is on screen.
+    if CLIENT then
+        self:PlayOwnThirdPersonSound(name)
+        return
+    end
 
     // Out of the player rather than the weapon. A carried weapon is not where the player is as
     // far as sound is concerned, and this was going out from wherever it thought it was.
-    local owner = self:GetOwner()
     local from = IsValid(owner) and owner or self
 
     local filter = RecipientFilter()
     filter:AddPVS(from:GetPos())
 
-    // The holder is left out because their viewmodel is playing the first person set, which is
-    // only true while they are looking down it. In third person they hear themselves the way
-    // everyone else hears them. Their client keeps mcv_cl_thirdperson in step with that.
-    if IsValid(owner) and owner:IsPlayer() and owner:GetInfoNum("mcv_cl_thirdperson", 0) < 1 then
+    // everyone near them; the holder is asked separately, just below
+    if IsValid(owner) and owner:IsPlayer() then
         filter:RemovePlayer(owner)
+
+        // Singleplayer runs none of the weapon on the client, so nothing above reached it and
+        // the client has to be asked outright. This is how the muzzle light gets there too.
+        if game.SinglePlayer() then
+            self:CallOnClient("PlayOwnThirdPersonSound", name)
+        end
     end
 
     if filter:GetCount() == 0 then return end
