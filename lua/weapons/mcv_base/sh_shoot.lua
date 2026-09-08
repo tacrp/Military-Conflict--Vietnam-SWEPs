@@ -14,6 +14,16 @@ function SWEP:PrimaryAttack()
         return
     end
 
+    // Sprinting on the trigger with a bayonet fixed: charge, the same input the melee weapons
+    // take it on. A gun will not fire at a sprint anyway, so nothing else wants this. Once the
+    // charge is up the think loop owns the weapon until it lands or the player lets go.
+    if self:IsBayonetCharging() then return end
+
+    if self:GetIsSprinting() and self:GetBayonet() then
+        self:StartBayonetCharge()
+        return
+    end
+
     if self.MustBipod and !self:GetBipod() then return end
 
     if self:GetGrenadeLauncher() then

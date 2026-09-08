@@ -58,15 +58,16 @@ end
 
 // The damage and the impact of a bash, given its reach. Split from the swing so the bayonet
 // charge lands the same hit with its own reach and its own damage.
-function SWEP:BashStrike(range, damage)
+function SWEP:BashStrike(range, damage, thrust)
     local owner = self:GetOwner()
     local tr, pos, dir = self:BashTrace(range)
 
     local dmginfo = DamageInfo()
     dmginfo:SetDamage(damage)
     dmginfo:SetDamageForce(dir * damage * 500)
-    // CLUB rather than GENERIC so TTT can assign DNA; it leaves none on generic damage
-    dmginfo:SetDamageType(DMG_CLUB)
+    // a thrust runs the blade in, a swing knocks with it; either way not GENERIC, which TTT
+    // leaves no DNA on
+    dmginfo:SetDamageType(thrust and DMG_SLASH or DMG_CLUB)
     dmginfo:SetDamagePosition(tr.HitPos)
     dmginfo:SetAttacker(owner)
     dmginfo:SetInflictor(self)

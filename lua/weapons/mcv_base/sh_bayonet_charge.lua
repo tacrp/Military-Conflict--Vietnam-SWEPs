@@ -15,6 +15,7 @@ SWEP.BayonetChargeDamageMultiplier = 2
 // how long before the blade is far enough forward to hit anything, and how long a charge can
 // be held before it gives up on finding a target
 SWEP.BayonetChargeWindup = 0.3
+SWEP.BayonetChargeHitDelay = 0.1  // into the thrust, before the blade reaches anything
 SWEP.BayonetChargeMaxTime = 4
 
 function SWEP:IsBayonetCharging()
@@ -29,6 +30,13 @@ function SWEP:CanBayonetCharge()
 end
 
 function SWEP:StartBayonetCharge()
+    // no wind-up in this model (nine of the fifty that take a bayonet): the input still does
+    // something rather than nothing, the way a melee weapon without one falls back to a stab
+    if !self:CanBayonetCharge() then
+        self:Bash()
+        return
+    end
+
     self:SetActionState(STATE_CHARGE)
     self:SetActionStart(CurTime())
     self:SetIronsight(false)
@@ -51,12 +59,19 @@ function SWEP:BayonetChargeAttack()
         if self:HasSequence(s) then seq = s break end
     end
 
-    local t = seq and self:PlaySequence(seq, 1, true) or 0.6
+    local t = seq and self:PlaySequence(seq, 1, false) or 0.6
     self:GetOwner():DoAnimationEvent(self.BashGesture)
 
-    self:BashStrike(self.BayonetRange, self.BayonetDamage * self.BayonetChargeDamageMultiplier)
+    // the blade has to travel before it reaches anything, so the hit lands a moment into the
+    // thrust rather than on its first frame, as the melee weapons' charge does
+    self:SetTimer(math.min(self.BayonetChargeHitDelay, t), function()
+        if !IsValid(self) then return end
+        self:BashStrike(self.BayonetRange,
+                        self.BayonetDamage * self.BayonetChargeDamageMultiplier, true)
+    end, "mcv_bayonet_charge_hit")
 
     self:SetNextPrimaryFire(CurTime() + t)
+    self:SetNextSecondaryFire(CurTime() + t)
 end
 
 function SWEP:EndBayonetCharge()
