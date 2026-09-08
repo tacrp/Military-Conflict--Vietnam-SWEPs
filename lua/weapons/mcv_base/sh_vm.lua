@@ -50,6 +50,19 @@ function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
         end
         if cycling then shown = math.min(shown + 1, clipsize) end
     end
+    // A round fed in one at a time is counted the moment its animation starts, but the hand is
+    // still carrying it to the port then, so the round appeared in the gun before it went in.
+    // The model says when it is actually in, through the refresh event the game puts partway
+    // through the insert; until then the counter holds the count from before this round.
+    if self.ShotgunReload and self.InsertClipPoseTime and self:GetReloading() then
+        local insert = self.ShotgunAltReload and ACT_VM_RELOAD_INSERT or ACT_VM_RELOAD
+
+        if vm:GetSequenceActivity(vm:GetSequence()) == insert
+           and vm:SequenceDuration() - (self:GetAnimLockTime() - CurTime()) < self.InsertClipPoseTime then
+            shown = math.max(shown - (self.ShotgunReloadRounds or 1), 0)
+        end
+    end
+
     // the cycle's variant is picked by the count after the shot (the game sets ammo_fraction2
     // from the clip at the bolt pull's first frame)
     if self.CycleAmmoPose2 then

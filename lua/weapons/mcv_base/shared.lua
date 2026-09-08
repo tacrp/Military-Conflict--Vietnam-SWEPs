@@ -85,6 +85,9 @@ SWEP.ShotgunAltReload = false // Clip-loading rifles use this set of anims for b
 // rather than played, so nothing reads the second one at the moment.
 SWEP.HasEmptyReload = true
 SWEP.ShotgunReloadRounds = 1
+// Seconds into a single insert before the round counts as in the gun rather than on its way
+// there, off the insert animation's own AE_WPN_CLIP_TO_POSEPARAM. nil shows it straight away.
+SWEP.InsertClipPoseTime = nil
 
 SWEP.MagInTime = 0 // seconds into the reload animation when the new magazine / belt is in (the rounds shown jump to the new count)
 SWEP.MagInTimeEmpty = 0

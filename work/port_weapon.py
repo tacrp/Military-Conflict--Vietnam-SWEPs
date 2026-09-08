@@ -24,6 +24,10 @@ import glob
 import os
 import re
 
+SEQ_BLOCK_RE = r'\$sequence\s+"[^"]+"\s*\{(.*?)\n\}'
+INSERT_POSE_RE = r'\{\s*event\s+AE_WPN_(?:NEXT)?CLIP_TO_POSEPARAM\s+(\d+)\s+"ammo_fraction"'
+
+
 HERE = os.path.dirname(os.path.abspath(__file__))
 ADDON = os.path.normpath(os.path.join(HERE, ".."))
 
@@ -439,6 +443,24 @@ def qc_facts(path):
         if frames:
             f["cycle_clip_pose"] = round(max(frames) / fps, 2)
         break
+    # A single insert refreshes the count partway through, once the round is in the gun rather
+    # than on its way there: the game's own AE_WPN_*CLIP_TO_POSEPARAM on "ammo_fraction". Read
+    # from the insert animation, ACT_VM_RELOAD_INSERT where the model has one, else ACT_VM_RELOAD.
+    f["insert_clip_pose"] = None
+    for _act in ("ACT_VM_RELOAD_INSERT", "ACT_VM_RELOAD"):
+        for _m in re.finditer(SEQ_BLOCK_RE, src, re.S):
+            _body = _m.group(1)
+            if not re.search(r'activity\s+"%s"' % _act, _body):
+                continue
+            _fm = re.search(r'^\s*fps\s+([\d.]+)', _body, re.M)
+            _fps = float(_fm.group(1)) if _fm else 30.0
+            _frames = [int(fr) for fr in re.findall(INSERT_POSE_RE, _body)]
+            if _frames:
+                f["insert_clip_pose"] = round(max(_frames) / _fps, 2)
+            break
+        if f["insert_clip_pose"] is not None:
+            break
+
     f["cycle_ammo_pose2"] = "ammo_fraction2" in f["poseparams"]
     # which hammerpos value the cycle animation (bolt pull / pump) carries: that is the event that
     # must release the action. Shotguns have shoot = 0 / pump = 1, bolt rifles shoot = 1 / bolt = 0.
@@ -683,6 +705,8 @@ def anim_timing(qc):
         out[k] = fmt(v)
     if qc and qc.get("cycle_clip_pose"):
         out["CycleClipPoseTime"] = fmt(qc["cycle_clip_pose"])
+    if qc and qc.get("insert_clip_pose"):
+        out["InsertClipPoseTime"] = fmt(qc["insert_clip_pose"])
     if qc and qc.get("cycle_ammo_pose2"):
         out["CycleAmmoPose2"] = "true"
     return out
@@ -1331,6 +1355,10 @@ def generate(script_path, args):
         if reuse("CyclePostDelay"): A(line("CyclePostDelay", reuse("CyclePostDelay")))
     if shotgun_reload:
         A(line("ShotgunReload", "true"))
+        # When the round counts as being in the gun rather than on its way to the port: the
+        # insert animation's own refresh event. Without it the round shows before it goes in.
+        if timing.get("InsertClipPoseTime"):
+            A(line("InsertClipPoseTime", timing["InsertClipPoseTime"]))
         if alt_reload:
             A(line("ShotgunAltReload", "true"))
         if "ACT_VM_RELOAD_INSERT_EMPTY" in acts:

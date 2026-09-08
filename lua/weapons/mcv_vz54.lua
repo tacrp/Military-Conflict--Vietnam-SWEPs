@@ -44,6 +44,7 @@ SWEP.LastShotAnimation = false
 SWEP.MagInClip = true
 SWEP.PlayCycleAnimation = true
 SWEP.ShotgunReload = true
+SWEP.InsertClipPoseTime = 0.2
 SWEP.ShotgunAltReload = true
 SWEP.ShotgunReloadEmptyStartAnimation = true
 SWEP.AnimationHandlesHammer = true

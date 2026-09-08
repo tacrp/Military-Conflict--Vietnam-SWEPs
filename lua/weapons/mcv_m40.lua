@@ -46,6 +46,7 @@ SWEP.Firemodes = {
 SWEP.LastShotAnimation = false
 SWEP.MagInClip = true
 SWEP.ShotgunReload = true
+SWEP.InsertClipPoseTime = 0.2
 SWEP.ShotgunAltReload = true
 SWEP.ShotgunReloadEmptyStartAnimation = false
 SWEP.PlayCycleAnimation = true

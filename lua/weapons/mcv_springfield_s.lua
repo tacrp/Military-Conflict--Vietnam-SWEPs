@@ -48,6 +48,7 @@ SWEP.MagInClip = true
 // in the model already (reload_start / reload_insert / reload_end); the clip animations are the
 // ones that go unused now. Same as the M40 and the Vz.54 sniper.
 SWEP.ShotgunReload = true
+SWEP.InsertClipPoseTime = 0.2
 SWEP.ShotgunAltReload = true
 SWEP.ShotgunReloadEmptyStartAnimation = false
 SWEP.PlayCycleAnimation = true
