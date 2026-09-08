@@ -248,14 +248,42 @@ end
 // server agree; `visual` uses the frame-smoothed sight amount for drawing.
 SWEP.HipSwayScale = 0.25
 
+// How much of the sway is in play. A deployed bipod rests the gun on something and a reload is
+// not aiming at anything, so the barrel does not wander in either; both are networked, so the
+// shot reads the same answer on both realms.
+function SWEP:GetSwaySteady()
+    return (self:GetBipod() or self:GetReloading()) and 0 or 1
+end
+
+if CLIENT then
+    // and what is drawn eases between the two, the way the stance multiplier and the sight
+    // blend do, so the gun and the crosshair settle instead of snapping. The shot still leaves
+    // along the real value, so the two differ for a fraction of a second either side.
+    SWEP.SwaySteadyRate = 4   // a second: a quarter of one to go either way
+
+    function SWEP:GetSwaySteadyVisual()
+        local frame = FrameNumber()
+        if self.VisualSteadyFrame == frame then return self.VisualSteady end
+
+        local target = self:GetSwaySteady()
+        local cur = self.VisualSteady
+        if cur == nil then cur = target end
+
+        self.VisualSteady = math.Approach(cur, target, self.SwaySteadyRate * FrameTime())
+        self.VisualSteadyFrame = frame
+
+        return self.VisualSteady
+    end
+else
+    SWEP.GetSwaySteadyVisual = SWEP.GetSwaySteady
+end
+
 // peak of the sway in degrees (each axis), 0 when the mode is off or the sights are up
 function SWEP:GetAimSwayAmplitude(visual)
     if !MCV.RealisticShooting() then return 0 end
 
-    // A deployed bipod rests the gun on something, and a reload is not aiming at anything, so
-    // the barrel does not wander in either. Both are networked, so the shot and the crosshair
-    // reach the same answer on both realms.
-    if self:GetBipod() or self:GetReloading() then return 0 end
+    local steady = visual and self:GetSwaySteadyVisual() or self:GetSwaySteady()
+    if steady <= 0 then return 0 end
 
     local sa = visual and self:GetSightAmountVisual() or self:GetSightAmount()
     local amp = (self.Spread or 0) * self.HipSwayScale * (1 - sa)
@@ -265,7 +293,7 @@ function SWEP:GetAimSwayAmplitude(visual)
     // crosshair reads to show the stance. What is drawn eases between stances; the shot reads
     // the real multiplier
     local stance = visual and self:GetStanceSpreadMultiplierVisual() or self:GetStanceSpreadMultiplier()
-    return amp * stance
+    return amp * stance * steady
 end
 
 function SWEP:GetAimSway(visual)
