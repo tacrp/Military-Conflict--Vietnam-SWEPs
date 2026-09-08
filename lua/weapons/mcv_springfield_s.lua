@@ -43,7 +43,12 @@ SWEP.Firemodes = {
 
 SWEP.LastShotAnimation = false
 SWEP.MagInClip = true
-SWEP.ShotgunReload = false // clip reload (reload / reload_empty); the single-round animations stay unused, as on the Kar98
+// A scope sits over the receiver, where the stripper clip would have to go, so a sniper feeds
+// one round at a time even where the rifle it is built on takes a clip. The single-round set is
+// in the model already (reload_start / reload_insert / reload_end); the clip animations are the
+// ones that go unused now. Same as the M40 and the Vz.54 sniper.
+SWEP.ShotgunReload = true
+SWEP.ShotgunAltReload = true
 SWEP.ShotgunReloadEmptyStartAnimation = false
 SWEP.PlayCycleAnimation = true
 SWEP.HasEmptyReload = true
