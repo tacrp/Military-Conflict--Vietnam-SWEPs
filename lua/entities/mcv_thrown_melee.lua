@@ -54,6 +54,10 @@ function ENT:Use(ply)
     if ply:HasWeapon(self.WeaponClass) then return end
 
     ply:Give(self.WeaponClass)
+
+    // back in the hand rather than just in the inventory: fetching a thrown blade is a
+    // deliberate walk over to it, so it is what you meant to be holding
+    ply:SelectWeapon(self.WeaponClass)
     self:Remove()
 end
 
