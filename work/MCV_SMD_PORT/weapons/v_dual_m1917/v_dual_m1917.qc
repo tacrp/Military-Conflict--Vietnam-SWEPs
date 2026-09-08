@@ -24,7 +24,7 @@ $attachment "muzzle2" "BaseLeftMesh" -8.95 0 1.4 rotate 0 180 0
 
 $cbox 0 0 0 0 0 0
 
-$bbox -9.645 -17.249 -27.51 29.335 17.659 23.96
+$bbox -96 -96 -96 96 96 96
 
 $definebone "root" "" 0 7.450089 -27.509027 0 0 0 0 0 0 0 0 0
 $definebone "pelvis" "root" -0.000002 0 0 -89.790336 -89.996943 89.996943 0 0 0 0 0 0
@@ -464,6 +464,21 @@ $animation "shoot_r_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_an
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "shoot_r_a_corrective_animation" 0
 }
+$animation "rc_r_shoot_r_a_tail01" "fixed_anims\shoot_r_a_tail01.smd" {
+	fps 30
+	frame 34 34
+	subtract "shoot_r_a_corrective_animation" 0
+}
+$animation "rc_r_shoot_r_a_tail02" "fixed_anims\shoot_r_a_tail02.smd" {
+	fps 30
+	frame 34 34
+	subtract "shoot_r_a_corrective_animation" 0
+}
+$animation "rc_r_shoot_r_a_tail03" "fixed_anims\shoot_r_a_tail03.smd" {
+	fps 30
+	frame 34 34
+	subtract "shoot_r_a_corrective_animation" 0
+}
 $animation "rc_r_shoot_r_a_f34" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\shoot_r_a.smd" {
 	fps 30
 	frame 34 34
@@ -528,6 +543,21 @@ $animation "rc_r_shoot_r_a_f00" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual
 $animation "shoot_r_ironsight_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\shoot_r_ironsight_a.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "shoot_r_ironsight_a_corrective_animation" 0
+}
+$animation "rc_r_shoot_r_ironsight_a_tail01" "fixed_anims\shoot_r_ironsight_a_tail01.smd" {
+	fps 30
+	frame 34 34
+	subtract "shoot_r_ironsight_a_corrective_animation" 0
+}
+$animation "rc_r_shoot_r_ironsight_a_tail02" "fixed_anims\shoot_r_ironsight_a_tail02.smd" {
+	fps 30
+	frame 34 34
+	subtract "shoot_r_ironsight_a_corrective_animation" 0
+}
+$animation "rc_r_shoot_r_ironsight_a_tail03" "fixed_anims\shoot_r_ironsight_a_tail03.smd" {
+	fps 30
+	frame 34 34
 	subtract "shoot_r_ironsight_a_corrective_animation" 0
 }
 $animation "rc_r_shoot_r_ironsight_a_f34" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\shoot_r_ironsight_a.smd" {
@@ -596,6 +626,21 @@ $animation "shoot_l_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_an
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "shoot_l_a_corrective_animation" 0
 }
+$animation "rc_l_shoot_l_a_tail01" "fixed_anims\shoot_l_a_tail01.smd" {
+	fps 30
+	frame 34 34
+	subtract "shoot_l_a_corrective_animation" 0
+}
+$animation "rc_l_shoot_l_a_tail02" "fixed_anims\shoot_l_a_tail02.smd" {
+	fps 30
+	frame 34 34
+	subtract "shoot_l_a_corrective_animation" 0
+}
+$animation "rc_l_shoot_l_a_tail03" "fixed_anims\shoot_l_a_tail03.smd" {
+	fps 30
+	frame 34 34
+	subtract "shoot_l_a_corrective_animation" 0
+}
 $animation "rc_l_shoot_l_a_f34" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\shoot_l_a.smd" {
 	fps 30
 	frame 34 34
@@ -660,6 +705,21 @@ $animation "rc_l_shoot_l_a_f00" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual
 $animation "shoot_l_ironsight_a" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\shoot_l_ironsight_a.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
+	subtract "shoot_l_ironsight_a_corrective_animation" 0
+}
+$animation "rc_l_shoot_l_ironsight_a_tail01" "fixed_anims\shoot_l_ironsight_a_tail01.smd" {
+	fps 30
+	frame 34 34
+	subtract "shoot_l_ironsight_a_corrective_animation" 0
+}
+$animation "rc_l_shoot_l_ironsight_a_tail02" "fixed_anims\shoot_l_ironsight_a_tail02.smd" {
+	fps 30
+	frame 34 34
+	subtract "shoot_l_ironsight_a_corrective_animation" 0
+}
+$animation "rc_l_shoot_l_ironsight_a_tail03" "fixed_anims\shoot_l_ironsight_a_tail03.smd" {
+	fps 30
+	frame 34 34
 	subtract "shoot_l_ironsight_a_corrective_animation" 0
 }
 $animation "rc_l_shoot_l_ironsight_a_f34" "..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\shoot_l_ironsight_a.smd" {
@@ -1033,6 +1093,9 @@ $sequence "recoil_layer_r" {
 	"rc_r_shoot_r_a_f28"
 	"rc_r_shoot_r_a_f31"
 	"rc_r_shoot_r_a_f34"
+	"rc_r_shoot_r_a_tail03"
+	"rc_r_shoot_r_a_tail02"
+	"rc_r_shoot_r_a_tail01"
 	"rc_r_shoot_r_a_zero"
 	"rc_r_shoot_r_ironsight_a_f00"
 	"rc_r_shoot_r_ironsight_a_f03"
@@ -1046,10 +1109,13 @@ $sequence "recoil_layer_r" {
 	"rc_r_shoot_r_ironsight_a_f28"
 	"rc_r_shoot_r_ironsight_a_f31"
 	"rc_r_shoot_r_ironsight_a_f34"
+	"rc_r_shoot_r_ironsight_a_tail03"
+	"rc_r_shoot_r_ironsight_a_tail02"
+	"rc_r_shoot_r_ironsight_a_tail01"
 	"rc_r_shoot_r_ironsight_a_zero"
 	blend "recoil_r" 0 1
 	blend "ironsight" 0 1
-	blendwidth 13
+	blendwidth 16
 	delta
 	hidden
 }
@@ -1066,6 +1132,9 @@ $sequence "recoil_layer_l" {
 	"rc_l_shoot_l_a_f28"
 	"rc_l_shoot_l_a_f31"
 	"rc_l_shoot_l_a_f34"
+	"rc_l_shoot_l_a_tail03"
+	"rc_l_shoot_l_a_tail02"
+	"rc_l_shoot_l_a_tail01"
 	"rc_l_shoot_l_a_zero"
 	"rc_l_shoot_l_ironsight_a_f00"
 	"rc_l_shoot_l_ironsight_a_f03"
@@ -1079,10 +1148,13 @@ $sequence "recoil_layer_l" {
 	"rc_l_shoot_l_ironsight_a_f28"
 	"rc_l_shoot_l_ironsight_a_f31"
 	"rc_l_shoot_l_ironsight_a_f34"
+	"rc_l_shoot_l_ironsight_a_tail03"
+	"rc_l_shoot_l_ironsight_a_tail02"
+	"rc_l_shoot_l_ironsight_a_tail01"
 	"rc_l_shoot_l_ironsight_a_zero"
 	blend "recoil_l" 0 1
 	blend "ironsight" 0 1
-	blendwidth 13
+	blendwidth 16
 	delta
 	hidden
 }
@@ -1429,7 +1501,6 @@ $sequence "prepare_delayed_right" {
 	blend "ironsight" 0 1
 	blend "revolver_firemode_pose" 0 1
 	blendwidth 3
-	fadein 0.1
 	fadeout 0.2
 	{ event 5004 0 "MCV_Weapon_Foley_Revolver.HammerOutSlow" }
 	addlayer "walklayer"
@@ -1438,6 +1509,7 @@ $sequence "prepare_delayed_right" {
 	addlayer "BulletCounter"
 	addlayer "prepare_delayed_right_pose"
 	node "0"
+	snap
 }
 $sequence "prepare_delayed_right_pose" {
 	"shoot_p_r_a"
@@ -1460,7 +1532,6 @@ $sequence "prepare_delayed_left" {
 	blend "ironsight" 0 1
 	blend "revolver_firemode_pose" 0 1
 	blendwidth 3
-	fadein 0.1
 	fadeout 0.2
 	{ event 5004 0 "MCV_Weapon_Foley_Revolver.HammerOutSlow" }
 	addlayer "walklayer"
@@ -1469,6 +1540,7 @@ $sequence "prepare_delayed_left" {
 	addlayer "BulletCounter"
 	addlayer "prepare_delayed_left_pose"
 	node "0"
+	snap
 }
 $sequence "prepare_delayed_left_pose" {
 	"shoot_p_l_a"

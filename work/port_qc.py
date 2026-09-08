@@ -1041,6 +1041,67 @@ def step_snap_idles(qc, ctx):
         ctx.note("snap on %d idle sequences: nothing interpolates into the idle" % n)
 
 
+# A revolver's double action start, the hammer haul that precedes the shot. Its first frame has
+# the cylinder already reset for the next chamber, so fading into it from the idle drags the
+# cylinder round over the fade instead of letting it jump on the frame it is authored on. Keyed
+# on the sequence names as well as the activity: the grenades' lob is ACT_VM_HAULBACK too.
+DA_START_SEQS = ("prepare_delayed", "prepare_delayed_right", "prepare_delayed_left")
+DA_START_ACTS = ("ACT_VM_HAULBACK", "ACT_VM_PULLPIN")
+
+# A zero fade is enough on a single revolver. The duals slip anyway: the transitioner blends the
+# whole pose, both guns at once, and the hand that is not hauling its hammer is still holding a
+# cylinder of its own, so there is always something for the blend to drag. They take the hard cut.
+DA_START_SNAP = ("prepare_delayed_right", "prepare_delayed_left")
+
+
+def step_da_start_fadein(qc, ctx):
+    """No interpolation into a revolver's double action start; the cylinder resets on its own
+    first frame, and fading in drags it round instead of letting it jump.
+
+    Runs after step_pose_split, which writes a 0.1 fade-in over every non-fire sequence it
+    rebuilds, these among them."""
+    n = 0
+    for b in qc.blocks("sequence"):
+        if b.name not in DA_START_SEQS or b.activity() not in DA_START_ACTS or b.has("snap"):
+            continue
+        b.remove_key("fadein")
+        if b.name in DA_START_SNAP:
+            b.lines.append("snap")
+        else:
+            b.lines.append("fadein 0")
+        n += 1
+    if n:
+        ctx.note("%d double action start(s) start on their own first frame (cylinder reset)" % n)
+
+
+# The two revolvers loaded a round at a time through a gate rather than a swung-out cylinder.
+# Their dual reload walks the cylinder one chamber per insert, so each sequence in the chain
+# begins where the last left the cylinder rather than at any rest pose, and fading in drags it
+# backwards. The game snaps its own inserts and leaves the ends to its animation system, which
+# the sequence transitioner does not reproduce, so the ends are the ones this adds.
+SNAP_GATE_RELOAD = {"v_dual_blackhawk", "v_dual_m1895"}
+GATE_RELOAD_ACTS = ("ACT_VM_RELOAD", "ACT_VM_RELOAD2",                       # the inserts
+                    "ACT_VM_RELOAD_END",                                     # right to left
+                    "ACT_VM_RELOAD_END_EMPTY", "ACT_SHOTGUN_RELOAD_FINISH")  # the ends
+# reload_start is left fading: it is the one sequence in the chain that comes from the idle
+# rather than from an insert, so there is no cylinder mid-rotation for a blend to drag.
+
+
+def step_snap_gate_reload(qc, ctx):
+    """`snap` on the dual gate-loaded revolvers' reload inserts and ends."""
+    if ctx.name not in SNAP_GATE_RELOAD:
+        return
+    n = 0
+    for b in qc.blocks("sequence"):
+        if b.activity() not in GATE_RELOAD_ACTS or b.has("snap"):
+            continue
+        b.remove_key("fadein")   # STUDIO_SNAP ignores it
+        b.lines.append("snap")
+        n += 1
+    if n:
+        ctx.note("snap on %d reload sequence(s): the cylinder does not blend between chambers" % n)
+
+
 def step_snap_draws(qc, ctx):
     """Throwables: the draw after a throw blended from the throw's end pose (hand out, empty)
     into the draw's first frame over the old sequence's fade-out, so the next grenade slid back
@@ -1237,6 +1298,11 @@ def step_pose_split(qc, ctx):
         pose.remove_key("fadeout")
         pose.remove_key("node")
         pose.remove_key("hidden")
+        # Whether the game itself snapped this sequence, read before the porter appends its own
+        # snap to the hidden pose layer a few lines down. `pose` is the same block the main
+        # sequence's test used to look at, so that test was always true and quietly snapped
+        # every non-fire sequence the split rebuilt: hammer hauls, reloads, draws and all.
+        game_snap = pose.has("snap")
         pose.remove_key("snap")
         # movement / bolt layers belong on the main sequence
         extra_layers = [l for l in pose.layers()]
@@ -1271,7 +1337,7 @@ def step_pose_split(qc, ctx):
             lines.append("blendwidth %d" % width)
         # the game's own snap is kept: the homemade pistol's bolt pull carries one, and blending
         # into it let the idle's magazine layer overlap the sequence's own override
-        if act in FIRE_ACTS or base.has("snap") or pose.has("snap"):
+        if act in FIRE_ACTS or base.has("snap") or game_snap:
             lines.append("snap")
         else:
             lines.append("fadein 0.1")
@@ -1350,9 +1416,12 @@ def _scale_toward(row, base, t):
     return list(pos) + list(bake_ik.euler(R @ Rb))
 
 
-def recoil_tail_knots(qc, ctx, src, corrective, last):
+def recoil_tail_knots(qc, ctx, src, corrective, last, force=False):
     """Files for the eased tail of a recoil layer, or [] when the shot already ends at rest.
-    Each is the source animation with frame `last` scaled back towards the corrective."""
+    Each is the source animation with frame `last` scaled back towards the corrective.
+
+    `force` builds them anyway, for a row whose sibling in the same blend grid needs them: the
+    knots of a shot that does end at rest are simply rest, and the grid has to stay square."""
     import numpy as np
     import bake_ik
     if corrective is None or not src.path:
@@ -1373,7 +1442,7 @@ def recoil_tail_knots(qc, ctx, src, corrective, last):
         R = bake_ik.rmat(row[3:6]) @ bake_ik.rmat(base[3:6]).T
         c = max(-1.0, min(1.0, (np.trace(R) - 1.0) / 2.0))
         worst_r = max(worst_r, math.degrees(math.acos(c)))
-    if worst_p < RECOIL_TAIL_POS and worst_r < RECOIL_TAIL_ROT:
+    if worst_p < RECOIL_TAIL_POS and worst_r < RECOIL_TAIL_ROT and not force:
         return []
     out = []
     for i in range(RECOIL_TAIL, 0, -1):
@@ -1418,13 +1487,34 @@ def step_pose_recoil(qc, ctx):
             continue
         # sample frame indices
         idx = sorted({round(i * (length - 1) / (samples - 1)) for i in range(samples)})
-        rows = []
+        srcs = []
         for src_name in anims[:2]:              # hip row, ironsight row (if present)
             src = qc.find("animation", src_name)
             if src is None:
                 ctx.warn("recoil layer: %s is not an $animation" % src_name)
-                rows = []
+                srcs = []
                 break
+            srcs.append((src_name, src, qc.find("animation", src_name + "_corrective_animation")))
+        if not srcs:
+            continue
+
+        # A shot that ends away from rest gets a short eased tail, so the return is not crammed
+        # into the last sample interval (see recoil_tail_knots). The decision belongs to the
+        # hand, not the row: several revolvers end at rest in the sights but not from the hip,
+        # and a 16-wide hip row against a 13-wide sighted one is a grid studiomdl refuses
+        # ("missing animation blends. Expected 16, found 29").
+        tails = [recoil_tail_knots(qc, ctx, src, corr, idx[-1]) for _, src, corr in srcs]
+        if any(tails) and not all(tails):
+            tails = [t or recoil_tail_knots(qc, ctx, src, corr, idx[-1], force=True)
+                     for t, (_, src, corr) in zip(tails, srcs)]
+        if len({len(t) for t in tails}) > 1:
+            # a row with no corrective or no readable smd cannot be given one; square the grid
+            # by going without, which is what every model did before the tails existed
+            ctx.warn("recoil layer %s: no tail knots for every row, going without" % hand)
+            tails = [[] for _ in tails]
+
+        rows = []
+        for (src_name, src, corrective), tail in zip(srcs, tails):
             row = []
             subtract_lines = [l for l in src.lines if l.startswith("subtract")]
             for k in idx:
@@ -1433,10 +1523,7 @@ def step_pose_recoil(qc, ctx):
                 nb = Block("animation", nm, src.path, lines)
                 qc.insert_after(src, nb)
                 row.append(nm)
-            corrective = qc.find("animation", src_name + "_corrective_animation")
-            # a shot that ends away from rest gets a short eased tail, so the return is not
-            # crammed into the last sample interval (see recoil_tail_knots)
-            for tname, tpath in recoil_tail_knots(qc, ctx, src, corrective, idx[-1]):
+            for tname, tpath in tail:
                 nm = "rc_%s_%s" % (hand, tname)
                 lines = ["fps 30", "frame %d %d" % (idx[-1], idx[-1])] + subtract_lines
                 qc.insert_after(src, Block("animation", nm, tpath, lines))
@@ -2027,6 +2114,8 @@ def port_one(args, og_dir):
     step_pose_split(qc, ctx)
     step_pose_recoil(qc, ctx)
     step_snap_idles(qc, ctx)
+    step_da_start_fadein(qc, ctx)    # after the pose split, which writes its own fade-in
+    step_snap_gate_reload(qc, ctx)
     step_tidy(qc, ctx)
     step_validate(qc, ctx)
 

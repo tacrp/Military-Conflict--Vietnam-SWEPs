@@ -1118,7 +1118,6 @@ $sequence "prepare_delayed_right" {
 	blend "ironsight" 0 1
 	blend "revolver_firemode_pose" 0 1
 	blendwidth 3
-	fadein 0.1
 	fadeout 0.2
 	{ event 5004 0 "MCV_Weapon_Foley_Revolver.HammerOutSlow" }
 	addlayer "walklayer"
@@ -1126,6 +1125,7 @@ $sequence "prepare_delayed_right" {
 	addlayer "runlayer"
 	addlayer "prepare_delayed_right_pose"
 	node "0"
+	snap
 }
 $sequence "prepare_delayed_right_pose" {
 	"shoot_p_r_a"
@@ -1148,7 +1148,6 @@ $sequence "prepare_delayed_left" {
 	blend "ironsight" 0 1
 	blend "revolver_firemode_pose" 0 1
 	blendwidth 3
-	fadein 0.1
 	fadeout 0.2
 	{ event 5004 0 "MCV_Weapon_Foley_Revolver.HammerOutSlow" }
 	addlayer "walklayer"
@@ -1156,6 +1155,7 @@ $sequence "prepare_delayed_left" {
 	addlayer "runlayer"
 	addlayer "prepare_delayed_left_pose"
 	node "0"
+	snap
 }
 $sequence "prepare_delayed_left_pose" {
 	"shoot_p_l_a"
@@ -1267,9 +1267,9 @@ $sequence "reload_end_right" {
 	blend "revolver_firemode_pose" 0 1
 	{ event 5004 1 "MCV_Weapon_Foley_M1895_Reload.End" }
 	{ event 5004 2 "MCV_Weapon_Foley_M1895_Reload.HandEnd" }
-	fadein 0.05
 	fadeout 0.2
 	node "0"
+	snap
 }
 
 $sequence "reload_changehand" {
@@ -1282,9 +1282,9 @@ $sequence "reload_changehand" {
 	blend "revolver_firemode_pose" 0 1
 	{ event 5004 1 "MCV_Weapon_Foley_M1895_Reload.Start" }
 	{ event 5004 2 "MCV_Weapon_Foley_M1895_Reload.Hand" }
-	fadein 0.05
 	fadeout 0.05
 	node "0"
+	snap
 }
 
 $sequence "reload_insert_left" {
@@ -1315,10 +1315,10 @@ $sequence "reload_end_left" {
 	blend "revolver_firemode_pose" 0 1
 	{ event 5004 1 "MCV_Weapon_Foley_M1895_Reload.End" }
 	{ event 5004 2 "MCV_Weapon_Foley_M1895_Reload.HandEnd" }
-	fadein 0.05
 	fadeout 0.2
 	addlayer "walklayerironsight"
 	node "0"
+	snap
 }
 
 $sequence "idletonearwall" {

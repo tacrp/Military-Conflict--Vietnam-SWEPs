@@ -1003,9 +1003,9 @@ $sequence "reload_end_right" {
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_M1895_Reload.End" }
 	{ event 5004 2 "MCV_Weapon_Foley_M1895_Reload.HandEnd" }
-	fadein 0.05
 	fadeout 0.2
 	node "0"
+	snap
 }
 
 $sequence "reload_changehand" {
@@ -1014,9 +1014,9 @@ $sequence "reload_changehand" {
 	activity "ACT_VM_RELOAD_END" 1
 	blend "ironsight" 0 1
 	blendwidth 2
-	fadein 0.05
 	fadeout 0.05
 	node "0"
+	snap
 }
 
 $sequence "reload_insert_left" {
@@ -1043,10 +1043,10 @@ $sequence "reload_end_left" {
 	blendwidth 2
 	{ event 5004 1 "MCV_Weapon_Foley_M1895_Reload.End" }
 	{ event 5004 2 "MCV_Weapon_Foley_M1895_Reload.HandEnd" }
-	fadein 0.05
 	fadeout 0.2
 	addlayer "walklayerironsight"
 	node "0"
+	snap
 }
 
 $sequence "idletonearwall" {

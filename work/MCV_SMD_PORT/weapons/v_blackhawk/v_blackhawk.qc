@@ -24,7 +24,7 @@ $attachment "eject" "Base" 10.9 -0.2 0.7 rotate 0 0 0
 
 $cbox 0 0 0 0 0 0
 
-$bbox -17.579 -12.106 -27.51 32.761 6.286 0.861
+$bbox -96 -96 -96 96 96 96
 
 $definebone "root" "" 0 7.450089 -27.509027 0 0 0 0 0 0 0 0 0
 $definebone "pelvis" "root" -0.000002 0 0 -89.790623 -89.997175 89.997175 0 0 0 0 0 0
@@ -833,7 +833,6 @@ $sequence "prepare_delayed" {
 	blend "ironsight" 0 1
 	blend "revolver_firemode_pose" 0 1
 	blendwidth 3
-	fadein 0.1
 	fadeout 0.2
 	{ event 5004 0 "MCV_Weapon_Foley_Revolver.HammerOutSlow" }
 	addlayer "walklayer"
@@ -841,6 +840,7 @@ $sequence "prepare_delayed" {
 	addlayer "runlayer"
 	addlayer "prepare_delayed_pose"
 	node "0"
+	fadein 0
 }
 $sequence "prepare_delayed_pose" {
 	"shoot_p_a"
