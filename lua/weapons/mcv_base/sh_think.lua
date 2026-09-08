@@ -102,6 +102,7 @@ function SWEP:ThinkWeapon()
         // what makes a bolt action one (it blocks the next shot until the trigger is released,
         // see CanPrimaryAttack); there is just no animation of its own to play or wait for.
         local t = self:PlayAnimation(ACT_VM_RELOAD_INSERT_PULL, self.CycleSpeed, false)
+        self:EmitThirdPersonSound(self.SoundCycleThirdPerson)
 
         if t then
             self:SetNextPrimaryFire(CurTime() + t * self.CyclePostDelay)

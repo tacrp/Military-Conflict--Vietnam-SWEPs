@@ -135,6 +135,7 @@ SWEP.OtherDamageModifier = 1.2
 SWEP.SoundSingleShot = "MCV_Weapon_M14.Single"
 SWEP.SoundDoubleShot = ""
 SWEP.SoundReload = ""
+SWEP.SoundReloadThirdPerson = "MCV_Weapon_Foley_ThirdPerson_M14.Reload"
 SWEP.SoundSpecial1 = ""
 SWEP.SoundSpecial2 = ""
 SWEP.SoundGrenadeShot = "MCV_Weapon_M14.RifleGrenade"

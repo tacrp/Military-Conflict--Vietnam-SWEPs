@@ -12,6 +12,9 @@ SWEP.SubCategory = "Carbines"
 SWEP.Caliber = ".45 ACP"
 
 SWEP.Slot = 3
+SWEP.HoldType = "revolver"
+SWEP.AimHoldType = "revolver"
+SWEP.SprintHoldType = "normal"
 
 SWEP.ViewModel = "models/weapons/mcv/v_shanxi_type17.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_shanxi_type17.mdl"
@@ -131,6 +134,7 @@ SWEP.OtherDamageModifier = 1.25
 SWEP.SoundSingleShot = "MCV_Weapon_Type17.Single"
 SWEP.SoundDoubleShot = ""
 SWEP.SoundReload = ""
+SWEP.SoundReloadThirdPerson = "MCV_Weapon_Foley_ThirdPerson_Type17.Reload"
 SWEP.SoundSpecial1 = ""
 SWEP.SoundSpecial2 = ""
 SWEP.SoundNearlyEmpty = "MCV_Weapon_Generic.NearlyEmptyClick"

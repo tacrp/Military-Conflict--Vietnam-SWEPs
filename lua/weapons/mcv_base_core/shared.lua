@@ -19,6 +19,22 @@ SWEP.WorldModel = "models/weapons/mcv/w_sks.mdl"
 
 // The multiplier the server has set for this weapon's category and a given stat
 // (mcv/shared/sh_categories.lua), 1 unless someone has turned a dial.
+// A sound for everyone in earshot except the player holding the weapon: their own foley comes
+// off the viewmodel's animation events, and hearing both at once is the same sound twice.
+function SWEP:EmitThirdPersonSound(name)
+    if CLIENT or !name or name == "" then return end
+
+    local filter = RecipientFilter()
+    filter:AddPVS(self:GetPos())
+
+    local owner = self:GetOwner()
+    if IsValid(owner) and owner:IsPlayer() then
+        filter:RemovePlayer(owner)
+    end
+
+    self:EmitSound(name, 75, 100, 1, CHAN_ITEM, 0, 0, filter)
+end
+
 function SWEP:StatMult(stat, category)
     return MCV.CategoryMult(category or self.SubCategory, stat)
 end

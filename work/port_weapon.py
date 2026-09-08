@@ -1478,6 +1478,13 @@ def generate(script_path, args):
     A(line("SoundSingleShot", snd("single_shot")))
     A(line("SoundDoubleShot", snd("double_shot")))
     A(line("SoundReload", snd("reload")))
+    # what everyone but the person holding it hears: the game keeps a duller set for the room
+    for script_key, field in (("player_reload", "SoundReloadThirdPerson"),
+                              ("player_reload_loop", "SoundReloadLoopThirdPerson"),
+                              ("player_reload_cycle", "SoundCycleThirdPerson")):
+        v = (S.get("SoundData." + script_key) or "").strip()
+        if v:
+            A(line(field, fmt("MCV_" + v)))
     A(line("SoundSpecial1", snd("special1")))
     A(line("SoundSpecial2", snd("special2")))
     if has_gl:

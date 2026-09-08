@@ -13,8 +13,8 @@ SWEP.Caliber = "9x19mm"
 
 SWEP.Slot = 2
 SWEP.SprintHoldType = "passive"
-SWEP.AimHoldType = "smg"
-SWEP.HoldType = "smg"
+SWEP.AimHoldType = "ar2"
+SWEP.HoldType = "ar2"
 
 SWEP.ViewModel = "models/weapons/mcv/v_sterling_sog.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_sterling_sog.mdl"
@@ -131,6 +131,7 @@ SWEP.OtherDamageModifier = 1.4
 SWEP.SoundSingleShot = "MCV_Weapon_Sterling_Sog.Single"
 SWEP.SoundDoubleShot = ""
 SWEP.SoundReload = ""
+SWEP.SoundReloadThirdPerson = "MCV_Weapon_Foley_ThirdPerson_Sterling.Reload"
 SWEP.SoundSpecial1 = ""
 SWEP.SoundSpecial2 = ""
 SWEP.SoundNearlyEmpty = "MCV_Weapon_Generic.NearlyEmptyClick_SMG"

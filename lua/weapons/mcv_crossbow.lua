@@ -87,7 +87,7 @@ SWEP.CustomAng = Angle(0, 0, 0)
 SWEP.Spread = 5
 SWEP.SpreadIronsighted = 1
 
-SWEP.FireRate = 30 // in rounds per minute
+SWEP.FireRate = 600 // in rounds per minute
 
 SWEP.CrosshairMinDistance = 8
 SWEP.CrosshairDeltaDistance = 4
@@ -135,6 +135,7 @@ SWEP.OtherDamageModifier = 1.25
 SWEP.SoundSingleShot = "MCV_Weapon_Crossbow.Single"
 SWEP.SoundDoubleShot = ""
 SWEP.SoundReload = ""
+SWEP.SoundReloadThirdPerson = "MCV_Weapon_Foley_ThirdPerson_Crossbow.Reload"
 SWEP.SoundSpecial1 = ""
 SWEP.SoundSpecial2 = ""
 SWEP.SoundNearlyEmpty = "MCV_Weapon_Generic.NearlyEmptyClick"

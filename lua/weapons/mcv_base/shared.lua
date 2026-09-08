@@ -207,6 +207,12 @@ SWEP.OtherDamageModifier = 1.25
 // Sound
 SWEP.SoundSingleShot = "MCV_Weapon_SKS.Single"
 SWEP.SoundDoubleShot = ""
+// What everyone but the person holding it hears. Their own foley rides the viewmodel's
+// animation events, which nobody else gets, so without these a reload is silent to the room.
+SWEP.SoundReloadThirdPerson = ""
+SWEP.SoundReloadLoopThirdPerson = ""  // per round on a shotgun or stripper reload
+SWEP.SoundCycleThirdPerson = ""       // a bolt or a pump worked between shots
+
 SWEP.SoundReload = ""
 SWEP.SoundSpecial1 = ""
 SWEP.SoundSpecial2 = ""

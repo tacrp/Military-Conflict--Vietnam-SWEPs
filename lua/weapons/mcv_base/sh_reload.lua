@@ -71,6 +71,7 @@ function SWEP:Reload()
     end
 
     self:SetLastClip(self:Clip1())
+    self:EmitThirdPersonSound(self.SoundReloadThirdPerson)
 
     // the third person gesture: the start of the reload, timed to the animation just started
     // (the whole reload, or the start of a per-round loop; the inserts and the end follow)
@@ -188,6 +189,7 @@ function SWEP:Think_Reload()
                     self:PlayReloadGesture(self:PlayAnimation(hand >= 2 and ACT_VM_RELOAD2 or ACT_VM_RELOAD, 1, true),
                                            PLAYERANIMEVENT_RELOAD_LOOP)
 
+                    self:EmitThirdPersonSound(self.SoundReloadLoopThirdPerson)
                     self:RestoreClip(self.ShotgunReloadRounds)
                 end
             elseif self.ShotgunReload then
@@ -207,6 +209,7 @@ function SWEP:Think_Reload()
                 else
                     self:PlayReloadGesture(self:PlayAnimation(self.ShotgunAltReload and ACT_VM_RELOAD_INSERT or ACT_VM_RELOAD, 1, true, true), PLAYERANIMEVENT_RELOAD_LOOP)
 
+                    self:EmitThirdPersonSound(self.SoundReloadLoopThirdPerson)
                     self:RestoreClip(self.ShotgunReloadRounds)
                 end
             else

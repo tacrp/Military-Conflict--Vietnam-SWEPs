@@ -13,8 +13,8 @@ SWEP.Caliber = "9x19mm"
 
 SWEP.Slot = 2
 SWEP.SprintHoldType = "passive"
-SWEP.AimHoldType = "smg"
-SWEP.HoldType = "smg"
+SWEP.AimHoldType = "ar2"
+SWEP.HoldType = "ar2"
 
 SWEP.ViewModel = "models/weapons/mcv/v_sten.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_sten.mdl"
@@ -133,6 +133,7 @@ SWEP.OtherDamageModifier = 1.4
 SWEP.SoundSingleShot = "MCV_Weapon_STENMK2.Single"
 SWEP.SoundDoubleShot = ""
 SWEP.SoundReload = ""
+SWEP.SoundReloadThirdPerson = "MCV_Weapon_Foley_ThirdPerson_STENMK2.Reload"
 SWEP.SoundSpecial1 = ""
 SWEP.SoundSpecial2 = ""
 SWEP.SoundNearlyEmpty = "MCV_Weapon_Generic.NearlyEmptyClick_SMG"
