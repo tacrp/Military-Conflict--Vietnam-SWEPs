@@ -13,7 +13,15 @@ function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
     local displayRoundsToLoad = self:GetReloading()
     local magOut = false // the old magazine / belt is out and the new one not yet in
 
-    if displayRoundsToLoad then
+    // A round-at-a-time reload has no magazine to swap. Nothing leaves the gun and nothing waits
+    // outside it to go in, so what the counter shows is simply what is loaded, and it only ever
+    // goes up. Both of the states below describe a magazine mid-swap, and both were being
+    // re-entered on every single insert, because each insert restarts the animation and with it
+    // the progress they are timed against: the rounds already in the gun blinked out each time.
+    if self.ShotgunReload then
+        displayRoundsToLoad = false
+
+    elseif displayRoundsToLoad then
         local reloadprogress = vm:SequenceDuration() - (self:GetAnimLockTime() - CurTime())
         local empty = self:Clip1() == 0
         local tin = empty and self.MagInTimeEmpty or self.MagInTime
@@ -53,29 +61,20 @@ function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
     end
 
     if displayRoundsToLoad then
-        if self.ShotgunReload and self:GetReloading() and self:GetEmptyReload() then
-            if self.MagInClip then
-                local bullets_to_load = self:Clip1()
+        // What the magazine on its way in is carrying, which is not yet what the gun holds. A
+        // clip-fed rifle shows the clip emptying as its rounds go down into the receiver, so it
+        // counts what is left to load; everything else shows the fresh magazine full.
+        if self.MagInClip then
+            local bullets_to_load = math.min(clipsize - self:Clip1(), self:Ammo1())
 
-                vm:SetPoseParameter("ammo_fraction", self:MagFraction(bullets_to_load, clipsize))
-                bodygroupbulletscount = bullets_to_load
-            else
-                vm:SetPoseParameter("ammo_fraction", 0)
-                bodygroupbulletscount = 0
-            end
+            vm:SetPoseParameter("ammo_fraction", self:MagFraction(bullets_to_load, clipsize))
+            bodygroupbulletscount = bullets_to_load
         else
-            if self.MagInClip then
-                local bullets_to_load = math.min(clipsize - self:Clip1(), self:Ammo1())
+            local reserve = self:GetInfiniteAmmo() and math.huge or (self:Clip1() + self:Ammo1())
+            local bullets_to_load = math.min(clipsize, self:GetClip1Capacity(), reserve)
 
-                vm:SetPoseParameter("ammo_fraction", self:MagFraction(bullets_to_load, clipsize))
-                bodygroupbulletscount = bullets_to_load
-            else
-                local reserve = self:GetInfiniteAmmo() and math.huge or (self:Clip1() + self:Ammo1())
-                local bullets_to_load = math.min(clipsize, self:GetClip1Capacity(), reserve)
-
-                vm:SetPoseParameter("ammo_fraction", self:MagFraction(bullets_to_load, clipsize))
-                bodygroupbulletscount = bullets_to_load
-            end
+            vm:SetPoseParameter("ammo_fraction", self:MagFraction(bullets_to_load, clipsize))
+            bodygroupbulletscount = bullets_to_load
         end
     elseif magOut then
         vm:SetPoseParameter("ammo_fraction", 0)
