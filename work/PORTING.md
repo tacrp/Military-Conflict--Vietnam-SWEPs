@@ -635,7 +635,8 @@ wrappers that print before and after each step to find the last one that ran.
 
 Gameplay toggles are server convars (replicated, archived, notify) registered in one place with
 `MCV.RegisterConVar` and read through accessors, so the predicted weapon code sees the same value
-on both realms. `mcv_realistic_shooting` (default 0, the game's numbers) at 1 picks the addon's own recoil and spread. It also
+on both realms. `mcv_realistic_shooting` (default 0, the game's numbers) at 1 picks the addon's own recoil and spread. Its hip
+sway damps to nothing as the sights come up and is 0 outright on a deployed bipod and through a reload. It also
 adds hip sway: the barrel wanders off the screen centre by up to `HipSwayScale` (0.25) times the
 gun's hip spread in degrees, half that on shotguns, damped by the sight amount; bullets,
 projectiles, the scope reticle and the viewmodel all follow `GetAimAngle` (eye angles +

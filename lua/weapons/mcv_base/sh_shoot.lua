@@ -251,6 +251,12 @@ SWEP.HipSwayScale = 0.25
 // peak of the sway in degrees (each axis), 0 when the mode is off or the sights are up
 function SWEP:GetAimSwayAmplitude(visual)
     if !MCV.RealisticShooting() then return 0 end
+
+    // A deployed bipod rests the gun on something, and a reload is not aiming at anything, so
+    // the barrel does not wander in either. Both are networked, so the shot and the crosshair
+    // reach the same answer on both realms.
+    if self:GetBipod() or self:GetReloading() then return 0 end
+
     local sa = visual and self:GetSightAmountVisual() or self:GetSightAmount()
     local amp = (self.Spread or 0) * self.HipSwayScale * (1 - sa)
     if (self.Num or 1) > 1 then amp = amp * 0.5 end // shotguns
