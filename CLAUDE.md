@@ -17,6 +17,16 @@ Vietnam**, so nothing has to be typed into the console. Adding one is two steps:
    a dropdown, anything else a checkbox; `section` starts a heading. Give every entry a `help`
    line saying what it does in plain words.
 
+`lua/mcv/shared/sh_categories.lua` holds the per-category stat multipliers: one convar per
+category and stat, `mcv_cat_<category>_<stat>`, all defaulting to 1. Adding a stat is an entry
+in `MCV.CategoryStats` plus the one line in the weapon code that reads it through
+`SWEP:StatMult`; adding a category is an entry in `MCV.Categories`. The menu builds its
+dropdown and sliders from those two tables, so it needs nothing further.
+
+Anything registering a convar through `MCV.RegisterConVar` must be loaded after
+`sh_convars.lua`. The autorun loader takes the shared files in name order and loads that one
+first for exactly this reason.
+
 The `mcv_wm_*` convars are deliberately left out of the menu: they are for tuning world model
 placement by hand against Crowbar and hold raw numbers, not settings anyone plays with.
 

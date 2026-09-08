@@ -17,6 +17,12 @@ SWEP.Caliber = ""
 SWEP.ViewModel = "models/weapons/mcv/v_sks.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_sks.mdl"
 
+// The multiplier the server has set for this weapon's category and a given stat
+// (mcv/shared/sh_categories.lua), 1 unless someone has turned a dial.
+function SWEP:StatMult(stat)
+    return MCV.CategoryMult(self.SubCategory, stat)
+end
+
 SWEP.BodyGroups = ""
 // The same set remapped onto the world model's own bodypart order, which is not always the
 // viewmodel's (work/port_weapon.py writes it by matching the bodypart names). Without it a gun

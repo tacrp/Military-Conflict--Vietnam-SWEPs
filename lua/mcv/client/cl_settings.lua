@@ -31,7 +31,53 @@ local SETTINGS = {
      choices = {{"Off", "0"}, {"Every time a weapon is drawn", "1"}, {"The first time each weapon is drawn", "2"}}},
 }
 
-local function build(panel)
+// which category the sliders below are showing, an index into MCV.Categories
+local cv_category = CreateClientConVar("mcv_cat_menu", "1", true, false,
+    "Q menu only: the weapon category whose stat multipliers the settings tab is showing")
+
+local function categoryBlock(panel, rebuild)
+    panel:Help("Category stats")
+    panel:ControlHelp("A multiplier per weapon category, shared by everyone on the server. " ..
+        "1 is the stat as the game has it. Pick a category, then set its stats below.")
+
+    local idx = math.Clamp(cv_category:GetInt(), 1, #MCV.Categories)
+    local category = MCV.Categories[idx]
+
+    local combo = panel:ComboBox("Category")
+    for i, name in ipairs(MCV.Categories) do
+        combo:AddChoice(name, i)
+    end
+    combo:SetValue(category)
+
+    combo.OnSelect = function(_, _, _, data)
+        cv_category:SetInt(data)
+
+        // out of the callback before the controls it is running from are thrown away
+        timer.Simple(0, function()
+            if IsValid(panel) then rebuild(panel) end
+        end)
+    end
+
+    for _, stat in ipairs(MCV.CategoryStats) do
+        panel:NumSlider(stat.label, MCV.CategoryConVarName(category, stat.key), 0, 3, 2)
+        panel:ControlHelp(stat.help)
+    end
+
+    local reset = panel:Button("Reset " .. category)
+    reset.DoClick = function()
+        for _, stat in ipairs(MCV.CategoryStats) do
+            RunConsoleCommand(MCV.CategoryConVarName(category, stat.key), "1")
+        end
+
+        timer.Simple(0, function()
+            if IsValid(panel) then rebuild(panel) end
+        end)
+    end
+end
+
+local build
+
+build = function(panel)
     panel:ClearControls()
 
     for _, s in ipairs(SETTINGS) do
@@ -62,6 +108,8 @@ local function build(panel)
 
         if s.help then panel:ControlHelp(s.help) end
     end
+
+    categoryBlock(panel, build)
 end
 
 hook.Add("PopulateToolMenu", "MCV_Settings", function()

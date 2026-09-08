@@ -108,11 +108,7 @@ function SWEP:PrimaryAttack()
     // or error the fire loop
     t = t or (60 / self.FireRate)
 
-    if fm == MCV.FIREMODE_FAST then
-        self:SetNextPrimaryFire(CurTime() + (60 / self.FireRate_Fast) * fmmult)
-    elseif fm == MCV.FIREMODE_SLOW then
-        self:SetNextPrimaryFire(CurTime() + (60 / self.FireRate_Slow) * fmmult)
-    elseif fm == MCV.FIREMODE_SA then
+    if fm == MCV.FIREMODE_SA then
         if self:GetAkimbo() then
             self:SetNextPrimaryFire(CurTime() + t * 0.4)
         else
@@ -286,7 +282,7 @@ function SWEP:GetAimSwayAmplitude(visual)
     if steady <= 0 then return 0 end
 
     local sa = visual and self:GetSightAmountVisual() or self:GetSightAmount()
-    local amp = (self.Spread or 0) * self.HipSwayScale * (1 - sa)
+    local amp = (self.Spread or 0) * self:StatMult("spread") * self.HipSwayScale * (1 - sa)
     if (self.Num or 1) > 1 then amp = amp * 0.5 end // shotguns
     // the stance swings the barrel the way it opens the game's cone: a jump or a run widens
     // the drift, a crouch steadies it. This mode has no cone to grow, so the sway is what the
@@ -332,6 +328,9 @@ function SWEP:GetSpread()
         spread = self.SpreadBipod
         sighted = self.SpreadBipodIronsighted or self.SpreadBipod
     end
+
+    spread = spread * self:StatMult("spread")
+    sighted = sighted * self:StatMult("spread_sights")
 
     local stance = self:GetStanceSpreadMultiplier()
 
@@ -381,6 +380,8 @@ function SWEP:AttackEffects()
     if self:GetBipod() then
         recoilmult = recoilmult * 0
     end
+
+    recoilmult = recoilmult * self:StatMult("recoil")
 
     self:SetLastRecoilTime(CurTime())
 
@@ -434,13 +435,19 @@ end
 // Rounds per minute for the firemode in hand. A revolver fans and pulls double action at
 // their own rates (the game's tertiary and secondary); everything else fires at FireRate.
 function SWEP:GetFiremodeRate(fm)
+    local rate = self.FireRate
+
     if fm == MCV.FIREMODE_FAN and (self.FireRate_Fan or 0) > 0 then
-        return self.FireRate_Fan
+        rate = self.FireRate_Fan
     elseif fm == MCV.FIREMODE_DA and (self.FireRate_DA or 0) > 0 then
-        return self.FireRate_DA
+        rate = self.FireRate_DA
+    elseif fm == MCV.FIREMODE_FAST and (self.FireRate_Fast or 0) > 0 then
+        rate = self.FireRate_Fast
+    elseif fm == MCV.FIREMODE_SLOW and (self.FireRate_Slow or 0) > 0 then
+        rate = self.FireRate_Slow
     end
 
-    return self.FireRate
+    return math.max(rate * self:StatMult("firerate"), 1)
 end
 
 function SWEP:BulletAttack()
@@ -457,7 +464,7 @@ function SWEP:BulletAttack()
     end
 
     owner:FireBullets({
-        Damage = self.DamageGeneric,
+        Damage = self.DamageGeneric * self:StatMult("damage"),
         Num = num,
         Src = owner:GetShootPos(),
         Dir = self:GetAimVector(),
