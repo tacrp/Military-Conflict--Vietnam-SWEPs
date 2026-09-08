@@ -654,6 +654,11 @@ ironsight pair when aiming). The game's `ViewKick*` random kick keys only exist 
 scripts, so nothing reads them. Client-only preferences (`mcv_hud_hints`) stay
 `CreateClientConVar` in the client files.
 
+Every convar has an entry in the Q menu tab, Options > Military Conflict: Vietnam
+(`mcv/client/cl_settings.lua`), so none of them has to be typed into the console; adding one
+means adding a line to the `SETTINGS` table there. See CLAUDE.md. The `mcv_wm_*` world model
+tuning convars are the exception, being raw numbers rather than settings.
+
 `mcv_tracer_color` (`mcv/client/cl_tracercolor.lua`) is a preference of a different kind: it is
 userinfo, so a player's choice travels with them and everyone sees that player's rounds in the
 colour they picked, not the colour the watcher picked. 0 is the colour the gun's own tracer
