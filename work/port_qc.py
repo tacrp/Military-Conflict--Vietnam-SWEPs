@@ -1729,6 +1729,7 @@ def step_validate(qc, ctx):
 # submachine guns 9.02, pistols and revolvers 4.49, shotguns 3.96.
 WORLD_PITCH_DELTA = {
     "w_bazooka": 43.87,   # -30.91 as derived, onto 12.96, the rpg pose's own
+    "w_type63b": 19.275,  # -6.319 as derived, onto 12.96, the ar2 pose's own
 }
 
 

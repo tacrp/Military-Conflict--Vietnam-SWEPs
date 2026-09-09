@@ -2857,5 +2857,10 @@
     }
   ],
   "proven": "Tested on the bazooka in game, side on, against Half-Life 2's rocket launcher in the same pose. Set the FOURTH number on the $definebone line for ValveBiped.Bip01_R_Hand, the pitch, to the hold type's reference pitch outright; do not add the correction to what is there. The bazooka went from -30.91 to 12.96 and now sits level on the shoulder like Half-Life 2's does. Position numbers are left alone, so the gun turns about the grip.",
-  "not_in_lua": "SWEP.WorldModelOffset cannot do this. It is applied by manipulating the player's ValveBiped.weapon_bone, and GMod player models have no such bone, so the call does nothing and the field has never had any effect. Confirmed in game: LookupBone returns nothing."
+  "not_in_lua": "SWEP.WorldModelOffset cannot do this. It is applied by manipulating the player's ValveBiped.weapon_bone, and GMod player models have no such bone, so the call does nothing and the field has never had any effect. Confirmed in game: LookupBone returns nothing.",
+  "tested": {
+    "w_bazooka": "-30.91 -> 12.96. Was pointing at the ground about forty-five degrees down; now level across the shoulder like Half-Life 2's launcher.",
+    "w_type63b": "-6.32 -> 12.96. Was nose-down about thirteen degrees; now level like Half-Life 2's rifle in the same pose."
+  },
+  "side_effect": "Both sit a little high against the hands afterwards. The rotation turns the model about the hand bone's origin, and the point the hand actually closes on is not exactly that origin, so the grip travels a short arc. The pitch is right and the height is not. Fixing it means a translation alongside the rotation, chosen so the grip lands back where it was; the three position numbers on the same line are where it goes."
 }
