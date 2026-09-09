@@ -1,0 +1,44 @@
+# World model pitch, seen side on.
+#
+# The camera sits square to the player's left looking across them, so the gun is in profile and
+# any pitch on it reads straight off the picture. The player model has to be drawn for the world
+# model to be drawn at all, hence the ShouldDrawLocalPlayer hook.
+#
+# Four shots of the same gun: as it is now, the measured pitch, the opposite sign, and the same
+# figure in the roll slot. Whichever tips the barrel down is the answer.
+god
+strip
+hud 0
+ang 0 0 0
+pos 0 0 0
+
+# side-on camera, player drawn
+clua hook.Add("CalcView", "mcv_side", function(p, pos, ang, fov) local o = p:GetPos() + Vector(0, 0, 42) return {origin = o + Vector(0, -110, 0), angles = Angle(0, 90, 0), fov = 45, drawviewer = true} end) hook.Add("ShouldDrawLocalPlayer", "mcv_side", function() return true end)
+
+give mcv_bazooka
+wait 1.5
+
+clua local w = ply:GetActiveWeapon() if IsValid(w) then w.WorldModelOffset = {pos = Vector(0, 0, 0), ang = Angle(0, 0, 0)} end
+wait 0.5
+shot wmpitch_0_none
+
+clua local w = ply:GetActiveWeapon() if IsValid(w) then w.WorldModelOffset = {pos = Vector(0, 0, 0), ang = Angle(12.96, 0, 0)} end
+wait 0.5
+shot wmpitch_1_pitch_plus
+
+clua local w = ply:GetActiveWeapon() if IsValid(w) then w.WorldModelOffset = {pos = Vector(0, 0, 0), ang = Angle(-12.96, 0, 0)} end
+wait 0.5
+shot wmpitch_2_pitch_minus
+
+clua local w = ply:GetActiveWeapon() if IsValid(w) then w.WorldModelOffset = {pos = Vector(0, 0, 0), ang = Angle(0, 0, 12.96)} end
+wait 0.5
+shot wmpitch_3_roll_plus
+
+# and the reference the numbers came from, held in the same pose
+clua local w = ply:GetActiveWeapon() if IsValid(w) then w.WorldModelOffset = {pos = Vector(0, 0, 0), ang = Angle(0, 0, 0)} end
+strip
+give weapon_rpg
+wait 1.5
+shot wmpitch_4_hl2_rpg
+
+clua hook.Remove("CalcView", "mcv_side") hook.Remove("ShouldDrawLocalPlayer", "mcv_side")

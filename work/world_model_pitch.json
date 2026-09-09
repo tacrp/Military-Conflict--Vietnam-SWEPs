@@ -3,7 +3,6 @@
   "barrel_axis": "Chosen per model by which attachment axis lies along the way from the hand to the muzzle. Half-Life 2 authors the barrel as the muzzle attachment's +X, this pack as its +Y, so it cannot be assumed.",
   "apply_to": "A rotation on the $definebone line for ValveBiped.Bip01_R_Hand, leaving its three position numbers alone: that bone's origin is the grip, so rotating it and nothing else turns the gun about the grip.",
   "which_number": "studiomdl reads the rotation triple as pitch, yaw, roll and stores it as roll, pitch, yaw, so the FIRST of the three is the pitch. Verified against the compiled bone on eight models.",
-  "unresolved": "Every gun in this pack has its barrel along the hand frame's -Y and Half-Life 2's along its +X, 90 degrees apart in heading, which the guns do not show in game. Until that is understood, whether the correction belongs in the pitch slot or the roll slot is unproven. Compile one gun each way and look.",
   "reference": {
     "ar2": {
       "axis": "+X",
@@ -2856,5 +2855,7 @@
       "holdtype": "melee",
       "why": "no reference for this hold type"
     }
-  ]
+  ],
+  "proven": "Tested on the bazooka in game, side on, against Half-Life 2's rocket launcher in the same pose. Set the FOURTH number on the $definebone line for ValveBiped.Bip01_R_Hand, the pitch, to the hold type's reference pitch outright; do not add the correction to what is there. The bazooka went from -30.91 to 12.96 and now sits level on the shoulder like Half-Life 2's does. Position numbers are left alone, so the gun turns about the grip.",
+  "not_in_lua": "SWEP.WorldModelOffset cannot do this. It is applied by manipulating the player's ValveBiped.weapon_bone, and GMod player models have no such bone, so the call does nothing and the field has never had any effect. Confirmed in game: LookupBone returns nothing."
 }

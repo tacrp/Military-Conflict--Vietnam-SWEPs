@@ -1719,6 +1719,36 @@ def step_validate(qc, ctx):
 # Worldmodels
 # --------------------------------------------------------------------------------------------
 
+# How far a world model's pitch in the hand is off where GMod's player poses want it. Those poses
+# were built around Half-Life 2's weapons, and nothing in this pack sits in them the same way;
+# work/world_model_pitch.json holds the measurements. Degrees, added to whatever the hand offset
+# below gave the model, and applied to the pitch alone: the hand bone's own origin is the grip, so
+# turning it and leaving its position turns the gun about the grip.
+# Proven on the bazooka in game against Half-Life 2's rocket launcher: the pitch wants to *be*
+# the hold type's reference figure, not be nudged towards it. rifles and anti-armor 12.96,
+# submachine guns 9.02, pistols and revolvers 4.49, shotguns 3.96.
+WORLD_PITCH_DELTA = {
+    "w_bazooka": 43.87,   # -30.91 as derived, onto 12.96, the rpg pose's own
+}
+
+
+def apply_pitch_delta(name, hand_line, ctx):
+    """The pitch is the fourth number on the line: x y z then pitch, yaw, roll."""
+    delta = WORLD_PITCH_DELTA.get(name)
+    if not delta or not hand_line:
+        return hand_line
+
+    m = re.match(r'^(\$definebone\s+"ValveBiped\.Bip01_R_Hand"\s+""\s+\S+\s+\S+\s+\S+\s+)(\S+)(\s.*)$',
+                 hand_line)
+    if not m:
+        ctx.warn("world pitch: could not read the hand bone line, left alone")
+        return hand_line
+
+    was = float(m.group(2))
+    ctx.note("world pitch %g -> %g (%+g)" % (was, was + delta, delta))
+    return "%s%g%s" % (m.group(1), was + delta, m.group(3))
+
+
 # Hand-tuned ValveBiped.Bip01_R_Hand offsets from the hand port: x y z rx ry rz. The gun bone is
 # re-parented under this bone so the world model bonemerges to the player's right hand. rx is
 # the tilt that pitches the barrel up along the curve of the arms (China Lake uses 15).
@@ -1985,6 +2015,7 @@ def port_worldmodel(args, og_dir):
                 ctx.warn("no tuned hand offset for this model; using the default, check it in game")
             hand_line = '$definebone "ValveBiped.Bip01_R_Hand" "" %s 0 0 0 0 0 0' % " ".join("%g" % v for v in off)
             ctx.note("hand bone %s" % " ".join("%g" % v for v in off))
+        hand_line = apply_pitch_delta(name, hand_line, ctx)
         # dual wield world models: bones for the left gun go under the left hand
         roots = re.findall(r'^\$definebone\s+"([^"]+)"\s+""', raw, re.M)
         left_roots = [r for r in roots if re.search(r'(_left|_l)$', r, re.I)]
