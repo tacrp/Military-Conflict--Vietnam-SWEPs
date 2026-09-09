@@ -1,0 +1,920 @@
+{
+  "what": "The pitch each world model's ValveBiped.Bip01_R_Hand bone line should carry, so the gun sits in GMod's player pose the way Half-Life 2's own weapon for that hold type does. Read by port_qc.py; measured by work/measure_world_model_pitch.py.",
+  "models": {
+    "w_ak47": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "ak47"
+    },
+    "w_akm": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "akm"
+    },
+    "w_amd65": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "amd65"
+    },
+    "w_aps": {
+      "pitch": 4.494,
+      "holdtype": "pistol",
+      "from": "aps"
+    },
+    "w_babybrowning": {
+      "pitch": 4.494,
+      "holdtype": "pistol",
+      "from": "babybrowning"
+    },
+    "w_bar_l": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "m1918"
+    },
+    "w_bazooka": {
+      "pitch": 12.956,
+      "holdtype": "rpg",
+      "from": "bazooka"
+    },
+    "w_blackhawk": {
+      "pitch": 4.494,
+      "holdtype": "revolver",
+      "from": "blackhawk"
+    },
+    "w_bren": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "bren"
+    },
+    "w_browning_auto": {
+      "pitch": 3.956,
+      "holdtype": "shotgun",
+      "from": "browning_auto"
+    },
+    "w_c96": {
+      "pitch": 4.494,
+      "holdtype": "pistol",
+      "from": "c96"
+    },
+    "w_c96_stock": {
+      "pitch": 4.494,
+      "holdtype": "pistol",
+      "from": "c96_stock"
+    },
+    "w_car15": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "car15"
+    },
+    "w_chinalake": {
+      "pitch": 3.956,
+      "holdtype": "shotgun",
+      "from": "chinalake"
+    },
+    "w_cobra": {
+      "pitch": 4.494,
+      "holdtype": "pistol",
+      "from": "cobra"
+    },
+    "w_crossbow": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "crossbow"
+    },
+    "w_cz52": {
+      "pitch": 4.494,
+      "holdtype": "pistol",
+      "from": "cz52"
+    },
+    "w_dp28": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "dp28"
+    },
+    "w_f1": {
+      "pitch": 9.02,
+      "holdtype": "smg",
+      "from": "f1"
+    },
+    "w_g3": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "g3"
+    },
+    "w_gewehr43": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "g43"
+    },
+    "w_gp25": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "akm_gp25"
+    },
+    "w_gyrojet_carbine": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "gyrojet_carbine"
+    },
+    "w_gyrojet_pistol": {
+      "pitch": 4.494,
+      "holdtype": "pistol",
+      "from": "gyrojet_pistol"
+    },
+    "w_hdm": {
+      "pitch": 4.494,
+      "holdtype": "pistol",
+      "from": "hdm"
+    },
+    "w_highpower": {
+      "pitch": 4.494,
+      "holdtype": "pistol",
+      "from": "hipower"
+    },
+    "w_izh43": {
+      "pitch": 3.956,
+      "holdtype": "shotgun",
+      "from": "fusil_robust"
+    },
+    "w_izh43_sog": {
+      "pitch": 3.956,
+      "holdtype": "shotgun",
+      "from": "fusil_robust_short"
+    },
+    "w_k50m": {
+      "pitch": 9.02,
+      "holdtype": "smg",
+      "from": "k50m"
+    },
+    "w_k50m_vc": {
+      "pitch": 9.02,
+      "holdtype": "smg",
+      "from": "k50m_vc"
+    },
+    "w_kar98_s": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "kar98_s"
+    },
+    "w_kbkg60": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "kbkg60"
+    },
+    "w_kolos": {
+      "pitch": 12.956,
+      "holdtype": "rpg",
+      "from": "kolos"
+    },
+    "w_l1a1": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "l1a1"
+    },
+    "w_l1a1_sog": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "l1a1_sog"
+    },
+    "w_l2a1": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "l2a1"
+    },
+    "w_lacoste": {
+      "pitch": 4.494,
+      "holdtype": "pistol",
+      "from": "lacoste"
+    },
+    "w_lebel": {
+      "pitch": 4.494,
+      "holdtype": "revolver",
+      "from": "lebel"
+    },
+    "w_lpo50": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "lpo50"
+    },
+    "w_luger": {
+      "pitch": 4.494,
+      "holdtype": "pistol",
+      "from": "luger"
+    },
+    "w_m12": {
+      "pitch": 9.02,
+      "holdtype": "smg",
+      "from": "m12"
+    },
+    "w_m14_sog": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "m14_sog"
+    },
+    "w_m14e2": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "m14e2"
+    },
+    "w_m14e2_sog": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "m14e2_sog"
+    },
+    "w_m14l": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "m14l"
+    },
+    "w_m16a1": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "m16a1"
+    },
+    "w_m1895": {
+      "pitch": 4.494,
+      "holdtype": "revolver",
+      "from": "m1895"
+    },
+    "w_m1897": {
+      "pitch": 3.956,
+      "holdtype": "shotgun",
+      "from": "m1897"
+    },
+    "w_m1911": {
+      "pitch": 4.494,
+      "holdtype": "pistol",
+      "from": "m1911a1"
+    },
+    "w_m1917": {
+      "pitch": 4.494,
+      "holdtype": "revolver",
+      "from": "m1917"
+    },
+    "w_m1919a6": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "m1919"
+    },
+    "w_m1928": {
+      "pitch": 9.02,
+      "holdtype": "smg",
+      "from": "thompson_m1928"
+    },
+    "w_m1a1": {
+      "pitch": 9.02,
+      "holdtype": "smg",
+      "from": "thompson"
+    },
+    "w_m1a1_SOG": {
+      "pitch": 9.02,
+      "holdtype": "smg",
+      "from": "thompson_sog"
+    },
+    "w_m1c": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "m1c"
+    },
+    "w_m1c_sog": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "m1c_sog"
+    },
+    "w_m1g_s": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "m1d"
+    },
+    "w_m202": {
+      "pitch": 12.956,
+      "holdtype": "rpg",
+      "from": "m202"
+    },
+    "w_m203": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "m16a1_m203"
+    },
+    "w_m21": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "m21"
+    },
+    "w_m24": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "fm24"
+    },
+    "w_m2c": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "m2c"
+    },
+    "w_m2c_sog": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "m2c_sog"
+    },
+    "w_m37": {
+      "pitch": 3.956,
+      "holdtype": "shotgun",
+      "from": "m37"
+    },
+    "w_m38": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "m38"
+    },
+    "w_m38_s": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "m38_s"
+    },
+    "w_m3a1": {
+      "pitch": 9.02,
+      "holdtype": "smg",
+      "from": "m3a1"
+    },
+    "w_m3a1_sog": {
+      "pitch": 9.02,
+      "holdtype": "smg",
+      "from": "m3a1_sog"
+    },
+    "w_m40": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "m40"
+    },
+    "w_m45": {
+      "pitch": 9.02,
+      "holdtype": "smg",
+      "from": "m45"
+    },
+    "w_m45_sog": {
+      "pitch": 9.02,
+      "holdtype": "smg",
+      "from": "m45_sog"
+    },
+    "w_m50": {
+      "pitch": 9.02,
+      "holdtype": "smg",
+      "from": "madsen"
+    },
+    "w_m56": {
+      "pitch": 9.02,
+      "holdtype": "smg",
+      "from": "m56"
+    },
+    "w_m60": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "m60"
+    },
+    "w_m601": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "m601"
+    },
+    "w_m605": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "m605"
+    },
+    "w_m607": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "m607"
+    },
+    "w_m60b": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "m60b"
+    },
+    "w_m656": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "m656"
+    },
+    "w_m7188": {
+      "pitch": 3.956,
+      "holdtype": "shotgun",
+      "from": "m7188"
+    },
+    "w_m72": {
+      "pitch": 12.956,
+      "holdtype": "rpg",
+      "from": "m72"
+    },
+    "w_m79": {
+      "pitch": 3.956,
+      "holdtype": "shotgun",
+      "from": "m79"
+    },
+    "w_m79_short": {
+      "pitch": 3.956,
+      "holdtype": "shotgun",
+      "from": "m79_sog"
+    },
+    "w_m8": {
+      "pitch": 4.494,
+      "holdtype": "pistol",
+      "from": "m8"
+    },
+    "w_m870": {
+      "pitch": 3.956,
+      "holdtype": "shotgun",
+      "from": "m870"
+    },
+    "w_m91": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "m91"
+    },
+    "w_m9a1": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "m9a1"
+    },
+    "w_mac10": {
+      "pitch": 4.494,
+      "holdtype": "pistol",
+      "from": "mac10"
+    },
+    "w_mac10_sog": {
+      "pitch": 4.494,
+      "holdtype": "pistol",
+      "from": "mac10_sog"
+    },
+    "w_mamba": {
+      "pitch": 4.494,
+      "holdtype": "pistol",
+      "from": "mamba"
+    },
+    "w_mas36": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "mas36"
+    },
+    "w_mas36_cr39": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "mas36_cr39"
+    },
+    "w_mas38": {
+      "pitch": 9.02,
+      "holdtype": "smg",
+      "from": "mas38"
+    },
+    "w_mas49": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "mas49"
+    },
+    "w_mat49": {
+      "pitch": 9.02,
+      "holdtype": "smg",
+      "from": "mat49"
+    },
+    "w_mat49_sog": {
+      "pitch": 9.02,
+      "holdtype": "smg",
+      "from": "mat49_sog"
+    },
+    "w_mat49k": {
+      "pitch": 9.02,
+      "holdtype": "smg",
+      "from": "mat49k"
+    },
+    "w_md63": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "md63"
+    },
+    "w_mg43": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "mg43"
+    },
+    "w_mg43b": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "mg43b"
+    },
+    "w_mg43d": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "mg43d"
+    },
+    "w_mk22": {
+      "pitch": 4.494,
+      "holdtype": "pistol",
+      "from": "mk22_mod0"
+    },
+    "w_mk4mod0": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "mk4mod0"
+    },
+    "w_mle1935": {
+      "pitch": 4.494,
+      "holdtype": "pistol",
+      "from": "mle1935"
+    },
+    "w_mp40": {
+      "pitch": 9.02,
+      "holdtype": "smg",
+      "from": "mp40"
+    },
+    "w_owen": {
+      "pitch": 9.02,
+      "holdtype": "smg",
+      "from": "owen"
+    },
+    "w_p38": {
+      "pitch": 4.494,
+      "holdtype": "pistol",
+      "from": "p38"
+    },
+    "w_panzerschreck": {
+      "pitch": 12.956,
+      "holdtype": "rpg",
+      "from": "panzerschreck"
+    },
+    "w_pb": {
+      "pitch": 4.494,
+      "holdtype": "pistol",
+      "from": "pb"
+    },
+    "w_pk": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "pk"
+    },
+    "w_pk_belt": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "pkm"
+    },
+    "w_pm": {
+      "pitch": 4.494,
+      "holdtype": "pistol",
+      "from": "pm"
+    },
+    "w_pm63": {
+      "pitch": 4.494,
+      "holdtype": "pistol",
+      "from": "pm63"
+    },
+    "w_ppk": {
+      "pitch": 4.494,
+      "holdtype": "pistol",
+      "from": "ppk"
+    },
+    "w_pps43": {
+      "pitch": 9.02,
+      "holdtype": "smg",
+      "from": "pps43"
+    },
+    "w_ppsh41": {
+      "pitch": 9.02,
+      "holdtype": "smg",
+      "from": "ppsh41"
+    },
+    "w_ppsh41_doubledrum": {
+      "pitch": 9.02,
+      "holdtype": "smg",
+      "from": "ppsh41dd"
+    },
+    "w_ppsh41_drum": {
+      "pitch": 9.02,
+      "holdtype": "smg",
+      "from": "ppsh41_drum"
+    },
+    "w_ptrd41": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "ptrd"
+    },
+    "w_qspr": {
+      "pitch": 4.494,
+      "holdtype": "revolver",
+      "from": "qspr"
+    },
+    "w_reising_m55": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "m55r"
+    },
+    "w_reising_m60": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "m60r"
+    },
+    "w_reising_smg": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "m50r"
+    },
+    "w_rhogun": {
+      "pitch": 4.494,
+      "holdtype": "pistol",
+      "from": "rhogun"
+    },
+    "w_rp46": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "rp46"
+    },
+    "w_rpd": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "rpd"
+    },
+    "w_rpd_sog": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "rpd_sog"
+    },
+    "w_rpdb": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "rpdb"
+    },
+    "w_rpdb_sog": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "rpdb_sog"
+    },
+    "w_rpg2": {
+      "pitch": 12.956,
+      "holdtype": "rpg",
+      "from": "rpg2"
+    },
+    "w_rpg7": {
+      "pitch": 12.956,
+      "holdtype": "rpg",
+      "from": "rpg7"
+    },
+    "w_rpk": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "rpk"
+    },
+    "w_ruby": {
+      "pitch": 4.494,
+      "holdtype": "pistol",
+      "from": "ruby"
+    },
+    "w_shanxi_type17": {
+      "pitch": 4.494,
+      "holdtype": "revolver",
+      "from": "shanxi_type17"
+    },
+    "w_sks": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "sks"
+    },
+    "w_springfield": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "springfield"
+    },
+    "w_sten": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "sten"
+    },
+    "w_sten_sog": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "sten_sog"
+    },
+    "w_sterling": {
+      "pitch": 9.02,
+      "holdtype": "smg",
+      "from": "sterling"
+    },
+    "w_sterling_sog": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "sterling_sog"
+    },
+    "w_stg44": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "stg44"
+    },
+    "w_stoner63": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "stoner63_commando"
+    },
+    "w_stoner63_autorifle": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "stoner63_bren"
+    },
+    "w_stoner63a": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "stoner63_ar"
+    },
+    "w_stoner63a_carbine": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "stoner63_carbine"
+    },
+    "w_stoner63lmg": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "stoner63_lmg"
+    },
+    "w_svd": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "svd"
+    },
+    "w_svt40_s": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "svt40_s"
+    },
+    "w_swm10": {
+      "pitch": 4.494,
+      "holdtype": "revolver",
+      "from": "swm10"
+    },
+    "w_swm12": {
+      "pitch": 4.494,
+      "holdtype": "revolver",
+      "from": "swm12"
+    },
+    "w_swm49": {
+      "pitch": 4.494,
+      "holdtype": "revolver",
+      "from": "swm49"
+    },
+    "w_swm76": {
+      "pitch": 9.02,
+      "holdtype": "smg",
+      "from": "swm76"
+    },
+    "w_swm76_sog": {
+      "pitch": 9.02,
+      "holdtype": "smg",
+      "from": "swm76_sog"
+    },
+    "w_t223": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "t223"
+    },
+    "w_tt33": {
+      "pitch": 4.494,
+      "holdtype": "pistol",
+      "from": "tt33"
+    },
+    "w_tul1": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "tul1"
+    },
+    "w_type14": {
+      "pitch": 4.494,
+      "holdtype": "pistol",
+      "from": "type14"
+    },
+    "w_type56": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "type56"
+    },
+    "w_type58": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "type58"
+    },
+    "w_type63": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "type63"
+    },
+    "w_type63b": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "type63b"
+    },
+    "w_type64": {
+      "pitch": 9.02,
+      "holdtype": "smg",
+      "from": "type64"
+    },
+    "w_type64_pistol": {
+      "pitch": 4.494,
+      "holdtype": "pistol",
+      "from": "type64p"
+    },
+    "w_type67": {
+      "pitch": 4.494,
+      "holdtype": "pistol",
+      "from": "type67"
+    },
+    "w_type79": {
+      "pitch": 4.494,
+      "holdtype": "pistol",
+      "from": "type97"
+    },
+    "w_uzi": {
+      "pitch": 9.02,
+      "holdtype": "smg",
+      "from": "uzi"
+    },
+    "w_uzi_sog": {
+      "pitch": 9.02,
+      "holdtype": "smg",
+      "from": "uzi_sog"
+    },
+    "w_vccarbine": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "vccarbine"
+    },
+    "w_vcpistol": {
+      "pitch": 4.494,
+      "holdtype": "pistol",
+      "from": "vcpistol"
+    },
+    "w_vcpistol2": {
+      "pitch": 4.494,
+      "holdtype": "pistol",
+      "from": "vcpistol2"
+    },
+    "w_vcshotgun": {
+      "pitch": 3.956,
+      "holdtype": "shotgun",
+      "from": "vcshotgun"
+    },
+    "w_vcsmg": {
+      "pitch": 9.02,
+      "holdtype": "smg",
+      "from": "vcsmg"
+    },
+    "w_vz23": {
+      "pitch": 9.02,
+      "holdtype": "smg",
+      "from": "vz23"
+    },
+    "w_vz24": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "vz24"
+    },
+    "w_vz52": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "vz52"
+    },
+    "w_vz54": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "vz54"
+    },
+    "w_vz58": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "vz58"
+    },
+    "w_vz59": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "vz59"
+    },
+    "w_vz61": {
+      "pitch": 4.494,
+      "holdtype": "pistol",
+      "from": "vz61"
+    },
+    "w_vz61_silencer": {
+      "pitch": 4.494,
+      "holdtype": "pistol",
+      "from": "vz61_sog"
+    },
+    "w_welrod": {
+      "pitch": 4.494,
+      "holdtype": "pistol",
+      "from": "welrod"
+    },
+    "w_xm148": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "m16_xm148"
+    },
+    "w_xm177": {
+      "pitch": 12.956,
+      "holdtype": "ar2",
+      "from": "xm177"
+    }
+  }
+}

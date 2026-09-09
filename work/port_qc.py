@@ -1719,24 +1719,34 @@ def step_validate(qc, ctx):
 # Worldmodels
 # --------------------------------------------------------------------------------------------
 
-# How far a world model's pitch in the hand is off where GMod's player poses want it. Those poses
-# were built around Half-Life 2's weapons, and nothing in this pack sits in them the same way;
-# work/world_model_pitch.json holds the measurements. Degrees, added to whatever the hand offset
-# below gave the model, and applied to the pitch alone: the hand bone's own origin is the grip, so
-# turning it and leaving its position turns the gun about the grip.
-# Proven on the bazooka in game against Half-Life 2's rocket launcher: the pitch wants to *be*
-# the hold type's reference figure, not be nudged towards it. rifles and anti-armor 12.96,
+# The pitch a world model's hand bone should carry, so the gun sits in GMod's player pose the way
+# Half-Life 2's own weapon for that hold type does. Those poses were built around Half-Life 2's
+# weapons and nothing in this pack sat in them right: rifles and anti-armor want 12.96 degrees,
 # submachine guns 9.02, pistols and revolvers 4.49, shotguns 3.96.
-WORLD_PITCH_DELTA = {
-    "w_bazooka": 43.87,   # -30.91 as derived, onto 12.96, the rpg pose's own
-    "w_type63b": 19.275,  # -6.319 as derived, onto 12.96, the ar2 pose's own
-}
+#
+# Measured by work/measure_world_model_pitch.py, listed per model in
+# work/world_model_pitch_targets.json, and proven in game on the bazooka and the Type 63.
+# The pitch is set outright rather than nudged, and the position numbers are left alone.
+_PITCH_TARGETS = None
+
+
+def world_pitch_target(name):
+    global _PITCH_TARGETS
+    if _PITCH_TARGETS is None:
+        path = os.path.join(HERE, "world_model_pitch_targets.json")
+        try:
+            with open(path, encoding="utf-8") as f:
+                _PITCH_TARGETS = json.load(f).get("models", {})
+        except Exception:
+            _PITCH_TARGETS = {}
+    entry = _PITCH_TARGETS.get(name)
+    return entry.get("pitch") if entry else None
 
 
 def apply_pitch_delta(name, hand_line, ctx):
     """The pitch is the fourth number on the line: x y z then pitch, yaw, roll."""
-    delta = WORLD_PITCH_DELTA.get(name)
-    if not delta or not hand_line:
+    target = world_pitch_target(name)
+    if target is None or not hand_line:
         return hand_line
 
     m = re.match(r'^(\$definebone\s+"ValveBiped\.Bip01_R_Hand"\s+""\s+\S+\s+\S+\s+\S+\s+)(\S+)(\s.*)$',
@@ -1746,8 +1756,11 @@ def apply_pitch_delta(name, hand_line, ctx):
         return hand_line
 
     was = float(m.group(2))
-    ctx.note("world pitch %g -> %g (%+g)" % (was, was + delta, delta))
-    return "%s%g%s" % (m.group(1), was + delta, m.group(3))
+    if abs(was - target) < 0.001:
+        return hand_line
+
+    ctx.note("world pitch %g -> %g" % (was, target))
+    return "%s%g%s" % (m.group(1), target, m.group(3))
 
 
 # Hand-tuned ValveBiped.Bip01_R_Hand offsets from the hand port: x y z rx ry rz. The gun bone is
