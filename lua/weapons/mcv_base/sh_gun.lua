@@ -9,8 +9,10 @@ function SWEP:GetPrecacheParticles()
 end
 
 function SWEP:IdleActivity()
-    if self:GetGrenadeLauncher() and self.RifleGrenadeIsUBGL then
-        return ACT_VM_IIDLE_M203
+    if self:GetGrenadeLauncher() then
+        // Rifle grenades have their own ladder-sight pose too. Using the rifle
+        // idle here jumps from standard irons to the ladder when the shot starts.
+        return self.RifleGrenadeIsUBGL and ACT_VM_IIDLE_M203 or ACT_VM_IDLE_M203
     elseif self:GetBipod() then
         return ACT_VM_DEPLOY
     end
@@ -19,11 +21,10 @@ function SWEP:IdleActivity()
 end
 
 function SWEP:DeployAnimation()
-    if self:GetGrenadeLauncher() and !self.RifleGrenadeIsUBGL then
-        return self:PlayAnimation(ACT_VM_DRAW_M203, 1, true)
+    if self:GetGrenadeLauncher() then
+        return self:PlayAnimation(self.RifleGrenadeIsUBGL and ACT_VM_IIN_M203 or ACT_VM_DRAW_M203, 1, true)
     end
 
-    self:SetGrenadeLauncher(false)
     return self:PlayAnimation(ACT_VM_DRAW, 1, true)
 end
 
@@ -79,9 +80,9 @@ function SWEP:GetControlHints()
         {"+attack2", "Aim"},
         {"+reload", "Reload"},
     }
-    if #self.Firemodes > 1 then
+    if #self.Firemodes > 1 and !self:GetGrenadeLauncher() then
         table.insert(h, {"+use +reload", "Fire mode"})
-    elseif self.AdjustableScopes then
+    elseif self.AdjustableScopes and !self:GetGrenadeLauncher() then
         table.insert(h, {"+use +reload", "Scope magnification"})
     end
     if self.HasRifleGrenade then

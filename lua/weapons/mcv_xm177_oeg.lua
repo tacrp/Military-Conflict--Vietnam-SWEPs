@@ -90,6 +90,8 @@ SWEP.Spread = 8.25
 SWEP.SpreadIronsighted = 1.75
 
 SWEP.FireRate = 750 // in rounds per minute
+// Match the plain XM177: finish the bolt stroke before the next automatic shot.
+SWEP.ShootAnimRate = 0.15
 
 SWEP.CrosshairMinDistance = 4
 SWEP.CrosshairDeltaDistance = 4

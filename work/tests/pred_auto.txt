@@ -1,0 +1,39 @@
+# Automatic rifle under 100 ms of lag: a long burst, an aimed burst, a burst while sprinting
+# (which should not fire), then an empty-clip reload.
+god
+strip
+ang 0 0 0
+ccmd cl_showerror 2
+ccmd net_fakelag 100
+give mcv_ak47
+wait 1.5
+ptrace start auto
+wait 0.3
+key +attack
+wait 1.5
+key -attack
+wait 0.6
+key +attack2
+wait 0.5
+key +attack
+wait 1.0
+key -attack
+wait 0.4
+key -attack2
+wait 0.5
+key +forward
+key +speed
+wait 0.6
+key +attack
+wait 0.8
+key -attack
+key -speed
+key -forward
+wait 0.8
+key +attack
+wait 2.5
+key -attack
+wait 4
+ptrace stop
+ccmd net_fakelag 0
+ccmd cl_showerror 0

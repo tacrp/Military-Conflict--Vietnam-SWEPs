@@ -8,7 +8,7 @@ ENT.Spawnable = false
 ENT.Model = "models/weapons/mcv/w_box.mdl"
 ENT.BoxKind = "ammo"
 ENT.HealAmount = 50
-ENT.AmmoMagazines = 2
+ENT.AmmoMagazines = 1
 ENT.Uses = 3
 ENT.Lifetime = 120
 ENT.TouchRadius = 48 // units from the box within which a player is served
@@ -45,7 +45,9 @@ function ENT:Use(ply)
     if (self.NextUse or 0) > CurTime() then return end
     self.NextUse = CurTime() + 0.5
 
-    if MCV_ApplySupply(self.BoxKind, ply, self.HealAmount, self.AmmoMagazines) then
+    local gave, cursor = MCV_ApplySupply(self.BoxKind, ply, self.HealAmount, self.AmmoMagazines, self.SupplyCursor)
+    if gave then
+        self.SupplyCursor = cursor
         self:EmitSound(self.BoxKind == "medic" and "items/medshot4.wav" or "items/ammocrate_close.wav", 70)
         self.Uses = self.Uses - 1
         if self.Uses <= 0 then self:Remove() end

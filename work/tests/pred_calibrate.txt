@@ -1,0 +1,24 @@
+# Verify the engine diagnostics using a temporary client-only mismatch, then remove it.
+ccmd net_fakelag 0
+ccmd cl_showerror 0
+ccmd cl_predict 1
+ccmd cl_predictweapons 1
+god
+strip
+give mcv_m14
+lua ply:Give("weapon_crowbar")
+select weapon_crowbar
+wait 3
+clua input.SelectWeapon(ply:GetWeapon("mcv_m14"))
+wait 3
+ccmd net_fakelag 100
+wait 2
+ccmd cl_showerror 2
+clua print("[prediction] CALIBRATION_BEGIN")
+clua local w = ply:GetActiveWeapon() print("[calibration predictable]", w:GetPredictable()) MCVCalibrationCalls=0 local original = w.Think w.Think = function(self, ...) original(self, ...) MCVCalibrationCalls=MCVCalibrationCalls+1 self:SetClip1(7) end
+wait 2
+clua print("[calibration calls]", MCVCalibrationCalls) assert(MCVCalibrationCalls > 0, "calibration weapon Think never ran") print("[prediction] CALIBRATION_END")
+strip
+ccmd net_fakelag 0
+ccmd cl_showerror 0
+wait 2

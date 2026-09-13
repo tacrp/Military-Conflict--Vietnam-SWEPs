@@ -1,9 +1,38 @@
+// Rebuild the engine-facing Lua alias from the restored mode. Launcher variants
+// carry both rifle and launcher animations in their own combined model.
+function SWEP:SyncViewModel(changeModel)
+    self.SingleViewModel = self.SingleViewModel or weapons.Get(self:GetClass()).ViewModel
+    local model = self.HasAkimbo and self:GetAkimbo() and self.ViewModelAkimbo or self.SingleViewModel
+    self.ViewModel = model
+    local vm = self:GetOwner():GetViewModel()
+    if !IsValid(vm) then return end
+    if changeModel then
+        // GetModel's cached string can agree while the engine still has the old MDL.
+        local mins, maxs = vm:GetCollisionBounds()
+        vm:SetModel(model)
+        // Client SetModel takes the MDL hull; the server retains the VM hull.
+        vm:SetCollisionBounds(mins, maxs)
+    elseif CLIENT then
+        // Match the server's cache update before Think, not during a deferred swap.
+        self:SetSaveValue("m_iViewModelIndex", vm:GetInternalVariable("m_nModelIndex"))
+    end
+end
+
 function SWEP:Deploy()
-    self:GetOwner():SetSaveValue("m_flNextAttack", 0)
+    self:CancelDeferred()
+    self:SetHolsterCommand(0)
+    self:SetHolsterTime(0)
+    self:SetHolsterEntity(NULL)
+    self:SetRecoilImpulse(vector_origin)
+    self:SetRecoilCommand(0)
+    self:SyncViewModel(true)
+    // The save-value interface is relative on the server and absolute on the client.
+    // Both writes mean ready now; CurTime on the server would double the deadline.
+    self:GetOwner():SetSaveValue("m_flNextAttack", SERVER and 0 or CurTime())
 
     if self:ViewModelHidden() then
         self:SetReady(true)
-    elseif !self:GetReady() and self:HasAnimation(ACT_VM_READY) then
+    elseif !self:GetReady() and !self:GetGrenadeLauncher() and self:HasAnimation(ACT_VM_READY) then
         self:PlayAnimation(ACT_VM_READY, 1, true)
         self:SetReady(true)
     else
@@ -40,6 +69,9 @@ function SWEP:Holster(wep)
     if game.SinglePlayer() and CLIENT then return end
 
     if CLIENT and self:GetOwner() != LocalPlayer() then return end
+    // The engine also calls Holster clientside outside prediction when applying a
+    // weapon switch. It must not start another delayed switch or mutate restored data.
+    if CLIENT and GetPredictionPlayer() != self:GetOwner() then return true end
 
     if self:GetOwner():IsNPC() then
         return
@@ -49,13 +81,16 @@ function SWEP:Holster(wep)
         self:SetReloading(false)
     end
 
-    if self:GetHolsterTime() > CurTime() then return false end
+    local forced = SERVER and GetPredictionPlayer() != self:GetOwner()
+    if !forced and self:GetHolsterTime() > CurTime() then return false end
 
-    if (self:GetHolsterTime() != 0 and self:GetHolsterTime() <= CurTime()) or !IsValid(wep) then
+    if forced or (self:GetHolsterTime() != 0 and self:GetHolsterTime() <= CurTime()) or !IsValid(wep) then
         -- Do the final holster request
         -- Picking up props try to switch to NULL, by the way
         self:SetHolsterTime(0)
+        self:SetHolsterCommand(0)
         self:SetHolsterEntity(NULL)
+        self:CancelDeferred()
 
         local vm = self:GetOwner():GetViewModel()
 
@@ -65,14 +100,18 @@ function SWEP:Holster(wep)
 
         return true
     else
+        self:CancelDeferred()
         local t = self:PlayAnimation(ACT_VM_HOLSTER, 1, true, true)
         self:SetHolsterTime(CurTime() + (t or 0))
+        local cmd = self:GetOwner():GetCurrentCommand()
+        self:SetHolsterCommand(cmd and cmd:CommandNumber() + math.ceil((t or 0) / engine.TickInterval()) or 0)
         self:SetHolsterEntity(wep)
 
         self:SetIronsight(false)
         self:SetActionState(0)
 
         self:GetOwner():DoAnimationEvent(ACT_HL2MP_GESTURE_RANGE_ATTACK_SLAM)
+        return false
     end
 end
 
@@ -80,9 +119,11 @@ hook.Add("StartCommand", "MCV_Holster", function(ply, ucmd)
     local wep = ply:GetActiveWeapon()
 
     if IsValid(wep) and wep.MilitaryConflictVietnam then
-        if wep:GetHolsterTime() != 0 and wep:GetHolsterTime() - wep:GetPingOffsetScale() <= CurTime() then
+        // StartCommand does not supply the weapon's predicted CurTime. Command
+        // numbers, including the command selected here, are identical on both sides.
+        local due = wep:GetHolsterCommand()
+        if due > 0 and ucmd:CommandNumber() >= due then
             if IsValid(wep:GetHolsterEntity()) then
-                wep:SetHolsterTime(-1)
                 ucmd:SelectWeapon(wep:GetHolsterEntity()) -- Call the final holster request
             end
         end
@@ -90,9 +131,19 @@ hook.Add("StartCommand", "MCV_Holster", function(ply, ucmd)
 end)
 
 function SWEP:Initialize()
-    // Per-instance state. The class-level defaults in sh_timers / sh_vm are tables shared
+    // Only the newly created weapon's free round is affected. Never clear the
+    // owner's shared ammo pool or a loaded weapon on deploy / pickup.
+    if SERVER and self.Secondary.Ammo == "smg1_grenade" and !MCV.SpawnRifleGrenadeAmmo() then
+        self:SetClip2(0)
+    end
+
+    // A model first precached at the mid-animation swap has no network model index
+    // on the predicting client yet. Register the alternate while giving the weapon.
+    if self.ViewModelAkimbo and self.ViewModelAkimbo != "" then
+        util.PrecacheModel(self.ViewModelAkimbo)
+    end
+    // Per-instance state. The class-level defaults in sh_vm are tables shared
     // by every weapon of the class, so they must not be mutated directly.
-    self.ActiveTimers = {}
     self.PCFs = {}
     self.ActiveEffects = {}
 

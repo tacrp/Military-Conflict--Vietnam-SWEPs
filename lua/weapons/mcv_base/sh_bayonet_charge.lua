@@ -44,19 +44,13 @@ function SWEP:StartBayonetCharge()
     local t = self:PlaySequence(self.SequenceBayonetChargeStart, 1, true) or 0.4
 
     // the thrust waits for the wind-up to finish, however long this model's is
-    self.BayonetChargeReady = CurTime() + t
-
-    self:SetTimer(t, function()
-        if !IsValid(self) or self:GetActionState() != STATE_CHARGE then return end
-        if self:HasSequence(self.SequenceBayonetChargeLoop) then
-            self:PlaySequence(self.SequenceBayonetChargeLoop, 1, false, true)
-        end
-    end, "mcv_bayonet_charge_loop")
+    self:SetActionEnd(CurTime() + t)
+    self:Defer("BayonetLoop", t)
 end
 
 function SWEP:BayonetChargeAttack()
     self:SetActionState(STATE_IDLE)
-    self.BayonetChargeReady = nil
+    self:SetActionEnd(0)
 
     local seq
     for _, s in ipairs(self.SequencesBayonetChargeAttack) do
@@ -68,11 +62,7 @@ function SWEP:BayonetChargeAttack()
 
     // the blade has to travel before it reaches anything, so the hit lands a moment into the
     // thrust rather than on its first frame, as the melee weapons' charge does
-    self:SetTimer(math.min(self.BayonetChargeHitDelay, t), function()
-        if !IsValid(self) then return end
-        self:BashStrike(self.BayonetRange,
-                        self.BayonetDamage * self.BayonetChargeDamageMultiplier, true)
-    end, "mcv_bayonet_charge_hit")
+    self:Defer("BayonetHit", math.min(self.BayonetChargeHitDelay, t))
 
     self:SetNextPrimaryFire(CurTime() + t)
     self:SetNextSecondaryFire(CurTime() + t)
@@ -81,7 +71,8 @@ end
 // Only for a charge abandoned rather than finished: the blade gone, or a reload over the top.
 function SWEP:EndBayonetCharge()
     self:SetActionState(STATE_IDLE)
-    self.BayonetChargeReady = nil
+    self:SetActionEnd(0)
+    self:CancelDeferred()
     self:SetNextIdle(CurTime())
     self:SetNextPrimaryFire(CurTime() + 0.3)
 end
@@ -106,7 +97,7 @@ function SWEP:Think_BayonetCharge()
     end
 
     // the wind-up plays out first, whatever else happens over it
-    if CurTime() < (self.BayonetChargeReady or self:GetActionStart() + self.BayonetChargeWindup) then
+    if CurTime() < self:GetActionEnd() then
         return
     end
 
@@ -122,4 +113,14 @@ function SWEP:Think_BayonetCharge()
        or CurTime() > self:GetActionStart() + self.BayonetChargeMaxTime then
         self:BayonetChargeAttack()
     end
+end
+
+function SWEP:Deferred_BayonetLoop()
+    if self:GetActionState() == STATE_CHARGE and self:HasSequence(self.SequenceBayonetChargeLoop) then
+        self:PlaySequence(self.SequenceBayonetChargeLoop, 1, false, true)
+    end
+end
+
+function SWEP:Deferred_BayonetHit()
+    self:BashStrike(self.BayonetRange, self.BayonetDamage * self.BayonetChargeDamageMultiplier, true)
 end

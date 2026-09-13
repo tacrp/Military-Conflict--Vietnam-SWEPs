@@ -3,6 +3,14 @@ local STATE_WINDUP = 1
 local STATE_BUSY = 2
 local STATE_STAKE = 3 // mine placed, waiting for the stake
 
+SWEP.DeferredActions = {"Place", "PlaceEnd", "ThrowLit"}
+
+// A newly created server entity has no client-predictable handle. Keep the authoritative
+// reference outside the predicted datatable; the placement stage itself remains predicted.
+function SWEP:GetPlacedMine()
+    return self:GetNWEntity("MCVPlacedMine")
+end
+
 function SWEP:GetFiremodeName()
     if self.PlaceKind == "mine" and self:GetActionState() == STATE_STAKE then return "Place stake" end
     if self.PlaceKind == "c4" and self:CountPlanted() > 0 then return "Right click: detonate" end
@@ -55,7 +63,7 @@ function SWEP:CanPlaceAt(tr)
     if self.PlaceKind == "mine" then
         if tr.HitNormal.z < 0.7 then return false end // mines go on the ground
         if self:GetActionState() == STATE_STAKE then
-            local mine = self:GetPlacedEntity()
+            local mine = self:GetPlacedMine()
             if !IsValid(mine) then return false end
             local d = (tr.HitPos - mine:GetPos()):Length()
             if d < 24 or d > self.WireLength then return false end
@@ -86,7 +94,7 @@ end
 
 function SWEP:IsLit()
     local state = self:GetActionState()
-    return state == STATE_WINDUP or (state == STATE_BUSY and CurTime() < (self.LitUntil or 0))
+    return state == STATE_WINDUP or (state == STATE_BUSY and (self:DeferPending("Place") or self:DeferPending("ThrowLit")))
 end
 
 function SWEP:GetPrecacheParticles()
@@ -124,28 +132,32 @@ function SWEP:Plant()
 
     local pos, normal = tr.HitPos, tr.HitNormal
     local parent = IsValid(tr.Entity) and !tr.Entity:IsWorld() and tr.Entity or nil
-    self.LitUntil = CurTime() + math.min(self.PlaceDelay, t)
-
-    self:SetTimer(math.min(self.PlaceDelay, t), function()
-        if !IsValid(self) then return end
-        if stake then
-            self:SpawnStake(pos, normal)
-        else
-            self:SpawnPlaced(pos, normal, parent)
-        end
-    end, "mcv_place")
-
-    self:SetTimer(t, function()
-        if !IsValid(self) then return end
-        if self.PlaceKind == "mine" and !stake then
-            self:SetActionState(STATE_STAKE)
-        else
-            self:SetActionState(STATE_IDLE)
-            self:CheckEmpty()
-        end
-    end, "mcv_place_end")
+    // Only entity creation reads this trace; the server does not replay Lua state.
+    if SERVER then self.PendingPlacement = {pos = pos, normal = normal, parent = parent} end
+    self:SetActionVariant(stake and 1 or 0)
+    self:SetActionEnd(CurTime() + t)
+    self:Defer("Place", math.min(self.PlaceDelay, t))
 
     return true
+end
+
+function SWEP:Deferred_Place()
+    local tr = SERVER and self.PendingPlacement or {}
+    if self:GetActionVariant() == 1 then
+        self:SpawnStake(tr.pos, tr.normal)
+    else
+        self:SpawnPlaced(tr.pos, tr.normal, tr.parent)
+    end
+    self:Defer("PlaceEnd", math.max(self:GetActionEnd() - CurTime(), 0))
+end
+
+function SWEP:Deferred_PlaceEnd()
+    if self.PlaceKind == "mine" and self:GetActionVariant() == 0 then
+        self:SetActionState(STATE_STAKE)
+    else
+        self:SetActionState(STATE_IDLE)
+        self:CheckEmpty()
+    end
 end
 
 function SWEP:ConfigurePlaced(ent)
@@ -181,7 +193,7 @@ function SWEP:SpawnPlaced(pos, normal, parent)
     if self.PlaceKind == "mine" then
         ent.MineBodygroups = self.MineBodygroups
         ent:SetBodygroup(self.MineBodygroups.stick, blank_of(ent, self.MineBodygroups.stick))
-        self:SetPlacedEntity(ent)
+        self:SetNWEntity("MCVPlacedMine", ent)
     end
 end
 
@@ -189,7 +201,7 @@ function SWEP:SpawnStake(pos, normal)
     self:TakeRound(1)
     if CLIENT then return end
 
-    local mine = self:GetPlacedEntity()
+    local mine = self:GetPlacedMine()
     if !IsValid(mine) then return end
 
     local stake = ents.Create(self.StakeEntityClass)
@@ -203,13 +215,13 @@ function SWEP:SpawnStake(pos, normal)
     stake:Activate()
 
     mine:SetStakeEntity(stake)
-    self:SetPlacedEntity(NULL)
+    self:SetNWEntity("MCVPlacedMine", NULL)
 end
 
 // Dynamite can be thrown lit instead of planted
 function SWEP:Windup(key)
     self:SetActionState(STATE_WINDUP)
-    self.WindupKey = key or IN_ATTACK
+    self:SetActionVariant(key or IN_ATTACK)
     if self:HasSequence(self.SequenceWindup) then
         self:PlaySequence(self.SequenceWindup, 1, false, true)
     end
@@ -220,36 +232,32 @@ function SWEP:ThrowLit()
     local t = self:HasSequence(self.SequenceThrow) and self:PlaySequence(self.SequenceThrow, 1, true) or 0.5
     self:SetNextPrimaryFire(CurTime() + t)
     self:GetOwner():DoAnimationEvent(ACT_HL2MP_GESTURE_RANGE_ATTACK_GRENADE)
-    self.LitUntil = CurTime() + math.min(0.2, t)
+    self:SetActionVariant(2)
+    self:SetActionEnd(CurTime() + t)
+    self:Defer("ThrowLit", math.min(0.2, t))
+end
 
-    self:SetTimer(math.min(0.2, t), function()
-        if !IsValid(self) then return end
-        self:TakeRound(1)
-        if CLIENT then return end
-        local owner = self:GetOwner()
-        local ang = self:GetAimAngle()
-        local ent = ents.Create(self.PlacedEntityClass)
-        if !IsValid(ent) then return end
-        self:ConfigurePlaced(ent)
-        ent.Thrown = true
-        ent:SetPos(owner:GetShootPos() + ang:Forward() * 12)
-        ent:SetAngles(ang)
-        ent:SetOwner(owner)
-        ent:Spawn()
-        ent:Activate()
-        ent:Light()
-        local phys = ent:GetPhysicsObject()
-        if IsValid(phys) then
-            phys:SetVelocityInstantaneous((ang:Forward() + ang:Up() * 0.15):GetNormalized() * self.ThrowForce + owner:GetVelocity())
-            phys:AddAngleVelocity(VectorRand() * 300)
-        end
-    end, "mcv_place")
-
-    self:SetTimer(t, function()
-        if !IsValid(self) then return end
-        self:SetActionState(STATE_IDLE)
-        self:CheckEmpty()
-    end, "mcv_place_end")
+function SWEP:Deferred_ThrowLit()
+    self:Defer("PlaceEnd", math.max(self:GetActionEnd() - CurTime(), 0))
+    self:TakeRound(1)
+    if CLIENT then return end
+    local owner = self:GetOwner()
+    local ang = self:GetAimAngle()
+    local ent = ents.Create(self.PlacedEntityClass)
+    if !IsValid(ent) then return end
+    self:ConfigurePlaced(ent)
+    ent.Thrown = true
+    ent:SetPos(owner:GetShootPos() + ang:Forward() * 12)
+    ent:SetAngles(ang)
+    ent:SetOwner(owner)
+    ent:Spawn()
+    ent:Activate()
+    ent:Light()
+    local phys = ent:GetPhysicsObject()
+    if IsValid(phys) then
+        phys:SetVelocityInstantaneous((ang:Forward() + ang:Up() * 0.15):GetNormalized() * self.ThrowForce + owner:GetVelocity())
+        phys:AddAngleVelocity(VectorRand() * 300)
+    end
 end
 
 function SWEP:Detonate()
@@ -312,7 +320,7 @@ function SWEP:ThinkWeapon()
 
     self:Think_Fuse()
 
-    if state == STATE_WINDUP and !owner:KeyDown(self.WindupKey or IN_ATTACK) then
+    if state == STATE_WINDUP and !owner:KeyDown(self:GetActionVariant()) then
         self:ThrowLit()
     end
 
@@ -322,7 +330,7 @@ function SWEP:ThinkWeapon()
     end
 
     // the mine step is lost if its half disappears
-    if state == STATE_STAKE and !IsValid(self:GetPlacedEntity()) then
+    if SERVER and state == STATE_STAKE and !IsValid(self:GetPlacedMine()) then
         self:SetActionState(STATE_IDLE)
     end
 end
@@ -422,7 +430,7 @@ if CLIENT then
         local ang = self:PlaceAngle(tr.HitNormal)
         local raise = 0.5
         if state == STATE_STAKE then
-            local mine = self:GetPlacedEntity()
+            local mine = self:GetPlacedMine()
             raise = self.StakeRaise
             ang = self:PlaceAngle(tr.HitNormal, IsValid(mine) and (mine:GetPos() - tr.HitPos):Angle().y or nil, self.StakeAngleOffset)
             if self.MineBodygroups then
@@ -446,7 +454,7 @@ if CLIENT then
 
         // the wire the stake would give
         if state == STATE_STAKE then
-            local mine = self:GetPlacedEntity()
+            local mine = self:GetPlacedMine()
             if IsValid(mine) then
                 render.SetMaterial(Material("cable/rope"))
                 render.DrawBeam(mine:GetPos() + Vector(0, 0, 4), tr.HitPos + tr.HitNormal * self.StakeRaise, 0.6, 0, 1, col)

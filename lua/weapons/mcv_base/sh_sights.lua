@@ -40,19 +40,17 @@ end
 if CLIENT then
     // Visual copy of the sight progress, advanced once per rendered frame.
     //
-    // The gameplay value is the predicted one and it is what the shot reads. The client writes
-    // its transition stamps during prediction and the engine restores them whenever the server
-    // disagrees, which is correct, but a restored stamp moves the whole curve at once: two
-    // networked numbers define it, so a correction of a tick lands as a step in the amount
-    // rather than as a slower or faster transition.
-    //
-    // So what is drawn never reads the stamps directly. It chases the gameplay value at a
-    // bounded rate: at least as fast as a transition itself, so once the two agree this tracks
-    // it exactly, and fast enough to close any gap within CatchUp seconds, so a correction is
-    // absorbed over a few frames instead of appearing. Nothing snaps, at any gap size.
+    // Shots read the predicted NetworkVar. Rendering follows its resulting value at a
+    // bounded rate, absorbing corrections over subsequent frames. This ordinary Lua cache
+    // is not rolled back: only calls outside command prediction may advance it.
     SWEP.VisualSightCatchUp = 0.08
 
     function SWEP:GetSightAmountRawVisual()
+        // GetViewModelPosition also runs while simulating commands. Never let an
+        // earlier command consume this rendered frame's visual update.
+        if GetPredictionPlayer() == self:GetOwner() then
+            return self.VisualSightRaw or self:GetSightAmountRaw()
+        end
         local frame = FrameNumber()
 
         if self.VisualSightFrame == frame then return self.VisualSightRaw end

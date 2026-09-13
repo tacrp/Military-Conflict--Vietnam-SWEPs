@@ -16,7 +16,7 @@ SWEP.Slot = 3
 SWEP.ViewModel = "models/weapons/mcv/v_mk4mod0.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_mk4mod0.mdl"
 
-SWEP.BodyGroups = "000"
+SWEP.BodyGroups = "001"
 SWEP.MagInTime = 1.47
 SWEP.MagInTimeEmpty = 1.47
 SWEP.MagOutTime = 0

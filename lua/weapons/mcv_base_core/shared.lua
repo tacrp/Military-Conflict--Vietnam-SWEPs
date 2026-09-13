@@ -25,6 +25,7 @@ SWEP.WorldModel = "models/weapons/mcv/w_sks.mdl"
 // first person foley, so this would be the same sound twice, unless the viewmodel is off screen.
 function SWEP:PlayOwnThirdPersonSound(name)
     if SERVER or !name or name == "" then return end
+    if !game.SinglePlayer() and !IsFirstTimePredicted() then return end
 
     local owner = self:GetOwner()
     if !IsValid(owner) or owner != LocalPlayer() then return end
@@ -237,6 +238,16 @@ function SWEP:SetupDataTables()
     self:NetworkVar("Float", 9, "ActionStart")
     // the one deferred action waiting to run, and when it is due (sh_timers.lua)
     self:NetworkVar("Float", 10, "DeferredTime")
+    self:NetworkVar("Float", 11, "ActionEnd")
+    self:NetworkVar("Float", 12, "NextRepairTime")
+    self:NetworkVar("Float", 13, "WindupEnd")
+    self:NetworkVar("Float", 14, "HammerReleaseTime")
+    // Completed movement samples, restored with the weapon on command replay.
+    // sh_movement.lua selects N-1 across the different client/server Think ordering.
+    self:NetworkVar("Float", 15, "MoveSpeed")
+    self:NetworkVar("Float", 16, "LastMoveSpeed")
+    self:NetworkVar("Float", 17, "AnimationStart")
+    self:NetworkVar("Float", 18, "AnimationDuration") // negative for reverse playback
 
     self:NetworkVar("Int", 0, "ScopeLevel")
     self:NetworkVar("Int", 1, "LastClip")
@@ -248,6 +259,12 @@ function SWEP:SetupDataTables()
     // one just closed (the hands swap next), 2 the left (mcv_base/sh_reload.lua)
     self:NetworkVar("Int", 6, "ReloadHand")
     self:NetworkVar("Int", 5, "DeferredAction") // index into SWEP.DeferredActions, 0 = nothing
+    self:NetworkVar("Int", 7, "ActionVariant")
+    self:NetworkVar("Int", 8, "SlashCount")
+    self:NetworkVar("Int", 9, "RecoilCommand")
+    self:NetworkVar("Int", 10, "HolsterCommand")
+    self:NetworkVar("Int", 11, "MoveCommand")
+    self:NetworkVar("Int", 12, "SupplyCursor")
 
     self:NetworkVar("Bool", 0, "Reloading")
     self:NetworkVar("Bool", 1, "EndReload")
@@ -263,10 +280,16 @@ function SWEP:SetupDataTables()
     self:NetworkVar("Bool", 11, "Akimbo")
     self:NetworkVar("Bool", 12, "PrimedAttack")
     self:NetworkVar("Bool", 13, "HasSecond") // a second copy of this weapon was picked up: dual wield allowed
+    self:NetworkVar("Bool", 14, "WasRunning")
+    self:NetworkVar("Bool", 15, "MoveGrounded")
+    self:NetworkVar("Bool", 16, "LastMoveGrounded")
+    self:NetworkVar("Bool", 17, "MoveCrouched")
+    self:NetworkVar("Bool", 18, "LastMoveCrouched")
+    self:NetworkVar("Vector", 0, "RecoilImpulse")
+    self:NetworkVar("Entity", 2, "ActionTarget")
 
     self:NetworkVar("Entity", 0, "HolsterEntity")
-    // equipment: the entity a two-step placement is working on (mine waiting for its stake)
-    self:NetworkVar("Entity", 1, "PlacedEntity")
+    // Slot 1 was the server-created mine handle; it now uses a non-predicted NWEntity.
 
     self:SetFiremode(1)
     self:SetScopeLevel(1)
@@ -332,12 +355,6 @@ function SWEP:PostDrawViewModelWeapon(vm) end
 function SWEP:DrawHUDExtra() end
 
 function SWEP:SecondaryAttack()
-end
-
-function SWEP:GetPingOffsetScale()
-    if game.SinglePlayer() then return 0 end
-
-    return (self:GetOwner():Ping() - 5) / 1000
 end
 
 // ---------------------------------------------------------------------------------------

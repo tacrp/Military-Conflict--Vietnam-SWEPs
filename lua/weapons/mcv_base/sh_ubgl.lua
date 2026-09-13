@@ -67,7 +67,7 @@ function SWEP:RifleGrenadeAttack()
 
     self:EmitSound(self.SoundGrenadeShot)
 
-    owner:SetVelocity(self:GetAimVector() * -self.RecoilPushbackValue)
+    self:QueueRecoilImpulse(self.RecoilPushbackValue)
 
     local recoilup = Lerp(self:GetSightAmount(), self.ViewSlideRecoilUp, self.ViewSlideRecoilIronsightUp) * 3
     local recoilright = Lerp(self:GetSightAmount(), self.ViewSlideRecoilRight, self.ViewSlideRecoilIronsightRight) * 3

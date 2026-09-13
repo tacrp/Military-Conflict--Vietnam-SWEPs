@@ -1,3 +1,9 @@
+// GetModel's Lua-facing name can survive a viewmodel change or prediction restore.
+// Gameplay metadata follows the weapon's predicted mode, not that cached name.
+local function animationModel(self)
+    return self:GetAkimbo() and self.ViewModelAkimbo or (self.SingleViewModel or self.ViewModel)
+end
+
 function SWEP:PrimaryAttack()
     if self:StillWaiting() then return end
     if self:GetNeedCycle() then return end
@@ -171,7 +177,7 @@ function SWEP:HasPoseRecoil()
     local vm = owner:GetViewModel()
     if !IsValid(vm) then return false end
 
-    local model = vm:GetModel()
+    local model = animationModel(self)
 
     if self.PoseRecoilModel != model then
         self.PoseRecoilModel = model
@@ -191,13 +197,25 @@ end
 function SWEP:FireAnimationEvent( pos, ang, event, name )
     if (name == "eject" or name == "eject2") and IsFirstTimePredicted() then
         self:DoEject(name)
-    elseif name == "hammerpos 1" and !self.InvertAnimationHammer then
-        self:SetNeedCycle(false)
-        self:SetEmptyReload(false)
-    elseif name == "hammerpos 0" and self.InvertAnimationHammer then
-        self:SetNeedCycle(false)
-        self:SetEmptyReload(false)
     end
+end
+
+// Animation events run on render/animation clocks and are not replayable gameplay input.
+// Use the event cycles extracted from the compiled model to schedule the same transition
+// from the predicted animation start instead.
+function SWEP:ScheduleHammerRelease(vm, seq, duration, reverse)
+    local model = MCV.HammerEvents and MCV.HammerEvents[string.lower(animationModel(self))]
+    local events = model and model[string.lower(vm:GetSequenceName(seq))]
+    local cycle = events and events[self.InvertAnimationHammer and 0 or 1]
+    self:SetHammerReleaseTime(cycle and (CurTime() + duration * (reverse and 1 - cycle or cycle)) or 0)
+end
+
+function SWEP:Think_HammerRelease()
+    local at = self:GetHammerReleaseTime()
+    if at == 0 or CurTime() < at then return end
+    self:SetHammerReleaseTime(0)
+    self:SetNeedCycle(false)
+    self:SetEmptyReload(false)
 end
 
 // How far the stance opens the gun up: the game's own multipliers (the weapon script's
@@ -209,11 +227,12 @@ function SWEP:GetStanceSpreadMultiplier()
     local owner = self:GetOwner()
     if !IsValid(owner) then return 1 end
 
-    local move = math.min(owner:GetVelocity():Length() / 273, 1)
+    local speed, grounded, crouched = self:GetWeaponMovement()
+    local move = math.min(speed / 273, 1)
 
-    if !owner:IsOnGround() then
+    if !grounded then
         return Lerp(move, 1, self.JumpSpreadMultiplier)
-    elseif owner:Crouching() then
+    elseif crouched then
         return Lerp(move, self.CrouchSpreadMultiplier, self.CrouchMoveSpreadMultiplier)
     end
     return Lerp(move, 1, self.StandMoveSpreadMultiplier)
@@ -229,6 +248,9 @@ if CLIENT then
     SWEP.StanceResyncThreshold = 4 // further apart than that and it snaps instead of crawling
 
     function SWEP:GetStanceSpreadMultiplierVisual()
+        if GetPredictionPlayer() == self:GetOwner() then
+            return self.VisualStance or self:GetStanceSpreadMultiplier()
+        end
         local frame = FrameNumber()
         if self.VisualStanceFrame == frame then return self.VisualStance end
 
@@ -268,6 +290,9 @@ if CLIENT then
     SWEP.SwaySteadyRate = 4   // a second: a quarter of one to go either way
 
     function SWEP:GetSwaySteadyVisual()
+        if GetPredictionPlayer() == self:GetOwner() then
+            return self.VisualSteady or self:GetSwaySteady()
+        end
         local frame = FrameNumber()
         if self.VisualSteadyFrame == frame then return self.VisualSteady end
 
@@ -439,7 +464,7 @@ function SWEP:AttackEffects()
         self:EmitSound(self.SoundNearlyEmpty, 100, 100, 1 - (clip_percentage * 3), CHAN_VOICE)
     end
 
-    owner:SetVelocity(self:GetAimVector() * -self.RecoilPushbackValue)
+    self:QueueRecoilImpulse(self.RecoilPushbackValue)
 end
 
 // The game records every weapon twice: the report from where the shot is fired, and the same
@@ -650,6 +675,10 @@ function SWEP:FiremodeAvailable(mode)
 end
 
 function SWEP:ChangeFiremode()
+    // The rifle's selector and scope adjustment do not operate in launcher mode.
+    // Preserve its selected mode and avoid interrupting the launcher animation.
+    if self:GetGrenadeLauncher() then return end
+
     if self.AdjustableScopes then
         local scopelevel = self:GetScopeLevel()
 

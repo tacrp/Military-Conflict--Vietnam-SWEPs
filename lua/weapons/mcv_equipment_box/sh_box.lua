@@ -1,3 +1,5 @@
+SWEP.DeferredActions = {"BoxUse", "BoxDrop", "BoxEnd"}
+
 function SWEP:GetFiremodeName()
     return self.BoxKind == "medic" and "Medic Box" or "Ammo Box"
 end
@@ -6,44 +8,92 @@ function SWEP:GetHUDAmmo()
     return self:GetRoundsLeft(), nil
 end
 
-// Give ammo for every MCV gun the target carries, or heal. Returns true when something was given.
-function MCV_ApplySupply(kind, target, amount_heal, magazines)
+// One shared magazine-equivalent budget, not a full magazine for every carried gun.
+// Ammo pools are sorted and merged so duplicate guns cannot multiply the grant.
+function MCV_AmmoSupplyPlan(target, magazines, cursor)
+    local pools = {}
+    local function addPool(ammo, clip, definition)
+        if ammo < 0 then return end
+        local name = string.lower(game.GetAmmoName(ammo) or "")
+        if name == "mcv_ammobox" or name == "mcv_medicbox" then return end
+        clip = math.max(clip, 0)
+        local per = math.max(clip, 1) // a loose grenade or rocket costs a whole share
+        local starting = tonumber((definition or {}).DefaultClip)
+        local cap = starting and math.max(starting - clip, per) or per
+        local maximum = game.GetAmmoMax(ammo)
+        if maximum and maximum > 0 then cap = math.min(cap, maximum) end
+        local pool = pools[ammo] or {ammo=ammo, per=0, cap=0}
+        pool.per = math.max(pool.per, per)
+        pool.cap = math.max(pool.cap, cap)
+        pools[ammo] = pool
+    end
+    for _, wep in ipairs(target:GetWeapons()) do
+        if wep.BoxKind then continue end // supplies never replenish supplies
+        addPool(wep:GetPrimaryAmmoType(), wep:GetMaxClip1(), wep.Primary)
+        addPool(wep:GetSecondaryAmmoType(), wep:GetMaxClip2(), wep.Secondary)
+    end
+
+    local candidates = {}
+    for ammo, pool in pairs(pools) do
+        pool.have = target:GetAmmoCount(ammo)
+        pool.amount = 0
+        if pool.have < pool.cap then table.insert(candidates, pool) end
+    end
+    table.sort(candidates, function(a,b) return a.ammo < b.ammo end)
+    local count = #candidates
+    cursor = cursor or 0
+    if count == 0 then return {}, cursor end
+    local ordered = {}
+    for i=1,count do ordered[i] = candidates[(cursor+i-1)%count+1] end
+    local budget = math.max(magazines or 1, 0)
+
+    for i, pool in ipairs(ordered) do
+        local share = budget / (count-i+1)
+        local amount = math.floor(pool.per * share + 1e-9)
+        // Indivisible ammo gets its turn when enough of the shared budget remains.
+        // Rotating the first pool lets rockets receive a full share on later uses.
+        if amount == 0 and budget+1e-9 >= 1/pool.per then amount = 1 end
+        pool.amount = math.min(amount, pool.cap-pool.have)
+        budget = budget-pool.amount/pool.per
+    end
+    // Distribute affordable rounding leftovers without exceeding the total budget.
+    local spent = true
+    while spent do
+        spent = false
+        for _, pool in ipairs(ordered) do
+            if pool.have+pool.amount < pool.cap and budget+1e-9 >= 1/pool.per then
+                pool.amount = pool.amount+1
+                budget = budget-1/pool.per
+                spent = true
+            end
+        end
+    end
+    return ordered, cursor+1
+end
+
+// Returns true only when something was supplied, plus the next ammo rotation cursor.
+function MCV_ApplySupply(kind, target, amount_heal, magazines, cursor)
     if !IsValid(target) or !target:IsPlayer() or !target:Alive() then return false end
 
     if kind == "medic" then
         if target:Health() >= target:GetMaxHealth() then return false end
-        target:SetHealth(math.min(target:Health() + amount_heal, target:GetMaxHealth()))
-        target:Extinguish()
+        if SERVER or target == LocalPlayer() then
+            target:SetHealth(math.min(target:Health() + amount_heal, target:GetMaxHealth()))
+        end
+        if SERVER then target:Extinguish() end
         return true
     end
 
+    local plan, nextCursor = MCV_AmmoSupplyPlan(target, magazines, cursor)
     local gave = false
-    for _, wep in ipairs(target:GetWeapons()) do
-        if !wep.MilitaryConflictVietnam then continue end
-        // boxes do not refill boxes (it used to hand itself three more)
-        if wep.BoxKind then continue end
-        local clip = wep.Primary and wep.Primary.ClipSize or -1
-        local ammo = wep:GetPrimaryAmmoType()
-        if ammo <= 0 then continue end
-        local per = clip > 0 and clip or (wep.Primary.DefaultClip or 1)
-        // up to what the gun spawns with (its DefaultClip is clip + reserve), at least a few
-        // magazines: with only the magazine rule a fresh gun (M16: 320 in reserve) was always
-        // "full" and the box did nothing for it
-        local cap = math.max(per * math.max(magazines, 1) * 3, (wep.Primary.DefaultClip or 0) - math.max(clip, 0))
-        local have = target:GetAmmoCount(ammo)
-        if have < cap then
-            target:GiveAmmo(math.min(per * magazines, cap - have), ammo, true)
-            gave = true
+    for _, pool in ipairs(plan) do
+        if pool.amount <= 0 then continue end
+        if SERVER or target == LocalPlayer() then
+            target:SetAmmo(pool.have+pool.amount, pool.ammo)
         end
-        if wep.Secondary and wep.Secondary.ClipSize and wep.Secondary.ClipSize > 0 then
-            local ammo2 = wep:GetSecondaryAmmoType()
-            if ammo2 > 0 and target:GetAmmoCount(ammo2) < 4 then
-                target:GiveAmmo(2, ammo2, true)
-                gave = true
-            end
-        end
+        gave = true
     end
-    return gave
+    return gave, gave and nextCursor or cursor
 end
 
 function SWEP:GetGiveTarget()
@@ -60,28 +110,33 @@ function SWEP:UseBox(target, seq, delay)
     self:SetNextPrimaryFire(CurTime() + t)
     self:SetNextSecondaryFire(CurTime() + t)
 
-    self:SetTimer(math.min(delay, t), function()
-        if !IsValid(self) or !IsValid(target) then return end
-        if SERVER then
-            if MCV_ApplySupply(self.BoxKind, target, self.HealAmount, self.AmmoMagazines) then
-                self:EmitSound(self.BoxKind == "medic" and "items/medshot4.wav" or "items/ammocrate_close.wav", 70)
-            else
-                self:EmitSound("items/medshotno1.wav", 60)
-                return
-            end
-        end
-        self:TakeRound(1)
-    end, "mcv_box_use")
+    self:SetActionTarget(target)
+    self:SetActionVariant(seq == self.SequenceSelf and 1 or 0)
+    self:SetActionEnd(CurTime() + t)
+    self:Defer("BoxUse", math.min(delay, t))
+end
 
-    self:SetTimer(t, function()
-        if !IsValid(self) then return end
-        // the self animation takes the box out of view and ends there: bring it back with the
-        // draw animation instead of snapping to the idle
-        if seq == self.SequenceSelf and self:HasSequence(self.SequenceDraw) and self:GetRoundsLeft() > 0 then
-            self:PlaySequence(self.SequenceDraw, 1, true)
-        end
-        self:CheckEmpty()
-    end, "mcv_box_end")
+function SWEP:Deferred_BoxUse()
+    self:Defer("BoxEnd", math.max(self:GetActionEnd() - CurTime(), 0))
+    local target = self:GetActionTarget()
+    if !IsValid(target) then return end
+    // Existing instances acquire the new accessor after a map change.
+    local gave, cursor = MCV_ApplySupply(self.BoxKind, target, self.HealAmount, self.AmmoMagazines, self.GetSupplyCursor and self:GetSupplyCursor() or 0)
+    if gave then
+        if cursor and self.SetSupplyCursor then self:SetSupplyCursor(cursor) end
+        self:TakeRound(1)
+        self:EmitSound(self.BoxKind == "medic" and "items/medshot4.wav" or "items/ammocrate_close.wav", 70)
+    else
+        self:EmitSound("items/medshotno1.wav", 60)
+    end
+end
+
+function SWEP:Deferred_BoxEnd()
+    // The self animation finishes off screen; bring the next box back with a draw.
+    if self:GetActionVariant() == 1 and self:HasSequence(self.SequenceDraw) and self:GetRoundsLeft() > 0 then
+        self:PlaySequence(self.SequenceDraw, 1, true)
+    end
+    self:CheckEmpty()
 end
 
 function SWEP:DropBox()
@@ -90,30 +145,31 @@ function SWEP:DropBox()
     self:SetNextPrimaryFire(CurTime() + t)
     owner:DoAnimationEvent(ACT_HL2MP_GESTURE_RANGE_ATTACK_GRENADE)
 
-    self:SetTimer(math.min(self.ThrowDelay, t), function()
-        if !IsValid(self) then return end
-        self:TakeRound(1)
-        if CLIENT then return end
-        local ang = self:GetAimAngle()
-        local ent = ents.Create(self.DroppedEntity)
-        if !IsValid(ent) then return end
-        ent.Model = self.WorldModel
-        ent.BoxKind = self.BoxKind
-        ent.HealAmount = self.HealAmount
-        ent.AmmoMagazines = self.AmmoMagazines
-        ent:SetPos(owner:GetShootPos() + ang:Forward() * 16)
-        ent:SetAngles(Angle(0, ang.y, 0))
-        ent:SetOwner(owner)
-        ent:Spawn()
-        local phys = ent:GetPhysicsObject()
-        if IsValid(phys) then
-            phys:SetVelocityInstantaneous(ang:Forward() * 350 + Vector(0, 0, 80) + owner:GetVelocity())
-        end
-    end, "mcv_box_drop")
+    self:SetActionVariant(2)
+    self:SetActionEnd(CurTime() + t)
+    self:Defer("BoxDrop", math.min(self.ThrowDelay, t))
+end
 
-    self:SetTimer(t, function()
-        if IsValid(self) then self:CheckEmpty() end
-    end, "mcv_box_end")
+function SWEP:Deferred_BoxDrop()
+    self:Defer("BoxEnd", math.max(self:GetActionEnd() - CurTime(), 0))
+    self:TakeRound(1)
+    if CLIENT then return end
+    local owner = self:GetOwner()
+    local ang = self:GetAimAngle()
+    local ent = ents.Create(self.DroppedEntity)
+    if !IsValid(ent) then return end
+    ent.Model = self.WorldModel
+    ent.BoxKind = self.BoxKind
+    ent.HealAmount = self.HealAmount
+    ent.AmmoMagazines = self.AmmoMagazines
+    ent:SetPos(owner:GetShootPos() + ang:Forward() * 16)
+    ent:SetAngles(Angle(0, ang.y, 0))
+    ent:SetOwner(owner)
+    ent:Spawn()
+    local phys = ent:GetPhysicsObject()
+    if IsValid(phys) then
+        phys:SetVelocityInstantaneous(ang:Forward() * 350 + Vector(0, 0, 80) + owner:GetVelocity())
+    end
 end
 
 function SWEP:CheckEmpty()
@@ -163,7 +219,7 @@ end
 function SWEP:GetControlHints()
     return {
         {"+attack", self.BoxKind == "medic" and "Heal the player you look at" or "Resupply the player you look at"},
-        {"+attack2", "Use on yourself"},
+        {"+attack2", self.BoxKind == "medic" and "Use on yourself" or "Resupply your other weapons"},
         {"+use +attack", "Drop the box"},
     }
 end

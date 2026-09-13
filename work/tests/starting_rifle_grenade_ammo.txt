@@ -1,0 +1,52 @@
+# Run in an isolated MP harness. Preserve its original setting and restore it at the end.
+ccmd net_fakelag 0
+ccmd cl_showerror 0
+lua MCV_StartingAmmoOriginal=GetConVar("mcv_spawn_rifle_grenade_ammo"):GetString()
+key -attack
+key -attack2
+key -use
+key -walk
+strip
+lua ply:RemoveAllAmmo() ply:GodEnable()
+cmd mcv_spawn_rifle_grenade_ammo 0
+wait 0.5
+# All rifle secondary-grenade declarations, including unused secondary clips on other rifles.
+lua local n=0 for _,s in ipairs(weapons.GetList()) do local d=weapons.Get(s.ClassName) if d and d.MilitaryConflictVietnam and d.Secondary and d.Secondary.Ammo=="smg1_grenade" then local w=ents.Create(s.ClassName) w:SetPos(Vector(0,0,-10000)) w:Spawn() assert(w:Clip2()==0,s.ClassName.." spawned loaded while disabled") w:Remove() n=n+1 end end assert(n>=18,"weapon survey did not run") print("[starting ammo] empty spawn classes",n)
+# New give and duplicate give preserve the owner's collected rounds, without free grenades.
+lua for _,class in ipairs({"mcv_vz24","mcv_sks","mcv_m16a1_m203","mcv_m16_xm148","mcv_m2c"}) do ply:StripWeapons() ply:RemoveAllAmmo() ply:SetAmmo(7,"smg1_grenade") local w=ply:Give(class) assert(w:Clip2()==0 and ply:GetAmmoCount("smg1_grenade")==7,class.." free ammo on give") ply:Give(class) assert(ply:GetAmmoCount("smg1_grenade")==7,class.." duplicate gave grenades") end
+strip
+lua ply:RemoveAllAmmo()
+give mcv_sks
+wait 3
+clua assert(not MCV.SpawnRifleGrenadeAmmo(),"option not replicated") assert(ply:GetWeapon("mcv_sks"):Clip2()==0 and ply:GetAmmoCount("smg1_grenade")==0,"client received starting grenade ammo")
+# Activating with no ammo must not manufacture a round.
+key +walk
+tap +use 0.12
+key -walk
+wait 4
+lua local w=ply:GetActiveWeapon() assert(w:GetGrenadeLauncher() and w:Clip2()==0 and w:Ammo2()==0,"empty activation supplied ammo")
+clua local w=ply:GetActiveWeapon() assert(w:GetGrenadeLauncher() and w:Clip2()==0 and w:Ammo2()==0,"client empty activation supplied ammo")
+# Collected ammo remains usable while the starting-ammo option is off.
+lua ply:SetAmmo(3,"smg1_grenade")
+wait 1
+tap +reload 0.12
+wait 5
+lua local w=ply:GetActiveWeapon() assert(w:Clip2()==1 and w:Ammo2()==2,"collected grenade ammo cannot reload")
+clua local w=ply:GetActiveWeapon() assert(w:Clip2()==1 and w:Ammo2()==2,"client reload mismatch")
+# A loaded weapon is not emptied by a later deploy.
+lua ply:GetActiveWeapon():Deploy() assert(ply:GetActiveWeapon():Clip2()==1,"deploy removed collected grenade")
+wait 2
+cmd mcv_spawn_rifle_grenade_ammo 1
+wait 0.5
+lua for _,class in ipairs({"mcv_vz24","mcv_sks","mcv_m16a1_m203","mcv_m16_xm148","mcv_m2c"}) do ply:StripWeapons() ply:RemoveAllAmmo() local w=ply:Give(class) assert(w:Clip2()==1 and w:Ammo2()==0,class.." default ammo not restored") end
+wait 1
+clua assert(MCV.SpawnRifleGrenadeAmmo(),"enabled option not replicated") assert(ply:GetWeapon("mcv_m2c"):Clip2()==1,"enabled clip not networked")
+# Turning off the option does not confiscate a weapon that already exists.
+cmd mcv_spawn_rifle_grenade_ammo 0
+wait 0.5
+lua assert(ply:GetWeapon("mcv_m2c"):Clip2()==1,"setting erased an existing loaded round")
+# The Q-menu entry is built on the Server page and bound to this exact convar.
+clua local found=false local old=spawnmenu.AddToolMenuOption spawnmenu.AddToolMenuOption=function(tab,category,id,label,command,config,build) if id=="mcv_settings_server" then local panel=setmetatable({CheckBox=function(_,text,cv) if cv=="mcv_spawn_rifle_grenade_ammo" then found=true end end},{__index=function() return function() return setmetatable({},{__index=function() return function() end end}) end end}) build(panel) end end local ok,err=pcall(hook.GetTable().PopulateToolMenu.MCV_Settings) spawnmenu.AddToolMenuOption=old assert(ok,err) assert(found,"starting ammo checkbox missing from server menu")
+lua RunConsoleCommand("mcv_spawn_rifle_grenade_ammo",MCV_StartingAmmoOriginal) MCV_StartingAmmoOriginal=nil
+wait 0.5
+report starting_rifle_grenade_ammo_final

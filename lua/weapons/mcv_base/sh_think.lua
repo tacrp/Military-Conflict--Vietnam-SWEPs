@@ -4,9 +4,8 @@
 // Third person: the world model's "bipod" bodygroup (option 1 is the deployed one on every
 // game model) follows the bipod, and its "belt" bodygroup (the long belt, blank second) goes
 // away with the last round. The drawn copies take the weapon entity's bodygroups
-// (cl_worldmodel.lua), so they are set on the entity, server side and networked.
+// (cl_worldmodel.lua). Bodygroups are engine predicted fields, so update both realms.
 function SWEP:Think_WorldBodygroups()
-    if CLIENT then return end
 
     // the two the player changes with the weapon in hand; the rest are set once at Initialize
     if self.HasBayonet then
@@ -39,6 +38,7 @@ end
 function SWEP:ThinkWeapon()
     local owner = self:GetOwner()
 
+    self:Think_HammerRelease()
     self:Think_Sights()
     self:Think_Reload()
     self:Think_Bipod()

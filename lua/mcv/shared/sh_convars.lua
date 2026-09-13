@@ -32,3 +32,10 @@ MCV.RegisterConVar("mcv_realistic_shooting", "0",
 function MCV.RealisticShooting()
     return MCV.ConVars.mcv_realistic_shooting:GetBool()
 end
+
+MCV.RegisterConVar("mcv_spawn_rifle_grenade_ammo", "1",
+    "Give newly spawned rifles their starting rifle-grenade or underbarrel-launcher ammo.")
+
+function MCV.SpawnRifleGrenadeAmmo()
+    return MCV.ConVars.mcv_spawn_rifle_grenade_ammo:GetBool()
+end

@@ -28,9 +28,8 @@ function SWEP:Deferred_AkimboSwap()
     local vm = owner:GetViewModel()
     if IsValid(vm) then
         if !self:GetAkimbo() then
-            self.ViewModel = self.ViewModelAkimbo
-            vm:SetModel(self.ViewModel)
             self:SetAkimbo(true)
+            self:SyncViewModel(true)
 
             // the dual model animates fewer modes than the single one (no fanning on either
             // revolver, and the dual Blackhawk has no double action either)
@@ -38,10 +37,8 @@ function SWEP:Deferred_AkimboSwap()
                 self:ChangeFiremode()
             end
         else
-            local original = weapons.Get(self:GetClass()).ViewModel
-            self.ViewModel = original
-            vm:SetModel(self.ViewModel)
             self:SetAkimbo(false)
+            self:SyncViewModel(true)
 
             self:RestoreClip(0)
         end

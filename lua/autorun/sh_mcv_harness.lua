@@ -1,11 +1,11 @@
-// Development harness: lets a script outside the game drive a singleplayer session.
+// Development harness: lets a script outside the game drive a local game session.
 //
 // Only active when garrysmod/data/mcv_harness/enable.txt exists (work/harness.py creates it).
 // The driver drops command files into data/mcv_harness/queue/; the server works through them
 // one line at a time and writes results into data/mcv_harness/results/ and screenshots into
 // data/mcv_harness/shots/. Keys are pressed through the local player's console (+attack2 and
 // so on), so the weapons see real input. Everything is written to disk, which both realms of
-// a singleplayer game share, so no reply channel is needed.
+// a local listen server share, so no reply channel is needed.
 //
 // Commands (one per line, # comments):
 //   give <class>            give the weapon and select it        strip          remove all weapons
@@ -19,7 +19,14 @@
 //   spawn <class> [dist]    entity <dist> units in front of the player (npc_citizen 300)
 //   cmd <console command>   server console                       ccmd <command>  client console
 //   lua <code> / clua <code> run Lua on the server / client
+//   ptrace start <name>     record the active weapon's state after every predicted Think on
+//                           both realms (see PtraceRecord); ptrace stop writes
+//                           results/<name>.ptrace.client.json and .server.json, which
+//                           work/ptrace_diff.py compares by command, entity and hook
 //   quit                    close the game
+//
+// An instance launched with -port N (anything but 27015) works out of mcv_harness/pN/ so that
+// several can run at once (work/harness.py --port N).
 
 if !file.Exists("mcv_harness/enable.txt", "DATA") then return end
 
@@ -27,7 +34,8 @@ MCV = MCV or {}
 MCV.Harness = MCV.Harness or {}
 local H = MCV.Harness
 
-local ROOT = "mcv_harness/"
+local port = GetConVar("hostport") and GetConVar("hostport"):GetInt() or 27015
+local ROOT = port == 27015 and "mcv_harness/" or ("mcv_harness/p" .. port .. "/")
 local QUEUE = ROOT .. "queue/"
 local RESULTS = ROOT .. "results/"
 local SHOTS = ROOT .. "shots/"
@@ -65,7 +73,10 @@ function H.WeaponState(ply)
     t.printname = wep.PrintName
     t.base = wep.Base
     t.clip = wep:Clip1()
-    t.reserve = wep:Ammo1()
+    t.reserve = ply:GetAmmoCount(wep:GetPrimaryAmmoType())
+    t.clip2 = wep:Clip2()
+    t.reserve2 = ply:GetAmmoCount(wep:GetSecondaryAmmoType())
+    t.ammo = ply:GetAmmo()
     if wep.MilitaryConflictVietnam then
         t.ironsight = wep:GetIronsight()
         t.sighted = wep:GetSighted()
@@ -74,6 +85,10 @@ function H.WeaponState(ply)
         t.speed = wep.GetSpeed and math.Round(wep:GetSpeed(), 1)
         t.firemode = wep.GetFiremodeName and wep:GetFiremodeName()
         t.action_state = wep.GetActionState and wep:GetActionState()
+        t.akimbo = wep.GetAkimbo and wep:GetAkimbo()
+        t.launcher = wep.GetGrenadeLauncher and wep:GetGrenadeLauncher()
+        t.bayonet = wep.GetBayonet and wep:GetBayonet()
+        t.bipod = wep.GetBipod and wep:GetBipod()
         t.holster_time = wep:GetHolsterTime()
         t.next_idle = math.Round(wep:GetNextIdle() - CurTime(), 3)
         t.anim_lock = math.Round(wep:GetAnimLockTime() - CurTime(), 3)
@@ -129,6 +144,154 @@ function H.WeaponState(ply)
 end
 
 // ---------------------------------------------------------------------------------------
+// Prediction trace: the active weapon's state after every Think, on both realms
+// ---------------------------------------------------------------------------------------
+//
+// Match by CUserCmd:CommandNumber, weapon entity and hook. CurTime can be adjusted as the
+// client's tick base is corrected; engine.TickCount is the processing tick, not command ID.
+// These are diagnostic samples, NOT the engine's acknowledged prediction snapshots. Think
+// runs before movement on the client and after it on the server; movement samples cannot be
+// compared here. Replaying an unacknowledged command is normal and is not an error count.
+// Use cl_showerror 2 for the engine's actual field errors.
+
+// plain Lua fields the bases keep that are not networked; recorded to show where they drift
+H.PtracePlain = {"ThrowReleaseAt", "LitUntil", "BayonetChargeReady", "NextRepairTick", "WasRunning",
+                 "SlashCount", "WindupKey", "ViewModel", "FuseBurning", "PoseRecoilAvailable"}
+H.PtraceKeys = {IN_ATTACK, IN_ATTACK2, IN_RELOAD, IN_USE, IN_SPEED, IN_WALK, IN_DUCK, IN_JUMP,
+                IN_FORWARD, IN_BACK, IN_MOVELEFT, IN_MOVERIGHT}
+
+H.Ptrace = nil // {name, records}
+
+local function enc(v)
+    if isnumber(v) then return math.Round(v, 4) end
+    if isvector(v) then return vecs(v) end
+    if isangle(v) then return angs(v) end
+    if isentity(v) then return IsValid(v) and v:EntIndex() or -1 end
+    if isbool(v) or isstring(v) then return v end
+    return v == nil and "nil" or tostring(v)
+end
+
+function H.PtraceRecord(wep, phase)
+    local owner = wep:GetOwner()
+    if !IsValid(owner) or !owner:IsPlayer() then return end
+    if GetPredictionPlayer() != owner then return end
+
+    local cmd = owner:GetCurrentCommand()
+    if !cmd or cmd:CommandNumber() == 0 then return end
+    local r = {tick = engine.TickCount(), ct = math.Round(CurTime(), 4), first = IsFirstTimePredicted(),
+               frame = FrameNumber(), wep = wep:GetClass(), ent = wep:EntIndex(),
+               cmd = cmd:CommandNumber(), cmdtick = cmd:TickCount(), buttons = cmd:GetButtons(),
+               phase = phase}
+    if CLIENT then r.upct = math.Round(UnPredictedCurTime(), 4) end
+
+    r.clip1, r.clip2, r.ammo1, r.ammo2 = wep:Clip1(), wep:Clip2(), wep:Ammo1(), wep:Ammo2()
+    r.npf = math.Round(wep:GetNextPrimaryFire(), 4)
+    r.nsf = math.Round(wep:GetNextSecondaryFire(), 4)
+    r.weapon_model_index = wep:GetInternalVariable("m_iViewModelIndex")
+    r.holdtype = wep:GetHoldType()
+    r.timers = istable(wep.ActiveTimers) and #wep.ActiveTimers or 0
+
+    if wep.GetNetworkVars then
+        for k, v in pairs(wep:GetNetworkVars() or {}) do
+            r["nv_" .. k] = enc(v)
+        end
+    end
+    for _, k in ipairs(H.PtracePlain) do
+        if wep[k] != nil then r["f_" .. k] = enc(wep[k]) end
+    end
+
+    local vm = owner:GetViewModel()
+    if IsValid(vm) then
+        local seq = vm:GetSequence()
+        r.vm_seq = vm:GetSequenceName(seq)
+        r.vm_rate = math.Round(vm:GetPlaybackRate(), 3)
+        r.vm_cycle = math.Round(vm:GetCycle(), 3)
+        r.vm_model = vm:GetModel()
+        r.vm_model_index = vm:GetInternalVariable("m_nModelIndex")
+    end
+
+    r.pos = vecs(owner:GetPos())
+    r.vel = vecs(owner:GetVelocity())
+    r.eye = angs(owner:EyeAngles())
+    r.punch = angs(owner:GetViewPunchAngles())
+    r.ground = owner:IsOnGround()
+    r.crouch = owner:Crouching()
+    if wep.GetWeaponMovement then
+        r.movement_speed, r.movement_ground, r.movement_crouch = wep:GetWeaponMovement()
+        r.movement_speed = string.format("%.12g", r.movement_speed)
+        r.movement_sample = wep.GetMoveSpeed and string.format("%.12g", wep:GetMoveSpeed())
+    end
+    local keys = 0
+    for i, k in ipairs(H.PtraceKeys) do
+        if owner:KeyDown(k) then keys = keys + bit.lshift(1, i - 1) end
+    end
+    r.keys = keys
+
+    return r
+end
+
+// The record is taken by a wrapper put on the weapon instance itself, straight after its own
+// Think, so it sees exactly what the tick left behind; the class table is not touched.
+local function ptraceWrap(wep)
+    if wep.HarnessPtraceWrapped then return end
+    wep.HarnessPtraceWrapped = true
+    for _, phase in ipairs({"Think", "PrimaryAttack", "SecondaryAttack", "Reload", "CaptureMovement"}) do
+        local orig = wep[phase]
+        if !isfunction(orig) then continue end
+        wep[phase] = function(self, ...)
+            local ret = orig(self, ...)
+            local pt = H.Ptrace
+            if pt and self == pt.wep then
+                local rec = H.PtraceRecord(self, phase)
+                if rec then table.insert(pt.records, rec) end
+            end
+            return ret
+        end
+    end
+end
+
+// every frame (client) or tick (server): follow the active weapon
+local function ptraceFollow(ply)
+    local pt = H.Ptrace
+    if !pt or !IsValid(ply) then return end
+    local wep = ply:GetActiveWeapon()
+    if !IsValid(wep) or !wep.MilitaryConflictVietnam then pt.wep = nil return end
+    if pt.wep != wep then
+        ptraceWrap(wep)
+        pt.wep = wep
+        table.insert(pt.records, {event = "weapon", wep = wep:GetClass(), tick = engine.TickCount(), ct = math.Round(CurTime(), 4)})
+    end
+end
+
+function H.PtraceStart(name)
+    H.Ptrace = {name = name, records = {}, started = CurTime(), tick = engine.TickCount()}
+    log("ptrace start", name)
+end
+
+function H.PtraceStop()
+    local pt = H.Ptrace
+    if !pt then return end
+    H.Ptrace = nil
+    local out = {schema = 2, name = pt.name, realm = CLIENT and "client" or "server", tickinterval = engine.TickInterval(),
+                 started = pt.started, starttick = pt.tick, stopped = CurTime(), stoptick = engine.TickCount(),
+                 records = pt.records}
+    local side = CLIENT and "client" or "server"
+    file.Write(RESULTS .. pt.name .. ".ptrace." .. side .. ".json", util.TableToJSON(out))
+    log("ptrace stop", pt.name, #pt.records .. " records")
+    if CLIENT then
+        file.Write(RESULTS .. pt.name .. ".ptrace.done.txt", "1")
+    end
+end
+
+if CLIENT then
+    hook.Add("Think", "MCV_HarnessPtrace", function() ptraceFollow(LocalPlayer()) end)
+else
+    hook.Add("PlayerPostThink", "MCV_HarnessPtrace", function(ply)
+        if H.Ptrace and ply == player.GetAll()[1] then ptraceFollow(ply) end
+    end)
+end
+
+// ---------------------------------------------------------------------------------------
 // Client: screenshots, reports, marker
 // ---------------------------------------------------------------------------------------
 
@@ -175,8 +338,21 @@ if CLIENT then
             else
                 log("clua compile error", tostring(fn))
             end
+        elseif kind == "tap" then
+            local input = util.JSONToTable(arg)
+            LocalPlayer():ConCommand(input.key)
+            timer.Simple(input.hold, function()
+                LocalPlayer():ConCommand("-" .. string.sub(input.key, 2))
+                file.Write(RESULTS .. input.done, "1")
+            end)
         elseif kind == "marker" then
             H.Marker = arg == "1"
+        elseif kind == "ptrace" then
+            if arg == "" then
+                H.PtraceStop()
+            else
+                H.PtraceStart(arg)
+            end
         end
     end)
     return
@@ -239,9 +415,12 @@ local function step(job, ply, line)
     elseif cmd == "tap" then
         local key = args[1]
         local hold = tonumber(args[2]) or 0.1
-        ply:ConCommand(key)
-        timer.Simple(hold, function() if IsValid(ply) then ply:ConCommand("-" .. string.sub(key, 2)) end end)
-        job.waituntil = CurTime() + hold + 0.05
+        // Time both edges on the client: lagged server packets can otherwise deliver
+        // +attack and -attack in one frame, without producing an attacking command.
+        local done = job.name .. "_tap" .. job.i .. ".done.txt"
+        file.Delete(RESULTS .. done)
+        send(ply, "tap", util.TableToJSON({key = key, hold = hold, done = done}))
+        job.waitfile = RESULTS .. done
     elseif cmd == "wait" then
         job.waituntil = CurTime() + (tonumber(rest) or 1)
     elseif cmd == "hud" then
@@ -288,6 +467,21 @@ local function step(job, ply, line)
         end
     elseif cmd == "clua" then
         send(ply, "clua", rest)
+    elseif cmd == "ptrace" then
+        if args[1] == "start" then
+            local name = args[2] or job.name
+            file.Delete(RESULTS .. name .. ".ptrace.done.txt")
+            H.PtraceStart(name)
+            send(ply, "ptrace", name)
+            table.insert(job.results.ptraces, name)
+        elseif args[1] == "stop" then
+            local name = H.Ptrace and H.Ptrace.name
+            H.PtraceStop()
+            send(ply, "ptrace", "")
+            if name then job.waitfile = RESULTS .. name .. ".ptrace.done.txt" end
+        else
+            table.insert(job.results.errors, "ptrace: start <name> or stop")
+        end
     elseif cmd == "marker" then
         send(ply, "marker", rest)
     elseif cmd == "quit" then
@@ -316,7 +510,7 @@ local function tick()
             local l = string.Trim(raw)
             if l != "" and string.sub(l, 1, 1) != "#" then table.insert(lines, l) end
         end
-        H.Job = {name = string.StripExtension(fname), lines = lines, i = 0, results = {log = {}, errors = {}, shots = {}, reports = {}, spawned = {}}}
+        H.Job = {name = string.StripExtension(fname), lines = lines, i = 0, results = {log = {}, errors = {}, shots = {}, reports = {}, spawned = {}, ptraces = {}}}
         log("job", H.Job.name, #lines .. " commands")
     end
 

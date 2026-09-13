@@ -1,5 +1,5 @@
 // Gun bodygroups and pose parameters (called from mcv_base_core/sh_vm.lua DoBodygroups
-// with the gameplay values from Think and the frame-smoothed values from PreDrawViewModel).
+// with gameplay values from Think and visual values before render bone setup).
 // The game's ammo_fraction is the magazine's fraction: the chambered round is not in it
 // (the PPK's counter has a knot pair per magazine round and one for "all hidden"; the dual
 // PPK's right gun with a single chambered round still showed a bullet in the magazine).
@@ -10,6 +10,7 @@ function SWEP:MagFraction(count, per)
 end
 
 function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
+    local now = visual and self:GetViewModelTime() or CurTime()
     local displayRoundsToLoad = self:GetReloading()
     local magOut = false // the old magazine / belt is out and the new one not yet in
 
@@ -22,7 +23,7 @@ function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
         displayRoundsToLoad = false
 
     elseif displayRoundsToLoad then
-        local reloadprogress = vm:SequenceDuration() - (self:GetAnimLockTime() - CurTime())
+        local reloadprogress = vm:SequenceDuration() - (self:GetAnimLockTime() - now)
         local empty = self:Clip1() == 0
         local tin = empty and self.MagInTimeEmpty or self.MagInTime
         local tout = empty and self.MagOutTimeEmpty or self.MagOutTime
@@ -46,7 +47,7 @@ function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
         // between the realms and the server's networked pose parameter fought the client's
         local cycling = self:GetNeedCycle()
         if !cycling and self:GetActionStart() > 0 then
-            cycling = CurTime() < self:GetActionStart() + self.CycleClipPoseTime * (self.CycleSpeed or 1)
+            cycling = now < self:GetActionStart() + self.CycleClipPoseTime * (self.CycleSpeed or 1)
         end
         if cycling then shown = math.min(shown + 1, clipsize) end
     end
@@ -58,7 +59,7 @@ function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
         local insert = self.ShotgunAltReload and ACT_VM_RELOAD_INSERT or ACT_VM_RELOAD
 
         if vm:GetSequenceActivity(vm:GetSequence()) == insert
-           and vm:SequenceDuration() - (self:GetAnimLockTime() - CurTime()) < self.InsertClipPoseTime then
+           and vm:SequenceDuration() - (self:GetAnimLockTime() - now) < self.InsertClipPoseTime then
             shown = math.max(shown - (self.ShotgunReloadRounds or 1), 0)
         end
     end
@@ -111,7 +112,7 @@ function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
             local nright, nleft = math.floor(total / 2), math.ceil(total / 2)
             local times = self.AkimboMagInTimes and self.AkimboMagInTimes[vm:GetSequenceActivity(vm:GetSequence())]
             if times then
-                local progress = vm:SequenceDuration() - (self:GetAnimLockTime() - CurTime())
+                local progress = vm:SequenceDuration() - (self:GetAnimLockTime() - now)
                 if times[1] and progress >= times[1] then right = nright end
                 if times[2] and progress >= times[2] then left = nleft end
             elseif displayRoundsToLoad then
@@ -166,8 +167,8 @@ function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
     // Dual wield pose-driven recoil: 0 = frame 0 of the hand's shoot animation, 1 = at rest.
     if self:GetAkimbo() and self:HasPoseRecoil() then
         local len = math.max(self.AkimboRecoilTime, 0.01)
-        vm:SetPoseParameter("recoil_r", math.Clamp((CurTime() - self:GetLastShotTimeR()) / len, 0, 1))
-        vm:SetPoseParameter("recoil_l", math.Clamp((CurTime() - self:GetLastShotTimeL()) / len, 0, 1))
+        vm:SetPoseParameter("recoil_r", math.Clamp((now - self:GetLastShotTimeR()) / len, 0, 1))
+        vm:SetPoseParameter("recoil_l", math.Clamp((now - self:GetLastShotTimeL()) / len, 0, 1))
     end
 
     if self:GetBayonet() then
@@ -179,7 +180,7 @@ function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
     if self:GetGrenadeLauncher() then
         vm:SetBodygroup(self.GrenadeLauncherBodygroup, 1)
 
-        local reloadprogress = vm:SequenceDuration() - (self:GetAnimLockTime() - CurTime())
+        local reloadprogress = vm:SequenceDuration() - (self:GetAnimLockTime() - now)
 
         if self:Clip2() > 0 or (self:GetReloading() and reloadprogress > self.MagInTimeGrenade) then
             vm:SetBodygroup(self.GrenadeBodygroup, 1)

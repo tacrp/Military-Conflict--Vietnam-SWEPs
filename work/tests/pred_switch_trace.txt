@@ -1,0 +1,21 @@
+ccmd cl_showerror 0
+ccmd net_fakelag 0
+lua game.CleanUpMap()
+strip
+lua ply:Give("mcv_m14")
+wait 1
+give mcv_m1911a1
+wait 5
+clua for _, w in ipairs(ply:GetWeapons()) do local old = w.Holster w.Holster = function(self, dest) local cmd = GetPredictionPlayer() == ply and ply:GetCurrentCommand() print("[HOLSTER before]", self:GetClass(), dest, CurTime(), GetPredictionPlayer(), IsFirstTimePredicted(), cmd and cmd:CommandNumber(), self:GetHolsterTime()) local ret = old(self, dest) print("[HOLSTER after]", ret, self:GetHolsterTime()) return ret end end
+lua for _, w in ipairs(ply:GetWeapons()) do local old = w.Holster w.Holster = function(self, dest) local cmd = GetPredictionPlayer() == ply and ply:GetCurrentCommand() print("[HOLSTER SV before]", self:GetClass(), dest, CurTime(), GetPredictionPlayer(), IsFirstTimePredicted(), cmd and cmd:CommandNumber(), self:GetHolsterTime()) local ret = old(self, dest) print("[HOLSTER SV after]", ret, self:GetHolsterTime()) return ret end end
+ccmd net_fakelag 100
+wait 2
+ccmd cl_showerror 2
+clua print("[switchtrace begin]") input.SelectWeapon(ply:GetWeapon("mcv_m14"))
+wait 4
+clua input.SelectWeapon(ply:GetWeapon("mcv_m1911a1"))
+wait 4
+clua print("[switchtrace end]")
+ccmd cl_showerror 0
+ccmd net_fakelag 0
+strip

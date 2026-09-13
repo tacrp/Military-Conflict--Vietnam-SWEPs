@@ -1,0 +1,16 @@
+ccmd cl_showerror 0
+ccmd cl_predict 0
+strip
+give mcv_m14
+wait 3
+lua local w=ply:GetActiveWeapon() print("[SP weapon]", w, w:GetNextPrimaryFire(), w:GetAnimLockTime(), ply:GetInternalVariable("m_flNextAttack"), CurTime(), w:GetNeedCycle(), w:GetNeedTriggerPress()) local old=w.PrimaryAttack w.PrimaryAttack=function(self, ...) print("[SP PrimaryAttack]", CurTime(), self:StillWaiting(), self:GetNeedCycle(), self:GetNeedTriggerPress(), self:GetSpeed(), self:GetOwner():GetInfo("cl_predictweapons")) return old(self, ...) end
+lua hook.Add("StartCommand", "MCV_SPProbe", function(p, cmd) if cmd:KeyDown(IN_ATTACK) then print("[SP cmd]", cmd:CommandNumber(), cmd:GetButtons(), p:GetActiveWeapon(), p:GetInternalVariable("m_flNextAttack"), CurTime()) end end)
+tap +attack 0.25
+wait 1
+key +attack
+wait 0.5
+key -attack
+wait 1
+report sp_probe
+lua hook.Remove("StartCommand", "MCV_SPProbe")
+strip

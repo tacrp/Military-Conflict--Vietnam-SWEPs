@@ -17,6 +17,9 @@ local SERVER_SETTINGS = {
 
     {convar = "mcv_surface_impacts", label = "The game's bullet impacts",
      help = "Use the game's bullet impact particles"},
+
+    {convar = "mcv_spawn_rifle_grenade_ammo", label = "Starting rifle-grenade ammo",
+     help = "Give newly spawned rifles their starting rifle-grenade or underbarrel-launcher ammo. Existing ammo and resupply are unaffected."},
 }
 
 local CLIENT_SETTINGS = {

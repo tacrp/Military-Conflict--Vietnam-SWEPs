@@ -1,12 +1,12 @@
 function SWEP:Think()
     // In singleplayer this hook also runs on the client, but the client is NOT predicting
     // there: anything it writes to a NetworkVar is overwritten by the next server update.
-    // If the client stamped its own sight/speed transitions here they would be re-stamped
-    // every frame until the server's state arrived, which visibly jerks the viewmodel.
+    // Advancing the sight/speed blends here would fight the server's state on each packet.
     // Everything the client needs in singleplayer is driven from the server's values via
-    // PreDrawViewModel / CalcView, so the client has nothing to do in Think.
+    // GetViewModelPosition / CalcView, so the client has nothing to do in Think.
     if CLIENT and game.SinglePlayer() then return end
 
+    self:SyncViewModel()
     self:Think_Speed()
     self:Think_HoldType()
     self:Think_Bayonet()
@@ -15,7 +15,6 @@ function SWEP:Think()
     self:DoBodygroups(nil, false)
 
     self:ProcessDeferred()
-    self:ProcessTimers()
 
     if self:GetNextIdle() <= CurTime() then
         self:Idle()
@@ -78,8 +77,9 @@ end
 
 function SWEP:GetTargetSpeed()
     local owner = self:GetOwner()
+    local _, grounded = self:GetWeaponMovement()
 
-    if !owner:IsOnGround() then return 0 end
+    if !grounded then return 0 end
     if !wantsMove(owner) then return 0 end
 
     if owner:KeyDown(IN_SPEED) then
@@ -96,9 +96,8 @@ end
 // start time and a start value with the blend derived from CurTime(), which is the shape that
 // turns a disagreement about *when* into a step in the value and then holds the two realms
 // apart until the next transition. Integrating heals instead: an error costs one tick of
-// travel. That also takes the sting out of the target below being read a tick apart on the two
-// realms, since the weapon's think runs before player movement on the client and after it on
-// the server, so whether the owner is on the ground can differ for exactly one tick.
+// travel. Ground state comes from the completed command's movement sample, so the client
+// and server do not choose different targets around a jump or landing.
 
 if CLIENT then
     // What is drawn chases the predicted value at a bounded rate and never snaps: at least as
@@ -107,6 +106,9 @@ if CLIENT then
     SWEP.VisualSpeedCatchUp = 0.08
 
     function SWEP:GetSpeedVisual()
+        if GetPredictionPlayer() == self:GetOwner() then
+            return self.VisualSpeed or self:GetSpeed()
+        end
         local frame = FrameNumber()
 
         if self.VisualSpeedFrame == frame then return self.VisualSpeed end

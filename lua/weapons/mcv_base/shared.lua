@@ -173,7 +173,7 @@ SWEP.HasBayonet = false
 
 // Deferred actions this base can have waiting (mcv_base_core/sh_timers.lua). The order is what
 // travels between the realms, so it is fixed: append, never insert.
-SWEP.DeferredActions = {"BayonetOff", "AkimboSwap", "LauncherSwap"}
+SWEP.DeferredActions = {"BayonetOff", "AkimboSwap", "LauncherSwap", "BayonetLoop", "BayonetHit"}
 SWEP.HasRifleGrenade = false
 SWEP.RifleGrenadeIsUBGL = false
 SWEP.HasAkimbo = false

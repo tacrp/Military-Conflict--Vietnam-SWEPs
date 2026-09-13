@@ -1,7 +1,12 @@
-"""Drive a Garry's Mod singleplayer session from outside the game.
+"""Drive a Garry's Mod session from outside the game.
 
-    python harness.py start [map]          launch GMod with the harness enabled (default gm_flatgrass)
-    python harness.py run tests/x.txt      send a command file, wait, print results and screenshot paths
+    python harness.py start [map] [--mp] [--multirun] [--port N]
+                                           launch GMod with the harness enabled (default gm_flatgrass).
+                                           --mp starts a listen server (maxplayers 2) so the host
+                                           client predicts as it would online; --multirun runs
+                                           alongside another instance (needs its own --port)
+    python harness.py run tests/x.txt [--port N]
+                                           send a command file, wait, print results and screenshot paths
     python harness.py send "give mcv_sks" "wait 1" "shot sks marker"   ad-hoc commands
     python harness.py status               is the game up, what is queued, last log lines
     python harness.py stop                 ask the game to quit
@@ -11,28 +16,54 @@ Commands are documented at the top of lua/autorun/sh_mcv_harness.lua. Results la
 garrysmod/data/mcv_harness/results/<job>.json (+ <name>.client.json / .server.json for reports)
 and screenshots in garrysmod/data/mcv_harness/shots/<name>.png.
 
-GMod runs one instance per Steam account: `start` refuses while a gmod.exe is running; `run`
-and `send` work against whatever instance is up, as long as the harness marker existed when its
-map loaded (otherwise reload the map, or run `mcv_harness_enable` in its console... which does
-not exist: just `changelevel` after `start`'s marker is in place).
+GMod runs one instance per Steam account unless launched with -multirun: `start` refuses while
+a gmod.exe is running without it; `run` and `send` work against whatever instance is up, as
+long as the harness marker existed when its map loaded. An instance started with --port N
+(anything but 27015) keeps its queue, results and shots under data/mcv_harness/pN/, so several
+can run at once; pass the same --port to run/send/status to address it.
+
+A `run` also reports the engine's own prediction complaints: it notes where console.log ends
+before the job and prints any "pred error"-type lines written during it (the client has to have
+cl_showerror on, which the tests do themselves).
 """
 import glob
 import json
 import os
+import re
 import subprocess
 import sys
 import time
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 GMOD = os.path.normpath(os.path.join(HERE, "..", "..", "..", ".."))
+CONSOLE_LOG = os.path.join(GMOD, "garrysmod", "console.log")
+DEFAULT_PORT = 27015
+
+
+def take_opt(args, name, default=None, flag=False):
+    """Pull --name [value] out of an argument list."""
+    if name in args:
+        i = args.index(name)
+        if flag:
+            del args[i]
+            return True
+        val = args[i + 1]
+        del args[i:i + 2]
+        return val
+    return default
+
+
+PORT = int(take_opt(sys.argv, "--port", DEFAULT_PORT))
+
 DATA = os.path.join(GMOD, "garrysmod", "data", "mcv_harness")
-QUEUE = os.path.join(DATA, "queue")
-RESULTS = os.path.join(DATA, "results")
-SHOTS = os.path.join(DATA, "shots")
+INST = DATA if PORT == DEFAULT_PORT else os.path.join(DATA, "p%d" % PORT)
+QUEUE = os.path.join(INST, "queue")
+RESULTS = os.path.join(INST, "results")
+SHOTS = os.path.join(INST, "shots")
 
 
 def ensure_dirs():
-    for d in (DATA, QUEUE, RESULTS, SHOTS):
+    for d in (DATA, INST, QUEUE, RESULTS, SHOTS):
         os.makedirs(d, exist_ok=True)
 
 
@@ -55,20 +86,31 @@ def find_exe():
     return hits[0] if hits else None
 
 
-def start(map_name="gm_flatgrass"):
-    if gmod_running():
-        print("gmod.exe is already running; use `run` against it (reload the map if the harness is not active)")
+def start(map_name="gm_flatgrass", mp=False, multirun=False):
+    if gmod_running() and not multirun:
+        print("gmod.exe is already running; use `run` against it (reload the map if the harness is not active), or start with --multirun")
         return 1
     enable()
-    ready = os.path.join(DATA, "ready.txt")
+    ready = os.path.join(INST, "ready.txt")
     if os.path.exists(ready):
         os.remove(ready)
     exe = find_exe()
     if not exe:
         print("gmod.exe not found under", GMOD)
         return 1
-    args = [exe, "-console", "-novid", "-windowed", "-noborder", "-w", "1600", "-h", "900", "-condebug",
-            "+sv_cheats", "1", "+map", map_name]
+    args = [exe, "-console", "-novid", "-windowed", "-noborder", "-w", "1600", "-h", "900", "-condebug"]
+    if multirun:
+        args.append("-multirun")
+    if PORT != DEFAULT_PORT:
+        # a second listen server needs its own server and client sockets
+        args += ["-port", str(PORT), "-clientport", str(27005 + (PORT - DEFAULT_PORT))]
+    args += ["+sv_cheats", "1"]
+    if mp:
+        # maxplayers above 1 is what makes the host's client predict, as any client online does
+        args += ["+sv_lan", "1", "+maxplayers", "2"]
+    else:
+        args += ["+maxplayers", "1"]
+    args += ["+map", map_name]
     print("launching", " ".join(args))
     subprocess.Popen(args, cwd=GMOD, creationflags=getattr(subprocess, "DETACHED_PROCESS", 0) | getattr(subprocess, "CREATE_NEW_PROCESS_GROUP", 0))
     t0 = time.time()
@@ -110,7 +152,23 @@ def send(lines, name=None, wait=True, timeout=900):
     return name, None
 
 
-def print_results(name, results):
+PRED_LINE = re.compile(r"pred(iction)?[ _]?err|mismatch|predict|\bdiffers\b", re.I)
+
+
+def console_tail(offset):
+    """Lines console.log gained since `offset`, and the new end offset."""
+    if not os.path.exists(CONSOLE_LOG):
+        return [], 0
+    size = os.path.getsize(CONSOLE_LOG)
+    if size < offset:
+        offset = 0
+    with open(CONSOLE_LOG, "rb") as f:
+        f.seek(offset)
+        data = f.read()
+    return data.decode("utf-8", errors="replace").splitlines(), size
+
+
+def print_results(name, results, log_offset=None):
     if results is None:
         print("job", name, "did not finish (is the game up with the harness enabled?)")
         return 1
@@ -126,6 +184,18 @@ def print_results(name, results):
             p = os.path.join(RESULTS, "%s.%s.json" % (r, side))
             if os.path.exists(p):
                 print("report:", p)
+    for t in results.get("ptraces", []):
+        for side in ("client", "server"):
+            p = os.path.join(RESULTS, "%s.ptrace.%s.json" % (t, side))
+            print("ptrace:", p, "" if os.path.exists(p) else "(missing)")
+    if log_offset is not None:
+        lines, _ = console_tail(log_offset)
+        hits = [l for l in lines if PRED_LINE.search(l)]
+        print("console: %d new lines, %d prediction-related" % (len(lines), len(hits)))
+        for l in hits[:40]:
+            print("  ", l)
+        if len(hits) > 40:
+            print("   ... %d more" % (len(hits) - 40))
     return 1 if results.get("errors") else 0
 
 
@@ -135,19 +205,24 @@ def main():
         return 1
     cmd = sys.argv[1]
     if cmd == "start":
-        return start(sys.argv[2] if len(sys.argv) > 2 else "gm_flatgrass")
+        mp = take_opt(sys.argv, "--mp", flag=True)
+        multirun = take_opt(sys.argv, "--multirun", flag=True)
+        return start(sys.argv[2] if len(sys.argv) > 2 else "gm_flatgrass", mp=bool(mp), multirun=bool(multirun))
     if cmd == "run":
         lines = [l.rstrip("\n") for l in open(sys.argv[2], encoding="utf-8")]
+        offset = os.path.getsize(CONSOLE_LOG) if os.path.exists(CONSOLE_LOG) else 0
         name, results = send(lines, name=next_job_name(os.path.splitext(os.path.basename(sys.argv[2]))[0]))
-        return print_results(name, results)
+        return print_results(name, results, log_offset=offset)
     if cmd == "send":
+        offset = os.path.getsize(CONSOLE_LOG) if os.path.exists(CONSOLE_LOG) else 0
         name, results = send(sys.argv[2:])
-        return print_results(name, results)
+        return print_results(name, results, log_offset=offset)
     if cmd == "status":
         print("gmod running:", gmod_running())
+        print("instance:", INST)
         print("enabled:", os.path.exists(os.path.join(DATA, "enable.txt")))
         print("queued:", os.listdir(QUEUE) if os.path.isdir(QUEUE) else [])
-        lp = os.path.join(DATA, "log.txt")
+        lp = os.path.join(INST, "log.txt")
         if os.path.exists(lp):
             print("\n".join(open(lp, encoding="utf-8", errors="replace").read().splitlines()[-10:]))
         return 0

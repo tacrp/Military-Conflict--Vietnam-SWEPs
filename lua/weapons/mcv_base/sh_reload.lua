@@ -6,6 +6,7 @@
 // it; a per-round loop fires the loop event per shell (the gesture starts at the insert) and
 // the end event when the action closes.
 function SWEP:PlayReloadGesture(t, event)
+    if !IsFirstTimePredicted() then return end
     local owner = self:GetOwner()
     if !IsValid(owner) or !owner:IsPlayer() then return end
     owner:DoCustomAnimEvent(event or PLAYERANIMEVENT_RELOAD, math.max(1, math.floor((t or 0) * 1000)))
@@ -33,9 +34,9 @@ function SWEP:Reload()
         if self.ShotgunReloadEmptyStartAnimation and self:Clip1() == 0 then
             // locked like the other start: unlocked, the first insert cut it off on its first
             // frame (Gyrojet, Vz.24: "no empty reload start animation")
-            self:PlayAnimation(ACT_VM_RELOAD_INSERT_EMPTY, 1, true)
+            self:PlayAnimation(ACT_VM_RELOAD_INSERT_EMPTY, 1, true, true)
         else
-            self:PlayAnimation(ACT_SHOTGUN_RELOAD_START, 1, true)
+            self:PlayAnimation(ACT_SHOTGUN_RELOAD_START, 1, true, true)
         end
     else
         if self:GetAkimbo() then
@@ -180,13 +181,13 @@ function SWEP:Think_Reload()
                     end
                 elseif hand == 0 and self:Clip1() >= half then
                     // the right gun holds its share: swap the guns over
-                    self:PlayReloadGesture(self:PlayAnimation(ACT_VM_RELOAD_END, 1, true), PLAYERANIMEVENT_RELOAD_LOOP)
+                    self:PlayReloadGesture(self:PlayAnimation(ACT_VM_RELOAD_END, 1, true, true), PLAYERANIMEVENT_RELOAD_LOOP)
                     self:SetReloadHand(2)
                     if !self.AnimationHandlesHammer then
                         self:SetEmptyReload(false)
                     end
                 else
-                    self:PlayReloadGesture(self:PlayAnimation(hand >= 2 and ACT_VM_RELOAD2 or ACT_VM_RELOAD, 1, true),
+                    self:PlayReloadGesture(self:PlayAnimation(hand >= 2 and ACT_VM_RELOAD2 or ACT_VM_RELOAD, 1, true, true),
                                            PLAYERANIMEVENT_RELOAD_LOOP)
 
                     self:EmitThirdPersonSound(self.SoundReloadLoopThirdPerson)

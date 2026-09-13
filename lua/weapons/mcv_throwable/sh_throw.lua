@@ -3,6 +3,8 @@ local STATE_WINDUP_HIGH = 1
 local STATE_WINDUP_LOW = 2
 local STATE_THROWING = 3
 
+SWEP.DeferredActions = {"ThrowRelease", "ThrowEnd"}
+
 // GMod inherits nested tables index by index, so a weapon's shorter FuseModes still sees
 // the base's later entries (the molotov's {0} read as {0, 5}); an impact-fused throwable
 // has exactly one mode, with no fuse at all
@@ -39,7 +41,7 @@ end
 function SWEP:IsLit()
     local state = self:GetActionState()
     if state == STATE_WINDUP_HIGH or state == STATE_WINDUP_LOW then return true end
-    return state == STATE_THROWING and CurTime() < (self.ThrowReleaseAt or 0)
+    return state == STATE_THROWING and self:DeferPending("ThrowRelease")
 end
 
 function SWEP:GetPrecacheParticles()
@@ -53,11 +55,6 @@ function SWEP:CanStartThrow()
     if self:GetRoundsLeft() <= 0 then return false end
 
     return true
-end
-
-function SWEP:SetupDataTables()
-    baseclass.Get("mcv_base_core").SetupDataTables(self)
-    self:NetworkVar("Float", 13, "WindupEnd") // when the pin-pull animation is over
 end
 
 // The fuse runs from the pin pull (start of the windup): hold it and it goes off sooner after
@@ -96,7 +93,8 @@ function SWEP:Throw(low, overcooked)
 
     local t = self:PlaySequence(seq, 1, true) or 0.5
     local release = math.min(low and self.ThrowReleaseTimeUnderhand or self.ThrowReleaseTime, t)
-    self.ThrowReleaseAt = CurTime() + release
+    self:SetActionEnd(CurTime() + t)
+    self:SetActionVariant(roll and 2 or (low and 1 or 0))
     local kind = roll and "roll" or (low and "low" or "high")
     local fuse = self:GetFuseTime()
     local cookstart = self:GetActionStart()
@@ -105,23 +103,27 @@ function SWEP:Throw(low, overcooked)
 
     if overcooked then
         self:LaunchThrowable(kind, fuse, cookstart)
+        self:Defer("ThrowEnd", t)
     else
-        self:SetTimer(release, function()
-            if !IsValid(self) then return end
-            self:LaunchThrowable(kind, fuse, cookstart)
-        end, "mcv_throw")
+        self:Defer("ThrowRelease", release)
     end
-
-    self:SetTimer(t, function()
-        if !IsValid(self) then return end
-        self:SetActionState(STATE_IDLE)
-        self:AfterThrow()
-    end, "mcv_throw_end")
 
     self:SetNextPrimaryFire(CurTime() + t)
 end
 
-// Spawns the projectile. Runs from a predicted timer on both realms; only the server creates.
+function SWEP:Deferred_ThrowRelease()
+    local variant = self:GetActionVariant()
+    self:LaunchThrowable(variant == 2 and "roll" or (variant == 1 and "low" or "high"),
+                         self:GetFuseTime(), self:GetActionStart())
+    self:Defer("ThrowEnd", math.max(self:GetActionEnd() - CurTime(), 0))
+end
+
+function SWEP:Deferred_ThrowEnd()
+    self:SetActionState(STATE_IDLE)
+    self:AfterThrow()
+end
+
+// Spawns the projectile. Runs from a predicted deadline; only the server creates.
 // `cookstart` is when the pin came out: the time already spent comes off the fuse.
 function SWEP:LaunchThrowable(kind, fuse, cookstart)
     local owner = self:GetOwner()

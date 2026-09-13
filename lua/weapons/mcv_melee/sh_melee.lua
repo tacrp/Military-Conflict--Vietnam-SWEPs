@@ -4,6 +4,8 @@ local STATE_THROW_HOLD = 2
 local STATE_REPAIR = 3
 local STATE_RUNNING = 4 // only marks that the run transition was played
 
+SWEP.DeferredActions = {"SlashHit", "StabHit", "ChargeLoop", "ChargeHit", "ThrowLoop", "ThrowBlade", "RepairLoop"}
+
 function SWEP:GetFiremodeName() return "" end
 function SWEP:GetHUDAmmo() return nil, nil end
 
@@ -105,12 +107,12 @@ end
 
 function SWEP:Slash()
     local owner = self:GetOwner()
-    self.SlashCount = (self.SlashCount or 0) + 1
+    self:SetSlashCount(self:GetSlashCount() + 1)
 
     // decide hit / miss up front so the right animation plays
     local tr = self:MeleeTrace(self.MeleeRange)
-    local seq = tr.Hit and self:PickSequence(self.SequencesSlash, self.SlashCount) or self:PickSequence(self.SequencesMiss, self.SlashCount)
-    seq = seq or self:PickSequence(self.SequencesSlash, self.SlashCount)
+    local seq = tr.Hit and self:PickSequence(self.SequencesSlash, self:GetSlashCount()) or self:PickSequence(self.SequencesMiss, self:GetSlashCount())
+    seq = seq or self:PickSequence(self.SequencesSlash, self:GetSlashCount())
 
     local t = seq and self:PlaySequence(seq, 1, false) or 0.5
     owner:DoAnimationEvent(self.ShootGesture)
@@ -118,10 +120,7 @@ function SWEP:Slash()
     if self.SoundSwing != "" then self:EmitSound(self.SoundSwing) end
 
     if tr.Hit then
-        self:SetTimer(math.min(self.HitDelay, t), function()
-            if !IsValid(self) then return end
-            self:MeleeHit(self.MeleeRange, self.DamageGeneric, false)
-        end, "mcv_melee_hit")
+        self:Defer("SlashHit", math.min(self.HitDelay, t))
     end
 
     self:SetNextPrimaryFire(CurTime() + self:SwingDelay(self.SlashRate))
@@ -135,10 +134,7 @@ function SWEP:Stab()
     local t = self:PlaySequence(seq, 1, false) or 0.6
     owner:DoAnimationEvent(self.ShootGesture)
 
-    self:SetTimer(math.min(self.StabHitDelay, t), function()
-        if !IsValid(self) then return end
-        self:MeleeHit(self.MeleeRangeAlt, self:GetStabDamage(), true)
-    end, "mcv_melee_hit")
+    self:Defer("StabHit", math.min(self.StabHitDelay, t))
 
     local delay = self:SwingDelay(self.StabRate)
     self:SetNextPrimaryFire(CurTime() + delay)
@@ -152,12 +148,7 @@ function SWEP:StartCharge()
     self:SetActionState(STATE_CHARGE)
     self:SetActionStart(CurTime())
     local t = self:PlaySequence(self.SequenceChargeStart, 1, true) or 0.4
-    self:SetTimer(t, function()
-        if !IsValid(self) or self:GetActionState() != STATE_CHARGE then return end
-        if self:HasSequence(self.SequenceChargeLoop) then
-            self:PlaySequence(self.SequenceChargeLoop, 1, false, true)
-        end
-    end, "mcv_charge_loop")
+    self:Defer("ChargeLoop", t)
 end
 
 function SWEP:ChargeAttack()
@@ -168,10 +159,7 @@ function SWEP:ChargeAttack()
     local t = seq and self:PlaySequence(seq, 1, false) or 0.6
     owner:DoAnimationEvent(self.ChargeGesture)
 
-    self:SetTimer(math.min(0.1, t), function()
-        if !IsValid(self) then return end
-        self:MeleeHit(self.MeleeRangeAlt, self:GetStabDamage() * self.ChargeDamageMultiplier, true)
-    end, "mcv_melee_hit")
+    self:Defer("ChargeHit", math.min(0.1, t))
 
     local delay = self:SwingDelay(self.StabRate)
     self:SetNextPrimaryFire(CurTime() + delay)
@@ -179,6 +167,7 @@ function SWEP:ChargeAttack()
 end
 
 function SWEP:EndCharge()
+    self:CancelDeferred()
     self:SetActionState(STATE_IDLE)
     self:SetNextIdle(CurTime())
     self:SetNextPrimaryFire(CurTime() + 0.3)
@@ -197,18 +186,14 @@ function SWEP:BeginThrow()
         self:SetActionState(STATE_THROW_HOLD)
         self:SetActionStart(CurTime())
         local t = self:PlaySequence(self.SequenceThrowStart, 1, true) or 0.3
-        self:SetTimer(t, function()
-            if !IsValid(self) or self:GetActionState() != STATE_THROW_HOLD then return end
-            if self:HasSequence(self.SequenceThrowLoop) then
-                self:PlaySequence(self.SequenceThrowLoop, 1, false, true)
-            end
-        end, "mcv_throw_loop")
+        self:Defer("ThrowLoop", t)
     else
         self:ThrowBlade()
     end
 end
 
 function SWEP:CancelThrow()
+    self:CancelDeferred()
     self:SetActionState(STATE_IDLE)
     if self:HasSequence(self.SequenceThrowCancel) then
         self:PlaySequence(self.SequenceThrowCancel, 1, true)
@@ -224,10 +209,7 @@ function SWEP:ThrowBlade()
     local t = self:PlaySequence(self.SequenceThrow, 1, true) or 0.5
     owner:DoAnimationEvent(ACT_HL2MP_GESTURE_RANGE_ATTACK_GRENADE)
 
-    self:SetTimer(math.min(0.15, t), function()
-        if !IsValid(self) then return end
-        self:LaunchBlade()
-    end, "mcv_throw_blade")
+    self:Defer("ThrowBlade", math.min(0.15, t))
 
     self:SetNextPrimaryFire(CurTime() + t)
 end
@@ -326,16 +308,12 @@ function SWEP:StartRepair()
     self:SetActionState(STATE_REPAIR)
     self:SetActionStart(CurTime())
     local t = self:HasSequence(self.SequenceRepairStart) and self:PlaySequence(self.SequenceRepairStart, 1, true) or 0.3
-    self.NextRepairTick = CurTime() + t
-    self:SetTimer(t, function()
-        if !IsValid(self) or self:GetActionState() != STATE_REPAIR then return end
-        if self:HasSequence(self.SequenceRepairLoop) then
-            self:PlaySequence(self.SequenceRepairLoop, 1, false, false)
-        end
-    end, "mcv_repair_loop")
+    self:SetNextRepairTime(CurTime() + t)
+    self:Defer("RepairLoop", t)
 end
 
 function SWEP:EndRepair()
+    self:CancelDeferred()
     self:SetActionState(STATE_IDLE)
     if self:HasSequence(self.SequenceRepairEnd) then
         self:PlaySequence(self.SequenceRepairEnd, 1, true)
@@ -345,8 +323,8 @@ function SWEP:EndRepair()
 end
 
 function SWEP:RepairTick()
-    if CurTime() < (self.NextRepairTick or 0) then return end
-    self.NextRepairTick = CurTime() + 0.25
+    if CurTime() < self:GetNextRepairTime() then return end
+    self:SetNextRepairTime(CurTime() + 0.25)
 
     local ent = self:GetRepairTarget()
     if !ent then self:EndRepair() return end
@@ -388,8 +366,8 @@ function SWEP:ThinkWeapon()
 
     // run transitions
     local running = self:GetSpeed() >= self.SpeedSprintThreshold
-    if running != (self.WasRunning or false) then
-        self.WasRunning = running
+    if running != self:GetWasRunning() then
+        self:SetWasRunning(running)
         if state == STATE_IDLE and !self:StillWaiting() then
             local seq = running and self.SequenceIdleToRun or self.SequenceRunToIdle
             if self:HasSequence(seq) then
@@ -467,7 +445,41 @@ end
 
 function SWEP:OnDeploy()
     self:SetActionState(STATE_IDLE)
-    self.WasRunning = false
+    self:SetWasRunning(false)
+end
+
+function SWEP:Deferred_SlashHit()
+    self:MeleeHit(self.MeleeRange, self.DamageGeneric, false)
+end
+
+function SWEP:Deferred_StabHit()
+    self:MeleeHit(self.MeleeRangeAlt, self:GetStabDamage(), true)
+end
+
+function SWEP:Deferred_ChargeHit()
+    self:MeleeHit(self.MeleeRangeAlt, self:GetStabDamage() * self.ChargeDamageMultiplier, true)
+end
+
+function SWEP:Deferred_ChargeLoop()
+    if self:GetActionState() == STATE_CHARGE and self:HasSequence(self.SequenceChargeLoop) then
+        self:PlaySequence(self.SequenceChargeLoop, 1, false, true)
+    end
+end
+
+function SWEP:Deferred_ThrowLoop()
+    if self:GetActionState() == STATE_THROW_HOLD and self:HasSequence(self.SequenceThrowLoop) then
+        self:PlaySequence(self.SequenceThrowLoop, 1, false, true)
+    end
+end
+
+function SWEP:Deferred_ThrowBlade()
+    self:LaunchBlade()
+end
+
+function SWEP:Deferred_RepairLoop()
+    if self:GetActionState() == STATE_REPAIR and self:HasSequence(self.SequenceRepairLoop) then
+        self:PlaySequence(self.SequenceRepairLoop, 1, false, false)
+    end
 end
 
 function SWEP:GetControlHints()

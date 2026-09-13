@@ -6,8 +6,8 @@
 //    server, so if the server never wrote them the client would keep receiving zeros
 //    that fight what it draws (visible as a flickering "ghost" viewmodel, worst in
 //    singleplayer where the client does not predict).
-//  * PreDrawViewModel (client, every rendered frame) with `visual = true`, using the
-//    frame-smoothed values so the pose is exact for the frame being drawn.
+//  * The non-predicted GetViewModelPosition call, before bones are built for drawing,
+//    with `visual = true`. Pose changes in PreDrawViewModel can arrive after bone setup.
 function SWEP:DoBodygroups(vm, visual)
     local owner = self:GetOwner()
     if !IsValid(owner) or !owner:IsPlayer() then return end
@@ -60,8 +60,6 @@ function SWEP:PreDrawViewModel(vm, weapon, ply, flags)
 
     self:PreDrawViewModelWeapon(vm)
     self:UpdateLitParticle(vm)
-
-    self:DoBodygroups(vm, true)
 
     local sa = self:GetSightAmountVisual() ^ 3
 
@@ -165,6 +163,12 @@ function SWEP:PostDrawViewModel(vm, ply, wep, flags)
 end
 
 function SWEP:GetViewModelPosition(pos, ang)
+    if GetPredictionPlayer() != self:GetOwner() then
+        local vm = self:GetOwner():GetViewModel()
+        self:UpdateViewModelAnimation(vm)
+        self:DoBodygroups(vm, true)
+        if IsValid(vm) then vm:InvalidateBoneCache() end
+    end
     local aim_delta = self:GetSightAmountVisual()
     local aim_punch = self:GetOwner():GetViewPunchAngles()
 

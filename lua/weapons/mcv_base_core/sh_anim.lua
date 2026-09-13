@@ -7,16 +7,21 @@ local function applySequence(self, vm, seq, mult, lock, noidle)
     end
 
     local time = vm:SequenceDuration(seq) * mult
-
-    vm:SendViewModelMatchingSequence(seq)
-
-    if reverse then
-        vm:SetCycle(1)
-        vm:SetPlaybackRate(-1 / mult)
-    else
-        vm:SetCycle(0)
-        vm:SetPlaybackRate(1 / mult)
+    // Lua refresh cannot add datatable accessors to weapons that already exist.
+    if self.SetAnimationStart then
+        self:SetAnimationStart(CurTime())
+        self:SetAnimationDuration(reverse and -time or time)
     end
+
+    if self.ScheduleHammerRelease then
+        self:ScheduleHammerRelease(vm, seq, time, reverse)
+    end
+
+    // Reconstruct animation state on every prediction pass. The render path
+    // recovers the final command's timeline after packet/sequence processing.
+    vm:SendViewModelMatchingSequence(seq)
+    vm:SetPlaybackRate((reverse and -1 or 1) / mult)
+    vm:SetCycle(reverse and 1 or 0)
 
     if lock then
         self:SetAnimLockTime(CurTime() + time)
@@ -31,6 +36,47 @@ local function applySequence(self, vm, seq, mult, lock, noidle)
     end
 
     return time
+end
+
+// CurTime outside prediction is the interpolated world clock. The local viewmodel
+// runs at the final predicted tick plus the fractional render tick instead.
+function SWEP:GetViewModelTime()
+    if CLIENT and !game.SinglePlayer() and self:GetOwner() == LocalPlayer() and GetPredictionPlayer() != self:GetOwner() then
+        local tick = engine.TickInterval()
+        return self:GetOwner():GetInternalVariable("m_nTickBase") * tick + CurTime() % tick
+    end
+    return CurTime()
+end
+
+function SWEP:UpdateViewModelAnimation(vm)
+    if !CLIENT or game.SinglePlayer() or self:GetOwner() != LocalPlayer() or !IsValid(vm) or !self.GetAnimationDuration then return end
+    if GetPredictionPlayer() == self:GetOwner() then return end
+    local duration = self:GetAnimationDuration()
+    if duration == 0 then return end
+    local start = self:GetAnimationStart()
+    local progress = math.max(self:GetViewModelTime() - start, 0) / math.abs(duration)
+    local sequence = vm:GetSequence()
+    local previous = self.VisualAnimation
+    if previous and previous.vm == vm and previous.sequence == sequence and previous.start == start and previous.duration == duration then
+        // Clock correction can move tick base back without changing the animation.
+        // Hold the visual until it catches up; never replay frames already shown.
+        progress = math.max(progress, previous.progress)
+        previous.progress = progress
+    else
+        self.VisualAnimation = {vm=vm, sequence=sequence, start=start, duration=duration, progress=progress}
+    end
+    local info = vm:GetSequenceInfo(sequence)
+    if info and bit.band(info.flags, 1) != 0 and self:GetNextIdle() != math.huge then
+        progress = progress % 1
+    else
+        progress = math.min(progress, 0.999)
+    end
+    // The engine's sequence receive proxy can replace its timestamp after the shot,
+    // skipping its first frames. Looping no-idle stages must also hold their end
+    // frame until the next command starts an insert, rather than wrap early.
+    // Recover from our restored timeline before building the render bones.
+    vm:SetSaveValue("m_flAnimTime", start)
+    vm:SetCycle(duration < 0 and 1 - progress or progress)
 end
 
 // Play the sequence registered for an activity. mult scales the duration (negative plays

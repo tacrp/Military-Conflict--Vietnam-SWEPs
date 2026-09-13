@@ -13,7 +13,7 @@ SWEP.AimHoldType = "slam"
 
 SWEP.BoxKind = "ammo" // "ammo" or "medic"
 SWEP.HealAmount = 50
-SWEP.AmmoMagazines = 2 // magazines' worth of reserve per gun
+SWEP.AmmoMagazines = 1 // total magazine-equivalent budget shared across the inventory
 SWEP.GiveRange = 96
 SWEP.DroppedEntity = "mcv_supply_box"
 

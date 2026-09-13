@@ -86,6 +86,9 @@ SWEP.Spread = 8.25
 SWEP.SpreadIronsighted = 1.75
 
 SWEP.FireRate = 750 // in rounds per minute
+// Its 20-frame shot pose is stretched over the 60-frame base. Close the bolt
+// before the next 80 ms shot; the default 0.5 leaves it held back through a burst.
+SWEP.ShootAnimRate = 0.15
 
 SWEP.CrosshairMinDistance = 4
 SWEP.CrosshairDeltaDistance = 4

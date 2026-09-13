@@ -34,6 +34,51 @@ NOTE: Please do not resort to using "snap" to fix this. "snap" should only be us
 
 - Some weapons have walk animations in ADS and others don't. Recommend all weapons dont play their walk animations in ADS for the sake of gameplay.
 
+## Rifle-grenade sights and fire modes, Sep 13 2026
+
+- Rifle-grenade ADS used the rifle's standard irons at idle, then jumped to the ladder
+  sight for the shot (vz.24 and SKS reproduced). The models already contain the matching
+  `grenade_idle` / `grenade_shoot` sight poses; `IdleActivity` only handled underbarrel
+  launchers. It now selects `ACT_VM_IDLE_M203` for rifle grenades and keeps
+  `ACT_VM_IIDLE_M203` for underbarrel launchers. No model or hand-tuned sight changes.
+- Fire-mode changes are blocked while the launcher is active, before any mode, scope,
+  animation, sound or burst-state change. Switching back preserves the rifle's selected
+  mode and enables its selector again. The control hint follows the same restriction.
+- `mcv_spawn_rifle_grenade_ammo` (default 1) controls the free secondary grenade round
+  on newly created rifles. Options > Military Conflict: Vietnam > Server exposes it as
+  "Starting rifle-grenade ammo". Disabling it leaves new secondary grenade clips empty;
+  collected ammo, existing weapons and resupply keep working. This also covers rifles
+  that declare the same secondary ammo despite not exposing a launcher mode.
+- Lua changes: reload the map; no model rebuild or full game restart is needed.
+
+## Shooting, reload animations and supplies, Sep 13 2026
+
+- [x] Multiplayer shots sometimes skipped the bolt stroke despite a clean prediction log. A viewmodel sequence update replaced the firing timestamp with the interpolated world clock. Animation start/duration now live in predicted weapon state and restore the rendered cycle before bone setup.
+- [x] The XM177's stretched shot held its bolt back longer than the interval between automatic shots. Both XM177 variants now complete that stroke before the next shot, through their existing Lua animation-rate setting.
+- [x] Shotgun reload starts briefly selected idle before the first insert; looping inserts could also wrap before the next command. Continuing stages suppress idle and hold their last frame until the next stage. Third-person sound and gesture side effects run only on the first prediction pass.
+- [x] Deploy explicitly sets the appropriate model for every weapon, preserving the viewmodel hull, dual-wield choice and active launcher mode. The earlier hip-fire launcher activity fallback was reverted at the user's request.
+- [x] Ammo self-supply serves the player's other weapons, including stock guns and grenade/rocket pools. One magazine-equivalent total is shared across distinct ammo pools, with capped reserves and rotating priority for indivisible rounds. It cannot resupply supply boxes.
+
+See [work/PREDICTION.md](work/PREDICTION.md) for retained MP animation, sound, deployment and budget checks. These are Lua changes; change map to load the new datatable fields.
+
+## Sprint and aim prediction visuals, Sep 13 2026
+
+- [x] Predicted `GetViewModelPosition` calls consumed the render frame's aim cache using an earlier command and a tick's time. Aim, speed, stance and steadiness visual caches now advance only outside prediction.
+- [x] Viewmodel poses were changed in `PreDrawViewModel` after bone setup, mixing one pose's hand bones with another pose's position. Visual poses now update before drawing and invalidate the bone cache.
+- [x] Movement-dependent aim/spread and jump/landing blend targets sampled different movement phases in client and server weapon Think. Completed speed, ground and crouch samples now live in NetworkVars; command numbers select the same prior movement on both realms and restore it on replay.
+
+The M2 Carbine and XM177 OEG were reproduced at `net_fakelag 100`. The harness now checks rendered frames and pose timing as well as native errors, with retained before/after traces. See [work/PREDICTION.md](work/PREDICTION.md) for results and limitations. Change map to install the new datatable fields; no model rebuild or sight-offset changes.
+
+## Prediction fixes, Sep 12 2026
+
+- [x] Grenade releases, melee hits, bayonet charges, placement and supply-box actions could lose or repeat their pending work after prediction rollback. Their stages, deadlines and arguments now live in NetworkVars; ordinary Lua closure queues and gameplay counters have been removed.
+- [x] Weapon recoil changed player velocity at different movement phases on the client and server. It now queues an impulse for the next command's shared movement phase, using that input's aim direction so tiny camera corrections do not become movement errors.
+- [x] Bolt/pump readiness depended on render-time hammer events. Release deadlines now come from the compiled model's event cycles and the predicted animation start. Model data is selected from the weapon's mode, avoiding a stale viewmodel name after dual wielding.
+- [x] Dual-wield swaps and delayed inventory switches diverged on replay. The model alias/cache and collision bounds now follow restored state, delayed selection uses command numbers, and extra client Holster callbacks cannot restart the switch. Deploy accounts for the server's relative next-attack save value.
+- [x] Bodygroups and hand-used supplies now update in both predicting realms. Newly spawned mines keep their authoritative entity handle outside the predicted datatable. The experimental XM148 hip-fire animation fallback was subsequently reverted; deployed fire retains its original activity.
+
+The harness checks real input, completed actions, client/server state and `cl_showerror 2`, with a deliberate mismatch calibration and a stock weapon control. See [work/PREDICTION.md](work/PREDICTION.md) for research, reproduced faults, retained results and test boundaries. Lua only: change map to load; no model rebuild or sight-offset changes.
+
 ## Reported Sep 5 2026 (after the Crowbar 0.74 recompile, shader scopes and equipment)
 
 - [x] China Lake pump animation glitches: gun position leaves the hands (same for the M870, and the M1897 / M37 did it too). The 2024 hand-edited pump animations do not fit the new rig; the game's own pump deltas are used (overrides parked in `work/MCV_SMD/disabled_pump_overrides/`)
