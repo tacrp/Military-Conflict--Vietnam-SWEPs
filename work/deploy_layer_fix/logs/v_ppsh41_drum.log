@@ -1,0 +1,125 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_ppsh41_drum\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_ppsh41_drum\v_ppsh41_drum.qc"
+Building binary model files...
+Working on "v_ppsh41_drum.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\Ref_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\mesh_mag_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\Default_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\Slideback_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\ShootMove_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\ShootStill_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\PoseDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\PoseDelta2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\Default.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\Slideback.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\ShootMove.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\ShootStill.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\change_firemode_idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\change_firemode_iron.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41_drum\v_ppsh41_drum_anims\holster.smd
+Processing LOD for material: ppsh41
+Processing LOD for material: shells_small
+Processing LOD for material: ppsh41
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_ppsh41_drum.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_ppsh41_drum.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        22056 bytes (96)
+animations  173904 bytes (65 anims) (1657 frames) [0:55]
+sequences     9904 bytes (26 seq) 
+ik/pose        408 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       140 bytes
+keyvalues       20 bytes
+bone transforms    13120 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       223412
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_ppsh41_drum.vvd:
+vertices    416976 bytes (8687 vertices)
+vertices    133200 bytes (2775 vertices)
+tangents    138992 bytes (8687 vertices)
+tangents     44400 bytes (2775 vertices)
+total       733632 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_ppsh41_drum.dx80.vtx":
+body parts:        16 bytes
+models:            40 bytes
+model LODs:        24 bytes
+meshes:            27 bytes
+strip groups:      75 bytes
+strips:            81 bytes
+verts:         103158 bytes
+indices:        71694 bytes
+bone changes:      56 bytes
+everything:    175183 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_ppsh41_drum.dx90.vtx":
+body parts:        16 bytes
+models:            40 bytes
+model LODs:        24 bytes
+meshes:            27 bytes
+strip groups:      75 bytes
+strips:            81 bytes
+verts:         103158 bytes
+indices:        71694 bytes
+bone changes:      56 bytes
+everything:    175183 bytes
+
+Completed "v_ppsh41_drum.qc"

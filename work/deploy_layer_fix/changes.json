@@ -1,0 +1,6564 @@
+[
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_ak47/v_ak47.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_ak47_bayonet/v_ak47_bayonet.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_akm/v_akm.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_amd65/v_amd65.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_aps/v_aps.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_babybrowning/v_babybrowning.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_bar_l/v_bar_l.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_bazooka/v_bazooka.qc",
+    "changes": [
+      {
+        "sequence": "draw_empty",
+        "activity": "ACT_VM_EMPTY_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_binocular/v_binocular.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_blackhawk/v_blackhawk.qc",
+    "changes": [
+      {
+        "sequence": "FirstDraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_box/v_box.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_bren/v_bren.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_browning_auto/v_browning_auto.qc",
+    "changes": [
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_c4/v_c4.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_c4_demolition/v_c4_demolition.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_c96/v_c96.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_c96_stock/v_c96_stock.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_car15/v_car15.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_chainsaw/v_chainsaw.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_chinalake/v_chinalake.qc",
+    "changes": [
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_cobra/v_cobra.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_crossbow/v_crossbow.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_crowbar/v_crowbar.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_csg/v_csg.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_csg2/v_csg2.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_css/v_css.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_cz52/v_cz52.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dp28/v_dp28.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dual_aps/v_dual_aps.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dual_babybrowning/v_dual_babybrowning.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dual_blackhawk/v_dual_blackhawk.qc",
+    "changes": [
+      {
+        "sequence": "FirstDraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dual_cobra/v_dual_cobra.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dual_cz52/v_dual_cz52.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dual_hdm/v_dual_hdm.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dual_highpower/v_dual_highpower.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dual_izh43/v_dual_izh43.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dual_lacoste/v_dual_lacoste.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dual_lebel/v_dual_lebel.qc",
+    "changes": [
+      {
+        "sequence": "FirstDraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dual_luger/v_dual_luger.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dual_m1895/v_dual_m1895.qc",
+    "changes": [
+      {
+        "sequence": "FirstDraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dual_m1911/v_dual_m1911.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dual_m1917/v_dual_m1917.qc",
+    "changes": [
+      {
+        "sequence": "FirstDraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dual_mac10/v_dual_mac10.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dual_mac10_sog/v_dual_mac10_sog.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dual_mamba/v_dual_mamba.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dual_mk22/v_dual_mk22.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dual_mk22_mod0/v_dual_mk22_mod0.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dual_mle1935/v_dual_mle1935.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dual_p38/v_dual_p38.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dual_pb/v_dual_pb.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dual_pm/v_dual_pm.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dual_pm63/v_dual_pm63.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dual_ppk/v_dual_ppk.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dual_qspr/v_dual_qspr.qc",
+    "changes": [
+      {
+        "sequence": "FirstDraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dual_rhogun/v_dual_rhogun.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dual_ruby/v_dual_ruby.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dual_swm10/v_dual_swm10.qc",
+    "changes": [
+      {
+        "sequence": "FirstDraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dual_swm12/v_dual_swm12.qc",
+    "changes": [
+      {
+        "sequence": "FirstDraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dual_swm49/v_dual_swm49.qc",
+    "changes": [
+      {
+        "sequence": "FirstDraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dual_tt33/v_dual_tt33.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dual_type14/v_dual_type14.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dual_type64_pistol/v_dual_type64_pistol.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dual_type67/v_dual_type67.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dual_uzi/v_dual_uzi.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dual_uzi_sog/v_dual_uzi_sog.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dual_vcpistol2/v_dual_vcpistol2.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dual_vz23/v_dual_vz23.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dual_vz61/v_dual_vz61.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dual_vz61_silencer/v_dual_vz61_silencer.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dynamite/v_dynamite.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_dynamite_demolition/v_dynamite_demolition.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_f1/v_f1.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_fist/v_fist.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_g3/v_g3.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_gewehr43/v_gewehr43.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "grenade_draw",
+        "activity": "ACT_VM_DRAWFULL_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\""
+        ]
+      },
+      {
+        "sequence": "Grenade_draw_empty",
+        "activity": "ACT_VM_DRAW_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_gp25/v_gp25.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "gl_draw",
+        "activity": "ACT_VM_DRAW_M203",
+        "removed": [
+          "addlayer \"walklayergrenironsight\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_gyrojet_carbine/v_gyrojet_carbine.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_gyrojet_pistol/v_gyrojet_pistol.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_hdm/v_hdm.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_highpower/v_highpower.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_izh43/v_izh43.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_izh43_sog/v_izh43_sog.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_k50m/v_k50m.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_k50m_vc/v_k50m_vc.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_kar98_dov/v_kar98_dov.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "grenade_draw",
+        "activity": "ACT_VM_DRAWFULL_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\""
+        ]
+      },
+      {
+        "sequence": "Grenade_draw_empty",
+        "activity": "ACT_VM_DRAW_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_kar98_s/v_kar98_s.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "grenade_draw",
+        "activity": "ACT_VM_DRAWFULL_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\""
+        ]
+      },
+      {
+        "sequence": "Grenade_draw_empty",
+        "activity": "ACT_VM_DRAW_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_katana/v_katana.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_kbkg60/v_kbkg60.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "grenade_draw",
+        "activity": "ACT_VM_DRAWFULL_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\""
+        ]
+      },
+      {
+        "sequence": "Grenade_draw_empty",
+        "activity": "ACT_VM_DRAW_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_kolos/v_kolos.qc",
+    "changes": [
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_l1a1/v_l1a1.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_l1a1_sog/v_l1a1_sog.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_l2a1/v_l2a1.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_lacoste/v_lacoste.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_lebel/v_lebel.qc",
+    "changes": [
+      {
+        "sequence": "FirstDraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_lpo50/v_lpo50.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_luger/v_luger.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_lunge_mine/v_lunge_mine.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m12/v_m12.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m14_sog/v_m14_sog.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m14e2/v_m14e2.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m14e2_sog/v_m14e2_sog.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m14l/v_m14l.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Grenade_draw_empty",
+        "activity": "ACT_VM_DRAW_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m16_flamer/v_m16_flamer.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\""
+        ]
+      },
+      {
+        "sequence": "gl_draw",
+        "activity": "ACT_VM_DRAW_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m16a1/v_m16a1.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m18/v_m18.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m1895/v_m1895.qc",
+    "changes": [
+      {
+        "sequence": "FirstDraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m1897/v_m1897.qc",
+    "changes": [
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "draw_empty",
+        "activity": "ACT_VM_EMPTY_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m1905_bayonet/v_m1905_bayonet.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m1911/v_m1911.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m1917/v_m1917.qc",
+    "changes": [
+      {
+        "sequence": "FirstDraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m1919a6/v_m1919a6.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m1928/v_m1928.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m1942_machete/v_m1942_machete.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m1a1/v_m1a1.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m1a1_sog/v_m1a1_sog.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m1c/v_m1c.qc",
+    "changes": [
+      {
+        "sequence": "FirstDraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "grenade_draw",
+        "activity": "ACT_VM_DRAWFULL_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\""
+        ]
+      },
+      {
+        "sequence": "grenade_draw_empty",
+        "activity": "ACT_VM_DRAW_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m1c_sog/v_m1c_sog.qc",
+    "changes": [
+      {
+        "sequence": "FirstDraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "grenade_draw",
+        "activity": "ACT_VM_DRAWFULL_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\""
+        ]
+      },
+      {
+        "sequence": "grenade_draw_empty",
+        "activity": "ACT_VM_DRAW_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m1g_s/v_m1g_s.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "grenade_draw",
+        "activity": "ACT_VM_DRAWFULL_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\""
+        ]
+      },
+      {
+        "sequence": "Grenade_draw_empty",
+        "activity": "ACT_VM_DRAW_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m202/v_m202.qc",
+    "changes": [
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m203/v_m203.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "gl_draw",
+        "activity": "ACT_VM_DRAW_M203",
+        "removed": [
+          "addlayer \"walklayergrenironsight\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m21/v_m21.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Grenade_draw_empty",
+        "activity": "ACT_VM_DRAW_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m24/v_m24.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m26/v_m26.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m2c/v_m2c.qc",
+    "changes": [
+      {
+        "sequence": "FirstDraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "grenade_draw",
+        "activity": "ACT_VM_DRAWFULL_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\""
+        ]
+      },
+      {
+        "sequence": "grenade_draw_empty",
+        "activity": "ACT_VM_DRAW_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m2c_sog/v_m2c_sog.qc",
+    "changes": [
+      {
+        "sequence": "FirstDraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "grenade_draw",
+        "activity": "ACT_VM_DRAWFULL_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\""
+        ]
+      },
+      {
+        "sequence": "grenade_draw_empty",
+        "activity": "ACT_VM_DRAW_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m34/v_m34.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m37/v_m37.qc",
+    "changes": [
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m38/v_m38.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "grenade_draw",
+        "activity": "ACT_VM_DRAWFULL_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\""
+        ]
+      },
+      {
+        "sequence": "grenade_draw_empty",
+        "activity": "ACT_VM_DRAW_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m38_s/v_m38_s.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "grenade_draw",
+        "activity": "ACT_VM_DRAWFULL_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\""
+        ]
+      },
+      {
+        "sequence": "grenade_draw_empty",
+        "activity": "ACT_VM_DRAW_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m3a1/v_m3a1.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m3a1_sog/v_m3a1_sog.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m40/v_m40.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m45/v_m45.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m45_sog/v_m45_sog.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m50/v_m50.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m56/v_m56.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m60/v_m60.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m601/v_m601.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m605/v_m605.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m607/v_m607.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m60b/v_m60b.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m635/v_m635.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m656/v_m656.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m6a1/v_m6a1.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m7188/v_m7188.qc",
+    "changes": [
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m72/v_m72.qc",
+    "changes": [
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m79/v_m79.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m79_short/v_m79_short.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m7_bayonet/v_m7_bayonet.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m8/v_m8.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m870/v_m870.qc",
+    "changes": [
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m91/v_m91.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "grenade_draw",
+        "activity": "ACT_VM_DRAWFULL_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\""
+        ]
+      },
+      {
+        "sequence": "grenade_draw_empty",
+        "activity": "ACT_VM_DRAW_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_m9a1/v_m9a1.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_mac10/v_mac10.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_mac10_sog/v_mac10_sog.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_mamba/v_mamba.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_mas36/v_mas36.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayerironsight\""
+        ]
+      },
+      {
+        "sequence": "grenade_draw",
+        "activity": "ACT_VM_DRAWFULL_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\""
+        ]
+      },
+      {
+        "sequence": "Grenade_draw_empty",
+        "activity": "ACT_VM_DRAW_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_mas36_cr39/v_mas36_cr39.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayerironsight\""
+        ]
+      },
+      {
+        "sequence": "grenade_draw",
+        "activity": "ACT_VM_DRAWFULL_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\""
+        ]
+      },
+      {
+        "sequence": "Grenade_draw_empty",
+        "activity": "ACT_VM_DRAW_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_mas38/v_mas38.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_mas49/v_mas49.qc",
+    "changes": [
+      {
+        "sequence": "FirstDraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "grenade_draw",
+        "activity": "ACT_VM_DRAWFULL_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\""
+        ]
+      },
+      {
+        "sequence": "grenade_draw_empty",
+        "activity": "ACT_VM_DRAW_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_mat49/v_mat49.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_mat49_sog/v_mat49_sog.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_mat49k/v_mat49k.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_md63/v_md63.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_medicbox/v_medicbox.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_mg43/v_mg43.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_mg43b/v_mg43b.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_mg43d/v_mg43d.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_mine/v_mine.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_mk1/v_mk1.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_mk2/v_mk2.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_mk22/v_mk22.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_mk3a2/v_mk3a2.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_mk4mod0/v_mk4mod0.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_mle1935/v_mle1935.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_molotov/v_molotov.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_morph/v_morph.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_mp40/v_mp40.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_owen/v_owen.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_p38/v_p38.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_panzerschreck/v_panzerschreck.qc",
+    "changes": [
+      {
+        "sequence": "draw_empty",
+        "activity": "ACT_VM_EMPTY_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_pb/v_pb.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_pk/v_pk.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_pk_belt/v_pk_belt.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_pm/v_pm.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_pm63/v_pm63.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_ppk/v_ppk.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_pps43/v_pps43.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_ppsh41/v_ppsh41.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_ppsh41_doubledrum/v_ppsh41_doubledrum.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_ppsh41_drum/v_ppsh41_drum.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_ptrd41/v_ptrd41.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_ptrd41_s/v_ptrd41_s.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_qspr/v_qspr.qc",
+    "changes": [
+      {
+        "sequence": "FirstDraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_r76/v_r76.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_reising_m55/v_reising_m55.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_reising_m60/v_reising_m60.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_reising_smg/v_reising_smg.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_rgd5/v_rgd5.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_rhogun/v_rhogun.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_rp46/v_rp46.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_rpd/v_rpd.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_rpd_sog/v_rpd_sog.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_rpdb/v_rpdb.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_rpdb_sog/v_rpdb_sog.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_rpg2/v_rpg2.qc",
+    "changes": [
+      {
+        "sequence": "draw_empty",
+        "activity": "ACT_VM_EMPTY_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_rpg7/v_rpg7.qc",
+    "changes": [
+      {
+        "sequence": "draw_empty",
+        "activity": "ACT_VM_EMPTY_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_rpk/v_rpk.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_ruby/v_ruby.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_s8498_bayonet/v_s8498_bayonet.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_shanxi_type17/v_shanxi_type17.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_shovel_de/v_shovel_de.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_shovel_us/v_shovel_us.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_shovel_vc/v_shovel_vc.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_sickle/v_sickle.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_sks/v_sks.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "grenade_draw",
+        "activity": "ACT_VM_DRAWFULL_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\""
+        ]
+      },
+      {
+        "sequence": "grenade_draw_empty",
+        "activity": "ACT_VM_DRAW_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_springfield/v_springfield.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "grenade_draw",
+        "activity": "ACT_VM_DRAWFULL_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\""
+        ]
+      },
+      {
+        "sequence": "Grenade_draw_empty",
+        "activity": "ACT_VM_DRAW_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_sten/v_sten.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_sten_sog/v_sten_sog.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_sterling/v_sterling.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_sterling_sog/v_sterling_sog.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_stg44/v_stg44.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_stielhandgranate/v_stielhandgranate.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_stoner63/v_stoner63.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_stoner63_autorifle/v_stoner63_autorifle.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_stoner63_lmg/v_stoner63_lmg.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_stoner63a/v_stoner63a.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_stoner63a_carbine/v_stoner63a_carbine.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_stoner63a_carbine_drum/v_stoner63a_carbine_drum.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_stoner63a_drum/v_stoner63a_drum.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_svd/v_svd.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_svt40_s/v_svt40_s.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_swm10/v_swm10.qc",
+    "changes": [
+      {
+        "sequence": "FirstDraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_swm12/v_swm12.qc",
+    "changes": [
+      {
+        "sequence": "FirstDraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_swm49/v_swm49.qc",
+    "changes": [
+      {
+        "sequence": "FirstDraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_swm76/v_swm76.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_swm76_sog/v_swm76_sog.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_t223/v_t223.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_ts3/v_ts3.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_tt33/v_tt33.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_tul1/v_tul1.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_type14/v_type14.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_type30_bayonet/v_type30_bayonet.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_type56/v_type56.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_type56xm148/v_type56xm148.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "gl_draw",
+        "activity": "ACT_VM_DRAW_M203",
+        "removed": [
+          "addlayer \"walklayergrenironsight\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_type58/v_type58.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_type63/v_type63.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "grenade_draw",
+        "activity": "ACT_VM_DRAWFULL_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\""
+        ]
+      },
+      {
+        "sequence": "grenade_draw_empty",
+        "activity": "ACT_VM_DRAW_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_type63b/v_type63b.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "grenade_draw",
+        "activity": "ACT_VM_DRAWFULL_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\""
+        ]
+      },
+      {
+        "sequence": "grenade_draw_empty",
+        "activity": "ACT_VM_DRAW_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_type64/v_type64.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_type64_pistol/v_type64_pistol.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_type67/v_type67.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_type79/v_type79.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_uzi/v_uzi.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_uzi_sog/v_uzi_sog.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_v40/v_v40.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_vcammobox/v_vcammobox.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_vccarbine/v_vccarbine.qc",
+    "changes": [
+      {
+        "sequence": "FirstDraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_vcgrenade/v_vcgrenade.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_vcmedicbox/v_vcmedicbox.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_vcpistol/v_vcpistol.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_vcpistol2/v_vcpistol2.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_vcshotgun/v_vcshotgun.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_vcsmg/v_vcsmg.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_vz23/v_vz23.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_vz24/v_vz24.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "grenade_draw",
+        "activity": "ACT_VM_DRAWFULL_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\""
+        ]
+      },
+      {
+        "sequence": "Grenade_draw_empty",
+        "activity": "ACT_VM_DRAW_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_vz52/v_vz52.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_vz54/v_vz54.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "grenade_draw",
+        "activity": "ACT_VM_DRAWFULL_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\""
+        ]
+      },
+      {
+        "sequence": "grenade_draw_empty",
+        "activity": "ACT_VM_DRAW_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_vz54s/v_vz54s.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "grenade_draw",
+        "activity": "ACT_VM_DRAWFULL_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\""
+        ]
+      },
+      {
+        "sequence": "grenade_draw_empty",
+        "activity": "ACT_VM_DRAW_M203",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_vz58/v_vz58.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_vz59/v_vz59.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_vz59b/v_vz59b.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_vz61/v_vz61.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_vz61_silencer/v_vz61_silencer.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_welrod/v_welrod.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_wrench/v_wrench.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_x2f2a2/v_x2f2a2.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_xm148/v_xm148.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "gl_draw",
+        "activity": "ACT_VM_DRAW_M203",
+        "removed": [
+          "addlayer \"walklayergrenironsight\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_xm16super/v_xm16super.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "gl_draw",
+        "activity": "ACT_VM_DRAW_M203",
+        "removed": [
+          "addlayer \"walklayergrenironsight\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_xm177/v_xm177.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD/weapons/v_m635/v_m635.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD/weapons/v_xm16super/v_xm16super.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "gl_draw",
+        "activity": "ACT_VM_DRAW_M203",
+        "removed": [
+          "addlayer \"walklayergrenironsight\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD/weapons/v_ptrd41_s/v_ptrd41_s.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayer\"",
+          "addlayer \"walklayerironsight\"",
+          "addlayer \"runlayer\""
+        ]
+      }
+    ]
+  }
+]

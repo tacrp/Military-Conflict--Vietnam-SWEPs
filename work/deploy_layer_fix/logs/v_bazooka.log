@@ -1,0 +1,106 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_bazooka\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_bazooka\v_bazooka.qc"
+Building binary model files...
+Working on "v_bazooka.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\bazooka_ref.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\bazooka_rocket.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\draw_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\draw_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_bazooka\v_bazooka_anims\holster.smd
+Processing LOD for material: v_bazooka
+Processing LOD for material: v_bazooka
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_bazooka.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_bazooka.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        21248 bytes (93)
+animations  157792 bytes (45 anims) (1518 frames) [0:50]
+sequences     7488 bytes (19 seq) 
+ik/pose        536 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures        72 bytes
+keyvalues       20 bytes
+bone transforms    12712 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       203056
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_bazooka.vvd:
+vertices    136608 bytes (2846 vertices)
+vertices     19344 bytes (403 vertices)
+tangents     45536 bytes (2846 vertices)
+tangents      6448 bytes (403 vertices)
+total       208000 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_bazooka.dx80.vtx":
+body parts:        16 bytes
+models:            60 bytes
+model LODs:        36 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:          29241 bytes
+indices:        21144 bytes
+bone changes:      32 bytes
+everything:     50651 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_bazooka.dx90.vtx":
+body parts:        16 bytes
+models:            60 bytes
+model LODs:        36 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:          29241 bytes
+indices:        21144 bytes
+bone changes:      32 bytes
+everything:     50651 bytes
+
+Completed "v_bazooka.qc"

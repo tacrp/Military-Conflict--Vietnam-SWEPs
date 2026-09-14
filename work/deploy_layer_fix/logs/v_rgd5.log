@@ -1,0 +1,85 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_rgd5\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_rgd5\v_rgd5.qc"
+Building binary model files...
+Working on "v_rgd5.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rgd5\rgd5_ref.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rgd5\v_rgd5_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rgd5\v_rgd5_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rgd5\v_rgd5_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rgd5\v_rgd5_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rgd5\v_rgd5_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rgd5\v_rgd5_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rgd5\v_rgd5_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rgd5\v_rgd5_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rgd5\v_rgd5_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rgd5\v_rgd5_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rgd5\v_rgd5_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rgd5\v_rgd5_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rgd5\v_rgd5_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rgd5\v_rgd5_anims\idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rgd5\v_rgd5_anims\drawbackhigh.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rgd5\v_rgd5_anims\drawbacklow.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rgd5\v_rgd5_anims\throw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rgd5\v_rgd5_anims\roll.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rgd5\v_rgd5_anims\lob.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rgd5\v_rgd5_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rgd5\v_rgd5_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rgd5\v_rgd5_anims\pickupstart.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rgd5\v_rgd5_anims\pickuploop.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rgd5\v_rgd5_anims\pickupend.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rgd5\v_rgd5_anims\idletonearwall.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rgd5\v_rgd5_anims\nearwall.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rgd5\v_rgd5_anims\nearwalltoidle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rgd5\v_rgd5_anims\holster.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rgd5\v_rgd5_anims\firemode.smd
+Processing LOD for material: v_rgd5
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_rgd5.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_rgd5.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        21464 bytes (94)
+animations   83656 bytes (29 anims) (618 frames) [0:20]
+sequences     7764 bytes (20 seq) 
+ik/pose        224 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures        72 bytes
+keyvalues       20 bytes
+bone transforms    12848 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       128868
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_rgd5.vvd:
+vertices    194304 bytes (4048 vertices)
+tangents     64768 bytes (4048 vertices)
+total       259136 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_rgd5.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:             9 bytes
+strip groups:      25 bytes
+strips:            27 bytes
+verts:          36432 bytes
+indices:        37008 bytes
+bone changes:      40 bytes
+everything:     73605 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_rgd5.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:             9 bytes
+strip groups:      25 bytes
+strips:            27 bytes
+verts:          36432 bytes
+indices:        37008 bytes
+bone changes:      40 bytes
+everything:     73605 bytes
+
+Completed "v_rgd5.qc"

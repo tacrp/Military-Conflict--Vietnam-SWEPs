@@ -4,6 +4,7 @@
 
 SWEP.Base = "mcv_base"
 SWEP.Spawnable = false
+SWEP.NPCUsable = false // The continuous flame needs its own AI, not the gun firing path.
 
 SWEP.SubCategory = "Flamethrowers"
 SWEP.Slot = 3

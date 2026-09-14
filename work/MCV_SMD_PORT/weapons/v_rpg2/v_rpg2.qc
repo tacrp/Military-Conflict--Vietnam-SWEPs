@@ -409,9 +409,6 @@ $sequence "draw_empty" {
 	{ event 5004 1 "MCV_Weapon_Foley_RPG7.Draw" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "walklayerironsight"
-	addlayer "runlayer"
 	node "0"
 	fps 30
 }
@@ -427,9 +424,6 @@ $sequence "draw" {
 	{ event 5004 1 "MCV_Weapon_Foley_RPG7.Draw" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "walklayerironsight"
-	addlayer "runlayer"
 	addlayer "RocketPosition"
 	node "0"
 	fps 30
@@ -448,9 +442,6 @@ $sequence "Firstdraw" {
 	{ event 5004 30 "MCV_Weapon_Foley_RPG7_Reload.HandEnd" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "walklayerironsight"
-	addlayer "runlayer"
 	fps 30
 }
 

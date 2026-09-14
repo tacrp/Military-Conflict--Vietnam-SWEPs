@@ -1,0 +1,191 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_swm49\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_swm49\v_swm49.qc"
+Building binary model files...
+Working on "v_swm49.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\swm49_mesh.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\38_special_5.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\Bullet0_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\Bullet1_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\Bullet2_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\Bullet3_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\Bullet4_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\Bullet5_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\Default_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\shoot_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\shoot_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\shoot_w_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\shoot_w_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\shoot_p_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\shoot_p_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\PoseDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\Default.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\Bullet5.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\Bullet4.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\Bullet3.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\Bullet2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\Bullet1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\Bullet0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\idle_delayed_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\ironsight_delayed.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\ironsight_transition_delayed.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\idle_western_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\ironsight_western.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\ironsight_transition_western.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\shoot_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\shoot_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\shoot_w_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\shoot_w_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\shoot_p_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\shoot_p_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\d_nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\w_nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\d_nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\w_nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\d_nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\w_nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\d_nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\w_nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\d_nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\w_nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\d_nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\w_nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\d_proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\d_proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\d_proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\d_proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\w_proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\w_proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\w_proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\w_proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\d_pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\w_pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\d_pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\w_pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\d_pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\w_pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\d_pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\w_pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\d_pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\w_pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\d_pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\w_pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\change_firemode_towestern_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\change_firemode_towestern_iron_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\change_firemode_todelayed_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\change_firemode_todelayed_iron_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\change_firemode_tonormal_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\change_firemode_tonormal_iron_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\FirstDraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\FirstDraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\FirstDraw_3.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\FirstDraw_4.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\FirstDraw_5.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\FirstDraw_6.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\draw_3.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\draw_4.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\draw_5.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\draw_6.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\reload_3.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\reload_4.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\reload_5.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\reload_6.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\bash_3.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\bash_4.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\bash_5.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\bash_6.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\holster.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\holster_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm49\v_swm49_anims\holster_3.smd
+Processing LOD for material: v_swm49wood
+Processing LOD for material: shells_small_additional
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_swm49.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_swm49.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        24444 bytes (107)
+animations  504364 bytes (138 anims) (3764 frames) [2:05]
+sequences    11544 bytes (28 seq) 
+ik/pose        428 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       212 bytes
+keyvalues       20 bytes
+bone transforms    14616 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       560824
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_swm49.vvd:
+vertices    478992 bytes (9979 vertices)
+vertices     93120 bytes (1940 vertices)
+tangents    159664 bytes (9979 vertices)
+tangents     31040 bytes (1940 vertices)
+total       762880 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_swm49.dx80.vtx":
+body parts:        16 bytes
+models:            40 bytes
+model LODs:        24 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:         107271 bytes
+indices:        83148 bytes
+bone changes:     136 bytes
+everything:    190769 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_swm49.dx90.vtx":
+body parts:        16 bytes
+models:            40 bytes
+model LODs:        24 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:         107271 bytes
+indices:        83148 bytes
+bone changes:     136 bytes
+everything:    190769 bytes
+
+Completed "v_swm49.qc"

@@ -1,0 +1,113 @@
+{
+	"health": 100,
+	"ironsight_ang": [
+		0,
+		0.05,
+		0
+	],
+	"realm": "client",
+	"ang": [
+		-9.702,
+		-99.528,
+		0
+	],
+	"reserve": 16,
+	"bipod": false,
+	"reserve2": 0,
+	"holster_time": 0,
+	"clip": 7,
+	"launcher": false,
+	"next_idle": 0.917,
+	"pos": [
+		-320,
+		-384,
+		-12287.08
+	],
+	"onground": true,
+	"sight_visual": 0,
+	"firemode": "Single-Fire",
+	"action_state": 0,
+	"map": "gm_flatgrass",
+	"eye": [
+		-320,
+		-384,
+		-12223.08
+	],
+	"sight_amount": 0,
+	"anim_lock": -57.45,
+	"speed": 0,
+	"ammo": {
+		"3": 16
+	},
+	"base": "mcv_base",
+	"weapon": "mcv_mk22_mod0",
+	"fov": 80,
+	"ironsight_pos": [
+		0,
+		-5,
+		-0.475
+	],
+	"screen": [
+		1600,
+		900
+	],
+	"vm": {
+		"rate": 1,
+		"pose": {
+			"recoil_r": 1,
+			"move_yaw": 0.502,
+			"ironsight": 0,
+			"recoil_l": 1,
+			"empty": 0,
+			"player_movement": 0
+		},
+		"cycle": 0.546,
+		"axis": [
+			801,
+			466,
+			true
+		],
+		"sequence": "idle",
+		"screen": {
+			"cam": [
+				-579034,
+				-2039574,
+				false
+			],
+			"muzzle": [
+				880,
+				526,
+				true
+			],
+			"eject": [
+				945,
+				575,
+				true
+			]
+		},
+		"model": "models/weapons/mcv/v_dual_mk22_mod0.mdl",
+		"ang": [
+			-9.181,
+			-99.685,
+			0.025
+		],
+		"bodygroups": {
+			"studio": 0,
+			"mk22_variants": 0
+		},
+		"activity": "ACT_VM_IDLE",
+		"pos": [
+			-319.502,
+			-381.081,
+			-12223.559
+		]
+	},
+	"ironsight": false,
+	"akimbo": true,
+	"time": 57.449998715892434,
+	"bayonet": false,
+	"sighted": false,
+	"clip2": -1,
+	"printname": "Mk 22 Mod 0",
+	"hold_type": "duel"
+}

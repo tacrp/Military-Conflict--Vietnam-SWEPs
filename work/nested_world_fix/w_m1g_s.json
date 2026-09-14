@@ -1,0 +1,124 @@
+{
+  "model": "w_m1g_s",
+  "prefix": "sksm1g",
+  "hand": [
+    -11.300066625617413,
+    -1.1475800156450942,
+    -0.3920602312888047,
+    12.956,
+    6.901831593202116,
+    -177.1854235631157
+  ],
+  "sources": [
+    {
+      "file": "m1g_s_lod0.smd",
+      "triangles": 2682,
+      "frames": 1
+    },
+    {
+      "file": "m1g_s_w_m7b_lod0.smd",
+      "triangles": 755,
+      "frames": 1
+    },
+    {
+      "file": "m1g_s_w_m1905_lod0.smd",
+      "triangles": 526,
+      "frames": 1
+    },
+    {
+      "file": "m1g_s_scope_lod0.smd",
+      "triangles": 504,
+      "frames": 1
+    },
+    {
+      "file": "m1g_s_usm_lod0.smd",
+      "triangles": 366,
+      "frames": 1
+    },
+    {
+      "file": "m1g_s_usg_lod0.smd",
+      "triangles": 400,
+      "frames": 1
+    },
+    {
+      "file": "m1g_s_lod0_lod1.smd",
+      "triangles": 1936,
+      "frames": 1
+    },
+    {
+      "file": "m1g_s_w_m7b_lod0_lod1.smd",
+      "triangles": 494,
+      "frames": 1
+    },
+    {
+      "file": "m1g_s_w_m1905_lod0_lod1.smd",
+      "triangles": 363,
+      "frames": 1
+    },
+    {
+      "file": "m1g_s_scope_lod0_lod1.smd",
+      "triangles": 226,
+      "frames": 1
+    },
+    {
+      "file": "m1g_s_usm_lod0_lod1.smd",
+      "triangles": 138,
+      "frames": 1
+    },
+    {
+      "file": "m1g_s_usg_lod0_lod1.smd",
+      "triangles": 148,
+      "frames": 1
+    },
+    {
+      "file": "m1g_s_lod0_lod2.smd",
+      "triangles": 442,
+      "frames": 1
+    },
+    {
+      "file": "m1g_s_w_m7b_lod0_lod2.smd",
+      "triangles": 245,
+      "frames": 1
+    },
+    {
+      "file": "m1g_s_w_m1905_lod0_lod2.smd",
+      "triangles": 176,
+      "frames": 1
+    },
+    {
+      "file": "m1g_s_scope_lod0_lod2.smd",
+      "triangles": 182,
+      "frames": 1
+    },
+    {
+      "file": "m1g_s_usm_lod0_lod2.smd",
+      "triangles": 138,
+      "frames": 1
+    },
+    {
+      "file": "m1g_s_usg_lod0_lod2.smd",
+      "triangles": 148,
+      "frames": 1
+    },
+    {
+      "file": "w_m1g_s_anims\\idle.smd",
+      "triangles": 0,
+      "frames": 1
+    },
+    {
+      "file": "w_m1g_s_anims\\attack1.smd",
+      "triangles": 0,
+      "frames": 2
+    },
+    {
+      "file": "w_m1g_s_anims\\attackoffcenter.smd",
+      "triangles": 0,
+      "frames": 2
+    },
+    {
+      "file": "w_m1g_s_physics.smd",
+      "triangles": 48,
+      "frames": 1
+    }
+  ]
+}

@@ -1,0 +1,111 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_chinalake\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_chinalake\v_chinalake.qc"
+Building binary model files...
+Working on "v_chinalake.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\Ref.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\pump_a_e_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\pump_ironsight_a_e_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\pump_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\pump_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\pump_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\pump_a_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\pump_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\pump_ironsight_a_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\reload_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\reload_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\reload_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\reload_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\reload_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\reload_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\reload_ep_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\reload_ep_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\holster.smd
+Processing LOD for material: shells_big
+Processing LOD for material: china_lake
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_chinalake.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_chinalake.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        22832 bytes (98)
+animations  167792 bytes (57 anims) (1505 frames) [0:50]
+sequences     8356 bytes (23 seq) 
+ik/pose        244 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       140 bytes
+keyvalues       20 bytes
+bone transforms    13392 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       216396
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_chinalake.vvd:
+vertices    592512 bytes (12344 vertices)
+tangents    197504 bytes (12344 vertices)
+total       790080 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_chinalake.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:         111096 bytes
+indices:        86340 bytes
+bone changes:      72 bytes
+everything:    197694 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_chinalake.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:         111096 bytes
+indices:        86340 bytes
+bone changes:      72 bytes
+everything:    197694 bytes
+
+Completed "v_chinalake.qc"

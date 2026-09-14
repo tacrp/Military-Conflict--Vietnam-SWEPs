@@ -1,0 +1,93 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_molotov\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_molotov\v_molotov.qc"
+Building binary model files...
+Working on "v_molotov.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_molotov\ref.smd
+Marking bone jf1 as a jiggle bone
+Marking bone jf2 as a jiggle bone
+Marking bone jf3 as a jiggle bone
+Marking bone Cloth2 as a jiggle bone
+Marking bone Cloth3 as a jiggle bone
+Marking bone Cloth4 as a jiggle bone
+Marking bone Liquid as a jiggle bone
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_molotov\v_molotov_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_molotov\v_molotov_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_molotov\v_molotov_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_molotov\v_molotov_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_molotov\v_molotov_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_molotov\v_molotov_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_molotov\v_molotov_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_molotov\v_molotov_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_molotov\v_molotov_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_molotov\v_molotov_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_molotov\v_molotov_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_molotov\v_molotov_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_molotov\v_molotov_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_molotov\v_molotov_anims\idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_molotov\v_molotov_anims\drawbackhigh.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_molotov\v_molotov_anims\throw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_molotov\v_molotov_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_molotov\v_molotov_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_molotov\v_molotov_anims\pickupstart.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_molotov\v_molotov_anims\pickuploop.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_molotov\v_molotov_anims\pickupend.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_molotov\v_molotov_anims\idletonearwall.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_molotov\v_molotov_anims\nearwall.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_molotov\v_molotov_anims\nearwalltoidle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_molotov\v_molotov_anims\holster.smd
+Processing LOD for material: molotov_flame
+Processing LOD for material: molotov_mat
+Processing LOD for material: bottle_mat
+Processing LOD for material: molotov_liquid
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_molotov.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_molotov.mdl
+   Found 16 preexisting sequences.
+bones        24032 bytes (101)
+animations   60528 bytes (25 anims) (526 frames) [0:17]
+Building sequence index remapping table...
+No re-ordering required.
+sequences     5664 bytes (16 seq) 
+ik/pose        224 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       268 bytes
+keyvalues       20 bytes
+bone transforms    13800 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       107588
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_molotov.vvd:
+vertices    192096 bytes (4002 vertices)
+tangents     64032 bytes (4002 vertices)
+total       256192 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_molotov.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            36 bytes
+strip groups:     100 bytes
+strips:           108 bytes
+verts:          36018 bytes
+indices:        31512 bytes
+bone changes:     112 bytes
+everything:     67950 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_molotov.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            36 bytes
+strip groups:     100 bytes
+strips:           108 bytes
+verts:          36018 bytes
+indices:        31512 bytes
+bone changes:     112 bytes
+everything:     67950 bytes
+
+Completed "v_molotov.qc"

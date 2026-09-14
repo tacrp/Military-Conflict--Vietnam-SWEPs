@@ -1124,9 +1124,6 @@ $sequence "draw" {
 	fadeout 0.2
 	addlayer "SlidePosition"
 	addlayer "BulletCounter"
-	addlayer "walklayer"
-	addlayer "walklayerironsight"
-	addlayer "runlayer"
 	node "0"
 	fps 30
 }
@@ -1142,9 +1139,6 @@ $sequence "Firstdraw" {
 	{ event AE_WPN_CLIP_TO_POSEPARAM 1 "ammo_fraction" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "walklayerironsight"
-	addlayer "runlayer"
 	node "0"
 }
 

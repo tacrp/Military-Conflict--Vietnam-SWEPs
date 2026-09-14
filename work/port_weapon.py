@@ -131,9 +131,11 @@ COUNTRY = {
 
 # Game EjectBrassType id -> MCV.ShellTypes index (lua/mcv/shared/sh_common.lua), by shell model.
 BRASS = {0: 11, 1: 12, 2: 4, 3: 5, 4: 6, 5: 1, 6: 7, 7: 8, 8: 9, 9: 10, 10: 15, 11: 17,
-         12: 16, 13: 18, 14: 3, 15: 2, 16: 13, 17: 14,
+         12: 16, 13: 18, 14: 3, 15: 2, 16: 12, 17: 5,
+         # 16 is 7.65mm Long, 17 is 8mm Nambu, 19 is the Type 64/67 pistol case.
+         # These are pistol cases, not the old flare/grenade/PTRD table entries.
          # newer game ids (2025+); the addon has no dedicated shell model for most, nearest case
-         19: 3, 20: 6, 21: 16, 22: 8, 23: 6, 24: 12, 26: 16, 27: 2, 28: 13, 29: 14, 30: 2, 31: 13}
+         19: 12, 20: 6, 21: 16, 22: 8, 23: 6, 24: 12, 26: 16, 27: 2, 28: 13, 29: 14, 30: 2, 31: 13}
 
 # WeaponTypes the mcv_base can drive. Grenades, mines, flamethrowers, melee and equipment need
 # their own bases and are skipped unless --all-types is given.
@@ -598,12 +600,24 @@ def sight_offsets(S):
         out["TracerParticle"] = '""'
     return out
 
-def akimbo_timing(vm):
+def akimbo_model(name, vm, scripts_dir):
+    """The dual script can name a variant absent from the single model's filename."""
+    path = os.path.join(scripts_dir, "weapon_dual_%s.txt" % name)
+    if os.path.isfile(path):
+        with open(path, encoding="utf-8", errors="replace") as source:
+            script = flat(parse_kv(source.read()).get("WeaponData", {}))
+        model = os.path.splitext(os.path.basename(script.get("viewmodel", "").replace("\\", "/")))[0]
+        if model and find_qc(model):
+            return model
+    return "v_dual_" + vm[2:]
+
+
+def akimbo_timing(vm, dual=None):
     """AkimboPoseRecoil / AkimboRecoilTime for a single-wield viewmodel whose dual model
     (v_dual_<name>) was compiled with the recoil_r / recoil_l pose layers (port_qc.py
     --pose-recoil): the recoil time is the hand's shot animation length."""
     out = {}
-    dual = "v_dual_" + vm[2:] if vm.startswith("v_") else None
+    dual = dual or ("v_dual_" + vm[2:] if vm.startswith("v_") else None)
     if not dual:
         return out
     qp = find_qc(dual)
@@ -1248,7 +1262,7 @@ def generate(script_path, args):
     # the dual mode belongs to this weapon.
     # ClipSize / Chamber / DefaultClip stay the script's (no reuse)
     ammo_type = rv("Primary.Ammo", ammo_type)
-    akimbo_vm = "v_dual_" + vm[2:] if has_akimbo else None
+    akimbo_vm = akimbo_model(name, vm, args.scripts_dir) if has_akimbo else None
 
     brass_game = int(num(S.get("EjectBrassType"), -1))
     brass = BRASS.get(brass_game, 0)
@@ -1324,7 +1338,7 @@ def generate(script_path, args):
         A(line("ViewModelAkimbo", fmt("models/weapons/mcv/%s.mdl" % akimbo_vm)))
         # the dual models carry pose-parameter recoil layers: each hand's shot is scrubbed on
         # recoil_r / recoil_l instead of a sequence, so both hands recoil independently
-        for k, v in akimbo_timing(vm).items():
+        for k, v in akimbo_timing(vm, akimbo_vm).items():
             A(line(k, v))
     A(line("WorldModel", fmt("models/weapons/mcv/%s.mdl" % wm)))
     A("")

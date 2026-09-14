@@ -1,0 +1,121 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_k50m_vc\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_k50m_vc\v_k50m_vc.qc"
+Building binary model files...
+Working on "v_k50m_vc.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\Ref_vc.smd
+SMD MODEL fixed_anims\Default_corrective_animation.smd
+SMD MODEL fixed_anims\Slideback_corrective_animation.smd
+SMD MODEL fixed_anims\runIdle_a_corrective_animation.smd
+SMD MODEL fixed_anims\run_a_corrective_animation.smd
+SMD MODEL fixed_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL fixed_anims\walk_a_corrective_animation.smd
+SMD MODEL fixed_anims\ShootMove_corrective_animation.smd
+SMD MODEL fixed_anims\ShootStill_corrective_animation.smd
+SMD MODEL fixed_anims\shoot1_a_corrective_animation.smd
+SMD MODEL fixed_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL fixed_anims\shoot2_a_corrective_animation.smd
+SMD MODEL fixed_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL fixed_anims\shoot3_a_corrective_animation.smd
+SMD MODEL fixed_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\PoseDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\PoseDelta2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\Default.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\Slideback.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\ShootMove.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\ShootStill.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\change_firemode_idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\change_firemode_iron.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_k50m_vc\v_k50m_vc_anims\holster.smd
+Processing LOD for material: shells_small
+Processing LOD for material: m1a1c
+Processing LOD for material: m1c
+Processing LOD for material: k50m_vc
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_k50m_vc.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_k50m_vc.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        21988 bytes (96)
+animations  175040 bytes (65 anims) (1657 frames) [0:55]
+sequences     9984 bytes (26 seq) 
+ik/pose        244 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       276 bytes
+keyvalues       20 bytes
+bone transforms    13120 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       224676
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_k50m_vc.vvd:
+vertices    842880 bytes (17560 vertices)
+tangents    280960 bytes (17560 vertices)
+total      1123904 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_k50m_vc.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            36 bytes
+strip groups:     100 bytes
+strips:           108 bytes
+verts:         158040 bytes
+indices:       115104 bytes
+bone changes:      72 bytes
+everything:    273524 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_k50m_vc.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            36 bytes
+strip groups:     100 bytes
+strips:           108 bytes
+verts:         158040 bytes
+indices:       115104 bytes
+bone changes:      72 bytes
+everything:    273524 bytes
+
+Completed "v_k50m_vc.qc"

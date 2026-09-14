@@ -1,0 +1,23 @@
+[
+  {
+    "model": "w_m1g_s",
+    "ok": true,
+    "outputs": [
+      "w_m1g_s.dx80.vtx",
+      "w_m1g_s.dx90.vtx",
+      "w_m1g_s.mdl",
+      "w_m1g_s.phy",
+      "w_m1g_s.vvd"
+    ]
+  },
+  {
+    "model": "v_m21",
+    "ok": true,
+    "outputs": [
+      "v_m21.dx80.vtx",
+      "v_m21.dx90.vtx",
+      "v_m21.mdl",
+      "v_m21.vvd"
+    ]
+  }
+]

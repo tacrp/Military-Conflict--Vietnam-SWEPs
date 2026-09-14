@@ -1,0 +1,174 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_mas49\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_mas49\v_mas49.qc"
+Building binary model files...
+Working on "v_mas49.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\ref_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_bayonet_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\mas49_mount.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\mas49_grenade.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\mas49_scopes.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\Default_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\Slideback_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\boltShootMovementA_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\boltShootNoMovementA_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\gren_shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\gren_shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\PoseDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\Default.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\Slideback.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\boltShootMovementA.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\boltShootNoMovementA.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\nearwall_start.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\nearwall_start_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\nearwall_loop.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\nearwall_loop_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\nearwall_end.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\nearwall_end_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\pickup_start.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\pickup_start_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\pickup_loop.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\pickup_loop_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\pickup_end.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\pickup_end_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\bayonet_unequip_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\bayonet_unequip_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\bayonet_equip_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\bayonet_equip_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\bayonet_bash_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\bayonet_bash_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\grenade_ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\gren_shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\gren_shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\gren_reload_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\gren_reload_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\scope_adjust_idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\scope_adjust_iron.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\ChargeStart_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\ChargeStart_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\ChargeLoop_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\ChargeLoop_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\ChargeEnd_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\ChargeEnd_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\FirstDraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\FirstDraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\holster.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\grenade_draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\grenade_draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\grenade_draw_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas49\v_mas49_anims\grenade_draw_empty_2.smd
+Processing LOD for material: shells_small_additional
+Processing LOD for material: mas49_main
+Processing LOD for material: ak47_bayonet_d
+Processing LOD for material: rifle_glmounts_vc
+Processing LOD for material: rifle_grenades_vc
+Processing LOD for material: mas49_scope
+Processing LOD for material: lens_mas49
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_mas49.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_mas49.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        22912 bytes (99)
+animations  299768 bytes (88 anims) (2546 frames) [1:24]
+sequences    15400 bytes (39 seq) 
+ik/pose       1492 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       484 bytes
+keyvalues       20 bytes
+bone transforms    13528 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       359076
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_mas49.vvd:
+vertices    524736 bytes (10932 vertices)
+vertices    105504 bytes (2198 vertices)
+vertices    119280 bytes (2485 vertices)
+vertices    108096 bytes (2252 vertices)
+vertices    216960 bytes (4520 vertices)
+tangents    174912 bytes (10932 vertices)
+tangents     35168 bytes (2198 vertices)
+tangents     39760 bytes (2485 vertices)
+tangents     36032 bytes (2252 vertices)
+tangents     72320 bytes (4520 vertices)
+total      1432832 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_mas49.dx80.vtx":
+body parts:        40 bytes
+models:           180 bytes
+model LODs:       108 bytes
+meshes:            63 bytes
+strip groups:     175 bytes
+strips:           189 bytes
+verts:         201483 bytes
+indices:       154710 bytes
+bone changes:     104 bytes
+everything:    356980 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_mas49.dx90.vtx":
+body parts:        40 bytes
+models:           180 bytes
+model LODs:       108 bytes
+meshes:            63 bytes
+strip groups:     175 bytes
+strips:           189 bytes
+verts:         201483 bytes
+indices:       154710 bytes
+bone changes:     104 bytes
+everything:    356980 bytes
+
+Completed "v_mas49.qc"

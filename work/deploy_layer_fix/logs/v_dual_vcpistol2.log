@@ -1,0 +1,139 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_dual_vcpistol2\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_dual_vcpistol2\v_dual_vcpistol2.qc"
+Building binary model files...
+Working on "v_dual_vcpistol2.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\vcpistol2_Right.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\vcpistol2_Left.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\Default_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\RightEmpty_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\BothEmpty_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\shoot1_r_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\shoot1_r_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\shoot1_l_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\shoot1_l_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\shoot2_r_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\shoot2_r_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\shoot2_l_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\shoot2_l_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\shootlast_r_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\shootlast_r_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\shootlast_l_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\shootlast_l_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\PoseDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\Default.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\RightEmpty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\BothEmpty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\FirstDraw_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\FirstDraw_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\shoot1_r_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\shoot1_r_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\shoot1_l_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\shoot1_l_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\shoot2_r_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\shoot2_r_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\shoot2_l_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\shoot2_l_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\shootlast_r_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\shootlast_r_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\shootlast_l_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\shootlast_l_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\reload_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\reload_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\reload_r_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\reload_r_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\reload_er_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\reload_er_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\reload_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\reload_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vcpistol2\v_dual_vcpistol2_anims\holster.smd
+Processing LOD for material: v_vcpistol2
+Processing LOD for material: shells_small
+Processing LOD for material: v_vcpistol2
+Processing LOD for material: shells_small
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dual_vcpistol2.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dual_vcpistol2.mdl
+   Found 34 preexisting sequences.
+bones        23964 bytes (103)
+animations  222968 bytes (128 anims) (2149 frames) [1:11]
+Building sequence index remapping table...
+No re-ordering required.
+sequences    14284 bytes (34 seq) 
+ik/pose        448 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       140 bytes
+keyvalues       20 bytes
+bone transforms    14072 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       281860
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dual_vcpistol2.vvd:
+vertices    214224 bytes (4463 vertices)
+vertices    214224 bytes (4463 vertices)
+tangents     71408 bytes (4463 vertices)
+tangents     71408 bytes (4463 vertices)
+total       571328 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dual_vcpistol2.dx80.vtx":
+body parts:        16 bytes
+models:            40 bytes
+model LODs:        24 bytes
+meshes:            36 bytes
+strip groups:     100 bytes
+strips:           108 bytes
+verts:          80334 bytes
+indices:        66468 bytes
+bone changes:     104 bytes
+everything:    147242 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dual_vcpistol2.dx90.vtx":
+body parts:        16 bytes
+models:            40 bytes
+model LODs:        24 bytes
+meshes:            36 bytes
+strip groups:     100 bytes
+strips:           108 bytes
+verts:          80334 bytes
+indices:        66468 bytes
+bone changes:     104 bytes
+everything:    147242 bytes
+
+Completed "v_dual_vcpistol2.qc"

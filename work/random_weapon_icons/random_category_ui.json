@@ -1,0 +1,74 @@
+[
+	{
+		"key": "category:anti_armor",
+		"material": "mcv/random/question.png"
+	},
+	{
+		"key": "category:assault_rifles",
+		"material": "mcv/random/question.png"
+	},
+	{
+		"key": "category:explosives",
+		"material": "mcv/random/question.png"
+	},
+	{
+		"key": "category:bows",
+		"material": "mcv/random/question.png"
+	},
+	{
+		"key": "category:battle_rifles",
+		"material": "mcv/random/question.png"
+	},
+	{
+		"key": "category:bolt_action_rifles",
+		"material": "mcv/random/question.png"
+	},
+	{
+		"key": "category:light_machine_guns",
+		"material": "mcv/random/question.png"
+	},
+	{
+		"key": "category:machine_pistols",
+		"material": "mcv/random/question.png"
+	},
+	{
+		"key": "category:sniper_rifles",
+		"material": "mcv/random/question.png"
+	},
+	{
+		"key": "category:grenades",
+		"material": "mcv/random/question.png"
+	},
+	{
+		"key": "category:equipment",
+		"material": "mcv/random/question.png"
+	},
+	{
+		"key": "category:carbines",
+		"material": "mcv/random/question.png"
+	},
+	{
+		"key": "category:submachine_guns",
+		"material": "mcv/random/question.png"
+	},
+	{
+		"key": "category:flamethrowers",
+		"material": "mcv/random/question.png"
+	},
+	{
+		"key": "category:melee",
+		"material": "mcv/random/question.png"
+	},
+	{
+		"key": "category:pistols",
+		"material": "mcv/random/question.png"
+	},
+	{
+		"key": "category:revolvers",
+		"material": "mcv/random/question.png"
+	},
+	{
+		"key": "category:shotguns",
+		"material": "mcv/random/question.png"
+	}
+]

@@ -1,0 +1,2248 @@
+[
+  {
+    "model": "v_ak47",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_ak47_bayonet",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 36
+  },
+  {
+    "model": "v_akm",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_amd65",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_aps",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 38
+  },
+  {
+    "model": "v_babybrowning",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_bar_l",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 37
+  },
+  {
+    "model": "v_bazooka",
+    "draws": [
+      "draw_empty",
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 19
+  },
+  {
+    "model": "v_binocular",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 22
+  },
+  {
+    "model": "v_blackhawk",
+    "draws": [
+      "FirstDraw",
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_box",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 23
+  },
+  {
+    "model": "v_bren",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 27
+  },
+  {
+    "model": "v_browning_auto",
+    "draws": [
+      "Firstdraw",
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_c4",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 26
+  },
+  {
+    "model": "v_c4_demolition",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 22
+  },
+  {
+    "model": "v_c96",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_c96_stock",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 31
+  },
+  {
+    "model": "v_car15",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 34
+  },
+  {
+    "model": "v_chainsaw",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 30
+  },
+  {
+    "model": "v_chinalake",
+    "draws": [
+      "Firstdraw",
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 28
+  },
+  {
+    "model": "v_cobra",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 29
+  },
+  {
+    "model": "v_crossbow",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 23
+  },
+  {
+    "model": "v_crowbar",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 30
+  },
+  {
+    "model": "v_csg",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_csg2",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_css",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_cz52",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 35
+  },
+  {
+    "model": "v_dp28",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 35
+  },
+  {
+    "model": "v_dual_aps",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_dual_babybrowning",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_dual_blackhawk",
+    "draws": [
+      "FirstDraw",
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 28
+  },
+  {
+    "model": "v_dual_cobra",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_dual_cz52",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_dual_hdm",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_dual_highpower",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_dual_izh43",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 37
+  },
+  {
+    "model": "v_dual_lacoste",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_dual_lebel",
+    "draws": [
+      "FirstDraw",
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 45
+  },
+  {
+    "model": "v_dual_luger",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_dual_m1895",
+    "draws": [
+      "FirstDraw",
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 46
+  },
+  {
+    "model": "v_dual_m1911",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_dual_m1917",
+    "draws": [
+      "FirstDraw",
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 45
+  },
+  {
+    "model": "v_dual_mac10",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_dual_mac10_sog",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_dual_mamba",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_dual_mk22",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_dual_mk22_mod0",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_dual_mle1935",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_dual_p38",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_dual_pb",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_dual_pm",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_dual_pm63",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_dual_ppk",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_dual_qspr",
+    "draws": [
+      "FirstDraw",
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 45
+  },
+  {
+    "model": "v_dual_rhogun",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_dual_ruby",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_dual_swm10",
+    "draws": [
+      "FirstDraw",
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 45
+  },
+  {
+    "model": "v_dual_swm12",
+    "draws": [
+      "FirstDraw",
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 45
+  },
+  {
+    "model": "v_dual_swm49",
+    "draws": [
+      "FirstDraw",
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 45
+  },
+  {
+    "model": "v_dual_tt33",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_dual_type14",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_dual_type64_pistol",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_dual_type67",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_dual_uzi",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_dual_uzi_sog",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_dual_vcpistol2",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_dual_vz23",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_dual_vz61",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_dual_vz61_silencer",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_dynamite",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 26
+  },
+  {
+    "model": "v_dynamite_demolition",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 22
+  },
+  {
+    "model": "v_f1",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 29
+  },
+  {
+    "model": "v_fist",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 38
+  },
+  {
+    "model": "v_g3",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_gewehr43",
+    "draws": [
+      "draw",
+      "Firstdraw",
+      "grenade_draw",
+      "Grenade_draw_empty"
+    ],
+    "movement_layers_on_other_sequences": 41
+  },
+  {
+    "model": "v_gp25",
+    "draws": [
+      "draw",
+      "Firstdraw",
+      "gl_draw"
+    ],
+    "movement_layers_on_other_sequences": 49
+  },
+  {
+    "model": "v_gyrojet_carbine",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 35
+  },
+  {
+    "model": "v_gyrojet_pistol",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 35
+  },
+  {
+    "model": "v_hdm",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_highpower",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_izh43",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 26
+  },
+  {
+    "model": "v_izh43_sog",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 26
+  },
+  {
+    "model": "v_k50m",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_k50m_vc",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_kar98_dov",
+    "draws": [
+      "draw",
+      "Firstdraw",
+      "grenade_draw",
+      "Grenade_draw_empty"
+    ],
+    "movement_layers_on_other_sequences": 52
+  },
+  {
+    "model": "v_kar98_s",
+    "draws": [
+      "draw",
+      "Firstdraw",
+      "grenade_draw",
+      "Grenade_draw_empty"
+    ],
+    "movement_layers_on_other_sequences": 52
+  },
+  {
+    "model": "v_katana",
+    "draws": [
+      "draw",
+      "firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 42
+  },
+  {
+    "model": "v_kbkg60",
+    "draws": [
+      "draw",
+      "Firstdraw",
+      "grenade_draw",
+      "Grenade_draw_empty"
+    ],
+    "movement_layers_on_other_sequences": 48
+  },
+  {
+    "model": "v_kolos",
+    "draws": [
+      "Firstdraw",
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 21
+  },
+  {
+    "model": "v_l1a1",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_l1a1_sog",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_l2a1",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 37
+  },
+  {
+    "model": "v_lacoste",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 29
+  },
+  {
+    "model": "v_lebel",
+    "draws": [
+      "FirstDraw",
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 41
+  },
+  {
+    "model": "v_lpo50",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 26
+  },
+  {
+    "model": "v_luger",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_lunge_mine",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 24
+  },
+  {
+    "model": "v_m12",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_m14_sog",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_m14e2",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 35
+  },
+  {
+    "model": "v_m14e2_sog",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_m14l",
+    "draws": [
+      "draw",
+      "Firstdraw",
+      "grenade_draw",
+      "Grenade_draw_empty"
+    ],
+    "movement_layers_on_other_sequences": 48
+  },
+  {
+    "model": "v_m16_flamer",
+    "draws": [
+      "draw",
+      "Firstdraw",
+      "gl_draw"
+    ],
+    "movement_layers_on_other_sequences": 53
+  },
+  {
+    "model": "v_m16a1",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_m18",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 30
+  },
+  {
+    "model": "v_m1895",
+    "draws": [
+      "FirstDraw",
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 43
+  },
+  {
+    "model": "v_m1897",
+    "draws": [
+      "Firstdraw",
+      "draw",
+      "draw_empty"
+    ],
+    "movement_layers_on_other_sequences": 36
+  },
+  {
+    "model": "v_m1905_bayonet",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 36
+  },
+  {
+    "model": "v_m1911",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_m1917",
+    "draws": [
+      "FirstDraw",
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 41
+  },
+  {
+    "model": "v_m1919a6",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 25
+  },
+  {
+    "model": "v_m1928",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_m1942_machete",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 36
+  },
+  {
+    "model": "v_m1a1",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_m1a1_sog",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_m1c",
+    "draws": [
+      "FirstDraw",
+      "draw",
+      "grenade_draw",
+      "grenade_draw_empty"
+    ],
+    "movement_layers_on_other_sequences": 44
+  },
+  {
+    "model": "v_m1c_sog",
+    "draws": [
+      "FirstDraw",
+      "draw",
+      "grenade_draw",
+      "grenade_draw_empty"
+    ],
+    "movement_layers_on_other_sequences": 44
+  },
+  {
+    "model": "v_m1g_s",
+    "draws": [
+      "draw",
+      "Firstdraw",
+      "grenade_draw",
+      "Grenade_draw_empty"
+    ],
+    "movement_layers_on_other_sequences": 50
+  },
+  {
+    "model": "v_m202",
+    "draws": [
+      "Firstdraw",
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 21
+  },
+  {
+    "model": "v_m203",
+    "draws": [
+      "draw",
+      "Firstdraw",
+      "gl_draw"
+    ],
+    "movement_layers_on_other_sequences": 45
+  },
+  {
+    "model": "v_m21",
+    "draws": [
+      "draw",
+      "Firstdraw",
+      "grenade_draw",
+      "Grenade_draw_empty"
+    ],
+    "movement_layers_on_other_sequences": 48
+  },
+  {
+    "model": "v_m24",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 27
+  },
+  {
+    "model": "v_m26",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 30
+  },
+  {
+    "model": "v_m2c",
+    "draws": [
+      "FirstDraw",
+      "draw",
+      "grenade_draw",
+      "grenade_draw_empty"
+    ],
+    "movement_layers_on_other_sequences": 47
+  },
+  {
+    "model": "v_m2c_sog",
+    "draws": [
+      "FirstDraw",
+      "draw",
+      "grenade_draw",
+      "grenade_draw_empty"
+    ],
+    "movement_layers_on_other_sequences": 47
+  },
+  {
+    "model": "v_m34",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 30
+  },
+  {
+    "model": "v_m37",
+    "draws": [
+      "Firstdraw",
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 36
+  },
+  {
+    "model": "v_m38",
+    "draws": [
+      "draw",
+      "Firstdraw",
+      "grenade_draw",
+      "grenade_draw_empty"
+    ],
+    "movement_layers_on_other_sequences": 47
+  },
+  {
+    "model": "v_m38_s",
+    "draws": [
+      "draw",
+      "Firstdraw",
+      "grenade_draw",
+      "grenade_draw_empty"
+    ],
+    "movement_layers_on_other_sequences": 48
+  },
+  {
+    "model": "v_m3a1",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 29
+  },
+  {
+    "model": "v_m3a1_sog",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 29
+  },
+  {
+    "model": "v_m40",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 35
+  },
+  {
+    "model": "v_m45",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_m45_sog",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_m50",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 29
+  },
+  {
+    "model": "v_m56",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_m60",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 25
+  },
+  {
+    "model": "v_m601",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_m605",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_m607",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 34
+  },
+  {
+    "model": "v_m60b",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 25
+  },
+  {
+    "model": "v_m635",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 34
+  },
+  {
+    "model": "v_m656",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 42
+  },
+  {
+    "model": "v_m6a1",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 30
+  },
+  {
+    "model": "v_m7188",
+    "draws": [
+      "Firstdraw",
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 34
+  },
+  {
+    "model": "v_m72",
+    "draws": [
+      "Firstdraw",
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 21
+  },
+  {
+    "model": "v_m79",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 23
+  },
+  {
+    "model": "v_m79_short",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 23
+  },
+  {
+    "model": "v_m7_bayonet",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 36
+  },
+  {
+    "model": "v_m8",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 23
+  },
+  {
+    "model": "v_m870",
+    "draws": [
+      "Firstdraw",
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 28
+  },
+  {
+    "model": "v_m91",
+    "draws": [
+      "draw",
+      "Firstdraw",
+      "grenade_draw",
+      "grenade_draw_empty"
+    ],
+    "movement_layers_on_other_sequences": 47
+  },
+  {
+    "model": "v_m9a1",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 26
+  },
+  {
+    "model": "v_mac10",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_mac10_sog",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_mamba",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_mas36",
+    "draws": [
+      "draw",
+      "Firstdraw",
+      "grenade_draw",
+      "Grenade_draw_empty"
+    ],
+    "movement_layers_on_other_sequences": 48
+  },
+  {
+    "model": "v_mas36_cr39",
+    "draws": [
+      "draw",
+      "Firstdraw",
+      "grenade_draw",
+      "Grenade_draw_empty"
+    ],
+    "movement_layers_on_other_sequences": 48
+  },
+  {
+    "model": "v_mas38",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 29
+  },
+  {
+    "model": "v_mas49",
+    "draws": [
+      "FirstDraw",
+      "draw",
+      "grenade_draw",
+      "grenade_draw_empty"
+    ],
+    "movement_layers_on_other_sequences": 55
+  },
+  {
+    "model": "v_mat49",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 29
+  },
+  {
+    "model": "v_mat49_sog",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 29
+  },
+  {
+    "model": "v_mat49k",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 29
+  },
+  {
+    "model": "v_md63",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_medicbox",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 23
+  },
+  {
+    "model": "v_mg43",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 27
+  },
+  {
+    "model": "v_mg43b",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 27
+  },
+  {
+    "model": "v_mg43d",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 27
+  },
+  {
+    "model": "v_mine",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 24
+  },
+  {
+    "model": "v_mk1",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 30
+  },
+  {
+    "model": "v_mk2",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 30
+  },
+  {
+    "model": "v_mk22",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_mk3a2",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 30
+  },
+  {
+    "model": "v_mk4mod0",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_mle1935",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_molotov",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 24
+  },
+  {
+    "model": "v_morph",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 23
+  },
+  {
+    "model": "v_mp40",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 29
+  },
+  {
+    "model": "v_owen",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_p38",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 35
+  },
+  {
+    "model": "v_panzerschreck",
+    "draws": [
+      "draw_empty",
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 19
+  },
+  {
+    "model": "v_pb",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 35
+  },
+  {
+    "model": "v_pk",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 27
+  },
+  {
+    "model": "v_pk_belt",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 27
+  },
+  {
+    "model": "v_pm",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 35
+  },
+  {
+    "model": "v_pm63",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 29
+  },
+  {
+    "model": "v_ppk",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 35
+  },
+  {
+    "model": "v_pps43",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_ppsh41",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_ppsh41_doubledrum",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_ppsh41_drum",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_ptrd41",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 26
+  },
+  {
+    "model": "v_ptrd41_s",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 26
+  },
+  {
+    "model": "v_qspr",
+    "draws": [
+      "FirstDraw",
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 41
+  },
+  {
+    "model": "v_r76",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 29
+  },
+  {
+    "model": "v_reising_m55",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_reising_m60",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_reising_smg",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_rgd5",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 30
+  },
+  {
+    "model": "v_rhogun",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 29
+  },
+  {
+    "model": "v_rp46",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 33
+  },
+  {
+    "model": "v_rpd",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 27
+  },
+  {
+    "model": "v_rpd_sog",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 27
+  },
+  {
+    "model": "v_rpdb",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 27
+  },
+  {
+    "model": "v_rpdb_sog",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 27
+  },
+  {
+    "model": "v_rpg2",
+    "draws": [
+      "draw_empty",
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 19
+  },
+  {
+    "model": "v_rpg7",
+    "draws": [
+      "draw_empty",
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 19
+  },
+  {
+    "model": "v_rpk",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 35
+  },
+  {
+    "model": "v_ruby",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 35
+  },
+  {
+    "model": "v_s8498_bayonet",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 36
+  },
+  {
+    "model": "v_shanxi_type17",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 34
+  },
+  {
+    "model": "v_shovel_de",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 30
+  },
+  {
+    "model": "v_shovel_us",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 30
+  },
+  {
+    "model": "v_shovel_vc",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 30
+  },
+  {
+    "model": "v_sickle",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 36
+  },
+  {
+    "model": "v_sks",
+    "draws": [
+      "draw",
+      "Firstdraw",
+      "grenade_draw",
+      "grenade_draw_empty"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_springfield",
+    "draws": [
+      "draw",
+      "Firstdraw",
+      "grenade_draw",
+      "Grenade_draw_empty"
+    ],
+    "movement_layers_on_other_sequences": 52
+  },
+  {
+    "model": "v_sten",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_sten_sog",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_sterling",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_sterling_sog",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_stg44",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 34
+  },
+  {
+    "model": "v_stielhandgranate",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_stoner63",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 27
+  },
+  {
+    "model": "v_stoner63_autorifle",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 27
+  },
+  {
+    "model": "v_stoner63_lmg",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 27
+  },
+  {
+    "model": "v_stoner63a",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_stoner63a_carbine",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_stoner63a_carbine_drum",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_stoner63a_drum",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_svd",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 39
+  },
+  {
+    "model": "v_svt40_s",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_swm10",
+    "draws": [
+      "FirstDraw",
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 41
+  },
+  {
+    "model": "v_swm12",
+    "draws": [
+      "FirstDraw",
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 41
+  },
+  {
+    "model": "v_swm49",
+    "draws": [
+      "FirstDraw",
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 41
+  },
+  {
+    "model": "v_swm76",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_swm76_sog",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_t223",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_ts3",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 29
+  },
+  {
+    "model": "v_tt33",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_tul1",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 35
+  },
+  {
+    "model": "v_type14",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_type30_bayonet",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 36
+  },
+  {
+    "model": "v_type56",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_type56xm148",
+    "draws": [
+      "draw",
+      "Firstdraw",
+      "gl_draw"
+    ],
+    "movement_layers_on_other_sequences": 49
+  },
+  {
+    "model": "v_type58",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_type63",
+    "draws": [
+      "draw",
+      "Firstdraw",
+      "grenade_draw",
+      "grenade_draw_empty"
+    ],
+    "movement_layers_on_other_sequences": 43
+  },
+  {
+    "model": "v_type63b",
+    "draws": [
+      "draw",
+      "Firstdraw",
+      "grenade_draw",
+      "grenade_draw_empty"
+    ],
+    "movement_layers_on_other_sequences": 43
+  },
+  {
+    "model": "v_type64",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_type64_pistol",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_type67",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 25
+  },
+  {
+    "model": "v_type79",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 23
+  },
+  {
+    "model": "v_uzi",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_uzi_sog",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_v40",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 30
+  },
+  {
+    "model": "v_vcammobox",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 23
+  },
+  {
+    "model": "v_vccarbine",
+    "draws": [
+      "FirstDraw",
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 30
+  },
+  {
+    "model": "v_vcgrenade",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 30
+  },
+  {
+    "model": "v_vcmedicbox",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 23
+  },
+  {
+    "model": "v_vcpistol",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 25
+  },
+  {
+    "model": "v_vcpistol2",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_vcshotgun",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 23
+  },
+  {
+    "model": "v_vcsmg",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 29
+  },
+  {
+    "model": "v_vz23",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 29
+  },
+  {
+    "model": "v_vz24",
+    "draws": [
+      "draw",
+      "Firstdraw",
+      "grenade_draw",
+      "Grenade_draw_empty"
+    ],
+    "movement_layers_on_other_sequences": 52
+  },
+  {
+    "model": "v_vz52",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 26
+  },
+  {
+    "model": "v_vz54",
+    "draws": [
+      "draw",
+      "Firstdraw",
+      "grenade_draw",
+      "grenade_draw_empty"
+    ],
+    "movement_layers_on_other_sequences": 48
+  },
+  {
+    "model": "v_vz54s",
+    "draws": [
+      "draw",
+      "Firstdraw",
+      "grenade_draw",
+      "grenade_draw_empty"
+    ],
+    "movement_layers_on_other_sequences": 48
+  },
+  {
+    "model": "v_vz58",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_vz59",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 27
+  },
+  {
+    "model": "v_vz59b",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 27
+  },
+  {
+    "model": "v_vz61",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_vz61_silencer",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 32
+  },
+  {
+    "model": "v_welrod",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 25
+  },
+  {
+    "model": "v_wrench",
+    "draws": [
+      "draw"
+    ],
+    "movement_layers_on_other_sequences": 27
+  },
+  {
+    "model": "v_x2f2a2",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 40
+  },
+  {
+    "model": "v_xm148",
+    "draws": [
+      "draw",
+      "Firstdraw",
+      "gl_draw"
+    ],
+    "movement_layers_on_other_sequences": 45
+  },
+  {
+    "model": "v_xm16super",
+    "draws": [
+      "draw",
+      "Firstdraw",
+      "gl_draw"
+    ],
+    "movement_layers_on_other_sequences": 46
+  },
+  {
+    "model": "v_xm177",
+    "draws": [
+      "draw",
+      "Firstdraw"
+    ],
+    "movement_layers_on_other_sequences": 34
+  }
+]

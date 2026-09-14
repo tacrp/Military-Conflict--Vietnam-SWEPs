@@ -1,0 +1,121 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_swm76_sog\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_swm76_sog\v_swm76_sog.qc"
+Building binary model files...
+Working on "v_swm76_sog.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\swm76_sog.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\Default_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\Slideback_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\ShootMove_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\ShootStill_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\PoseDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\PoseDelta2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\Default.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\Slideback.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\ShootMove.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\ShootStill.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\walkDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\walkIdle_a.smd
+SMD MODEL fixed_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\change_firemode_idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\change_firemode_iron.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm76_sog\v_swm76_sog_anims\holster.smd
+Processing LOD for material: sten_silenser
+Processing LOD for material: shells_small
+Processing LOD for material: v_swm76
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_swm76_sog.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_swm76_sog.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        22056 bytes (96)
+animations  169392 bytes (66 anims) (1648 frames) [0:54]
+sequences     9904 bytes (26 seq) 
+ik/pose        244 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       212 bytes
+keyvalues       20 bytes
+bone transforms    13120 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       218852
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_swm76_sog.vvd:
+vertices    738048 bytes (15376 vertices)
+tangents    246016 bytes (15376 vertices)
+total       984128 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_swm76_sog.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            27 bytes
+strip groups:      75 bytes
+strips:            81 bytes
+verts:         138384 bytes
+indices:       112716 bytes
+bone changes:      64 bytes
+everything:    251411 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_swm76_sog.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            27 bytes
+strip groups:      75 bytes
+strips:            81 bytes
+verts:         138384 bytes
+indices:       112716 bytes
+bone changes:      64 bytes
+everything:    251411 bytes
+
+Completed "v_swm76_sog.qc"

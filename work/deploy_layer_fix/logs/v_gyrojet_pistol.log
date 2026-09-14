@@ -1,0 +1,138 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_gyrojet_pistol\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_gyrojet_pistol\v_gyrojet_pistol.qc"
+Building binary model files...
+Working on "v_gyrojet_pistol.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\gyrojet_pistol.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\Bullet0_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\Bullet1_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\Bullet2_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\Bullet3_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\Bullet4_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\Bullet5_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\Bullet6_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\Default_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\Slideback_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\shootlast_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\shootlast_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\PoseDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\Default.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\Slideback.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\Bullet6.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\Bullet5.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\Bullet4.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\Bullet3.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\Bullet2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\Bullet1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\Bullet0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\idle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\runIdle_a.smd
+SMD MODEL fixed_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\walkIdle_a.smd
+SMD MODEL fixed_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\shootlast_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\shootlast_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\reload_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\reload_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\reload_se_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\reload_se_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\reload_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\reload_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\reload_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\reload_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_pistol\v_gyrojet_pistol_anims\holster.smd
+Processing LOD for material: v_gyrojet_pistol1
+Processing LOD for material: v_gyrojet_pistol2
+Processing LOD for material: v_gyrojet_projectile
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_gyrojet_pistol.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_gyrojet_pistol.mdl
+   Found 30 preexisting sequences.
+bones        23700 bytes (104)
+animations  198912 bytes (81 anims) (1472 frames) [0:49]
+Building sequence index remapping table...
+No re-ordering required.
+sequences    11084 bytes (30 seq) 
+ik/pose        264 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       208 bytes
+keyvalues       20 bytes
+bone transforms    14208 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       252768
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_gyrojet_pistol.vvd:
+vertices    873648 bytes (18201 vertices)
+tangents    291216 bytes (18201 vertices)
+total      1164928 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_gyrojet_pistol.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            27 bytes
+strip groups:      75 bytes
+strips:            81 bytes
+verts:         163809 bytes
+indices:       127848 bytes
+bone changes:     128 bytes
+everything:    292032 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_gyrojet_pistol.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            27 bytes
+strip groups:      75 bytes
+strips:            81 bytes
+verts:         163809 bytes
+indices:       127848 bytes
+bone changes:     128 bytes
+everything:    292032 bytes
+
+Completed "v_gyrojet_pistol.qc"

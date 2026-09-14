@@ -291,9 +291,70 @@ things and the script does the same:
    with the calibration mirrored across the sagittal plane; unverified in game, the Lua draws
    the single model twice) or else a mirror of the right line.
 
-Four world models in the fixed tree (`w_lpo50`, `w_m1g_s`, `w_m9a1`, `w_r76`) use a different
-scheme (a full hand transform parented to a `ValveBiped` root); those lines are reused as they
-are when no table entry exists.
+Four world models in the fixed tree (`w_lpo50`, `w_m1g_s`, `w_m9a1`, `w_r76`) had a
+different scheme: an original MCV hand parented under a `ValveBiped` root. The first
+three are now handled by `nested_world_models.prepare_nested_world` before the
+ordinary worldmodel pass. It converts the original meshes, both LODs, physics and
+animations into the canonical weapon frame and supplies the correct GMod hand root,
+derived from the game's animation class with the same finger-preserving pitch rule
+as the other rifles. The private `MCV.weapon_bone` prevents accidental NPC bonemerging
+onto an unrelated weapon bone. Original source files stay intact; normalized inputs
+and geometry-preservation checks are under `fixed_anims/world_rig/`. This supersedes
+the inadequate Garand angle-only correction. `w_r76` retains its previous handling.
+Rebuild the three corrected worldmodels with `python work/build_nested_world_models.py`.
+
+`model_pose_fixes.prepare_pose_fixes` restores the missing `BaseRoot` in the M21's older hand-edited
+empty reload. It converts the animation into the current hierarchy without
+changing its world-space poses or timing. Corrected paths take precedence during
+QC generation; the user's files under `MCV_SMD/weapons/v_m21/anims/` are not edited.
+
+### Deploy movement layers
+
+`step_deploy_no_movement` runs after the steps that inherit layers from the idle.
+Weapon draws and first draws (including empty, dual and launcher variants) keep
+their authored motion and mechanical/corrective layers, but no walk/run layers.
+The existing-QC migration is `python work/build_deploy_layers.py --apply --compile`:
+it deletes only the matching layer lines, without regenerating meshes, animation
+sources or the rest of the QC. It also patches the three editable custom bundles.
+Two unused `_pbr` test models with no remaining source assets are excluded. Rebuilt
+models require a full game restart. Validation is recorded in `deploy_layer_fix/`.
+
+### Small pistol casing mappings
+
+The original game's brass IDs are not `MCV.ShellTypes` indices. In `port_weapon.py`,
+IDs 16 and 19 map to the small 9mm case (index 12); ID 17 uses the small bottleneck
+case (index 5). The source pack has no exact 7.65mm/8mm cases. Do not map these to
+flare, 40mm or PTRD cases. Existing hand-tuned weapon files were changed field by
+field, never regenerated. Validate these visual-only models with `ClientsideModel`;
+`util.IsValidModel` rejects the non-physics shell models even though they load/render.
+
+The Nebelhandgranate's source script also incorrectly identifies it as a frag with
+225 blast damage. `overrides/weapon_stielhand_smoke.txt` changes its effective type
+to `SmokeGrenade` and clears blast damage/radius before generation. The committed
+Lua uses `mcv_grenade_smoke`; the explosive Stielhandgranate keeps its frag entity.
+
+### NPC support
+
+`mcv_base/sh_npc.lua` gives NPCs a server-only firing path while retaining the same
+bullet damage, penetration, projectile and category multipliers as player fire.
+NPC schedules and native reload events own clip refill; do not start player reload
+timers or touch a viewmodel. Player-only deploy, Think and lag-compensation paths
+are guarded. AI burst/rest hooks distinguish automatic, burst and manual actions.
+`GetNPCShotInterval` caps semi-auto fire at 60/90/120/180/240 RPM for current
+weapon proficiency Poor/Average/Good/Very Good/Perfect. It reads proficiency
+on each call, after category fire-rate scaling; slower weapon/action/override
+intervals take precedence. Both AI scheduling and the actual NextPrimaryFire
+gate use this helper, so extra animation events cannot exceed the cap. Automatic
+and burst modes keep their rates. This uses NPC weapon proficiency, not the
+global `skill` difficulty convar. Validation: `npc_cadence/README.md`.
+Primary launchers and the crossbow work; alternate launcher modes, akimbo, bipods,
+flamethrower AI, thrown equipment and melee are not operated by NPCs.
+
+`mcv/shared/sh_npc.lua` registers individual classes and provides the MCV NPC Weapons
+menu with category/random choices. It reads sandbox's existing `gmod_npcweapon`
+userinfo and respects explicit right-click equipment selection. New supported guns
+inherit `NPCUsable`; unsupported bases must override it to false. Tests and evidence
+are in `npc_validation/README.md`.
 
 ## Ripping the game directly (`rip_game.py`)
 
@@ -648,7 +709,9 @@ its gap grows by the sway's peak, so the shot always lands inside it. Also: dual
 sets `HasSecond`), and fixing a bayonet needs a bayonet melee weapon (`IsBayonet`) in the
 inventory. The rest of the mode: it picks the addon's own recoil and spread: hip
 fire is barrel-accurate (the sighted spread applies at all times, the miss comes from the gun not
-being lined up with the eye), recoil from the hip kicks in a random direction and harder, CalcView
+being lined up with the eye). Aiming reduces ordinary single-projectile dispersion to a quarter;
+shotguns and the current volley firemode retain their pattern throughout the sight transition.
+Recoil from the hip kicks in a random direction and harder, CalcView
 takes 75% of the view punch back out so the kick moves the aim rather than the picture, and the
 view pulls back a little through a burst. At 0 the game's numbers apply as the scripts have them:
 `Lerp(sightamount, BulletSpreadDegrees, BulletSpreadDegreesIronsighted)` times the stance and
@@ -747,6 +810,20 @@ ring every half second while cooking (`GetCookPulse`).
 
 ## Icons
 
+Random selectors use `mcv_random_weapon` content icons rather than proxy SWEPs.
+`sh_random_weapons.lua` defines the category/country/theme pools; the spawn menu
+adds a Random entry per section and a Miscellaneous child node. Server rolls go
+through sandbox's normal give/spawn functions. NPC selections use the existing
+NPC-weapon userinfo path with an AI-compatible pool. Question marks and flag
+badges are built by `work/build_random_weapon_icons.py`; instructions, validation
+and source credits are in `work/random_weapon_icons/README.md`. Russian pools
+use the Soviet flag; WW2 Germany uses the black-white-red Imperial flag. Every
+flag badge uses flat rectangular artwork at the same dimensions. Modern SVGs
+come from flag-icons v7.5.0; historical flags use cached Commons artwork.
+Country pools union the weapon's `Country` with explicit `alsoCountry` additions
+for shared designs/service associations. Each eligible class appears once per
+pool; these additions do not affect stat categories or explicit WW2 lists.
+
 `rip_game.py --steps icons` renders the game's panorama SVGs (`materials/panorama/images/icons/
 equipment/`, 320 of them, plus 3 in `new/` that win) as drawn: white fills with black outlines,
 the game's outlined style, at 1024 px, scaled into the middle 512x256 band of a 512x512 png in
@@ -754,6 +831,21 @@ the game's outlined style, at 1024 px, scaled into the middle 512x256 band of a 
 alpha, which reduced them to silhouettes (the "blobby" icons). Icons named after game scripts
 rather than lua files (IconOverride targets) are re-rendered by the same step; the four without
 an svg (AVT-40, Type 17 pistol, T223 40-round) are copies of their sibling's.
+
+RHOGUN, Cobra and the three custom guns use orthographic line drawings generated directly from their
+viewmodel meshes by `python work/build_spawn_icons.py`. Mesh depth and normals supply
+the silhouette and internal feature lines. These custom PNGs use white fills and
+thin black details at 65% opacity; `--line-opacity` controls the stroke transparency.
+Sources, build metadata and a spawn-menu check are under `work/spawn_icons/`. The
+icon import step reapplies these local images after processing the game's SVGs.
+Use `python work/build_spawn_icons.py ptrd_sniper m635 xm16super` for the custom
+guns alone. The custom model builders call the same renderer. See
+`work/spawn_icons/README.md` for preset sources, preview-only output and other meshes.
+
+Dual-wield model names come from the game's `weapon_dual_*` script where available.
+Do not infer a variant by adding `dual_` to the single model: Mk 22 Mod 0 shares
+the single Mk 22 model via bodygroups, but needs `v_dual_mk22_mod0` for its two
+suppressors and their extended muzzle attachments.
 
 ## Sight survey (`work/sight_survey.py`)
 

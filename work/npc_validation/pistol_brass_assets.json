@@ -1,0 +1,42 @@
+{
+	"mcv_type64p": {
+		"created": true,
+		"bones": 1,
+		"materials": [
+			"models/weapons/shells/shells_small"
+		],
+		"actual": 12,
+		"expected": 12,
+		"model": "models/weapons/shells/shell_9x19.mdl"
+	},
+	"mcv_mle1935": {
+		"created": true,
+		"bones": 1,
+		"materials": [
+			"models/weapons/shells/shells_small"
+		],
+		"actual": 12,
+		"expected": 12,
+		"model": "models/weapons/shells/shell_9x19.mdl"
+	},
+	"mcv_type67": {
+		"created": true,
+		"bones": 1,
+		"materials": [
+			"models/weapons/shells/shells_small"
+		],
+		"actual": 12,
+		"expected": 12,
+		"model": "models/weapons/shells/shell_9x19.mdl"
+	},
+	"mcv_type14": {
+		"created": true,
+		"bones": 1,
+		"materials": [
+			"models/weapons/shells/shells_small"
+		],
+		"actual": 5,
+		"expected": 5,
+		"model": "models/weapons/shells/shell_762x25t.mdl"
+	}
+}

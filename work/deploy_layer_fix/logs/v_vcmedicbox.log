@@ -1,0 +1,81 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_vcmedicbox\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_vcmedicbox\v_vcmedicbox.qc"
+Building binary model files...
+Working on "v_vcmedicbox.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcmedicbox\v_viet_medicbag.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcmedicbox\v_vcmedicbox_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcmedicbox\v_vcmedicbox_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcmedicbox\v_vcmedicbox_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcmedicbox\v_vcmedicbox_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcmedicbox\v_vcmedicbox_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcmedicbox\v_vcmedicbox_anims\runIdle_a.smd
+SMD MODEL fixed_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcmedicbox\v_vcmedicbox_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcmedicbox\v_vcmedicbox_anims\walk_a.smd
+SMD MODEL fixed_anims\proneF.smd
+SMD MODEL fixed_anims\proneB.smd
+SMD MODEL fixed_anims\proneL.smd
+SMD MODEL fixed_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcmedicbox\v_vcmedicbox_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcmedicbox\v_vcmedicbox_anims\idletonearwall.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcmedicbox\v_vcmedicbox_anims\nearwall.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcmedicbox\v_vcmedicbox_anims\nearwalltoidle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcmedicbox\v_vcmedicbox_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcmedicbox\v_vcmedicbox_anims\pickupstart.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcmedicbox\v_vcmedicbox_anims\pickuploop.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcmedicbox\v_vcmedicbox_anims\pickupend.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcmedicbox\v_vcmedicbox_anims\holster.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcmedicbox\v_vcmedicbox_anims\give.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcmedicbox\v_vcmedicbox_anims\self.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcmedicbox\v_vcmedicbox_anims\throw.smd
+Processing LOD for material: vietnammedicine
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_vcmedicbox.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_vcmedicbox.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        20652 bytes (91)
+animations   68172 bytes (25 anims) (577 frames) [0:19]
+sequences     5736 bytes (17 seq) 
+ik/pose        224 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures        76 bytes
+keyvalues       20 bytes
+bone transforms    12440 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       110004
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_vcmedicbox.vvd:
+vertices    315504 bytes (6573 vertices)
+tangents    105168 bytes (6573 vertices)
+total       420736 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_vcmedicbox.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:             9 bytes
+strip groups:      25 bytes
+strips:            27 bytes
+verts:          59157 bytes
+indices:        69810 bytes
+bone changes:      16 bytes
+everything:    129108 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_vcmedicbox.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:             9 bytes
+strip groups:      25 bytes
+strips:            27 bytes
+verts:          59157 bytes
+indices:        69810 bytes
+bone changes:      16 bytes
+everything:    129108 bytes
+
+Completed "v_vcmedicbox.qc"

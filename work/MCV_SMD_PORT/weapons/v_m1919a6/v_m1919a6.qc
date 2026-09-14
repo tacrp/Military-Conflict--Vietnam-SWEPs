@@ -611,9 +611,6 @@ $sequence "draw" {
 	{ event AE_CL_BODYGROUP_SET_TO_CLIP 1 "" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "walklayerironsight"
-	addlayer "runlayer"
 	fps 30
 }
 
@@ -629,9 +626,6 @@ $sequence "Firstdraw" {
 	{ event AE_CL_BODYGROUP_SET_TO_CLIP 1 "" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "walklayerironsight"
-	addlayer "runlayer"
 	fps 30
 }
 

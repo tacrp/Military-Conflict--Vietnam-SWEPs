@@ -1,0 +1,6 @@
+{
+	"smoke": true,
+	"popped": true,
+	"model": "models/weapons/mcv/w_stielhandgranate.mdl",
+	"particleValid": true
+}

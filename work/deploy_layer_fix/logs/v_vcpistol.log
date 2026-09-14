@@ -1,0 +1,142 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_vcpistol\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_vcpistol\v_vcpistol.qc"
+Building binary model files...
+Working on "v_vcpistol.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\vcpistol_ref.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\Bullet0_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\Bullet1_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\Bullet2_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\Default_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\MagPose1_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\MagPose2_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\MagPose3_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\boltpull1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\boltpull2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\boltpullIron2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\boltpullIron1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\PoseDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\Default.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\Bullet2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\Bullet1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\Bullet0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\MagPose3.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\MagPose2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\MagPose1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\boltpull2_d.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\boltpull1_d.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\boltpullIron2_d.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\boltpullIron1_d.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\boltpull2_o.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\boltpull1_o.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\boltpullIron2_o.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\boltpullIron1_o.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\boltpull2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\boltpull1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\boltpullIron2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\boltpullIron1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\reload_3.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\reload_4.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\reload_5.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\reload_6.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\reload_7.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\reload_8.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\reload_empty_3.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\reload_empty_4.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\reload_empty_5.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\reload_empty_6.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\reload_empty_7.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\reload_empty_8.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\holster.smd
+Processing LOD for material: shells_small
+Processing LOD for material: v_vcpistol
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_vcpistol.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_vcpistol.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        23076 bytes (101)
+animations  487216 bytes (88 anims) (3930 frames) [2:11]
+sequences    11728 bytes (24 seq) 
+ik/pose        264 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       140 bytes
+keyvalues       20 bytes
+bone transforms    13800 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       540300
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_vcpistol.vvd:
+vertices    401328 bytes (8361 vertices)
+tangents    133776 bytes (8361 vertices)
+total       535168 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_vcpistol.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:          75249 bytes
+indices:        57702 bytes
+bone changes:      96 bytes
+everything:    133233 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_vcpistol.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:          75249 bytes
+indices:        57702 bytes
+bone changes:      96 bytes
+everything:    133233 bytes
+
+Completed "v_vcpistol.qc"

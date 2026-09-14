@@ -1,0 +1,105 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_crossbow\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_crossbow\v_crossbow.qc"
+Building binary model files...
+Working on "v_crossbow.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\Ref.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\Slideback_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\Default_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\PoseDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\PoseDelta2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\Default.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\Slideback.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\walkdelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\runIdle_a.smd
+SMD MODEL fixed_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\walkIdle_a.smd
+SMD MODEL fixed_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\shoot_overlay.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_crossbow\v_crossbow_anims\holster.smd
+Processing LOD for material: crossbow
+Processing LOD for material: arrow
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_crossbow.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_crossbow.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        26900 bytes (118)
+animations  156832 bytes (51 anims) (1410 frames) [0:46]
+sequences     8020 bytes (20 seq) 
+ik/pose        244 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       140 bytes
+keyvalues       20 bytes
+bone transforms    16112 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       211820
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_crossbow.vvd:
+vertices    508848 bytes (10601 vertices)
+tangents    169616 bytes (10601 vertices)
+total       678528 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_crossbow.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            81 bytes
+verts:          96345 bytes
+indices:       106728 bytes
+bone changes:     256 bytes
+everything:    203542 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_crossbow.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:          95409 bytes
+indices:       106728 bytes
+bone changes:     232 bytes
+everything:    202555 bytes
+
+Completed "v_crossbow.qc"

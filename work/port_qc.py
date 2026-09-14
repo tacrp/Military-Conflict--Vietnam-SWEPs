@@ -363,6 +363,7 @@ class Ctx:
         self.shell_dual = False
         self.primary_pose_len = None
         self.static_anims = set()
+        self.normalized = {}
 
     def warn(self, msg):
         self.warnings.append(msg)
@@ -374,6 +375,8 @@ class Ctx:
         """Absolute path of an smd referenced from the OG qc (checks overrides first)."""
         rel = rel.replace("\\", os.sep).replace("/", os.sep)
         base = os.path.basename(rel)
+        if base in self.normalized:
+            return self.normalized[base]
         ov = os.path.join(self.override_dir, base)
         if os.path.isfile(ov):
             return ov
@@ -1125,6 +1128,38 @@ def step_cycle_no_sprint(qc, ctx):
         n += 1
     if n:
         ctx.note("%d bolt cycle sequence(s) no longer take the sprint layer" % n)
+
+
+DEPLOY_MOVEMENT_LAYERS = frozenset({
+    "walklayer", "walklayerironsight", "walklayergrenironsight", "runlayer",
+})
+
+
+def is_deploy_activity(activity):
+    """Weapon draw/first-draw, including empty, launcher and dual variants."""
+    return bool(re.fullmatch(r"ACT_VM_(?:(?:EMPTY_)?DRAW(?:_.*)?|DRAWFULL_M203|FIRSTDRAW|READY(?:_.*)?)",
+                             activity or ""))
+
+
+def is_deploy_movement_layer(line):
+    match = re.match(r'^\s*(?:addlayer|blendlayer)\s+"([^\"]+)"', line, re.I)
+    return bool(match and match.group(1).lower() in DEPLOY_MOVEMENT_LAYERS)
+
+
+def step_deploy_no_movement(qc, ctx):
+    """Draws have authored hand motion; movement layers distort their grip/reach.
+
+    Keep this after all steps that inherit or add idle movement layers. Mechanical
+    layers (slide, hammer, belt, etc.) still apply during deployment.
+    """
+    count = 0
+    for block in qc.blocks("sequence"):
+        if is_deploy_activity(block.activity()):
+            old_count = len(block.lines)
+            block.remove(is_deploy_movement_layer)
+            count += old_count != len(block.lines)
+    if count:
+        ctx.note("%d deploy sequence(s) no longer take walk/run layers" % count)
 
 
 def step_snap_draws(qc, ctx):
@@ -1977,12 +2012,16 @@ def port_worldmodel(args, og_dir):
     ctx.mode = "world"
     text = open(og_qc, encoding="utf-8", errors="replace").read().replace("\r\n", "\n")
     qc = QC(text)
+    from nested_world_models import prepare_nested_world
+    prepare_nested_world(qc, ctx)
 
     n = qc.raw_sub(r'\$modelname\s+"weapons[\\/]', '$modelname "weapons\\\\mcv\\\\')
     if n == 0:
         ctx.warn("no $modelname weapons\\ line found")
     step_illumposition(qc, ctx)
     step_bbox(qc, ctx)
+    from model_pose_fixes import prepare_pose_fixes
+    prepare_pose_fixes(ctx)
     qc.raw_sub(r'\$cdmaterials\s+"models\\[Ww]eapons\\', '$cdmaterials "' + MATERIAL_PREFIX.replace("\\", "\\\\"))
     qc.raw_sub(r'"([^"\n]+\.smd)"', lambda m: '"%s"' % ctx.out_smd_path(m.group(1)))
     for b in qc.blocks("animation"):
@@ -2166,6 +2205,8 @@ def port_one(args, og_dir):
     step_fix_correctives(qc, ctx)
     step_glue_guns(qc, ctx)
     step_bake_ik(qc, ctx)
+    from model_pose_fixes import prepare_pose_fixes
+    prepare_pose_fixes(ctx)
     step_paths(qc, ctx)
     step_reconstruct_missing_anims(qc, ctx)
     step_include(qc, ctx)
@@ -2189,6 +2230,7 @@ def port_one(args, og_dir):
     step_da_start_fadein(qc, ctx)    # after the pose split, which writes its own fade-in
     step_snap_gate_reload(qc, ctx)
     step_cycle_no_sprint(qc, ctx)
+    step_deploy_no_movement(qc, ctx)
     step_tidy(qc, ctx)
     step_validate(qc, ctx)
 

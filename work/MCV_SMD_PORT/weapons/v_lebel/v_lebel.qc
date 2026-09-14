@@ -760,9 +760,6 @@ $sequence "FirstDraw" {
 	{ event 5004 10 "MCV_Weapon_Foley_M1917.DrawMetal" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "walklayerironsight"
-	addlayer "runlayer"
 	node "0"
 	fps 30
 }
@@ -781,9 +778,6 @@ $sequence "draw" {
 	{ event 5004 1 "MCV_Weapon_Foley_Lebel.Draw" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "walklayerironsight"
-	addlayer "runlayer"
 	node "0"
 	fps 30
 }

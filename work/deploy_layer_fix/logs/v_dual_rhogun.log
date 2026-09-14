@@ -1,0 +1,141 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_dual_rhogun\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_dual_rhogun\v_dual_rhogun.qc"
+Building binary model files...
+Working on "v_dual_rhogun.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\DualRhogun.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\body1_model0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\Default_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\RightEmpty_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\BothEmpty_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\shoot1_r_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\shoot1_r_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\shoot1_l_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\shoot1_l_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\shoot2_r_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\shoot2_r_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\shoot2_l_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\shoot2_l_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\shootlast_r_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\shootlast_r_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\shootlast_l_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\shootlast_l_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\PoseDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\Default.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\RightEmpty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\BothEmpty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\FirstDraw_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\FirstDraw_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\shoot1_r_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\shoot1_r_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\shoot1_l_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\shoot1_l_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\shoot2_r_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\shoot2_r_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\shoot2_l_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\shoot2_l_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\shootlast_r_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\shootlast_r_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\shootlast_l_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\shootlast_l_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\reload_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\reload_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\reload_ra.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\reload_ra_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\reload_er_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\reload_er_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\reload_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\reload_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_rhogun\v_dual_rhogun_anims\holster.smd
+Processing LOD for material: rhogun_base
+Processing LOD for material: rhogun_mag
+Processing LOD for material: rhogun_mag
+Processing LOD for material: shells_small
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dual_rhogun.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dual_rhogun.mdl
+   Found 34 preexisting sequences.
+bones        23804 bytes (101)
+animations  273744 bytes (128 anims) (2523 frames) [1:24]
+Building sequence index remapping table...
+No re-ordering required.
+sequences    14428 bytes (34 seq) 
+ik/pose        596 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       208 bytes
+keyvalues       20 bytes
+bone transforms    13800 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       332544
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dual_rhogun.vvd:
+vertices   1572816 bytes (32767 vertices)
+vertices     93456 bytes (1947 vertices)
+tangents    524272 bytes (32767 vertices)
+tangents     31152 bytes (1947 vertices)
+total      2221760 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dual_rhogun.dx80.vtx":
+body parts:        16 bytes
+models:            60 bytes
+model LODs:        36 bytes
+meshes:            36 bytes
+strip groups:     100 bytes
+strips:           108 bytes
+verts:         312426 bytes
+indices:       299856 bytes
+bone changes:     112 bytes
+everything:    612750 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dual_rhogun.dx90.vtx":
+body parts:        16 bytes
+models:            60 bytes
+model LODs:        36 bytes
+meshes:            36 bytes
+strip groups:     100 bytes
+strips:           108 bytes
+verts:         312426 bytes
+indices:       299856 bytes
+bone changes:     112 bytes
+everything:    612750 bytes
+
+Completed "v_dual_rhogun.qc"

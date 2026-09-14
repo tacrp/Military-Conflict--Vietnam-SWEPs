@@ -159,7 +159,7 @@ SWEP.MuzzleParticleIronsightedSmoke = "vietnam_muzzleflash_pistol_type2_fp_is_sm
 
 SWEP.MuzzleParticle3rdPerson = "vietnam_muzzleflash_pistol_type2_tp"
 
-SWEP.EjectBrassType = 3
+SWEP.EjectBrassType = 12 // Small pistol brass; no dedicated 7.65mm case model.
 SWEP.EjectBrassTrail = "vietnam_weaponeffect_shelleject_trail"
 SWEP.EjectBrassParticle = "vietnam_weaponeffect_shelleject_side"
 

@@ -1,0 +1,107 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_mat49\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_mat49\v_mat49.qc"
+Building binary model files...
+Working on "v_mat49.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\Ref_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mat49\v_mat49_anims\holster.smd
+Processing LOD for material: shells_small
+Processing LOD for material: mat49
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_mat49.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_mat49.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        21840 bytes (95)
+animations  158416 bytes (53 anims) (1581 frames) [0:52]
+sequences     8712 bytes (23 seq) 
+ik/pose        224 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       140 bytes
+keyvalues       20 bytes
+bone transforms    12984 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       205768
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_mat49.vvd:
+vertices    932880 bytes (19435 vertices)
+tangents    310960 bytes (19435 vertices)
+total      1243904 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_mat49.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:         174915 bytes
+indices:       146508 bytes
+bone changes:      48 bytes
+everything:    321657 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_mat49.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:         174915 bytes
+indices:       146508 bytes
+bone changes:      48 bytes
+everything:    321657 bytes
+
+Completed "v_mat49.qc"

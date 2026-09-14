@@ -1,0 +1,248 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_rp46\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_rp46\v_rp46.qc"
+Building binary model files...
+Working on "v_rp46.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\Ref_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\Bullet_new.001.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\Bullet_new.002.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\Bullet_new.003.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\Bullet_new.004.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\Bullet_new.005.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\Bullet_new.006.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\Bullet_new.007.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\Bullet_new.008.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\Bullet_new.009.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\Bullet_new.010.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\Bullet_new.011.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\Bullet_new.012.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\Bullet_new.013.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\NotEmpty_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\Empty_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\NotEmptyMove_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\EmptyMove_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\shoot1d_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\shoot1d_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\shoot2d_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\shoot2d_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\shoot3d_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\shoot3d_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\walkDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\Base.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\NotEmpty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\Empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\NotEmptyMove.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\EmptyMove.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\prone_deployF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\prone_deployB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\prone_deployL.smd
+SMD MODEL fixed_anims\prone_deployR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\deploy_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\deploy_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\deploy_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\ironsightdeploy.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\deploy_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\deploy_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\shoot1d_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\shoot1d_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\shoot2d_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\shoot2d_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\shoot3d_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\shoot3d_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\reload_deploy.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\reload_deploy_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\reload_deploy_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\reload_deploy_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rp46\v_rp46_anims\holster.smd
+Processing LOD for material: dp28
+Processing LOD for material: rp46
+Processing LOD for material: soviet_belt
+Processing LOD for material: shells_small_additional
+Processing LOD for material: shells_small_additional
+Processing LOD for material: shells_small_additional
+Processing LOD for material: shells_small_additional
+Processing LOD for material: shells_small_additional
+Processing LOD for material: shells_small_additional
+Processing LOD for material: shells_small_additional
+Processing LOD for material: shells_small_additional
+Processing LOD for material: shells_small_additional
+Processing LOD for material: shells_small_additional
+Processing LOD for material: shells_small_additional
+Processing LOD for material: shells_small_additional
+Processing LOD for material: shells_small_additional
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_rp46.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_rp46.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        24296 bytes (106)
+animations  418892 bytes (91 anims) (2782 frames) [1:30]
+sequences    15984 bytes (37 seq) 
+ik/pose       4300 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       272 bytes
+keyvalues       20 bytes
+bone transforms    14480 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       484624
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_rp46.vvd:
+vertices   1547328 bytes (32236 vertices)
+vertices     14688 bytes (306 vertices)
+vertices     14688 bytes (306 vertices)
+vertices     14688 bytes (306 vertices)
+vertices     14688 bytes (306 vertices)
+vertices     14688 bytes (306 vertices)
+vertices     14688 bytes (306 vertices)
+vertices     14688 bytes (306 vertices)
+vertices     14688 bytes (306 vertices)
+vertices     14688 bytes (306 vertices)
+vertices     14688 bytes (306 vertices)
+vertices     14688 bytes (306 vertices)
+vertices     14688 bytes (306 vertices)
+vertices     14688 bytes (306 vertices)
+tangents    515776 bytes (32236 vertices)
+tangents      4896 bytes (306 vertices)
+tangents      4896 bytes (306 vertices)
+tangents      4896 bytes (306 vertices)
+tangents      4896 bytes (306 vertices)
+tangents      4896 bytes (306 vertices)
+tangents      4896 bytes (306 vertices)
+tangents      4896 bytes (306 vertices)
+tangents      4896 bytes (306 vertices)
+tangents      4896 bytes (306 vertices)
+tangents      4896 bytes (306 vertices)
+tangents      4896 bytes (306 vertices)
+tangents      4896 bytes (306 vertices)
+tangents      4896 bytes (306 vertices)
+total      2317760 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_rp46.dx80.vtx":
+body parts:       112 bytes
+models:           540 bytes
+model LODs:       324 bytes
+meshes:           144 bytes
+strip groups:     400 bytes
+strips:           432 bytes
+verts:         325926 bytes
+indices:       247098 bytes
+bone changes:     256 bytes
+everything:    574944 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_rp46.dx90.vtx":
+body parts:       112 bytes
+models:           540 bytes
+model LODs:       324 bytes
+meshes:           144 bytes
+strip groups:     400 bytes
+strips:           432 bytes
+verts:         325926 bytes
+indices:       247098 bytes
+bone changes:     256 bytes
+everything:    574944 bytes
+
+Completed "v_rp46.qc"

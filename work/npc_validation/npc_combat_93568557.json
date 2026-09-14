@@ -1,0 +1,25 @@
+{
+	"ptraces": [],
+	"errors": [],
+	"spawned": [],
+	"log": [
+		"cmd sv_cheats 1",
+		"cmd ai_disabled 0",
+		"cmd ai_ignoreplayers 1",
+		"ccmd net_fakelag 0",
+		"ccmd cl_showerror 0",
+		"strip",
+		"pos 3780 -3180 -12799",
+		"ang 0 34 0",
+		"lua ply:GodEnable() include(\"mcv_harness/npc.lua\") MCVNPCTest.Start()",
+		"wait 15",
+		"lua MCVNPCTest.Report(\"npc_combat_15\")",
+		"shot npc_combat",
+		"wait 20",
+		"lua MCVNPCTest.Report(\"npc_combat_35\")"
+	],
+	"shots": [
+		"npc_combat"
+	],
+	"reports": []
+}

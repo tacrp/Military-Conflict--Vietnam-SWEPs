@@ -51,17 +51,21 @@ nodes
   47 "cam_driver" -1
   48 "BaseRoot" -1
   49 "Base" 48
-  50 "Trigger" 49
-  51 "Bolt" 49
-  52 "rhand_ikTarget" 49
-  53 "lhand_ikTarget" 49
-  54 "MagRelease" 49
-  55 "BoltCover" 49
-  56 "Boltpuller" 49
-  57 "Bayonet" 49
-  58 "Mag" 49
-  59 "Bullet" 58
-  60 "BulletMove" 59
+  50 "Mag" 49
+  51 "Bullet" 50
+  52 "BulletMove" 51
+  53 "Trigger" 49
+  54 "Bolt" 49
+  55 "rhand_ikTarget" 49
+  56 "lhand_ikTarget" 49
+  57 "MagRelease" 49
+  58 "Boltpuller" 49
+  59 "BoltCover" 49
+  60 "Tube" 49
+  61 "M203_GrenBase" 60
+  62 "M203_GrenHead" 61
+  63 "M203_Trigger" 49
+  64 "M203_Ironsight" 49
 end
 skeleton
   time 0

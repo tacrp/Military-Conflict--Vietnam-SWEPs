@@ -26,6 +26,12 @@ SWEP.RifleGrenadeIsUBGL = true
 SWEP.RifleGrenadeEntity = "mcv_proj_40mm"
 SWEP.RifleGrenadeForce = 2000
 
+SWEP.Firemodes = {
+    MCV.FIREMODE_AUTO,
+    MCV.FIREMODE_SEMI,
+    MCV.FIREMODE_BURST,
+}
+
 // Full-length suppressed barrel; retain the Mk.4's sound and muzzle effects.
 SWEP.MuzzleVelocity = 960
 SWEP.RangeModifier = 0.94
@@ -39,7 +45,7 @@ SWEP.MuzzleParticle3rdPerson = "vietnam_muzzleflash_pistol_type2_tp"
 SWEP.MuzzleFlashLightTexture = "effects/flashlight_muzzleflash_sl"
 SWEP.TracerParticle = ""
 SWEP.TracerParticle2 = ""
-SWEP.ShootAnimRate = 0.5 // M16 rifle-shot timing
+SWEP.ShootAnimRate = 0.5 // M16-M203 rifle-shot timing
 
 SWEP.HasScope = true
 SWEP.OEGScope = false

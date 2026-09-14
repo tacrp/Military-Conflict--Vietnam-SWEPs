@@ -1,0 +1,129 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_r76\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_r76\v_r76.qc"
+Building binary model files...
+Working on "v_r76.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\RefNorthwood.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\Ref_R76.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\Ref_R77.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\Default_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\Slideback_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\PoseDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\PoseDelta2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\Default.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\Slideback.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\ShootMove.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\ShootStill.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\walkDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\runIdle_a.smd
+SMD MODEL fixed_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\walkIdle_a.smd
+SMD MODEL fixed_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_r76\v_r76_anims\holster.smd
+Processing LOD for material: northwood
+Processing LOD for material: magazine
+Processing LOD for material: shells_small
+Processing LOD for material: northwoodbarrelstocks
+Processing LOD for material: northwoodbarrelstocks
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_r76.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_r76.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        22276 bytes (97)
+animations  177676 bytes (62 anims) (1743 frames) [0:58]
+sequences     9180 bytes (24 seq) 
+ik/pose        556 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       272 bytes
+keyvalues       20 bytes
+bone transforms    13256 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       227228
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_r76.vvd:
+vertices    491040 bytes (10230 vertices)
+vertices     69360 bytes (1445 vertices)
+vertices     76176 bytes (1587 vertices)
+tangents    163680 bytes (10230 vertices)
+tangents     23120 bytes (1445 vertices)
+tangents     25392 bytes (1587 vertices)
+total       848832 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_r76.dx80.vtx":
+body parts:        16 bytes
+models:            60 bytes
+model LODs:        36 bytes
+meshes:            45 bytes
+strip groups:     125 bytes
+strips:           135 bytes
+verts:         119358 bytes
+indices:       107280 bytes
+bone changes:      88 bytes
+everything:    227143 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_r76.dx90.vtx":
+body parts:        16 bytes
+models:            60 bytes
+model LODs:        36 bytes
+meshes:            45 bytes
+strip groups:     125 bytes
+strips:           135 bytes
+verts:         119358 bytes
+indices:       107280 bytes
+bone changes:      88 bytes
+everything:    227143 bytes
+
+Completed "v_r76.qc"

@@ -1,0 +1,130 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_md63\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_md63\v_md63.qc"
+Building binary model files...
+Working on "v_md63.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_md63\ref_md63.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_md63\v_bayonetAKM.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\bayonet_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\bayonet_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\bayonet_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\bayonet_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\change_firemode_idle.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\change_firemode_iron.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\bayonet_attack_a.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\bayonet_attack_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\Charge_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\Charge_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\Charge_l_a.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\Charge_l_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\Charge_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\Charge_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_md63\anims\holster.smd
+Processing LOD for material: md63
+Processing LOD for material: shells_small
+Processing LOD for material: akm_mag
+Processing LOD for material: ak47_bayonet_d
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_md63.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_md63.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        22344 bytes (97)
+animations  235800 bytes (67 anims) (2029 frames) [1:07]
+sequences    11528 bytes (31 seq) 
+ik/pose        536 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       280 bytes
+keyvalues       20 bytes
+bone transforms    13256 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       287984
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_md63.vvd:
+vertices   1170288 bytes (24381 vertices)
+vertices    101376 bytes (2112 vertices)
+tangents    390096 bytes (24381 vertices)
+tangents     33792 bytes (2112 vertices)
+total      1695616 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_md63.dx80.vtx":
+body parts:        16 bytes
+models:            60 bytes
+model LODs:        36 bytes
+meshes:            36 bytes
+strip groups:     100 bytes
+strips:           108 bytes
+verts:         238437 bytes
+indices:       200250 bytes
+bone changes:      64 bytes
+everything:    439107 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_md63.dx90.vtx":
+body parts:        16 bytes
+models:            60 bytes
+model LODs:        36 bytes
+meshes:            36 bytes
+strip groups:     100 bytes
+strips:           108 bytes
+verts:         238437 bytes
+indices:       200250 bytes
+bone changes:      64 bytes
+everything:    439107 bytes
+
+Completed "v_md63.qc"

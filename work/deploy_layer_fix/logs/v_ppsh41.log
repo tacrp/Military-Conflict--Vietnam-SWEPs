@@ -1,0 +1,125 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_ppsh41\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_ppsh41\v_ppsh41.qc"
+Building binary model files...
+Working on "v_ppsh41.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\Ref_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\mesh_mag_1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\Default_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\Slideback_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\ShootMove_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\ShootStill_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\PoseDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\PoseDelta2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\Default.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\Slideback.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\ShootMove.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\ShootStill.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\change_firemode_idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\change_firemode_iron.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ppsh41\v_ppsh41_anims\holster.smd
+Processing LOD for material: ppsh41
+Processing LOD for material: shells_small
+Processing LOD for material: ppsh41
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_ppsh41.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_ppsh41.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        22056 bytes (96)
+animations  171704 bytes (65 anims) (1657 frames) [0:55]
+sequences     9904 bytes (26 seq) 
+ik/pose        408 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       140 bytes
+keyvalues       20 bytes
+bone transforms    13120 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       221208
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_ppsh41.vvd:
+vertices    416976 bytes (8687 vertices)
+vertices     59616 bytes (1242 vertices)
+tangents    138992 bytes (8687 vertices)
+tangents     19872 bytes (1242 vertices)
+total       635520 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_ppsh41.dx80.vtx":
+body parts:        16 bytes
+models:            40 bytes
+model LODs:        24 bytes
+meshes:            27 bytes
+strip groups:      75 bytes
+strips:            81 bytes
+verts:          89361 bytes
+indices:        62988 bytes
+bone changes:      56 bytes
+everything:    152680 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_ppsh41.dx90.vtx":
+body parts:        16 bytes
+models:            40 bytes
+model LODs:        24 bytes
+meshes:            27 bytes
+strip groups:      75 bytes
+strips:            81 bytes
+verts:          89361 bytes
+indices:        62988 bytes
+bone changes:      56 bytes
+everything:    152680 bytes
+
+Completed "v_ppsh41.qc"

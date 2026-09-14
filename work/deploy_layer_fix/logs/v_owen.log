@@ -1,0 +1,120 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_owen\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_owen\v_owen.qc"
+Building binary model files...
+Working on "v_owen.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\Ref_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\Default_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\Slideback_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\ShootMove_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\ShootStill_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\PoseDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\PoseDelta2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\Default.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\Slideback.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\ShootMove.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\ShootStill.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\walkDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\runIdle_a.smd
+SMD MODEL fixed_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\walkIdle_a.smd
+SMD MODEL fixed_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\change_firemode_idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\change_firemode_iron.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_owen\v_owen_anims\holster.smd
+Processing LOD for material: shells_small
+Processing LOD for material: owengun
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_owen.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_owen.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        22056 bytes (96)
+animations  170036 bytes (66 anims) (1714 frames) [0:57]
+sequences     9880 bytes (26 seq) 
+ik/pose        244 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       140 bytes
+keyvalues       20 bytes
+bone transforms    13120 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       219240
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_owen.vvd:
+vertices    660624 bytes (13763 vertices)
+tangents    220208 bytes (13763 vertices)
+total       880896 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_owen.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:         123867 bytes
+indices:        92616 bytes
+bone changes:      56 bytes
+everything:    216725 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_owen.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:         123867 bytes
+indices:        92616 bytes
+bone changes:      56 bytes
+everything:    216725 bytes
+
+Completed "v_owen.qc"

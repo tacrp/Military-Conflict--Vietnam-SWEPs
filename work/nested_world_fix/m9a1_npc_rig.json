@@ -1,0 +1,19 @@
+{
+	"owner": "models/combine_soldier.mdl",
+	"bodygroups": [
+		{
+			"submodels": {
+				"0": "fixed_anims\\world_rig\\w_m9a1_lod0.smd"
+			},
+			"num": 1,
+			"name": "Body",
+			"id": 0
+		}
+	],
+	"muzzle": "[24.583 -1.6208 -7.6983]",
+	"gunAng": "{-8.9169 -89.8325 -102.9818}",
+	"npc": true,
+	"model": "models/weapons/mcv/w_m9a1.mdl",
+	"gunPos": "[10.6015 -0.9875 -3.3991]",
+	"weapon": "mcv_m9a1"
+}

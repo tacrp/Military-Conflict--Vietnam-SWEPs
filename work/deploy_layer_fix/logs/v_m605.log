@@ -1,0 +1,145 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_m605\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_m605\v_m605.qc"
+Building binary model files...
+Working on "v_m605.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\m605_ref.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_bayonet_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\magazine_20.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\magazine_30.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\change_firemode_idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\change_firemode_iron.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\bayonet_attack_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\bayonet_attack_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\bayonet_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\bayonet_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\bayonet_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\bayonet_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\Charge_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\Charge_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\Charge_l_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\Charge_l_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\Charge_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\Charge_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m605\v_m605_anims\holster.smd
+Processing LOD for material: m605_base
+Processing LOD for material: m605_stock
+Processing LOD for material: shells_small
+Processing LOD for material: m16_mag30
+Processing LOD for material: m7_d
+Processing LOD for material: shells_small
+Processing LOD for material: m16_mag20
+Processing LOD for material: shells_small
+Processing LOD for material: m16_mag30
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m605.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m605.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        22708 bytes (99)
+animations  213852 bytes (67 anims) (1948 frames) [1:04]
+sequences    11864 bytes (32 seq) 
+ik/pose        848 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       420 bytes
+keyvalues       20 bytes
+bone transforms    13528 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       268176
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m605.vvd:
+vertices   1509312 bytes (31444 vertices)
+vertices     95904 bytes (1998 vertices)
+vertices    114960 bytes (2395 vertices)
+vertices    161904 bytes (3373 vertices)
+tangents    503104 bytes (31444 vertices)
+tangents     31968 bytes (1998 vertices)
+tangents     38320 bytes (2395 vertices)
+tangents     53968 bytes (3373 vertices)
+total      2509504 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m605.dx80.vtx":
+body parts:        24 bytes
+models:           100 bytes
+model LODs:        60 bytes
+meshes:            81 bytes
+strip groups:     225 bytes
+strips:           243 bytes
+verts:         352890 bytes
+indices:       299430 bytes
+bone changes:     136 bytes
+everything:    653165 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m605.dx90.vtx":
+body parts:        24 bytes
+models:           100 bytes
+model LODs:        60 bytes
+meshes:            81 bytes
+strip groups:     225 bytes
+strips:           243 bytes
+verts:         352890 bytes
+indices:       299430 bytes
+bone changes:     136 bytes
+everything:    653165 bytes
+
+Completed "v_m605.qc"

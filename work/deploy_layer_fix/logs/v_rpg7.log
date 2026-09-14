@@ -1,0 +1,110 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_rpg7\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_rpg7\v_rpg7.qc"
+Building binary model files...
+Working on "v_rpg7.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\RPGref_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\Rocketref_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\Slideback_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\Default_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\PoseDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\Default.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\Slideback.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\draw_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpg7\v_rpg7_anims\holster.smd
+Processing LOD for material: rpg7
+Processing LOD for material: rpg7
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_rpg7.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_rpg7.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        21680 bytes (95)
+animations  158852 bytes (49 anims) (1566 frames) [0:52]
+sequences     8456 bytes (20 seq) 
+ik/pose        556 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures        72 bytes
+keyvalues       20 bytes
+bone transforms    12984 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       205932
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_rpg7.vvd:
+vertices   1177968 bytes (24541 vertices)
+vertices    289584 bytes (6033 vertices)
+tangents    392656 bytes (24541 vertices)
+tangents     96528 bytes (6033 vertices)
+total      1956800 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_rpg7.dx80.vtx":
+body parts:        16 bytes
+models:            60 bytes
+model LODs:        36 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:         275166 bytes
+indices:       228762 bytes
+bone changes:      48 bytes
+everything:    504210 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_rpg7.dx90.vtx":
+body parts:        16 bytes
+models:            60 bytes
+model LODs:        36 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:         275166 bytes
+indices:       228762 bytes
+bone changes:      48 bytes
+everything:    504210 bytes
+
+Completed "v_rpg7.qc"

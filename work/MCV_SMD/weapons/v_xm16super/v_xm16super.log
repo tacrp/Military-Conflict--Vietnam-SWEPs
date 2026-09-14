@@ -108,8 +108,10 @@ Processing LOD for material: mk4mod0
 Processing LOD for material: m16a1_stock
 ---------------------
 writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD\weapons\v_xm16super\compiled\models/weapons/mcv/v_xm16super.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD\weapons\v_xm16super\compiled\models/weapons/mcv/v_xm16super.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
 bones        24088 bytes (104)
-animations  310748 bytes (93 anims) (2738 frames) [1:31]
+animations  311116 bytes (93 anims) (2738 frames) [1:31]
 sequences    15452 bytes (43 seq) 
 ik/pose        224 bytes
 eyeballs         0 bytes (0 eyeballs)
@@ -119,7 +121,7 @@ keyvalues       20 bytes
 bone transforms    14208 bytes
 bone flex driver       0 bytes
 collision        0 bytes
-total       371368
+total       371736
 ---------------------
 writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD\weapons\v_xm16super\compiled\models/weapons/mcv/v_xm16super.vvd:
 vertices   3144864 bytes (65518 vertices)

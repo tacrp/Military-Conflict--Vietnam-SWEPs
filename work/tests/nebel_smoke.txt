@@ -1,0 +1,16 @@
+ccmd net_fakelag 0
+ccmd cl_showerror 0
+strip
+pos 4000 0 -12799
+ang 0 0 0
+give mcv_stielhand_smoke
+wait 2
+lua local w=ply:GetActiveWeapon() assert(w.ThrowEntity=="mcv_grenade_smoke" and w.ExplosionDamage==0 and w.ExplosionRadius==0,"Nebelhandgranate still configured as frag") assert(weapons.Get("mcv_stielhand_explosive").ThrowEntity=="mcv_grenade_frag","frag variant changed") MCVSmokeCheck={blastEvents=0,before=ply:GetAmmoCount(w.Primary.Ammo)} hook.Add("EntityTakeDamage","MCV_SmokeCheck",function(_,d) if d:IsExplosionDamage() then MCVSmokeCheck.blastEvents=MCVSmokeCheck.blastEvents+1 end end)
+tap +attack 1.1
+wait 0.6
+lua local list=ents.FindByClass("mcv_grenade_smoke") assert(#list==1,"throw did not spawn one smoke grenade") local e=list[1] assert(!e:GetPopped(),"fuse expired before damage probe") local physics=e:GetPhysicsObject() if IsValid(physics) then physics:EnableMotion(false) end SetGlobalEntity("MCVSmokeCheckGrenade",e) MCVSmokeCheck.model=e:GetModel() MCVSmokeCheck.class=e:GetClass() local target=ents.Create("npc_bullseye") target:SetPos(e:GetPos()+Vector(0,0,24)) target:SetHealth(1000) target:Spawn() target:SetHealth(1000) MCVSmokeCheck.target=target MCVSmokeCheck.targetHealth=target:Health()
+wait 4
+lua local e=GetGlobalEntity("MCVSmokeCheckGrenade") assert(IsValid(e) and e:GetPopped() and !e:GetStopped(),"smoke did not ignite/stay active") assert(e.Hurts==false and e.ExplosionDamage==0 and MCVSmokeCheck.blastEvents==0,"smoke caused explosive damage") assert(MCVSmokeCheck.target:Health()==MCVSmokeCheck.targetHealth,"nearby target damaged") MCVSmokeCheck.popped=e:GetPopped() MCVSmokeCheck.duration=e.EffectDuration MCVSmokeCheck.after=ply:GetAmmoCount("mcv_grenade") assert(MCVSmokeCheck.after==MCVSmokeCheck.before-1,"wrong ammo usage") MCVSmokeCheck.target:Remove() MCVSmokeCheck.target=nil hook.Remove("EntityTakeDamage","MCV_SmokeCheck") file.Write("mcv_harness/p27017/results/nebel_smoke.server.json",util.TableToJSON(MCVSmokeCheck,true))
+clua local e=GetGlobalEntity("MCVSmokeCheckGrenade") assert(IsValid(e) and e:GetPopped() and e.ClientSmoke and IsValid(e.ClientSmokePS),"client smoke effect missing") file.Write("mcv_harness/p27017/results/nebel_smoke.client.json",util.TableToJSON({popped=e:GetPopped(),smoke=e.ClientSmoke,particleValid=IsValid(e.ClientSmokePS),model=e:GetModel()},true))
+shot nebel_smoke
+lua GetGlobalEntity("MCVSmokeCheckGrenade"):Remove()

@@ -1,0 +1,107 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_mas38\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_mas38\v_mas38.qc"
+Building binary model files...
+Working on "v_mas38.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\Ref_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas38\v_mas38_anims\holster.smd
+Processing LOD for material: shells_small_additional
+Processing LOD for material: v_mas38
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_mas38.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_mas38.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        22344 bytes (97)
+animations  155940 bytes (53 anims) (1543 frames) [0:51]
+sequences     8560 bytes (23 seq) 
+ik/pose        224 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       140 bytes
+keyvalues       20 bytes
+bone transforms    13256 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       203944
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_mas38.vvd:
+vertices    349536 bytes (7282 vertices)
+tangents    116512 bytes (7282 vertices)
+total       466112 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_mas38.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:          65538 bytes
+indices:        51336 bytes
+bone changes:      64 bytes
+everything:    117124 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_mas38.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:          65538 bytes
+indices:        51336 bytes
+bone changes:      64 bytes
+everything:    117124 bytes
+
+Completed "v_mas38.qc"

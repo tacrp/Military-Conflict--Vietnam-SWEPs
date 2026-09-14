@@ -1,0 +1,136 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_stoner63_autorifle\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_stoner63_autorifle\v_stoner63_autorifle.qc"
+Building binary model files...
+Working on "v_stoner63_autorifle.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\ref_stoner_autorifle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\shoot1_d_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\shoot1_di_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\shoot2_d_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\shoot2_di_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\shoot3_d_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\shoot3_di_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\walkDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\runIdle_a.smd
+SMD MODEL fixed_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\walkIdle_a.smd
+SMD MODEL fixed_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\prone_deployF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\prone_deployB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\prone_deployL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\prone_deployR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\deploy_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\deploy_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\deploy_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\ironsightdeploy.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\deploy_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\deploy_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\shoot1_d_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\shoot1_di_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\shoot2_d_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\shoot2_di_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\shoot3_d_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\shoot3_di_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\reload_deploy.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\reload_deploy_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\reload_deploy_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\reload_deploy_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_autorifle\v_stoner63_autorifle_anims\holster.smd
+Processing LOD for material: shells_small
+Processing LOD for material: stoner63lmg
+Processing LOD for material: stoner63a
+Processing LOD for material: stoner63_autorifle
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_stoner63_autorifle.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_stoner63_autorifle.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        21988 bytes (96)
+animations  293524 bytes (82 anims) (2824 frames) [1:32]
+sequences    13896 bytes (35 seq) 
+ik/pose        224 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       272 bytes
+keyvalues       20 bytes
+bone transforms    13120 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       347604
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_stoner63_autorifle.vvd:
+vertices   1561008 bytes (32521 vertices)
+tangents    520336 bytes (32521 vertices)
+total      2081408 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_stoner63_autorifle.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            36 bytes
+strip groups:     100 bytes
+strips:           108 bytes
+verts:         292689 bytes
+indices:       209298 bytes
+bone changes:      72 bytes
+everything:    502367 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_stoner63_autorifle.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            36 bytes
+strip groups:     100 bytes
+strips:           108 bytes
+verts:         292689 bytes
+indices:       209298 bytes
+bone changes:      72 bytes
+everything:    502367 bytes
+
+Completed "v_stoner63_autorifle.qc"

@@ -1,0 +1,246 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_stoner63_lmg\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_stoner63_lmg\v_stoner63_lmg.qc"
+Building binary model files...
+Working on "v_stoner63_lmg.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\ref_stoner_lmg.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\Bullet013.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\Bullet012.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\Bullet011.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\Bullet010.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\Bullet009.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\Bullet008.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\Bullet007.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\Bullet006.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\Bullet005.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\Bullet004.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\Bullet003.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\Bullet002.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\Bullet001.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\body14_model0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\shoot1_d_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\shoot1_di_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\shoot2_d_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\shoot2_di_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\shoot3_d_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\shoot3_di_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\walkDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\runIdle_a.smd
+SMD MODEL fixed_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\walkIdle_a.smd
+SMD MODEL fixed_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\prone_deployF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\prone_deployB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\prone_deployL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\prone_deployR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\deploy_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\deploy_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\deploy_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\ironsightdeploy.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\deploy_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\deploy_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\shoot1_d_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\shoot1_di_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\shoot2_d_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\shoot2_di_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\shoot3_d_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\shoot3_di_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\reload_deploy.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\reload_deploy_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\reload_deploy_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\reload_deploy_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stoner63_lmg\v_stoner63_lmg_anims\holster.smd
+Processing LOD for material: stoner63lmg_chain
+Processing LOD for material: stoner63lmg
+Processing LOD for material: shells_small
+Processing LOD for material: shells_small
+Processing LOD for material: shells_small
+Processing LOD for material: shells_small
+Processing LOD for material: shells_small
+Processing LOD for material: shells_small
+Processing LOD for material: shells_small
+Processing LOD for material: shells_small
+Processing LOD for material: shells_small
+Processing LOD for material: shells_small
+Processing LOD for material: shells_small
+Processing LOD for material: shells_small
+Processing LOD for material: shells_small
+Processing LOD for material: stoner63lmg
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_stoner63_lmg.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_stoner63_lmg.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        25164 bytes (110)
+animations  558464 bytes (82 anims) (3556 frames) [1:57]
+sequences    15312 bytes (35 seq) 
+ik/pose       4592 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       208 bytes
+keyvalues       20 bytes
+bone transforms    15024 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       624980
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_stoner63_lmg.vvd:
+vertices   1572768 bytes (32766 vertices)
+vertices     18816 bytes (392 vertices)
+vertices     18816 bytes (392 vertices)
+vertices     18816 bytes (392 vertices)
+vertices     18816 bytes (392 vertices)
+vertices     18816 bytes (392 vertices)
+vertices     18816 bytes (392 vertices)
+vertices     18816 bytes (392 vertices)
+vertices     18816 bytes (392 vertices)
+vertices     18816 bytes (392 vertices)
+vertices     18816 bytes (392 vertices)
+vertices     18816 bytes (392 vertices)
+vertices     18816 bytes (392 vertices)
+vertices     18816 bytes (392 vertices)
+vertices    909648 bytes (18951 vertices)
+tangents    524256 bytes (32766 vertices)
+tangents      6272 bytes (392 vertices)
+tangents      6272 bytes (392 vertices)
+tangents      6272 bytes (392 vertices)
+tangents      6272 bytes (392 vertices)
+tangents      6272 bytes (392 vertices)
+tangents      6272 bytes (392 vertices)
+tangents      6272 bytes (392 vertices)
+tangents      6272 bytes (392 vertices)
+tangents      6272 bytes (392 vertices)
+tangents      6272 bytes (392 vertices)
+tangents      6272 bytes (392 vertices)
+tangents      6272 bytes (392 vertices)
+tangents      6272 bytes (392 vertices)
+tangents    303216 bytes (18951 vertices)
+total      3636096 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_stoner63_lmg.dx80.vtx":
+body parts:       120 bytes
+models:           580 bytes
+model LODs:       348 bytes
+meshes:           144 bytes
+strip groups:     400 bytes
+strips:           432 bytes
+verts:         511317 bytes
+indices:       255804 bytes
+bone changes:     280 bytes
+everything:    769113 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_stoner63_lmg.dx90.vtx":
+body parts:       120 bytes
+models:           580 bytes
+model LODs:       348 bytes
+meshes:           144 bytes
+strip groups:     400 bytes
+strips:           432 bytes
+verts:         511317 bytes
+indices:       255804 bytes
+bone changes:     280 bytes
+everything:    769113 bytes
+
+Completed "v_stoner63_lmg.qc"

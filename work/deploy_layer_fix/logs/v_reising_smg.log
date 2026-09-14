@@ -1,0 +1,118 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_reising_smg\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_reising_smg\v_reising_smg.qc"
+Building binary model files...
+Working on "v_reising_smg.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\Ref_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\m50smg_ref.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\walkBase.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\runIdle_a.smd
+SMD MODEL fixed_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\walkIdle_a.smd
+SMD MODEL fixed_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\change_firemode_idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\change_firemode_iron.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_reising_smg\v_reising_smg_anims\holster.smd
+Processing LOD for material: reising_mag
+Processing LOD for material: shells_small
+Processing LOD for material: m60r
+Processing LOD for material: reising_mag
+Processing LOD for material: m50r
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_reising_smg.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_reising_smg.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        21988 bytes (96)
+animations  173260 bytes (56 anims) (1630 frames) [0:54]
+sequences     9176 bytes (24 seq) 
+ik/pose        388 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       272 bytes
+keyvalues       20 bytes
+bone transforms    13120 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       222124
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_reising_smg.vvd:
+vertices     88464 bytes (1843 vertices)
+vertices    352944 bytes (7353 vertices)
+tangents     29488 bytes (1843 vertices)
+tangents    117648 bytes (7353 vertices)
+total       588608 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_reising_smg.dx80.vtx":
+body parts:        16 bytes
+models:            40 bytes
+model LODs:        24 bytes
+meshes:            45 bytes
+strip groups:     125 bytes
+strips:           135 bytes
+verts:          82764 bytes
+indices:        73632 bytes
+bone changes:      64 bytes
+everything:    156857 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_reising_smg.dx90.vtx":
+body parts:        16 bytes
+models:            40 bytes
+model LODs:        24 bytes
+meshes:            45 bytes
+strip groups:     125 bytes
+strips:           135 bytes
+verts:          82764 bytes
+indices:        73632 bytes
+bone changes:      64 bytes
+everything:    156857 bytes
+
+Completed "v_reising_smg.qc"

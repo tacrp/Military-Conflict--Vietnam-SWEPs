@@ -1,0 +1,139 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_gyrojet_carbine\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_gyrojet_carbine\v_gyrojet_carbine.qc"
+Building binary model files...
+Working on "v_gyrojet_carbine.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\gyrojet_carbine.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\Bullet0_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\Bullet1_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\Bullet2_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\Bullet3_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\Bullet4_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\Bullet5_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\Bullet6_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\Default_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\Slideback_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\shootlast_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\shootlast_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\PoseDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\Default.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\Slideback.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\Bullet6.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\Bullet5.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\Bullet4.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\Bullet3.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\Bullet2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\Bullet1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\Bullet0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\idle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\runIdle_a.smd
+SMD MODEL fixed_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\walkIdle_a.smd
+SMD MODEL fixed_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\shootlast_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\shootlast_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\reload_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\reload_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\reload_se_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\reload_se_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\reload_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\reload_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\reload_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\reload_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gyrojet_carbine\v_gyrojet_carbine_anims\holster.smd
+Processing LOD for material: v_gyrojet_carbine
+Processing LOD for material: v_gyrojet_pistol1
+Processing LOD for material: v_gyrojet_pistol2
+Processing LOD for material: v_gyrojet_projectile
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_gyrojet_carbine.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_gyrojet_carbine.mdl
+   Found 30 preexisting sequences.
+bones        23768 bytes (104)
+animations  207096 bytes (81 anims) (1532 frames) [0:51]
+Building sequence index remapping table...
+No re-ordering required.
+sequences    11012 bytes (30 seq) 
+ik/pose        264 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       272 bytes
+keyvalues       20 bytes
+bone transforms    14208 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       261148
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_gyrojet_carbine.vvd:
+vertices   1089840 bytes (22705 vertices)
+tangents    363280 bytes (22705 vertices)
+total      1453184 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_gyrojet_carbine.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            36 bytes
+strip groups:     100 bytes
+strips:           108 bytes
+verts:         204345 bytes
+indices:       161064 bytes
+bone changes:     144 bytes
+everything:    365861 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_gyrojet_carbine.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            36 bytes
+strip groups:     100 bytes
+strips:           108 bytes
+verts:         204345 bytes
+indices:       161064 bytes
+bone changes:     144 bytes
+everything:    365861 bytes
+
+Completed "v_gyrojet_carbine.qc"

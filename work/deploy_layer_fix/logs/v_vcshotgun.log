@@ -1,0 +1,105 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_vcshotgun\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_vcshotgun\v_vcshotgun.qc"
+Building binary model files...
+Working on "v_vcshotgun.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\Ref_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\shotshell.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\walkDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcshotgun\v_vcshotgun_anims\holster.smd
+Processing LOD for material: vcshotgun
+Processing LOD for material: shells_big
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_vcshotgun.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_vcshotgun.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        21624 bytes (94)
+animations  167568 bytes (46 anims) (1466 frames) [0:48]
+sequences     7988 bytes (19 seq) 
+ik/pose        388 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       140 bytes
+keyvalues       20 bytes
+bone transforms    12848 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       213792
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_vcshotgun.vvd:
+vertices    386256 bytes (8047 vertices)
+vertices     15552 bytes (324 vertices)
+tangents    128752 bytes (8047 vertices)
+tangents      5184 bytes (324 vertices)
+total       535808 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_vcshotgun.dx80.vtx":
+body parts:        16 bytes
+models:            40 bytes
+model LODs:        24 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:          75339 bytes
+indices:        72720 bytes
+bone changes:      40 bytes
+everything:    148313 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_vcshotgun.dx90.vtx":
+body parts:        16 bytes
+models:            40 bytes
+model LODs:        24 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:          75339 bytes
+indices:        72720 bytes
+bone changes:      40 bytes
+everything:    148313 bytes
+
+Completed "v_vcshotgun.qc"

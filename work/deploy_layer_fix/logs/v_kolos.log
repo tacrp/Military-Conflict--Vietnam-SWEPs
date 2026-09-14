@@ -1,0 +1,155 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_kolos\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_kolos\v_kolos.qc"
+Building binary model files...
+Working on "v_kolos.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\Ref.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\Rocketref_7.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\Rocketref_6.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\Rocketref_5.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\Rocketref_4.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\Rocketref_3.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\Rocketref_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\Rocketref_1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kolos\v_kolos_anims\holster.smd
+Processing LOD for material: kolos_base
+Processing LOD for material: kolos_ammo
+Processing LOD for material: kolos_ammo
+Processing LOD for material: kolos_ammo
+Processing LOD for material: kolos_ammo
+Processing LOD for material: kolos_ammo
+Processing LOD for material: kolos_ammo
+Processing LOD for material: kolos_ammo
+Processing LOD for material: kolos_ammo
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_kolos.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_kolos.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        23528 bytes (101)
+animations  217236 bytes (45 anims) (1816 frames) [1:00]
+sequences     7896 bytes (19 seq) 
+ik/pose       2408 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       136 bytes
+keyvalues       20 bytes
+bone transforms    13800 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       269172
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_kolos.vvd:
+vertices    417168 bytes (8691 vertices)
+vertices     14640 bytes (305 vertices)
+vertices     14640 bytes (305 vertices)
+vertices     14640 bytes (305 vertices)
+vertices     14640 bytes (305 vertices)
+vertices     14640 bytes (305 vertices)
+vertices     14640 bytes (305 vertices)
+vertices     14640 bytes (305 vertices)
+tangents    139056 bytes (8691 vertices)
+tangents      4880 bytes (305 vertices)
+tangents      4880 bytes (305 vertices)
+tangents      4880 bytes (305 vertices)
+tangents      4880 bytes (305 vertices)
+tangents      4880 bytes (305 vertices)
+tangents      4880 bytes (305 vertices)
+tangents      4880 bytes (305 vertices)
+total       692928 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_kolos.dx80.vtx":
+body parts:        64 bytes
+models:           300 bytes
+model LODs:       180 bytes
+meshes:            81 bytes
+strip groups:     225 bytes
+strips:           243 bytes
+verts:          97434 bytes
+indices:        80346 bytes
+bone changes:      96 bytes
+everything:    178825 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_kolos.dx90.vtx":
+body parts:        64 bytes
+models:           300 bytes
+model LODs:       180 bytes
+meshes:            81 bytes
+strip groups:     225 bytes
+strips:           243 bytes
+verts:          97434 bytes
+indices:        80346 bytes
+bone changes:      96 bytes
+everything:    178825 bytes
+
+Completed "v_kolos.qc"

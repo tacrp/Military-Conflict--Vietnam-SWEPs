@@ -583,9 +583,6 @@ $sequence "draw" {
 	{ event 5004 1 "MCV_Weapon_Foley_AK47.Draw" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "walklayerironsight"
-	addlayer "runlayer"
 	fps 30
 }
 
@@ -601,9 +598,6 @@ $sequence "Firstdraw" {
 	{ event 5004 29 "MCV_Weapon_Foley_AK47_Reload.MetalEnd" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "walklayerironsight"
-	addlayer "runlayer"
 	fps 30
 }
 
@@ -968,7 +962,6 @@ $sequence "gl_draw" {
 	{ event 5004 1 "MCV_Weapon_Foley_AK47.Draw" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayergrenironsight"
 }
 
 $sequence "idletonearwall_grenade" {

@@ -1,0 +1,180 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_c96_stock\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_c96_stock\v_c96_stock.qc"
+Building binary model files...
+Working on "v_c96_stock.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\Ref_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\Clip.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\Bullets.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\Stock_shanxi.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\Default_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\Slideback_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\shootlast_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\shootlast_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\PoseDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\Default.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\Slideback.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\idle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\runIdle_a.smd
+SMD MODEL fixed_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\walkIdle_a.smd
+SMD MODEL fixed_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\shootlast_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\shootlast_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload10.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload09.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload08.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload07.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload06.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload05.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload04.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload03.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload02.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload01.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload00.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload10_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload09_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload08_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload07_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload06_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload05_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload04_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload03_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload02_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload01_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload00_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload10_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload09_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload08_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload07_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload06_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload05_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload04_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload03_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload02_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload01_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload00_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload10_i_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload09_i_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload08_i_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload07_i_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload06_i_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload05_i_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload04_i_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload03_i_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload02_i_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload01_i_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\reload00_i_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_c96_stock\v_c96_stock_anims\holster.smd
+Processing LOD for material: mauser96
+Processing LOD for material: mauser96
+Processing LOD for material: shells_small
+Processing LOD for material: mauser96_stock
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_c96_stock.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_c96_stock.mdl
+   Found 26 preexisting sequences.
+bones        24444 bytes (107)
+animations  970192 bytes (103 anims) (5490 frames) [3:03]
+Building sequence index remapping table...
+No re-ordering required.
+sequences    11804 bytes (26 seq) 
+ik/pose       1052 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       208 bytes
+keyvalues       20 bytes
+bone transforms    14616 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total      1026944
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_c96_stock.vvd:
+vertices    522336 bytes (10882 vertices)
+vertices     16896 bytes (352 vertices)
+vertices    154080 bytes (3210 vertices)
+vertices    102576 bytes (2137 vertices)
+tangents    174112 bytes (10882 vertices)
+tangents      5632 bytes (352 vertices)
+tangents     51360 bytes (3210 vertices)
+tangents     34192 bytes (2137 vertices)
+total      1061248 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_c96_stock.dx80.vtx":
+body parts:        32 bytes
+models:           120 bytes
+model LODs:        72 bytes
+meshes:            36 bytes
+strip groups:     100 bytes
+strips:           108 bytes
+verts:         149229 bytes
+indices:       120066 bytes
+bone changes:     144 bytes
+everything:    269871 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_c96_stock.dx90.vtx":
+body parts:        32 bytes
+models:           120 bytes
+model LODs:        72 bytes
+meshes:            36 bytes
+strip groups:     100 bytes
+strips:           108 bytes
+verts:         149229 bytes
+indices:       120066 bytes
+bone changes:     144 bytes
+everything:    269871 bytes
+
+Completed "v_c96_stock.qc"

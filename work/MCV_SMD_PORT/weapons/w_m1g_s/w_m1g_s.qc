@@ -5,48 +5,48 @@ $modelname "weapons\mcv\w_m1g_s.mdl"
 
 $bodygroup "Body"
 {
-	studio "..\..\..\MCV_SMD_OG\weapons\w_m1g_s\m1g_s_lod0.smd"
+	studio "fixed_anims\world_rig\m1g_s_lod0.smd"
 }
 $bodygroup "bayonet"
 {
 	blank
-	studio "..\..\..\MCV_SMD_OG\weapons\w_m1g_s\m1g_s_w_m7b_lod0.smd"
-	studio "..\..\..\MCV_SMD_OG\weapons\w_m1g_s\m1g_s_w_m1905_lod0.smd"
+	studio "fixed_anims\world_rig\m1g_s_w_m7b_lod0.smd"
+	studio "fixed_anims\world_rig\m1g_s_w_m1905_lod0.smd"
 }
 $bodygroup "scope"
 {
-	studio "..\..\..\MCV_SMD_OG\weapons\w_m1g_s\m1g_s_scope_lod0.smd"
+	studio "fixed_anims\world_rig\m1g_s_scope_lod0.smd"
 	blank
 }
 $bodygroup "mount"
 {
 	blank
-	studio "..\..\..\MCV_SMD_OG\weapons\w_m1g_s\m1g_s_usm_lod0.smd"
+	studio "fixed_anims\world_rig\m1g_s_usm_lod0.smd"
 }
 $bodygroup "grenade"
 {
 	blank
-	studio "..\..\..\MCV_SMD_OG\weapons\w_m1g_s\m1g_s_usg_lod0.smd"
+	studio "fixed_anims\world_rig\m1g_s_usg_lod0.smd"
 }
 
 $lod 15
 {
-	replacemodel "..\..\..\MCV_SMD_OG\weapons\w_m1g_s\m1g_s_lod0.smd" "..\..\..\MCV_SMD_OG\weapons\w_m1g_s\m1g_s_lod0_lod1.smd"
-	replacemodel "..\..\..\MCV_SMD_OG\weapons\w_m1g_s\m1g_s_w_m7b_lod0.smd" "..\..\..\MCV_SMD_OG\weapons\w_m1g_s\m1g_s_w_m7b_lod0_lod1.smd"
-	replacemodel "..\..\..\MCV_SMD_OG\weapons\w_m1g_s\m1g_s_w_m1905_lod0.smd" "..\..\..\MCV_SMD_OG\weapons\w_m1g_s\m1g_s_w_m1905_lod0_lod1.smd"
-	replacemodel "..\..\..\MCV_SMD_OG\weapons\w_m1g_s\m1g_s_scope_lod0.smd" "..\..\..\MCV_SMD_OG\weapons\w_m1g_s\m1g_s_scope_lod0_lod1.smd"
-	replacemodel "..\..\..\MCV_SMD_OG\weapons\w_m1g_s\m1g_s_usm_lod0.smd" "..\..\..\MCV_SMD_OG\weapons\w_m1g_s\m1g_s_usm_lod0_lod1.smd"
-	replacemodel "..\..\..\MCV_SMD_OG\weapons\w_m1g_s\m1g_s_usg_lod0.smd" "..\..\..\MCV_SMD_OG\weapons\w_m1g_s\m1g_s_usg_lod0_lod1.smd"
+	replacemodel "fixed_anims\world_rig\m1g_s_lod0.smd" "fixed_anims\world_rig\m1g_s_lod0_lod1.smd"
+	replacemodel "fixed_anims\world_rig\m1g_s_w_m7b_lod0.smd" "fixed_anims\world_rig\m1g_s_w_m7b_lod0_lod1.smd"
+	replacemodel "fixed_anims\world_rig\m1g_s_w_m1905_lod0.smd" "fixed_anims\world_rig\m1g_s_w_m1905_lod0_lod1.smd"
+	replacemodel "fixed_anims\world_rig\m1g_s_scope_lod0.smd" "fixed_anims\world_rig\m1g_s_scope_lod0_lod1.smd"
+	replacemodel "fixed_anims\world_rig\m1g_s_usm_lod0.smd" "fixed_anims\world_rig\m1g_s_usm_lod0_lod1.smd"
+	replacemodel "fixed_anims\world_rig\m1g_s_usg_lod0.smd" "fixed_anims\world_rig\m1g_s_usg_lod0_lod1.smd"
 	nofacial
 }
 $lod 30
 {
-	replacemodel "..\..\..\MCV_SMD_OG\weapons\w_m1g_s\m1g_s_lod0.smd" "..\..\..\MCV_SMD_OG\weapons\w_m1g_s\m1g_s_lod0_lod2.smd"
-	replacemodel "..\..\..\MCV_SMD_OG\weapons\w_m1g_s\m1g_s_w_m7b_lod0.smd" "..\..\..\MCV_SMD_OG\weapons\w_m1g_s\m1g_s_w_m7b_lod0_lod2.smd"
-	replacemodel "..\..\..\MCV_SMD_OG\weapons\w_m1g_s\m1g_s_w_m1905_lod0.smd" "..\..\..\MCV_SMD_OG\weapons\w_m1g_s\m1g_s_w_m1905_lod0_lod2.smd"
-	replacemodel "..\..\..\MCV_SMD_OG\weapons\w_m1g_s\m1g_s_scope_lod0.smd" "..\..\..\MCV_SMD_OG\weapons\w_m1g_s\m1g_s_scope_lod0_lod2.smd"
-	replacemodel "..\..\..\MCV_SMD_OG\weapons\w_m1g_s\m1g_s_usm_lod0.smd" "..\..\..\MCV_SMD_OG\weapons\w_m1g_s\m1g_s_usm_lod0_lod2.smd"
-	replacemodel "..\..\..\MCV_SMD_OG\weapons\w_m1g_s\m1g_s_usg_lod0.smd" "..\..\..\MCV_SMD_OG\weapons\w_m1g_s\m1g_s_usg_lod0_lod2.smd"
+	replacemodel "fixed_anims\world_rig\m1g_s_lod0.smd" "fixed_anims\world_rig\m1g_s_lod0_lod2.smd"
+	replacemodel "fixed_anims\world_rig\m1g_s_w_m7b_lod0.smd" "fixed_anims\world_rig\m1g_s_w_m7b_lod0_lod2.smd"
+	replacemodel "fixed_anims\world_rig\m1g_s_w_m1905_lod0.smd" "fixed_anims\world_rig\m1g_s_w_m1905_lod0_lod2.smd"
+	replacemodel "fixed_anims\world_rig\m1g_s_scope_lod0.smd" "fixed_anims\world_rig\m1g_s_scope_lod0_lod2.smd"
+	replacemodel "fixed_anims\world_rig\m1g_s_usm_lod0.smd" "fixed_anims\world_rig\m1g_s_usm_lod0_lod2.smd"
+	replacemodel "fixed_anims\world_rig\m1g_s_usg_lod0.smd" "fixed_anims\world_rig\m1g_s_usg_lod0_lod2.smd"
 	nofacial
 }
 
@@ -62,23 +62,25 @@ $cdmaterials "models\weapons\mcv\w_m1g_s\"
 $cdmaterials "models\weapons\mcv\rif_gl\"
 $cdmaterials ""
 
-$attachment "muzzle" "ValveBiped.Weapon_bone" 0 1.9 24.85 rotate -90 -90 0
-$attachment "shell_eject" "ValveBiped.Weapon_bone" 0 1.9 -1 rotate 0 110 90
-$attachment "mag_eject" "ValveBiped.Weapon_bone" 0 1.5 -1 rotate 0 90 90
-$attachment "glint" "ValveBiped.Weapon_bone" 1.4 3.3 6.5 rotate -90 -90 0
+$attachment "muzzle" "MCV.weapon_bone" 0 1.9 24.85 rotate -90 -90 0
+$attachment "shell_eject" "MCV.weapon_bone" 0 1.9 -1 rotate 0 110 90
+$attachment "mag_eject" "MCV.weapon_bone" 0 1.5 -1 rotate 0 90 90
+$attachment "glint" "MCV.weapon_bone" 1.4 3.3 6.5 rotate -90 -90 0
 
 $cbox 0 0 0 0 0 0
 
-$bbox -18.725 -10.219 -5.111 37.02 1.883 4.676
+$bbox -1.356772 -37.019721 -4.921010 1.883075 18.642419 4.675749
 
-$definebone "ValveBiped" "" 0 0 0 0 0 89.999989 0 0 0 0 0 0
-$definebone "ValveBiped.Bip01_R_Hand" "ValveBiped" 0.267086 -2.58952 10.171793 78.84129 -102.773508 -9.262035 0 0 0 0 0 0
-$definebone "ValveBiped.Weapon_bone" "ValveBiped.Bip01_R_Hand" 4.999999 -1.5 -4.999998 0.000002 0 0.000001 0 0 0 0 0 0
-$definebone "ValveBiped.weapon_bone4" "ValveBiped.Weapon_bone" 0 0 0 0.000001 0 0.000001 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Hand" "" -11.300066626 -1.147580016 -0.392060231 12.956000000 6.901831593 -177.185423563 0 0 0 0 0 0
+$definebone "MCV.weapon_bone" "ValveBiped.Bip01_R_Hand" 0.000000000 0.000000000 -0.064417000 -0.000000000 0.000000000 90.000000000 0 0 0 0 0 0
+$definebone "MCV.weapon_bone4" "MCV.weapon_bone" 0.000000000 0.000000000 0.000000000 -0.000000000 0.000000000 0.000000000 0 0 0 0 0 0
+
+
+
 
 
 $sequence "idle" {
-	"..\..\..\MCV_SMD_OG\weapons\w_m1g_s\w_m1g_s_anims\idle.smd"
+	"fixed_anims\world_rig\idle.smd"
 	fadein 0.2
 	fadeout 0.2
 	fps 30
@@ -86,7 +88,7 @@ $sequence "idle" {
 }
 
 $sequence "attack1" {
-	"..\..\..\MCV_SMD_OG\weapons\w_m1g_s\w_m1g_s_anims\attack1.smd"
+	"fixed_anims\world_rig\attack1.smd"
 	activity "ACT_RANGE_ATTACK_AR2" 1
 	{ event AE_NPC_MUZZLEFLASH 0 "SMG1 MUZZLE" }
 	{ event 3002 0 "" }
@@ -97,7 +99,7 @@ $sequence "attack1" {
 }
 
 $sequence "attackoffcenter" {
-	"..\..\..\MCV_SMD_OG\weapons\w_m1g_s\w_m1g_s_anims\attackoffcenter.smd"
+	"fixed_anims\world_rig\attackoffcenter.smd"
 	{ event AE_NPC_MUZZLEFLASH 0 "SMG1 MUZZLE" }
 	{ event 3002 0 "lefthand" }
 	{ event 6001 0 "0" }
@@ -106,7 +108,7 @@ $sequence "attackoffcenter" {
 	fps 20
 }
 
-$collisionmodel "..\..\..\MCV_SMD_OG\weapons\w_m1g_s\w_m1g_s_physics.smd"
+$collisionmodel "fixed_anims\world_rig\w_m1g_s_physics.smd"
 {
 	$mass 8
 	$inertia 1

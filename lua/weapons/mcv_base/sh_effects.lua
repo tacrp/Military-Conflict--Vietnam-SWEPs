@@ -25,7 +25,10 @@ end
 
 function SWEP:DoMuzzle(alt)
     if !IsFirstTimePredicted() then return end
-    local vm = self:GetOwner():GetViewModel()
+    local owner = self:GetOwner()
+    if !IsValid(owner) then return end
+    local vm = owner:IsPlayer() and owner:GetViewModel() or self
+    if !IsValid(vm) then return end
     local muzz_qca = vm:LookupAttachment("muzzle")
 
     if self:GetGrenadeLauncher() and self.RifleGrenadeIsUBGL then
@@ -56,7 +59,7 @@ function SWEP:DoMuzzle(alt)
 
     if CLIENT and self:GetOwner() == LocalPlayer() then
         self:DoMuzzleLight()
-    elseif game.SinglePlayer() then
+    elseif game.SinglePlayer() and owner:IsPlayer() then
         self:CallOnClient("DoMuzzleLight")
     end
 end
@@ -67,7 +70,10 @@ end
 function SWEP:DoEject(attachment)
     if !IsFirstTimePredicted() then return end
     if self.EjectBrassType == 0 then return end
-    local vm = self:GetOwner():GetViewModel()
+    local owner = self:GetOwner()
+    if !IsValid(owner) then return end
+    local vm = owner:IsPlayer() and owner:GetViewModel() or self
+    if !IsValid(vm) then return end
 
     local names = {attachment or "eject"}
     if !attachment and self:GetAkimbo() then

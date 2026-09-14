@@ -6,8 +6,8 @@
 It has a 30-round magazine, one optional chambered round, the Mk.4 suppressor and
 muzzle position, XM177 stock and 4x scope, and a deployed M203. It inherits the
 M16A1 M203's handling and launcher animations. Its three hip/aimed rifle-shot
-deltas and matching correctives now come from the M16A1, with `ShootAnimRate = 0.5`
-matching the M16's playback rate instead of the old, snappier 0.15. Scope mode uses the scope eye position;
+deltas and matching correctives come from the M16A1 M203, with `ShootAnimRate = 0.5`
+matching that donor's playback rate. Scope mode uses the scope eye position;
 launcher mode uses the M203 ladder position and disables the scope lens.
 
 ## Rebuild
@@ -56,9 +56,14 @@ two in the rifle test), so these were not completely error-free engine runs.
 **Restart Garry's Mod fully to load the new models.** Subsequent Lua-only edits
 need a map change.
 
-The M16A1 firing-animation update was compiled again from the local editable
+The earlier plain-M16A1 firing-animation update was compiled from the local editable
 QCs and checked in a fresh multiplayer game. Hip and aimed shots consumed ammo,
 the M16 playback rate was active, all view/world materials resolved, and the
 deployed launcher sequence remained available. These were asset/function checks;
 the prediction results above describe the earlier launcher validation. Updated
 screenshots and results are in `work/custom_weapon_validation/`.
+
+The subsequent correction uses all three M16A1 M203 hip/aimed rifle-shot deltas
+and their six matching corrective files. The editable bundle and generation tool
+both use that donor. The corrected bundle compiled successfully; the screenshots
+above predate this donor correction.

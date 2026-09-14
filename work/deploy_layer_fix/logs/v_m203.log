@@ -1,0 +1,159 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_m203\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_m203\v_m203.qc"
+Building binary model files...
+Working on "v_m203.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\RefM203_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\body1_model0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\walkIdle_gren_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\walk_gren_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\gl_shoot_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\gl_shoot_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\walkDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\reload_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\reload_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\reload_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\reload_e_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\idletonearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\idletonearwall_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\nearwall_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\nearwalltoidle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\nearwalltoidle_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\bash_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\bash_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\change_firemode_idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\change_firemode_iron.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\gl_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\irongl.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\walkIdle_gren_a.smd
+SMD MODEL fixed_anims\walk_gren_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\idle_to_gl_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\idle_to_gl_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\gl_to_idle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\gl_to_idle_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\gl_shoot_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\gl_shoot_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\reload_secondary_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\reload_secondary_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\gl_draw_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\gl_draw_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\nearwall_gren_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\nearwall_gren_s_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\nearwall_gren_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\nearwall_gren_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\nearwall_gren_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\nearwall_gren_e_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\prone_g_F.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\prone_g_B.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\prone_g_L.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\prone_g_R.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\bashGrenade_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\bashGrenade_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\pickupstart_gren_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\pickupstart_gren_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\pickupend_gren_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\pickupend_gren_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\pickup_gren_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\pickup_gren_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\holster.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m203\v_m203_anims\holster_grenade.smd
+Processing LOD for material: shells_small
+Processing LOD for material: m16_mag20
+Processing LOD for material: m16a1
+Processing LOD for material: m16a1
+Processing LOD for material: m16a1_stock
+Processing LOD for material: m203
+Processing LOD for material: shells_big
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m203.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m203.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        24020 bytes (104)
+animations  311120 bytes (93 anims) (2738 frames) [1:31]
+sequences    14984 bytes (42 seq) 
+ik/pose        536 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       408 bytes
+keyvalues       20 bytes
+bone transforms    14208 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       370816
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m203.vvd:
+vertices   1572864 bytes (32768 vertices)
+vertices   1522896 bytes (31727 vertices)
+tangents    524288 bytes (32768 vertices)
+tangents    507632 bytes (31727 vertices)
+total      4127744 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m203.dx80.vtx":
+body parts:        16 bytes
+models:            60 bytes
+model LODs:        36 bytes
+meshes:            63 bytes
+strip groups:     175 bytes
+strips:           189 bytes
+verts:         580455 bytes
+indices:       390612 bytes
+bone changes:     160 bytes
+everything:    971766 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m203.dx90.vtx":
+body parts:        16 bytes
+models:            60 bytes
+model LODs:        36 bytes
+meshes:            63 bytes
+strip groups:     175 bytes
+strips:           189 bytes
+verts:         580455 bytes
+indices:       390612 bytes
+bone changes:     160 bytes
+everything:    971766 bytes
+
+Completed "v_m203.qc"

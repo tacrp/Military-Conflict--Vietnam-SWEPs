@@ -169,22 +169,22 @@ $animation "walkIdle_a_corrective_animation" "../../../MCV_SMD_OG/weapons/v_m203
 $animation "walk_a_corrective_animation" "../../../MCV_SMD_OG/weapons/v_m203/v_m203_anims/walk_a_corrective_animation.smd" {
 }
 
-$animation "shoot1_a_corrective_animation" "../../../MCV_SMD_OG/weapons/v_m16a1/v_m16a1_anims/shoot1_a_corrective_animation.smd" {
+$animation "shoot1_a_corrective_animation" "../../../MCV_SMD_OG/weapons/v_m203/v_m203_anims/shoot1_a_corrective_animation.smd" {
 }
 
-$animation "shoot1_ironsight_a_corrective_animation" "../../../MCV_SMD_OG/weapons/v_m16a1/v_m16a1_anims/shoot1_ironsight_a_corrective_animation.smd" {
+$animation "shoot1_ironsight_a_corrective_animation" "../../../MCV_SMD_OG/weapons/v_m203/v_m203_anims/shoot1_ironsight_a_corrective_animation.smd" {
 }
 
-$animation "shoot2_a_corrective_animation" "../../../MCV_SMD_OG/weapons/v_m16a1/v_m16a1_anims/shoot2_a_corrective_animation.smd" {
+$animation "shoot2_a_corrective_animation" "../../../MCV_SMD_OG/weapons/v_m203/v_m203_anims/shoot2_a_corrective_animation.smd" {
 }
 
-$animation "shoot2_ironsight_a_corrective_animation" "../../../MCV_SMD_OG/weapons/v_m16a1/v_m16a1_anims/shoot2_ironsight_a_corrective_animation.smd" {
+$animation "shoot2_ironsight_a_corrective_animation" "../../../MCV_SMD_OG/weapons/v_m203/v_m203_anims/shoot2_ironsight_a_corrective_animation.smd" {
 }
 
-$animation "shoot3_a_corrective_animation" "../../../MCV_SMD_OG/weapons/v_m16a1/v_m16a1_anims/shoot3_a_corrective_animation.smd" {
+$animation "shoot3_a_corrective_animation" "../../../MCV_SMD_OG/weapons/v_m203/v_m203_anims/shoot3_a_corrective_animation.smd" {
 }
 
-$animation "shoot3_ironsight_a_corrective_animation" "../../../MCV_SMD_OG/weapons/v_m16a1/v_m16a1_anims/shoot3_ironsight_a_corrective_animation.smd" {
+$animation "shoot3_ironsight_a_corrective_animation" "../../../MCV_SMD_OG/weapons/v_m203/v_m203_anims/shoot3_ironsight_a_corrective_animation.smd" {
 }
 
 $animation "walkIdle_gren_a_corrective_animation" "../../../MCV_SMD_OG/weapons/v_m203/v_m203_anims/walkIdle_gren_a_corrective_animation.smd" {
@@ -260,37 +260,37 @@ $animation "walk_a" "../../../MCV_SMD_OG/weapons/v_m203/v_m203_anims/walk_a.smd"
 	subtract "walk_a_corrective_animation" 0
 }
 
-$animation "shoot1_a" "../../../MCV_SMD_OG/weapons/v_m16a1/v_m16a1_anims/shoot1_a.smd" {
+$animation "shoot1_a" "../../../MCV_SMD_OG/weapons/v_m203/v_m203_anims/shoot1_a.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "shoot1_a_corrective_animation" 0
 }
 
-$animation "shoot1_ironsight_a" "../../../MCV_SMD_OG/weapons/v_m16a1/v_m16a1_anims/shoot1_ironsight_a.smd" {
+$animation "shoot1_ironsight_a" "../../../MCV_SMD_OG/weapons/v_m203/v_m203_anims/shoot1_ironsight_a.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "shoot1_ironsight_a_corrective_animation" 0
 }
 
-$animation "shoot2_a" "../../../MCV_SMD_OG/weapons/v_m16a1/v_m16a1_anims/shoot2_a.smd" {
+$animation "shoot2_a" "../../../MCV_SMD_OG/weapons/v_m203/v_m203_anims/shoot2_a.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "shoot2_a_corrective_animation" 0
 }
 
-$animation "shoot2_ironsight_a" "../../../MCV_SMD_OG/weapons/v_m16a1/v_m16a1_anims/shoot2_ironsight_a.smd" {
+$animation "shoot2_ironsight_a" "../../../MCV_SMD_OG/weapons/v_m203/v_m203_anims/shoot2_ironsight_a.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "shoot2_ironsight_a_corrective_animation" 0
 }
 
-$animation "shoot3_a" "../../../MCV_SMD_OG/weapons/v_m16a1/v_m16a1_anims/shoot3_a.smd" {
+$animation "shoot3_a" "../../../MCV_SMD_OG/weapons/v_m203/v_m203_anims/shoot3_a.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "shoot3_a_corrective_animation" 0
 }
 
-$animation "shoot3_ironsight_a" "../../../MCV_SMD_OG/weapons/v_m16a1/v_m16a1_anims/shoot3_ironsight_a.smd" {
+$animation "shoot3_ironsight_a" "../../../MCV_SMD_OG/weapons/v_m203/v_m203_anims/shoot3_ironsight_a.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "shoot3_ironsight_a_corrective_animation" 0
@@ -611,9 +611,6 @@ $sequence "draw" {
 	{ event 5004 1 "MCV_Weapon_Foley_M16A1.Draw" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "walklayerironsight"
-	addlayer "runlayer"
 	fps 30
 }
 
@@ -628,9 +625,6 @@ $sequence "Firstdraw" {
 	{ event 5004 15 "MCV_Weapon_Foley_M16A1.DrawMetalEnd" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "walklayerironsight"
-	addlayer "runlayer"
 	fps 30
 }
 
@@ -992,7 +986,6 @@ $sequence "gl_draw" {
 	{ event 5004 1 "MCV_Weapon_Foley_M16A1.Draw" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayergrenironsight"
 }
 
 $sequence "idletonearwall_grenade" {

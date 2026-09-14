@@ -1,0 +1,169 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_dual_m1895\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_dual_m1895\v_dual_m1895.qc"
+Building binary model files...
+Working on "v_dual_m1895.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\ref_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\shoot_r_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\shoot_r_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\shoot_l_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\shoot_l_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\shoot_p_r_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\shoot_p_r_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\shoot_p_l_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\shoot_p_l_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\shoot_d_r_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\shoot_d_r_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\shoot_d_l_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\shoot_d_l_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\idle_delayed_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\ironsight_delayed.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\ironsight_transition_delayed.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\shoot_r_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\shoot_r_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\shoot_l_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\shoot_l_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\shoot_p_r_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\shoot_p_r_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\shoot_p_l_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\shoot_p_l_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\shoot_d_r_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\shoot_d_r_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\shoot_d_l_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\shoot_d_l_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_s.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_s_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_s_d.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_s_d_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_l.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_l_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_l_d.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_l_d_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_e_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_e_d.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_e_d_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_ch.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_ch_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_ch_d.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_ch_d_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_l_l.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_l_l_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_l_l_d.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_l_l_d_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_e_l.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_e_l_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_e_l_d.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\reload_e_l_d_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\nearwall_d_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\nearwall_d_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\nearwall_d_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\nearwall_d_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\nearwall_d_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\nearwall_d_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\pronedF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\pronedB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\pronedL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\pronedR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\pickup_d_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\pickup_d_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\pickup_d_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\pickup_d_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\pickup_d_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\pickup_d_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\change_firemode_todelayed_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\change_firemode_todelayed_iron_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\change_firemode_tonormal_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\change_firemode_tonormal_iron_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\FirstDraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\FirstDraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\draw_3.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\draw_4.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\bash_3.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\bash_4.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\holster.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1895\v_dual_m1895_anims\holster_2.smd
+Processing LOD for material: m1895
+Processing LOD for material: shells_small
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dual_m1895.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dual_m1895.mdl
+   Found 37 preexisting sequences.
+bones        24832 bytes (107)
+animations  373928 bytes (168 anims) (3120 frames) [1:41]
+Building sequence index remapping table...
+No re-ordering required.
+sequences    14088 bytes (37 seq) 
+ik/pose        284 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       140 bytes
+keyvalues       20 bytes
+bone transforms    14616 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       434408
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dual_m1895.vvd:
+vertices    709632 bytes (14784 vertices)
+tangents    236544 bytes (14784 vertices)
+total       946240 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dual_m1895.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:         133056 bytes
+indices:       100620 bytes
+bone changes:     168 bytes
+everything:    234030 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dual_m1895.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:         133056 bytes
+indices:       100620 bytes
+bone changes:     168 bytes
+everything:    234030 bytes
+
+Completed "v_dual_m1895.qc"

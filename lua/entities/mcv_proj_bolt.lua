@@ -86,6 +86,19 @@ function ENT:Impact(data, collider)
     end
 end
 
+function ENT:PhysicsCollide(data, collider)
+    if self.ImpactQueued or self.HitDone then return end
+    self.ImpactQueued = true
+    local impact = table.Copy(data)
+    // Sticking reparents the bolt and changes its collision rules. Doing that
+    // inside the physics callback spews warnings and can destabilize VPhysics.
+    timer.Simple(0, function()
+        if !IsValid(self) then return end
+        self.ImpactQueued = false
+        self.BaseClass.PhysicsCollide(self, impact, collider)
+    end)
+end
+
 function ENT:Use(ply)
     if !IsValid(ply) or !ply:IsPlayer() then return end
     ply:GiveAmmo(1, self.PickupAmmo, false)

@@ -1,0 +1,3 @@
+lua include("mcv_harness/npc_cadence.lua") MCVNPCCadence.Audit() MCVNPCCadence.Start()
+wait 22
+lua MCVNPCCadence.Finish()

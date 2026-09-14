@@ -1,0 +1,42 @@
+lua include("mcv_harness/npc.lua") MCVNPCTest.Clear()
+ccmd gmod_npcweapon "!mcv|Shotguns"
+wait 1
+lua local n=Spawn_NPC(ply,"npc_combine_s","!mcv|Shotguns",{HitPos=Vector(4000,0,-12800),HitNormal=vector_up}) assert(IsValid(n),"NPC spawn failed") local w=n:GetActiveWeapon() assert(IsValid(w) and w.MilitaryConflictVietnam and w.SubCategory=="Shotguns","random category failed") file.Write("mcv_harness/p27017/results/npc_menu.json",util.TableToJSON({random=w:GetClass(),registered=#MCV.GetNPCWeapons()},true)) n:Remove()
+lua local n=Spawn_NPC(ply,"npc_combine_s","mcv_m21",{HitPos=Vector(4000,0,-12800),HitNormal=vector_up}) assert(IsValid(n:GetActiveWeapon()) and n:GetActiveWeapon():GetClass()=="mcv_m21","explicit weapon lost to random selection") n:Remove()
+ccmd gmod_npcweapon "!mcv|invalid"
+wait 1
+lua local n=Spawn_NPC(ply,"npc_combine_s","!mcv|invalid",{HitPos=Vector(4000,0,-12800),HitNormal=vector_up}) assert(!IsValid(n:GetActiveWeapon()),"invalid random selection gave a gun") n:Remove()
+ccmd gmod_npcweapon "!mcv|all"
+wait 1
+lua local n=Spawn_NPC(ply,"npc_combine_s","!mcv|all",{HitPos=Vector(4000,0,-12800),HitNormal=vector_up}) assert(IsValid(n:GetActiveWeapon()) and n:GetActiveWeapon().NPCUsable,"random any failed") n:Remove() local choices=MCV.GetNPCWeapons() for _,e in ipairs(choices) do local w=weapons.Get(e.class) assert(w.NPCUsable and w.Primary.ClipSize>0 and w.Base!="mcv_flamethrower" and w.Base!="mcv_throwable" and w.Base!="mcv_melee" and w.Base!="mcv_binoculars","unsupported class registered") end
+ccmd gmod_npcweapon ""
+clua local m=menubar.Control.Menus["MCV NPC Weapons"] assert(IsValid(m),"missing NPC menu") local subs={} for _,p in ipairs(m:GetCanvas():GetChildren()) do if IsValid(p.SubMenu) then subs[#subs+1]=p.SubMenu end end assert(#subs>10,"empty category menu") CloseDermaMenus() for _,sub in ipairs(subs) do assert(IsValid(sub) and !sub:GetDeleteSelf(),"category menu destroyed on close") end m:Open(10,80,false)
+wait 1
+shot npc_menu
+clua CloseDermaMenus()
+strip
+give mcv_akm
+wait 4
+ccmd net_fakelag 100
+wait 5
+lua ply:GetActiveWeapon():SetClip1(0) ply:SetAmmo(90,"ar2")
+wait 1
+ccmd cl_showerror 2
+tap +reload 0.1
+wait 4
+lua assert(ply:GetActiveWeapon():Clip1()==30,"player empty reload failed")
+key +attack
+wait 0.7
+key -attack
+wait 1
+lua local w=ply:GetActiveWeapon() assert(w:Clip1()<30 and w:Clip1()>0,"player did not fire")
+report npc_player_smoke
+ccmd cl_showerror 0
+ccmd net_fakelag 0
+strip
+lua local n=ents.Create("npc_combine_s") n:SetPos(Vector(4000,0,-12799)) n:SetKeyValue("additionalequipment","mcv_akm") n:Spawn() local w=n:GetActiveWeapon() n:DropWeapon() n:Remove() assert(IsValid(w),"NPC did not drop gun") ply:PickupWeapon(w)
+wait 4
+tap +attack 0.2
+wait 0.7
+lua assert(IsValid(ply:GetActiveWeapon()) and ply:GetActiveWeapon():GetClass()=="mcv_akm" and ply:GetActiveWeapon():Clip1()<30,"NPC gun pickup/fire failed")
+report npc_pickup_smoke

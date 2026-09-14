@@ -1,0 +1,117 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_ptrd41\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_ptrd41\v_ptrd41.qc"
+Building binary model files...
+Working on "v_ptrd41.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\Ref_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\Ref_Bullet.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\Slideback_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\Default_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\walk_a_iron_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\shoot1d_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\shoot1d_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\PoseDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\PoseDelta2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\Default.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\Slideback.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\walk_a.smd
+SMD MODEL fixed_anims\walk_a_iron.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\ShootMove.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\ShootStill.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\deploy_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\deploy_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\deploy_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\ironsightdeploy.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\deploy_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\deploy_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\shoot1d_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\shoot1d_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\idletonearwall.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\nearwall.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\nearwalltoidle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\pickupstart.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\pickuploop.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\pickupend.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\holster.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\reload_deploy.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_ptrd41\v_ptrd41_anims\reload_deploy_2.smd
+Processing LOD for material: ptrd41
+Processing LOD for material: shells_small_lmg
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_ptrd41.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_ptrd41.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        21784 bytes (94)
+animations  151028 bytes (58 anims) (1658 frames) [1:03]
+sequences    11552 bytes (27 seq) 
+ik/pose        556 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       140 bytes
+keyvalues       20 bytes
+bone transforms    12848 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       201792
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_ptrd41.vvd:
+vertices    850128 bytes (17711 vertices)
+vertices     15360 bytes (320 vertices)
+tangents    283376 bytes (17711 vertices)
+tangents      5120 bytes (320 vertices)
+total      1154048 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_ptrd41.dx80.vtx":
+body parts:        16 bytes
+models:            60 bytes
+model LODs:        36 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:         162279 bytes
+indices:       132234 bytes
+bone changes:      40 bytes
+everything:    294787 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_ptrd41.dx90.vtx":
+body parts:        16 bytes
+models:            60 bytes
+model LODs:        36 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:         162279 bytes
+indices:       132234 bytes
+bone changes:      40 bytes
+everything:    294787 bytes
+
+Completed "v_ptrd41.qc"

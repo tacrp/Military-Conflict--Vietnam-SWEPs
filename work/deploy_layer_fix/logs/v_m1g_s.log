@@ -1,0 +1,212 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_m1g_s\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_m1g_s\v_m1g_s.qc"
+Building binary model files...
+Working on "v_m1g_s.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\ref_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\m1g_ironsight_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_bayonet_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_bayonet_long_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\m1g_scope_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\m1g_mount_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\m1g_grenade_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\Default_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\Slideback_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\Bullet08_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\Bullet07_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\Bullet06_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\Bullet05_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\Bullet04_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\Bullet03_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\Bullet02_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\Bullet01_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\FullBullet_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\shootlast_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\shootlast_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\gren_shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\gren_shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\PoseDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\PoseDeltaEmpty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\Iron.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\IronEmpty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\PoseDelta2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\Default.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\Slideback.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\BulletDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\FullBullet.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\Bullet01.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\Bullet02.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\Bullet03.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\Bullet04.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\Bullet05.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\Bullet06.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\Bullet07.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\Bullet08.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\walkDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\runIdle_a.smd
+SMD MODEL fixed_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\walkIdle_a.smd
+SMD MODEL fixed_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\shootdelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\shootlast_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\shootlast_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\nearwall_e_a_i.smd
+SMD MODEL fixed_anims\proneF.smd
+SMD MODEL fixed_anims\proneB.smd
+SMD MODEL fixed_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\grenade_ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\gren_shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\gren_shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\gren_reload_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\gren_reload_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\bayonet_unequip_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\bayonet_unequip_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\bayonet_equip_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\bayonet_equip_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\bash_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\bash_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\scope_adjust_idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\scope_adjust_iron.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\charge_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\charge_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\charge_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\charge_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\charge_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\charge_e_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\grenade_draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\grenade_draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\Grenade_draw_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\Grenade_draw_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m1g_s\v_m1g_s_anims\holster.smd
+Processing LOD for material: shells_small
+Processing LOD for material: m1g_clip
+Processing LOD for material: m1g_base
+Processing LOD for material: m1g_base
+Processing LOD for material: m7_d
+Processing LOD for material: v_m1905
+Processing LOD for material: m1g_scope
+Processing LOD for material: lens_m1g
+Processing LOD for material: rifle_glmounts
+Processing LOD for material: rifle_grenades
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m1g_s.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m1g_s.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        24456 bytes (106)
+animations  313132 bytes (113 anims) (2580 frames) [1:25]
+sequences    16448 bytes (41 seq) 
+ik/pose       1824 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       620 bytes
+keyvalues       20 bytes
+bone transforms    14480 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       377376
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m1g_s.vvd:
+vertices    565680 bytes (11785 vertices)
+vertices    179136 bytes (3732 vertices)
+vertices     98160 bytes (2045 vertices)
+vertices     72816 bytes (1517 vertices)
+vertices    141456 bytes (2947 vertices)
+vertices    104544 bytes (2178 vertices)
+vertices     89232 bytes (1859 vertices)
+tangents    188560 bytes (11785 vertices)
+tangents     59712 bytes (3732 vertices)
+tangents     32720 bytes (2045 vertices)
+tangents     24272 bytes (1517 vertices)
+tangents     47152 bytes (2947 vertices)
+tangents     34848 bytes (2178 vertices)
+tangents     29744 bytes (1859 vertices)
+total      1668096 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m1g_s.dx80.vtx":
+body parts:        48 bytes
+models:           220 bytes
+model LODs:       132 bytes
+meshes:            90 bytes
+strip groups:     250 bytes
+strips:           270 bytes
+verts:         234567 bytes
+indices:       180342 bytes
+bone changes:     184 bytes
+everything:    416007 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m1g_s.dx90.vtx":
+body parts:        48 bytes
+models:           220 bytes
+model LODs:       132 bytes
+meshes:            90 bytes
+strip groups:     250 bytes
+strips:           270 bytes
+verts:         234567 bytes
+indices:       180342 bytes
+bone changes:     184 bytes
+everything:    416007 bytes
+
+Completed "v_m1g_s.qc"

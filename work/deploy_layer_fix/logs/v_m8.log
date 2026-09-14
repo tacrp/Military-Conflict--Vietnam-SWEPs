@@ -1,0 +1,95 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_m8\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_m8\v_m8.qc"
+Building binary model files...
+Working on "v_m8.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m8\Ref_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m8\v_m8_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m8\v_m8_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m8\v_m8_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m8\v_m8_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m8\v_m8_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m8\v_m8_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m8\v_m8_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m8\v_m8_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m8\v_m8_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m8\v_m8_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m8\v_m8_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m8\v_m8_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m8\v_m8_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m8\v_m8_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m8\v_m8_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m8\v_m8_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m8\v_m8_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m8\v_m8_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m8\v_m8_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m8\v_m8_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m8\v_m8_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m8\v_m8_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m8\v_m8_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m8\v_m8_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m8\v_m8_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m8\v_m8_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m8\v_m8_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m8\v_m8_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m8\v_m8_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m8\v_m8_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m8\v_m8_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m8\v_m8_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m8\v_m8_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m8\v_m8_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m8\v_m8_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m8\v_m8_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m8\v_m8_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m8\v_m8_anims\holster.smd
+Processing LOD for material: m8
+Processing LOD for material: shells_big
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m8.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m8.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        21908 bytes (95)
+animations  124040 bytes (41 anims) (1167 frames) [0:38]
+sequences     6336 bytes (17 seq) 
+ik/pose        224 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       140 bytes
+keyvalues       20 bytes
+bone transforms    12984 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       168760
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m8.vvd:
+vertices    342240 bytes (7130 vertices)
+tangents    114080 bytes (7130 vertices)
+total       456384 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m8.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:          64170 bytes
+indices:        44910 bytes
+bone changes:      48 bytes
+everything:    109314 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m8.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:          64170 bytes
+indices:        44910 bytes
+bone changes:      48 bytes
+everything:    109314 bytes
+
+Completed "v_m8.qc"

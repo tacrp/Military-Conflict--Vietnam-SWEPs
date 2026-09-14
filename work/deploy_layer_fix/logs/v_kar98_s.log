@@ -1,0 +1,212 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_kar98_s\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_kar98_s\v_kar98_s.qc"
+Building binary model files...
+Working on "v_kar98_s.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\ref_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_bayonet_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_bayonet_long_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\kar98_scope_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\kar98_ZF41.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\kar98_mount_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\kar98_grenade_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\boltpull_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\boltpullIron_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\gren_shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\gren_shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\boltpull_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\boltpullIron_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\reload01.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\reload02.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\reload03.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\reload04.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\reload05.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\reload01_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\reload02_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\reload03_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\reload04_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\reload05_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\reload01_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\reload02_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\reload03_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\reload04_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\reload01_e_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\reload02_e_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\reload03_e_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\reload04_e_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\reloadstart_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\reloadstart_full.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\reloadstart_empty_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\reloadstart_full_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\reloadinsert_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\reloadinsert_full.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\reloadinsert_empty_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\reloadinsert_full_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\reloadend_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\reloadend_e_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\reloadend.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\reloadend_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\grenade_ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\gren_shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\gren_shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\gren_reload_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\gren_reload_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\bash_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\bash_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\bayonet_unequip_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\bayonet_unequip_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\bayonet_equip_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\bayonet_equip_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\scope_adjust_idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\scope_adjust_iron.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\charge_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\charge_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\charge_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\charge_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\charge_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\charge_e_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\grenade_draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\grenade_draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\Grenade_draw_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\Grenade_draw_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_kar98_s\v_kar98_s_anims\holster.smd
+Processing LOD for material: kar98_postwar
+Processing LOD for material: shells_small
+Processing LOD for material: kar98_s
+Processing LOD for material: ak47_bayonet_d
+Processing LOD for material: v_type30_bayonet
+Processing LOD for material: kar98_scope
+Processing LOD for material: lens_zf39
+Processing LOD for material: kar98_s
+Processing LOD for material: zf41
+Processing LOD for material: crosshair_zf41
+Processing LOD for material: crosshair_zf41a
+Processing LOD for material: zf41_mount
+Processing LOD for material: rifle_glmounts_vc
+Processing LOD for material: rifle_grenades_vc
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_kar98_s.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_kar98_s.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        23712 bytes (103)
+animations  670632 bytes (109 anims) (4157 frames) [2:18]
+sequences    17872 bytes (45 seq) 
+ik/pose       1788 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       884 bytes
+keyvalues       20 bytes
+bone transforms    14072 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       735840
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_kar98_s.vvd:
+vertices    494064 bytes (10293 vertices)
+vertices    105456 bytes (2197 vertices)
+vertices     35280 bytes (735 vertices)
+vertices    175392 bytes (3654 vertices)
+vertices    280224 bytes (5838 vertices)
+vertices    119280 bytes (2485 vertices)
+vertices    108096 bytes (2252 vertices)
+tangents    164688 bytes (10293 vertices)
+tangents     35152 bytes (2197 vertices)
+tangents     11760 bytes (735 vertices)
+tangents     58464 bytes (3654 vertices)
+tangents     93408 bytes (5838 vertices)
+tangents     39760 bytes (2485 vertices)
+tangents     36032 bytes (2252 vertices)
+total      1757120 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_kar98_s.dx80.vtx":
+body parts:        40 bytes
+models:           220 bytes
+model LODs:       132 bytes
+meshes:           126 bytes
+strip groups:     350 bytes
+strips:           378 bytes
+verts:         247086 bytes
+indices:       186948 bytes
+bone changes:     184 bytes
+everything:    435368 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_kar98_s.dx90.vtx":
+body parts:        40 bytes
+models:           220 bytes
+model LODs:       132 bytes
+meshes:           126 bytes
+strip groups:     350 bytes
+strips:           378 bytes
+verts:         247086 bytes
+indices:       186948 bytes
+bone changes:     184 bytes
+everything:    435368 bytes
+
+Completed "v_kar98_s.qc"

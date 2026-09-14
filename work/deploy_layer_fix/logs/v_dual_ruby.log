@@ -1,0 +1,162 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_dual_ruby\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_dual_ruby\v_dual_ruby.qc"
+Building binary model files...
+Working on "v_dual_ruby.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\Dualruby.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\Bullet16_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\Bullet14_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\Bullet12_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\Bullet10_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\Bullet08_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\Bullet06_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\Bullet04_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\Bullet02_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\DefaultLeft_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\shoot1_r_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\shoot1_r_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\shoot1_l_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\shoot1_l_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\shoot2_r_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\shoot2_r_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\shoot2_l_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\shoot2_l_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\shootlast_r_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\shootlast_r_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\shootlast_l_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\shootlast_l_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\Bullet15_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\Bullet13_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\Bullet11_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\Bullet09_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\Bullet07_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\Bullet05_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\Bullet03_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\Bullet01_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\DefaultRight_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\PoseDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\DefaultRight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\Bullet01.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\Bullet03.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\Bullet05.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\Bullet07.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\Bullet09.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\Bullet11.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\Bullet13.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\Bullet15.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\DefaultLeft.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\Bullet02.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\Bullet04.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\Bullet06.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\Bullet08.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\Bullet10.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\Bullet12.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\Bullet14.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\Bullet16.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\FirstDraw_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\FirstDraw_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\shoot1_r_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\shoot1_r_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\shoot1_l_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\shoot1_l_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\shoot2_r_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\shoot2_r_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\shoot2_l_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\shoot2_l_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\shootlast_r_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\shootlast_r_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\shootlast_l_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\shootlast_l_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\reload_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\reload_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\reload_r_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\reload_r_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\reload_re_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\reload_re_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\reload_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\reload_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_ruby\v_dual_ruby_anims\holster.smd
+Processing LOD for material: shells_small_additional
+Processing LOD for material: ruby
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dual_ruby.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dual_ruby.mdl
+   Found 35 preexisting sequences.
+bones        27004 bytes (117)
+animations  280324 bytes (158 anims) (2538 frames) [1:24]
+Building sequence index remapping table...
+No re-ordering required.
+sequences    18876 bytes (35 seq) 
+ik/pose        304 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       140 bytes
+keyvalues       20 bytes
+bone transforms    15976 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       349192
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dual_ruby.vvd:
+vertices    819552 bytes (17074 vertices)
+tangents    273184 bytes (17074 vertices)
+total      1092800 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dual_ruby.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            81 bytes
+verts:         153666 bytes
+indices:       113712 bytes
+bone changes:     232 bytes
+everything:    267823 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dual_ruby.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:         153666 bytes
+indices:       113712 bytes
+bone changes:     232 bytes
+everything:    267796 bytes
+
+Completed "v_dual_ruby.qc"

@@ -1,0 +1,180 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_mas36_cr39\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_mas36_cr39\v_mas36_cr39.qc"
+Building binary model files...
+Working on "v_mas36_cr39.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\mesh_mas36_cr39.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\cr39_bayonet.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\cr39_bayonet_long.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\cr39_mount_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\cr39_grenade_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\boltpull_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\boltpullIron_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\gren_shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\gren_shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\walkDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\walkIdle_a.smd
+SMD MODEL fixed_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\boltpull_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\boltpullIron_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\reload01.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\reload02.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\reload03.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\reload04.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\reload05.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\reload01_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\reload02_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\reload03_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\reload04_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\reload05_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\reload01_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\reload02_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\reload03_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\reload04_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\reload01_e_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\reload02_e_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\reload03_e_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\reload04_e_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\grenade_ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\gren_shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\gren_shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\gren_reload_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\gren_reload_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\bash_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\bash_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\bayonet_unequip_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\bayonet_unequip_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\bayonet_equip_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\bayonet_equip_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\charge_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\charge_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\charge_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\charge_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\charge_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\charge_e_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\grenade_draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\grenade_draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\Grenade_draw_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\Grenade_draw_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mas36_cr39\v_mas36_cr39_anims\holster.smd
+Processing LOD for material: rc39
+Processing LOD for material: mas36
+Processing LOD for material: shells_small_additional
+Processing LOD for material: ak47_bayonet_d
+Processing LOD for material: v_type30_bayonet
+Processing LOD for material: rifle_glmounts_vc
+Processing LOD for material: rifle_grenades_vc
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_mas36_cr39.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_mas36_cr39.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        23644 bytes (103)
+animations  515712 bytes (96 anims) (3750 frames) [2:05]
+sequences    15564 bytes (40 seq) 
+ik/pose       1328 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       484 bytes
+keyvalues       20 bytes
+bone transforms    14072 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       576364
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_mas36_cr39.vvd:
+vertices    620784 bytes (12933 vertices)
+vertices    105504 bytes (2198 vertices)
+vertices     35280 bytes (735 vertices)
+vertices    119280 bytes (2485 vertices)
+vertices    106992 bytes (2229 vertices)
+tangents    206928 bytes (12933 vertices)
+tangents     35168 bytes (2198 vertices)
+tangents     11760 bytes (735 vertices)
+tangents     39760 bytes (2485 vertices)
+tangents     35664 bytes (2229 vertices)
+total      1317184 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_mas36_cr39.dx80.vtx":
+body parts:        32 bytes
+models:           160 bytes
+model LODs:        96 bytes
+meshes:            63 bytes
+strip groups:     175 bytes
+strips:           189 bytes
+verts:         185220 bytes
+indices:       155568 bytes
+bone changes:     120 bytes
+everything:    341563 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_mas36_cr39.dx90.vtx":
+body parts:        32 bytes
+models:           160 bytes
+model LODs:        96 bytes
+meshes:            63 bytes
+strip groups:     175 bytes
+strips:           189 bytes
+verts:         185220 bytes
+indices:       155568 bytes
+bone changes:     120 bytes
+everything:    341563 bytes
+
+Completed "v_mas36_cr39.qc"

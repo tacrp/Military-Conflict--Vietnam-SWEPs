@@ -1,0 +1,133 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_dual_vz61_silencer\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer.qc"
+Building binary model files...
+Working on "v_dual_vz61_silencer.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\DualVz61_silencer.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\Default_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\RightEmpty_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\BothEmpty_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\shoot1_r_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\shoot1_r_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\shoot1_l_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\shoot1_l_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\shoot2_r_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\shoot2_r_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\shoot2_l_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\shoot2_l_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\shootlast_r_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\shootlast_r_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\shootlast_l_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\shootlast_l_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\PoseDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\Default.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\RightEmpty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\BothEmpty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\FirstDraw_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\FirstDraw_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\shoot1_r_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\shoot1_r_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\shoot1_l_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\shoot1_l_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\shoot2_r_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\shoot2_r_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\shoot2_l_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\shoot2_l_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\shootlast_r_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\shootlast_r_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\shootlast_l_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\shootlast_l_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\reload_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\reload_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\reload_ra.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\reload_ra_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\reload_er_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\reload_er_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\reload_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\reload_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_vz61_silencer\v_dual_vz61_silencer_anims\holster.smd
+Processing LOD for material: vz61
+Processing LOD for material: shells_small_additional
+Processing LOD for material: vz61_silencer
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dual_vz61_silencer.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dual_vz61_silencer.mdl
+   Found 34 preexisting sequences.
+bones        23232 bytes (99)
+animations  257524 bytes (128 anims) (2545 frames) [1:24]
+Building sequence index remapping table...
+No re-ordering required.
+sequences    16012 bytes (34 seq) 
+ik/pose        284 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       208 bytes
+keyvalues       20 bytes
+bone transforms    13528 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       316612
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dual_vz61_silencer.vvd:
+vertices   1307808 bytes (27246 vertices)
+tangents    435936 bytes (27246 vertices)
+total      1743808 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dual_vz61_silencer.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            27 bytes
+strip groups:      75 bytes
+strips:            81 bytes
+verts:         245214 bytes
+indices:       179760 bytes
+bone changes:     104 bytes
+everything:    425325 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dual_vz61_silencer.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            27 bytes
+strip groups:      75 bytes
+strips:            81 bytes
+verts:         245214 bytes
+indices:       179760 bytes
+bone changes:     104 bytes
+everything:    425325 bytes
+
+Completed "v_dual_vz61_silencer.qc"

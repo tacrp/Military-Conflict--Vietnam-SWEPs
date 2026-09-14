@@ -1,0 +1,127 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_dual_blackhawk\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_dual_blackhawk\v_dual_blackhawk.qc"
+Building binary model files...
+Working on "v_dual_blackhawk.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\ref_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\shoot_r_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\shoot_r_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\shoot_l_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\shoot_l_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\walkDelta.smd
+SMD MODEL fixed_anims\runIdle_a.smd
+SMD MODEL fixed_anims\run_a.smd
+SMD MODEL fixed_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\walkDelta2.smd
+SMD MODEL fixed_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\FirstDraw_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\FirstDraw_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\Draw_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\Draw_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\shoot_r_a.smd
+SMD MODEL fixed_anims\shoot_r_a_tail01.smd
+SMD MODEL fixed_anims\shoot_r_a_tail02.smd
+SMD MODEL fixed_anims\shoot_r_a_tail03.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\shoot_r_ironsight_a.smd
+SMD MODEL fixed_anims\shoot_r_ironsight_a_tail01.smd
+SMD MODEL fixed_anims\shoot_r_ironsight_a_tail02.smd
+SMD MODEL fixed_anims\shoot_r_ironsight_a_tail03.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\shoot_l_a.smd
+SMD MODEL fixed_anims\shoot_l_a_tail01.smd
+SMD MODEL fixed_anims\shoot_l_a_tail02.smd
+SMD MODEL fixed_anims\shoot_l_a_tail03.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\shoot_l_ironsight_a.smd
+SMD MODEL fixed_anims\shoot_l_ironsight_a_tail01.smd
+SMD MODEL fixed_anims\shoot_l_ironsight_a_tail02.smd
+SMD MODEL fixed_anims\shoot_l_ironsight_a_tail03.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\reload_s.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\reload_s_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\reload_l.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\reload_l_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\reload_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\reload_e_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\reload_ch.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\reload_ch_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\reload_l_l.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\reload_l_l_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\reload_e_l.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\reload_e_l_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\Bash_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\Bash_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_blackhawk\v_dual_blackhawk_anims\holster.smd
+Processing LOD for material: shells_small_additional
+Processing LOD for material: blackhawk
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dual_blackhawk.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dual_blackhawk.mdl
+   Found 27 preexisting sequences.
+bones        25564 bytes (111)
+animations  207500 bytes (123 anims) (1503 frames) [0:50]
+Building sequence index remapping table...
+No re-ordering required.
+sequences    10160 bytes (27 seq) 
+ik/pose        264 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       140 bytes
+keyvalues       20 bytes
+bone transforms    15160 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       264328
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dual_blackhawk.vvd:
+vertices    900048 bytes (18751 vertices)
+tangents    300016 bytes (18751 vertices)
+total      1200128 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dual_blackhawk.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:         168759 bytes
+indices:       132672 bytes
+bone changes:     184 bytes
+everything:    301801 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dual_blackhawk.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:         168759 bytes
+indices:       132672 bytes
+bone changes:     184 bytes
+everything:    301801 bytes
+
+Completed "v_dual_blackhawk.qc"

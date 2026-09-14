@@ -1,0 +1,130 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_type58\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_type58\v_type58.qc"
+Building binary model files...
+Working on "v_type58.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\type58.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_bayonetAK.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\bayonet_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\bayonet_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\bayonet_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\bayonet_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\change_firemode_idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\change_firemode_iron.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\bayonet_attack_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\bayonet_attack_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\Charge_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\Charge_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\Charge_l_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\Charge_l_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\Charge_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\Charge_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type58\v_type58_anims\holster.smd
+Processing LOD for material: type58
+Processing LOD for material: akm_slab_mag
+Processing LOD for material: shells_small
+Processing LOD for material: ak47_bayonet_d
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_type58.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_type58.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        22344 bytes (97)
+animations  229260 bytes (67 anims) (2029 frames) [1:07]
+sequences    11528 bytes (31 seq) 
+ik/pose        536 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       284 bytes
+keyvalues       20 bytes
+bone transforms    13256 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       281484
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_type58.vvd:
+vertices   1021392 bytes (21279 vertices)
+vertices    101376 bytes (2112 vertices)
+tangents    340464 bytes (21279 vertices)
+tangents     33792 bytes (2112 vertices)
+total      1497088 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_type58.dx80.vtx":
+body parts:        16 bytes
+models:            60 bytes
+model LODs:        36 bytes
+meshes:            36 bytes
+strip groups:     100 bytes
+strips:           108 bytes
+verts:         210519 bytes
+indices:       174048 bytes
+bone changes:      64 bytes
+everything:    384987 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_type58.dx90.vtx":
+body parts:        16 bytes
+models:            60 bytes
+model LODs:        36 bytes
+meshes:            36 bytes
+strip groups:     100 bytes
+strips:           108 bytes
+verts:         210519 bytes
+indices:       174048 bytes
+bone changes:      64 bytes
+everything:    384987 bytes
+
+Completed "v_type58.qc"

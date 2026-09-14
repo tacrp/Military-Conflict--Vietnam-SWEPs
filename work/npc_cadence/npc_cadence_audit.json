@@ -1,0 +1,30 @@
+{
+	"levels": [
+		{
+			"proficiency": 0,
+			"cap": 60,
+			"interval": 1
+		},
+		{
+			"proficiency": 1,
+			"cap": 90,
+			"interval": 0.6666666666666666
+		},
+		{
+			"proficiency": 2,
+			"cap": 120,
+			"interval": 0.5
+		},
+		{
+			"proficiency": 3,
+			"cap": 180,
+			"interval": 0.3333333333333333
+		},
+		{
+			"proficiency": 4,
+			"cap": 240,
+			"interval": 0.25
+		}
+	],
+	"controls": true
+}

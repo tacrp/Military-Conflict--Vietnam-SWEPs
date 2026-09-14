@@ -1,0 +1,119 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_type64\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_type64\v_type64.qc"
+Building binary model files...
+Working on "v_type64.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\Ref_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\Default_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\Slideback_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\ShootMove_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\ShootStill_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\PoseDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\Default.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\Slideback.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\ShootMove.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\ShootStill.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\walkbasePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\change_firemode_idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\change_firemode_iron.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64\v_type64_anims\holster.smd
+Processing LOD for material: v_type64
+Processing LOD for material: shells_small
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_type64.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_type64.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        22276 bytes (97)
+animations  170240 bytes (65 anims) (1661 frames) [0:55]
+sequences     9908 bytes (26 seq) 
+ik/pose        244 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       140 bytes
+keyvalues       20 bytes
+bone transforms    13256 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       219832
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_type64.vvd:
+vertices    764400 bytes (15925 vertices)
+tangents    254800 bytes (15925 vertices)
+total      1019264 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_type64.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:         143325 bytes
+indices:       119748 bytes
+bone changes:      64 bytes
+everything:    263323 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_type64.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:         143325 bytes
+indices:       119748 bytes
+bone changes:      64 bytes
+everything:    263323 bytes
+
+Completed "v_type64.qc"

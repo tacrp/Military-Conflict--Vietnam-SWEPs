@@ -1,0 +1,108 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_m79_short\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_m79_short\v_m79_short.qc"
+Building binary model files...
+Working on "v_m79_short.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\RefM79_Short.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\40mm_explosive.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\40mm_buckshot.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\v_m79_short_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\v_m79_short_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\v_m79_short_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\v_m79_short_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\v_m79_short_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\v_m79_short_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\v_m79_short_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\v_m79_short_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\v_m79_short_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\v_m79_short_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\v_m79_short_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\v_m79_short_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\v_m79_short_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\v_m79_short_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\v_m79_short_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\v_m79_short_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\v_m79_short_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\v_m79_short_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\v_m79_short_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\v_m79_short_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\v_m79_short_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\v_m79_short_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\v_m79_short_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\v_m79_short_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\v_m79_short_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\v_m79_short_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\v_m79_short_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\v_m79_short_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\v_m79_short_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\v_m79_short_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\v_m79_short_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\v_m79_short_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\v_m79_short_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\v_m79_short_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\v_m79_short_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\v_m79_short_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\v_m79_short_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\v_m79_short_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\v_m79_short_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m79_short\v_m79_short_anims\holster.smd
+Processing LOD for material: m79short
+Processing LOD for material: shells_big
+Processing LOD for material: xm576
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m79_short.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m79_short.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        22124 bytes (96)
+animations  131552 bytes (43 anims) (1325 frames) [0:44]
+sequences     6648 bytes (18 seq) 
+ik/pose        536 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       208 bytes
+keyvalues       20 bytes
+bone transforms    13120 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       177480
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m79_short.vvd:
+vertices    206496 bytes (4302 vertices)
+vertices     22272 bytes (464 vertices)
+vertices     84384 bytes (1758 vertices)
+tangents     68832 bytes (4302 vertices)
+tangents      7424 bytes (464 vertices)
+tangents     28128 bytes (1758 vertices)
+total       417600 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m79_short.dx80.vtx":
+body parts:        16 bytes
+models:            60 bytes
+model LODs:        36 bytes
+meshes:            27 bytes
+strip groups:      75 bytes
+strips:            81 bytes
+verts:          58716 bytes
+indices:        47928 bytes
+bone changes:      72 bytes
+everything:    107011 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m79_short.dx90.vtx":
+body parts:        16 bytes
+models:            60 bytes
+model LODs:        36 bytes
+meshes:            27 bytes
+strip groups:      75 bytes
+strips:            81 bytes
+verts:          58716 bytes
+indices:        47928 bytes
+bone changes:      72 bytes
+everything:    107011 bytes
+
+Completed "v_m79_short.qc"

@@ -22,8 +22,12 @@ Model has 7 convex sub-parts
 Collision model completed.
 ---------------------
 writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD\weapons\v_xm16super\compiled\models/weapons\mcv\w_xm16super.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD\weapons\v_xm16super\compiled\models/weapons\mcv\w_xm16super.mdl
+   Found 1 preexisting sequences.
 bones         1764 bytes (3)
 animations     132 bytes (1 anims) (1 frames) [0:00]
+Building sequence index remapping table...
+No re-ordering required.
 sequences      228 bytes (1 seq) 
 ik/pose        164 bytes
 eyeballs         0 bytes (0 eyeballs)

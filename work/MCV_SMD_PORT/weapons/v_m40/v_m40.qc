@@ -479,9 +479,6 @@ $sequence "draw" {
 	{ event 5004 1 "MCV_Weapon_Foley_M40.Draw" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "walklayerironsight"
-	addlayer "runlayer"
 	fps 30
 }
 
@@ -498,9 +495,6 @@ $sequence "Firstdraw" {
 	{ event 5004 25 "MCV_Weapon_Foley_M40_Reload.Metal4" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "walklayerironsight"
-	addlayer "runlayer"
 	fps 24
 }
 

@@ -310,9 +310,6 @@ $sequence "draw" {
 	{ event AE_CL_STOP_PARTICLE_EFFECT 1 "vietnam_weaponeffect_dynamite_fuse 1" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "walklayerironsight"
-	addlayer "runlayer"
 	node "0"
 	fps 30
 }

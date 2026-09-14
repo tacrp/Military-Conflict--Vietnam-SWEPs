@@ -1,0 +1,420 @@
+[
+	{
+		"npcCount": 11,
+		"kind": "category",
+		"category": "Anti-Armor",
+		"count": 11,
+		"name": "Random Anti-Armor",
+		"key": "category:anti_armor"
+	},
+	{
+		"npcCount": 22,
+		"kind": "category",
+		"category": "Assault Rifles",
+		"count": 22,
+		"name": "Random Assault Rifle",
+		"key": "category:assault_rifles"
+	},
+	{
+		"npcCount": 5,
+		"flag": "au",
+		"kind": "country",
+		"count": 5,
+		"name": "Random Australian Weapon",
+		"key": "country:au"
+	},
+	{
+		"npcCount": 12,
+		"kind": "category",
+		"category": "Battle Rifles",
+		"count": 12,
+		"name": "Random Battle Rifle",
+		"key": "category:battle_rifles"
+	},
+	{
+		"npcCount": 2,
+		"flag": "be",
+		"kind": "country",
+		"count": 2,
+		"name": "Random Belgian Weapon",
+		"key": "country:be"
+	},
+	{
+		"npcCount": 8,
+		"kind": "category",
+		"category": "Bolt-Action Rifles",
+		"count": 8,
+		"name": "Random Bolt-Action Rifle",
+		"key": "category:bolt_action_rifles"
+	},
+	{
+		"npcCount": 1,
+		"kind": "category",
+		"category": "Bows",
+		"count": 1,
+		"name": "Random Bow",
+		"key": "category:bows"
+	},
+	{
+		"npcCount": 4,
+		"flag": "gb",
+		"kind": "ww2",
+		"count": 4,
+		"name": "Random British WW2 Weapon",
+		"key": "theme:gb_ww2"
+	},
+	{
+		"npcCount": 6,
+		"flag": "gb",
+		"kind": "country",
+		"count": 6,
+		"name": "Random British Weapon",
+		"key": "country:gb"
+	},
+	{
+		"npcCount": 22,
+		"kind": "category",
+		"category": "Carbines",
+		"count": 22,
+		"name": "Random Carbine",
+		"key": "category:carbines"
+	},
+	{
+		"npcCount": 7,
+		"flag": "cn",
+		"kind": "country",
+		"count": 11,
+		"name": "Random Chinese Weapon",
+		"key": "country:cn"
+	},
+	{
+		"npcCount": 3,
+		"kind": "other",
+		"count": 3,
+		"name": "Random Custom Weapon",
+		"key": "theme:custom"
+	},
+	{
+		"npcCount": 5,
+		"flag": "cz",
+		"kind": "country",
+		"count": 5,
+		"name": "Random Czechoslovak Weapon",
+		"key": "country:cz"
+	},
+	{
+		"npcCount": 1,
+		"flag": "dk",
+		"kind": "country",
+		"count": 1,
+		"name": "Random Danish Weapon",
+		"key": "country:dk"
+	},
+	{
+		"npcCount": 38,
+		"kind": "other",
+		"count": 38,
+		"name": "Random Dual-Wield Weapon",
+		"key": "feature:dual"
+	},
+	{
+		"npcCount": 0,
+		"kind": "category",
+		"category": "Equipment",
+		"count": 6,
+		"name": "Random Equipment",
+		"key": "category:equipment"
+	},
+	{
+		"npcCount": 0,
+		"kind": "category",
+		"category": "Explosives",
+		"count": 4,
+		"name": "Random Explosive",
+		"key": "category:explosives"
+	},
+	{
+		"npcCount": 0,
+		"flag": "fi",
+		"kind": "country",
+		"count": 1,
+		"name": "Random Finnish Weapon",
+		"key": "country:fi"
+	},
+	{
+		"npcCount": 0,
+		"kind": "category",
+		"category": "Flamethrowers",
+		"count": 2,
+		"name": "Random Flamethrower",
+		"key": "category:flamethrowers"
+	},
+	{
+		"npcCount": 6,
+		"flag": "fr",
+		"kind": "ww2",
+		"count": 6,
+		"name": "Random French WW2 Weapon",
+		"key": "theme:fr_ww2"
+	},
+	{
+		"npcCount": 12,
+		"flag": "fr",
+		"kind": "country",
+		"count": 12,
+		"name": "Random French Weapon",
+		"key": "country:fr"
+	},
+	{
+		"npcCount": 14,
+		"flag": "de",
+		"kind": "ww2",
+		"count": 17,
+		"name": "Random German WW2 Weapon",
+		"key": "theme:de_ww2"
+	},
+	{
+		"npcCount": 15,
+		"flag": "de",
+		"kind": "country",
+		"count": 18,
+		"name": "Random German Weapon",
+		"key": "country:de"
+	},
+	{
+		"npcCount": 0,
+		"kind": "category",
+		"category": "Grenades",
+		"count": 14,
+		"name": "Random Grenade",
+		"key": "category:grenades"
+	},
+	{
+		"npcCount": 5,
+		"kind": "other",
+		"count": 6,
+		"name": "Random Homemade Weapon",
+		"key": "theme:homemade"
+	},
+	{
+		"npcCount": 1,
+		"flag": "hu",
+		"kind": "country",
+		"count": 1,
+		"name": "Random Hungarian Weapon",
+		"key": "country:hu"
+	},
+	{
+		"npcCount": 2,
+		"flag": "il",
+		"kind": "country",
+		"count": 2,
+		"name": "Random Israeli Weapon",
+		"key": "country:il"
+	},
+	{
+		"npcCount": 1,
+		"flag": "it",
+		"kind": "country",
+		"count": 1,
+		"name": "Random Italian Weapon",
+		"key": "country:it"
+	},
+	{
+		"npcCount": 2,
+		"flag": "jp",
+		"kind": "ww2",
+		"count": 4,
+		"name": "Random Japanese WW2 Weapon",
+		"key": "theme:jp_ww2"
+	},
+	{
+		"npcCount": 2,
+		"flag": "jp",
+		"kind": "country",
+		"count": 4,
+		"name": "Random Japanese Weapon",
+		"key": "country:jp"
+	},
+	{
+		"npcCount": 25,
+		"kind": "category",
+		"category": "Light-Machine Guns",
+		"count": 25,
+		"name": "Random Light-Machine Gun",
+		"key": "category:light_machine_guns"
+	},
+	{
+		"npcCount": 201,
+		"kind": "other",
+		"count": 240,
+		"name": "Random MCV Weapon",
+		"key": "all"
+	},
+	{
+		"npcCount": 7,
+		"kind": "category",
+		"category": "Machine Pistols",
+		"count": 7,
+		"name": "Random Machine Pistol",
+		"key": "category:machine_pistols"
+	},
+	{
+		"npcCount": 0,
+		"kind": "category",
+		"category": "Melee",
+		"count": 13,
+		"name": "Random Melee Weapon",
+		"key": "category:melee"
+	},
+	{
+		"npcCount": 1,
+		"flag": "kp",
+		"kind": "country",
+		"count": 1,
+		"name": "Random North Korean Weapon",
+		"key": "country:kp"
+	},
+	{
+		"npcCount": 26,
+		"kind": "category",
+		"category": "Pistols",
+		"count": 26,
+		"name": "Random Pistol",
+		"key": "category:pistols"
+	},
+	{
+		"npcCount": 2,
+		"flag": "pl",
+		"kind": "country",
+		"count": 2,
+		"name": "Random Polish Weapon",
+		"key": "country:pl"
+	},
+	{
+		"npcCount": 8,
+		"kind": "category",
+		"category": "Revolvers",
+		"count": 8,
+		"name": "Random Revolver",
+		"key": "category:revolvers"
+	},
+	{
+		"npcCount": 4,
+		"flag": "rh",
+		"kind": "country",
+		"count": 4,
+		"name": "Random Rhodesian Weapon",
+		"key": "country:rh"
+	},
+	{
+		"npcCount": 19,
+		"kind": "other",
+		"count": 19,
+		"name": "Random Rifle-Grenade Weapon",
+		"key": "feature:launcher"
+	},
+	{
+		"npcCount": 1,
+		"flag": "ro",
+		"kind": "country",
+		"count": 1,
+		"name": "Random Romanian Weapon",
+		"key": "country:ro"
+	},
+	{
+		"npcCount": 13,
+		"flag": "su",
+		"kind": "ww2",
+		"count": 13,
+		"name": "Random Russian WW2 Weapon",
+		"key": "theme:ru_ww2"
+	},
+	{
+		"npcCount": 38,
+		"flag": "su",
+		"kind": "country",
+		"count": 43,
+		"name": "Random Russian Weapon",
+		"key": "country:ru"
+	},
+	{
+		"npcCount": 18,
+		"kind": "other",
+		"count": 18,
+		"name": "Random Scoped Weapon",
+		"key": "feature:scope"
+	},
+	{
+		"npcCount": 8,
+		"kind": "category",
+		"category": "Shotguns",
+		"count": 8,
+		"name": "Random Shotgun",
+		"key": "category:shotguns"
+	},
+	{
+		"npcCount": 12,
+		"kind": "category",
+		"category": "Sniper Rifles",
+		"count": 12,
+		"name": "Random Sniper Rifle",
+		"key": "category:sniper_rifles"
+	},
+	{
+		"npcCount": 1,
+		"flag": "es",
+		"kind": "country",
+		"count": 1,
+		"name": "Random Spanish Weapon",
+		"key": "country:es"
+	},
+	{
+		"npcCount": 39,
+		"kind": "category",
+		"category": "Submachine Guns",
+		"count": 39,
+		"name": "Random Submachine Gun",
+		"key": "category:submachine_guns"
+	},
+	{
+		"npcCount": 2,
+		"flag": "se",
+		"kind": "country",
+		"count": 2,
+		"name": "Random Swedish Weapon",
+		"key": "country:se"
+	},
+	{
+		"npcCount": 23,
+		"flag": "us",
+		"kind": "ww2",
+		"count": 27,
+		"name": "Random US WW2 Weapon",
+		"key": "theme:us_ww2"
+	},
+	{
+		"npcCount": 82,
+		"flag": "us",
+		"kind": "country",
+		"count": 95,
+		"name": "Random US Weapon",
+		"key": "country:us"
+	},
+	{
+		"npcCount": 10,
+		"flag": "vn",
+		"kind": "country",
+		"count": 12,
+		"name": "Random Vietnamese Weapon",
+		"key": "country:vn"
+	},
+	{
+		"npcCount": 1,
+		"flag": "yu",
+		"kind": "country",
+		"count": 1,
+		"name": "Random Yugoslav Weapon",
+		"key": "country:yu"
+	}
+]

@@ -1,0 +1,43 @@
+ccmd firstperson
+ccmd cl_showerror 0
+ccmd net_fakelag 0
+strip
+pos -704 576 -12288
+ang 0 0 0
+lua ply:GodEnable()
+give mcv_m1g
+wait 3
+clua gui.HideGameUI() if gui.IsConsoleVisible() then ply:ConCommand("toggleconsole") end include("mcv_harness/garand_m21.lua") MCVGunsCheck.WorldView()
+wait 1
+shot garand_world_after
+clua MCVGunsCheck.WorldReport("garand_after")
+give mcv_m1d
+wait 3
+shot garand_scoped_world_after
+clua MCVGunsCheck.StopWorld()
+give mcv_m21
+wait 3
+lua ply:GetActiveWeapon():SetClip1(0) ply:SetAmmo(80,"ar2")
+wait 1
+clua MCVGunsCheck.StartRender("after_m21")
+wait 0.3
+tap +reload 0.1
+wait 4
+clua MCVGunsCheck.StopRender()
+lua assert(ply:GetActiveWeapon():Clip1()==20,"empty reload failed")
+report m21_empty_after
+lua ply:GetActiveWeapon():SetClip1(0)
+wait 1
+key +attack2
+wait 2
+clua MCVGunsCheck.StartRender("after_m21_aimed")
+wait 0.3
+tap +reload 0.1
+wait 4
+clua MCVGunsCheck.StopRender()
+key -attack2
+lua assert(ply:GetActiveWeapon():Clip1()==20,"aimed empty reload failed")
+tap +reload 0.1
+wait 3
+lua assert(ply:GetActiveWeapon():Clip1()==21,"tactical reload failed")
+report m21_tactical_after

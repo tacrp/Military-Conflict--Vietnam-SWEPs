@@ -1,0 +1,65 @@
+[
+  {
+    "name": "ptrd_sniper",
+    "source": "work/MCV_SMD/weapons/v_ptrd41_s/Ref_new.smd",
+    "output": "work/spawn_icons/rebuild_check/mcv_ptrd_sniper.png",
+    "installed": null,
+    "source_sha256": "0d9ec89cdc7f0afef43eca38de6443927b4ffce3cb3bcfbb4c75f914cf17cb23",
+    "png_sha256": "ed3a85a330edcb73804dc8256ef889205ae6fdd671f186940cb7d494390ca770",
+    "triangles": 25230,
+    "size": 512,
+    "bone": "Base",
+    "side": "left",
+    "exclude_materials": [
+      "shell"
+    ],
+    "alpha_bounds": [
+      0,
+      199,
+      512,
+      313
+    ]
+  },
+  {
+    "name": "m635",
+    "source": "work/MCV_SMD/weapons/v_m635/m635.smd",
+    "output": "work/spawn_icons/rebuild_check/mcv_m635.png",
+    "installed": null,
+    "source_sha256": "ff87f817519d94f1a5a8f1a14c6fb9fe4e3161106af602361b3450495ee05faf",
+    "png_sha256": "84591e6f764c70a2633bd0c6d529b6e287ca29ce104aab0d6886ab22bcaa3707",
+    "triangles": 48050,
+    "size": 512,
+    "bone": "Base",
+    "side": "left",
+    "exclude_materials": [
+      "shell"
+    ],
+    "alpha_bounds": [
+      0,
+      166,
+      512,
+      346
+    ]
+  },
+  {
+    "name": "xm16super",
+    "source": "work/MCV_SMD/weapons/v_xm16super/xm16super.smd",
+    "output": "work/spawn_icons/rebuild_check/mcv_xm16super.png",
+    "installed": null,
+    "source_sha256": "4352e03fa36057081e903ceaca5edc05a36472d09a2e9a6b1b107de0d3f767b9",
+    "png_sha256": "c55dbebbb7e63ad2c84a9a082a09aa8c3c69251b6eaf6a7e2708a0f12db751bf",
+    "triangles": 66552,
+    "size": 512,
+    "bone": "Base",
+    "side": "left",
+    "exclude_materials": [
+      "shell"
+    ],
+    "alpha_bounds": [
+      0,
+      185,
+      512,
+      327
+    ]
+  }
+]

@@ -1,0 +1,143 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_type64_pistol\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_type64_pistol\v_type64_pistol.qc"
+Building binary model files...
+Working on "v_type64_pistol.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\RefType64_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\Bullet0_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\Bullet1_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\Bullet2_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\Bullet3_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\Bullet4_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\Bullet5_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\Bullet6_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\Bullet7_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\Bullet8_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\Default_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\SlideForward_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\Slideback_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\SlideMove_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\SlideStill_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\shootlast_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\shootlast_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\PoseDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\Default.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\Bullet8.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\Bullet7.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\Bullet6.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\Bullet5.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\Bullet4.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\Bullet3.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\Bullet2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\Bullet1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\Bullet0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\Slideback.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\walkDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\runIdle_a.smd
+SMD MODEL fixed_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\walkIdle_a.smd
+SMD MODEL fixed_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\SlideForward.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\SlideStill.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\SlideMove.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\shoot1_ironsight_delta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\shootlast_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\shootlast_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type64_pistol\v_type64_pistol_anims\holster.smd
+Processing LOD for material: shells_small_additional
+Processing LOD for material: v_type64
+Processing LOD for material: v_type67
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_type64_pistol.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_type64_pistol.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        23724 bytes (104)
+animations  199480 bytes (88 anims) (1657 frames) [0:55]
+sequences    11088 bytes (28 seq) 
+ik/pose        264 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       208 bytes
+keyvalues       20 bytes
+bone transforms    14208 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       253492
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_type64_pistol.vvd:
+vertices    326496 bytes (6802 vertices)
+tangents    108832 bytes (6802 vertices)
+total       435392 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_type64_pistol.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            27 bytes
+strip groups:      75 bytes
+strips:            81 bytes
+verts:          61218 bytes
+indices:        49344 bytes
+bone changes:     128 bytes
+everything:    110937 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_type64_pistol.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            27 bytes
+strip groups:      75 bytes
+strips:            81 bytes
+verts:          61218 bytes
+indices:        49344 bytes
+bone changes:     128 bytes
+everything:    110937 bytes
+
+Completed "v_type64_pistol.qc"

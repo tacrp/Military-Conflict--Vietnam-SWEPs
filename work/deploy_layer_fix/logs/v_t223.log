@@ -1,0 +1,135 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_t223\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_t223\v_t223.qc"
+Building binary model files...
+Working on "v_t223.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\HK33_ref.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\hk33_v_bayonet.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\magazine_25.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\magazine_40.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\nearwall_e_a_i.smd
+SMD MODEL fixed_anims\proneF.smd
+SMD MODEL fixed_anims\proneB.smd
+SMD MODEL fixed_anims\proneL.smd
+SMD MODEL fixed_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\change_firemode_idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\change_firemode_iron.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\bayonet_attack_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\bayonet_attack_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\bayonet_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\bayonet_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\bayonet_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\bayonet_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_t223\v_t223_anims\holster.smd
+Processing LOD for material: shells_small
+Processing LOD for material: v_t223
+Processing LOD for material: m7_d
+Processing LOD for material: v_t223magazine
+Processing LOD for material: v_t223magazine
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_t223.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_t223.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        22776 bytes (99)
+animations  246052 bytes (61 anims) (2057 frames) [1:08]
+sequences    11012 bytes (28 seq) 
+ik/pose        848 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       276 bytes
+keyvalues       20 bytes
+bone transforms    13528 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       298720
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_t223.vvd:
+vertices    929520 bytes (19365 vertices)
+vertices     98160 bytes (2045 vertices)
+vertices     52704 bytes (1098 vertices)
+vertices     52656 bytes (1097 vertices)
+tangents    309840 bytes (19365 vertices)
+tangents     32720 bytes (2045 vertices)
+tangents     17568 bytes (1098 vertices)
+tangents     17552 bytes (1097 vertices)
+total      1510784 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_t223.dx80.vtx":
+body parts:        24 bytes
+models:           100 bytes
+model LODs:        60 bytes
+meshes:            45 bytes
+strip groups:     125 bytes
+strips:           135 bytes
+verts:         212445 bytes
+indices:       185436 bytes
+bone changes:      96 bytes
+everything:    398442 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_t223.dx90.vtx":
+body parts:        24 bytes
+models:           100 bytes
+model LODs:        60 bytes
+meshes:            45 bytes
+strip groups:     125 bytes
+strips:           135 bytes
+verts:         212445 bytes
+indices:       185436 bytes
+bone changes:      96 bytes
+everything:    398442 bytes
+
+Completed "v_t223.qc"

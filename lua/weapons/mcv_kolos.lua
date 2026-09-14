@@ -95,7 +95,7 @@ SWEP.CustomPos = Vector(0, 0, 0)
 SWEP.CustomAng = Angle(0, 0, 0)
 
 SWEP.Spread = 2.5
-SWEP.SpreadIronsighted = 2.5
+SWEP.SpreadIronsighted = 7
 
 SWEP.FireRate = 70 // in rounds per minute
 

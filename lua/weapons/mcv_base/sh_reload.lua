@@ -13,6 +13,7 @@ function SWEP:PlayReloadGesture(t, event)
 end
 
 function SWEP:Reload()
+    if IsValid(self:GetOwner()) and self:GetOwner():IsNPC() then return self:NPC_Reload() end
     if self:StillWaiting() then return end
     if !self:GetOwner():KeyPressed(IN_RELOAD) then return end
 

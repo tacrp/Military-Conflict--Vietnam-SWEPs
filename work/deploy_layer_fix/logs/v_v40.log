@@ -1,0 +1,85 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_v40\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_v40\v_v40.qc"
+Building binary model files...
+Working on "v_v40.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_v40\V40_Ref.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_v40\v_v40_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_v40\v_v40_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_v40\v_v40_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_v40\v_v40_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_v40\v_v40_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_v40\v_v40_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_v40\v_v40_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_v40\v_v40_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_v40\v_v40_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_v40\v_v40_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_v40\v_v40_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_v40\v_v40_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_v40\v_v40_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_v40\v_v40_anims\idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_v40\v_v40_anims\drawbackhigh.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_v40\v_v40_anims\drawbacklow.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_v40\v_v40_anims\throw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_v40\v_v40_anims\roll.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_v40\v_v40_anims\lob.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_v40\v_v40_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_v40\v_v40_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_v40\v_v40_anims\pickupstart.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_v40\v_v40_anims\pickuploop.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_v40\v_v40_anims\pickupend.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_v40\v_v40_anims\idletonearwall.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_v40\v_v40_anims\nearwall.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_v40\v_v40_anims\nearwalltoidle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_v40\v_v40_anims\holster.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_v40\v_v40_anims\firemode.smd
+Processing LOD for material: v40
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_v40.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_v40.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        21440 bytes (94)
+animations   79896 bytes (29 anims) (618 frames) [0:20]
+sequences     7444 bytes (20 seq) 
+ik/pose        224 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures        72 bytes
+keyvalues       20 bytes
+bone transforms    12848 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       124736
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_v40.vvd:
+vertices    245088 bytes (5106 vertices)
+tangents     81696 bytes (5106 vertices)
+total       326848 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_v40.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:             9 bytes
+strip groups:      25 bytes
+strips:            27 bytes
+verts:          45954 bytes
+indices:        39552 bytes
+bone changes:      40 bytes
+everything:     85671 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_v40.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:             9 bytes
+strip groups:      25 bytes
+strips:            27 bytes
+verts:          45954 bytes
+indices:        39552 bytes
+bone changes:      40 bytes
+everything:     85671 bytes
+
+Completed "v_v40.qc"

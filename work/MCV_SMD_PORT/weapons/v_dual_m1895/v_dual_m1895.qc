@@ -1022,9 +1022,6 @@ $sequence "FirstDraw" {
 	{ event AE_WPN_SET_POSEPARAM 4 "revolver_firemode_pose 0" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "walklayerironsight"
-	addlayer "runlayer"
 	node "0"
 	fps 30
 }
@@ -1040,9 +1037,6 @@ $sequence "draw" {
 	{ event 5004 1 "MCV_Weapon_Foley_M1895.Draw" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "walklayerironsight"
-	addlayer "runlayer"
 	node "0"
 	fps 30
 }

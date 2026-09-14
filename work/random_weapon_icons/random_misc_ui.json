@@ -1,0 +1,142 @@
+[
+	{
+		"key": "theme:us_ww2",
+		"material": "mcv/random/us.png"
+	},
+	{
+		"key": "country:us",
+		"material": "mcv/random/us.png"
+	},
+	{
+		"key": "country:vn",
+		"material": "mcv/random/vn.png"
+	},
+	{
+		"key": "country:jp",
+		"material": "mcv/random/jp.png"
+	},
+	{
+		"key": "country:ro",
+		"material": "mcv/random/ro.png"
+	},
+	{
+		"key": "theme:de_ww2",
+		"material": "mcv/random/de.png"
+	},
+	{
+		"key": "country:ru",
+		"material": "mcv/random/su.png"
+	},
+	{
+		"key": "country:de",
+		"material": "mcv/random/de.png"
+	},
+	{
+		"key": "country:fr",
+		"material": "mcv/random/fr.png"
+	},
+	{
+		"key": "country:dk",
+		"material": "mcv/random/dk.png"
+	},
+	{
+		"key": "country:cn",
+		"material": "mcv/random/cn.png"
+	},
+	{
+		"key": "theme:fr_ww2",
+		"material": "mcv/random/fr.png"
+	},
+	{
+		"key": "theme:custom",
+		"material": "mcv/random/question.png"
+	},
+	{
+		"key": "theme:homemade",
+		"material": "mcv/random/question.png"
+	},
+	{
+		"key": "country:il",
+		"material": "mcv/random/il.png"
+	},
+	{
+		"key": "country:gb",
+		"material": "mcv/random/gb.png"
+	},
+	{
+		"key": "feature:launcher",
+		"material": "mcv/random/question.png"
+	},
+	{
+		"key": "feature:dual",
+		"material": "mcv/random/question.png"
+	},
+	{
+		"key": "country:fi",
+		"material": "mcv/random/fi.png"
+	},
+	{
+		"key": "country:au",
+		"material": "mcv/random/au.png"
+	},
+	{
+		"key": "theme:jp_ww2",
+		"material": "mcv/random/jp.png"
+	},
+	{
+		"key": "country:it",
+		"material": "mcv/random/it.png"
+	},
+	{
+		"key": "country:rh",
+		"material": "mcv/random/rh.png"
+	},
+	{
+		"key": "country:se",
+		"material": "mcv/random/se.png"
+	},
+	{
+		"key": "theme:gb_ww2",
+		"material": "mcv/random/gb.png"
+	},
+	{
+		"key": "country:hu",
+		"material": "mcv/random/hu.png"
+	},
+	{
+		"key": "country:cz",
+		"material": "mcv/random/cz.png"
+	},
+	{
+		"key": "theme:ru_ww2",
+		"material": "mcv/random/su.png"
+	},
+	{
+		"key": "all",
+		"material": "mcv/random/question.png"
+	},
+	{
+		"key": "country:pl",
+		"material": "mcv/random/pl.png"
+	},
+	{
+		"key": "country:kp",
+		"material": "mcv/random/kp.png"
+	},
+	{
+		"key": "country:es",
+		"material": "mcv/random/es.png"
+	},
+	{
+		"key": "feature:scope",
+		"material": "mcv/random/question.png"
+	},
+	{
+		"key": "country:yu",
+		"material": "mcv/random/yu.png"
+	},
+	{
+		"key": "country:be",
+		"material": "mcv/random/be.png"
+	}
+]

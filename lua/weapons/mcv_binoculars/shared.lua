@@ -3,6 +3,7 @@
 
 SWEP.Base = "mcv_base"
 SWEP.Spawnable = false
+SWEP.NPCUsable = false // Optical equipment inherits the gun base but cannot fire.
 
 SWEP.SubCategory = "Equipment"
 SWEP.Slot = 4

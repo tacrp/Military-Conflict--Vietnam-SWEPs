@@ -43,13 +43,7 @@ def viewmodel():
     text = text.replace('$attachment "muzzle" "Base" -26.5', '$attachment "muzzle" "Base" -33.5')
     text = text.replace('$cdmaterials "models\\weapons\\mcv\\shells\\"',
                         '$cdmaterials "models\\weapons\\mcv\\shells\\"\n$cdmaterials "models\\weapons\\mcv\\optics\\"')
-    # Use the M16 rifle-shot deltas and their matching subtractive correctives.
-    # Keep the M203 base poses and launcher animations on the kitbash's own rig.
-    def rifle_shot(m):
-        path = PORT / 'v_m16a1' / '../../../MCV_SMD_OG/weapons/v_m16a1/v_m16a1_anims' / m[1]
-        assert path.exists(), path
-        return '"' + relative(path.resolve(), out) + '"'
-    text = re.sub(r'"[^"\n]*/v_m203_anims/(shoot[123](?:_ironsight)?_a(?:_corrective_animation)?\.smd)"', rifle_shot, text)
+    # Keep the M16-M203 donor's rifle-shot deltas and matching correctives.
     # Keep the original hip-fire sequence, and supply a separate deployed shot.
     # Its base is the same gl_a / irongl pair as the launcher idle, so the shot
     # cannot snap back to the rifle's sight pose.
@@ -135,26 +129,9 @@ def worldmodel(source=SOURCE, name='xm16super', muzzle=-33.5, launcher=True):
 
 
 def icon(source=SOURCE, name='xm16super'):
-    """Render an orthographic silhouette directly from the mesh for the Q menu/HUD."""
-    from PIL import Image, ImageDraw, ImageFilter
-    nodes, frames, _ = load_smd(source)
-    base = next(i for i, (name, _) in nodes.items() if name == 'Base')
-    inverse = np.linalg.inv(fk(nodes, frames[0])[base])
-    mesh = source.read_text().split('triangles\n', 1)[1].splitlines()
-    points = np.array([list(map(float, mesh[i + j].split()[1:4])) + [1.]
-                       for i in range(0, len(mesh) - 1, 4) for j in [1, 2, 3]])
-    local = points @ inverse.T
-    xy = np.column_stack((-local[:, 0], -local[:, 2]))
-    lo, hi = xy.min(axis=0), xy.max(axis=0)
-    xy = (xy - (lo + hi) / 2) * min(940 / (hi[0] - lo[0]), 460 / (hi[1] - lo[1])) + [512, 512]
-    mask = Image.new('L', (1024, 1024))
-    draw = ImageDraw.Draw(mask)
-    for triangle in xy.reshape((-1, 3, 2)):
-        draw.polygon([tuple(v) for v in triangle], fill=255)
-    result = Image.new('RGBA', mask.size, (0, 0, 0, 0))
-    result.paste((0, 0, 0, 255), mask=mask.filter(ImageFilter.MaxFilter(7)))
-    result.paste((255, 255, 255, 255), mask=mask)
-    result.save(ROOT / ('materials/entities/mcv_' + name + '.png'))
+    """Use the same outlined mesh renderer as the standalone icon command."""
+    from build_spawn_icons import make
+    return make(name, source)
 
 
 def main():

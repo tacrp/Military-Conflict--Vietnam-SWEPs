@@ -1,0 +1,19 @@
+{
+	"owner": "models/player/kleiner.mdl",
+	"bodygroups": [
+		{
+			"submodels": {
+				"0": "fixed_anims\\world_rig\\w_lpo50_lod0.smd"
+			},
+			"num": 1,
+			"name": "Body",
+			"id": 0
+		}
+	],
+	"muzzle": "[23.5669 -0.9988 -7.5108]",
+	"gunAng": "{-0.4392 -90.0019 -102.9558}",
+	"npc": false,
+	"model": "models/weapons/mcv/w_lpo50.mdl",
+	"gunPos": "[5.7617 -0.959 -2.3888]",
+	"weapon": "mcv_lpo50"
+}

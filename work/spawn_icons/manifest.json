@@ -1,0 +1,117 @@
+[
+  {
+    "name": "rhogun",
+    "source": "work/MCV_SMD_OG/weapons/v_rhogun/Ref_new.smd",
+    "output": "work/spawn_icons/mcv_rhogun.png",
+    "installed": "materials/entities/mcv_rhogun.png",
+    "source_sha256": "d08ebffa4cc72ff12d76722ac4a698135c76edfdfa4d5338ab1d42c8671620c5",
+    "png_sha256": "9d112f7918db54dbd79ab8aaf96ff326e4eeea5448a5f81d593604cef724fb74",
+    "triangles": 24316,
+    "size": 512,
+    "bone": "Base",
+    "side": "left",
+    "style": "translucent_outline",
+    "line_opacity": 0.65,
+    "exclude_materials": [
+      "shell"
+    ],
+    "alpha_bounds": [
+      1,
+      159,
+      511,
+      353
+    ]
+  },
+  {
+    "name": "cobra",
+    "source": "work/MCV_SMD_OG/weapons/v_cobra/Ref_new.smd",
+    "output": "work/spawn_icons/mcv_cobra.png",
+    "installed": "materials/entities/mcv_cobra.png",
+    "source_sha256": "6b1a4384b2ea897efe2619c32c0a2a54d6f5cd03bc6aa4f2d4d6ed2939102f8b",
+    "png_sha256": "fecb89944a419b54cae53522285fe0276f8773a1ff868cd78c5621c2288f0cf4",
+    "triangles": 26869,
+    "size": 512,
+    "bone": "Base",
+    "side": "left",
+    "style": "translucent_outline",
+    "line_opacity": 0.65,
+    "exclude_materials": [
+      "shell"
+    ],
+    "alpha_bounds": [
+      1,
+      168,
+      511,
+      344
+    ]
+  },
+  {
+    "name": "ptrd_sniper",
+    "source": "work/MCV_SMD/weapons/v_ptrd41_s/Ref_new.smd",
+    "output": "work/spawn_icons/mcv_ptrd_sniper.png",
+    "installed": "materials/entities/mcv_ptrd_sniper.png",
+    "source_sha256": "0d9ec89cdc7f0afef43eca38de6443927b4ffce3cb3bcfbb4c75f914cf17cb23",
+    "png_sha256": "2f08da57ec975529cc8c6395ca63f967bddfdfcce9d986c241cb9228a79a3537",
+    "triangles": 25230,
+    "size": 512,
+    "bone": "Base",
+    "side": "left",
+    "style": "translucent_outline",
+    "line_opacity": 0.65,
+    "exclude_materials": [
+      "shell"
+    ],
+    "alpha_bounds": [
+      1,
+      199,
+      511,
+      313
+    ]
+  },
+  {
+    "name": "m635",
+    "source": "work/MCV_SMD/weapons/v_m635/m635.smd",
+    "output": "work/spawn_icons/mcv_m635.png",
+    "installed": "materials/entities/mcv_m635.png",
+    "source_sha256": "ff87f817519d94f1a5a8f1a14c6fb9fe4e3161106af602361b3450495ee05faf",
+    "png_sha256": "91c9c6e87be19667e51c9ec8f7c751b66901bce868056e2908d718c943293a27",
+    "triangles": 48050,
+    "size": 512,
+    "bone": "Base",
+    "side": "left",
+    "style": "translucent_outline",
+    "line_opacity": 0.65,
+    "exclude_materials": [
+      "shell"
+    ],
+    "alpha_bounds": [
+      1,
+      166,
+      511,
+      346
+    ]
+  },
+  {
+    "name": "xm16super",
+    "source": "work/MCV_SMD/weapons/v_xm16super/xm16super.smd",
+    "output": "work/spawn_icons/mcv_xm16super.png",
+    "installed": "materials/entities/mcv_xm16super.png",
+    "source_sha256": "4352e03fa36057081e903ceaca5edc05a36472d09a2e9a6b1b107de0d3f767b9",
+    "png_sha256": "f025d0b6532027a7775afaad101c6d5525541fb3852839c20f0377a521a232aa",
+    "triangles": 66552,
+    "size": 512,
+    "bone": "Base",
+    "side": "left",
+    "style": "translucent_outline",
+    "line_opacity": 0.65,
+    "exclude_materials": [
+      "shell"
+    ],
+    "alpha_bounds": [
+      1,
+      185,
+      511,
+      327
+    ]
+  }
+]

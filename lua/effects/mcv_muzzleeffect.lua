@@ -38,6 +38,7 @@ function EFFECT:Init(data)
         end
 
         for _, muzzleeffect in ipairs(muzzle) do
+            if muzzleeffect == "" then continue end // Crossbows/launchers can have no flash.
             local pcf = CreateParticleSystem(parent, muzzleeffect, PATTACH_POINT_FOLLOW, att)
 
             if IsValid(pcf) then

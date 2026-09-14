@@ -1,0 +1,10 @@
+{
+	"blastEvents": 0,
+	"duration": 25,
+	"class": "mcv_grenade_smoke",
+	"before": 2,
+	"targetHealth": 1000,
+	"popped": true,
+	"after": 1,
+	"model": "models/weapons/mcv/w_stielhandgranate.mdl"
+}

@@ -1,0 +1,125 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_l1a1\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_l1a1\v_l1a1.qc"
+Building binary model files...
+Working on "v_l1a1.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\l1a1_ref.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\l1a1_v_bayonet.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\change_firemode_idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\change_firemode_iron.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\bayonet_attack_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\bayonet_attack_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\bayonet_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\bayonet_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\bayonet_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\bayonet_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_l1a1\v_l1a1_anims\holster.smd
+Processing LOD for material: l2a1_details
+Processing LOD for material: l1a1
+Processing LOD for material: barrels
+Processing LOD for material: shells_small
+Processing LOD for material: m7_d
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_l1a1.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_l1a1.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        22560 bytes (98)
+animations  211576 bytes (61 anims) (2015 frames) [1:07]
+sequences    10848 bytes (28 seq) 
+ik/pose        536 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       344 bytes
+keyvalues       20 bytes
+bone transforms    13392 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       263460
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_l1a1.vvd:
+vertices   1299120 bytes (27065 vertices)
+vertices     98160 bytes (2045 vertices)
+tangents    433040 bytes (27065 vertices)
+tangents     32720 bytes (2045 vertices)
+total      1863104 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_l1a1.dx80.vtx":
+body parts:        16 bytes
+models:            60 bytes
+model LODs:        36 bytes
+meshes:            45 bytes
+strip groups:     125 bytes
+strips:           135 bytes
+verts:         261990 bytes
+indices:       232788 bytes
+bone changes:      96 bytes
+everything:    495291 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_l1a1.dx90.vtx":
+body parts:        16 bytes
+models:            60 bytes
+model LODs:        36 bytes
+meshes:            45 bytes
+strip groups:     125 bytes
+strips:           135 bytes
+verts:         261990 bytes
+indices:       232788 bytes
+bone changes:      96 bytes
+everything:    495291 bytes
+
+Completed "v_l1a1.qc"

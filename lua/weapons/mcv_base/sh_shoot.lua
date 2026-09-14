@@ -5,6 +5,7 @@ local function animationModel(self)
 end
 
 function SWEP:PrimaryAttack()
+    if IsValid(self:GetOwner()) and self:GetOwner():IsNPC() then return self:NPC_PrimaryAttack() end
     if self:StillWaiting() then return end
     if self:GetNeedCycle() then return end
 
@@ -341,6 +342,7 @@ end
 // read this.
 function SWEP:GetAimAngle(visual)
     local owner = self:GetOwner()
+    if owner:IsNPC() then return owner:GetAimVector():Angle() end
     if !MCV.RealisticShooting() then
         // the game: the shot goes where the view points. The camera carries the whole punch
         // (cl_camera.lua takes none of it out in this mode), so this is the screen centre
@@ -354,7 +356,9 @@ function SWEP:GetAimVector(visual)
 end
 
 function SWEP:GetSpread()
+    if self:GetOwner():IsNPC() then return self:GetNPCSpread() end
     local sa = self:GetSightAmount()
+    local fm = self:GetFiremodeValue()
     local spread = self.Spread
     local sighted = self.SpreadIronsighted
 
@@ -373,9 +377,9 @@ function SWEP:GetSpread()
         // realistic (mcv_realistic_shooting 1): the bullet leaves the barrel wherever it points.
         // Hip fire misses because the gun is not lined up with the eye, not through a cone, so
         // the gun's own dispersion is all there is from the hip, and on the sights a rifle or
-        // pistol puts every round where it points: no spread at all. Shotguns keep their
-        // pattern whatever the stance.
-        if (self.Num or 1) > 1 then
+        // pistol reduces dispersion to a quarter. Shotguns and volley fire keep their
+        // pattern whatever the sight amount or stance.
+        if (self.Num or 1) > 1 or fm == MCV.FIREMODE_VOLLEY then
             spread = sighted
         else
             spread = sighted * Lerp(sa, 1, 0.25)
@@ -385,8 +389,6 @@ function SWEP:GetSpread()
         // widened by stance and movement
         spread = Lerp(sa, spread, sighted) * stance
     end
-
-    local fm = self:GetFiremodeValue()
 
     if fm == MCV.FIREMODE_SA then
         spread = spread * 0.5
@@ -522,12 +524,12 @@ function SWEP:GetFiremodeRate(fm)
     return math.max(rate * self:StatMult("firerate"), 1)
 end
 
-function SWEP:BulletAttack()
+function SWEP:BulletAttack(shootPos, shootDir)
     local owner = self:GetOwner()
 
     local spread = self:GetSpread()
 
-    owner:LagCompensation(true)
+    if owner:IsPlayer() then owner:LagCompensation(true) end
 
     local num = self.Num
 
@@ -555,7 +557,7 @@ function SWEP:BulletAttack()
             end
         })
     end
-    fireSegment({src = owner:GetShootPos(), dir = self:GetAimVector(),
+    fireSegment({src = shootPos or owner:GetShootPos(), dir = shootDir or self:GetAimVector(),
         damage = self.DamageGeneric * self:StatMult("damage"), distance = 0, budget = 1, layers = 0},
         num, Vector(spread, spread, spread), 1)
 
@@ -570,10 +572,10 @@ function SWEP:BulletAttack()
         end
     end
 
-    owner:LagCompensation(false)
+    if owner:IsPlayer() then owner:LagCompensation(false) end
 end
 
-function SWEP:RocketAttack(secondary)
+function SWEP:RocketAttack(secondary, shootPos, shootDir)
     if CLIENT then return end
 
     local count = 1
@@ -584,16 +586,16 @@ function SWEP:RocketAttack(secondary)
     end
 
     for i = 1, count do
-        self:LaunchProjectile(secondary, i)
+        self:LaunchProjectile(secondary, i, shootPos, shootDir)
     end
 end
 
-function SWEP:LaunchProjectile(secondary, seed)
+function SWEP:LaunchProjectile(secondary, seed, shootPos, shootDir)
     local owner = self:GetOwner()
     local spread = self:RandomSpread(self:GetSpread(), seed)
 
-    local src = owner:GetShootPos()
-    local dir = self:GetAimAngle() + spread
+    local src = shootPos or owner:GetShootPos()
+    local dir = (shootDir and shootDir:Angle() or self:GetAimAngle()) + spread
 
     local ent = self.ShootEntity
     local force = self.ShootEntityForce

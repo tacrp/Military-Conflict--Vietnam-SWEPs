@@ -1,0 +1,37 @@
+# Disposable local MP test instance. Clears the test player's inventory.
+lua include("mcv_harness/random_weapons.lua") MCVRandomTest.Audit(ply)
+clua include("mcv_harness/random_weapons.lua") MCVRandomTest.Open(false)
+wait 2
+shot random_categories
+clua MCVRandomTest.Icons["category:anti_armor"]:DoClick()
+wait 2
+lua local w=ply:GetActiveWeapon() assert(IsValid(w) and w.SubCategory=="Anti-Armor","category give failed")
+clua MCVRandomTest.Open(true)
+wait 2
+shot random_misc
+strip
+clua MCVRandomTest.Icons["country:fr"]:DoClick()
+wait 2
+lua local w=ply:GetActiveWeapon() assert(IsValid(w) and w.Country=="France","country give failed") file.Write("mcv_harness/p27018/results/random_player.json",util.TableToJSON({class=w:GetClass(),country=w.Country},true))
+clua MCVRandomTest.SelectNPC("country:fr")
+wait 1
+lua MCVRandomTest.SpawnNPC(ply,"country:fr") MCVRandomTest.SpawnNPC(ply,"country:fr","mcv_m21")
+strip
+lua MCVRandomDenied=false hook.Add("PlayerGiveSWEP","MCVRandomTestDeny",function(p,c) if c=="mcv_madsen" then MCVRandomDenied=true return false end end)
+clua MCVRandomTest.Icons["country:dk"]:DoClick()
+wait 1
+lua assert(MCVRandomDenied and !ply:HasWeapon("mcv_madsen"),"give bypassed permission hook") hook.Remove("PlayerGiveSWEP","MCVRandomTestDeny")
+clua RunConsoleCommand("mcv_random_weapon","invalid")
+wait 1
+lua assert(#ply:GetWeapons()==0,"invalid group gave a weapon")
+lua MCVRandomDropDenied=false hook.Add("PlayerSpawnSWEP","MCVRandomTestDenyDrop",function(p,c) if c=="mcv_madsen" then MCVRandomDropDenied=true return false end end)
+clua MCVRandomTest.Icons["country:dk"]:DoMiddleClick()
+wait 1
+lua assert(MCVRandomDropDenied,"pickup bypassed spawn hook") hook.Remove("PlayerSpawnSWEP","MCVRandomTestDenyDrop") file.Write("mcv_harness/p27018/results/random_permissions.json","{\"give_denied\":true,\"pickup_denied\":true,\"invalid_rejected\":true}")
+clua MCVRandomTest.Icons["theme:us_ww2"]:DoClick()
+wait 2
+lua local w=ply:GetActiveWeapon() assert(IsValid(w) and MCV.RandomWeaponDefinitions["theme:us_ww2"].classes[w:GetClass()],"WW2 give failed") file.Write("mcv_harness/p27018/results/random_ww2.json",util.TableToJSON({class=w:GetClass()},true))
+clua MCVRandomTest.Open(true)
+wait 1
+clua g_SpawnMenu:Close()
+ccmd gmod_npcweapon ""

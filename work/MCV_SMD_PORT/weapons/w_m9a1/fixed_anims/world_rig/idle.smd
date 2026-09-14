@@ -1,0 +1,8 @@
+version 1
+nodes
+0 "MCV.weapon_bone" -1
+end
+skeleton
+time 0
+0 0.000000000 0.000000000 -0.064417000 1.570796327 0.000000000 -0.000000000
+end

@@ -1,0 +1,85 @@
+{
+	"health": 100,
+	"ironsight_ang": [
+		0,
+		0.05,
+		0
+	],
+	"realm": "server",
+	"clip2": -1,
+	"sighted": false,
+	"bipod": false,
+	"reserve2": 0,
+	"holster_time": 0,
+	"clip": 7,
+	"launcher": false,
+	"akimbo": true,
+	"pos": [
+		-320,
+		-384,
+		-12287.08
+	],
+	"onground": true,
+	"firemode": "Single-Fire",
+	"action_state": 0,
+	"map": "gm_flatgrass",
+	"eye": [
+		-320,
+		-384,
+		-12223.08
+	],
+	"sight_amount": 0,
+	"anim_lock": -57.405,
+	"speed": 0,
+	"ammo": {
+		"3": 16
+	},
+	"base": "mcv_base",
+	"weapon": "mcv_mk22_mod0",
+	"hold_type": "duel",
+	"vm": {
+		"rate": 1,
+		"pose": {
+			"recoil_r": 1,
+			"move_yaw": 0,
+			"ironsight": 0,
+			"recoil_l": 1,
+			"empty": 0,
+			"player_movement": 0
+		},
+		"cycle": 0.542,
+		"sequence": "idle",
+		"model": "models/weapons/mcv/v_dual_mk22_mod0.mdl",
+		"ang": [
+			0,
+			-90,
+			0
+		],
+		"bodygroups": {
+			"studio": 0,
+			"mk22_variants": 0
+		},
+		"activity": "ACT_VM_IDLE",
+		"pos": [
+			-320,
+			-384,
+			-12287.08
+		]
+	},
+	"ironsight_pos": [
+		0,
+		-5,
+		-0.475
+	],
+	"next_idle": 0.962,
+	"time": 57.40499871689826,
+	"bayonet": false,
+	"ironsight": false,
+	"reserve": 16,
+	"ang": [
+		-9.702,
+		-99.528,
+		0
+	],
+	"printname": "Mk 22 Mod 0"
+}

@@ -1,0 +1,116 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_welrod\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_welrod\v_welrod.qc"
+Building binary model files...
+Working on "v_welrod.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\welrod_ref.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\Bullet0_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\Bullet1_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\Bullet2_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\Bullet3_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\Bullet4_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\Default_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\boltpull_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\boltpullIron_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\PoseDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\Default.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\Bullet4.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\Bullet3.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\Bullet2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\Bullet1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\Bullet0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\boltpull_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\boltpullIron_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_welrod\v_welrod_anims\holster.smd
+Processing LOD for material: shells_small_additional
+Processing LOD for material: v_welrod
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_welrod.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_welrod.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        22708 bytes (99)
+animations  186780 bytes (62 anims) (1531 frames) [0:51]
+sequences     9508 bytes (22 seq) 
+ik/pose        244 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       140 bytes
+keyvalues       20 bytes
+bone transforms    13528 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       236632
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_welrod.vvd:
+vertices    480144 bytes (10003 vertices)
+tangents    160048 bytes (10003 vertices)
+total       640256 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_welrod.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:          90027 bytes
+indices:        68016 bytes
+bone changes:      80 bytes
+everything:    158309 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_welrod.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:          90027 bytes
+indices:        68016 bytes
+bone changes:      80 bytes
+everything:    158309 bytes
+
+Completed "v_welrod.qc"

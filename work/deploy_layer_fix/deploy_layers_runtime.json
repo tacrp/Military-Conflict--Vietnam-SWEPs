@@ -1,0 +1,151 @@
+{
+	"ok": true,
+	"models": [
+		{
+			"idleDelta": 16.400350043183884,
+			"name": "v_ak47",
+			"draws": [
+				{
+					"movementDelta": 0,
+					"sequence": "draw"
+				},
+				{
+					"movementDelta": 0,
+					"sequence": "Firstdraw"
+				}
+			]
+		},
+		{
+			"idleDelta": 29.099246687160402,
+			"name": "v_sks",
+			"draws": [
+				{
+					"movementDelta": 0,
+					"sequence": "draw"
+				},
+				{
+					"movementDelta": 0,
+					"sequence": "Firstdraw"
+				},
+				{
+					"movementDelta": 0,
+					"sequence": "grenade_draw"
+				},
+				{
+					"movementDelta": 0,
+					"sequence": "grenade_draw_empty"
+				}
+			]
+		},
+		{
+			"idleDelta": 16.024351556091855,
+			"name": "v_m203",
+			"draws": [
+				{
+					"movementDelta": 0,
+					"sequence": "draw"
+				},
+				{
+					"movementDelta": 0,
+					"sequence": "Firstdraw"
+				},
+				{
+					"movementDelta": 0,
+					"sequence": "gl_draw"
+				}
+			]
+		},
+		{
+			"idleDelta": 31.859138624212544,
+			"name": "v_m21",
+			"draws": [
+				{
+					"movementDelta": 0,
+					"sequence": "draw"
+				},
+				{
+					"movementDelta": 0,
+					"sequence": "Firstdraw"
+				},
+				{
+					"movementDelta": 0,
+					"sequence": "grenade_draw"
+				},
+				{
+					"movementDelta": 0,
+					"sequence": "Grenade_draw_empty"
+				}
+			]
+		},
+		{
+			"idleDelta": 11.642661572594184,
+			"name": "v_dual_m1911",
+			"draws": [
+				{
+					"movementDelta": 0,
+					"sequence": "draw"
+				},
+				{
+					"movementDelta": 0,
+					"sequence": "Firstdraw"
+				}
+			]
+		},
+		{
+			"idleDelta": 13.956255322377647,
+			"name": "v_m635",
+			"draws": [
+				{
+					"movementDelta": 0,
+					"sequence": "draw"
+				},
+				{
+					"movementDelta": 0,
+					"sequence": "Firstdraw"
+				}
+			]
+		},
+		{
+			"idleDelta": 15.299612821765749,
+			"name": "v_xm16super",
+			"draws": [
+				{
+					"movementDelta": 0,
+					"sequence": "draw"
+				},
+				{
+					"movementDelta": 0,
+					"sequence": "Firstdraw"
+				},
+				{
+					"movementDelta": 0,
+					"sequence": "gl_draw"
+				}
+			]
+		},
+		{
+			"idleDelta": 1.1845544490224258,
+			"name": "v_ptrd41_s",
+			"draws": [
+				{
+					"movementDelta": 0,
+					"sequence": "draw"
+				},
+				{
+					"movementDelta": 0,
+					"sequence": "Firstdraw"
+				}
+			]
+		},
+		{
+			"idleDelta": 11.458879609791499,
+			"name": "v_lpo50",
+			"draws": [
+				{
+					"movementDelta": 0,
+					"sequence": "draw"
+				}
+			]
+		}
+	]
+}

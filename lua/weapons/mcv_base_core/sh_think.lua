@@ -1,4 +1,6 @@
 function SWEP:Think()
+    local owner = self:GetOwner()
+    if !IsValid(owner) or !owner:IsPlayer() then return end
     // In singleplayer this hook also runs on the client, but the client is NOT predicting
     // there: anything it writes to a NetworkVar is overwritten by the next server update.
     // Advancing the sight/speed blends here would fight the server's state on each packet.

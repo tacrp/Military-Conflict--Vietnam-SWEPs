@@ -1,0 +1,49 @@
+{
+  "model": "w_lpo50",
+  "prefix": "lpo50",
+  "hand": [
+    -6.153633063193485,
+    -0.9404790267408432,
+    -1.1082037582312432,
+    12.956,
+    -0.0021244462626396525,
+    -179.56114628797332
+  ],
+  "sources": [
+    {
+      "file": "w_lpo50_lod0.smd",
+      "triangles": 1028,
+      "frames": 1
+    },
+    {
+      "file": "w_lpo50_lod0_lod1.smd",
+      "triangles": 436,
+      "frames": 1
+    },
+    {
+      "file": "w_lpo50_lod0_lod2.smd",
+      "triangles": 150,
+      "frames": 1
+    },
+    {
+      "file": "w_lpo50_anims\\idle.smd",
+      "triangles": 0,
+      "frames": 1
+    },
+    {
+      "file": "w_lpo50_anims\\attack1.smd",
+      "triangles": 0,
+      "frames": 2
+    },
+    {
+      "file": "w_lpo50_anims\\attackoffcenter.smd",
+      "triangles": 0,
+      "frames": 2
+    },
+    {
+      "file": "w_lpo50_physics.smd",
+      "triangles": 92,
+      "frames": 1
+    }
+  ]
+}

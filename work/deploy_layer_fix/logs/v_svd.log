@@ -1,0 +1,135 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_svd\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_svd\v_svd.qc"
+Building binary model files...
+Working on "v_svd.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\ref_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_bayonet.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\Boltforward_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\BoltBack_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\BoltMove_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\BoltStand_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\walkDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\walkIdle_a.smd
+SMD MODEL fixed_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\BasePose.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\BoltBack.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\Boltforward.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\BoltMove.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\BoltStand.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\bash_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\bash_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\bayonet_unequip_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\bayonet_unequip_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\bayonet_equip_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\bayonet_equip_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\scope_adjust_idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\scope_adjust_iron.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_svd\v_svd_anims\holster.smd
+Processing LOD for material: shells_small_additional
+Processing LOD for material: svd
+Processing LOD for material: lens_svd
+Processing LOD for material: optics_pso_1
+Processing LOD for material: ak47_bayonet_d
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_svd.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_svd.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        22628 bytes (98)
+animations  218516 bytes (71 anims) (2100 frames) [1:09]
+sequences    12048 bytes (30 seq) 
+ik/pose        556 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       348 bytes
+keyvalues       20 bytes
+bone transforms    13392 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       271980
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_svd.vvd:
+vertices   1294080 bytes (26960 vertices)
+vertices    101520 bytes (2115 vertices)
+tangents    431360 bytes (26960 vertices)
+tangents     33840 bytes (2115 vertices)
+total      1860864 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_svd.dx80.vtx":
+body parts:        16 bytes
+models:            60 bytes
+model LODs:        36 bytes
+meshes:            45 bytes
+strip groups:     125 bytes
+strips:           135 bytes
+verts:         261675 bytes
+indices:       198054 bytes
+bone changes:      88 bytes
+everything:    460234 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_svd.dx90.vtx":
+body parts:        16 bytes
+models:            60 bytes
+model LODs:        36 bytes
+meshes:            45 bytes
+strip groups:     125 bytes
+strips:           135 bytes
+verts:         261675 bytes
+indices:       198054 bytes
+bone changes:      88 bytes
+everything:    460234 bytes
+
+Completed "v_svd.qc"

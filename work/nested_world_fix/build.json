@@ -1,0 +1,32 @@
+[
+  {
+    "model": "w_m1g_s",
+    "files": [
+      "w_m1g_s.dx80.vtx",
+      "w_m1g_s.dx90.vtx",
+      "w_m1g_s.mdl",
+      "w_m1g_s.phy",
+      "w_m1g_s.vvd"
+    ]
+  },
+  {
+    "model": "w_lpo50",
+    "files": [
+      "w_lpo50.dx80.vtx",
+      "w_lpo50.dx90.vtx",
+      "w_lpo50.mdl",
+      "w_lpo50.phy",
+      "w_lpo50.vvd"
+    ]
+  },
+  {
+    "model": "w_m9a1",
+    "files": [
+      "w_m9a1.dx80.vtx",
+      "w_m9a1.dx90.vtx",
+      "w_m9a1.mdl",
+      "w_m9a1.phy",
+      "w_m9a1.vvd"
+    ]
+  }
+]

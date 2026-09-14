@@ -1,0 +1,38 @@
+[
+	{
+		"width": 512,
+		"material": "entities/mcv_rhogun.png",
+		"height": 512,
+		"class": "mcv_rhogun"
+	},
+	{
+		"width": 512,
+		"material": "entities/mcv_cobra.png",
+		"height": 512,
+		"class": "mcv_cobra"
+	},
+	{
+		"width": 512,
+		"material": "entities/mcv_ptrd_sniper.png",
+		"height": 512,
+		"class": "mcv_ptrd_sniper"
+	},
+	{
+		"width": 512,
+		"material": "entities/mcv_m635.png",
+		"height": 512,
+		"class": "mcv_m635"
+	},
+	{
+		"width": 512,
+		"material": "entities/mcv_xm16super.png",
+		"height": 512,
+		"class": "mcv_xm16super"
+	},
+	{
+		"width": 512,
+		"material": "entities/mcv_swm76.png",
+		"height": 512,
+		"class": "mcv_swm76"
+	}
+]

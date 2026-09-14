@@ -1,0 +1,153 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_dp28\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_dp28\v_dp28.qc"
+Building binary model files...
+Working on "v_dp28.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\Ref_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\magRotate_base_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\magRotate_270_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\magRotate_180_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\magRotate_90_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\NotEmpty_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\Empty_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\NotEmptyMove_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\EmptyMove_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\shoot1d_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\shoot1d_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\shoot2d_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\shoot2d_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\shoot3d_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\shoot3d_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\magRotate_delta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\magRotate_base.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\magRotate_90.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\magRotate_180.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\magRotate_270.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\magRotate_360.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\Base.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\NotEmpty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\Empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\NotEmptyMove.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\EmptyMove.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\walkDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\prone_deployF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\prone_deployB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\prone_deployL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\prone_deployR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\proneB.smd
+SMD MODEL fixed_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\deploy_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\deploy_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\deploy_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\ironsightdeploy.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\deploy_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\deploy_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\shoot1d_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\shoot1d_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\shoot2d_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\shoot2d_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\shoot3d_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\shoot3d_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\reload_deploy.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\reload_deploy_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\reload_deploy_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\reload_deploy_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dp28\v_dp28_anims\holster.smd
+Processing LOD for material: shells_small_additional
+Processing LOD for material: dp28
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dp28.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dp28.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        22992 bytes (100)
+animations  401076 bytes (101 anims) (3107 frames) [1:41]
+sequences    14792 bytes (38 seq) 
+ik/pose        264 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       140 bytes
+keyvalues       20 bytes
+bone transforms    13664 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       457724
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dp28.vvd:
+vertices   1194720 bytes (24890 vertices)
+tangents    398240 bytes (24890 vertices)
+total      1593024 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dp28.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:         224010 bytes
+indices:       175422 bytes
+bone changes:      88 bytes
+everything:    399706 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dp28.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:         224010 bytes
+indices:       175422 bytes
+bone changes:      88 bytes
+everything:    399706 bytes
+
+Completed "v_dp28.qc"

@@ -1,0 +1,182 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_blackhawk\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_blackhawk\v_blackhawk.qc"
+Building binary model files...
+Working on "v_blackhawk.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\ref_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\shoot_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\shoot_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\shoot_w_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\shoot_w_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\shoot_p_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\shoot_p_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\walkDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\walkIdle_a.smd
+SMD MODEL fixed_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\idle_delayed_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\ironsight_delayed.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\ironsight_transition_delayed.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\idle_western_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\ironsight_western.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\ironsight_transition_western.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\shoot_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\shoot_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\shoot_w_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\shoot_w_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\shoot_p_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\shoot_p_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\reload_s.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\w_reload_s.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\d_reload_s.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\reload_s_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\w_reload_s_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\d_reload_s_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\reload_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\w_reload_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\d_reload_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\reload_e_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\w_reload_e_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\d_reload_e_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\reload_l.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\w_reload_l.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\d_reload_l.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\reload_l_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\w_reload_l_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\d_reload_l_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\d_nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\w_nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\d_nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\w_nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\d_nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\w_nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\d_nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\w_nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\d_nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\w_nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\d_nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\w_nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\d_proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\d_proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\d_proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\d_proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\w_proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\w_proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\w_proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\w_proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\d_pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\w_pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\d_pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\w_pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\d_pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\w_pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\d_pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\w_pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\d_pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\w_pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\d_pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\w_pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\change_firemode_towestern_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\change_firemode_towestern_iron_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\change_firemode_tonormal_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\change_firemode_tonormal_iron_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\FirstDraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\FirstDraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\FirstDraw_3.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\FirstDraw_4.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\FirstDraw_5.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\FirstDraw_6.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\draw_3.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\draw_4.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\draw_5.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\draw_6.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\bash_3.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\bash_4.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\bash_5.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\bash_6.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\holster.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\holster_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_blackhawk\v_blackhawk_anims\holster_3.smd
+Processing LOD for material: shells_small_additional
+Processing LOD for material: blackhawk
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_blackhawk.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_blackhawk.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        23076 bytes (101)
+animations  475756 bytes (134 anims) (3588 frames) [1:59]
+sequences    10752 bytes (28 seq) 
+ik/pose        244 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       140 bytes
+keyvalues       20 bytes
+bone transforms    13800 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       528708
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_blackhawk.vvd:
+vertices    450096 bytes (9377 vertices)
+tangents    150032 bytes (9377 vertices)
+total       600192 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_blackhawk.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:          84393 bytes
+indices:        66336 bytes
+bone changes:      96 bytes
+everything:    151011 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_blackhawk.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:          84393 bytes
+indices:        66336 bytes
+bone changes:      96 bytes
+everything:    151011 bytes
+
+Completed "v_blackhawk.qc"

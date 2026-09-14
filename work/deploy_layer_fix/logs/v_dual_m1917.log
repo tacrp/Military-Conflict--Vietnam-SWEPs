@@ -1,0 +1,192 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_dual_m1917\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_dual_m1917\v_dual_m1917.qc"
+Building binary model files...
+Working on "v_dual_m1917.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\DualM1917.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\Bullet0_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\Bullet1_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\Bullet2_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\Bullet3_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\Bullet4_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\Bullet5_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\Bullet6_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\Bullet7_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\Bullet8_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\Bullet9_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\Bullet10_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\Bullet11_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\Default_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\shoot_r_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\shoot_r_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\shoot_l_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\shoot_l_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\shoot_p_r_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\shoot_p_r_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\shoot_p_l_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\shoot_p_l_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\shoot_d_r_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\shoot_d_r_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\shoot_d_l_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\shoot_d_l_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\PoseDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\Default.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\Bullet11.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\Bullet10.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\Bullet9.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\Bullet8.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\Bullet7.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\Bullet6.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\Bullet5.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\Bullet4.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\Bullet3.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\Bullet2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\Bullet1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\Bullet0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\idle_delayed_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\ironsight_delayed.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\ironsight_transition_delayed.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\shoot_r_a.smd
+SMD MODEL fixed_anims\shoot_r_a_tail01.smd
+SMD MODEL fixed_anims\shoot_r_a_tail02.smd
+SMD MODEL fixed_anims\shoot_r_a_tail03.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\shoot_r_ironsight_a.smd
+SMD MODEL fixed_anims\shoot_r_ironsight_a_tail01.smd
+SMD MODEL fixed_anims\shoot_r_ironsight_a_tail02.smd
+SMD MODEL fixed_anims\shoot_r_ironsight_a_tail03.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\shoot_l_a.smd
+SMD MODEL fixed_anims\shoot_l_a_tail01.smd
+SMD MODEL fixed_anims\shoot_l_a_tail02.smd
+SMD MODEL fixed_anims\shoot_l_a_tail03.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\shoot_l_ironsight_a.smd
+SMD MODEL fixed_anims\shoot_l_ironsight_a_tail01.smd
+SMD MODEL fixed_anims\shoot_l_ironsight_a_tail02.smd
+SMD MODEL fixed_anims\shoot_l_ironsight_a_tail03.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\shoot_p_r_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\shoot_p_r_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\shoot_p_l_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\shoot_p_l_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\shoot_d_r_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\shoot_d_r_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\shoot_d_l_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\shoot_d_l_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\reload_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\reload_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\reload_d_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\reload_d_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\reload_r_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\reload_r_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\reload_d_r_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\reload_d_r_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\nearwall_d_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\nearwall_d_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\nearwall_d_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\nearwall_d_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\nearwall_d_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\nearwall_d_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\pronedF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\pronedB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\pronedL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\pronedR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\pickup_d_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\pickup_d_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\pickup_d_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\pickup_d_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\pickup_d_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\pickup_d_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\change_firemode_todelayed_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\change_firemode_todelayed_iron_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\change_firemode_tonormal_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\change_firemode_tonormal_iron_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\FirstDraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\FirstDraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\draw_3.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\draw_4.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\bash_3.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\bash_4.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\holster.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_m1917\v_dual_m1917_anims\holster_2.smd
+Processing LOD for material: m1917
+Processing LOD for material: shells_small
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dual_m1917.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dual_m1917.mdl
+   Found 34 preexisting sequences.
+bones        29408 bytes (128)
+animations  419272 bytes (191 anims) (3611 frames) [2:00]
+Building sequence index remapping table...
+No re-ordering required.
+sequences    14796 bytes (34 seq) 
+ik/pose        304 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       140 bytes
+keyvalues       20 bytes
+bone transforms    17472 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       488764
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dual_m1917.vvd:
+vertices    806880 bytes (16810 vertices)
+tangents    268960 bytes (16810 vertices)
+total      1075904 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dual_m1917.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:         151290 bytes
+indices:       133152 bytes
+bone changes:     232 bytes
+everything:    284860 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dual_m1917.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:         151290 bytes
+indices:       133152 bytes
+bone changes:     232 bytes
+everything:    284860 bytes
+
+Completed "v_dual_m1917.qc"

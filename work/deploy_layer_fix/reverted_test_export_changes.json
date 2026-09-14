@@ -1,0 +1,40 @@
+[
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_cobra_pbr/v_cobra_pbr.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayerironsight\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayerironsight\""
+        ]
+      }
+    ]
+  },
+  {
+    "qc": "MCV_SMD_PORT/weapons/v_lacoste_pbr/v_lacoste_pbr.qc",
+    "changes": [
+      {
+        "sequence": "draw",
+        "activity": "ACT_VM_DRAW",
+        "removed": [
+          "addlayer \"walklayerironsight\""
+        ]
+      },
+      {
+        "sequence": "Firstdraw",
+        "activity": "ACT_VM_READY",
+        "removed": [
+          "addlayer \"walklayerironsight\""
+        ]
+      }
+    ]
+  }
+]

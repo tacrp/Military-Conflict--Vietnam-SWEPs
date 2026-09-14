@@ -1,0 +1,133 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_m202\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_m202\v_m202.qc"
+Building binary model files...
+Working on "v_m202.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\Ref.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\Rocketref_4.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\Rocketref_3.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\Rocketref_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\Rocketref_1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m202\v_m202_anims\holster.smd
+Processing LOD for material: clip
+Processing LOD for material: m202
+Processing LOD for material: parts
+Processing LOD for material: glassdecals
+Processing LOD for material: clip
+Processing LOD for material: clip
+Processing LOD for material: clip
+Processing LOD for material: clip
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m202.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m202.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        23172 bytes (100)
+animations  218564 bytes (45 anims) (1888 frames) [1:02]
+sequences     7572 bytes (19 seq) 
+ik/pose       1472 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       268 bytes
+keyvalues       20 bytes
+bone transforms    13664 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       268728
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m202.vvd:
+vertices   1206672 bytes (25139 vertices)
+vertices     47376 bytes (987 vertices)
+vertices     47376 bytes (987 vertices)
+vertices     47376 bytes (987 vertices)
+vertices     47376 bytes (987 vertices)
+tangents    402224 bytes (25139 vertices)
+tangents     15792 bytes (987 vertices)
+tangents     15792 bytes (987 vertices)
+tangents     15792 bytes (987 vertices)
+tangents     15792 bytes (987 vertices)
+total      1861632 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m202.dx80.vtx":
+body parts:        40 bytes
+models:           180 bytes
+model LODs:       108 bytes
+meshes:            72 bytes
+strip groups:     200 bytes
+strips:           216 bytes
+verts:         261783 bytes
+indices:       224676 bytes
+bone changes:     112 bytes
+everything:    487315 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m202.dx90.vtx":
+body parts:        40 bytes
+models:           180 bytes
+model LODs:       108 bytes
+meshes:            72 bytes
+strip groups:     200 bytes
+strips:           216 bytes
+verts:         261783 bytes
+indices:       224676 bytes
+bone changes:     112 bytes
+everything:    487315 bytes
+
+Completed "v_m202.qc"

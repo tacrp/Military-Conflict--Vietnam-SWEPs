@@ -1,0 +1,85 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_mk3a2\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_mk3a2\v_mk3a2.qc"
+Building binary model files...
+Working on "v_mk3a2.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mk3a2\Mk32_Ref.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mk3a2\v_mk3a2_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mk3a2\v_mk3a2_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mk3a2\v_mk3a2_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mk3a2\v_mk3a2_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mk3a2\v_mk3a2_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mk3a2\v_mk3a2_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mk3a2\v_mk3a2_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mk3a2\v_mk3a2_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mk3a2\v_mk3a2_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mk3a2\v_mk3a2_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mk3a2\v_mk3a2_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mk3a2\v_mk3a2_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mk3a2\v_mk3a2_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mk3a2\v_mk3a2_anims\idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mk3a2\v_mk3a2_anims\drawbackhigh.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mk3a2\v_mk3a2_anims\drawbacklow.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mk3a2\v_mk3a2_anims\throw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mk3a2\v_mk3a2_anims\roll.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mk3a2\v_mk3a2_anims\lob.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mk3a2\v_mk3a2_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mk3a2\v_mk3a2_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mk3a2\v_mk3a2_anims\pickupstart.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mk3a2\v_mk3a2_anims\pickuploop.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mk3a2\v_mk3a2_anims\pickupend.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mk3a2\v_mk3a2_anims\idletonearwall.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mk3a2\v_mk3a2_anims\nearwall.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mk3a2\v_mk3a2_anims\nearwalltoidle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mk3a2\v_mk3a2_anims\holster.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mk3a2\v_mk3a2_anims\firemode.smd
+Processing LOD for material: mk32
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_mk3a2.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_mk3a2.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        21372 bytes (94)
+animations   83620 bytes (29 anims) (618 frames) [0:20]
+sequences     7444 bytes (20 seq) 
+ik/pose        224 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures        72 bytes
+keyvalues       20 bytes
+bone transforms    12848 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       128384
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_mk3a2.vvd:
+vertices    249072 bytes (5189 vertices)
+tangents     83024 bytes (5189 vertices)
+total       332160 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_mk3a2.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:             9 bytes
+strip groups:      25 bytes
+strips:            27 bytes
+verts:          46701 bytes
+indices:        43176 bytes
+bone changes:      40 bytes
+everything:     90042 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_mk3a2.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:             9 bytes
+strip groups:      25 bytes
+strips:            27 bytes
+verts:          46701 bytes
+indices:        43176 bytes
+bone changes:      40 bytes
+everything:     90042 bytes
+
+Completed "v_mk3a2.qc"

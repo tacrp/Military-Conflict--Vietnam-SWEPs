@@ -7,6 +7,11 @@ SWEP.Spawnable = false
 SWEP.AdminOnly = false
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Base = "weapon_base"
+SWEP.NPCUsable = false
+
+function SWEP:CanBePickedUpByNPCs()
+    return self.NPCUsable
+end
 
 // Names and basic information
 SWEP.PrintName = ""

@@ -1,0 +1,39 @@
+ccmd net_fakelag 0
+ccmd cl_showerror 0
+strip
+lua ply:SetModel("models/player/kleiner.mdl") ply:GodEnable() include("mcv_harness/npc_models.lua")
+pos 4000 300 -12799
+ang 0 0 0
+give mcv_m1g
+wait 3
+clua include("mcv_harness/npc_models.lua") MCVModelTest.View(false)
+wait 1
+shot garand_player_rig
+clua MCVModelTest.Report("garand_player_rig")
+give mcv_m1d
+wait 3
+shot garand_scope_player_rig
+give mcv_lpo50
+wait 3
+shot lpo50_player_rig
+clua MCVModelTest.Report("lpo50_player_rig")
+give mcv_m9a1
+wait 3
+shot m9a1_player_rig
+clua MCVModelTest.Report("m9a1_player_rig")
+lua MCVModelTest.Spawn("mcv_m1g")
+wait 1
+clua MCVModelTest.View(true)
+wait 1
+shot garand_npc_rig
+clua MCVModelTest.Report("garand_npc_rig")
+lua MCVModelTest.Spawn("mcv_lpo50")
+wait 1
+shot lpo50_npc_rig
+clua MCVModelTest.Report("lpo50_npc_rig")
+lua MCVModelTest.Spawn("mcv_m9a1")
+wait 1
+shot m9a1_npc_rig
+clua MCVModelTest.Report("m9a1_npc_rig")
+clua MCVModelTest.Stop()
+lua if IsValid(MCVModelTest.npc) then MCVModelTest.npc:Remove() end

@@ -1,0 +1,120 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_sten\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_sten\v_sten.qc"
+Building binary model files...
+Working on "v_sten.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\Ref_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\Default_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\Slideback_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\ShootMove_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\ShootStill_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\PoseDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\PoseDelta2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\Default.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\Slideback.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\ShootMove.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\ShootStill.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\walkDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\change_firemode_idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\change_firemode_iron.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sten\v_sten_anims\holster.smd
+Processing LOD for material: shells_small
+Processing LOD for material: sten
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_sten.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_sten.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        22056 bytes (96)
+animations  167756 bytes (66 anims) (1682 frames) [0:56]
+sequences     9984 bytes (26 seq) 
+ik/pose        244 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       140 bytes
+keyvalues       20 bytes
+bone transforms    13120 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       217060
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_sten.vvd:
+vertices    896976 bytes (18687 vertices)
+tangents    298992 bytes (18687 vertices)
+total      1196032 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_sten.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:         168183 bytes
+indices:       121818 bytes
+bone changes:      64 bytes
+everything:    290251 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_sten.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:         168183 bytes
+indices:       121818 bytes
+bone changes:      64 bytes
+everything:    290251 bytes
+
+Completed "v_sten.qc"

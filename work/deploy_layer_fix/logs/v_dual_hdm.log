@@ -1,0 +1,164 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_dual_hdm\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_dual_hdm\v_dual_hdm.qc"
+Building binary model files...
+Working on "v_dual_hdm.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\DualHDM.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\DefaultSlide_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\RightEmpty_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\BothEmpty_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\Bullet16_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\Bullet15_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\Bullet14_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\Bullet13_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\Bullet12_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\Bullet11_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\Bullet10_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\Bullet09_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\Bullet08_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\Bullet07_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\Bullet06_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\Bullet05_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\Bullet04_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\Bullet03_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\Bullet02_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\shoot1_r_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\shoot1_r_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\shoot1_l_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\shoot1_l_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\shoot2_r_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\shoot2_r_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\shoot2_l_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\shoot2_l_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\shootlast_r_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\shootlast_r_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\shootlast_l_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\shootlast_l_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\PoseDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\DefaultSlide.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\RightEmpty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\BothEmpty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\Default.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\Bullet01.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\Bullet02.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\Bullet03.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\Bullet04.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\Bullet05.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\Bullet06.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\Bullet07.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\Bullet08.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\Bullet09.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\Bullet10.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\Bullet11.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\Bullet12.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\Bullet13.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\Bullet14.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\Bullet15.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\Bullet16.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\FirstDraw_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\FirstDraw_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\shoot1_r_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\shoot1_r_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\shoot1_l_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\shoot1_l_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\shoot2_r_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\shoot2_r_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\shoot2_l_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\shoot2_l_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\shootlast_r_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\shootlast_r_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\shootlast_l_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\shootlast_l_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\nearwall_start.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\nearwall_start_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\nearwall_loop.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\nearwall_loop_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\nearwall_end.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\nearwall_end_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\pickup_start.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\pickup_start_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\pickup_loop.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\pickup_loop_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\pickup_end.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\pickup_end_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\reloadRightOnly.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\reloadRightOnly_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\reload_emptyRightOnly.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\reload_emptyRightOnly_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dual_hdm\v_dual_hdm_anims\holster.smd
+Processing LOD for material: shells_small
+Processing LOD for material: hdm
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dual_hdm.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dual_hdm.mdl
+   Found 35 preexisting sequences.
+bones        26432 bytes (115)
+animations  268688 bytes (160 anims) (2413 frames) [1:20]
+Building sequence index remapping table...
+No re-ordering required.
+sequences    16552 bytes (35 seq) 
+ik/pose        304 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       140 bytes
+keyvalues       20 bytes
+bone transforms    15704 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       334336
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dual_hdm.vvd:
+vertices    909984 bytes (18958 vertices)
+tangents    303328 bytes (18958 vertices)
+total      1213376 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dual_hdm.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:         170622 bytes
+indices:       130572 bytes
+bone changes:     216 bytes
+everything:    301596 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dual_hdm.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:         170622 bytes
+indices:       130572 bytes
+bone changes:     216 bytes
+everything:    301596 bytes
+
+Completed "v_dual_hdm.qc"

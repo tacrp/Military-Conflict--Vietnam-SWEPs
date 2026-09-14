@@ -1,0 +1,39 @@
+{
+  "model": "w_m9a1",
+  "prefix": "m9a1",
+  "hand": [
+    -11.121690001418939,
+    -0.4791333328771977,
+    -1.1089989655128931,
+    12.956,
+    0.16961681353869484,
+    -171.044840104516
+  ],
+  "sources": [
+    {
+      "file": "w_m9a1_lod0.smd",
+      "triangles": 1134,
+      "frames": 1
+    },
+    {
+      "file": "w_m9a1_lod0_lod1.smd",
+      "triangles": 537,
+      "frames": 1
+    },
+    {
+      "file": "w_m9a1_lod0_lod2.smd",
+      "triangles": 268,
+      "frames": 1
+    },
+    {
+      "file": "w_m9a1_anims\\idle.smd",
+      "triangles": 0,
+      "frames": 1
+    },
+    {
+      "file": "w_m9a1_physics.smd",
+      "triangles": 84,
+      "frames": 1
+    }
+  ]
+}

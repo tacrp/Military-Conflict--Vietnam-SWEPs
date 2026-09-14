@@ -1,0 +1,86 @@
+{
+	"health": 100,
+	"ironsight_ang": [
+		0,
+		0,
+		0
+	],
+	"realm": "server",
+	"clip2": 1,
+	"sighted": false,
+	"bipod": false,
+	"reserve2": 0,
+	"holster_time": 0,
+	"clip": 20,
+	"launcher": false,
+	"akimbo": false,
+	"pos": [
+		-704,
+		576,
+		-12288
+	],
+	"onground": true,
+	"firemode": "Single-Fire",
+	"action_state": 0,
+	"map": "gm_flatgrass",
+	"eye": [
+		-704,
+		576,
+		-12224
+	],
+	"sight_amount": 0,
+	"anim_lock": -55.305,
+	"speed": 0,
+	"ammo": [
+		60
+	],
+	"base": "mcv_base",
+	"weapon": "mcv_m21",
+	"hold_type": "ar2",
+	"vm": {
+		"rate": 1,
+		"pose": {
+			"ironsight": 0,
+			"player_movement": 0,
+			"move_yaw": 0,
+			"empty": 0
+		},
+		"cycle": 0.58,
+		"sequence": "idle",
+		"model": "models/weapons/mcv/v_m21.mdl",
+		"ang": [
+			0,
+			45,
+			0
+		],
+		"bodygroups": {
+			"scope": 0,
+			"grenade": 0,
+			"bayonet": 0,
+			"studio": 0,
+			"mount": 0
+		},
+		"activity": "ACT_VM_IDLE",
+		"pos": [
+			-704,
+			576,
+			-12288
+		]
+	},
+	"ironsight_pos": [
+		-0.002,
+		-5.4,
+		-0.84
+	],
+	"next_idle": 0.887,
+	"time": 55.30499876383692,
+	"bayonet": false,
+	"ironsight": false,
+	"reserve": 60,
+	"ang": [
+		0,
+		0,
+		0
+	],
+	"printname": "XM21"
+}

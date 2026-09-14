@@ -1,0 +1,165 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_type63b\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_type63b\v_type63b.qc"
+Building binary model files...
+Working on "v_type63b.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\type63b.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\type63b_mount.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\type63b_grenade.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\Default_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\Slideback_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\boltShootMovementA_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\boltShootNoMovementA_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\shootlast_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\shootlast_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\gren_shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\gren_shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\PoseDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\Default.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\Slideback.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\Basewalk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\runIdle_a.smd
+SMD MODEL fixed_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\walkIdle_a.smd
+SMD MODEL fixed_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\boltShootMovementA.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\boltShootNoMovementA.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\shootlast_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\shootlast_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\reload_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\reload_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\nearwall_start.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\nearwall_start_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\nearwall_loop.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\nearwall_loop_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\nearwall_end.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\nearwall_end_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\pickup_start.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\pickup_start_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\pickup_loop.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\pickup_loop_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\pickup_end.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\pickup_end_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\grenade_ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\gren_shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\gren_shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\gren_reload_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\gren_reload_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\bayonet_unequip_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\bayonet_unequip_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\bayonet_equip_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\bayonet_equip_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\bayonet_bash_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\bayonet_bash_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\ChargeStart_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\ChargeStart_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\ChargeLoop_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\ChargeLoop_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\ChargeEnd_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\ChargeEnd_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\change_firemode_idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\change_firemode_iron.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\grenade_draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\grenade_draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\grenade_draw_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\grenade_draw_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type63b\v_type63b_anims\holster.smd
+Processing LOD for material: type63
+Processing LOD for material: type63b
+Processing LOD for material: type63b_wood
+Processing LOD for material: type63_wood
+Processing LOD for material: shells_small
+Processing LOD for material: rifle_glmounts_vc
+Processing LOD for material: rifle_grenades_vc
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_type63b.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_type63b.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        22344 bytes (97)
+animations  288032 bytes (93 anims) (2653 frames) [1:28]
+sequences    15296 bytes (41 seq) 
+ik/pose        868 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       484 bytes
+keyvalues       20 bytes
+bone transforms    13256 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       345908
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_type63b.vvd:
+vertices    984144 bytes (20503 vertices)
+vertices    119280 bytes (2485 vertices)
+vertices    107280 bytes (2235 vertices)
+tangents    328048 bytes (20503 vertices)
+tangents     39760 bytes (2485 vertices)
+tangents     35760 bytes (2235 vertices)
+total      1614336 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_type63b.dx80.vtx":
+body parts:        24 bytes
+models:           100 bytes
+model LODs:        60 bytes
+meshes:            63 bytes
+strip groups:     175 bytes
+strips:           189 bytes
+verts:         227007 bytes
+indices:       188616 bytes
+bone changes:      96 bytes
+everything:    416306 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_type63b.dx90.vtx":
+body parts:        24 bytes
+models:           100 bytes
+model LODs:        60 bytes
+meshes:            63 bytes
+strip groups:     175 bytes
+strips:           189 bytes
+verts:         227007 bytes
+indices:       188616 bytes
+bone changes:      96 bytes
+everything:    416306 bytes
+
+Completed "v_type63b.qc"

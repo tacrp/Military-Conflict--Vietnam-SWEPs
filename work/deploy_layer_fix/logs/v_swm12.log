@@ -1,0 +1,192 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_swm12\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_swm12\v_swm12.qc"
+Building binary model files...
+Working on "v_swm12.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\ref_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\38_special_6.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\Bullet0_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\Bullet1_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\Bullet2_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\Bullet3_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\Bullet4_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\Bullet5_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\Default_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\shoot_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\shoot_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\shoot_w_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\shoot_w_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\shoot_p_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\shoot_p_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\PoseDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\Default.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\Bullet5.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\Bullet4.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\Bullet3.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\Bullet2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\Bullet1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\Bullet0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\idle_delayed_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\ironsight_delayed.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\ironsight_transition_delayed.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\idle_western_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\ironsight_western.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\ironsight_transition_western.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\shoot_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\shoot_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\shoot_w_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\shoot_w_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\shoot_p_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\shoot_p_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\d_nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\w_nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\d_nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\w_nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\d_nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\w_nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\d_nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\w_nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\d_nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\w_nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\d_nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\w_nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\d_proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\d_proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\d_proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\d_proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\w_proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\w_proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\w_proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\w_proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\d_pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\w_pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\d_pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\w_pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\d_pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\w_pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\d_pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\w_pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\d_pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\w_pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\d_pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\w_pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\change_firemode_towestern_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\change_firemode_towestern_iron_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\change_firemode_todelayed_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\change_firemode_todelayed_iron_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\change_firemode_tonormal_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\change_firemode_tonormal_iron_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\FirstDraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\FirstDraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\FirstDraw_3.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\FirstDraw_4.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\FirstDraw_5.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\FirstDraw_6.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\draw_3.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\draw_4.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\draw_5.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\draw_6.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\reload_3.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\reload_4.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\reload_5.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\reload_6.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\bash_3.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\bash_4.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\bash_5.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\bash_6.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\holster.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\holster_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_swm12\v_swm12_anims\holster_3.smd
+Processing LOD for material: v_swm12
+Processing LOD for material: shells_small
+Processing LOD for material: shells_small_additional
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_swm12.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_swm12.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        24812 bytes (109)
+animations  509868 bytes (138 anims) (3764 frames) [2:04]
+sequences    11632 bytes (28 seq) 
+ik/pose        428 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       208 bytes
+keyvalues       20 bytes
+bone transforms    14888 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       567188
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_swm12.vvd:
+vertices    317760 bytes (6620 vertices)
+vertices    111744 bytes (2328 vertices)
+tangents    105920 bytes (6620 vertices)
+tangents     37248 bytes (2328 vertices)
+total       572736 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_swm12.dx80.vtx":
+body parts:        16 bytes
+models:            40 bytes
+model LODs:        24 bytes
+meshes:            27 bytes
+strip groups:      75 bytes
+strips:            81 bytes
+verts:          80532 bytes
+indices:        66504 bytes
+bone changes:     160 bytes
+everything:    147471 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_swm12.dx90.vtx":
+body parts:        16 bytes
+models:            40 bytes
+model LODs:        24 bytes
+meshes:            27 bytes
+strip groups:      75 bytes
+strips:            81 bytes
+verts:          80532 bytes
+indices:        66504 bytes
+bone changes:     160 bytes
+everything:    147471 bytes
+
+Completed "v_swm12.qc"

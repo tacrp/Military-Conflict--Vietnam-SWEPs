@@ -1,0 +1,56 @@
+{
+	"owner": "models/player/kleiner.mdl",
+	"bodygroups": [
+		{
+			"submodels": {
+				"0": "fixed_anims\\world_rig\\m1g_s_lod0.smd"
+			},
+			"num": 1,
+			"name": "Body",
+			"id": 0
+		},
+		{
+			"submodels": {
+				"0": "empty",
+				"1": "fixed_anims\\world_rig\\m1g_s_w_m7b_lod0.smd",
+				"2": "fixed_anims\\world_rig\\m1g_s_w_m1905_lod0.smd"
+			},
+			"num": 3,
+			"name": "bayonet",
+			"id": 1
+		},
+		{
+			"submodels": {
+				"0": "fixed_anims\\world_rig\\m1g_s_scope_lod0.smd",
+				"1": "empty"
+			},
+			"num": 2,
+			"name": "scope",
+			"id": 2
+		},
+		{
+			"submodels": {
+				"0": "empty",
+				"1": "fixed_anims\\world_rig\\m1g_s_usm_lod0.smd"
+			},
+			"num": 2,
+			"name": "mount",
+			"id": 3
+		},
+		{
+			"submodels": {
+				"0": "empty",
+				"1": "fixed_anims\\world_rig\\m1g_s_usg_lod0.smd"
+			},
+			"num": 2,
+			"name": "grenade",
+			"id": 4
+		}
+	],
+	"muzzle": "[34.6077 2.6978 -10.3911]",
+	"gunAng": "{-1.2512 -83.2729 -103.1947}",
+	"npc": false,
+	"model": "models/weapons/mcv/w_m1g_s.mdl",
+	"gunPos": "[10.9919 0.0776 -2.8707]",
+	"weapon": "mcv_m1g"
+}

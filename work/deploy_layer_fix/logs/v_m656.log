@@ -1,0 +1,149 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_m656\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_m656\v_m656.qc"
+Building binary model files...
+Working on "v_m656.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\m656_ref.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_bayonet_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\magazine_20.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\body3_model0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\change_firemode_idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\change_firemode_iron.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\bayonet_attack_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\bayonet_attack_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\bayonet_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\bayonet_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\bayonet_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\bayonet_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\Charge_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\Charge_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\Charge_l_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\Charge_l_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\Charge_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\Charge_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\scope_adjust_idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\scope_adjust_iron.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m656\v_m656_anims\holster.smd
+Processing LOD for material: m656
+Processing LOD for material: m656_stock
+Processing LOD for material: m21_scope
+Processing LOD for material: m7_d
+Processing LOD for material: shells_small
+Processing LOD for material: m16_mag20
+Processing LOD for material: m21_scope
+Processing LOD for material: lens_m656
+Processing LOD for material: m16_mag30
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m656.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m656.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        22776 bytes (99)
+animations  220272 bytes (69 anims) (2010 frames) [1:06]
+sequences    11972 bytes (32 seq) 
+ik/pose       1012 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       556 bytes
+keyvalues       20 bytes
+bone transforms    13528 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       275152
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m656.vvd:
+vertices   1572816 bytes (32767 vertices)
+vertices     95904 bytes (1998 vertices)
+vertices    114960 bytes (2395 vertices)
+vertices    689952 bytes (14374 vertices)
+tangents    524272 bytes (32767 vertices)
+tangents     31968 bytes (1998 vertices)
+tangents     38320 bytes (2395 vertices)
+tangents    229984 bytes (14374 vertices)
+total      3298240 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m656.dx80.vtx":
+body parts:        32 bytes
+models:           120 bytes
+model LODs:        72 bytes
+meshes:            81 bytes
+strip groups:     225 bytes
+strips:           243 bytes
+verts:         463806 bytes
+indices:       363636 bytes
+bone changes:     120 bytes
+everything:    828299 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m656.dx90.vtx":
+body parts:        32 bytes
+models:           120 bytes
+model LODs:        72 bytes
+meshes:            81 bytes
+strip groups:     225 bytes
+strips:           243 bytes
+verts:         463806 bytes
+indices:       363636 bytes
+bone changes:     120 bytes
+everything:    828299 bytes
+
+Completed "v_m656.qc"

@@ -1,0 +1,183 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_gewehr43\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_gewehr43\v_gewehr43.qc"
+Building binary model files...
+Working on "v_gewehr43.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\gewehr43_mesh.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\gewehr43_bayonet.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\gewehr43_mount.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\gewehr43_grenade.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\Bullet0_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\Bullet1_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\Bullet2_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\Bullet3_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\Bullet4_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\Bullet5_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\Bullet6_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\Bullet7_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\Bullet8_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\Default_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\Slideback_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\boltShootMovementA_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\boltShootNoMovementA_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\gren_shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\gren_shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\PoseDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\Default.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\Slideback.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\Bullet8.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\Bullet7.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\Bullet6.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\Bullet5.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\Bullet4.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\Bullet3.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\Bullet2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\Bullet1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\Bullet0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\walkDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\walkIdle_a.smd
+SMD MODEL fixed_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\boltShootDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\boltShootMovementA.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\boltShootNoMovementA.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\bash_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\bash_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\bayonet_unequip_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\bayonet_unequip_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\bayonet_equip_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\bayonet_equip_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\charge_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\charge_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\charge_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\charge_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\charge_e.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\charge_e_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\grenade_ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\gren_shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\gren_shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\gren_reload_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\gren_reload_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\holster.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\grenade_draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\grenade_draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\Grenade_draw_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_gewehr43\v_gewehr43_anims\Grenade_draw_empty_2.smd
+Processing LOD for material: v_gewehr43
+Processing LOD for material: shells_small_additional
+Processing LOD for material: v_s8498_bayonet
+Processing LOD for material: german_riflegrenade
+Processing LOD for material: german_riflegrenade
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_gewehr43.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_gewehr43.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        24296 bytes (106)
+animations  281916 bytes (106 anims) (2545 frames) [1:24]
+sequences    15356 bytes (39 seq) 
+ik/pose       1200 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       284 bytes
+keyvalues       20 bytes
+bone transforms    14480 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       343116
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_gewehr43.vvd:
+vertices   1104480 bytes (23010 vertices)
+vertices     28944 bytes (603 vertices)
+vertices    103056 bytes (2147 vertices)
+vertices     46128 bytes (961 vertices)
+tangents    368160 bytes (23010 vertices)
+tangents      9648 bytes (603 vertices)
+tangents     34352 bytes (2147 vertices)
+tangents     15376 bytes (961 vertices)
+total      1710208 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_gewehr43.dx80.vtx":
+body parts:        32 bytes
+models:           140 bytes
+model LODs:        84 bytes
+meshes:            45 bytes
+strip groups:     125 bytes
+strips:           135 bytes
+verts:         240489 bytes
+indices:       197256 bytes
+bone changes:     136 bytes
+everything:    438394 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_gewehr43.dx90.vtx":
+body parts:        32 bytes
+models:           140 bytes
+model LODs:        84 bytes
+meshes:            45 bytes
+strip groups:     125 bytes
+strips:           135 bytes
+verts:         240489 bytes
+indices:       197256 bytes
+bone changes:     136 bytes
+everything:    438394 bytes
+
+Completed "v_gewehr43.qc"

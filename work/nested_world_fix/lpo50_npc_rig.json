@@ -1,0 +1,19 @@
+{
+	"owner": "models/combine_soldier.mdl",
+	"bodygroups": [
+		{
+			"submodels": {
+				"0": "fixed_anims\\world_rig\\w_lpo50_lod0.smd"
+			},
+			"num": 1,
+			"name": "Body",
+			"id": 0
+		}
+	],
+	"muzzle": "[23.5663 -0.999 -7.5113]",
+	"gunAng": "{-0.4392 -90.0019 -102.9558}",
+	"npc": true,
+	"model": "models/weapons/mcv/w_lpo50.mdl",
+	"gunPos": "[5.7615 -0.9592 -2.3894]",
+	"weapon": "mcv_lpo50"
+}

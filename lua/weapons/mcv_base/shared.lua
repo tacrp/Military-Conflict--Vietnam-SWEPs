@@ -3,6 +3,7 @@ SWEP.Spawnable = false
 SWEP.AdminOnly = false
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Base = "mcv_base_core"
+SWEP.NPCUsable = true
 
 // Names and basic information
 SWEP.PrintName = ""

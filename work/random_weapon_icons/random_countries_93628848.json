@@ -1,0 +1,24 @@
+{
+	"ptraces": [],
+	"errors": [],
+	"spawned": [],
+	"log": [
+		"lua include(\"mcv/shared/sh_random_weapons.lua\") include(\"mcv_harness/random_weapons.lua\") MCVRandomTest.Audit(ply)",
+		"clua include(\"mcv/shared/sh_random_weapons.lua\") include(\"mcv_harness/random_weapons.lua\") MCVRandomTest.Open(true)",
+		"wait 2",
+		"shot random_flat_countries",
+		"clua MCVRandomTest.SelectNPC(\"country:gb\")",
+		"wait 1",
+		"lua MCVRandomTest.SpawnNPC(ply,\"country:gb\")",
+		"clua local icon=MCVRandomTest.Icons[\"theme:de_ww2\"] assert(IsValid(icon) and string.find(icon.m_MaterialName,\"de_imperial\",1,true)) MCVRandomTest.Panel:ScrollToChild(icon)",
+		"wait 2",
+		"shot random_flat_ww2",
+		"clua g_SpawnMenu:Close()",
+		"ccmd gmod_npcweapon \"\""
+	],
+	"shots": [
+		"random_flat_countries",
+		"random_flat_ww2"
+	],
+	"reports": []
+}

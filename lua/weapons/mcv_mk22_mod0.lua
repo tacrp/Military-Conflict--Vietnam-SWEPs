@@ -19,7 +19,8 @@ SWEP.AimHoldType = "revolver"
 SWEP.SprintHoldType = "normal"
 
 SWEP.ViewModel = "models/weapons/mcv/v_mk22.mdl"
-SWEP.ViewModelAkimbo = "models/weapons/mcv/v_dual_mk22.mdl"
+// The dual suppressors are a separate model, not the single gun's variant bodygroup.
+SWEP.ViewModelAkimbo = "models/weapons/mcv/v_dual_mk22_mod0.mdl"
 SWEP.AkimboPoseRecoil = true
 SWEP.WorldModel = "models/weapons/mcv/w_mk22.mdl"
 

@@ -5,17 +5,17 @@ $modelname "weapons\mcv\w_m9a1.mdl"
 
 $bodygroup "Body"
 {
-	studio "..\..\..\MCV_SMD_OG\weapons\w_m9a1\w_m9a1_lod0.smd"
+	studio "fixed_anims\world_rig\w_m9a1_lod0.smd"
 }
 
 $lod 15
 {
-	replacemodel "..\..\..\MCV_SMD_OG\weapons\w_m9a1\w_m9a1_lod0.smd" "..\..\..\MCV_SMD_OG\weapons\w_m9a1\w_m9a1_lod0_lod1.smd"
+	replacemodel "fixed_anims\world_rig\w_m9a1_lod0.smd" "fixed_anims\world_rig\w_m9a1_lod0_lod1.smd"
 	nofacial
 }
 $lod 30
 {
-	replacemodel "..\..\..\MCV_SMD_OG\weapons\w_m9a1\w_m9a1_lod0.smd" "..\..\..\MCV_SMD_OG\weapons\w_m9a1\w_m9a1_lod0_lod2.smd"
+	replacemodel "fixed_anims\world_rig\w_m9a1_lod0.smd" "fixed_anims\world_rig\w_m9a1_lod0_lod2.smd"
 	nofacial
 }
 
@@ -28,28 +28,29 @@ $illumposition 0 0 0
 $cdmaterials "models\weapons\mcv\w_m9a1\"
 $cdmaterials ""
 
-$attachment "muzzle" "ValveBiped.Weapon_bone" 0 1.1 14.6 rotate -90 -90 0
-$attachment "1" "ValveBiped.Weapon_bone" -2.6 1.2 -11 rotate -90 -90 0
-$attachment "flamethrower_gascable_2" "ValveBiped.Weapon_bone" -2.6 1.2 -11 rotate -90 -90 0
+$attachment "muzzle" "MCV.weapon_bone" 0 1.1 14.6 rotate -90 -90 0
+$attachment "1" "MCV.weapon_bone" -2.6 1.2 -11 rotate -90 -90 0
+$attachment "flamethrower_gascable_2" "MCV.weapon_bone" -2.6 1.2 -11 rotate -90 -90 0
 
 $cbox 0 0 0 0 0 0
 
-$bbox -11.263 -10.219 -4.825 14.862 1.468 2.858
+$bbox -3.421719 -14.580570 -4.629578 1.461095 11.009565 2.517526
 
-$definebone "ValveBiped" "" 0 0 0 0 0 89.999982 0 0 0 0 0 0
-$definebone "ValveBiped.Bip01_R_Hand" "ValveBiped" 0.267086 -2.58952 10.171795 78.841283 -102.773508 -9.262035 0 0 0 0 0 0
-$definebone "ValveBiped.Weapon_bone" "ValveBiped.Bip01_R_Hand" 5 -1.5 -4.999998 0.000002 0 0.000001 0 0 0 0 0 0
+$definebone "ValveBiped.Bip01_R_Hand" "" -11.121690001 -0.479133333 -1.108998966 12.956000000 0.169616814 -171.044840105 0 0 0 0 0 0
+$definebone "MCV.weapon_bone" "ValveBiped.Bip01_R_Hand" 0.000000000 0.000000000 -0.064417000 -0.000000000 0.000000000 90.000000000 0 0 0 0 0 0
+
+
 
 
 $sequence "idle" {
-	"..\..\..\MCV_SMD_OG\weapons\w_m9a1\w_m9a1_anims\idle.smd"
+	"fixed_anims\world_rig\idle.smd"
 	fadein 0.2
 	fadeout 0.2
 	fps 30
 	loop
 }
 
-$collisionmodel "..\..\..\MCV_SMD_OG\weapons\w_m9a1\w_m9a1_physics.smd"
+$collisionmodel "fixed_anims\world_rig\w_m9a1_physics.smd"
 {
 	$mass 8
 	$inertia 1

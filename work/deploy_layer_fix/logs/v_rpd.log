@@ -1,0 +1,240 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_rpd\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_rpd\v_rpd.qc"
+Building binary model files...
+Working on "v_rpd.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\RPDRef_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\Bulletnew.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\Bulletnew.001.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\Bulletnew.002.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\Bulletnew.003.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\Bulletnew.004.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\Bulletnew.005.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\Bulletnew.006.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\Bulletnew.007.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\Bulletnew.008.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\Bulletnew.009.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\Bulletnew.010.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\Bulletnew.011.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\body13_model0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\walk_a_r_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\shoot1_d_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\shoot1_di_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\shoot2_d_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\shoot2_di_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\shoot3_d_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\shoot3_di_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\walkPoses.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\runIdle_a.smd
+SMD MODEL fixed_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\walkIdle_a.smd
+SMD MODEL fixed_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\walk_a_r.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\prone_deployF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\prone_deployB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\prone_deployL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\prone_deployR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\deploy_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\deploy_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\deploy_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\ironsightdeploy.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\deploy_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\deploy_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\shoot1_d_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\shoot1_di_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\shoot2_d_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\shoot2_di_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\shoot3_d_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\shoot3_di_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\reload_deploy.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\reload_deploy_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\reload_deploy_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\reload_deploy_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_rpd\v_rpd_anims\holster.smd
+Processing LOD for material: rpd_nocull
+Processing LOD for material: rpd
+Processing LOD for material: shells_small
+Processing LOD for material: shells_small
+Processing LOD for material: shells_small
+Processing LOD for material: shells_small
+Processing LOD for material: shells_small
+Processing LOD for material: shells_small
+Processing LOD for material: shells_small
+Processing LOD for material: shells_small
+Processing LOD for material: shells_small
+Processing LOD for material: shells_small
+Processing LOD for material: shells_small
+Processing LOD for material: shells_small
+Processing LOD for material: rpd
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_rpd.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_rpd.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        25300 bytes (110)
+animations  634588 bytes (84 anims) (3461 frames) [1:53]
+sequences    15748 bytes (36 seq) 
+ik/pose       4280 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       208 bytes
+keyvalues       20 bytes
+bone transforms    15024 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       701276
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_rpd.vvd:
+vertices   1572768 bytes (32766 vertices)
+vertices     13920 bytes (290 vertices)
+vertices     13920 bytes (290 vertices)
+vertices     13920 bytes (290 vertices)
+vertices     13920 bytes (290 vertices)
+vertices     13920 bytes (290 vertices)
+vertices     13920 bytes (290 vertices)
+vertices     13920 bytes (290 vertices)
+vertices     13920 bytes (290 vertices)
+vertices     13920 bytes (290 vertices)
+vertices     13920 bytes (290 vertices)
+vertices     13920 bytes (290 vertices)
+vertices     13920 bytes (290 vertices)
+vertices     39792 bytes (829 vertices)
+tangents    524256 bytes (32766 vertices)
+tangents      4640 bytes (290 vertices)
+tangents      4640 bytes (290 vertices)
+tangents      4640 bytes (290 vertices)
+tangents      4640 bytes (290 vertices)
+tangents      4640 bytes (290 vertices)
+tangents      4640 bytes (290 vertices)
+tangents      4640 bytes (290 vertices)
+tangents      4640 bytes (290 vertices)
+tangents      4640 bytes (290 vertices)
+tangents      4640 bytes (290 vertices)
+tangents      4640 bytes (290 vertices)
+tangents      4640 bytes (290 vertices)
+tangents     13264 bytes (829 vertices)
+total      2372864 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_rpd.dx80.vtx":
+body parts:       112 bytes
+models:           540 bytes
+model LODs:       324 bytes
+meshes:           135 bytes
+strip groups:     375 bytes
+strips:           405 bytes
+verts:         333675 bytes
+indices:       242148 bytes
+bone changes:     272 bytes
+everything:    577698 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_rpd.dx90.vtx":
+body parts:       112 bytes
+models:           540 bytes
+model LODs:       324 bytes
+meshes:           135 bytes
+strip groups:     375 bytes
+strips:           405 bytes
+verts:         333675 bytes
+indices:       242148 bytes
+bone changes:     272 bytes
+everything:    577698 bytes
+
+Completed "v_rpd.qc"

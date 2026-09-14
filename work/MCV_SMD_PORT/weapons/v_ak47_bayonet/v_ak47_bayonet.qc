@@ -263,9 +263,6 @@ $sequence "draw" {
 	{ event 5004 1 "MCV_Weapon_Foley_Melee.Draw" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "walklayerironsight"
-	addlayer "runlayer"
 	node "0"
 	fps 30
 }

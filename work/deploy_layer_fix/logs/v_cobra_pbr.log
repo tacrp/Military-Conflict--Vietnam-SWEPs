@@ -1,0 +1,10 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_cobra_pbr\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_cobra_pbr\v_cobra_pbr.qc"
+Building binary model files...
+Working on "v_cobra_pbr.qc"
+ERROR: c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_cobra_pbr\v_cobra_pbr.qc(8): - could not load file '..\..\..\MCV_SMD_OG\weapons\v_cobra_pbr\Ref_new.smd'
+ERROR: Aborted Processing on 'weapons/mcv/v_cobra_pbr.mdl'
+WARNING: Leaking 1 elements

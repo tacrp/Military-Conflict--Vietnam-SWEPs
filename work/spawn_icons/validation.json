@@ -1,0 +1,62 @@
+[
+  {
+    "name": "rhogun",
+    "size": [
+      512,
+      512
+    ],
+    "line_opacity": 0.65,
+    "dark_pixels": 3209,
+    "translucent_dark_pixels": 3209,
+    "override_matches": true,
+    "png_sha256": "9d112f7918db54dbd79ab8aaf96ff326e4eeea5448a5f81d593604cef724fb74"
+  },
+  {
+    "name": "cobra",
+    "size": [
+      512,
+      512
+    ],
+    "line_opacity": 0.65,
+    "dark_pixels": 3585,
+    "translucent_dark_pixels": 3585,
+    "override_matches": true,
+    "png_sha256": "fecb89944a419b54cae53522285fe0276f8773a1ff868cd78c5621c2288f0cf4"
+  },
+  {
+    "name": "ptrd_sniper",
+    "size": [
+      512,
+      512
+    ],
+    "line_opacity": 0.65,
+    "dark_pixels": 4354,
+    "translucent_dark_pixels": 4354,
+    "override_matches": true,
+    "png_sha256": "2f08da57ec975529cc8c6395ca63f967bddfdfcce9d986c241cb9228a79a3537"
+  },
+  {
+    "name": "m635",
+    "size": [
+      512,
+      512
+    ],
+    "line_opacity": 0.65,
+    "dark_pixels": 4564,
+    "translucent_dark_pixels": 4564,
+    "override_matches": true,
+    "png_sha256": "91c9c6e87be19667e51c9ec8f7c751b66901bce868056e2908d718c943293a27"
+  },
+  {
+    "name": "xm16super",
+    "size": [
+      512,
+      512
+    ],
+    "line_opacity": 0.65,
+    "dark_pixels": 5660,
+    "translucent_dark_pixels": 5660,
+    "override_matches": true,
+    "png_sha256": "f025d0b6532027a7775afaad101c6d5525541fb3852839c20f0377a521a232aa"
+  }
+]

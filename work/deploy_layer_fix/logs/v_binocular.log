@@ -1,0 +1,97 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_binocular\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_binocular\v_binocular.qc"
+Building binary model files...
+Working on "v_binocular.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_binocular\ref_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_binocular\vc_bino_vmodel_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_binocular\v_binocular_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_binocular\v_binocular_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_binocular\v_binocular_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_binocular\v_binocular_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_binocular\v_binocular_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_binocular\v_binocular_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_binocular\v_binocular_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_binocular\v_binocular_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_binocular\v_binocular_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_binocular\v_binocular_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_binocular\v_binocular_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_binocular\v_binocular_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_binocular\v_binocular_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_binocular\v_binocular_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_binocular\v_binocular_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_binocular\v_binocular_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_binocular\v_binocular_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_binocular\v_binocular_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_binocular\v_binocular_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_binocular\v_binocular_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_binocular\v_binocular_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_binocular\v_binocular_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_binocular\v_binocular_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_binocular\v_binocular_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_binocular\v_binocular_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_binocular\v_binocular_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_binocular\v_binocular_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_binocular\v_binocular_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_binocular\v_binocular_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_binocular\v_binocular_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_binocular\v_binocular_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_binocular\v_binocular_anims\holster.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_binocular\v_binocular_anims\firemode.smd
+Processing LOD for material: binoculars
+Processing LOD for material: binoculars_glass
+Processing LOD for material: binoculars2
+Processing LOD for material: binoculars_glass2
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_binocular.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_binocular.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        20652 bytes (91)
+animations   79260 bytes (33 anims) (810 frames) [0:26]
+sequences     5316 bytes (15 seq) 
+ik/pose        372 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       268 bytes
+keyvalues       20 bytes
+bone transforms    12440 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       121416
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_binocular.vvd:
+vertices    256608 bytes (5346 vertices)
+vertices    238752 bytes (4974 vertices)
+tangents     85536 bytes (5346 vertices)
+tangents     79584 bytes (4974 vertices)
+total       660544 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_binocular.dx80.vtx":
+body parts:         8 bytes
+models:            40 bytes
+model LODs:        24 bytes
+meshes:            36 bytes
+strip groups:     100 bytes
+strips:           108 bytes
+verts:          92880 bytes
+indices:        69024 bytes
+bone changes:      40 bytes
+everything:    162272 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_binocular.dx90.vtx":
+body parts:         8 bytes
+models:            40 bytes
+model LODs:        24 bytes
+meshes:            36 bytes
+strip groups:     100 bytes
+strips:           108 bytes
+verts:          92880 bytes
+indices:        69024 bytes
+bone changes:      40 bytes
+everything:    162272 bytes
+
+Completed "v_binocular.qc"

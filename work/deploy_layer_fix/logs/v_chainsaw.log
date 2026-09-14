@@ -1,0 +1,94 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_chainsaw\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_chainsaw\v_chainsaw.qc"
+Building binary model files...
+Working on "v_chainsaw.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chainsaw\Ref.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chainsaw\body1_model0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chainsaw\v_chainsaw_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chainsaw\v_chainsaw_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chainsaw\v_chainsaw_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chainsaw\v_chainsaw_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chainsaw\v_chainsaw_anims\chainmovement_idle_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chainsaw\v_chainsaw_anims\shootloop_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chainsaw\v_chainsaw_anims\shootend_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chainsaw\v_chainsaw_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chainsaw\v_chainsaw_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chainsaw\v_chainsaw_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chainsaw\v_chainsaw_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chainsaw\v_chainsaw_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chainsaw\v_chainsaw_anims\chainmovementbase.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chainsaw\v_chainsaw_anims\chainmovement_idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chainsaw\v_chainsaw_anims\chainmovement_attack.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chainsaw\v_chainsaw_anims\shootloop_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chainsaw\v_chainsaw_anims\shootend_a.smd
+SMD MODEL fixed_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chainsaw\v_chainsaw_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chainsaw\v_chainsaw_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chainsaw\v_chainsaw_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chainsaw\v_chainsaw_anims\idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chainsaw\v_chainsaw_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chainsaw\v_chainsaw_anims\idletonearwall.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chainsaw\v_chainsaw_anims\nearwall.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chainsaw\v_chainsaw_anims\nearwalltoidle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chainsaw\v_chainsaw_anims\pickupstart.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chainsaw\v_chainsaw_anims\pickuploop.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chainsaw\v_chainsaw_anims\pickupend.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_chainsaw\v_chainsaw_anims\holster.smd
+Processing LOD for material: v_chainsaw
+Processing LOD for material: v_chainsaw
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_chainsaw.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_chainsaw.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        50380 bytes (228)
+animations  412684 bytes (32 anims) (1271 frames) [0:42]
+sequences     7708 bytes (19 seq) 
+ik/pose        536 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures        76 bytes
+keyvalues       20 bytes
+bone transforms    31072 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       506824
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_chainsaw.vvd:
+vertices   1572864 bytes (32768 vertices)
+vertices    231840 bytes (4830 vertices)
+tangents    524288 bytes (32768 vertices)
+tangents     77280 bytes (4830 vertices)
+total      2406336 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_chainsaw.dx80.vtx":
+body parts:        16 bytes
+models:            60 bytes
+model LODs:        36 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:           297 bytes
+verts:         338382 bytes
+indices:       242436 bytes
+bone changes:    1296 bytes
+everything:    582591 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_chainsaw.dx90.vtx":
+body parts:        16 bytes
+models:            60 bytes
+model LODs:        36 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:           108 bytes
+verts:         338382 bytes
+indices:       242436 bytes
+bone changes:    1296 bytes
+everything:    582402 bytes
+
+Completed "v_chainsaw.qc"

@@ -1,0 +1,131 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_type67\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_type67\v_type67.qc"
+Building binary model files...
+Working on "v_type67.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\RefType67_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\Bullet0_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\Bullet1_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\Bullet2_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\Bullet3_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\Bullet4_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\Bullet5_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\Bullet6_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\Bullet7_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\Bullet8_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\Default_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\Hammerback_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\Hammerforward_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\boltpull_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\boltpullIron_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\PoseDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\Default.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\Bullet8.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\Bullet7.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\Bullet6.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\Bullet5.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\Bullet4.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\Bullet3.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\Bullet2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\Bullet1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\Bullet0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\Slideback.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\Hammerback.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\Hammerforward.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\walkDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\runIdle_a.smd
+SMD MODEL fixed_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\walkIdle_a.smd
+SMD MODEL fixed_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\shoot1_ironsight_delta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\boltpull_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\boltpullIron_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\holster.smd
+Processing LOD for material: v_type67
+Processing LOD for material: shells_small_additional
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_type67.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_type67.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        23724 bytes (104)
+animations  192392 bytes (77 anims) (1493 frames) [0:49]
+sequences    10236 bytes (23 seq) 
+ik/pose        264 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       140 bytes
+keyvalues       20 bytes
+bone transforms    14208 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       245068
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_type67.vvd:
+vertices    309696 bytes (6452 vertices)
+tangents    103232 bytes (6452 vertices)
+total       412992 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_type67.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:          58068 bytes
+indices:        47364 bytes
+bone changes:     120 bytes
+everything:    105738 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_type67.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:          58068 bytes
+indices:        47364 bytes
+bone changes:     120 bytes
+everything:    105738 bytes
+
+Completed "v_type67.qc"

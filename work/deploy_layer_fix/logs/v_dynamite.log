@@ -1,0 +1,94 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_dynamite\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_dynamite\v_dynamite.qc"
+Building binary model files...
+Working on "v_dynamite.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dynamite\ref_dynamite_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dynamite\ref_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dynamite\v_dynamite_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dynamite\v_dynamite_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dynamite\v_dynamite_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dynamite\v_dynamite_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dynamite\v_dynamite_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dynamite\v_dynamite_anims\runIdle_a.smd
+SMD MODEL fixed_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dynamite\v_dynamite_anims\walkIdle_a.smd
+SMD MODEL fixed_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dynamite\v_dynamite_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dynamite\v_dynamite_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dynamite\v_dynamite_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dynamite\v_dynamite_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dynamite\v_dynamite_anims\drawbackhigh.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dynamite\v_dynamite_anims\throw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dynamite\v_dynamite_anims\plant.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dynamite\v_dynamite_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dynamite\v_dynamite_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dynamite\v_dynamite_anims\pickupstart.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dynamite\v_dynamite_anims\pickuploop.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dynamite\v_dynamite_anims\pickupend.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dynamite\v_dynamite_anims\idletonearwall.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dynamite\v_dynamite_anims\nearwall.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dynamite\v_dynamite_anims\nearwalltoidle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_dynamite\v_dynamite_anims\holster.smd
+Processing LOD for material: v_dynamite
+Processing LOD for material: molotov_flame
+Processing LOD for material: molotov_mat
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dynamite.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dynamite.mdl
+   Found 17 preexisting sequences.
+bones        21896 bytes (96)
+animations   60580 bytes (25 anims) (529 frames) [0:17]
+Building sequence index remapping table...
+No re-ordering required.
+sequences     5988 bytes (17 seq) 
+ik/pose        684 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       208 bytes
+keyvalues       20 bytes
+bone transforms    13120 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       105444
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dynamite.vvd:
+vertices    106032 bytes (2209 vertices)
+vertices     84768 bytes (1766 vertices)
+tangents     35344 bytes (2209 vertices)
+tangents     28256 bytes (1766 vertices)
+total       254464 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dynamite.dx80.vtx":
+body parts:        16 bytes
+models:            80 bytes
+model LODs:        48 bytes
+meshes:            27 bytes
+strip groups:      75 bytes
+strips:            81 bytes
+verts:          35775 bytes
+indices:        31308 bytes
+bone changes:      56 bytes
+everything:     67454 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_dynamite.dx90.vtx":
+body parts:        16 bytes
+models:            80 bytes
+model LODs:        48 bytes
+meshes:            27 bytes
+strip groups:      75 bytes
+strips:            81 bytes
+verts:          35775 bytes
+indices:        31308 bytes
+bone changes:      56 bytes
+everything:     67454 bytes
+
+Completed "v_dynamite.qc"

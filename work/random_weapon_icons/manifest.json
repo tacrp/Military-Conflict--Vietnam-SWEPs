@@ -1,0 +1,434 @@
+[
+  {
+    "flag": "au",
+    "url": "https://raw.githubusercontent.com/lipis/flag-icons/v7.5.0/flags/4x3/au.svg",
+    "source_page": "https://github.com/lipis/flag-icons/blob/v7.5.0/flags/4x3/au.svg",
+    "credit": "flag-icons: Panayiotis Lipiridis and contributors; MIT",
+    "style": "flat_rectangle",
+    "badge_size": [
+      128,
+      88
+    ],
+    "badge_position": [
+      312,
+      330
+    ],
+    "source_sha256": "cbb2206c5e59a25d79228306af973666a191e163f0ae337681f447977e6edb18",
+    "output": "materials/mcv/random/au.png",
+    "png_sha256": "94a666dc888158185fc7c3d05e16a36842bcb59798d351ddba1d092765513486"
+  },
+  {
+    "flag": "be",
+    "url": "https://raw.githubusercontent.com/lipis/flag-icons/v7.5.0/flags/4x3/be.svg",
+    "source_page": "https://github.com/lipis/flag-icons/blob/v7.5.0/flags/4x3/be.svg",
+    "credit": "flag-icons: Panayiotis Lipiridis and contributors; MIT",
+    "style": "flat_rectangle",
+    "badge_size": [
+      128,
+      88
+    ],
+    "badge_position": [
+      312,
+      330
+    ],
+    "source_sha256": "d6aff6fa4c913404eafd53f91c0a9b240fcecaddc8f0ac2160d362e38469342c",
+    "output": "materials/mcv/random/be.png",
+    "png_sha256": "0a9db2a16a09487b2d85083c7c4d7873e1c0de17450fbf98d1553d96ca9777e3"
+  },
+  {
+    "flag": "cn",
+    "url": "https://raw.githubusercontent.com/lipis/flag-icons/v7.5.0/flags/4x3/cn.svg",
+    "source_page": "https://github.com/lipis/flag-icons/blob/v7.5.0/flags/4x3/cn.svg",
+    "credit": "flag-icons: Panayiotis Lipiridis and contributors; MIT",
+    "style": "flat_rectangle",
+    "badge_size": [
+      128,
+      88
+    ],
+    "badge_position": [
+      312,
+      330
+    ],
+    "source_sha256": "981da9bdf82d48e31691f20578cefcb26cf7d0bd95e4ebd5c0df00bdfe988c1a",
+    "output": "materials/mcv/random/cn.png",
+    "png_sha256": "dd945cbc2ab36fd2ea74388bc78aad7c709c9a39492e4a104ced3cc05638258d"
+  },
+  {
+    "flag": "cz",
+    "url": "https://raw.githubusercontent.com/lipis/flag-icons/v7.5.0/flags/4x3/cz.svg",
+    "source_page": "https://github.com/lipis/flag-icons/blob/v7.5.0/flags/4x3/cz.svg",
+    "credit": "flag-icons: Panayiotis Lipiridis and contributors; MIT",
+    "style": "flat_rectangle",
+    "badge_size": [
+      128,
+      88
+    ],
+    "badge_position": [
+      312,
+      330
+    ],
+    "source_sha256": "d601fcc2e5b1fd48b79d53c55108af4c0e90793f146db51f3ee449d8d69512bc",
+    "output": "materials/mcv/random/cz.png",
+    "png_sha256": "fcaac31fc1da3c3904bf5b9669458bf0cefc8d16f587ef9d22c7bbc40e8099ae"
+  },
+  {
+    "flag": "de",
+    "url": "https://raw.githubusercontent.com/lipis/flag-icons/v7.5.0/flags/4x3/de.svg",
+    "source_page": "https://github.com/lipis/flag-icons/blob/v7.5.0/flags/4x3/de.svg",
+    "credit": "flag-icons: Panayiotis Lipiridis and contributors; MIT",
+    "style": "flat_rectangle",
+    "badge_size": [
+      128,
+      88
+    ],
+    "badge_position": [
+      312,
+      330
+    ],
+    "source_sha256": "efd480af5a154a7651f29da23ee0d09dbc892410fb4041898ddf8face336c575",
+    "output": "materials/mcv/random/de.png",
+    "png_sha256": "4d402dbaed17ef65749ae1720cc2fa4a5f66b939a7928d78306faaa9e2d6732d"
+  },
+  {
+    "flag": "de_imperial",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Flag_of_Germany_%281867%E2%80%931918%29.svg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Germany_%281867%E2%80%931918%29.svg",
+    "credit": "Wikimedia Commons; public-domain flag artwork",
+    "style": "flat_rectangle",
+    "badge_size": [
+      128,
+      88
+    ],
+    "badge_position": [
+      312,
+      330
+    ],
+    "source_sha256": "6571eb6423bfe57942c89f989cf95238dc56e90a4072580750160552f4d9150d",
+    "output": "materials/mcv/random/de_imperial.png",
+    "png_sha256": "a9b7ae53aacec1b2437e4294cfd93fb0e6e2f42d28d385e8340654d912875472"
+  },
+  {
+    "flag": "dk",
+    "url": "https://raw.githubusercontent.com/lipis/flag-icons/v7.5.0/flags/4x3/dk.svg",
+    "source_page": "https://github.com/lipis/flag-icons/blob/v7.5.0/flags/4x3/dk.svg",
+    "credit": "flag-icons: Panayiotis Lipiridis and contributors; MIT",
+    "style": "flat_rectangle",
+    "badge_size": [
+      128,
+      88
+    ],
+    "badge_position": [
+      312,
+      330
+    ],
+    "source_sha256": "d2847c0bd7a1fb97977ee51f2f618c5ebc5898dd66ef9804f187613c27bdca1a",
+    "output": "materials/mcv/random/dk.png",
+    "png_sha256": "56c247a20b6630015464b6dd5531506fbef0ae617a7ea1a2c185bb9fa749418b"
+  },
+  {
+    "flag": "es",
+    "url": "https://raw.githubusercontent.com/lipis/flag-icons/v7.5.0/flags/4x3/es.svg",
+    "source_page": "https://github.com/lipis/flag-icons/blob/v7.5.0/flags/4x3/es.svg",
+    "credit": "flag-icons: Panayiotis Lipiridis and contributors; MIT",
+    "style": "flat_rectangle",
+    "badge_size": [
+      128,
+      88
+    ],
+    "badge_position": [
+      312,
+      330
+    ],
+    "source_sha256": "f9cfaff858e95f830733ade9591037b5322dfb5827a53b70956a3d190bb49b9a",
+    "output": "materials/mcv/random/es.png",
+    "png_sha256": "7962cbb51292cdcb955e2656071eb18c60330210bac43636b5782199c4d39e61"
+  },
+  {
+    "flag": "fi",
+    "url": "https://raw.githubusercontent.com/lipis/flag-icons/v7.5.0/flags/4x3/fi.svg",
+    "source_page": "https://github.com/lipis/flag-icons/blob/v7.5.0/flags/4x3/fi.svg",
+    "credit": "flag-icons: Panayiotis Lipiridis and contributors; MIT",
+    "style": "flat_rectangle",
+    "badge_size": [
+      128,
+      88
+    ],
+    "badge_position": [
+      312,
+      330
+    ],
+    "source_sha256": "012edd984cf1879463c2855b7df02dea2f7de7f7a66b244fb1e22b4227f7aa65",
+    "output": "materials/mcv/random/fi.png",
+    "png_sha256": "bafc5aed13e9be92662676772754dec48ff50668a30c28e2d64394c8ab91f255"
+  },
+  {
+    "flag": "fr",
+    "url": "https://raw.githubusercontent.com/lipis/flag-icons/v7.5.0/flags/4x3/fr.svg",
+    "source_page": "https://github.com/lipis/flag-icons/blob/v7.5.0/flags/4x3/fr.svg",
+    "credit": "flag-icons: Panayiotis Lipiridis and contributors; MIT",
+    "style": "flat_rectangle",
+    "badge_size": [
+      128,
+      88
+    ],
+    "badge_position": [
+      312,
+      330
+    ],
+    "source_sha256": "8cdacc8d79bcf210cdca2777a2c0de1f9e5862526877bd3026c9d59ecdcd4578",
+    "output": "materials/mcv/random/fr.png",
+    "png_sha256": "fd597bb8dbda607eea07ab90fe78aa36077c3efb46d9a8d77ca4b68433a23a17"
+  },
+  {
+    "flag": "gb",
+    "url": "https://raw.githubusercontent.com/lipis/flag-icons/v7.5.0/flags/4x3/gb.svg",
+    "source_page": "https://github.com/lipis/flag-icons/blob/v7.5.0/flags/4x3/gb.svg",
+    "credit": "flag-icons: Panayiotis Lipiridis and contributors; MIT",
+    "style": "flat_rectangle",
+    "badge_size": [
+      128,
+      88
+    ],
+    "badge_position": [
+      312,
+      330
+    ],
+    "source_sha256": "c8be1e7208798a4ae692ee1e937065d498bb29e741943f6172b29118b8ed8066",
+    "output": "materials/mcv/random/gb.png",
+    "png_sha256": "1a5d10aff17206a9c748efb2c6d753fe0847499641a9fd86236231ef03cd0c86"
+  },
+  {
+    "flag": "hu",
+    "url": "https://raw.githubusercontent.com/lipis/flag-icons/v7.5.0/flags/4x3/hu.svg",
+    "source_page": "https://github.com/lipis/flag-icons/blob/v7.5.0/flags/4x3/hu.svg",
+    "credit": "flag-icons: Panayiotis Lipiridis and contributors; MIT",
+    "style": "flat_rectangle",
+    "badge_size": [
+      128,
+      88
+    ],
+    "badge_position": [
+      312,
+      330
+    ],
+    "source_sha256": "ffc4edd580d4b9789bee68f33cef24afe826ae571464350fe7b98c7a36b4ff8f",
+    "output": "materials/mcv/random/hu.png",
+    "png_sha256": "d78a78fc309c0305915591d8f5e3ce3021739b57d33d86dcb21435e6fec7d1a8"
+  },
+  {
+    "flag": "il",
+    "url": "https://raw.githubusercontent.com/lipis/flag-icons/v7.5.0/flags/4x3/il.svg",
+    "source_page": "https://github.com/lipis/flag-icons/blob/v7.5.0/flags/4x3/il.svg",
+    "credit": "flag-icons: Panayiotis Lipiridis and contributors; MIT",
+    "style": "flat_rectangle",
+    "badge_size": [
+      128,
+      88
+    ],
+    "badge_position": [
+      312,
+      330
+    ],
+    "source_sha256": "04a099ac4370b5e856f5f8d44ce0822ec47a6d3bc395a7d048d3a46d69274d68",
+    "output": "materials/mcv/random/il.png",
+    "png_sha256": "d29eef7c2af6a87a269c1bd46566c558346bf0b26a64ec550ae8d015dcb3d85f"
+  },
+  {
+    "flag": "it",
+    "url": "https://raw.githubusercontent.com/lipis/flag-icons/v7.5.0/flags/4x3/it.svg",
+    "source_page": "https://github.com/lipis/flag-icons/blob/v7.5.0/flags/4x3/it.svg",
+    "credit": "flag-icons: Panayiotis Lipiridis and contributors; MIT",
+    "style": "flat_rectangle",
+    "badge_size": [
+      128,
+      88
+    ],
+    "badge_position": [
+      312,
+      330
+    ],
+    "source_sha256": "9fa88118818d9b64838f578e2babcca3d0630aed21b5c33b34aff7ac5ce506bc",
+    "output": "materials/mcv/random/it.png",
+    "png_sha256": "a7dee582362004fe3e650dfad170686cdb78a2e172ad726d7c3a8e966288faed"
+  },
+  {
+    "flag": "jp",
+    "url": "https://raw.githubusercontent.com/lipis/flag-icons/v7.5.0/flags/4x3/jp.svg",
+    "source_page": "https://github.com/lipis/flag-icons/blob/v7.5.0/flags/4x3/jp.svg",
+    "credit": "flag-icons: Panayiotis Lipiridis and contributors; MIT",
+    "style": "flat_rectangle",
+    "badge_size": [
+      128,
+      88
+    ],
+    "badge_position": [
+      312,
+      330
+    ],
+    "source_sha256": "bfea80baf9989383dc4bf7ca594ed95be0df0ff125bfc88d0bfa878eb0198022",
+    "output": "materials/mcv/random/jp.png",
+    "png_sha256": "284e89288757524ea0cdd81c294d94643b593f35f9e7c5051e207362db043e7f"
+  },
+  {
+    "flag": "kp",
+    "url": "https://raw.githubusercontent.com/lipis/flag-icons/v7.5.0/flags/4x3/kp.svg",
+    "source_page": "https://github.com/lipis/flag-icons/blob/v7.5.0/flags/4x3/kp.svg",
+    "credit": "flag-icons: Panayiotis Lipiridis and contributors; MIT",
+    "style": "flat_rectangle",
+    "badge_size": [
+      128,
+      88
+    ],
+    "badge_position": [
+      312,
+      330
+    ],
+    "source_sha256": "f79bc8b6502445b51fd6db4bb9b6fa9d49f7fbe00da77b6af4d052b6d9fec4d3",
+    "output": "materials/mcv/random/kp.png",
+    "png_sha256": "58011de3895953409b02b2ed357156b07bfa8025e4b3511074f2c6bf2f075ce1"
+  },
+  {
+    "flag": "pl",
+    "url": "https://raw.githubusercontent.com/lipis/flag-icons/v7.5.0/flags/4x3/pl.svg",
+    "source_page": "https://github.com/lipis/flag-icons/blob/v7.5.0/flags/4x3/pl.svg",
+    "credit": "flag-icons: Panayiotis Lipiridis and contributors; MIT",
+    "style": "flat_rectangle",
+    "badge_size": [
+      128,
+      88
+    ],
+    "badge_position": [
+      312,
+      330
+    ],
+    "source_sha256": "369bb3e14ee718df1ee15fd2fb3ad0dae713f78f622e277710fb2b30a313f2aa",
+    "output": "materials/mcv/random/pl.png",
+    "png_sha256": "17a30943c5474fce85bc6185373adcb77dbeb1d80862e008d8f906bdb46445ff"
+  },
+  {
+    "flag": "rh",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/0/02/Flag_of_Rhodesia_%281968%E2%80%931979%29.svg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Rhodesia_%281968%E2%80%931979%29.svg",
+    "credit": "Wikimedia Commons; public-domain flag artwork",
+    "style": "flat_rectangle",
+    "badge_size": [
+      128,
+      88
+    ],
+    "badge_position": [
+      312,
+      330
+    ],
+    "source_sha256": "fb60d7c3721a98cd357b71dfc7deb318f273521ff0337722b43b3788f7673ff3",
+    "output": "materials/mcv/random/rh.png",
+    "png_sha256": "450521867855d9a01743e27a282747a019fcbcbb56bba51222bf6138eee955ef"
+  },
+  {
+    "flag": "ro",
+    "url": "https://raw.githubusercontent.com/lipis/flag-icons/v7.5.0/flags/4x3/ro.svg",
+    "source_page": "https://github.com/lipis/flag-icons/blob/v7.5.0/flags/4x3/ro.svg",
+    "credit": "flag-icons: Panayiotis Lipiridis and contributors; MIT",
+    "style": "flat_rectangle",
+    "badge_size": [
+      128,
+      88
+    ],
+    "badge_position": [
+      312,
+      330
+    ],
+    "source_sha256": "17a3a747fc5e63302aaa670a667e5812f3676f46768e5a3e87b254bd41762840",
+    "output": "materials/mcv/random/ro.png",
+    "png_sha256": "ccd397dc9c54822954fe72f1e91d70f2b0d0bf477336346fc78073bb9c95028c"
+  },
+  {
+    "flag": "se",
+    "url": "https://raw.githubusercontent.com/lipis/flag-icons/v7.5.0/flags/4x3/se.svg",
+    "source_page": "https://github.com/lipis/flag-icons/blob/v7.5.0/flags/4x3/se.svg",
+    "credit": "flag-icons: Panayiotis Lipiridis and contributors; MIT",
+    "style": "flat_rectangle",
+    "badge_size": [
+      128,
+      88
+    ],
+    "badge_position": [
+      312,
+      330
+    ],
+    "source_sha256": "b3b5071e6c1d4a0e3db828bab5c7dfd68d0e90fcf3b25b15e9a2c4f96c1f79c9",
+    "output": "materials/mcv/random/se.png",
+    "png_sha256": "cbb3db4b446082260e7ba3c7097a613f5dc500ec8eb3ce838724cc02fa041bee"
+  },
+  {
+    "flag": "su",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/a/a9/Flag_of_the_Soviet_Union.svg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Flag_of_the_Soviet_Union.svg",
+    "credit": "Wikimedia Commons; public-domain flag artwork",
+    "style": "flat_rectangle",
+    "badge_size": [
+      128,
+      88
+    ],
+    "badge_position": [
+      312,
+      330
+    ],
+    "source_sha256": "f6741b67fcf8934c47f2482a54440ab406ae82763c9c7676b9972f476232127f",
+    "output": "materials/mcv/random/su.png",
+    "png_sha256": "d87b6d708593e5548764784207f3a8c5c7602fc274a2d2a692e46df912f12b66"
+  },
+  {
+    "flag": "us",
+    "url": "https://raw.githubusercontent.com/lipis/flag-icons/v7.5.0/flags/4x3/us.svg",
+    "source_page": "https://github.com/lipis/flag-icons/blob/v7.5.0/flags/4x3/us.svg",
+    "credit": "flag-icons: Panayiotis Lipiridis and contributors; MIT",
+    "style": "flat_rectangle",
+    "badge_size": [
+      128,
+      88
+    ],
+    "badge_position": [
+      312,
+      330
+    ],
+    "source_sha256": "e7be4240cf57987926673708f09233be1ab6bdf35acc7b86bd32a263f197a2a7",
+    "output": "materials/mcv/random/us.png",
+    "png_sha256": "2b1c9478c27395075dfe6ae88a22b14986a8e0cf57707b93354b3a73489b14d6"
+  },
+  {
+    "flag": "vn",
+    "url": "https://raw.githubusercontent.com/lipis/flag-icons/v7.5.0/flags/4x3/vn.svg",
+    "source_page": "https://github.com/lipis/flag-icons/blob/v7.5.0/flags/4x3/vn.svg",
+    "credit": "flag-icons: Panayiotis Lipiridis and contributors; MIT",
+    "style": "flat_rectangle",
+    "badge_size": [
+      128,
+      88
+    ],
+    "badge_position": [
+      312,
+      330
+    ],
+    "source_sha256": "2355037201315d74581ab0ad60b5587a29a087d26b0525bdeb8676e64fae5b86",
+    "output": "materials/mcv/random/vn.png",
+    "png_sha256": "a931a9305bacf8cadc5732deeea13326b058c937c0ec8c2f5b5f8297ed26ae9a"
+  },
+  {
+    "flag": "yu",
+    "url": "https://upload.wikimedia.org/wikipedia/commons/6/61/Flag_of_Yugoslavia_%281946-1992%29.svg",
+    "source_page": "https://commons.wikimedia.org/wiki/File:Flag_of_Yugoslavia_%281946-1992%29.svg",
+    "credit": "Wikimedia Commons; public-domain flag artwork",
+    "style": "flat_rectangle",
+    "badge_size": [
+      128,
+      88
+    ],
+    "badge_position": [
+      312,
+      330
+    ],
+    "source_sha256": "688185bc4e5b46debda7d6ecaa3bc3f410b1c1ba62d759d5a876def06e6bc887",
+    "output": "materials/mcv/random/yu.png",
+    "png_sha256": "e198064ec502f1cf095999f4e2c8a99c866836cbdd4936504417482f62c31d3e"
+  }
+]

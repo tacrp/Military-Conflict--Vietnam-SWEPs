@@ -1,0 +1,86 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_csg\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_csg\v_csg.qc"
+Building binary model files...
+Working on "v_csg.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_csg\CSG_newref.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_csg\v_csg_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_csg\v_csg_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_csg\v_csg_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_csg\v_csg_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_csg\v_csg_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_csg\v_csg_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_csg\v_csg_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_csg\v_csg_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_csg\v_csg_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_csg\v_csg_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_csg\v_csg_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_csg\v_csg_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_csg\v_csg_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_csg\v_csg_anims\idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_csg\v_csg_anims\drawbackhigh.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_csg\v_csg_anims\drawbacklow.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_csg\v_csg_anims\throw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_csg\v_csg_anims\roll.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_csg\v_csg_anims\lob.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_csg\v_csg_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_csg\v_csg_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_csg\v_csg_anims\pickupstart.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_csg\v_csg_anims\pickuploop.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_csg\v_csg_anims\pickupend.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_csg\v_csg_anims\idletonearwall.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_csg\v_csg_anims\nearwall.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_csg\v_csg_anims\nearwalltoidle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_csg\v_csg_anims\holster.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_csg\v_csg_anims\firemode.smd
+Processing LOD for material: csg_head
+Processing LOD for material: csg
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_csg.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_csg.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        20868 bytes (92)
+animations   72548 bytes (29 anims) (618 frames) [0:20]
+sequences     7484 bytes (20 seq) 
+ik/pose        224 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       136 bytes
+keyvalues       20 bytes
+bone transforms    12576 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       116752
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_csg.vvd:
+vertices    157200 bytes (3275 vertices)
+tangents     52400 bytes (3275 vertices)
+total       209664 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_csg.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:          29475 bytes
+indices:        30936 bytes
+bone changes:      32 bytes
+everything:     60629 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_csg.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:          29475 bytes
+indices:        30936 bytes
+bone changes:      32 bytes
+everything:     60629 bytes
+
+Completed "v_csg.qc"

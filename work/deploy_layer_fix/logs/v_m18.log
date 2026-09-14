@@ -1,0 +1,127 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_m18\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_m18\v_m18.qc"
+Building binary model files...
+Working on "v_m18.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m18\m18_red.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m18\m18_green.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m18\m18_yellow.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m18\m18_violet.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m18\m18.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m18\incen1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m18\incen2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m18\riot.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m18\v_m18_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m18\v_m18_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m18\v_m18_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m18\v_m18_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m18\v_m18_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m18\v_m18_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m18\v_m18_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m18\v_m18_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m18\v_m18_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m18\v_m18_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m18\v_m18_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m18\v_m18_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m18\v_m18_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m18\v_m18_anims\idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m18\v_m18_anims\drawbackhigh.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m18\v_m18_anims\drawbacklow.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m18\v_m18_anims\throw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m18\v_m18_anims\roll.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m18\v_m18_anims\lob.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m18\v_m18_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m18\v_m18_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m18\v_m18_anims\pickupstart.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m18\v_m18_anims\pickuploop.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m18\v_m18_anims\pickupend.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m18\v_m18_anims\idletonearwall.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m18\v_m18_anims\nearwall.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m18\v_m18_anims\nearwalltoidle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m18\v_m18_anims\holster.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m18\v_m18_anims\firemode.smd
+Processing LOD for material: m18_red
+Processing LOD for material: m18_green
+Processing LOD for material: m18_yellow
+Processing LOD for material: m18_violet
+Processing LOD for material: m18
+Processing LOD for material: incen1
+Processing LOD for material: incen2
+Processing LOD for material: riot
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m18.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m18.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        21304 bytes (94)
+animations   76576 bytes (29 anims) (619 frames) [0:20]
+sequences     7524 bytes (20 seq) 
+ik/pose       1260 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       644 bytes
+keyvalues       20 bytes
+bone transforms    12848 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       123860
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m18.vvd:
+vertices    291552 bytes (6074 vertices)
+vertices    291552 bytes (6074 vertices)
+vertices    291552 bytes (6074 vertices)
+vertices    291552 bytes (6074 vertices)
+vertices    291312 bytes (6069 vertices)
+vertices    291552 bytes (6074 vertices)
+vertices    291552 bytes (6074 vertices)
+vertices    291552 bytes (6074 vertices)
+tangents     97184 bytes (6074 vertices)
+tangents     97184 bytes (6074 vertices)
+tangents     97184 bytes (6074 vertices)
+tangents     97184 bytes (6074 vertices)
+tangents     97104 bytes (6069 vertices)
+tangents     97184 bytes (6074 vertices)
+tangents     97184 bytes (6074 vertices)
+tangents     97184 bytes (6074 vertices)
+total      3109632 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m18.dx80.vtx":
+body parts:         8 bytes
+models:           160 bytes
+model LODs:        96 bytes
+meshes:            72 bytes
+strip groups:     200 bytes
+strips:           216 bytes
+verts:         437283 bytes
+indices:       373392 bytes
+bone changes:     264 bytes
+everything:    811631 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m18.dx90.vtx":
+body parts:         8 bytes
+models:           160 bytes
+model LODs:        96 bytes
+meshes:            72 bytes
+strip groups:     200 bytes
+strips:           216 bytes
+verts:         437283 bytes
+indices:       373392 bytes
+bone changes:     264 bytes
+everything:    811631 bytes
+
+Completed "v_m18.qc"

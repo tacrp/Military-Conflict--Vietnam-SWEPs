@@ -1,0 +1,109 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_vccarbine\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_vccarbine\v_vccarbine.qc"
+Building binary model files...
+Working on "v_vccarbine.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\Ref_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\shoot_ironsight_delta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\nearwall_start.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\nearwall_start_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\nearwall_loop.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\nearwall_loop_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\nearwall_end.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\nearwall_end_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\pickup_start.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\pickup_start_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\pickup_loop.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\pickup_loop_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\pickup_end.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\pickup_end_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\FirstDraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\FirstDraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vccarbine\v_vccarbine_anims\holster.smd
+Processing LOD for material: vccarbine_base
+Processing LOD for material: shells_small
+Processing LOD for material: vccarbine_mag
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_vccarbine.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_vccarbine.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        21988 bytes (96)
+animations  163096 bytes (54 anims) (1574 frames) [0:52]
+sequences     8500 bytes (23 seq) 
+ik/pose        224 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       216 bytes
+keyvalues       20 bytes
+bone transforms    13120 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       210820
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_vccarbine.vvd:
+vertices    412608 bytes (8596 vertices)
+tangents    137536 bytes (8596 vertices)
+total       550208 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_vccarbine.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            27 bytes
+strip groups:      75 bytes
+strips:            81 bytes
+verts:          77364 bytes
+indices:        66828 bytes
+bone changes:      64 bytes
+everything:    144503 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_vccarbine.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            27 bytes
+strip groups:      75 bytes
+strips:            81 bytes
+verts:          77364 bytes
+indices:        66828 bytes
+bone changes:      64 bytes
+everything:    144503 bytes
+
+Completed "v_vccarbine.qc"

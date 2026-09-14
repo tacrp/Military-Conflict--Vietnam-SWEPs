@@ -50,24 +50,31 @@ hook.Add("PopulateWeapons", "zzz_MCV_SubCategories", function(pnlContent, tree, 
             node.DoPopulate = function(self)
 
                 -- If we've already populated it - forget it.
-                -- if (self.PropPanel) then return end
+                if IsValid(self.PropPanel) then self.PropPanel:Remove() end
 
                 -- Create the container panel
                 self.PropPanel = vgui.Create("ContentContainer", pnlContent)
                 self.PropPanel:SetVisible(false)
                 self.PropPanel:SetTriggerSpawnlistChange(false)
+                local randomGroups = {}
+                for _, group in ipairs(MCV.GetRandomWeaponGroups(LocalPlayer())) do
+                    if group.category then randomGroups[group.category] = group end
+                end
 
                 -- Iterate through the subcategories
                 for subcatName, subcatWeps in SortedPairs(catSubcats) do
 
                     -- Create the subcategory header, if more than one exists for this category
                     if (table.Count(catSubcats) > 1) then
-                        local label = vgui.Create("ContentHeader", container)
+                        local label = vgui.Create("ContentHeader", self.PropPanel)
                         label:SetText(subcatName)
                         self.PropPanel:Add(label)
                     end
 
                     -- Create the clickable icon
+                    if randomGroups[subcatName] then
+                        MCV.CreateRandomWeaponIcon(self.PropPanel, randomGroups[subcatName])
+                    end
                     for _, ent in SortedPairsByMemberValue(subcatWeps, "PrintName") do
                         spawnmenu.CreateContentIcon(ent.ScriptedEntityType or "weapon", self.PropPanel, {
                             nicename  = ent.PrintName or ent.ClassName,
@@ -83,6 +90,22 @@ hook.Add("PopulateWeapons", "zzz_MCV_SubCategories", function(pnlContent, tree, 
             node.DoClick = function(self)
                 self:DoPopulate()
                 pnlContent:SwitchPanel(self.PropPanel)
+            end
+            local misc = node:AddNode("Miscellaneous", "icon16/help.png")
+            misc.MCVRandomMisc = true
+            misc.DoPopulate = function(self)
+                if IsValid(self.PropPanel) then self.PropPanel:Remove() end
+                self.PropPanel = vgui.Create("ContentContainer", pnlContent)
+                self.PropPanel:SetVisible(false)
+                self.PropPanel:SetTriggerSpawnlistChange(false)
+                MCV.PopulateRandomWeaponMisc(self.PropPanel)
+            end
+            misc.DoClick = function(self)
+                self:DoPopulate()
+                pnlContent:SwitchPanel(self.PropPanel)
+            end
+            misc.OnRemove = function(self)
+                if IsValid(self.PropPanel) then self.PropPanel:Remove() end
             end
         end
 

@@ -1,0 +1,119 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_vcsmg\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_vcsmg\v_vcsmg.qc"
+Building binary model files...
+Working on "v_vcsmg.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\Ref_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\Default_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\Slideback_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\ShootMove_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\ShootStill_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\PoseDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\PoseDelta2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\Default.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\Slideback.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\ShootMove.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\ShootStill.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\walkDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcsmg\v_vcsmg_anims\holster.smd
+Processing LOD for material: vcsmg_base
+Processing LOD for material: vcsmg_mag
+Processing LOD for material: shells_small
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_vcsmg.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_vcsmg.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        22056 bytes (96)
+animations  184748 bytes (64 anims) (1636 frames) [0:54]
+sequences     9740 bytes (25 seq) 
+ik/pose        244 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       208 bytes
+keyvalues       20 bytes
+bone transforms    13120 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       233936
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_vcsmg.vvd:
+vertices    631392 bytes (13154 vertices)
+tangents    210464 bytes (13154 vertices)
+total       841920 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_vcsmg.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            27 bytes
+strip groups:      75 bytes
+strips:            81 bytes
+verts:         118386 bytes
+indices:        96150 bytes
+bone changes:      56 bytes
+everything:    214839 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_vcsmg.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            27 bytes
+strip groups:      75 bytes
+strips:            81 bytes
+verts:         118386 bytes
+indices:        96150 bytes
+bone changes:      56 bytes
+everything:    214839 bytes
+
+Completed "v_vcsmg.qc"

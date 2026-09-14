@@ -1,0 +1,22 @@
+ccmd firstperson
+ccmd cl_showerror 0
+ccmd net_fakelag 0
+strip
+pos -704 576 -12288
+ang 0 0 0
+lua ply:GodEnable()
+give mcv_m1g
+wait 3
+clua gui.HideGameUI() if gui.IsConsoleVisible() then ply:ConCommand("toggleconsole") end include("mcv_harness/garand_m21.lua") MCVGunsCheck.WorldView()
+wait 1
+shot garand_world_before
+clua MCVGunsCheck.StopWorld()
+give mcv_m21
+wait 3
+lua ply:GetActiveWeapon():SetClip1(0) ply:SetAmmo(80,"ar2")
+wait 1
+clua include("mcv_harness/reload_trace.lua") MCV.ReloadHarness.Start("m21_empty_before",false)
+tap +reload 0.1
+wait 4
+clua MCV.ReloadHarness.Stop()
+report m21_empty_before

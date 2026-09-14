@@ -1,0 +1,141 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_stg44\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_stg44\v_stg44.qc"
+Building binary model files...
+Working on "v_stg44.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\ref_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\stg44_scope_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\stg44_ZF41.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\magazine_30.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\magazine_20.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\walkDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\proneF.smd
+SMD MODEL fixed_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\change_firemode_idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\change_firemode_iron.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\scope_adjust_idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\scope_adjust_iron.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_stg44\v_stg44_anims\holster.smd
+Processing LOD for material: stg44
+Processing LOD for material: shells_small
+Processing LOD for material: zf4
+Processing LOD for material: lens_zf4
+Processing LOD for material: zf41
+Processing LOD for material: crosshair_zf41
+Processing LOD for material: crosshair_zf41a
+Processing LOD for material: stg44
+Processing LOD for material: stg44
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_stg44.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_stg44.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        21988 bytes (96)
+animations  173436 bytes (58 anims) (1690 frames) [0:56]
+sequences     9132 bytes (25 seq) 
+ik/pose        996 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       476 bytes
+keyvalues       20 bytes
+bone transforms    13120 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       223632
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_stg44.vvd:
+vertices    880752 bytes (18349 vertices)
+vertices    298848 bytes (6226 vertices)
+vertices    372720 bytes (7765 vertices)
+vertices     53472 bytes (1114 vertices)
+vertices     45792 bytes (954 vertices)
+tangents    293584 bytes (18349 vertices)
+tangents     99616 bytes (6226 vertices)
+tangents    124240 bytes (7765 vertices)
+tangents     17824 bytes (1114 vertices)
+tangents     15264 bytes (954 vertices)
+total      2202176 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_stg44.dx80.vtx":
+body parts:        24 bytes
+models:           120 bytes
+model LODs:        72 bytes
+meshes:            81 bytes
+strip groups:     225 bytes
+strips:           243 bytes
+verts:         309672 bytes
+indices:       265590 bytes
+bone changes:     112 bytes
+everything:    576103 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_stg44.dx90.vtx":
+body parts:        24 bytes
+models:           120 bytes
+model LODs:        72 bytes
+meshes:            81 bytes
+strip groups:     225 bytes
+strips:           243 bytes
+verts:         309672 bytes
+indices:       265590 bytes
+bone changes:     112 bytes
+everything:    576103 bytes
+
+Completed "v_stg44.qc"

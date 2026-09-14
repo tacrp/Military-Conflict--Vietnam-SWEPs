@@ -521,9 +521,6 @@ $sequence "FirstDraw" {
 	{ event 5004 9 "MCV_Weapon_Foley_M1C.DrawMetal" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "walklayerironsight"
-	addlayer "runlayer"
 	fps 30
 }
 
@@ -536,9 +533,6 @@ $sequence "draw" {
 	{ event 5004 1 "MCV_Weapon_Foley_M1C.Draw" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "walklayerironsight"
-	addlayer "runlayer"
 	fps 30
 }
 
@@ -895,8 +889,6 @@ $sequence "grenade_draw" {
 	{ event AE_WPN_SET_POSEPARAM 0 "ammo_fraction 1" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "walklayerironsight"
 	fps 30
 }
 
@@ -910,9 +902,6 @@ $sequence "grenade_draw_empty" {
 	{ event AE_WPN_SET_POSEPARAM 0 "ammo_fraction 1" }
 	fadein 0
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "walklayerironsight"
-	addlayer "runlayer"
 	fps 30
 }
 

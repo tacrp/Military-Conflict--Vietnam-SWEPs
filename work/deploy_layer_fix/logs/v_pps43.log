@@ -1,0 +1,119 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_pps43\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_pps43\v_pps43.qc"
+Building binary model files...
+Working on "v_pps43.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\Ref_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\Default_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\Slideback_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\ShootMove_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\ShootStill_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\PoseDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\PoseDelta2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\Default.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\Slideback.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\ShootMove.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\ShootStill.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\change_firemode_idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\change_firemode_iron.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_pps43\v_pps43_anims\holster.smd
+Processing LOD for material: shells_small
+Processing LOD for material: pps_43
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_pps43.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_pps43.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        21772 bytes (95)
+animations  166948 bytes (65 anims) (1657 frames) [0:55]
+sequences     9900 bytes (26 seq) 
+ik/pose        244 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       140 bytes
+keyvalues       20 bytes
+bone transforms    12984 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       215732
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_pps43.vvd:
+vertices    843168 bytes (17566 vertices)
+tangents    281056 bytes (17566 vertices)
+total      1124288 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_pps43.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:         158094 bytes
+indices:       131010 bytes
+bone changes:      48 bytes
+everything:    289338 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_pps43.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:         158094 bytes
+indices:       131010 bytes
+bone changes:      48 bytes
+everything:    289338 bytes
+
+Completed "v_pps43.qc"

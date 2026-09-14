@@ -1,0 +1,160 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_xm148\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_xm148\v_xm148.qc"
+Building binary model files...
+Working on "v_xm148.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\RefXM148_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\body1_model0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\walkIdle_gren_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\walk_gren_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\gl_shoot_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\gl_shoot_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\walkDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\reload_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\reload_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\reload_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\reload_e_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\idletonearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\idletonearwall_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\nearwall_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\nearwalltoidle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\nearwalltoidle_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\bash_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\bash_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\change_firemode_idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\change_firemode_iron.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\gl_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\irongl.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\walkIdle_gren_a.smd
+SMD MODEL fixed_anims\walk_gren_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\idle_to_gl_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\idle_to_gl_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\gl_to_idle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\gl_to_idle_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\gl_shoot_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\gl_shoot_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\reload_secondary_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\reload_secondary_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\gl_draw_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\gl_draw_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\nearwall_gren_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\nearwall_gren_s_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\nearwall_gren_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\nearwall_gren_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\nearwall_gren_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\nearwall_gren_e_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\prone_g_F.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\prone_g_B.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\prone_g_L.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\prone_g_R.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\bashGrenade_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\bashGrenade_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\pickupstart_gren_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\pickupstart_gren_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\pickupend_gren_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\pickupend_gren_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\pickup_gren_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\pickup_gren_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\holster.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_xm148\v_xm148_anims\holster_grenade.smd
+Processing LOD for material: shells_small
+Processing LOD for material: m16_mag20
+Processing LOD for material: xm148_launcher
+Processing LOD for material: m16a1
+Processing LOD for material: m16a1
+Processing LOD for material: m16a1_stock
+Processing LOD for material: xm148_barrel
+Processing LOD for material: shells_big
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_xm148.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_xm148.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        24740 bytes (107)
+animations  308004 bytes (93 anims) (2692 frames) [1:29]
+sequences    15076 bytes (42 seq) 
+ik/pose        536 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       476 bytes
+keyvalues       20 bytes
+bone transforms    14616 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       369164
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_xm148.vvd:
+vertices   1572816 bytes (32767 vertices)
+vertices   1396992 bytes (29104 vertices)
+tangents    524272 bytes (32767 vertices)
+tangents    465664 bytes (29104 vertices)
+total      3959808 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_xm148.dx80.vtx":
+body parts:        16 bytes
+models:            60 bytes
+model LODs:        36 bytes
+meshes:            72 bytes
+strip groups:     200 bytes
+strips:           216 bytes
+verts:         556839 bytes
+indices:       415902 bytes
+bone changes:     192 bytes
+everything:    973533 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_xm148.dx90.vtx":
+body parts:        16 bytes
+models:            60 bytes
+model LODs:        36 bytes
+meshes:            72 bytes
+strip groups:     200 bytes
+strips:           216 bytes
+verts:         556839 bytes
+indices:       415902 bytes
+bone changes:     192 bytes
+everything:    973533 bytes
+
+Completed "v_xm148.qc"

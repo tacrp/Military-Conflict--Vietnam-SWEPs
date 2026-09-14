@@ -1,0 +1,120 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_sterling\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_sterling\v_sterling.qc"
+Building binary model files...
+Working on "v_sterling.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\Ref_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\Default_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\Slideback_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\ShootMove_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\ShootStill_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\PoseDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\PoseDelta2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\Default.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\Slideback.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\ShootMove.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\ShootStill.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\movesubtract.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\runIdle_a.smd
+SMD MODEL fixed_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\walkIdle_a.smd
+SMD MODEL fixed_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\change_firemode_idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\change_firemode_iron.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_sterling\v_sterling_anims\holster.smd
+Processing LOD for material: sterling
+Processing LOD for material: shells_small
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_sterling.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_sterling.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        22056 bytes (96)
+animations  163016 bytes (66 anims) (1692 frames) [0:56]
+sequences    10064 bytes (26 seq) 
+ik/pose        244 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       140 bytes
+keyvalues       20 bytes
+bone transforms    13120 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       212416
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_sterling.vvd:
+vertices   1377984 bytes (28708 vertices)
+tangents    459328 bytes (28708 vertices)
+total      1837376 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_sterling.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:         258372 bytes
+indices:       214962 bytes
+bone changes:      56 bytes
+everything:    473576 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_sterling.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:         258372 bytes
+indices:       214962 bytes
+bone changes:      56 bytes
+everything:    473576 bytes
+
+Completed "v_sterling.qc"

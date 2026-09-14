@@ -1,0 +1,91 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_css\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_css\v_css.qc"
+Building binary model files...
+Working on "v_css.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_css\CSS_RDG1_black.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_css\CSS_RDG1_white.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_css\v_css_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_css\v_css_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_css\v_css_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_css\v_css_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_css\v_css_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_css\v_css_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_css\v_css_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_css\v_css_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_css\v_css_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_css\v_css_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_css\v_css_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_css\v_css_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_css\v_css_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_css\v_css_anims\idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_css\v_css_anims\drawbackhigh.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_css\v_css_anims\drawbacklow.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_css\v_css_anims\throw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_css\v_css_anims\roll.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_css\v_css_anims\lob.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_css\v_css_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_css\v_css_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_css\v_css_anims\pickupstart.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_css\v_css_anims\pickuploop.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_css\v_css_anims\pickupend.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_css\v_css_anims\idletonearwall.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_css\v_css_anims\nearwall.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_css\v_css_anims\nearwalltoidle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_css\v_css_anims\holster.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_css\v_css_anims\firemode.smd
+Processing LOD for material: css_black
+Processing LOD for material: css_white
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_css.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_css.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        23096 bytes (101)
+animations   73576 bytes (29 anims) (619 frames) [0:20]
+sequences     7680 bytes (20 seq) 
+ik/pose        372 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       140 bytes
+keyvalues       20 bytes
+bone transforms    13800 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       121696
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_css.vvd:
+vertices    109680 bytes (2285 vertices)
+vertices    109680 bytes (2285 vertices)
+tangents     36560 bytes (2285 vertices)
+tangents     36560 bytes (2285 vertices)
+total       292544 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_css.dx80.vtx":
+body parts:         8 bytes
+models:            40 bytes
+model LODs:        24 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:          41130 bytes
+indices:        36048 bytes
+bone changes:     168 bytes
+everything:     77552 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_css.dx90.vtx":
+body parts:         8 bytes
+models:            40 bytes
+model LODs:        24 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:          41130 bytes
+indices:        36048 bytes
+bone changes:     168 bytes
+everything:     77552 bytes
+
+Completed "v_css.qc"

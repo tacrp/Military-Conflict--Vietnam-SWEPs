@@ -1,0 +1,165 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_type56xm148\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_type56xm148\v_type56xm148.qc"
+Building binary model files...
+Working on "v_type56xm148.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\type56_xm148.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_bayonetAK.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\body2_model0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\walkIdle_gren_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\walk_gren_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\gl_shoot_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\gl_shoot_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\change_firemode_idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\change_firemode_iron.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\gl_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\irongl.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\walkIdle_gren_a.smd
+SMD MODEL fixed_anims\walk_gren_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\idle_to_gl_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\idle_to_gl_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\gl_to_idle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\gl_to_idle_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\gl_shoot_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\gl_shoot_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\reload_secondary_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\reload_secondary_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\gl_draw_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\gl_draw_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\nearwall_gren_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\nearwall_gren_s_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\nearwall_gren_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\nearwall_gren_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\nearwall_gren_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\nearwall_gren_e_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\prone_g_F.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\prone_g_B.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\prone_g_L.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\prone_g_R.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\bashGrenade_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\bashGrenade_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\pickupstart_gren_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\pickupstart_gren_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\pickupend_gren_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\pickupend_gren_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\pickup_gren_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\pickup_gren_i_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\holster.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_type56xm148\v_type56xm148_anims\holster_grenade.smd
+Processing LOD for material: shells_big
+Processing LOD for material: xm148_launcher
+Processing LOD for material: type56
+Processing LOD for material: ak47_bayonet_d
+Processing LOD for material: type56
+Processing LOD for material: akm_mag
+Processing LOD for material: shells_small
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_type56xm148.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_type56xm148.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        24284 bytes (105)
+animations  327360 bytes (92 anims) (2774 frames) [1:32]
+sequences    15164 bytes (42 seq) 
+ik/pose        848 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       420 bytes
+keyvalues       20 bytes
+bone transforms    14344 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       388016
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_type56xm148.vvd:
+vertices   1572768 bytes (32766 vertices)
+vertices    101376 bytes (2112 vertices)
+vertices    460800 bytes (9600 vertices)
+tangents    524256 bytes (32766 vertices)
+tangents     33792 bytes (2112 vertices)
+tangents    153600 bytes (9600 vertices)
+total      2846656 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_type56xm148.dx80.vtx":
+body parts:        24 bytes
+models:           100 bytes
+model LODs:        60 bytes
+meshes:            63 bytes
+strip groups:     175 bytes
+strips:           189 bytes
+verts:         400302 bytes
+indices:       344124 bytes
+bone changes:     136 bytes
+everything:    745149 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_type56xm148.dx90.vtx":
+body parts:        24 bytes
+models:           100 bytes
+model LODs:        60 bytes
+meshes:            63 bytes
+strip groups:     175 bytes
+strips:           189 bytes
+verts:         400302 bytes
+indices:       344124 bytes
+bone changes:     136 bytes
+everything:    745149 bytes
+
+Completed "v_type56xm148.qc"

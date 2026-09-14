@@ -1,6 +1,8 @@
 // Rebuild the engine-facing Lua alias from the restored mode. Launcher variants
 // carry both rifle and launcher animations in their own combined model.
 function SWEP:SyncViewModel(changeModel)
+    local owner = self:GetOwner()
+    if !IsValid(owner) or !owner:IsPlayer() then return end
     self.SingleViewModel = self.SingleViewModel or weapons.Get(self:GetClass()).ViewModel
     local model = self.HasAkimbo and self:GetAkimbo() and self.ViewModelAkimbo or self.SingleViewModel
     self.ViewModel = model
@@ -19,6 +21,10 @@ function SWEP:SyncViewModel(changeModel)
 end
 
 function SWEP:Deploy()
+    if IsValid(self:GetOwner()) and self:GetOwner():IsNPC() then
+        if self.NPC_Deploy then self:NPC_Deploy() end
+        return true
+    end
     self:CancelDeferred()
     self:SetHolsterCommand(0)
     self:SetHolsterTime(0)
@@ -66,16 +72,13 @@ function SWEP:ClientHolster()
 end
 
 function SWEP:Holster(wep)
+    if IsValid(self:GetOwner()) and self:GetOwner():IsNPC() then return true end
     if game.SinglePlayer() and CLIENT then return end
 
     if CLIENT and self:GetOwner() != LocalPlayer() then return end
     // The engine also calls Holster clientside outside prediction when applying a
     // weapon switch. It must not start another delayed switch or mutate restored data.
     if CLIENT and GetPredictionPlayer() != self:GetOwner() then return true end
-
-    if self:GetOwner():IsNPC() then
-        return
-    end
 
     if self:GetReloading() then
         self:SetReloading(false)
@@ -131,6 +134,8 @@ hook.Add("StartCommand", "MCV_Holster", function(ply, ucmd)
 end)
 
 function SWEP:Initialize()
+    // Also builds the engine's activity translations for NPC aiming / firing / reloads.
+    self:SetHoldType(self.HoldType or "ar2")
     // Only the newly created weapon's free round is affected. Never clear the
     // owner's shared ammo pool or a loaded weapon on deploy / pickup.
     if SERVER and self.Secondary.Ammo == "smg1_grenade" and !MCV.SpawnRifleGrenadeAmmo() then

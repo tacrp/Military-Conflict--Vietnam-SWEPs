@@ -521,9 +521,6 @@ $sequence "Firstdraw" {
 	{ event AE_WPN_SET_POSEPARAM 11 "hammerpos 1" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "walklayerironsight"
-	addlayer "runlayer"
 	fps 30
 }
 
@@ -537,9 +534,6 @@ $sequence "draw" {
 	{ event AE_WPN_SET_POSEPARAM 1 "hammerpos 1" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "walklayerironsight"
-	addlayer "runlayer"
 	fps 30
 }
 
@@ -553,9 +547,6 @@ $sequence "draw_empty" {
 	{ event AE_WPN_SET_POSEPARAM 1 "hammerpos 0" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "walklayerironsight"
-	addlayer "runlayer"
 	fps 30
 }
 

@@ -1,0 +1,185 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_qspr\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_qspr\v_qspr.qc"
+Building binary model files...
+Working on "v_qspr.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\qspr.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\Bullet0_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\Bullet1_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\Bullet2_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\Bullet3_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\Bullet4_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\Bullet5_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\Default_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\shoot_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\shoot_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\shoot_w_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\shoot_w_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\shoot_p_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\shoot_p_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\PoseDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\Default.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\Bullet5.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\Bullet4.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\Bullet3.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\Bullet2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\Bullet1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\Bullet0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\idle_delayed_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\ironsight_delayed.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\ironsight_transition_delayed.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\idle_western_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\ironsight_western.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\ironsight_transition_western.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\shoot_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\shoot_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\shoot_w_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\shoot_w_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\shoot_p_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\shoot_p_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\d_nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\w_nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\d_nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\w_nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\d_nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\w_nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\d_nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\w_nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\d_nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\w_nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\d_nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\w_nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\d_proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\d_proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\d_proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\d_proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\w_proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\w_proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\w_proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\w_proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\d_pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\w_pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\d_pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\w_pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\d_pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\w_pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\d_pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\w_pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\d_pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\w_pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\d_pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\w_pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\change_firemode_towestern_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\change_firemode_towestern_iron_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\change_firemode_todelayed_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\change_firemode_todelayed_iron_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\change_firemode_tonormal_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\change_firemode_tonormal_iron_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\FirstDraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\FirstDraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\FirstDraw_3.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\FirstDraw_4.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\FirstDraw_5.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\FirstDraw_6.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\draw_3.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\draw_4.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\draw_5.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\draw_6.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\reload_3.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\reload_4.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\reload_5.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\reload_6.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\bash_3.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\bash_4.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\bash_5.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\bash_6.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\holster.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\holster_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_qspr\v_qspr_anims\holster_3.smd
+Processing LOD for material: v_qspr
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_qspr.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_qspr.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        24812 bytes (109)
+animations  509868 bytes (138 anims) (3764 frames) [2:04]
+sequences    11552 bytes (28 seq) 
+ik/pose        264 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures        76 bytes
+keyvalues       20 bytes
+bone transforms    14888 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       566536
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_qspr.vvd:
+vertices    455616 bytes (9492 vertices)
+tangents    151872 bytes (9492 vertices)
+total       607552 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_qspr.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:             9 bytes
+strip groups:      25 bytes
+strips:            54 bytes
+verts:          85428 bytes
+indices:        56130 bytes
+bone changes:     152 bytes
+everything:    141862 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_qspr.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:             9 bytes
+strip groups:      25 bytes
+strips:            27 bytes
+verts:          85428 bytes
+indices:        56130 bytes
+bone changes:     152 bytes
+everything:    141835 bytes
+
+Completed "v_qspr.qc"

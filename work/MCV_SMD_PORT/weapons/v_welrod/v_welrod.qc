@@ -473,9 +473,6 @@ $sequence "draw" {
 	fadein 0
 	fadeout 0.2
 	addlayer "BulletCounter"
-	addlayer "walklayer"
-	addlayer "walklayerironsight"
-	addlayer "runlayer"
 	node "0"
 	fps 30
 }
@@ -493,9 +490,6 @@ $sequence "Firstdraw" {
 	fadein 0
 	fadeout 0.2
 	addlayer "BulletCounter"
-	addlayer "walklayer"
-	addlayer "walklayerironsight"
-	addlayer "runlayer"
 	node "0"
 	fps 30
 }

@@ -1,0 +1,81 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_vcammobox\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_vcammobox\v_vcammobox.qc"
+Building binary model files...
+Working on "v_vcammobox.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcammobox\v_vcbox_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcammobox\v_vcammobox_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcammobox\v_vcammobox_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcammobox\v_vcammobox_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcammobox\v_vcammobox_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcammobox\v_vcammobox_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcammobox\v_vcammobox_anims\runIdle_a.smd
+SMD MODEL fixed_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcammobox\v_vcammobox_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcammobox\v_vcammobox_anims\walk_a.smd
+SMD MODEL fixed_anims\proneF.smd
+SMD MODEL fixed_anims\proneB.smd
+SMD MODEL fixed_anims\proneL.smd
+SMD MODEL fixed_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcammobox\v_vcammobox_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcammobox\v_vcammobox_anims\idletonearwall.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcammobox\v_vcammobox_anims\nearwall.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcammobox\v_vcammobox_anims\nearwalltoidle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcammobox\v_vcammobox_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcammobox\v_vcammobox_anims\pickupstart.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcammobox\v_vcammobox_anims\pickuploop.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcammobox\v_vcammobox_anims\pickupend.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcammobox\v_vcammobox_anims\holster.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcammobox\v_vcammobox_anims\give.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcammobox\v_vcammobox_anims\self.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_vcammobox\v_vcammobox_anims\throw.smd
+Processing LOD for material: ammobox
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_vcammobox.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_vcammobox.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        20652 bytes (91)
+animations   69004 bytes (25 anims) (577 frames) [0:19]
+sequences     5736 bytes (17 seq) 
+ik/pose        224 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures        72 bytes
+keyvalues       20 bytes
+bone transforms    12440 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       110780
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_vcammobox.vvd:
+vertices    170064 bytes (3543 vertices)
+tangents     56688 bytes (3543 vertices)
+total       226816 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_vcammobox.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:             9 bytes
+strip groups:      25 bytes
+strips:            27 bytes
+verts:          31887 bytes
+indices:        22296 bytes
+bone changes:      16 bytes
+everything:     54324 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_vcammobox.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:             9 bytes
+strip groups:      25 bytes
+strips:            27 bytes
+verts:          31887 bytes
+indices:        22296 bytes
+bone changes:      16 bytes
+everything:     54324 bytes
+
+Completed "v_vcammobox.qc"

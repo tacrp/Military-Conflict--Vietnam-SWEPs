@@ -1,0 +1,23 @@
+[
+  {
+    "name": "m635",
+    "source": "work/MCV_SMD/weapons/v_m635/m635.smd",
+    "output": "work/spawn_icons/options_check/mcv_m635.png",
+    "installed": null,
+    "source_sha256": "ff87f817519d94f1a5a8f1a14c6fb9fe4e3161106af602361b3450495ee05faf",
+    "png_sha256": "4d8424b564b60b86f70c362dd926b793914abc32aaf0061b6d62c7d901e44d36",
+    "triangles": 48050,
+    "size": 256,
+    "bone": "Base",
+    "side": "right",
+    "exclude_materials": [
+      "shell"
+    ],
+    "alpha_bounds": [
+      0,
+      81,
+      256,
+      175
+    ]
+  }
+]

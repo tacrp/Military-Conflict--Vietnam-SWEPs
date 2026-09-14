@@ -158,7 +158,7 @@ SWEP.MuzzleParticleIronsightedSmoke = "vietnam_muzzleflash_pistol_type1_fp_is_sm
 
 SWEP.MuzzleParticle3rdPerson = "vietnam_muzzleflash_pistol_type1_tp"
 
-SWEP.EjectBrassType = 14
+SWEP.EjectBrassType = 5 // Bottleneck pistol case, the closest model to 8mm Nambu.
 SWEP.EjectBrassTrail = "vietnam_weaponeffect_shelleject_trail"
 SWEP.EjectBrassParticle = "vietnam_weaponeffect_shelleject_side"
 

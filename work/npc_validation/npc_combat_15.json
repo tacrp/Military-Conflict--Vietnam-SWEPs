@@ -1,0 +1,818 @@
+{
+	"menu": 203,
+	"cases": [
+		{
+			"reloads": [
+				{
+					"clip": 30,
+					"time": 196.01999561861157
+				},
+				{
+					"clip": 30,
+					"time": 202.97999546304345
+				}
+			],
+			"targetPos": "[4700 -3000 -12799]",
+			"alive": true,
+			"clip": 7,
+			"enemy": "NPC [74][npc_zombie]",
+			"activity": 66,
+			"initialClip": 30,
+			"reloadCalls": 0,
+			"damage": 790.6763248443604,
+			"hold": "ar2",
+			"npc": "npc_combine_s",
+			"shots": [
+				{
+					"time": 197.36999558843672,
+					"after": 29,
+					"before": 30
+				},
+				{
+					"time": 197.4749955860898,
+					"after": 28,
+					"before": 29
+				},
+				{
+					"time": 197.6099955830723,
+					"after": 27,
+					"before": 28
+				},
+				{
+					"time": 198.2399955689907,
+					"after": 26,
+					"before": 27
+				},
+				{
+					"time": 198.34499556664377,
+					"after": 25,
+					"before": 26
+				},
+				{
+					"time": 198.44999556429684,
+					"after": 24,
+					"before": 25
+				},
+				{
+					"time": 198.5549955619499,
+					"after": 23,
+					"before": 24
+				},
+				{
+					"time": 198.65999555960298,
+					"after": 22,
+					"before": 23
+				},
+				{
+					"time": 199.39499554317445,
+					"after": 21,
+					"before": 22
+				},
+				{
+					"time": 199.4999955408275,
+					"after": 20,
+					"before": 21
+				},
+				{
+					"time": 199.60499553848058,
+					"after": 19,
+					"before": 20
+				},
+				{
+					"time": 199.70999553613365,
+					"after": 18,
+					"before": 19
+				},
+				{
+					"time": 199.8149955337867,
+					"after": 17,
+					"before": 18
+				},
+				{
+					"time": 200.44499551970512,
+					"after": 16,
+					"before": 17
+				},
+				{
+					"time": 200.54999551735818,
+					"after": 15,
+					"before": 16
+				},
+				{
+					"time": 200.65499551501125,
+					"after": 14,
+					"before": 15
+				},
+				{
+					"time": 200.75999551266432,
+					"after": 13,
+					"before": 14
+				},
+				{
+					"time": 200.86499551031739,
+					"after": 12,
+					"before": 13
+				},
+				{
+					"time": 200.96999550797045,
+					"after": 11,
+					"before": 12
+				},
+				{
+					"time": 201.70499549154192,
+					"after": 10,
+					"before": 11
+				},
+				{
+					"time": 201.809995489195,
+					"after": 9,
+					"before": 10
+				},
+				{
+					"time": 201.91499548684806,
+					"after": 8,
+					"before": 9
+				},
+				{
+					"time": 202.01999548450112,
+					"after": 7,
+					"before": 8
+				},
+				{
+					"time": 204.43499543052167,
+					"after": 29,
+					"before": 30
+				},
+				{
+					"time": 204.53999542817473,
+					"after": 28,
+					"before": 29
+				},
+				{
+					"time": 204.6449954258278,
+					"after": 27,
+					"before": 28
+				},
+				{
+					"time": 205.5899954047054,
+					"after": 26,
+					"before": 27
+				},
+				{
+					"time": 205.69499540235847,
+					"after": 25,
+					"before": 26
+				},
+				{
+					"time": 205.79999540001154,
+					"after": 24,
+					"before": 25
+				},
+				{
+					"time": 205.9049953976646,
+					"after": 23,
+					"before": 24
+				},
+				{
+					"time": 206.00999539531767,
+					"after": 22,
+					"before": 23
+				},
+				{
+					"time": 206.11499539297074,
+					"after": 21,
+					"before": 22
+				},
+				{
+					"time": 206.2199953906238,
+					"after": 20,
+					"before": 21
+				},
+				{
+					"time": 206.74499537888914,
+					"after": 19,
+					"before": 20
+				},
+				{
+					"time": 206.8499953765422,
+					"after": 18,
+					"before": 19
+				},
+				{
+					"time": 206.95499537419528,
+					"after": 17,
+					"before": 18
+				},
+				{
+					"time": 207.05999537184834,
+					"after": 16,
+					"before": 17
+				},
+				{
+					"time": 207.1649953695014,
+					"after": 15,
+					"before": 16
+				},
+				{
+					"time": 207.26999536715448,
+					"after": 14,
+					"before": 15
+				},
+				{
+					"time": 208.00499535072595,
+					"after": 13,
+					"before": 14
+				},
+				{
+					"time": 208.10999534837902,
+					"after": 12,
+					"before": 13
+				},
+				{
+					"time": 208.21499534603208,
+					"after": 11,
+					"before": 12
+				},
+				{
+					"time": 208.31999534368515,
+					"after": 10,
+					"before": 11
+				},
+				{
+					"time": 208.42499534133822,
+					"after": 9,
+					"before": 10
+				},
+				{
+					"time": 209.36999532021582,
+					"after": 8,
+					"before": 9
+				},
+				{
+					"time": 209.4749953178689,
+					"after": 7,
+					"before": 8
+				}
+			],
+			"schedule": 92,
+			"weapon": "mcv_akm"
+		},
+		{
+			"reloads": [
+				{
+					"clip": 20,
+					"time": 196.4099956098944
+				},
+				{
+					"clip": 20,
+					"time": 207.23999536782503
+				}
+			],
+			"targetPos": "[4700 -2100 -12799]",
+			"alive": true,
+			"clip": 17,
+			"enemy": "NPC [82][npc_zombie]",
+			"activity": 1,
+			"initialClip": 20,
+			"reloadCalls": 0,
+			"damage": 107.07502746582031,
+			"hold": "ar2",
+			"npc": "npc_citizen",
+			"shots": [
+				{
+					"time": 198.07499557267874,
+					"after": 19,
+					"before": 20
+				},
+				{
+					"time": 198.50999556295574,
+					"after": 18,
+					"before": 19
+				},
+				{
+					"time": 199.13999554887414,
+					"after": 17,
+					"before": 18
+				},
+				{
+					"time": 199.45499554183334,
+					"after": 16,
+					"before": 17
+				},
+				{
+					"time": 199.8749955324456,
+					"after": 15,
+					"before": 16
+				},
+				{
+					"time": 200.29499552305788,
+					"after": 14,
+					"before": 15
+				},
+				{
+					"time": 200.92499550897628,
+					"after": 13,
+					"before": 14
+				},
+				{
+					"time": 201.44999549724162,
+					"after": 12,
+					"before": 13
+				},
+				{
+					"time": 201.97499548550695,
+					"after": 11,
+					"before": 12
+				},
+				{
+					"time": 202.4999954737723,
+					"after": 10,
+					"before": 11
+				},
+				{
+					"time": 203.1299954596907,
+					"after": 9,
+					"before": 10
+				},
+				{
+					"time": 203.65499544795603,
+					"after": 8,
+					"before": 9
+				},
+				{
+					"time": 204.0749954385683,
+					"after": 7,
+					"before": 8
+				},
+				{
+					"time": 204.59999542683363,
+					"after": 6,
+					"before": 7
+				},
+				{
+					"time": 205.0199954174459,
+					"after": 5,
+					"before": 6
+				},
+				{
+					"time": 208.69499533530325,
+					"after": 19,
+					"before": 20
+				},
+				{
+					"time": 209.21999532356858,
+					"after": 18,
+					"before": 19
+				},
+				{
+					"time": 209.74499531183392,
+					"after": 17,
+					"before": 18
+				}
+			],
+			"schedule": 12,
+			"weapon": "mcv_m21"
+		},
+		{
+			"reloads": [
+				{
+					"clip": 4,
+					"time": 196.51499560754746
+				},
+				{
+					"clip": 4,
+					"time": 201.98999548517168
+				},
+				{
+					"clip": 4,
+					"time": 207.56999536044896
+				}
+			],
+			"targetPos": "[4700 -1200 -12799]",
+			"alive": true,
+			"clip": 3,
+			"enemy": "NPC [86][npc_zombie]",
+			"activity": 16,
+			"initialClip": 4,
+			"reloadCalls": 0,
+			"damage": 182.8518362045288,
+			"hold": "shotgun",
+			"npc": "npc_combine_s",
+			"shots": [
+				{
+					"time": 195.50999563001096,
+					"after": 1,
+					"before": 2
+				},
+				{
+					"time": 197.8649955773726,
+					"after": 3,
+					"before": 4
+				},
+				{
+					"time": 199.45499554183334,
+					"after": 2,
+					"before": 3
+				},
+				{
+					"time": 201.02999550662935,
+					"after": 1,
+					"before": 2
+				},
+				{
+					"time": 203.4449954526499,
+					"after": 3,
+					"before": 4
+				},
+				{
+					"time": 205.0199954174459,
+					"after": 2,
+					"before": 3
+				},
+				{
+					"time": 206.60999538190663,
+					"after": 1,
+					"before": 2
+				},
+				{
+					"time": 208.9199953302741,
+					"after": 3,
+					"before": 4
+				}
+			],
+			"schedule": 100,
+			"weapon": "mcv_m37"
+		},
+		{
+			"reloads": [
+				{
+					"clip": 5,
+					"time": 196.5449956068769
+				},
+				{
+					"clip": 5,
+					"time": 202.67999546974897
+				},
+				{
+					"clip": 5,
+					"time": 208.13999534770846
+				}
+			],
+			"targetPos": "[4700 -300 -12799]",
+			"alive": true,
+			"clip": 4,
+			"enemy": "NPC [90][npc_zombie]",
+			"activity": 16,
+			"initialClip": 5,
+			"reloadCalls": 0,
+			"damage": 545.4606475830078,
+			"hold": "ar2",
+			"npc": "npc_combine_s",
+			"shots": [
+				{
+					"time": 195.58499562833458,
+					"after": 1,
+					"before": 2
+				},
+				{
+					"time": 198.13499557133764,
+					"after": 4,
+					"before": 5
+				},
+				{
+					"time": 199.40999554283917,
+					"after": 3,
+					"before": 4
+				},
+				{
+					"time": 200.45999551936984,
+					"after": 2,
+					"before": 3
+				},
+				{
+					"time": 201.71999549120665,
+					"after": 1,
+					"before": 2
+				},
+				{
+					"time": 204.02999543957412,
+					"after": 4,
+					"before": 5
+				},
+				{
+					"time": 205.0799954161048,
+					"after": 3,
+					"before": 4
+				},
+				{
+					"time": 206.12999539263546,
+					"after": 2,
+					"before": 3
+				},
+				{
+					"time": 207.17999536916614,
+					"after": 1,
+					"before": 2
+				},
+				{
+					"time": 209.69999531283975,
+					"after": 4,
+					"before": 5
+				}
+			],
+			"schedule": 100,
+			"weapon": "mcv_vz24"
+		},
+		{
+			"reloads": [
+				{
+					"clip": 6,
+					"time": 198.74999555759132
+				},
+				{
+					"clip": 6,
+					"time": 206.1449953923002
+				}
+			],
+			"targetPos": "[4700 600 -12799]",
+			"alive": true,
+			"clip": 3,
+			"enemy": "NPC [94][npc_zombie]",
+			"activity": 76,
+			"initialClip": 6,
+			"reloadCalls": 0,
+			"damage": 0,
+			"hold": "revolver",
+			"npc": "npc_metropolice",
+			"shots": [
+				{
+					"time": 196.49999560788274,
+					"after": 1,
+					"before": 2
+				},
+				{
+					"time": 197.5499955844134,
+					"after": 0,
+					"before": 1
+				},
+				{
+					"time": 199.70999553613365,
+					"after": 5,
+					"before": 6
+				},
+				{
+					"time": 200.75999551266432,
+					"after": 4,
+					"before": 5
+				},
+				{
+					"time": 201.809995489195,
+					"after": 3,
+					"before": 4
+				},
+				{
+					"time": 202.87499546539038,
+					"after": 2,
+					"before": 3
+				},
+				{
+					"time": 203.92499544192106,
+					"after": 1,
+					"before": 2
+				},
+				{
+					"time": 204.97499541845173,
+					"after": 0,
+					"before": 1
+				},
+				{
+					"time": 207.2849953668192,
+					"after": 5,
+					"before": 6
+				},
+				{
+					"time": 208.33499534334987,
+					"after": 4,
+					"before": 5
+				},
+				{
+					"time": 209.38499531988055,
+					"after": 3,
+					"before": 4
+				}
+			],
+			"schedule": 258,
+			"weapon": "mcv_blackhawk"
+		},
+		{
+			"reloads": [
+				{
+					"clip": 1,
+					"time": 196.51499560754746
+				},
+				{
+					"clip": 1,
+					"time": 198.8549955552444
+				},
+				{
+					"clip": 1,
+					"time": 201.1949955029413
+				},
+				{
+					"clip": 1,
+					"time": 203.5199954509735
+				},
+				{
+					"clip": 1,
+					"time": 206.03999539464712
+				},
+				{
+					"clip": 1,
+					"time": 208.57499533798546
+				}
+			],
+			"targetPos": "[4700 1500 -12799]",
+			"alive": true,
+			"clip": 0,
+			"enemy": "NPC [99][npc_zombie]",
+			"activity": 16,
+			"initialClip": 1,
+			"reloadCalls": 0,
+			"damage": 2383.3749237060547,
+			"hold": "ar2",
+			"npc": "npc_combine_s",
+			"shots": [
+				{
+					"time": 195.50999563001096,
+					"after": 0,
+					"before": 1
+				},
+				{
+					"time": 197.8649955773726,
+					"after": 0,
+					"before": 1
+				},
+				{
+					"time": 200.23499552439898,
+					"after": 0,
+					"before": 1
+				},
+				{
+					"time": 202.54499547276646,
+					"after": 0,
+					"before": 1
+				},
+				{
+					"time": 205.0799954161048,
+					"after": 0,
+					"before": 1
+				},
+				{
+					"time": 207.61499535944313,
+					"after": 0,
+					"before": 1
+				},
+				{
+					"time": 209.9249953078106,
+					"after": 0,
+					"before": 1
+				}
+			],
+			"schedule": 100,
+			"weapon": "mcv_rpg7"
+		},
+		{
+			"reloads": [
+				{
+					"clip": 1,
+					"time": 198.28499556798488
+				},
+				{
+					"clip": 1,
+					"time": 201.7499954905361
+				},
+				{
+					"clip": 1,
+					"time": 204.8999954201281
+				},
+				{
+					"clip": 1,
+					"time": 208.04999534972012
+				}
+			],
+			"targetPos": "[4700 2400 -12799]",
+			"alive": true,
+			"clip": 0,
+			"enemy": "NPC [103][npc_zombie]",
+			"activity": 66,
+			"initialClip": 1,
+			"reloadCalls": 0,
+			"damage": 198.75,
+			"hold": "ar2",
+			"npc": "npc_citizen",
+			"shots": [
+				{
+					"time": 196.00499561894685,
+					"after": 0,
+					"before": 1
+				},
+				{
+					"time": 199.4249955425039,
+					"after": 0,
+					"before": 1
+				},
+				{
+					"time": 202.5749954720959,
+					"after": 0,
+					"before": 1
+				},
+				{
+					"time": 205.72499540168792,
+					"after": 0,
+					"before": 1
+				},
+				{
+					"time": 209.08499532658607,
+					"after": 0,
+					"before": 1
+				}
+			],
+			"schedule": 51,
+			"weapon": "mcv_crossbow"
+		},
+		{
+			"reloads": [
+				{
+					"clip": 1,
+					"time": 196.43999560922384
+				},
+				{
+					"clip": 1,
+					"time": 198.7949955565855
+				},
+				{
+					"clip": 1,
+					"time": 201.3149955002591
+				},
+				{
+					"clip": 1,
+					"time": 203.8349954439327
+				},
+				{
+					"clip": 1,
+					"time": 206.1449953923002
+				},
+				{
+					"clip": 1,
+					"time": 208.4699953403324
+				}
+			],
+			"targetPos": "[4700 3300 -12799]",
+			"alive": true,
+			"clip": 1,
+			"enemy": "NPC [107][npc_zombie]",
+			"activity": 1,
+			"initialClip": 1,
+			"reloadCalls": 0,
+			"damage": 2079.6814308166504,
+			"hold": "shotgun",
+			"npc": "npc_combine_s",
+			"shots": [
+				{
+					"time": 195.47999563068151,
+					"after": 0,
+					"before": 1
+				},
+				{
+					"time": 197.81999557837844,
+					"after": 0,
+					"before": 1
+				},
+				{
+					"time": 200.35499552171677,
+					"after": 0,
+					"before": 1
+				},
+				{
+					"time": 202.87499546539038,
+					"after": 0,
+					"before": 1
+				},
+				{
+					"time": 205.18499541375786,
+					"after": 0,
+					"before": 1
+				},
+				{
+					"time": 207.50999536179006,
+					"after": 0,
+					"before": 1
+				}
+			],
+			"schedule": 100,
+			"weapon": "mcv_m79"
+		}
+	],
+	"map": "gm_flatgrass",
+	"singleplayer": false
+}

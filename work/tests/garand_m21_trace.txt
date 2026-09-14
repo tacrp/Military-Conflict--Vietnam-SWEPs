@@ -1,0 +1,17 @@
+clua include("mcv_harness/garand_m21.lua")
+lua ply:GetActiveWeapon():SetClip1(0) ply:SetAmmo(80,"ar2")
+wait 1
+clua MCVGunsCheck.StartRender("before_m21")
+wait 0.3
+tap +reload 0.1
+wait 4
+clua MCVGunsCheck.StopRender()
+select mcv_m1g
+wait 2
+clua MCVGunsCheck.WorldView()
+wait 1
+clua MCVGunsCheck.WorldReport("garand_before")
+give mcv_sks
+wait 3
+clua MCVGunsCheck.WorldReport("sks_reference")
+clua MCVGunsCheck.StopWorld()

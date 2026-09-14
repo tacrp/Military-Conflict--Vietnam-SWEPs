@@ -1,0 +1,22 @@
+[
+  {
+    "model": "v_cobra_pbr",
+    "ok": false,
+    "returncode": 4294967295,
+    "files": [],
+    "errors": [
+      "ERROR: c:\\program files (x86)\\steam\\steamapps\\common\\garrysmod\\garrysmod\\addons\\mcv\\work\\mcv_smd_port\\weapons\\v_cobra_pbr\\v_cobra_pbr.qc(8): - could not load file '..\\..\\..\\MCV_SMD_OG\\weapons\\v_cobra_pbr\\Ref_new.smd'",
+      "ERROR: Aborted Processing on 'weapons/mcv/v_cobra_pbr.mdl'"
+    ]
+  },
+  {
+    "model": "v_lacoste_pbr",
+    "ok": false,
+    "returncode": 4294967295,
+    "files": [],
+    "errors": [
+      "ERROR: c:\\program files (x86)\\steam\\steamapps\\common\\garrysmod\\garrysmod\\addons\\mcv\\work\\mcv_smd_port\\weapons\\v_lacoste_pbr\\v_lacoste_pbr.qc(8): - could not load file '..\\..\\..\\MCV_SMD_OG\\weapons\\v_lacoste_pbr\\Ref_new.smd'",
+      "ERROR: Aborted Processing on 'weapons/mcv/v_lacoste_pbr.mdl'"
+    ]
+  }
+]

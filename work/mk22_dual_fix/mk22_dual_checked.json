@@ -1,0 +1,31 @@
+{
+	"muzzle2": 5,
+	"bodygroups": [
+		{
+			"submodels": {
+				"0": "..\\..\\..\\MCV_SMD_OG\\weapons\\v_dual_mk22_mod0\\RefMk22_Right.smd"
+			},
+			"num": 1,
+			"name": "studio",
+			"id": 0
+		},
+		{
+			"submodels": {
+				"0": "..\\..\\..\\MCV_SMD_OG\\weapons\\v_dual_mk22_mod0\\RefMk22_Left.smd"
+			},
+			"num": 1,
+			"name": "studio",
+			"id": 1
+		},
+		{
+			"submodels": {
+				"0": "..\\..\\..\\MCV_SMD_OG\\weapons\\v_dual_mk22_mod0\\bg_mod0_Right.smd"
+			},
+			"num": 1,
+			"name": "mk22_variants",
+			"id": 2
+		}
+	],
+	"muzzle": 2,
+	"model": "models/weapons/mcv/v_dual_mk22_mod0.mdl"
+}

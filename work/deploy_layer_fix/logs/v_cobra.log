@@ -1,0 +1,118 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_cobra\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_cobra\v_cobra.qc"
+Building binary model files...
+Working on "v_cobra.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\Ref_new.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\Default_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\Slideback_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\ShootMove_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\PoseDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\PoseDelta2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\Default.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\Slideback.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\ShootMove.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\ShootStill.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\walkDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\walkIdle_a.smd
+SMD MODEL fixed_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD\weapons\v_cobra\anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\reload_empty_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\holster.smd
+Processing LOD for material: lacoste
+Processing LOD for material: cobra
+Processing LOD for material: shells_small
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_cobra.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_cobra.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        21840 bytes (95)
+animations  167776 bytes (63 anims) (1671 frames) [0:55]
+sequences     9472 bytes (25 seq) 
+ik/pose        244 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       212 bytes
+keyvalues       20 bytes
+bone transforms    12984 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       216328
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_cobra.vvd:
+vertices   1041792 bytes (21704 vertices)
+tangents    347264 bytes (21704 vertices)
+total      1389120 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_cobra.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            27 bytes
+strip groups:      75 bytes
+strips:            81 bytes
+verts:         195336 bytes
+indices:       165246 bytes
+bone changes:      48 bytes
+everything:    360877 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_cobra.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            27 bytes
+strip groups:      75 bytes
+strips:            81 bytes
+verts:         195336 bytes
+indices:       165246 bytes
+bone changes:      48 bytes
+everything:    360877 bytes
+
+Completed "v_cobra.qc"

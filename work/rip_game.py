@@ -679,6 +679,12 @@ def step_icons(args, vpk):
                 shutil.copyfile(src_png, dst_png)
                 copied += 1
                 break
+    # Locally authored replacements win over imports or sibling fallbacks.
+    for filename in ("mcv_rhogun.png", "mcv_cobra.png", "mcv_ptrd_sniper.png",
+                     "mcv_m635.png", "mcv_xm16super.png"):
+        custom = os.path.join(HERE, "spawn_icons", filename)
+        if os.path.isfile(custom):
+            shutil.copyfile(custom, os.path.join(out_dir, filename))
     log("icons: %d icons written to materials/entities, %d weapons without an svg, %d variants given their sibling's icon" % (made, skipped, copied))
 
 

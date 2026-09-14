@@ -1,5 +1,11 @@
 # Custom weapon asset validation — 2026-09-14
 
+The XM16 Super screenshots and game results here predate the user's subsequent
+correction to the M16-M203 firing donor. That correction replaced all 12 rifle-shot
+and corrective SMDs, verified byte-for-byte against the M203 donor, and compiled
+from the editable bundle. Its compile logs are beside the local QCs. No new
+in-game run was performed for that donor substitution.
+
 Fresh local multiplayer instance on gm_flatgrass, port 27016, sv_cheats 1,
 net_fakelag 0. These are functional and visual checks, not a prediction regression
 suite. `custom_weapon_assets.json` contains all three successful material checks.

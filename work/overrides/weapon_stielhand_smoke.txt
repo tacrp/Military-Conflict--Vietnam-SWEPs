@@ -1,0 +1,8 @@
+// The source script copied the frag type/damage into the smoke variant.
+// Keep the Nebelhandgranate correction across weapon-script imports/generation.
+WeaponData
+{
+    "WeaponType" "SmokeGrenade"
+    "ExplosionDamage" "0"
+    "ExplosionRadius" "0"
+}

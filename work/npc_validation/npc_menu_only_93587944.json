@@ -1,0 +1,27 @@
+{
+	"ptraces": [],
+	"errors": [],
+	"spawned": [],
+	"log": [
+		"lua include(\"mcv_harness/npc.lua\") MCVNPCTest.Clear()",
+		"ccmd gmod_npcweapon \"!mcv|Shotguns\"",
+		"wait 1",
+		"lua local n=Spawn_NPC(ply,\"npc_combine_s\",\"!mcv|Shotguns\",{HitPos=Vector(4000,0,-12800),HitNormal=vector_up}) assert(IsValid(n),\"NPC spawn failed\") local w=n:GetActiveWeapon() assert(IsValid(w) and w.MilitaryConflictVietnam and w.SubCategory==\"Shotguns\",\"random category failed\") file.Write(\"mcv_harness/p27017/results/npc_menu.json\",util.TableToJSON({random=w:GetClass(),registered=#MCV.GetNPCWeapons()},true)) n:Remove()",
+		"lua local n=Spawn_NPC(ply,\"npc_combine_s\",\"mcv_m21\",{HitPos=Vector(4000,0,-12800),HitNormal=vector_up}) assert(IsValid(n:GetActiveWeapon()) and n:GetActiveWeapon():GetClass()==\"mcv_m21\",\"explicit weapon lost to random selection\") n:Remove()",
+		"ccmd gmod_npcweapon \"!mcv|invalid\"",
+		"wait 1",
+		"lua local n=Spawn_NPC(ply,\"npc_combine_s\",\"!mcv|invalid\",{HitPos=Vector(4000,0,-12800),HitNormal=vector_up}) assert(!IsValid(n:GetActiveWeapon()),\"invalid random selection gave a gun\") n:Remove()",
+		"ccmd gmod_npcweapon \"!mcv|all\"",
+		"wait 1",
+		"lua local n=Spawn_NPC(ply,\"npc_combine_s\",\"!mcv|all\",{HitPos=Vector(4000,0,-12800),HitNormal=vector_up}) assert(IsValid(n:GetActiveWeapon()) and n:GetActiveWeapon().NPCUsable,\"random any failed\") n:Remove() local choices=MCV.GetNPCWeapons() for _,e in ipairs(choices) do local w=weapons.Get(e.class) assert(w.NPCUsable and w.Primary.ClipSize>0 and w.Base!=\"mcv_flamethrower\" and w.Base!=\"mcv_throwable\" and w.Base!=\"mcv_melee\" and w.Base!=\"mcv_binoculars\",\"unsupported class registered\") end",
+		"ccmd gmod_npcweapon \"\"",
+		"clua local m=menubar.Control.Menus[\"MCV NPC Weapons\"] assert(IsValid(m),\"missing NPC menu\") local subs={} for _,p in ipairs(m:GetCanvas():GetChildren()) do if IsValid(p.SubMenu) then subs[#subs+1]=p.SubMenu end end assert(#subs>10,\"empty category menu\") CloseDermaMenus() for _,sub in ipairs(subs) do assert(IsValid(sub) and !sub:GetDeleteSelf(),\"category menu destroyed on close\") end m:Open(10,80,false)",
+		"wait 1",
+		"shot npc_menu",
+		"clua CloseDermaMenus()"
+	],
+	"shots": [
+		"npc_menu"
+	],
+	"reports": []
+}
