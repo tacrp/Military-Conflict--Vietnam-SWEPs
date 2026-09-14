@@ -1,0 +1,17 @@
+key -attack
+key -attack2
+key -duck
+ang 0 0 0
+clua include("mcv_harness/custom_weapon_assets.lua")
+clua input.SelectWeapon(ply:GetWeapon("mcv_m635"))
+wait 2
+clua MCVCustomAssets.WorldView()
+wait 1
+shot m635_m601_world
+clua MCVCustomAssets.StopWorldView()
+clua input.SelectWeapon(ply:GetWeapon("mcv_ptrd_sniper"))
+wait 3
+clua MCVCustomAssets.WorldView()
+wait 1
+shot ptrd_sniper_world
+clua MCVCustomAssets.StopWorldView()

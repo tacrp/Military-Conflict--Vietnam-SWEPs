@@ -1,0 +1,75 @@
+# Run after xm16super_preview; seed ammo outside the measured prediction interval.
+ccmd cl_showerror 0
+ccmd net_fakelag 0
+key -attack
+key -attack2
+key -use
+key -walk
+strip
+give mcv_xm16super
+wait 4
+lua local w=ply:GetActiveWeapon() assert(w:Clip1()==30 and w:GetMaxClip1()==30,"spawn clip") ply:SetAmmo(90,w:GetPrimaryAmmoType())
+wait 2
+ccmd net_fakelag 100
+ccmd cl_pred_optimize 0
+wait 2
+clua include("mcv_harness/visual_trace.lua") MCV.VisualHarness.StartVisualTrace("xm16super_firing100",false)
+ccmd cl_showerror 2
+clua print("[XM16 rifle begin]") MCV.VisualHarness.VisualPhase="hip_auto"
+key +attack
+wait 0.6
+key -attack
+wait 1
+lua local w=ply:GetActiveWeapon() assert(w:Clip1()>0 and w:Clip1()<28,"automatic fire")
+report xm16super_auto
+clua MCV.VisualHarness.VisualPhase="reload"
+tap +reload 0.12
+wait 4
+lua assert(ply:GetActiveWeapon():Clip1()==31,"tactical reload capacity")
+report xm16super_reload
+key +use
+tap +reload 0.12
+key -use
+wait 1
+clua MCV.VisualHarness.VisualPhase="scope_semi"
+key +attack2
+wait 1
+tap +attack 0.12
+wait 0.6
+tap +attack 0.12
+wait 0.6
+tap +attack 0.12
+wait 1
+lua assert(ply:GetActiveWeapon():Clip1()==28,"semi-auto shot count")
+report xm16super_semi
+key -attack2
+wait 1
+clua print("[XM16 rifle end]") MCV.VisualHarness.StopVisualTrace()
+ccmd cl_showerror 0
+ccmd net_fakelag 0
+ccmd cl_pred_optimize 2
+wait 1
+# Empty reload starts from a seeded clip; allow replication before measuring again.
+lua ply:GetActiveWeapon():SetClip1(0)
+wait 2
+ccmd net_fakelag 100
+wait 2
+ccmd cl_showerror 2
+clua print("[XM16 empty reload begin]")
+tap +reload 0.12
+wait 4
+lua assert(ply:GetActiveWeapon():Clip1()==30,"empty reload capacity")
+report xm16super_empty_reload
+clua print("[XM16 empty reload end]")
+ccmd cl_showerror 0
+ccmd net_fakelag 0
+wait 1
+# Inspect the matching world model in the player's hand.
+ang 0 0 0
+hud 0
+clua hook.Add("CalcView","xm16super_side",function(p) local o=p:GetPos()+Vector(10,0,48) return {origin=o+Vector(0,-100,0),angles=Angle(0,90,0),fov=45,drawviewer=true} end) hook.Add("ShouldDrawLocalPlayer","xm16super_side",function() return true end)
+wait 1
+shot xm16super_world
+clua local w=ply:GetActiveWeapon() local wm=w:GetWorldModelEntity() assert(IsValid(wm) and wm:GetModel()==w.WorldModel,"world model missing")
+clua hook.Remove("CalcView","xm16super_side") hook.Remove("ShouldDrawLocalPlayer","xm16super_side")
+hud 1

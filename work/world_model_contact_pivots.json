@@ -1,0 +1,35 @@
+{
+  "source": "Measured on models/player/kleiner.mdl in each GMod hold type; midpoint of right index-finger middle/distal joints, in right-hand bone coordinates.",
+  "holdtypes": {
+    "ar2": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "rpg": [
+      5.703888,
+      -1.117584,
+      -1.231716
+    ],
+    "shotgun": [
+      5.941833,
+      0.047791,
+      -1.72776
+    ],
+    "revolver": [
+      5.913208,
+      -0.47464,
+      -2.095299
+    ],
+    "pistol": [
+      5.77124,
+      -1.062561,
+      -1.740435
+    ],
+    "smg": [
+      5.740295,
+      -0.728912,
+      -1.469898
+    ]
+  }
+}

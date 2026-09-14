@@ -1,0 +1,26 @@
+[
+  {
+    "folder": "v_xm16super",
+    "ok": true,
+    "sources": {
+      "xm16super.smd": "4352e03fa36057081e903ceaca5edc05a36472d09a2e9a6b1b107de0d3f767b9"
+    },
+    "output": "Compiling v_xm16super.qc\nInstalled v_xm16super.qc\nCompiling w_xm16super.qc\nInstalled w_xm16super.qc\nFully restart Garrys Mod to load the rebuilt models.\n"
+  },
+  {
+    "folder": "v_m635",
+    "ok": true,
+    "sources": {
+      "m635.smd": "ff87f817519d94f1a5a8f1a14c6fb9fe4e3161106af602361b3450495ee05faf"
+    },
+    "output": "Compiling v_m635.qc\nInstalled v_m635.qc\nCompiling w_m635.qc\nInstalled w_m635.qc\nFully restart Garrys Mod to load the rebuilt models.\n"
+  },
+  {
+    "folder": "v_ptrd41_s",
+    "ok": true,
+    "sources": {
+      "Ref_new.smd": "0d9ec89cdc7f0afef43eca38de6443927b4ffce3cb3bcfbb4c75f914cf17cb23"
+    },
+    "output": "Compiling v_ptrd41_s.qc\nInstalled v_ptrd41_s.qc\nCompiling w_ptrd41_s.qc\nInstalled w_ptrd41_s.qc\nFully restart Garrys Mod to load the rebuilt models.\n"
+  }
+]

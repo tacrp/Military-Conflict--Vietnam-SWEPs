@@ -1,0 +1,86 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\w_m1897\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\w_m1897\w_m1897.qc"
+Building binary model files...
+Working on "w_m1897.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m1897\w_m1897_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m1897\w_m1897_akb_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m1897\w_m1897_w_type30_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m1897\w_m1897_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m1897\w_m1897_akb_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m1897\w_m1897_w_type30_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m1897\w_m1897_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m1897\w_m1897_akb_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m1897\w_m1897_w_type30_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m1897\w_m1897_anims\idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m1897\w_m1897_physics.smd
+Processing LOD for material: w_m1897
+Lod 1: vertexes: 981 (70 new)
+Lod 2: vertexes: 1052 (71 new)
+Processing LOD for material: w_akb
+Processing LOD for material: w_type30_bayonet
+Lod 1: vertexes: 421 (16 new)
+Model has 2 convex sub-parts
+Collision model completed.
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_m1897.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_m1897.mdl
+   Found 1 preexisting sequences.
+bones         1864 bytes (4)
+animations     144 bytes (1 anims) (1 frames) [0:00]
+Building sequence index remapping table...
+No re-ordering required.
+sequences      232 bytes (1 seq) 
+ik/pose        624 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       216 bytes
+keyvalues       20 bytes
+bone transforms      608 bytes
+bone flex driver       0 bytes
+Collision model volume 326.64 in^3
+collision        0 bytes
+total         4368
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_m1897.vvd:
+vertices     50496 bytes (1052 vertices)
+vertices     22176 bytes (462 vertices)
+vertices     20208 bytes (421 vertices)
+tangents     16832 bytes (1052 vertices)
+tangents      7392 bytes (462 vertices)
+tangents      6736 bytes (421 vertices)
+total       123904 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_m1897.dx80.vtx":
+body parts:        16 bytes
+models:           176 bytes
+model LODs:       144 bytes
+meshes:            81 bytes
+strip groups:     225 bytes
+strips:           243 bytes
+verts:          42876 bytes
+indices:        28950 bytes
+bone changes:     120 bytes
+everything:     72723 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_m1897.dx90.vtx":
+body parts:        16 bytes
+models:           176 bytes
+model LODs:       144 bytes
+meshes:            81 bytes
+strip groups:     225 bytes
+strips:           243 bytes
+verts:          42876 bytes
+indices:        28950 bytes
+bone changes:     120 bytes
+everything:     72723 bytes
+
+Completed "w_m1897.qc"

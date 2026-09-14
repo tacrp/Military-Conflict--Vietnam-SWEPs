@@ -13,6 +13,8 @@ SWEP.Caliber = "7.62x51mm"
 
 SWEP.Slot = 3
 
+SWEP.HoldType = "smg"
+
 SWEP.ViewModel = "models/weapons/mcv/v_l1a1_sog.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_l1a1_sog.mdl"
 

@@ -1,0 +1,27 @@
+key -attack
+key -attack2
+hud 1
+strip
+give mcv_m16a1
+give mcv_m37
+give weapon_physcannon
+wait 2
+clua include("mcv_harness/hud_transition_tests.lua") input.SelectWeapon(ply:GetWeapon("mcv_m16a1"))
+wait 2
+lua ply:GetActiveWeapon():SetClip1(10) ply:SetAmmo(80,"AR2")
+wait 0.5
+tap +reload 0.1
+wait 4
+clua input.SelectWeapon(ply:GetWeapon("mcv_m37"))
+wait 2
+lua ply:GetActiveWeapon():SetClip1(2) ply:SetAmmo(30,"Buckshot")
+wait 0.5
+tap +reload 0.1
+wait 8
+clua input.SelectWeapon(ply:GetWeapon("weapon_physcannon"))
+wait 2
+clua input.SelectWeapon(ply:GetWeapon("mcv_m16a1"))
+wait 2
+clua input.SelectWeapon(ply:GetWeapon("mcv_m37"))
+wait 2
+clua MCVHUDTest.Finish()

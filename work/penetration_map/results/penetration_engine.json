@@ -1,0 +1,229 @@
+{
+	"failures": [],
+	"results": [
+		{
+			"mat": 77,
+			"records": [
+				{
+					"type": 8194,
+					"damage": 34.19093704223633,
+					"inflictor": true,
+					"attacker": true
+				}
+			],
+			"hits": 1,
+			"damage": 34.19093704223633,
+			"name": "unobstructed"
+		},
+		{
+			"mat": 87,
+			"records": [
+				{
+					"type": 8194,
+					"damage": 23.97357749938965,
+					"inflictor": true,
+					"attacker": true
+				}
+			],
+			"hits": 1,
+			"damage": 23.97357749938965,
+			"name": "wood4"
+		},
+		{
+			"mat": 77,
+			"records": [
+				{
+					"type": 4098,
+					"damage": 8.521551132202148,
+					"inflictor": true,
+					"attacker": true
+				}
+			],
+			"hits": 1,
+			"damage": 8.521551132202148,
+			"name": "metal4"
+		},
+		{
+			"mat": 89,
+			"records": [
+				{
+					"type": 8194,
+					"damage": 21.809123992919922,
+					"inflictor": true,
+					"attacker": true
+				}
+			],
+			"hits": 1,
+			"damage": 21.809123992919922,
+			"name": "glass4"
+		},
+		{
+			"mat": 67,
+			"records": [
+				{
+					"type": 4098,
+					"damage": 11.6034517288208,
+					"inflictor": true,
+					"attacker": true
+				}
+			],
+			"hits": 1,
+			"damage": 11.6034517288208,
+			"name": "concrete4"
+		},
+		{
+			"mat": 76,
+			"records": [
+				{
+					"type": 8194,
+					"damage": 18.778650283813477,
+					"inflictor": true,
+					"attacker": true
+				}
+			],
+			"hits": 1,
+			"damage": 18.778650283813477,
+			"name": "plastic4"
+		},
+		{
+			"mat": 87,
+			"records": [],
+			"hits": 0,
+			"damage": 0,
+			"name": "wood17"
+		},
+		{
+			"mat": 87,
+			"records": [],
+			"hits": 0,
+			"damage": 0,
+			"name": "wood20"
+		},
+		{
+			"mat": 77,
+			"records": [],
+			"hits": 0,
+			"damage": 0,
+			"name": "metal8"
+		},
+		{
+			"mat": 87,
+			"records": [
+				{
+					"type": 4098,
+					"damage": 5.106391906738281,
+					"inflictor": true,
+					"attacker": true
+				}
+			],
+			"hits": 1,
+			"damage": 5.106391906738281,
+			"name": "wood13"
+		},
+		{
+			"mat": 87,
+			"records": [],
+			"hits": 0,
+			"damage": 0,
+			"name": "wood13_oblique"
+		},
+		{
+			"mat": 87,
+			"records": [
+				{
+					"type": 8194,
+					"damage": 26.409961700439453,
+					"inflictor": true,
+					"attacker": true
+				}
+			],
+			"hits": 1,
+			"damage": 26.409961700439453,
+			"name": "wood3"
+		},
+		{
+			"mat": 87,
+			"records": [
+				{
+					"type": 8194,
+					"damage": 19.128700256347656,
+					"inflictor": true,
+					"attacker": true
+				}
+			],
+			"hits": 1,
+			"damage": 19.128700256347656,
+			"name": "wood3_plus3"
+		},
+		{
+			"mat": 77,
+			"records": [],
+			"hits": 0,
+			"damage": 0,
+			"name": "metal4_plus_wood8"
+		},
+		{
+			"mat": 87,
+			"records": [
+				{
+					"type": 536879106,
+					"damage": 26.409961700439453,
+					"inflictor": true,
+					"attacker": true
+				},
+				{
+					"type": 536879106,
+					"damage": 26.409961700439453,
+					"inflictor": true,
+					"attacker": true
+				},
+				{
+					"type": 536879106,
+					"damage": 26.409961700439453,
+					"inflictor": true,
+					"attacker": true
+				},
+				{
+					"type": 536879106,
+					"damage": 26.409961700439453,
+					"inflictor": true,
+					"attacker": true
+				},
+				{
+					"type": 536879106,
+					"damage": 26.409961700439453,
+					"inflictor": true,
+					"attacker": true
+				},
+				{
+					"type": 536879106,
+					"damage": 26.409961700439453,
+					"inflictor": true,
+					"attacker": true
+				},
+				{
+					"type": 536879106,
+					"damage": 26.409961700439453,
+					"inflictor": true,
+					"attacker": true
+				},
+				{
+					"type": 536879106,
+					"damage": 26.409961700439453,
+					"inflictor": true,
+					"attacker": true
+				}
+			],
+			"hits": 8,
+			"damage": 211.27969360351563,
+			"name": "eight_pellets"
+		},
+		{
+			"mat": 87,
+			"records": [],
+			"hits": 0,
+			"damage": 0,
+			"name": "disabled_wood3"
+		}
+	]
+}

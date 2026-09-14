@@ -1,0 +1,34 @@
+[
+	{
+		"sequence": "deployshoot1",
+		"reload": false,
+		"bullet": 1,
+		"clip": 0,
+		"cycle": 0.6080792546272278,
+		"time": 227.90999490581453
+	},
+	{
+		"sequence": "reload_deploy",
+		"reload": true,
+		"bullet": 0,
+		"clip": 0,
+		"cycle": 0.2940695583820343,
+		"time": 230.00999485887587
+	},
+	{
+		"sequence": "reload_deploy",
+		"reload": true,
+		"bullet": 0,
+		"clip": 0,
+		"cycle": 0.6662901043891907,
+		"time": 231.01499483641237
+	},
+	{
+		"sequence": "deploy",
+		"reload": false,
+		"bullet": 0,
+		"clip": 1,
+		"cycle": 0.5771998167037964,
+		"time": 234.22499476466328
+	}
+]

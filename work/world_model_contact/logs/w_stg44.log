@@ -1,0 +1,104 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\w_stg44\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\w_stg44\w_stg44.qc"
+Building binary model files...
+Working on "w_stg44.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_stg44\w_stg44_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_stg44\w_stg44_scope_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_stg44\w_ZF41_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_stg44\w_magazine30_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_stg44\w_magazine20_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_stg44\w_stg44_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_stg44\w_stg44_scope_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_stg44\w_ZF41_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_stg44\w_magazine30_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_stg44\w_magazine20_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_stg44\w_stg44_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_stg44\w_stg44_scope_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_stg44\w_ZF41_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_stg44\w_magazine30_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_stg44\w_magazine20_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_stg44\w_stg44_anims\idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_stg44\w_stg44_physics.smd
+Processing LOD for material: w_stg44
+Lod 1: vertexes: 3058 (890 new)
+Lod 2: vertexes: 3394 (336 new)
+Processing LOD for material: zf4
+Lod 1: vertexes: 4101 (454 new)
+Processing LOD for material: w_zf41
+Lod 1: vertexes: 987 (131 new)
+Lod 2: vertexes: 1133 (146 new)
+Processing LOD for material: w_stg44
+Processing LOD for material: w_stg44
+Model has 8 convex sub-parts
+Collision model completed.
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_stg44.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_stg44.mdl
+   Found 1 preexisting sequences.
+bones         1764 bytes (3)
+animations     132 bytes (1 anims) (1 frames) [0:00]
+Building sequence index remapping table...
+No re-ordering required.
+sequences      228 bytes (1 seq) 
+ik/pose        936 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       208 bytes
+keyvalues       20 bytes
+bone transforms      472 bytes
+bone flex driver       0 bytes
+Collision model volume 150.47 in^3
+collision        0 bytes
+total         4564
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_stg44.vvd:
+vertices    162912 bytes (3394 vertices)
+vertices    196848 bytes (4101 vertices)
+vertices     54384 bytes (1133 vertices)
+vertices      8832 bytes (184 vertices)
+vertices      8064 bytes (168 vertices)
+tangents     54304 bytes (3394 vertices)
+tangents     65616 bytes (4101 vertices)
+tangents     18128 bytes (1133 vertices)
+tangents      2944 bytes (184 vertices)
+tangents      2688 bytes (168 vertices)
+total       574784 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_stg44.dx80.vtx":
+body parts:        24 bytes
+models:           264 bytes
+model LODs:       216 bytes
+meshes:           135 bytes
+strip groups:     375 bytes
+strips:           405 bytes
+verts:         139833 bytes
+indices:        79746 bytes
+bone changes:     144 bytes
+everything:    220962 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_stg44.dx90.vtx":
+body parts:        24 bytes
+models:           264 bytes
+model LODs:       216 bytes
+meshes:           135 bytes
+strip groups:     375 bytes
+strips:           405 bytes
+verts:         139833 bytes
+indices:        79746 bytes
+bone changes:     144 bytes
+everything:    220962 bytes
+
+Completed "w_stg44.qc"

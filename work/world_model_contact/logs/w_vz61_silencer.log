@@ -1,0 +1,69 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\w_vz61_silencer\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\w_vz61_silencer\w_vz61_silencer.qc"
+Building binary model files...
+Working on "w_vz61_silencer.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_vz61_silencer\w_vz61_silencer_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_vz61_silencer\w_vz61_silencer_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_vz61_silencer\w_vz61_silencer_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_vz61_silencer\w_vz61_silencer_anims\idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_vz61_silencer\w_vz61_silencer_physics.smd
+Processing LOD for material: w_vz61_silencer
+Lod 1: vertexes: 209 (41 new)
+Processing LOD for material: w_vz61
+Lod 1: vertexes: 1941 (508 new)
+Lod 2: vertexes: 2182 (241 new)
+Model has 7 convex sub-parts
+Collision model completed.
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_vz61_silencer.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_vz61_silencer.mdl
+   Found 1 preexisting sequences.
+bones         1672 bytes (3)
+animations     128 bytes (1 anims) (1 frames) [0:00]
+Building sequence index remapping table...
+No re-ordering required.
+sequences      228 bytes (1 seq) 
+ik/pose        164 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       140 bytes
+keyvalues       20 bytes
+bone transforms      472 bytes
+bone flex driver       0 bytes
+Collision model volume 65.20 in^3
+collision        0 bytes
+total         3272
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_vz61_silencer.vvd:
+vertices    104736 bytes (2182 vertices)
+tangents     34912 bytes (2182 vertices)
+total       139712 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_vz61_silencer.dx80.vtx":
+body parts:         8 bytes
+models:            44 bytes
+model LODs:        36 bytes
+meshes:            54 bytes
+strip groups:     150 bytes
+strips:           162 bytes
+verts:          22167 bytes
+indices:        13998 bytes
+bone changes:      96 bytes
+everything:     36715 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_vz61_silencer.dx90.vtx":
+body parts:         8 bytes
+models:            44 bytes
+model LODs:        36 bytes
+meshes:            54 bytes
+strip groups:     150 bytes
+strips:           162 bytes
+verts:          22167 bytes
+indices:        13998 bytes
+bone changes:      96 bytes
+everything:     36715 bytes
+
+Completed "w_vz61_silencer.qc"

@@ -1,0 +1,89 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\w_m37\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\w_m37\w_m37.qc"
+Building binary model files...
+Working on "w_m37.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m37\w_m37_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m37\w_m37_w_m7b_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m37\w_m37_w_m1905_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m37\w_m37_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m37\w_m37_w_m7b_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m37\w_m37_w_m1905_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m37\w_m37_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m37\w_m37_w_m7b_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m37\w_m37_w_m1905_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m37\w_m37_anims\idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m37\w_m37_physics.smd
+Processing LOD for material: w_m37
+Lod 1: vertexes: 996 (34 new)
+Lod 2: vertexes: 1038 (42 new)
+Processing LOD for material: w_m7b
+Lod 1: vertexes: 657 (9 new)
+Lod 2: vertexes: 798 (141 new)
+Processing LOD for material: w_m1905
+Lod 1: vertexes: 513 (33 new)
+Lod 2: vertexes: 627 (114 new)
+Model has 2 convex sub-parts
+Collision model completed.
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_m37.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_m37.mdl
+   Found 1 preexisting sequences.
+bones         1864 bytes (4)
+animations     144 bytes (1 anims) (1 frames) [0:00]
+Building sequence index remapping table...
+No re-ordering required.
+sequences      232 bytes (1 seq) 
+ik/pose        624 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       216 bytes
+keyvalues       20 bytes
+bone transforms      608 bytes
+bone flex driver       0 bytes
+Collision model volume 215.39 in^3
+collision        0 bytes
+total         4344
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_m37.vvd:
+vertices     49824 bytes (1038 vertices)
+vertices     38304 bytes (798 vertices)
+vertices     30096 bytes (627 vertices)
+tangents     16608 bytes (1038 vertices)
+tangents     12768 bytes (798 vertices)
+tangents     10032 bytes (627 vertices)
+total       157696 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_m37.dx80.vtx":
+body parts:        16 bytes
+models:           176 bytes
+model LODs:       144 bytes
+meshes:            81 bytes
+strip groups:     225 bytes
+strips:           243 bytes
+verts:          44667 bytes
+indices:        30954 bytes
+bone changes:     120 bytes
+everything:     76518 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_m37.dx90.vtx":
+body parts:        16 bytes
+models:           176 bytes
+model LODs:       144 bytes
+meshes:            81 bytes
+strip groups:     225 bytes
+strips:           243 bytes
+verts:          44667 bytes
+indices:        30954 bytes
+bone changes:     120 bytes
+everything:     76518 bytes
+
+Completed "w_m37.qc"

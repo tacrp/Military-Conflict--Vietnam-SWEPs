@@ -1,0 +1,106 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\w_rpdb\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\w_rpdb\w_rpdb.qc"
+Building binary model files...
+Working on "w_rpdb.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpdb\w_rpdb_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpdb\w_rpd_bipod1_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpdb\w_rpd_bipod2_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpdb\rpd_long_belt_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpdb\w_rpdb_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpdb\w_rpd_bipod1_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpdb\w_rpd_bipod2_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpdb\rpd_long_belt_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpdb\w_rpdb_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpdb\w_rpd_bipod1_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpdb\w_rpd_bipod2_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpdb\rpd_long_belt_lod0_lod2.smd
+Marking bone ValveBiped.weapon_bone4_belt001 as a jiggle bone
+Marking bone ValveBiped.weapon_bone4_belt002 as a jiggle bone
+Marking bone ValveBiped.weapon_bone4_belt003 as a jiggle bone
+Marking bone ValveBiped.weapon_bone4_belt004 as a jiggle bone
+Marking bone ValveBiped.weapon_bone4_belt005 as a jiggle bone
+Marking bone ValveBiped.weapon_bone4_belt006 as a jiggle bone
+Marking bone ValveBiped.weapon_bone4_belt007 as a jiggle bone
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpdb\w_rpdb_anims\idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpdb\w_rpdb_physics.smd
+Processing LOD for material: w_rpd
+Lod 1: vertexes: 4025 (1831 new)
+Lod 2: vertexes: 4595 (570 new)
+Processing LOD for material: w_rpd
+Lod 1: vertexes: 508 (178 new)
+Lod 2: vertexes: 592 (84 new)
+Processing LOD for material: w_rpd
+Lod 1: vertexes: 508 (178 new)
+Lod 2: vertexes: 592 (84 new)
+Processing LOD for material: vceq_ammobelt
+Lod 1: vertexes: 625 (213 new)
+Lod 2: vertexes: 714 (89 new)
+Model has 6 convex sub-parts
+Collision model completed.
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_rpdb.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_rpdb.mdl
+   Found 1 preexisting sequences.
+bones         5096 bytes (13)
+animations     128 bytes (1 anims) (1 frames) [0:00]
+Building sequence index remapping table...
+No re-ordering required.
+sequences      268 bytes (1 seq) 
+ik/pose        788 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       144 bytes
+keyvalues       20 bytes
+bone transforms     1832 bytes
+bone flex driver       0 bytes
+Collision model volume 278.93 in^3
+collision        0 bytes
+total         9284
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_rpdb.vvd:
+vertices    220560 bytes (4595 vertices)
+vertices     28416 bytes (592 vertices)
+vertices     28416 bytes (592 vertices)
+vertices     34272 bytes (714 vertices)
+tangents     73520 bytes (4595 vertices)
+tangents      9472 bytes (592 vertices)
+tangents      9472 bytes (592 vertices)
+tangents     11424 bytes (714 vertices)
+total       415616 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_rpdb.dx80.vtx":
+body parts:        24 bytes
+models:           220 bytes
+model LODs:       180 bytes
+meshes:           108 bytes
+strip groups:     300 bytes
+strips:           324 bytes
+verts:          63108 bytes
+indices:        30678 bytes
+bone changes:     312 bytes
+everything:     95110 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_rpdb.dx90.vtx":
+body parts:        24 bytes
+models:           220 bytes
+model LODs:       180 bytes
+meshes:           108 bytes
+strip groups:     300 bytes
+strips:           324 bytes
+verts:          63108 bytes
+indices:        30678 bytes
+bone changes:     312 bytes
+everything:     95110 bytes
+
+Completed "w_rpdb.qc"

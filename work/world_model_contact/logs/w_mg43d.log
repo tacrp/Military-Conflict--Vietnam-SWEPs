@@ -1,0 +1,90 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\w_mg43d\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\w_mg43d\w_mg43d.qc"
+Building binary model files...
+Working on "w_mg43d.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_mg43d\w_mg43d_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_mg43d\w_mg43_bipod1_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_mg43d\w_mg43_bipod2_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_mg43d\w_mg43d_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_mg43d\w_mg43_bipod1_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_mg43d\w_mg43_bipod2_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_mg43d\w_mg43d_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_mg43d\w_mg43_bipod1_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_mg43d\w_mg43_bipod2_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_mg43d\w_mg43d_anims\idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_mg43d\w_mg43d_physics.smd
+Processing LOD for material: w_mg43_mag
+Lod 1: vertexes: 1435 (45 new)
+Lod 2: vertexes: 1632 (197 new)
+Processing LOD for material: w_mg43
+Lod 1: vertexes: 2927 (138 new)
+Lod 2: vertexes: 3144 (217 new)
+Processing LOD for material: w_mg43
+Lod 1: vertexes: 354 (70 new)
+Lod 2: vertexes: 366 (12 new)
+Processing LOD for material: w_mg43
+Lod 1: vertexes: 343 (59 new)
+Lod 2: vertexes: 353 (10 new)
+Model has 3 convex sub-parts
+Collision model completed.
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_mg43d.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_mg43d.mdl
+   Found 1 preexisting sequences.
+bones         1740 bytes (3)
+animations     124 bytes (1 anims) (1 frames) [0:00]
+Building sequence index remapping table...
+No re-ordering required.
+sequences      228 bytes (1 seq) 
+ik/pose        476 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       144 bytes
+keyvalues       20 bytes
+bone transforms      472 bytes
+bone flex driver       0 bytes
+Collision model volume 584.04 in^3
+collision        0 bytes
+total         3900
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_mg43d.vvd:
+vertices    150912 bytes (3144 vertices)
+vertices     17568 bytes (366 vertices)
+vertices     16944 bytes (353 vertices)
+tangents     50304 bytes (3144 vertices)
+tangents      5856 bytes (366 vertices)
+tangents      5648 bytes (353 vertices)
+total       247296 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_mg43d.dx80.vtx":
+body parts:        16 bytes
+models:           132 bytes
+model LODs:       108 bytes
+meshes:           108 bytes
+strip groups:     300 bytes
+strips:           324 bytes
+verts:          62505 bytes
+indices:        36648 bytes
+bone changes:     144 bytes
+everything:    100213 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_mg43d.dx90.vtx":
+body parts:        16 bytes
+models:           132 bytes
+model LODs:       108 bytes
+meshes:           108 bytes
+strip groups:     300 bytes
+strips:           324 bytes
+verts:          62505 bytes
+indices:        36648 bytes
+bone changes:     144 bytes
+everything:    100213 bytes
+
+Completed "w_mg43d.qc"

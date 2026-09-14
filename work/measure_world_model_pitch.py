@@ -220,9 +220,9 @@ def main():
             "barrel_axis": "Chosen per model by which attachment axis lies along the way from the "
                            "hand to the muzzle. Half-Life 2 authors the barrel as the muzzle "
                            "attachment's +X, this pack as its +Y, so it cannot be assumed.",
-            "apply_to": "A rotation on the $definebone line for ValveBiped.Bip01_R_Hand, leaving "
-                        "its three position numbers alone: that bone's origin is the grip, so "
-                        "rotating it and nothing else turns the gun about the grip.",
+            "apply_to": "A rotation on the $definebone line for ValveBiped.Bip01_R_Hand. "
+                        "world_model_contact.py adjusts its translation to preserve the index "
+                        "finger contact point; the hand bone origin is below the trigger.",
             "which_number": "studiomdl reads the rotation triple as pitch, yaw, roll and stores it "
                             "as roll, pitch, yaw, so the FIRST of the three is the pitch. Verified "
                             "against the compiled bone on eight models.",

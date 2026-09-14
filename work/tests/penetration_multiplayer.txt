@@ -1,0 +1,26 @@
+strip
+give mcv_m16a1
+wait 4
+lua include("mcv_harness/penetration_world_tests.lua")
+pos -128 -250 0
+ang 0 0 0
+lua local w=ply:GetActiveWeapon() w:SetClip1(30) PenInputTarget=ents.Create("base_anim") local e=PenInputTarget e:SetModel("models/hunter/blocks/cube025x025x025.mdl") e:SetPos(Vector(100,-250,64)) e:Spawn() e:PhysicsInitBox(Vector(-2,-60,-60),Vector(2,60,60)) e:SetSolid(SOLID_VPHYSICS) e:SetMoveType(MOVETYPE_VPHYSICS) e:EnableCustomCollisions(true) e:GetPhysicsObject():EnableMotion(false) PenInputHits=0 hook.Add("EntityTakeDamage","MCV_PenInput",function(t,d) if t==PenInputTarget then PenInputHits=PenInputHits+1 return true end end)
+wait 2
+ccmd net_fakelag 100
+ccmd cl_pred_optimize 0
+wait 2
+ccmd cl_showerror 2
+clua print("[penetration input begin]")
+key +attack2
+wait 1
+key +attack
+wait 0.35
+key -attack
+wait 2
+key -attack2
+lua local fired=30-ply:GetActiveWeapon():Clip1() file.Write("mcv_harness/p27016/results/penetration_input.json",util.TableToJSON({fired=fired,hits=PenInputHits})) assert(fired>0 and fired==PenInputHits,"penetrated hits do not match fired rounds")
+clua print("[penetration input end]")
+ccmd cl_showerror 0
+ccmd net_fakelag 0
+ccmd cl_pred_optimize 2
+lua hook.Remove("EntityTakeDamage","MCV_PenInput") if IsValid(PenInputTarget) then PenInputTarget:Remove() end

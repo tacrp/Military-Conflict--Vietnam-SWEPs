@@ -1,0 +1,67 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\w_izh43\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\w_izh43\w_izh43.qc"
+Building binary model files...
+Working on "w_izh43.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_izh43\w_izh43_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_izh43\w_izh43_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_izh43\w_izh43_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_izh43\w_izh43_anims\idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_izh43\w_izh43_physics.smd
+Processing LOD for material: w_izh43
+Lod 1: vertexes: 1537 (532 new)
+Lod 2: vertexes: 1785 (248 new)
+Model has 3 convex sub-parts
+Collision model completed.
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_izh43.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_izh43.mdl
+   Found 1 preexisting sequences.
+bones         1740 bytes (3)
+animations     124 bytes (1 anims) (1 frames) [0:00]
+Building sequence index remapping table...
+No re-ordering required.
+sequences      228 bytes (1 seq) 
+ik/pose        164 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures        76 bytes
+keyvalues       20 bytes
+bone transforms      472 bytes
+bone flex driver       0 bytes
+Collision model volume 215.46 in^3
+collision        0 bytes
+total         3136
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_izh43.vvd:
+vertices     85680 bytes (1785 vertices)
+tangents     28560 bytes (1785 vertices)
+total       114304 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_izh43.dx80.vtx":
+body parts:         8 bytes
+models:            44 bytes
+model LODs:        36 bytes
+meshes:            27 bytes
+strip groups:      75 bytes
+strips:            81 bytes
+verts:          16218 bytes
+indices:         9432 bytes
+bone changes:      72 bytes
+everything:     25993 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_izh43.dx90.vtx":
+body parts:         8 bytes
+models:            44 bytes
+model LODs:        36 bytes
+meshes:            27 bytes
+strip groups:      75 bytes
+strips:            81 bytes
+verts:          16218 bytes
+indices:         9432 bytes
+bone changes:      72 bytes
+everything:     25993 bytes
+
+Completed "w_izh43.qc"

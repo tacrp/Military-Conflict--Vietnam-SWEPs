@@ -1,0 +1,67 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\w_kolos\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\w_kolos\w_kolos.qc"
+Building binary model files...
+Working on "w_kolos.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_kolos\w_kolos_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_kolos\w_kolos_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_kolos\w_kolos_anims\idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_kolos\w_kolos_physics.smd
+Processing LOD for material: w_kolos
+Lod 1: vertexes: 1879 (372 new)
+WARNING: Model has 2-dimensional geometry (less than 0.500 inches thick on any axis)!!!
+WARNING: Error with convex elements of ..\..\..\MCV_SMD_OG\weapons\w_kolos\w_kolos_physics.smd, building single convex!!!!
+Model has 4 convex sub-parts
+Collision model completed.
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_kolos.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_kolos.mdl
+   Found 1 preexisting sequences.
+bones         2208 bytes (4)
+animations     136 bytes (1 anims) (1 frames) [0:00]
+Building sequence index remapping table...
+No re-ordering required.
+sequences      232 bytes (1 seq) 
+ik/pose        164 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures        76 bytes
+keyvalues       20 bytes
+bone transforms      608 bytes
+bone flex driver       0 bytes
+Collision model volume 2869.85 in^3
+collision        0 bytes
+total         3804
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_kolos.vvd:
+vertices     90192 bytes (1879 vertices)
+tangents     30064 bytes (1879 vertices)
+total       120320 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_kolos.dx80.vtx":
+body parts:         8 bytes
+models:            32 bytes
+model LODs:        24 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:          21870 bytes
+indices:        14478 bytes
+bone changes:      64 bytes
+everything:     36610 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_kolos.dx90.vtx":
+body parts:         8 bytes
+models:            32 bytes
+model LODs:        24 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:          21870 bytes
+indices:        14478 bytes
+bone changes:      64 bytes
+everything:     36610 bytes
+
+Completed "w_kolos.qc"

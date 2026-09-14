@@ -1,0 +1,28 @@
+{
+	"failures": [],
+	"results": [
+		{
+			"thickness": 4.062507629394531,
+			"material": 77,
+			"hits": 1,
+			"world": true,
+			"name": "world_metal4",
+			"damage": 8.543553352355957
+		},
+		{
+			"material": 77,
+			"hits": 0,
+			"world": true,
+			"name": "world_metal20",
+			"damage": 0
+		},
+		{
+			"thickness": 3.0625076293945313,
+			"material": 77,
+			"hits": 1,
+			"world": true,
+			"name": "world_two_metal3",
+			"damage": 1.230515956878662
+		}
+	]
+}

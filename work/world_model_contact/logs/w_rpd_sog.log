@@ -1,0 +1,68 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\w_rpd_sog\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\w_rpd_sog\w_rpd_sog.qc"
+Building binary model files...
+Working on "w_rpd_sog.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpd_sog\w_rpd_sog_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpd_sog\w_rpd_sog_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpd_sog\w_rpd_sog_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpd_sog\w_rpd_sog_anims\idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpd_sog\w_rpd_sog_physics.smd
+Processing LOD for material: vceq_ammobelt
+Processing LOD for material: w_rpd
+Lod 1: vertexes: 2856 (627 new)
+Lod 2: vertexes: 3337 (481 new)
+Model has 6 convex sub-parts
+Collision model completed.
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_rpd_sog.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_rpd_sog.mdl
+   Found 1 preexisting sequences.
+bones         2312 bytes (5)
+animations     128 bytes (1 anims) (1 frames) [0:00]
+Building sequence index remapping table...
+No re-ordering required.
+sequences      236 bytes (1 seq) 
+ik/pose        164 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       140 bytes
+keyvalues       20 bytes
+bone transforms      744 bytes
+bone flex driver       0 bytes
+Collision model volume 242.08 in^3
+collision        0 bytes
+total         4256
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_rpd_sog.vvd:
+vertices    160176 bytes (3337 vertices)
+tangents     53392 bytes (3337 vertices)
+total       213632 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_rpd_sog.dx80.vtx":
+body parts:         8 bytes
+models:            44 bytes
+model LODs:        36 bytes
+meshes:            54 bytes
+strip groups:     125 bytes
+strips:           135 bytes
+verts:          38637 bytes
+indices:        21144 bytes
+bone changes:     128 bytes
+everything:     60311 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_rpd_sog.dx90.vtx":
+body parts:         8 bytes
+models:            44 bytes
+model LODs:        36 bytes
+meshes:            54 bytes
+strip groups:     125 bytes
+strips:           135 bytes
+verts:          38637 bytes
+indices:        21144 bytes
+bone changes:     128 bytes
+everything:     60311 bytes
+
+Completed "w_rpd_sog.qc"

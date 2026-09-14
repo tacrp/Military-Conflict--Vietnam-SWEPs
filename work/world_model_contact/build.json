@@ -1,0 +1,907 @@
+[
+  {
+    "model": "w_ak47",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_akm",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_amd65",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_aps",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_babybrowning",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_bar_l",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_bazooka",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_blackhawk",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_bren",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_browning_auto",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_c96",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_c96_stock",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_car15",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_chinalake",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_cobra",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_crossbow",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_cz52",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_dp28",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_f1",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_g3",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_gewehr43",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_gp25",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_gyrojet_carbine",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_gyrojet_pistol",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_hdm",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_highpower",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_izh43",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_izh43_sog",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_k50m",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_k50m_vc",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_kar98_s",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_kbkg60",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_kolos",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_l1a1",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_l1a1_sog",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_l2a1",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_lacoste",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_lebel",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_luger",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m12",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m14_sog",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m14e2",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m14e2_sog",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m14l",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m16a1",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m1895",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m1897",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m1911",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m1917",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m1919a6",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m1928",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m1a1",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m1c",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m1c_sog",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m202",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m203",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m21",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m24",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m2c",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m2c_sog",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m37",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m38",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m38_s",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m3a1",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m3a1_sog",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m40",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m45",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m45_sog",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m50",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m56",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m60",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m601",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m605",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m607",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m60b",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m635",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m656",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m7188",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m72",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m79",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m79_short",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m8",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m870",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_m91",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_mac10",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_mac10_sog",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_mamba",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_mas36",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_mas36_cr39",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_mas38",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_mas49",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_mat49",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_mat49_sog",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_mat49k",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_md63",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_mg43",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_mg43b",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_mg43d",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_mk22",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_mk4mod0",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_mle1935",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_mp40",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_owen",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_p38",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_panzerschreck",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_pb",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_pk",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_pk_belt",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_pm",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_pm63",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_ppk",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_pps43",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_ppsh41",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_ppsh41_doubledrum",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_ppsh41_drum",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_ptrd41",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_qspr",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_reising_m55",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_reising_m60",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_reising_smg",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_rhogun",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_rp46",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_rpd",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_rpd_sog",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_rpdb",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_rpdb_sog",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_rpg2",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_rpg7",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_rpk",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_ruby",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_shanxi_type17",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_sks",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_springfield",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_sten",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_sten_sog",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_sterling",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_sterling_sog",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_stg44",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_stoner63",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_stoner63_autorifle",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_stoner63a",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_stoner63a_carbine",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_stoner63lmg",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_svd",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_svt40_s",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_swm10",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_swm12",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_swm49",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_swm76",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_swm76_sog",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_t223",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_tt33",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_tul1",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_type14",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_type56",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_type58",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_type63",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_type63b",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_type64",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_type64_pistol",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_type67",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_type79",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_uzi",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_uzi_sog",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_vccarbine",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_vcpistol",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_vcpistol2",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_vcshotgun",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_vcsmg",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_vz23",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_vz24",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_vz52",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_vz54",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_vz58",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_vz59",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_vz61",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_vz61_silencer",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_welrod",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_xm148",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_xm16super",
+    "ok": true,
+    "installed": true
+  },
+  {
+    "model": "w_xm177",
+    "ok": true,
+    "installed": true
+  }
+]

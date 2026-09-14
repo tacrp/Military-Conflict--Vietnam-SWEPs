@@ -1,0 +1,51 @@
+Adding filesystem addon 'c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\-arccw-cs-onsc'
+Adding filesystem addon 'c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\11guns'
+Adding filesystem addon 'c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\arc-9'
+Adding filesystem addon 'c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\arc9-saw'
+Adding filesystem addon 'c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\arccw'
+Adding filesystem addon 'c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\arccw_mapaps_2140007767'
+Adding filesystem addon 'c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\disable'
+Adding filesystem addon 'c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\gmod_shader_guide-main'
+Adding filesystem addon 'c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv'
+Adding filesystem addon 'c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\tabphone'
+Adding filesystem addon 'c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\tacrp'
+Adding filesystem addon 'c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\tacrp-ak'
+Adding filesystem addon 'c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\tacrp-heavy-ops'
+Adding filesystem addon 'c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\tacrp-io-anniversary'
+Adding filesystem addon 'c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\tacrp-melee'
+Adding filesystem addon 'c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\tacrp-special-delivery'
+Adding filesystem addon 'c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\tacrp_ar'
+Adding filesystem addon 'c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\tacrp_interops'
+Adding filesystem addon 'c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\tacrp_pa'
+Adding filesystem addon 'c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\tacrp_xm'
+Adding filesystem addon 'c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\vmanip_neosun_s_cooler_nightvision_3425531829'
+16 threads
+materialPath: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\materials
+Loading C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\clock_transition\mcv_clock_b.vmf
+fixing up env_cubemap materials on brush sides...
+ProcessBlock_Thread: 0...1...2...3...4...5...6...7...8...9...10 (0)
+ProcessBlock_Thread: 0...1...2...3...4...5...6...7...8...9...10 (0)
+Processing areas...done (0)
+Building Faces...done (0)
+FixTjuncs...
+PruneNodes...
+WriteBSP...
+done (0)
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\clock_transition\mcv_clock_b.prt...
+Building visibility clusters...
+done (0)
+material "skybox/rt" not found.
+Can't load skybox file skybox/ to build the default cubemap!
+Can't load skybox file skybox/ to build the default cubemap!
+Finding displacement neighbors...
+Finding lightmap sample positions...
+Displacement Alpha : 0...1...2...3...4...5...6...7...8...9...10
+Building Physics collision data...
+done (0) (3396 bytes)
+Placing detail props : 0...1...2...3...4...5...6...7...8...9...10
+Compacting texture/material tables...
+Reduced 2 texinfos to 2
+Reduced 2 texdatas to 2 (46 bytes to 46)
+Writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\clock_transition\mcv_clock_b.bsp
+0 seconds elapsed
+Valve Software - vbsp.exe (May  8 2026) - Garry's Mod Edition

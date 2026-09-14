@@ -265,6 +265,12 @@ function SWEP:SetupDataTables()
     self:NetworkVar("Int", 10, "HolsterCommand")
     self:NetworkVar("Int", 11, "MoveCommand")
     self:NetworkVar("Int", 12, "SupplyCursor")
+    self:NetworkVar("Int", 13, "ClockResetSerial")
+    if CLIENT then
+        self:NetworkVarNotify("ClockResetSerial", function(w, _, old, new)
+            if old != new then w:ResetClockVisuals() end
+        end)
+    end
 
     self:NetworkVar("Bool", 0, "Reloading")
     self:NetworkVar("Bool", 1, "EndReload")
@@ -291,9 +297,10 @@ function SWEP:SetupDataTables()
     self:NetworkVar("Entity", 0, "HolsterEntity")
     // Slot 1 was the server-created mine handle; it now uses a non-predicted NWEntity.
 
-    self:SetFiremode(1)
-    self:SetScopeLevel(1)
-    self:SetNeedCycle(false)
+    // Setup runs again for retained entities on a Source map transition.
+    // Only seed zero-initialized slots; keep the existing mode and bolt state.
+    if self:GetFiremode() < 1 then self:SetFiremode(1) end
+    if self:GetScopeLevel() < 1 then self:SetScopeLevel(1) end
 end
 
 // ---------------------------------------------------------------------------------------

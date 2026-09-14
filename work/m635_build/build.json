@@ -1,0 +1,23 @@
+[
+  {
+    "model": "v_m635",
+    "files": [
+      "v_m635.dx80.vtx",
+      "v_m635.dx90.vtx",
+      "v_m635.mdl",
+      "v_m635.vvd"
+    ],
+    "installed": true
+  },
+  {
+    "model": "w_m635",
+    "files": [
+      "w_m635.dx80.vtx",
+      "w_m635.dx90.vtx",
+      "w_m635.mdl",
+      "w_m635.phy",
+      "w_m635.vvd"
+    ],
+    "installed": true
+  }
+]

@@ -1,0 +1,79 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\w_g3\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\w_g3\w_g3.qc"
+Building binary model files...
+Working on "w_g3.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_g3\w_g3_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_g3\w_t223_bayonet_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_g3\w_g3_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_g3\w_t223_bayonet_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_g3\w_g3_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_g3\w_t223_bayonet_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_g3\w_g3_anims\idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_g3\w_g3_physics.smd
+Processing LOD for material: w_g3
+Lod 1: vertexes: 1072 (56 new)
+Lod 2: vertexes: 1227 (155 new)
+Processing LOD for material: w_m7b
+Lod 1: vertexes: 656 (8 new)
+Lod 2: vertexes: 798 (142 new)
+Model has 4 convex sub-parts
+Collision model completed.
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_g3.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_g3.mdl
+   Found 1 preexisting sequences.
+bones         1888 bytes (4)
+animations     136 bytes (1 anims) (1 frames) [0:00]
+Building sequence index remapping table...
+No re-ordering required.
+sequences      232 bytes (1 seq) 
+ik/pose        476 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       144 bytes
+keyvalues       20 bytes
+bone transforms      608 bytes
+bone flex driver       0 bytes
+Collision model volume 115.69 in^3
+collision        0 bytes
+total         3988
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_g3.vvd:
+vertices     58896 bytes (1227 vertices)
+vertices     38304 bytes (798 vertices)
+tangents     19632 bytes (1227 vertices)
+tangents     12768 bytes (798 vertices)
+total       129664 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_g3.dx80.vtx":
+body parts:        16 bytes
+models:           132 bytes
+model LODs:       108 bytes
+meshes:            54 bytes
+strip groups:     150 bytes
+strips:           162 bytes
+verts:          33030 bytes
+indices:        22356 bytes
+bone changes:      96 bytes
+everything:     56032 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_g3.dx90.vtx":
+body parts:        16 bytes
+models:           132 bytes
+model LODs:       108 bytes
+meshes:            54 bytes
+strip groups:     150 bytes
+strips:           162 bytes
+verts:          33030 bytes
+indices:        22356 bytes
+bone changes:      96 bytes
+everything:     56032 bytes
+
+Completed "w_g3.qc"

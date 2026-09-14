@@ -1,0 +1,103 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\w_pk_belt\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\w_pk_belt\w_pk_belt.qc"
+Building binary model files...
+Working on "w_pk_belt.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_pk_belt\w_pk_belt_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_pk_belt\w_pk_bipod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_pk_belt\w_pk_bipod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_pk_belt\pk_long_belt_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_pk_belt\w_pk_belt_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_pk_belt\w_pk_bipod1_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_pk_belt\w_pk_bipod2_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_pk_belt\pk_long_belt_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_pk_belt\w_pk_belt_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_pk_belt\w_pk_bipod1_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_pk_belt\w_pk_bipod2_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_pk_belt\pk_long_belt_lod0_lod2.smd
+Marking bone ValveBiped.weapon_bone4_belt001 as a jiggle bone
+Marking bone ValveBiped.weapon_bone4_belt002 as a jiggle bone
+Marking bone ValveBiped.weapon_bone4_belt003 as a jiggle bone
+Marking bone ValveBiped.weapon_bone4_belt004 as a jiggle bone
+Marking bone ValveBiped.weapon_bone4_belt005 as a jiggle bone
+Marking bone ValveBiped.weapon_bone4_belt006 as a jiggle bone
+Marking bone ValveBiped.weapon_bone4_belt007 as a jiggle bone
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_pk_belt\w_pk_belt_anims\idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_pk_belt\w_pk_belt_physics.smd
+Processing LOD for material: w_pk
+Lod 1: vertexes: 1799 (178 new)
+Lod 2: vertexes: 2019 (220 new)
+Processing LOD for material: w_pk
+Processing LOD for material: w_pk
+Processing LOD for material: w_spring
+Processing LOD for material: vceq_ammobelt
+Lod 1: vertexes: 635 (223 new)
+Lod 2: vertexes: 753 (118 new)
+Model has 3 convex sub-parts
+Collision model completed.
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_pk_belt.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_pk_belt.mdl
+   Found 1 preexisting sequences.
+bones         5232 bytes (13)
+animations     136 bytes (1 anims) (1 frames) [0:00]
+Building sequence index remapping table...
+No re-ordering required.
+sequences      268 bytes (1 seq) 
+ik/pose        788 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       212 bytes
+keyvalues       20 bytes
+bone transforms     1832 bytes
+bone flex driver       0 bytes
+Collision model volume 193.25 in^3
+collision        0 bytes
+total         9648
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_pk_belt.vvd:
+vertices     96912 bytes (2019 vertices)
+vertices      8160 bytes (170 vertices)
+vertices     10320 bytes (215 vertices)
+vertices     36144 bytes (753 vertices)
+tangents     32304 bytes (2019 vertices)
+tangents      2720 bytes (170 vertices)
+tangents      3440 bytes (215 vertices)
+tangents     12048 bytes (753 vertices)
+total       202112 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_pk_belt.dx80.vtx":
+body parts:        24 bytes
+models:           220 bytes
+model LODs:       180 bytes
+meshes:           135 bytes
+strip groups:     375 bytes
+strips:           405 bytes
+verts:          49932 bytes
+indices:        29598 bytes
+bone changes:     336 bytes
+everything:     81061 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_pk_belt.dx90.vtx":
+body parts:        24 bytes
+models:           220 bytes
+model LODs:       180 bytes
+meshes:           135 bytes
+strip groups:     375 bytes
+strips:           405 bytes
+verts:          49932 bytes
+indices:        29598 bytes
+bone changes:     336 bytes
+everything:     81061 bytes
+
+Completed "w_pk_belt.qc"

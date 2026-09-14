@@ -1,0 +1,33 @@
+{
+	"ok": true,
+	"results": [
+		{
+			"ok": true,
+			"class": "mcv_m16a1"
+		},
+		{
+			"ok": true,
+			"class": "mcv_m16a1_m203"
+		},
+		{
+			"ok": true,
+			"class": "mcv_m37"
+		},
+		{
+			"ok": true,
+			"class": "mcv_mk2"
+		},
+		{
+			"ok": true,
+			"class": "mcv_c4"
+		},
+		{
+			"ok": true,
+			"class": "mcv_wrench"
+		},
+		{
+			"ok": true,
+			"class": "mcv_lpo50"
+		}
+	]
+}

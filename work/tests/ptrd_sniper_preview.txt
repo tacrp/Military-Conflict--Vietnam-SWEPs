@@ -1,0 +1,25 @@
+ccmd net_fakelag 0
+ccmd cl_showerror 0
+ccmd firstperson
+key -attack
+key -attack2
+key -use
+key -walk
+key -duck
+strip
+lua ply:GodEnable()
+pos -704 576 -12288
+ang 0 0 0
+give mcv_ptrd_sniper
+wait 4
+clua gui.HideGameUI() if gui.IsConsoleVisible() then ply:ConCommand("toggleconsole") end
+shot ptrd_sniper_hip
+report ptrd_sniper_hip
+key +duck
+wait 1
+tap +use 0.12
+wait 2
+key +attack2
+wait 2
+shot ptrd_sniper_scope_initial
+report ptrd_sniper_scope_initial

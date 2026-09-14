@@ -1,0 +1,36 @@
+{
+	"time": 75.01499832328409,
+	"weapons": [
+		{
+			"fire": 30.809999311342835,
+			"lock": 0,
+			"reload": false,
+			"serial": 3,
+			"class": "mcv_m16a1",
+			"clip": 7,
+			"mode": 2,
+			"marker": "retained:mcv_m16a1"
+		},
+		{
+			"fire": 30.809999311342835,
+			"lock": 0,
+			"reload": false,
+			"serial": 3,
+			"class": "mcv_m37",
+			"clip": 7,
+			"mode": 1,
+			"marker": "retained:mcv_m37"
+		},
+		{
+			"fire": 30.809999311342835,
+			"lock": 0,
+			"reload": false,
+			"serial": 3,
+			"class": "mcv_m16a1_m203",
+			"clip": 7,
+			"mode": 2,
+			"marker": "retained:mcv_m16a1_m203"
+		}
+	],
+	"map": "mcv_clock_a"
+}

@@ -1,0 +1,83 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\w_bren\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\w_bren\w_bren.qc"
+Building binary model files...
+Working on "w_bren.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_bren\w_bren_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_bren\w_bren_bp0_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_bren\w_bren_bp1_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_bren\w_bren_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_bren\w_bren_bp0_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_bren\w_bren_bp1_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_bren\w_bren_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_bren\w_bren_bp0_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_bren\w_bren_bp1_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_bren\w_bren_anims\idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_bren\w_bren_physics.smd
+Processing LOD for material: w_bren
+Lod 1: vertexes: 2022 (185 new)
+Lod 2: vertexes: 2322 (300 new)
+Processing LOD for material: w_bren
+Processing LOD for material: w_bren
+Model has 7 convex sub-parts
+Collision model completed.
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_bren.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_bren.mdl
+   Found 1 preexisting sequences.
+bones         1740 bytes (3)
+animations     124 bytes (1 anims) (1 frames) [0:00]
+Building sequence index remapping table...
+No re-ordering required.
+sequences      228 bytes (1 seq) 
+ik/pose        476 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures        76 bytes
+keyvalues       20 bytes
+bone transforms      472 bytes
+bone flex driver       0 bytes
+Collision model volume 271.74 in^3
+collision        0 bytes
+total         3680
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_bren.vvd:
+vertices    111456 bytes (2322 vertices)
+vertices      6528 bytes (136 vertices)
+vertices      6528 bytes (136 vertices)
+tangents     37152 bytes (2322 vertices)
+tangents      2176 bytes (136 vertices)
+tangents      2176 bytes (136 vertices)
+total       166080 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_bren.dx80.vtx":
+body parts:        16 bytes
+models:           132 bytes
+model LODs:       108 bytes
+meshes:            81 bytes
+strip groups:     225 bytes
+strips:           243 bytes
+verts:          45144 bytes
+indices:        27312 bytes
+bone changes:     120 bytes
+everything:     73309 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_bren.dx90.vtx":
+body parts:        16 bytes
+models:           132 bytes
+model LODs:       108 bytes
+meshes:            81 bytes
+strip groups:     225 bytes
+strips:           243 bytes
+verts:          45144 bytes
+indices:        27312 bytes
+bone changes:     120 bytes
+everything:     73309 bytes
+
+Completed "w_bren.qc"

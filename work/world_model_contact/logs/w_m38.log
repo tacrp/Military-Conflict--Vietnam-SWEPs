@@ -1,0 +1,110 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\w_m38\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\w_m38\w_m38.qc"
+Building binary model files...
+Working on "w_m38.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m38\w_m38_assault_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m38\w_m38_w_akb_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m38\w_m38_w_type30_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m38\w_m38_vcm_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m38\w_m38_vcg_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m38\w_m38_assault_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m38\w_m38_w_akb_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m38\w_m38_w_type30_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m38\w_m38_vcm_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m38\w_m38_vcg_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m38\w_m38_assault_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m38\w_m38_w_akb_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m38\w_m38_w_type30_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m38\w_m38_vcm_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m38\w_m38_vcg_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m38\w_m38_anims\idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m38\w_m38_physics.smd
+Processing LOD for material: w_m38
+Lod 1: vertexes: 2791 (186 new)
+Lod 2: vertexes: 3123 (332 new)
+Processing LOD for material: w_akb
+Lod 1: vertexes: 621 (159 new)
+Lod 2: vertexes: 711 (90 new)
+Processing LOD for material: w_type30_bayonet
+Lod 1: vertexes: 454 (49 new)
+Lod 2: vertexes: 543 (89 new)
+Processing LOD for material: w_rifle_glmounts_vc
+Lod 1: vertexes: 846 (172 new)
+Processing LOD for material: w_rifle_grenades_vc
+Model has 5 convex sub-parts
+Collision model completed.
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_m38.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_m38.mdl
+   Found 1 preexisting sequences.
+bones         1956 bytes (4)
+animations     132 bytes (1 anims) (1 frames) [0:00]
+Building sequence index remapping table...
+No re-ordering required.
+sequences      232 bytes (1 seq) 
+ik/pose       1248 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       352 bytes
+keyvalues       20 bytes
+bone transforms      608 bytes
+bone flex driver       0 bytes
+Collision model volume 179.77 in^3
+collision        0 bytes
+total         5524
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_m38.vvd:
+vertices    149904 bytes (3123 vertices)
+vertices     34128 bytes (711 vertices)
+vertices     26064 bytes (543 vertices)
+vertices     40608 bytes (846 vertices)
+vertices      9600 bytes (200 vertices)
+tangents     49968 bytes (3123 vertices)
+tangents     11376 bytes (711 vertices)
+tangents      8688 bytes (543 vertices)
+tangents     13536 bytes (846 vertices)
+tangents      3200 bytes (200 vertices)
+total       347136 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_m38.dx80.vtx":
+body parts:        32 bytes
+models:           352 bytes
+model LODs:       288 bytes
+meshes:           135 bytes
+strip groups:     375 bytes
+strips:           405 bytes
+verts:          87876 bytes
+indices:        53058 bytes
+bone changes:     168 bytes
+everything:    142437 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_m38.dx90.vtx":
+body parts:        32 bytes
+models:           352 bytes
+model LODs:       288 bytes
+meshes:           135 bytes
+strip groups:     375 bytes
+strips:           405 bytes
+verts:          87876 bytes
+indices:        53058 bytes
+bone changes:     168 bytes
+everything:    142437 bytes
+
+Completed "w_m38.qc"

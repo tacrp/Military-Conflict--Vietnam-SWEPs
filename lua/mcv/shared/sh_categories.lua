@@ -34,6 +34,8 @@ MCV.Categories = {
 
 MCV.CategoryStats = {
     {key = "damage", label = "Damage"},
+    {key = "penetration", label = "Bullet penetration",
+     help = "Multiplies how far bullets can travel through each material. 0 stops penetration; 1 uses the weapon's normal depths."},
     {key = "spread", label = "Hip spread"},
     {key = "spread_sights", label = "Aimed spread"},
     {key = "recoil", label = "Recoil"},

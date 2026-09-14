@@ -1,0 +1,37 @@
+# Asset/function smoke check only; intentionally no prediction regression suite.
+ccmd net_fakelag 0
+ccmd cl_showerror 0
+ccmd firstperson
+key -attack
+key -attack2
+strip
+lua ply:GodEnable()
+pos -704 576 -12288
+ang 0 0 0
+give mcv_m635
+wait 4
+clua gui.HideGameUI() if gui.IsConsoleVisible() then ply:ConCommand("toggleconsole") end
+lua local w=ply:GetActiveWeapon() assert(w:GetClass()=="mcv_m635" and w:Clip1()==32 and w:GetMaxClip1()==32,"M635 magazine") assert(w.FireRate==850 and w.Primary.Ammo=="pistol","M635 stats") assert(sound.GetProperties(w.SoundSingleShot),"M76 sound missing") ply:SetAmmo(96,w:GetPrimaryAmmoType())
+shot m635_hip
+report m635_hip
+key +attack2
+wait 2
+shot m635_sights
+report m635_sights
+tap +attack 0.12
+wait 1
+key -attack2
+tap +reload 0.12
+wait 4
+lua assert(ply:GetActiveWeapon():Clip1()==33,"M635 tactical reload")
+lua ply:GetActiveWeapon():SetClip1(0)
+wait 1
+tap +reload 0.12
+wait 4
+lua assert(ply:GetActiveWeapon():Clip1()==32,"M635 empty reload")
+report m635_reloaded
+ang 0 0 0
+clua hook.Add("CalcView","m635_side",function(p) local o=p:GetPos()+Vector(5,0,48) return {origin=o+Vector(0,-100,0),angles=Angle(0,90,0),fov=45,drawviewer=true} end) hook.Add("ShouldDrawLocalPlayer","m635_side",function() return true end)
+wait 1
+shot m635_world
+clua hook.Remove("CalcView","m635_side") hook.Remove("ShouldDrawLocalPlayer","m635_side")

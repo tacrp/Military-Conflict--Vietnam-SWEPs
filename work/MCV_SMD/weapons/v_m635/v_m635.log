@@ -1,0 +1,113 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd\weapons\v_m635\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD\weapons\v_m635\compiled\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD\weapons\v_m635\v_m635.qc"
+Building binary model files...
+Working on "v_m635.qc"
+SMD MODEL m635.smd
+SMD MODEL assets/runIdle_a_corrective_animation.smd
+SMD MODEL assets/run_a_corrective_animation.smd
+SMD MODEL assets/walkIdle_a_corrective_animation.smd
+SMD MODEL assets/walk_a_corrective_animation.smd
+SMD MODEL assets/shoot1_a_corrective_animation.smd
+SMD MODEL assets/shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL assets/shoot2_a_corrective_animation.smd
+SMD MODEL assets/shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL assets/shoot3_a_corrective_animation.smd
+SMD MODEL assets/shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL assets/basePose_a.smd
+SMD MODEL assets/ironsight.smd
+SMD MODEL assets/ironsight_transition.smd
+SMD MODEL assets/runIdle_a.smd
+SMD MODEL assets/run_a.smd
+SMD MODEL assets/walkIdle_a.smd
+SMD MODEL assets/walk_a.smd
+SMD MODEL assets/shoot1_a.smd
+SMD MODEL assets/shoot1_ironsight_a.smd
+SMD MODEL assets/shoot2_a.smd
+SMD MODEL assets/shoot2_ironsight_a.smd
+SMD MODEL assets/shoot3_a.smd
+SMD MODEL assets/shoot3_ironsight_a.smd
+SMD MODEL assets/nearwall_s_a.smd
+SMD MODEL assets/nearwall_s_a_i.smd
+SMD MODEL assets/nearwall_a.smd
+SMD MODEL assets/nearwall_a_i.smd
+SMD MODEL assets/nearwall_e_a.smd
+SMD MODEL assets/nearwall_e_a_i.smd
+SMD MODEL assets/proneF.smd
+SMD MODEL assets/proneB.smd
+SMD MODEL assets/proneL.smd
+SMD MODEL assets/proneR.smd
+SMD MODEL assets/pickup_s_a.smd
+SMD MODEL assets/pickup_s_a_i.smd
+SMD MODEL assets/pickup_a.smd
+SMD MODEL assets/pickup_a_i.smd
+SMD MODEL assets/pickup_e_a.smd
+SMD MODEL assets/pickup_e_a_i.smd
+SMD MODEL assets/change_firemode_idle.smd
+SMD MODEL assets/change_firemode_iron.smd
+SMD MODEL assets/scope_adjust_idle.smd
+SMD MODEL assets/scope_adjust_iron.smd
+SMD MODEL assets/draw.smd
+SMD MODEL assets/draw_2.smd
+SMD MODEL assets/Firstdraw.smd
+SMD MODEL assets/Firstdraw_2.smd
+SMD MODEL assets/reload.smd
+SMD MODEL assets/reload_2.smd
+SMD MODEL assets/reload_empty.smd
+SMD MODEL assets/reload_empty_2.smd
+SMD MODEL assets/bash.smd
+SMD MODEL assets/bash_2.smd
+SMD MODEL assets/holster.smd
+Processing LOD for material: xm177
+Processing LOD for material: m16a1
+Processing LOD for material: uzi
+Processing LOD for material: m601
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD\weapons\v_m635\compiled\models/weapons/mcv/v_m635.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD\weapons\v_m635\compiled\models/weapons/mcv/v_m635.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        22708 bytes (99)
+animations  169040 bytes (57 anims) (1628 frames) [0:54]
+sequences     9368 bytes (25 seq) 
+ik/pose        224 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       284 bytes
+keyvalues       20 bytes
+bone transforms    13528 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       219068
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD\weapons\v_m635\compiled\models/weapons/mcv/v_m635.vvd:
+vertices   1924848 bytes (40101 vertices)
+tangents    641616 bytes (40101 vertices)
+total      2566528 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD\weapons\v_m635\compiled\models/weapons/mcv/v_m635.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            36 bytes
+strip groups:     100 bytes
+strips:           108 bytes
+verts:         360909 bytes
+indices:       288300 bytes
+bone changes:      80 bytes
+everything:    649597 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD\weapons\v_m635\compiled\models/weapons/mcv/v_m635.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            36 bytes
+strip groups:     100 bytes
+strips:           108 bytes
+verts:         360909 bytes
+indices:       288300 bytes
+bone changes:      80 bytes
+everything:    649597 bytes
+
+Completed "v_m635.qc"

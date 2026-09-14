@@ -1,0 +1,53 @@
+# Run after ptrd_sniper_preview, or from a fresh weapon setup at the flatgrass platform.
+ccmd cl_showerror 0
+ccmd net_fakelag 0
+clua include("mcv_harness/custom_weapon_assets.lua")
+clua ply:GetActiveWeapon().IronsightPos=Vector(-2.38,0,.755) MCVCustomAssets.Check()
+wait 0.4
+shot ptrd_sniper_scope
+lua MCVCustomInput={ptrdBefore=ply:GetActiveWeapon():Clip1()}
+tap +attack 0.12
+wait 0.3
+clua MCVCustomAssets.RecordReload()
+lua MCVCustomInput.ptrdAfter=ply:GetActiveWeapon():Clip1()
+key -attack2
+wait 1
+tap +reload 0.12
+wait 0.55
+clua MCVCustomAssets.RecordReload()
+shot ptrd_sniper_cartridge
+wait 0.7
+clua MCVCustomAssets.RecordReload()
+wait 3
+clua MCVCustomAssets.RecordReload()
+lua MCVCustomInput.ptrdReloaded=ply:GetActiveWeapon():Clip1()
+key -duck
+wait 1
+clua MCVCustomAssets.WorldView()
+wait 1
+shot ptrd_sniper_world
+clua MCVCustomAssets.StopWorldView()
+give mcv_m635
+wait 3
+clua MCVCustomAssets.Check()
+shot m635_m601_receiver
+clua MCVCustomAssets.WorldView()
+wait 1
+shot m635_m601_world
+clua MCVCustomAssets.StopWorldView()
+give mcv_xm16super
+wait 3
+clua MCVCustomAssets.Check()
+lua MCVCustomInput.xm16Before=ply:GetActiveWeapon():Clip1()
+tap +attack 0.12
+wait 0.15
+shot xm16super_m16_shoot
+wait 1
+lua MCVCustomInput.xm16After=ply:GetActiveWeapon():Clip1() MCVCustomInput.ok=MCVCustomInput.ptrdBefore==1 and MCVCustomInput.ptrdAfter==0 and MCVCustomInput.ptrdReloaded==1 and MCVCustomInput.xm16After<MCVCustomInput.xm16Before file.Write("mcv_harness/p27016/results/custom_weapon_input.json",util.TableToJSON(MCVCustomInput,true))
+key +attack2
+wait 2
+tap +attack 0.12
+wait 0.15
+shot xm16super_m16_shoot_aimed
+wait 1
+key -attack2

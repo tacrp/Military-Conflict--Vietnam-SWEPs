@@ -1,0 +1,17 @@
+{
+  "ok": true,
+  "results": [
+    {
+      "sequence": "reload",
+      "frame": 29,
+      "seconds": 0.9666666398445766,
+      "advance": 0.5
+    },
+    {
+      "sequence": "reload_empty",
+      "frame": 29,
+      "seconds": 0.9666666785875956,
+      "advance": 0.5
+    }
+  ]
+}

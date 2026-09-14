@@ -1,0 +1,117 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd\weapons\v_ptrd41_s\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD\weapons\v_ptrd41_s\compiled\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD\weapons\v_ptrd41_s\v_ptrd41_s.qc"
+Building binary model files...
+Working on "v_ptrd41_s.qc"
+SMD MODEL Ref_new.smd
+SMD MODEL assets/Ref_Bullet.smd
+SMD MODEL assets/Slideback_corrective_animation.smd
+SMD MODEL assets/Default_corrective_animation.smd
+SMD MODEL assets/runIdle_a_corrective_animation.smd
+SMD MODEL assets/run_a_corrective_animation.smd
+SMD MODEL assets/walkIdle_a_corrective_animation.smd
+SMD MODEL assets/walk_a_corrective_animation.smd
+SMD MODEL assets/walk_a_iron_corrective_animation.smd
+SMD MODEL assets/shoot1_a_corrective_animation.smd
+SMD MODEL assets/shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL assets/shoot1d_a_corrective_animation.smd
+SMD MODEL assets/shoot1d_ironsight_a_corrective_animation.smd
+SMD MODEL assets/PoseDelta.smd
+SMD MODEL assets/PoseDelta2.smd
+SMD MODEL assets/Default.smd
+SMD MODEL assets/Slideback.smd
+SMD MODEL assets/basePose_a.smd
+SMD MODEL assets/ironsight.smd
+SMD MODEL assets/ironsight_transition.smd
+SMD MODEL assets/runIdle_a.smd
+SMD MODEL assets/run_a.smd
+SMD MODEL assets/walkIdle_a.smd
+SMD MODEL assets/walk_a.smd
+SMD MODEL assets/walk_a_iron.smd
+SMD MODEL assets/ShootMove.smd
+SMD MODEL assets/ShootStill.smd
+SMD MODEL assets/shoot1_a.smd
+SMD MODEL assets/shoot1_ironsight_a.smd
+SMD MODEL assets/proneF.smd
+SMD MODEL assets/proneB.smd
+SMD MODEL assets/proneL.smd
+SMD MODEL assets/proneR.smd
+SMD MODEL assets/deploy_s_a.smd
+SMD MODEL assets/deploy_s_a_i.smd
+SMD MODEL assets/deploy_a.smd
+SMD MODEL assets/ironsightdeploy.smd
+SMD MODEL assets/deploy_e_a.smd
+SMD MODEL assets/deploy_e_a_i.smd
+SMD MODEL assets/shoot1d_a.smd
+SMD MODEL assets/shoot1d_ironsight_a.smd
+SMD MODEL assets/draw.smd
+SMD MODEL assets/Firstdraw.smd
+SMD MODEL assets/reload.smd
+SMD MODEL assets/reload_2.smd
+SMD MODEL assets/idletonearwall.smd
+SMD MODEL assets/nearwall.smd
+SMD MODEL assets/nearwalltoidle.smd
+SMD MODEL assets/bash.smd
+SMD MODEL assets/pickupstart.smd
+SMD MODEL assets/pickuploop.smd
+SMD MODEL assets/pickupend.smd
+SMD MODEL assets/holster.smd
+SMD MODEL assets/reload_deploy.smd
+SMD MODEL assets/reload_deploy_2.smd
+Processing LOD for material: ptrd41
+Processing LOD for material: v_vz54_scope
+Processing LOD for material: crosshair_meopta256
+Processing LOD for material: shells_small_lmg
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD\weapons\v_ptrd41_s\compiled\models/weapons/mcv/v_ptrd41_s.mdl:
+bones        21784 bytes (94)
+animations  151028 bytes (58 anims) (1658 frames) [1:03]
+sequences    11696 bytes (27 seq) 
+ik/pose        556 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       280 bytes
+keyvalues       20 bytes
+bone transforms    12848 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       202396
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD\weapons\v_ptrd41_s\compiled\models/weapons/mcv/v_ptrd41_s.vvd:
+vertices   1011120 bytes (21065 vertices)
+vertices     15360 bytes (320 vertices)
+tangents    337040 bytes (21065 vertices)
+tangents      5120 bytes (320 vertices)
+total      1368704 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD\weapons\v_ptrd41_s\compiled\models/weapons/mcv/v_ptrd41_s.dx80.vtx":
+body parts:        16 bytes
+models:            60 bytes
+model LODs:        36 bytes
+meshes:            36 bytes
+strip groups:     100 bytes
+strips:           108 bytes
+verts:         192465 bytes
+indices:       154356 bytes
+bone changes:      56 bytes
+everything:    347233 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD\weapons\v_ptrd41_s\compiled\models/weapons/mcv/v_ptrd41_s.dx90.vtx":
+body parts:        16 bytes
+models:            60 bytes
+model LODs:        36 bytes
+meshes:            36 bytes
+strip groups:     100 bytes
+strips:           108 bytes
+verts:         192465 bytes
+indices:       154356 bytes
+bone changes:      56 bytes
+everything:    347233 bytes
+
+Completed "v_ptrd41_s.qc"

@@ -1,0 +1,153 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd\weapons\v_xm16super\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD\weapons\v_xm16super\compiled\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD\weapons\v_xm16super\v_xm16super.qc"
+Building binary model files...
+Working on "v_xm16super.qc"
+SMD MODEL xm16super.smd
+SMD MODEL assets/runIdle_a_corrective_animation.smd
+SMD MODEL assets/run_a_corrective_animation.smd
+SMD MODEL assets/walkIdle_a_corrective_animation.smd
+SMD MODEL assets/walk_a_corrective_animation.smd
+SMD MODEL assets/shoot1_a_corrective_animation.smd
+SMD MODEL assets/shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL assets/shoot2_a_corrective_animation.smd
+SMD MODEL assets/shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL assets/shoot3_a_corrective_animation.smd
+SMD MODEL assets/shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL assets/walkIdle_gren_a_corrective_animation.smd
+SMD MODEL assets/walk_gren_a_corrective_animation.smd
+SMD MODEL assets/gl_shoot_a_corrective_animation.smd
+SMD MODEL assets/gl_shoot_ironsight_a_corrective_animation.smd
+SMD MODEL assets/basePose_a.smd
+SMD MODEL assets/ironsight.smd
+SMD MODEL assets/ironsight_transition.smd
+SMD MODEL assets/walkDelta.smd
+SMD MODEL assets/runIdle_a.smd
+SMD MODEL assets/run_a.smd
+SMD MODEL assets/walkIdle_a.smd
+SMD MODEL assets/walk_a.smd
+SMD MODEL assets/shoot1_a.smd
+SMD MODEL assets/shoot1_ironsight_a.smd
+SMD MODEL assets/shoot2_a.smd
+SMD MODEL assets/shoot2_ironsight_a.smd
+SMD MODEL assets/shoot3_a.smd
+SMD MODEL assets/shoot3_ironsight_a.smd
+SMD MODEL assets/reload_a.smd
+SMD MODEL assets/reload_i_a.smd
+SMD MODEL assets/reload_e_a.smd
+SMD MODEL assets/reload_e_i_a.smd
+SMD MODEL assets/idletonearwall_a.smd
+SMD MODEL assets/idletonearwall_i_a.smd
+SMD MODEL assets/nearwall_a.smd
+SMD MODEL assets/nearwall_i_a.smd
+SMD MODEL assets/nearwalltoidle_a.smd
+SMD MODEL assets/nearwalltoidle_i_a.smd
+SMD MODEL assets/proneF.smd
+SMD MODEL assets/proneB.smd
+SMD MODEL assets/proneL.smd
+SMD MODEL assets/proneR.smd
+SMD MODEL assets/bash_a.smd
+SMD MODEL assets/bash_i_a.smd
+SMD MODEL assets/pickup_s_a.smd
+SMD MODEL assets/pickup_s_a_i.smd
+SMD MODEL assets/pickup_a.smd
+SMD MODEL assets/pickup_a_i.smd
+SMD MODEL assets/pickup_e_a.smd
+SMD MODEL assets/pickup_e_a_i.smd
+SMD MODEL assets/change_firemode_idle.smd
+SMD MODEL assets/change_firemode_iron.smd
+SMD MODEL assets/gl_a.smd
+SMD MODEL assets/irongl.smd
+SMD MODEL assets/walkIdle_gren_a.smd
+SMD MODEL assets/walk_gren_a.smd
+SMD MODEL assets/idle_to_gl_a.smd
+SMD MODEL assets/idle_to_gl_i_a.smd
+SMD MODEL assets/gl_to_idle_a.smd
+SMD MODEL assets/gl_to_idle_i_a.smd
+SMD MODEL assets/gl_shoot_a.smd
+SMD MODEL assets/gl_shoot_ironsight_a.smd
+SMD MODEL assets/reload_secondary_a.smd
+SMD MODEL assets/reload_secondary_i_a.smd
+SMD MODEL assets/gl_draw_a.smd
+SMD MODEL assets/gl_draw_i_a.smd
+SMD MODEL assets/nearwall_gren_s_a.smd
+SMD MODEL assets/nearwall_gren_s_i_a.smd
+SMD MODEL assets/nearwall_gren_a.smd
+SMD MODEL assets/nearwall_gren_i_a.smd
+SMD MODEL assets/nearwall_gren_e_a.smd
+SMD MODEL assets/nearwall_gren_e_i_a.smd
+SMD MODEL assets/prone_g_F.smd
+SMD MODEL assets/prone_g_B.smd
+SMD MODEL assets/prone_g_L.smd
+SMD MODEL assets/prone_g_R.smd
+SMD MODEL assets/bashGrenade_a.smd
+SMD MODEL assets/bashGrenade_i_a.smd
+SMD MODEL assets/pickupstart_gren_a.smd
+SMD MODEL assets/pickupstart_gren_i_a.smd
+SMD MODEL assets/pickupend_gren_a.smd
+SMD MODEL assets/pickupend_gren_i_a.smd
+SMD MODEL assets/pickup_gren_a.smd
+SMD MODEL assets/pickup_gren_i_a.smd
+SMD MODEL assets/draw.smd
+SMD MODEL assets/draw_2.smd
+SMD MODEL assets/Firstdraw.smd
+SMD MODEL assets/Firstdraw_2.smd
+SMD MODEL assets/holster.smd
+SMD MODEL assets/holster_grenade.smd
+Processing LOD for material: m16a1
+Processing LOD for material: m203
+Processing LOD for material: shells_big
+Processing LOD for material: shells_small
+Processing LOD for material: lens_4x
+Processing LOD for material: 4x
+Processing LOD for material: xm177
+Processing LOD for material: m16_mag30
+Processing LOD for material: mk4mod0
+Processing LOD for material: m16a1_stock
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD\weapons\v_xm16super\compiled\models/weapons/mcv/v_xm16super.mdl:
+bones        24088 bytes (104)
+animations  310748 bytes (93 anims) (2738 frames) [1:31]
+sequences    15452 bytes (43 seq) 
+ik/pose        224 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       676 bytes
+keyvalues       20 bytes
+bone transforms    14208 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       371368
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD\weapons\v_xm16super\compiled\models/weapons/mcv/v_xm16super.vvd:
+vertices   3144864 bytes (65518 vertices)
+tangents   1048288 bytes (65518 vertices)
+total      4193216 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD\weapons\v_xm16super\compiled\models/weapons/mcv/v_xm16super.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            90 bytes
+strip groups:     250 bytes
+strips:           270 bytes
+verts:         589203 bytes
+indices:       408864 bytes
+bone changes:     176 bytes
+everything:    998917 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD\weapons\v_xm16super\compiled\models/weapons/mcv/v_xm16super.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            90 bytes
+strip groups:     250 bytes
+strips:           270 bytes
+verts:         589203 bytes
+indices:       408864 bytes
+bone changes:     176 bytes
+everything:    998917 bytes
+
+Completed "v_xm16super.qc"

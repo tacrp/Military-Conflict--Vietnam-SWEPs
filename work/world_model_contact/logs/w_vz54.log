@@ -1,0 +1,115 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\w_vz54\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\w_vz54\w_vz54.qc"
+Building binary model files...
+Working on "w_vz54.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_vz54\w_vz54_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_vz54\w_vz54_akb_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_vz54\w_vz54_type30_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_vz54\w_vz54_scope_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_vz54\w_vz54_vcm_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_vz54\w_vz54_vcg_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_vz54\w_vz54_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_vz54\w_vz54_akb_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_vz54\w_vz54_type30_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_vz54\w_vz54_scope_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_vz54\w_vz54_vcm_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_vz54\w_vz54_vcg_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_vz54\w_vz54_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_vz54\w_vz54_akb_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_vz54\w_vz54_type30_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_vz54\w_vz54_scope_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_vz54\w_vz54_vcm_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_vz54\w_vz54_vcg_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_vz54\w_vz54_anims\idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_vz54\w_vz54_physics.smd
+Processing LOD for material: w_vz54
+Lod 1: vertexes: 1374 (145 new)
+Lod 2: vertexes: 1512 (138 new)
+Processing LOD for material: w_akb
+Processing LOD for material: w_type30_bayonet
+Processing LOD for material: w_vz54
+Processing LOD for material: w_rifle_glmounts_vc
+Processing LOD for material: w_rifle_grenades_vc
+Model has 3 convex sub-parts
+Collision model completed.
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_vz54.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_vz54.mdl
+   Found 1 preexisting sequences.
+bones         2268 bytes (5)
+animations     124 bytes (1 anims) (1 frames) [0:00]
+Building sequence index remapping table...
+No re-ordering required.
+sequences      236 bytes (1 seq) 
+ik/pose       1560 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       352 bytes
+keyvalues       20 bytes
+bone transforms      744 bytes
+bone flex driver       0 bytes
+Collision model volume 194.20 in^3
+collision        0 bytes
+total         6436
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_vz54.vvd:
+vertices     72576 bytes (1512 vertices)
+vertices     22224 bytes (463 vertices)
+vertices     19440 bytes (405 vertices)
+vertices     18144 bytes (378 vertices)
+vertices     32256 bytes (672 vertices)
+vertices      9600 bytes (200 vertices)
+tangents     24192 bytes (1512 vertices)
+tangents      7408 bytes (463 vertices)
+tangents      6480 bytes (405 vertices)
+tangents      6048 bytes (378 vertices)
+tangents     10752 bytes (672 vertices)
+tangents      3200 bytes (200 vertices)
+total       232384 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_vz54.dx80.vtx":
+body parts:        40 bytes
+models:           440 bytes
+model LODs:       360 bytes
+meshes:           162 bytes
+strip groups:     450 bytes
+strips:           486 bytes
+verts:          80937 bytes
+indices:        47724 bytes
+bone changes:     192 bytes
+everything:    130467 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_vz54.dx90.vtx":
+body parts:        40 bytes
+models:           440 bytes
+model LODs:       360 bytes
+meshes:           162 bytes
+strip groups:     450 bytes
+strips:           486 bytes
+verts:          80937 bytes
+indices:        47724 bytes
+bone changes:     192 bytes
+everything:    130467 bytes
+
+Completed "w_vz54.qc"

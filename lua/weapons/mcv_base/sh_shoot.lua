@@ -535,50 +535,40 @@ function SWEP:BulletAttack()
         num = num * math.min(self:Clip1(), self.VolleyCount)
     end
 
-    owner:FireBullets({
-        Damage = self.DamageGeneric * self:StatMult("damage"),
-        Num = num,
-        Src = owner:GetShootPos(),
-        Dir = self:GetAimVector(),
-        Spread = Vector(spread, spread, spread),
-        Attacker = owner,
-        Tracer = 1,
-        TracerName = "mcv_tracer",
-        Callback = function(attacker, tr, dmginfo)
-            // A load of pellets is buckshot: the shotguns, the SOG M79's canister and the
-            // QSPR's shot cartridge all fire more than one, and that pellet count is the test
-            // rather than the hold type, which the two grenade launchers share while firing a
-            // single projectile. The bullet bit stays on, as the engine's own shotguns do it.
-            if (self.Num or 1) > 1 then
-                dmginfo:SetDamageType(bit.bor(dmginfo:GetDamageType(), DMG_BUCKSHOT))
+    local queue = {}
+    local function fireSegment(state, count, cone, tracer)
+        owner:FireBullets({
+            Damage = state.damage,
+            Num = count,
+            Src = state.src,
+            Dir = state.dir,
+            Spread = cone,
+            Distance = 56756 - state.distance,
+            Attacker = owner,
+            Inflictor = self,
+            Tracer = tracer,
+            TracerName = "mcv_tracer",
+            Callback = function(attacker, tr, dmginfo)
+                local distance = state.distance + (tr.HitPos - tr.StartPos):Length()
+                self:ApplyBulletDamage(tr, dmginfo, distance)
+                if SERVER then self:QueuePenetration(tr, state, queue) end
             end
+        })
+    end
+    fireSegment({src = owner:GetShootPos(), dir = self:GetAimVector(),
+        damage = self.DamageGeneric * self:StatMult("damage"), distance = 0, budget = 1, layers = 0},
+        num, Vector(spread, spread, spread), 1)
 
-            // Range falloff: the damage is multiplied by RangeModifier every 500 units (the
-            // HUD reads the same curve). It goes back on the damage info here, before the
-            // hitgroup multipliers scale what is left.
-            local range = (tr.HitPos - tr.StartPos):Length()
-
-            dmginfo:SetDamage(dmginfo:GetDamage() * math.pow(self.RangeModifier, math.max(range / 500, 0)))
-
-            if IsValid(tr.Entity) then
-                MCV.CancelBodyDamage(tr.Entity, dmginfo, tr.HitGroup)
-
-                local hitgroup = tr.HitGroup
-
-                if hitgroup == HITGROUP_HEAD then
-                    dmginfo:ScaleDamage(self.DamageHeadMultiplier)
-                elseif hitgroup == HITGROUP_CHEST then
-                    dmginfo:ScaleDamage(self.DamageChestMultiplier)
-                elseif hitgroup == HITGROUP_STOMACH then
-                    dmginfo:ScaleDamage(self.DamageStomachMultiplier)
-                elseif hitgroup == HITGROUP_LEFTARM or hitgroup == HITGROUP_RIGHTARM then
-                    dmginfo:ScaleDamage(self.DamageArmMultiplier)
-                elseif hitgroup == HITGROUP_LEFTLEG or hitgroup == HITGROUP_RIGHTLEG then
-                    dmginfo:ScaleDamage(self.DamageLegMultiplier)
-                end
-            end
+    // Finish each FireBullets call before firing its continuations, so nested
+    // engine multi-damage accumulation cannot apply a target's damage twice.
+    // These traces stay inside the original shot's lag-compensation window.
+    if SERVER then
+        local index = 1
+        while queue[index] do
+            fireSegment(queue[index], 1, vector_origin, 0)
+            index = index + 1
         end
-    })
+    end
 
     owner:LagCompensation(false)
 end

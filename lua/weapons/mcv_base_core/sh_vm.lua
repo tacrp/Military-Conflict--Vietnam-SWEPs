@@ -176,6 +176,9 @@ function SWEP:GetViewModelPosition(pos, ang)
     // the dual models aim from their own script offsets where those differ
     if self.GetAkimbo and self:GetAkimbo() and self.IronsightPosAkimbo then
         ipos, iang = self.IronsightPosAkimbo, self.IronsightAngAkimbo or iang
+    elseif self.GetGrenadeLauncher and self:GetGrenadeLauncher() and self.IronsightPosLauncher then
+        // A scoped rifle can use a different eye position for its launcher ladder.
+        ipos, iang = self.IronsightPosLauncher, self.IronsightAngLauncher or iang
     end
     local offsetpos = LerpVector(aim_delta, self.CustomPos, ipos)
     local offsetang = LerpAngle(aim_delta, self.CustomAng, iang)

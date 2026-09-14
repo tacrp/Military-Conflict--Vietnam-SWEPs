@@ -39,3 +39,10 @@ MCV.RegisterConVar("mcv_spawn_rifle_grenade_ammo", "1",
 function MCV.SpawnRifleGrenadeAmmo()
     return MCV.ConVars.mcv_spawn_rifle_grenade_ammo:GetBool()
 end
+
+MCV.RegisterConVar("mcv_bullet_penetration", "1",
+    "Allow bullets through thin cover using each weapon's material penetration stats.")
+
+function MCV.BulletPenetration()
+    return MCV.ConVars.mcv_bullet_penetration:GetBool()
+end

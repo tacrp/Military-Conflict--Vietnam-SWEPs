@@ -1,0 +1,106 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\w_mg43b\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\w_mg43b\w_mg43b.qc"
+Building binary model files...
+Working on "w_mg43b.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_mg43b\w_mg43b_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_mg43b\w_mg43_bipod1_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_mg43b\w_mg43_bipod2_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_mg43b\mg43_long_belt_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_mg43b\w_mg43b_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_mg43b\w_mg43_bipod1_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_mg43b\w_mg43_bipod2_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_mg43b\mg43_long_belt_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_mg43b\w_mg43b_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_mg43b\w_mg43_bipod1_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_mg43b\w_mg43_bipod2_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_mg43b\mg43_long_belt_lod0_lod2.smd
+Marking bone ValveBiped.weapon_bone4_belt001 as a jiggle bone
+Marking bone ValveBiped.weapon_bone4_belt002 as a jiggle bone
+Marking bone ValveBiped.weapon_bone4_belt003 as a jiggle bone
+Marking bone ValveBiped.weapon_bone4_belt004 as a jiggle bone
+Marking bone ValveBiped.weapon_bone4_belt005 as a jiggle bone
+Marking bone ValveBiped.weapon_bone4_belt006 as a jiggle bone
+Marking bone ValveBiped.weapon_bone4_belt007 as a jiggle bone
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_mg43b\w_mg43b_anims\idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_mg43b\w_mg43b_physics.smd
+Processing LOD for material: w_mg43
+Lod 1: vertexes: 1226 (61 new)
+Lod 2: vertexes: 1297 (71 new)
+Processing LOD for material: w_mg43
+Lod 1: vertexes: 354 (70 new)
+Lod 2: vertexes: 366 (12 new)
+Processing LOD for material: w_mg43
+Lod 1: vertexes: 343 (59 new)
+Lod 2: vertexes: 353 (10 new)
+Processing LOD for material: vceq_ammobelt
+Lod 1: vertexes: 625 (213 new)
+Lod 2: vertexes: 714 (89 new)
+Model has 2 convex sub-parts
+Collision model completed.
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_mg43b.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_mg43b.mdl
+   Found 1 preexisting sequences.
+bones         5164 bytes (13)
+animations     124 bytes (1 anims) (1 frames) [0:00]
+Building sequence index remapping table...
+No re-ordering required.
+sequences      268 bytes (1 seq) 
+ik/pose        788 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       144 bytes
+keyvalues       20 bytes
+bone transforms     1832 bytes
+bone flex driver       0 bytes
+Collision model volume 514.44 in^3
+collision        0 bytes
+total         9348
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_mg43b.vvd:
+vertices     62256 bytes (1297 vertices)
+vertices     17568 bytes (366 vertices)
+vertices     16944 bytes (353 vertices)
+vertices     34272 bytes (714 vertices)
+tangents     20752 bytes (1297 vertices)
+tangents      5856 bytes (366 vertices)
+tangents      5648 bytes (353 vertices)
+tangents     11424 bytes (714 vertices)
+total       174784 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_mg43b.dx80.vtx":
+body parts:        24 bytes
+models:           220 bytes
+model LODs:       180 bytes
+meshes:           108 bytes
+strip groups:     300 bytes
+strips:           324 bytes
+verts:          40608 bytes
+indices:        25320 bytes
+bone changes:     312 bytes
+everything:     67252 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_mg43b.dx90.vtx":
+body parts:        24 bytes
+models:           220 bytes
+model LODs:       180 bytes
+meshes:           108 bytes
+strip groups:     300 bytes
+strips:           324 bytes
+verts:          40608 bytes
+indices:        25320 bytes
+bone changes:     312 bytes
+everything:     67252 bytes
+
+Completed "w_mg43b.qc"

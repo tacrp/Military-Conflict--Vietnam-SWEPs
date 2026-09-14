@@ -1,0 +1,89 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\w_rpd\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\w_rpd\w_rpd.qc"
+Building binary model files...
+Working on "w_rpd.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpd\w_rpd_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpd\w_rpd_bipod1_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpd\w_rpd_bipod2_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpd\w_rpd_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpd\w_rpd_bipod1_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpd\w_rpd_bipod2_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpd\w_rpd_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpd\w_rpd_bipod1_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpd\w_rpd_bipod2_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpd\w_rpd_anims\idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpd\w_rpd_physics.smd
+Processing LOD for material: vceq_ammobelt
+Lod 1: vertexes: 243 (11 new)
+Processing LOD for material: w_rpd
+Lod 1: vertexes: 4484 (1929 new)
+Lod 2: vertexes: 5089 (605 new)
+Processing LOD for material: w_rpd
+Lod 1: vertexes: 508 (178 new)
+Lod 2: vertexes: 592 (84 new)
+Processing LOD for material: w_rpd
+Lod 1: vertexes: 508 (178 new)
+Lod 2: vertexes: 592 (84 new)
+Model has 6 convex sub-parts
+Collision model completed.
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_rpd.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_rpd.mdl
+   Found 1 preexisting sequences.
+bones         2312 bytes (5)
+animations     128 bytes (1 anims) (1 frames) [0:00]
+Building sequence index remapping table...
+No re-ordering required.
+sequences      236 bytes (1 seq) 
+ik/pose        476 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       144 bytes
+keyvalues       20 bytes
+bone transforms      744 bytes
+bone flex driver       0 bytes
+Collision model volume 278.93 in^3
+collision        0 bytes
+total         4804
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_rpd.vvd:
+vertices    244272 bytes (5089 vertices)
+vertices     28416 bytes (592 vertices)
+vertices     28416 bytes (592 vertices)
+tangents     81424 bytes (5089 vertices)
+tangents      9472 bytes (592 vertices)
+tangents      9472 bytes (592 vertices)
+total       401536 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_rpd.dx80.vtx":
+body parts:        16 bytes
+models:           132 bytes
+model LODs:       108 bytes
+meshes:           108 bytes
+strip groups:     275 bytes
+strips:           297 bytes
+verts:          63459 bytes
+indices:        28824 bytes
+bone changes:     176 bytes
+everything:     93323 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_rpd.dx90.vtx":
+body parts:        16 bytes
+models:           132 bytes
+model LODs:       108 bytes
+meshes:           108 bytes
+strip groups:     275 bytes
+strips:           297 bytes
+verts:          63459 bytes
+indices:        28824 bytes
+bone changes:     176 bytes
+everything:     93323 bytes
+
+Completed "w_rpd.qc"

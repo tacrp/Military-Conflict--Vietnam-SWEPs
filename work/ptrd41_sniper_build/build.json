@@ -1,0 +1,23 @@
+[
+  {
+    "model": "v_ptrd41_s",
+    "installed": true,
+    "files": [
+      "v_ptrd41_s.dx80.vtx",
+      "v_ptrd41_s.dx90.vtx",
+      "v_ptrd41_s.mdl",
+      "v_ptrd41_s.vvd"
+    ]
+  },
+  {
+    "model": "w_ptrd41_s",
+    "installed": true,
+    "files": [
+      "w_ptrd41_s.dx80.vtx",
+      "w_ptrd41_s.dx90.vtx",
+      "w_ptrd41_s.mdl",
+      "w_ptrd41_s.phy",
+      "w_ptrd41_s.vvd"
+    ]
+  }
+]

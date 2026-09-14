@@ -1,0 +1,30 @@
+[
+  {
+    "qc": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv\\work\\MCV_SMD_PORT\\weapons\\v_xm16super\\v_xm16super.qc",
+    "outputs": [
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv\\work\\compile_test_game\\models\\weapons\\mcv\\v_xm16super.dx80.vtx",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv\\work\\compile_test_game\\models\\weapons\\mcv\\v_xm16super.dx90.vtx",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv\\work\\compile_test_game\\models\\weapons\\mcv\\v_xm16super.mdl",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv\\work\\compile_test_game\\models\\weapons\\mcv\\v_xm16super.vvd"
+    ],
+    "installed": true,
+    "warnings": [
+      "WARNING: Failed to load keyvalues file cfg/mount.cfg!",
+      "WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences."
+    ]
+  },
+  {
+    "qc": "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv\\work\\MCV_SMD_PORT\\weapons\\w_xm16super\\w_xm16super.qc",
+    "outputs": [
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv\\work\\compile_test_game\\models\\weapons\\mcv\\w_xm16super.dx80.vtx",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv\\work\\compile_test_game\\models\\weapons\\mcv\\w_xm16super.dx90.vtx",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv\\work\\compile_test_game\\models\\weapons\\mcv\\w_xm16super.mdl",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv\\work\\compile_test_game\\models\\weapons\\mcv\\w_xm16super.phy",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv\\work\\compile_test_game\\models\\weapons\\mcv\\w_xm16super.vvd"
+    ],
+    "installed": true,
+    "warnings": [
+      "WARNING: Failed to load keyvalues file cfg/mount.cfg!"
+    ]
+  }
+]

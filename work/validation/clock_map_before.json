@@ -1,0 +1,34 @@
+{
+	"singleplayer": true,
+	"time": 77.81999826058745,
+	"weapons": [
+		{
+			"lock": 36077.8203125,
+			"fire": 36077.81999826059,
+			"serial": 0,
+			"clip": 7,
+			"class": "mcv_m16a1",
+			"mode": 2,
+			"marker": "retained:mcv_m16a1"
+		},
+		{
+			"lock": 36077.8203125,
+			"fire": 36077.81999826059,
+			"serial": 0,
+			"clip": 7,
+			"class": "mcv_m37",
+			"mode": 1,
+			"marker": "retained:mcv_m37"
+		},
+		{
+			"lock": 36077.8203125,
+			"fire": 36077.81999826059,
+			"serial": 0,
+			"clip": 7,
+			"class": "mcv_m16a1_m203",
+			"mode": 2,
+			"marker": "retained:mcv_m16a1_m203"
+		}
+	],
+	"map": "mcv_clock_b"
+}

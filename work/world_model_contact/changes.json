@@ -1,0 +1,2898 @@
+{
+  "w_ak47": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6 -1 -3.25 12.956 0 180 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.183419 -1.000000 -1.925614 12.956000 0.000000 180.000000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": 0,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.18341892597411658,
+      0.0,
+      1.3243864172158784
+    ]
+  },
+  "w_swm76": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.199 -1.123 -2.179 9.02 0.053 -178.158 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.322859 -1.123115 -1.420233 9.020000 0.053000 -178.158000 0 0 0 0 0 0",
+    "holdtype": "smg",
+    "original_pitch": 1.588,
+    "finger_pivot": [
+      5.740295,
+      -0.728912,
+      -1.469898
+    ],
+    "translation_delta": [
+      -0.12385941596116368,
+      -0.00011457302743922426,
+      0.7587666802952138
+    ]
+  },
+  "w_akm": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6 -1 -3.25 12.956 0 180 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.183419 -1.000000 -1.925614 12.956000 0.000000 180.000000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -0.0,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.18341892597411658,
+      0.0,
+      1.3243864172158784
+    ]
+  },
+  "w_amd65": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6 -1 -3.25 12.956 0 180 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.183419 -1.000000 -1.925614 12.956000 0.000000 180.000000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": 0,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.18341892597411658,
+      0.0,
+      1.3243864172158784
+    ]
+  },
+  "w_aps": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.5 -1 -1.5 4.494 0 180 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.618628 -1.000000 -1.042445 4.494000 0.000000 180.000000 0 0 0 0 0 0",
+    "holdtype": "pistol",
+    "original_pitch": 0,
+    "finger_pivot": [
+      5.77124,
+      -1.062561,
+      -1.740435
+    ],
+    "translation_delta": [
+      -0.11862783878700744,
+      0.0,
+      0.457554659341735
+    ]
+  },
+  "w_babybrowning": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.512 -0.98 -1.298 4.494 -3.313 -170.164 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.679160 -0.970324 -0.732024 4.494000 -3.313000 -170.164000 0 0 0 0 0 0",
+    "holdtype": "pistol",
+    "original_pitch": -1.075,
+    "finger_pivot": [
+      5.77124,
+      -1.062561,
+      -1.740435
+    ],
+    "translation_delta": [
+      -0.16715995469626455,
+      0.009676436327976545,
+      0.5659756170035448
+    ]
+  },
+  "w_bar_l": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.79 -1.598 -0.698 12.956 10.616 -170.088 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.791411 -1.598264 -1.223256 12.956000 10.616000 -170.088000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": 18.014,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.0014105952817882184,
+      -0.0002643934615080834,
+      -0.5252560693645101
+    ]
+  },
+  "w_bazooka": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" 2.177 -1.154 -6.703 12.956 -4.968 -178.524 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" 0.588289 -1.015900 -2.641023 12.956000 -4.968000 -178.524000 0 0 0 0 0 0",
+    "holdtype": "rpg",
+    "original_pitch": -30.91,
+    "finger_pivot": [
+      5.703888,
+      -1.117584,
+      -1.231716
+    ],
+    "translation_delta": [
+      -1.5887113473339642,
+      0.13810018063616525,
+      4.061977450305254
+    ]
+  },
+  "w_blackhawk": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.512 -0.98 -1.298 4.494 -3.313 -170.164 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.702911 -0.968949 -0.717515 4.494000 -3.313000 -170.164000 0 0 0 0 0 0",
+    "holdtype": "revolver",
+    "original_pitch": -1.075,
+    "finger_pivot": [
+      5.913208,
+      -0.47464,
+      -2.095299
+    ],
+    "translation_delta": [
+      -0.19091134859690007,
+      0.011051340091248085,
+      0.5804852994153618
+    ]
+  },
+  "w_bren": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.488 -1.046 -2.759 12.956 1.382 179.172 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.896825 -1.055863 -0.727532 12.956000 1.382000 179.172000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -7.194,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.40882487489379393,
+      -0.009862952877741193,
+      2.0314680761594266
+    ]
+  },
+  "w_browning_auto": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -11 -1 -2 3.956 0 180 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -11.105041 -1.000000 -1.585954 3.956000 0.000000 180.000000 0 0 0 0 0 0",
+    "holdtype": "shotgun",
+    "original_pitch": 0,
+    "finger_pivot": [
+      5.941833,
+      0.047791,
+      -1.72776
+    ],
+    "translation_delta": [
+      -0.10504136173526035,
+      0.0,
+      0.41404600111066925
+    ]
+  },
+  "w_c96": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.512 -0.98 -1.298 4.494 -3.313 -170.164 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.679160 -0.970324 -0.732024 4.494000 -3.313000 -170.164000 0 0 0 0 0 0",
+    "holdtype": "pistol",
+    "original_pitch": -1.075,
+    "finger_pivot": [
+      5.77124,
+      -1.062561,
+      -1.740435
+    ],
+    "translation_delta": [
+      -0.16715995469626455,
+      0.009676436327976545,
+      0.5659756170035448
+    ]
+  },
+  "w_c96_stock": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.512 -0.98 -1.298 4.494 -3.313 -170.164 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.679160 -0.970324 -0.732024 4.494000 -3.313000 -170.164000 0 0 0 0 0 0",
+    "holdtype": "pistol",
+    "original_pitch": -1.075,
+    "finger_pivot": [
+      5.77124,
+      -1.062561,
+      -1.740435
+    ],
+    "translation_delta": [
+      -0.16715995469626455,
+      0.009676436327976545,
+      0.5659756170035448
+    ]
+  },
+  "w_car15": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6 -1 -3.25 12.956 0 180 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.183419 -1.000000 -1.925614 12.956000 0.000000 180.000000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": 0,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.18341892597411658,
+      0.0,
+      1.3243864172158784
+    ]
+  },
+  "w_chinalake": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10 -1 0 3.956 0 180 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -9.860327 -1.000000 -1.182686 3.956000 0.000000 180.000000 0 0 0 0 0 0",
+    "holdtype": "shotgun",
+    "original_pitch": 15,
+    "finger_pivot": [
+      5.941833,
+      0.047791,
+      -1.72776
+    ],
+    "translation_delta": [
+      0.13967278182772525,
+      0.0,
+      -1.182685536478776
+    ]
+  },
+  "w_cobra": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.512 -0.98 -1.298 4.494 -3.313 -170.164 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.679160 -0.970324 -0.732024 4.494000 -3.313000 -170.164000 0 0 0 0 0 0",
+    "holdtype": "pistol",
+    "original_pitch": -1.075,
+    "finger_pivot": [
+      5.77124,
+      -1.062561,
+      -1.740435
+    ],
+    "translation_delta": [
+      -0.16715995469626455,
+      0.009676436327976545,
+      0.5659756170035448
+    ]
+  },
+  "w_crossbow": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.164 -2.064 0.947 12.956 23.163 -149.856 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.321320 -2.131307 -0.812675 12.956000 23.163000 -149.856000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": 29.989,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.15732013143455248,
+      -0.06730727235108702,
+      -1.7596752999175787
+    ]
+  },
+  "w_cz52": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.512 -0.98 -1.298 4.494 -3.313 -170.164 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.679160 -0.970324 -0.732024 4.494000 -3.313000 -170.164000 0 0 0 0 0 0",
+    "holdtype": "pistol",
+    "original_pitch": -1.075,
+    "finger_pivot": [
+      5.77124,
+      -1.062561,
+      -1.740435
+    ],
+    "translation_delta": [
+      -0.16715995469626455,
+      0.009676436327976545,
+      0.5659756170035448
+    ]
+  },
+  "w_dp28": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.344 -1.642 -0.083 12.956 6.777 -177.279 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.344658 -1.642078 -0.062091 12.956000 6.777000 -177.279000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": 12.754,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.0006583473482733027,
+      -7.823514599269998e-05,
+      0.020908977482722205
+    ]
+  },
+  "w_f1": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -2.239 -1.594 -2.122 9.02 -0.629 177.669 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -2.253646 -1.593839 -1.976796 9.020000 -0.629000 177.669000 0 0 0 0 0 0",
+    "holdtype": "smg",
+    "original_pitch": 7.607,
+    "finger_pivot": [
+      5.740295,
+      -0.728912,
+      -1.469898
+    ],
+    "translation_delta": [
+      -0.014645899328756151,
+      0.00016079091442522397,
+      0.14520432334341526
+    ]
+  },
+  "w_g3": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -5.773 -0.85 -3.932 12.956 0 180 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -5.956419 -0.850000 -2.607614 12.956000 0.000000 180.000000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -0.0,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.18341892597411658,
+      0.0,
+      1.3243864172158784
+    ]
+  },
+  "w_gewehr43": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -11.301 -1.148 -0.372 12.956 6.902 -177.185 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -11.300428 -1.147931 -0.392291 12.956000 6.902000 -177.185000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": 13.152,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      0.0005722345013357,
+      6.926825088204858e-05,
+      -0.020290864181979507
+    ]
+  },
+  "w_gp25": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6 -1 -3.25 12.956 0 180 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.183419 -1.000000 -1.925614 12.956000 0.000000 180.000000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -0.0,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.18341892597411658,
+      0.0,
+      1.3243864172158784
+    ]
+  },
+  "w_gyrojet_carbine": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -11.014 -0.487 -3.388 12.956 0 -179.602 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -11.395754 -0.487000 -1.440658 12.956000 0.000000 -179.602000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -6.319,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.3817541042677348,
+      0.0,
+      1.9473418868513854
+    ]
+  },
+  "w_gyrojet_pistol": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.512 -0.98 -1.298 4.494 -3.313 -170.164 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.679160 -0.970324 -0.732024 4.494000 -3.313000 -170.164000 0 0 0 0 0 0",
+    "holdtype": "pistol",
+    "original_pitch": -1.075,
+    "finger_pivot": [
+      5.77124,
+      -1.062561,
+      -1.740435
+    ],
+    "translation_delta": [
+      -0.16715995469626455,
+      0.009676436327976545,
+      0.5659756170035448
+    ]
+  },
+  "w_hdm": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.512 -0.98 -1.298 4.494 -3.313 -170.164 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.679160 -0.970324 -0.732024 4.494000 -3.313000 -170.164000 0 0 0 0 0 0",
+    "holdtype": "pistol",
+    "original_pitch": -1.075,
+    "finger_pivot": [
+      5.77124,
+      -1.062561,
+      -1.740435
+    ],
+    "translation_delta": [
+      -0.16715995469626455,
+      0.009676436327976545,
+      0.5659756170035448
+    ]
+  },
+  "w_highpower": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.512 -0.98 -1.298 4.494 -3.313 -170.164 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.679160 -0.970324 -0.732024 4.494000 -3.313000 -170.164000 0 0 0 0 0 0",
+    "holdtype": "pistol",
+    "original_pitch": -1.075,
+    "finger_pivot": [
+      5.77124,
+      -1.062561,
+      -1.740435
+    ],
+    "translation_delta": [
+      -0.16715995469626455,
+      0.009676436327976545,
+      0.5659756170035448
+    ]
+  },
+  "w_izh43": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.976 -1.12 -0.618 3.956 6.777 -177.279 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.847757 -1.104760 -1.558241 3.956000 6.777000 -177.279000 0 0 0 0 0 0",
+    "holdtype": "shotgun",
+    "original_pitch": 12.754,
+    "finger_pivot": [
+      5.941833,
+      0.047791,
+      -1.72776
+    ],
+    "translation_delta": [
+      0.12824276855936922,
+      0.015239814889614234,
+      -0.9402410720815485
+    ]
+  },
+  "w_izh43_sog": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.976 -1.12 -0.618 3.956 6.777 -177.279 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.847757 -1.104760 -1.558241 3.956000 6.777000 -177.279000 0 0 0 0 0 0",
+    "holdtype": "shotgun",
+    "original_pitch": 12.754,
+    "finger_pivot": [
+      5.941833,
+      0.047791,
+      -1.72776
+    ],
+    "translation_delta": [
+      0.12824276855936922,
+      0.015239814889614234,
+      -0.9402410720815485
+    ]
+  },
+  "w_k50m": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.771 -1.101 -2.477 9.02 -1.975 -178.873 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.135116 -1.088444 -0.924207 9.020000 -1.975000 -178.873000 0 0 0 0 0 0",
+    "holdtype": "smg",
+    "original_pitch": -6.44,
+    "finger_pivot": [
+      5.740295,
+      -0.728912,
+      -1.469898
+    ],
+    "translation_delta": [
+      -0.3641157328478828,
+      0.01255613478651152,
+      1.5527929732454087
+    ]
+  },
+  "w_k50m_vc": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.771 -1.101 -2.477 9.02 -1.975 -178.873 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.135116 -1.088444 -0.924207 9.020000 -1.975000 -178.873000 0 0 0 0 0 0",
+    "holdtype": "smg",
+    "original_pitch": -6.44,
+    "finger_pivot": [
+      5.740295,
+      -0.728912,
+      -1.469898
+    ],
+    "translation_delta": [
+      -0.3641157328478828,
+      0.01255613478651152,
+      1.5527929732454087
+    ]
+  },
+  "w_kar98_s": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.864 -1.121 -0.656 12.956 6.777 -177.279 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.864658 -1.121078 -0.635091 12.956000 6.777000 -177.279000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": 12.754,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.0006583473482724145,
+      -7.823514599269998e-05,
+      0.020908977482722246
+    ]
+  },
+  "w_kbkg60": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6 -1 -3.25 12.956 0 180 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.183419 -1.000000 -1.925614 12.956000 0.000000 180.000000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -0.0,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.18341892597411658,
+      0.0,
+      1.3243864172158784
+    ]
+  },
+  "w_kolos": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -0.025 -1.07 -6.117 12.956 -4.728 -178.412 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -0.452047 -1.034680 -3.871635 12.956000 -4.728000 -178.412000 0 0 0 0 0 0",
+    "holdtype": "rpg",
+    "original_pitch": -9.609,
+    "finger_pivot": [
+      5.703888,
+      -1.117584,
+      -1.231716
+    ],
+    "translation_delta": [
+      -0.427046903107507,
+      0.035319760089842944,
+      2.2453645921134844
+    ]
+  },
+  "w_l1a1": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -5.773 -0.85 -3.932 12.956 0 180 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -5.956419 -0.850000 -2.607614 12.956000 0.000000 180.000000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -0.0,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.18341892597411658,
+      0.0,
+      1.3243864172158784
+    ]
+  },
+  "w_l1a1_sog": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -5.773 -0.85 -3.932 12.956 0 180 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -5.956419 -0.850000 -2.607614 12.956000 0.000000 180.000000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -0.0,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.18341892597411658,
+      0.0,
+      1.3243864172158784
+    ]
+  },
+  "w_l2a1": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -5.773 -0.85 -3.932 12.956 0 180 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -5.956419 -0.850000 -2.607614 12.956000 0.000000 180.000000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -0.0,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.18341892597411658,
+      0.0,
+      1.3243864172158784
+    ]
+  },
+  "w_lacoste": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.155 -0.692 -1.596 4.494 -11.837 179.969 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.455101 -0.629103 -0.606262 4.494000 -11.837000 179.969000 0 0 0 0 0 0",
+    "holdtype": "pistol",
+    "original_pitch": -5.367,
+    "finger_pivot": [
+      5.77124,
+      -1.062561,
+      -1.740435
+    ],
+    "translation_delta": [
+      -0.30010121868876194,
+      0.06289669324333658,
+      0.9897376775676234
+    ]
+  },
+  "w_lebel": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.512 -0.98 -1.298 4.494 -3.313 -170.164 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.702911 -0.968949 -0.717515 4.494000 -3.313000 -170.164000 0 0 0 0 0 0",
+    "holdtype": "revolver",
+    "original_pitch": -1.075,
+    "finger_pivot": [
+      5.913208,
+      -0.47464,
+      -2.095299
+    ],
+    "translation_delta": [
+      -0.19091134859690007,
+      0.011051340091248085,
+      0.5804852994153618
+    ]
+  },
+  "w_luger": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.512 -0.98 -1.298 4.494 -3.313 -170.164 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.679160 -0.970324 -0.732024 4.494000 -3.313000 -170.164000 0 0 0 0 0 0",
+    "holdtype": "pistol",
+    "original_pitch": -1.075,
+    "finger_pivot": [
+      5.77124,
+      -1.062561,
+      -1.740435
+    ],
+    "translation_delta": [
+      -0.16715995469626455,
+      0.009676436327976545,
+      0.5659756170035448
+    ]
+  },
+  "w_m12": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -2.974 -1.486 -2.511 9.02 0.053 -178.158 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.097859 -1.486115 -1.752233 9.020000 0.053000 -178.158000 0 0 0 0 0 0",
+    "holdtype": "smg",
+    "original_pitch": 1.588,
+    "finger_pivot": [
+      5.740295,
+      -0.728912,
+      -1.469898
+    ],
+    "translation_delta": [
+      -0.12385941596116368,
+      -0.00011457302743922426,
+      0.7587666802952138
+    ]
+  },
+  "w_m14_sog": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -11.301 -1.148 -0.372 12.956 6.902 -177.185 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -11.300428 -1.147931 -0.392291 12.956000 6.902000 -177.185000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": 13.152,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      0.0005722345013357,
+      6.926825088204858e-05,
+      -0.020290864181979507
+    ]
+  },
+  "w_m14e2": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.035 -0.54 -3.158 12.956 -0.68 178.756 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.665314 -0.532519 -0.626355 12.956000 -0.680000 178.756000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -12.497,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.6303140087900498,
+      0.0074810684990544996,
+      2.5316445914081114
+    ]
+  },
+  "w_m14e2_sog": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.035 -0.54 -3.158 12.956 -0.68 178.756 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.665314 -0.532519 -0.626355 12.956000 -0.680000 178.756000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -12.497,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.6303140087900498,
+      0.0074810684990544996,
+      2.5316445914081114
+    ]
+  },
+  "w_m14l": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -11.301 -1.148 -0.372 12.956 6.902 -177.185 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -11.300428 -1.147931 -0.392291 12.956000 6.902000 -177.185000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": 13.152,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      0.0005722345013357,
+      6.926825088204858e-05,
+      -0.020290864181979507
+    ]
+  },
+  "w_m16a1": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6 -1 -3.25 12.956 0 180 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.183419 -1.000000 -1.925614 12.956000 0.000000 180.000000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -0.0,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.18341892597411658,
+      0.0,
+      1.3243864172158784
+    ]
+  },
+  "w_m1895": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.512 -0.98 -1.298 4.494 -3.313 -170.164 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.702911 -0.968949 -0.717515 4.494000 -3.313000 -170.164000 0 0 0 0 0 0",
+    "holdtype": "revolver",
+    "original_pitch": -1.075,
+    "finger_pivot": [
+      5.913208,
+      -0.47464,
+      -2.095299
+    ],
+    "translation_delta": [
+      -0.19091134859690007,
+      0.011051340091248085,
+      0.5804852994153618
+    ]
+  },
+  "w_m1897": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -11.467 -1.131 -0.368 3.956 6.777 -177.279 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -11.338757 -1.115760 -1.308241 3.956000 6.777000 -177.279000 0 0 0 0 0 0",
+    "holdtype": "shotgun",
+    "original_pitch": 12.754,
+    "finger_pivot": [
+      5.941833,
+      0.047791,
+      -1.72776
+    ],
+    "translation_delta": [
+      0.12824276855936922,
+      0.015239814889614234,
+      -0.9402410720815485
+    ]
+  },
+  "w_m1911": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.512 -0.98 -1.298 4.494 -3.313 -170.164 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.679160 -0.970324 -0.732024 4.494000 -3.313000 -170.164000 0 0 0 0 0 0",
+    "holdtype": "pistol",
+    "original_pitch": -1.075,
+    "finger_pivot": [
+      5.77124,
+      -1.062561,
+      -1.740435
+    ],
+    "translation_delta": [
+      -0.16715995469626455,
+      0.009676436327976545,
+      0.5659756170035448
+    ]
+  },
+  "w_m1917": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.512 -0.98 -1.298 4.494 -3.313 -170.164 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.702911 -0.968949 -0.717515 4.494000 -3.313000 -170.164000 0 0 0 0 0 0",
+    "holdtype": "revolver",
+    "original_pitch": -1.075,
+    "finger_pivot": [
+      5.913208,
+      -0.47464,
+      -2.095299
+    ],
+    "translation_delta": [
+      -0.19091134859690007,
+      0.011051340091248085,
+      0.5804852994153618
+    ]
+  },
+  "w_m1919a6": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.115 -1.026 -1.452 12.956 1.157 -179.485 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.202970 -1.027777 -0.575238 12.956000 1.157000 -179.485000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": 4.43,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.08796959282151029,
+      -0.0017766519035364858,
+      0.8767622236690308
+    ]
+  },
+  "w_m1928": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.909 -0.458 -1.752 9.02 -8.371 178.504 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.018436 -0.441897 -1.029161 9.020000 -8.371000 178.504000 0 0 0 0 0 0",
+    "holdtype": "smg",
+    "original_pitch": 1.939,
+    "finger_pivot": [
+      5.740295,
+      -0.728912,
+      -1.469898
+    ],
+    "translation_delta": [
+      -0.10943555312353848,
+      0.01610344261968044,
+      0.7228386432913758
+    ]
+  },
+  "w_m1a1": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.909 -0.458 -1.752 9.02 -8.371 178.504 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.018436 -0.441897 -1.029161 9.020000 -8.371000 178.504000 0 0 0 0 0 0",
+    "holdtype": "smg",
+    "original_pitch": 1.939,
+    "finger_pivot": [
+      5.740295,
+      -0.728912,
+      -1.469898
+    ],
+    "translation_delta": [
+      -0.10943555312353848,
+      0.01610344261968044,
+      0.7228386432913758
+    ]
+  },
+  "w_m1c": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -9.766 -0.735 -2.512 12.956 1.907 -179.99 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -9.999362 -0.742770 -1.004456 12.956000 1.907000 -179.990000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -1.836,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.23336200352107817,
+      -0.007769957000533845,
+      1.5075437020721292
+    ]
+  },
+  "w_m1c_sog": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -9.766 -0.735 -2.512 12.956 1.907 -179.99 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -9.999362 -0.742770 -1.004456 12.956000 1.907000 -179.990000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -1.836,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.23336200352107817,
+      -0.007769957000533845,
+      1.5075437020721292
+    ]
+  },
+  "w_m202": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" 0.615 -1.118 -6.404 12.956 -4.728 -178.412 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" 0.187953 -1.082680 -4.158635 12.956000 -4.728000 -178.412000 0 0 0 0 0 0",
+    "holdtype": "rpg",
+    "original_pitch": -9.609,
+    "finger_pivot": [
+      5.703888,
+      -1.117584,
+      -1.231716
+    ],
+    "translation_delta": [
+      -0.427046903107507,
+      0.035319760089842944,
+      2.245364592113484
+    ]
+  },
+  "w_m203": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6 -1 -3.25 12.956 0 180 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.183419 -1.000000 -1.925614 12.956000 0.000000 180.000000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -0.0,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.18341892597411658,
+      0.0,
+      1.3243864172158784
+    ]
+  },
+  "w_m21": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -11.301 -1.148 -0.372 12.956 6.902 -177.185 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -11.300428 -1.147931 -0.392291 12.956000 6.902000 -177.185000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": 13.152,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      0.0005722345013357,
+      6.926825088204858e-05,
+      -0.020290864181979507
+    ]
+  },
+  "w_m24": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.488 -1.046 -2.759 12.956 1.382 179.172 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.896825 -1.055863 -0.727532 12.956000 1.382000 179.172000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -7.194,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.40882487489379393,
+      -0.009862952877741193,
+      2.0314680761594266
+    ]
+  },
+  "w_m2c": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -11.301 -1.148 -0.372 12.956 6.902 -177.185 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -11.300428 -1.147931 -0.392291 12.956000 6.902000 -177.185000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": 13.152,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      0.0005722345013357,
+      6.926825088204858e-05,
+      -0.020290864181979507
+    ]
+  },
+  "w_m2c_sog": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -11.301 -1.148 -0.372 12.956 6.902 -177.185 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -11.300428 -1.147931 -0.392291 12.956000 6.902000 -177.185000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": 13.152,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      0.0005722345013357,
+      6.926825088204858e-05,
+      -0.020290864181979507
+    ]
+  },
+  "w_m37": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -11.467 -1.131 -0.368 3.956 6.777 -177.279 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -11.338757 -1.115760 -1.308241 3.956000 6.777000 -177.279000 0 0 0 0 0 0",
+    "holdtype": "shotgun",
+    "original_pitch": 12.754,
+    "finger_pivot": [
+      5.941833,
+      0.047791,
+      -1.72776
+    ],
+    "translation_delta": [
+      0.12824276855936922,
+      0.015239814889614234,
+      -0.9402410720815485
+    ]
+  },
+  "w_m38": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.864 -1.121 -0.656 12.956 6.777 -177.279 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.864658 -1.121078 -0.635091 12.956000 6.777000 -177.279000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": 12.754,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.0006583473482724145,
+      -7.823514599269998e-05,
+      0.020908977482722246
+    ]
+  },
+  "w_m38_s": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.864 -1.121 -0.656 12.956 6.777 -177.279 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.864658 -1.121078 -0.635091 12.956000 6.777000 -177.279000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": 12.754,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.0006583473482724145,
+      -7.823514599269998e-05,
+      0.020908977482722246
+    ]
+  },
+  "w_m3a1": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.739 -0.799 -2.425 9.02 -1.975 -178.873 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.103116 -0.786444 -0.872207 9.020000 -1.975000 -178.873000 0 0 0 0 0 0",
+    "holdtype": "smg",
+    "original_pitch": -6.44,
+    "finger_pivot": [
+      5.740295,
+      -0.728912,
+      -1.469898
+    ],
+    "translation_delta": [
+      -0.3641157328478828,
+      0.01255613478651163,
+      1.5527929732454087
+    ]
+  },
+  "w_m3a1_sog": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.739 -0.799 -2.425 9.02 -1.975 -178.873 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.103116 -0.786444 -0.872207 9.020000 -1.975000 -178.873000 0 0 0 0 0 0",
+    "holdtype": "smg",
+    "original_pitch": -6.44,
+    "finger_pivot": [
+      5.740295,
+      -0.728912,
+      -1.469898
+    ],
+    "translation_delta": [
+      -0.3641157328478828,
+      0.01255613478651163,
+      1.5527929732454087
+    ]
+  },
+  "w_m40": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.864 -1.121 -0.656 12.956 6.777 -177.279 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.864658 -1.121078 -0.635091 12.956000 6.777000 -177.279000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": 12.754,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.0006583473482724145,
+      -7.823514599269998e-05,
+      0.020908977482722246
+    ]
+  },
+  "w_m45": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.199 -1.123 -2.179 9.02 0.053 -178.158 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.322859 -1.123115 -1.420233 9.020000 0.053000 -178.158000 0 0 0 0 0 0",
+    "holdtype": "smg",
+    "original_pitch": 1.588,
+    "finger_pivot": [
+      5.740295,
+      -0.728912,
+      -1.469898
+    ],
+    "translation_delta": [
+      -0.12385941596116368,
+      -0.00011457302743922426,
+      0.7587666802952138
+    ]
+  },
+  "w_m45_sog": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.199 -1.123 -2.179 9.02 0.053 -178.158 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.322859 -1.123115 -1.420233 9.020000 0.053000 -178.158000 0 0 0 0 0 0",
+    "holdtype": "smg",
+    "original_pitch": 1.588,
+    "finger_pivot": [
+      5.740295,
+      -0.728912,
+      -1.469898
+    ],
+    "translation_delta": [
+      -0.12385941596116368,
+      -0.00011457302743922426,
+      0.7587666802952138
+    ]
+  },
+  "w_m50": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.771 -1.101 -2.477 9.02 -1.975 -178.873 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.135116 -1.088444 -0.924207 9.020000 -1.975000 -178.873000 0 0 0 0 0 0",
+    "holdtype": "smg",
+    "original_pitch": -6.44,
+    "finger_pivot": [
+      5.740295,
+      -0.728912,
+      -1.469898
+    ],
+    "translation_delta": [
+      -0.3641157328478828,
+      0.01255613478651152,
+      1.5527929732454087
+    ]
+  },
+  "w_m56": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.013 -0.746 -2.573 9.02 -0.769 176.778 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.641732 -0.737561 -0.384863 9.020000 -0.769000 176.778000 0 0 0 0 0 0",
+    "holdtype": "smg",
+    "original_pitch": -13.172,
+    "finger_pivot": [
+      5.740295,
+      -0.728912,
+      -1.469898
+    ],
+    "translation_delta": [
+      -0.6287321265511707,
+      0.00843908650164249,
+      2.188137487391424
+    ]
+  },
+  "w_m60": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.121 -0.83 -3.455 12.956 0 180 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.304419 -0.830000 -2.130614 12.956000 0.000000 180.000000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -0.0,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.18341892597411658,
+      0.0,
+      1.3243864172158784
+    ]
+  },
+  "w_m601": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6 -1 -3.25 12.956 0 180 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.183419 -1.000000 -1.925614 12.956000 0.000000 180.000000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -0.0,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.18341892597411658,
+      0.0,
+      1.3243864172158784
+    ]
+  },
+  "w_m605": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6 -1 -3.25 12.956 0 180 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.183419 -1.000000 -1.925614 12.956000 0.000000 180.000000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -0.0,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.18341892597411658,
+      0.0,
+      1.3243864172158784
+    ]
+  },
+  "w_m607": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6 -1 -3.25 12.956 0 180 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.183419 -1.000000 -1.925614 12.956000 0.000000 180.000000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -0.0,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.18341892597411658,
+      0.0,
+      1.3243864172158784
+    ]
+  },
+  "w_m60b": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.121 -0.83 -3.455 12.956 0 180 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.304419 -0.830000 -2.130614 12.956000 0.000000 180.000000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -0.0,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.18341892597411658,
+      0.0,
+      1.3243864172158784
+    ]
+  },
+  "w_m635": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6 -1 -3.25 12.956 0 180 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.183419 -1.000000 -1.925614 12.956000 0.000000 180.000000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -0.0,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.18341892597411658,
+      0.0,
+      1.3243864172158784
+    ]
+  },
+  "w_m656": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6 -1 -3.25 12.956 0 180 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.183419 -1.000000 -1.925614 12.956000 0.000000 180.000000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -0.0,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.18341892597411658,
+      0.0,
+      1.3243864172158784
+    ]
+  },
+  "w_m7188": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -11.467 -1.131 -0.368 3.956 6.777 -177.279 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -11.338757 -1.115760 -1.308241 3.956000 6.777000 -177.279000 0 0 0 0 0 0",
+    "holdtype": "shotgun",
+    "original_pitch": 12.754,
+    "finger_pivot": [
+      5.941833,
+      0.047791,
+      -1.72776
+    ],
+    "translation_delta": [
+      0.12824276855936922,
+      0.015239814889614234,
+      -0.9402410720815485
+    ]
+  },
+  "w_m72": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -5.987 -2.581 -1.023 12.956 56.525 117.325 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -8.118106 -5.803804 6.164214 12.956000 56.525000 117.325000 0 0 0 0 0 0",
+    "holdtype": "rpg",
+    "original_pitch": -78.051,
+    "finger_pivot": [
+      5.703888,
+      -1.117584,
+      -1.231716
+    ],
+    "translation_delta": [
+      -2.1311056703486155,
+      -3.2228038753342934,
+      7.1872143617845445
+    ]
+  },
+  "w_m79": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.19 -1.806 0.494 3.956 8.733 -175.774 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.058143 -1.785745 -1.082384 3.956000 8.733000 -175.774000 0 0 0 0 0 0",
+    "holdtype": "shotgun",
+    "original_pitch": 18.65,
+    "finger_pivot": [
+      5.941833,
+      0.047791,
+      -1.72776
+    ],
+    "translation_delta": [
+      0.1318571934036612,
+      0.020254715343904106,
+      -1.5763837953857527
+    ]
+  },
+  "w_m79_short": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.19 -1.806 0.494 3.956 8.733 -175.774 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.058143 -1.785745 -1.082384 3.956000 8.733000 -175.774000 0 0 0 0 0 0",
+    "holdtype": "shotgun",
+    "original_pitch": 18.65,
+    "finger_pivot": [
+      5.941833,
+      0.047791,
+      -1.72776
+    ],
+    "translation_delta": [
+      0.1318571934036612,
+      0.020254715343904106,
+      -1.5763837953857527
+    ]
+  },
+  "w_m8": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.512 -0.98 -1.298 4.494 -3.313 -170.164 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.679160 -0.970324 -0.732024 4.494000 -3.313000 -170.164000 0 0 0 0 0 0",
+    "holdtype": "pistol",
+    "original_pitch": -1.075,
+    "finger_pivot": [
+      5.77124,
+      -1.062561,
+      -1.740435
+    ],
+    "translation_delta": [
+      -0.16715995469626455,
+      0.009676436327976545,
+      0.5659756170035448
+    ]
+  },
+  "w_m870": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -11.467 -1.131 -0.368 3.956 6.777 -177.279 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -11.338757 -1.115760 -1.308241 3.956000 6.777000 -177.279000 0 0 0 0 0 0",
+    "holdtype": "shotgun",
+    "original_pitch": 12.754,
+    "finger_pivot": [
+      5.941833,
+      0.047791,
+      -1.72776
+    ],
+    "translation_delta": [
+      0.12824276855936922,
+      0.015239814889614234,
+      -0.9402410720815485
+    ]
+  },
+  "w_m91": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.864 -1.121 -0.656 12.956 6.777 -177.279 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.864658 -1.121078 -0.635091 12.956000 6.777000 -177.279000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": 12.754,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.0006583473482724145,
+      -7.823514599269998e-05,
+      0.020908977482722246
+    ]
+  },
+  "w_mac10": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.155 -0.692 -1.596 4.494 -11.837 179.969 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.455101 -0.629103 -0.606262 4.494000 -11.837000 179.969000 0 0 0 0 0 0",
+    "holdtype": "pistol",
+    "original_pitch": -5.367,
+    "finger_pivot": [
+      5.77124,
+      -1.062561,
+      -1.740435
+    ],
+    "translation_delta": [
+      -0.30010121868876194,
+      0.06289669324333658,
+      0.9897376775676234
+    ]
+  },
+  "w_mac10_sog": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.155 -0.692 -1.596 4.494 -11.837 179.969 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.455101 -0.629103 -0.606262 4.494000 -11.837000 179.969000 0 0 0 0 0 0",
+    "holdtype": "pistol",
+    "original_pitch": -5.367,
+    "finger_pivot": [
+      5.77124,
+      -1.062561,
+      -1.740435
+    ],
+    "translation_delta": [
+      -0.30010121868876194,
+      0.06289669324333658,
+      0.9897376775676234
+    ]
+  },
+  "w_mamba": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.512 -0.98 -1.298 4.494 -3.313 -170.164 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.679160 -0.970324 -0.732024 4.494000 -3.313000 -170.164000 0 0 0 0 0 0",
+    "holdtype": "pistol",
+    "original_pitch": -1.075,
+    "finger_pivot": [
+      5.77124,
+      -1.062561,
+      -1.740435
+    ],
+    "translation_delta": [
+      -0.16715995469626455,
+      0.009676436327976545,
+      0.5659756170035448
+    ]
+  },
+  "w_mas36": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.864 -1.121 -0.656 12.956 6.777 -177.279 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.864658 -1.121078 -0.635091 12.956000 6.777000 -177.279000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": 12.754,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.0006583473482724145,
+      -7.823514599269998e-05,
+      0.020908977482722246
+    ]
+  },
+  "w_mas36_cr39": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.864 -1.121 -0.656 12.956 6.777 -177.279 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.864658 -1.121078 -0.635091 12.956000 6.777000 -177.279000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": 12.754,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.0006583473482724145,
+      -7.823514599269998e-05,
+      0.020908977482722246
+    ]
+  },
+  "w_mas38": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7 -1 -2 9.02 0 180 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.159463 -1.000000 -1.081864 9.020000 0.000000 180.000000 0 0 0 0 0 0",
+    "holdtype": "smg",
+    "original_pitch": 0,
+    "finger_pivot": [
+      5.740295,
+      -0.728912,
+      -1.469898
+    ],
+    "translation_delta": [
+      -0.15946311099112886,
+      0.0,
+      0.9181362314590902
+    ]
+  },
+  "w_mas49": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -11.301 -1.148 -0.372 12.956 6.902 -177.185 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -11.300428 -1.147931 -0.392291 12.956000 6.902000 -177.185000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": 13.152,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      0.0005722345013357,
+      6.926825088204858e-05,
+      -0.020290864181979507
+    ]
+  },
+  "w_mat49": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.977 -0.849 -1.775 9.02 0.053 -178.158 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.100859 -0.849115 -1.016233 9.020000 0.053000 -178.158000 0 0 0 0 0 0",
+    "holdtype": "smg",
+    "original_pitch": 1.588,
+    "finger_pivot": [
+      5.740295,
+      -0.728912,
+      -1.469898
+    ],
+    "translation_delta": [
+      -0.12385941596116368,
+      -0.00011457302743922426,
+      0.7587666802952138
+    ]
+  },
+  "w_mat49_sog": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.977 -0.849 -1.775 9.02 0.053 -178.158 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.100859 -0.849115 -1.016233 9.020000 0.053000 -178.158000 0 0 0 0 0 0",
+    "holdtype": "smg",
+    "original_pitch": 1.588,
+    "finger_pivot": [
+      5.740295,
+      -0.728912,
+      -1.469898
+    ],
+    "translation_delta": [
+      -0.12385941596116368,
+      -0.00011457302743922426,
+      0.7587666802952138
+    ]
+  },
+  "w_mat49k": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.977 -0.849 -1.775 9.02 0.053 -178.158 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.100859 -0.849115 -1.016233 9.020000 0.053000 -178.158000 0 0 0 0 0 0",
+    "holdtype": "smg",
+    "original_pitch": 1.588,
+    "finger_pivot": [
+      5.740295,
+      -0.728912,
+      -1.469898
+    ],
+    "translation_delta": [
+      -0.12385941596116368,
+      -0.00011457302743922426,
+      0.7587666802952138
+    ]
+  },
+  "w_md63": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6 -1 -3.25 12.956 0 180 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.183419 -1.000000 -1.925614 12.956000 0.000000 180.000000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -0.0,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.18341892597411658,
+      0.0,
+      1.3243864172158784
+    ]
+  },
+  "w_mg43": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.861 -1.031 -2.775 12.956 -1.879 179.328 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.282243 -1.017181 -0.713705 12.956000 -1.879000 179.328000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -7.504,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.421242601280011,
+      0.013819494792583376,
+      2.061294895196732
+    ]
+  },
+  "w_mg43b": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.861 -1.031 -2.775 12.956 -1.879 179.328 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.282243 -1.017181 -0.713705 12.956000 -1.879000 179.328000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -7.504,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.421242601280011,
+      0.013819494792583376,
+      2.061294895196732
+    ]
+  },
+  "w_mg43d": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.861 -1.031 -2.775 12.956 -1.879 179.328 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.282243 -1.017181 -0.713705 12.956000 -1.879000 179.328000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -7.504,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.421242601280011,
+      0.013819494792583376,
+      2.061294895196732
+    ]
+  },
+  "w_mk22": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.512 -0.98 -1.298 4.494 -3.313 -170.164 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.679160 -0.970324 -0.732024 4.494000 -3.313000 -170.164000 0 0 0 0 0 0",
+    "holdtype": "pistol",
+    "original_pitch": -1.075,
+    "finger_pivot": [
+      5.77124,
+      -1.062561,
+      -1.740435
+    ],
+    "translation_delta": [
+      -0.16715995469626455,
+      0.009676436327976545,
+      0.5659756170035448
+    ]
+  },
+  "w_mk4mod0": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6 -1 -3.25 12.956 0 180 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.183419 -1.000000 -1.925614 12.956000 0.000000 180.000000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -0.0,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.18341892597411658,
+      0.0,
+      1.3243864172158784
+    ]
+  },
+  "w_mle1935": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.5 -1 -1.5 4.494 0 180 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.618628 -1.000000 -1.042445 4.494000 0.000000 180.000000 0 0 0 0 0 0",
+    "holdtype": "pistol",
+    "original_pitch": 0,
+    "finger_pivot": [
+      5.77124,
+      -1.062561,
+      -1.740435
+    ],
+    "translation_delta": [
+      -0.11862783878700744,
+      0.0,
+      0.457554659341735
+    ]
+  },
+  "w_mp40": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.447 -0.721 -2.079 9.02 0.053 -178.158 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.570859 -0.721115 -1.320233 9.020000 0.053000 -178.158000 0 0 0 0 0 0",
+    "holdtype": "smg",
+    "original_pitch": 1.588,
+    "finger_pivot": [
+      5.740295,
+      -0.728912,
+      -1.469898
+    ],
+    "translation_delta": [
+      -0.12385941596116368,
+      -0.00011457302743922426,
+      0.7587666802952138
+    ]
+  },
+  "w_owen": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -2.054 -1.266 -3.747 9.02 -3.252 -179.189 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -2.630482 -1.233245 -1.701655 9.020000 -3.252000 -179.189000 0 0 0 0 0 0",
+    "holdtype": "smg",
+    "original_pitch": -11.633,
+    "finger_pivot": [
+      5.740295,
+      -0.728912,
+      -1.469898
+    ],
+    "translation_delta": [
+      -0.5764815198491129,
+      0.03275518091859686,
+      2.045345366106948
+    ]
+  },
+  "w_p38": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.512 -0.98 -1.298 4.494 -3.313 -170.164 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.679160 -0.970324 -0.732024 4.494000 -3.313000 -170.164000 0 0 0 0 0 0",
+    "holdtype": "pistol",
+    "original_pitch": -1.075,
+    "finger_pivot": [
+      5.77124,
+      -1.062561,
+      -1.740435
+    ],
+    "translation_delta": [
+      -0.16715995469626455,
+      0.009676436327976545,
+      0.5659756170035448
+    ]
+  },
+  "w_panzerschreck": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" 2.177 -1.154 -6.703 12.956 -4.968 -178.524 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" 0.588289 -1.015900 -2.641023 12.956000 -4.968000 -178.524000 0 0 0 0 0 0",
+    "holdtype": "rpg",
+    "original_pitch": -30.91,
+    "finger_pivot": [
+      5.703888,
+      -1.117584,
+      -1.231716
+    ],
+    "translation_delta": [
+      -1.5887113473339642,
+      0.13810018063616525,
+      4.061977450305254
+    ]
+  },
+  "w_pb": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.512 -0.98 -1.298 4.494 -3.313 -170.164 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.679160 -0.970324 -0.732024 4.494000 -3.313000 -170.164000 0 0 0 0 0 0",
+    "holdtype": "pistol",
+    "original_pitch": -1.075,
+    "finger_pivot": [
+      5.77124,
+      -1.062561,
+      -1.740435
+    ],
+    "translation_delta": [
+      -0.16715995469626455,
+      0.009676436327976545,
+      0.5659756170035448
+    ]
+  },
+  "w_pk": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.375 -0.721 -2.642 12.956 0.006 -179.813 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.643035 -0.721028 -1.021818 12.956000 0.006000 -179.813000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -2.973,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.2680348627519322,
+      -2.806854529346925e-05,
+      1.6201824789905555
+    ]
+  },
+  "w_pk_belt": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.375 -0.721 -2.642 12.956 0.006 -179.813 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.643035 -0.721028 -1.021818 12.956000 0.006000 -179.813000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -2.973,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.2680348627519322,
+      -2.806854529346925e-05,
+      1.6201824789905555
+    ]
+  },
+  "w_pm": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.512 -0.98 -1.298 4.494 -3.313 -170.164 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.679160 -0.970324 -0.732024 4.494000 -3.313000 -170.164000 0 0 0 0 0 0",
+    "holdtype": "pistol",
+    "original_pitch": -1.075,
+    "finger_pivot": [
+      5.77124,
+      -1.062561,
+      -1.740435
+    ],
+    "translation_delta": [
+      -0.16715995469626455,
+      0.009676436327976545,
+      0.5659756170035448
+    ]
+  },
+  "w_pm63": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.155 -0.692 -1.596 4.494 -11.837 179.969 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.455101 -0.629103 -0.606262 4.494000 -11.837000 179.969000 0 0 0 0 0 0",
+    "holdtype": "pistol",
+    "original_pitch": -5.367,
+    "finger_pivot": [
+      5.77124,
+      -1.062561,
+      -1.740435
+    ],
+    "translation_delta": [
+      -0.30010121868876194,
+      0.06289669324333658,
+      0.9897376775676234
+    ]
+  },
+  "w_ppk": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.512 -0.98 -1.298 4.494 -3.313 -170.164 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.679160 -0.970324 -0.732024 4.494000 -3.313000 -170.164000 0 0 0 0 0 0",
+    "holdtype": "pistol",
+    "original_pitch": -1.075,
+    "finger_pivot": [
+      5.77124,
+      -1.062561,
+      -1.740435
+    ],
+    "translation_delta": [
+      -0.16715995469626455,
+      0.009676436327976545,
+      0.5659756170035448
+    ]
+  },
+  "w_pps43": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.771 -1.101 -2.477 9.02 -1.975 -178.873 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.135116 -1.088444 -0.924207 9.020000 -1.975000 -178.873000 0 0 0 0 0 0",
+    "holdtype": "smg",
+    "original_pitch": -6.44,
+    "finger_pivot": [
+      5.740295,
+      -0.728912,
+      -1.469898
+    ],
+    "translation_delta": [
+      -0.3641157328478828,
+      0.01255613478651152,
+      1.5527929732454087
+    ]
+  },
+  "w_ppsh41": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.846 -0.998 -0.013 9.02 8.406 -176.032 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.823694 -0.994704 -0.912465 9.020000 8.406000 -176.032000 0 0 0 0 0 0",
+    "holdtype": "smg",
+    "original_pitch": 17.711,
+    "finger_pivot": [
+      5.740295,
+      -0.728912,
+      -1.469898
+    ],
+    "translation_delta": [
+      0.02230608695695757,
+      0.003296263207050787,
+      -0.8994652192228293
+    ]
+  },
+  "w_ppsh41_doubledrum": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.846 -0.998 -0.013 9.02 8.406 -176.032 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.823694 -0.994704 -0.912465 9.020000 8.406000 -176.032000 0 0 0 0 0 0",
+    "holdtype": "smg",
+    "original_pitch": 17.711,
+    "finger_pivot": [
+      5.740295,
+      -0.728912,
+      -1.469898
+    ],
+    "translation_delta": [
+      0.02230608695695757,
+      0.003296263207050787,
+      -0.8994652192228293
+    ]
+  },
+  "w_ppsh41_drum": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.846 -0.998 -0.013 9.02 8.406 -176.032 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.823694 -0.994704 -0.912465 9.020000 8.406000 -176.032000 0 0 0 0 0 0",
+    "holdtype": "smg",
+    "original_pitch": 17.711,
+    "finger_pivot": [
+      5.740295,
+      -0.728912,
+      -1.469898
+    ],
+    "translation_delta": [
+      0.02230608695695757,
+      0.003296263207050787,
+      -0.8994652192228293
+    ]
+  },
+  "w_ptrd41": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -5.73 -0.637 -4.782 12.956 -3.105 179.011 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.361892 -0.602723 -2.248411 12.956000 -3.105000 179.011000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -12.518,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.6318915808889853,
+      0.034277329677912305,
+      2.5335888442909926
+    ]
+  },
+  "w_qspr": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.512 -0.98 -1.298 4.494 -3.313 -170.164 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.702911 -0.968949 -0.717515 4.494000 -3.313000 -170.164000 0 0 0 0 0 0",
+    "holdtype": "revolver",
+    "original_pitch": -1.075,
+    "finger_pivot": [
+      5.913208,
+      -0.47464,
+      -2.095299
+    ],
+    "translation_delta": [
+      -0.19091134859690007,
+      0.011051340091248085,
+      0.5804852994153618
+    ]
+  },
+  "w_reising_m55": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.771 -1.101 -2.477 12.956 -1.975 -178.873 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.160001 -1.087586 -0.517784 12.956000 -1.975000 -178.873000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -6.44,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.3890008196249273,
+      0.013414269922015887,
+      1.9592159394271118
+    ]
+  },
+  "w_reising_m60": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.846 -0.998 -0.013 12.956 8.406 -176.032 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.850524 -0.998669 -0.505569 12.956000 8.406000 -176.032000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": 17.711,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.0045242107031864265,
+      -0.0006685614249882788,
+      -0.49256896340356227
+    ]
+  },
+  "w_reising_smg": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.846 -0.998 -0.013 12.956 8.406 -176.032 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.850524 -0.998669 -0.505569 12.956000 8.406000 -176.032000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": 17.711,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.0045242107031864265,
+      -0.0006685614249882788,
+      -0.49256896340356227
+    ]
+  },
+  "w_rhogun": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.512 -0.98 -1.298 4.494 -3.313 -170.164 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.679160 -0.970324 -0.732024 4.494000 -3.313000 -170.164000 0 0 0 0 0 0",
+    "holdtype": "pistol",
+    "original_pitch": -1.075,
+    "finger_pivot": [
+      5.77124,
+      -1.062561,
+      -1.740435
+    ],
+    "translation_delta": [
+      -0.16715995469626455,
+      0.009676436327976545,
+      0.5659756170035448
+    ]
+  },
+  "w_rp46": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -5.998 -0.882 -3.605 12.956 -1.527 177.825 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.997952 -0.855344 -0.428385 12.956000 -1.527000 177.825000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -19.727,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.9999518013433146,
+      0.02665620459569973,
+      3.1766149530586953
+    ]
+  },
+  "w_rpd": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.375 -0.721 -2.642 12.956 0.006 -179.813 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.643035 -0.721028 -1.021818 12.956000 0.006000 -179.813000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -2.973,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.2680348627519322,
+      -2.806854529346925e-05,
+      1.6201824789905555
+    ]
+  },
+  "w_rpd_sog": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.375 -0.721 -2.642 12.956 0.006 -179.813 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.643035 -0.721028 -1.021818 12.956000 0.006000 -179.813000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -2.973,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.2680348627519322,
+      -2.806854529346925e-05,
+      1.6201824789905555
+    ]
+  },
+  "w_rpdb": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.375 -0.721 -2.642 12.956 0.006 -179.813 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.643035 -0.721028 -1.021818 12.956000 0.006000 -179.813000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -2.973,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.2680348627519322,
+      -2.806854529346925e-05,
+      1.6201824789905555
+    ]
+  },
+  "w_rpdb_sog": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.375 -0.721 -2.642 12.956 0.006 -179.813 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.643035 -0.721028 -1.021818 12.956000 0.006000 -179.813000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -2.973,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.2680348627519322,
+      -2.806854529346925e-05,
+      1.6201824789905555
+    ]
+  },
+  "w_rpg2": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" 2.177 -1.154 -6.703 12.956 -4.968 -178.524 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" 0.588289 -1.015900 -2.641023 12.956000 -4.968000 -178.524000 0 0 0 0 0 0",
+    "holdtype": "rpg",
+    "original_pitch": -30.91,
+    "finger_pivot": [
+      5.703888,
+      -1.117584,
+      -1.231716
+    ],
+    "translation_delta": [
+      -1.5887113473339642,
+      0.13810018063616525,
+      4.061977450305254
+    ]
+  },
+  "w_rpg7": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" 2.177 -1.154 -6.703 12.956 -4.968 -178.524 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" 0.588289 -1.015900 -2.641023 12.956000 -4.968000 -178.524000 0 0 0 0 0 0",
+    "holdtype": "rpg",
+    "original_pitch": -30.91,
+    "finger_pivot": [
+      5.703888,
+      -1.117584,
+      -1.231716
+    ],
+    "translation_delta": [
+      -1.5887113473339642,
+      0.13810018063616525,
+      4.061977450305254
+    ]
+  },
+  "w_rpk": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6 -1 -3.25 12.956 0 180 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.183419 -1.000000 -1.925614 12.956000 0.000000 180.000000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -0.0,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.18341892597411658,
+      0.0,
+      1.3243864172158784
+    ]
+  },
+  "w_ruby": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.512 -0.98 -1.298 4.494 -3.313 -170.164 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.679160 -0.970324 -0.732024 4.494000 -3.313000 -170.164000 0 0 0 0 0 0",
+    "holdtype": "pistol",
+    "original_pitch": -1.075,
+    "finger_pivot": [
+      5.77124,
+      -1.062561,
+      -1.740435
+    ],
+    "translation_delta": [
+      -0.16715995469626455,
+      0.009676436327976545,
+      0.5659756170035448
+    ]
+  },
+  "w_shanxi_type17": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.512 -0.98 -1.298 4.494 -3.313 -170.164 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.702911 -0.968949 -0.717515 4.494000 -3.313000 -170.164000 0 0 0 0 0 0",
+    "holdtype": "revolver",
+    "original_pitch": -1.075,
+    "finger_pivot": [
+      5.913208,
+      -0.47464,
+      -2.095299
+    ],
+    "translation_delta": [
+      -0.19091134859690007,
+      0.011051340091248085,
+      0.5804852994153618
+    ]
+  },
+  "w_sks": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10 -1 -2 12.956 0 180 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.183419 -1.000000 -0.675614 12.956000 0.000000 180.000000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": 0,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.18341892597411658,
+      0.0,
+      1.3243864172158784
+    ]
+  },
+  "w_springfield": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.864 -1.121 -0.656 12.956 6.777 -177.279 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.864658 -1.121078 -0.635091 12.956000 6.777000 -177.279000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": 12.754,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.0006583473482724145,
+      -7.823514599269998e-05,
+      0.020908977482722246
+    ]
+  },
+  "w_sten": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.846 -0.998 -0.013 12.956 8.406 -176.032 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.850524 -0.998669 -0.505569 12.956000 8.406000 -176.032000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": 17.711,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.0045242107031864265,
+      -0.0006685614249882788,
+      -0.49256896340356227
+    ]
+  },
+  "w_sten_sog": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.846 -0.998 -0.013 12.956 8.406 -176.032 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.850524 -0.998669 -0.505569 12.956000 8.406000 -176.032000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": 17.711,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.0045242107031864265,
+      -0.0006685614249882788,
+      -0.49256896340356227
+    ]
+  },
+  "w_sterling": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -2.667 -1.815 -2.112 9.02 2.181 -173.096 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -2.884158 -1.823270 -1.032044 9.020000 2.181000 -173.096000 0 0 0 0 0 0",
+    "holdtype": "smg",
+    "original_pitch": -1.612,
+    "finger_pivot": [
+      5.740295,
+      -0.728912,
+      -1.469898
+    ],
+    "translation_delta": [
+      -0.21715807938101772,
+      -0.00827025421272043,
+      1.0799559996770718
+    ]
+  },
+  "w_sterling_sog": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -2.667 -1.815 -2.112 12.956 2.181 -173.096 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -2.913281 -1.824379 -0.624789 12.956000 2.181000 -173.096000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -1.612,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.2462808150096727,
+      -0.00937936526999894,
+      1.4872108409655107
+    ]
+  },
+  "w_stg44": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -5.641 -1.125 -2.914 12.956 0 180 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -5.824419 -1.125000 -1.589614 12.956000 0.000000 180.000000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -0.0,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.18341892597411658,
+      0.0,
+      1.3243864172158784
+    ]
+  },
+  "w_stoner63": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -5.773 -0.85 -3.932 12.956 0 180 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -5.956419 -0.850000 -2.607614 12.956000 0.000000 180.000000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -0.0,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.18341892597411658,
+      0.0,
+      1.3243864172158784
+    ]
+  },
+  "w_stoner63_autorifle": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.488 -1.046 -2.759 12.956 1.382 179.172 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.896825 -1.055863 -0.727532 12.956000 1.382000 179.172000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -7.194,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.40882487489379393,
+      -0.009862952877741193,
+      2.0314680761594266
+    ]
+  },
+  "w_stoner63a": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6 -1 -3.25 12.956 0 180 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.183419 -1.000000 -1.925614 12.956000 0.000000 180.000000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -0.0,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.18341892597411658,
+      0.0,
+      1.3243864172158784
+    ]
+  },
+  "w_stoner63a_carbine": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6 -1 -3.25 12.956 0 180 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.183419 -1.000000 -1.925614 12.956000 0.000000 180.000000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -0.0,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.18341892597411658,
+      0.0,
+      1.3243864172158784
+    ]
+  },
+  "w_stoner63lmg": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -5.773 -0.85 -3.932 12.956 0 180 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -5.956419 -0.850000 -2.607614 12.956000 0.000000 180.000000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -0.0,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.18341892597411658,
+      0.0,
+      1.3243864172158784
+    ]
+  },
+  "w_svd": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.893 -1.028 -2.774 12.956 0.692 -179.701 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.014842 -1.029472 -1.718515 12.956000 0.692000 -179.701000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": 2.67,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.12184187920932654,
+      -0.0014716385924664621,
+      1.0554850370260418
+    ]
+  },
+  "w_svt40_s": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -11.301 -1.148 -0.372 12.956 6.902 -177.185 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -11.300428 -1.147931 -0.392291 12.956000 6.902000 -177.185000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": 13.152,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      0.0005722345013357,
+      6.926825088204858e-05,
+      -0.020290864181979507
+    ]
+  },
+  "w_swm10": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.512 -0.98 -1.298 4.494 -3.313 -170.164 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.702911 -0.968949 -0.717515 4.494000 -3.313000 -170.164000 0 0 0 0 0 0",
+    "holdtype": "revolver",
+    "original_pitch": -1.075,
+    "finger_pivot": [
+      5.913208,
+      -0.47464,
+      -2.095299
+    ],
+    "translation_delta": [
+      -0.19091134859690007,
+      0.011051340091248085,
+      0.5804852994153618
+    ]
+  },
+  "w_swm12": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.512 -0.98 -1.298 4.494 -3.313 -170.164 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.702911 -0.968949 -0.717515 4.494000 -3.313000 -170.164000 0 0 0 0 0 0",
+    "holdtype": "revolver",
+    "original_pitch": -1.075,
+    "finger_pivot": [
+      5.913208,
+      -0.47464,
+      -2.095299
+    ],
+    "translation_delta": [
+      -0.19091134859690007,
+      0.011051340091248085,
+      0.5804852994153618
+    ]
+  },
+  "w_swm49": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.512 -0.98 -1.298 4.494 -3.313 -170.164 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.702911 -0.968949 -0.717515 4.494000 -3.313000 -170.164000 0 0 0 0 0 0",
+    "holdtype": "revolver",
+    "original_pitch": -1.075,
+    "finger_pivot": [
+      5.913208,
+      -0.47464,
+      -2.095299
+    ],
+    "translation_delta": [
+      -0.19091134859690007,
+      0.011051340091248085,
+      0.5804852994153618
+    ]
+  },
+  "w_swm76_sog": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.199 -1.123 -2.179 9.02 0.053 -178.158 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.322859 -1.123115 -1.420233 9.020000 0.053000 -178.158000 0 0 0 0 0 0",
+    "holdtype": "smg",
+    "original_pitch": 1.588,
+    "finger_pivot": [
+      5.740295,
+      -0.728912,
+      -1.469898
+    ],
+    "translation_delta": [
+      -0.12385941596116368,
+      -0.00011457302743922426,
+      0.7587666802952138
+    ]
+  },
+  "w_t223": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -5.773 -0.85 -3.932 12.956 0 180 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -5.956419 -0.850000 -2.607614 12.956000 0.000000 180.000000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -0.0,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.18341892597411658,
+      0.0,
+      1.3243864172158784
+    ]
+  },
+  "w_tt33": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.512 -0.98 -1.298 4.494 -3.313 -170.164 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.679160 -0.970324 -0.732024 4.494000 -3.313000 -170.164000 0 0 0 0 0 0",
+    "holdtype": "pistol",
+    "original_pitch": -1.075,
+    "finger_pivot": [
+      5.77124,
+      -1.062561,
+      -1.740435
+    ],
+    "translation_delta": [
+      -0.16715995469626455,
+      0.009676436327976545,
+      0.5659756170035448
+    ]
+  },
+  "w_tul1": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6 -1 -3.25 12.956 0 180 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.183419 -1.000000 -1.925614 12.956000 0.000000 180.000000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -0.0,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.18341892597411658,
+      0.0,
+      1.3243864172158784
+    ]
+  },
+  "w_type14": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.512 -0.98 -1.298 4.494 -3.313 -170.164 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.679160 -0.970324 -0.732024 4.494000 -3.313000 -170.164000 0 0 0 0 0 0",
+    "holdtype": "pistol",
+    "original_pitch": -1.075,
+    "finger_pivot": [
+      5.77124,
+      -1.062561,
+      -1.740435
+    ],
+    "translation_delta": [
+      -0.16715995469626455,
+      0.009676436327976545,
+      0.5659756170035448
+    ]
+  },
+  "w_type56": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6 -1 -3.25 12.956 0 180 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.183419 -1.000000 -1.925614 12.956000 0.000000 180.000000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -0.0,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.18341892597411658,
+      0.0,
+      1.3243864172158784
+    ]
+  },
+  "w_type58": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6 -1 -3.25 12.956 0 180 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.183419 -1.000000 -1.925614 12.956000 0.000000 180.000000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -0.0,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.18341892597411658,
+      0.0,
+      1.3243864172158784
+    ]
+  },
+  "w_type63": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -11.301 -1.148 -0.372 12.956 6.902 -177.185 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -11.300428 -1.147931 -0.392291 12.956000 6.902000 -177.185000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": 13.152,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      0.0005722345013357,
+      6.926825088204858e-05,
+      -0.020290864181979507
+    ]
+  },
+  "w_type63b": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -11.014 -0.487 -3.388 12.956 0 -179.602 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -11.395754 -0.487000 -1.440658 12.956000 0.000000 -179.602000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -6.319,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.3817541042677348,
+      0.0,
+      1.9473418868513854
+    ]
+  },
+  "w_type64": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.845 -1.242 -3.527 9.02 -1.908 176.795 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -4.689884 -1.213854 -0.952730 9.020000 -1.908000 176.795000 0 0 0 0 0 0",
+    "holdtype": "smg",
+    "original_pitch": -17.461,
+    "finger_pivot": [
+      5.740295,
+      -0.728912,
+      -1.469898
+    ],
+    "translation_delta": [
+      -0.8448841444139306,
+      0.028145792154589566,
+      2.574269919470911
+    ]
+  },
+  "w_type64_pistol": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.512 -0.98 -1.298 4.494 -3.313 -170.164 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.679160 -0.970324 -0.732024 4.494000 -3.313000 -170.164000 0 0 0 0 0 0",
+    "holdtype": "pistol",
+    "original_pitch": -1.075,
+    "finger_pivot": [
+      5.77124,
+      -1.062561,
+      -1.740435
+    ],
+    "translation_delta": [
+      -0.16715995469626455,
+      0.009676436327976545,
+      0.5659756170035448
+    ]
+  },
+  "w_type67": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.512 -0.98 -1.298 4.494 -3.313 -170.164 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.679160 -0.970324 -0.732024 4.494000 -3.313000 -170.164000 0 0 0 0 0 0",
+    "holdtype": "pistol",
+    "original_pitch": -1.075,
+    "finger_pivot": [
+      5.77124,
+      -1.062561,
+      -1.740435
+    ],
+    "translation_delta": [
+      -0.16715995469626455,
+      0.009676436327976545,
+      0.5659756170035448
+    ]
+  },
+  "w_type79": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.512 -0.98 -1.298 4.494 -3.313 -170.164 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.679160 -0.970324 -0.732024 4.494000 -3.313000 -170.164000 0 0 0 0 0 0",
+    "holdtype": "pistol",
+    "original_pitch": -1.075,
+    "finger_pivot": [
+      5.77124,
+      -1.062561,
+      -1.740435
+    ],
+    "translation_delta": [
+      -0.16715995469626455,
+      0.009676436327976545,
+      0.5659756170035448
+    ]
+  },
+  "w_uzi": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.155 -0.692 -1.596 9.02 -11.837 179.969 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.470169 -0.625945 -0.147393 9.020000 -11.837000 179.969000 0 0 0 0 0 0",
+    "holdtype": "smg",
+    "original_pitch": -5.367,
+    "finger_pivot": [
+      5.740295,
+      -0.728912,
+      -1.469898
+    ],
+    "translation_delta": [
+      -0.31516889502488477,
+      0.06605465115015152,
+      1.4486069430548838
+    ]
+  },
+  "w_uzi_sog": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.155 -0.692 -1.596 9.02 -11.837 179.969 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.470169 -0.625945 -0.147393 9.020000 -11.837000 179.969000 0 0 0 0 0 0",
+    "holdtype": "smg",
+    "original_pitch": -5.367,
+    "finger_pivot": [
+      5.740295,
+      -0.728912,
+      -1.469898
+    ],
+    "translation_delta": [
+      -0.31516889502488477,
+      0.06605465115015152,
+      1.4486069430548838
+    ]
+  },
+  "w_vccarbine": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -9.766 -0.735 -2.512 12.956 1.907 -179.99 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -9.999362 -0.742770 -1.004456 12.956000 1.907000 -179.990000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -1.836,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.23336200352107817,
+      -0.007769957000533845,
+      1.5075437020721292
+    ]
+  },
+  "w_vcpistol": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.512 -0.98 -1.298 4.494 -3.313 -170.164 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.679160 -0.970324 -0.732024 4.494000 -3.313000 -170.164000 0 0 0 0 0 0",
+    "holdtype": "pistol",
+    "original_pitch": -1.075,
+    "finger_pivot": [
+      5.77124,
+      -1.062561,
+      -1.740435
+    ],
+    "translation_delta": [
+      -0.16715995469626455,
+      0.009676436327976545,
+      0.5659756170035448
+    ]
+  },
+  "w_vcpistol2": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.512 -0.98 -1.298 4.494 -3.313 -170.164 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.679160 -0.970324 -0.732024 4.494000 -3.313000 -170.164000 0 0 0 0 0 0",
+    "holdtype": "pistol",
+    "original_pitch": -1.075,
+    "finger_pivot": [
+      5.77124,
+      -1.062561,
+      -1.740435
+    ],
+    "translation_delta": [
+      -0.16715995469626455,
+      0.009676436327976545,
+      0.5659756170035448
+    ]
+  },
+  "w_vcshotgun": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -8.056 -0.426 -5.092 3.956 -2.61 -177.36 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -9.609325 -0.355192 -2.147089 3.956000 -2.610000 -177.360000 0 0 0 0 0 0",
+    "holdtype": "shotgun",
+    "original_pitch": -27.27,
+    "finger_pivot": [
+      5.941833,
+      0.047791,
+      -1.72776
+    ],
+    "translation_delta": [
+      -1.5533251283121192,
+      0.07080774889701985,
+      2.944910943398607
+    ]
+  },
+  "w_vcsmg": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.846 -0.998 -0.013 9.02 8.406 -176.032 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.823694 -0.994704 -0.912465 9.020000 8.406000 -176.032000 0 0 0 0 0 0",
+    "holdtype": "smg",
+    "original_pitch": 17.711,
+    "finger_pivot": [
+      5.740295,
+      -0.728912,
+      -1.469898
+    ],
+    "translation_delta": [
+      0.02230608695695757,
+      0.003296263207050787,
+      -0.8994652192228293
+    ]
+  },
+  "w_vz23": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.155 -0.692 -1.596 9.02 -11.837 179.969 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.470169 -0.625945 -0.147393 9.020000 -11.837000 179.969000 0 0 0 0 0 0",
+    "holdtype": "smg",
+    "original_pitch": -5.367,
+    "finger_pivot": [
+      5.740295,
+      -0.728912,
+      -1.469898
+    ],
+    "translation_delta": [
+      -0.31516889502488477,
+      0.06605465115015152,
+      1.4486069430548838
+    ]
+  },
+  "w_vz24": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.864 -1.121 -0.656 12.956 6.777 -177.279 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.864658 -1.121078 -0.635091 12.956000 6.777000 -177.279000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": 12.754,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.0006583473482724145,
+      -7.823514599269998e-05,
+      0.020908977482722246
+    ]
+  },
+  "w_vz52": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -11.301 -1.148 -0.372 12.956 6.902 -177.185 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -11.300428 -1.147931 -0.392291 12.956000 6.902000 -177.185000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": 13.152,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      0.0005722345013357,
+      6.926825088204858e-05,
+      -0.020290864181979507
+    ]
+  },
+  "w_vz54": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.864 -1.121 -0.656 12.956 6.777 -177.279 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -10.864658 -1.121078 -0.635091 12.956000 6.777000 -177.279000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": 12.754,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.0006583473482724145,
+      -7.823514599269998e-05,
+      0.020908977482722246
+    ]
+  },
+  "w_vz58": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6 -1 -3.25 12.956 0 180 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.183419 -1.000000 -1.925614 12.956000 0.000000 180.000000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -0.0,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.18341892597411658,
+      0.0,
+      1.3243864172158784
+    ]
+  },
+  "w_vz59": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.375 -0.721 -2.642 12.956 0.006 -179.813 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.643035 -0.721028 -1.021818 12.956000 0.006000 -179.813000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -2.973,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.2680348627519322,
+      -2.806854529346925e-05,
+      1.6201824789905555
+    ]
+  },
+  "w_vz61": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.26 -0.14 -1.481 4.494 -13.626 171.275 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.276760 -0.135937 -1.392730 4.494000 -13.626000 171.275000 0 0 0 0 0 0",
+    "holdtype": "pistol",
+    "original_pitch": 3.632,
+    "finger_pivot": [
+      5.77124,
+      -1.062561,
+      -1.740435
+    ],
+    "translation_delta": [
+      -0.016759969957937493,
+      0.004062714905614412,
+      0.08826971039641895
+    ]
+  },
+  "w_vz61_silencer": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.26 -0.14 -1.481 4.494 -13.626 171.275 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -7.276760 -0.135937 -1.392730 4.494000 -13.626000 171.275000 0 0 0 0 0 0",
+    "holdtype": "pistol",
+    "original_pitch": 3.632,
+    "finger_pivot": [
+      5.77124,
+      -1.062561,
+      -1.740435
+    ],
+    "translation_delta": [
+      -0.016759969957937493,
+      0.004062714905614412,
+      0.08826971039641895
+    ]
+  },
+  "w_welrod": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.512 -0.98 -1.298 4.494 -3.313 -170.164 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -3.679160 -0.970324 -0.732024 4.494000 -3.313000 -170.164000 0 0 0 0 0 0",
+    "holdtype": "pistol",
+    "original_pitch": -1.075,
+    "finger_pivot": [
+      5.77124,
+      -1.062561,
+      -1.740435
+    ],
+    "translation_delta": [
+      -0.16715995469626455,
+      0.009676436327976545,
+      0.5659756170035448
+    ]
+  },
+  "w_xm148": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6 -1 -3.25 12.956 0 180 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.183419 -1.000000 -1.925614 12.956000 0.000000 180.000000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -0.0,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.18341892597411658,
+      0.0,
+      1.3243864172158784
+    ]
+  },
+  "w_xm16super": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6 -1 -3.25 12.956 0 180 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.183419 -1.000000 -1.925614 12.956000 0.000000 180.000000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": -0.0,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.18341892597411658,
+      0.0,
+      1.3243864172158784
+    ]
+  },
+  "w_xm177": {
+    "before": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6 -1 -3.25 12.956 0 180 0 0 0 0 0 0",
+    "after": "$definebone \"ValveBiped.Bip01_R_Hand\" \"\" -6.183419 -1.000000 -1.925614 12.956000 0.000000 180.000000 0 0 0 0 0 0",
+    "holdtype": "ar2",
+    "original_pitch": 0,
+    "finger_pivot": [
+      5.740194,
+      -0.728902,
+      -1.469874
+    ],
+    "translation_delta": [
+      -0.18341892597411658,
+      0.0,
+      1.3243864172158784
+    ]
+  }
+}

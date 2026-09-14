@@ -1,6 +1,8 @@
 All oddities, visual bugs and WIP elements that need addressing
 (updated Dec. 12th, 2024)
 
+- [x] Sep. 14, 2026: Added the PTRD-41 Sniper kitbash with its canted Meopta optic, PTRD rig/animations and separate cartridge; cartridge visibility follows firing/reload state. Rebuilt M635 with the user's M601 receiver and its material path, moved only the magazine-in sound 0.5 seconds earlier on both reloads, and gave XM16 Super the M16A1 rifle-shot animations and playback rate. All three retain editable view/world QCs, local animation sources, rig includes and `compile.py` beside their original meshes. All six models compiled from those folders; fresh multiplayer asset/function checks and Lua syntax checks passed. Models require a full game restart. See `work/custom_weapon_validation/README.md`.
+
 - Pack is still dependent on ARC9/ArcCW/TacRP for muzzleflashes. ARC9 dependency for RT scope textures.
 
 - ~~Certain animations (especially sprint and ADS transitions) are affected by lack of IK chains. Unlikely to be fixed unless a breakthrough is made.~~ (Sep 6 2026: the IK touch rules are baked into the animations by the port, `work/bake_ik.py`)
@@ -33,6 +35,27 @@ NOTE: Please do not resort to using "snap" to fix this. "snap" should only be us
 - ~~RPK and TUL-1 bolts move too slowly when firing while deployed.~~ (Sep 6 2026: deployed shot bases scaled to the pose; RPK, TUL-1, M60, DP-28, RP-46, BAR, L2A1, M14E2, M1919, Stoner recompiled)
 
 - Some weapons have walk animations in ADS and others don't. Recommend all weapons dont play their walk animations in ADS for the sake of gameplay.
+
+## HUD, map transitions and worldmodel placement, Sep 14 2026
+
+- [x] Weapon switching briefly showed the HUD fully on before sliding in. Active-weapon
+  observation now initializes the incoming HUD before drawing; the outgoing HUD stays
+  hidden through the handover. Four switches and 5,051 rendered frames checked.
+- [x] Crosshairs fade during reload, including the finishing/pump stage of shell reloads.
+- [x] Retained weapons clear stale CurTime deadlines and unfinished actions at map/restore
+  boundaries. The reset runs outside prediction replay and preserves ammunition. Repeated
+  datatable setup also preserves selected modes and bolt/pump readiness.
+- [x] Bullet penetration now has category modification sliders, including All; the two
+  multipliers combine. All/category zero stops penetration. Thirty material-depth checks pass.
+- [x] The previous worldmodel pitch pass rotated around the hand origin below the trigger.
+  Corrected the translations of 181 supported worldmodels to preserve index-finger contact,
+  rebuilt and installed them, and inspected ten representative weapons in game.
+- [x] Addon artwork uses 57 randomly selected original-game HUD icons in darkened,
+  alternating horizontal rows, the actual MCV wordmark and "An Arctic Mod".
+  The rejected render collage is archived; the pattern excludes custom guns.
+
+See `work/CLOCK_AND_HUD.md`, `work/PENETRATION.md`, `work/WORLD_MODEL_CONTACT.md` and
+`work/artwork/README.md`. Fully restart the game for the rebuilt worldmodels.
 
 ## Rifle-grenade sights and fire modes, Sep 13 2026
 

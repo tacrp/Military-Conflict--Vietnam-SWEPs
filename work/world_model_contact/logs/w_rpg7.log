@@ -1,0 +1,79 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\w_rpg7\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\w_rpg7\w_rpg7.qc"
+Building binary model files...
+Working on "w_rpg7.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpg7\w_rpg7_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpg7\w_rpg7_bg_rocket_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpg7\w_rpg7_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpg7\w_rpg7_bg_rocket_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpg7\w_rpg7_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpg7\w_rpg7_bg_rocket_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpg7\w_rpg7_anims\idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpg7\w_rpg7_physics.smd
+Processing LOD for material: w_rpg7
+Lod 1: vertexes: 1479 (427 new)
+Lod 2: vertexes: 1728 (249 new)
+Processing LOD for material: w_rpg7
+Lod 1: vertexes: 300 (70 new)
+Lod 2: vertexes: 334 (34 new)
+Model has 5 convex sub-parts
+Collision model completed.
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_rpg7.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_rpg7.mdl
+   Found 1 preexisting sequences.
+bones         1648 bytes (3)
+animations     136 bytes (1 anims) (1 frames) [0:00]
+Building sequence index remapping table...
+No re-ordering required.
+sequences      228 bytes (1 seq) 
+ik/pose        476 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures        76 bytes
+keyvalues       20 bytes
+bone transforms      472 bytes
+bone flex driver       0 bytes
+Collision model volume 593.07 in^3
+collision        0 bytes
+total         3472
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_rpg7.vvd:
+vertices     82944 bytes (1728 vertices)
+vertices     16032 bytes (334 vertices)
+tangents     27648 bytes (1728 vertices)
+tangents      5344 bytes (334 vertices)
+total       132032 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_rpg7.dx80.vtx":
+body parts:        16 bytes
+models:           132 bytes
+model LODs:       108 bytes
+meshes:            54 bytes
+strip groups:     150 bytes
+strips:           162 bytes
+verts:          20295 bytes
+indices:        10764 bytes
+bone changes:      72 bytes
+everything:     31681 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_rpg7.dx90.vtx":
+body parts:        16 bytes
+models:           132 bytes
+model LODs:       108 bytes
+meshes:            54 bytes
+strip groups:     150 bytes
+strips:           162 bytes
+verts:          20295 bytes
+indices:        10764 bytes
+bone changes:      72 bytes
+everything:     31681 bytes
+
+Completed "w_rpg7.qc"

@@ -271,7 +271,10 @@ things and the script does the same:
    with a warning. The line matters on a bonemerged model even though the player's hand
    replaces the bone: the mesh stays where it is in model space while the bind pose moves, so
    in the hand the gun sits at the inverse of this line (that is what the Crowbar trial and
-   error tunes).
+   error tunes). The pitch correction now also translates that bind pose to keep the
+   index finger fixed: `world_model_contact.py` uses the finger positions measured in each
+   GMod hold type. Rotating with the old translation alone pivots below the trigger and
+   lifts the gun out of the hand. See `work/WORLD_MODEL_CONTACT.md` for the applied pass.
 4. `work/derive_hand_offsets.py` writes the derived table from the game's own placement rule.
    The game bonemerges a world model onto the player's `ValveBiped.weapon_bone`, which the
    player animation set of the weapon's class (`anim_prefix` in the weapon script, one of 118

@@ -1,0 +1,1 @@
+"GameInfo" { game "MCV custom compile" FileSystem { SteamAppId 4000 SearchPaths { Game |gameinfo_path|. Game "C:/Program Files (x86)/Steam/steamapps/common/GarrysMod/garrysmod" } } }

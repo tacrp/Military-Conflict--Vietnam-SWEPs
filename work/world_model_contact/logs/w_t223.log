@@ -1,0 +1,95 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\w_t223\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\w_t223\w_t223.qc"
+Building binary model files...
+Working on "w_t223.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_t223\w_t223_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_t223\w_t223_bayonet_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_t223\magazine_25.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_t223\magazine_40.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_t223\w_t223_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_t223\w_t223_bayonet_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_t223\magazine_25_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_t223\magazine_40_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_t223\w_t223_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_t223\w_t223_bayonet_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_t223\magazine_25_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_t223\magazine_40_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_t223\w_t223_anims\idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_t223\w_t223_physics.smd
+Processing LOD for material: w_t223
+Lod 1: vertexes: 1111 (130 new)
+Lod 2: vertexes: 1260 (149 new)
+Processing LOD for material: w_m7b
+Lod 1: vertexes: 656 (8 new)
+Lod 2: vertexes: 798 (142 new)
+Processing LOD for material: w_t223
+Processing LOD for material: w_t223
+Model has 4 convex sub-parts
+Collision model completed.
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_t223.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_t223.mdl
+   Found 1 preexisting sequences.
+bones         1888 bytes (4)
+animations     136 bytes (1 anims) (1 frames) [0:00]
+Building sequence index remapping table...
+No re-ordering required.
+sequences      232 bytes (1 seq) 
+ik/pose        788 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       140 bytes
+keyvalues       20 bytes
+bone transforms      608 bytes
+bone flex driver       0 bytes
+Collision model volume 171.51 in^3
+collision        0 bytes
+total         4544
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_t223.vvd:
+vertices     60480 bytes (1260 vertices)
+vertices     38304 bytes (798 vertices)
+vertices      2496 bytes (52 vertices)
+vertices      4032 bytes (84 vertices)
+tangents     20160 bytes (1260 vertices)
+tangents     12768 bytes (798 vertices)
+tangents       832 bytes (52 vertices)
+tangents      1344 bytes (84 vertices)
+total       140480 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_t223.dx80.vtx":
+body parts:        24 bytes
+models:           220 bytes
+model LODs:       180 bytes
+meshes:           108 bytes
+strip groups:     300 bytes
+strips:           324 bytes
+verts:          35631 bytes
+indices:        23628 bytes
+bone changes:     120 bytes
+everything:     60391 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_t223.dx90.vtx":
+body parts:        24 bytes
+models:           220 bytes
+model LODs:       180 bytes
+meshes:           108 bytes
+strip groups:     300 bytes
+strips:           324 bytes
+verts:          35631 bytes
+indices:        23628 bytes
+bone changes:     120 bytes
+everything:     60391 bytes
+
+Completed "w_t223.qc"

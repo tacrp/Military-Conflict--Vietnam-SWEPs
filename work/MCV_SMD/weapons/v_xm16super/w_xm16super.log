@@ -1,0 +1,68 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd\weapons\v_xm16super\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD\weapons\v_xm16super\compiled\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD\weapons\v_xm16super\w_xm16super.qc"
+Building binary model files...
+Working on "w_xm16super.qc"
+SMD MODEL assets/xm16super_world.smd
+SMD MODEL assets/idle.smd
+SMD MODEL assets/w_mk4mod0_physics.smd
+Processing LOD for material: m16a1
+Processing LOD for material: m203
+Processing LOD for material: shells_big
+Processing LOD for material: shells_small
+Processing LOD for material: lens_4x
+Processing LOD for material: 4x
+Processing LOD for material: xm177
+Processing LOD for material: m16_mag30
+Processing LOD for material: mk4mod0
+Processing LOD for material: m16a1_stock
+Model has 7 convex sub-parts
+Collision model completed.
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD\weapons\v_xm16super\compiled\models/weapons\mcv\w_xm16super.mdl:
+bones         1764 bytes (3)
+animations     132 bytes (1 anims) (1 frames) [0:00]
+sequences      228 bytes (1 seq) 
+ik/pose        164 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       676 bytes
+keyvalues       20 bytes
+bone transforms      472 bytes
+bone flex driver       0 bytes
+Collision model volume 166.97 in^3
+collision        0 bytes
+total         4984
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD\weapons\v_xm16super\compiled\models/weapons\mcv\w_xm16super.vvd:
+vertices   3144624 bytes (65513 vertices)
+tangents   1048208 bytes (65513 vertices)
+total      4192896 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD\weapons\v_xm16super\compiled\models/weapons\mcv\w_xm16super.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            90 bytes
+strip groups:     250 bytes
+strips:           270 bytes
+verts:         589158 bytes
+indices:       408864 bytes
+bone changes:      88 bytes
+everything:    998784 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD\weapons\v_xm16super\compiled\models/weapons\mcv\w_xm16super.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            90 bytes
+strip groups:     250 bytes
+strips:           270 bytes
+verts:         589158 bytes
+indices:       408864 bytes
+bone changes:      88 bytes
+everything:    998784 bytes
+
+Completed "w_xm16super.qc"

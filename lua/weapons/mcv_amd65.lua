@@ -12,6 +12,7 @@ SWEP.SubCategory = "Carbines"
 SWEP.Caliber = "7.62x39mm"
 
 SWEP.Slot = 3
+SWEP.HoldType = "smg"
 
 SWEP.ViewModel = "models/weapons/mcv/v_amd65.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_amd65.mdl"

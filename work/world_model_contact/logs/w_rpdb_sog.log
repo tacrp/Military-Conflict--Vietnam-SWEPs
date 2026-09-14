@@ -1,0 +1,86 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\w_rpdb_sog\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\w_rpdb_sog\w_rpdb_sog.qc"
+Building binary model files...
+Working on "w_rpdb_sog.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpdb_sog\w_rpdb_sog_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpdb_sog\rpd_long_belt_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpdb_sog\w_rpdb_sog_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpdb_sog\rpd_long_belt_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpdb_sog\w_rpdb_sog_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpdb_sog\rpd_long_belt_lod0_lod2.smd
+Marking bone ValveBiped.weapon_bone4_belt001 as a jiggle bone
+Marking bone ValveBiped.weapon_bone4_belt002 as a jiggle bone
+Marking bone ValveBiped.weapon_bone4_belt003 as a jiggle bone
+Marking bone ValveBiped.weapon_bone4_belt004 as a jiggle bone
+Marking bone ValveBiped.weapon_bone4_belt005 as a jiggle bone
+Marking bone ValveBiped.weapon_bone4_belt006 as a jiggle bone
+Marking bone ValveBiped.weapon_bone4_belt007 as a jiggle bone
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpdb_sog\w_rpdb_sog_anims\idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_rpdb_sog\w_rpdb_sog_physics.smd
+Processing LOD for material: w_rpd
+Lod 1: vertexes: 2453 (577 new)
+Lod 2: vertexes: 2902 (449 new)
+Processing LOD for material: vceq_ammobelt
+Lod 1: vertexes: 625 (213 new)
+Lod 2: vertexes: 714 (89 new)
+Model has 6 convex sub-parts
+Collision model completed.
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_rpdb_sog.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_rpdb_sog.mdl
+   Found 1 preexisting sequences.
+bones         5096 bytes (13)
+animations     128 bytes (1 anims) (1 frames) [0:00]
+Building sequence index remapping table...
+No re-ordering required.
+sequences      268 bytes (1 seq) 
+ik/pose        476 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       140 bytes
+keyvalues       20 bytes
+bone transforms     1832 bytes
+bone flex driver       0 bytes
+Collision model volume 242.08 in^3
+collision        0 bytes
+total         8732
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_rpdb_sog.vvd:
+vertices    139296 bytes (2902 vertices)
+vertices     34272 bytes (714 vertices)
+tangents     46432 bytes (2902 vertices)
+tangents     11424 bytes (714 vertices)
+total       231488 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_rpdb_sog.dx80.vtx":
+body parts:        16 bytes
+models:           132 bytes
+model LODs:       108 bytes
+meshes:            54 bytes
+strip groups:     150 bytes
+strips:           162 bytes
+verts:          38871 bytes
+indices:        22998 bytes
+bone changes:     264 bytes
+everything:     62683 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_rpdb_sog.dx90.vtx":
+body parts:        16 bytes
+models:           132 bytes
+model LODs:       108 bytes
+meshes:            54 bytes
+strip groups:     150 bytes
+strips:           162 bytes
+verts:          38871 bytes
+indices:        22998 bytes
+bone changes:     264 bytes
+everything:     62683 bytes
+
+Completed "w_rpdb_sog.qc"

@@ -1,0 +1,83 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\w_m605\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\w_m605\w_m605.qc"
+Building binary model files...
+Working on "w_m605.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m605\w_m605_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m605\w_magazine20_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m605\w_magazine30_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m605\w_m605_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m605\w_magazine20_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m605\w_magazine30_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m605\w_m605_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m605\w_magazine20_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m605\w_magazine30_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m605\w_m605_anims\idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m605\w_m605_physics.smd
+Processing LOD for material: w_m605
+Lod 1: vertexes: 3081 (1060 new)
+Lod 2: vertexes: 3439 (358 new)
+Processing LOD for material: w_m16a1
+Processing LOD for material: w_m203
+Model has 7 convex sub-parts
+Collision model completed.
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_m605.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_m605.mdl
+   Found 1 preexisting sequences.
+bones         1672 bytes (3)
+animations     128 bytes (1 anims) (1 frames) [0:00]
+Building sequence index remapping table...
+No re-ordering required.
+sequences      228 bytes (1 seq) 
+ik/pose        476 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       224 bytes
+keyvalues       20 bytes
+bone transforms      472 bytes
+bone flex driver       0 bytes
+Collision model volume 153.25 in^3
+collision        0 bytes
+total         3896
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_m605.vvd:
+vertices    165072 bytes (3439 vertices)
+vertices      3552 bytes (74 vertices)
+vertices      4896 bytes (102 vertices)
+tangents     55024 bytes (3439 vertices)
+tangents      1184 bytes (74 vertices)
+tangents      1632 bytes (102 vertices)
+total       231424 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_m605.dx80.vtx":
+body parts:        16 bytes
+models:           132 bytes
+model LODs:       108 bytes
+meshes:            81 bytes
+strip groups:     225 bytes
+strips:           243 bytes
+verts:          36684 bytes
+indices:        19806 bytes
+bone changes:      96 bytes
+everything:     57319 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_m605.dx90.vtx":
+body parts:        16 bytes
+models:           132 bytes
+model LODs:       108 bytes
+meshes:            81 bytes
+strip groups:     225 bytes
+strips:           243 bytes
+verts:          36684 bytes
+indices:        19806 bytes
+bone changes:      96 bytes
+everything:     57319 bytes
+
+Completed "w_m605.qc"

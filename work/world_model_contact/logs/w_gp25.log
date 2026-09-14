@@ -1,0 +1,70 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\w_gp25\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\w_gp25\w_gp25.qc"
+Building binary model files...
+Working on "w_gp25.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_gp25\w_gp25_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_gp25\w_gp25_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_gp25\w_gp25_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_gp25\w_gp25_anims\idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_gp25\w_gp25_physics.smd
+Processing LOD for material: w_akm
+Lod 1: vertexes: 3159 (801 new)
+Lod 2: vertexes: 3582 (423 new)
+Processing LOD for material: w_gp25
+Lod 1: vertexes: 5031 (430 new)
+Lod 2: vertexes: 5316 (285 new)
+Model has 9 convex sub-parts
+Collision model completed.
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_gp25.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_gp25.mdl
+   Found 1 preexisting sequences.
+bones         1740 bytes (3)
+animations     124 bytes (1 anims) (1 frames) [0:00]
+Building sequence index remapping table...
+No re-ordering required.
+sequences      228 bytes (1 seq) 
+ik/pose        164 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       140 bytes
+keyvalues       20 bytes
+bone transforms      472 bytes
+bone flex driver       0 bytes
+Collision model volume 196.77 in^3
+collision        0 bytes
+total         3316
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_gp25.vvd:
+vertices    255168 bytes (5316 vertices)
+tangents     85056 bytes (5316 vertices)
+total       340288 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_gp25.dx80.vtx":
+body parts:         8 bytes
+models:            44 bytes
+model LODs:        36 bytes
+meshes:            54 bytes
+strip groups:     150 bytes
+strips:           162 bytes
+verts:          54027 bytes
+indices:        31512 bytes
+bone changes:      96 bytes
+everything:     86089 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_gp25.dx90.vtx":
+body parts:         8 bytes
+models:            44 bytes
+model LODs:        36 bytes
+meshes:            54 bytes
+strip groups:     150 bytes
+strips:           162 bytes
+verts:          54027 bytes
+indices:        31512 bytes
+bone changes:      96 bytes
+everything:     86089 bytes
+
+Completed "w_gp25.qc"

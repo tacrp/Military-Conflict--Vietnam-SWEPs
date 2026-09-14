@@ -1,0 +1,77 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\w_c96_stock\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\w_c96_stock\w_c96_stock.qc"
+Building binary model files...
+Working on "w_c96_stock.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_c96_stock\w_c96_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_c96_stock\w_c96_stock.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_c96_stock\w_c96_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_c96_stock\w_c96_stock_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_c96_stock\w_c96_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_c96_stock\w_c96_stock_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_c96_stock\w_c96_stock_anims\idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_c96_stock\w_c96_stock_physics.smd
+Processing LOD for material: w_mauser96
+Lod 1: vertexes: 755 (74 new)
+Lod 2: vertexes: 884 (129 new)
+Processing LOD for material: w_mauser96_stock
+Lod 1: vertexes: 125 (3 new)
+Lod 2: vertexes: 151 (26 new)
+Model has 2 convex sub-parts
+Collision model completed.
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_c96_stock.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_c96_stock.mdl
+   Found 1 preexisting sequences.
+bones         1672 bytes (3)
+animations     128 bytes (1 anims) (1 frames) [0:00]
+Building sequence index remapping table...
+No re-ordering required.
+sequences      228 bytes (1 seq) 
+ik/pose        328 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       140 bytes
+keyvalues       20 bytes
+bone transforms      472 bytes
+bone flex driver       0 bytes
+Collision model volume 149.41 in^3
+collision        0 bytes
+total         3440
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_c96_stock.vvd:
+vertices     42432 bytes (884 vertices)
+vertices      7248 bytes (151 vertices)
+tangents     14144 bytes (884 vertices)
+tangents      2416 bytes (151 vertices)
+total        66304 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_c96_stock.dx80.vtx":
+body parts:        16 bytes
+models:            88 bytes
+model LODs:        72 bytes
+meshes:            54 bytes
+strip groups:     150 bytes
+strips:           162 bytes
+verts:          16146 bytes
+indices:        10098 bytes
+bone changes:      72 bytes
+everything:     26822 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_c96_stock.dx90.vtx":
+body parts:        16 bytes
+models:            88 bytes
+model LODs:        72 bytes
+meshes:            54 bytes
+strip groups:     150 bytes
+strips:           162 bytes
+verts:          16146 bytes
+indices:        10098 bytes
+bone changes:      72 bytes
+everything:     26822 bytes
+
+Completed "w_c96_stock.qc"

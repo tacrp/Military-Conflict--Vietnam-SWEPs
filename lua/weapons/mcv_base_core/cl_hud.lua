@@ -1,9 +1,8 @@
 // HUD for every MCV weapon: crosshair, the ammo block bottom right with the weapon's icon
 // behind it, control hints that fade out after a deploy, and in / out animations on switching.
 //
-// Realms: Deploy and Holster do not run on the client in singleplayer, so nothing here relies
-// on them. A deploy is detected by DrawHUD being called for a weapon that was not drawn the
-// frame before; a holster by the networked HolsterTime running (mcv_base_core/sh_deploy.lua).
+// Deploy need not run clientside. Observe the actual active weapon before drawing;
+// holster-out still follows the predicted HolsterTime.
 
 MCV.HUD = MCV.HUD or {}
 local HUD = MCV.HUD
@@ -58,12 +57,29 @@ end
 // ---------------------------------------------------------------------------------------
 
 // 0..1 how far the HUD is "in". Combines the deploy slide-in with the holster slide-out.
+local function observeHUDWeapon()
+    local player = LocalPlayer()
+    local active = IsValid(player) and player:GetActiveWeapon() or NULL
+    if HUD.ActiveWeapon == active then return end
+    HUD.ActiveWeapon = active
+    if IsValid(active) and active.MilitaryConflictVietnam then
+        active.HUDLastFrame = nil
+        active.CrosshairReloadAlpha = 1
+        active.CrosshairWasReloading = false
+        active.CrosshairReloadUntil = nil
+    end
+end
+hook.Add("PreDrawHUD", "MCV_HUDWeaponSwitch", observeHUDWeapon)
+
 function SWEP:GetHUDBlend()
+    observeHUDWeapon()
+    if HUD.ActiveWeapon != self then return 0 end
     local now = CurTime()
     local frame = FrameNumber()
 
     // deploy: first frame this weapon is drawn again
-    if self.HUDLastFrame == nil or frame - self.HUDLastFrame > 2 then
+    if self.HUDLastFrame == nil or frame < self.HUDLastFrame or frame - self.HUDLastFrame > 2
+            or now < (self.HUDDeployTime or now) then
         self.HUDDeployTime = now
         self.HUDHolsterStart = nil
         self.HUDHintsStart = now
@@ -84,8 +100,10 @@ function SWEP:GetHUDBlend()
         end
         local out = ease((now - self.HUDHolsterStart) / math.min(self.HUDHolsterLen, HUD.OutTimeDefault * 2))
         blend = blend * (1 - out)
-    elseif ht < 0 then
-        blend = 0 // switch handed over, gone
+    elseif ht < 0 or self.HUDHolsterStart then
+        // The deadline can expire/clear one frame before ActiveWeapon changes.
+        // Stay out through that handover instead of flashing fully on again.
+        blend = 0
     else
         self.HUDHolsterStart = nil
     end
@@ -378,7 +396,18 @@ end
 
 function SWEP:DoDrawCrosshair(x, y)
     local blend = self:GetHUDBlend()
-    local a = (1 - self:GetSightAmountVisual()) * 100 * blend
+    local reloading = self:GetReloading()
+    if reloading then
+        self.CrosshairReloadUntil = nil
+    elseif self.CrosshairWasReloading then
+        // Shotgun Reloading clears as the finishing/pump animation starts.
+        self.CrosshairReloadUntil = self:GetAnimLockTime()
+    end
+    self.CrosshairWasReloading = reloading
+    local reloadTarget = (reloading or (self.CrosshairReloadUntil or 0) > CurTime()) and 0 or 1
+    self.CrosshairReloadAlpha = math.Approach(self.CrosshairReloadAlpha or 1,
+        reloadTarget, FrameTime() * 8)
+    local a = (1 - self:GetSightAmountVisual()) * 100 * blend * self.CrosshairReloadAlpha
     if a <= 0 then return true end
 
     local col = crosshair_col

@@ -1,0 +1,95 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\w_stoner63a_carbine\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\w_stoner63a_carbine\w_stoner63a_carbine.qc"
+Building binary model files...
+Working on "w_stoner63a_carbine.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_stoner63a_carbine\w_stoner63a_carbine_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_stoner63a_carbine\w_stoner63a_carbine_bayonet_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_stoner63a_carbine\mesh_mag_1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_stoner63a_carbine\mesh_mag_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_stoner63a_carbine\w_stoner63a_carbine_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_stoner63a_carbine\w_stoner63a_carbine_bayonet_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_stoner63a_carbine\mesh_mag_1_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_stoner63a_carbine\mesh_mag_2_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_stoner63a_carbine\w_stoner63a_carbine_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_stoner63a_carbine\w_stoner63a_carbine_bayonet_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_stoner63a_carbine\mesh_mag_1_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_stoner63a_carbine\mesh_mag_2_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_stoner63a_carbine\w_stoner63a_carbine_anims\idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_stoner63a_carbine\w_stoner63a_carbine_physics.smd
+Processing LOD for material: w_stoner63a
+Lod 1: vertexes: 1029 (94 new)
+Lod 2: vertexes: 1103 (74 new)
+Processing LOD for material: w_m7b
+Lod 1: vertexes: 669 (21 new)
+Lod 2: vertexes: 818 (149 new)
+Processing LOD for material: w_stoner63a
+Processing LOD for material: w_stoner63a
+Model has 3 convex sub-parts
+Collision model completed.
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_stoner63a_carbine.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_stoner63a_carbine.mdl
+   Found 1 preexisting sequences.
+bones         1956 bytes (4)
+animations     132 bytes (1 anims) (1 frames) [0:00]
+Building sequence index remapping table...
+No re-ordering required.
+sequences      232 bytes (1 seq) 
+ik/pose        788 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       144 bytes
+keyvalues       20 bytes
+bone transforms      608 bytes
+bone flex driver       0 bytes
+Collision model volume 185.12 in^3
+collision        0 bytes
+total         4632
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_stoner63a_carbine.vvd:
+vertices     52944 bytes (1103 vertices)
+vertices     39264 bytes (818 vertices)
+vertices      2496 bytes (52 vertices)
+vertices      4224 bytes (88 vertices)
+tangents     17648 bytes (1103 vertices)
+tangents     13088 bytes (818 vertices)
+tangents       832 bytes (52 vertices)
+tangents      1408 bytes (88 vertices)
+total       131968 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_stoner63a_carbine.dx80.vtx":
+body parts:        24 bytes
+models:           220 bytes
+model LODs:       180 bytes
+meshes:           108 bytes
+strip groups:     300 bytes
+strips:           324 bytes
+verts:          37665 bytes
+indices:        23184 bytes
+bone changes:     120 bytes
+everything:     61981 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_stoner63a_carbine.dx90.vtx":
+body parts:        24 bytes
+models:           220 bytes
+model LODs:       180 bytes
+meshes:           108 bytes
+strip groups:     300 bytes
+strips:           324 bytes
+verts:          37665 bytes
+indices:        23184 bytes
+bone changes:     120 bytes
+everything:     61981 bytes
+
+Completed "w_stoner63a_carbine.qc"

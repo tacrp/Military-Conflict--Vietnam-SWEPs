@@ -1,0 +1,78 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\w_m14e2_sog\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\w_m14e2_sog\w_m14e2_sog.qc"
+Building binary model files...
+Working on "w_m14e2_sog.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m14e2_sog\w_m14e2_sog_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m14e2_sog\w_m14e2_handle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m14e2_sog\w_m14e2_sog_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m14e2_sog\w_m14e2_handle_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m14e2_sog\w_m14e2_sog_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m14e2_sog\w_m14e2_handle_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m14e2_sog\w_m14e2_sog_anims\idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_m14e2_sog\w_m14e2_sog_physics.smd
+Processing LOD for material: w_m21
+Lod 1: vertexes: 3587 (1266 new)
+Lod 2: vertexes: 4028 (441 new)
+Processing LOD for material: w_m14e2
+Lod 1: vertexes: 4950 (317 new)
+Lod 2: vertexes: 5020 (70 new)
+Processing LOD for material: w_m14e2
+Model has 3 convex sub-parts
+Collision model completed.
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_m14e2_sog.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_m14e2_sog.mdl
+   Found 1 preexisting sequences.
+bones         1672 bytes (3)
+animations     128 bytes (1 anims) (1 frames) [0:00]
+Building sequence index remapping table...
+No re-ordering required.
+sequences      228 bytes (1 seq) 
+ik/pose        328 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       140 bytes
+keyvalues       20 bytes
+bone transforms      472 bytes
+bone flex driver       0 bytes
+Collision model volume 238.23 in^3
+collision        0 bytes
+total         3544
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_m14e2_sog.vvd:
+vertices    240960 bytes (5020 vertices)
+vertices      3936 bytes (82 vertices)
+tangents     80320 bytes (5020 vertices)
+tangents      1312 bytes (82 vertices)
+total       326592 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_m14e2_sog.dx80.vtx":
+body parts:        16 bytes
+models:            88 bytes
+model LODs:        72 bytes
+meshes:            81 bytes
+strip groups:     225 bytes
+strips:           243 bytes
+verts:          51192 bytes
+indices:        33246 bytes
+bone changes:     120 bytes
+everything:     85247 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_m14e2_sog.dx90.vtx":
+body parts:        16 bytes
+models:            88 bytes
+model LODs:        72 bytes
+meshes:            81 bytes
+strip groups:     225 bytes
+strips:           243 bytes
+verts:          51192 bytes
+indices:        33246 bytes
+bone changes:     120 bytes
+everything:     85247 bytes
+
+Completed "w_m14e2_sog.qc"

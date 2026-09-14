@@ -1,0 +1,10 @@
+lua local r={} for _,w in ipairs(ply:GetWeapons()) do if w.MilitaryConflictVietnam then r[#r+1]={class=w:GetClass(),marker=w.MCVClockTransitionMarker,clip=w:Clip1(),mode=w:GetFiremode(),fire=w:GetNextPrimaryFire(),lock=w:GetAnimLockTime(),serial=w:GetClockResetSerial(),reload=w:GetReloading()} end end file.Write("mcv_harness/p27016/results/clock_map_return.json",util.TableToJSON({map=game.GetMap(),time=CurTime(),weapons=r},true))
+clua input.SelectWeapon(ply:GetWeapon("mcv_m16a1"))
+wait 2
+lua MCVClockPost={before=ply:GetActiveWeapon():Clip1(),class=ply:GetActiveWeapon():GetClass(),time=CurTime(),mode=ply:GetActiveWeapon():GetFiremode()}
+tap +attack 0.1
+wait 1
+lua MCVClockPost.afterFire=ply:GetActiveWeapon():Clip1()
+tap +reload 0.1
+wait 4
+lua MCVClockPost.afterReload=ply:GetActiveWeapon():Clip1() MCVClockPost.ok=MCVClockPost.afterFire<MCVClockPost.before and MCVClockPost.afterReload>MCVClockPost.afterFire file.Write("mcv_harness/p27016/results/clock_post_input.json",util.TableToJSON(MCVClockPost,true))

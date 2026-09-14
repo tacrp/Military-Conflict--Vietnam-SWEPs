@@ -1,0 +1,85 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\w_pk\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\w_pk\w_pk.qc"
+Building binary model files...
+Working on "w_pk.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_pk\w_pk_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_pk\w_pk_bipod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_pk\w_pk_bipod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_pk\w_pk_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_pk\w_pk_bipod1_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_pk\w_pk_bipod2_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_pk\w_pk_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_pk\w_pk_bipod1_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_pk\w_pk_bipod2_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_pk\w_pk_anims\idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_pk\w_pk_physics.smd
+Processing LOD for material: w_pk
+Lod 1: vertexes: 2191 (148 new)
+Lod 2: vertexes: 2427 (236 new)
+Processing LOD for material: vceq_ammobelt
+Processing LOD for material: w_pk
+Processing LOD for material: w_pk
+Processing LOD for material: w_spring
+Model has 4 convex sub-parts
+Collision model completed.
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_pk.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_pk.mdl
+   Found 1 preexisting sequences.
+bones         2312 bytes (5)
+animations     128 bytes (1 anims) (1 frames) [0:00]
+Building sequence index remapping table...
+No re-ordering required.
+sequences      236 bytes (1 seq) 
+ik/pose        476 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       212 bytes
+keyvalues       20 bytes
+bone transforms      744 bytes
+bone flex driver       0 bytes
+Collision model volume 309.37 in^3
+collision        0 bytes
+total         5020
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_pk.vvd:
+vertices    125808 bytes (2621 vertices)
+vertices      8160 bytes (170 vertices)
+vertices     10320 bytes (215 vertices)
+tangents     41936 bytes (2621 vertices)
+tangents      2720 bytes (170 vertices)
+tangents      3440 bytes (215 vertices)
+total       192448 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_pk.dx80.vtx":
+body parts:        16 bytes
+models:           132 bytes
+model LODs:       108 bytes
+meshes:           135 bytes
+strip groups:     375 bytes
+strips:           405 bytes
+verts:          60948 bytes
+indices:        35070 bytes
+bone changes:     192 bytes
+everything:     97309 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_pk.dx90.vtx":
+body parts:        16 bytes
+models:           132 bytes
+model LODs:       108 bytes
+meshes:           135 bytes
+strip groups:     375 bytes
+strips:           405 bytes
+verts:          60948 bytes
+indices:        35070 bytes
+bone changes:     192 bytes
+everything:     97309 bytes
+
+Completed "w_pk.qc"

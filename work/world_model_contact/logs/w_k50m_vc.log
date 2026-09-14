@@ -1,0 +1,76 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\w_k50m_vc\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\w_k50m_vc\w_k50m_vc.qc"
+Building binary model files...
+Working on "w_k50m_vc.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_k50m_vc\w_k50m_vc_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_k50m_vc\w_k50m_vc_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_k50m_vc\w_k50m_vc_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_k50m_vc\w_k50m_vc_anims\idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_k50m_vc\w_k50m_vc_physics.smd
+Processing LOD for material: w_k50m
+Lod 1: vertexes: 1257 (144 new)
+Lod 2: vertexes: 1479 (222 new)
+Processing LOD for material: w_m1c
+Lod 1: vertexes: 1741 (20 new)
+Lod 2: vertexes: 1766 (25 new)
+Processing LOD for material: w_m1a1c
+Lod 1: vertexes: 2567 (36 new)
+Lod 2: vertexes: 2672 (105 new)
+Processing LOD for material: w_akm
+Lod 1: vertexes: 3043 (79 new)
+Lod 2: vertexes: 3096 (53 new)
+Model has 5 convex sub-parts
+Collision model completed.
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_k50m_vc.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_k50m_vc.mdl
+   Found 1 preexisting sequences.
+bones         1740 bytes (3)
+animations     124 bytes (1 anims) (1 frames) [0:00]
+Building sequence index remapping table...
+No re-ordering required.
+sequences      228 bytes (1 seq) 
+ik/pose        164 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       280 bytes
+keyvalues       20 bytes
+bone transforms      472 bytes
+bone flex driver       0 bytes
+Collision model volume 84.64 in^3
+collision        0 bytes
+total         3756
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_k50m_vc.vvd:
+vertices    148608 bytes (3096 vertices)
+tangents     49536 bytes (3096 vertices)
+total       198208 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_k50m_vc.dx80.vtx":
+body parts:         8 bytes
+models:            44 bytes
+model LODs:        36 bytes
+meshes:           108 bytes
+strip groups:     300 bytes
+strips:           324 bytes
+verts:          46278 bytes
+indices:        28242 bytes
+bone changes:     144 bytes
+everything:     75484 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_k50m_vc.dx90.vtx":
+body parts:         8 bytes
+models:            44 bytes
+model LODs:        36 bytes
+meshes:           108 bytes
+strip groups:     300 bytes
+strips:           324 bytes
+verts:          46278 bytes
+indices:        28242 bytes
+bone changes:     144 bytes
+everything:     75484 bytes
+
+Completed "w_k50m_vc.qc"

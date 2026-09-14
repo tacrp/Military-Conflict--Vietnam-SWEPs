@@ -1,0 +1,104 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\w_xm177\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\w_xm177\w_xm177.qc"
+Building binary model files...
+Working on "w_xm177.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_xm177\w_xm177_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_xm177\w_car15_scope_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_xm177\w_single_point_OEG.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_xm177\w_magazine30_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_xm177\w_magazine20_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_xm177\w_xm177_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_xm177\w_car15_scope_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_xm177\w_single_point_OEG_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_xm177\w_magazine30_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_xm177\w_magazine20_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_xm177\w_xm177_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_xm177\w_car15_scope_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_xm177\w_single_point_OEG_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_xm177\w_magazine30_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_xm177\w_magazine20_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_xm177\w_xm177_anims\idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_xm177\w_xm177_physics.smd
+Processing LOD for material: w_car15
+Lod 1: vertexes: 3519 (910 new)
+Lod 2: vertexes: 4033 (514 new)
+Processing LOD for material: 4x
+Lod 1: vertexes: 2511 (411 new)
+Lod 2: vertexes: 2676 (165 new)
+Processing LOD for material: w_single_point
+Processing LOD for material: w_single_point_glass
+Processing LOD for material: w_m203
+Processing LOD for material: w_m16a1
+Model has 7 convex sub-parts
+Collision model completed.
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_xm177.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_xm177.mdl
+   Found 1 preexisting sequences.
+bones         1672 bytes (3)
+animations     128 bytes (1 anims) (1 frames) [0:00]
+Building sequence index remapping table...
+No re-ordering required.
+sequences      228 bytes (1 seq) 
+ik/pose        936 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       412 bytes
+keyvalues       20 bytes
+bone transforms      472 bytes
+bone flex driver       0 bytes
+Collision model volume 127.21 in^3
+collision        0 bytes
+total         4880
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_xm177.vvd:
+vertices    193584 bytes (4033 vertices)
+vertices    128448 bytes (2676 vertices)
+vertices     26160 bytes (545 vertices)
+vertices      4896 bytes (102 vertices)
+vertices      3552 bytes (74 vertices)
+tangents     64528 bytes (4033 vertices)
+tangents     42816 bytes (2676 vertices)
+tangents      8720 bytes (545 vertices)
+tangents      1632 bytes (102 vertices)
+tangents      1184 bytes (74 vertices)
+total       475584 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_xm177.dx80.vtx":
+body parts:        24 bytes
+models:           264 bytes
+model LODs:       216 bytes
+meshes:           162 bytes
+strip groups:     450 bytes
+strips:           486 bytes
+verts:          97542 bytes
+indices:        57144 bytes
+bone changes:     168 bytes
+everything:    156276 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_xm177.dx90.vtx":
+body parts:        24 bytes
+models:           264 bytes
+model LODs:       216 bytes
+meshes:           162 bytes
+strip groups:     450 bytes
+strips:           486 bytes
+verts:          97542 bytes
+indices:        57144 bytes
+bone changes:     168 bytes
+everything:    156276 bytes
+
+Completed "w_xm177.qc"

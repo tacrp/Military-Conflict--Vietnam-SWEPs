@@ -1,0 +1,160 @@
+[
+	{
+		"world": "models/weapons/mcv/w_ptrd41_s.mdl",
+		"shootRate": 0.5,
+		"bodygroups": [
+			{
+				"submodels": {
+					"0": "Ref_new.smd"
+				},
+				"num": 1,
+				"name": "studio",
+				"id": 0
+			},
+			{
+				"submodels": {
+					"0": "assets/Ref_Bullet.smd",
+					"1": "empty"
+				},
+				"num": 2,
+				"name": "bulletDisplay",
+				"id": 1
+			}
+		],
+		"clip": 1,
+		"class": "mcv_ptrd_sniper",
+		"materials": [
+			"models/weapons/mcv/v_ptrd41/ptrd41",
+			"models/weapons/mcv/v_vz54/v_vz54_scope",
+			"models/weapons/mcv/optics/crosshair_meopta256",
+			"models/weapons/mcv/shells/shells_small_lmg"
+		],
+		"worldMaterials": [
+			"models/weapons/mcv/w_ptrd41/w_ptrd41",
+			"models/weapons/mcv/shells/shells_small",
+			"models/weapons/mcv/v_vz54/v_vz54_scope",
+			"models/weapons/mcv/optics/crosshair_meopta256"
+		],
+		"model": "models/weapons/mcv/v_ptrd41_s.mdl"
+	},
+	{
+		"shootRate": 0.1,
+		"materials": [
+			"models/weapons/mcv/v_m16a1/xm177",
+			"models/weapons/mcv/v_m16a1/m16a1",
+			"models/weapons/mcv/v_uzi/uzi",
+			"models/weapons/mcv/v_m601/m601"
+		],
+		"model": "models/weapons/mcv/v_m635.mdl",
+		"clip": 32,
+		"reloadEvents": {
+			"reload": {
+				"fadeintime": 0.20000000298023224,
+				"bbmin": "[-32.8635 -15.0184 -27.509]",
+				"numevents": 5,
+				"bbmax": "[37.5973 22.6067 12.9176]",
+				"label": "reload",
+				"localentrynode": 1,
+				"cycleposeindex": 0,
+				"nextseq": 0,
+				"localexitnode": 1,
+				"pose": 0,
+				"numblends": 2,
+				"nodeflags": 0,
+				"activityname": "ACT_VM_RELOAD",
+				"anims": [
+					50,
+					51
+				],
+				"flags": 12288,
+				"fadeouttime": 0.20000000298023224,
+				"activity": 183,
+				"lastframe": 0,
+				"actweight": 1
+			},
+			"reload_empty": {
+				"fadeintime": 0.20000000298023224,
+				"bbmin": "[-32.8635 -14.6444 -27.509]",
+				"numevents": 8,
+				"bbmax": "[37.5973 22.6067 12.9176]",
+				"label": "reload_empty",
+				"localentrynode": 1,
+				"cycleposeindex": 0,
+				"nextseq": 0,
+				"localexitnode": 1,
+				"pose": 0,
+				"numblends": 2,
+				"nodeflags": 0,
+				"activityname": "ACT_VM_RELOADEMPTY",
+				"anims": [
+					52,
+					53
+				],
+				"flags": 12288,
+				"fadeouttime": 0.20000000298023224,
+				"activity": 1927,
+				"lastframe": 0,
+				"actweight": 1
+			}
+		},
+		"class": "mcv_m635",
+		"world": "models/weapons/mcv/w_m635.mdl",
+		"worldMaterials": [
+			"models/weapons/mcv/v_m16a1/xm177",
+			"models/weapons/mcv/v_m16a1/m16a1",
+			"models/weapons/mcv/v_uzi/uzi",
+			"models/weapons/mcv/v_m601/m601"
+		],
+		"bodygroups": [
+			{
+				"submodels": {
+					"0": "m635.smd"
+				},
+				"num": 1,
+				"name": "studio",
+				"id": 0
+			}
+		]
+	},
+	{
+		"world": "models/weapons/mcv/w_xm16super.mdl",
+		"shootRate": 0.5,
+		"bodygroups": [
+			{
+				"submodels": {
+					"0": "xm16super.smd"
+				},
+				"num": 1,
+				"name": "studio",
+				"id": 0
+			}
+		],
+		"clip": 30,
+		"class": "mcv_xm16super",
+		"materials": [
+			"models/weapons/mcv/v_m16a1/m16a1",
+			"models/weapons/mcv/v_m16a1/m203",
+			"models/weapons/mcv/shells/shells_big",
+			"models/weapons/mcv/shells/shells_small",
+			"models/weapons/mcv/optics/lens_4x",
+			"models/weapons/mcv/v_m16a1/4x",
+			"models/weapons/mcv/v_m16a1/xm177",
+			"models/weapons/mcv/v_m16a1/m16_mag30",
+			"models/weapons/mcv/v_m16a1/mk4mod0",
+			"models/weapons/mcv/v_m16a1/m16a1_stock"
+		],
+		"worldMaterials": [
+			"models/weapons/mcv/v_m16a1/m16a1",
+			"models/weapons/mcv/v_m16a1/m203",
+			"models/weapons/mcv/shells/shells_big",
+			"models/weapons/mcv/shells/shells_small",
+			"models/weapons/mcv/optics/lens_4x",
+			"models/weapons/mcv/v_m16a1/4x",
+			"models/weapons/mcv/v_m16a1/xm177",
+			"models/weapons/mcv/v_m16a1/m16_mag30",
+			"models/weapons/mcv/v_m16a1/mk4mod0",
+			"models/weapons/mcv/v_m16a1/m16a1_stock"
+		],
+		"model": "models/weapons/mcv/v_xm16super.mdl"
+	}
+]

@@ -1,0 +1,41 @@
+{
+	"results": [
+		{
+			"category": 1,
+			"unrelated": 1,
+			"effective": 1,
+			"all": 1
+		},
+		{
+			"category": 1,
+			"unrelated": 1,
+			"effective": 2,
+			"all": 2
+		},
+		{
+			"category": 0.5,
+			"unrelated": 1,
+			"effective": 0.5,
+			"all": 1
+		},
+		{
+			"category": 3,
+			"unrelated": 9,
+			"effective": 6,
+			"all": 2
+		},
+		{
+			"category": 3,
+			"unrelated": 1,
+			"effective": 0,
+			"all": 0
+		},
+		{
+			"category": 0,
+			"unrelated": 1,
+			"effective": 0,
+			"all": 2
+		}
+	],
+	"ok": true
+}

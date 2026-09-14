@@ -1726,7 +1726,7 @@ def step_validate(qc, ctx):
 #
 # Measured by work/measure_world_model_pitch.py, listed per model in
 # work/world_model_pitch_targets.json, and proven in game on the bazooka and the Type 63.
-# The pitch is set outright rather than nudged, and the position numbers are left alone.
+# Pitch is set outright; translation preserves the measured trigger-finger anchor.
 _PITCH_TARGETS = None
 
 
@@ -1759,8 +1759,10 @@ def apply_pitch_delta(name, hand_line, ctx):
     if abs(was - target) < 0.001:
         return hand_line
 
-    ctx.note("world pitch %g -> %g" % (was, target))
-    return "%s%g%s" % (m.group(1), target, m.group(3))
+    from world_model_contact import pitch_hand_line
+    hold = _PITCH_TARGETS[name]["holdtype"]
+    ctx.note("world pitch %g -> %g about the trigger finger" % (was, target))
+    return pitch_hand_line(hand_line, target, hold)
 
 
 # Hand-tuned ValveBiped.Bip01_R_Hand offsets from the hand port: x y z rx ry rz. The gun bone is

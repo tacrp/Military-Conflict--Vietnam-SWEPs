@@ -1,0 +1,87 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\w_dp28\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\w_dp28\w_dp28.qc"
+Building binary model files...
+Working on "w_dp28.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_dp28\w_dp28_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_dp28\w_dp28_bipod1_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_dp28\w_dp28_bipod2_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_dp28\w_dp28_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_dp28\w_dp28_bipod1_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_dp28\w_dp28_bipod2_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_dp28\w_dp28_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_dp28\w_dp28_bipod1_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_dp28\w_dp28_bipod2_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_dp28\w_dp28_anims\idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_dp28\w_dp28_physics.smd
+Processing LOD for material: w_dp28
+Lod 1: vertexes: 2595 (705 new)
+Lod 2: vertexes: 3087 (492 new)
+Processing LOD for material: w_dp28
+Lod 1: vertexes: 322 (94 new)
+Lod 2: vertexes: 358 (36 new)
+Processing LOD for material: w_dp28
+Lod 1: vertexes: 322 (94 new)
+Lod 2: vertexes: 358 (36 new)
+Model has 9 convex sub-parts
+Collision model completed.
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_dp28.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_dp28.mdl
+   Found 1 preexisting sequences.
+bones         1740 bytes (3)
+animations     124 bytes (1 anims) (1 frames) [0:00]
+Building sequence index remapping table...
+No re-ordering required.
+sequences      228 bytes (1 seq) 
+ik/pose        476 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures        76 bytes
+keyvalues       20 bytes
+bone transforms      472 bytes
+bone flex driver       0 bytes
+Collision model volume 291.59 in^3
+collision        0 bytes
+total         3680
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_dp28.vvd:
+vertices    148176 bytes (3087 vertices)
+vertices     17184 bytes (358 vertices)
+vertices     17184 bytes (358 vertices)
+tangents     49392 bytes (3087 vertices)
+tangents      5728 bytes (358 vertices)
+tangents      5728 bytes (358 vertices)
+total       243456 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_dp28.dx80.vtx":
+body parts:        16 bytes
+models:           132 bytes
+model LODs:       108 bytes
+meshes:            81 bytes
+strip groups:     225 bytes
+strips:           243 bytes
+verts:          38565 bytes
+indices:        22554 bytes
+bone changes:     120 bytes
+everything:     61972 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_dp28.dx90.vtx":
+body parts:        16 bytes
+models:           132 bytes
+model LODs:       108 bytes
+meshes:            81 bytes
+strip groups:     225 bytes
+strips:           243 bytes
+verts:          38565 bytes
+indices:        22554 bytes
+bone changes:     120 bytes
+everything:     61972 bytes
+
+Completed "w_dp28.qc"

@@ -1,0 +1,53 @@
+key -attack
+key -attack2
+hud 0
+lua ply:GodEnable() ply:SetModel("models/player/kleiner.mdl")
+pos -704 576 -12288
+ang 0 0 0
+clua include("mcv_harness/worldmodel_contact.lua") gui.HideGameUI() if gui.IsConsoleVisible() then ply:ConCommand("toggleconsole") end
+strip
+give mcv_ak47
+wait 2
+clua MCVContact.Record("after")
+shot contact_after_ak47
+strip
+give mcv_swm76
+wait 2
+clua MCVContact.Record("after")
+shot contact_after_swm76
+strip
+give mcv_m1911a1
+wait 2
+clua MCVContact.Record("after")
+shot contact_after_m1911
+strip
+give mcv_chinalake
+wait 2
+clua MCVContact.Record("after")
+shot contact_after_chinalake
+strip
+give mcv_bazooka
+wait 2
+clua MCVContact.Record("after")
+shot contact_after_bazooka
+strip
+give mcv_dp28
+wait 2
+clua MCVContact.Record("after")
+shot contact_after_dp28
+strip
+give mcv_sks
+wait 2
+clua MCVContact.Record("after")
+shot contact_after_sks
+strip
+give mcv_blackhawk
+wait 2
+clua MCVContact.Record("after")
+shot contact_after_blackhawk
+strip
+give mcv_owen
+wait 2
+clua MCVContact.Record("after")
+shot contact_after_owen
+clua MCVContact.Stop()

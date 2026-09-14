@@ -1,0 +1,85 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\w_mas36_cr39\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\w_mas36_cr39\w_mas36_cr39.qc"
+Building binary model files...
+Working on "w_mas36_cr39.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_mas36_cr39\w_mas36_cr39_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_mas36_cr39\w_mas36_cr39_akb_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_mas36_cr39\w_mas36_cr39_type30_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_mas36_cr39\w_mas36_cr39_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_mas36_cr39\w_mas36_cr39_akb_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_mas36_cr39\w_mas36_cr39_type30_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_mas36_cr39\w_mas36_cr39_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_mas36_cr39\w_mas36_cr39_akb_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_mas36_cr39\w_mas36_cr39_type30_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_mas36_cr39\w_mas36_cr39_anims\idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_mas36_cr39\w_mas36_cr39_physics.smd
+Processing LOD for material: w_rc39
+Lod 1: vertexes: 1488 (532 new)
+Lod 2: vertexes: 1598 (110 new)
+Processing LOD for material: w_akb
+Processing LOD for material: w_type30_bayonet
+Model has 1 convex sub-parts
+Collision model completed.
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_mas36_cr39.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_mas36_cr39.mdl
+   Found 1 preexisting sequences.
+bones         1956 bytes (4)
+animations     132 bytes (1 anims) (1 frames) [0:00]
+Building sequence index remapping table...
+No re-ordering required.
+sequences      232 bytes (1 seq) 
+ik/pose        624 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       216 bytes
+keyvalues       20 bytes
+bone transforms      608 bytes
+bone flex driver       0 bytes
+Collision model volume 247.90 in^3
+collision        0 bytes
+total         4460
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_mas36_cr39.vvd:
+vertices     76704 bytes (1598 vertices)
+vertices     22224 bytes (463 vertices)
+vertices     19440 bytes (405 vertices)
+tangents     25568 bytes (1598 vertices)
+tangents      7408 bytes (463 vertices)
+tangents      6480 bytes (405 vertices)
+total       157888 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_mas36_cr39.dx80.vtx":
+body parts:        16 bytes
+models:           176 bytes
+model LODs:       144 bytes
+meshes:            81 bytes
+strip groups:     225 bytes
+strips:           243 bytes
+verts:          39870 bytes
+indices:        25602 bytes
+bone changes:     120 bytes
+everything:     66369 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_mas36_cr39.dx90.vtx":
+body parts:        16 bytes
+models:           176 bytes
+model LODs:       144 bytes
+meshes:            81 bytes
+strip groups:     225 bytes
+strips:           243 bytes
+verts:          39870 bytes
+indices:        25602 bytes
+bone changes:     120 bytes
+everything:     66369 bytes
+
+Completed "w_mas36_cr39.qc"

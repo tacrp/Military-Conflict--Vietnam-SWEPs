@@ -15,7 +15,7 @@ function SWEP:CalcView(ply, pos, ang, fov)
 
     if realistic then
         // the view pulls back a little as a burst goes on
-        mag = mag + 0.15 * (1 / ((self:GetBurstCount() / 25) + 1))
+        mag = mag + (0.15 * (1 / ((self:GetBurstCount() / 25) + 1))) - 0.15
     end
 
     local diff = math.abs(self.SmoothedMagnification - mag)

@@ -1,0 +1,130 @@
+StudioMDL.exe (Apr 27 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\w_kar98_s\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\w_kar98_s\w_kar98_s.qc"
+Building binary model files...
+Working on "w_kar98_s.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_kar98_s\w_kar98s_postwar_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_kar98_s\w_kar98s_w_akb_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_kar98_s\w_kar98s_w_type30_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_kar98_s\w_kar98s_scope_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_kar98_s\w_kar98s_zf41_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_kar98_s\w_kar98s_vcm_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_kar98_s\w_kar98s_vcg_lod0.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_kar98_s\w_kar98s_postwar_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_kar98_s\w_kar98s_w_akb_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_kar98_s\w_kar98s_w_type30_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_kar98_s\w_kar98s_scope_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_kar98_s\w_kar98s_zf41_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_kar98_s\w_kar98s_vcm_lod1_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_kar98_s\w_kar98s_vcg_lod0_lod1.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_kar98_s\w_kar98s_postwar_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_kar98_s\w_kar98s_w_akb_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_kar98_s\w_kar98s_w_type30_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_kar98_s\w_kar98s_scope_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_kar98_s\w_kar98s_zf41_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_kar98_s\w_kar98s_vcm_lod1_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_kar98_s\w_kar98s_vcg_lod0_lod2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_kar98_s\w_kar98_s_anims\idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\w_kar98_s\w_kar98_s_physics.smd
+Processing LOD for material: w_kar98s_postwar
+Lod 1: vertexes: 2580 (173 new)
+Lod 2: vertexes: 2888 (308 new)
+Processing LOD for material: w_akb
+Lod 1: vertexes: 637 (175 new)
+Lod 2: vertexes: 727 (90 new)
+Processing LOD for material: w_type30_bayonet
+Lod 1: vertexes: 421 (16 new)
+Lod 2: vertexes: 522 (101 new)
+Processing LOD for material: w_kar98s
+Lod 1: vertexes: 994 (280 new)
+Lod 2: vertexes: 1148 (154 new)
+Processing LOD for material: w_zf41_kar
+Lod 1: vertexes: 650 (37 new)
+Processing LOD for material: w_rifle_glmounts_vc
+Processing LOD for material: w_rifle_grenades_vc
+Model has 2 convex sub-parts
+Collision model completed.
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_kar98_s.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_kar98_s.mdl
+   Found 1 preexisting sequences.
+bones         2116 bytes (4)
+animations     132 bytes (1 anims) (1 frames) [0:00]
+Building sequence index remapping table...
+No re-ordering required.
+sequences      232 bytes (1 seq) 
+ik/pose       1708 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       484 bytes
+keyvalues       20 bytes
+bone transforms      608 bytes
+bone flex driver       0 bytes
+Collision model volume 168.64 in^3
+collision        0 bytes
+total         6560
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_kar98_s.vvd:
+vertices    138624 bytes (2888 vertices)
+vertices     34896 bytes (727 vertices)
+vertices     25056 bytes (522 vertices)
+vertices     55104 bytes (1148 vertices)
+vertices     31200 bytes (650 vertices)
+vertices     17568 bytes (366 vertices)
+vertices      9600 bytes (200 vertices)
+tangents     46208 bytes (2888 vertices)
+tangents     11632 bytes (727 vertices)
+tangents      8352 bytes (522 vertices)
+tangents     18368 bytes (1148 vertices)
+tangents     10400 bytes (650 vertices)
+tangents      5856 bytes (366 vertices)
+tangents      3200 bytes (200 vertices)
+total       416128 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_kar98_s.dx80.vtx":
+body parts:        40 bytes
+models:           484 bytes
+model LODs:       396 bytes
+meshes:           189 bytes
+strip groups:     525 bytes
+strips:           567 bytes
+verts:         102501 bytes
+indices:        61086 bytes
+bone changes:     216 bytes
+everything:    165644 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_kar98_s.dx90.vtx":
+body parts:        40 bytes
+models:           484 bytes
+model LODs:       396 bytes
+meshes:           189 bytes
+strip groups:     525 bytes
+strips:           567 bytes
+verts:         102501 bytes
+indices:        61086 bytes
+bone changes:     216 bytes
+everything:    165644 bytes
+
+Completed "w_kar98_s.qc"
