@@ -1,0 +1,16 @@
+ccmd net_fakelag 100
+wait 3
+lua MCVType67Timing.Start(ply,"lag100")
+clua MCVType67Timing.Start(ply,"lag100")
+wait 0.5
+tap +attack 0.25
+wait 3
+key +attack2
+wait 1
+tap +attack 0.25
+wait 3
+key -attack2
+clua MCVType67Timing.Finish()
+lua MCVType67Timing.Finish()
+ccmd net_fakelag 0
+wait 1

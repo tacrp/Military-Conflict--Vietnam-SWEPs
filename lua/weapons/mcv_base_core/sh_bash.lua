@@ -83,7 +83,7 @@ function SWEP:BashStrike(range, damage, thrust)
         Src = pos,
     })
 
-    if IsValid(tr.Entity) then
+    if SERVER and IsValid(tr.Entity) then
         tr.Entity:TakeDamageInfo(dmginfo)
     end
 

@@ -1,0 +1,15 @@
+clua include("mcv_harness/bolt.lua") MCVBoltTest.WatchFlight()
+lua include("mcv_harness/bolt.lua") MCVBoltTest.Start(ply,"fixed")
+wait 1
+lua MCVBoltTest.Check()
+clua MCVBoltTest.CheckClient("fixed")
+wait 0.3
+lua assert(util.JSONToTable(file.Read("mcv_harness/p27018/results/bolt_render_fixed.json","DATA")).passed,"client render check failed")
+clua include("mcv_harness/bolt.lua") MCVBoltTest.View("oblique")
+wait 1
+shot bolt_oblique
+clua MCVBoltTest.View("prop")
+wait 1
+shot bolt_prop
+clua hook.Remove("CalcView","MCVBoltTest")
+lua MCVBoltTest.Cleanup(ply)

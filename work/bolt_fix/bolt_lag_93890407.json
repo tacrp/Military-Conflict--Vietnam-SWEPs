@@ -1,0 +1,28 @@
+{
+	"ptraces": [],
+	"errors": [],
+	"spawned": [],
+	"log": [
+		"cmd net_fakelag 100",
+		"wait 1",
+		"clua include(\"mcv_harness/bolt.lua\") MCVBoltTest.WatchFlight()",
+		"lua include(\"mcv_harness/bolt.lua\") MCVBoltTest.Start(ply,\"lag100\")",
+		"wait 1.5",
+		"shot bolt_flight_lag",
+		"lua MCVBoltTest.Check()",
+		"clua MCVBoltTest.CheckClient(\"lag100\")",
+		"wait 0.5",
+		"lua assert(util.JSONToTable(file.Read(\"mcv_harness/p27018/results/bolt_render_lag100.json\",\"DATA\")).passed,\"client render check failed\")",
+		"clua MCVBoltTest.View(\"prop\")",
+		"wait 1",
+		"shot bolt_prop_lag",
+		"clua hook.Remove(\"CalcView\",\"MCVBoltTest\")",
+		"lua MCVBoltTest.Cleanup(ply)",
+		"cmd net_fakelag 0"
+	],
+	"shots": [
+		"bolt_flight_lag",
+		"bolt_prop_lag"
+	],
+	"reports": []
+}

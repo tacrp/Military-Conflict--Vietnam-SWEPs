@@ -1,0 +1,19 @@
+{
+  "finalStart": 205.00498962402344,
+  "clip": 2,
+  "rows": [
+    {
+      "duration": 0.6666666666666666,
+      "rate": 1,
+      "model": "models/weapons/mcv/v_m37.mdl",
+      "first": true,
+      "sequence": "pump",
+      "clip": 2,
+      "class": "mcv_m37",
+      "release": 205.0716552734375,
+      "start": 205.00499541778117,
+      "command": 67807
+    }
+  ],
+  "needCycle": false
+}

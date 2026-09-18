@@ -296,6 +296,8 @@ function SWEP:SetupDataTables()
     self:NetworkVar("Bool", 16, "LastMoveGrounded")
     self:NetworkVar("Bool", 17, "MoveCrouched")
     self:NetworkVar("Bool", 18, "LastMoveCrouched")
+    self:NetworkVar("Bool", 19, "Safe")
+
     self:NetworkVar("Vector", 0, "RecoilImpulse")
     self:NetworkVar("Entity", 2, "ActionTarget")
 

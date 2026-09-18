@@ -143,7 +143,7 @@ SWEP.FireRate = 300 // in rounds per minute
 // Zero falls back to FireRate.
 SWEP.FireRate_DA = 0
 SWEP.FireRate_Fan = 0
-SWEP.CycleSpeed = 0.75 // how long is the cycle animation
+// Cycle animation duration comes from the model's original pump/bolt motion.
 SWEP.CyclePostDelay = 0.65 // how long to wait after cycling before we can fire again
 
 SWEP.CrosshairMinDistance = 8

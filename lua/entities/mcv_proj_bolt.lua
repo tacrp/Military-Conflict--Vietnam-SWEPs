@@ -21,6 +21,9 @@ ENT.ChestMultiplier = 3
 ENT.PickupAmmo = "mcv_crossbowbolt"
 ENT.Lifetime = 60
 
+// In the compiled idle pose the tip is 20.03 units along local +X.
+local tipDistance, embedDepth = 20.03, 2
+
 function ENT:OnInitialize()
     if SERVER then
         self:SetUseType(SIMPLE_USE)
@@ -29,22 +32,34 @@ function ENT:OnInitialize()
         if IsValid(phys) then
             phys:EnableDrag(false)
             phys:SetMass(2)
+            phys:AddGameFlag(FVPHYSICS_NO_IMPACT_DMG) // Impact() owns bolt damage.
         end
+    else
+        // Flight rendering can rotate independently of the collision sphere.
+        self:SetRenderBounds(Vector(-26,-26,-26), Vector(26,26,26))
     end
 end
 
 function ENT:OnThink()
-    if SERVER then
-        // fly point first
-        local phys = self:GetPhysicsObject()
-        if IsValid(phys) and self:GetMoveType() == MOVETYPE_VPHYSICS then
-            local vel = phys:GetVelocity()
-            if vel:LengthSqr() > 100 then
-                self:SetAngles(vel:Angle())
-            end
-        end
-        if CurTime() > self.DieTime then self:Remove() end
+    if SERVER and CurTime() > self.DieTime then self:Remove() end
+end
+
+function ENT:Draw()
+    // SetAngles on a flying VPhysics entity clears its velocity. Align only the
+    // rendered mesh, every frame; the server sets the final angle when it sticks.
+    if self:GetMoveType() == MOVETYPE_VPHYSICS then
+        // Server-only VPhysics does not supply reliable client GetVelocity().
+        // Follow the interpolated positions, retaining the angle between updates.
+        local pos = self:GetPos()
+        local delta = self.LastDrawPos and (pos - self.LastDrawPos)
+        if delta and delta:LengthSqr() > 0.000001 then self.FlightRenderAngle = delta:Angle() end
+        self.LastDrawPos = pos
+        self:SetRenderAngles(self.FlightRenderAngle or self:GetAngles())
+    else
+        self.LastDrawPos, self.FlightRenderAngle = nil, nil
     end
+    self:DrawModel()
+    self:SetRenderAngles()
 end
 
 function ENT:Impact(data, collider)
@@ -77,13 +92,32 @@ function ENT:Impact(data, collider)
             end,
         })
         self:EmitSound("MCV_Weapon_Crossbow.BoltHitBody")
-        if ent:IsPlayer() or ent:IsNPC() then
+        if ent:IsPlayer() or ent:IsNPC() or ent:IsNextBot() then
             // no bolt to pick up out of a body
             timer.Simple(0.05, function() if IsValid(self) then self:Remove() end end)
         end
     else
         self:EmitSound("MCV_Weapon_Crossbow.BoltHitWorld")
     end
+end
+
+function ENT:Stick(data)
+    local direction = data.OurOldVelocity:GetNormalized()
+    if direction:IsZero() then direction = self:GetForward() end
+    // Use the incoming direction, not the bounce. The tip enters the surface
+    // while the shaft stays outside. Retire flight physics before parenting.
+    self:PhysicsDestroy()
+    self:SetMoveType(MOVETYPE_NONE)
+    self:SetSolid(SOLID_BBOX)
+    self:SetCollisionBounds(Vector(-2, -2, -2), Vector(2, 2, 2))
+    self:SetCollisionGroup(COLLISION_GROUP_DEBRIS)
+    self:SetAngles(direction:Angle())
+    self:SetPos(data.HitPos - direction * (tipDistance - embedDepth))
+    if IsValid(data.HitEntity) and !data.HitEntity:IsWorld() then
+        self:SetParent(data.HitEntity)
+    end
+    self:ReleaseOwner()
+    self:Stuck()
 end
 
 function ENT:PhysicsCollide(data, collider)
@@ -95,7 +129,14 @@ function ENT:PhysicsCollide(data, collider)
     timer.Simple(0, function()
         if !IsValid(self) then return end
         self.ImpactQueued = false
-        self.BaseClass.PhysicsCollide(self, impact, collider)
+        if IsValid(impact.HitEntity) and impact.HitEntity:GetClass() == "func_breakable_surf" then
+            // Keep the shared glass-shattering/continuation behavior.
+            self.BaseClass.PhysicsCollide(self, impact, collider)
+            return
+        end
+        self.ImpactNormal, self.ImpactPos = -impact.HitNormal, impact.HitPos
+        self:Impact(impact, collider)
+        if IsValid(self) then self:Stick(impact) end
     end)
 end
 

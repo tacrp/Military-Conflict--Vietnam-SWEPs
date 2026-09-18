@@ -1,0 +1,275 @@
+[
+  {
+    "model": "v_chinalake",
+    "sequence": "pump",
+    "frames": 26,
+    "fps": 30.0,
+    "duration": 0.8333333333333334,
+    "events": [
+      "{ event AE_WPN_CLIP_TO_POSEPARAM 1 \"ammo_fraction\" }",
+      "{ event 5004 1 \"MCV_Weapon_Foley_ChinaLake_Reload.MetalStart\" }",
+      "{ event 5004 10 \"MCV_Weapon_Foley_ChinaLake_Reload.MetalEnd\" }",
+      "{ event AE_CLIENT_EJECT_BRASS 4 \"eject\" }"
+    ]
+  },
+  {
+    "model": "v_kar98_dov",
+    "sequence": "boltpull",
+    "frames": 40,
+    "fps": 30.0,
+    "duration": 1.3,
+    "events": [
+      "{ event 5004 1 \"MCV_Weapon_Foley_kar98_Reload.Hand\" }",
+      "{ event 5004 7 \"MCV_Weapon_Foley_kar98_Reload.MetalStart\" }",
+      "{ event AE_CLIENT_EJECT_BRASS 12 \"eject\" }",
+      "{ event 5004 15 \"MCV_Weapon_Foley_kar98_Reload.HandEnd\" }",
+      "{ event 5004 16 \"MCV_Weapon_Foley_kar98_Reload.MetalEnd\" }"
+    ]
+  },
+  {
+    "model": "v_kar98_s",
+    "sequence": "boltpull",
+    "frames": 40,
+    "fps": 30.0,
+    "duration": 1.3,
+    "events": [
+      "{ event 5004 1 \"MCV_Weapon_Foley_kar98_Reload.Hand\" }",
+      "{ event 5004 7 \"MCV_Weapon_Foley_kar98_Reload.MetalStart\" }",
+      "{ event AE_CLIENT_EJECT_BRASS 12 \"eject\" }",
+      "{ event 5004 15 \"MCV_Weapon_Foley_kar98_Reload.HandEnd\" }",
+      "{ event 5004 16 \"MCV_Weapon_Foley_kar98_Reload.MetalEnd\" }"
+    ]
+  },
+  {
+    "model": "v_m1897",
+    "sequence": "pump",
+    "frames": 21,
+    "fps": 30.0,
+    "duration": 0.6666666666666666,
+    "events": [
+      "{ event 5004 1 \"MCV_Weapon_Foley_M1897_Reload.MetalStart\" }",
+      "{ event 5004 5 \"MCV_Weapon_Foley_M1897_Reload.MetalEnd\" }",
+      "{ event AE_CLIENT_EJECT_BRASS 4 \"eject\" }",
+      "{ event AE_WPN_CLIP_TO_POSEPARAM 1 \"ammo_fraction\" }",
+      "{ event AE_WPN_SET_POSEPARAM 2 \"hammerpos 1\" }"
+    ]
+  },
+  {
+    "model": "v_m37",
+    "sequence": "pump",
+    "frames": 21,
+    "fps": 30.0,
+    "duration": 0.6666666666666666,
+    "events": [
+      "{ event 5004 1 \"MCV_Weapon_Foley_M37_Reload.MetalStart\" }",
+      "{ event 5004 6 \"MCV_Weapon_Foley_M37_Reload.MetalEnd\" }",
+      "{ event AE_CLIENT_EJECT_BRASS 4 \"eject\" }",
+      "{ event AE_WPN_SET_POSEPARAM 2 \"hammerpos 1\" }"
+    ]
+  },
+  {
+    "model": "v_m38",
+    "sequence": "boltpull",
+    "frames": 35,
+    "fps": 30.0,
+    "duration": 1.1333333333333333,
+    "events": [
+      "{ event 5004 1 \"MCV_Weapon_Foley_M38_Reload.Hand\" }",
+      "{ event 5004 4 \"MCV_Weapon_Foley_M38_Reload.MetalStart\" }",
+      "{ event 5004 20 \"MCV_Weapon_Foley_M38_Reload.HandEnd\" }",
+      "{ event 5004 15 \"MCV_Weapon_Foley_M38_Reload.MetalEnd\" }",
+      "{ event AE_CLIENT_EJECT_BRASS 10 \"eject\" }",
+      "{ event AE_WPN_SET_POSEPARAM 9 \"hammerpos 0\" }"
+    ]
+  },
+  {
+    "model": "v_m38_s",
+    "sequence": "boltpull",
+    "frames": 35,
+    "fps": 30.0,
+    "duration": 1.1333333333333333,
+    "events": [
+      "{ event 5004 1 \"MCV_Weapon_Foley_M38_Reload.Hand\" }",
+      "{ event 5004 4 \"MCV_Weapon_Foley_M38_Reload.MetalStart\" }",
+      "{ event 5004 20 \"MCV_Weapon_Foley_M38_Reload.HandEnd\" }",
+      "{ event 5004 15 \"MCV_Weapon_Foley_M38_Reload.MetalEnd\" }",
+      "{ event AE_CLIENT_EJECT_BRASS 10 \"eject\" }",
+      "{ event AE_WPN_SET_POSEPARAM 9 \"hammerpos 0\" }"
+    ]
+  },
+  {
+    "model": "v_m40",
+    "sequence": "boltpull",
+    "frames": 35,
+    "fps": 24.0,
+    "duration": 1.4166666666666667,
+    "events": [
+      "{ event 5004 0 \"MCV_Weapon_Foley_M40_Reload.Hand\" }",
+      "{ event 5004 5 \"MCV_Weapon_Foley_M40_Reload.Metal1\" }",
+      "{ event 5004 8 \"MCV_Weapon_Foley_M40_Reload.Metal2\" }",
+      "{ event 5004 10 \"MCV_Weapon_Foley_M40_Reload.Shell\" }",
+      "{ event 5004 26 \"MCV_Weapon_Foley_M40_Reload.HandEnd\" }",
+      "{ event 5004 16 \"MCV_Weapon_Foley_M40_Reload.Metal3\" }",
+      "{ event 5004 21 \"MCV_Weapon_Foley_M40_Reload.Metal4\" }",
+      "{ event AE_CLIENT_EJECT_BRASS 10 \"eject\" }"
+    ]
+  },
+  {
+    "model": "v_m870",
+    "sequence": "pump",
+    "frames": 21,
+    "fps": 30.0,
+    "duration": 0.6666666666666666,
+    "events": [
+      "{ event 5004 1 \"MCV_Weapon_Foley_M870_Reload.MetalStart\" }",
+      "{ event 5004 9 \"MCV_Weapon_Foley_M870_Reload.MetalEnd\" }",
+      "{ event AE_CLIENT_EJECT_BRASS 4 \"eject\" }"
+    ]
+  },
+  {
+    "model": "v_m91",
+    "sequence": "boltpull",
+    "frames": 35,
+    "fps": 30.0,
+    "duration": 1.1333333333333333,
+    "events": [
+      "{ event 5004 1 \"MCV_Weapon_Foley_M38_Reload.Hand\" }",
+      "{ event 5004 4 \"MCV_Weapon_Foley_M38_Reload.MetalStart\" }",
+      "{ event 5004 20 \"MCV_Weapon_Foley_M38_Reload.HandEnd\" }",
+      "{ event 5004 15 \"MCV_Weapon_Foley_M38_Reload.MetalEnd\" }",
+      "{ event AE_CLIENT_EJECT_BRASS 10 \"eject\" }",
+      "{ event AE_WPN_SET_POSEPARAM 9 \"hammerpos 0\" }"
+    ]
+  },
+  {
+    "model": "v_mas36",
+    "sequence": "boltpull",
+    "frames": 40,
+    "fps": 30.0,
+    "duration": 1.3,
+    "events": [
+      "{ event 5004 1 \"MCV_Weapon_Foley_MAS36_Reload.Hand\" }",
+      "{ event 5004 7 \"MCV_Weapon_Foley_MAS36_Reload.MetalStart\" }",
+      "{ event AE_CLIENT_EJECT_BRASS 12 \"eject\" }",
+      "{ event 5004 15 \"MCV_Weapon_Foley_MAS36_Reload.HandEnd\" }",
+      "{ event 5004 16 \"MCV_Weapon_Foley_MAS36_Reload.MetalEnd\" }"
+    ]
+  },
+  {
+    "model": "v_mas36_cr39",
+    "sequence": "boltpull",
+    "frames": 40,
+    "fps": 30.0,
+    "duration": 1.3,
+    "events": [
+      "{ event 5004 1 \"MCV_Weapon_Foley_MAS36_Reload.Hand\" }",
+      "{ event 5004 7 \"MCV_Weapon_Foley_MAS36_Reload.MetalStart\" }",
+      "{ event AE_CLIENT_EJECT_BRASS 12 \"eject\" }",
+      "{ event 5004 15 \"MCV_Weapon_Foley_MAS36_Reload.HandEnd\" }",
+      "{ event 5004 16 \"MCV_Weapon_Foley_MAS36_Reload.MetalEnd\" }"
+    ]
+  },
+  {
+    "model": "v_springfield",
+    "sequence": "boltpull",
+    "frames": 35,
+    "fps": 30.0,
+    "duration": 1.1333333333333333,
+    "events": [
+      "{ event 5004 1 \"MCV_Weapon_Foley_Springfield_Reload.Hand\" }",
+      "{ event 5004 6 \"MCV_Weapon_Foley_Springfield_Reload.MetalStart\" }",
+      "{ event 5004 20 \"MCV_Weapon_Foley_Springfield_Reload.HandEnd\" }",
+      "{ event 5004 17 \"MCV_Weapon_Foley_Springfield_Reload.MetalEnd\" }",
+      "{ event AE_CLIENT_EJECT_BRASS 11 \"eject\" }"
+    ]
+  },
+  {
+    "model": "v_type67",
+    "sequence": "boltpull",
+    "frames": 30,
+    "fps": 30.0,
+    "duration": 0.9666666666666667,
+    "events": [
+      "{ event 5004 1 \"MCV_Weapon_Foley_Type67_Reload.Hand\" }",
+      "{ event 5004 8 \"MCV_Weapon_Foley_Type67_Reload.Cycle\" }",
+      "{ event AE_CLIENT_EJECT_BRASS 11 \"eject\" }",
+      "{ event AE_WPN_SET_POSEPARAM 10 \"hammerpos 0\" }"
+    ]
+  },
+  {
+    "model": "v_vcpistol",
+    "sequence": "boltpull",
+    "frames": 71,
+    "fps": 30.0,
+    "duration": 2.3333333333333335,
+    "events": [
+      "{ event AE_CLIENT_EJECT_BRASS 42 \"eject\" }",
+      "{ event 5004 1 \"MCV_Weapon_Foley_VCPistol_Reload.Hand\" }",
+      "{ event 5004 9 \"MCV_Weapon_Foley_VCPistol_Reload.Mid_SpinIn\" }",
+      "{ event 5004 15 \"MCV_Weapon_Foley_VCPistol_Reload.Mid_SpinOut\" }",
+      "{ event 5004 30 \"MCV_Weapon_Foley_VCPistol_Reload.HandMid\" }",
+      "{ event 5004 36 \"MCV_Weapon_Foley_VCPistol_Reload.Mid_Eject\" }",
+      "{ event 5004 50 \"MCV_Weapon_Foley_VCPistol_Reload.MetalStart\" }",
+      "{ event 5004 54 \"MCV_Weapon_Foley_VCPistol_Reload.MetalEnd\" }",
+      "{ event 5004 60 \"MCV_Weapon_Foley_VCPistol_Reload.HandEnd\" }",
+      "{ event AE_WPN_CLIP_TO_POSEPARAM 0 \"ammo_fraction2\" }",
+      "{ event AE_WPN_CLIP_TO_POSEPARAM 55 \"ammo_fraction\" }"
+    ]
+  },
+  {
+    "model": "v_vz24",
+    "sequence": "boltpull",
+    "frames": 40,
+    "fps": 30.0,
+    "duration": 1.3,
+    "events": [
+      "{ event 5004 1 \"MCV_Weapon_Foley_VZ24_Reload.Hand\" }",
+      "{ event 5004 6 \"MCV_Weapon_Foley_VZ24_Reload.MetalStart\" }",
+      "{ event AE_CLIENT_EJECT_BRASS 12 \"eject\" }",
+      "{ event 5004 15 \"MCV_Weapon_Foley_VZ24_Reload.HandEnd\" }",
+      "{ event 5004 16 \"MCV_Weapon_Foley_VZ24_Reload.MetalEnd\" }"
+    ]
+  },
+  {
+    "model": "v_vz54",
+    "sequence": "boltpull",
+    "frames": 35,
+    "fps": 30.0,
+    "duration": 1.1333333333333333,
+    "events": [
+      "{ event 5004 1 \"MCV_Weapon_Foley_VZ54_Reload.Hand\" }",
+      "{ event 5004 4 \"MCV_Weapon_Foley_VZ54_Reload.MetalStart\" }",
+      "{ event 5004 15 \"MCV_Weapon_Foley_VZ54_Reload.MetalEnd\" }",
+      "{ event 5004 20 \"MCV_Weapon_Foley_VZ54_Reload.HandEnd\" }",
+      "{ event AE_CLIENT_EJECT_BRASS 10 \"eject\" }",
+      "{ event AE_WPN_SET_POSEPARAM 9 \"hammerpos 0\" }"
+    ]
+  },
+  {
+    "model": "v_vz54s",
+    "sequence": "boltpull",
+    "frames": 35,
+    "fps": 30.0,
+    "duration": 1.1333333333333333,
+    "events": [
+      "{ event 5004 1 \"MCV_Weapon_Foley_VZ54_Reload.Hand\" }",
+      "{ event 5004 4 \"MCV_Weapon_Foley_VZ54_Reload.MetalStart\" }",
+      "{ event 5004 15 \"MCV_Weapon_Foley_VZ54_Reload.MetalEnd\" }",
+      "{ event 5004 20 \"MCV_Weapon_Foley_VZ54_Reload.HandEnd\" }",
+      "{ event AE_CLIENT_EJECT_BRASS 10 \"eject\" }",
+      "{ event AE_WPN_SET_POSEPARAM 9 \"hammerpos 0\" }"
+    ]
+  },
+  {
+    "model": "v_welrod",
+    "sequence": "boltpull",
+    "frames": 41,
+    "fps": 30.0,
+    "duration": 1.3333333333333333,
+    "events": [
+      "{ event 5004 6 \"MCV_Weapon_Foley_Welrod_Reload.MetalStart\" }",
+      "{ event 5004 16 \"MCV_Weapon_Foley_Welrod_Reload.MetalEnd\" }",
+      "{ event AE_CLIENT_EJECT_BRASS 12 \"eject\" }"
+    ]
+  }
+]

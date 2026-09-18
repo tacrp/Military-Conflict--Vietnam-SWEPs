@@ -23,6 +23,7 @@ import collections
 import glob
 import os
 import re
+from pack_paths import asset_path, mounted_files
 
 SEQ_BLOCK_RE = r'\$sequence\s+"[^"]+"\s*\{(.*?)\n\}'
 INSERT_POSE_RE = r'\{\s*event\s+AE_WPN_(?:NEXT)?CLIP_TO_POSEPARAM\s+(\d+)\s+"ammo_fraction"'
@@ -176,6 +177,10 @@ SA_DUAL_RELOAD = {"m1895", "blackhawk"}
 # game script name -> addon lua name where the two cannot be matched through the viewmodel alone
 # (several lua files share one viewmodel, or the model was renamed)
 SCRIPT_ALIASES = {
+    # Distinct configurations that share a model must not resolve to the base gun.
+    "kar98k_zf41": "kar98_zf41", "stg44_zf41": "stg44_zf41",
+    "m16a1_xm3": "m16a1_xm3", "m16a1_sog": "m16a1_sog",
+    "car15_oeg": "xm177_oeg",
     "mk22": "sw39",            # S&W M39-2 (the unsuppressed Mk 22); mk22_mod0 is the Hush Puppy"baby_browning": "babybrowning", "china_lake": "chinalake", "dual_hp": "dual_highpower",
                   "kar98k": "kar98", "kar98k_s": "kar98_s", "m1903": "springfield", "m1903s": "springfield_s",
                   "m1918_bar": "m1918_bar", "m1918": "m1918", "m1942": "m1942_machete", "stg44s": "stg44_s",
@@ -201,7 +206,7 @@ def resolve_lua_names(scripts_dir, addon=ADDON):
     import difflib
     vm_to_luas = {}
     lua_names = set()
-    for lp in glob.glob(os.path.join(addon, "lua", "weapons", "mcv_*.lua")):
+    for lp in mounted_files("lua/weapons", "mcv_*.lua", root=addon):
         ln = os.path.basename(lp)[4:-4]
         lua_names.add(ln)
         m = re.search(r'SWEP\.ViewModel\s*=\s*"models/weapons/mcv/([^"]+)\.mdl"', open(lp, encoding="utf-8", errors="replace").read())
@@ -257,7 +262,7 @@ def launcher_folds(scripts_dir):
 
 def mdl_textures(vm):
     """Material names of the compiled viewmodel, in submaterial order."""
-    p = os.path.join(ADDON, "models", "weapons", "mcv", vm + ".mdl")
+    p = asset_path("models/weapons/mcv/" + vm + ".mdl")
     if not os.path.isfile(p):
         return []
     d = open(p, "rb").read()
@@ -274,10 +279,11 @@ def mdl_textures(vm):
 
 def ensure_reticle_vmt(base):
     """The rip copies every crosshair_*.vtf of the game but only some come with a .vmt."""
-    vmt = os.path.join(OPTICS_DIR, base + ".vmt")
-    vtf = os.path.join(OPTICS_DIR, base + ".vtf")
+    vtf = asset_path("materials/models/weapons/mcv/optics/" + base + ".vtf")
+    vmt = asset_path("materials/models/weapons/mcv/optics/" + base + ".vmt")
     if os.path.isfile(vmt) or not os.path.isfile(vtf):
         return os.path.isfile(vmt)
+    vmt = vtf.with_suffix(".vmt")
     with open(vmt, "w", encoding="utf-8", newline="\n") as f:
         f.write('"VertexLitGeneric"\n{\n\t"$basetexture" "models\\weapons\\mcv\\optics\\%s"\n\t"$translucent" "1"\n\t"$nocsm" "1"\n}\n' % base)
     return True
@@ -286,10 +292,10 @@ def ensure_reticle_vmt(base):
 def ensure_lens_vmt(base):
     """A glass eyepiece for a model whose lens mesh carries no lens_* of its own. Copied from
     one that has one; fix_optics_vmts writes them all from the same body."""
-    vmt = os.path.join(OPTICS_DIR, base + ".vmt")
+    vmt = asset_path("materials/models/weapons/mcv/optics/" + base + ".vmt")
     if os.path.isfile(vmt):
         return True
-    for src in sorted(glob.glob(os.path.join(OPTICS_DIR, "lens_*.vmt"))):
+    for src in mounted_files("materials/models/weapons/mcv/optics", "lens_*.vmt"):
         with open(src, encoding="utf-8", errors="replace") as f:
             body = f.read()
         if "scope_glass_diffuse" not in body:
@@ -300,10 +306,15 @@ def ensure_lens_vmt(base):
     return False
 
 
-def scope_idle_lens(vm):
+def scope_idle_lens(vm, prefer=None):
     """The material the eyepiece falls back to when not aimed, for a model whose lens mesh wears
     a reticle instead of glass (the Vz.54 Meopta). None where the model's own will do."""
     names = mdl_textures(vm)
+    if prefer == "zf41":
+        # The other optic's ordinary glass is also a suitable idle ZF41 lens.
+        for n in names:
+            if n.lower().startswith("lens_") and ensure_lens_vmt(n.lower()):
+                return "models/weapons/mcv/optics/" + n.lower()
     if any(n.lower().startswith("lens_") for n in names):
         return None
     for n in names:
@@ -325,6 +336,11 @@ def scope_info(vm, prefer=None):
     render target is the matching crosshair_<suffix> texture from the game when the addon has it."""
     names = mdl_textures(vm)
     idx = None
+    # ZF41 has a separate reticle plane and Refract glass. Replace the glass, not the reticle.
+    if prefer == "zf41":
+        for i, n in enumerate(names):
+            if n.lower() == "crosshair_zf41a" and ensure_reticle_vmt("crosshair_zf41"):
+                return i, "models/weapons/mcv/optics/crosshair_zf41"
     if prefer:
         for i, n in enumerate(names):
             if n.lower() == "lens_" + prefer:
@@ -548,7 +564,7 @@ def qc_facts(path):
 # --------------------------------------------------------------------------------------------
 
 REUSE_KEYS = ("PrintName", "FireRate", "ScopeMaterial", "HasScope", "AdjustableScopes", "OEGScope", "Slot", "SubCategory", "Caliber",
-              "CycleSpeed", "CyclePostDelay", "TriggerDelayTime", "IconOverride", "ViewModelFOV",
+              "CyclePostDelay", "TriggerDelayTime", "IconOverride", "ViewModelFOV",
               "SightedViewModelFOV", "MuzzleParticle", "MuzzleParticle3rdPerson", "MuzzleParticleIronsighted",
               "RTScopeMaterialIndex", "IronsightSpeedScale", "InvertAnimationHammer", "AnimationHandlesHammer",
               "RifleGrenadeForce", "SoundGrenadeShot")
@@ -799,8 +815,8 @@ def world_bodygroups_string(vm, wm, values):
     carries the same bodyparts under the same names but not always in the same order (the M1
     Garand's scope is the fourth group on one and the third on the other), so the string is
     remapped by name. Empty when nothing needs switching off, which is most guns."""
-    vparts = mdl_bodyparts(os.path.join(ADDON, "models", "weapons", "mcv", vm + ".mdl"))
-    wparts = mdl_bodyparts(os.path.join(ADDON, "models", "weapons", "mcv", wm + ".mdl"))
+    vparts = mdl_bodyparts(asset_path("models/weapons/mcv/" + vm + ".mdl"))
+    wparts = mdl_bodyparts(asset_path("models/weapons/mcv/" + wm + ".mdl"))
     if not (vparts and wparts and values):
         return ""
     want = {}
@@ -1119,7 +1135,7 @@ def generate(script_path, args):
     acts = qc["acts"]
 
     lua_name = args.name_map.get(name, name)
-    existing = read_existing(os.path.join(args.addon, "lua", "weapons", "mcv_%s.lua" % lua_name)) if args.reuse else {}
+    existing = read_existing(asset_path("lua/weapons/mcv_%s.lua" % lua_name, root=args.addon)) if args.reuse else {}
     def reuse(key):
         return existing.get(key) if args.reuse else None
 
@@ -1278,14 +1294,14 @@ def generate(script_path, args):
         has_scope = reuse("HasScope") == "true"
     scope_idx, scope_mat = (None, None)
     if has_scope:
-        scope_idx, scope_mat = scope_info(vm, "singlepoint" if reuse("OEGScope") else None)
+        scope_idx, scope_mat = scope_info(vm, "zf41" if name.endswith("_zf41") else "singlepoint" if reuse("OEGScope") else None)
         if scope_idx is None:
             warnings.append("script suggests a scope but the compiled model has no lens material; HasScope off")
             has_scope = False
         # a hand-made reticle in the optics folder wins over the game's texture
         r = reuse("ScopeMaterial")
         rm = re.search(r'Material\("([^"]+)"\)', r or "")
-        if rm and os.path.isfile(os.path.join(ADDON, "materials", rm.group(1).replace("/", os.sep) + ".vmt")):
+        if rm and asset_path("materials/" + rm.group(1) + ".vmt").is_file():
             scope_mat = rm.group(1)
         if scope_mat is None:
             warnings.append("no reticle material found for the scope")
@@ -1398,7 +1414,6 @@ def generate(script_path, args):
         A(line("MagInClip", "true"))
     if cycle:
         A(line("PlayCycleAnimation", "true"))
-        if reuse("CycleSpeed"): A(line("CycleSpeed", reuse("CycleSpeed")))
         if reuse("CyclePostDelay"): A(line("CyclePostDelay", reuse("CyclePostDelay")))
     if shotgun_reload:
         A(line("ShotgunReload", "true"))
@@ -1482,7 +1497,7 @@ def generate(script_path, args):
         A(line("RTScopeMaterialIndex", scope_idx))
         # a model whose lens mesh wears the reticle rather than glass has nothing to show
         # through the eyepiece when the scope is not being looked through
-        idle_lens = scope_idle_lens(vm)
+        idle_lens = scope_idle_lens(vm, "zf41" if name.endswith("_zf41") else None)
         if idle_lens:
             A(line("ScopeIdleLensMaterial", fmt(idle_lens)))
     if reuse("AdjustableScopes"): A(line("AdjustableScopes", reuse("AdjustableScopes")))
@@ -1683,7 +1698,7 @@ def main():
                 continue
             lua_name = name
         produced[lua_name] = name
-        if args.only_new and os.path.isfile(os.path.join(args.addon, "lua", "weapons", "mcv_%s.lua" % lua_name)):
+        if args.only_new and asset_path("lua/weapons/mcv_%s.lua" % lua_name, root=args.addon).is_file():
             continue
         try:
             text, warnings = generate(f, args)

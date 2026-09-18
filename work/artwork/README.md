@@ -1,5 +1,14 @@
 # Addon icon
 
+The active artwork is now split into `part1-eastern/` and `part2-western/`, each with a
+2048px PNG, 512px preview, background and reproducible placement manifest. The original
+wordmark and credit remain, with **Part 1 - Eastern** / **Part 2 - Western** subheadings.
+The compositor reads both addon folders and limits each mosaic to its pack's original-game
+weapons. Rebuild both with `python work/compose_addon_icon.py`, or select `--part eastern`
+or `--part western`. Each addon folder gets an upload-ready `icon.jpg`.
+`pack-icons-preview.png` shows them side by side. The unsplit version described below is
+archived in `archive/unsplit-icons/`; the top-level PNGs now preview Part 1.
+
 `addon-icon-hd.png`: 2048 x 2048 RGB PNG. `addon-icon-512.png`: 512 x 512 preview.
 The background uses the addon's actual HUD icons in tightly stacked horizontal
 rows. Every other row faces left, with staggered row starts and cropped edges so

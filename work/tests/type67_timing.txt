@@ -1,0 +1,30 @@
+cmd sv_cheats 1
+ccmd net_fakelag 0
+give mcv_type67
+wait 3
+lua ply:GiveAmmo(100,ply:GetActiveWeapon():GetPrimaryAmmoType(),true)
+wait 0.5
+lua include("mcv_harness/type67_timing.lua") MCVType67Timing.Start(ply,"fixed")
+clua include("mcv_harness/type67_timing.lua") MCVType67Timing.Start(ply,"fixed")
+ccmd cl_showerror 2
+wait 0.3
+tap +attack 0.25
+wait 2.5
+key +attack2
+wait 1
+tap +attack 0.25
+wait 2.5
+key -attack2
+tap +reload 0.1
+wait 3
+lua ply:GetActiveWeapon():SetClip1(1)
+clua ply:GetActiveWeapon():SetClip1(1)
+wait 0.5
+tap +attack 0.25
+wait 0.5
+tap +reload 0.1
+wait 4
+lua assert(ply:GetActiveWeapon():Clip1()>0 and !ply:GetActiveWeapon():GetNeedCycle())
+clua MCVType67Timing.Finish()
+lua MCVType67Timing.Finish()
+wait 0.3

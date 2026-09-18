@@ -159,10 +159,19 @@ Found by scanning all 204 files; the script applies one rule everywhere.
   spare GMod activity (`ACT_VM_IDLE_1..8`, `ACT_VM_PRIMARYATTACK_4..8` are free) if you want
   the pickup, charge, deployed-crawl and melee run animations back.
 
+## Two-pack install
+
+Runtime files are split between `mcv` (Eastern + all shared code) and sibling `mcv-2`
+(Western content only; requires Part 1). Use `work/pack_paths.py` when reading or installing
+weapon assets so rebuilds do not recreate duplicate mounted paths. All editable sources
+stay in `mcv/work`. See `work/pack_split/README.md` for the catalog, manifest, icons and
+streaming GMA build/extraction workflow. Do not run in-game verification unless the user
+explicitly requests it.
+
 ## Timing: the 60-frame base
 
-An `addlayer` layer plays in sync with the parent sequence's cycle. The parent of every pose
-layer is the 60-frame idle copy, so a 25-frame shot pose is stretched to 60 frames and played
+An `addlayer` layer plays in sync with the parent sequence's cycle. Most shot poses use a
+60-frame idle copy, so a 25-frame shot pose is stretched to 60 frames and played
 back at the Lua rate (`PlayAnimation(..., 0.5)`, now `SWEP.ShootAnimRate`). For the shots this
 is by design and looks right. It is the cause of the bug-list items where the pose is much
 shorter than a shot:
@@ -172,16 +181,30 @@ shorter than a shot:
   the hip shot (10 over 20 frames gives a 30 frame base), the hip shot stays on 60.
 * The 60 frames are meant at 30 fps. Crowbar writes static poses as `fps 1` (the PTRD's
   `deploy_a` is 5 frames), and a 60-frame copy at 1 fps is a one-minute base: the PTRD's
-  deployed shot took a minute. `make_len_variant` now forces `fps 30` on every length variant.
+  deployed shot took a minute. `make_len_variant` defaults to `fps 30`; manual cycles pass
+  the source action's actual FPS instead.
 * Manual actions with wrong eject timing: the pump events were re-timed by hand for the
   stretched sequence (M1897 `MetalStart 1 -> 9`, `MetalEnd 5 -> 24`) while the eject frame was
-  not.
+  not. `step_pose_split` now transfers events by their normalized phase:
+  `round(source_frame * (parent_frames - 1) / (pose_frames - 1))`, clamped to the parent.
+  This preserves their position within the motion, including shortened bases. Existing
+  generated QCs are not changed until individually rebuilt.
+* Manual cycles now always retain their source frame count and FPS, independently of
+  `--base-len`. Their 19 models were rebuilt with `work/fix_cycle_timings.py --compile`,
+  which edits only the cycle sequences and their static parent variants. There is no shared
+  `CycleSpeed` multiplier: Lua plays them at rate 1 and reads `SequenceDuration`. Existing
+  `CyclePostDelay` fractions still control recovery. The M37 pump is 21 frames at 30 FPS
+  (0.667 s), Kar98 is 40 at 30 (1.3 s), and M40 is 35 at **24** (1.417 s).
+  Sound, eject and hammer events stay on their authored frames. Type 67 now uses its original
+  30 frames: hammer 10/29, eject 11/29. It also needs `AnimationHandlesHammer = true` so
+  `NeedCycle` survives the start of the pull. Refresh `sh_hammer_events.lua` after compiling.
+  See `work/cycle_timings/README.md` for the complete manifest and checks.
 
 `--base-len normalize` gives every pose-layered sequence the same stretch ratio as the weapon's
 primary attack (so a 10-frame deployed shot gets a 30-frame base when the hip shot is 20 frames
 over 60). `--base-len match` uses the authored length and keeps events on their authored frames,
-but then `SWEP.ShootAnimRate` has to be 1 and `CycleSpeed` / `CyclePostDelay` retuned. Use these
-only on the guns that need it; leave the default for the rest.
+but then `SWEP.ShootAnimRate` has to be 1. These options affect the other poses; manual cycles
+already use authored timing. Use them only on the guns that need it.
 
 ## Pose-parameter recoil for dual wield (new)
 
@@ -445,6 +468,12 @@ Brass ids the game added after 2024 (19 to 31) map to the nearest shell model th
   inverted flag the shot itself releases the action and a bolt rifle fires semi-auto.
 * **Volleys**: `VOLLEY_ALL` (Kolos: 7) makes `FIREMODE_VOLLEY` the only mode; `RocketAttack`
   launches one projectile per round with its own spread.
+* **Crossbow bolts**: flight orientation is a client render override following interpolated
+  positions. Never turn the flying VPhysics entity with `SetAngles`: it resets velocity.
+  The compiled idle pose points along +X with its tip about 20.03 units ahead of the origin
+  (apply bone transforms before measuring raw mesh vertices). Sticking uses incoming velocity,
+  embeds the tip two units, destroys flight physics outside the callback, and then parents to
+  props. Disable VPhysics impact damage so `Impact` owns the hit. Tests: `bolt_fix/README.md`.
 * **Dual single-action revolvers** (`SA_DUAL_RELOAD`: Nagant, Blackhawk) get
   `AkimboDualSingleActionReload`.
 * The `empty` pose parameter is 1 when the clip is empty (the game's `SlidePosition` and
@@ -953,7 +982,7 @@ alone since the field has no gameplay effect.
   game only refreshes `ammo_fraction` (the BulletCounter and MagPosition layers) at frame 55 of it;
   `ammo_fraction2`, set from the clip at the pull's first frame, picks which chamber the pull
   animates. Lua shows the pre-shot count until that point (from the shot through the cycle's
-  first 1.83 x CycleSpeed seconds) and drives ammo_fraction2 from the post-shot count. Only
+  first 1.83 seconds at the authored playback rate) and drives ammo_fraction2 from the post-shot count. Only
   this model has the second parameter.
 * **Idle layers vs a sequence's own override** (`layer_owned_bones` / `layer_delta_bones`): the
   pose-split conversion carries the idle's layers (slide, hammer, bullet counter...) onto the

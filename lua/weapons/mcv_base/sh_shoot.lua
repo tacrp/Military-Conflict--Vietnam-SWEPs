@@ -9,6 +9,8 @@ function SWEP:PrimaryAttack()
     if self:StillWaiting() then return end
     if self:GetNeedCycle() then return end
 
+    if self:GetSafe() then self:ToggleSafe(true) return end
+
     local owner = self:GetOwner()
     local bursting = self:IsBursting() // a runaway burst finishing itself (ThinkWeapon)
 
@@ -741,4 +743,6 @@ function SWEP:ChangeFiremode()
         self:SetAnimLockTime(CurTime() + 0.25)
         self:EmitSound("MCV_Weapon_Foley_AK47.DrawMetal")
     end
+
+    self:GetOwner():PrintMessage(HUD_PRINTTALK, "Switched to " .. self:GetFiremodeName())
 end

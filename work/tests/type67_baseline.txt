@@ -1,0 +1,13 @@
+cmd sv_cheats 1
+ccmd net_fakelag 0
+ccmd cl_showerror 2
+give mcv_type67
+wait 3
+lua include("mcv_harness/type67_timing.lua") MCVType67Timing.Start(ply,"baseline")
+clua include("mcv_harness/type67_timing.lua") MCVType67Timing.Start(ply,"baseline")
+wait 0.3
+tap +attack 0.25
+wait 3
+clua MCVType67Timing.Finish()
+lua MCVType67Timing.Finish()
+wait 0.3

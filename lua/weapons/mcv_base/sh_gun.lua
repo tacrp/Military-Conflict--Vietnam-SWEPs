@@ -9,6 +9,10 @@ function SWEP:GetPrecacheParticles()
 end
 
 function SWEP:IdleActivity()
+    if self:GetSafe() then
+        return ACT_VM_IDLE_LOWERED
+    end
+
     if self:GetGrenadeLauncher() then
         // Rifle grenades have their own ladder-sight pose too. Using the rifle
         // idle here jumps from standard irons to the ladder when the shot starts.
@@ -75,21 +79,23 @@ end
 
 // Controls shown by the HUD after a deploy and in the weapon selection info
 function SWEP:GetControlHints()
-    local h = {
-        {"+attack", "Fire"},
-        {"+attack2", "Aim"},
-        {"+reload", "Reload"},
-    }
+    local h = {}
+    local safe = self:GetSafe()
+    if !safe then
+        table.insert(h, {"+attack", "Fire"})
+        table.insert(h, {"+attack2", "Aim"})
+    end
+    table.insert(h, {"+reload", "Reload"})
     if #self.Firemodes > 1 and !self:GetGrenadeLauncher() then
         table.insert(h, {"+use +reload", "Fire mode"})
     elseif self.AdjustableScopes and !self:GetGrenadeLauncher() then
         table.insert(h, {"+use +reload", "Scope magnification"})
     end
     if self.HasRifleGrenade then
-        table.insert(h, {"+use +walk", self.RifleGrenadeIsUBGL and "Grenade launcher" or "Rifle grenade"})
+        table.insert(h, {"+walk +use", self.RifleGrenadeIsUBGL and "Grenade launcher" or "Rifle grenade"})
     end
     if self.HasAkimbo then
-        table.insert(h, {"+use +walk", self:GetHasSecond() and "Dual wield" or "Dual wield (need another)"})
+        table.insert(h, {"+walk +use", self:GetHasSecond() and "Dual wield" or "Dual wield (need another)"})
     end
     if self.HasBayonet then
         table.insert(h, {"+use +attack2", self:OwnerHasBayonet() and "Bayonet" or "Bayonet (need one)"})
@@ -97,9 +103,25 @@ function SWEP:GetControlHints()
     if self.HasBipod then
         table.insert(h, {"+use", "Bipod (at cover)"})
     end
-    table.insert(h, {"+use +attack", self.HasBayonet and "Bash / stab" or "Bash"})
-    if self.HasBayonet and self:GetBayonet() and self:CanBayonetCharge() then
-        table.insert(h, {"+speed +attack", "Charge"})
+    if !safe then
+        table.insert(h, {"+use +attack", self.HasBayonet and "Bash / stab" or "Bash"})
     end
+    table.insert(h, {"+use +walk", safe and "Weapon Ready" or "At Ease"})
     return h
+end
+
+function SWEP:ToggleSafe(forceoff)
+    self:SetSafe((forceoff and false) or !self:GetSafe())
+
+    if !forceoff then
+        self:EmitSound("MCV_Weapon_Foley_Movement.ProneCrawl")
+    end
+
+    self:SetNextPrimaryFire(CurTime() + 0.25)
+
+    if self:GetSafe() then
+        self:PlayAnimation(ACT_VM_IDLE_TO_LOWERED, 1, true)
+    else
+        self:PlayAnimation(ACT_VM_LOWERED_TO_IDLE, 1, true)
+    end
 end

@@ -63,7 +63,7 @@ function SWEP:ThinkWeapon()
         end
 
         if self:GetPrimedAttack() then
-            self:PlayAnimation(ACT_VM_IDLE)
+            self:PlayAnimation(self:IdleActivity())
             self:SetPrimedAttack(false)
         end
     elseif self:GetReloading() and self.ShotgunReload and owner:KeyPressed(IN_ATTACK) and self:Clip1() > 0 then
@@ -102,7 +102,8 @@ function SWEP:ThinkWeapon()
         // cannot also pull the other gun's bolt. The cycle still happens, because the state is
         // what makes a bolt action one (it blocks the next shot until the trigger is released,
         // see CanPrimaryAttack); there is just no animation of its own to play or wait for.
-        local t = self:PlayAnimation(ACT_VM_RELOAD_INSERT_PULL, self.CycleSpeed, false)
+        // Cycle sequences retain their source duration; each action runs at normal speed.
+        local t = self:PlayAnimation(ACT_VM_RELOAD_INSERT_PULL, 1, false)
         self:EmitThirdPersonSound(self.SoundCycleThirdPerson)
 
         if t then
@@ -115,5 +116,11 @@ function SWEP:ThinkWeapon()
         if t == nil or !self.AnimationHandlesHammer then
             self:SetNeedCycle(false)
         end
+    end
+
+    // Safety mechanism
+
+    if owner:KeyDown(IN_USE) and owner:KeyPressed(IN_WALK) then
+        self:ToggleSafe()
     end
 end

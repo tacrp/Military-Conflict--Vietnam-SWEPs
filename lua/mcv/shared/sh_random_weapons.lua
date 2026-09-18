@@ -48,7 +48,7 @@ theme("custom", "Custom", nil, "m635 xm16super ptrd_sniper")
 // Explicit period configurations: modern derivatives and SOG conversions stay out.
 theme("us_ww2", "US WW2", "us", "bazooka browning_auto hdm m1897 m1905_bayonet m1911a1 m1917 m1918 m1918_bar m1919 m1942_machete m1c m1g m2c m37 m3a1 m50r m55r m60r m8 mk2 mk3a2 springfield springfield_s swm10 thompson thompson_m1928", "ww2")
 theme("ru_ww2", "Russian WW2", "su", "m1895 m38 m38_s m91 avt40 dp28 pps43 ppsh41 ppsh41_drum ptrd svt40 svt40_s tt33", "ww2")
-theme("de_ww2", "German WW2", "de_imperial", "c96 c96_stock luger g43 kar98 kar98_s mg43 mg43d mp40 p38 panzerschreck ppk stg44 stg44_s stielhand_explosive stielhand_smoke shovel_ger", "ww2")
+theme("de_ww2", "German WW2", "de_imperial", "c96 c96_stock luger g43 kar98 kar98_s kar98_zf41 mg43 mg43d mp40 p38 panzerschreck ppk stg44 stg44_s stg44_zf41 stielhand_explosive stielhand_smoke shovel_ger", "ww2")
 theme("gb_ww2", "British WW2", "gb", "bren sten sten_sog welrod", "ww2")
 theme("fr_ww2", "French WW2", "fr", "fm24 lebel mas36_cr39 mas38 mle1935 fusil_robust", "ww2")
 theme("jp_ww2", "Japanese WW2", "jp", "type14 type30_bayonet type97 katana", "ww2")

@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "originalFilesVerified": 9923,
+  "westernWeaponFiles": 157,
+  "sharedAssetsInPart1": 642,
+  "bytes": {
+    "eastern": 2987514637,
+    "western": 2608128906
+  }
+}

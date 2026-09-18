@@ -3,6 +3,11 @@
 Military Conflict: Vietnam's weapons ported to Garry's Mod. `work/PORTING.md` is the long
 reference for the porting pipeline; `BUGLIST.md` is the running log of what has been fixed.
 
+The install is split by nation: this `mcv` folder is Part 1 (Eastern + all shared bases/code),
+and sibling `../mcv-2` is Part 2 (Western content only, requires Part 1). Search both folders
+for weapons/assets. Source and custom compile files remain under this folder's `work/`;
+use `work/pack_paths.py` to resolve runtime destinations. See `work/pack_split/README.md`.
+
 ## Convars
 
 Every convar the addon has must appear in the Q menu, under **Options > Military Conflict:
@@ -49,6 +54,8 @@ placement by hand against Crowbar and hold raw numbers, not settings anyone play
 
 ## House rules
 
+* Do not launch or run in-game verification unless the user explicitly requests it.
+  Use file, syntax, dependency and archive build/extraction checks by default.
 * Never regenerate a whole weapon lua to change a few fields. The generators drop hand-tuned
   keys (sights, secondaries, rifle-grenade keys, placement offsets). Copy the values you mean
   to change into the committed file instead.
@@ -57,7 +64,7 @@ placement by hand against Crowbar and hold raw numbers, not settings anyone play
 * Stage files explicitly when committing. `git add -A lua` has swept the user's uncommitted
   work into unrelated commits more than once, and a `git checkout` across `lua/weapons` has
   destroyed hand tuning that was never committed. Stash first if the tree has to be cleaned.
-* Check Lua with `python work/glua_check.py "lua/weapons/*.lua"` after editing; there is no
+* Check Lua with `python work/glua_check.py "lua/weapons/*.lua" "../mcv-2/lua/weapons/*.lua"` after editing; there is no
   luac on this machine and the checker translates GLua before compiling it.
 * Write patch scripts with the file tool rather than shell heredocs, which mangle backslashes
   in regular expressions.

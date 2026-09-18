@@ -1,0 +1,26 @@
+[
+	{
+		"category": "Assault Rifles",
+		"clip": 30,
+		"reserve": 60,
+		"class": "mcv_m16a1_sog"
+	},
+	{
+		"category": "Assault Rifles",
+		"clip": 20,
+		"reserve": 100,
+		"class": "mcv_stg44_zf41"
+	},
+	{
+		"category": "Bolt-Action Rifles",
+		"clip": 5,
+		"reserve": 20,
+		"class": "mcv_kar98_zf41"
+	},
+	{
+		"category": "Light-Machine Guns",
+		"clip": 30,
+		"reserve": 120,
+		"class": "mcv_m16a1_xm3"
+	}
+]

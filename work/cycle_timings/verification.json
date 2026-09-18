@@ -1,0 +1,187 @@
+{
+  "compiled": [
+    {
+      "model": "v_chinalake",
+      "events": 4,
+      "duration": 0.8333333333333334
+    },
+    {
+      "model": "v_kar98_dov",
+      "events": 5,
+      "duration": 1.3
+    },
+    {
+      "model": "v_kar98_s",
+      "events": 5,
+      "duration": 1.3
+    },
+    {
+      "model": "v_m1897",
+      "events": 5,
+      "duration": 0.6666666666666666
+    },
+    {
+      "model": "v_m37",
+      "events": 4,
+      "duration": 0.6666666666666666
+    },
+    {
+      "model": "v_m38",
+      "events": 6,
+      "duration": 1.1333333333333333
+    },
+    {
+      "model": "v_m38_s",
+      "events": 6,
+      "duration": 1.1333333333333333
+    },
+    {
+      "model": "v_m40",
+      "events": 8,
+      "duration": 1.4166666666666667
+    },
+    {
+      "model": "v_m870",
+      "events": 3,
+      "duration": 0.6666666666666666
+    },
+    {
+      "model": "v_m91",
+      "events": 6,
+      "duration": 1.1333333333333333
+    },
+    {
+      "model": "v_mas36",
+      "events": 5,
+      "duration": 1.3
+    },
+    {
+      "model": "v_mas36_cr39",
+      "events": 5,
+      "duration": 1.3
+    },
+    {
+      "model": "v_springfield",
+      "events": 5,
+      "duration": 1.1333333333333333
+    },
+    {
+      "model": "v_type67",
+      "events": 4,
+      "duration": 0.9666666666666667
+    },
+    {
+      "model": "v_vcpistol",
+      "events": 11,
+      "duration": 2.3333333333333335
+    },
+    {
+      "model": "v_vz24",
+      "events": 5,
+      "duration": 1.3
+    },
+    {
+      "model": "v_vz54",
+      "events": 6,
+      "duration": 1.1333333333333333
+    },
+    {
+      "model": "v_vz54s",
+      "events": 6,
+      "duration": 1.1333333333333333
+    },
+    {
+      "model": "v_welrod",
+      "events": 3,
+      "duration": 1.3333333333333333
+    }
+  ],
+  "porterModels": 19,
+  "realInput": [
+    {
+      "gun": "m37",
+      "fakelag": 0,
+      "duration": 0.6666666666666666,
+      "clientPasses": 1,
+      "clientServerAgree": true
+    },
+    {
+      "gun": "kar98",
+      "fakelag": 0,
+      "duration": 1.299999976754189,
+      "clientPasses": 1,
+      "clientServerAgree": true
+    },
+    {
+      "gun": "m40",
+      "fakelag": 0,
+      "duration": 1.4166666314833702,
+      "clientPasses": 1,
+      "clientServerAgree": true
+    },
+    {
+      "gun": "type67",
+      "fakelag": 0,
+      "duration": 0.9666667050785503,
+      "clientPasses": 1,
+      "clientServerAgree": true
+    },
+    {
+      "gun": "vcpistol",
+      "fakelag": 0,
+      "duration": 2.3333333101537495,
+      "clientPasses": 1,
+      "clientServerAgree": true
+    },
+    {
+      "gun": "welrod",
+      "fakelag": 0,
+      "duration": 1.3333333333333333,
+      "clientPasses": 1,
+      "clientServerAgree": true
+    },
+    {
+      "gun": "m37",
+      "fakelag": 100,
+      "duration": 0.6666666666666666,
+      "clientPasses": 1,
+      "clientServerAgree": true
+    },
+    {
+      "gun": "kar98",
+      "fakelag": 100,
+      "duration": 1.299999976754189,
+      "clientPasses": 2,
+      "clientServerAgree": true
+    },
+    {
+      "gun": "m40",
+      "fakelag": 100,
+      "duration": 1.4166666314833702,
+      "clientPasses": 1,
+      "clientServerAgree": true
+    },
+    {
+      "gun": "type67",
+      "fakelag": 100,
+      "duration": 0.9666667050785503,
+      "clientPasses": 1,
+      "clientServerAgree": true
+    },
+    {
+      "gun": "vcpistol",
+      "fakelag": 100,
+      "duration": 2.3333333101537495,
+      "clientPasses": 1,
+      "clientServerAgree": true
+    },
+    {
+      "gun": "welrod",
+      "fakelag": 100,
+      "duration": 1.3333333333333333,
+      "clientPasses": 1,
+      "clientServerAgree": true
+    }
+  ],
+  "passed": true
+}

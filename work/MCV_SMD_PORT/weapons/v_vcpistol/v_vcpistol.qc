@@ -320,6 +320,11 @@ $animation "basePose_a" "..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims
 	fps 30
 	numframes 60
 }
+
+$animation "basePose_a__f71" "..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\basePose_a.smd" {
+	fps 30
+	numframes 71
+}
 $animation "basePose_a__f60" "..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\basePose_a.smd" {
 	fps 30
 	numframes 60
@@ -329,6 +334,12 @@ $animation "ironsight" "..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\
 	fps 30
 	frame 1 1
 	numframes 60
+}
+
+$animation "ironsight__f71" "..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\ironsight.smd" {
+	fps 30
+	frame 1 1
+	numframes 71
 }
 $animation "ironsight__f60" "..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\ironsight.smd" {
 	fps 30
@@ -340,6 +351,12 @@ $animation "ironsight_transition" "..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpi
 	fps 30
 	frame 0 1
 	numframes 60
+}
+
+$animation "ironsight_transition__f71" "..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\ironsight_transition.smd" {
+	fps 30
+	frame 0 1
+	numframes 71
 }
 $animation "ironsight_transition__f60" "..\..\..\MCV_SMD_OG\weapons\v_vcpistol\v_vcpistol_anims\ironsight_transition.smd" {
 	fps 30
@@ -680,9 +697,9 @@ $sequence "boltpull_magoverride" {
 }
 
 $sequence "boltpull" {
-	"basePose_a__f60"
-	"ironsight_transition__f60"
-	"ironsight__f60"
+	"basePose_a__f71"
+	"ironsight_transition__f71"
+	"ironsight__f71"
 	activity "ACT_VM_RELOAD_INSERT_PULL" 1
 	blend "ironsight" 0 1
 	blendwidth 3
@@ -695,7 +712,7 @@ $sequence "boltpull" {
 	{ event 5004 36 "MCV_Weapon_Foley_VCPistol_Reload.Mid_Eject" }
 	{ event 5004 50 "MCV_Weapon_Foley_VCPistol_Reload.MetalStart" }
 	{ event 5004 54 "MCV_Weapon_Foley_VCPistol_Reload.MetalEnd" }
-	{ event 5004 59 "MCV_Weapon_Foley_VCPistol_Reload.HandEnd" }
+	{ event 5004 60 "MCV_Weapon_Foley_VCPistol_Reload.HandEnd" }
 	{ event AE_WPN_CLIP_TO_POSEPARAM 0 "ammo_fraction2" }
 	{ event AE_WPN_CLIP_TO_POSEPARAM 55 "ammo_fraction" }
 	addlayer "walklayer"

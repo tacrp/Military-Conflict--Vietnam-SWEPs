@@ -7,6 +7,7 @@ import shutil
 import subprocess
 import numpy as np
 from bake_ik import load_smd, fk
+from pack_paths import asset_path
 from build_xm16super import HERE, ROOT, PORT, SCRATCH, relative, rebase, worldmodel, icon
 
 SOURCE = HERE / 'MCV_SMD/weapons/v_m635/m635.smd'
@@ -83,7 +84,7 @@ def main():
         if result.returncode or 'Completed' not in output: raise RuntimeError(output[-6000:])
         files=sorted((SCRATCH/'models/weapons/mcv').glob(qc.stem+'.*'))
         if args.install:
-            for p in files: shutil.copy2(p,ROOT/'models/weapons/mcv'/p.name)
+            for p in files: shutil.copy2(p,asset_path('models/weapons/mcv/'+p.name))
         results.append({'model':qc.stem,'files':[p.name for p in files],'installed':args.install})
         print(qc.stem,'compiled',len(files),'files',flush=True)
     if args.install: icon(SOURCE,'m635')

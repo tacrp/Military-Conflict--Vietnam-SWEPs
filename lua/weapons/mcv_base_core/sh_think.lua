@@ -74,6 +74,10 @@ function SWEP:GetMovementPose(speed, sa)
     // on the sights the movement layers are the sighted walk layer's: a set fraction of its swing
     local sighted = math.min(speed / self.SpeedRun, 1) * self.MovementPoseSighted * self.SightedSwayFraction
 
+    if self:GetSafe() then
+        pose = math.Clamp(pose, 0, 86)
+    end
+
     return Lerp(sa, pose, sighted)
 end
 

@@ -198,6 +198,11 @@ $animation "basePose_a" "..\..\..\MCV_SMD_OG\weapons\v_m1897\v_m1897_anims\baseP
 	fps 30
 	numframes 60
 }
+
+$animation "basePose_a__f21" "..\..\..\MCV_SMD_OG\weapons\v_m1897\v_m1897_anims\basePose_a.smd" {
+	fps 30
+	numframes 21
+}
 $animation "basePose_a__f60" "..\..\..\MCV_SMD_OG\weapons\v_m1897\v_m1897_anims\basePose_a.smd" {
 	fps 30
 	numframes 60
@@ -207,6 +212,12 @@ $animation "ironsight" "..\..\..\MCV_SMD_OG\weapons\v_m1897\v_m1897_anims\ironsi
 	fps 30
 	frame 1 1
 	numframes 60
+}
+
+$animation "ironsight__f21" "..\..\..\MCV_SMD_OG\weapons\v_m1897\v_m1897_anims\ironsight.smd" {
+	fps 30
+	frame 1 1
+	numframes 21
 }
 $animation "ironsight__f60" "..\..\..\MCV_SMD_OG\weapons\v_m1897\v_m1897_anims\ironsight.smd" {
 	fps 30
@@ -218,6 +229,12 @@ $animation "ironsight_transition" "..\..\..\MCV_SMD_OG\weapons\v_m1897\v_m1897_a
 	fps 30
 	frame 0 1
 	numframes 60
+}
+
+$animation "ironsight_transition__f21" "..\..\..\MCV_SMD_OG\weapons\v_m1897\v_m1897_anims\ironsight_transition.smd" {
+	fps 30
+	frame 0 1
+	numframes 21
 }
 $animation "ironsight_transition__f60" "..\..\..\MCV_SMD_OG\weapons\v_m1897\v_m1897_anims\ironsight_transition.smd" {
 	fps 30
@@ -576,9 +593,9 @@ $sequence "shoot1_pose" {
 }
 
 $sequence "pump" {
-	"basePose_a__f60"
-	"ironsight_transition__f60"
-	"ironsight__f60"
+	"basePose_a__f21"
+	"ironsight_transition__f21"
+	"ironsight__f21"
 	activity "ACT_VM_RELOAD_INSERT_PULL" 1
 	blend "ironsight" 0 1
 	blendwidth 3

@@ -6,6 +6,7 @@ import shutil
 import subprocess
 import numpy as np
 from bake_ik import load_smd, fk
+from pack_paths import asset_path
 from build_xm16super import HERE, ROOT, PORT, SCRATCH, relative, rebase, icon
 
 SOURCE = HERE/'MCV_SMD/weapons/v_ptrd41_s/Ref_new.smd'
@@ -88,7 +89,7 @@ def main():
         files = sorted((SCRATCH/'models/weapons/mcv').glob(qc.stem+'.*'))
         assert any(p.suffix=='.mdl' for p in files)
         if args.install:
-            for file in files: shutil.copy2(file,ROOT/'models/weapons/mcv'/file.name)
+            for file in files: shutil.copy2(file,asset_path('models/weapons/mcv/'+file.name))
         results.append(dict(model=qc.stem,installed=args.install,files=[p.name for p in files]))
         print(qc.stem,'compiled',len(files),'files',flush=True)
     if args.install: icon(SOURCE,'ptrd_sniper')

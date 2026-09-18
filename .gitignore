@@ -9,3 +9,6 @@ work/lua_port/
 work/tools/
 work/shaders/shaders/
 work/survey/
+work/pack_split/build/
+work/pack_split/release*/
+work/pack_split/__pycache__/

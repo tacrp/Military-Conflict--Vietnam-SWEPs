@@ -13,6 +13,7 @@ import tempfile
 import numpy as np
 from PIL import Image, ImageDraw, ImageFilter, ImageFont
 from bake_ik import load_smd, fk
+from pack_paths import asset_path
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
@@ -110,7 +111,7 @@ def make(name, source=None, *, out=None, bone="Base", side="left", size=512,
     output_dir.mkdir(parents=True, exist_ok=True)
     destination = output_dir / f"mcv_{name}.png"
     result.save(destination)
-    installed = ROOT / "materials/entities" / destination.name
+    installed = asset_path("materials/entities/" + destination.name)
     if out is None:
         # Replace a completed PNG instead of truncating a texture the game may have open.
         with tempfile.NamedTemporaryFile(dir=installed.parent, prefix=installed.stem + "_",

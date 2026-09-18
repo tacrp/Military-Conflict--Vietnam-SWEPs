@@ -301,6 +301,11 @@ $animation "basePose_a" "..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\bas
 	fps 30
 	numframes 60
 }
+
+$animation "basePose_a__f30" "..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\basePose_a.smd" {
+	fps 30
+	numframes 30
+}
 $animation "basePose_a__f60" "..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\basePose_a.smd" {
 	fps 30
 	numframes 60
@@ -310,6 +315,12 @@ $animation "ironsight" "..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\iron
 	fps 30
 	frame 1 1
 	numframes 60
+}
+
+$animation "ironsight__f30" "..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\ironsight.smd" {
+	fps 30
+	frame 1 1
+	numframes 30
 }
 $animation "ironsight__f60" "..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\ironsight.smd" {
 	fps 30
@@ -321,6 +332,12 @@ $animation "ironsight_transition" "..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67
 	fps 30
 	frame 0 1
 	numframes 60
+}
+
+$animation "ironsight_transition__f30" "..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\ironsight_transition.smd" {
+	fps 30
+	frame 0 1
+	numframes 30
 }
 $animation "ironsight_transition__f60" "..\..\..\MCV_SMD_OG\weapons\v_type67\v_type67_anims\ironsight_transition.smd" {
 	fps 30
@@ -619,9 +636,9 @@ $sequence "shoot1_pose" {
 }
 
 $sequence "boltpull" {
-	"basePose_a__f60"
-	"ironsight_transition__f60"
-	"ironsight__f60"
+	"basePose_a__f30"
+	"ironsight_transition__f30"
+	"ironsight__f30"
 	activity "ACT_VM_RELOAD_INSERT_PULL" 1
 	blend "ironsight" 0 1
 	blendwidth 3

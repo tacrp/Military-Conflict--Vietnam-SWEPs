@@ -48,6 +48,8 @@ SWEP.Firemodes = {
 }
 // manually cycled after every shot like the Welrod (the model's boltpull; script FireRate 40 RPM)
 SWEP.PlayCycleAnimation = true
+// Keep the fired hammer down until the bolt pull's predicted cocking event.
+SWEP.AnimationHandlesHammer = true
 // the pull sets hammerpos 0, the shot 1: the cocked / ready state is 0 on this model
 SWEP.InvertAnimationHammer = true
 

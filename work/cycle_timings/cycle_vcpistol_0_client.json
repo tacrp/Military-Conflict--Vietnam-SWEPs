@@ -1,0 +1,19 @@
+{
+  "finalStart": 151.44000244140625,
+  "clip": 2,
+  "rows": [
+    {
+      "duration": 2.3333333101537495,
+      "rate": 1,
+      "model": "models/weapons/mcv/v_vcpistol.mdl",
+      "first": true,
+      "sequence": "boltpull",
+      "clip": 2,
+      "class": "mcv_vcpistol",
+      "release": 0,
+      "start": 151.43999661505222,
+      "command": 64242
+    }
+  ],
+  "needCycle": false
+}

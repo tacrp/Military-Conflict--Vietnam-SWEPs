@@ -1,6 +1,6 @@
 # Military Conflict: Vietnam — weapon list
 
-240 spawnable weapon and equipment classes in the addon. Names and categories come from the current Lua definitions. Separate variants count separately; dual wield and grenade-launcher modes within a weapon do not add another class. Custom kitbashes are marked below.
+244 spawnable weapon and equipment classes in the addon. Names and categories come from the current Lua definitions. Separate variants count separately; dual wield and grenade-launcher modes within a weapon do not add another class. Custom kitbashes are marked below.
 
 ## Anti-Armor (11)
 
@@ -18,7 +18,7 @@
 | RPG-2 | `mcv_rpg2` |
 | RPG-7 | `mcv_rpg7` |
 
-## Assault Rifles (22)
+## Assault Rifles (24)
 
 | Weapon | Class |
 | --- | --- |
@@ -30,6 +30,7 @@
 | Kbkg 60 | `mcv_kbkg60` |
 | M16A1 | `mcv_m16a1` |
 | M16A1 M203 | `mcv_m16a1_m203` |
+| M16A1 SOG | `mcv_m16a1_sog` |
 | M16A1 XM148 | `mcv_m16_xm148` |
 | M601 | `mcv_m601` |
 | M605B | `mcv_m605` |
@@ -37,6 +38,7 @@
 | PM md. 63 | `mcv_md63` |
 | StG-44 | `mcv_stg44` |
 | StG-44 ZF4 | `mcv_stg44_s` |
+| StG-44 ZF41 | `mcv_stg44_zf41` |
 | Stoner 63A Drum | `mcv_stoner63_ar_drum` |
 | Stoner 63A Rifle | `mcv_stoner63_ar` |
 | Type 56-1 | `mcv_type56` |
@@ -62,11 +64,12 @@
 | MAS-49 | `mcv_mas49` |
 | SVT-40 | `mcv_svt40` |
 
-## Bolt-Action Rifles (8)
+## Bolt-Action Rifles (9)
 
 | Weapon | Class |
 | --- | --- |
 | Karabiner 98K | `mcv_kar98` |
+| Karabiner 98K ZF41 | `mcv_kar98_zf41` |
 | M1903 Springfield | `mcv_springfield` |
 | MAS-36 CR39 Para | `mcv_mas36_cr39` |
 | MAS-36/51 | `mcv_mas36` |
@@ -154,7 +157,7 @@
 | Type 67 HE Grenade | `mcv_csg2` |
 | V-40 Mini Grenade | `mcv_v40` |
 
-## Light-Machine Guns (25)
+## Light-Machine Guns (26)
 
 | Weapon | Class |
 | --- | --- |
@@ -163,6 +166,7 @@
 | FM 24/29 | `mcv_fm24` |
 | L2A1 | `mcv_l2a1` |
 | M14E2 | `mcv_m14e2` |
+| M16A1 XM3 | `mcv_m16a1_xm3` |
 | M1918A2 BAR LMG | `mcv_m1918_bar` |
 | M1919A6 | `mcv_m1919` |
 | M60 | `mcv_m60` |

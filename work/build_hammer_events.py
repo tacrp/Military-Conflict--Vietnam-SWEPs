@@ -9,6 +9,7 @@ import argparse
 import json
 from pathlib import Path
 import struct
+from pack_paths import mounted_files
 
 ROOT = Path(__file__).resolve().parents[1]
 
@@ -51,13 +52,13 @@ def main():
              "// Normalized event cycles, keyed by model, sequence and hammer position.",
              "MCV.HammerEvents = {"]
     models = sequences = 0
-    for path in sorted((ROOT / "models/weapons/mcv").glob("v_*.mdl")):
+    for path in sorted(mounted_files("models/weapons/mcv", "v_*.mdl"), key=lambda p:p.name):
         events = read_events(path)
         if not events:
             continue
         models += 1
         sequences += len(events)
-        lines.append(f'    [{json.dumps(path.relative_to(ROOT).as_posix())}] = {{')
+        lines.append(f'    [{json.dumps("models/weapons/mcv/" + path.name)}] = {{')
         for name, values in sorted(events.items()):
             fields = ", ".join(f"[{k}] = {v:.8g}" for k, v in sorted(values.items()))
             lines.append(f"        [{json.dumps(name)}] = {{{fields}}},")

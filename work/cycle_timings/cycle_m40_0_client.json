@@ -1,0 +1,19 @@
+{
+  "finalStart": 135.85499572753906,
+  "clip": 4,
+  "rows": [
+    {
+      "duration": 1.4166666314833702,
+      "rate": 1,
+      "model": "models/weapons/mcv/v_m40.mdl",
+      "first": true,
+      "sequence": "boltpull",
+      "clip": 4,
+      "class": "mcv_m40",
+      "release": 0,
+      "start": 135.85499696340412,
+      "command": 63203
+    }
+  ],
+  "needCycle": false
+}

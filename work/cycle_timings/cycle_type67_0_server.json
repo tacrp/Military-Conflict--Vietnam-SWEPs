@@ -1,0 +1,19 @@
+{
+  "finalStart": 143.65499877929688,
+  "clip": 8,
+  "rows": [
+    {
+      "duration": 0.9666667050785503,
+      "rate": 1,
+      "model": "models/weapons/mcv/v_type67.mdl",
+      "first": true,
+      "sequence": "boltpull",
+      "clip": 8,
+      "class": "mcv_type67",
+      "release": 143.9883270263672,
+      "start": 143.65499678906053,
+      "command": 63723
+    }
+  ],
+  "needCycle": false
+}

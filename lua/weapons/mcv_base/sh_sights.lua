@@ -96,7 +96,7 @@ end
 function SWEP:Think_Sights()
     local owner = self:GetOwner()
 
-    if owner:KeyDown(IN_ATTACK2) then
+    if owner:KeyDown(IN_ATTACK2) and !self:GetSafe() then
         if !self:GetIronsight() and !owner:KeyDown(IN_USE) and !self:StillWaiting() then
             self:ScopeToggle(true)
         end

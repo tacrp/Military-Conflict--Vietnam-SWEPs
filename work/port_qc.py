@@ -1274,21 +1274,23 @@ def step_sighted_walk(qc, ctx):
             b.lines.insert(i + 1, 'addlayer "walklayerironsight"')
 
 
-def make_len_variant(qc, ctx, anim_name, nframes, created):
+def make_len_variant(qc, ctx, anim_name, nframes, created, fps=30):
     """Return the name of a copy of animation `anim_name` forced to `nframes` frames."""
     src = qc.find("animation", anim_name)
     if src is None:
         ctx.warn("base animation %s not defined as $animation; using as-is" % anim_name)
         return anim_name
-    key = (anim_name, nframes)
+    key = (anim_name, nframes, fps)
     if key in created:
         return created[key]
     new_name = "%s__f%d" % (anim_name, nframes)
+    if fps != 30:
+        new_name += "_fps%g" % fps
     # The frame count is meant at 30 fps (a 60-frame base is two seconds). Static poses come
     # out of Crowbar as "fps 1" (the PTRD's deploy_a: 5 frames), and a 60-frame variant at
     # 1 fps is a one-minute base, which stretched the PTRD's deployed shot to a minute.
     lines = [l for l in src.lines if not l.startswith("numframes") and not l.startswith("fps") and l != "loop"]
-    lines.insert(0, "fps 30")
+    lines.insert(0, "fps %g" % fps)
     lines.append("numframes %d" % nframes)
     nb = Block("animation", new_name, src.path, lines)
     qc.insert_after(src, nb)
@@ -1332,9 +1334,22 @@ def step_pose_split(qc, ctx):
         #   normalize - same stretch ratio as the primary attack of this weapon; fixes the few
         #               guns whose deployed/cycle poses are far shorter than their hip shot
         pose_len = anim_length(qc, seq.anims()[0], ctx) if seq.anims() else 0
+        base_fps = 30
+        if act == "ACT_VM_RELOAD_INSERT_PULL" and seq.anims():
+            pose_len = max(anim_length(qc, a, ctx) for a in seq.anims())
+            rates = {float((seq.get("fps") or
+                            (qc.find("animation", a).get("fps") if qc.find("animation", a) else None) or
+                            "fps 30").split()[1]) for a in seq.anims()}
+            if len(rates) != 1:
+                raise ValueError("cycle blend has mixed frame rates: %s" % seq.name)
+            base_fps = rates.pop()
         if pose_len <= 0:
             nframes = 60
             ctx.warn("could not determine length of %s; using 60" % seq.name)
+        elif act == "ACT_VM_RELOAD_INSERT_PULL":
+            # Manual actions play at their authored speed. Padding every pump/bolt
+            # pull to 60 frames required a shared Lua multiplier that erased this.
+            nframes = pose_len
         elif act == "ACT_VM_PRIMARYATTACK_DEPLOYED" and ctx.args.base_len == "60" and ctx.primary_pose_len:
             # the deployed shot keeps its ratio to the hip shot (RPK / TUL-1 / DP-28 / M60: a 10
             # or 15 frame pose over a 60 frame base ran the bolt at a third of its speed)
@@ -1373,7 +1388,7 @@ def step_pose_split(qc, ctx):
         # ---- main sequence ----------------------------------------------------------------
         lines = []
         for a in base_anims:
-            lines.append('"%s"' % make_len_variant(qc, ctx, a, nframes, created))
+            lines.append('"%s"' % make_len_variant(qc, ctx, a, nframes, created, base_fps))
         lines.append('activity "%s" 1' % act)
         blends = [l for l in base.lines if l.startswith("blend ")]
         if not blends and len(base_anims) > 1:
@@ -1405,11 +1420,18 @@ def step_pose_split(qc, ctx):
         for ev in events:
             if any(k in ev for k in LUA_HANDLED_EVENTS) and act in FIRE_ACTS:
                 continue
-            # the main sequence is nframes long; an event authored past that would be a compile error
+            # addlayer stretches the pose to the parent's cycle. Keep its events at the
+            # same fraction of that motion, rather than at the old absolute frame number
+            # (Type 67: a 30-frame bolt pull over 60 frames ejected halfway too early).
             m = re.match(r'^\{ event (\S+) (\d+) (.*)$', ev)
-            if m and int(m.group(2)) >= nframes:
-                ev = "{ event %s %d %s" % (m.group(1), nframes - 1, m.group(3))
-                ctx.note("%s: event %s moved from frame %s to %d" % (seq.name, m.group(1), m.group(2), nframes - 1))
+            if m:
+                frame = int(m.group(2))
+                if pose_len > 1:
+                    frame = round(frame * (nframes - 1) / (pose_len - 1))
+                frame = min(frame, nframes - 1)
+                if frame != int(m.group(2)):
+                    ev = "{ event %s %d %s" % (m.group(1), frame, m.group(3))
+                    ctx.note("%s: event %s moved from frame %s to %d" % (seq.name, m.group(1), m.group(2), frame))
             lines.append(ev)
         movement = [l for l in base.layers() if l in ("walklayer", "runlayer", "walklayerironsight")]
         for ml in movement:

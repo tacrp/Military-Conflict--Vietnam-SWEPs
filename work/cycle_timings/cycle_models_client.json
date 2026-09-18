@@ -1,0 +1,97 @@
+[
+  {
+    "model": "models/weapons/mcv/v_chinalake.mdl",
+    "duration": 0.8333333002196431,
+    "sequence": "pump"
+  },
+  {
+    "model": "models/weapons/mcv/v_kar98_dov.mdl",
+    "duration": 1.299999976754189,
+    "sequence": "boltpull"
+  },
+  {
+    "model": "models/weapons/mcv/v_kar98_s.mdl",
+    "duration": 1.299999976754189,
+    "sequence": "boltpull"
+  },
+  {
+    "model": "models/weapons/mcv/v_m1897.mdl",
+    "duration": 0.6666666666666666,
+    "sequence": "pump"
+  },
+  {
+    "model": "models/weapons/mcv/v_m37.mdl",
+    "duration": 0.6666666666666666,
+    "sequence": "pump"
+  },
+  {
+    "model": "models/weapons/mcv/v_m38.mdl",
+    "duration": 1.1333333243264092,
+    "sequence": "boltpull"
+  },
+  {
+    "model": "models/weapons/mcv/v_m38_s.mdl",
+    "duration": 1.1333333243264092,
+    "sequence": "boltpull"
+  },
+  {
+    "model": "models/weapons/mcv/v_m40.mdl",
+    "duration": 1.4166666314833702,
+    "sequence": "boltpull"
+  },
+  {
+    "model": "models/weapons/mcv/v_m870.mdl",
+    "duration": 0.6666666666666666,
+    "sequence": "pump"
+  },
+  {
+    "model": "models/weapons/mcv/v_m91.mdl",
+    "duration": 1.1333333243264092,
+    "sequence": "boltpull"
+  },
+  {
+    "model": "models/weapons/mcv/v_mas36.mdl",
+    "duration": 1.299999976754189,
+    "sequence": "boltpull"
+  },
+  {
+    "model": "models/weapons/mcv/v_mas36_cr39.mdl",
+    "duration": 1.299999976754189,
+    "sequence": "boltpull"
+  },
+  {
+    "model": "models/weapons/mcv/v_springfield.mdl",
+    "duration": 1.1333333243264092,
+    "sequence": "boltpull"
+  },
+  {
+    "model": "models/weapons/mcv/v_type67.mdl",
+    "duration": 0.9666667050785503,
+    "sequence": "boltpull"
+  },
+  {
+    "model": "models/weapons/mcv/v_vcpistol.mdl",
+    "duration": 2.3333333101537495,
+    "sequence": "boltpull"
+  },
+  {
+    "model": "models/weapons/mcv/v_vz24.mdl",
+    "duration": 1.299999976754189,
+    "sequence": "boltpull"
+  },
+  {
+    "model": "models/weapons/mcv/v_vz54.mdl",
+    "duration": 1.1333333243264092,
+    "sequence": "boltpull"
+  },
+  {
+    "model": "models/weapons/mcv/v_vz54s.mdl",
+    "duration": 1.1333333243264092,
+    "sequence": "boltpull"
+  },
+  {
+    "model": "models/weapons/mcv/v_welrod.mdl",
+    "duration": 1.3333333333333333,
+    "sequence": "boltpull"
+  }
+]

@@ -256,9 +256,9 @@ function ENT:PhysicsCollide(data, collider)
         self:SetCollisionGroup(COLLISION_GROUP_DEBRIS)
         self:SetPos(data.HitPos)
 
-        if self.StickyPlace then
-            self:SetAngles((-data.HitNormal):Angle())
-        end
+        // if self.StickyPlace then
+        //     self:SetAngles((-data.HitNormal):Angle())
+        // end
 
         if data.HitEntity:IsWorld() or data.HitEntity:GetSolid() == SOLID_BSP then
             self:SetMoveType(MOVETYPE_NONE)

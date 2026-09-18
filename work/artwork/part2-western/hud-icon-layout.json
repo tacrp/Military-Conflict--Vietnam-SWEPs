@@ -1,0 +1,691 @@
+{
+  "part": "western",
+  "seed": 2789311901,
+  "eligible_icons": 130,
+  "placements": [
+    {
+      "weapon": "mcv_m1918_bar",
+      "icon": "materials/entities/mcv_m1918_bar.png",
+      "row": 0,
+      "direction": "right",
+      "box": [
+        -150,
+        -41,
+        443,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_luger",
+      "icon": "materials/entities/mcv_luger.png",
+      "row": 0,
+      "direction": "right",
+      "box": [
+        321,
+        -41,
+        273,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_mamba",
+      "icon": "materials/entities/mcv_mamba.png",
+      "row": 0,
+      "direction": "right",
+      "box": [
+        622,
+        -41,
+        251,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_m1c",
+      "icon": "materials/entities/mcv_m1c.png",
+      "row": 0,
+      "direction": "right",
+      "box": [
+        901,
+        -20,
+        640,
+        125
+      ]
+    },
+    {
+      "weapon": "mcv_m1919",
+      "icon": "materials/entities/mcv_m1919a6.png",
+      "row": 0,
+      "direction": "right",
+      "box": [
+        1569,
+        -3,
+        640,
+        92
+      ]
+    },
+    {
+      "weapon": "mcv_m8",
+      "icon": "materials/entities/mcv_m8.png",
+      "row": 1,
+      "direction": "left",
+      "box": [
+        -171,
+        144,
+        161,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_mat49",
+      "icon": "materials/entities/mcv_mat49.png",
+      "row": 1,
+      "direction": "left",
+      "box": [
+        18,
+        144,
+        337,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_hipower",
+      "icon": "materials/entities/mcv_hp.png",
+      "row": 1,
+      "direction": "left",
+      "box": [
+        383,
+        144,
+        244,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_xm177",
+      "icon": "materials/entities/mcv_xm177.png",
+      "row": 1,
+      "direction": "left",
+      "box": [
+        655,
+        144,
+        512,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_m1917",
+      "icon": "materials/entities/mcv_m1917.png",
+      "row": 1,
+      "direction": "left",
+      "box": [
+        1195,
+        144,
+        333,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_m60r",
+      "icon": "materials/entities/mcv_m60r.png",
+      "row": 1,
+      "direction": "left",
+      "box": [
+        1556,
+        158,
+        640,
+        140
+      ]
+    },
+    {
+      "weapon": "mcv_m14l",
+      "icon": "materials/entities/mcv_m14l.png",
+      "row": 2,
+      "direction": "right",
+      "box": [
+        -298,
+        358,
+        640,
+        110
+      ]
+    },
+    {
+      "weapon": "mcv_bren",
+      "icon": "materials/entities/mcv_bren.png",
+      "row": 2,
+      "direction": "right",
+      "box": [
+        370,
+        329,
+        524,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_m12",
+      "icon": "materials/entities/mcv_m12.png",
+      "row": 2,
+      "direction": "right",
+      "box": [
+        922,
+        329,
+        418,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_cobra",
+      "icon": "materials/entities/mcv_cobra.png",
+      "row": 2,
+      "direction": "right",
+      "box": [
+        1368,
+        329,
+        487,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_ruby",
+      "icon": "materials/entities/mcv_ruby.png",
+      "row": 2,
+      "direction": "right",
+      "box": [
+        1883,
+        329,
+        201,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_car15",
+      "icon": "materials/entities/mcv_car15.png",
+      "row": 3,
+      "direction": "left",
+      "box": [
+        -135,
+        514,
+        512,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_kar98_zf41",
+      "icon": "materials/entities/mcv_kar98_zf41.png",
+      "row": 3,
+      "direction": "left",
+      "box": [
+        405,
+        532,
+        640,
+        131
+      ]
+    },
+    {
+      "weapon": "mcv_m2c",
+      "icon": "materials/entities/mcv_m2c.png",
+      "row": 3,
+      "direction": "left",
+      "box": [
+        1073,
+        522,
+        640,
+        151
+      ]
+    },
+    {
+      "weapon": "mcv_madsen",
+      "icon": "materials/entities/mcv_m50.png",
+      "row": 3,
+      "direction": "left",
+      "box": [
+        1741,
+        514,
+        506,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_m1g",
+      "icon": "materials/entities/mcv_m1g.png",
+      "row": 4,
+      "direction": "right",
+      "box": [
+        -223,
+        724,
+        640,
+        119
+      ]
+    },
+    {
+      "weapon": "mcv_mas49_s",
+      "icon": "materials/entities/mcv_mas49s.png",
+      "row": 4,
+      "direction": "right",
+      "box": [
+        445,
+        706,
+        640,
+        155
+      ]
+    },
+    {
+      "weapon": "mcv_m60",
+      "icon": "materials/entities/mcv_m60.png",
+      "row": 4,
+      "direction": "right",
+      "box": [
+        1113,
+        710,
+        640,
+        145
+      ]
+    },
+    {
+      "weapon": "mcv_m1918",
+      "icon": "materials/entities/mcv_m1918.png",
+      "row": 4,
+      "direction": "right",
+      "box": [
+        1781,
+        731,
+        640,
+        104
+      ]
+    },
+    {
+      "weapon": "mcv_stoner63_carbine",
+      "icon": "materials/entities/mcv_stoner63_c.png",
+      "row": 5,
+      "direction": "left",
+      "box": [
+        -166,
+        884,
+        581,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_welrod",
+      "icon": "materials/entities/mcv_welrod.png",
+      "row": 5,
+      "direction": "left",
+      "box": [
+        443,
+        884,
+        408,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_m55r",
+      "icon": "materials/entities/mcv_m55r.png",
+      "row": 5,
+      "direction": "left",
+      "box": [
+        879,
+        884,
+        467,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_panzerschreck",
+      "icon": "materials/entities/mcv_panzerschreck.png",
+      "row": 5,
+      "direction": "left",
+      "box": [
+        1374,
+        902,
+        640,
+        132
+      ]
+    },
+    {
+      "weapon": "mcv_kar98_s",
+      "icon": "materials/entities/mcv_kar98k_s.png",
+      "row": 5,
+      "direction": "left",
+      "box": [
+        2042,
+        900,
+        640,
+        135
+      ]
+    },
+    {
+      "weapon": "mcv_blackhawk",
+      "icon": "materials/entities/mcv_blackhawk.png",
+      "row": 6,
+      "direction": "right",
+      "box": [
+        -321,
+        1069,
+        391,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_sten_sog",
+      "icon": "materials/entities/mcv_stenmk2_sog.png",
+      "row": 6,
+      "direction": "right",
+      "box": [
+        98,
+        1086,
+        640,
+        135
+      ]
+    },
+    {
+      "weapon": "mcv_swm10",
+      "icon": "materials/entities/mcv_swm10.png",
+      "row": 6,
+      "direction": "right",
+      "box": [
+        766,
+        1069,
+        324,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_m40",
+      "icon": "materials/entities/mcv_m40.png",
+      "row": 6,
+      "direction": "right",
+      "box": [
+        1118,
+        1084,
+        640,
+        138
+      ]
+    },
+    {
+      "weapon": "mcv_m870",
+      "icon": "materials/entities/mcv_m870.png",
+      "row": 6,
+      "direction": "right",
+      "box": [
+        1786,
+        1096,
+        640,
+        114
+      ]
+    },
+    {
+      "weapon": "mcv_m45_sog",
+      "icon": "materials/entities/mcv_m45_sog.png",
+      "row": 7,
+      "direction": "left",
+      "box": [
+        -240,
+        1254,
+        606,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_springfield",
+      "icon": "materials/entities/mcv_m1903.png",
+      "row": 7,
+      "direction": "left",
+      "box": [
+        394,
+        1278,
+        640,
+        119
+      ]
+    },
+    {
+      "weapon": "mcv_qspr",
+      "icon": "materials/entities/mcv_qspr.png",
+      "row": 7,
+      "direction": "left",
+      "box": [
+        1062,
+        1254,
+        230,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_mac10",
+      "icon": "materials/entities/mcv_mac10.png",
+      "row": 7,
+      "direction": "left",
+      "box": [
+        1320,
+        1254,
+        178,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_m1911a1",
+      "icon": "materials/entities/mcv_m1911.png",
+      "row": 7,
+      "direction": "left",
+      "box": [
+        1526,
+        1254,
+        269,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_l1a1_sog",
+      "icon": "materials/entities/mcv_l1a1_sog.png",
+      "row": 7,
+      "direction": "left",
+      "box": [
+        1823,
+        1254,
+        494,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_f1",
+      "icon": "materials/entities/mcv_f1.png",
+      "row": 8,
+      "direction": "right",
+      "box": [
+        -199,
+        1439,
+        323,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_m14e2_sog",
+      "icon": "materials/entities/mcv_m14e2_sog.png",
+      "row": 8,
+      "direction": "right",
+      "box": [
+        152,
+        1439,
+        548,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_m7188",
+      "icon": "materials/entities/mcv_m7188.png",
+      "row": 8,
+      "direction": "right",
+      "box": [
+        728,
+        1458,
+        640,
+        130
+      ]
+    },
+    {
+      "weapon": "mcv_ppk",
+      "icon": "materials/entities/mcv_ppk.png",
+      "row": 8,
+      "direction": "right",
+      "box": [
+        1396,
+        1439,
+        410,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_kar98",
+      "icon": "materials/entities/mcv_kar98k.png",
+      "row": 8,
+      "direction": "right",
+      "box": [
+        1834,
+        1467,
+        640,
+        112
+      ]
+    },
+    {
+      "weapon": "mcv_stg44_zf41",
+      "icon": "materials/entities/mcv_stg44_zf41.png",
+      "row": 9,
+      "direction": "left",
+      "box": [
+        -117,
+        1624,
+        577,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_m1c_sog",
+      "icon": "materials/entities/mcv_m1c_sog.png",
+      "row": 9,
+      "direction": "left",
+      "box": [
+        488,
+        1624,
+        538,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_thompson",
+      "icon": "materials/entities/mcv_m1a1.png",
+      "row": 9,
+      "direction": "left",
+      "box": [
+        1054,
+        1624,
+        524,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_sterling",
+      "icon": "materials/entities/mcv_sterling.png",
+      "row": 9,
+      "direction": "left",
+      "box": [
+        1606,
+        1624,
+        602,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_m202",
+      "icon": "materials/entities/mcv_xm202.png",
+      "row": 10,
+      "direction": "right",
+      "box": [
+        -106,
+        1809,
+        424,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_m60b",
+      "icon": "materials/entities/mcv_m60b.png",
+      "row": 10,
+      "direction": "right",
+      "box": [
+        346,
+        1820,
+        640,
+        145
+      ]
+    },
+    {
+      "weapon": "mcv_browning_auto",
+      "icon": "materials/entities/mcv_browning_auto.png",
+      "row": 10,
+      "direction": "right",
+      "box": [
+        1014,
+        1832,
+        640,
+        122
+      ]
+    },
+    {
+      "weapon": "mcv_m79",
+      "icon": "materials/entities/mcv_m79.png",
+      "row": 10,
+      "direction": "right",
+      "box": [
+        1682,
+        1828,
+        640,
+        130
+      ]
+    },
+    {
+      "weapon": "mcv_thompson_m1928",
+      "icon": "materials/entities/mcv_m1928.png",
+      "row": 11,
+      "direction": "left",
+      "box": [
+        -104,
+        1995,
+        640,
+        166
+      ]
+    },
+    {
+      "weapon": "mcv_stoner63_lmg",
+      "icon": "materials/entities/mcv_stoner63_l.png",
+      "row": 11,
+      "direction": "left",
+      "box": [
+        564,
+        2013,
+        640,
+        130
+      ]
+    },
+    {
+      "weapon": "mcv_springfield_s",
+      "icon": "materials/entities/mcv_m1903s.png",
+      "row": 11,
+      "direction": "left",
+      "box": [
+        1232,
+        2010,
+        640,
+        135
+      ]
+    },
+    {
+      "weapon": "mcv_p38",
+      "icon": "materials/entities/mcv_p38.png",
+      "row": 11,
+      "direction": "left",
+      "box": [
+        1900,
+        1994,
+        263,
+        168
+      ]
+    }
+  ]
+}

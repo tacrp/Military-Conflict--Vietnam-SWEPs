@@ -1,0 +1,679 @@
+{
+  "part": "eastern",
+  "seed": 1337582519,
+  "eligible_icons": 67,
+  "placements": [
+    {
+      "weapon": "mcv_amd65",
+      "icon": "materials/entities/mcv_amd65.png",
+      "row": 0,
+      "direction": "right",
+      "box": [
+        -177,
+        -41,
+        538,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_m91",
+      "icon": "materials/entities/mcv_m91.png",
+      "row": 0,
+      "direction": "right",
+      "box": [
+        389,
+        -10,
+        640,
+        105
+      ]
+    },
+    {
+      "weapon": "mcv_type63",
+      "icon": "materials/entities/mcv_type63.png",
+      "row": 0,
+      "direction": "right",
+      "box": [
+        1057,
+        -22,
+        640,
+        130
+      ]
+    },
+    {
+      "weapon": "mcv_pk",
+      "icon": "materials/entities/mcv_pk.png",
+      "row": 0,
+      "direction": "right",
+      "box": [
+        1725,
+        -38,
+        640,
+        162
+      ]
+    },
+    {
+      "weapon": "mcv_vz59",
+      "icon": "materials/entities/mcv_vz59.png",
+      "row": 1,
+      "direction": "left",
+      "box": [
+        -301,
+        154,
+        640,
+        148
+      ]
+    },
+    {
+      "weapon": "mcv_ptrd",
+      "icon": "materials/entities/mcv_ptrd.png",
+      "row": 1,
+      "direction": "left",
+      "box": [
+        367,
+        158,
+        640,
+        139
+      ]
+    },
+    {
+      "weapon": "mcv_shanxi_type17",
+      "icon": "materials/entities/mcv_type17.png",
+      "row": 1,
+      "direction": "left",
+      "box": [
+        1035,
+        144,
+        589,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_kbkg60",
+      "icon": "materials/entities/mcv_kbkg60.png",
+      "row": 1,
+      "direction": "left",
+      "box": [
+        1652,
+        144,
+        573,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_akm_gp25",
+      "icon": "materials/entities/mcv_akm_gp25.png",
+      "row": 2,
+      "direction": "right",
+      "box": [
+        -274,
+        329,
+        593,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_type56",
+      "icon": "materials/entities/mcv_type56.png",
+      "row": 2,
+      "direction": "right",
+      "box": [
+        347,
+        329,
+        430,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_mat49k",
+      "icon": "materials/entities/mcv_mat49k.png",
+      "row": 2,
+      "direction": "right",
+      "box": [
+        805,
+        329,
+        368,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_sks",
+      "icon": "materials/entities/mcv_sks.png",
+      "row": 2,
+      "direction": "right",
+      "box": [
+        1201,
+        358,
+        640,
+        111
+      ]
+    },
+    {
+      "weapon": "mcv_tt33",
+      "icon": "materials/entities/mcv_tt33.png",
+      "row": 2,
+      "direction": "right",
+      "box": [
+        1869,
+        329,
+        255,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_type97",
+      "icon": "materials/entities/mcv_type97.png",
+      "row": 3,
+      "direction": "left",
+      "box": [
+        -220,
+        514,
+        224,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_lpo50",
+      "icon": "materials/entities/mcv_lpo50.png",
+      "row": 3,
+      "direction": "left",
+      "box": [
+        32,
+        547,
+        640,
+        102
+      ]
+    },
+    {
+      "weapon": "mcv_type64p",
+      "icon": "materials/entities/mcv_type64p.png",
+      "row": 3,
+      "direction": "left",
+      "box": [
+        700,
+        514,
+        312,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_vcshotgun",
+      "icon": "materials/entities/mcv_vcshotgun.png",
+      "row": 3,
+      "direction": "left",
+      "box": [
+        1040,
+        519,
+        640,
+        158
+      ]
+    },
+    {
+      "weapon": "mcv_dp28",
+      "icon": "materials/entities/mcv_dp28.png",
+      "row": 3,
+      "direction": "left",
+      "box": [
+        1708,
+        547,
+        640,
+        102
+      ]
+    },
+    {
+      "weapon": "mcv_pps43",
+      "icon": "materials/entities/mcv_pps43.png",
+      "row": 4,
+      "direction": "right",
+      "box": [
+        -298,
+        699,
+        566,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_ppsh41dd",
+      "icon": "materials/entities/mcv_ppsh41dd.png",
+      "row": 4,
+      "direction": "right",
+      "box": [
+        296,
+        699,
+        538,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_avt40",
+      "icon": "materials/entities/mcv_svt40.png",
+      "row": 4,
+      "direction": "right",
+      "box": [
+        862,
+        730,
+        640,
+        106
+      ]
+    },
+    {
+      "weapon": "mcv_cz52",
+      "icon": "materials/entities/mcv_cz52.png",
+      "row": 4,
+      "direction": "right",
+      "box": [
+        1530,
+        699,
+        252,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_vz23",
+      "icon": "materials/entities/mcv_vz23.png",
+      "row": 4,
+      "direction": "right",
+      "box": [
+        1810,
+        699,
+        340,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_rpk",
+      "icon": "materials/entities/mcv_rpk.png",
+      "row": 5,
+      "direction": "left",
+      "box": [
+        -312,
+        895,
+        640,
+        146
+      ]
+    },
+    {
+      "weapon": "mcv_md63",
+      "icon": "materials/entities/mcv_md63.png",
+      "row": 5,
+      "direction": "left",
+      "box": [
+        356,
+        884,
+        581,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_pm63",
+      "icon": "materials/entities/mcv_pm63.png",
+      "row": 5,
+      "direction": "left",
+      "box": [
+        965,
+        884,
+        267,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_type64",
+      "icon": "materials/entities/mcv_type64.png",
+      "row": 5,
+      "direction": "left",
+      "box": [
+        1260,
+        884,
+        632,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_aps",
+      "icon": "materials/entities/mcv_aps.png",
+      "row": 5,
+      "direction": "left",
+      "box": [
+        1920,
+        884,
+        573,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_akm",
+      "icon": "materials/entities/mcv_akm.png",
+      "row": 6,
+      "direction": "right",
+      "box": [
+        -269,
+        1069,
+        597,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_pm",
+      "icon": "materials/entities/mcv_pm.png",
+      "row": 6,
+      "direction": "right",
+      "box": [
+        356,
+        1069,
+        215,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_rpdb_sog",
+      "icon": "materials/entities/mcv_rpdb_sog.png",
+      "row": 6,
+      "direction": "right",
+      "box": [
+        599,
+        1081,
+        640,
+        144
+      ]
+    },
+    {
+      "weapon": "mcv_rpd",
+      "icon": "materials/entities/mcv_rpd.png",
+      "row": 6,
+      "direction": "right",
+      "box": [
+        1267,
+        1072,
+        640,
+        162
+      ]
+    },
+    {
+      "weapon": "mcv_type58",
+      "icon": "materials/entities/mcv_type58.png",
+      "row": 6,
+      "direction": "right",
+      "box": [
+        1935,
+        1069,
+        581,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_rpg2",
+      "icon": "materials/entities/mcv_rpg2.png",
+      "row": 7,
+      "direction": "left",
+      "box": [
+        -226,
+        1254,
+        606,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_rpdb",
+      "icon": "materials/entities/mcv_rpdb.png",
+      "row": 7,
+      "direction": "left",
+      "box": [
+        408,
+        1284,
+        640,
+        109
+      ]
+    },
+    {
+      "weapon": "mcv_ppsh41_drum",
+      "icon": "materials/entities/mcv_ppsh41d.png",
+      "row": 7,
+      "direction": "left",
+      "box": [
+        1076,
+        1254,
+        606,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_vz61_sog",
+      "icon": "materials/entities/mcv_vz61e_sog.png",
+      "row": 7,
+      "direction": "left",
+      "box": [
+        1710,
+        1254,
+        602,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_rpg7",
+      "icon": "materials/entities/mcv_rpg7.png",
+      "row": 8,
+      "direction": "right",
+      "box": [
+        -110,
+        1439,
+        640,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_vcsmg",
+      "icon": "materials/entities/mcv_vcsmg.png",
+      "row": 8,
+      "direction": "right",
+      "box": [
+        558,
+        1439,
+        426,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_vz61",
+      "icon": "materials/entities/mcv_vz61e.png",
+      "row": 8,
+      "direction": "right",
+      "box": [
+        1012,
+        1439,
+        271,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_vcpistol",
+      "icon": "materials/entities/mcv_vcpistol.png",
+      "row": 8,
+      "direction": "right",
+      "box": [
+        1311,
+        1439,
+        323,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_rpd_sog",
+      "icon": "materials/entities/mcv_rpd_sog.png",
+      "row": 8,
+      "direction": "right",
+      "box": [
+        1662,
+        1439,
+        500,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_k50m_vc",
+      "icon": "materials/entities/mcv_k50m_vc.png",
+      "row": 9,
+      "direction": "left",
+      "box": [
+        -316,
+        1624,
+        515,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_type67",
+      "icon": "materials/entities/mcv_type67.png",
+      "row": 9,
+      "direction": "left",
+      "box": [
+        227,
+        1624,
+        312,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_svt40_s",
+      "icon": "materials/entities/mcv_svt40s.png",
+      "row": 9,
+      "direction": "left",
+      "box": [
+        567,
+        1647,
+        640,
+        122
+      ]
+    },
+    {
+      "weapon": "mcv_m56",
+      "icon": "materials/entities/mcv_m56.png",
+      "row": 9,
+      "direction": "left",
+      "box": [
+        1235,
+        1624,
+        581,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_vz54s",
+      "icon": "materials/entities/mcv_vz54s.png",
+      "row": 9,
+      "direction": "left",
+      "box": [
+        1844,
+        1648,
+        640,
+        121
+      ]
+    },
+    {
+      "weapon": "mcv_vz54",
+      "icon": "materials/entities/mcv_vz54.png",
+      "row": 10,
+      "direction": "right",
+      "box": [
+        -141,
+        1844,
+        640,
+        99
+      ]
+    },
+    {
+      "weapon": "mcv_ak47",
+      "icon": "materials/entities/mcv_ak47.png",
+      "row": 10,
+      "direction": "right",
+      "box": [
+        527,
+        1809,
+        581,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_rp46",
+      "icon": "materials/entities/mcv_rp46.png",
+      "row": 10,
+      "direction": "right",
+      "box": [
+        1136,
+        1826,
+        640,
+        135
+      ]
+    },
+    {
+      "weapon": "mcv_m38_s",
+      "icon": "materials/entities/mcv_m38s.png",
+      "row": 10,
+      "direction": "right",
+      "box": [
+        1804,
+        1832,
+        640,
+        122
+      ]
+    },
+    {
+      "weapon": "mcv_vcpistol2",
+      "icon": "materials/entities/mcv_vcpistol2.png",
+      "row": 11,
+      "direction": "left",
+      "box": [
+        -152,
+        1994,
+        269,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_ppsh41",
+      "icon": "materials/entities/mcv_ppsh41.png",
+      "row": 11,
+      "direction": "left",
+      "box": [
+        145,
+        1994,
+        489,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_pkm",
+      "icon": "materials/entities/mcv_pkm.png",
+      "row": 11,
+      "direction": "left",
+      "box": [
+        662,
+        2010,
+        640,
+        135
+      ]
+    },
+    {
+      "weapon": "mcv_k50m",
+      "icon": "materials/entities/mcv_k50m.png",
+      "row": 11,
+      "direction": "left",
+      "box": [
+        1330,
+        1994,
+        406,
+        168
+      ]
+    },
+    {
+      "weapon": "mcv_tul1",
+      "icon": "materials/entities/mcv_tul1.png",
+      "row": 11,
+      "direction": "left",
+      "box": [
+        1764,
+        1994,
+        640,
+        168
+      ]
+    }
+  ]
+}

@@ -42,6 +42,14 @@ local CLIENT_SETTINGS = {
     {convar = "mcv_shell_smoke", label = "Shell smoke trail"},
 
     {convar = "mcv_shell_time", label = "Shells stay for", slider = {0, 60, 1}},
+
+    {section = "HUD",},
+
+    {convar = "mcv_hud_enable", label = "Enable HUD"},
+
+    {convar = "mcv_hud_hints", label = "Hints", choices = {{"Never", "0"}, {"On Deploy", "1"}, {"First Deploy", "2"}, {"Always", "3"}}},
+
+    {convar = "mcv_hud_crosshair", label = "Enable Crosshair"},
 }
 
 // which category the sliders below are showing, an index into MCV.Categories

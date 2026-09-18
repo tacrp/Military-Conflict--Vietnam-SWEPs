@@ -1,0 +1,19 @@
+{
+  "finalStart": 244.34999084472656,
+  "clip": 6,
+  "rows": [
+    {
+      "duration": 1.3333333333333333,
+      "rate": 1,
+      "model": "models/weapons/mcv/v_welrod.mdl",
+      "first": true,
+      "sequence": "boltpull",
+      "clip": 6,
+      "class": "mcv_welrod",
+      "release": 0,
+      "start": 244.3499945383519,
+      "command": 70430
+    }
+  ],
+  "needCycle": false
+}

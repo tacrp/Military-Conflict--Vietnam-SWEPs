@@ -12,6 +12,7 @@ import shutil
 import subprocess
 import numpy as np
 from bake_ik import load_smd, fk
+from pack_paths import asset_path
 
 HERE = Path(__file__).resolve().parent
 ROOT = HERE.parent
@@ -165,7 +166,7 @@ def main():
         assert any(p.suffix == '.mdl' for p in files)
         if a.install:
             for p in files:
-                shutil.copy2(p, ROOT / 'models/weapons/mcv' / p.name)
+                shutil.copy2(p, asset_path('models/weapons/mcv/' + p.name))
         results.append({'qc': str(qc), 'outputs': [str(p) for p in files], 'installed': a.install,
                         'warnings': [line for line in output.splitlines() if 'WARNING' in line]})
         print(qc.stem, 'compiled', len(files), 'files', flush=True)

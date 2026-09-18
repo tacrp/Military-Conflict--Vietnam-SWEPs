@@ -47,7 +47,7 @@ function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
         // between the realms and the server's networked pose parameter fought the client's
         local cycling = self:GetNeedCycle()
         if !cycling and self:GetActionStart() > 0 then
-            cycling = now < self:GetActionStart() + self.CycleClipPoseTime * (self.CycleSpeed or 1)
+            cycling = now < self:GetActionStart() + self.CycleClipPoseTime
         end
         if cycling then shown = math.min(shown + 1, clipsize) end
     end

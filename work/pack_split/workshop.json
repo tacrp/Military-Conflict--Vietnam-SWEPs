@@ -1,0 +1,16 @@
+{
+  "eastern": {
+    "folder": "mcv",
+    "title": "Military Conflict: Vietnam - Part 1: Eastern & Base",
+    "workshop_id": null,
+    "required_parts": [],
+    "icon": "mcv/icon.jpg"
+  },
+  "western": {
+    "folder": "mcv-2",
+    "title": "Military Conflict: Vietnam - Part 2: Western",
+    "workshop_id": null,
+    "required_parts": ["eastern"],
+    "icon": "mcv-2/icon.jpg"
+  }
+}

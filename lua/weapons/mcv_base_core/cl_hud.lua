@@ -18,7 +18,10 @@ HUD.HintDuration = 6 // seconds the hints stay before fading
 HUD.HintFade = 1
 HUD.HintStagger = 0.06 // extra delay per hint line
 
-local cv_hints = CreateClientConVar("mcv_hud_hints", "1", true, false, "Control hints on deploy: 0 off, 1 every deploy, 2 first deploy of each weapon")
+local cv_hints = CreateClientConVar("mcv_hud_hints", "1", true, false, "Control hints on deploy: 0 off, 1 every deploy, 2 first deploy of each weapon; 3 always")
+local cv_hud_enable = CreateClientConVar("mcv_hud_enable", "1", true, false, "Whether to enable the weapon HUD")
+local cv_hud_crosshair = CreateClientConVar("mcv_hud_crosshair", "1", true, false, "Whether to enable the crosshair")
+
 
 local function ease(p)
     p = math.Clamp(p, 0, 1)
@@ -281,7 +284,7 @@ end
 function SWEP:DrawHUDHints(blend)
     local mode = cv_hints:GetInt()
     if mode <= 0 then return end
-    if mode >= 2 and (HUD.DeployCount[self:GetClass()] or 1) > 1 then return end
+    if mode == 2 and (HUD.DeployCount[self:GetClass()] or 1) > 1 then return end
 
     local hints = self:GetControlHints()
     if !hints or #hints == 0 then return end
@@ -289,6 +292,7 @@ function SWEP:DrawHUDHints(blend)
     local now = CurTime()
     local age = now - (self.HUDHintsStart or now)
     local life = 1 - math.Clamp((age - HUD.HintDuration) / HUD.HintFade, 0, 1)
+    if mode >= 3 then life = 1 end
     if life <= 0 then return end
 
     local sw, sh = ScrW(), ScrH()
@@ -333,6 +337,8 @@ function SWEP:GetControlHints()
 end
 
 function SWEP:DrawHUD()
+    if !cv_hud_enable:GetBool() then return end
+
     local blend = self:GetHUDBlend()
 
     self:DrawHUDExtra()
@@ -412,6 +418,8 @@ function SWEP:DoDrawCrosshair(x, y)
 
     local col = crosshair_col
     col.a = a
+
+    if !cv_hud_crosshair:GetBool() then return end
 
     // The crosshair follows the view punch (twice it, as the shot does) but not the hip sway:
     // it stays put and grows by the sway's peak instead, so the shot always lands inside it
@@ -516,6 +524,7 @@ local shoulddraw = {
 }
 
 function SWEP:HUDShouldDraw(element)
+    if !cv_hud_enable:GetBool() then return end
     if shoulddraw[element] then return false end
 end
 

@@ -1,0 +1,4 @@
+lua include("mcv_harness/bolt.lua") MCVBoltTest.Baseline(ply)
+clua include("mcv_harness/bolt.lua") MCVBoltTest.Model()
+wait 1
+lua MCVBoltTest.FinishBaseline()

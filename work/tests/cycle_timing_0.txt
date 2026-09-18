@@ -1,0 +1,81 @@
+cmd sv_cheats 1
+ccmd cl_showerror 0
+wait 0.4
+ccmd net_fakelag 0
+wait 2
+lua include("mcv_harness/cycle_timing.lua") MCVCycleTiming.Audit()
+clua include("mcv_harness/cycle_timing.lua") MCVCycleTiming.Audit()
+ccmd cl_showerror 0
+wait 0.4
+give mcv_m37
+wait 2.5
+lua MCVCycleTiming.Start(ply,"m37_0")
+clua MCVCycleTiming.Start(ply,"m37_0")
+ccmd cl_showerror 2
+wait 0.4
+tap +attack 0.15
+wait 3.5
+clua MCVCycleTiming.Finish()
+lua MCVCycleTiming.Finish()
+ccmd cl_showerror 0
+wait 0.4
+give mcv_kar98
+wait 2.5
+lua MCVCycleTiming.Start(ply,"kar98_0")
+clua MCVCycleTiming.Start(ply,"kar98_0")
+ccmd cl_showerror 2
+wait 0.4
+tap +attack 0.15
+wait 3.5
+clua MCVCycleTiming.Finish()
+lua MCVCycleTiming.Finish()
+ccmd cl_showerror 0
+wait 0.4
+give mcv_m40
+wait 2.5
+lua MCVCycleTiming.Start(ply,"m40_0")
+clua MCVCycleTiming.Start(ply,"m40_0")
+ccmd cl_showerror 2
+wait 0.4
+tap +attack 0.15
+wait 3.5
+clua MCVCycleTiming.Finish()
+lua MCVCycleTiming.Finish()
+ccmd cl_showerror 0
+wait 0.4
+give mcv_type67
+wait 2.5
+lua MCVCycleTiming.Start(ply,"type67_0")
+clua MCVCycleTiming.Start(ply,"type67_0")
+ccmd cl_showerror 2
+wait 0.4
+tap +attack 0.15
+wait 3.5
+clua MCVCycleTiming.Finish()
+lua MCVCycleTiming.Finish()
+ccmd cl_showerror 0
+wait 0.4
+give mcv_vcpistol
+wait 2.5
+lua MCVCycleTiming.Start(ply,"vcpistol_0")
+clua MCVCycleTiming.Start(ply,"vcpistol_0")
+ccmd cl_showerror 2
+wait 0.4
+tap +attack 0.15
+wait 3.5
+clua MCVCycleTiming.Finish()
+lua MCVCycleTiming.Finish()
+ccmd cl_showerror 0
+wait 0.4
+give mcv_welrod
+wait 2.5
+lua MCVCycleTiming.Start(ply,"welrod_0")
+clua MCVCycleTiming.Start(ply,"welrod_0")
+ccmd cl_showerror 2
+wait 0.4
+tap +attack 0.15
+wait 3.5
+clua MCVCycleTiming.Finish()
+lua MCVCycleTiming.Finish()
+ccmd net_fakelag 0
+wait 1

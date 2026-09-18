@@ -3,6 +3,7 @@ import argparse
 from pathlib import Path
 import shutil
 import subprocess
+import sys
 
 folder = Path(__file__).resolve().parent
 parser = argparse.ArgumentParser(description=__doc__)
@@ -15,6 +16,9 @@ scratch = folder/'compiled'
 scratch.mkdir(exist_ok=True)
 (scratch/'gameinfo.txt').write_text('"GameInfo" { game "MCV custom compile" FileSystem { SteamAppId 4000 SearchPaths { Game |gameinfo_path|. Game "'+game.as_posix()+'" } } }')
 addon = next((p for p in folder.parents if (p/'lua/weapons/mcv_base_core').exists()), None)
+if addon:
+    sys.path.insert(0,str(addon/'work'))
+    from pack_paths import asset_path
 for qc in sorted(folder.glob('*.qc')):
     print('Compiling', qc.name, flush=True)
     run = subprocess.run([str(compiler), '-game', str(scratch), '-nop4', str(qc)], cwd=compiler.parent, capture_output=True, text=True)
@@ -24,7 +28,7 @@ for qc in sorted(folder.glob('*.qc')):
         raise SystemExit(output[-6000:])
     if addon:
         for model in (scratch/'models/weapons/mcv').glob(qc.stem+'.*'):
-            shutil.copy2(model,addon/'models/weapons/mcv'/model.name)
+            shutil.copy2(model,asset_path('models/weapons/mcv/'+model.name))
         print('Installed', qc.name, flush=True)
     else:
         print('Built into', scratch/'models/weapons/mcv', flush=True)

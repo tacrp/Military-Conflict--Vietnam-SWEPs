@@ -1,0 +1,19 @@
+{
+  "finalStart": 128.0399932861328,
+  "clip": 4,
+  "rows": [
+    {
+      "duration": 1.299999976754189,
+      "rate": 1,
+      "model": "models/weapons/mcv/v_kar98_s.mdl",
+      "first": true,
+      "sequence": "boltpull",
+      "clip": 4,
+      "class": "mcv_kar98",
+      "release": 0,
+      "start": 128.03999713808298,
+      "command": 62682
+    }
+  ],
+  "needCycle": false
+}

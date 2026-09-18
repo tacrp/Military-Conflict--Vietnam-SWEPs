@@ -184,6 +184,11 @@ $animation "basePose_a" "..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_ani
 	fps 30
 	numframes 60
 }
+
+$animation "basePose_a__f26" "..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\basePose_a.smd" {
+	fps 30
+	numframes 26
+}
 $animation "basePose_a__f60" "..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\basePose_a.smd" {
 	fps 30
 	numframes 60
@@ -193,6 +198,12 @@ $animation "ironsight" "..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anim
 	fps 30
 	frame 1 1
 	numframes 60
+}
+
+$animation "ironsight__f26" "..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\ironsight.smd" {
+	fps 30
+	frame 1 1
+	numframes 26
 }
 $animation "ironsight__f60" "..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\ironsight.smd" {
 	fps 30
@@ -204,6 +215,12 @@ $animation "ironsight_transition" "..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chi
 	fps 30
 	frame 0 1
 	numframes 60
+}
+
+$animation "ironsight_transition__f26" "..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\ironsight_transition.smd" {
+	fps 30
+	frame 0 1
+	numframes 26
 }
 $animation "ironsight_transition__f60" "..\..\..\MCV_SMD_OG\weapons\v_chinalake\v_chinalake_anims\ironsight_transition.smd" {
 	fps 30
@@ -487,9 +504,9 @@ $sequence "shoot1_pose" {
 }
 
 $sequence "pump" {
-	"basePose_a__f60"
-	"ironsight_transition__f60"
-	"ironsight__f60"
+	"basePose_a__f26"
+	"ironsight_transition__f26"
+	"ironsight__f26"
 	activity "ACT_VM_RELOAD_INSERT_PULL" 1
 	blend "ironsight" 0 1
 	blendwidth 3

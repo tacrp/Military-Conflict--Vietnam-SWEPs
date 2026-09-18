@@ -1,0 +1,19 @@
+select mcv_type67
+wait 2
+lua ply:GetActiveWeapon():SetHasSecond(true)
+wait 0.5
+key +walk
+tap +use 0.1
+key -walk
+wait 4
+lua assert(ply:GetActiveWeapon():GetAkimbo())
+clua MCVType67Timing.Start(ply,"dual")
+lua MCVType67Timing.Start(ply,"dual")
+tap +attack 0.25
+wait 1
+tap +attack 0.25
+wait 1
+lua assert(!ply:GetActiveWeapon():GetNeedCycle())
+clua MCVType67Timing.Finish()
+lua MCVType67Timing.Finish()
+wait 0.3
