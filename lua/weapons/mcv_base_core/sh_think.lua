@@ -161,6 +161,10 @@ function SWEP:Think_HoldType()
         holdtype = self.AimHoldType
     end
 
+    if self:GetSafe() then
+        holdtype = self.SprintHoldType
+    end
+
     // SetHoldType is networked; only call it when something changed. Asking the weapon what it
     // is now rather than remembering it in a plain field keeps this right through a prediction
     // error: a field is never put back, so it would claim to have set a hold type the server

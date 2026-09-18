@@ -26,6 +26,8 @@ SWEP.WeaponSelectIcon = NULL
 
 SWEP.BayonetBodygroup = 1
 
+SWEP.WorldBayonetBodygroup = 1
+
 // Stats
 
 SWEP.DamageGeneric = 40 // damage for other objects (i.e. explosive barrels, breakable walls, or characters with no hitboxes set)

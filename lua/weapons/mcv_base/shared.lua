@@ -20,6 +20,10 @@ SWEP.BayonetBodygroup = 0
 SWEP.GrenadeLauncherBodygroup = 0
 SWEP.GrenadeBodygroup = 0
 
+SWEP.WorldBayonetBodygroup = 0
+SWEP.WorldGrenadeLauncherBodygroup = 0
+SWEP.WorldGrenadeBodygroup = 0
+
 SWEP.BulletBodygroups = nil
 SWEP.BeltBodygroups = nil // bodygroup indices of the belt segment in the feed tray (the game's "clamped*"), hidden when no rounds are shown
 
