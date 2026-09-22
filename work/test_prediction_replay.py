@@ -47,6 +47,56 @@ def realm(module):
 
 
 class ReplayTests(unittest.TestCase):
+    def test_toggle_aim_replays_and_respects_other_controls(self):
+        for client in (True, False):
+            lua = realm("lua/weapons/mcv_base/sh_sights.lua")
+            lua.globals().CLIENT = client
+            lua.globals().SERVER = not client
+            lua.execute('''
+                IN_ATTACK2=1; IN_USE=2
+                engine={TickInterval=function() return 0.015 end}
+                function math.Approach(cur,target,step)
+                    if cur < target then return math.min(cur+step,target) end
+                    return math.max(cur-step,target)
+                end
+                function owner:IsPlayer() return true end
+                mode=1; down=false; pressed=false; use=false; waiting=false; sprint=false
+                function owner:GetInfoNum(name,default)
+                    assert(name=="mcv_toggle_aim" and default==0); return mode
+                end
+                function owner:KeyDown(key) return (key==IN_USE and use) or (key==IN_ATTACK2 and down) end
+                function owner:KeyPressed(key) return key==IN_ATTACK2 and pressed end
+                function SWEP:StillWaiting() return waiting end
+                function SWEP:GetIsSprinting() return sprint end
+                SWEP.Ironsight=true; SWEP.IronsightSpeedScale=1
+                w=make(); w:SetIronsight(false); w:SetSighted(false); w:SetSafe(false)
+                w:SetReloading(false); w:SetBipod(false); w:SetSightAmountRaw(0)
+                -- A replay restores only DT state; the same press must raise sights again.
+                before=copy(w.dt); pressed=true; down=true; w:Think_Sights()
+                assert(w:GetIronsight() and w:GetSighted()); after=copy(w.dt)
+                w.dt=copy(before); first=false; w:Think_Sights()
+                for k,v in pairs(after) do assert(w.dt[k]==v,k) end
+                -- Holding or releasing must not undo the toggle.
+                pressed=false; w:Think_Sights(); assert(w:GetIronsight())
+                down=false; w:Think_Sights(); assert(w:GetIronsight())
+                sprint=true; w:Think_Sights(); assert(w:GetIronsight() and not w:GetSighted())
+                sprint=false; w:Think_Sights(); assert(w:GetSighted())
+                -- Use + aim belongs to the bayonet control, not the toggle.
+                use=true; pressed=true; down=true; w:Think_Sights(); assert(w:GetIronsight())
+                use=false; before=copy(w.dt); w:Think_Sights(); assert(not w:GetIronsight())
+                w.dt=copy(before); w:Think_Sights(); assert(not w:GetIronsight())
+                waiting=true; w:Think_Sights(); assert(not w:GetIronsight())
+                waiting=false; w:SetReloading(true); w:Think_Sights(); assert(not w:GetIronsight())
+                w:SetReloading(false); w.MustBipod=true; w:Think_Sights(); assert(not w:GetIronsight())
+                w:SetBipod(true); w:Think_Sights(); assert(w:GetIronsight())
+                w.MustBipod=false; pressed=false
+                w:SetSafe(true); w:Think_Sights(); assert(not w:GetIronsight())
+                w:SetSafe(false); w:Think_Sights(); assert(not w:GetIronsight())
+                -- Returning to hold mode obeys the current button without a fresh press.
+                mode=0; w:Think_Sights(); assert(w:GetIronsight())
+                down=false; w:Think_Sights(); assert(not w:GetIronsight())
+            ''')
+
     def test_movement_samples_match_across_hook_order_and_rollback(self):
         lua=realm("lua/weapons/mcv_base_core/sh_timers.lua")
         lua.execute('''
@@ -189,6 +239,7 @@ class ReplayTests(unittest.TestCase):
             function vm:SetCollisionBounds(a,b) self.mins=a; self.maxs=b end
             function vm:GetInternalVariable() return self.model=="single" and 1 or 2 end
             function owner:GetViewModel() return vm end
+            function owner:IsPlayer() return true end
             function SWEP:SetSaveValue(k,v) self.dt[k]=v end
             w=make(); w:SetAkimbo(false); w:SyncViewModel(true); w:SyncViewModel(); before=copy(w.dt)
             w:SetAkimbo(true); w:SyncViewModel(true)
@@ -250,6 +301,41 @@ class ReplayTests(unittest.TestCase):
             w:Deploy(); assert(owner.m_flNextAttack==0)
             game.SinglePlayer=function() return true end
             w:Deploy(); assert(owner.m_flNextAttack==0)
+        ''')
+
+    def test_grenade_holdtypes_follow_pull_and_restore(self):
+        lua = realm("lua/weapons/mcv_throwable/sh_throw.lua")
+        lua.execute('''
+            SWEP.FuseModes={3}; SWEP.ThrowReleaseTime=0.22; SWEP.ThrowReleaseTimeUnderhand=0.3
+            SWEP.ShootGesture=123
+            SWEP.SequenceWindupHigh="drawbackhigh"; SWEP.SequenceWindupLow="drawbacklow"
+            SWEP.SequenceThrowHigh="throw"; SWEP.SequenceThrowLow="lob"; SWEP.SequenceRoll="roll"
+            function SWEP:LaunchThrowable() end
+            owner.DoAnimationEvent=function(_,gesture)
+                assert(gesture==123 and w:GetHoldType()=="grenade")
+            end
+            for _,server in ipairs({false,true}) do
+                SERVER=server; CLIENT=not server
+                for _,low in ipairs({false,true}) do
+                    for _,crouched in ipairs({false,true}) do
+                        owner.Crouching=function() return crouched end
+                        w=make(); w:SetFiremode(1); w:SetSpeed(999)
+                        w:OnDeploy(); assert(w:GetHoldType()=="slam")
+                        w:Windup(low)
+                        assert(w:GetHoldType()==(low and "melee2" or "grenade"))
+                        local pulled=copy(w.dt)
+                        w:Throw(low,false); assert(w:GetHoldType()=="grenade")
+                        assert(w.lastSequence==(low and (crouched and "roll" or "lob") or "throw"))
+                        w:Deferred_ThrowEnd(); assert(w:GetHoldType()=="slam")
+                        -- Replayed/received action state corrects a stale holdtype without Lua flags.
+                        w.dt=copy(pulled); w:SetHoldType("slam"); first=false
+                        w:Think_HoldType()
+                        assert(w:GetHoldType()==(low and "melee2" or "grenade"))
+                        w:Throw(low,true); assert(w:GetHoldType()=="grenade")
+                        w:OnDeploy(); assert(w:GetHoldType()=="slam")
+                    end
+                end
+            end
         ''')
 
     def test_throw_replayed_from_before_input_consumes_once(self):

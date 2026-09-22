@@ -1,0 +1,6 @@
+WeaponData
+{
+    "printname" "M18 Smoke (Red)"
+    "skin" "0"
+    "SmokeColor" "255 0 0"
+}

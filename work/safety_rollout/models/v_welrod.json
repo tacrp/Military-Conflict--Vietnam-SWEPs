@@ -1,0 +1,35 @@
+{
+  "model": "v_welrod",
+  "safe": true,
+  "status": "baked",
+  "sequences": [
+    {
+      "sequence": "idletonearwall",
+      "rows": 2,
+      "mode_axis": false
+    },
+    {
+      "sequence": "nearwall",
+      "rows": 2,
+      "mode_axis": false
+    },
+    {
+      "sequence": "nearwalltoidle",
+      "rows": 2,
+      "mode_axis": false
+    }
+  ],
+  "max_grip_error": 8.332909474608342e-10,
+  "max_blended_grip_error": 0.12781693984768738,
+  "max_shoulder_shift": 0.0,
+  "qc_sha256": "4152c6d4470d603eb589926488e371c82cb3c96eae499ec0e4cbbd5552dd0157",
+  "compile": {
+    "ok": true,
+    "returncode": 0,
+    "messages": [
+      "WARNING: Failed to load keyvalues file cfg/mount.cfg!",
+      "WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences."
+    ]
+  },
+  "compiled_sequence_count": 22
+}

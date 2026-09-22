@@ -1,0 +1,35 @@
+{
+  "model": "v_bren",
+  "safe": true,
+  "status": "baked",
+  "sequences": [
+    {
+      "sequence": "idletonearwall",
+      "rows": 2,
+      "mode_axis": false
+    },
+    {
+      "sequence": "nearwall",
+      "rows": 2,
+      "mode_axis": false
+    },
+    {
+      "sequence": "nearwalltoidle",
+      "rows": 2,
+      "mode_axis": false
+    }
+  ],
+  "max_grip_error": 4.941010901317216e-10,
+  "max_blended_grip_error": 0.08359212180613408,
+  "max_shoulder_shift": 0.0,
+  "qc_sha256": "c030791ae0524279f1659f0e6148b9b6c592dde5fec9848a9d267a18f93562f2",
+  "compile": {
+    "ok": true,
+    "returncode": 0,
+    "messages": [
+      "WARNING: Failed to load keyvalues file cfg/mount.cfg!",
+      "WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences."
+    ]
+  },
+  "compiled_sequence_count": 35
+}

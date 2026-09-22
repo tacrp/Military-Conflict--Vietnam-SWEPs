@@ -1,6 +1,7 @@
 AddCSLuaFile()
 
 ENT.Base                     = "mcv_grenade_base"
+ENT.RoundCollision           = false
 ENT.PrintName                = "Tripwire Mine"
 ENT.Spawnable                = false
 

@@ -1,0 +1,15 @@
+{
+  "model": "v_ts3",
+  "status": "equipment: original animations",
+  "safe": false,
+  "qc_sha256": "c9b6e40562fcdba7e253a6bb5b9b5c1ac1946352465258eb5e796988150baef2",
+  "compile": {
+    "ok": true,
+    "returncode": 0,
+    "messages": [
+      "WARNING: Failed to load keyvalues file cfg/mount.cfg!",
+      "WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences."
+    ]
+  },
+  "compiled_sequence_count": 25
+}

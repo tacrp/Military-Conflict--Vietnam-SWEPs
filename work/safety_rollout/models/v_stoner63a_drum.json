@@ -1,0 +1,35 @@
+{
+  "model": "v_stoner63a_drum",
+  "safe": true,
+  "status": "baked",
+  "sequences": [
+    {
+      "sequence": "idletonearwall",
+      "rows": 2,
+      "mode_axis": false
+    },
+    {
+      "sequence": "nearwall",
+      "rows": 2,
+      "mode_axis": false
+    },
+    {
+      "sequence": "nearwalltoidle",
+      "rows": 2,
+      "mode_axis": false
+    }
+  ],
+  "max_grip_error": 5.704431478397898e-10,
+  "max_blended_grip_error": 0.059582929883396495,
+  "max_shoulder_shift": 0.0,
+  "qc_sha256": "4788663fda2266b520c1ed840555256d7fad463c5f512d37b7a30dea6f9bb979",
+  "compile": {
+    "ok": true,
+    "returncode": 0,
+    "messages": [
+      "WARNING: Failed to load keyvalues file cfg/mount.cfg!",
+      "WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences."
+    ]
+  },
+  "compiled_sequence_count": 31
+}

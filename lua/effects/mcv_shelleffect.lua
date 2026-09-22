@@ -22,6 +22,7 @@ function EFFECT:Init(data)
 
     if !IsValid(ent) then self:Remove() return end
     if !IsValid(ent:GetOwner()) then self:Remove() return end
+    if ent:IsDormant() or ent:GetOwner():IsDormant() then self:Remove() return end
 
     local origin, ang, dir, mdl
 

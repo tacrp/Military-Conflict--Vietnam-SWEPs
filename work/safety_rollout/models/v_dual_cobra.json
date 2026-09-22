@@ -1,0 +1,14 @@
+{
+  "model": "v_dual_cobra",
+  "status": "equipment: original animations",
+  "safe": false,
+  "qc_sha256": "a8093e68e7e7f16ff58ec7c6247b3ccf2b95ac2ef5d1accbbd4c6fe1662d5ce7",
+  "compile": {
+    "ok": true,
+    "returncode": 0,
+    "messages": [
+      "WARNING: Failed to load keyvalues file cfg/mount.cfg!"
+    ]
+  },
+  "compiled_sequence_count": 34
+}

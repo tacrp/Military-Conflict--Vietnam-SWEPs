@@ -1,0 +1,2371 @@
+{
+	"phase": "npc_returned",
+	"events": [
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_tp",
+			"phase": "npc",
+			"pos": [
+				-1998.201904296875,
+				-3171.147216796875,
+				-182.79006958007813
+			],
+			"parent": "class C_BaseFlex",
+			"time": 229.13385662063956,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_tp",
+			"phase": "npc",
+			"pos": [
+				-1998.2080078125,
+				-3171.26708984375,
+				-182.7021484375
+			],
+			"parent": "class C_BaseFlex",
+			"time": 229.4850437194109,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_tp",
+			"phase": "npc",
+			"pos": [
+				-1998.1971435546875,
+				-3171.330078125,
+				-182.6151123046875
+			],
+			"parent": "class C_BaseFlex",
+			"time": 229.58547101728618,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_tp",
+			"phase": "npc",
+			"pos": [
+				-1998.23046875,
+				-3171.35302734375,
+				-182.70079040527344
+			],
+			"parent": "class C_BaseFlex",
+			"time": 229.685815917328,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_tp",
+			"phase": "npc",
+			"pos": [
+				-1998.1884765625,
+				-3171.32470703125,
+				-182.59378051757813
+			],
+			"parent": "class C_BaseFlex",
+			"time": 229.83616541326046,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_tp",
+			"phase": "npc",
+			"pos": [
+				-1998.198486328125,
+				-3171.3310546875,
+				-182.6185760498047
+			],
+			"parent": "class C_BaseFlex",
+			"time": 229.93642271496356,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_tp",
+			"phase": "npc",
+			"pos": [
+				-1998.207275390625,
+				-3171.336669921875,
+				-182.64065551757813
+			],
+			"parent": "class C_BaseFlex",
+			"time": 230.03654101863503,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_tp",
+			"phase": "npc_returned",
+			"pos": [
+				-2017.3087158203125,
+				-3173.714111328125,
+				-177.3594207763672
+			],
+			"parent": "class C_BaseFlex",
+			"time": 233.18039301224053,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_tp",
+			"phase": "npc_returned",
+			"pos": [
+				-2016.920654296875,
+				-3174.164306640625,
+				-197.793701171875
+			],
+			"parent": "class C_BaseFlex",
+			"time": 233.280691312626,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_tp",
+			"phase": "npc_returned",
+			"pos": [
+				-2016.884521484375,
+				-3174.2177734375,
+				-199.63912963867188
+			],
+			"parent": "class C_BaseFlex",
+			"time": 233.38109331391752,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_tp",
+			"phase": "npc_returned",
+			"pos": [
+				-2016.8663330078125,
+				-3174.244384765625,
+				-199.60403442382813
+			],
+			"parent": "class C_BaseFlex",
+			"time": 233.48150361329317,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_tp",
+			"phase": "npc_returned",
+			"pos": [
+				-2016.8662109375,
+				-3174.245361328125,
+				-199.60337829589844
+			],
+			"parent": "class C_BaseFlex",
+			"time": 233.5819509141147,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_tp",
+			"phase": "npc_returned",
+			"pos": [
+				-2016.8662109375,
+				-3174.24560546875,
+				-199.60336303710938
+			],
+			"parent": "class C_BaseFlex",
+			"time": 233.68229171447456,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_tp",
+			"phase": "npc_returned",
+			"pos": [
+				-2016.8662109375,
+				-3174.24560546875,
+				-199.60336303710938
+			],
+			"parent": "class C_BaseFlex",
+			"time": 233.83268841728568,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_tp",
+			"phase": "npc_returned",
+			"pos": [
+				-2016.8662109375,
+				-3174.24560546875,
+				-199.60337829589844
+			],
+			"parent": "class C_BaseFlex",
+			"time": 233.93310321681201,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_tp",
+			"phase": "npc_returned",
+			"pos": [
+				-1998.27734375,
+				-3172.111572265625,
+				-195.88914489746094
+			],
+			"parent": "class C_BaseFlex",
+			"time": 234.53458051383495,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_tp",
+			"phase": "npc_returned",
+			"pos": [
+				-1998.2919921875,
+				-3172.389404296875,
+				-196.1643829345703
+			],
+			"parent": "class C_BaseFlex",
+			"time": 234.63492051325738,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_tp",
+			"phase": "npc_returned",
+			"pos": [
+				-1998.234375,
+				-3172.614501953125,
+				-196.27024841308594
+			],
+			"parent": "class C_BaseFlex",
+			"time": 234.735302913934,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_tp",
+			"phase": "npc_returned",
+			"pos": [
+				-1998.2340087890625,
+				-3172.61669921875,
+				-196.2684326171875
+			],
+			"parent": "class C_BaseFlex",
+			"time": 234.88561101071537,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_tp",
+			"phase": "npc_returned",
+			"pos": [
+				-1998.2340087890625,
+				-3172.61669921875,
+				-196.26844787597656
+			],
+			"parent": "class C_BaseFlex",
+			"time": 234.9858113117516,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_tp",
+			"phase": "npc_returned",
+			"pos": [
+				-1998.0792236328125,
+				-3172.29638671875,
+				-193.20281982421875
+			],
+			"parent": "class C_BaseFlex",
+			"time": 235.08619900979102,
+			"name": "particle",
+			"valid": true
+		}
+	],
+	"samples": [
+		{
+			"phase": "flame_returned",
+			"muzzle": [
+				-1996.252197265625,
+				-2948.08740234375,
+				-42.237796783447266
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 224.84999497421086,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "flame_returned",
+			"muzzle": [
+				-1996.4073486328125,
+				-2948.079345703125,
+				-42.24510192871094
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 225.059994969517,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "flame_returned",
+			"muzzle": [
+				-1996.65234375,
+				-2948.1064453125,
+				-41.95320510864258
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 225.2549949651584,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "flame_returned",
+			"muzzle": [
+				-1996.958251953125,
+				-2948.172119140625,
+				-41.39292907714844
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 225.46499496046454,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "flame_returned",
+			"muzzle": [
+				-1997.165283203125,
+				-2948.2392578125,
+				-40.91867446899414
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 225.61499495711178,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "repair",
+			"muzzle": [
+				-1997.3961181640625,
+				-2948.346435546875,
+				-40.233062744140625
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 225.85499495174736,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "repair",
+			"muzzle": [
+				-1997.4171142578125,
+				-2948.403076171875,
+				-39.897071838378906
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 226.0649949470535,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "repair",
+			"muzzle": [
+				-1997.3153076171875,
+				-2948.412109375,
+				-39.87110137939453
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 226.21499494370073,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "repair",
+			"muzzle": [
+				-1997.0322265625,
+				-2948.36474609375,
+				-40.2012939453125
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 226.4549949383363,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "repair",
+			"muzzle": [
+				-1996.737060546875,
+				-2948.284912109375,
+				-40.76109313964844
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 226.66499493364245,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc",
+			"muzzle": [
+				-1996.52880859375,
+				-2948.217529296875,
+				-41.234283447265625
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 226.81499493028969,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc",
+			"muzzle": [
+				-1996.3109130859375,
+				-2948.1376953125,
+				-41.84205627441406
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 227.02499492559582,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc",
+			"muzzle": [
+				-2017.673583984375,
+				-3179.807861328125,
+				-103.50211334228516
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 38,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3200,
+				-150
+			],
+			"time": 227.02499492559582,
+			"wm": true,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc",
+			"muzzle": [
+				-1996.2449951171875,
+				-2948.09228515625,
+				-42.20641326904297
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 227.21999492123723,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc",
+			"muzzle": [
+				-2013.684814453125,
+				-3173.2919921875,
+				-209.23873901367188
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 38,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3200,
+				-256.46875
+			],
+			"time": 227.21999492123723,
+			"wm": true,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc",
+			"muzzle": [
+				-1996.3631591796875,
+				-2948.078369140625,
+				-42.2735481262207
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 227.41499491687864,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc",
+			"muzzle": [
+				-1998.2991943359375,
+				-3168.490478515625,
+				-186.2602081298828
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 38,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3200,
+				-256.46875
+			],
+			"time": 227.41499491687864,
+			"wm": true,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc",
+			"muzzle": [
+				-1996.60986328125,
+				-2948.10009765625,
+				-42.01408004760742
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 227.62499491218477,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc",
+			"muzzle": [
+				-1998.205810546875,
+				-3171.032958984375,
+				-182.92642211914063
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 38,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000.0001220703125,
+				-3200,
+				-256.46875
+			],
+			"time": 227.62499491218477,
+			"wm": true,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc",
+			"muzzle": [
+				-1996.8927001953125,
+				-2948.154541015625,
+				-41.528560638427734
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 227.81999490782619,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc",
+			"muzzle": [
+				-1998.201904296875,
+				-3171.147216796875,
+				-182.79006958007813
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 38,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3200,
+				-256.46875
+			],
+			"time": 227.81999490782619,
+			"wm": true,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc",
+			"muzzle": [
+				-1997.165283203125,
+				-2948.2392578125,
+				-40.91867446899414
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 228.0149949034676,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc",
+			"muzzle": [
+				-1998.201904296875,
+				-3171.147216796875,
+				-182.79006958007813
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 38,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3200,
+				-256.46875
+			],
+			"time": 228.0149949034676,
+			"wm": true,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc",
+			"muzzle": [
+				-1997.37744140625,
+				-2948.334228515625,
+				-40.305755615234375
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 228.22499489877373,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc",
+			"muzzle": [
+				-1998.201904296875,
+				-3171.147216796875,
+				-182.79006958007813
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 38,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3200,
+				-256.46875
+			],
+			"time": 228.22499489877373,
+			"wm": true,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc",
+			"muzzle": [
+				-1997.4312744140625,
+				-2948.395751953125,
+				-39.939823150634766
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 228.41999489441514,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc",
+			"muzzle": [
+				-1998.201904296875,
+				-3171.147216796875,
+				-182.79006958007813
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 38,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3200,
+				-256.46875
+			],
+			"time": 228.41999489441514,
+			"wm": true,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc",
+			"muzzle": [
+				-1997.3153076171875,
+				-2948.412109375,
+				-39.87110137939453
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 228.61499489005655,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc",
+			"muzzle": [
+				-1998.201904296875,
+				-3171.147216796875,
+				-182.79006958007813
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 38,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3200,
+				-256.46875
+			],
+			"time": 228.61499489005655,
+			"wm": true,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc",
+			"muzzle": [
+				-1997.072021484375,
+				-2948.373779296875,
+				-40.13859558105469
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 228.82499488536268,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc",
+			"muzzle": [
+				-1998.201904296875,
+				-3171.147216796875,
+				-182.79006958007813
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 38,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3200,
+				-256.46875
+			],
+			"time": 228.82499488536268,
+			"wm": true,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc",
+			"muzzle": [
+				-1996.799560546875,
+				-2948.3046875,
+				-40.62459945678711
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 229.0199948810041,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc",
+			"muzzle": [
+				-1998.201904296875,
+				-3171.147216796875,
+				-182.79006958007813
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 38,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3200,
+				-256.46875
+			],
+			"time": 229.0199948810041,
+			"wm": true,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc",
+			"muzzle": [
+				-1996.52880859375,
+				-2948.217529296875,
+				-41.234283447265625
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 229.2149948766455,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc",
+			"muzzle": [
+				-1998.201904296875,
+				-3171.147216796875,
+				-182.79006958007813
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 38,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3200,
+				-256.46875
+			],
+			"time": 229.2149948766455,
+			"wm": true,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc",
+			"muzzle": [
+				-1996.3109130859375,
+				-2948.1376953125,
+				-41.842063903808594
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 229.42499487195164,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc",
+			"muzzle": [
+				-1998.21240234375,
+				-3171.190673828125,
+				-182.7871551513672
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 38,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3200,
+				-256.46875
+			],
+			"time": 229.42499487195164,
+			"wm": true,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc",
+			"muzzle": [
+				-1996.2449951171875,
+				-2948.09228515625,
+				-42.20641326904297
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 229.61999486759305,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc",
+			"muzzle": [
+				-1998.183837890625,
+				-3171.322021484375,
+				-182.58555603027344
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 38,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3200,
+				-256.46875
+			],
+			"time": 229.61999486759305,
+			"wm": true,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc",
+			"muzzle": [
+				-1996.3631591796875,
+				-2948.078369140625,
+				-42.2735481262207
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 229.81499486323446,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc",
+			"muzzle": [
+				-1998.2144775390625,
+				-3171.342529296875,
+				-182.6625518798828
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 38,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3200,
+				-256.46875
+			],
+			"time": 229.81499486323446,
+			"wm": true,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc",
+			"muzzle": [
+				-1996.60986328125,
+				-2948.10009765625,
+				-42.01408004760742
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 230.0249948585406,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc",
+			"muzzle": [
+				-1998.221435546875,
+				-3171.346923828125,
+				-182.67950439453125
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 38,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3200,
+				-256.46875
+			],
+			"time": 230.0249948585406,
+			"wm": true,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc_outside",
+			"muzzle": [
+				-1996.8927001953125,
+				-2948.154541015625,
+				-41.528560638427734
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 230.219994854182,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 38,
+			"dormant": true,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3200,
+				-256.46875
+			],
+			"time": 230.219994854182,
+			"wm": false,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc_outside",
+			"muzzle": [
+				-1997.1839599609375,
+				-2948.24609375,
+				-40.8706169128418
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 230.42999484948814,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 38,
+			"dormant": true,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3200,
+				-256.46875
+			],
+			"time": 230.42999484948814,
+			"wm": false,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc_outside",
+			"muzzle": [
+				-1997.37744140625,
+				-2948.334228515625,
+				-40.30575942993164
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 230.62499484512955,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 38,
+			"dormant": true,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3200,
+				-256.46875
+			],
+			"time": 230.62499484512955,
+			"wm": false,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc_outside",
+			"muzzle": [
+				-1997.4312744140625,
+				-2948.395751953125,
+				-39.939823150634766
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 230.81999484077096,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 38,
+			"dormant": true,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3200,
+				-256.46875
+			],
+			"time": 230.81999484077096,
+			"wm": false,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc_outside",
+			"muzzle": [
+				-1997.301513671875,
+				-2948.4111328125,
+				-39.87864685058594
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 231.0299948360771,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 38,
+			"dormant": true,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3200,
+				-256.46875
+			],
+			"time": 231.0299948360771,
+			"wm": false,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc_outside",
+			"muzzle": [
+				-1997.072021484375,
+				-2948.373779296875,
+				-40.13859558105469
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 231.2249948317185,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 38,
+			"dormant": true,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3200,
+				-256.46875
+			],
+			"time": 231.2249948317185,
+			"wm": false,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc_outside",
+			"muzzle": [
+				-1996.799560546875,
+				-2948.3046875,
+				-40.624603271484375
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 231.41999482735991,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 38,
+			"dormant": true,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3200,
+				-256.46875
+			],
+			"time": 231.41999482735991,
+			"wm": false,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc_outside",
+			"muzzle": [
+				-1996.5107421875,
+				-2948.21044921875,
+				-41.28117752075195
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 231.62999482266605,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 38,
+			"dormant": true,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3200,
+				-256.46875
+			],
+			"time": 231.62999482266605,
+			"wm": false,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc_outside",
+			"muzzle": [
+				-1996.3109130859375,
+				-2948.1376953125,
+				-41.842063903808594
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 231.82499481830746,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 38,
+			"dormant": true,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3200,
+				-256.46875
+			],
+			"time": 231.82499481830746,
+			"wm": false,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc_outside",
+			"muzzle": [
+				-1996.2449951171875,
+				-2948.09228515625,
+				-42.20641326904297
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 232.01999481394887,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 38,
+			"dormant": true,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3200,
+				-256.46875
+			],
+			"time": 232.01999481394887,
+			"wm": false,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc_outside",
+			"muzzle": [
+				-1996.37646484375,
+				-2948.077880859375,
+				-42.26637268066406
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 232.229994809255,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 38,
+			"dormant": true,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3200,
+				-256.46875
+			],
+			"time": 232.229994809255,
+			"wm": false,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc_returned",
+			"muzzle": [
+				-1996.60986328125,
+				-2948.10009765625,
+				-42.01408004760742
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 232.42499480489641,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc_returned",
+			"muzzle": [
+				-2034.54638671875,
+				-3214.1103515625,
+				-95.69200134277344
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 38,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3200,
+				-150
+			],
+			"time": 232.42499480489641,
+			"wm": true,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc_returned",
+			"muzzle": [
+				-1996.8927001953125,
+				-2948.154541015625,
+				-41.528560638427734
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 232.61999480053782,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc_returned",
+			"muzzle": [
+				-2029.6331787109375,
+				-3218.365966796875,
+				-105.12507629394531
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 38,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3200,
+				-160.90098571777344
+			],
+			"time": 232.61999480053782,
+			"wm": true,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc_returned",
+			"muzzle": [
+				-1997.1839599609375,
+				-2948.24609375,
+				-40.8706169128418
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 232.82999479584396,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc_returned",
+			"muzzle": [
+				-2032.978271484375,
+				-3188.062744140625,
+				-111.14592742919922
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 38,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3200,
+				-161.4853515625
+			],
+			"time": 232.82999479584396,
+			"wm": true,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc_returned",
+			"muzzle": [
+				-1997.37744140625,
+				-2948.334228515625,
+				-40.30575942993164
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 233.02499479148537,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc_returned",
+			"muzzle": [
+				-2022.8009033203125,
+				-3173.46044921875,
+				-138.34173583984375
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 38,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3200,
+				-190.9666748046875
+			],
+			"time": 233.02499479148537,
+			"wm": true,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc_returned",
+			"muzzle": [
+				-1997.4312744140625,
+				-2948.395751953125,
+				-39.939823150634766
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 233.21999478712678,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc_returned",
+			"muzzle": [
+				-2017.1298828125,
+				-3173.9013671875,
+				-185.45619201660156
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 38,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3200,
+				-241.95123291015625
+			],
+			"time": 233.21999478712678,
+			"wm": true,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc_returned",
+			"muzzle": [
+				-1997.301513671875,
+				-2948.4111328125,
+				-39.87864685058594
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 233.4299947824329,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc_returned",
+			"muzzle": [
+				-2016.880859375,
+				-3174.2236328125,
+				-199.63198852539063
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 38,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000.0001220703125,
+				-3200.000244140625,
+				-256.46875
+			],
+			"time": 233.4299947824329,
+			"wm": true,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc_returned",
+			"muzzle": [
+				-1997.072021484375,
+				-2948.373779296875,
+				-40.13859176635742
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 233.62499477807432,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc_returned",
+			"muzzle": [
+				-2016.8662109375,
+				-3174.24560546875,
+				-199.60336303710938
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 38,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3200,
+				-256.46875
+			],
+			"time": 233.62499477807432,
+			"wm": true,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc_returned",
+			"muzzle": [
+				-1996.799560546875,
+				-2948.3046875,
+				-40.624603271484375
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 233.81999477371573,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc_returned",
+			"muzzle": [
+				-2016.8662109375,
+				-3174.24560546875,
+				-199.60337829589844
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 38,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3200,
+				-256.46875
+			],
+			"time": 233.81999477371573,
+			"wm": true,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc_returned",
+			"muzzle": [
+				-1996.5107421875,
+				-2948.21044921875,
+				-41.28117752075195
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 234.02999476902187,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc_returned",
+			"muzzle": [
+				-2016.8662109375,
+				-3174.24560546875,
+				-199.60337829589844
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 38,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3200,
+				-256.46875
+			],
+			"time": 234.02999476902187,
+			"wm": true,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc_returned",
+			"muzzle": [
+				-1996.3109130859375,
+				-2948.1376953125,
+				-41.84206008911133
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 234.22499476466328,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc_returned",
+			"muzzle": [
+				-2016.8662109375,
+				-3174.24560546875,
+				-199.60337829589844
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 38,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3200,
+				-256.46875
+			],
+			"time": 234.22499476466328,
+			"wm": true,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc_returned",
+			"muzzle": [
+				-1996.2449951171875,
+				-2948.09228515625,
+				-42.20641326904297
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 234.4199947603047,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc_returned",
+			"muzzle": [
+				-2002.5211181640625,
+				-3172.01513671875,
+				-196.02096557617188
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 38,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3200,
+				-256.46875
+			],
+			"time": 234.4199947603047,
+			"wm": true,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc_returned",
+			"muzzle": [
+				-1996.37646484375,
+				-2948.077880859375,
+				-42.26637268066406
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 234.62999475561082,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc_returned",
+			"muzzle": [
+				-1998.29443359375,
+				-3172.3720703125,
+				-196.149658203125
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 38,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3200,
+				-256.46875
+			],
+			"time": 234.62999475561082,
+			"wm": true,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc_returned",
+			"muzzle": [
+				-1996.60986328125,
+				-2948.10009765625,
+				-42.01408004760742
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 234.82499475125223,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc_returned",
+			"muzzle": [
+				-1998.2340087890625,
+				-3172.61669921875,
+				-196.26844787597656
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 38,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3200,
+				-256.46875
+			],
+			"time": 234.82499475125223,
+			"wm": true,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc_returned",
+			"muzzle": [
+				-1996.9151611328125,
+				-2948.16064453125,
+				-41.48400115966797
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 235.03499474655837,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc_returned",
+			"muzzle": [
+				-1998.2340087890625,
+				-3172.61669921875,
+				-196.26844787597656
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 38,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3200,
+				-256.46875
+			],
+			"time": 235.03499474655837,
+			"wm": true,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc_returned",
+			"muzzle": [
+				-1997.1839599609375,
+				-2948.24609375,
+				-40.8706169128418
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 235.22999474219978,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc_returned",
+			"muzzle": [
+				-1996.384521484375,
+				-3167.41552734375,
+				-189.42654418945313
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 38,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000.209228515625,
+				-3199.500732421875,
+				-256.46875
+			],
+			"time": 235.22999474219978,
+			"wm": true,
+			"weapon": "mcv_akm"
+		},
+		{
+			"phase": "npc_returned",
+			"muzzle": [
+				-1997.37744140625,
+				-2948.334228515625,
+				-40.30575942993164
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 1,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2000,
+				-3000,
+				-100
+			],
+			"time": 235.4249947378412,
+			"wm": true,
+			"weapon": "mcv_lpo50"
+		},
+		{
+			"phase": "npc_returned",
+			"muzzle": [
+				-1997.2166748046875,
+				-3158.034423828125,
+				-183.629638671875
+			],
+			"parent": true,
+			"flame_parent": false,
+			"owner": 38,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2001.8240966796875,
+				-3193.04638671875,
+				-256.46875
+			],
+			"time": 235.4249947378412,
+			"wm": true,
+			"weapon": "mcv_akm"
+		}
+	],
+	"wrapped": true
+}

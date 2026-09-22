@@ -1,10 +1,12 @@
 """Drive a Garry's Mod session from outside the game.
 
-    python harness.py start [map] [--mp] [--multirun] [--port N]
+    python harness.py start [map] [--mp] [--multirun] [--port N] [--connect host:port]
                                            launch GMod with the harness enabled (default gm_flatgrass).
                                            --mp starts a listen server (maxplayers 2) so the host
                                            client predicts as it would online; --multirun runs
                                            alongside another instance (needs its own --port)
+                                           --connect joins an existing server as an observer;
+                                           control that player through the host's Lua commands.
     python harness.py run tests/x.txt [--port N]
                                            send a command file, wait, print results and screenshot paths
     python harness.py send "give mcv_sks" "wait 1" "shot sks marker"   ad-hoc commands
@@ -86,12 +88,12 @@ def find_exe():
     return hits[0] if hits else None
 
 
-def start(map_name="gm_flatgrass", mp=False, multirun=False):
+def start(map_name="gm_flatgrass", mp=False, multirun=False, connect=None):
     if gmod_running() and not multirun:
         print("gmod.exe is already running; use `run` against it (reload the map if the harness is not active), or start with --multirun")
         return 1
     enable()
-    ready = os.path.join(INST, "ready.txt")
+    ready = os.path.join(INST, "client_ready.txt" if connect else "ready.txt")
     if os.path.exists(ready):
         os.remove(ready)
     exe = find_exe()
@@ -110,7 +112,7 @@ def start(map_name="gm_flatgrass", mp=False, multirun=False):
         args += ["+sv_lan", "1", "+maxplayers", "2"]
     else:
         args += ["+maxplayers", "1"]
-    args += ["+map", map_name]
+    args += ["+connect", connect] if connect else ["+map", map_name]
     print("launching", " ".join(args))
     subprocess.Popen(args, cwd=GMOD, creationflags=getattr(subprocess, "DETACHED_PROCESS", 0) | getattr(subprocess, "CREATE_NEW_PROCESS_GROUP", 0))
     t0 = time.time()
@@ -207,7 +209,8 @@ def main():
     if cmd == "start":
         mp = take_opt(sys.argv, "--mp", flag=True)
         multirun = take_opt(sys.argv, "--multirun", flag=True)
-        return start(sys.argv[2] if len(sys.argv) > 2 else "gm_flatgrass", mp=bool(mp), multirun=bool(multirun))
+        connect = take_opt(sys.argv, "--connect")
+        return start(sys.argv[2] if len(sys.argv) > 2 else "gm_flatgrass", mp=bool(mp), multirun=bool(multirun), connect=connect)
     if cmd == "run":
         lines = [l.rstrip("\n") for l in open(sys.argv[2], encoding="utf-8")]
         offset = os.path.getsize(CONSOLE_LOG) if os.path.exists(CONSOLE_LOG) else 0

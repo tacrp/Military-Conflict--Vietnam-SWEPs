@@ -1,0 +1,106 @@
+[
+  {
+    "model": "v_gyrojet_pistol",
+    "hand_animation_sha256": {
+      "run_a.smd": "6dc9c3f9fec03011cef5e385b1377f653b627739301e739bd00a9659f508a066",
+      "walk_a.smd": "880360f5ca01ccdde2b5ea106436d76648c70de08b110480348e0cecc6da8e01"
+    },
+    "corrective_sha256": {
+      "run_a_corrective_animation.smd": "cf28a2fac10180c709714def818c7fdd7f398baae49175da657c115fb878be95",
+      "walk_a_corrective_animation.smd": "cf28a2fac10180c709714def818c7fdd7f398baae49175da657c115fb878be95"
+    },
+    "motion": {
+      "run_a": {
+        "before": {
+          "frames": 19,
+          "max_grip_distance": 0.06382719430055608,
+          "max_grip_angle_degrees": 28.597317401455708
+        },
+        "after": {
+          "frames": 19,
+          "max_grip_distance": 0.06382719430055608,
+          "max_grip_angle_degrees": 0.7800286390687493
+        }
+      },
+      "walk_a": {
+        "before": {
+          "frames": 23,
+          "max_grip_distance": 0.04110540352848931,
+          "max_grip_angle_degrees": 0.8581285854494245
+        },
+        "after": {
+          "frames": 23,
+          "max_grip_distance": 0.04110540352848931,
+          "max_grip_angle_degrees": 0.38942843220356327
+        }
+      }
+    },
+    "compile": {
+      "ok": true,
+      "returncode": 0,
+      "messages": [
+        "WARNING: Failed to load keyvalues file cfg/mount.cfg!"
+      ]
+    },
+    "compiled_sequence_count": 30,
+    "compiled_animation_count": 81,
+    "installed": {
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_gyrojet_pistol.mdl": "51e11fbd62ced5acbd7db31034b3ecfa8a7a24d32f948af1848d7b81ffbca9fc",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_gyrojet_pistol.vvd": "7b412a8076a9e88ea966a0faf4720e75b86ae1b537d9c84d65821d2fcdb7d048",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_gyrojet_pistol.dx80.vtx": "1814ea0e21147961b9eaf70d2c52825c005dcdabb302c48f66b47879fa0a3c57",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_gyrojet_pistol.dx90.vtx": "048e9fb6fd3c70a55fc25636c06cc07e3d6c9b1c7e9ff775edeb5bb018c11305"
+    }
+  },
+  {
+    "model": "v_gyrojet_carbine",
+    "hand_animation_sha256": {
+      "run_a.smd": "c3511d4f3eb3ec858b7c23a5e5111ec753ba988038df4507e73a1b2436ae35c7",
+      "walk_a.smd": "e28e3b1bb54699c61c1e1fd2da05f7946cb0964e869dd8a4c5b4f5caae60734a"
+    },
+    "corrective_sha256": {
+      "run_a_corrective_animation.smd": "cf28a2fac10180c709714def818c7fdd7f398baae49175da657c115fb878be95",
+      "walk_a_corrective_animation.smd": "cf28a2fac10180c709714def818c7fdd7f398baae49175da657c115fb878be95"
+    },
+    "motion": {
+      "run_a": {
+        "before": {
+          "frames": 19,
+          "max_grip_distance": 0.08336675367257124,
+          "max_grip_angle_degrees": 28.337837839032165
+        },
+        "after": {
+          "frames": 19,
+          "max_grip_distance": 0.08336675367257124,
+          "max_grip_angle_degrees": 1.0704033203634078
+        }
+      },
+      "walk_a": {
+        "before": {
+          "frames": 23,
+          "max_grip_distance": 0.04669295504742849,
+          "max_grip_angle_degrees": 0.9706138531908978
+        },
+        "after": {
+          "frames": 23,
+          "max_grip_distance": 0.04669295504742849,
+          "max_grip_angle_degrees": 0.4435591905553821
+        }
+      }
+    },
+    "compile": {
+      "ok": true,
+      "returncode": 0,
+      "messages": [
+        "WARNING: Failed to load keyvalues file cfg/mount.cfg!"
+      ]
+    },
+    "compiled_sequence_count": 30,
+    "compiled_animation_count": 81,
+    "installed": {
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_gyrojet_carbine.mdl": "17e649f50195db9a0edbb3027a9dbedf91f82230dda9f93135af127c87651f0f",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_gyrojet_carbine.vvd": "76564c3f6389611549765607c201bb8fe969fc49a3b0d43999ec2261b9817ffa",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_gyrojet_carbine.dx80.vtx": "083e6d40d7c40a34d0887210ad8ae2eee30c1013c41595694d210b21f28d43f0",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_gyrojet_carbine.dx90.vtx": "8b69b34d80b5927f1b510809ed87555fe40fe9ad7ad2fb9feb29009dad4483db"
+    }
+  }
+]

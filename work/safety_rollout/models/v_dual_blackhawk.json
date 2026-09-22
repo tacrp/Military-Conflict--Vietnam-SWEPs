@@ -1,0 +1,34 @@
+{
+  "model": "v_dual_blackhawk",
+  "safe": true,
+  "status": "baked",
+  "sequences": [
+    {
+      "sequence": "idletonearwall",
+      "rows": 2,
+      "mode_axis": false
+    },
+    {
+      "sequence": "nearwall",
+      "rows": 2,
+      "mode_axis": false
+    },
+    {
+      "sequence": "nearwalltoidle",
+      "rows": 2,
+      "mode_axis": false
+    }
+  ],
+  "max_grip_error": 8.242195427687247e-10,
+  "max_blended_grip_error": 0.12615756654222995,
+  "max_shoulder_shift": 0.0,
+  "qc_sha256": "8cdea3d28d921d04c5545fc87764806872434ef7d16ad669405fe6cae0bf3271",
+  "compile": {
+    "ok": true,
+    "returncode": 0,
+    "messages": [
+      "WARNING: Failed to load keyvalues file cfg/mount.cfg!"
+    ]
+  },
+  "compiled_sequence_count": 27
+}

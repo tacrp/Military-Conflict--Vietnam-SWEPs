@@ -4,7 +4,7 @@
 // shader (work/shaders/mcv_scope_ps3x.hlsl) samples the frame captured just before the
 // viewmodel was drawn - the world without the gun - and magnifies it around the point where
 // the scope axis meets the screen. The world is never rendered a second time; the per-frame
-// cost is one frame copy (render.UpdateScreenEffectTexture in PreDrawViewModels,
+// cost is one frame copy (into our own texture before viewmodel/shader effects,
 // lua/mcv/client/cl_rendertarget.lua) and two floats for that axis point, projected from the
 // muzzle attachment so the picture follows the gun's sway. The exit pupil slides against the
 // axis point's offset from the screen centre (the eye off the scope axis), the reticle is the
@@ -14,6 +14,7 @@
 local LENS_MATERIAL = "mcv/scope_lens"
 local lensmat = Material(LENS_MATERIAL)
 local HAVE_SHADER = !lensmat:IsError()
+local scopeScene
 // per-weapon override of the lens material (debug variants)
 SWEP.ScopeLensMaterial = nil
 
@@ -97,12 +98,20 @@ function SWEP:ApplyScopeMaterial()
     end
 end
 
-// Runs from PreDrawViewModels, before any viewmodel is drawn: the frame holds the world only.
-function SWEP:CaptureScopeScreen()
+// gShader reconstructs depth including the viewmodel before drawing its colour model. Its
+// early AO can therefore already contain a gun silhouette at PreDrawViewModels. Capture at
+// PreDrawReconstruction when available, otherwise use the ordinary pre-viewmodel capture.
+// A private texture is essential: other effects overwrite _rt_FullFrameFB later this frame.
+function SWEP:CaptureScopeScreen(beforeReconstruction)
     if !HAVE_SHADER or !self.HasScope then return end
     if self:GetSightAmountVisual() <= 0.5 or !self:ShouldDoScope() then return end
-    render.UpdateScreenEffectTexture()
-    lensmat:SetTexture("$basetexture", render.GetScreenEffectTexture())
+    if !beforeReconstruction and self.ScopeCleanCaptureFrame == FrameNumber() then return end
+    scopeScene = scopeScene or GetRenderTargetEx("mcv_scope_scene", ScrW(), ScrH(),
+        RT_SIZE_FULL_FRAME_BUFFER, MATERIAL_RT_DEPTH_NONE, bit.bor(4, 8, 256, 512), 0,
+        IMAGE_FORMAT_RGB888)
+    render.CopyRenderTargetToTexture(scopeScene)
+    lensmat:SetTexture("$basetexture", scopeScene)
+    if beforeReconstruction then self.ScopeCleanCaptureFrame = FrameNumber() end
 end
 
 // Where the scope axis meets the screen (0..1, y down): the muzzle attachment's forward, read

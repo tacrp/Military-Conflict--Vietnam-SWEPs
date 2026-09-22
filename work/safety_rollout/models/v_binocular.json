@@ -1,0 +1,15 @@
+{
+  "model": "v_binocular",
+  "status": "equipment: original animations",
+  "safe": false,
+  "qc_sha256": "3ef3e56c630050ddda2161b4b01de7899d1ea92996b67264b87b4393f9839ffe",
+  "compile": {
+    "ok": true,
+    "returncode": 0,
+    "messages": [
+      "WARNING: Failed to load keyvalues file cfg/mount.cfg!",
+      "WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences."
+    ]
+  },
+  "compiled_sequence_count": 15
+}

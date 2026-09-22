@@ -331,6 +331,16 @@ empty reload. It converts the animation into the current hierarchy without
 changing its world-space poses or timing. Corrected paths take precedence during
 QC generation; the user's files under `MCV_SMD/weapons/v_m21/anims/` are not edited.
 
+### At-ease movement layers
+
+After porting or changing animation sources, run `python work/build_safe_movement.py
+--compile --jobs 6` and `python work/install_safe_movement.py` from the addon root.
+The builder also accepts `--models v_name` for individual ports. This patches existing
+QCs with grip-corrected safety walk/sprint blends instead of regenerating the weapon.
+The installer validates all referenced builds, installs into the correct nation pack,
+updates the three editable custom bundles and generates the shared runtime model opt-ins.
+See `work/safety_rollout/README.md`. A full restart is required to load rebuilt models.
+
 ### Deploy movement layers
 
 `step_deploy_no_movement` runs after the steps that inherit layers from the idle.
@@ -593,6 +603,14 @@ Brass ids the game added after 2024 (19 to 31) map to the nearest shell model th
   instead. A weapon that is invisible or wildly displaced only when its viewmodel is drawn is
   worth checking against this first (dump the bones with the harness: `BaseRoot` yaw 0 instead
   of 180).
+  The Gyrojet pistol and carbine have a different export fault: the independently animated
+  gun root `Base` has its first movement-frame rotation copied into the corrective. Subtracting
+  that cancels about 28 degrees of sprint carry rotation while the hands still turn normally.
+  For those two rigs only, `step_fix_correctives` takes `Base` from the corresponding neutral
+  `runIdle_a` / `walkIdle_a` corrective, retaining the exporter axis correction without
+  subtracting authored movement. The baked hands remain unchanged. Apply/rebuild without
+  regenerating the existing QCs using `python work/fix_gyrojet_sprint.py --compile`;
+  see `work/gyrojet_sprint_fix/README.md` for offline measurements.
 * **Two-axis blends** (`step_pose_split`): a fire sequence rebuilt from a two-axis idle
   (`ironsight` x `revolver_firemode_pose`, 9 anims) gets `blendwidth 3`, one row per axis.
   `blendwidth 9` (the anim count) made the ironsight axis run through all nine poses, which is

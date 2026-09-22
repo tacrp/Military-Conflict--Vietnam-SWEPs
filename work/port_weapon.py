@@ -177,6 +177,7 @@ SA_DUAL_RELOAD = {"m1895", "blackhawk"}
 # game script name -> addon lua name where the two cannot be matched through the viewmodel alone
 # (several lua files share one viewmodel, or the model was renamed)
 SCRIPT_ALIASES = {
+    "m18": "m18", "m6a1": "m6a1",  # Separate smoke/gas weapons despite shared source model paths.
     # Distinct configurations that share a model must not resolve to the base gun.
     "kar98k_zf41": "kar98_zf41", "stg44_zf41": "stg44_zf41",
     "m16a1_xm3": "m16a1_xm3", "m16a1_sog": "m16a1_sog",
@@ -933,6 +934,8 @@ def generate_throwable(name, S, qc, vm, args, existing, warnings):
     A = out.append
     A('SWEP.ViewModel = "models/weapons/mcv/%s.mdl"' % vm)
     A('SWEP.WorldModel = "models/weapons/mcv/%s.mdl"' % _wm_of(S, vm))
+    if "skin" in S:
+        A("SWEP.ModelSkin = %s" % fmt(num(S["skin"], 0)))
     pm = re.search(r'models/weapons/([^"]+)\.mdl', S.get("projectilemodel", "") or "")
     if pm:
         A('SWEP.ThrowModel = "models/weapons/mcv/%s.mdl"' % pm.group(1))

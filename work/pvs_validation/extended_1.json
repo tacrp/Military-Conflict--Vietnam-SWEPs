@@ -1,0 +1,2681 @@
+{
+	"phase": "flame_returned",
+	"events": [
+		{
+			"particle": "vietnam_muzzleflash_pistol_type3_fp",
+			"phase": "dual_near",
+			"pos": [
+				-1997.20068359375,
+				-2973.324951171875,
+				-38.76776123046875
+			],
+			"parent": "viewmodel",
+			"time": 68.66999846510589,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_pistol_type1_fp_smoke",
+			"phase": "dual_near",
+			"pos": [
+				-1997.20068359375,
+				-2973.324951171875,
+				-38.76776123046875
+			],
+			"parent": "viewmodel",
+			"time": 68.66999846510589,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_pistol_type3_fp",
+			"phase": "dual_near",
+			"pos": [
+				-1997.078369140625,
+				-2973.341552734375,
+				-38.8941764831543
+			],
+			"parent": "viewmodel",
+			"time": 69.41999844834208,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_pistol_type1_fp_smoke",
+			"phase": "dual_near",
+			"pos": [
+				-1997.078369140625,
+				-2973.341552734375,
+				-38.8941764831543
+			],
+			"parent": "viewmodel",
+			"time": 69.41999844834208,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_pistol_type3_fp",
+			"phase": "dual_returned",
+			"pos": [
+				-1996.893310546875,
+				-2973.3544921875,
+				-38.703731536865234
+			],
+			"parent": "viewmodel",
+			"time": 76.5299982894212,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_pistol_type1_fp_smoke",
+			"phase": "dual_returned",
+			"pos": [
+				-1996.893310546875,
+				-2973.3544921875,
+				-38.703731536865234
+			],
+			"parent": "viewmodel",
+			"time": 76.5299982894212,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_pistol_type3_fp",
+			"phase": "dual_returned",
+			"pos": [
+				-1996.58447265625,
+				-2973.465576171875,
+				-39.47233581542969
+			],
+			"parent": "viewmodel",
+			"time": 77.18999827466905,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_pistol_type1_fp_smoke",
+			"phase": "dual_returned",
+			"pos": [
+				-1996.58447265625,
+				-2973.465576171875,
+				-39.47233581542969
+			],
+			"parent": "viewmodel",
+			"time": 77.18999827466905,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "lpo50_flame",
+			"phase": "flame_near",
+			"pos": [
+				-1997.0284423828125,
+				-2961.501953125,
+				-41.12165832519531
+			],
+			"parent": "viewmodel",
+			"time": 82.18934695445932,
+			"name": "particle",
+			"valid": true
+		}
+	],
+	"samples": [
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 62.69999859854579,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 62.8949985941872,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 63.08999858982861,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 63.299998585134745,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 63.494998580776155,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 63.689998576417565,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 63.8999985717237,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 64.09499856736511,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 64.28999856300652,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 64.49999855831265,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 64.69499855395406,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 64.88999854959548,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 65.09999854490161,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 65.29499854054302,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 65.48999853618443,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 65.69999853149056,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 65.89499852713197,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 66.10499852243811,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 66.29999851807952,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 66.49499851372093,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 66.70499850902706,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 66.89999850466847,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 67.09499850030988,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 67.30499849561602,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 67.49999849125743,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 67.69499848689884,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 67.90499848220497,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 68.09999847784638,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 68.2949984734878,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 68.50499846879393,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 68.69999846443534,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 68.89499846007675,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 69.10499845538288,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 69.2999984510243,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 69.4949984466657,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 69.70499844197184,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 69.89999843761325,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 70.10999843291938,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 70.31999842822552,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 70.51499842386693,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 70.70999841950834,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 70.91999841481447,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 71.11499841045588,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 71.30999840609729,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 71.51999840140343,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 71.71499839704484,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 71.90999839268625,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 72.11999838799238,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 72.31499838363379,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 72.5099983792752,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 72.71999837458134,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 72.91499837022275,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 73.12499836552888,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 73.31999836117029,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 73.5149983568117,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 73.72499835211784,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 73.91999834775925,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 74.11499834340066,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 74.32499833870679,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 74.5199983343482,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 74.71499832998961,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 74.92499832529575,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 75.11999832093716,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 75.31499831657857,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 75.5249983118847,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 75.71999830752611,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 75.91499830316752,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 76.12499829847366,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 76.31999829411507,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 76.51499828975648,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 76.72499828506261,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 76.91999828070402,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 77.11499827634543,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 77.32499827165157,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 77.51999826729298,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 77.71499826293439,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 77.92499825824052,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 78.11999825388193,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 78.31499824952334,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 78.52499824482948,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 78.71999824047089,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "dual_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 78.9149982361123,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 79.12499823141843,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 79.31999822705984,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 79.51499822270125,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 79.67999821901321,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 79.9199982136488,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 80.12999820895493,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 80.32499820459634,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 80.51999820023775,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 80.71499819587916,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 80.9249981911853,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 81.1199981868267,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 81.31499818246812,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 81.52499817777425,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 81.71999817341566,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 81.91499816905707,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 82.1249981643632,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 82.31999816000462,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 82.51499815564603,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 82.72499815095216,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 82.91999814659357,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_near",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 83.11499814223498,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 83.32499813754112,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 83.48999813385308,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 83.68499812949449,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 83.89499812480062,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 84.08999812044203,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 84.28499811608344,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 84.49499811138958,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 84.68999810703099,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 84.8849981026724,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 85.09499809797853,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 85.28999809361994,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 85.48499808926135,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 85.69499808456749,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 85.8899980802089,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 86.08499807585031,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_outside",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 86.29499807115644,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 86.48999806679785,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 86.68499806243926,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 86.8949980577454,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 87.08999805338681,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 87.28499804902822,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 87.49499804433435,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 87.68999803997576,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 87.8999980352819,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 88.0949980309233,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 88.28999802656472,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 88.48499802220613,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 88.69499801751226,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 88.88999801315367,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 89.08499800879508,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 89.29499800410122,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 89.48999799974263,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 89.68499799538404,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 89.89499799069017,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 90.08999798633158,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 90.29999798163772,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 90.49499797727913,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 90.68999797292054,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "flame_returned",
+			"muzzle": false,
+			"parent": false,
+			"flame_parent": true,
+			"owner": 2,
+			"dormant": false,
+			"flame": false,
+			"left": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 90.89999796822667,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		}
+	],
+	"wrapped": true
+}

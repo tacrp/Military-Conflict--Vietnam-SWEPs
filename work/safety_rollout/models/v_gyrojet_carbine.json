@@ -1,0 +1,35 @@
+{
+  "model": "v_gyrojet_carbine",
+  "safe": true,
+  "status": "baked",
+  "sequences": [
+    {
+      "sequence": "idletonearwall",
+      "rows": 2,
+      "mode_axis": false
+    },
+    {
+      "sequence": "nearwall",
+      "rows": 2,
+      "mode_axis": false
+    },
+    {
+      "sequence": "nearwalltoidle",
+      "rows": 2,
+      "mode_axis": false
+    }
+  ],
+  "max_grip_error": 3.782140051614258e-10,
+  "max_blended_grip_error": 0.03877366014863715,
+  "max_shoulder_shift": 0.0,
+  "knots": 17,
+  "qc_sha256": "4328b6ed5041da50abe4252e4dd5a26d59d0646d38caa3a332bd4192eb3b3433",
+  "compile": {
+    "ok": true,
+    "returncode": 0,
+    "messages": [
+      "WARNING: Failed to load keyvalues file cfg/mount.cfg!"
+    ]
+  },
+  "compiled_sequence_count": 30
+}

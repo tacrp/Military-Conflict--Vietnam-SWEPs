@@ -51,6 +51,7 @@ local function adjustOwnerBone(owner, pos, ang)
         owner:ManipulateBonePosition(id, pos)
         owner:ManipulateBoneAngles(id, ang)
         owner.MCVBoneAdjusted, owner.MCVBonePos, owner.MCVBoneAng = true, pos, ang
+        owner:InvalidateBoneCache()
     end
     return true
 end
@@ -77,8 +78,20 @@ end)
 function SWEP:GetWorldModelEntity(left)
     local key = left and "WMLeft" or "WM"
     local mdl = self[key]
-    if IsValid(mdl) and mdl:GetModel() == self.WorldModel and mdl.MCVOwner == self:GetOwner() then return mdl end
+    if IsValid(mdl) and mdl:GetModel() == self.WorldModel and mdl.MCVOwner == self:GetOwner() then
+        // Engine PVS transitions can detach a clientside child without changing
+        // our cached owner. Repair the actual parent, not just the Lua cache.
+        if !left and mdl:GetParent() != self:GetOwner() then
+            mdl:SetParent(self:GetOwner())
+            mdl:SetLocalPos(vector_origin)
+            mdl:SetLocalAngles(angle_zero)
+            mdl:AddEffects(EF_BONEMERGE)
+            mdl:InvalidateBoneCache()
+        end
+        return mdl
+    end
     if IsValid(mdl) then mdl:Remove() end
+    if left then self.WMLeftBind = nil end
     if !self.WorldModel or self.WorldModel == "" or !util.IsValidModel(self.WorldModel) then return nil end
     mdl = ClientsideModel(self.WorldModel, RENDERGROUP_OPAQUE)
     if !IsValid(mdl) then return nil end
@@ -87,6 +100,8 @@ function SWEP:GetWorldModelEntity(left)
     if !left then
         // the engine's own placement: bones merged onto the owner's
         mdl:SetParent(self:GetOwner())
+        mdl:SetLocalPos(vector_origin)
+        mdl:SetLocalAngles(angle_zero)
         mdl:AddEffects(EF_BONEMERGE)
     end
     self[key] = mdl
@@ -94,10 +109,12 @@ function SWEP:GetWorldModelEntity(left)
 end
 
 function SWEP:RemoveWorldModels()
+    if self.StopFlameEffect then self:StopFlameEffect() end
     for _, key in ipairs({"WM", "WMLeft"}) do
         if IsValid(self[key]) then self[key]:Remove() end
         self[key] = nil
     end
+    self.WMLeftBind = nil
 end
 
 local function copyLook(self, mdl)
@@ -159,23 +176,23 @@ function SWEP:GetWorldModelTransformLeft(right, left)
     return E:GetTranslation(), E:GetAngles()
 end
 
-function SWEP:DrawWorldModel(flags)
+// Effects can arrive before DrawWorldModel (or while the gun is off screen).
+// Both paths must prepare the same current pose before reading attachments.
+function SWEP:UpdateWorldModels(drawing)
     local owner = self:GetOwner()
+    if self:IsDormant() or (IsValid(owner) and owner:IsDormant()) then return end
     if !IsValid(owner) or !(owner:IsPlayer() or owner:IsNPC()) then
-        // on the ground: the entity as it is
         self:RemoveWorldModels()
-        self:DrawModel()
         return
     end
     local right = self:GetWorldModelEntity(false)
-    if !right then
-        self:DrawModel()
-        return
-    end
+    if !right then return end
     adjustOwnerBone(owner, self:GetWorldModelBoneAdjust())
+    // DrawWorldModel is already inside the owner's render pass. Only effects
+    // arriving outside that pass need to explicitly prepare the owner's bones.
+    if !drawing then owner:SetupBones() end
     copyLook(self, right)
     right:SetupBones()
-    right:DrawModel()
 
     if self.GetAkimbo and self:GetAkimbo() then
         local left = self:GetWorldModelEntity(true)
@@ -185,20 +202,43 @@ function SWEP:DrawWorldModel(flags)
             left:SetAngles(ang)
             copyLook(self, left)
             left:SetupBones()
-            left:DrawModel()
         end
     elseif IsValid(self.WMLeft) then
         self.WMLeft:Remove()
         self.WMLeft = nil
+        self.WMLeftBind = nil
+    end
+    return right, self.WMLeft
+end
+
+function SWEP:DrawWorldModel(flags)
+    local right, left = self:UpdateWorldModels(true)
+    if IsValid(right) then
+        right:DrawModel()
+        if IsValid(left) then left:DrawModel() end
+    elseif !self:IsDormant() then
+        self:DrawModel()
     end
 end
 
 // The model the third person effects attach to (right or left gun)
 function SWEP:GetWorldModelFor(left)
-    local mdl = left and self.WMLeft or self.WM
+    local right, other = self:UpdateWorldModels()
+    local mdl = left and other or right
     if IsValid(mdl) then return mdl end
     return self
 end
+
+// Retire particles along with their attachment models on PVS loss. Re-entry
+// lazily rebuilds them; never keep an orphaned model at an old world position.
+hook.Add("NotifyShouldTransmit", "MCV_WorldModelPVS", function(ent, transmitting)
+    if transmitting then return end
+    local wep = ent
+    if ent.GetActiveWeapon then wep = ent:GetActiveWeapon() end
+    if IsValid(wep) and wep.MilitaryConflictVietnam and wep.RemoveWorldModels then
+        wep:RemoveWorldModels()
+    end
+end)
 
 // Model and attachment id for a third person effect: kind "muzzle" or "eject", left gun or
 // right. The game names the muzzle "muzzle" and the port "shell_eject" (a few models "eject");

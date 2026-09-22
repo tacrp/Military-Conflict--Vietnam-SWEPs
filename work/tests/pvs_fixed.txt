@@ -1,0 +1,18 @@
+lua include("mcv_harness/pvs.lua") assert(#player.GetHumans()==2,"Need host plus observer") MCVPVS.Setup()
+wait 2
+strip
+give mcv_akm
+lua local ps=player.GetHumans() ps[1]:SetPos(Vector(-2000,-3000,-100)) ps[1]:SetEyeAngles(Angle(0,90,0)) ps[2]:SetPos(Vector(-2150,-3000,-100)) ps[2]:SetEyeAngles(Angle(0,0,0)) MCVPVS.Phase("near")
+wait 3
+tap +attack 1
+wait 1
+lua MCVPVS.Capture("fixed_near") MCVPVS.Phase("outside") player.GetHumans()[1]:SetPos(Vector(1000,2000,100))
+wait 3
+tap +attack 0.5
+wait 1
+lua MCVPVS.Phase("returned") player.GetHumans()[1]:SetPos(Vector(-2000,-3000,-100))
+wait 3
+tap +attack 1
+wait 1
+lua MCVPVS.Capture("fixed_returned") MCVPVS.Flush("fixed")
+wait 1

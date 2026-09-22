@@ -1,0 +1,35 @@
+{
+  "model": "v_m1g_s",
+  "safe": true,
+  "status": "baked",
+  "sequences": [
+    {
+      "sequence": "idletonearwall",
+      "rows": 2,
+      "mode_axis": false
+    },
+    {
+      "sequence": "nearwall",
+      "rows": 2,
+      "mode_axis": false
+    },
+    {
+      "sequence": "nearwalltoidle",
+      "rows": 2,
+      "mode_axis": false
+    }
+  ],
+  "max_grip_error": 1.2055556281912218e-09,
+  "max_blended_grip_error": 0.14140358022051344,
+  "max_shoulder_shift": 1.2908114459059907,
+  "knots": 31,
+  "qc_sha256": "0eac05097feba275c5e5aecded8a37a0d3c9ddf2e8a518f91856aecb8ee0ea2b",
+  "compile": {
+    "ok": true,
+    "returncode": 0,
+    "messages": [
+      "WARNING: Failed to load keyvalues file cfg/mount.cfg!"
+    ]
+  },
+  "compiled_sequence_count": 41
+}

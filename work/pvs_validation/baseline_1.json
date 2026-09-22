@@ -1,0 +1,2049 @@
+{
+	"phase": "returned",
+	"events": [
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_fp",
+			"phase": "near",
+			"pos": [
+				-1995.9609375,
+				-2967.175537109375,
+				-39.153350830078125
+			],
+			"parent": "viewmodel",
+			"time": 440.05499016400427,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type1_fp_smoke",
+			"phase": "near",
+			"pos": [
+				-1995.9609375,
+				-2967.175537109375,
+				-39.153350830078125
+			],
+			"parent": "viewmodel",
+			"time": 440.05499016400427,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_fp",
+			"phase": "near",
+			"pos": [
+				-1995.8824462890625,
+				-2967.184814453125,
+				-39.15008544921875
+			],
+			"parent": "viewmodel",
+			"time": 440.15999016165733,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type1_fp_smoke",
+			"phase": "near",
+			"pos": [
+				-1995.8824462890625,
+				-2967.184814453125,
+				-39.15008544921875
+			],
+			"parent": "viewmodel",
+			"time": 440.15999016165733,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_fp",
+			"phase": "near",
+			"pos": [
+				-1995.8154296875,
+				-2967.191162109375,
+				-39.12522506713867
+			],
+			"parent": "viewmodel",
+			"time": 440.2649901593104,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type1_fp_smoke",
+			"phase": "near",
+			"pos": [
+				-1995.8154296875,
+				-2967.191162109375,
+				-39.12522506713867
+			],
+			"parent": "viewmodel",
+			"time": 440.2649901593104,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_fp",
+			"phase": "near",
+			"pos": [
+				-1996.0010986328125,
+				-2967.19140625,
+				-39.70351028442383
+			],
+			"parent": "viewmodel",
+			"time": 440.36999015696347,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type1_fp_smoke",
+			"phase": "near",
+			"pos": [
+				-1996.0010986328125,
+				-2967.19140625,
+				-39.70351028442383
+			],
+			"parent": "viewmodel",
+			"time": 440.36999015696347,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_fp",
+			"phase": "near",
+			"pos": [
+				-1995.72705078125,
+				-2967.191162109375,
+				-39.00511932373047
+			],
+			"parent": "viewmodel",
+			"time": 440.47499015461653,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type1_fp_smoke",
+			"phase": "near",
+			"pos": [
+				-1995.72705078125,
+				-2967.191162109375,
+				-39.00511932373047
+			],
+			"parent": "viewmodel",
+			"time": 440.47499015461653,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_fp",
+			"phase": "near",
+			"pos": [
+				-1996.27392578125,
+				-2967.17529296875,
+				-39.64274597167969
+			],
+			"parent": "viewmodel",
+			"time": 440.5799901522696,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type1_fp_smoke",
+			"phase": "near",
+			"pos": [
+				-1996.27392578125,
+				-2967.17529296875,
+				-39.64274597167969
+			],
+			"parent": "viewmodel",
+			"time": 440.5799901522696,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_fp",
+			"phase": "near",
+			"pos": [
+				-1996.2762451171875,
+				-2967.16259765625,
+				-39.52751541137695
+			],
+			"parent": "viewmodel",
+			"time": 440.68499014992267,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type1_fp_smoke",
+			"phase": "near",
+			"pos": [
+				-1996.2762451171875,
+				-2967.16259765625,
+				-39.52751541137695
+			],
+			"parent": "viewmodel",
+			"time": 440.68499014992267,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_fp",
+			"phase": "near",
+			"pos": [
+				-1996.298828125,
+				-2967.146240234375,
+				-39.395362854003906
+			],
+			"parent": "viewmodel",
+			"time": 440.78999014757574,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type1_fp_smoke",
+			"phase": "near",
+			"pos": [
+				-1996.298828125,
+				-2967.146240234375,
+				-39.395362854003906
+			],
+			"parent": "viewmodel",
+			"time": 440.78999014757574,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_fp",
+			"phase": "near",
+			"pos": [
+				-1996.341552734375,
+				-2967.12646484375,
+				-39.25098419189453
+			],
+			"parent": "viewmodel",
+			"time": 440.8949901452288,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type1_fp_smoke",
+			"phase": "near",
+			"pos": [
+				-1996.341552734375,
+				-2967.12646484375,
+				-39.25098419189453
+			],
+			"parent": "viewmodel",
+			"time": 440.8949901452288,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_fp",
+			"phase": "near",
+			"pos": [
+				-1995.8394775390625,
+				-2967.12451171875,
+				-38.36783981323242
+			],
+			"parent": "viewmodel",
+			"time": 440.99999014288187,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type1_fp_smoke",
+			"phase": "near",
+			"pos": [
+				-1995.8394775390625,
+				-2967.12451171875,
+				-38.36783981323242
+			],
+			"parent": "viewmodel",
+			"time": 440.99999014288187,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_fp",
+			"phase": "outside",
+			"pos": [
+				1002.43798828125,
+				2032.9359130859375,
+				160.07554626464844
+			],
+			"parent": "viewmodel",
+			"time": 445.4699900429696,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type1_fp_smoke",
+			"phase": "outside",
+			"pos": [
+				1002.43798828125,
+				2032.9359130859375,
+				160.07554626464844
+			],
+			"parent": "viewmodel",
+			"time": 445.4699900429696,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_fp",
+			"phase": "outside",
+			"pos": [
+				1002.6957397460938,
+				2032.9464111328125,
+				160.68710327148438
+			],
+			"parent": "viewmodel",
+			"time": 445.57499004062265,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type1_fp_smoke",
+			"phase": "outside",
+			"pos": [
+				1002.6957397460938,
+				2032.9464111328125,
+				160.68710327148438
+			],
+			"parent": "viewmodel",
+			"time": 445.57499004062265,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_fp",
+			"phase": "outside",
+			"pos": [
+				1002.7325439453125,
+				2032.9442138671875,
+				160.6949920654297
+			],
+			"parent": "viewmodel",
+			"time": 445.6799900382757,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type1_fp_smoke",
+			"phase": "outside",
+			"pos": [
+				1002.7325439453125,
+				2032.9442138671875,
+				160.6949920654297
+			],
+			"parent": "viewmodel",
+			"time": 445.6799900382757,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_fp",
+			"phase": "outside",
+			"pos": [
+				1002.7871704101563,
+				2032.94287109375,
+				160.72789001464844
+			],
+			"parent": "viewmodel",
+			"time": 445.7849900359288,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type1_fp_smoke",
+			"phase": "outside",
+			"pos": [
+				1002.7871704101563,
+				2032.94287109375,
+				160.72789001464844
+			],
+			"parent": "viewmodel",
+			"time": 445.7849900359288,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_fp",
+			"phase": "outside",
+			"pos": [
+				1002.29443359375,
+				2032.9208984375,
+				160.05491638183594
+			],
+			"parent": "viewmodel",
+			"time": 445.88999003358185,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type1_fp_smoke",
+			"phase": "outside",
+			"pos": [
+				1002.29443359375,
+				2032.9208984375,
+				160.05491638183594
+			],
+			"parent": "viewmodel",
+			"time": 445.88999003358185,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_fp",
+			"phase": "outside",
+			"pos": [
+				1002.94677734375,
+				2032.9429931640625,
+				160.8717041015625
+			],
+			"parent": "viewmodel",
+			"time": 445.9949900312349,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type1_fp_smoke",
+			"phase": "outside",
+			"pos": [
+				1002.94677734375,
+				2032.9429931640625,
+				160.8717041015625
+			],
+			"parent": "viewmodel",
+			"time": 445.9949900312349,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_fp",
+			"phase": "returned",
+			"pos": [
+				-1996.5484619140625,
+				-2967.097900390625,
+				-39.04194259643555
+			],
+			"parent": "viewmodel",
+			"time": 450.3749899333343,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type1_fp_smoke",
+			"phase": "returned",
+			"pos": [
+				-1996.5484619140625,
+				-2967.097900390625,
+				-39.04194259643555
+			],
+			"parent": "viewmodel",
+			"time": 450.3749899333343,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_fp",
+			"phase": "returned",
+			"pos": [
+				-1996.798095703125,
+				-2967.10888671875,
+				-39.747764587402344
+			],
+			"parent": "viewmodel",
+			"time": 450.47998993098736,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type1_fp_smoke",
+			"phase": "returned",
+			"pos": [
+				-1996.798095703125,
+				-2967.10888671875,
+				-39.747764587402344
+			],
+			"parent": "viewmodel",
+			"time": 450.47998993098736,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_fp",
+			"phase": "returned",
+			"pos": [
+				-1997.149169921875,
+				-2967.121337890625,
+				-39.934749603271484
+			],
+			"parent": "viewmodel",
+			"time": 450.5849899286404,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type1_fp_smoke",
+			"phase": "returned",
+			"pos": [
+				-1997.149169921875,
+				-2967.121337890625,
+				-39.934749603271484
+			],
+			"parent": "viewmodel",
+			"time": 450.5849899286404,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_fp",
+			"phase": "returned",
+			"pos": [
+				-1996.623779296875,
+				-2967.113037109375,
+				-39.280269622802734
+			],
+			"parent": "viewmodel",
+			"time": 450.6899899262935,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type1_fp_smoke",
+			"phase": "returned",
+			"pos": [
+				-1996.623779296875,
+				-2967.113037109375,
+				-39.280269622802734
+			],
+			"parent": "viewmodel",
+			"time": 450.6899899262935,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_fp",
+			"phase": "returned",
+			"pos": [
+				-1996.6767578125,
+				-2967.114501953125,
+				-39.348907470703125
+			],
+			"parent": "viewmodel",
+			"time": 450.79498992394656,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type1_fp_smoke",
+			"phase": "returned",
+			"pos": [
+				-1996.6767578125,
+				-2967.114501953125,
+				-39.348907470703125
+			],
+			"parent": "viewmodel",
+			"time": 450.79498992394656,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_fp",
+			"phase": "returned",
+			"pos": [
+				-1997.307861328125,
+				-2967.1328125,
+				-40.13517379760742
+			],
+			"parent": "viewmodel",
+			"time": 450.8999899215996,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type1_fp_smoke",
+			"phase": "returned",
+			"pos": [
+				-1997.307861328125,
+				-2967.1328125,
+				-40.13517379760742
+			],
+			"parent": "viewmodel",
+			"time": 450.8999899215996,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_fp",
+			"phase": "returned",
+			"pos": [
+				-1997.0599365234375,
+				-2967.122314453125,
+				-40.06452560424805
+			],
+			"parent": "viewmodel",
+			"time": 451.0049899192527,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type1_fp_smoke",
+			"phase": "returned",
+			"pos": [
+				-1997.0599365234375,
+				-2967.122314453125,
+				-40.06452560424805
+			],
+			"parent": "viewmodel",
+			"time": 451.0049899192527,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_fp",
+			"phase": "returned",
+			"pos": [
+				-1997.474609375,
+				-2967.125244140625,
+				-40.18203353881836
+			],
+			"parent": "viewmodel",
+			"time": 451.10998991690576,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type1_fp_smoke",
+			"phase": "returned",
+			"pos": [
+				-1997.474609375,
+				-2967.125244140625,
+				-40.18203353881836
+			],
+			"parent": "viewmodel",
+			"time": 451.10998991690576,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_fp",
+			"phase": "returned",
+			"pos": [
+				-1997.5706787109375,
+				-2967.1162109375,
+				-40.1677131652832
+			],
+			"parent": "viewmodel",
+			"time": 451.2149899145588,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type1_fp_smoke",
+			"phase": "returned",
+			"pos": [
+				-1997.5706787109375,
+				-2967.1162109375,
+				-40.1677131652832
+			],
+			"parent": "viewmodel",
+			"time": 451.2149899145588,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type2_fp",
+			"phase": "returned",
+			"pos": [
+				-1997.67138671875,
+				-2967.103759765625,
+				-40.12553405761719
+			],
+			"parent": "viewmodel",
+			"time": 451.3199899122119,
+			"name": "particle",
+			"valid": true
+		},
+		{
+			"particle": "vietnam_muzzleflash_machinegun_type1_fp_smoke",
+			"phase": "returned",
+			"pos": [
+				-1997.67138671875,
+				-2967.103759765625,
+				-40.12553405761719
+			],
+			"parent": "viewmodel",
+			"time": 451.3199899122119,
+			"name": "particle",
+			"valid": true
+		}
+	],
+	"samples": [
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 434.2349902940914,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 434.38499029073864,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 434.6249902853742,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 434.83499028068036,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 434.9849902773276,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 435.2249902719632,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 435.4349902672693,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 435.58499026391655,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 435.82499025855213,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 436.03499025385827,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 436.1849902505055,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 436.4399902448058,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 436.58999024145305,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "near",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 436.78499023709446,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "near",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 437.03999023139477,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "near",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 437.189990228042,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "near",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 437.3849902236834,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "near",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 437.6399902179837,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "near",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 437.78999021463096,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "near",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 437.9849902102724,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "near",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 438.2399902045727,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "near",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000.000244140625,
+				-100
+			],
+			"time": 438.3899902012199,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "near",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 438.5849901968613,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "near",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 438.83999019116163,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "near",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 438.98999018780887,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "near",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 439.1849901834503,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "near",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-99.99999237060547
+			],
+			"time": 439.4399901777506,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "near",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 439.5899901743978,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "near",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2149.999755859375,
+				-3000,
+				-99.99999237060547
+			],
+			"time": 439.78499017003924,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "near",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 440.03999016433954,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "near",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 440.1899901609868,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "near",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100.00000762939453
+			],
+			"time": 440.3849901566282,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "near",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 440.6399901509285,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "near",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000.000244140625,
+				-100
+			],
+			"time": 440.78999014757574,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "near",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 440.98499014321715,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "near",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-2999.999755859375,
+				-99.99999237060547
+			],
+			"time": 441.1949901385233,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "near",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 441.3899901341647,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "near",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 441.5849901298061,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "near",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100.00000762939453
+			],
+			"time": 441.79499012511224,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "near",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 441.98999012075365,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "outside",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 442.18499011639506,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "outside",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 442.3949901117012,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "outside",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 442.5899901073426,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "outside",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-99.99999237060547
+			],
+			"time": 442.784990102984,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "outside",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 442.99499009829015,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "outside",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 443.18999009393156,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "outside",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2149.999755859375,
+				-3000,
+				-100
+			],
+			"time": 443.38499008957297,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "outside",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 443.5949900848791,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "outside",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 443.7899900805205,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "outside",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 443.9849900761619,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "outside",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 444.19499007146806,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "outside",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-99.99999237060547
+			],
+			"time": 444.38999006710947,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "outside",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 444.5849900627509,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "outside",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 444.794990058057,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "outside",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100.00000762939453
+			],
+			"time": 444.9899900536984,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "outside",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 445.18499004933983,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "outside",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 445.39499004464597,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "outside",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100.00000762939453
+			],
+			"time": 445.5899900402874,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "outside",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 445.7999900355935,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "outside",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 445.9949900312349,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "outside",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 446.18999002687633,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "outside",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 446.39999002218246,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "outside",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 446.5949900178239,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "outside",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 446.7899900134653,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "outside",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 446.9999900087714,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-2999.999755859375,
+				-100
+			],
+			"time": 447.19499000441283,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 447.38999000005424,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 447.5999899953604,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 447.7949899910018,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100.00000762939453
+			],
+			"time": 447.9899899866432,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-99.99999237060547
+			],
+			"time": 448.19998998194933,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000.000244140625,
+				-100
+			],
+			"time": 448.39498997759074,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-2999.999755859375,
+				-100
+			],
+			"time": 448.58998997323215,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 448.7999899685383,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 448.9949899641797,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 449.1899899598211,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 449.39998995512724,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 449.59498995076865,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100.00000762939453
+			],
+			"time": 449.78998994641006,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 449.9999899417162,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 450.1949899373576,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 450.389989932999,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 450.59998992830515,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 450.79498992394656,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 451.0049899192527,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 451.1999899148941,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000.000244140625,
+				-100
+			],
+			"time": 451.3949899105355,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 451.60498990584165,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 451.79998990148306,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 451.99498989712447,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		},
+		{
+			"phase": "returned",
+			"muzzle": false,
+			"parent": false,
+			"owner": 2,
+			"dormant": false,
+			"pos": [
+				-2150,
+				-3000,
+				-100
+			],
+			"time": 452.2049898924306,
+			"wm": false,
+			"weapon": "weapon_physgun"
+		}
+	],
+	"wrapped": true
+}

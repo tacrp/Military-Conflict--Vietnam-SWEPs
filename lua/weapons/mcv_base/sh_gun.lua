@@ -83,7 +83,7 @@ function SWEP:GetControlHints()
     local safe = self:GetSafe()
     if !safe then
         table.insert(h, {"+attack", "Fire"})
-        table.insert(h, {"+attack2", "Aim"})
+        table.insert(h, {"+attack2", self:UsesToggleAim() and "Toggle aim" or "Aim"})
     end
     table.insert(h, {"+reload", "Reload"})
     if #self.Firemodes > 1 and !self:GetGrenadeLauncher() then

@@ -74,7 +74,11 @@ function SWEP:GetMovementPose(speed, sa)
     // on the sights the movement layers are the sighted walk layer's: a set fraction of its swing
     local sighted = math.min(speed / self.SpeedRun, 1) * self.MovementPoseSighted * self.SightedSwayFraction
 
-    if self:GetSafe() then
+    // Only models with grip-corrected nearwall locomotion can use the full movement range.
+    // Check the active model too: dual wield swaps ViewModel on the same weapon instance.
+    local safeMovement = self.SafeMovementAnimations or (MCV.SafeMovementModels and
+        MCV.SafeMovementModels[string.lower(self.ViewModel or "")])
+    if self:GetSafe() and !safeMovement then
         pose = math.Clamp(pose, 0, 86)
     end
 

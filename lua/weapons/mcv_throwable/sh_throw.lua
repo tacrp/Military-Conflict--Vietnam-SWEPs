@@ -5,6 +5,30 @@ local STATE_THROWING = 3
 
 SWEP.DeferredActions = {"ThrowRelease", "ThrowEnd"}
 
+function SWEP:Initialize()
+    baseclass.Get("mcv_base_core").Initialize(self)
+    if self.ModelSkin != nil then self:SetSkin(self.ModelSkin) end
+end
+
+function SWEP:DoBodygroupsWeapon(vm)
+    if self.ModelSkin != nil and vm:GetSkin() != self:GetSkin() then
+        vm:SetSkin(self:GetSkin())
+    end
+end
+
+// Derive this from predicted/networked action state, including for remote players.
+// Sprinting must not hide a pulled grenade. Both releases use the grenade throw gesture.
+function SWEP:Think_HoldType()
+    local state = self:GetActionState()
+    local hold = "slam"
+    if state == STATE_WINDUP_LOW then
+        hold = "melee2"
+    elseif state == STATE_WINDUP_HIGH or state == STATE_THROWING then
+        hold = "grenade"
+    end
+    if self:GetHoldType() != hold then self:SetHoldType(hold) end
+end
+
 // GMod inherits nested tables index by index, so a weapon's shorter FuseModes still sees
 // the base's later entries (the molotov's {0} read as {0, 5}); an impact-fused throwable
 // has exactly one mode, with no fuse at all
@@ -68,6 +92,7 @@ end
 
 function SWEP:Windup(low)
     self:SetActionState(low and STATE_WINDUP_LOW or STATE_WINDUP_HIGH)
+    self:Think_HoldType()
     self:SetActionStart(CurTime())
 
     local seq = low and self.SequenceWindupLow or self.SequenceWindupHigh
@@ -90,6 +115,7 @@ function SWEP:Throw(low, overcooked)
     end
 
     self:SetActionState(STATE_THROWING)
+    self:Think_HoldType()
 
     local t = self:PlaySequence(seq, 1, true) or 0.5
     local release = math.min(low and self.ThrowReleaseTimeUnderhand or self.ThrowReleaseTime, t)
@@ -120,6 +146,7 @@ end
 
 function SWEP:Deferred_ThrowEnd()
     self:SetActionState(STATE_IDLE)
+    self:Think_HoldType()
     self:AfterThrow()
 end
 
@@ -150,9 +177,13 @@ function SWEP:LaunchThrowable(kind, fuse, cookstart)
         force = self.ThrowForceUnderhand
         dir = (fwd + up * 0.25):GetNormalized()
     elseif kind == "roll" then
-        pos = pos - up * 20
+        // Keep the cylinder axle horizontal even when aiming up/down. Local Z
+        // points to the player's right, perpendicular to the roll direction.
+        ang = Angle(0, ang.y, 90)
+        fwd = ang:Forward()
+        pos = owner:GetShootPos() + fwd * 12 + ang:Up() * 6 - vector_up * 20
         force = self.ThrowForceRoll
-        dir = (fwd - up * 0.15):GetNormalized()
+        dir = (fwd - vector_up * 0.15):GetNormalized()
     end
 
     // do not spawn inside a wall
@@ -181,6 +212,7 @@ function SWEP:LaunchThrowable(kind, fuse, cookstart)
     ent:SetAngles(ang)
     ent:SetOwner(owner)
     ent:Spawn()
+    ent:SetSkin(self:GetSkin())
     ent:Activate()
 
     // held too long: it goes off in the hand
@@ -193,8 +225,16 @@ function SWEP:LaunchThrowable(kind, fuse, cookstart)
 
     local phys = ent:GetPhysicsObject()
     if IsValid(phys) then
-        phys:SetVelocityInstantaneous(dir * force + owner:GetVelocity())
-        phys:AddAngleVelocity(VectorRand() * self.ThrowSpin)
+        local velocity = dir * force + owner:GetVelocity()
+        phys:SetVelocityInstantaneous(velocity)
+        if kind == "roll" and ent.RollRadius then
+            // Angular velocity is local degrees/sec. Match the forward surface
+            // speed to the launch speed, including the thrower's movement.
+            local spin = math.deg(velocity:Dot(fwd) / ent.RollRadius)
+            phys:AddAngleVelocity(Vector(0, 0, spin) - phys:GetAngleVelocity())
+        else
+            phys:AddAngleVelocity(VectorRand() * self.ThrowSpin)
+        end
     end
 end
 
@@ -280,6 +320,7 @@ end
 
 function SWEP:OnDeploy()
     self:SetActionState(STATE_IDLE)
+    self:Think_HoldType()
 end
 
 function SWEP:GetControlHints()

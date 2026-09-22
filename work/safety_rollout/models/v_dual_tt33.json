@@ -1,0 +1,34 @@
+{
+  "model": "v_dual_tt33",
+  "safe": true,
+  "status": "baked",
+  "sequences": [
+    {
+      "sequence": "idletonearwall",
+      "rows": 2,
+      "mode_axis": false
+    },
+    {
+      "sequence": "nearwall",
+      "rows": 2,
+      "mode_axis": false
+    },
+    {
+      "sequence": "nearwalltoidle",
+      "rows": 2,
+      "mode_axis": false
+    }
+  ],
+  "max_grip_error": 1.0841599276764049e-14,
+  "max_blended_grip_error": 8.97016233590804e-15,
+  "max_shoulder_shift": 0.0,
+  "qc_sha256": "91514cdbbfa48815e475353b495795cc819ee477265c2611c328f3e559842d42",
+  "compile": {
+    "ok": true,
+    "returncode": 0,
+    "messages": [
+      "WARNING: Failed to load keyvalues file cfg/mount.cfg!"
+    ]
+  },
+  "compiled_sequence_count": 34
+}

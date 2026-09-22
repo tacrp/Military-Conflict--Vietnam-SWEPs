@@ -484,7 +484,10 @@ def step_fix_correctives(qc, ctx):
     angle per root bone instead (-90, -180, -270), so the subtraction left +180 degrees on
     BaseRoot, applied by both the walk and run layers, and the gun sat behind the camera. Where a
     corrective disagrees with a bone that is constant in its delta animation, the corrective is
-    rewritten to that bone's value and the fixed file used instead."""
+    rewritten to that bone's value and the fixed file used instead. The Gyrojets' separate
+    animated Base root needs the neutral movement corrective: Crowbar copied its first run/
+    walk frame rotation into the corrective, subtracting the gun's carry angle but not the
+    hands'. These two rigs use the corresponding runIdle/walkIdle corrective for Base only."""
     fixed = 0
     for corr in sorted(glob.glob(os.path.join(ctx.og_dir, "*_anims", "*_corrective_animation.smd"))):
         anim = corr.replace("_corrective_animation", "")
@@ -492,8 +495,17 @@ def step_fix_correctives(qc, ctx):
             continue
         cf, _ = _smd_first_frame(corr)
         af, const = _smd_first_frame(anim)
-        wrong = [b for b, v in cf.items() if b in af and const.get(b) and any(abs(a - c) > 0.01 for a, c in zip(v[3:], af[b][3:]))]
-        if not wrong:
+        replacements = {b: af[b] for b, v in cf.items() if b in af and const.get(b)
+                        and any(abs(a - c) > 0.01 for a, c in zip(v[3:], af[b][3:]))}
+        neutral = {"run_a.smd": "runIdle_a_corrective_animation.smd",
+                   "walk_a.smd": "walkIdle_a_corrective_animation.smd"}.get(os.path.basename(anim))
+        if ctx.name in ("v_gyrojet_pistol", "v_gyrojet_carbine") and neutral:
+            nf, _ = _smd_first_frame(os.path.join(os.path.dirname(corr), neutral))
+            if "Base" in cf and "Base" in nf:
+                replacements["Base"] = nf["Base"]
+                ctx.note("%s: Base uses the neutral %s corrective, preserving its animated rotation" %
+                         (os.path.basename(anim), neutral))
+        if not replacements:
             continue
         text = open(corr, encoding="utf-8", errors="replace").read()
         lines = text.split("\n")
@@ -506,8 +518,8 @@ def step_fix_correctives(qc, ctx):
         i = lines.index("skeleton") + 1
         while lines[i].strip() != "end":
             q = lines[i].split()
-            if q and q[0] != "time" and names[int(q[0])] in wrong:
-                v = af[names[int(q[0])]]
+            if q and q[0] != "time" and names[int(q[0])] in replacements:
+                v = replacements[names[int(q[0])]]
                 lines[i] = "%s %s" % (q[0], " ".join("%.6f" % x for x in v))
             i += 1
         os.makedirs(ctx.fixed_dir, exist_ok=True)
@@ -515,7 +527,7 @@ def step_fix_correctives(qc, ctx):
             f.write("\n".join(lines))
         fixed += 1
     if fixed:
-        ctx.note("%d corrective animations rewritten to match their delta animation (Crowbar root bone rotation)" % fixed)
+        ctx.note("%d corrective animations repaired (Crowbar root bone rotation)" % fixed)
 
 
 def step_glue_guns(qc, ctx):

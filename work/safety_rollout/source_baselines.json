@@ -1,0 +1,3507 @@
+[
+  {
+    "model": "v_dp28",
+    "baseline_qc_sha256": "bbd018cf02be6dffb40a1a5179e8b2d36457fd1cddd4a50d67b400dc50360aaa",
+    "original_animation_timings": {
+      "magRotate_base_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "magRotate_270_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "magRotate_180_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "magRotate_90_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "NotEmpty_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "Empty_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "NotEmptyMove_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "EmptyMove_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "runIdle_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "run_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "walkIdle_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "walk_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot1_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot1_ironsight_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot2_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot2_ironsight_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot3_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot3_ironsight_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot1d_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot1d_ironsight_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot2d_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot2d_ironsight_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot3d_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot3d_ironsight_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "magRotate_delta": [
+        30.0,
+        0,
+        69
+      ],
+      "magRotate_base": [
+        30.0,
+        5,
+        5
+      ],
+      "magRotate_90": [
+        30.0,
+        4,
+        5
+      ],
+      "magRotate_180": [
+        30.0,
+        4,
+        5
+      ],
+      "magRotate_270": [
+        30.0,
+        4,
+        5
+      ],
+      "magRotate_360": [
+        30.0,
+        0,
+        5
+      ],
+      "Base": [
+        30.0,
+        0,
+        2
+      ],
+      "NotEmpty": [
+        30.0,
+        4,
+        2
+      ],
+      "Empty": [
+        30.0,
+        4,
+        2
+      ],
+      "NotEmptyMove": [
+        30.0,
+        5,
+        20
+      ],
+      "EmptyMove": [
+        30.0,
+        4,
+        20
+      ],
+      "basePose_a": [
+        30.0,
+        0,
+        60
+      ],
+      "basePose_a__f60": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsight": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsight__f60": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsight_transition": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsight_transition__f60": [
+        30.0,
+        0,
+        60
+      ],
+      "walkDelta": [
+        30.0,
+        0,
+        19
+      ],
+      "runIdle_a": [
+        30.0,
+        5,
+        19
+      ],
+      "run_a": [
+        30.0,
+        4,
+        19
+      ],
+      "walkIdle_a": [
+        30.0,
+        5,
+        23
+      ],
+      "walk_a": [
+        30.0,
+        4,
+        23
+      ],
+      "shoot1_a": [
+        30.0,
+        4,
+        20
+      ],
+      "shoot1_ironsight_a": [
+        30.0,
+        4,
+        20
+      ],
+      "shoot2_a": [
+        30.0,
+        4,
+        20
+      ],
+      "shoot2_ironsight_a": [
+        30.0,
+        4,
+        20
+      ],
+      "shoot3_a": [
+        30.0,
+        4,
+        20
+      ],
+      "shoot3_ironsight_a": [
+        30.0,
+        4,
+        20
+      ],
+      "nearwall_s_a": [
+        30.0,
+        0,
+        16
+      ],
+      "nearwall_s_a_i": [
+        30.0,
+        0,
+        16
+      ],
+      "nearwall_a": [
+        30.0,
+        1,
+        61
+      ],
+      "nearwall_a_i": [
+        30.0,
+        0,
+        61
+      ],
+      "nearwall_e_a": [
+        30.0,
+        0,
+        16
+      ],
+      "nearwall_e_a_i": [
+        30.0,
+        0,
+        16
+      ],
+      "prone_deployF": [
+        30.0,
+        1,
+        26
+      ],
+      "prone_deployB": [
+        30.0,
+        0,
+        26
+      ],
+      "prone_deployL": [
+        30.0,
+        0,
+        26
+      ],
+      "prone_deployR": [
+        30.0,
+        0,
+        26
+      ],
+      "proneF": [
+        30.0,
+        1,
+        26
+      ],
+      "proneB": [
+        30.0,
+        0,
+        26
+      ],
+      "proneL": [
+        30.0,
+        0,
+        26
+      ],
+      "proneR": [
+        30.0,
+        0,
+        26
+      ],
+      "pickup_s_a": [
+        30.0,
+        0,
+        16
+      ],
+      "pickup_s_a_i": [
+        30.0,
+        0,
+        16
+      ],
+      "pickup_a": [
+        30.0,
+        1,
+        61
+      ],
+      "pickup_a_i": [
+        30.0,
+        0,
+        61
+      ],
+      "pickup_e_a": [
+        30.0,
+        0,
+        16
+      ],
+      "pickup_e_a_i": [
+        30.0,
+        0,
+        16
+      ],
+      "deploy_s_a": [
+        40.0,
+        0,
+        56
+      ],
+      "deploy_s_a_i": [
+        40.0,
+        0,
+        56
+      ],
+      "deploy_a": [
+        30.0,
+        0,
+        60
+      ],
+      "deploy_a__f30": [
+        30.0,
+        0,
+        30
+      ],
+      "ironsightdeploy": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsightdeploy__f30": [
+        30.0,
+        0,
+        30
+      ],
+      "deploy_e_a": [
+        40.0,
+        0,
+        51
+      ],
+      "deploy_e_a_i": [
+        40.0,
+        0,
+        51
+      ],
+      "shoot1d_a": [
+        30.0,
+        4,
+        10
+      ],
+      "shoot1d_ironsight_a": [
+        30.0,
+        4,
+        10
+      ],
+      "shoot2d_a": [
+        30.0,
+        4,
+        10
+      ],
+      "shoot2d_ironsight_a": [
+        30.0,
+        4,
+        10
+      ],
+      "shoot3d_a": [
+        30.0,
+        4,
+        10
+      ],
+      "shoot3d_ironsight_a": [
+        30.0,
+        4,
+        10
+      ],
+      "@draw": [
+        30.0,
+        0,
+        26
+      ],
+      "@Firstdraw": [
+        30.0,
+        0,
+        41
+      ],
+      "@reload": [
+        30.0,
+        0,
+        127
+      ],
+      "@reload_empty": [
+        30.0,
+        0,
+        152
+      ],
+      "@bash": [
+        30.0,
+        0,
+        31
+      ],
+      "@reload_deploy": [
+        30.0,
+        0,
+        127
+      ],
+      "@reload_deploy_empty": [
+        30.0,
+        0,
+        152
+      ],
+      "@holster": [
+        30.0,
+        0,
+        11
+      ]
+    },
+    "passed": true
+  },
+  {
+    "model": "v_pk",
+    "baseline_qc_sha256": "65aefb66ee90d63fc8918e16aceb8e5df3378bef95a91cf0b48a719c8f101c4e",
+    "original_animation_timings": {
+      "runIdle_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "run_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "walkIdle_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "walk_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "walk_a_r_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot1_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot1_ironsight_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot2_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot2_ironsight_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot3_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot3_ironsight_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot1_d_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot1_di_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot2_d_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot2_di_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot3_d_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot3_di_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "basePose_a": [
+        30.0,
+        0,
+        60
+      ],
+      "basePose_a__f60": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsight": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsight__f60": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsight_transition": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsight_transition__f60": [
+        30.0,
+        0,
+        60
+      ],
+      "walkPoses": [
+        30.0,
+        0,
+        23
+      ],
+      "runIdle_a": [
+        30.0,
+        5,
+        19
+      ],
+      "run_a": [
+        30.0,
+        4,
+        19
+      ],
+      "walkIdle_a": [
+        30.0,
+        5,
+        23
+      ],
+      "walk_a": [
+        30.0,
+        4,
+        23
+      ],
+      "walk_a_r": [
+        30.0,
+        4,
+        23
+      ],
+      "shoot1_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shoot1_ironsight_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shoot2_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shoot2_ironsight_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shoot3_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shoot3_ironsight_a": [
+        30.0,
+        4,
+        26
+      ],
+      "nearwall_s_a": [
+        30.0,
+        0,
+        16
+      ],
+      "nearwall_s_a_i": [
+        30.0,
+        0,
+        16
+      ],
+      "nearwall_a": [
+        30.0,
+        1,
+        61
+      ],
+      "nearwall_a_i": [
+        30.0,
+        0,
+        61
+      ],
+      "nearwall_e_a": [
+        30.0,
+        0,
+        16
+      ],
+      "nearwall_e_a_i": [
+        30.0,
+        0,
+        16
+      ],
+      "prone_deployF": [
+        30.0,
+        1,
+        26
+      ],
+      "prone_deployB": [
+        30.0,
+        0,
+        26
+      ],
+      "prone_deployL": [
+        30.0,
+        0,
+        26
+      ],
+      "prone_deployR": [
+        30.0,
+        0,
+        26
+      ],
+      "proneF": [
+        30.0,
+        1,
+        26
+      ],
+      "proneB": [
+        30.0,
+        0,
+        26
+      ],
+      "proneL": [
+        30.0,
+        0,
+        26
+      ],
+      "proneR": [
+        30.0,
+        0,
+        26
+      ],
+      "pickup_s_a": [
+        30.0,
+        0,
+        16
+      ],
+      "pickup_s_a_i": [
+        30.0,
+        0,
+        16
+      ],
+      "pickup_a": [
+        30.0,
+        1,
+        61
+      ],
+      "pickup_a_i": [
+        30.0,
+        0,
+        61
+      ],
+      "pickup_e_a": [
+        30.0,
+        0,
+        16
+      ],
+      "pickup_e_a_i": [
+        30.0,
+        0,
+        16
+      ],
+      "deploy_s_a": [
+        40.0,
+        0,
+        61
+      ],
+      "deploy_s_a_i": [
+        40.0,
+        0,
+        61
+      ],
+      "deploy_a": [
+        30.0,
+        0,
+        60
+      ],
+      "deploy_a__f60": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsightdeploy": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsightdeploy__f60": [
+        30.0,
+        0,
+        60
+      ],
+      "deploy_e_a": [
+        40.0,
+        0,
+        51
+      ],
+      "deploy_e_a_i": [
+        40.0,
+        0,
+        51
+      ],
+      "shoot1_d_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shoot1_di_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shoot2_d_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shoot2_di_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shoot3_d_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shoot3_di_a": [
+        30.0,
+        4,
+        25
+      ],
+      "@draw": [
+        30.0,
+        0,
+        26
+      ],
+      "@Firstdraw": [
+        30.0,
+        0,
+        39
+      ],
+      "@reload": [
+        30.0,
+        0,
+        191
+      ],
+      "@reload_empty": [
+        30.0,
+        0,
+        216
+      ],
+      "@bash": [
+        30.0,
+        0,
+        31
+      ],
+      "@reload_deploy": [
+        30.0,
+        0,
+        191
+      ],
+      "@reload_deploy_empty": [
+        30.0,
+        0,
+        216
+      ],
+      "@holster": [
+        30.0,
+        0,
+        11
+      ]
+    },
+    "passed": true
+  },
+  {
+    "model": "v_pk_belt",
+    "baseline_qc_sha256": "d339d4433ea8d2dade9b5ddc4c47af00a5e2aa1f91aab81a12706bff7e3abefa",
+    "original_animation_timings": {
+      "runIdle_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "run_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "walkIdle_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "walk_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "walk_a_r_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot1_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot1_ironsight_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot2_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot2_ironsight_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot3_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot3_ironsight_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot1_d_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot1_di_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot2_d_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot2_di_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot3_d_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot3_di_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "basePose_a": [
+        30.0,
+        0,
+        60
+      ],
+      "basePose_a__f60": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsight": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsight__f60": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsight_transition": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsight_transition__f60": [
+        30.0,
+        0,
+        60
+      ],
+      "walkPoses": [
+        30.0,
+        0,
+        23
+      ],
+      "runIdle_a": [
+        30.0,
+        5,
+        19
+      ],
+      "run_a": [
+        30.0,
+        4,
+        19
+      ],
+      "walkIdle_a": [
+        30.0,
+        5,
+        23
+      ],
+      "walk_a": [
+        30.0,
+        4,
+        23
+      ],
+      "walk_a_r": [
+        30.0,
+        4,
+        23
+      ],
+      "shoot1_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shoot1_ironsight_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shoot2_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shoot2_ironsight_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shoot3_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shoot3_ironsight_a": [
+        30.0,
+        4,
+        26
+      ],
+      "nearwall_s_a": [
+        30.0,
+        0,
+        16
+      ],
+      "nearwall_s_a_i": [
+        30.0,
+        0,
+        16
+      ],
+      "nearwall_a": [
+        30.0,
+        1,
+        61
+      ],
+      "nearwall_a_i": [
+        30.0,
+        0,
+        61
+      ],
+      "nearwall_e_a": [
+        30.0,
+        0,
+        16
+      ],
+      "nearwall_e_a_i": [
+        30.0,
+        0,
+        16
+      ],
+      "prone_deployF": [
+        30.0,
+        1,
+        26
+      ],
+      "prone_deployB": [
+        30.0,
+        0,
+        26
+      ],
+      "prone_deployL": [
+        30.0,
+        0,
+        26
+      ],
+      "prone_deployR": [
+        30.0,
+        0,
+        26
+      ],
+      "proneF": [
+        30.0,
+        1,
+        26
+      ],
+      "proneB": [
+        30.0,
+        0,
+        26
+      ],
+      "proneL": [
+        30.0,
+        0,
+        26
+      ],
+      "proneR": [
+        30.0,
+        0,
+        26
+      ],
+      "pickup_s_a": [
+        30.0,
+        0,
+        16
+      ],
+      "pickup_s_a_i": [
+        30.0,
+        0,
+        16
+      ],
+      "pickup_a": [
+        30.0,
+        1,
+        61
+      ],
+      "pickup_a_i": [
+        30.0,
+        0,
+        61
+      ],
+      "pickup_e_a": [
+        30.0,
+        0,
+        16
+      ],
+      "pickup_e_a_i": [
+        30.0,
+        0,
+        16
+      ],
+      "deploy_s_a": [
+        40.0,
+        0,
+        61
+      ],
+      "deploy_s_a_i": [
+        40.0,
+        0,
+        61
+      ],
+      "deploy_a": [
+        30.0,
+        0,
+        60
+      ],
+      "deploy_a__f60": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsightdeploy": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsightdeploy__f60": [
+        30.0,
+        0,
+        60
+      ],
+      "deploy_e_a": [
+        40.0,
+        0,
+        51
+      ],
+      "deploy_e_a_i": [
+        40.0,
+        0,
+        51
+      ],
+      "shoot1_d_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shoot1_di_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shoot2_d_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shoot2_di_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shoot3_d_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shoot3_di_a": [
+        30.0,
+        4,
+        25
+      ],
+      "@draw": [
+        30.0,
+        0,
+        26
+      ],
+      "@Firstdraw": [
+        30.0,
+        0,
+        39
+      ],
+      "@reload": [
+        30.0,
+        0,
+        191
+      ],
+      "@reload_empty": [
+        30.0,
+        0,
+        216
+      ],
+      "@bash": [
+        30.0,
+        0,
+        31
+      ],
+      "@reload_deploy": [
+        30.0,
+        0,
+        191
+      ],
+      "@reload_deploy_empty": [
+        30.0,
+        0,
+        216
+      ],
+      "@holster": [
+        30.0,
+        0,
+        11
+      ]
+    },
+    "passed": true
+  },
+  {
+    "model": "v_vz61",
+    "baseline_qc_sha256": "26ea015c5ab371b81b01bf7fa5a9e34eff75cb3d6fc1bfe577534a1e94a5349c",
+    "original_animation_timings": {
+      "Default_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "Slideback_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "runIdle_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "run_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "walkIdle_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "walk_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "ShootMove_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "ShootStill_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot1_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot1_ironsight_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot2_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot2_ironsight_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot3_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot3_ironsight_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "PoseDelta": [
+        30.0,
+        0,
+        3
+      ],
+      "PoseDelta2": [
+        30.0,
+        0,
+        3
+      ],
+      "Default": [
+        30.0,
+        4,
+        3
+      ],
+      "Slideback": [
+        30.0,
+        4,
+        3
+      ],
+      "ShootMove": [
+        30.0,
+        4,
+        20
+      ],
+      "ShootStill": [
+        30.0,
+        4,
+        20
+      ],
+      "basePose_a": [
+        30.0,
+        0,
+        60
+      ],
+      "basePose_a__f60": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsight": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsight__f60": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsight_transition": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsight_transition__f60": [
+        30.0,
+        0,
+        60
+      ],
+      "walkDelta": [
+        30.0,
+        0,
+        23
+      ],
+      "runIdle_a": [
+        30.0,
+        5,
+        19
+      ],
+      "run_a": [
+        30.0,
+        4,
+        19
+      ],
+      "walkIdle_a": [
+        30.0,
+        5,
+        23
+      ],
+      "walk_a": [
+        30.0,
+        4,
+        23
+      ],
+      "shoot1_a": [
+        30.0,
+        4,
+        20
+      ],
+      "shoot1_ironsight_a": [
+        30.0,
+        4,
+        20
+      ],
+      "shoot2_a": [
+        30.0,
+        4,
+        20
+      ],
+      "shoot2_ironsight_a": [
+        30.0,
+        4,
+        20
+      ],
+      "shoot3_a": [
+        30.0,
+        4,
+        20
+      ],
+      "shoot3_ironsight_a": [
+        30.0,
+        4,
+        20
+      ],
+      "nearwall_s_a": [
+        30.0,
+        0,
+        16
+      ],
+      "nearwall_s_a_i": [
+        30.0,
+        0,
+        16
+      ],
+      "nearwall_a": [
+        30.0,
+        1,
+        61
+      ],
+      "nearwall_a_i": [
+        30.0,
+        0,
+        61
+      ],
+      "nearwall_e_a": [
+        30.0,
+        0,
+        16
+      ],
+      "nearwall_e_a_i": [
+        30.0,
+        0,
+        16
+      ],
+      "proneF": [
+        30.0,
+        1,
+        26
+      ],
+      "proneB": [
+        30.0,
+        0,
+        26
+      ],
+      "proneL": [
+        30.0,
+        0,
+        26
+      ],
+      "proneR": [
+        30.0,
+        0,
+        26
+      ],
+      "pickup_s_a": [
+        30.0,
+        0,
+        16
+      ],
+      "pickup_s_a_i": [
+        30.0,
+        0,
+        16
+      ],
+      "pickup_a": [
+        30.0,
+        1,
+        61
+      ],
+      "pickup_a_i": [
+        30.0,
+        0,
+        61
+      ],
+      "pickup_e_a": [
+        30.0,
+        0,
+        16
+      ],
+      "pickup_e_a_i": [
+        30.0,
+        0,
+        16
+      ],
+      "change_firemode_idle": [
+        30.0,
+        0,
+        21
+      ],
+      "change_firemode_iron": [
+        30.0,
+        0,
+        21
+      ],
+      "@draw": [
+        30.0,
+        0,
+        16
+      ],
+      "@Firstdraw": [
+        30.0,
+        0,
+        38
+      ],
+      "@reload": [
+        30.0,
+        0,
+        63
+      ],
+      "@reload_empty": [
+        30.0,
+        0,
+        87
+      ],
+      "@bash": [
+        30.0,
+        0,
+        31
+      ],
+      "@holster": [
+        30.0,
+        0,
+        11
+      ]
+    },
+    "passed": true
+  },
+  {
+    "model": "v_vz61_silencer",
+    "baseline_qc_sha256": "cebfd681230e0b410da6723e21fbf94aeb6b80fa249eb89e58c90a4b0571ba73",
+    "original_animation_timings": {
+      "Slideback_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "Default_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "runIdle_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "run_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "walkIdle_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "walk_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "ShootStill_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "ShootMove_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot1_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot1_ironsight_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot2_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot2_ironsight_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot3_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot3_ironsight_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "PoseDelta": [
+        30.0,
+        0,
+        3
+      ],
+      "PoseDelta2": [
+        30.0,
+        0,
+        3
+      ],
+      "Default": [
+        30.0,
+        4,
+        3
+      ],
+      "Slideback": [
+        30.0,
+        4,
+        3
+      ],
+      "ShootMove": [
+        30.0,
+        4,
+        20
+      ],
+      "ShootStill": [
+        30.0,
+        4,
+        20
+      ],
+      "basePose_a": [
+        30.0,
+        0,
+        60
+      ],
+      "basePose_a__f60": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsight": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsight__f60": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsight_transition": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsight_transition__f60": [
+        30.0,
+        0,
+        60
+      ],
+      "walkDelta": [
+        30.0,
+        0,
+        23
+      ],
+      "runIdle_a": [
+        30.0,
+        5,
+        19
+      ],
+      "run_a": [
+        30.0,
+        4,
+        19
+      ],
+      "walkIdle_a": [
+        30.0,
+        5,
+        23
+      ],
+      "walk_a": [
+        30.0,
+        4,
+        23
+      ],
+      "shoot1_a": [
+        30.0,
+        4,
+        20
+      ],
+      "shoot1_ironsight_a": [
+        30.0,
+        4,
+        20
+      ],
+      "shoot2_a": [
+        30.0,
+        4,
+        20
+      ],
+      "shoot2_ironsight_a": [
+        30.0,
+        4,
+        20
+      ],
+      "shoot3_a": [
+        30.0,
+        4,
+        20
+      ],
+      "shoot3_ironsight_a": [
+        30.0,
+        4,
+        20
+      ],
+      "nearwall_s_a": [
+        30.0,
+        0,
+        16
+      ],
+      "nearwall_s_a_i": [
+        30.0,
+        0,
+        16
+      ],
+      "nearwall_a": [
+        30.0,
+        1,
+        61
+      ],
+      "nearwall_a_i": [
+        30.0,
+        0,
+        61
+      ],
+      "nearwall_e_a": [
+        30.0,
+        0,
+        16
+      ],
+      "nearwall_e_a_i": [
+        30.0,
+        0,
+        16
+      ],
+      "proneF": [
+        30.0,
+        1,
+        26
+      ],
+      "proneB": [
+        30.0,
+        0,
+        26
+      ],
+      "proneL": [
+        30.0,
+        0,
+        26
+      ],
+      "proneR": [
+        30.0,
+        0,
+        26
+      ],
+      "pickup_s_a": [
+        30.0,
+        0,
+        16
+      ],
+      "pickup_s_a_i": [
+        30.0,
+        0,
+        16
+      ],
+      "pickup_a": [
+        30.0,
+        1,
+        61
+      ],
+      "pickup_a_i": [
+        30.0,
+        0,
+        61
+      ],
+      "pickup_e_a": [
+        30.0,
+        0,
+        16
+      ],
+      "pickup_e_a_i": [
+        30.0,
+        0,
+        16
+      ],
+      "change_firemode_idle": [
+        30.0,
+        0,
+        21
+      ],
+      "change_firemode_iron": [
+        30.0,
+        0,
+        21
+      ],
+      "@draw": [
+        30.0,
+        0,
+        16
+      ],
+      "@Firstdraw": [
+        30.0,
+        0,
+        38
+      ],
+      "@reload": [
+        30.0,
+        0,
+        63
+      ],
+      "@reload_empty": [
+        30.0,
+        0,
+        87
+      ],
+      "@bash": [
+        30.0,
+        0,
+        31
+      ],
+      "@holster": [
+        30.0,
+        0,
+        11
+      ]
+    },
+    "passed": true
+  },
+  {
+    "model": "v_lacoste",
+    "baseline_qc_sha256": "b75c09112e73b5586dcbda1c6865d59191506bc757002d6fd1ae510ecd487146",
+    "original_animation_timings": {
+      "Default_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "Slideback_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "runIdle_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "run_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "walkIdle_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "walk_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "ShootStill_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "ShootMove_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot1_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot1_ironsight_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot2_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot2_ironsight_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot3_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot3_ironsight_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "PoseDelta": [
+        30.0,
+        0,
+        3
+      ],
+      "PoseDelta2": [
+        30.0,
+        0,
+        3
+      ],
+      "Default": [
+        30.0,
+        4,
+        3
+      ],
+      "Slideback": [
+        30.0,
+        4,
+        3
+      ],
+      "ShootMove": [
+        30.0,
+        4,
+        25
+      ],
+      "ShootStill": [
+        30.0,
+        4,
+        25
+      ],
+      "basePose_a": [
+        30.0,
+        0,
+        60
+      ],
+      "basePose_a__f60": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsight": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsight__f60": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsight_transition": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsight_transition__f60": [
+        30.0,
+        0,
+        60
+      ],
+      "walkDelta": [
+        30.0,
+        0,
+        19
+      ],
+      "runIdle_a": [
+        30.0,
+        5,
+        19
+      ],
+      "run_a": [
+        30.0,
+        4,
+        19
+      ],
+      "walkIdle_a": [
+        30.0,
+        5,
+        23
+      ],
+      "walk_a": [
+        30.0,
+        4,
+        23
+      ],
+      "shoot1_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shoot1_ironsight_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shoot2_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shoot2_ironsight_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shoot3_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shoot3_ironsight_a": [
+        30.0,
+        4,
+        25
+      ],
+      "nearwall_s_a": [
+        30.0,
+        0,
+        16
+      ],
+      "nearwall_s_a_i": [
+        30.0,
+        0,
+        16
+      ],
+      "nearwall_a": [
+        30.0,
+        1,
+        61
+      ],
+      "nearwall_a_i": [
+        30.0,
+        0,
+        61
+      ],
+      "nearwall_e_a": [
+        30.0,
+        0,
+        16
+      ],
+      "nearwall_e_a_i": [
+        30.0,
+        0,
+        16
+      ],
+      "proneF": [
+        30.0,
+        1,
+        26
+      ],
+      "proneB": [
+        30.0,
+        0,
+        26
+      ],
+      "proneL": [
+        30.0,
+        0,
+        26
+      ],
+      "proneR": [
+        30.0,
+        0,
+        26
+      ],
+      "pickup_s_a": [
+        30.0,
+        0,
+        16
+      ],
+      "pickup_s_a_i": [
+        30.0,
+        0,
+        16
+      ],
+      "pickup_a": [
+        30.0,
+        1,
+        61
+      ],
+      "pickup_a_i": [
+        30.0,
+        0,
+        61
+      ],
+      "pickup_e_a": [
+        30.0,
+        0,
+        16
+      ],
+      "pickup_e_a_i": [
+        30.0,
+        0,
+        16
+      ],
+      "@draw": [
+        30.0,
+        0,
+        16
+      ],
+      "@Firstdraw": [
+        30.0,
+        0,
+        41
+      ],
+      "@reload": [
+        30.0,
+        0,
+        72
+      ],
+      "@reload_empty": [
+        30.0,
+        0,
+        94
+      ],
+      "@bash": [
+        30.0,
+        0,
+        31
+      ],
+      "@holster": [
+        30.0,
+        0,
+        11
+      ]
+    },
+    "passed": true
+  },
+  {
+    "model": "v_luger",
+    "baseline_qc_sha256": "92d132e5cf512e48ac9dd7db30ab30ba441250613ef2245a183bf51140e4eb30",
+    "original_animation_timings": {
+      "Default_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "Slideback_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "runIdle_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "run_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "walkIdle_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "walk_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot1_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot1_ironsight_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot2_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot2_ironsight_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot3_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot3_ironsight_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shootlast_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shootlast_ironsight_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "PoseDelta": [
+        30.0,
+        0,
+        2
+      ],
+      "Default": [
+        30.0,
+        4,
+        2
+      ],
+      "Slideback": [
+        30.0,
+        4,
+        2
+      ],
+      "basePose_a": [
+        30.0,
+        0,
+        19
+      ],
+      "ironsight": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsight__f60": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsight_transition": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsight_transition__f60": [
+        30.0,
+        0,
+        60
+      ],
+      "idle_a": [
+        30.0,
+        0,
+        60
+      ],
+      "idle_a__f60": [
+        30.0,
+        0,
+        60
+      ],
+      "runIdle_a": [
+        30.0,
+        5,
+        19
+      ],
+      "run_a": [
+        30.0,
+        4,
+        19
+      ],
+      "walkIdle_a": [
+        30.0,
+        5,
+        23
+      ],
+      "walk_a": [
+        30.0,
+        4,
+        23
+      ],
+      "shoot1_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shoot1_ironsight_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shoot2_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shoot2_ironsight_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shoot3_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shoot3_ironsight_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shootlast_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shootlast_ironsight_a": [
+        30.0,
+        4,
+        25
+      ],
+      "nearwall_s_a": [
+        30.0,
+        0,
+        11
+      ],
+      "nearwall_s_a_i": [
+        30.0,
+        0,
+        11
+      ],
+      "nearwall_a": [
+        30.0,
+        1,
+        41
+      ],
+      "nearwall_a_i": [
+        30.0,
+        0,
+        41
+      ],
+      "nearwall_e_a": [
+        30.0,
+        0,
+        11
+      ],
+      "nearwall_e_a_i": [
+        30.0,
+        0,
+        11
+      ],
+      "proneF": [
+        30.0,
+        1,
+        26
+      ],
+      "proneB": [
+        30.0,
+        0,
+        26
+      ],
+      "proneL": [
+        30.0,
+        0,
+        26
+      ],
+      "proneR": [
+        30.0,
+        0,
+        26
+      ],
+      "pickup_s_a": [
+        30.0,
+        0,
+        16
+      ],
+      "pickup_s_a_i": [
+        30.0,
+        0,
+        16
+      ],
+      "pickup_a": [
+        30.0,
+        1,
+        61
+      ],
+      "pickup_a_i": [
+        30.0,
+        0,
+        61
+      ],
+      "pickup_e_a": [
+        30.0,
+        0,
+        16
+      ],
+      "pickup_e_a_i": [
+        30.0,
+        0,
+        16
+      ],
+      "@draw": [
+        30.0,
+        0,
+        16
+      ],
+      "@Firstdraw": [
+        30.0,
+        0,
+        36
+      ],
+      "@reload": [
+        30.0,
+        0,
+        68
+      ],
+      "@reload_empty": [
+        30.0,
+        0,
+        91
+      ],
+      "@bash": [
+        30.0,
+        0,
+        31
+      ],
+      "@holster": [
+        30.0,
+        0,
+        11
+      ]
+    },
+    "passed": true
+  },
+  {
+    "model": "v_m14e2_sog",
+    "baseline_qc_sha256": "aea177b89249216575656f48e8b7bbe4ef711d242485839bd97d97e4b8b9f30c",
+    "original_animation_timings": {
+      "Default_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "Slideback_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "runIdle_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "run_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "walkIdle_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "walk_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "boltShootMovementA_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "boltShootNoMovementA_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot1_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot1_ironsight_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot2_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot2_ironsight_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot3_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot3_ironsight_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "PoseDelta": [
+        30.0,
+        0,
+        2
+      ],
+      "Default": [
+        30.0,
+        4,
+        6
+      ],
+      "Slideback": [
+        30.0,
+        4,
+        6
+      ],
+      "basePose_a": [
+        30.0,
+        0,
+        60
+      ],
+      "basePose_a__f60": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsight": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsight__f60": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsight_transition": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsight_transition__f60": [
+        30.0,
+        0,
+        60
+      ],
+      "walkBase": [
+        30.0,
+        0,
+        23
+      ],
+      "runIdle_a": [
+        30.0,
+        5,
+        19
+      ],
+      "run_a": [
+        30.0,
+        4,
+        19
+      ],
+      "walkIdle_a": [
+        30.0,
+        5,
+        23
+      ],
+      "walk_a": [
+        30.0,
+        4,
+        23
+      ],
+      "boltShootMovementA": [
+        30.0,
+        4,
+        20
+      ],
+      "boltShootNoMovementA": [
+        30.0,
+        4,
+        20
+      ],
+      "shoot1_ironsight_delta": [
+        30.0,
+        0,
+        20
+      ],
+      "shoot1_a": [
+        30.0,
+        4,
+        20
+      ],
+      "shoot1_ironsight_a": [
+        30.0,
+        4,
+        20
+      ],
+      "shoot2_a": [
+        30.0,
+        4,
+        20
+      ],
+      "shoot2_ironsight_a": [
+        30.0,
+        4,
+        20
+      ],
+      "shoot3_a": [
+        30.0,
+        4,
+        20
+      ],
+      "shoot3_ironsight_a": [
+        30.0,
+        4,
+        20
+      ],
+      "nearwall_s_a": [
+        30.0,
+        0,
+        16
+      ],
+      "nearwall_s_a_i": [
+        30.0,
+        0,
+        16
+      ],
+      "nearwall_a": [
+        30.0,
+        1,
+        61
+      ],
+      "nearwall_a_i": [
+        30.0,
+        0,
+        61
+      ],
+      "nearwall_e_a": [
+        30.0,
+        0,
+        16
+      ],
+      "nearwall_e_a_i": [
+        30.0,
+        0,
+        16
+      ],
+      "proneF": [
+        30.0,
+        1,
+        26
+      ],
+      "proneB": [
+        30.0,
+        0,
+        26
+      ],
+      "proneL": [
+        30.0,
+        0,
+        26
+      ],
+      "proneR": [
+        30.0,
+        0,
+        26
+      ],
+      "pickup_s_a": [
+        30.0,
+        0,
+        16
+      ],
+      "pickup_s_a_i": [
+        30.0,
+        0,
+        16
+      ],
+      "pickup_a": [
+        30.0,
+        1,
+        61
+      ],
+      "pickup_a_i": [
+        30.0,
+        0,
+        61
+      ],
+      "pickup_e_a": [
+        30.0,
+        0,
+        16
+      ],
+      "pickup_e_a_i": [
+        30.0,
+        0,
+        16
+      ],
+      "change_firemode_idle": [
+        30.0,
+        0,
+        21
+      ],
+      "change_firemode_iron": [
+        30.0,
+        0,
+        21
+      ],
+      "@draw": [
+        30.0,
+        0,
+        21
+      ],
+      "@Firstdraw": [
+        30.0,
+        0,
+        31
+      ],
+      "@reload": [
+        30.0,
+        0,
+        73
+      ],
+      "@reload_empty": [
+        30.0,
+        0,
+        98
+      ],
+      "@bash": [
+        30.0,
+        0,
+        31
+      ],
+      "@holster": [
+        30.0,
+        0,
+        11
+      ]
+    },
+    "passed": true
+  },
+  {
+    "model": "v_m7188",
+    "baseline_qc_sha256": "31325254043d5ce908071e475a3aef4f2d1a1f5db8e06fa4b3e68690404dda20",
+    "original_animation_timings": {
+      "Default_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "Slideback_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "ShootMove_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "ShootStill_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "runIdle_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "run_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "walkIdle_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "walk_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot1_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot1_ironsight_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "PoseDelta": [
+        30.0,
+        0,
+        3
+      ],
+      "PoseDelta2": [
+        30.0,
+        0,
+        2
+      ],
+      "Default": [
+        30.0,
+        4,
+        3
+      ],
+      "Slideback": [
+        30.0,
+        4,
+        3
+      ],
+      "ShootMove": [
+        30.0,
+        4,
+        21
+      ],
+      "ShootStill": [
+        30.0,
+        4,
+        21
+      ],
+      "basePose_a": [
+        30.0,
+        0,
+        60
+      ],
+      "basePose_a__f60": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsight": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsight__f60": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsight_transition": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsight_transition__f60": [
+        30.0,
+        0,
+        60
+      ],
+      "runIdle_a": [
+        30.0,
+        5,
+        19
+      ],
+      "run_a": [
+        30.0,
+        4,
+        19
+      ],
+      "walkIdle_a": [
+        30.0,
+        5,
+        23
+      ],
+      "walk_a": [
+        30.0,
+        4,
+        23
+      ],
+      "shoot1_a": [
+        30.0,
+        4,
+        21
+      ],
+      "shoot1_ironsight_a": [
+        30.0,
+        4,
+        21
+      ],
+      "reload_s_a": [
+        30.0,
+        0,
+        16
+      ],
+      "reload_s_a_i": [
+        30.0,
+        0,
+        16
+      ],
+      "reload_a": [
+        30.0,
+        1,
+        21
+      ],
+      "reload_a_i": [
+        30.0,
+        0,
+        21
+      ],
+      "reload_e_a": [
+        30.0,
+        0,
+        16
+      ],
+      "reload_e_a_i": [
+        30.0,
+        0,
+        16
+      ],
+      "reload_ep_a": [
+        30.0,
+        0,
+        31
+      ],
+      "reload_ep_a_i": [
+        30.0,
+        0,
+        31
+      ],
+      "nearwall_s_a": [
+        30.0,
+        0,
+        16
+      ],
+      "nearwall_s_a_i": [
+        30.0,
+        0,
+        16
+      ],
+      "nearwall_a": [
+        30.0,
+        1,
+        61
+      ],
+      "nearwall_a_i": [
+        30.0,
+        0,
+        61
+      ],
+      "nearwall_e_a": [
+        30.0,
+        0,
+        16
+      ],
+      "nearwall_e_a_i": [
+        30.0,
+        0,
+        16
+      ],
+      "proneF": [
+        30.0,
+        1,
+        26
+      ],
+      "proneB": [
+        30.0,
+        0,
+        26
+      ],
+      "proneL": [
+        30.0,
+        0,
+        26
+      ],
+      "proneR": [
+        30.0,
+        0,
+        26
+      ],
+      "pickup_s_a": [
+        30.0,
+        0,
+        16
+      ],
+      "pickup_s_a_i": [
+        30.0,
+        0,
+        16
+      ],
+      "pickup_a": [
+        30.0,
+        1,
+        61
+      ],
+      "pickup_a_i": [
+        30.0,
+        0,
+        61
+      ],
+      "pickup_e_a": [
+        30.0,
+        0,
+        16
+      ],
+      "pickup_e_a_i": [
+        30.0,
+        0,
+        16
+      ],
+      "bayonet_attack_a": [
+        30.0,
+        0,
+        31
+      ],
+      "bayonet_attack_a_i": [
+        30.0,
+        0,
+        31
+      ],
+      "bayonet_e_a": [
+        30.0,
+        0,
+        51
+      ],
+      "bayonet_e_a_i": [
+        30.0,
+        0,
+        51
+      ],
+      "bayonet_s_a": [
+        30.0,
+        0,
+        56
+      ],
+      "bayonet_s_a_i": [
+        30.0,
+        0,
+        56
+      ],
+      "@Firstdraw": [
+        30.0,
+        0,
+        35
+      ],
+      "@draw": [
+        30.0,
+        0,
+        16
+      ],
+      "@bash": [
+        30.0,
+        0,
+        31
+      ],
+      "@holster": [
+        30.0,
+        0,
+        11
+      ]
+    },
+    "passed": true
+  },
+  {
+    "model": "v_mg43b",
+    "baseline_qc_sha256": "a97205f4c773a6a6ef45f9f5f10dadbc5f3500dbebb3c438f210f28438c39a8a",
+    "original_animation_timings": {
+      "runIdle_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "run_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "walkIdle_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "walk_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "walk_a_r_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot1_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot1_ironsight_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot2_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot2_ironsight_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot3_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot3_ironsight_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot1_d_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot1_di_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot2_d_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot2_di_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot3_d_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "shoot3_di_a_corrective_animation": [
+        30.0,
+        0,
+        1
+      ],
+      "basePose_a": [
+        30.0,
+        0,
+        60
+      ],
+      "basePose_a__f60": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsight": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsight__f60": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsight_transition": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsight_transition__f60": [
+        30.0,
+        0,
+        60
+      ],
+      "walkPoses": [
+        30.0,
+        0,
+        23
+      ],
+      "runIdle_a": [
+        30.0,
+        5,
+        19
+      ],
+      "run_a": [
+        30.0,
+        4,
+        19
+      ],
+      "walkIdle_a": [
+        30.0,
+        5,
+        23
+      ],
+      "walk_a": [
+        30.0,
+        4,
+        23
+      ],
+      "walk_a_r": [
+        30.0,
+        4,
+        23
+      ],
+      "shoot1_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shoot1_ironsight_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shoot2_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shoot2_ironsight_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shoot3_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shoot3_ironsight_a": [
+        30.0,
+        4,
+        26
+      ],
+      "nearwall_s_a": [
+        30.0,
+        0,
+        16
+      ],
+      "nearwall_s_a_i": [
+        30.0,
+        0,
+        16
+      ],
+      "nearwall_a": [
+        30.0,
+        1,
+        61
+      ],
+      "nearwall_a_i": [
+        30.0,
+        0,
+        61
+      ],
+      "nearwall_e_a": [
+        30.0,
+        0,
+        15
+      ],
+      "nearwall_e_a_i": [
+        30.0,
+        0,
+        15
+      ],
+      "prone_deployF": [
+        30.0,
+        1,
+        26
+      ],
+      "prone_deployB": [
+        30.0,
+        0,
+        26
+      ],
+      "prone_deployL": [
+        30.0,
+        0,
+        26
+      ],
+      "prone_deployR": [
+        30.0,
+        0,
+        25
+      ],
+      "proneF": [
+        30.0,
+        1,
+        26
+      ],
+      "proneB": [
+        30.0,
+        0,
+        26
+      ],
+      "proneL": [
+        30.0,
+        0,
+        26
+      ],
+      "proneR": [
+        30.0,
+        0,
+        25
+      ],
+      "pickup_s_a": [
+        30.0,
+        0,
+        16
+      ],
+      "pickup_s_a_i": [
+        30.0,
+        0,
+        16
+      ],
+      "pickup_a": [
+        30.0,
+        1,
+        61
+      ],
+      "pickup_a_i": [
+        30.0,
+        0,
+        61
+      ],
+      "pickup_e_a": [
+        30.0,
+        0,
+        15
+      ],
+      "pickup_e_a_i": [
+        30.0,
+        0,
+        15
+      ],
+      "deploy_s_a": [
+        40.0,
+        0,
+        61
+      ],
+      "deploy_s_a_i": [
+        40.0,
+        0,
+        61
+      ],
+      "deploy_a": [
+        30.0,
+        0,
+        60
+      ],
+      "deploy_a__f60": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsightdeploy": [
+        30.0,
+        0,
+        60
+      ],
+      "ironsightdeploy__f60": [
+        30.0,
+        0,
+        60
+      ],
+      "deploy_e_a": [
+        40.0,
+        0,
+        50
+      ],
+      "deploy_e_a_i": [
+        40.0,
+        0,
+        50
+      ],
+      "shoot1_d_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shoot1_di_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shoot2_d_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shoot2_di_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shoot3_d_a": [
+        30.0,
+        4,
+        25
+      ],
+      "shoot3_di_a": [
+        30.0,
+        4,
+        24
+      ],
+      "@draw": [
+        30.0,
+        0,
+        25
+      ],
+      "@Firstdraw": [
+        30.0,
+        0,
+        38
+      ],
+      "@reload": [
+        30.0,
+        0,
+        173
+      ],
+      "@reload_empty": [
+        30.0,
+        0,
+        199
+      ],
+      "@bash": [
+        30.0,
+        0,
+        30
+      ],
+      "@reload_deploy": [
+        30.0,
+        0,
+        173
+      ],
+      "@reload_deploy_empty": [
+        30.0,
+        0,
+        199
+      ],
+      "@holster": [
+        30.0,
+        0,
+        10
+      ]
+    },
+    "passed": true
+  }
+]

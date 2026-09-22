@@ -8,9 +8,9 @@ SWEP.Spawnable = false
 SWEP.SubCategory = "Grenades"
 SWEP.Slot = 4
 
-SWEP.HoldType = "grenade"
-SWEP.SprintHoldType = "normal"
-SWEP.AimHoldType = "grenade"
+SWEP.HoldType = "slam"
+SWEP.SprintHoldType = "slam"
+SWEP.AimHoldType = "slam"
 
 SWEP.ShootGesture = ACT_HL2MP_GESTURE_RANGE_ATTACK_GRENADE
 

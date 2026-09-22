@@ -5,6 +5,7 @@ ENT.PrintName                = "Gas Grenade"
 ENT.Spawnable                = false
 
 ENT.Model                    = "models/weapons/mcv/w_m18.mdl"
+ENT.ModelSkin                = 7
 
 ENT.SmokeParticle = "vietnam_gasgrenade_attached"
 ENT.SmokeParticleColored = "vietnam_gasgrenade_attached"
@@ -13,7 +14,7 @@ ENT.SmokeLoop = "MCV_Weapon_M6A1.SoundLoop"
 ENT.Hurts = true
 
 // damage per second to anyone in the cloud without a gas mask (game: ExplosionDamage)
-ENT.ExplosionDamage = 20
+ENT.ExplosionDamage = 125
 ENT.ExplosionRadius = 500
 ENT.TickRate = 0.5
 
@@ -53,7 +54,7 @@ function ENT:HurtTick()
         ent:TakeDamageInfo(dmg)
 
         if ent:IsPlayer() then
-            ent:ScreenFade(SCREENFADE.IN, Color(180, 200, 60, 40), 0.4, 0.2)
+            ent:ScreenFade(SCREENFADE.IN, Color(0, 0, 0, 40), 0.4, 0.2)
         end
     end
 end

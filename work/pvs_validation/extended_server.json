@@ -1,0 +1,86 @@
+{
+	"phase": "flame_returned",
+	"events": [
+		{
+			"time": 68.66999846510589,
+			"phase": "dual_near",
+			"name": "mcv_shelleffect",
+			"origin": [
+				-2000,
+				-3000,
+				-36
+			]
+		},
+		{
+			"time": 68.66999846510589,
+			"phase": "dual_near",
+			"name": "mcv_muzzleeffect",
+			"origin": [
+				-2000,
+				-3000,
+				-36
+			]
+		},
+		{
+			"time": 69.41999844834208,
+			"phase": "dual_near",
+			"name": "mcv_shelleffect",
+			"origin": [
+				-2000,
+				-3000,
+				-36
+			]
+		},
+		{
+			"time": 69.41999844834208,
+			"phase": "dual_near",
+			"name": "mcv_muzzleeffect",
+			"origin": [
+				-2000,
+				-3000,
+				-36
+			]
+		},
+		{
+			"time": 76.5299982894212,
+			"phase": "dual_returned",
+			"name": "mcv_shelleffect",
+			"origin": [
+				-2000,
+				-3000,
+				-36
+			]
+		},
+		{
+			"time": 76.5299982894212,
+			"phase": "dual_returned",
+			"name": "mcv_muzzleeffect",
+			"origin": [
+				-2000,
+				-3000,
+				-36
+			]
+		},
+		{
+			"time": 77.18999827466905,
+			"phase": "dual_returned",
+			"name": "mcv_shelleffect",
+			"origin": [
+				-2000,
+				-3000,
+				-36
+			]
+		},
+		{
+			"time": 77.18999827466905,
+			"phase": "dual_returned",
+			"name": "mcv_muzzleeffect",
+			"origin": [
+				-2000,
+				-3000,
+				-36
+			]
+		}
+	],
+	"samples": []
+}

@@ -296,6 +296,9 @@ end
 // ---------------------------------------------------------------------------------------
 
 if CLIENT then
+    hook.Add("InitPostEntity", "MCV_HarnessClientReady", function()
+        file.Write(ROOT .. "client_ready.txt", os.date("%H:%M:%S ") .. game.GetMap())
+    end)
     H.PendingShot = nil
     H.Marker = false
 

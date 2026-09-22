@@ -1,0 +1,15 @@
+{
+  "model": "v_vcgrenade",
+  "status": "equipment: original animations",
+  "safe": false,
+  "qc_sha256": "b505336e34b8c9c9814cbe16aa3d09e3c156e71d198bc2f073da1075ad3b7855",
+  "compile": {
+    "ok": true,
+    "returncode": 0,
+    "messages": [
+      "WARNING: Failed to load keyvalues file cfg/mount.cfg!",
+      "WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences."
+    ]
+  },
+  "compiled_sequence_count": 20
+}

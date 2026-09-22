@@ -1,0 +1,35 @@
+{
+  "model": "v_type67",
+  "safe": true,
+  "status": "baked",
+  "sequences": [
+    {
+      "sequence": "idletonearwall",
+      "rows": 2,
+      "mode_axis": false
+    },
+    {
+      "sequence": "nearwall",
+      "rows": 2,
+      "mode_axis": false
+    },
+    {
+      "sequence": "nearwalltoidle",
+      "rows": 2,
+      "mode_axis": false
+    }
+  ],
+  "max_grip_error": 8.718146933304981e-10,
+  "max_blended_grip_error": 0.11918669537124549,
+  "max_shoulder_shift": 0.0,
+  "qc_sha256": "c9448c064c163d0d5900bf1109ac120ca94feb0cdd418a8c6be351b3d8b104f0",
+  "compile": {
+    "ok": true,
+    "returncode": 0,
+    "messages": [
+      "WARNING: Failed to load keyvalues file cfg/mount.cfg!",
+      "WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences."
+    ]
+  },
+  "compiled_sequence_count": 23
+}

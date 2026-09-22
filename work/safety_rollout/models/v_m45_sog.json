@@ -1,0 +1,34 @@
+{
+  "model": "v_m45_sog",
+  "safe": true,
+  "status": "baked",
+  "sequences": [
+    {
+      "sequence": "idletonearwall",
+      "rows": 2,
+      "mode_axis": false
+    },
+    {
+      "sequence": "nearwall",
+      "rows": 2,
+      "mode_axis": false
+    },
+    {
+      "sequence": "nearwalltoidle",
+      "rows": 2,
+      "mode_axis": false
+    }
+  ],
+  "max_grip_error": 6.699657810781909e-10,
+  "max_blended_grip_error": 0.06967375034204279,
+  "max_shoulder_shift": 0.0,
+  "qc_sha256": "aa85dc17d51b52c2ea28001bad71ac658bf99a97aac229fd7bf16b6bf276ca74",
+  "compile": {
+    "ok": true,
+    "returncode": 0,
+    "messages": [
+      "WARNING: Failed to load keyvalues file cfg/mount.cfg!"
+    ]
+  },
+  "compiled_sequence_count": 26
+}

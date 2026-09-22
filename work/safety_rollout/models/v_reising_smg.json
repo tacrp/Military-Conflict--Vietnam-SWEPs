@@ -1,0 +1,35 @@
+{
+  "model": "v_reising_smg",
+  "safe": true,
+  "status": "baked",
+  "sequences": [
+    {
+      "sequence": "idletonearwall",
+      "rows": 2,
+      "mode_axis": false
+    },
+    {
+      "sequence": "nearwall",
+      "rows": 2,
+      "mode_axis": false
+    },
+    {
+      "sequence": "nearwalltoidle",
+      "rows": 2,
+      "mode_axis": false
+    }
+  ],
+  "max_grip_error": 7.636878409695272e-10,
+  "max_blended_grip_error": 0.07567895288706956,
+  "max_shoulder_shift": 0.0,
+  "qc_sha256": "38fd0571b63d7c4cde0ec8679803077e7d22d605de6c3bf065357f7ac9cfbb01",
+  "compile": {
+    "ok": true,
+    "returncode": 0,
+    "messages": [
+      "WARNING: Failed to load keyvalues file cfg/mount.cfg!",
+      "WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences."
+    ]
+  },
+  "compiled_sequence_count": 24
+}

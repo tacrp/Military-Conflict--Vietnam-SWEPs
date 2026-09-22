@@ -139,7 +139,7 @@ function SWEP:Holster(wep)
 end
 
 function SWEP:OnRemove()
-    if CLIENT then self:StopFlameEffect() end
+    if CLIENT then self:StopFlameEffect() self:RemoveWorldModels() end
     self:StopSound(self.SoundFireLoop)
 end
 
@@ -151,7 +151,7 @@ if CLIENT then
         if owner == LocalPlayer() and !owner:ShouldDrawLocalPlayer() then
             return owner:GetViewModel()
         end
-        return self
+        return self:GetWorldModelFor(false)
     end
 
     function SWEP:StartFlameEffect()
@@ -161,7 +161,8 @@ if CLIENT then
         local att = ent:LookupAttachment("muzzle")
         if att <= 0 then att = 1 end
         local ps = CreateParticleSystem(ent, self.FlameParticle, PATTACH_POINT_FOLLOW, att)
-        if IsValid(ps) and ent != self then
+        local owner = self:GetOwner()
+        if IsValid(ps) and owner == LocalPlayer() and !owner:ShouldDrawLocalPlayer() then
             // viewmodel particles are drawn from PostDrawViewModel; the jet reaches into the
             // world, so it keeps the world's projection rather than the viewmodel's
             ps:StartEmission()
@@ -179,6 +180,7 @@ if CLIENT then
             self.FlamePS:StopEmission(false, false, true)
         end
         self.FlamePS = nil
+        self.FlamePSEnt = nil
     end
 
     // The game's stream systems aim at control point 1 (where the fuel lands); keep it on the
@@ -192,7 +194,10 @@ if CLIENT then
         local dir = owner:GetAimVector()
         local tr = util.TraceLine({start = src, endpos = src + dir * self.FlameRange, filter = owner, mask = MASK_SHOT})
         ps:SetControlPoint(1, tr.HitPos)
-        ps:SetControlPointOrientation(1, tr.HitNormal, dir, dir:Cross(tr.HitNormal))
+        // Looking straight at a surface makes dir parallel to its normal. The
+        // old cross product then had zero length, an invalid particle matrix.
+        local basis = (tr.Hit and tr.HitNormal or -dir):Angle()
+        ps:SetControlPointOrientation(1, basis:Forward(), basis:Right(), basis:Up())
         ps:SetControlPoint(2, src + dir * self.FlameRange)
     end
 
@@ -210,7 +215,12 @@ if CLIENT then
     // and other players' weapons never think here, so this is the one place that starts and
     // stops the client effect for everyone.
     function SWEP:Think_ClientFlame()
-        local flaming = self:GetPrimedAttack() and IsValid(self:GetOwner()) and self:GetOwner():GetActiveWeapon() == self
+        local owner = self:GetOwner()
+        local flaming = !self:IsDormant() and IsValid(owner) and !owner:IsDormant()
+            and self:GetPrimedAttack() and owner:GetActiveWeapon() == self
+        if flaming and IsValid(self.FlamePS) and self.FlamePSEnt != self:FlameEmitter() then
+            self:StopFlameEffect()
+        end
         if flaming and !IsValid(self.FlamePS) then
             self:StartFlameEffect()
         elseif !flaming and IsValid(self.FlamePS) then
@@ -219,7 +229,7 @@ if CLIENT then
     end
 
     function SWEP:DrawWorldModel()
-        self:DrawModel()
+        baseclass.Get("mcv_base_core").DrawWorldModel(self)
         self:Think_ClientFlame()
         if self:GetOwner() != LocalPlayer() then self:UpdateFlameControlPoints() end
     end

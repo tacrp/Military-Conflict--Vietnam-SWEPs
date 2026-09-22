@@ -2,12 +2,29 @@
 SWEP.ActiveEffects = {}
 SWEP.PCFs = {}
 
+// Effect position and recipients belong to the shooter, never the default
+// EffectData origin (0,0,0). The firing client already predicts its own effects.
+local function dispatchWeaponEffect(name, data, owner)
+    data:SetOrigin(owner:GetShootPos())
+    if SERVER then
+        local recipients = RecipientFilter()
+        recipients:AddPVS(owner:GetShootPos())
+        if owner:IsPlayer() and !game.SinglePlayer() then recipients:RemovePlayer(owner) end
+        util.Effect(name, data, true, recipients)
+    else
+        util.Effect(name, data)
+    end
+end
+
 function SWEP:GetTracerOrigin()
     local owner = self:GetOwner()
     if SERVER or owner != LocalPlayer() or owner:ShouldDrawLocalPlayer() then
         // world model muzzle
-        local id = self:LookupAttachment("muzzle")
-        local att = id > 0 and self:GetAttachment(id)
+        local mdl, id = self, self:LookupAttachment("muzzle")
+        if CLIENT and self.GetWorldModelAttachment then
+            mdl, id = self:GetWorldModelAttachment("muzzle", self:GetAkimbo() and self:Clip1() % 2 == 1)
+        end
+        local att = IsValid(mdl) and id > 0 and mdl:GetAttachment(id)
         return att and att.Pos or owner:GetShootPos()
     end
     local vm = owner:GetViewModel()
@@ -46,7 +63,7 @@ function SWEP:DoMuzzle(alt)
     data:SetAttachment(muzz_qca)
     data:SetMagnitude((self:GetAkimbo() and self:Clip1() % 2 == 1 and !is_volley) and 1 or 0) // third person: left gun
 
-    util.Effect( "mcv_muzzleeffect", data )
+    dispatchWeaponEffect("mcv_muzzleeffect", data, owner)
 
     if self:GetAkimbo() and is_volley then
         local data2 = EffectData()
@@ -54,7 +71,7 @@ function SWEP:DoMuzzle(alt)
         data2:SetAttachment(4)
         data2:SetMagnitude(1)
 
-        util.Effect( "mcv_muzzleeffect", data2 )
+        dispatchWeaponEffect("mcv_muzzleeffect", data2, owner)
     end
 
     if CLIENT and self:GetOwner() == LocalPlayer() then
@@ -95,7 +112,7 @@ function SWEP:DoEject(attachment)
         data:SetAttachment(eject_qca)
         data:SetMagnitude(name == "eject2" and 1 or 0) // third person: left gun
 
-        util.Effect( "mcv_shelleffect", data )
+        dispatchWeaponEffect("mcv_shelleffect", data, owner)
     end
 end
 

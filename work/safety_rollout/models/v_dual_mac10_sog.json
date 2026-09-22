@@ -1,0 +1,34 @@
+{
+  "model": "v_dual_mac10_sog",
+  "safe": true,
+  "status": "baked",
+  "sequences": [
+    {
+      "sequence": "idletonearwall",
+      "rows": 2,
+      "mode_axis": false
+    },
+    {
+      "sequence": "nearwall",
+      "rows": 2,
+      "mode_axis": false
+    },
+    {
+      "sequence": "nearwalltoidle",
+      "rows": 2,
+      "mode_axis": false
+    }
+  ],
+  "max_grip_error": 9.607118501968132e-15,
+  "max_blended_grip_error": 9.930136612989092e-15,
+  "max_shoulder_shift": 0.0,
+  "qc_sha256": "403e16c8815b3978811ef371e4a31121a16cc4e9e4c37af2deebc4f55a96507c",
+  "compile": {
+    "ok": true,
+    "returncode": 0,
+    "messages": [
+      "WARNING: Failed to load keyvalues file cfg/mount.cfg!"
+    ]
+  },
+  "compiled_sequence_count": 34
+}

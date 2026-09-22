@@ -1,0 +1,33 @@
+{
+  "model": "v_equipment_parachute",
+  "status": "equipment: original animations",
+  "safe": false,
+  "qc_sha256": "0b53a3ce1017ee95a930822df9a6fef517d2c6d0ddf1f23ebfa0499a77d7ab4e",
+  "compile": {
+    "ok": true,
+    "returncode": 0,
+    "messages": [
+      "WARNING: Failed to load keyvalues file cfg/mount.cfg!",
+      "WARNING: Imported bone ValveBiped.Bip01_Spine4 tried to access parent bone spine_03 and failed!",
+      "WARNING: Imported bone ValveBiped.Bip01_L_Clavicle tried to access parent bone clavicle_l and failed!",
+      "WARNING: Imported bone ValveBiped.Bip01_R_Clavicle tried to access parent bone clavicle_r and failed!",
+      "WARNING: Imported bone ValveBiped.Bip01_L_UpperArm tried to access parent bone upperarm_l and failed!",
+      "WARNING: Imported bone ValveBiped.Bip01_L_Forearm tried to access parent bone lowerarm_l and failed!",
+      "WARNING: Imported bone ValveBiped.Bip01_L_Hand tried to access parent bone hand_l and failed!",
+      "WARNING: Imported bone ValveBiped.Bip01_L_Finger0 tried to access parent bone thumb_01_l and failed!",
+      "WARNING: Imported bone ValveBiped.Bip01_L_Finger01 tried to access parent bone thumb_02_l and failed!",
+      "WARNING: Imported bone ValveBiped.Bip01_L_Finger02 tried to access parent bone thumb_03_l and failed!",
+      "WARNING: Imported bone ValveBiped.Bip01_L_Finger1 tried to access parent bone index_01_l and failed!",
+      "WARNING: Imported bone ValveBiped.Bip01_L_Finger11 tried to access parent bone index_02_l and failed!",
+      "WARNING: Imported bone ValveBiped.Bip01_L_Finger12 tried to access parent bone index_03_l and failed!",
+      "WARNING: Imported bone ValveBiped.Bip01_L_Finger2 tried to access parent bone middle_01_l and failed!",
+      "WARNING: Imported bone ValveBiped.Bip01_L_Finger21 tried to access parent bone middle_02_l and failed!",
+      "WARNING: Imported bone ValveBiped.Bip01_L_Finger22 tried to access parent bone middle_03_l and failed!",
+      "WARNING: Imported bone ValveBiped.Bip01_L_Finger3 tried to access parent bone ring_01_l and failed!",
+      "WARNING: Imported bone ValveBiped.Bip01_L_Finger31 tried to access parent bone ring_02_l and failed!",
+      "WARNING: Imported bone ValveBiped.Bip01_L_Finger32 tried to access parent bone ring_03_l and failed!",
+      "WARNING: Imported bone ValveBiped.Bip01_L_Finger4 tried to access parent bone pinky_01_l and failed!"
+    ]
+  },
+  "compiled_sequence_count": 3
+}

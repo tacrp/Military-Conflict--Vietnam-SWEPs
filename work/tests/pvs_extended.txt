@@ -1,0 +1,36 @@
+lua include("mcv_harness/pvs.lua") MCVPVS.Setup()
+cmd net_fakelag 100
+wait 2
+strip
+give mcv_m1911a1
+lua local w=ply:GetActiveWeapon() w:SetHasSecond(true) w:SetAkimbo(true) w:SetClip1(14) w:SyncViewModel(true) MCVPVS.Phase("dual_near")
+wait 3
+tap +attack 0.1
+wait 0.3
+tap +attack 0.1
+wait 0.3
+lua MCVPVS.Capture("dual_near") MCVPVS.Phase("dual_outside") ply:SetPos(Vector(1000,2000,100))
+wait 3
+lua MCVPVS.Phase("dual_returned") ply:SetPos(Vector(-2000,-3000,-100))
+wait 3
+tap +attack 0.1
+wait 0.3
+tap +attack 0.1
+wait 1
+lua MCVPVS.Capture("dual_returned")
+strip
+give mcv_lpo50
+lua ply:GiveAmmo(500,"mcv_flamethrower_fuel",true) MCVPVS.Phase("flame_near")
+wait 3
+key +attack
+wait 1
+lua MCVPVS.Capture("flame_near") MCVPVS.Phase("flame_outside") ply:SetPos(Vector(1000,2000,100))
+wait 3
+lua MCVPVS.Phase("flame_returned") ply:SetPos(Vector(-2000,-3000,-100))
+wait 3
+lua MCVPVS.Capture("flame_returned")
+key -attack
+wait 1
+lua MCVPVS.Flush("extended")
+cmd net_fakelag 0
+wait 1

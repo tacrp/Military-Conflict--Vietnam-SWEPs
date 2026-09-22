@@ -1,0 +1,8 @@
+{
+  "old_max_grip_error_at_pose_86": 0.3924611745349673,
+  "compiled_sequences_preserved": 45,
+  "existing_animation_timings_preserved": 112,
+  "new_animations": 102,
+  "qc_changes_limited_to_three_nearwall_sequences_and_new_animations": true,
+  "lua_movement_mapping": "pilot reaches sprint; other models retain cap"
+}

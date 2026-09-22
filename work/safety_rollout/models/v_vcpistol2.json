@@ -1,0 +1,35 @@
+{
+  "model": "v_vcpistol2",
+  "safe": true,
+  "status": "baked",
+  "sequences": [
+    {
+      "sequence": "idletonearwall",
+      "rows": 2,
+      "mode_axis": false
+    },
+    {
+      "sequence": "nearwall",
+      "rows": 2,
+      "mode_axis": false
+    },
+    {
+      "sequence": "nearwalltoidle",
+      "rows": 2,
+      "mode_axis": false
+    }
+  ],
+  "max_grip_error": 9.562281965389162e-10,
+  "max_blended_grip_error": 0.20451145030907847,
+  "max_shoulder_shift": 0.0,
+  "qc_sha256": "28bd57950f3340207c2f516cb430e11342ead4ce026fc3ea4406950e0a704f20",
+  "compile": {
+    "ok": true,
+    "returncode": 0,
+    "messages": [
+      "WARNING: Failed to load keyvalues file cfg/mount.cfg!",
+      "WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences."
+    ]
+  },
+  "compiled_sequence_count": 26
+}

@@ -2,6 +2,8 @@ function EFFECT:Init(data)
     local wpn = data:GetEntity()
 
     if !IsValid(wpn) then self:Remove() return end
+    local owner = wpn:GetOwner()
+    if !IsValid(owner) or wpn:IsDormant() or owner:IsDormant() then self:Remove() return end
 
     local muzzle = {wpn.MuzzleParticle, wpn.MuzzleParticleSmoke}
 
@@ -9,7 +11,7 @@ function EFFECT:Init(data)
 
     local wm = false
 
-    if (LocalPlayer():ShouldDrawLocalPlayer() or wpn.Owner != LocalPlayer()) then
+    if (LocalPlayer():ShouldDrawLocalPlayer() or owner != LocalPlayer()) then
         wm = true
     end
 
@@ -30,7 +32,7 @@ function EFFECT:Init(data)
         muzzle = wpn.MuzzleParticle3rdPerson
     end
 
-    -- if !IsValid(parent) then return end
+    if !IsValid(parent) then self:Remove() return end
 
     if muzzle then
         if !istable(muzzle) then

@@ -1,0 +1,15 @@
+{
+  "model": "v_sickle",
+  "status": "equipment: original animations",
+  "safe": false,
+  "qc_sha256": "71295e18d45cc21b3d349e0580c81bacbda5cbbc89269d9b8c25abc781a0422a",
+  "compile": {
+    "ok": true,
+    "returncode": 0,
+    "messages": [
+      "WARNING: Failed to load keyvalues file cfg/mount.cfg!",
+      "WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences."
+    ]
+  },
+  "compiled_sequence_count": 25
+}

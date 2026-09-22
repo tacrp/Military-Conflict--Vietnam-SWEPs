@@ -28,6 +28,37 @@ ENT.ExplosionSound = "MCV_BaseGrenade.Explode"
 
 ENT.BounceSounds = {"MCV_HEGrenade.Bounce"}
 
+ENT.RoundCollision = true
+
+function ENT:InitProjectilePhysics()
+    if !self.RoundCollision then
+        return baseclass.Get("mcv_proj_base").InitProjectilePhysics(self)
+    end
+
+    // V40's body is a 1.5-unit sphere at the model origin; exclude its lever.
+    if string.lower(self:GetModel()) == "models/weapons/mcv/w_v40.mdl" then
+        self.RollRadius = 1.5
+        self:PhysicsInitSphere(self.RollRadius, "metal")
+    else
+        // All thrown canisters/bottles are authored along local Z. A regular
+        // convex cylinder removes the protrusions and seams of the model .phy.
+        local mins, maxs = self:GetModelBounds()
+        local cx, cy = (mins.x + maxs.x) * 0.5, (mins.y + maxs.y) * 0.5
+        local radius = math.max(maxs.x - mins.x, maxs.y - mins.y) * 0.5
+        radius = math.max(radius, 0.5)
+        local points = {}
+        for i = 0, 63 do
+            local a = i * math.pi * 2 / 64
+            local x, y = cx + math.cos(a) * radius, cy + math.sin(a) * radius
+            points[#points + 1] = Vector(x, y, mins.z)
+            points[#points + 1] = Vector(x, y, maxs.z)
+        end
+        self.RollRadius = radius
+        self:PhysicsInitConvex(points)
+    end
+    self:EnableCustomCollisions(true)
+end
+
 function ENT:GetAttacker()
     local a = self.Attacker
     if IsValid(a) then return a end

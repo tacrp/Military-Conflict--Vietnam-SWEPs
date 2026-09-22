@@ -38,12 +38,9 @@ end
 SWEP.ActiveEffects = {}
 SWEP.PCFs = {}
 
-// A depth pass draws the viewmodel a second time to fill the SSAO or shadow depth texture.
-// None of the composite below belongs in one: the gun would be written into that buffer at the
-// weapon's own field of view and near plane instead of the world's, and PostDrawViewModel
-// returns before the reset that closes the scope's depth override, so the override stays on and
-// depth-tests the gun out of the main view. Stock GMod asks for no depth pass, so this only
-// shows with an addon that turns one on (gShader answers NeedsDepthPass true every frame).
+// Screen-depth consumers (such as gShader) need the same viewmodel silhouette as the colour
+// pass: FOV, near plane and depth range must agree. Only the colour composites/effects should
+// be skipped. Shadow maps have a light-space projection and must keep the engine's camera.
 function SWEP:IsDepthPass(flags)
     flags = flags or 0
     return bit.band(flags, STUDIO_SSAODEPTHTEXTURE) != 0 or bit.band(flags, STUDIO_SHADOWDEPTHTEXTURE) != 0
@@ -54,12 +51,13 @@ end
 function SWEP:PreDrawViewModel(vm, weapon, ply, flags)
     vm = vm or self:GetOwner():GetViewModel()
     if self:ViewModelHidden() then return true end
-    // draw nothing of our own into a depth buffer, and leave the gun to the engine so it lands
-    // in there with the world's projection
-    if self:IsDepthPass(flags) then return end
+    if bit.band(flags or 0, STUDIO_SHADOWDEPTHTEXTURE) != 0 then return end
+    local depthpass = self:IsDepthPass(flags)
 
-    self:PreDrawViewModelWeapon(vm)
-    self:UpdateLitParticle(vm)
+    if !depthpass then
+        self:PreDrawViewModelWeapon(vm)
+        self:UpdateLitParticle(vm)
+    end
 
     local sa = self:GetSightAmountVisual() ^ 3
 
@@ -74,7 +72,7 @@ function SWEP:PreDrawViewModel(vm, weapon, ply, flags)
     self.VMCamOpen = true // PostDrawViewModel closes it; nothing to close if this never ran
     cam.IgnoreZ(true)
 
-    self:PreDrawViewModelBlend(vm, sa)
+    if !depthpass then self:PreDrawViewModelBlend(vm, sa) end
 end
 
 // Runs inside the viewmodel's own render pass (the camera PreDrawViewModel set up: the weapon's
@@ -129,12 +127,20 @@ function SWEP:PostDrawViewModel(vm, ply, wep, flags)
     if !depthpass then
         cam.IgnoreZ(false)
         local newpcfs = {}
+        local refractUpdated = false
 
         for _, pcf in ipairs(self.PCFs) do
             if pcf and IsValid(pcf) and pcf.Render then
                 if self.WorldPCFs and self.WorldPCFs[pcf] then
                     table.insert(worldpcfs, pcf)
                 else
+                    // Manual PCF draws need a current refraction source. The scope's
+                    // UpdateScreenEffectTexture fills a different buffer. Capture once
+                    // per batch, after the gun, before any particles can feed back into it.
+                    if !refractUpdated then
+                        render.UpdateRefractTexture()
+                        refractUpdated = true
+                    end
                     pcf:Render()
                 end
                 table.insert(newpcfs, pcf)
@@ -155,6 +161,7 @@ function SWEP:PostDrawViewModel(vm, ply, wep, flags)
     if #worldpcfs > 0 then
         cam.Start3D()
             cam.IgnoreZ(false)
+            render.UpdateRefractTexture()
             for _, pcf in ipairs(worldpcfs) do pcf:Render() end
         cam.End3D()
     end

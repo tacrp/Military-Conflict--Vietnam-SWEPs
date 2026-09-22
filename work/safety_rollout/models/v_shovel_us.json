@@ -1,0 +1,15 @@
+{
+  "model": "v_shovel_us",
+  "status": "equipment: original animations",
+  "safe": false,
+  "qc_sha256": "d706ce83ded88132989ae9bccb88fbbb38dd53c758bbcfde9159fecd61c17070",
+  "compile": {
+    "ok": true,
+    "returncode": 0,
+    "messages": [
+      "WARNING: Failed to load keyvalues file cfg/mount.cfg!",
+      "WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences."
+    ]
+  },
+  "compiled_sequence_count": 23
+}

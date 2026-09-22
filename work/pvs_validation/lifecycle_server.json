@@ -1,0 +1,467 @@
+{
+	"phase": "npc_returned",
+	"events": [
+		{
+			"time": 229.0199948810041,
+			"phase": "npc",
+			"name": "mcv_muzzleeffect",
+			"origin": [
+				-1992,
+				-3200,
+				-199.46875
+			]
+		},
+		{
+			"time": 229.0199948810041,
+			"phase": "npc",
+			"name": "mcv_shelleffect",
+			"origin": [
+				-1992,
+				-3200,
+				-199.46875
+			]
+		},
+		{
+			"time": 229.36499487329274,
+			"phase": "npc",
+			"name": "mcv_muzzleeffect",
+			"origin": [
+				-1992,
+				-3200,
+				-199.46875
+			]
+		},
+		{
+			"time": 229.36499487329274,
+			"phase": "npc",
+			"name": "mcv_shelleffect",
+			"origin": [
+				-1992,
+				-3200,
+				-199.46875
+			]
+		},
+		{
+			"time": 229.4699948709458,
+			"phase": "npc",
+			"name": "mcv_muzzleeffect",
+			"origin": [
+				-1992,
+				-3200,
+				-199.46875
+			]
+		},
+		{
+			"time": 229.4699948709458,
+			"phase": "npc",
+			"name": "mcv_shelleffect",
+			"origin": [
+				-1992,
+				-3200,
+				-199.46875
+			]
+		},
+		{
+			"time": 229.57499486859888,
+			"phase": "npc",
+			"name": "mcv_muzzleeffect",
+			"origin": [
+				-1992,
+				-3200,
+				-199.46875
+			]
+		},
+		{
+			"time": 229.57499486859888,
+			"phase": "npc",
+			"name": "mcv_shelleffect",
+			"origin": [
+				-1992,
+				-3200,
+				-199.46875
+			]
+		},
+		{
+			"time": 229.67999486625195,
+			"phase": "npc",
+			"name": "mcv_muzzleeffect",
+			"origin": [
+				-1992,
+				-3200,
+				-199.46875
+			]
+		},
+		{
+			"time": 229.67999486625195,
+			"phase": "npc",
+			"name": "mcv_shelleffect",
+			"origin": [
+				-1992,
+				-3200,
+				-199.46875
+			]
+		},
+		{
+			"time": 229.784994863905,
+			"phase": "npc",
+			"name": "mcv_muzzleeffect",
+			"origin": [
+				-1992,
+				-3200,
+				-199.46875
+			]
+		},
+		{
+			"time": 229.784994863905,
+			"phase": "npc",
+			"name": "mcv_shelleffect",
+			"origin": [
+				-1992,
+				-3200,
+				-199.46875
+			]
+		},
+		{
+			"time": 229.88999486155808,
+			"phase": "npc",
+			"name": "mcv_muzzleeffect",
+			"origin": [
+				-1992,
+				-3200,
+				-199.46875
+			]
+		},
+		{
+			"time": 229.88999486155808,
+			"phase": "npc",
+			"name": "mcv_shelleffect",
+			"origin": [
+				-1992,
+				-3200,
+				-199.46875
+			]
+		},
+		{
+			"time": 229.99499485921115,
+			"phase": "npc",
+			"name": "mcv_muzzleeffect",
+			"origin": [
+				-1992,
+				-3200,
+				-199.46875
+			]
+		},
+		{
+			"time": 229.99499485921115,
+			"phase": "npc",
+			"name": "mcv_shelleffect",
+			"origin": [
+				-1992,
+				-3200,
+				-199.46875
+			]
+		},
+		{
+			"time": 230.0999948568642,
+			"phase": "npc",
+			"name": "mcv_muzzleeffect",
+			"origin": [
+				-1992,
+				-3200,
+				-199.46875
+			]
+		},
+		{
+			"time": 230.0999948568642,
+			"phase": "npc",
+			"name": "mcv_shelleffect",
+			"origin": [
+				-1992,
+				-3200,
+				-199.46875
+			]
+		},
+		{
+			"time": 233.05499479081482,
+			"phase": "npc_returned",
+			"name": "mcv_muzzleeffect",
+			"origin": [
+				-1993.599609375,
+				-3195.20068359375,
+				-220.46875
+			]
+		},
+		{
+			"time": 233.05499479081482,
+			"phase": "npc_returned",
+			"name": "mcv_shelleffect",
+			"origin": [
+				-1993.599609375,
+				-3195.20068359375,
+				-220.46875
+			]
+		},
+		{
+			"time": 233.15999478846788,
+			"phase": "npc_returned",
+			"name": "mcv_muzzleeffect",
+			"origin": [
+				-1993.599609375,
+				-3195.20068359375,
+				-220.46875
+			]
+		},
+		{
+			"time": 233.15999478846788,
+			"phase": "npc_returned",
+			"name": "mcv_shelleffect",
+			"origin": [
+				-1993.599609375,
+				-3195.20068359375,
+				-220.46875
+			]
+		},
+		{
+			"time": 233.26499478612095,
+			"phase": "npc_returned",
+			"name": "mcv_muzzleeffect",
+			"origin": [
+				-1993.599609375,
+				-3195.20068359375,
+				-220.46875
+			]
+		},
+		{
+			"time": 233.26499478612095,
+			"phase": "npc_returned",
+			"name": "mcv_shelleffect",
+			"origin": [
+				-1993.599609375,
+				-3195.20068359375,
+				-220.46875
+			]
+		},
+		{
+			"time": 233.36999478377402,
+			"phase": "npc_returned",
+			"name": "mcv_muzzleeffect",
+			"origin": [
+				-1993.599609375,
+				-3195.20068359375,
+				-220.46875
+			]
+		},
+		{
+			"time": 233.36999478377402,
+			"phase": "npc_returned",
+			"name": "mcv_shelleffect",
+			"origin": [
+				-1993.599609375,
+				-3195.20068359375,
+				-220.46875
+			]
+		},
+		{
+			"time": 233.47499478142709,
+			"phase": "npc_returned",
+			"name": "mcv_muzzleeffect",
+			"origin": [
+				-1993.599609375,
+				-3195.20068359375,
+				-220.46875
+			]
+		},
+		{
+			"time": 233.47499478142709,
+			"phase": "npc_returned",
+			"name": "mcv_shelleffect",
+			"origin": [
+				-1993.599609375,
+				-3195.20068359375,
+				-220.46875
+			]
+		},
+		{
+			"time": 233.57999477908015,
+			"phase": "npc_returned",
+			"name": "mcv_muzzleeffect",
+			"origin": [
+				-1993.599609375,
+				-3195.20068359375,
+				-220.46875
+			]
+		},
+		{
+			"time": 233.57999477908015,
+			"phase": "npc_returned",
+			"name": "mcv_shelleffect",
+			"origin": [
+				-1993.599609375,
+				-3195.20068359375,
+				-220.46875
+			]
+		},
+		{
+			"time": 233.68499477673322,
+			"phase": "npc_returned",
+			"name": "mcv_muzzleeffect",
+			"origin": [
+				-1993.599609375,
+				-3195.20068359375,
+				-220.46875
+			]
+		},
+		{
+			"time": 233.68499477673322,
+			"phase": "npc_returned",
+			"name": "mcv_shelleffect",
+			"origin": [
+				-1993.599609375,
+				-3195.20068359375,
+				-220.46875
+			]
+		},
+		{
+			"time": 233.7899947743863,
+			"phase": "npc_returned",
+			"name": "mcv_muzzleeffect",
+			"origin": [
+				-1993.599609375,
+				-3195.20068359375,
+				-220.46875
+			]
+		},
+		{
+			"time": 233.7899947743863,
+			"phase": "npc_returned",
+			"name": "mcv_shelleffect",
+			"origin": [
+				-1993.599609375,
+				-3195.20068359375,
+				-220.46875
+			]
+		},
+		{
+			"time": 234.4199947603047,
+			"phase": "npc_returned",
+			"name": "mcv_muzzleeffect",
+			"origin": [
+				-1992,
+				-3200,
+				-220.46875
+			]
+		},
+		{
+			"time": 234.4199947603047,
+			"phase": "npc_returned",
+			"name": "mcv_shelleffect",
+			"origin": [
+				-1992,
+				-3200,
+				-220.46875
+			]
+		},
+		{
+			"time": 234.52499475795776,
+			"phase": "npc_returned",
+			"name": "mcv_muzzleeffect",
+			"origin": [
+				-1992,
+				-3200,
+				-220.46875
+			]
+		},
+		{
+			"time": 234.52499475795776,
+			"phase": "npc_returned",
+			"name": "mcv_shelleffect",
+			"origin": [
+				-1992,
+				-3200,
+				-220.46875
+			]
+		},
+		{
+			"time": 234.62999475561082,
+			"phase": "npc_returned",
+			"name": "mcv_muzzleeffect",
+			"origin": [
+				-1992,
+				-3200,
+				-220.46875
+			]
+		},
+		{
+			"time": 234.62999475561082,
+			"phase": "npc_returned",
+			"name": "mcv_shelleffect",
+			"origin": [
+				-1992,
+				-3200,
+				-220.46875
+			]
+		},
+		{
+			"time": 234.7349947532639,
+			"phase": "npc_returned",
+			"name": "mcv_muzzleeffect",
+			"origin": [
+				-1992,
+				-3200,
+				-220.46875
+			]
+		},
+		{
+			"time": 234.7349947532639,
+			"phase": "npc_returned",
+			"name": "mcv_shelleffect",
+			"origin": [
+				-1992,
+				-3200,
+				-220.46875
+			]
+		},
+		{
+			"time": 234.83999475091696,
+			"phase": "npc_returned",
+			"name": "mcv_muzzleeffect",
+			"origin": [
+				-1992,
+				-3200,
+				-220.46875
+			]
+		},
+		{
+			"time": 234.83999475091696,
+			"phase": "npc_returned",
+			"name": "mcv_shelleffect",
+			"origin": [
+				-1992,
+				-3200,
+				-220.46875
+			]
+		},
+		{
+			"time": 234.94499474857002,
+			"phase": "npc_returned",
+			"name": "mcv_muzzleeffect",
+			"origin": [
+				-1992,
+				-3200,
+				-220.46875
+			]
+		},
+		{
+			"time": 234.94499474857002,
+			"phase": "npc_returned",
+			"name": "mcv_shelleffect",
+			"origin": [
+				-1992,
+				-3200,
+				-220.46875
+			]
+		}
+	],
+	"npc": 38,
+	"samples": []
+}

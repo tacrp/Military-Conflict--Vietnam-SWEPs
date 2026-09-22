@@ -1,0 +1,35 @@
+{
+  "model": "v_stoner63a_carbine",
+  "safe": true,
+  "status": "baked",
+  "sequences": [
+    {
+      "sequence": "idletonearwall",
+      "rows": 2,
+      "mode_axis": false
+    },
+    {
+      "sequence": "nearwall",
+      "rows": 2,
+      "mode_axis": false
+    },
+    {
+      "sequence": "nearwalltoidle",
+      "rows": 2,
+      "mode_axis": false
+    }
+  ],
+  "max_grip_error": 5.673742545909037e-10,
+  "max_blended_grip_error": 0.0571310623512244,
+  "max_shoulder_shift": 0.0,
+  "qc_sha256": "4b9604668c5f297e8f23b2d2f009ac8cd94151cfacfd52632db490d93414684b",
+  "compile": {
+    "ok": true,
+    "returncode": 0,
+    "messages": [
+      "WARNING: Failed to load keyvalues file cfg/mount.cfg!",
+      "WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences."
+    ]
+  },
+  "compiled_sequence_count": 31
+}

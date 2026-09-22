@@ -1,0 +1,35 @@
+{
+  "model": "v_shanxi_type17",
+  "safe": true,
+  "status": "baked",
+  "sequences": [
+    {
+      "sequence": "idletonearwall",
+      "rows": 2,
+      "mode_axis": false
+    },
+    {
+      "sequence": "nearwall",
+      "rows": 2,
+      "mode_axis": false
+    },
+    {
+      "sequence": "nearwalltoidle",
+      "rows": 2,
+      "mode_axis": false
+    }
+  ],
+  "max_grip_error": 1.0943563870703268e-09,
+  "max_blended_grip_error": 0.18723970220886121,
+  "max_shoulder_shift": 0.0,
+  "qc_sha256": "84e3b9a7b87278a2b05507255815650506b7a660e6bfc701d592ad7b996a38b1",
+  "compile": {
+    "ok": true,
+    "returncode": 0,
+    "messages": [
+      "WARNING: Failed to load keyvalues file cfg/mount.cfg!",
+      "WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences."
+    ]
+  },
+  "compiled_sequence_count": 28
+}

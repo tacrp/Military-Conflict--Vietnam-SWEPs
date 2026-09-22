@@ -1,0 +1,15 @@
+{
+  "model": "v_vcmedicbox",
+  "status": "equipment: original animations",
+  "safe": false,
+  "qc_sha256": "1c5e9be8a89b6487e695f4859f997d7a429c1b3e2f057f325de742a02dba1b60",
+  "compile": {
+    "ok": true,
+    "returncode": 0,
+    "messages": [
+      "WARNING: Failed to load keyvalues file cfg/mount.cfg!",
+      "WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences."
+    ]
+  },
+  "compiled_sequence_count": 17
+}

@@ -3,7 +3,7 @@
 // Two pages, because the two kinds of convar answer to different people. The server ones are
 // replicated and shared by everyone playing, so on someone else's server they are the host's to
 // set and a client changing them is ignored. The client ones are that player's own and reach
-// nobody else, with the one exception noted on the tracer colour.
+// nobody else unless marked userinfo, such as tracer colour and aim input mode.
 //
 // Adding a convar is one entry in SERVER_SETTINGS or CLIENT_SETTINGS and nothing else. A
 // `section` entry starts a heading; an entry with `choices` is a dropdown, one with `slider` a
@@ -26,6 +26,9 @@ local SERVER_SETTINGS = {
 }
 
 local CLIENT_SETTINGS = {
+    {convar = "mcv_toggle_aim", label = "Toggle aim",
+     help = "Press aim once to raise sights and again to lower them. Disable to hold aim instead."},
+
     {convar = "mcv_tracer_color", label = "Tracer colour",
      help = "Other players see this too",
      choices = {{"Default", "0"}, {"Player colour", "1"}, {"Weapon colour", "2"}}},

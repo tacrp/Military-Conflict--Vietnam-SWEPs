@@ -1,0 +1,34 @@
+{
+  "model": "v_dual_aps",
+  "safe": true,
+  "status": "baked",
+  "sequences": [
+    {
+      "sequence": "idletonearwall",
+      "rows": 2,
+      "mode_axis": false
+    },
+    {
+      "sequence": "nearwall",
+      "rows": 2,
+      "mode_axis": false
+    },
+    {
+      "sequence": "nearwalltoidle",
+      "rows": 2,
+      "mode_axis": false
+    }
+  ],
+  "max_grip_error": 1.0805156823142815e-14,
+  "max_blended_grip_error": 9.027690306531665e-15,
+  "max_shoulder_shift": 0.0,
+  "qc_sha256": "665e284030353988c7d513bb9c2fc1b5da2ef8b90b8a619a3a5091c592f02b5a",
+  "compile": {
+    "ok": true,
+    "returncode": 0,
+    "messages": [
+      "WARNING: Failed to load keyvalues file cfg/mount.cfg!"
+    ]
+  },
+  "compiled_sequence_count": 36
+}

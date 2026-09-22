@@ -1,0 +1,20 @@
+lua include("mcv_harness/pvs.lua") assert(#player.GetHumans()==2,"Need host plus observer") MCVPVS.Setup()
+wait 2
+strip
+give mcv_akm
+lua local w=player.GetHumans()[1]:GetActiveWeapon() w:SetClip1(30) player.GetHumans()[1]:GiveAmmo(100,w:GetPrimaryAmmoType(),true)
+lua local ps=player.GetHumans() ps[1]:SetPos(Vector(-2000,-3000,-100)) ps[1]:SetEyeAngles(Angle(0,90,0)) ps[2]:SetPos(Vector(-2150,-3000,-100)) ps[2]:SetEyeAngles(Angle(0,0,0)) MCVPVS.Phase("near")
+wait 3
+lua local ps=player.GetHumans() file.Write("mcv_harness/pvs/visibility.json",util.TableToJSON({origin=ps[2]:TestPVS(Vector(0,0,0)),shooter=ps[2]:TestPVS(ps[1])}))
+tap +attack 1
+wait 1
+lua MCVPVS.Phase("outside") player.GetHumans()[1]:SetPos(Vector(1000,2000,100))
+wait 3
+tap +attack 0.5
+wait 1
+lua MCVPVS.Phase("returned") player.GetHumans()[1]:SetPos(Vector(-2000,-3000,-100))
+wait 3
+tap +attack 1
+wait 1
+lua MCVPVS.Flush("baseline")
+wait 1

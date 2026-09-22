@@ -1,0 +1,16 @@
+lua include("mcv_harness/pvs.lua") MCVPVS.Setup()
+wait 1
+lua MCVPVS.Phase("repair") for _,p in ipairs(player.GetHumans()) do p:SendLua([[local other=player.GetAll()[1] local w=other:GetActiveWeapon() if other!=LocalPlayer() and IsValid(w) then local m=w:GetWorldModelFor(false) m:SetParent(NULL) local repaired=w:GetWorldModelFor(false) assert(repaired:GetParent()==other,"parent not repaired") w:RemoveWorldModels() local new=w:GetWorldModelFor(false) assert(IsValid(new) and new:GetParent()==other,"recreation failed") end]]) end
+wait 1
+lua MCVPVS.Phase("npc") local n=ents.Create("npc_combine_s") n:SetPos(Vector(-2000,-3200,-150)) n:SetAngles(Angle(0,90,0)) n:Spawn() n:Give("mcv_akm") n:SetNPCState(NPC_STATE_IDLE) MCVPVS.npc=n:EntIndex()
+wait 2
+lua local n=Entity(MCVPVS.npc) n:GetActiveWeapon():NPCShoot_Primary(n:GetShootPos(),Vector(0,1,0))
+wait 1
+lua MCVPVS.Phase("npc_outside") Entity(MCVPVS.npc):SetPos(Vector(1000,2000,100))
+wait 2
+lua MCVPVS.Phase("npc_returned") Entity(MCVPVS.npc):SetPos(Vector(-2000,-3200,-150))
+wait 2
+lua local n=Entity(MCVPVS.npc) n:GetActiveWeapon():NPCShoot_Primary(n:GetShootPos(),Vector(0,1,0))
+wait 1
+lua MCVPVS.Flush("lifecycle") Entity(MCVPVS.npc):Remove()
+wait 1

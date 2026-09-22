@@ -1,0 +1,35 @@
+{
+  "model": "v_xm148",
+  "safe": true,
+  "status": "baked",
+  "sequences": [
+    {
+      "sequence": "idletonearwall",
+      "rows": 2,
+      "mode_axis": false
+    },
+    {
+      "sequence": "nearwall",
+      "rows": 2,
+      "mode_axis": false
+    },
+    {
+      "sequence": "nearwalltoidle",
+      "rows": 2,
+      "mode_axis": false
+    }
+  ],
+  "max_grip_error": 4.377019277101618e-10,
+  "max_blended_grip_error": 0.035676186608305585,
+  "max_shoulder_shift": 0.0,
+  "qc_sha256": "96e7a96b6951ece5ee5245f103500137c712db22ff049b6f3c8a842f496cf1d4",
+  "compile": {
+    "ok": true,
+    "returncode": 0,
+    "messages": [
+      "WARNING: Failed to load keyvalues file cfg/mount.cfg!",
+      "WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences."
+    ]
+  },
+  "compiled_sequence_count": 42
+}

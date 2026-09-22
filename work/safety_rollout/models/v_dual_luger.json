@@ -1,0 +1,34 @@
+{
+  "model": "v_dual_luger",
+  "safe": true,
+  "status": "baked",
+  "sequences": [
+    {
+      "sequence": "idletonearwall",
+      "rows": 2,
+      "mode_axis": false
+    },
+    {
+      "sequence": "nearwall",
+      "rows": 2,
+      "mode_axis": false
+    },
+    {
+      "sequence": "nearwalltoidle",
+      "rows": 2,
+      "mode_axis": false
+    }
+  ],
+  "max_grip_error": 1.290917759688582e-14,
+  "max_blended_grip_error": 1.0695084443661336e-14,
+  "max_shoulder_shift": 0.0,
+  "qc_sha256": "ee621f9cde1915b3a3392b7f0c00c3be450029f342b2d0ce45681baa91b263d2",
+  "compile": {
+    "ok": true,
+    "returncode": 0,
+    "messages": [
+      "WARNING: Failed to load keyvalues file cfg/mount.cfg!"
+    ]
+  },
+  "compiled_sequence_count": 35
+}

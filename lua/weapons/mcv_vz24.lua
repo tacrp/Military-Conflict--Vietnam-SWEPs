@@ -69,6 +69,7 @@ SWEP.IronsightWalkBobbingStrength = -0.25
 SWEP.MovementPoseWalk = 138
 SWEP.MovementPoseSprint = 233
 SWEP.MovementPoseSighted = 130
+SWEP.SafeMovementAnimations = true // nearwall idle/walk/sprint and transitions baked together
 
 SWEP.HasScope = false
 SWEP.ScopeMaterial = NULL

@@ -93,10 +93,27 @@ function SWEP:ScopeToggle(on)
     self:SetIronsight(on)
 end
 
+function SWEP:UsesToggleAim()
+    local owner = self:GetOwner()
+    return IsValid(owner) and owner:IsPlayer() and owner:GetInfoNum("mcv_toggle_aim", 0) != 0
+end
+
 function SWEP:Think_Sights()
     local owner = self:GetOwner()
 
-    if owner:KeyDown(IN_ATTACK2) and !self:GetSafe() then
+    // Ironsight is already a predicted NetworkVar: replay the press against its restored
+    // value, never a plain Lua latch or an IsFirstTimePredicted-only state change.
+    if self:GetSafe() then
+        if self:GetIronsight() then self:ScopeToggle(false) end
+    elseif self:UsesToggleAim() then
+        if owner:KeyPressed(IN_ATTACK2) and !owner:KeyDown(IN_USE) then
+            if self:GetIronsight() then
+                self:ScopeToggle(false)
+            elseif !self:StillWaiting() then
+                self:ScopeToggle(true)
+            end
+        end
+    elseif owner:KeyDown(IN_ATTACK2) then
         if !self:GetIronsight() and !owner:KeyDown(IN_USE) and !self:StillWaiting() then
             self:ScopeToggle(true)
         end

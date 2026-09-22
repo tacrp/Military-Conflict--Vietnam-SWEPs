@@ -74,19 +74,24 @@ function ENT:ReleaseOwner()
     self:SetOwner(NULL)
 end
 
+function ENT:InitProjectilePhysics()
+    if self.CollisionSphere then
+        self:PhysicsInitSphere(self.CollisionSphere)
+    else
+        self:PhysicsInit(SOLID_VPHYSICS)
+        // The game's rocket / bolt models ship without a .phy.
+        if !IsValid(self:GetPhysicsObject()) then
+            self:PhysicsInitSphere(self.FallbackRadius or 2)
+        end
+    end
+end
+
 function ENT:Initialize()
     if SERVER then
         self:SetModel(self.Model)
+        if self.ModelSkin != nil then self:SetSkin(self.ModelSkin) end
         self:SetMaterial(self.Material or "")
-        if self.CollisionSphere then
-            self:PhysicsInitSphere(self.CollisionSphere)
-        else
-            self:PhysicsInit(SOLID_VPHYSICS)
-            // the game's rocket / bolt models ship without a .phy: a small sphere then
-            if !IsValid(self:GetPhysicsObject()) then
-                self:PhysicsInitSphere(self.FallbackRadius or 2)
-            end
-        end
+        self:InitProjectilePhysics()
         self:SetMoveType(MOVETYPE_VPHYSICS)
         self:SetSolid(SOLID_VPHYSICS)
 

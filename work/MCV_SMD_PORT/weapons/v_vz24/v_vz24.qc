@@ -960,44 +960,580 @@ $sequence "reload_end" {
 	node "0"
 }
 
+// BEGIN MCV SAFETY LOCOMOTION
+$animation "mcv_safe_nearwall_s_a_00" "safe_anims\mcv_safe_nearwall_s_a_00.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_s_a_01" "safe_anims\mcv_safe_nearwall_s_a_01.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_s_a_02" "safe_anims\mcv_safe_nearwall_s_a_02.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_s_a_03" "safe_anims\mcv_safe_nearwall_s_a_03.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_s_a_04" "safe_anims\mcv_safe_nearwall_s_a_04.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_s_a_05" "safe_anims\mcv_safe_nearwall_s_a_05.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_s_a_06" "safe_anims\mcv_safe_nearwall_s_a_06.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_s_a_07" "safe_anims\mcv_safe_nearwall_s_a_07.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_s_a_08" "safe_anims\mcv_safe_nearwall_s_a_08.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_s_a_09" "safe_anims\mcv_safe_nearwall_s_a_09.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_s_a_10" "safe_anims\mcv_safe_nearwall_s_a_10.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_s_a_11" "safe_anims\mcv_safe_nearwall_s_a_11.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_s_a_12" "safe_anims\mcv_safe_nearwall_s_a_12.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_s_a_13" "safe_anims\mcv_safe_nearwall_s_a_13.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_s_a_14" "safe_anims\mcv_safe_nearwall_s_a_14.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_s_a_15" "safe_anims\mcv_safe_nearwall_s_a_15.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_s_a_16" "safe_anims\mcv_safe_nearwall_s_a_16.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_s_a_i_00" "safe_anims\mcv_safe_nearwall_s_a_i_00.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_s_a_i_01" "safe_anims\mcv_safe_nearwall_s_a_i_01.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_s_a_i_02" "safe_anims\mcv_safe_nearwall_s_a_i_02.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_s_a_i_03" "safe_anims\mcv_safe_nearwall_s_a_i_03.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_s_a_i_04" "safe_anims\mcv_safe_nearwall_s_a_i_04.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_s_a_i_05" "safe_anims\mcv_safe_nearwall_s_a_i_05.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_s_a_i_06" "safe_anims\mcv_safe_nearwall_s_a_i_06.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_s_a_i_07" "safe_anims\mcv_safe_nearwall_s_a_i_07.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_s_a_i_08" "safe_anims\mcv_safe_nearwall_s_a_i_08.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_s_a_i_09" "safe_anims\mcv_safe_nearwall_s_a_i_09.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_s_a_i_10" "safe_anims\mcv_safe_nearwall_s_a_i_10.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_s_a_i_11" "safe_anims\mcv_safe_nearwall_s_a_i_11.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_s_a_i_12" "safe_anims\mcv_safe_nearwall_s_a_i_12.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_s_a_i_13" "safe_anims\mcv_safe_nearwall_s_a_i_13.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_s_a_i_14" "safe_anims\mcv_safe_nearwall_s_a_i_14.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_s_a_i_15" "safe_anims\mcv_safe_nearwall_s_a_i_15.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_s_a_i_16" "safe_anims\mcv_safe_nearwall_s_a_i_16.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_a_00" "safe_anims\mcv_safe_nearwall_a_00.smd" {
+	fps 30.00000000
+	loop
+}
+
+$animation "mcv_safe_nearwall_a_01" "safe_anims\mcv_safe_nearwall_a_01.smd" {
+	fps 33.04798843
+	loop
+}
+
+$animation "mcv_safe_nearwall_a_02" "safe_anims\mcv_safe_nearwall_a_02.smd" {
+	fps 36.78536760
+	loop
+}
+
+$animation "mcv_safe_nearwall_a_03" "safe_anims\mcv_safe_nearwall_a_03.smd" {
+	fps 41.47584896
+	loop
+}
+
+$animation "mcv_safe_nearwall_a_04" "safe_anims\mcv_safe_nearwall_a_04.smd" {
+	fps 47.53730358
+	loop
+}
+
+$animation "mcv_safe_nearwall_a_05" "safe_anims\mcv_safe_nearwall_a_05.smd" {
+	fps 55.67369032
+	loop
+}
+
+$animation "mcv_safe_nearwall_a_06" "safe_anims\mcv_safe_nearwall_a_06.smd" {
+	fps 67.17044500
+	loop
+}
+
+$animation "mcv_safe_nearwall_a_07" "safe_anims\mcv_safe_nearwall_a_07.smd" {
+	fps 81.81818182
+	loop
+}
+
+$animation "mcv_safe_nearwall_a_08" "safe_anims\mcv_safe_nearwall_a_08.smd" {
+	fps 81.81818182
+	loop
+}
+
+$animation "mcv_safe_nearwall_a_09" "safe_anims\mcv_safe_nearwall_a_09.smd" {
+	fps 81.81818182
+	loop
+}
+
+$animation "mcv_safe_nearwall_a_10" "safe_anims\mcv_safe_nearwall_a_10.smd" {
+	fps 83.02986162
+	loop
+}
+
+$animation "mcv_safe_nearwall_a_11" "safe_anims\mcv_safe_nearwall_a_11.smd" {
+	fps 85.44659588
+	loop
+}
+
+$animation "mcv_safe_nearwall_a_12" "safe_anims\mcv_safe_nearwall_a_12.smd" {
+	fps 88.00823469
+	loop
+}
+
+$animation "mcv_safe_nearwall_a_13" "safe_anims\mcv_safe_nearwall_a_13.smd" {
+	fps 90.72821329
+	loop
+}
+
+$animation "mcv_safe_nearwall_a_14" "safe_anims\mcv_safe_nearwall_a_14.smd" {
+	fps 93.62168081
+	loop
+}
+
+$animation "mcv_safe_nearwall_a_15" "safe_anims\mcv_safe_nearwall_a_15.smd" {
+	fps 96.70578255
+	loop
+}
+
+$animation "mcv_safe_nearwall_a_16" "safe_anims\mcv_safe_nearwall_a_16.smd" {
+	fps 100.00000000
+	loop
+}
+
+$animation "mcv_safe_nearwall_a_i_00" "safe_anims\mcv_safe_nearwall_a_i_00.smd" {
+	fps 30.00000000
+	loop
+}
+
+$animation "mcv_safe_nearwall_a_i_01" "safe_anims\mcv_safe_nearwall_a_i_01.smd" {
+	fps 33.04798843
+	loop
+}
+
+$animation "mcv_safe_nearwall_a_i_02" "safe_anims\mcv_safe_nearwall_a_i_02.smd" {
+	fps 36.78536760
+	loop
+}
+
+$animation "mcv_safe_nearwall_a_i_03" "safe_anims\mcv_safe_nearwall_a_i_03.smd" {
+	fps 41.47584896
+	loop
+}
+
+$animation "mcv_safe_nearwall_a_i_04" "safe_anims\mcv_safe_nearwall_a_i_04.smd" {
+	fps 47.53730358
+	loop
+}
+
+$animation "mcv_safe_nearwall_a_i_05" "safe_anims\mcv_safe_nearwall_a_i_05.smd" {
+	fps 55.67369032
+	loop
+}
+
+$animation "mcv_safe_nearwall_a_i_06" "safe_anims\mcv_safe_nearwall_a_i_06.smd" {
+	fps 67.17044500
+	loop
+}
+
+$animation "mcv_safe_nearwall_a_i_07" "safe_anims\mcv_safe_nearwall_a_i_07.smd" {
+	fps 81.81818182
+	loop
+}
+
+$animation "mcv_safe_nearwall_a_i_08" "safe_anims\mcv_safe_nearwall_a_i_08.smd" {
+	fps 81.81818182
+	loop
+}
+
+$animation "mcv_safe_nearwall_a_i_09" "safe_anims\mcv_safe_nearwall_a_i_09.smd" {
+	fps 81.81818182
+	loop
+}
+
+$animation "mcv_safe_nearwall_a_i_10" "safe_anims\mcv_safe_nearwall_a_i_10.smd" {
+	fps 83.02986162
+	loop
+}
+
+$animation "mcv_safe_nearwall_a_i_11" "safe_anims\mcv_safe_nearwall_a_i_11.smd" {
+	fps 85.44659588
+	loop
+}
+
+$animation "mcv_safe_nearwall_a_i_12" "safe_anims\mcv_safe_nearwall_a_i_12.smd" {
+	fps 88.00823469
+	loop
+}
+
+$animation "mcv_safe_nearwall_a_i_13" "safe_anims\mcv_safe_nearwall_a_i_13.smd" {
+	fps 90.72821329
+	loop
+}
+
+$animation "mcv_safe_nearwall_a_i_14" "safe_anims\mcv_safe_nearwall_a_i_14.smd" {
+	fps 93.62168081
+	loop
+}
+
+$animation "mcv_safe_nearwall_a_i_15" "safe_anims\mcv_safe_nearwall_a_i_15.smd" {
+	fps 96.70578255
+	loop
+}
+
+$animation "mcv_safe_nearwall_a_i_16" "safe_anims\mcv_safe_nearwall_a_i_16.smd" {
+	fps 100.00000000
+	loop
+}
+
+$animation "mcv_safe_nearwall_e_a_00" "safe_anims\mcv_safe_nearwall_e_a_00.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_e_a_01" "safe_anims\mcv_safe_nearwall_e_a_01.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_e_a_02" "safe_anims\mcv_safe_nearwall_e_a_02.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_e_a_03" "safe_anims\mcv_safe_nearwall_e_a_03.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_e_a_04" "safe_anims\mcv_safe_nearwall_e_a_04.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_e_a_05" "safe_anims\mcv_safe_nearwall_e_a_05.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_e_a_06" "safe_anims\mcv_safe_nearwall_e_a_06.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_e_a_07" "safe_anims\mcv_safe_nearwall_e_a_07.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_e_a_08" "safe_anims\mcv_safe_nearwall_e_a_08.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_e_a_09" "safe_anims\mcv_safe_nearwall_e_a_09.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_e_a_10" "safe_anims\mcv_safe_nearwall_e_a_10.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_e_a_11" "safe_anims\mcv_safe_nearwall_e_a_11.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_e_a_12" "safe_anims\mcv_safe_nearwall_e_a_12.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_e_a_13" "safe_anims\mcv_safe_nearwall_e_a_13.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_e_a_14" "safe_anims\mcv_safe_nearwall_e_a_14.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_e_a_15" "safe_anims\mcv_safe_nearwall_e_a_15.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_e_a_16" "safe_anims\mcv_safe_nearwall_e_a_16.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_e_a_i_00" "safe_anims\mcv_safe_nearwall_e_a_i_00.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_e_a_i_01" "safe_anims\mcv_safe_nearwall_e_a_i_01.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_e_a_i_02" "safe_anims\mcv_safe_nearwall_e_a_i_02.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_e_a_i_03" "safe_anims\mcv_safe_nearwall_e_a_i_03.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_e_a_i_04" "safe_anims\mcv_safe_nearwall_e_a_i_04.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_e_a_i_05" "safe_anims\mcv_safe_nearwall_e_a_i_05.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_e_a_i_06" "safe_anims\mcv_safe_nearwall_e_a_i_06.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_e_a_i_07" "safe_anims\mcv_safe_nearwall_e_a_i_07.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_e_a_i_08" "safe_anims\mcv_safe_nearwall_e_a_i_08.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_e_a_i_09" "safe_anims\mcv_safe_nearwall_e_a_i_09.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_e_a_i_10" "safe_anims\mcv_safe_nearwall_e_a_i_10.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_e_a_i_11" "safe_anims\mcv_safe_nearwall_e_a_i_11.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_e_a_i_12" "safe_anims\mcv_safe_nearwall_e_a_i_12.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_e_a_i_13" "safe_anims\mcv_safe_nearwall_e_a_i_13.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_e_a_i_14" "safe_anims\mcv_safe_nearwall_e_a_i_14.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_e_a_i_15" "safe_anims\mcv_safe_nearwall_e_a_i_15.smd" {
+	fps 30.00000000
+}
+
+$animation "mcv_safe_nearwall_e_a_i_16" "safe_anims\mcv_safe_nearwall_e_a_i_16.smd" {
+	fps 30.00000000
+}
+// END MCV SAFETY LOCOMOTION
 $sequence "idletonearwall" {
-	"nearwall_s_a"
-	"nearwall_s_a_i"
-	activity "ACT_VM_IDLE_TO_LOWERED" 1
+	"mcv_safe_nearwall_s_a_00"
+	"mcv_safe_nearwall_s_a_01"
+	"mcv_safe_nearwall_s_a_02"
+	"mcv_safe_nearwall_s_a_03"
+	"mcv_safe_nearwall_s_a_04"
+	"mcv_safe_nearwall_s_a_05"
+	"mcv_safe_nearwall_s_a_06"
+	"mcv_safe_nearwall_s_a_07"
+	"mcv_safe_nearwall_s_a_08"
+	"mcv_safe_nearwall_s_a_09"
+	"mcv_safe_nearwall_s_a_10"
+	"mcv_safe_nearwall_s_a_11"
+	"mcv_safe_nearwall_s_a_12"
+	"mcv_safe_nearwall_s_a_13"
+	"mcv_safe_nearwall_s_a_14"
+	"mcv_safe_nearwall_s_a_15"
+	"mcv_safe_nearwall_s_a_16"
+	"mcv_safe_nearwall_s_a_i_00"
+	"mcv_safe_nearwall_s_a_i_01"
+	"mcv_safe_nearwall_s_a_i_02"
+	"mcv_safe_nearwall_s_a_i_03"
+	"mcv_safe_nearwall_s_a_i_04"
+	"mcv_safe_nearwall_s_a_i_05"
+	"mcv_safe_nearwall_s_a_i_06"
+	"mcv_safe_nearwall_s_a_i_07"
+	"mcv_safe_nearwall_s_a_i_08"
+	"mcv_safe_nearwall_s_a_i_09"
+	"mcv_safe_nearwall_s_a_i_10"
+	"mcv_safe_nearwall_s_a_i_11"
+	"mcv_safe_nearwall_s_a_i_12"
+	"mcv_safe_nearwall_s_a_i_13"
+	"mcv_safe_nearwall_s_a_i_14"
+	"mcv_safe_nearwall_s_a_i_15"
+	"mcv_safe_nearwall_s_a_i_16"
+	blend "player_movement" 0 233
 	blend "ironsight" 0 1
-	blendwidth 2
+	blendwidth 17
+	activity "ACT_VM_IDLE_TO_LOWERED" 1
 	{ event 5004 1 "MCV_Weapon_Foley_Nearwall.In" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "walklayerironsight"
 	node "0"
 }
 
 $sequence "nearwall" {
-	"nearwall_a"
-	"nearwall_a_i"
-	activity "ACT_VM_IDLE_LOWERED" 1
+	"mcv_safe_nearwall_a_00"
+	"mcv_safe_nearwall_a_01"
+	"mcv_safe_nearwall_a_02"
+	"mcv_safe_nearwall_a_03"
+	"mcv_safe_nearwall_a_04"
+	"mcv_safe_nearwall_a_05"
+	"mcv_safe_nearwall_a_06"
+	"mcv_safe_nearwall_a_07"
+	"mcv_safe_nearwall_a_08"
+	"mcv_safe_nearwall_a_09"
+	"mcv_safe_nearwall_a_10"
+	"mcv_safe_nearwall_a_11"
+	"mcv_safe_nearwall_a_12"
+	"mcv_safe_nearwall_a_13"
+	"mcv_safe_nearwall_a_14"
+	"mcv_safe_nearwall_a_15"
+	"mcv_safe_nearwall_a_16"
+	"mcv_safe_nearwall_a_i_00"
+	"mcv_safe_nearwall_a_i_01"
+	"mcv_safe_nearwall_a_i_02"
+	"mcv_safe_nearwall_a_i_03"
+	"mcv_safe_nearwall_a_i_04"
+	"mcv_safe_nearwall_a_i_05"
+	"mcv_safe_nearwall_a_i_06"
+	"mcv_safe_nearwall_a_i_07"
+	"mcv_safe_nearwall_a_i_08"
+	"mcv_safe_nearwall_a_i_09"
+	"mcv_safe_nearwall_a_i_10"
+	"mcv_safe_nearwall_a_i_11"
+	"mcv_safe_nearwall_a_i_12"
+	"mcv_safe_nearwall_a_i_13"
+	"mcv_safe_nearwall_a_i_14"
+	"mcv_safe_nearwall_a_i_15"
+	"mcv_safe_nearwall_a_i_16"
+	blend "player_movement" 0 233
 	blend "ironsight" 0 1
-	blendwidth 2
+	blendwidth 17
+	activity "ACT_VM_IDLE_LOWERED" 1
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "walklayerironsight"
 	node "0"
 }
 
 $sequence "nearwalltoidle" {
-	"nearwall_e_a"
-	"nearwall_e_a_i"
-	activity "ACT_VM_LOWERED_TO_IDLE" 1
+	"mcv_safe_nearwall_e_a_00"
+	"mcv_safe_nearwall_e_a_01"
+	"mcv_safe_nearwall_e_a_02"
+	"mcv_safe_nearwall_e_a_03"
+	"mcv_safe_nearwall_e_a_04"
+	"mcv_safe_nearwall_e_a_05"
+	"mcv_safe_nearwall_e_a_06"
+	"mcv_safe_nearwall_e_a_07"
+	"mcv_safe_nearwall_e_a_08"
+	"mcv_safe_nearwall_e_a_09"
+	"mcv_safe_nearwall_e_a_10"
+	"mcv_safe_nearwall_e_a_11"
+	"mcv_safe_nearwall_e_a_12"
+	"mcv_safe_nearwall_e_a_13"
+	"mcv_safe_nearwall_e_a_14"
+	"mcv_safe_nearwall_e_a_15"
+	"mcv_safe_nearwall_e_a_16"
+	"mcv_safe_nearwall_e_a_i_00"
+	"mcv_safe_nearwall_e_a_i_01"
+	"mcv_safe_nearwall_e_a_i_02"
+	"mcv_safe_nearwall_e_a_i_03"
+	"mcv_safe_nearwall_e_a_i_04"
+	"mcv_safe_nearwall_e_a_i_05"
+	"mcv_safe_nearwall_e_a_i_06"
+	"mcv_safe_nearwall_e_a_i_07"
+	"mcv_safe_nearwall_e_a_i_08"
+	"mcv_safe_nearwall_e_a_i_09"
+	"mcv_safe_nearwall_e_a_i_10"
+	"mcv_safe_nearwall_e_a_i_11"
+	"mcv_safe_nearwall_e_a_i_12"
+	"mcv_safe_nearwall_e_a_i_13"
+	"mcv_safe_nearwall_e_a_i_14"
+	"mcv_safe_nearwall_e_a_i_15"
+	"mcv_safe_nearwall_e_a_i_16"
+	blend "player_movement" 0 233
 	blend "ironsight" 0 1
-	blendwidth 2
+	blendwidth 17
+	activity "ACT_VM_LOWERED_TO_IDLE" 1
 	{ event 5004 1 "MCV_Weapon_Foley_Nearwall.Out" }
 	fadein 0.2
 	fadeout 0.2
-	addlayer "walklayer"
-	addlayer "walklayerironsight"
 	node "0"
 }
 
