@@ -9,9 +9,9 @@ AddCSLuaFile()
 // Names and basic information
 SWEP.PrintName = "vz. 24"
 SWEP.Category = "Military Conflict: Vietnam"
-SWEP.Country = "Soviet Union"
+SWEP.Country = "Czechoslovakia"
 SWEP.SubCategory = "Bolt-Action Rifles"
-SWEP.Caliber = "7.62x54mmR"
+SWEP.Caliber = "7.92x57mm"
 
 SWEP.Slot = 3
 
@@ -92,7 +92,7 @@ SWEP.CrosshairDeltaDistance = 4
 
 SWEP.WeaponWeight = 4.2
 
-SWEP.Primary.Ammo = "ar2"
+SWEP.Primary.Ammo = "357"
 SWEP.Primary.ClipSize = 5
 SWEP.Primary.Chamber = 0
 SWEP.Primary.DefaultClip = 40
@@ -164,3 +164,5 @@ SWEP.Secondary.Automatic = true
 SWEP.Secondary.ClipSize = 1
 SWEP.Secondary.Ammo = "smg1_grenade"
 SWEP.Secondary.DefaultClip = 1
+
+SWEP.MuzzleVelocity = 865 // m/s, original game stat

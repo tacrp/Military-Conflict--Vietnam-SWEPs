@@ -10,7 +10,7 @@ AddCSLuaFile()
 SWEP.PrintName = "vz. 52/57"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Czechoslovakia"
-SWEP.SubCategory = "Assault Rifles"
+SWEP.SubCategory = "Carbines" // Semi-auto rifle; grouped with the SKS, not the generic source "Rifle" category.
 SWEP.Caliber = "7.62x39mm"
 
 SWEP.Slot = 3
@@ -90,7 +90,7 @@ SWEP.CrosshairDeltaDistance = 4
 
 SWEP.WeaponWeight = 4.3
 
-SWEP.Primary.Ammo = "ar2"
+SWEP.Primary.Ammo = "smg1"
 SWEP.Primary.ClipSize = 10
 SWEP.Primary.Chamber = 1
 SWEP.Primary.DefaultClip = 80
@@ -154,3 +154,5 @@ SWEP.TracerParticle2 = "vietnam_tracer_rifle_green_secondary"
 
 SWEP.TracerRandomness = 6
 SWEP.TracerFrequency = 1
+
+SWEP.MuzzleVelocity = 744 // m/s, original game stat

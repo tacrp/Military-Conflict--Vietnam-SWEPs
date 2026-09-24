@@ -35,11 +35,12 @@ ACTS = {"ACT_VM_IDLE_TO_LOWERED", "ACT_VM_IDLE_LOWERED", "ACT_VM_LOWERED_TO_IDLE
 @lru_cache(None)
 def weapon_models():
     classes, references = {}, {}
-    for path in mounted_files("lua/weapons", "*.lua"):
+    for path in list(mounted_files("lua/weapons", "*.lua")) + list(mounted_files("lua/weapons", "*/shared.lua")):
         text = path.read_text(errors="replace")
         base = re.search(r'SWEP.Base\s*=\s*"([^"]+)"', text)
-        classes[path.stem] = base.group(1) if base else ""
-        references[path.stem] = {m.lower() for m in re.findall(r'models/weapons/mcv/(v_[^" ]+)\.mdl', text)}
+        cls = path.parent.name if path.name == "shared.lua" else path.stem
+        classes[cls] = base.group(1) if base else ""
+        references[cls] = {m.lower() for m in re.findall(r'models/weapons/mcv/(v_[^" ]+)\.mdl', text)}
     def gun(cls, seen=None):
         if cls in ("mcv_base", "mcv_flamethrower"):
             return True
@@ -310,7 +311,9 @@ class Model:
                         poses.append(self.solve(base, pilot.sample(hipframes, phase), pilot.sample(self.walks, wc),
                                                 pilot.sample(self.runs, rc), speed))
                     tracks.append(poses)
-                    pilot.write_smd(target / (name + ".smd"), self.nodes, poses)
+                    temporary = target / (name + ".tmp.smd")
+                    pilot.write_smd(temporary, self.nodes, poses)
+                    os.replace(temporary, target / (name + ".smd"))
                     fps = base_fps
                     if looping:
                         w = min(speed / min(100, self.walk * 0.95), 1)
@@ -358,7 +361,7 @@ def job(name, compile_model, dense=False):
         else:
             report = {}
         if (report.get("qc_sha256") != digest(model.qcpath) or report.get("error")
-                or (report.get("safe") and name not in weapon_models()[1])):
+                or (bool(report.get("safe")) != (name in weapon_models()[1]))):
             try:
                 report = model.build()
             except AssertionError as error:

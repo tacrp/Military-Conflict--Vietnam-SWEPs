@@ -1,0 +1,46 @@
+[
+  {
+    "path": "lua/weapons/mcv_type56xm148.lua",
+    "sha256": "328d54ba21b7c49601b4886f09b1ab30111a6aa3f6a77f20b10545bb496ef393"
+  },
+  {
+    "path": "materials/entities/mcv_type56xm148.png",
+    "sha256": "1948aa79a558574f53e37b19106c00c7b835fbc563947d1ae938feb752727324"
+  },
+  {
+    "path": "models/weapons/mcv/v_type56xm148.dx80.vtx",
+    "sha256": "296edacb3fc831dee4aa82a04964f633e817f122398899d3ec8dec3ec2e17bfb"
+  },
+  {
+    "path": "models/weapons/mcv/v_type56xm148.dx90.vtx",
+    "sha256": "b733a8a132273a1a26f921bd9c2c2c5586a03e8610c222d832fa587edf9b171d"
+  },
+  {
+    "path": "models/weapons/mcv/v_type56xm148.mdl",
+    "sha256": "887962e27fb3750ca3e816360c27c9389de1dd88ae8772552fe9e001f4fa9e60"
+  },
+  {
+    "path": "models/weapons/mcv/v_type56xm148.vvd",
+    "sha256": "561fd04e63fb1b66a814035c178cbb1bd548be6d397104d08a4834079196b0b9"
+  },
+  {
+    "path": "models/weapons/mcv/w_type56xm148.dx80.vtx",
+    "sha256": "f7f8aacda40aeb0dda0613aa8ae726f46d76c3497c8777df7ecd6eae19cca8a1"
+  },
+  {
+    "path": "models/weapons/mcv/w_type56xm148.dx90.vtx",
+    "sha256": "8fc915762ad83edce2925677e21725746568d8840cb56e5957e27b1274680169"
+  },
+  {
+    "path": "models/weapons/mcv/w_type56xm148.mdl",
+    "sha256": "a0a4880f3e7ed785252890b756225db04b22ce7ffdf189765060e9410189123e"
+  },
+  {
+    "path": "models/weapons/mcv/w_type56xm148.phy",
+    "sha256": "0adb77e9ff2610f97886c410892271d997f06dd1ddf3eb7fc23b71ffc95ee491"
+  },
+  {
+    "path": "models/weapons/mcv/w_type56xm148.vvd",
+    "sha256": "5a6c8d07b4f4911d3f0800336b0fa40a474d3b0b5d94389ae959861c5ca566e0"
+  }
+]

@@ -242,9 +242,9 @@ function T.Cleanup(ply)
         if row.name!="ground" then continue end
         local e=row.entity
         assert(e:GetPos():Distance(row.fixedPos)<0.01,"stuck world bolt moved")
-        local ammo=ply:GetAmmoCount("mcv_crossbowbolt")
+        local ammo=ply:GetAmmoCount("XBowBolt")
         e:Use(ply)
-        assert(ply:GetAmmoCount("mcv_crossbowbolt")==ammo+1,"bolt pickup lost ammo")
+        assert(ply:GetAmmoCount("XBowBolt")==ammo+1,"bolt pickup lost ammo")
     end
     for _,e in ipairs(T.entities) do if IsValid(e) then e:Remove() end end
     file.Write(root .. "bolt_pickup_" .. T.label .. ".json",'{"stationary":true,"ammo_returned":true}')

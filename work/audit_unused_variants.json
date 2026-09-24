@@ -1,0 +1,85 @@
+{
+  "X2F2A2 FAL": {
+    "models": [
+      "models/weapons/mcv/v_x2f2a2.mdl",
+      "models/weapons/mcv/w_x2f2a2.mdl"
+    ],
+    "dependency_count": 81,
+    "missing": {},
+    "class": "mcv_x2f2a2",
+    "required_sequences_present": [
+      "draw",
+      "idle",
+      "reload",
+      "reload_empty"
+    ]
+  },
+  "vz. 59 Belt": {
+    "models": [
+      "models/weapons/mcv/v_vz59b.mdl"
+    ],
+    "dependency_count": 74,
+    "missing": {},
+    "class": "mcv_vz59b",
+    "required_sequences_present": [
+      "draw",
+      "idle",
+      "reload",
+      "reload_empty"
+    ]
+  },
+  "M16 Flamer": {
+    "models": [
+      "models/weapons/mcv/v_m16_flamer.mdl",
+      "models/weapons/mcv/w_m16_flamer.mdl"
+    ],
+    "dependency_count": 101,
+    "missing": {},
+    "class": "mcv_m16_flamer",
+    "required_sequences_present": [
+      "draw",
+      "gl",
+      "gl_shoot",
+      "idle",
+      "reload",
+      "reload_empty",
+      "reload_secondary"
+    ]
+  },
+  "Type 56 XM148": {
+    "models": [
+      "models/weapons/mcv/v_type56xm148.mdl",
+      "models/weapons/mcv/w_type56xm148.mdl"
+    ],
+    "dependency_count": 103,
+    "missing": {},
+    "class": "mcv_type56xm148",
+    "required_sequences_present": [
+      "draw",
+      "gl",
+      "gl_shoot",
+      "idle",
+      "reload",
+      "reload_empty",
+      "reload_secondary"
+    ]
+  },
+  "Lunge Mine": {
+    "models": [
+      "models/weapons/mcv/v_lunge_mine.mdl",
+      "models/weapons/mcv/w_lunge_mine.mdl"
+    ],
+    "dependency_count": 53,
+    "missing": {},
+    "class": "mcv_lunge_mine",
+    "required_sequences_present": [
+      "draw",
+      "idle",
+      "slash",
+      "stab",
+      "throw",
+      "throw_loop",
+      "throw_start"
+    ]
+  }
+}

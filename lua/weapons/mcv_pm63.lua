@@ -7,7 +7,7 @@ AddCSLuaFile()
 // Names and basic information
 SWEP.PrintName = "PM-63 RAK"
 SWEP.Category = "Military Conflict: Vietnam"
-SWEP.Country = "Polish People's Republic"
+SWEP.Country = "Poland"
 SWEP.SubCategory = "Machine Pistols"
 SWEP.Caliber = "9x18mm"
 

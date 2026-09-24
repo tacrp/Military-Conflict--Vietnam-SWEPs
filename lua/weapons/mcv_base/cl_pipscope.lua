@@ -98,20 +98,17 @@ function SWEP:ApplyScopeMaterial()
     end
 end
 
-// gShader reconstructs depth including the viewmodel before drawing its colour model. Its
-// early AO can therefore already contain a gun silhouette at PreDrawViewModels. Capture at
-// PreDrawReconstruction when available, otherwise use the ordinary pre-viewmodel capture.
-// A private texture is essential: other effects overwrite _rt_FullFrameFB later this frame.
-function SWEP:CaptureScopeScreen(beforeReconstruction)
+// Capture after world translucency/effects, immediately before the viewmodel. Capturing
+// before gShader reconstruction loses particles and translucent objects from the lens.
+// A private texture keeps later shared-buffer updates from changing the scope picture.
+function SWEP:CaptureScopeScreen()
     if !HAVE_SHADER or !self.HasScope then return end
     if self:GetSightAmountVisual() <= 0.5 or !self:ShouldDoScope() then return end
-    if !beforeReconstruction and self.ScopeCleanCaptureFrame == FrameNumber() then return end
     scopeScene = scopeScene or GetRenderTargetEx("mcv_scope_scene", ScrW(), ScrH(),
         RT_SIZE_FULL_FRAME_BUFFER, MATERIAL_RT_DEPTH_NONE, bit.bor(4, 8, 256, 512), 0,
         IMAGE_FORMAT_RGB888)
     render.CopyRenderTargetToTexture(scopeScene)
     lensmat:SetTexture("$basetexture", scopeScene)
-    if beforeReconstruction then self.ScopeCleanCaptureFrame = FrameNumber() end
 end
 
 // Where the scope axis meets the screen (0..1, y down): the muzzle attachment's forward, read

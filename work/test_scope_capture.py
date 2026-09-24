@@ -33,23 +33,21 @@ class ScopeCaptureTests(unittest.TestCase):
             function SWEP:GetSightAmountVisual() return self.aim end
             function SWEP:GetIronsight() return self.aim>0 end
             w=setmetatable({HasScope=true,aim=1},{__index=SWEP})
-            -- Early shader hook takes the uncontaminated world picture.
-            w:CaptureScopeScreen(true)
-            assert(lens.texture.pixels=="world" and copies==1)
-            framebuffer="world + gun occlusion"
-            w:CaptureScopeScreen(false)
-            assert(lens.texture.pixels=="world" and copies==1)
+            -- The only capture is after world particles/translucency and before the gun.
+            framebuffer="world + particles + translucency + shaders"
+            w:CaptureScopeScreen()
+            assert(lens.texture.pixels==framebuffer and copies==1)
             -- Further shader copies do not alias our private texture.
-            shared={}; render.CopyRenderTargetToTexture(shared)
+            framebuffer="world + gun"; shared={}; render.CopyRenderTargetToTexture(shared)
             assert(shared.pixels~=lens.texture.pixels)
             -- Disabling gShader falls back immediately, without stale pictures.
             frame=2; framebuffer="new world"
-            w:CaptureScopeScreen(false)
+            w:CaptureScopeScreen()
             assert(lens.texture.pixels=="new world" and allocations==1)
             frame=3; w.aim=0; framebuffer="hip view"
-            w:CaptureScopeScreen(true)
+            w:CaptureScopeScreen()
             assert(lens.texture.pixels=="new world")
-            w.aim=1; w.HasScope=false; w:CaptureScopeScreen(false)
+            w.aim=1; w.HasScope=false; w:CaptureScopeScreen()
             assert(lens.texture.pixels=="new world")
         ''')
 

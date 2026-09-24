@@ -7,7 +7,7 @@ AddCSLuaFile()
 // Names and basic information
 SWEP.PrintName = "Kbkg 60"
 SWEP.Category = "Military Conflict: Vietnam"
-SWEP.Country = "Polish People's Republic"
+SWEP.Country = "Poland"
 SWEP.SubCategory = "Assault Rifles"
 SWEP.Caliber = "7.62x39mm"
 
@@ -98,7 +98,7 @@ SWEP.CrosshairDeltaDistance = 4
 
 SWEP.WeaponWeight = 3.8
 
-SWEP.Primary.Ammo = "ar2"
+SWEP.Primary.Ammo = "smg1"
 SWEP.Primary.ClipSize = 30
 SWEP.Primary.Chamber = 1
 SWEP.Primary.DefaultClip = 60

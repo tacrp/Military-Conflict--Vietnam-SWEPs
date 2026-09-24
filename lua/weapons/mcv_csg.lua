@@ -9,7 +9,7 @@ AddCSLuaFile()
 // Names and basic information
 SWEP.PrintName = "ChiCom Frag Grenade"
 SWEP.Category = "Military Conflict: Vietnam"
-SWEP.Country = "People's Republic of China"
+SWEP.Country = "China"
 SWEP.SubCategory = "Grenades"
 
 SWEP.Slot = 4

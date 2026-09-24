@@ -607,6 +607,13 @@ $sequence "holster" {
 	fps 30
 }
 
+$animation "mcv_launcher_idle_0" "..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\gl.smd" {
+	fps 30
+}
+$animation "mcv_launcher_idle_0__f60" "..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\gl.smd" {
+	fps 30
+	numframes 60
+}
 $sequence "gl" {
 	"..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\gl.smd"
 	activity "ACT_VM_IIDLE_M203" 1
@@ -671,12 +678,12 @@ $sequence "irongl_to_gl" {
 }
 
 $sequence "gl_shoot" {
-	"basePose_a__f60"
-	activity "ACT_VM_SECONDARYATTACK" 1
-	snap
+	"mcv_launcher_idle_0__f60"
+	activity "ACT_VM_ISHOOT_M203" 1
 	addlayer "walklayer"
 	addlayer "walklayerironsight"
 	addlayer "runlayer"
+	snap
 	addlayer "gl_shoot_pose"
 	node "0"
 }

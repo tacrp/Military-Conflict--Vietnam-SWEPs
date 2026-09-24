@@ -7,7 +7,7 @@ AddCSLuaFile()
 // Names and basic information
 SWEP.PrintName = "K-50M"
 SWEP.Category = "Military Conflict: Vietnam"
-SWEP.Country = "Democratic Republic of Vietnam"
+SWEP.Country = "Vietnam"
 SWEP.SubCategory = "Submachine Guns"
 SWEP.Caliber = "7.62x25mm Tokarev"
 

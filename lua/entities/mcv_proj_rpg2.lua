@@ -7,6 +7,7 @@ ENT.Spawnable                = false
 ENT.Model                    = "models/weapons/shells/rpg7_rocket.mdl"
 
 ENT.IsRocket = true // projectile has a booster and will not drop.
+ENT.CollisionSphere = 2
 
 ENT.InstantFuse = false // projectile is armed immediately after firing.
 ENT.RemoteFuse = false // allow this projectile to be triggered by remote detonator.

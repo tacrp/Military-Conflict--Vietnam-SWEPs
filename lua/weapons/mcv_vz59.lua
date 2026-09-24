@@ -9,7 +9,7 @@ AddCSLuaFile()
 // Names and basic information
 SWEP.PrintName = "Uk vz. 59"
 SWEP.Category = "Military Conflict: Vietnam"
-SWEP.Country = "Soviet Union"
+SWEP.Country = "Czechoslovakia"
 SWEP.SubCategory = "Light-Machine Guns"
 SWEP.Caliber = "7.62x54mmR"
 
@@ -163,3 +163,5 @@ SWEP.TracerParticle2 = "vietnam_tracer_machinegun_green_secondary"
 
 SWEP.TracerRandomness = 6
 SWEP.TracerFrequency = 3
+
+SWEP.MuzzleVelocity = 853 // m/s, original game stat

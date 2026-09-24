@@ -44,7 +44,9 @@ function SWEP:Deferred_AkimboSwap()
         end
     end
 
-    if self:Clip1() > 0 then
+    // Draw carries SlidePosition's one-side-empty pose; ready racks both slides.
+    local oneEmpty = self:GetAkimbo() and self.LastShotAnimation and self:Clip1() == 1
+    if self:Clip1() > 0 and !oneEmpty then
         self:PlayAnimation(ACT_VM_READY, 1, true)
     else
         self:PlayAnimation(ACT_VM_DRAW, 1, true)

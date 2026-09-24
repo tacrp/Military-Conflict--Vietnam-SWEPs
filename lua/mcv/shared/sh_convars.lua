@@ -46,3 +46,11 @@ MCV.RegisterConVar("mcv_bullet_penetration", "1",
 function MCV.BulletPenetration()
     return MCV.ConVars.mcv_bullet_penetration:GetBool()
 end
+
+MCV.RegisterConVar("mcv_physbullets", "0", "Simulate bullet travel time and drop using weapon MuzzleVelocity stats.")
+MCV.RegisterConVar("mcv_physbullets_npcs", "0", "Use physical bullets for NPC guns too.")
+MCV.RegisterConVar("mcv_physbullets_pellets", "0", "Simulate individual shotgun and buckshot pellets; increases simulation work.")
+MCV.RegisterConVar("mcv_physbullets_velocity", "1", "Multiply weapon MuzzleVelocity for physical bullets.")
+MCV.RegisterConVar("mcv_physbullets_gravity", "1", "Physical bullet gravity multiplier; 1 is Earth gravity.")
+MCV.RegisterConVar("mcv_physbullets_drag", "0", "Physical bullet linear air resistance per second; 0 disables drag.")
+MCV.RegisterConVar("mcv_physbullets_lifetime", "5", "Maximum physical bullet flight time in seconds.")

@@ -11,7 +11,7 @@ SWEP.PrintName = "Kolos AA Rocket Launcher"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Soviet Union"
 SWEP.SubCategory = "Anti-Armor"
-SWEP.Caliber = "Rocket"
+SWEP.Caliber = "30mm Rocket"
 
 SWEP.Slot = 4
 SWEP.HoldType = "rpg"
@@ -58,7 +58,11 @@ SWEP.VolleyCount = 7
 SWEP.LastShotAnimation = false
 SWEP.NoEjectOnShoot = true
 SWEP.ShootEntity = "mcv_proj_kolos"
-SWEP.ShootEntityForce = 5000
+SWEP.ShootEntityForce = 110 / 0.0254
+SWEP.RocketGravity = 9.80665 / 0.0254
+SWEP.RocketBoostSpeed = 560 / 0.0254
+SWEP.RocketBoostDelay = 0.18
+SWEP.RocketBoostDuration = 0.3 // Provisional prototype approximation; see work/ROCKET_BALLISTICS.md.
 SWEP.AmmoPerShot = 1
 
 // View slide from recoil
@@ -104,7 +108,7 @@ SWEP.CrosshairDeltaDistance = 4
 
 SWEP.WeaponWeight = 12
 
-SWEP.Primary.Ammo = "rpg_round"
+SWEP.Primary.Ammo = "smg1_grenade"
 SWEP.Primary.ClipSize = 7
 SWEP.Primary.Chamber = 0
 SWEP.Primary.DefaultClip = 7

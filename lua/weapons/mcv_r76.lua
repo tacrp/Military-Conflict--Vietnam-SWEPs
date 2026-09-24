@@ -7,7 +7,7 @@ AddCSLuaFile()
 // Names and basic information
 SWEP.PrintName = "Northwood R76"
 SWEP.Category = "Military Conflict: Vietnam"
-SWEP.Country = "Republic of Rhodesia"
+SWEP.Country = "Rhodesia"
 SWEP.SubCategory = "Submachine Guns"
 SWEP.Caliber = "9x19mm"
 

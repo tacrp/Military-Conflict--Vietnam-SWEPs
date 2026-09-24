@@ -153,6 +153,20 @@ function SWEP:GetInfiniteAmmo()
     return false
 end
 
+function SWEP:RestoreReloadInsert()
+    if self.ReloadInsertTime then
+        self:Defer("ReloadInsert", self.ReloadInsertTime)
+    else
+        self:RestoreClip(self.ShotgunReloadRounds)
+    end
+end
+
+function SWEP:Deferred_ReloadInsert()
+    if self:GetReloading() then
+        self:RestoreClip(self.ShotgunReloadRounds)
+    end
+end
+
 function SWEP:Think_Reload()
     if self:GetReloading() and !self:StillWaiting() then
         if self:GetGrenadeLauncher() then
@@ -192,7 +206,7 @@ function SWEP:Think_Reload()
                                            PLAYERANIMEVENT_RELOAD_LOOP)
 
                     self:EmitThirdPersonSound(self.SoundReloadLoopThirdPerson)
-                    self:RestoreClip(self.ShotgunReloadRounds)
+                    self:RestoreReloadInsert()
                 end
             elseif self.ShotgunReload then
                 if self:GetEndReload() or self:Clip1() >= (self:GetEmptyReload() and self.Primary.ClipSize or self:GetClip1Capacity()) or (!self:GetInfiniteAmmo() and self:Ammo1() == 0) then
@@ -212,7 +226,7 @@ function SWEP:Think_Reload()
                     self:PlayReloadGesture(self:PlayAnimation(self.ShotgunAltReload and ACT_VM_RELOAD_INSERT or ACT_VM_RELOAD, 1, true, true), PLAYERANIMEVENT_RELOAD_LOOP)
 
                     self:EmitThirdPersonSound(self.SoundReloadLoopThirdPerson)
-                    self:RestoreClip(self.ShotgunReloadRounds)
+                    self:RestoreReloadInsert()
                 end
             else
                 self:SetReloading(false)

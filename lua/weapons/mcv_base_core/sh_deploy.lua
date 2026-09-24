@@ -8,6 +8,10 @@ function SWEP:SyncViewModel(changeModel)
     self.ViewModel = model
     local vm = self:GetOwner():GetViewModel()
     if !IsValid(vm) then return end
+
+    // If we don't do this, it can sometimes carry the last weapon's bodygroups over.
+    vm:SetBodyGroups("0000000000000000000000000000000000000000000000000000000000000")
+
     if changeModel then
         // GetModel's cached string can agree while the engine still has the old MDL.
         local mins, maxs = vm:GetCollisionBounds()
@@ -134,6 +138,20 @@ hook.Add("StartCommand", "MCV_Holster", function(ply, ucmd)
 end)
 
 function SWEP:Initialize()
+    // GMod merges nested lists: a derived one-mode gun can inherit a duplicate
+    // second entry. Keep a private, dense list of distinct numeric modes.
+    if self.Firemodes then
+        local modes, seen = {}, {}
+        local selected = self.Firemodes[self:GetFiremode()]
+        for _, mode in ipairs(self.Firemodes) do
+            if isnumber(mode) and !seen[mode] then
+                modes[#modes + 1] = mode
+                seen[mode] = #modes
+            end
+        end
+        self.Firemodes = modes
+        self:SetFiremode(seen[selected] or 1)
+    end
     // Also builds the engine's activity translations for NPC aiming / firing / reloads.
     self:SetHoldType(self.HoldType or "ar2")
     // Only the newly created weapon's free round is affected. Never clear the

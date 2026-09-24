@@ -7,6 +7,7 @@ SWEP.Spawnable = false
 SWEP.NPCUsable = false // The continuous flame needs its own AI, not the gun firing path.
 
 SWEP.SubCategory = "Flamethrowers"
+SWEP.CrosshairCircle = true
 SWEP.Slot = 3
 
 SWEP.HoldType = "ar2"

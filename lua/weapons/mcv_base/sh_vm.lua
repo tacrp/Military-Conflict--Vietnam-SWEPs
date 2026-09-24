@@ -41,6 +41,13 @@ function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
     // (CycleClipPoseTime, the game's AE_WPN_CLIP_TO_POSEPARAM at frame 55); shown earlier, the
     // next chamber looked empty the moment the shot went off
     local shown = self:Clip1()
+    // Clip-loaded pose selects how many rounds the hand carries in the insert animation.
+    // Keep that selection while the actual ammo transfer waits for the insertion event.
+    local pendingInsert = self:GetReloading() and self.ReloadInsertTime and self:DeferPending("ReloadInsert")
+    if pendingInsert then
+        local reserve = self:GetInfiniteAmmo() and math.huge or self:Ammo1()
+        shown = math.min(shown + math.min(self.ShotgunReloadRounds, reserve), self:GetClip1Capacity())
+    end
     if self.CycleClipPoseTime and !self:GetReloading() then
         // NeedCycle from the shot until the cycle starts, then the networked start time
         // (ActionStart, sh_think.lua) until the refresh point; a Lua-side start time differed
@@ -124,11 +131,15 @@ function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
     end
 
     if self.BulletBodygroups then
+        // Keys are round-count thresholds, not list positions. Keep sparse thresholds
+        // working while ignoring the BaseClass entry added by SWEP table inheritance.
         for i, bg in pairs(self.BulletBodygroups) do
-            if i > bodygroupbulletscount then
-                vm:SetBodygroup(bg[1], bg[2])
-            else
-                vm:SetBodygroup(bg[1], 0)
+            if isnumber(i) then
+                if i > bodygroupbulletscount then
+                    vm:SetBodygroup(bg[1], bg[2])
+                else
+                    vm:SetBodygroup(bg[1], 0)
+                end
             end
         end
     end
@@ -153,7 +164,7 @@ function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
     // empty reload it drops the moment the new magazine is in (MagInTimeEmpty), as the game
     // does at its NEXTCLIP event: held to the end, the layer kept the bolt back while the
     // animation closed it, and the bolt visibly closed and reopened (M14, XM21, M2, vz.58, MAS-49).
-    local empty = (self:Clip1() == 0 and !displayRoundsToLoad) and 1 or 0
+    local empty = ((pendingInsert and shown or self:Clip1()) == 0 and !displayRoundsToLoad) and 1 or 0
     if self:GetAkimbo() and !displayRoundsToLoad then
         // the dual models' SlidePosition has three states: none, the right gun empty (it fires
         // first, so it runs dry first), both empty (knots at 0, 1/3-2/3, 1)

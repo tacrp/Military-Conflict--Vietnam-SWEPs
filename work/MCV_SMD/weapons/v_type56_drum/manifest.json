@@ -1,0 +1,25 @@
+[
+  {
+    "name": "type56_drum",
+    "source": "work/MCV_SMD/weapons/v_type56_drum/v_type56_drum_mesh0.smd",
+    "output": "work/MCV_SMD/weapons/v_type56_drum/mcv_type56_drum.png",
+    "installed": null,
+    "source_sha256": "606c5b939933443ed85daaef76d3c57ade861145e242b24a83103cf09c05fadb",
+    "png_sha256": "c7868790564652a9d0cd7d98783896c15a68b2c6279d9a712c78fa876b451a27",
+    "triangles": 38765,
+    "size": 512,
+    "bone": "Base",
+    "side": "left",
+    "style": "translucent_outline",
+    "line_opacity": 0.65,
+    "exclude_materials": [
+      "shell"
+    ],
+    "alpha_bounds": [
+      1,
+      159,
+      511,
+      353
+    ]
+  }
+]

@@ -1,0 +1,7 @@
+DecalModulate
+{
+$basetexture "mcv/decals/rock/rock03"
+$decal 1
+$decalscale "0.17"
+$decalScaleVariation "0.15"
+}

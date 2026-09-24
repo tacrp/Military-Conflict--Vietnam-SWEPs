@@ -1,0 +1,25 @@
+[
+  {
+    "name": "svd_irons",
+    "source": "work/MCV_SMD/weapons/v_svd_irons/v_svd_irons_mesh0.smd",
+    "output": "work/MCV_SMD/weapons/v_svd_irons/mcv_svd_irons.png",
+    "installed": null,
+    "source_sha256": "f22e9b9062ab7623400d7655338f9ca2d1655afbf19664e64f6eae0078a3479b",
+    "png_sha256": "c2db8187b2be0854243085a2d351aad2e92b02e9468b952cf8720a6a180651e9",
+    "triangles": 16222,
+    "size": 512,
+    "bone": "Base",
+    "side": "left",
+    "style": "translucent_outline",
+    "line_opacity": 0.65,
+    "exclude_materials": [
+      "shell"
+    ],
+    "alpha_bounds": [
+      1,
+      215,
+      511,
+      297
+    ]
+  }
+]

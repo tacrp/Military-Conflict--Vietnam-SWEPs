@@ -34,11 +34,14 @@ MCV.ImpactFamilies = {
     "wet", "wood",
 }
 
+game.AddParticles("particles/mcv_scaled_impacts.pcf")
+game.AddParticles("particles/mcv_scaled_impacts_cheap.pcf")
+
 local index = {}
 for i, name in ipairs(MCV.ImpactFamilies) do
     index[name] = i
     for v = 1, 3 do
-        PrecacheParticleSystem("impact_" .. name .. "_" .. v)
+        PrecacheParticleSystem("mcv_scaled_impact_" .. name .. "_" .. v)
     end
 end
 
@@ -64,25 +67,18 @@ local mattype_to_family = {
     [MAT_EGGSHELL] = "plaster",
 }
 
-// The hole UTIL_ImpactTrace would have left. Only decal names the engine is certain to have.
-local mattype_to_decal = {
-    [MAT_METAL] = "Impact.Metal",
-    [MAT_GRATE] = "Impact.Metal",
-    [MAT_VENT] = "Impact.Metal",
-    [MAT_COMPUTER] = "Impact.Computer",
-    [MAT_WOOD] = "Impact.Wood",
-    [MAT_GLASS] = "Impact.Glass",
-    [MAT_DIRT] = "Impact.Dirt",
-    [MAT_GRASS] = "Impact.Dirt",
-    [MAT_FOLIAGE] = "Impact.Dirt",
-    [MAT_SLOSH] = "Impact.Dirt",
-    [MAT_SAND] = "Impact.Sand",
-    [MAT_SNOW] = "Impact.Sand",
-    [MAT_ANTLION] = "Impact.Antlion",
-    [MAT_FLESH] = "Impact.Flesh",
-    [MAT_BLOODYFLESH] = "Impact.Flesh",
-    [MAT_ALIENFLESH] = "Impact.Flesh",
+// The game's own decal materials are registered by sh_impact_decals.lua.
+local decal_alias = {
+    metalsteam = "metal", metalwater = "metal", sandbarrel = "sand",
+    clay = "dirt", wet = "dirt", paper = "cardboard", cloth = "upholstery",
 }
+
+function MCV.ImpactDecalName(family)
+    if family == "puddle" or string.StartWith(family, "water_") then return end
+    family = decal_alias[family] or family
+    if !MCV.SurfaceDecals[family] then family = "concrete" end
+    return "MCV.Impact." .. family
+end
 
 // The surface's own property name first, since it separates brick, asphalt, rock and carpet
 // from the one MAT_CONCRETE the engine reports for all of them; the material type otherwise.
@@ -96,23 +92,31 @@ end
 
 // True when the impact was handled here, which is the weapon hook's signal to leave the
 // engine's own alone.
-function MCV.SurfaceImpact(tr)
+// 40 damage is the original size. Square-root growth keeps pellet marks modest
+// and caps very powerful/custom-multiplier weapons at twice the particle radius.
+function MCV.ImpactScale(damage)
+    return math.Clamp(math.sqrt(math.max(damage or 40, 0) / 40), 0.5, 2)
+end
+
+function MCV.SurfaceImpact(tr, damage, recipients)
     if !MCV.SurfaceImpacts() then return false end
-    if !IsFirstTimePredicted() then return end
     if !tr or !tr.Hit or tr.HitSky then return false end
 
     local family = MCV.ImpactFamily(tr)
     local i = family and index[family]
     if !i then return false end
+    // This hook receives authoritative client impacts (including singleplayer),
+    // outside user-command prediction. IsFirstTimePredicted can be false here;
+    // it is not a replay indicator for this callback. The engine gates the hook.
 
     local fx = EffectData()
     fx:SetOrigin(tr.HitPos)
     fx:SetNormal(tr.HitNormal)
     fx:SetFlags(i)
-    util.Effect("mcv_impact", fx)
+    fx:SetScale(MCV.ImpactScale(damage))
+    // Authoritative/SP callers run outside prediction. Hitscan supplies its own
+    // recipient filter and gates first-predicted dispatch at the firing callback.
+    util.Effect("mcv_impact", fx, true, recipients or true)
 
-    -- util.Decal(mattype_to_decal[tr.MatType] or "Impact.Concrete",
-    --            tr.HitPos + tr.HitNormal * 4, tr.HitPos - tr.HitNormal * 4, tr.Entity)
-
-    return false
+    return true
 end

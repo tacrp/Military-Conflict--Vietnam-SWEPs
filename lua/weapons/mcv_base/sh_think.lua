@@ -77,7 +77,7 @@ function SWEP:ThinkWeapon()
     if owner:KeyDown(IN_ATTACK) and self:GetPrimedAttack() and self:GetLastTriggerTime() + self.TriggerDelayTime < CurTime() then
         if SERVER or !game.SinglePlayer() then
             self:AttackEffects()
-            if self.ShootEntity then
+            if self:GetProjectileClass() then
                 self:RocketAttack()
             else
                 self:BulletAttack()

@@ -1,0 +1,77 @@
+StudioMDL.exe (Sep 16 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\w_type56_drum\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\w_type56_drum\w_type56_drum.qc"
+Building binary model files...
+Working on "w_type56_drum.qc"
+SMD MODEL ../../../MCV_SMD/weapons/v_type56_drum/w_type56_drum_mesh0.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/w_type56/w_ak_akb_lod0.smd
+SMD MODEL ../../../MCV_SMD/weapons/v_type56_drum/w_type56_drum_mesh1.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/w_type56/w_ak_akb_lod0_lod1.smd
+SMD MODEL ../../../MCV_SMD/weapons/v_type56_drum/w_type56_drum_mesh2.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/w_type56/w_ak_akb_lod0_lod2.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/w_type56/w_type56_anims/idle.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/w_type56/w_type56_physics.smd
+Processing LOD for material: w_type56
+Lod 1: vertexes: 2859 (341 new)
+Lod 2: vertexes: 3260 (401 new)
+Processing LOD for material: w_rpk_drum
+Lod 1: vertexes: 3548 (144 new)
+Processing LOD for material: w_akb
+Lod 1: vertexes: 630 (168 new)
+Lod 2: vertexes: 720 (90 new)
+Model has 8 convex sub-parts
+Collision model completed.
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_type56_drum.mdl:
+bones         1956 bytes (4)
+animations     132 bytes (1 anims) (1 frames) [0:00]
+sequences      232 bytes (1 seq) 
+ik/pose        476 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       216 bytes
+keyvalues       20 bytes
+bone transforms      608 bytes
+bone flex driver       0 bytes
+Collision model volume 147.58 in^3
+collision        0 bytes
+total         4300
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_type56_drum.vvd:
+vertices    170304 bytes (3548 vertices)
+vertices     34560 bytes (720 vertices)
+tangents     56768 bytes (3548 vertices)
+tangents     11520 bytes (720 vertices)
+total       273216 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_type56_drum.dx80.vtx":
+body parts:        16 bytes
+models:           132 bytes
+model LODs:       108 bytes
+meshes:            81 bytes
+strip groups:     225 bytes
+strips:           243 bytes
+verts:          59202 bytes
+indices:        34458 bytes
+bone changes:      96 bytes
+everything:     94489 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_type56_drum.dx90.vtx":
+body parts:        16 bytes
+models:           132 bytes
+model LODs:       108 bytes
+meshes:            81 bytes
+strip groups:     225 bytes
+strips:           243 bytes
+verts:          59202 bytes
+indices:        34458 bytes
+bone changes:      96 bytes
+everything:     94489 bytes
+
+Completed "w_type56_drum.qc"

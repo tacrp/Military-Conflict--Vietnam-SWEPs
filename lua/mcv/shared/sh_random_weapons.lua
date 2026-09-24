@@ -23,8 +23,9 @@ country("de", "German", "de", "German Empire", "German Reich", "Nazi Germany", "
 country("gb", "British", "gb", "United Kingdom")
 country("au", "Australian", "au", "Australia")
 country("be", "Belgian", "be", "Belgium")
+country("nl", "Dutch", "nl", "Netherlands")
 country("cz", "Czechoslovak", "cz", "Czechoslovakia")
-country("kp", "North Korean", "kp", "Democratic People's Republic of Korea")
+country("kp", "North Korean", "kp", "Democratic People's Republic of Korea", "North Korea")
 country("vn", "Vietnamese", "vn", "Vietnam", "North Vietnam", "Democratic Republic of Vietnam")
 country("fi", "Finnish", "fi", "Finland")
 country("hu", "Hungarian", "hu", "Hungary")
@@ -44,7 +45,7 @@ local function theme(key, name, flag, members, kind)
     define("theme:" .. key, "Random " .. name .. " Weapon", kind or "other", {classes = classes, flag = flag})
 end
 theme("homemade", "Homemade", nil, "vccarbine vcgrenade vcpistol vcpistol2 vcshotgun vcsmg")
-theme("custom", "Custom", nil, "m635 xm16super ptrd_sniper")
+theme("custom", "Custom", nil, "m635 xm16super ptrd_sniper m1_carbine svd_irons type56_drum")
 // Explicit period configurations: modern derivatives and SOG conversions stay out.
 theme("us_ww2", "US WW2", "us", "bazooka browning_auto hdm m1897 m1905_bayonet m1911a1 m1917 m1918 m1918_bar m1919 m1942_machete m1c m1g m2c m37 m3a1 m50r m55r m60r m8 mk2 mk3a2 springfield springfield_s swm10 thompson thompson_m1928", "ww2")
 theme("ru_ww2", "Russian WW2", "su", "m1895 m38 m38_s m91 avt40 dp28 pps43 ppsh41 ppsh41_drum ptrd svt40 svt40_s tt33", "ww2")
@@ -66,10 +67,10 @@ alsoCountry("gb", "l1a1 hipower") // Commonwealth SLR and service pistol.
 alsoCountry("au", "bren hipower") // Australian service alongside the local SLRs.
 alsoCountry("be", "l1a1 l1a1_sog l2a1 babybrowning browning_auto") // FN design/manufacture.
 alsoCountry("cz", "cz52 vz24 vz54 vz54s vz59 bren") // Czech designs, including the Bren's ancestry.
-alsoCountry("de", "g3 t223") // H&K family, currently labelled US in the source metadata.
+alsoCountry("de", "g3 t223 t223_25") // H&K family, including the US-market T223.
 alsoCountry("ru", "m1895") // Belgian-designed Russian service revolver.
 alsoCountry("fr", "ruby mat49k") // French service pistol and the Vietnamese MAT-49 conversion.
-alsoCountry("us", "m45_sog rpd_sog rpdb_sog") // SOG configurations of foreign designs.
+alsoCountry("us", "m45_sog rpd_sog rpdb_sog v40") // SOG configurations and the Dutch V40 in US service.
 
 define("feature:scope", "Random Scoped Weapon", "other", {feature = "HasScope"})
 define("feature:dual", "Random Dual-Wield Weapon", "other", {feature = "HasAkimbo"})

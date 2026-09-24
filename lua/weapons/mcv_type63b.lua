@@ -7,7 +7,7 @@ AddCSLuaFile()
 // Names and basic information
 SWEP.PrintName = "Type 63 FS" -- literally the exact same as the normal one???????????
 SWEP.Category = "Military Conflict: Vietnam"
-SWEP.Country = "People's Republic of China"
+SWEP.Country = "China"
 SWEP.SubCategory = "Carbines"
 SWEP.Caliber = "7.62x39mm"
 
@@ -98,7 +98,7 @@ SWEP.CrosshairDeltaDistance = 4
 
 SWEP.WeaponWeight = 3.65
 
-SWEP.Primary.Ammo = "ar2"
+SWEP.Primary.Ammo = "smg1"
 SWEP.Primary.ClipSize = 20
 SWEP.Primary.Chamber = 1
 SWEP.Primary.DefaultClip = 80

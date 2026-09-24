@@ -400,6 +400,12 @@ function SWEP:GetCrosshairSpread()
     return self.Spread or 0
 end
 
+function SWEP:GetCrosshairKick()
+    local since = CurTime() - self:GetLastRecoilTime()
+    local kick = math.Clamp(1 - since / HUD.CrosshairKickTime, 0, 1)
+    return kick * kick
+end
+
 function SWEP:DoDrawCrosshair(x, y)
     local blend = self:GetHUDBlend()
     local reloading = self:GetReloading()
@@ -442,9 +448,7 @@ function SWEP:DoDrawCrosshair(x, y)
 
     // target gap from the live spread, plus a kick that decays after each shot
     local spread = self:GetCrosshairSpread()
-    local since = CurTime() - self:GetLastRecoilTime()
-    local kick = math.Clamp(1 - since / HUD.CrosshairKickTime, 0, 1)
-    kick = kick * kick
+    local kick = self:GetCrosshairKick()
     // the hip sway's peak (degrees, both axes: 1.2 covers the diagonal) widens the gap so the
     // wandering barrel stays inside the crosshair
     local sway = self.GetAimSwayAmplitude and self:GetAimSwayAmplitude(true) * 1.2 or 0
@@ -471,7 +475,7 @@ function SWEP:DoDrawCrosshair(x, y)
 
     drawshadowrect(x - (dot_size / 2), y - (dot_size / 2), dot_size, dot_size, col)
 
-    if self.Num > 1 then
+    if self.CrosshairCircle or self:GetBulletCount() > 1 then
         local shadow = crosshair_shadow
         shadow.a = a * 100 / 150
 
@@ -545,98 +549,158 @@ local function boxes(f)
     return str
 end
 
-SWEP.InfoMarkup = nil
+// Plain data rows keep labels and values aligned independently of font metrics.
+function SWEP:GetWeaponInfoRows()
+    local rows = {}
+    local thrown = self.ThrowEntity and baseclass.Get(self.ThrowEntity)
+    local smoke = thrown and thrown.SmokeParticle and thrown.Hurts == false
+    local function row(label, value)
+        rows[#rows + 1] = {label .. ":", tostring(value)}
+    end
+    if self.AmmoPerShot > 0 and self.Primary.Ammo and self.Primary.Ammo != "none" then
+        local ammo = self.SelectableGrenadeAmmo and self:GetSelectedAmmo() or self.Primary.Ammo
+        row("Ammo", language.GetPhrase(ammo .. "_ammo"))
+    end
+    if (self.DamageGeneric or 0) > 0 and !self:GetProjectileClass() and !smoke then
+        local pellets = self:GetBulletCount()
+        row("Damage", self.DamageGeneric .. (pellets > 1 and ("x" .. pellets) or ""))
+    end
+    local function explosive(entity, prefix, category)
+        local projectile = entity and baseclass.Get(entity) or {}
+        projectile = projectile or {}
+        local damage, radius = self.ExplosionDamage, self.ExplosionRadius
+        // LaunchProjectile falls back on the projectile for zero/missing values.
+        // Throwables/placed charges deliberately allow zero damage (smoke/gas).
+        if self:GetProjectileClass() or category then
+            damage = (damage or 0) > 0 and damage or projectile.ExplosionDamage
+            radius = (radius or 0) > 0 and radius or projectile.ExplosionRadius
+        end
+        if (damage or 0) > 0 then
+            row(prefix .. "damage", math.Round(damage * self:StatMult("explosion_damage", category), 1))
+            if (radius or 0) > 0 then
+                row(prefix .. "radius", math.Round(radius * self:StatMult("explosion_radius", category) * 0.0254, 1) .. " m")
+            end
+        end
+    end
+    if smoke then
+        local color = self.SmokeColor or thrown.SmokeColor
+        rows[#rows + 1] = {"Smoke colour:", "", swatch = color and Color(color.x, color.y, color.z) or Color(255, 255, 255)}
+    else
+        explosive(self:GetProjectileClass() or self.ThrowEntity or self.PlacedEntityClass, "Blast ")
+    end
+    if self.HasRifleGrenade then
+        explosive(self.RifleGrenadeEntity, self.RifleGrenadeIsUBGL and "GL " or "RG ", MCV.CATEGORY_RIFLE_GRENADE)
+    end
+    if (self.FireRate or 0) > 0 then row("Fire Rate", self.FireRate .. " RPM") end
+    if self.Primary.ClipSize > 0 then
+        local bonus = self.Primary.Chamber or 0
+        row("Capacity", self.Primary.ClipSize .. (bonus > 0 and " (+" .. bonus .. ")" or ""))
+    end
+    if (self.FireRate or 0) > 0 and !self:GetProjectileClass() and (self.RangeModifier or 0) > 0 and self.RangeModifier < 1 then
+        local range = math.floor(-346.571 / math.log(self.RangeModifier))
+        row("Range", boxes(math.Clamp(range / 10000, 0, 1)))
+    end
+    if self.Caliber and self.Caliber != "" then row("Caliber", self.Caliber) end
+    if (self.FireRate or 0) > 0 then
+        local d
+        if self.SpreadIronsighted == self.Spread then
+            d = math.log(1 + self.Spread / 3)
+            row("Spread", boxes(math.Clamp(d, 0, 1)))
+        else
+            d = 1 - math.log(1 + (self.SpreadIronsighted + self.Spread) / 15)
+            row("Accuracy", boxes(math.Clamp(d, 0, 1)))
+        end
+        local recoil = ((self.ViewSlideRecoilUp + self.ViewSlideRecoilIronsightUp) / 2)
+            + self.ViewSlideRecoilRight + self.ViewSlideRecoilIronsightRight
+        row("Recoil", boxes(math.Clamp(recoil * 0.5, 0, 1)))
+    end
+    return rows
+end
+
+function SWEP:GetWeaponInfoTags()
+    local tags = {}
+    local function tag(enabled, name) if enabled then tags[#tags + 1] = "[" .. name .. "]" end end
+    tag(self.HasAkimbo, "DUAL")
+    tag(self.HasRifleGrenade and !self.RifleGrenadeIsUBGL, "RG")
+    tag(self.HasRifleGrenade and self.RifleGrenadeIsUBGL, "GL")
+    tag(self.Silencer, "SD")
+    tag(self.HasBipod, "BI")
+    tag(self.HasBayonet, "BAYO")
+    tag(self.HasScope and self.AdjustableScopes, "VS")
+    tag(self.ArmorPiercing, "AP")
+    return table.concat(tags, " ")
+end
+
 function SWEP:PrintWeaponInfo(x, y, alpha)
     if self.DrawWeaponInfoBox == false then return end
-
-    // Built once per weapon instance; markup.Parse every frame is expensive.
-    if self.InfoMarkup == nil then
-        local str
-        local title_color = "<color=230,230,230,255>"
-        local text_color = "<color=150,150,150,255>"
-        str = ""
-
-        str = str .. "<font=MCV_HudSelectionTitle>" .. title_color .. self.PrintName .. "</color></font>\n"
-
-        if self.Country ~= "" then
-            str = str .. "<font=MCV_HudSelectionDesc>" .. text_color .. self.Country .. "</color></font>\n"
-        end
-
-        str = str .. "\n<font=HudSelectionText>"
-
-        if self.AmmoPerShot > 0 and self.Primary.Ammo and self.Primary.Ammo != "none" then
-            str = str .. title_color .. "Ammo:</color>\t" .. text_color .. language.GetPhrase(self.Primary.Ammo .. "_ammo") .. "</color>\n"
-        end
-
-        if (self.DamageGeneric or 0) > 0 then
-            str = str .. title_color .. "Damage:</color>\t" .. text_color .. self.DamageGeneric .. (self.Num > 1 and ("x" .. self.Num) or "") .. "</color>\n"
-        end
-
-        if (self.FireRate or 0) > 0 then
-            str = str .. title_color .. "Fire Rate:</color>\t" .. text_color .. self.FireRate .. " RPM</color>\n"
-        end
-
-        if self.Primary.ClipSize > 0 then
-            local bonus = self.Primary.Chamber or 0
-            str = str .. title_color .. "Capacity:</color>\t" .. text_color .. self.Primary.ClipSize .. (bonus > 0 and " (+" .. bonus .. ")" or "") .. "</color>\n"
-        end
-
-        if (self.FireRate or 0) > 0 then
-            local range = math.floor(-346.571 / math.log(self.RangeModifier))
-
-            str = str .. title_color .. "Range:</color>\t" .. text_color
-            str = str .. boxes(Lerp(range / 10000, 0, 1)) .. "</color>\n"
-        end
-
-        if self.Caliber ~= "" then
-            str = str .. title_color .. "Caliber:</color>\t" .. text_color .. self.Caliber .. "</color>\n"
-        end
-
-        if (self.FireRate or 0) > 0 then
-            local d
-            if self.SpreadIronsighted == self.Spread then
-                str = str .. title_color .. "Spread:</color>\t" .. text_color
-                d = Lerp(math.log(1 + (self.Spread) / 3), 0, 1)
-            else
-                str = str .. title_color .. "Accuracy:</color>\t" .. text_color
-                d = Lerp(math.log(1 + (self.SpreadIronsighted + self.Spread) / 15), 1, 0)
-            end
-            str = str .. boxes(d) .. "</color>\n"
-
-            local recoil = ((self.ViewSlideRecoilUp + self.ViewSlideRecoilIronsightUp) / 2) + (self.ViewSlideRecoilRight + self.ViewSlideRecoilIronsightRight)
-
-            str = str .. title_color .. "Recoil:</color>\t\t" .. text_color
-            str = str .. boxes(Lerp(recoil * 0.5, 0, 1)) .. "</color>\n"
-        end
-
-        // the same controls the HUD hints show
-        local hints = self:GetControlHints()
-        if hints and #hints > 0 then
-            str = str .. "\n"
-            for _, h in ipairs(hints) do
-                str = str .. title_color .. HUD.KeyLabel(h[1]) .. "</color>\t" .. text_color .. h[2] .. "</color>\n"
-            end
-        end
-
-        str = str .. "</font>"
-        self.InfoMarkup = markup.Parse(str, 250)
+    local scale = ScreenScale(1) / 3
+    local padding = 10 * scale
+    local width = math.min(300 * scale, ScrW() - padding * 2)
+    local textWidth = width - padding * 2
+    local rows, tags = self:GetWeaponInfoRows(), self:GetWeaponInfoTags()
+    local key = {tostring(textWidth), tostring(MCV.SelectionFontRevision), self.PrintName, self.Country or "", tags}
+    for _, row in ipairs(rows) do
+        key[#key + 1] = row[1] .. row[2] .. (row.swatch and tostring(row.swatch) or "")
     end
-
-    surface.SetDrawColor(60, 60, 60, alpha)
-    surface.SetTexture(self.SpeechBubbleLid)
-    surface.DrawTexturedRect(x, y - 64 - 5, 128, 64)
-    draw.RoundedBox(8, x - 5, y - 6, 260, self.InfoMarkup:GetHeight() + 18, Color(60, 60, 60, alpha))
-    self.InfoMarkup:Draw(x + 5, y + 5, nil, nil, alpha)
+    key = table.concat(key, "\n")
+    if self.InfoLayoutKey != key then
+        local function parse(text, font, color, w)
+            return markup.Parse("<font=" .. font .. "><color=" .. color .. ">" .. text .. "</color></font>", w)
+        end
+        local layout = {}
+        local title = parse(self.PrintName, "MCV_HudSelectionTitle", "230,230,230", textWidth)
+        local country = parse(self.Country or "", "MCV_HudSelectionDesc", "150,150,150", textWidth)
+        local height = title:GetHeight() + country:GetHeight() + padding
+        surface.SetFont("MCV_HudSelectionText")
+        local labelWidth = 0
+        for _, row in ipairs(rows) do labelWidth = math.max(labelWidth, surface.GetTextSize(row[1])) end
+        // Markup's per-glyph rounding can exceed GetTextSize's whole-string width.
+        // Leave breathing room so labels such as Accuracy do not wrap at 4K.
+        labelWidth = math.min(labelWidth + 12 * scale, textWidth * 0.55)
+        for _, row in ipairs(rows) do
+            local label = parse(row[1], "MCV_HudSelectionText", "230,230,230", labelWidth)
+            local value = parse(row[2], "MCV_HudSelectionText", "150,150,150", textWidth - labelWidth - padding)
+            layout[#layout + 1] = {label = label, value = value, swatch = row.swatch, y = height}
+            height = height + math.max(label:GetHeight(), value:GetHeight(), row.swatch and 14 * scale or 0)
+        end
+        local footer = tags != "" and parse(tags, "MCV_HudSelectionText", "230,230,230", textWidth) or nil
+        self.InfoLayout = {title = title, country = country, rows = layout, footer = footer, footerY = height + padding,
+            height = height + (footer and padding + footer:GetHeight() or 0) + padding * 2}
+        self.InfoLayoutKey = key
+    end
+    local layout = self.InfoLayout
+    x = math.Clamp(x, padding, math.max(padding, ScrW() - width - padding))
+    y = math.Clamp(y, padding, math.max(padding, ScrH() - layout.height - padding))
+    draw.RoundedBox(8 * scale, x, y, width, layout.height, Color(60, 60, 60, alpha))
+    local left, top = x + padding, y + padding
+    layout.title:Draw(left, top, nil, nil, alpha)
+    layout.country:Draw(left, top + layout.title:GetHeight(), nil, nil, alpha)
+    for _, row in ipairs(layout.rows) do
+        row.label:Draw(left, top + row.y, nil, nil, alpha)
+        if row.swatch then
+            local size = 12 * scale
+            local sx, sy = x + width - padding - size, top + row.y + scale
+            surface.SetDrawColor(row.swatch.r, row.swatch.g, row.swatch.b, alpha)
+            surface.DrawRect(sx, sy, size, size)
+            surface.SetDrawColor(230, 230, 230, alpha)
+            surface.DrawOutlinedRect(sx, sy, size, size)
+        else
+            row.value:Draw(x + width - padding, top + row.y, TEXT_ALIGN_RIGHT, nil, alpha, TEXT_ALIGN_RIGHT)
+        end
+    end
+    if layout.footer then layout.footer:Draw(left, top + layout.footerY, nil, nil, alpha) end
 end
 
 SWEP.Mat_Select = nil
 
 function SWEP:DrawWeaponSelection(x, y, w, h, a)
+    // Anchor the info box to the selection slot, before adjusting the icon's bounds.
+    local infoX, infoY = x + w + ScreenScale(20 / 3), y + h * 0.95
     if !self.Mat_Select then
         self.Mat_Select = Material(self.IconOverride or  "entities/" .. self:GetClass() .. ".png", "smooth mips")
     end
 
-    surface.SetDrawColor(255, 255, 255, 255)
+    surface.SetDrawColor(255, 255, 255, a)
     surface.SetMaterial(self.Mat_Select)
     if self.IconOverride then
         w = w - 128
@@ -647,4 +711,5 @@ function SWEP:DrawWeaponSelection(x, y, w, h, a)
     end
 
     surface.DrawTexturedRect(x, y, w, w)
+    self:PrintWeaponInfo(infoX, infoY, a)
 end

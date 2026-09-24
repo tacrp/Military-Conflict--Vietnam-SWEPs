@@ -7,7 +7,7 @@ AddCSLuaFile()
 // Names and basic information
 SWEP.PrintName = "Type 14 Nambu"
 SWEP.Category = "Military Conflict: Vietnam"
-SWEP.Country = "Empire of Japan"
+SWEP.Country = "Japan"
 SWEP.SubCategory = "Pistols"
 SWEP.Caliber = "8x22mm Nambu"
 

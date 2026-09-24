@@ -1,0 +1,128 @@
+StudioMDL.exe (Sep 16 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_m16_flamer\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_m16_flamer\v_m16_flamer.qc"
+Building binary model files...
+Working on "v_m16_flamer.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\m16_flamer.smd
+SMD MODEL fixed_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\run_a_corrective_animation.smd
+SMD MODEL fixed_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\gl_shoot_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\gl_shoot_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\basePose_a.smd
+SMD MODEL fixed_anims\runIdle_a.smd
+SMD MODEL fixed_anims\run_a.smd
+SMD MODEL fixed_anims\walkIdle_a.smd
+SMD MODEL fixed_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\shoot2_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\change_firemode_idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\change_firemode_iron.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\gl_shoot_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\gl_shoot_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\idletoironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\ironsighttoidle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\idletonearwall.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\nearwall.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\nearwalltoidle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\prone.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\pronetoidle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\idletoprone.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\pickupstart.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\pickupend.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\pickuploop.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\holster.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\gl.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\idle_to_gl.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\gl_to_idle.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\irongl.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\gl_to_irongl.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\irongl_to_gl.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\reload_secondary.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\gl_draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\idletonearwall_grenade.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\nearwall_grenade.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\nearwalltoidle_grenade.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\prone_grenade.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\pronetoidle_grenade.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\idletoprone_grenade.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\bash_grenade.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\pickupstart_grenade.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\pickupend_grenade.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\pickuploop_grenade.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_m16_flamer\v_m16_flamer_anims\holster_grenade.smd
+Processing LOD for material: shells_small
+Processing LOD for material: m203_nc
+Processing LOD for material: m203
+Processing LOD for material: flamer
+Processing LOD for material: flamer_fuel
+Processing LOD for material: m16a1
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m16_flamer.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m16_flamer.mdl
+   Found 50 preexisting sequences.
+bones        22448 bytes (98)
+animations  214924 bytes (68 anims) (1651 frames) [1:12]
+Building sequence index remapping table...
+No re-ordering required.
+sequences    16708 bytes (50 seq) 
+ik/pose        204 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       416 bytes
+keyvalues       20 bytes
+bone transforms    13392 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       273388
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m16_flamer.vvd:
+vertices    868656 bytes (18097 vertices)
+tangents    289552 bytes (18097 vertices)
+total      1158272 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m16_flamer.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            54 bytes
+strip groups:     150 bytes
+strips:           162 bytes
+verts:         162873 bytes
+indices:       129546 bytes
+bone changes:      96 bytes
+everything:    292945 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_m16_flamer.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            54 bytes
+strip groups:     150 bytes
+strips:           162 bytes
+verts:         162873 bytes
+indices:       129546 bytes
+bone changes:      96 bytes
+everything:    292945 bytes
+
+Completed "v_m16_flamer.qc"

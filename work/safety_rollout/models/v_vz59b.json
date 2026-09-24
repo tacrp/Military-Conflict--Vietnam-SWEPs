@@ -1,8 +1,30 @@
 {
   "model": "v_vz59b",
-  "status": "equipment: original animations",
-  "safe": false,
-  "qc_sha256": "87cfe7ab529252f5980180d32c97f008d74d004e11000d8c1c99a5a747383ffa",
+  "safe": true,
+  "status": "baked",
+  "sequences": [
+    {
+      "sequence": "idletonearwall",
+      "rows": 2,
+      "mode_axis": false
+    },
+    {
+      "sequence": "nearwall",
+      "rows": 2,
+      "mode_axis": false
+    },
+    {
+      "sequence": "nearwalltoidle",
+      "rows": 2,
+      "mode_axis": false
+    }
+  ],
+  "max_grip_error": 7.867778351859515e-10,
+  "max_blended_grip_error": 0.01945172239993457,
+  "max_shoulder_shift": 0.0,
+  "knots": 31,
+  "reach_margin": 0.5,
+  "qc_sha256": "ac9ac7783f6b5295964dff0df93a5a476fb0711b6021db0580adc6bb853d08f8",
   "compile": {
     "ok": true,
     "returncode": 0,
@@ -10,6 +32,9 @@
       "WARNING: Failed to load keyvalues file cfg/mount.cfg!",
       "WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences."
     ]
+  },
+  "timing_check": {
+    "matches_installed": true
   },
   "compiled_sequence_count": 36
 }

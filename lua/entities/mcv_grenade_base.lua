@@ -89,8 +89,7 @@ function ENT:Detonate()
     end
 
     // a planted charge blows normal to the surface it was placed on; anything thrown or
-    // dropped blows straight up, whatever it happened to bounce off last (the fire pool above
-    // still lies on the surface)
+    // dropped blows straight up, whatever it happened to bounce off last.
     local normal = self.PlacedNormal or vector_up
     MCV.ExplosionEffect(self.ExplosionFamily, self:GetImpactPos(), normal, self:WaterLevel() > 0)
 

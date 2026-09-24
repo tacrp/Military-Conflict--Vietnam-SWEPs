@@ -145,29 +145,18 @@ function ENT:StartTrail()
     ParticleEffectAttach(self.TrailParticle, PATTACH_ABSORIGIN_FOLLOW, self, 0)
 end
 
-// Surface normal at the point of impact, for orienting the explosion effect. Filled in by
-// PhysicsCollide; timed detonations in the air fall back to a short trace along the velocity,
-// then to straight up.
+// Collision data describes a detonation only for an immediate impact fuse. A
+// timed/remote explosive may have bounced, rolled or moved with its parent since.
+// Planted charges retain their explicit orientation; airborne bursts face up.
 function ENT:GetImpactNormal()
-    if self.ImpactNormal then return self.ImpactNormal end
-
-    local vel = self:GetVelocity()
-    if vel:LengthSqr() > 1 then
-        local tr = util.TraceLine({
-            start = self:GetPos(),
-            endpos = self:GetPos() + vel:GetNormalized() * 96,
-            filter = self,
-            mask = MASK_SOLID,
-        })
-
-        if tr.Hit then return -tr.HitNormal end
+    if self.ImpactFuse and (self.Delay == 0 or self.ExplodeOnImpact) and self.ImpactNormal then
+        return self.ImpactNormal
     end
-
-    return vector_up
+    return self.PlacedNormal or vector_up
 end
 
 function ENT:GetImpactPos()
-    if self.ImpactPos then
+    if self.ImpactFuse and (self.Delay == 0 or self.ExplodeOnImpact) and self.ImpactPos then
         return self.ImpactPos + (self.ImpactNormal or vector_up) * 2
     end
 
@@ -335,8 +324,65 @@ function ENT:DoSmokeTrail()
     end
 end
 
+// Swept server flight avoids VPhysics' global speed cap without changing physics
+// settings for other addons. Only launchers opting into RocketGravity use this.
+function ENT:StartRocketFlight(direction, speed, gravity, boostSpeed, delay, duration)
+    if !SERVER then return end
+    local phys = self:GetPhysicsObject()
+    if IsValid(phys) then phys:EnableMotion(false) end
+    self:SetMoveType(MOVETYPE_NONE)
+    // Keep the physics collision model available to TraceEntity, but do not
+    // let the stationary physics object block other entities or volley rockets.
+    self:SetSolid(SOLID_VPHYSICS)
+    self:SetNotSolid(true)
+    self.RocketFlight = {
+        origin = self:GetPos(), direction = direction, started = CurTime(),
+        speed = speed, gravity = gravity, boostSpeed = boostSpeed,
+        delay = delay, duration = duration,
+    }
+    self:NextThink(CurTime())
+end
+
+function ENT:Think_RocketFlight()
+    local flight = self.RocketFlight
+    if !SERVER or !flight or self.Detonated then return end
+    local age = math.max(CurTime() - flight.started, 0)
+    if age > 30 then self:Remove() return end
+    local distance, speed = MCV.RocketFlightDistance(age, flight.speed,
+        flight.boostSpeed, flight.delay, flight.duration)
+    local velocity = flight.direction * speed - Vector(0, 0, flight.gravity * age)
+    local destination = flight.origin + flight.direction * distance
+        - Vector(0, 0, 0.5 * flight.gravity * age * age)
+    // Sweep the initialized sphere itself, not its axis-aligned bounding box.
+    // TraceEntity ignores rotation, which is immaterial for a sphere.
+    local tr = util.TraceEntity({
+        start = self:GetPos(), endpos = destination,
+        filter = {self, self:GetOwner()}, mask = MASK_SHOT,
+        collisiongroup = COLLISION_GROUP_PROJECTILE,
+    }, self)
+    self:SetPos(tr.HitPos)
+    if velocity:LengthSqr() > 0 then self:SetAngles(velocity:Angle()) end
+    if tr.Hit then
+        self.RocketFlight = nil
+        self.ImpactPos = tr.HitPos
+        // Trace normals point out of the surface; PhysicsCollide normals point in.
+        self.ImpactNormal = tr.HitNormal
+        self.Armed = true
+        self.ArmTime = CurTime()
+        self:Impact({HitPos = tr.HitPos, HitNormal = -tr.HitNormal,
+            HitEntity = tr.Entity, OurOldVelocity = velocity}, self:GetPhysicsObject())
+        if IsValid(self) and !self.Detonated then self:PreDetonate() end
+    end
+end
+
 function ENT:Think()
     if !IsValid(self) or self:GetNoDraw() then return end
+
+    local rocketFlight = SERVER and self.RocketFlight != nil
+    if rocketFlight then
+        self:Think_RocketFlight()
+        if !IsValid(self) then return end
+    end
 
     if !self.SpawnTime then
         self.SpawnTime = CurTime()
@@ -358,6 +404,7 @@ function ENT:Think()
     self:DoSmokeTrail()
 
     self:OnThink()
+    if rocketFlight then self:NextThink(CurTime()) return true end
 end
 
 function ENT:Use(ply)

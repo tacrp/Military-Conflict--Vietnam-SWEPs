@@ -1,5 +1,23 @@
 # Viewmodel depth projection — 2026-09-22
 
+## Current status after user visual feedback
+
+The scoped screen-depth exclusion described below was rolled back: the user observed AO
+through the gun. All viewmodels again participate in screen depth. The late scope capture
+remains, so gun occlusion inside the lens is not yet resolved. Offline depth/capture/refraction
+checks pass; this is not a completed visual compatibility fix.
+
+Proposed replacement: render a separate world-only colour/depth target before the main scene,
+including world translucency and particles, with recursion guards and no HUD/viewmodel. Then
+allow the main view to rebuild its normal depth with the gun included. The lens samples only
+the independent image. Preserve existing reticle/optical styling initially. Audit gShader's
+shared buffers, temporal caches and hook ordering before implementation; a separate target
+alone does not isolate global addon state. This adds a world render while aiming. Do not
+invoke RenderView inside the viewmodel draw (Facepunch documents flicker for that arrangement).
+The user redirected work to rocket-launcher ballistics before this redesign was implemented.
+
+The following sections record earlier attempts, not the current completed behavior.
+
 The screen-depth pass previously returned from `PreDrawViewModel` before opening the custom
 camera, while the colour pass used the weapon's blended hip/aim FOV and optional near plane.
 The depth silhouette could therefore differ from the visible weapon. This was the initial
@@ -33,16 +51,22 @@ it. The depth texture already includes the viewmodel. With early effects enabled
 the visible gun has even been drawn. The scope magnifies that contaminated colour picture.
 The old lens also referenced the shared screen-effect texture, which these effects overwrite.
 
-The scope now copies to its own full-frame texture. When gShader invokes
-`PreDrawReconstruction`, we capture there and retain that picture for this frame;
-without that hook, capture still occurs at `PreDrawViewModels`. Other render view IDs
-(reflections/cameras) are excluded. No external addon hooks or settings are changed.
+The initial fix copied the frame at `PreDrawReconstruction` and blocked the later capture.
+That avoided the gun silhouette but also excluded world particles and translucent objects.
+The reported missing effects while scoped are consistent with this ordering.
 
-Tradeoff: the early gShader capture precedes translucent objects and reconstruction effects,
-so those are not present in that scope picture. Fully shaded/translucent independent scope
-rendering would require a separate world pass, which this screen-reprojection scope avoids.
-The weapon and main view retain their effects.
+The scope now captures only at `PreDrawViewModels`, after world translucency. Its private
+full-frame texture still protects against later shared-buffer updates. While the shader scope
+is active, `PreDrawViewModel` suppresses only the screen-depth viewmodel draw. Reconstruction
+therefore sees world depth without a gun silhouette to magnify. Colour rendering, manual
+particles and shadow rendering retain their existing paths; unscoped depth is unchanged.
+No external addon hooks or settings are changed; our obsolete early capture hook is removed.
 
-`python work/test_scope_capture.py` checks clean early capture, preservation against the
-later contaminated frame and shared-buffer rewrites, next-frame fallback when gShader stops,
-and inactive scopes. This is an offline check; visual confirmation remains outstanding.
+Tradeoff: screen-depth effects do not shade the viewmodel itself while the scope is active.
+Effects drawn after the pre-viewmodel capture are still outside the lens's source picture;
+this remains screen reprojection rather than a separate world render.
+
+`python work/test_scope_capture.py`, `python work/test_viewmodel_depth.py` and
+`python work/test_particle_refraction.py` pass. They check capture isolation, active-scope
+depth exclusion, colour/depth camera cleanup and particle refraction ordering with Lua stubs.
+They cannot validate actual GPU/addon behavior. No game was launched; change maps to load Lua.

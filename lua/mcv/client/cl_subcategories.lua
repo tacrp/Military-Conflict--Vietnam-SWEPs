@@ -76,10 +76,13 @@ hook.Add("PopulateWeapons", "zzz_MCV_SubCategories", function(pnlContent, tree, 
                         MCV.CreateRandomWeaponIcon(self.PropPanel, randomGroups[subcatName])
                     end
                     for _, ent in SortedPairsByMemberValue(subcatWeps, "PrintName") do
+                        -- Spawn-list entries can omit inherited SWEP fields. Resolve
+                        -- the registered weapon too, so variants reuse their base icon.
+                        local weapon = weapons.Get(ent.ClassName) or {}
                         spawnmenu.CreateContentIcon(ent.ScriptedEntityType or "weapon", self.PropPanel, {
                             nicename  = ent.PrintName or ent.ClassName,
                             spawnname = ent.ClassName,
-                            material  = ent.IconOverride or "entities/" .. ent.ClassName .. ".png",
+                            material  = ent.IconOverride or weapon.IconOverride or "entities/" .. ent.ClassName .. ".png",
                             admin     = ent.AdminOnly
                         })
                     end

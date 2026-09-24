@@ -60,17 +60,21 @@ class ReplayTests(unittest.TestCase):
                     return math.max(cur-step,target)
                 end
                 function owner:IsPlayer() return true end
-                mode=1; down=false; pressed=false; use=false; waiting=false; sprint=false
+                mode=1; down=false; pressed=false; use=false; sprint=false
                 function owner:GetInfoNum(name,default)
                     assert(name=="mcv_toggle_aim" and default==0); return mode
                 end
                 function owner:KeyDown(key) return (key==IN_USE and use) or (key==IN_ATTACK2 and down) end
                 function owner:KeyPressed(key) return key==IN_ATTACK2 and pressed end
-                function SWEP:StillWaiting() return waiting end
+                function SWEP:StillWaiting()
+                    return self:GetNextPrimaryFire()>CurTime() or self:GetAnimLockTime()>CurTime()
+                end
                 function SWEP:GetIsSprinting() return sprint end
                 SWEP.Ironsight=true; SWEP.IronsightSpeedScale=1
                 w=make(); w:SetIronsight(false); w:SetSighted(false); w:SetSafe(false)
                 w:SetReloading(false); w:SetBipod(false); w:SetSightAmountRaw(0)
+                -- Automatic fire keeps refreshing this cooldown. It must not consume the aim press.
+                w:SetNextPrimaryFire(CurTime()+0.1); assert(w:StillWaiting())
                 -- A replay restores only DT state; the same press must raise sights again.
                 before=copy(w.dt); pressed=true; down=true; w:Think_Sights()
                 assert(w:GetIronsight() and w:GetSighted()); after=copy(w.dt)
@@ -85,8 +89,8 @@ class ReplayTests(unittest.TestCase):
                 use=true; pressed=true; down=true; w:Think_Sights(); assert(w:GetIronsight())
                 use=false; before=copy(w.dt); w:Think_Sights(); assert(not w:GetIronsight())
                 w.dt=copy(before); w:Think_Sights(); assert(not w:GetIronsight())
-                waiting=true; w:Think_Sights(); assert(not w:GetIronsight())
-                waiting=false; w:SetReloading(true); w:Think_Sights(); assert(not w:GetIronsight())
+                w:SetAnimLockTime(CurTime()+1); w:Think_Sights(); assert(not w:GetIronsight())
+                w:SetAnimLockTime(CurTime()); w:SetReloading(true); w:Think_Sights(); assert(not w:GetIronsight())
                 w:SetReloading(false); w.MustBipod=true; w:Think_Sights(); assert(not w:GetIronsight())
                 w:SetBipod(true); w:Think_Sights(); assert(w:GetIronsight())
                 w.MustBipod=false; pressed=false
@@ -234,6 +238,7 @@ class ReplayTests(unittest.TestCase):
             weapons={Get=function() return {ViewModel="single"} end}
             vm={model="single", mins=-8, maxs=8}
             function vm:GetModel() return self.model end
+            function vm:SetBodyGroups(v) self.bodygroups=v end
             function vm:SetModel(v) self.model=v; self.mins=-100; self.maxs=100 end
             function vm:GetCollisionBounds() return self.mins,self.maxs end
             function vm:SetCollisionBounds(a,b) self.mins=a; self.maxs=b end

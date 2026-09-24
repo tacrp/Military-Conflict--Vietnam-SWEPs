@@ -21,11 +21,13 @@ FOLDERS = ("lua", "materials", "models", "sound", "particles", "shaders")
 EAST = {"Soviet Union", "Russian Empire", "Russia", "Czechoslovakia", "Hungary",
         "Polish People's Republic", "Romania", "Yugoslavia", "People's Republic of China",
         "Shanxi Province", "Democratic People's Republic of Korea", "Empire of Japan",
-        "Vietnam", "North Vietnam", "Democratic Republic of Vietnam"}
+        "Vietnam", "North Vietnam", "Democratic Republic of Vietnam",
+        "China", "Japan", "North Korea", "Poland"}
 WEST = {"United States of America", "United Kingdom", "Australia", "Belgium", "France",
         "German Empire", "German Reich", "Nazi Germany", "Germany", "Finland", "Israel",
         "Italy", "Kingdom of Denmark", "Kingdom of Spain", "Sweden", "Republic of Rhodesia", "Rhodesia"}
-OVERRIDES = {"mcv_ammobox_us": "western", "mcv_binoculars_us": "western", "mcv_medicbox_us": "western",
+OVERRIDES = {"mcv_type56xm148": "western", # XM148-equipped variant belongs with the Western pack.
+             "mcv_ammobox_us": "western", "mcv_binoculars_us": "western", "mcv_medicbox_us": "western",
              "mcv_ammobox_vc": "eastern", "mcv_binoculars_vc": "eastern", "mcv_medicbox_vc": "eastern",
              "mcv_fists": "eastern", "mcv_wrench": "eastern", "mcv_crowbar": "eastern"}
 

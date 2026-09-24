@@ -111,7 +111,10 @@ function SWEP:GetControlHints()
 end
 
 function SWEP:ToggleSafe(forceoff)
-    self:SetSafe((forceoff and false) or !self:GetSafe())
+    // A supported firing stance cannot be lowered into the at-ease pose.
+    if self:GetBipod() then return end
+    if forceoff and !self:GetSafe() then return end
+    self:SetSafe(!forceoff and !self:GetSafe())
 
     if !forceoff then
         self:EmitSound("MCV_Weapon_Foley_Movement.ProneCrawl")

@@ -1,0 +1,260 @@
+Class	Pack	Spawnable	Name	Category	Country	Caliber	Primary ammo	Secondary ammo
+mcv_ak47	Part 1	True	AK-47	Assault Rifles	Soviet Union	7.62x39mm	smg1	
+mcv_ak47_bayonet	Part 1	True	6H2 Bayonet	Melee	Soviet Union		none	
+mcv_akm	Part 1	True	AKM	Assault Rifles	Soviet Union	7.62x39mm	smg1	
+mcv_akm_gp25	Part 1	True	AKM GP25	Assault Rifles	Soviet Union	7.62x39mm	smg1	smg1_grenade
+mcv_amd65	Part 1	True	AMD-65	Carbines	Hungary	7.62x39mm	smg1	
+mcv_ammobox_us	Part 2	True	Ammunition Box	Equipment			mcv_ammobox	
+mcv_ammobox_vc	Part 1	True	Ammunition Box	Equipment			mcv_ammobox	
+mcv_anm8	Part 2	True	AN-M8 Smoke	Grenades	United States of America		mcv_grenade	
+mcv_aps	Part 1	True	APS	Machine Pistols	Soviet Union	9x18mm	pistol	
+mcv_avt40	Part 1	True	AVT-40	Battle Rifles	Soviet Union	7.62x54mmR	ar2	smg1_grenade
+mcv_babybrowning	Part 2	True	Baby Browning	Pistols	Belgium	.25 ACP	pistol	
+mcv_bazooka	Part 2	True	Bazooka	Anti-Armor	United States of America	Rocket	rpg_round	
+mcv_binoculars_us	Part 2	True	Binoculars	Equipment			none	
+mcv_binoculars_vc	Part 1	True	Binoculars	Equipment			none	
+mcv_blackhawk	Part 2	True	Blackhawk	Revolvers	United States of America	.357 Magnum	pistol	
+mcv_bren	Part 2	True	Bren	Light-Machine Guns	United Kingdom	.303 British	ar2	
+mcv_browning_auto	Part 2	True	Auto 5	Shotguns	United States of America	12 Gauge	buckshot	
+mcv_c4	Part 2	True	C4	Explosives	United States of America		mcv_explosive_charge	
+mcv_c96	Part 2	True	Mauser C96	Pistols	Germany	7.63x25mm Mauser	pistol	
+mcv_c96_stock	Part 2	True	Mauser C96	Carbines	Germany	7.63x25mm Mauser	pistol	
+mcv_car15	Part 2	True	XM177E2	Carbines	United States of America	5.56x45mm	smg1	
+mcv_car15_s	Part 2	True	XM177E2 4X	Carbines	United States of America	5.56x45mm	smg1	
+mcv_chinalake	Part 2	True	China Lake	Anti-Armor	United States of America	40x46mm Grenade	smg1_grenade	
+mcv_cobra	Part 2	True	Cobra Mk1	Submachine Guns	Rhodesia	9x19mm	pistol	
+mcv_crossbow	Part 1	True	Montagnard Crossbow	Bows	Vietnam	Crossbow Bolt	XBowBolt	
+mcv_crowbar	Part 1	True	Crowbar	Melee	Black Mesa		none	
+mcv_csg	Part 1	True	ChiCom Frag Grenade	Grenades	China		mcv_grenade	
+mcv_csg2	Part 1	True	Type 67 HE Grenade	Grenades	China		mcv_grenade	
+mcv_css	Part 1	True	RGD-1 Smoke	Grenades	Soviet Union		mcv_grenade	
+mcv_cz52	Part 1	True	CZ 52	Pistols	Czechoslovakia	7.62x25mm Tokarev	pistol	
+mcv_dp28	Part 1	True	DP-28	Light-Machine Guns	Soviet Union	7.62x54mmR	ar2	
+mcv_dynamite	Part 1	True	Dynamite	Explosives	China		mcv_explosive_charge	
+mcv_f1	Part 2	True	F1	Submachine Guns	Australia	9x19mm	pistol	
+mcv_fists	Part 1	True	Fists	Melee			none	
+mcv_fm24	Part 2	True	FM 24/29	Light-Machine Guns	France	7.5x54mm	ar2	
+mcv_fusil_robust	Part 2	True	Fusil Robust	Shotguns	France	12 Gauge	buckshot	
+mcv_fusil_robust_short	Part 2	True	Fusil Robust Sawed-Off	Shotguns	France	12 Gauge	buckshot	
+mcv_g3	Part 2	True	G3	Battle Rifles	Germany	7.62x51mm	ar2	
+mcv_g43	Part 2	True	Gewehr 43	Battle Rifles	Germany	7.92x57mm	ar2	
+mcv_gyrojet_carbine	Part 2	True	Gyrojet Carbine	Carbines	United States of America	13 mm Gyrojet rocket	pistol	
+mcv_gyrojet_pistol	Part 2	True	Gyrojet Pistol	Pistols	United States of America	13 mm Gyrojet rocket	pistol	
+mcv_hdm	Part 2	True	HDM	Pistols	United States of America	.22 Long Rifle	pistol	
+mcv_hipower	Part 2	True	Browning Hi-Power	Pistols	Belgium	9x19mm	pistol	
+mcv_k50m	Part 1	True	K-50M	Submachine Guns	Vietnam	7.62x25mm Tokarev	pistol	
+mcv_k50m_vc	Part 1	True	K-50M1A1	Submachine Guns	Vietnam	7.62x25mm Tokarev	pistol	
+mcv_kar98	Part 2	True	Karabiner 98K	Bolt-Action Rifles	Germany	7.92x57mm	357	smg1_grenade
+mcv_kar98_prewar	Part 2	True	Karabiner 98K (Prewar)	Bolt-Action Rifles	Germany	7.92x57mm	357	smg1_grenade
+mcv_kar98_prewar_s	Part 2	True	Karabiner 98K ZF39 (Prewar)	Sniper Rifles	Germany	7.92x57mm	357	
+mcv_kar98_prewar_zf41	Part 2	True	Karabiner 98K ZF41 (Prewar)	Bolt-Action Rifles	Germany	7.92x57mm	357	
+mcv_kar98_s	Part 2	True	Karabiner 98K ZF39	Sniper Rifles	Germany	7.92x57mm	357	
+mcv_kar98_zf41	Part 2	True	Karabiner 98K ZF41	Bolt-Action Rifles	Germany	7.92x57mm	357	
+mcv_katana	Part 1	True	Katana	Melee	Japan		none	
+mcv_kbkg60	Part 1	True	Kbkg 60	Assault Rifles	Poland	7.62x39mm	smg1	smg1_grenade
+mcv_kolos	Part 1	True	Kolos AA Rocket Launcher	Anti-Armor	Soviet Union	30mm Rocket	smg1_grenade	
+mcv_l1a1	Part 2	True	L1A1	Battle Rifles	Australia	7.62x51mm	ar2	
+mcv_l1a1_sog	Part 2	True	L1A1 SASR	Battle Rifles	Australia	7.62x51mm	ar2	
+mcv_l2a1	Part 2	True	L2A1	Light-Machine Guns	Australia	7.62x51mm	ar2	
+mcv_lacoste	Part 2	True	LDP Kommando	Submachine Guns	Rhodesia	9x19mm	pistol	
+mcv_lebel	Part 2	True	MAS-M1892	Revolvers	France	8x27mmR French Ordnance	pistol	
+mcv_lpo50	Part 1	True	LPO-50 Flamethrower	Flamethrowers	Soviet Union		mcv_flamethrower_fuel	
+mcv_luger	Part 2	True	Luger P08	Pistols	Germany	9x19mm	pistol	
+mcv_lunge_mine	Part 1	True	Lunge Mine	Anti-Armor	Japan		none	
+mcv_m12	Part 2	True	M12 Beretta	Submachine Guns	Italy	9x19mm	pistol	
+mcv_m14	Part 2	True	M14	Battle Rifles	United States of America	7.62x51mm	ar2	smg1_grenade
+mcv_m14_sog	Part 2	True	M14 SOG	Battle Rifles	United States of America	7.62x51mm	ar2	
+mcv_m14e2	Part 2	True	M14E2	Light-Machine Guns	United States of America	7.62x51mm	ar2	
+mcv_m14e2_sog	Part 2	True	M14E2 SOG	Battle Rifles	United States of America	7.62x51mm	ar2	
+mcv_m14l	Part 2	True	M14 Early	Battle Rifles	United States of America	7.62x51mm	ar2	smg1_grenade
+mcv_m16_flamer	Part 2	False	M16 Flamer	Assault Rifles	United States of America	5.56x45mm	smg1	mcv_flame_cartridge
+mcv_m16_xm148	Part 2	True	M16A1 XM148	Assault Rifles	United States of America	5.56x45mm	smg1	smg1_grenade
+mcv_m16a1	Part 2	True	M16A1	Assault Rifles	United States of America	5.56x45mm	smg1	
+mcv_m16a1_m203	Part 2	True	M16A1 M203	Assault Rifles	United States of America	5.56x45mm	smg1	smg1_grenade
+mcv_m16a1_sog	Part 2	True	M16A1 SOG	Assault Rifles	United States of America	5.56x45mm	smg1	
+mcv_m16a1_xm3	Part 2	True	M16A1 XM3	Light-Machine Guns	United States of America	5.56x45mm	smg1	
+mcv_m16mine	Part 2	True	M16 Mine	Explosives	United States of America		mcv_mine	
+mcv_m18	Part 2	True	M18 Smoke (Red)	Grenades	United States of America		mcv_grenade	
+mcv_m1895	Part 2	True	Nagant M1895	Revolvers	Belgium	7.62x38mmR	pistol	
+mcv_m1897	Part 2	True	M1897	Shotguns	United States of America	12 Gauge	buckshot	
+mcv_m1905_bayonet	Part 2	True	M1905 Bayonet	Melee	United States of America		none	
+mcv_m1911a1	Part 2	True	M1911A1	Pistols	United States of America	.45 ACP	pistol	
+mcv_m1917	Part 2	True	M1917	Revolvers	United States of America	.45 ACP	pistol	
+mcv_m1918	Part 2	True	M1918A2 BAR	Battle Rifles	United States of America	.30-06	ar2	
+mcv_m1918_bar	Part 2	True	M1918A2 BAR LMG	Light-Machine Guns	United States of America	.30-06	ar2	
+mcv_m1919	Part 2	True	M1919A6	Light-Machine Guns	United States of America	.30-06	ar2	
+mcv_m1942_machete	Part 2	True	M1942 Machete	Melee	United States of America		none	
+mcv_m1_carbine	Part 2	True	M1 Carbine	Carbines	United States of America	.30 Carbine	smg1	smg1_grenade
+mcv_m1c	Part 2	True	M1A1 Carbine	Carbines	United States of America	.30 Carbine	smg1	smg1_grenade
+mcv_m1c_sog	Part 2	True	M1A1 Carbine SOG	Carbines	United States of America	.30 Carbine	smg1	smg1_grenade
+mcv_m1d	Part 2	True	M1D Garand	Sniper Rifles	United States of America	.30-06	ar2	smg1_grenade
+mcv_m1g	Part 2	True	M1 Garand	Battle Rifles	United States of America	.30-06	ar2	smg1_grenade
+mcv_m202	Part 2	True	M202 FLASH	Anti-Armor	United States of America	66mm Rocket	rpg_round	
+mcv_m21	Part 2	True	XM21	Sniper Rifles	United States of America	7.62x51mm	ar2	smg1_grenade
+mcv_m26	Part 2	True	M26 Frag Grenade	Grenades	United States of America		mcv_grenade	
+mcv_m2c	Part 2	True	M2 Carbine	Carbines	United States of America	.30 Carbine	smg1	smg1_grenade
+mcv_m2c_sog	Part 2	True	M2 Carbine SOG	Carbines	United States of America	.30 Carbine	smg1	smg1_grenade
+mcv_m34	Part 2	True	M34 Phosphorus Grenade	Grenades	United States of America		mcv_grenade	
+mcv_m37	Part 2	True	M37 Ithaca	Shotguns	United States of America	12 Gauge	buckshot	
+mcv_m38	Part 1	True	Mosin-Nagant M38	Bolt-Action Rifles	Soviet Union	7.62x54mmR	357	smg1_grenade
+mcv_m38_s	Part 1	True	Mosin-Nagant M91/30 PU	Sniper Rifles	Soviet Union	7.62x54mmR	357	smg1_grenade
+mcv_m3a1	Part 2	True	M3A1 Grease Gun	Submachine Guns	United States of America	.45 ACP	pistol	
+mcv_m3a1_sog	Part 2	True	M3A1 Grease Gun SOG	Submachine Guns	United States of America	.45 ACP	pistol	
+mcv_m40	Part 2	True	M40	Sniper Rifles	United States of America	7.62x51mm	357	
+mcv_m45	Part 2	True	Carl Gustaf M/45	Submachine Guns	Sweden	9x19mm	pistol	
+mcv_m45_sog	Part 2	True	Carl Gustaf M/45 SOG	Submachine Guns	Sweden	9x19mm	pistol	
+mcv_m50r	Part 2	True	M50 Reising	Submachine Guns	United States of America	.45 ACP	pistol	
+mcv_m55r	Part 2	True	M55 Reising Para	Submachine Guns	United States of America	.45 ACP	pistol	
+mcv_m56	Part 1	True	M56	Submachine Guns	Yugoslavia	7.62x25mm Tokarev	pistol	
+mcv_m60	Part 2	True	M60	Light-Machine Guns	United States of America	7.62x51mm	ar2	
+mcv_m601	Part 2	True	M601	Assault Rifles	United States of America	5.56x45mm	smg1	
+mcv_m605	Part 2	True	M605B	Assault Rifles	United States of America	5.56x45mm	smg1	
+mcv_m607	Part 2	True	XM607	Carbines	United States of America	5.56x45mm	smg1	
+mcv_m607_oeg	Part 2	True	XM607 OEG	Carbines	United States of America	5.56x45mm	smg1	
+mcv_m607_s	Part 2	True	XM607 4X	Carbines	United States of America	5.56x45mm	smg1	
+mcv_m60b	Part 2	True	M60 Belt	Light-Machine Guns	United States of America	7.62x51mm	ar2	
+mcv_m60r	Part 2	True	M60 Reising	Carbines	United States of America	.45 ACP	pistol	
+mcv_m635	Part 2	True	M635	Submachine Guns	United States of America	9x19mm	pistol	
+mcv_m656	Part 2	True	M656	Sniper Rifles	United States of America	5.56x45mm	ar2	
+mcv_m6a1	Part 2	True	M6A1 Gas	Grenades	United States of America		mcv_grenade	
+mcv_m7188	Part 2	True	Remington M7188	Shotguns	United States of America	12 Gauge	buckshot	
+mcv_m72	Part 2	True	M72 LAW	Anti-Armor	United States of America	66mm Rocket	rpg_round	
+mcv_m79	Part 2	True	M79 'Thumper'	Anti-Armor	United States of America	40x46mm Grenade	smg1_grenade	
+mcv_m79_sog	Part 2	True	M79 SOG	Anti-Armor	United States of America	40x46mm Buckshot	buckshot	
+mcv_m7_bayonet	Part 2	True	M7 Bayonet	Melee	United States of America		none	
+mcv_m8	Part 2	True	M8 Flaregun	Pistols	United States of America	26.5mm Flare	mcv_flareround	
+mcv_m870	Part 2	True	M870	Shotguns	United States of America	12 Gauge	buckshot	
+mcv_m91	Part 1	True	Mosin-Nagant M91/30	Bolt-Action Rifles	Soviet Union	7.62x54mmR	357	smg1_grenade
+mcv_m9a1	Part 2	True	M9A1 Flamethrower	Flamethrowers	United States of America		mcv_flamethrower_fuel	
+mcv_mac10	Part 2	True	MAC-10	Machine Pistols	United States of America	9x19mm	pistol	
+mcv_mac10_sog	Part 2	True	MAC-10 SOG	Machine Pistols	United States of America	9x19mm	pistol	
+mcv_madsen	Part 2	True	Madsen M/50	Submachine Guns	Denmark	9x19mm	pistol	
+mcv_mamba	Part 2	True	Mamba	Pistols	Rhodesia	9x19mm	pistol	
+mcv_mas36	Part 2	True	MAS-36/51	Bolt-Action Rifles	France	7.5x54mm	357	smg1_grenade
+mcv_mas36_cr39	Part 2	True	MAS-36 CR39 Para	Bolt-Action Rifles	France	7.5x54mm	357	
+mcv_mas38	Part 2	True	MAS-38	Submachine Guns	France	7.65x20mm	pistol	
+mcv_mas49	Part 2	True	MAS-49	Battle Rifles	France	7.5x54mm	ar2	smg1_grenade
+mcv_mas49_s	Part 2	True	MAS-49 APX L806	Sniper Rifles	France	7.5x54mm	ar2	smg1_grenade
+mcv_mat49	Part 2	True	MAT-49	Submachine Guns	France	9x19mm	pistol	
+mcv_mat49_sog	Part 2	True	MAT-49 Đặc Công	Submachine Guns	France	9x19mm	pistol	
+mcv_mat49k	Part 1	True	MAT-49K	Submachine Guns	Vietnam	7.62x25mm Tokarev	pistol	
+mcv_md63	Part 1	True	PM md. 63	Assault Rifles	Romania	7.62x39mm	smg1	
+mcv_medicbox_us	Part 2	True	Medical Kit	Equipment			mcv_medicbox	
+mcv_medicbox_vc	Part 1	True	Medical Kit	Equipment			mcv_medicbox	
+mcv_mg43	Part 2	True	MG 34	Light-Machine Guns	Germany	7.92x57mm	ar2	
+mcv_mg43b	Part 2	True	MG 34 Belt	Light-Machine Guns	Germany	7.92x57mm	ar2	
+mcv_mg43d	Part 2	True	MG 34 Double Drum	Light-Machine Guns	Germany	7.92x57mm	ar2	
+mcv_mk2	Part 2	True	Mk 2 Frag Grenade	Grenades	United States of America		mcv_grenade	
+mcv_mk22_mod0	Part 2	True	Mk 22 Mod 0	Pistols	United States of America	9x19mm	pistol	
+mcv_mk3a2	Part 2	True	MK3A2 High Explosive	Grenades	United States of America		mcv_grenade	
+mcv_mk4mod0	Part 2	True	Mk 4 Mod 0	Assault Rifles	United States of America	5.56x45mm	smg1	
+mcv_mle1935	Part 2	True	MAS-35S	Pistols	France	7.65x20mm	pistol	
+mcv_molotov	Part 2	True	Molotov	Grenades	Finland		mcv_molotov	
+mcv_mp40	Part 2	True	MP 40	Submachine Guns	Germany	9x19mm	pistol	
+mcv_owen	Part 2	True	Owen Gun	Submachine Guns	Australia	9x19mm	pistol	
+mcv_p38	Part 2	True	Walther P38	Pistols	Germany	9x19mm	pistol	
+mcv_panzerschreck	Part 2	True	Panzerschreck	Anti-Armor	Germany	Rocket	rpg_round	
+mcv_pb	Part 1	True	PB	Pistols	Soviet Union	9x18mm	pistol	
+mcv_pk	Part 1	True	PK	Light-Machine Guns	Soviet Union	7.62x54mmR	ar2	
+mcv_pkm	Part 1	True	PK Belt	Light-Machine Guns	Soviet Union	7.62x54mmR	ar2	
+mcv_pm	Part 1	True	Makarov	Pistols	Soviet Union	9x18mm	pistol	
+mcv_pm63	Part 1	True	PM-63 RAK	Machine Pistols	Poland	9x18mm	pistol	
+mcv_ppk	Part 2	True	Walther PPK	Pistols	Germany	.380 ACP	pistol	
+mcv_pps43	Part 1	True	PPS-43	Submachine Guns	Soviet Union	7.62x25mm Tokarev	pistol	
+mcv_ppsh41	Part 1	True	PPSh-41	Submachine Guns	Soviet Union	7.62x25mm Tokarev	pistol	
+mcv_ppsh41_drum	Part 1	True	PPSh-41 Drum	Submachine Guns	Soviet Union	7.62x25mm Tokarev	pistol	
+mcv_ppsh41dd	Part 1	True	PPSh-41 Double Drum	Submachine Guns	Soviet Union	7.62x25mm Tokarev	pistol	
+mcv_ptrd	Part 1	True	PTRD-41	Anti-Armor	Soviet Union	14.5x114mm	357	
+mcv_ptrd_sniper	Part 1	True	PTRD-41 Sniper	Sniper Rifles	Soviet Union	14.5x114mm	357	
+mcv_qspr	Part 2	True	QSPR	Revolvers	United States of America	10mm QSPR	pistol	
+mcv_r76	Part 1	False	Northwood R76	Submachine Guns	Rhodesia	9x19mm	pistol	
+mcv_rg42	Part 1	True	OZM-4 Mine	Explosives	Soviet Union		mcv_mine	
+mcv_rgd5	Part 1	True	RGD-5 Frag Grenade	Grenades	Soviet Union		mcv_grenade	
+mcv_rhogun	Part 2	True	RHOGUN	Machine Pistols	Rhodesia	9x19mm	pistol	
+mcv_rp46	Part 1	True	RP-46	Light-Machine Guns	Soviet Union	7.62x54mmR	ar2	
+mcv_rpd	Part 1	True	RPD	Light-Machine Guns	Soviet Union	7.62x39mm	smg1	
+mcv_rpd_sog	Part 1	True	RPD SOG	Light-Machine Guns	Soviet Union	7.62x39mm	smg1	
+mcv_rpdb	Part 1	True	RPD Belt	Light-Machine Guns	Soviet Union	7.62x39mm	smg1	
+mcv_rpdb_sog	Part 1	True	RPD SOG Belt	Light-Machine Guns	Soviet Union	7.62x39mm	smg1	
+mcv_rpg2	Part 1	True	RPG-2	Anti-Armor	Soviet Union	40mm Rocket	rpg_round	
+mcv_rpg7	Part 1	True	RPG-7	Anti-Armor	Soviet Union	40mm Rocket	rpg_round	
+mcv_rpk	Part 1	True	RPK	Light-Machine Guns	Soviet Union	7.62x39mm	smg1	
+mcv_ruby	Part 2	True	Ruby	Pistols	Spain	.32 ACP	pistol	
+mcv_shanxi_type17	Part 1	True	Shanxi Type 17	Carbines	China	.45 ACP	pistol	
+mcv_shovel_ger	Part 2	True	Shovel	Melee	Germany		none	
+mcv_shovel_us	Part 2	True	AMES 1966 Shovel	Melee	United States of America		none	
+mcv_shovel_vc	Part 1	True	ChiCom Shovel	Melee	China		none	
+mcv_sickle	Part 1	True	Sickle	Melee	Vietnam		none	
+mcv_sks	Part 1	True	SKS	Carbines	Soviet Union	7.62x39mm	smg1	smg1_grenade
+mcv_springfield	Part 2	True	M1903 Springfield	Bolt-Action Rifles	United States of America	.30-06	357	smg1_grenade
+mcv_springfield_s	Part 2	True	M1903A4 Springfield	Sniper Rifles	United States of America	.30-06	357	smg1_grenade
+mcv_sten	Part 2	True	Sten Mk2	Submachine Guns	United Kingdom	9x19mm	pistol	
+mcv_sten_sog	Part 2	True	Sten Mk2 SAS	Submachine Guns	United Kingdom	9x19mm	pistol	
+mcv_sterling	Part 2	True	Sterling L2A3	Submachine Guns	United Kingdom	9x19mm	pistol	
+mcv_sterling_sog	Part 2	True	Sterling L34A1	Submachine Guns	United Kingdom	9x19mm	pistol	
+mcv_stg44	Part 2	True	StG-44	Assault Rifles	Germany	7.92x33mm	smg1	
+mcv_stg44_s	Part 2	True	StG-44 ZF4	Assault Rifles	Germany	7.92x33mm	smg1	
+mcv_stg44_zf41	Part 2	True	StG-44 ZF41	Assault Rifles	Germany	7.92x33mm	smg1	
+mcv_stielhand_explosive	Part 2	True	Stielhandgranate	Grenades	Germany		mcv_grenade	
+mcv_stielhand_smoke	Part 2	True	Nebelhandgranate	Grenades	Germany		mcv_grenade	
+mcv_stoner63_ar	Part 2	True	Stoner 63A Rifle	Assault Rifles	United States of America	5.56x45mm	smg1	
+mcv_stoner63_ar_drum	Part 2	True	Stoner 63A Drum	Assault Rifles	United States of America	5.56x45mm	smg1	
+mcv_stoner63_bren	Part 2	True	Stoner 63 Bren	Light-Machine Guns	United States of America	5.56x45mm	smg1	
+mcv_stoner63_carbine	Part 2	True	Stoner 63A Carbine	Carbines	United States of America	5.56x45mm	smg1	
+mcv_stoner63_carbine_drum	Part 2	True	Stoner 63AC Drum	Carbines	United States of America	5.56x45mm	smg1	
+mcv_stoner63_commando	Part 2	True	Stoner 63 Commando	Light-Machine Guns	United States of America	5.56x45mm	smg1	
+mcv_stoner63_lmg	Part 2	True	Stoner 63 LMG	Light-Machine Guns	United States of America	5.56x45mm	smg1	
+mcv_svd	Part 1	True	SVD	Sniper Rifles	Soviet Union	7.62x54mmR	ar2	smg1_grenade
+mcv_svd_irons	Part 1	True	SVD Irons	Battle Rifles	Soviet Union	7.62x54mmR	ar2	smg1_grenade
+mcv_svt40	Part 1	True	SVT-40	Battle Rifles	Soviet Union	7.62x54mmR	ar2	smg1_grenade
+mcv_svt40_s	Part 1	True	SVT-40 PU	Sniper Rifles	Soviet Union	7.62x54mmR	ar2	smg1_grenade
+mcv_sw39	Part 2	True	S&W M39-2	Pistols	United States of America	9x19mm	pistol	
+mcv_swm10	Part 2	True	S&W M10	Revolvers	United States of America	.38 Special	pistol	
+mcv_swm12	Part 2	True	S&W M12	Revolvers	United States of America	.38 Special	pistol	
+mcv_swm49	Part 2	True	SW M49 Bodyguard	Revolvers	United States of America	.38 Special	pistol	
+mcv_swm76	Part 2	True	S&W M76	Submachine Guns	United States of America	9x19mm	pistol	
+mcv_swm76_sog	Part 2	True	S&W M76 SOG	Submachine Guns	United States of America	9x19mm	pistol	
+mcv_t223	Part 2	True	H&R T223	Assault Rifles	United States of America	5.56x45mm	smg1	
+mcv_t223_25	Part 2	True	H&R T223 (25R)	Assault Rifles	United States of America	5.56x45mm	smg1	
+mcv_thompson	Part 2	True	M1A1 Thompson	Submachine Guns	United States of America	.45 ACP	pistol	
+mcv_thompson_m1928	Part 2	True	M1928 Thompson	Submachine Guns	United States of America	.45 ACP	pistol	
+mcv_thompson_sog	Part 2	True	M1A1 Thompson SOG	Submachine Guns	United States of America	.45 ACP	pistol	
+mcv_tt33	Part 1	True	TT-33	Pistols	Soviet Union	7.62x25mm Tokarev	pistol	
+mcv_tul1	Part 1	True	TUL-1	Light-Machine Guns	Vietnam	7.62x39mm	smg1	
+mcv_type14	Part 1	True	Type 14 Nambu	Pistols	Japan	8x22mm Nambu	pistol	
+mcv_type30_bayonet	Part 1	True	Type 30 Bayonet	Melee	Japan		none	
+mcv_type56	Part 1	True	Type 56-1	Assault Rifles	China	7.62x39mm	smg1	
+mcv_type56_drum	Part 1	True	Type 56-1 Drum	Assault Rifles	China	7.62x39mm	smg1	
+mcv_type56xm148	Part 2	True	Type 56 XM148	Assault Rifles	China	7.62x39mm	smg1	smg1_grenade
+mcv_type58	Part 1	True	Type 58	Assault Rifles	North Korea	7.62x39mm	smg1	
+mcv_type63	Part 1	True	Type 63	Carbines	China	7.62x39mm	smg1	smg1_grenade
+mcv_type63b	Part 1	True	Type 63 FS	Carbines	China	7.62x39mm	smg1	smg1_grenade
+mcv_type64	Part 1	True	Type 64	Submachine Guns	China	7.62x25mm Tokarev (subsonic)	pistol	
+mcv_type64p	Part 1	True	Type 64	Pistols	China	7.65x17mm Type 64 rimless	pistol	
+mcv_type67	Part 1	True	Type 67	Pistols	China	7.65x17mm Type 64 rimless	pistol	
+mcv_type97	Part 1	True	Type 97 Flaregun	Pistols	Japan	26.5mm Flare	mcv_flareround	
+mcv_uzi	Part 2	True	Uzi	Submachine Guns	Israel	9x19mm	pistol	
+mcv_uzi_sog	Part 2	True	Uzi SOG	Submachine Guns	Israel	9x19mm	pistol	
+mcv_v40	Part 2	True	V-40 Mini Grenade	Grenades	Netherlands		mcv_grenade	
+mcv_vccarbine	Part 1	True	Homemade Carbine	Carbines	Vietnam	.30 Carbine	smg1	
+mcv_vcgrenade	Part 1	True	Homemade Grenade	Grenades	Vietnam		mcv_grenade	
+mcv_vcpistol	Part 1	True	Homemade Pistol	Pistols	Vietnam	.45 ACP	pistol	
+mcv_vcpistol2	Part 1	True	Homemade M1911	Pistols	Vietnam	.45 ACP	pistol	
+mcv_vcshotgun	Part 1	True	Homemade Shotgun	Shotguns	Vietnam	12 Gauge	buckshot	
+mcv_vcsmg	Part 1	True	Homemade Sten	Submachine Guns	Vietnam	9x19mm	pistol	
+mcv_vz23	Part 1	True	Vz. 23	Submachine Guns	Czechoslovakia	9x19mm	pistol	
+mcv_vz24	Part 1	True	vz. 24	Bolt-Action Rifles	Czechoslovakia	7.92x57mm	357	smg1_grenade
+mcv_vz52	Part 1	True	vz. 52/57	Carbines	Czechoslovakia	7.62x39mm	smg1	
+mcv_vz54	Part 1	True	vz. 54	Bolt-Action Rifles	Czechoslovakia	7.62x54mmR	357	smg1_grenade
+mcv_vz54s	Part 1	True	vz. 54 Meopta	Sniper Rifles	Czechoslovakia	7.62x54mmR	357	
+mcv_vz58	Part 1	True	Vz. 58	Assault Rifles	Czechoslovakia	7.62x39mm	smg1	
+mcv_vz59	Part 1	True	Uk vz. 59	Light-Machine Guns	Czechoslovakia	7.62x54mmR	ar2	
+mcv_vz59b	Part 1	True	Uk vz. 59 Belt	Light-Machine Guns	Czechoslovakia	7.62x54mmR	ar2	
+mcv_vz61	Part 1	True	Vz. 61e Škorpion	Machine Pistols	Czechoslovakia	.32 ACP	pistol	
+mcv_vz61_sog	Part 1	True	Vz. 61e Đặc Công	Machine Pistols	Czechoslovakia	.32 ACP	pistol	
+mcv_welrod	Part 2	True	Welrod	Pistols	United Kingdom	.32 ACP	pistol	
+mcv_wrench	Part 1	True	Wrench	Melee			none	
+mcv_x2f2a2	Part 2	True	X2F2A2 FAL	Battle Rifles	United Kingdom	7.62x51mm	ar2	
+mcv_xm16super	Part 2	True	XM16 Super	Assault Rifles	United States of America	5.56x45mm	smg1	smg1_grenade
+mcv_xm177	Part 2	True	XM177E2 SOG	Carbines	United States of America	5.56x45mm	smg1	
+mcv_xm177_oeg	Part 2	True	XM177E2 OEG	Carbines	United States of America	5.56x45mm	smg1	

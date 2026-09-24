@@ -9,6 +9,7 @@ SWEP.PrintName = "PTRD-41"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Soviet Union"
 SWEP.SubCategory = "Anti-Armor"
+SWEP.ArmorPiercing = true
 SWEP.Caliber = "14.5x114mm"
 
 SWEP.Slot = 4

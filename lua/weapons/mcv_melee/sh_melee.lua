@@ -76,8 +76,10 @@ function SWEP:MeleeHit(range, damage, thrust)
         end
     end
 
-    // surface impact effect (decal / sparks) through a zero damage bullet
-    if !isFlesh(ent) then
+    // One authoritative surface impact, using the actual melee hull contact.
+    // Client replay must not fire cosmetic bullets or receive a second local effect.
+    if SERVER and !isFlesh(ent) and !MCV.SurfaceImpact(tr, damage) then
+        // Stock fallback only; custom effects already own the particles and decal.
         self:FireBullets({Attacker = owner, Damage = 0, Force = 0, Distance = range + 16, HullSize = 0, Tracer = 0,
                           Dir = (tr.HitPos - owner:GetShootPos()):GetNormalized(), Src = owner:GetShootPos()})
     end

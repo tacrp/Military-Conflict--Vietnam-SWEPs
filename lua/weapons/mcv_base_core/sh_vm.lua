@@ -54,6 +54,7 @@ function SWEP:PreDrawViewModel(vm, weapon, ply, flags)
     if bit.band(flags or 0, STUDIO_SHADOWDEPTHTEXTURE) != 0 then return end
     local depthpass = self:IsDepthPass(flags)
 
+
     if !depthpass then
         self:PreDrawViewModelWeapon(vm)
         self:UpdateLitParticle(vm)
@@ -81,6 +82,7 @@ end
 // hits something, then draws itself in the world. Nothing is drawn into the depth passes.
 function SWEP:ViewModelDrawn(vm, flags)
     if self:IsDepthPass(flags) then return end
+    if MCV.CapturePhysicalMuzzles then MCV.CapturePhysicalMuzzles(self, vm) end
 
     local newactiveeffects = {}
     for _, effect in ipairs(self.ActiveEffects) do

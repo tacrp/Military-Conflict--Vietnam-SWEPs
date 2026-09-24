@@ -22,7 +22,8 @@ function SWEP:GetNPCShotInterval()
     local mode = self:GetFiremodeValue()
     local delay = 60 / self:GetFiremodeRate(mode)
     local owner = self:GetOwner()
-    if SERVER and mode == MCV.FIREMODE_SEMI and IsValid(owner) and owner:IsNPC() then
+    if SERVER and (mode == MCV.FIREMODE_SEMI or mode == MCV.FIREMODE_HE or mode == MCV.FIREMODE_BUCKSHOT)
+        and IsValid(owner) and owner:IsNPC() then
         local proficiency = math.Clamp(owner:GetCurrentWeaponProficiency(),
             WEAPON_PROFICIENCY_POOR, WEAPON_PROFICIENCY_PERFECT)
         // Read proficiency each time so skill changes take effect without re-equipping.
@@ -44,7 +45,7 @@ function SWEP:GetNPCBurstSettings()
     if mode == MCV.FIREMODE_BURST then
         local count = math.min(clip, self.BurstRounds)
         return count, count, delay
-    elseif !self.PlayCycleAnimation and !self.ShootEntity and
+    elseif !self.PlayCycleAnimation and !self:GetProjectileClass() and
             (mode == MCV.FIREMODE_AUTO or mode == MCV.FIREMODE_FAST or mode == MCV.FIREMODE_SLOW) then
         return math.min(clip, math.max(2, math.ceil(0.3 / delay))),
             math.min(clip, math.max(3, math.ceil(0.8 / delay))), delay
@@ -72,6 +73,10 @@ function SWEP:NPC_Deploy()
     self:SetPrimedAttack(false)
     self:SetGrenadeLauncher(false)
     self:SetAkimbo(false)
+    // Fresh SWEPs carry DefaultClip (magazine plus starting reserve) in Clip1 until
+    // player pickup distributes it. NPCs have no reserve pool: give them only a magazine.
+    self.MCVWasNPCWeapon = true
+    self:ClampNPCAmmo()
     self:SetFiremode(math.Clamp(self:GetFiremode(), 1, #self.Firemodes))
     local hold = self.HoldTypeNPC or self.HoldType
     self:SetHoldType(hold)
@@ -84,9 +89,33 @@ function SWEP:NPC_Deploy()
     self:Think_WorldBodygroups()
 end
 
+// Only call on the NPC ownership/drop path, never on a fresh player pickup.
+function SWEP:ClampNPCAmmo()
+    local primary = self:GetClip1Capacity()
+    local secondary = self:GetClip2Capacity()
+    if self.Primary.ClipSize >= 0 and primary >= 0 and self:Clip1() > primary then
+        self:SetClip1(primary)
+    end
+    if self.Secondary.ClipSize >= 0 and secondary >= 0 and self:Clip2() > secondary then
+        self:SetClip2(secondary)
+    end
+end
+
 function SWEP:Equip(newOwner)
+    if newOwner:IsPlayer() then
+        self.MCVWasNPCWeapon = nil
+        return
+    end
     if !newOwner:IsNPC() or !self.NPCUsable then return end
     self:NPC_Deploy()
+end
+
+function SWEP:OnDrop()
+    // Also contain any excess left by an NPC/third-party reload before it becomes loot.
+    if self.MCVWasNPCWeapon then
+        self:ClampNPCAmmo()
+        self.MCVWasNPCWeapon = nil
+    end
 end
 
 function SWEP:NPCShoot_Primary(shootPos, shootDir)
@@ -119,7 +148,7 @@ function SWEP:NPC_PrimaryAttack(shootPos, shootDir)
     self:EmitShotSound(volley and rounds > 1 and self.SoundDoubleShot or self.SoundSingleShot)
     self:DoMuzzle()
     if !self.NoEjectOnShoot or self.PlayCycleAnimation then self:DoEject() end
-    if self.ShootEntity then
+    if self:GetProjectileClass() then
         local enemy = owner:GetEnemy()
         if IsValid(enemy) then shootDir = (enemy:WorldSpaceCenter() - shootPos):GetNormalized() end
         self:RocketAttack(false, shootPos, shootDir)

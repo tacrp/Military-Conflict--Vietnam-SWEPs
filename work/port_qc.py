@@ -833,6 +833,12 @@ def step_strip_ik(qc, ctx):
 
 
 def step_activities(qc, ctx):
+    # These unused combined models labelled their launcher shot as a generic secondary.
+    # Map it before pose splitting so it also receives the launcher idle as its base.
+    if ctx.name in ("v_type56xm148", "v_m16_flamer"):
+        shot = qc.find("sequence", "gl_shoot")
+        if shot:
+            shot.set_activity("ACT_VM_ISHOOT_M203")
     amap = dict(ACT_MAP_COMMON)
     if ctx.mode == "dual":
         amap.update(ACT_MAP_DUAL_SHELL if ctx.shell_dual else ACT_MAP_DUAL_MAG)
@@ -946,6 +952,15 @@ def step_mode_idles(qc, ctx):
     Source skips the ramp and plays the layer at full weight, so the gun sat in its sights the
     whole time the launcher was up. The aimed pose becomes a row of an ironsight blend on the
     sequence itself, like the main idle (step_idle)."""
+    # The prewar K98 cup launcher uses the normal irons, not the postwar ladder.
+    # Keep the launcher animation aliases so idle and the firing base agree.
+    if ctx.name == "v_kar98_dov":
+        irons = qc.find("animation", "ironsight")
+        if irons:
+            for anim in qc.blocks("animation"):
+                if anim.name == "grenade_ironsight" or anim.name.startswith("grenade_ironsight__"):
+                    anim.path = irons.path
+            ctx.note("prewar K98 grenade launcher uses the standard ironsight pose")
     pat = re.compile(r'^blendlayer\s+"(\w+_ironsight_test)"\s+[-0-9.]+\s+[-0-9.]+\s+[-0-9.]+\s+[-0-9.]+.*poseparameter\s+ironsight')
     done = 0
     for sq in qc.blocks("sequence"):
@@ -2273,6 +2288,8 @@ def port_one(args, og_dir):
     with open(out_qc, "w", encoding="utf-8", newline="\n") as f:
         f.write(header + qc.render())
 
+    from m79_live_reload import prepare as prepare_m79_live_reload
+    prepare_m79_live_reload(out_qc)
     result = {"name": name, "mode": ctx.mode, "qc": out_qc, "warnings": ctx.warnings, "notes": ctx.notes}
     if args.compile:
         result["compile"] = compile_qc(args, out_qc)

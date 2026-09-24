@@ -1,0 +1,25 @@
+[
+  {
+    "name": "m1_carbine",
+    "source": "work/MCV_SMD/weapons/v_m1_carbine/v_m1_carbine_mesh0.smd",
+    "output": "work/MCV_SMD/weapons/v_m1_carbine/mcv_m1_carbine.png",
+    "installed": null,
+    "source_sha256": "ad1cdd3a050fb2fe0b4ddd0b490e413f7072485e5eb56925b6699a870c81b251",
+    "png_sha256": "96af98c288496c4d6e36ebf88b7b01747357709093180a5ae22f6d2e48a17763",
+    "triangles": 14411,
+    "size": 512,
+    "bone": "Base",
+    "side": "left",
+    "style": "translucent_outline",
+    "line_opacity": 0.65,
+    "exclude_materials": [
+      "shell"
+    ],
+    "alpha_bounds": [
+      1,
+      204,
+      511,
+      308
+    ]
+  }
+]

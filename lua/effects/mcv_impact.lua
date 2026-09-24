@@ -28,12 +28,19 @@ function EFFECT:Init(data)
     local normal = data:GetNormal()
     if !normal or normal:LengthSqr() < 0.5 then normal = vector_up end
 
+    // Deliver the hole with the effect, including to the firing prediction host.
+    // Decal's fourth argument excludes entities; passing the hit prop would skip it.
+    local decal = MCV.ImpactDecalName(family)
+    if decal then
+        util.Decal(decal, pos + normal * 4, pos - normal * 4)
+    end
+
     local ang = normal:Angle()
 
     self:SetPos(pos)
     self:SetAngles(ang)
 
-    local ps = CreateParticleSystem(self, "impact_" .. family .. "_" .. math.random(3),
+    local ps = CreateParticleSystem(self, "mcv_scaled_impact_" .. family .. "_" .. math.random(3),
                                     PATTACH_ABSORIGIN_FOLLOW, 0)
     if !IsValid(ps) then return end
 
@@ -42,6 +49,11 @@ function EFFECT:Init(data)
         ps:SetControlPoint(cp, pos)
         ps:SetControlPointOrientation(cp, forward, right, up)
     end
+
+    local scale = data:GetScale()
+    if scale <= 0 then scale = 1 end
+    scale = math.Clamp(scale, 0.5, 2)
+    ps:SetControlPoint(2, Vector(scale, scale, scale))
 
     ps:StartEmission()
 

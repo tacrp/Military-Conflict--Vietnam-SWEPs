@@ -1,0 +1,138 @@
+[
+  {
+    "name": "vz59b",
+    "source": "work/unused_variant_icons/vz59b_icon.smd",
+    "output": "work/unused_variant_icons/mcv_vz59b.png",
+    "installed": null,
+    "source_sha256": "c711da0f0f58c90ed6552328a314329ea1bd38fe2572df45ded0f5526720049f",
+    "png_sha256": "be349a514466995e13843a152c72b52023889be4ead7281cb533b79e26577004",
+    "triangles": 37138,
+    "size": 512,
+    "bone": "Base",
+    "side": "left",
+    "style": "translucent_outline",
+    "line_opacity": 0.65,
+    "exclude_materials": [
+      "shell",
+      "arms",
+      "hands",
+      "sleeve",
+      "glove"
+    ],
+    "alpha_bounds": [
+      1,
+      185,
+      511,
+      327
+    ]
+  },
+  {
+    "name": "m16_flamer",
+    "source": "work/MCV_SMD_OG/weapons/v_m16_flamer/m16_flamer.smd",
+    "output": "work/unused_variant_icons/mcv_m16_flamer.png",
+    "installed": null,
+    "source_sha256": "5093e55fd426b653ea6f6e55e904cc25bf45f4eb569852a248426d3050276fe5",
+    "png_sha256": "5438b476da07683d08a6fac70737f06dfcd7d0aa19b34cf994a77c0c28d4bf02",
+    "triangles": 20663,
+    "size": 512,
+    "bone": "Base",
+    "side": "left",
+    "style": "translucent_outline",
+    "line_opacity": 0.65,
+    "exclude_materials": [
+      "shell",
+      "arms",
+      "hands",
+      "sleeve",
+      "glove"
+    ],
+    "alpha_bounds": [
+      1,
+      186,
+      511,
+      326
+    ]
+  },
+  {
+    "name": "type56xm148",
+    "source": "work/unused_variant_icons/type56xm148_icon.smd",
+    "output": "work/unused_variant_icons/mcv_type56xm148.png",
+    "installed": null,
+    "source_sha256": "dd185e988b9ce391bea34cfdafca5d76693bd7aa14513dfd951027fb4063fe9e",
+    "png_sha256": "1948aa79a558574f53e37b19106c00c7b835fbc563947d1ae938feb752727324",
+    "triangles": 53098,
+    "size": 512,
+    "bone": "Base",
+    "side": "left",
+    "style": "translucent_outline",
+    "line_opacity": 0.65,
+    "exclude_materials": [
+      "shell",
+      "arms",
+      "hands",
+      "sleeve",
+      "glove"
+    ],
+    "alpha_bounds": [
+      1,
+      186,
+      511,
+      326
+    ]
+  },
+  {
+    "name": "lunge_mine",
+    "source": "work/MCV_SMD_OG/weapons/v_lunge_mine/Ref_lunge.smd",
+    "output": "work/unused_variant_icons/mcv_lunge_mine.png",
+    "installed": null,
+    "source_sha256": "ad69179f4f500f457fdca28374a44996f9ed89f5556dbf83637a78bdc67eef38",
+    "png_sha256": "5e8f7c2d804ace3e7d931c1ae036e93a3acf3d85c466fb6bce5d09dea682ce9d",
+    "triangles": 2019,
+    "size": 512,
+    "bone": "Base",
+    "side": "left",
+    "style": "translucent_outline",
+    "line_opacity": 0.65,
+    "exclude_materials": [
+      "shell",
+      "arms",
+      "hands",
+      "sleeve",
+      "glove"
+    ],
+    "alpha_bounds": [
+      240,
+      129,
+      271,
+      383
+    ],
+    "rotation": 90
+  },
+  {
+    "name": "x2f2a2",
+    "source": "work/unused_variant_icons/x2f2a2_icon.smd",
+    "output": "work/unused_variant_icons/mcv_x2f2a2.png",
+    "installed": null,
+    "source_sha256": "52b02ee4b1431bf9427c9afd66a1ca715b7ab0738a97c183a48d77a4c4dc49a4",
+    "png_sha256": "389159505bac1a3eb5d1628c0e58ff62bbdec40c85bf6f334577db7d70aefec0",
+    "triangles": 64843,
+    "size": 512,
+    "bone": "Base",
+    "side": "left",
+    "style": "translucent_outline",
+    "line_opacity": 0.65,
+    "exclude_materials": [
+      "shell",
+      "arms",
+      "hands",
+      "sleeve",
+      "glove"
+    ],
+    "alpha_bounds": [
+      1,
+      192,
+      511,
+      320
+    ]
+  }
+]

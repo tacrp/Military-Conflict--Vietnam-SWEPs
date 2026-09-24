@@ -138,7 +138,7 @@ function SWEP:PrimaryAttack()
     end
 
     if fm != MCV.FIREMODE_DA then
-        if self.ShootEntity then
+        if self:GetProjectileClass() then
             self:RocketAttack()
         else
             self:BulletAttack()
@@ -151,7 +151,8 @@ function SWEP:PrimaryAttack()
 
     local firemode = self:GetFiremodeValue()
 
-    if firemode == MCV.FIREMODE_SEMI or firemode == MCV.FIREMODE_SA or firemode == MCV.FIREMODE_DA then
+    if firemode == MCV.FIREMODE_SEMI or firemode == MCV.FIREMODE_SA or firemode == MCV.FIREMODE_DA
+        or firemode == MCV.FIREMODE_HE or firemode == MCV.FIREMODE_BUCKSHOT then
         self:SetNeedTriggerPress(true)
     end
 
@@ -321,7 +322,7 @@ function SWEP:GetAimSwayAmplitude(visual)
 
     local sa = visual and self:GetSightAmountVisual() or self:GetSightAmount()
     local amp = (self.Spread or 0) * self:StatMult("spread") * self.HipSwayScale * (1 - sa)
-    if (self.Num or 1) > 1 then amp = amp * 0.5 end // shotguns
+    if self:GetBulletCount() > 1 then amp = amp * 0.5 end // shotguns
     // the stance swings the barrel the way it opens the game's cone: a jump or a run widens
     // the drift, a crouch steadies it. This mode has no cone to grow, so the sway is what the
     // crosshair reads to show the stance. What is drawn eases between stances; the shot reads
@@ -381,7 +382,7 @@ function SWEP:GetSpread()
         // the gun's own dispersion is all there is from the hip, and on the sights a rifle or
         // pistol reduces dispersion to a quarter. Shotguns and volley fire keep their
         // pattern whatever the sight amount or stance.
-        if (self.Num or 1) > 1 or fm == MCV.FIREMODE_VOLLEY then
+        if self:GetBulletCount() > 1 or fm == MCV.FIREMODE_VOLLEY then
             spread = sighted
         else
             spread = sighted * Lerp(sa, 1, 0.25)
@@ -417,7 +418,7 @@ function SWEP:AttackEffects()
     end
 
     if self:GetBipod() then
-        recoilmult = recoilmult * 0
+        recoilmult = recoilmult * 0.25 // Bipod absorbs 75% of recoil.
     end
 
     recoilmult = recoilmult * self:StatMult("recoil")
@@ -425,8 +426,13 @@ function SWEP:AttackEffects()
     self:SetLastRecoilTime(CurTime())
 
     local sa = self:GetSightAmount()
-    local recoilup = Lerp(sa, self.ViewSlideRecoilUp, self.ViewSlideRecoilIronsightUp) * recoilmult
-    local recoilright = Lerp(sa, self.ViewSlideRecoilRight, self.ViewSlideRecoilIronsightRight) * recoilmult
+    // BurstCount is the predicted number of earlier shots, incremented below.
+    // Read it on every replay; never accumulate recoil in an ordinary Lua field.
+    local preceding = self:GetBurstCount()
+    local recoilup = (Lerp(sa, self.ViewSlideRecoilUp, self.ViewSlideRecoilIronsightUp)
+        + preceding * (self.ProgressiveRecoilUp or 0)) * recoilmult
+    local recoilright = (Lerp(sa, self.ViewSlideRecoilRight, self.ViewSlideRecoilIronsightRight)
+        + preceding * (self.ProgressiveRecoilRight or 0)) * recoilmult
 
     if MCV.RealisticShooting() then
         // realistic: from the hip the gun jumps in a random direction and harder; on the sights
@@ -464,9 +470,9 @@ function SWEP:AttackEffects()
 
     local clip_percentage = self:Clip1() / self.Primary.ClipSize
 
-    if clip_percentage < 0.334 then
-        self:EmitSound(self.SoundNearlyEmpty, 100, 100, 1 - (clip_percentage * 3), CHAN_VOICE)
-    end
+    // if clip_percentage < 0.334 then
+    //     self:EmitSound(self.SoundNearlyEmpty, 100, 100, 1 - (clip_percentage * 3), CHAN_VOICE)
+    // end
 
     self:QueueRecoilImpulse(self.RecoilPushbackValue)
 end
@@ -497,14 +503,42 @@ end
 // you hear the report with the far layer filling in underneath; further out only the far layer
 // is left. Splitting the listeners by distance instead meant the far recording only reached
 // someone already standing far away, and never the shooter.
-function SWEP:EmitShotSound(name)
-    if (name or "") == "" then return end
+local function emitShotLayer(wep, name, channel)
+    local props = sound.GetProperties(name)
+    if !props then
+        wep:EmitSound(name, nil, nil, nil, channel)
+        return
+    end
 
-    self:EmitSound(name, nil, nil, nil, CHAN_WEAPON)
+    // Resolve the script: Entity:EmitSound can ignore channel/volume overrides
+    // on script names. Raw samples make each layer's replacement channel explicit.
+    // Never stack reports on CHAN_STATIC: long tails exhaust voices in long bursts.
+    local function pick(value, fallback, key, discrete)
+        if !istable(value) then return value or fallback end
+        local owner = wep:GetOwner()
+        local lo, hi = discrete and 1 or value[1], discrete and (#value + 1) or value[2]
+        local n
+        if IsValid(owner) and owner:IsPlayer() then
+            n = util.SharedRandom("MCVShotSound:" .. name .. ":" .. key, lo, hi)
+        else
+            n = math.Rand(lo, hi)
+        end
+        return discrete and value[math.Clamp(math.floor(n), 1, #value)] or n
+    end
+    local sample = pick(props.sound, name, "sample", true)
+    local volume = pick(props.volume, 1, "volume")
+    local pitch = math.Round(pick(props.pitch, 100, "pitch"))
+    wep:EmitSound(sample, props.level or 75, pitch, volume, channel)
+end
+
+function SWEP:EmitShotSound(name)
+    if !IsFirstTimePredicted() or (name or "") == "" then return end
+
+    emitShotLayer(self, name, MCV.CHAN_SHOT)
 
     local far = distantShot(name)
     if far then
-        self:EmitSound(far, nil, nil, nil, CHAN_WEAPON)
+        emitShotLayer(self, far, MCV.CHAN_SHOT_DISTANT)
     end
 end
 
@@ -529,11 +563,23 @@ end
 function SWEP:BulletAttack(shootPos, shootDir)
     local owner = self:GetOwner()
 
+    if MCV.PhysicalBulletsEnabled(self) then
+        if SERVER then MCV.LaunchPhysicalBullets(self, shootPos, shootDir) end
+        if CLIENT and (game.SinglePlayer() or IsFirstTimePredicted()) then
+            MCV.PredictPhysicalBullets(self, shootPos, shootDir)
+        end
+        return
+    end
+
+    // Ammo/recoil are updated by the caller on every prediction pass. These
+    // client traces exist only for presentation; never replay their effects.
+    if CLIENT and (game.SinglePlayer() or !IsFirstTimePredicted()) then return end
+
     local spread = self:GetSpread()
 
     if owner:IsPlayer() then owner:LagCompensation(true) end
 
-    local num = self.Num
+    local num = self:GetBulletCount()
 
     if self:GetFiremodeValue() == MCV.FIREMODE_VOLLEY then
         num = num * math.min(self:Clip1(), self.VolleyCount)
@@ -550,12 +596,14 @@ function SWEP:BulletAttack(shootPos, shootDir)
             Distance = 56756 - state.distance,
             Attacker = owner,
             Inflictor = self,
-            Tracer = tracer,
+            Tracer = 0,
             TracerName = "mcv_tracer",
             Callback = function(attacker, tr, dmginfo)
                 local distance = state.distance + (tr.HitPos - tr.StartPos):Length()
                 self:ApplyBulletDamage(tr, dmginfo, distance)
-                if SERVER then self:QueuePenetration(tr, state, queue) end
+                self:QueuePenetration(tr, state, queue)
+                MCV.HitscanEffects(self, tr, dmginfo:GetDamage(), tracer)
+                return {effects = false}
             end
         })
     end
@@ -565,8 +613,9 @@ function SWEP:BulletAttack(shootPos, shootDir)
 
     // Finish each FireBullets call before firing its continuations, so nested
     // engine multi-damage accumulation cannot apply a target's damage twice.
-    // These traces stay inside the original shot's lag-compensation window.
-    if SERVER then
+    // Client continuations predict effects too; server traces stay inside the
+    // original shot's lag-compensation window.
+    do
         local index = 1
         while queue[index] do
             fireSegment(queue[index], 1, vector_origin, 0)
@@ -599,7 +648,7 @@ function SWEP:LaunchProjectile(secondary, seed, shootPos, shootDir)
     local src = shootPos or owner:GetShootPos()
     local dir = (shootDir and shootDir:Angle() or self:GetAimAngle()) + spread
 
-    local ent = self.ShootEntity
+    local ent = self:GetProjectileClass()
     local force = self.ShootEntityForce
 
     if secondary then
@@ -620,7 +669,8 @@ function SWEP:LaunchProjectile(secondary, seed, shootPos, shootDir)
     if dmg then rocket.ExplosionDamage = dmg * self:StatMult("explosion_damage", category) end
     if radius then rocket.ExplosionRadius = radius * self:StatMult("explosion_radius", category) end
 
-    force = force * self:StatMult("projectile_speed", category)
+    local speedmult = self:StatMult("projectile_speed", category)
+    force = force * speedmult
 
     rocket:SetPos(src)
     rocket:SetOwner(owner)
@@ -630,6 +680,14 @@ function SWEP:LaunchProjectile(secondary, seed, shootPos, shootDir)
         rocket:SetWeapon(self)
     end
     rocket:Spawn()
+
+    // Opt-in launcher flight; rifle grenades and other projectiles keep their physics.
+    if !secondary and self.RocketGravity and IsValid(rocket) then
+        rocket:StartRocketFlight(dir:Forward(), force, self.RocketGravity,
+            (self.RocketBoostSpeed or self.ShootEntityForce) * speedmult,
+            self.RocketBoostDelay, self.RocketBoostDuration)
+        return
+    end
 
     local phys = rocket:GetPhysicsObject()
 

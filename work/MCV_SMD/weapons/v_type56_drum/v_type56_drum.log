@@ -1,0 +1,230 @@
+StudioMDL.exe (Sep 16 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_type56_drum\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_type56_drum\v_type56_drum.qc"
+Building binary model files...
+Working on "v_type56_drum.qc"
+SMD MODEL ../../../MCV_SMD/weapons/v_type56_drum/v_type56_drum_mesh0.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_bayonetAK.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/runIdle_a_corrective_animation.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/run_a_corrective_animation.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/walkIdle_a_corrective_animation.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/walk_a_corrective_animation.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/shoot1_a_corrective_animation.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/shoot2_a_corrective_animation.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/shoot3_a_corrective_animation.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/basePose_a.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/ironsight.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/ironsight_transition.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/runIdle_a.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/run_a.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/walkIdle_a.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/walk_a.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/shoot1_a.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/shoot1_ironsight_a.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/shoot2_a.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/shoot2_ironsight_a.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/shoot3_a.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/shoot3_ironsight_a.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/nearwall_s_a.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/nearwall_s_a_i.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/nearwall_a.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/nearwall_a_i.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/nearwall_e_a.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/nearwall_e_a_i.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/proneF.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/proneB.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/proneL.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/proneR.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/pickup_s_a.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/pickup_s_a_i.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/pickup_a.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/pickup_a_i.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/pickup_e_a.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/pickup_e_a_i.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/bayonet_e_a.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/bayonet_e_a_i.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/bayonet_s_a.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/bayonet_s_a_i.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/change_firemode_idle.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/change_firemode_iron.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/bayonet_attack_a.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/bayonet_attack_a_i.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/Charge_s_a.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/Charge_s_a_i.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/Charge_l_a.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/Charge_l_a_i.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/Charge_e_a.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/Charge_e_a_i.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/draw.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/draw_2.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/Firstdraw.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/Firstdraw_2.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_rpk/v_rpk_anims/reload.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_rpk/v_rpk_anims/reload_2.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_rpk/v_rpk_anims/reload_empty.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_rpk/v_rpk_anims/reload_empty_2.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_idletonearwall_0_00.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_idletonearwall_0_01.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_idletonearwall_0_02.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_idletonearwall_0_03.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_idletonearwall_0_04.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_idletonearwall_0_05.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_idletonearwall_0_06.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_idletonearwall_0_07.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_idletonearwall_0_08.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_idletonearwall_0_09.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_idletonearwall_0_10.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_idletonearwall_0_11.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_idletonearwall_0_12.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_idletonearwall_0_13.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_idletonearwall_0_14.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_idletonearwall_0_15.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_idletonearwall_0_16.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_idletonearwall_1_00.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_idletonearwall_1_01.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_idletonearwall_1_02.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_idletonearwall_1_03.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_idletonearwall_1_04.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_idletonearwall_1_05.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_idletonearwall_1_06.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_idletonearwall_1_07.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_idletonearwall_1_08.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_idletonearwall_1_09.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_idletonearwall_1_10.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_idletonearwall_1_11.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_idletonearwall_1_12.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_idletonearwall_1_13.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_idletonearwall_1_14.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_idletonearwall_1_15.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_idletonearwall_1_16.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwall_0_00.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwall_0_01.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwall_0_02.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwall_0_03.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwall_0_04.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwall_0_05.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwall_0_06.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwall_0_07.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwall_0_08.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwall_0_09.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwall_0_10.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwall_0_11.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwall_0_12.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwall_0_13.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwall_0_14.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwall_0_15.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwall_0_16.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwall_1_00.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwall_1_01.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwall_1_02.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwall_1_03.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwall_1_04.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwall_1_05.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwall_1_06.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwall_1_07.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwall_1_08.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwall_1_09.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwall_1_10.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwall_1_11.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwall_1_12.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwall_1_13.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwall_1_14.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwall_1_15.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwall_1_16.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwalltoidle_0_00.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwalltoidle_0_01.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwalltoidle_0_02.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwalltoidle_0_03.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwalltoidle_0_04.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwalltoidle_0_05.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwalltoidle_0_06.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwalltoidle_0_07.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwalltoidle_0_08.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwalltoidle_0_09.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwalltoidle_0_10.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwalltoidle_0_11.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwalltoidle_0_12.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwalltoidle_0_13.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwalltoidle_0_14.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwalltoidle_0_15.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwalltoidle_0_16.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwalltoidle_1_00.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwalltoidle_1_01.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwalltoidle_1_02.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwalltoidle_1_03.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwalltoidle_1_04.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwalltoidle_1_05.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwalltoidle_1_06.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwalltoidle_1_07.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwalltoidle_1_08.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwalltoidle_1_09.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwalltoidle_1_10.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwalltoidle_1_11.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwalltoidle_1_12.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwalltoidle_1_13.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwalltoidle_1_14.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwalltoidle_1_15.smd
+SMD MODEL ../v_type56/safe_anims/mcv_safe_nearwalltoidle_1_16.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/bash.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/bash_2.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/v_type56/v_type56_anims/holster.smd
+Processing LOD for material: type56
+Processing LOD for material: shells_small
+Processing LOD for material: akm_mag3
+Processing LOD for material: ak47_bayonet_d
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_type56_drum.mdl:
+bones        22344 bytes (97)
+animations  458940 bytes (169 anims) (5191 frames) [2:18]
+sequences    11688 bytes (31 seq) 
+ik/pose        536 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       288 bytes
+keyvalues       20 bytes
+bone transforms    13256 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       514112
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_type56_drum.vvd:
+vertices   1457712 bytes (30369 vertices)
+vertices    101376 bytes (2112 vertices)
+tangents    485904 bytes (30369 vertices)
+tangents     33792 bytes (2112 vertices)
+total      2078848 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_type56_drum.dx80.vtx":
+body parts:        16 bytes
+models:            60 bytes
+model LODs:        36 bytes
+meshes:            36 bytes
+strip groups:     100 bytes
+strips:           108 bytes
+verts:         292329 bytes
+indices:       253926 bytes
+bone changes:      64 bytes
+everything:    546675 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_type56_drum.dx90.vtx":
+body parts:        16 bytes
+models:            60 bytes
+model LODs:        36 bytes
+meshes:            36 bytes
+strip groups:     100 bytes
+strips:           108 bytes
+verts:         292329 bytes
+indices:       253926 bytes
+bone changes:      64 bytes
+everything:    546675 bytes
+
+Completed "v_type56_drum.qc"

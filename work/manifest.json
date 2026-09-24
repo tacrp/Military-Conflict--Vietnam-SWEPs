@@ -1,0 +1,48 @@
+[
+  {
+    "name": "rpk_main_check",
+    "source": "work/MCV_SMD_OG/weapons/v_rpk/refRPK_new.smd",
+    "output": "work/mcv_rpk_main_check.png",
+    "installed": null,
+    "source_sha256": "3e41ee7687c56b3b3b1c211f71e98b5360b0a38e12b1007b47e0d4a2bbe0a021",
+    "png_sha256": "59aeb320122c1c38818d40d32f8897c9305963f1a602f691f218788a5b87b754",
+    "triangles": 35875,
+    "size": 512,
+    "bone": "Base",
+    "side": "left",
+    "style": "translucent_outline",
+    "line_opacity": 0.65,
+    "exclude_materials": [
+      "shell"
+    ],
+    "alpha_bounds": [
+      1,
+      208,
+      511,
+      304
+    ]
+  },
+  {
+    "name": "rpk_mag_check",
+    "source": "work/MCV_SMD_OG/weapons/v_rpk/RPK_mag_drum.smd",
+    "output": "work/mcv_rpk_mag_check.png",
+    "installed": null,
+    "source_sha256": "0ffabc73a38a26f7cf2e13e5b95eceb106fbb3a41a39d6cf415fc10e5c2ebff9",
+    "png_sha256": "02bec2d975996282fcaa260b6b5e5f6f8315fd18167b1b933e624a2622fae79a",
+    "triangles": 9045,
+    "size": 512,
+    "bone": "Base",
+    "side": "left",
+    "style": "translucent_outline",
+    "line_opacity": 0.65,
+    "exclude_materials": [
+      "shell"
+    ],
+    "alpha_bounds": [
+      190,
+      129,
+      322,
+      383
+    ]
+  }
+]

@@ -9,7 +9,7 @@ AddCSLuaFile()
 // Names and basic information
 SWEP.PrintName = "vz. 54 Meopta"
 SWEP.Category = "Military Conflict: Vietnam"
-SWEP.Country = "Soviet Union"
+SWEP.Country = "Czechoslovakia"
 SWEP.SubCategory = "Sniper Rifles"
 SWEP.Caliber = "7.62x54mmR"
 
@@ -99,7 +99,7 @@ SWEP.CrosshairDeltaDistance = 4
 
 SWEP.WeaponWeight = 4.4
 
-SWEP.Primary.Ammo = "ar2"
+SWEP.Primary.Ammo = "357"
 SWEP.Primary.ClipSize = 5
 SWEP.Primary.Chamber = 0
 SWEP.Primary.DefaultClip = 20
@@ -165,3 +165,5 @@ SWEP.TracerParticle2 = "vietnam_tracer_sniperrifle_green_secondary"
 
 SWEP.TracerRandomness = 6
 SWEP.TracerFrequency = 1
+
+SWEP.MuzzleVelocity = 865 // m/s, original game stat

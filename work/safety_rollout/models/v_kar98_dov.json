@@ -1,8 +1,30 @@
 {
   "model": "v_kar98_dov",
-  "status": "equipment: original animations",
-  "safe": false,
-  "qc_sha256": "61a13c2c3ae5c31e04b63b25169d56bdc849714826d85fdd35a75b2095e29038",
+  "safe": true,
+  "status": "baked",
+  "sequences": [
+    {
+      "sequence": "idletonearwall",
+      "rows": 2,
+      "mode_axis": false
+    },
+    {
+      "sequence": "nearwall",
+      "rows": 2,
+      "mode_axis": false
+    },
+    {
+      "sequence": "nearwalltoidle",
+      "rows": 2,
+      "mode_axis": false
+    }
+  ],
+  "max_grip_error": 1.0179974469521788e-09,
+  "max_blended_grip_error": 0.21508903325310902,
+  "max_shoulder_shift": 1.0290317432389005,
+  "knots": 31,
+  "reach_margin": 0.002,
+  "qc_sha256": "c00a2cad52d6c91b0c5cb00b4b0a92d27cf5017c60ad5fe5d6460b05c6c05a27",
   "compile": {
     "ok": true,
     "returncode": 0,
@@ -10,6 +32,9 @@
       "WARNING: Failed to load keyvalues file cfg/mount.cfg!",
       "WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences."
     ]
+  },
+  "timing_check": {
+    "matches_installed": true
   },
   "compiled_sequence_count": 45
 }

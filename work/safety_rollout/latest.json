@@ -1,6 +1,6 @@
 [
   {
-    "model": "v_m38_s",
+    "model": "v_vz59b",
     "safe": true,
     "status": "baked",
     "sequences": [
@@ -20,60 +20,12 @@
         "mode_axis": false
       }
     ],
-    "max_grip_error": 9.371875047886304e-10,
-    "max_blended_grip_error": 0.14724761633248626,
-    "max_shoulder_shift": 1.2923689435246075,
+    "max_grip_error": 7.867778351859515e-10,
+    "max_blended_grip_error": 0.01945172239993457,
+    "max_shoulder_shift": 0.0,
     "knots": 31,
-    "qc_sha256": "d77cb3b1534d121a2601974c2b3dc5e080b2012b8f1a8f5091555ce378eeb56a",
-    "compile": {
-      "ok": true,
-      "returncode": 0,
-      "messages": [
-        "WARNING: Failed to load keyvalues file cfg/mount.cfg!"
-      ]
-    },
-    "compiled_sequence_count": 42
-  },
-  {
-    "model": "v_m40",
-    "safe": true,
-    "status": "baked",
-    "sequences": [
-      {
-        "sequence": "idletonearwall",
-        "rows": 2,
-        "mode_axis": false
-      },
-      {
-        "sequence": "nearwall",
-        "rows": 2,
-        "mode_axis": false
-      },
-      {
-        "sequence": "nearwalltoidle",
-        "rows": 2,
-        "mode_axis": false
-      }
-    ],
-    "max_grip_error": 7.979703682808776e-10,
-    "max_blended_grip_error": 0.10992880851330412,
-    "max_shoulder_shift": 3.41294040720426,
-    "knots": 31,
-    "qc_sha256": "8772a73d07c38b528a64c9095a9413a73d48effc11210295ff180e290c580719",
-    "compile": {
-      "ok": true,
-      "returncode": 0,
-      "messages": [
-        "WARNING: Failed to load keyvalues file cfg/mount.cfg!"
-      ]
-    },
-    "compiled_sequence_count": 28
-  },
-  {
-    "model": "v_lunge_mine",
-    "status": "equipment: original animations",
-    "safe": false,
-    "qc_sha256": "f6bea4192dbeeb471c095f307b77396528d53b24ad25aca6d4d77b56326f19c5",
+    "reach_margin": 0.5,
+    "qc_sha256": "ac9ac7783f6b5295964dff0df93a5a476fb0711b6021db0580adc6bb853d08f8",
     "compile": {
       "ok": true,
       "returncode": 0,
@@ -82,20 +34,89 @@
         "WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences."
       ]
     },
-    "compiled_sequence_count": 20
+    "timing_check": {
+      "matches_installed": true
+    },
+    "compiled_sequence_count": 36
   },
   {
-    "model": "v_m16_flamer",
-    "status": "equipment: original animations",
-    "safe": false,
-    "qc_sha256": "b64d9dc298207ded5d1322d077d8af1c449247a10024e9dfce8d00530d91827b",
+    "model": "v_kar98_dov",
+    "safe": true,
+    "status": "baked",
+    "sequences": [
+      {
+        "sequence": "idletonearwall",
+        "rows": 2,
+        "mode_axis": false
+      },
+      {
+        "sequence": "nearwall",
+        "rows": 2,
+        "mode_axis": false
+      },
+      {
+        "sequence": "nearwalltoidle",
+        "rows": 2,
+        "mode_axis": false
+      }
+    ],
+    "max_grip_error": 1.0179974469521788e-09,
+    "max_blended_grip_error": 0.21508903325310902,
+    "max_shoulder_shift": 1.0290317432389005,
+    "knots": 31,
+    "reach_margin": 0.002,
+    "qc_sha256": "c00a2cad52d6c91b0c5cb00b4b0a92d27cf5017c60ad5fe5d6460b05c6c05a27",
     "compile": {
       "ok": true,
       "returncode": 0,
       "messages": [
-        "WARNING: Failed to load keyvalues file cfg/mount.cfg!"
+        "WARNING: Failed to load keyvalues file cfg/mount.cfg!",
+        "WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences."
       ]
     },
-    "compiled_sequence_count": 50
+    "timing_check": {
+      "matches_installed": true
+    },
+    "compiled_sequence_count": 45
+  },
+  {
+    "model": "v_x2f2a2",
+    "safe": true,
+    "status": "baked",
+    "sequences": [
+      {
+        "sequence": "idletonearwall",
+        "rows": 2,
+        "mode_axis": false
+      },
+      {
+        "sequence": "nearwall",
+        "rows": 2,
+        "mode_axis": false
+      },
+      {
+        "sequence": "nearwalltoidle",
+        "rows": 2,
+        "mode_axis": false
+      }
+    ],
+    "max_grip_error": 3.3633340029203887e-10,
+    "max_blended_grip_error": 0.010922868552129735,
+    "max_shoulder_shift": 0.0,
+    "knots": 31,
+    "reach_margin": 0.5,
+    "qc_sha256": "c06265b498674718647099ef1a9eac34c6e12adbad99c821863f265de01ac0b2",
+    "compile": {
+      "ok": true,
+      "returncode": 0,
+      "messages": [
+        "WARNING: Failed to load keyvalues file cfg/mount.cfg!",
+        "WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences."
+      ]
+    },
+    "timing_check": {
+      "matches_installed": true
+    },
+    "compiled_sequence_count": 28
   }
 ]

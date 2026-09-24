@@ -1,0 +1,75 @@
+StudioMDL.exe (Sep 16 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\w_svd_irons\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\w_svd_irons\w_svd_irons.qc"
+Building binary model files...
+Working on "w_svd_irons.qc"
+SMD MODEL ../../../MCV_SMD/weapons/v_svd_irons/w_svd_irons_mesh0.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/w_svd/w_svd_akb_lod0.smd
+SMD MODEL ../../../MCV_SMD/weapons/v_svd_irons/w_svd_irons_mesh1.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/w_svd/w_svd_akb_lod0_lod1.smd
+SMD MODEL ../../../MCV_SMD/weapons/v_svd_irons/w_svd_irons_mesh2.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/w_svd/w_svd_akb_lod0_lod2.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/w_svd/w_svd_anims/idle.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/w_svd/w_svd_physics.smd
+Processing LOD for material: w_svd
+Lod 1: vertexes: 3262 (891 new)
+Lod 2: vertexes: 3771 (509 new)
+Processing LOD for material: w_akb
+Lod 1: vertexes: 637 (175 new)
+Lod 2: vertexes: 727 (90 new)
+Model has 3 convex sub-parts
+Collision model completed.
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_svd_irons.mdl:
+bones         2116 bytes (4)
+animations     132 bytes (1 anims) (1 frames) [0:00]
+sequences      232 bytes (1 seq) 
+ik/pose        476 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       144 bytes
+keyvalues       20 bytes
+bone transforms      608 bytes
+bone flex driver       0 bytes
+Collision model volume 307.85 in^3
+collision        0 bytes
+total         4232
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_svd_irons.vvd:
+vertices    181008 bytes (3771 vertices)
+vertices     34896 bytes (727 vertices)
+tangents     60336 bytes (3771 vertices)
+tangents     11632 bytes (727 vertices)
+total       287936 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_svd_irons.dx80.vtx":
+body parts:        16 bytes
+models:           132 bytes
+model LODs:       108 bytes
+meshes:            54 bytes
+strip groups:     150 bytes
+strips:           162 bytes
+verts:          44289 bytes
+indices:        24876 bytes
+bone changes:      96 bytes
+everything:     69811 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_svd_irons.dx90.vtx":
+body parts:        16 bytes
+models:           132 bytes
+model LODs:       108 bytes
+meshes:            54 bytes
+strip groups:     150 bytes
+strips:           162 bytes
+verts:          44289 bytes
+indices:        24876 bytes
+bone changes:      96 bytes
+everything:     69811 bytes
+
+Completed "w_svd_irons.qc"

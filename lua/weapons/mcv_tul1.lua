@@ -7,7 +7,7 @@ AddCSLuaFile()
 // Names and basic information
 SWEP.PrintName = "TUL-1"
 SWEP.Category = "Military Conflict: Vietnam"
-SWEP.Country = "Democratic Republic of Vietnam"
+SWEP.Country = "Vietnam"
 SWEP.SubCategory = "Light-Machine Guns"
 SWEP.Caliber = "7.62x39mm"
 
@@ -95,7 +95,7 @@ SWEP.CrosshairDeltaDistance = 4
 
 SWEP.WeaponWeight = 4.8
 
-SWEP.Primary.Ammo = "ar2"
+SWEP.Primary.Ammo = "smg1"
 SWEP.Primary.ClipSize = 40
 SWEP.Primary.Chamber = 1
 SWEP.Primary.DefaultClip = 120

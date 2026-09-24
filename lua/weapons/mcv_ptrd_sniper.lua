@@ -8,6 +8,9 @@ SWEP.Category = "Military Conflict: Vietnam"
 SWEP.SubCategory = "Sniper Rifles"
 SWEP.ViewModel = "models/weapons/mcv/v_ptrd41_s.mdl"
 SWEP.WorldModel = "models/weapons/mcv/w_ptrd41_s.mdl"
+
+SWEP.HoldType = "passive"
+
 SWEP.BodyGroups = "00" // gun and the separately animated PTRD cartridge
 SWEP.WorldModelBodyGroups = "00"
 // Match the donor's frame-13 cartridge reveal through shared predicted state.

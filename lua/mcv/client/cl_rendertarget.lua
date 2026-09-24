@@ -1,7 +1,7 @@
 // The scope lens shader samples the frame from before the viewmodel was drawn: the world
-// without the gun. gShader's early effects also contain the gun's depth silhouette, so
-// its PreDrawReconstruction hook provides an earlier clean capture point.
-local function captureScope(beforeReconstruction)
+// without the colour viewmodel, but including world translucency/effects. Screen-space
+// shading may already contain viewmodel occlusion; see work/GSHADER_COMPATIBILITY.md.
+local function captureScope()
     // Do not replace the main view with a reflection, camera or another addon's RT view.
     local view = render.GetViewSetup()
     if view.id and view.id != 0 and view.id != 4 then return end
@@ -11,16 +11,15 @@ local function captureScope(beforeReconstruction)
 
     if !IsValid(wpn) or !wpn.MilitaryConflictVietnam then return end
 
-    if wpn.CaptureScopeScreen then wpn:CaptureScopeScreen(beforeReconstruction) end
+    if wpn.CaptureScopeScreen then wpn:CaptureScopeScreen() end
 end
 
 hook.Add("PreDrawViewModels", "MCV_CaptureScopeScreen", function()
-    captureScope(false)
+    captureScope()
 end)
 
-hook.Add("PreDrawReconstruction", "MCV_CaptureScopeBeforeShaders", function()
-    captureScope(true)
-end)
+// Also remove the obsolete early capture when this file is hot-reloaded.
+hook.Remove("PreDrawReconstruction", "MCV_CaptureScopeBeforeShaders")
 
 // The model's own $bbox is the viewmodel's render box, and a box that ends at eye height (the
 // molotov's and the dynamite's) had the whole viewmodel culled: nothing drawn, and none of

@@ -77,7 +77,7 @@ HOLDTYPES = {
 }
 
 AMMO = {  # primary_ammo -> (GMod ammo type, caliber label)
-    "CrossbowBolt": ("mcv_crossbowbolt", "Crossbow Bolt"),
+    "CrossbowBolt": ("XBowBolt", "Crossbow Bolt"),
     "FlareRound": ("mcv_flareround", "26.5mm Flare"),
     "9x19mm": ("pistol", "9x19mm"),
     "5.56mm": ("ar2", "5.56x45mm"),
@@ -568,7 +568,7 @@ REUSE_KEYS = ("PrintName", "FireRate", "ScopeMaterial", "HasScope", "AdjustableS
               "CyclePostDelay", "TriggerDelayTime", "IconOverride", "ViewModelFOV",
               "SightedViewModelFOV", "MuzzleParticle", "MuzzleParticle3rdPerson", "MuzzleParticleIronsighted",
               "RTScopeMaterialIndex", "IronsightSpeedScale", "InvertAnimationHammer", "AnimationHandlesHammer",
-              "RifleGrenadeForce", "SoundGrenadeShot")
+              "RifleGrenadeForce", "SoundGrenadeShot", "MuzzleVelocity")
 
 def shoot_anim_seconds(vm):
     """Length of the model's primary shot animation from the OG decompile (30 fps), or None."""
@@ -894,6 +894,7 @@ def _wm_of(S, vm):
 
 
 def _header(name, base, S, args, existing, printname_default, subcat, slot):
+    from weapon_countries import canonical_country
     country = COUNTRY.get(S.get("origin", ""))
     if country is None and args.strings:
         country = args.strings.get(S.get("origin", "").lstrip("#").lower())
@@ -903,7 +904,7 @@ def _header(name, base, S, args, existing, printname_default, subcat, slot):
            "// Names and basic information",
            "SWEP.PrintName = %s" % (existing.get("PrintName") or fmt(game_name or pretty_name(S.get("printname", printname_default)))),
            'SWEP.Category = "Military Conflict: Vietnam"',
-           "SWEP.Country = %s" % fmt(country or ""),
+           "SWEP.Country = %s" % fmt(canonical_country(name, country or "")),
            "SWEP.SubCategory = %s" % (existing.get("SubCategory") or fmt(subcat)),
            "", "SWEP.Slot = %s" % (existing.get("Slot") or slot), ""]
     return out
@@ -1281,6 +1282,10 @@ def generate(script_path, args):
     # the dual mode belongs to this weapon.
     # ClipSize / Chamber / DefaultClip stay the script's (no reuse)
     ammo_type = rv("Primary.Ammo", ammo_type)
+    from weapon_trivia import gameplay_ammo, trivia_caliber, CATEGORY_OVERRIDES
+    subcat = CATEGORY_OVERRIDES.get(name, rv("SubCategory", subcat))
+    caliber = trivia_caliber(name, rv("Caliber", caliber))
+    ammo_type = gameplay_ammo(name, subcat, caliber, ammo_type)
     akimbo_vm = akimbo_model(name, vm, args.scripts_dir) if has_akimbo else None
 
     brass_game = int(num(S.get("EjectBrassType"), -1))
@@ -1341,9 +1346,10 @@ def generate(script_path, args):
     A("// Names and basic information")
     A(line("PrintName", reuse("PrintName") or fmt(game_name or pretty_name(S.get("printname", name)))))
     A(line("Category", '"Military Conflict: Vietnam"'))
-    A(line("Country", fmt(country)))
-    A(line("SubCategory", reuse("SubCategory") or fmt(subcat)))
-    A(line("Caliber", reuse("Caliber") or fmt(caliber)))
+    from weapon_countries import canonical_country
+    A(line("Country", fmt(canonical_country(name, country))))
+    A(line("SubCategory", fmt(subcat)))
+    A(line("Caliber", fmt(caliber)))
     A("")
     A(line("Slot", reuse("Slot") or slot))
     if holdtype != "ar2":
@@ -1527,6 +1533,8 @@ def generate(script_path, args):
     A(line("SpreadIronsighted", fmt(num(S.get("BulletSpreadDegreesIronsighted"), 1))))
     A("")
     A(line("FireRate", fmt(firerate) if not isinstance(firerate, str) else firerate) + " // in rounds per minute")
+    if reuse("MuzzleVelocity") or num(S.get("muzzle_velocity"), 0) > 0:
+        A(line("MuzzleVelocity", reuse("MuzzleVelocity") or fmt(num(S.get("muzzle_velocity"), 0))) + " // m/s")
     # a revolver's other two rates: the double action pull and fanning
     if "MCV.FIREMODE_DA" in firemodes and num(S.get("SecondaryFireRate"), 0) > 0:
         A(line("FireRate_DA", int(num(S.get("SecondaryFireRate"), 0))) + " // double action pull")

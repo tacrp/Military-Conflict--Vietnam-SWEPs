@@ -9,7 +9,7 @@ SWEP.PrintName = "PPSh-41"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Soviet Union"
 SWEP.SubCategory = "Submachine Guns"
-SWEP.Caliber = "7.62x25mm"
+SWEP.Caliber = "7.62x25mm Tokarev"
 
 SWEP.Slot = 2
 SWEP.SprintHoldType = "passive"

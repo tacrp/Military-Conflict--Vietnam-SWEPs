@@ -9,7 +9,7 @@ AddCSLuaFile()
 // Names and basic information
 SWEP.PrintName = "Type 97 Flaregun"
 SWEP.Category = "Military Conflict: Vietnam"
-SWEP.Country = "Empire of Japan"
+SWEP.Country = "Japan"
 SWEP.SubCategory = "Pistols"
 SWEP.Caliber = "26.5mm Flare"
 

@@ -1108,3 +1108,21 @@ $keyvalues
 //		"value" "d:\dev_content2\mcv\mcv-content\vietnam\models\guns\launcher_m79\m79_short.qc"
 //	}
 }
+
+// BEGIN MCV LIVE M79 RELOAD
+$sequence "reload_live" {
+	"live_reload/reload_live_0.smd"
+	"live_reload/reload_live_1.smd"
+	blend "ironsight" 0 1
+	blendwidth 2
+	{ event 5004 1 "MCV_Weapon_Foley_M79_Reload.Hand" }
+	{ event 5004 10 "MCV_Weapon_Foley_M79_Reload.Open" }
+	{ event 5004 63 "MCV_Weapon_Foley_M79_Reload.Insert" }
+	{ event 5004 79 "MCV_Weapon_Foley_M79_Reload.Close" }
+	{ event 5004 81 "MCV_Weapon_Foley_M79_Reload.HandEnd" }
+	fadein 0.2
+	fadeout 0.2
+	node "0"
+	fps 30
+}
+// END MCV LIVE M79 RELOAD

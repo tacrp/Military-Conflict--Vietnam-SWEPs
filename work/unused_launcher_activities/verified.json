@@ -1,0 +1,22 @@
+[
+  {
+    "model": "v_type56xm148",
+    "shot": [
+      "gl_shoot",
+      2,
+      -1,
+      1,
+      []
+    ]
+  },
+  {
+    "model": "v_m16_flamer",
+    "shot": [
+      "gl_shoot",
+      2,
+      -1,
+      1,
+      []
+    ]
+  }
+]

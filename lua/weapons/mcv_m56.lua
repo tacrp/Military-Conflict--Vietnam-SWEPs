@@ -9,7 +9,7 @@ SWEP.PrintName = "M56"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Yugoslavia"
 SWEP.SubCategory = "Submachine Guns"
-SWEP.Caliber = "9x19mm"
+SWEP.Caliber = "7.62x25mm Tokarev"
 
 SWEP.Slot = 2
 SWEP.SprintHoldType = "passive"

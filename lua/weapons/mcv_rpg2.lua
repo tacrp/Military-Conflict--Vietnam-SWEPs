@@ -35,6 +35,8 @@ SWEP.LastShotAnimation = false
 SWEP.MagInClip = false
 
 SWEP.ShootEntity = "mcv_proj_rpg"
+SWEP.ShootEntityForce = 84 / 0.0254
+SWEP.RocketGravity = 9.80665 / 0.0254
 SWEP.ShootForce = 2000
 
 // View slide from recoil

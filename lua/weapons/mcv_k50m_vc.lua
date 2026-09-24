@@ -9,7 +9,7 @@ AddCSLuaFile()
 // Names and basic information
 SWEP.PrintName = "K-50M1A1"
 SWEP.Category = "Military Conflict: Vietnam"
-SWEP.Country = "Democratic Republic of Vietnam"
+SWEP.Country = "Vietnam"
 SWEP.SubCategory = "Submachine Guns"
 SWEP.Caliber = "7.62x25mm Tokarev"
 
@@ -155,3 +155,5 @@ SWEP.TracerParticle2 = "vietnam_tracer_smg_green_secondary"
 
 SWEP.TracerRandomness = 6
 SWEP.TracerFrequency = 2
+
+SWEP.MuzzleVelocity = 488 // m/s, original game stat

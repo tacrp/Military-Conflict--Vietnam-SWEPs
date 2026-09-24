@@ -94,8 +94,8 @@ SWEP.HoldType = "ar2"
 SWEP.SprintHoldType = "passive"
 SWEP.AimHoldType = "rpg"
 
-SWEP.ShootGesture = ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
-SWEP.ReloadGesture = ACT_HL2MP_GESTURE_RELOAD_AR2
+SWEP.ShootGesture = false
+SWEP.ReloadGesture = false
 
 // Third person gestures follow the hold type in use (a pistol reload on a pistol pose, the
 // duel set with a gun in each hand); the two fields above are the fallback
@@ -115,12 +115,12 @@ local GESTURES = {
 
 function SWEP:GetShootGesture()
     local g = GESTURES[self:GetHoldType() or self.HoldType]
-    return g and g[1] or self.ShootGesture
+    return self.ShootGesture or (g and g[1]) or ACT_HL2MP_GESTURE_RANGE_ATTACK_AR2
 end
 
 function SWEP:GetReloadGesture()
     local g = GESTURES[self:GetHoldType() or self.HoldType]
-    return g and g[2] or self.ReloadGesture
+    return self.ReloadGesture or (g and g[2]) or ACT_HL2MP_GESTURE_RELOAD_AR2
 end
 SWEP.BashGesture = ACT_GMOD_GESTURE_MELEE_SHOVE_2HAND
 
@@ -271,6 +271,7 @@ function SWEP:SetupDataTables()
     self:NetworkVar("Int", 11, "MoveCommand")
     self:NetworkVar("Int", 12, "SupplyCursor")
     self:NetworkVar("Int", 13, "ClockResetSerial")
+    self:NetworkVar("Int", 14, "AmmoSwitchFrom") // outgoing cartridge during an ammo-change reload
     if CLIENT then
         self:NetworkVarNotify("ClockResetSerial", function(w, _, old, new)
             if old != new then w:ResetClockVisuals() end
@@ -329,11 +330,15 @@ function SWEP:GetZoomMagnification() return 1 end
 // hole with it, so that file puts a hole back; returning false leaves the shot to the engine,
 // which is what the convar being off and a hit on flesh both do.
 function SWEP:DoImpactEffect(tr, dmgtype)
-    return MCV.SurfaceImpact(tr)
+    return MCV.SurfaceImpact(tr, (self.DamageGeneric or 40) * self:StatMult("damage"))
 end
 
 // Text shown above the ammo counter, and the two numbers of the counter (nil hides them)
 function SWEP:GetFiremodeName() return "" end
+
+// Cartridge-dependent metadata is derived from predicted state by selectable launchers.
+function SWEP:GetBulletCount() return self.Num or 1 end
+function SWEP:GetProjectileClass() return self.ShootEntity end
 function SWEP:GetHUDAmmo() return nil, nil end
 
 // Activity the idle loop uses, or a sequence name that takes precedence when not nil

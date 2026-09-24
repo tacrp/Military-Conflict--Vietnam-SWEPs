@@ -101,6 +101,10 @@ end
 function SWEP:Think_Sights()
     local owner = self:GetOwner()
 
+    // Shot cooldowns must not swallow aim input during automatic fire. Only locked
+    // actions block entry here; ScopeToggle also checks reload and bipod requirements.
+    local aimUnlocked = self:GetAnimLockTime() <= CurTime()
+
     // Ironsight is already a predicted NetworkVar: replay the press against its restored
     // value, never a plain Lua latch or an IsFirstTimePredicted-only state change.
     if self:GetSafe() then
@@ -109,12 +113,12 @@ function SWEP:Think_Sights()
         if owner:KeyPressed(IN_ATTACK2) and !owner:KeyDown(IN_USE) then
             if self:GetIronsight() then
                 self:ScopeToggle(false)
-            elseif !self:StillWaiting() then
+            elseif aimUnlocked then
                 self:ScopeToggle(true)
             end
         end
     elseif owner:KeyDown(IN_ATTACK2) then
-        if !self:GetIronsight() and !owner:KeyDown(IN_USE) and !self:StillWaiting() then
+        if !self:GetIronsight() and !owner:KeyDown(IN_USE) and aimUnlocked then
             self:ScopeToggle(true)
         end
     elseif self:GetIronsight() then

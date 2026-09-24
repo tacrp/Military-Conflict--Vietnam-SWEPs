@@ -144,6 +144,12 @@ function SWEP:OnRemove()
 end
 
 if CLIENT then
+    // Hold the expanded gap for the stream, independent of its damage ticks.
+    // The shared HUD smoothly opens/closes it when flaming starts/stops.
+    function SWEP:GetCrosshairKick()
+        return self:IsFlaming() and 1 or 0
+    end
+
     // The stream is a particle system attached to the muzzle attachment: the viewmodel for
     // the player holding it, the world model for everyone else.
     function SWEP:FlameEmitter()
@@ -158,7 +164,7 @@ if CLIENT then
         self:StopFlameEffect()
         local ent = self:FlameEmitter()
         if !IsValid(ent) then return end
-        local att = ent:LookupAttachment("muzzle")
+        local att = ent:LookupAttachment(self.FlameAttachment or "muzzle")
         if att <= 0 then att = 1 end
         local ps = CreateParticleSystem(ent, self.FlameParticle, PATTACH_POINT_FOLLOW, att)
         local owner = self:GetOwner()
@@ -217,7 +223,7 @@ if CLIENT then
     function SWEP:Think_ClientFlame()
         local owner = self:GetOwner()
         local flaming = !self:IsDormant() and IsValid(owner) and !owner:IsDormant()
-            and self:GetPrimedAttack() and owner:GetActiveWeapon() == self
+            and self:IsFlaming() and owner:GetActiveWeapon() == self
         if flaming and IsValid(self.FlamePS) and self.FlamePSEnt != self:FlameEmitter() then
             self:StopFlameEffect()
         end

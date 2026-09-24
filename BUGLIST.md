@@ -1,6 +1,120 @@
 All oddities, visual bugs and WIP elements that need addressing
 (updated Dec. 12th, 2024)
 
+- [x] Regular hitscan bullets now dispatch tracer/impact effects directly from the firing callback. MP shooter traces/effects run only on the first predicted pass; server PVS delivery excludes that shooter. SP/NPC effects remain server-driven. Disabled the redundant engine effect path per bullet and replicated penetration traces clientside for immediate follow-on impacts. Custom/stock and tracer routing covered by work/test_hitscan_impacts.py; existing physical/melee/replay checks pass. No in-game verification. Change maps.
+
+- [x] Physical bullets predict local impacts and material penetration, using matching client/server flight substeps. Server damage bullets suppress engine effects and send keyed contact confirmations; matching shot/pellet/layer echoes do not replay impacts. Stock/custom effects, remote clients and SP retained; MP launch first-predicted guard allows SP. Offline impact ownership, client penetration, replay and syntax checks passed; no in-game verification. Lua/protocol change: change maps so all clients load it.
+
+- [x] Unified physical-bullet beam and smoke position updates: both use the muzzle-blended path during flight, immediately on server adoption/correction, and up to predicted contact before smoke emission stops. Offline regression compares beam/CP positions without waiting for another Think and checks the blended contact point. Lua only; change maps. Existing emitted smoke retains its original drift/fade.
+
+- [x] Physical tracer muzzle now captures attachments from the actual viewmodel draw, projects its FOV into world space and reuses the offset during firing. Removed the firing-time viewmodel bone rebuild that could invalidate the attachment and fall back to the camera. Preserved 1000-HU blending and smoke startup fixes. Offline projection/stale-attachment regression and syntax checks; visual confirmation pending. Lua only, change maps.
+
+- [x] Physical smoke follows original radius, emission-rate setting, position variation and opacity ramp again. Hardened first-shot/restart initialization: set CP positions/orientations before simulation, 20 ms emission warmup, stale attachment fallback, separate rope across corrections. Offline first-shot-at-distance and penetration-restart checks passed; user-reported origin artifact still needs in-game confirmation. Restart GMod for updated PCF.
+
+- [x] Restored original smoke opacity remapping removed accidentally during standalone conversion. All 11 families preserve original Color Random, Alpha Random and Remap Initial Scalar settings, verified byte-for-byte by the builder. Retained current 50% radius to isolate the opacity correction. Rebuilt PCF; restart GMod. No in-game verification.
+
+- [x] Reduced physical-bullet smoke radii to 50% across all 11 families; retained emission density, colour and fade timing. Rebuilt the standalone smoke PCF. Restart GMod to refresh particles.
+
+- [x] Physical-bullet smoke no longer relies on native parent tracer particles. Added 11 standalone original rope-smoke families that emit continuously at the moving bullet-head CP0, loaded/precached explicitly. Kept original smoke materials/colour/lifetime/motion and muzzle blending; emitted smoke fades after contact. Rebuild with work/build_physical_smoke.py. Asset and offline lifecycle checks passed; visual verification remains pending. Restart GMod for the new PCF.
+
+- [x] Physical bullets now predict local cosmetic launches with shared spread and command/weapon/round/pellet identities; server confirmation adopts the existing visual and late echoes cannot replay it. Smoke and streak blend from the drawn muzzle to the true trajectory over 1000 HU, retaining emitted smoke after contact. Server-only water/slime surface splashes on entry/exit. Damage remains authoritative. Offline prediction/echo/pellet/water/blend/lifecycle and syntax checks passed; no in-game verification. Change maps.
+
+- [x] Added opt-in physical bullets and an Options > Military Conflict: Vietnam > Physical Bullets page: weapon MuzzleVelocity, gravity, drag, lifetime, NPC and pellet controls. Server swept flight applies existing damage/penetration at contact; clients follow with particle/beam tracers and clean up on impact/expiry/map reset. Flight networking uses full floats to avoid compressed-vector velocity truncation. Filled missing original-game velocity stats; all 201 audited firearms covered. Offline flight, client lifecycle, impact, ammo/prediction and syntax checks passed. No in-game verification; high-latency presentation remains unverified. See work/PHYSICAL_BULLETS.md. Change maps.
+
+- [x] Re-rendered X2F2A2 spawn icon with its separate handguard bodygroup included. The offline variant renderer now includes body1_model0.smd and accepts individual variant names: python work/build_unused_variant_icons.py x2f2a2. Visually checked the installed artwork; no in-game verification.
+
+- [x] Base T223 icon now uses the original game's extended-magazine artwork; T223 (25R) has a separate short-magazine icon. Reproduce with python work/build_t223_icons.py. Restart if cached icons remain visible.
+
+- [x] Reworked shot audio following local ARC9: near report uses CHAN_WEAPON, distant layer uses CHAN_USER_BASE, replacing each layer's preceding tail instead of stacking every shot on CHAN_STATIC. Retained raw WAV resolution, original mix/pitch/attenuation and prediction suppression. Offline 1,000-shot dispatch test and syntax/replay checks passed; audible confirmation of the reported long-burst dropout remains pending. Change maps.
+
+- [x] Added opt-in ProgressiveRecoilUp/ProgressiveRecoilRight weapon stats, both zero by default. Add per-preceding-shot vertical/horizontal recoil using predicted BurstCount before existing recoil multipliers; shared by normal/realistic shooting. No current guns enabled. Offline recoil/reset/replay checks; change maps.
+
+- [x] M79 loaded ammo swaps use a separate reload_live sequence: ShellTip stays attached to the live round, while hand/gun/shell movement remains original; removed brass-ejection event and spent-ejection foley from that sequence. Empty/spent reloads retain the original animation and ejection. Explicit frame-50 cartridge visual timing replaces base defaults. Reproducible work/m79_live_reload.py --compile, integrated in port_qc.py. Both viewmodels compiled/installed; full restart required. Offline checks only.
+
+- [x] Restored H&R T223 (25R) as mcv_t223_25 in Part 2: original 25-round view/world magazine bodygroups, 25-round magazine plus inherited chamber, 50 default rounds. Inherits current T223 handling, reloads, ammo and sights; reuses T223 icon and belongs to US/German random pools. Lua only; change maps.
+
+- [x] M79 ammo selection now plays the actual break-open reload and completes through the normal selected-ammo transfer. Both viewmodels use their HE/buckshot cartridge bodygroups dynamically, retaining the outgoing type until the frame-50 ejection point. Removed the placeholder AK selector sound/quarter-second delay; retained model reload foley and third-person reload gesture. Offline cartridge/reload/replay checks passed. Lua only; change maps.
+
+- [x] M79 and M79 SOG select HE/Buckshot with Use + Reload through new FIREMODE_HE/FIREMODE_BUCKSHOT enums and the FiremodeAmmo mapping. HE consumes SMG1 grenades; buckshot consumes Buckshot and fires the existing 12-pellet SOG load. Selection unloads a live round back into its original reserve and requires reloading the new cartridge; locked during reload/recovery. Predicted mode drives projectile/pellet routing, reserve HUD, info, spread, recoil and NPC behavior. Shared launcher base lives in Part 1. Offline ammo/replay, existing prediction and syntax checks passed; change maps.
+
+- [x] Added the missing rpg_round_ammo language label so rocket launcher weapon info displays Rockets instead of the raw localization key. Change maps.
+
+- [x] Audited ammo and trivia across both packs: pistol-calibre carbines use Pistol; semi-auto snipers use AR2 while bolt-actions retain .357; LMG pools follow cartridge class. Preserved flare/fuel/equipment supplies, standardized launcher ammo, and matched recovered crossbow bolts to XBowBolt. Corrected calibre/country labels and added Dutch random-weapon membership for V40. Reproducible targeted audit and full inventory in work/WEAPON_TRIVIA.md. Offline checks only; change maps.
+
+- [x] Harmless smoke grenades show a small smoke-colour swatch instead of damage/blast stats in weapon info. Uses the configured smoke colour, white for uncoloured smoke; scales/fades with the box. Gas grenades retain damage stats. Change maps.
+
+- [x] Selection info uses measured, padded label/value columns, right-aligned values and bottom capability tags (DUAL/RG/GL/SD/BI/BAYO/VS/AP). Added explosive damage/radius using launcher fallback values and category multipliers; radii display metres at 12 HU per foot. Label column includes extra room for Accuracy at 4K. Offline checks only; change maps.
+
+- [x] PTRD and inherited sniper variant are AP: direct hits use helicopter-compatible damage on Combine helicopters and blast-type direct damage on Striders/gunships (including Strider bone followers). Ordinary targets retain bullet damage; no radius explosion or duplicate hit. Engine armor/difficulty rules remain. Offline damage routing checks only; change maps.
+
+- [x] Corrected Czech origins (CZ52, vz.24, vz.54/Meopta, vz.59/Belt), G3 (Germany), Baby Browning (Belgium). Standardized country aliases across both packs, including Vietnam, Japan, China, Germany and Rhodesia. Preserved historical Soviet/Czechoslovak labels, random pools and pack classification; porting generator shares the corrections. Gyrojet pistol/carbine now display 13 mm Gyrojet rocket, both consume pistol ammo. Change maps.
+
+- [x] Weapon info box omits controls and scales fonts, wrap width, padding and bubble with ScreenScale. Height follows wrapped text; box stays within screen edges. Resolution changes regenerate fonts and invalidate cached markup. Offline syntax checks only; change maps.
+
+- [x] Restored the weapon-selection info box: the custom icon renderer now calls PrintWeaponInfo, anchored to the original selection slot rather than the resized icon. Icon and info box use the selection fade alpha. Offline syntax checks only; change maps.
+
+- [x] Shanxi Type 17 credits each stripper clip at reload_insert frame 14 (14/30 seconds), using the predicted deferred-action scheduler rather than granting rounds when the insert starts. Preserved the clip-loaded animation pose while ammo is pending. Change maps.
+
+- [x] Flamethrowers use circular crosshairs with sustained expansion while flaming, independent of individual damage ticks. Existing HUD smoothing handles starting/stopping. Change maps.
+
+- [x] Dynamite lighter now maintains its left-hand grip throughout the baked walk/sprint animations. Repaired only the lighter root, preserved other bones and sequence/event metadata, and added the fix to the porting pipeline. Recompiled/installed; full game restart required. Offline checks only.
+
+- [x] Timed/remote grenade explosions no longer use the last bounce position or normal. Their effect follows the current entity position, matching blast damage even after rolling off a ledge. Immediate impact fuses retain the contact point/outward normal; planted charges retain their explicit orientation. Offline position/detonation and rocket regressions; change maps.
+
+- [x] Prewar Kar 98K grenade launcher now uses the standard iron-sight pose in both launcher idle and firing. Patched only the two pose source references in v_kar98_dov, retained the launcher recoil layer, and added the permanent porting rule. Compiled/installed in Part 2; sequence/event/frame metadata unchanged. No in-game verification; fully restart for the model.
+
+- [x] Damage-scaled impact particles: nominal per-bullet damage including category/All damage multipliers maps to sqrt(damage/40), clamped to 0.5-2x radius. Isolated full/cheap PCFs read CP2 and retain particle counts and original decal sizes. Melee/bashes now dispatch their custom impact once on the server from the contact trace, using strike damage; cosmetic bullets remain only for the stock fallback. Offline PCF/dispatch/realm/syntax checks pass; no in-game verification. Fully restart for PCF loading.
+
+- [x] Added SVD Irons and Type 56-1 Drum to Part 1, with custom view/world models, all world LODs, spawn icons and editable compile bundles. SVD retains its base stats with mesh-derived bare-sight offsets; Type 56 retains folded-stock handling with the RPK's 75-round drum and reload animations/events. Offline compilation/dependency/sequence checks pass; in-game alignment not verified. Fully restart for models.
+
+- [x] Dual slide-lock pistols entering akimbo with one round now draw using the SlidePosition layer instead of playing the ready/racking animation. Offline empty/one/two-round and reverse-swap checks pass; change maps.
+
+- [x] Revised surface impact replacement after the user reported missing SP effects: removed the IsFirstTimePredicted gate from the authoritative impact hook (the SP client receives it outside prediction), and bypassed effect prediction filtering in both realms. Added original MCV bullet-hole materials under mcv/decals with 23 registered surface families; effect-side decals do not exclude the hit prop. Offline outside-prediction/dispatch/decal/dependency tests pass; visual confirmation remains pending. Change maps for Lua/material registration.
+
+- [x] M72 LAW removes itself from the player's inventory when both clip and reserve are empty, after action recovery. Retains replacement-ammo and infinite-ammo behavior; removal is server-only. Offline policy/syntax checks; change maps.
+
+- [x] All launcher rockets now initialize a consistent 2-unit-radius physics sphere. Swept flight traces that entity collision model instead of a box, retaining ballistic drop, boost and sky detonation. Offline flight/syntax checks only; change maps.
+
+- [x] Swept rockets now detonate on sky surfaces through their normal impact/explosion path instead of silently disappearing. Offline sky-hit regression passes; change maps.
+
+- [x] Added distinct launch speeds and gravity-driven drop for all seven rocket launchers, with simplified RPG-7/Kolos boost phases. Weapon-owned profiles use the existing projectile-speed multipliers; swept server flight avoids changing the global physics speed cap. See work/ROCKET_BALLISTICS.md for historical sources, estimates and collision tradeoffs. Offline tests only; change maps.
+
+- [ ] gShader scope redesign: user reported AO through the gun after scoped screen-depth exclusion. Rolled that exclusion back and restored normal viewmodel depth. Late capture remains; scope-image occlusion is unresolved. Separate world colour/depth render proposed in work/GSHADER_COMPATIBILITY.md; implementation deferred when work moved to launcher ballistics.
+
+- [x] Revised scoped gShader compatibility: removed the early pre-reconstruction frame capture that omitted world translucency/particles. Capture now occurs before viewmodels; active scopes omit the viewmodel from screen-depth rendering to avoid magnified gun occlusion. Colour/shadow paths remain active. Tradeoff: no screen-depth shading on the scoped viewmodel. Offline scope/depth/refraction checks passed; visual confirmation outstanding. Change maps.
+
+- [x] Spawn menu now resolves inherited IconOverride from weapons.Get when the spawn-list entry omits it. Prewar Kar 98K / ZF39 / ZF41 reuse their respective existing icons without duplicate PNGs; explicit spawn-list overrides retain priority and ordinary weapons retain the class-name fallback. Offline syntax/asset checks only; change maps.
+
+- [x] Bipod/safety transitions: cannot enter safety while deployed; deploying clears safety without a competing ready animation. Use + Walk no longer also deploys the bipod, and force-ready is idempotent. Bipod firing now retains 25% recoil instead of eliminating it. Offline client/server transition/replay and Lua syntax checks; change maps.
+
+- [x] Added separate prewar Kar 98K, ZF39 and ZF41 weapons in Part 2, inheriting each current counterpart's stats. Uses the existing prewar view/world meshes and their distinct prewar materials; current rifles retain postwar materials. Corrected prewar scope lens slots (4/7), retained matching scope bodygroups, and gave the unscoped variant the German grenade projectile appearance with unchanged VC grenade physics/damage. Moved dedicated prewar model companions to Part 2. Lua/dependency/material-slot checks only; no in-game verification.
+
+- [x] Added custom M1 Carbine to Part 2: fixed-stock M2 with the Para's 15-round magazine, semi-auto only. Swapped view/world magazine meshes at every world LOD, retained M2 animations/handling, rendered a spawn icon and kept editable compile sources under work/MCV_SMD/weapons/v_m1_carbine. Offline verification only; full game restart required.
+
+- [x] Reclassified vz. 52/57 as Carbines alongside the SKS. The importer had mapped the source's generic WeaponType Rifle to Assault Rifles despite its semi-only fire mode. Category menus, random pools and stat multipliers now follow Carbines. Lua change: change maps.
+
+- [x] X2F2A2 lightweight balance pass: increased vertical/lateral recoil by about 15%/30%, aim-speed scale 1.2, hip spread 6.75, movement spread multipliers 1.4/1.3/1.2 and weight 3.6. Retains L1A1 aimed accuracy/ballistics and the current 25-round magazine. Lua syntax checked; no in-game verification. Change maps.
+
+- [x] Bullet-bodygroup iteration now ignores SWEP inheritance's BaseClass metadata while retaining sparse numeric round thresholds. Audited existing definitions and other weapon/entity table loops; dense lists retain ipairs. Offline sparse/metadata regression and Lua syntax checks; change maps.
+
+- [x] Disabled Lunge Mine throwing because its animations are unfinished; removed the throw control hint. Contact strike/thrust detonation remains available. Lua change: change maps.
+
+- [x] Disabled the incomplete M16 Flamer: removed from spawn-menu/random pools and explicitly excluded from NPC selection. Kept implementation/assets for development. Lua change: change maps.
+
+- [x] Moved Type 56 XM148 definition, icon and dedicated models to Part 2 with a persistent pack override. Unfolded-stock handling now uses explicit midpoints between the folded Type 56-1 and AK-47 (recoil, spread, stance multipliers and weight); source animation rates and sight offsets remain intact. Offline checks only.
+
+- [x] Added the unused X2F2A2 FAL, vz. 59 Belt, Type 56 XM148, M16 Flamer and Lunge Mine as spawnable weapons with estimated stats and mesh-rendered icons. Includes predicted cartridge flame bursts and a single-use contact/throw mine; launcher fire activities corrected in the two QCs and models rebuilt. See `work/UNUSED_VARIANTS.md` for estimates, checks and limitations. No in-game verification; full restart required.
+
+- [x] Unscoped vz. 54 now uses its existing stripper-clip reload and empty-reload animations instead of single-round loading. Retains ammo-count blending and hammer-event timing; scoped Meopta remains a single-round loader. Lua-only change; change maps. No in-game verification.
+
+- [x] Toggle aim could exit but not enter ADS during automatic fire: aim entry now checks the animation lock instead of StillWaiting's shot cooldown, for both toggle and hold modes. Reload, safety, bipod and Use-key restrictions remain. Offline regression reproduced the failure before the fix and checks replay behavior with a live shot cooldown. No in-game verification; change maps.
+
+- [ ] C96 Carbine empty-reload investigation: all 11 ammo variants have hand/IK-target drift during the final 13 frames (80-93 at 30 FPS), returning to the correct idle endpoint. Hip right-hand drift peaks at 3.862 units; aimed at 4.271. Present in exported source SMDs referenced by the port QC; no missing hierarchy or endpoint mismatch in visible gun/hands. Investigate correcting the closing arm motion; no runtime/model changes made. Reproduce offline with `python work/inspect_c96_reload.py`.
+
+- [x] Corrected NPC ammo handling without stripping fresh player weapons of their starting reserves. Cap clips during NPC equip/deploy, with an NPC-only drop safeguard for reload excess; removed the general player/duplicate-pickup clamp. Preserve partial clips and clipless weapons. Offline checks cover fresh player and duplicate pickups, NPC equip/drop, chamber allowance and disabling dual mode for NPCs. No in-game verification. Lua change: change maps.
+
+- [ ] Automatic-fire audio cutoffs: shot layers now resolve soundscript samples and explicitly emit on CHAN_STATIC, retaining level, volume and pitch variation; dispatch skips prediction replays. Near-empty click remains disabled by the user's edit. Offline dispatcher and syntax checks passed. Existing scripts already requested CHAN_STATIC despite the caller passing CHAN_WEAPON, so channel ambiguity is corrected but audible cutoffs/mixer saturation still need in-game diagnosis. Lua change: change maps.
+
 - [x] Corrected the smoke/gas canister variants: AN-M8 is a separate Part 2 weapon using shared-canister skin 4 and white smoke; M18 uses skin 0 and red smoke; M6A1 uses the original game's shared-canister gas skin 7 (GAS CN-DM) instead of the mismatched dedicated model. Viewmodel, held/thrown skins, spawn icons and import overrides agree. Compiled view/world skin tables, texture dependencies and Lua syntax checked offline. No models recompiled; change maps for Lua.
 
 - [x] Weapon PVS lifecycle: repair detached clientside parents, retire world models on transmission loss, and prepare the same current transforms for drawing and muzzle/shell/tracer attachments. Weapon effects use the shooter's origin/PVS and ignore dormant owners; flamethrower streams follow the drawn model and rebuild on return. Two real clients on gm_construct reproduced the detached 253-unit muzzle offset and verified recovery, effect delivery, dual wield, NPCs and flames at 0/100 ms fakelag. See `work/PVS.md`. Lua change: change maps.

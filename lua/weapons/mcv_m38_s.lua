@@ -8,7 +8,7 @@ AddCSLuaFile()
 // Names and basic information
 SWEP.PrintName = "Mosin-Nagant M91/30 PU"
 SWEP.Category = "Military Conflict: Vietnam"
-SWEP.Country = "Russian Empire"
+SWEP.Country = "Soviet Union"
 SWEP.SubCategory = "Sniper Rifles" -- classed as a carbine in MCV but putting it here to pad out the bolt actions category for our sake
 SWEP.Caliber = "7.62x54mmR"
 
@@ -106,7 +106,7 @@ SWEP.CrosshairDeltaDistance = 4
 
 SWEP.WeaponWeight = 4.2
 
-SWEP.Primary.Ammo = "ar2"
+SWEP.Primary.Ammo = "357"
 SWEP.Primary.ClipSize = 5
 SWEP.Primary.Chamber = 0
 SWEP.Primary.DefaultClip = 20

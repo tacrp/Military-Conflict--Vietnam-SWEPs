@@ -20,24 +20,32 @@ local function generatefonts()
         } )
 
     end
+
+    surface.CreateFont("MCV_HudSelectionTitle", {
+        font = "Verdana",
+        size = math.Round(ScreenScale(20 / 3)),
+        weight = 700,
+        antialias = true,
+        extended = true,
+    })
+
+    surface.CreateFont("MCV_HudSelectionDesc", {
+        font = "Verdana",
+        size = math.Round(ScreenScale(14 / 3)),
+        weight = 700,
+        antialias = true,
+        extended = true,
+    })
+
+    surface.CreateFont("MCV_HudSelectionText", {
+        font = "Verdana",
+        size = math.Round(ScreenScale(14 / 3)),
+        weight = 500,
+        antialias = true,
+        extended = true,
+    })
+    MCV.SelectionFontRevision = (MCV.SelectionFontRevision or 0) + 1
 end
-
-surface.CreateFont( "MCV_HudSelectionTitle", {
-    font = "Verdana",
-    size = 20,
-    weight = 700,
-    antialias = true,
-    extended = true, -- Required for non-latin fonts
-})
-
-surface.CreateFont( "MCV_HudSelectionDesc", {
-    font = "Verdana",
-    size = 14,
-    weight = 700,
-    antialias = true,
-    extended = true, -- Required for non-latin fonts
-})
-
 
 generatefonts()
 
@@ -48,6 +56,5 @@ end
 concommand.Add("MCV_font_reload", MCV.Regen)
 
 hook.Add("OnScreenSizeChanged", "MCV.FontRegen", function(oldWidth, oldHeight)
-    print("Warning: Resolution was changed. If MCV fonts are too small/big now, try type  MCV_font_reload  in console ")
-    timer.Simple(5, MCV.Regen)
+    MCV.Regen()
 end)

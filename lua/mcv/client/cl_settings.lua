@@ -25,6 +25,16 @@ local SERVER_SETTINGS = {
      help = "Give newly spawned rifles their starting rifle-grenade or underbarrel-launcher ammo. Existing ammo and resupply are unaffected."},
 }
 
+local PHYSICAL_SETTINGS = {
+    {convar = "mcv_physbullets", label = "Enable physical bullets", help = "Server setting: bullets travel using weapon MuzzleVelocity instead of hitting instantly. Guns without a velocity stat retain hitscan."},
+    {convar = "mcv_physbullets_npcs", label = "NPC physical bullets", help = "Use travelling bullets for NPC guns as well as players."},
+    {convar = "mcv_physbullets_pellets", label = "Physical shotgun pellets", help = "Simulate each pellet separately. This costs more processing and network traffic."},
+    {convar = "mcv_physbullets_velocity", label = "Muzzle velocity multiplier", slider = {0.1, 3, 2}, help = "1 uses the gun's MuzzleVelocity in metres per second. Higher values shorten travel time."},
+    {convar = "mcv_physbullets_gravity", label = "Gravity multiplier", slider = {0, 3, 2}, help = "1 applies Earth gravity; 0 disables bullet drop."},
+    {convar = "mcv_physbullets_drag", label = "Air resistance (per second)", slider = {0, 2, 2}, help = "Linear drag slows bullets during flight. 0 keeps horizontal speed constant."},
+    {convar = "mcv_physbullets_lifetime", label = "Maximum flight time (seconds)", slider = {0.1, 10, 1}, help = "Remove bullets after this time or the existing maximum bullet range, whichever comes first."},
+}
+
 local CLIENT_SETTINGS = {
     {convar = "mcv_toggle_aim", label = "Toggle aim",
      help = "Press aim once to raise sights and again to lower them. Disable to hold aim instead."},
@@ -162,6 +172,7 @@ buildServer = function(panel)
     panel:ClearControls()
 
     controls(panel, SERVER_SETTINGS)
+    controls(panel, PHYSICAL_SETTINGS)
     categoryBlock(panel, buildServer)
 end
 
@@ -172,6 +183,19 @@ local function buildClient(panel)
 end
 
 hook.Add("PopulateToolMenu", "MCV_Settings", function()
+    spawnmenu.AddToolMenuOption("Options", "Military Conflict: Vietnam", "mcv_settings_physical_bullets",
+        "Physical Bullets", "", "", function(panel)
+            panel:ClearControls()
+            panel:Help("Server-controlled ballistics. Particle tracers follow bullet flight; damage occurs at contact. Existing projectile weapons keep their own flight.")
+            controls(panel, PHYSICAL_SETTINGS)
+            local reset = panel:Button("Reset physical bullet settings")
+            reset.DoClick = function()
+                for _, setting in ipairs(PHYSICAL_SETTINGS) do
+                    local cv = GetConVar(setting.convar)
+                    if cv then RunConsoleCommand(setting.convar, cv:GetDefault()) end
+                end
+            end
+        end)
     spawnmenu.AddToolMenuOption("Options", "Military Conflict: Vietnam", "mcv_settings_server",
         "Server", "", "", buildServer)
 

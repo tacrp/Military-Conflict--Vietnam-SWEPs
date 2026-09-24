@@ -9,7 +9,7 @@ AddCSLuaFile()
 // Names and basic information
 SWEP.PrintName = "vz. 54"
 SWEP.Category = "Military Conflict: Vietnam"
-SWEP.Country = "Soviet Union"
+SWEP.Country = "Czechoslovakia"
 SWEP.SubCategory = "Bolt-Action Rifles"
 SWEP.Caliber = "7.62x54mmR"
 
@@ -43,10 +43,7 @@ SWEP.Firemodes = {
 SWEP.LastShotAnimation = false
 SWEP.MagInClip = true
 SWEP.PlayCycleAnimation = true
-SWEP.ShotgunReload = true
-SWEP.InsertClipPoseTime = 0.2
-SWEP.ShotgunAltReload = true
-SWEP.ShotgunReloadEmptyStartAnimation = true
+SWEP.ShotgunReload = false // unscoped rifle uses the model's ammo-blended stripper-clip reloads
 SWEP.AnimationHandlesHammer = true
 SWEP.InvertAnimationHammer = true
 SWEP.NoEjectOnShoot = true
@@ -96,7 +93,7 @@ SWEP.CrosshairDeltaDistance = 4
 
 SWEP.WeaponWeight = 4
 
-SWEP.Primary.Ammo = "ar2"
+SWEP.Primary.Ammo = "357"
 SWEP.Primary.ClipSize = 5
 SWEP.Primary.Chamber = 0
 SWEP.Primary.DefaultClip = 40
@@ -168,3 +165,5 @@ SWEP.Secondary.Automatic = true
 SWEP.Secondary.ClipSize = 1
 SWEP.Secondary.Ammo = "smg1_grenade"
 SWEP.Secondary.DefaultClip = 1
+
+SWEP.MuzzleVelocity = 865 // m/s, original game stat

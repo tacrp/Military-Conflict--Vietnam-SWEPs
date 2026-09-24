@@ -9,7 +9,7 @@ AddCSLuaFile()
 // Names and basic information
 SWEP.PrintName = "Katana"
 SWEP.Category = "Military Conflict: Vietnam"
-SWEP.Country = "Empire of Japan"
+SWEP.Country = "Japan"
 SWEP.SubCategory = "Melee"
 
 SWEP.Slot = 0

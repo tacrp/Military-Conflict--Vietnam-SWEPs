@@ -1,0 +1,5 @@
+DecalModulate
+{
+$basetexture "mcv/decals/glass/shot1"
+$decalscale 0.11
+}

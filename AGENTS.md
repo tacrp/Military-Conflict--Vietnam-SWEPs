@@ -54,6 +54,11 @@ placement by hand against Crowbar and hold raw numbers, not settings anyone play
 
 ## House rules
 
+* SWEP inheritance adds `BaseClass` entries to nested tables. Iterate dense lists with
+  `ipairs`; for numeric-key maps such as `BulletBodygroups`, use `pairs` with an
+  `isnumber(key)` guard so sparse round-count thresholds still work. Do not treat
+  inherited configuration tables as metadata-free dictionaries.
+
 * Do not launch or run in-game verification unless the user explicitly requests it.
   Use file, syntax, dependency and archive build/extraction checks by default.
 * Never regenerate a whole weapon lua to change a few fields. The generators drop hand-tuned

@@ -7,7 +7,7 @@ AddCSLuaFile()
 // Names and basic information
 SWEP.PrintName = "Shanxi Type 17"
 SWEP.Category = "Military Conflict: Vietnam"
-SWEP.Country = "Shanxi Province"
+SWEP.Country = "China"
 SWEP.SubCategory = "Carbines"
 SWEP.Caliber = ".45 ACP"
 
@@ -49,6 +49,7 @@ SWEP.LastShotAnimation = true
 SWEP.ShotgunReload = true
 SWEP.ShotgunReloadEmptyStartAnimation = true
 SWEP.ShotgunReloadRounds = 5
+SWEP.ReloadInsertTime = 14 / 30 // reload_insert: rounds leave the stripper clip at frame 14.
 SWEP.HasEmptyReload = true
 
 SWEP.MagInTime = 0.4

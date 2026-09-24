@@ -71,7 +71,7 @@ SWEP.ScopeMaterial = NULL
 SWEP.ScopeFOV = 8
 SWEP.ScopeFOV2 = 4
 
-SWEP.IronsightPos = Vector(0, -4.5, 0)
+SWEP.IronsightPos = Vector(0, -2, 0)
 SWEP.IronsightAng = Angle(0, 0, 0)
 
 SWEP.CustomPos = Vector(0, -2, 0)
@@ -87,7 +87,7 @@ SWEP.CrosshairDeltaDistance = 4
 
 SWEP.WeaponWeight = 2.4
 
-SWEP.Primary.Ammo = "ar2"
+SWEP.Primary.Ammo = "smg1"
 SWEP.Primary.ClipSize = 8
 SWEP.Primary.Chamber = 1
 SWEP.Primary.DefaultClip = 40
@@ -151,3 +151,5 @@ SWEP.TracerParticle2 = "vietnam_tracer_rifle_secondary"
 
 SWEP.TracerRandomness = 6
 SWEP.TracerFrequency = 1
+
+SWEP.MuzzleVelocity = 607 // m/s, original game stat

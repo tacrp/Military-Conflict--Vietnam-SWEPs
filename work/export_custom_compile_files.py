@@ -5,7 +5,10 @@ from pathlib import Path
 import re
 
 HERE = Path(__file__).resolve().parent
-BUNDLES = {'v_xm16super': ('v_xm16super','w_xm16super'),
+BUNDLES = {'v_svd_irons': ('v_svd_irons', 'w_svd_irons'),
+           'v_type56_drum': ('v_type56_drum', 'w_type56_drum'),
+           'v_m1_carbine': ('v_m1_carbine', 'w_m1_carbine'),
+           'v_xm16super': ('v_xm16super','w_xm16super'),
            'v_m635': ('v_m635','w_m635'), 'v_ptrd41_s': ('v_ptrd41_s','w_ptrd41_s')}
 FILE_REF = re.compile(r'"([^"\n]+\.(?:smd|qci|vta|dmx))"', re.I)
 COMPILER = '''"""Compile this folder's edited QCs directly; does not regenerate source files."""

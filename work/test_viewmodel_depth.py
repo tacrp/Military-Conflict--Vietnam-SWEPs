@@ -60,6 +60,15 @@ class ViewmodelDepthTests(unittest.TestCase):
                 end
             end
             cameras={}; calls={}
+            -- Even a stale hot-loaded scope exclusion method must not hide screen depth.
+            function SWEP:ScopeNeedsWorldDepth() return true end
+            w:PreDrawViewModel({},nil,nil,2)
+            w:PostDrawViewModel({},nil,nil,2)
+            assert(#cameras==1 and #calls==0 and stack==0)
+            w:PreDrawViewModel({},nil,nil,0)
+            w:PostDrawViewModel({},nil,nil,0)
+            assert(#cameras==2 and #calls==4 and stack==0)
+            cameras={}; calls={}
             w:PreDrawViewModel({},nil,nil,4)
             w:PostDrawViewModel({},nil,nil,4)
             assert(#cameras==0 and #calls==0 and stack==0)

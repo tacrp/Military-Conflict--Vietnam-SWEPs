@@ -35,7 +35,11 @@ function SWEP:Think_Bipod()
     local owner = self:GetOwner()
 
     if !self:GetBipod() then
-        if owner:KeyPressed(IN_USE) and self:CanBipod() then
+        // Use + Walk belongs to safety / launcher controls, not bipod deployment.
+        if owner:KeyPressed(IN_USE) and !owner:KeyDown(IN_WALK) and self:CanBipod() then
+            // Replay both NetworkVars together. Do not play the safety exit
+            // animation: the deployment animation takes the weapon into position.
+            self:SetSafe(false)
             self:PlayAnimation(ACT_VM_DEPLOYED_IN, 1, true)
             self:SetBipod(true)
         end

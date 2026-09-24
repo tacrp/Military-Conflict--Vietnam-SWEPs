@@ -160,3 +160,5 @@ SWEP.TracerParticle2 = "vietnam_tracer_pistol_green_secondary"
 
 SWEP.TracerRandomness = 6
 SWEP.TracerFrequency = 1
+
+SWEP.MuzzleVelocity = 231 // m/s, original game stat

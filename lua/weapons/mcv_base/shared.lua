@@ -110,6 +110,12 @@ SWEP.ViewSlideRecoilRight = 0.48
 SWEP.ViewSlideRecoilIronsightUp = 1.35
 SWEP.ViewSlideRecoilIronsightRight = 0.48
 
+// Additive recoil per preceding shot in the current burst (first shot adds zero).
+// Degrees of vertical kick / horizontal random-kick amplitude, for hip and ADS.
+// Applied before category, bipod, dual-wield and volley recoil multipliers.
+SWEP.ProgressiveRecoilUp = 0
+SWEP.ProgressiveRecoilRight = 0
+
 SWEP.RecoilPushbackValue = 1.5
 
 // Camera shake from recoil
@@ -178,7 +184,7 @@ SWEP.HasBayonet = false
 
 // Deferred actions this base can have waiting (mcv_base_core/sh_timers.lua). The order is what
 // travels between the realms, so it is fixed: append, never insert.
-SWEP.DeferredActions = {"BayonetOff", "AkimboSwap", "LauncherSwap", "BayonetLoop", "BayonetHit"}
+SWEP.DeferredActions = {"BayonetOff", "AkimboSwap", "LauncherSwap", "BayonetLoop", "BayonetHit", "ReloadInsert"}
 SWEP.HasRifleGrenade = false
 SWEP.RifleGrenadeIsUBGL = false
 SWEP.HasAkimbo = false

@@ -7,9 +7,9 @@ AddCSLuaFile()
 // Names and basic information
 SWEP.PrintName = "Type 64"
 SWEP.Category = "Military Conflict: Vietnam"
-SWEP.Country = "People's Republic of China"
+SWEP.Country = "China"
 SWEP.SubCategory = "Pistols"
-SWEP.Caliber = ".32 ACP"
+SWEP.Caliber = "7.65x17mm Type 64 rimless"
 
 SWEP.Slot = 1
 SWEP.SprintHoldType = "normal"

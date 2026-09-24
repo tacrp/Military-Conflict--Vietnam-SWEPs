@@ -72,16 +72,20 @@ function SWEP:BashStrike(range, damage, thrust)
     dmginfo:SetAttacker(owner)
     dmginfo:SetInflictor(self)
 
-    self:FireBullets({
-        Attacker = owner,
-        Damage = 0,
-        Force = 0,
-        Distance = range + (BASH_HULL * 1.5),
-        HullSize = 0,
-        Tracer = 0,
-        Dir = (tr.HitPos - pos):GetNormalized(),
-        Src = pos,
-    })
+    if SERVER and tr.Hit and !MCV.SurfaceImpact(tr, damage) then
+        // A cosmetic bullet is only needed for the stock fallback. The server
+        // owns impact dispatch; predicted bashes must not create a second copy.
+        self:FireBullets({
+            Attacker = owner,
+            Damage = 0,
+            Force = 0,
+            Distance = range + (BASH_HULL * 1.5),
+            HullSize = 0,
+            Tracer = 0,
+            Dir = (tr.HitPos - pos):GetNormalized(),
+            Src = pos,
+        })
+    end
 
     if SERVER and IsValid(tr.Entity) then
         tr.Entity:TakeDamageInfo(dmginfo)

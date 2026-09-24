@@ -10,7 +10,7 @@ AddCSLuaFile()
 // Names and basic information
 SWEP.PrintName = "Type 30 Bayonet"
 SWEP.Category = "Military Conflict: Vietnam"
-SWEP.Country = "Empire of Japan"
+SWEP.Country = "Japan"
 SWEP.SubCategory = "Melee"
 
 SWEP.Slot = 0

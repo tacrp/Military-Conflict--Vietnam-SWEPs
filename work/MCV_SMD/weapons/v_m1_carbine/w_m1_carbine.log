@@ -1,0 +1,99 @@
+StudioMDL.exe (Sep 16 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\w_m1_carbine\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\w_m1_carbine\w_m1_carbine.qc"
+Building binary model files...
+Working on "w_m1_carbine.qc"
+SMD MODEL ../../../MCV_SMD/weapons/v_m1_carbine/w_m1_carbine_mesh0.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/w_m2c/w_m1c_w_m7b_lod0.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/w_m2c/w_m2c_usm_lod0.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/w_m2c/w_m2c_usg_lod0.smd
+SMD MODEL ../../../MCV_SMD/weapons/v_m1_carbine/w_m1_carbine_mesh1.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/w_m2c/w_m1c_w_m7b_lod0_lod1.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/w_m2c/w_m2c_usm_lod0_lod1.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/w_m2c/w_m2c_usg_lod0_lod1.smd
+SMD MODEL ../../../MCV_SMD/weapons/v_m1_carbine/w_m1_carbine_mesh2.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/w_m2c/w_m1c_w_m7b_lod0_lod2.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/w_m2c/w_m2c_usm_lod0_lod2.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/w_m2c/w_m2c_usg_lod0_lod2.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/w_m2c/w_m2c_anims/idle.smd
+SMD MODEL ../../../MCV_SMD_OG/weapons/w_m2c/w_m2c_physics.smd
+Processing LOD for material: w_m2c
+Lod 1: vertexes: 3512 (710 new)
+Lod 2: vertexes: 4064 (552 new)
+Processing LOD for material: w_m1c
+Lod 2: vertexes: 4156 (2 new)
+Processing LOD for material: w_m7b
+Lod 1: vertexes: 652 (4 new)
+Lod 2: vertexes: 786 (134 new)
+Processing LOD for material: w_rifle_glmounts
+Lod 1: vertexes: 417 (12 new)
+Processing LOD for material: w_rifle_grenades
+Lod 1: vertexes: 408 (20 new)
+Model has 4 convex sub-parts
+Collision model completed.
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_m1_carbine.mdl:
+bones         2176 bytes (5)
+animations     136 bytes (1 anims) (1 frames) [0:00]
+sequences      236 bytes (1 seq) 
+ik/pose       1100 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       348 bytes
+keyvalues       20 bytes
+bone transforms      744 bytes
+bone flex driver       0 bytes
+Collision model volume 284.37 in^3
+collision        0 bytes
+total         5708
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_m1_carbine.vvd:
+vertices    199488 bytes (4156 vertices)
+vertices     37728 bytes (786 vertices)
+vertices     20016 bytes (417 vertices)
+vertices     19584 bytes (408 vertices)
+tangents     66496 bytes (4156 vertices)
+tangents     12576 bytes (786 vertices)
+tangents      6672 bytes (417 vertices)
+tangents      6528 bytes (408 vertices)
+total       369152 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_m1_carbine.dx80.vtx":
+body parts:        32 bytes
+models:           308 bytes
+model LODs:       252 bytes
+meshes:           135 bytes
+strip groups:     375 bytes
+strips:           405 bytes
+verts:          74709 bytes
+indices:        49842 bytes
+bone changes:     168 bytes
+everything:    126010 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons\mcv\w_m1_carbine.dx90.vtx":
+body parts:        32 bytes
+models:           308 bytes
+model LODs:       252 bytes
+meshes:           135 bytes
+strip groups:     375 bytes
+strips:           405 bytes
+verts:          74709 bytes
+indices:        49842 bytes
+bone changes:     168 bytes
+everything:    126010 bytes
+
+Completed "w_m1_carbine.qc"

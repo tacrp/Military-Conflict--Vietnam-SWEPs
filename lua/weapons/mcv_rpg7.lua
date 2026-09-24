@@ -35,6 +35,11 @@ SWEP.LastShotAnimation = false
 SWEP.MagInClip = false
 
 SWEP.ShootEntity = "mcv_proj_rpg"
+SWEP.ShootEntityForce = 115 / 0.0254
+SWEP.RocketGravity = 9.80665 / 0.0254
+SWEP.RocketBoostSpeed = 300 / 0.0254
+SWEP.RocketBoostDelay = 0.1
+SWEP.RocketBoostDuration = 0.4 // Approximate game boost curve; see work/ROCKET_BALLISTICS.md.
 SWEP.ShootForce = 5000
 
 // View slide from recoil

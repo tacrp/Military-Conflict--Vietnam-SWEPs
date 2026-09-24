@@ -94,7 +94,7 @@ SWEP.CrosshairDeltaDistance = 4
 
 SWEP.WeaponWeight = 2.5
 
-SWEP.Primary.Ammo = "mcv_crossbowbolt"
+SWEP.Primary.Ammo = "XBowBolt"
 SWEP.Primary.ClipSize = 1
 SWEP.Primary.Chamber = 0
 SWEP.Primary.DefaultClip = 12

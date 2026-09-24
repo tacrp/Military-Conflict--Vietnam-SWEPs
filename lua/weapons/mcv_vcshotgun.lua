@@ -11,7 +11,7 @@ SWEP.PrintName = "Homemade Shotgun"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Vietnam"
 SWEP.SubCategory = "Shotguns"
-SWEP.Caliber = "12 Gauge Shell"
+SWEP.Caliber = "12 Gauge"
 
 SWEP.Slot = 2
 SWEP.HoldType = "shotgun"
@@ -154,3 +154,5 @@ SWEP.TracerParticle2 = "vietnam_tracer_shotgun_green_secondary"
 
 SWEP.TracerRandomness = 6
 SWEP.TracerFrequency = 1
+
+SWEP.MuzzleVelocity = 403 // m/s, original game stat

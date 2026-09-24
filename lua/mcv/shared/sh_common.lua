@@ -9,6 +9,18 @@ MCV.FIREMODE_PUMP = 7
 MCV.FIREMODE_FAST = 8
 MCV.FIREMODE_SLOW = 9
 MCV.FIREMODE_VOLLEY = 10
+MCV.FIREMODE_HE = 11
+MCV.FIREMODE_BUCKSHOT = 12
+
+// Per-weapon replacement channels, following ARC9's report/distant separation.
+// CHAN_STATIC stacks every tail during automatic fire instead of replacing it.
+MCV.CHAN_SHOT = CHAN_WEAPON
+MCV.CHAN_SHOT_DISTANT = CHAN_USER_BASE
+
+MCV.FiremodeAmmo = {
+    [MCV.FIREMODE_HE] = "smg1_grenade",
+    [MCV.FIREMODE_BUCKSHOT] = "buckshot",
+}
 
 
 MCV.FiremodeNames = {
@@ -22,7 +34,9 @@ MCV.FiremodeNames = {
     [MCV.FIREMODE_PUMP] = "Pump-Action",
 	[MCV.FIREMODE_FAST] = "Fast-Fire",
 	[MCV.FIREMODE_SLOW] = "Slow-Fire",
-    [MCV.FIREMODE_VOLLEY] = "Volley"
+    [MCV.FIREMODE_VOLLEY] = "Volley",
+    [MCV.FIREMODE_HE] = "HE",
+    [MCV.FIREMODE_BUCKSHOT] = "Buckshot"
 }
 
 MCV.CancelMultipliers = {
@@ -48,7 +62,7 @@ MCV.CancelMultipliers = {
 // Ammo types for equipment, named after the game's primary_ammo values. Registered on both
 // realms at load so weapons can use them in Primary.Ammo.
 MCV.AmmoTypes = {"mcv_grenade", "mcv_molotov", "mcv_mine", "mcv_explosive_charge", "mcv_flamethrower_fuel",
-                 "mcv_crossbowbolt", "mcv_flareround", "mcv_ammobox", "mcv_medicbox"}
+                 "mcv_crossbowbolt", "mcv_flareround", "mcv_ammobox", "mcv_medicbox", "mcv_flame_cartridge"}
 
 for _, name in ipairs(MCV.AmmoTypes) do
     game.AddAmmoType({

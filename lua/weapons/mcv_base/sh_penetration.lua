@@ -17,12 +17,29 @@ end
 
 // Keep the original range/hitgroup handling on every segment. Passing total
 // travelled distance avoids resetting range falloff after a wall.
-function SWEP:ApplyBulletDamage(tr, dmginfo, distance)
-    if (self.Num or 1) > 1 then
+function SWEP:ApplyBulletDamage(tr, dmginfo, distance, bulletCount)
+    if (bulletCount or self:GetBulletCount()) > 1 then
         dmginfo:SetDamageType(bit.bor(dmginfo:GetDamageType(), DMG_BUCKSHOT))
     end
     dmginfo:SetDamage(dmginfo:GetDamage() * math.pow(self.RangeModifier, math.max(distance / 500, 0)))
     if !IsValid(tr.Entity) then return end
+    if self.ArmorPiercing then
+        local target = tr.Entity
+        // Strider limb collisions can be represented by a physics bone follower.
+        if target:GetClass() == "phys_bone_follower" and IsValid(target:GetOwner()) then
+            target = target:GetOwner()
+        end
+        local class = target:GetClass()
+        if class == "npc_helicopter" then
+            dmginfo:SetDamageType(DMG_AIRBOAT)
+            return
+        elseif class == "npc_strider" or class == "npc_combinegunship" then
+            // These NPCs reject ordinary bullets. This is still one direct hit,
+            // not a radius explosion; retain the engine's armor/difficulty rules.
+            dmginfo:SetDamageType(DMG_BLAST)
+            return
+        end
+    end
     MCV.CancelBodyDamage(tr.Entity, dmginfo, tr.HitGroup)
     local hitgroup = tr.HitGroup
     if hitgroup == HITGROUP_HEAD then
@@ -38,7 +55,8 @@ function SWEP:ApplyBulletDamage(tr, dmginfo, distance)
     end
 end
 
-if CLIENT then return end
+// Exit probing is shared for cosmetic physical-bullet prediction. Only the
+// server damage path applies damage; these functions only trace and queue state.
 
 function SWEP:FindPenetrationExit(tr, dir, limit)
     // Displacements and sky are not closed volumes. Characters are terminal
