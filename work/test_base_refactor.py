@@ -38,7 +38,7 @@ draw=draw.replace('if !IsValid(effect) then continue end',
 draw=draw.replace('if !effect.VMContext then continue end',
                   'if !effect.VMContext then goto skip_effect end')
 draw=draw.replace('effects[kept] = effect', 'effects[kept] = effect\n        ::skip_effect::')
-post=source[source.index('function SWEP:PostDrawViewModel'):source.index('function SWEP:GetViewModelPosition')]
+post=source[source.index('local refractionBackup'):source.index('function SWEP:GetViewModelPosition')]
 lua.execute('''
 SWEP={IsDepthPass=function(self,flags) return flags==1 end,
 PostDrawViewModelWeapon=function() end}
