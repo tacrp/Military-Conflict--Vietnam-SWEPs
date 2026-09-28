@@ -429,7 +429,7 @@ $animation "shoot1d_a" "..\..\..\MCV_SMD_OG\weapons\v_bar_l\v_bar_l_anims\shoot1
 	subtract "shoot1d_a_corrective_animation" 0
 }
 
-$animation "shoot1d_ironsight_a" "..\..\..\MCV_SMD_OG\weapons\v_bar_l\v_bar_l_anims\shoot1d_ironsight_a.smd" {
+$animation "shoot1d_ironsight_a" "fixed_anims\shoot1d_ironsight_a.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "shoot1d_ironsight_a_corrective_animation" 0
@@ -441,7 +441,7 @@ $animation "shoot2d_a" "..\..\..\MCV_SMD_OG\weapons\v_bar_l\v_bar_l_anims\shoot2
 	subtract "shoot2d_a_corrective_animation" 0
 }
 
-$animation "shoot2d_ironsight_a" "..\..\..\MCV_SMD_OG\weapons\v_bar_l\v_bar_l_anims\shoot2d_ironsight_a.smd" {
+$animation "shoot2d_ironsight_a" "fixed_anims\shoot2d_ironsight_a.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "shoot2d_ironsight_a_corrective_animation" 0

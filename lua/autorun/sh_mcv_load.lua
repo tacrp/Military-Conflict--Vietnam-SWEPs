@@ -1,5 +1,6 @@
 AddCSLuaFile()
 
+if CLIENT and MCV and MCV.CleanupClientModels then MCV.CleanupClientModels() end
 MCV = {}
 
 local searchdir = "mcv/"

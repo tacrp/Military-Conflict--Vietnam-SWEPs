@@ -1,0 +1,9 @@
+"UnlitGeneric"
+{
+    "$basetexture" "effects/mcv/ricochet"
+    "$additive" "1"
+    "$vertexcolor" "1"
+    "$vertexalpha" "1"
+    "$overbrightfactor" "13"
+    "$depthblend" "0"
+}

@@ -1,56 +1,56 @@
-"""Exercise real scope Lua with a mutable framebuffer and competing shader captures."""
+"""Regression: PreDrawEffects follows viewmodels and must not overwrite scope input."""
 from pathlib import Path
-import unittest
 from lupa import LuaRuntime
 from glua_check import to_lua
 
 ROOT = Path(__file__).resolve().parents[1]
-
-
-class ScopeCaptureTests(unittest.TestCase):
-    def test_capture_lifetime(self):
-        lua = LuaRuntime()
-        lua.execute('''
-            SWEP={}; frame=1; framebuffer="world"; copies=0; allocations=0
-            RT_SIZE_FULL_FRAME_BUFFER=4; MATERIAL_RT_DEPTH_NONE=2; IMAGE_FORMAT_RGB888=2
-            bit={bor=function(...) return 0 end}
-            function ScrW() return 1920 end
-            function ScrH() return 1080 end
-            function FrameNumber() return frame end
-            lens={IsError=function() return false end,
-                  SetTexture=function(self,key,texture) self.texture=texture end}
-            function Material() return lens end
-            function CreateMaterial() return {} end
-            function GetRenderTargetEx(...)
-                allocations=allocations+1; return {}
-            end
-            render={CopyRenderTargetToTexture=function(target)
-                copies=copies+1; target.pixels=framebuffer
-            end}
-        ''')
-        lua.execute(to_lua((ROOT / 'lua/weapons/mcv_base/cl_pipscope.lua').read_text()))
-        lua.execute('''
-            function SWEP:GetSightAmountVisual() return self.aim end
-            function SWEP:GetIronsight() return self.aim>0 end
-            w=setmetatable({HasScope=true,aim=1},{__index=SWEP})
-            -- The only capture is after world particles/translucency and before the gun.
-            framebuffer="world + particles + translucency + shaders"
-            w:CaptureScopeScreen()
-            assert(lens.texture.pixels==framebuffer and copies==1)
-            -- Further shader copies do not alias our private texture.
-            framebuffer="world + gun"; shared={}; render.CopyRenderTargetToTexture(shared)
-            assert(shared.pixels~=lens.texture.pixels)
-            -- Disabling gShader falls back immediately, without stale pictures.
-            frame=2; framebuffer="new world"
-            w:CaptureScopeScreen()
-            assert(lens.texture.pixels=="new world" and allocations==1)
-            frame=3; w.aim=0; framebuffer="hip view"
-            w:CaptureScopeScreen()
-            assert(lens.texture.pixels=="new world")
-            w.aim=1; w.HasScope=false; w:CaptureScopeScreen()
-            assert(lens.texture.pixels=="new world")
-        ''')
-
-
-if __name__ == '__main__':
-    unittest.main()
+lua = LuaRuntime()
+lua.execute('''
+SWEP={}; MCV={}; hooks={}; copies=0; framebuffer="world"
+bit={bor=function(...) return 0 end}
+function ScrW() return 1920 end
+function ScrH() return 1080 end
+function Vector() return {} end
+function IsValid(v) return v~=nil end
+lens={IsError=function() return false end,
+    SetTexture=function(self,k,t) self.texture=t end}
+function Material() return lens end
+function CreateMaterial() return {} end
+function GetRenderTargetEx() return {} end
+render={CopyRenderTargetToTexture=function(t) copies=copies+1; t.pixels=framebuffer end,
+    GetViewSetup=function() return {id=viewid} end}
+hook={GetTable=function() return hooks end,
+    Add=function(e,k,f) hooks[e]=hooks[e] or {}; hooks[e][k]=f end,
+    Remove=function(e,k) if hooks[e] then hooks[e][k]=nil end end}
+function LocalPlayer() return player end
+''')
+lua.execute(to_lua((ROOT/'lua/weapons/mcv_base/cl_pipscope.lua').read_text()))
+lua.execute('''
+function SWEP:GetSightAmountVisual() return self.aim end
+function SWEP:GetIronsight() return self.aim>0 end
+w=setmetatable({MilitaryConflictVietnam=true,HasScope=true,aim=1},{__index=SWEP})
+player={GetActiveWeapon=function() return w end}
+function contact() framebuffer=framebuffer.." + contact shadows"; return 123 end
+function oldWrapper() w:CaptureScopeScreen(); return contact() end
+MCV.ContactScopeHook={original=contact,wrapper=oldWrapper}
+hook.Add("PreDrawEffects","ContactShadows",oldWrapper)
+hook.Add("PreRender","MCV_ContactScopeCapture",function() error("obsolete wrapper") end)
+''')
+source=to_lua((ROOT/'lua/mcv/client/cl_rendertarget.lua').read_text())
+lua.execute(source)
+lua.execute('''
+assert(hooks.PreDrawEffects.ContactShadows==contact)
+assert(hooks.PreRender.MCV_ContactScopeCapture==nil)
+hooks.PreDrawViewModels.MCV_CaptureScopeScreen()
+assert(copies==1 and lens.texture.pixels=="world")
+framebuffer="world + gun + scope"
+assert(hooks.PreDrawEffects.ContactShadows()==123)
+assert(copies==1 and lens.texture.pixels=="world")
+framebuffer="next world"; hooks.PreDrawViewModels.MCV_CaptureScopeScreen()
+assert(copies==2 and lens.texture.pixels=="next world")
+viewid=1; hooks.PreDrawViewModels.MCV_CaptureScopeScreen(); assert(copies==2)
+viewid=0; w.aim=0; hooks.PreDrawViewModels.MCV_CaptureScopeScreen(); assert(copies==2)
+''')
+lua.execute(source)
+lua.execute('assert(hooks.PreDrawEffects.ContactShadows==contact)')
+print('Scope capture order and obsolete-wrapper migration passed')

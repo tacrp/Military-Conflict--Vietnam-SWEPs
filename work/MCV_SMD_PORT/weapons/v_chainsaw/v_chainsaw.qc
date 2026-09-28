@@ -667,6 +667,8 @@ $sequence "shootloop" {
 	addlayer "chainidle"
 	addlayer "shootloop_pose"
 	node "0"
+	fps 90
+	loop
 }
 $sequence "shootloop_pose" {
 	"shootloop_a"
@@ -685,6 +687,7 @@ $sequence "shootend" {
 	addlayer "chainidle"
 	addlayer "shootend_pose"
 	node "0"
+	fps 120
 }
 $sequence "shootend_pose" {
 	"shootend_a"

@@ -1,7 +1,9 @@
+include("mcv/weapon_common/load.lua")
+
 // Ammo and medic boxes. Left click hands the box to the player you are looking at, right
 // click uses it on yourself, USE + attack throws it down for anyone to pick up.
 
-SWEP.Base = "mcv_base_core"
+SWEP.Base = "weapon_base"
 SWEP.Spawnable = false
 
 SWEP.SubCategory = "Equipment"
@@ -31,19 +33,4 @@ SWEP.Primary.Automatic = false
 
 AddCSLuaFile()
 
-local searchdir = "weapons/mcv_equipment_box"
-
-for _, filename in pairs(file.Find(searchdir .. "/*.lua", "LUA")) do
-    if filename == "shared.lua" then continue end
-    local luatype = string.sub(filename, 1, 2)
-
-    if luatype == "sv" then
-        if SERVER then include(searchdir .. "/" .. filename) end
-    elseif luatype == "cl" then
-        AddCSLuaFile(searchdir .. "/" .. filename)
-        if CLIENT then include(searchdir .. "/" .. filename) end
-    else
-        AddCSLuaFile(searchdir .. "/" .. filename)
-        include(searchdir .. "/" .. filename)
-    end
-end
+MCV.IncludeWeaponModules("weapons/mcv_equipment_box")

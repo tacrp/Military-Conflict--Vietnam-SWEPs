@@ -164,7 +164,7 @@ if CLIENT then
         self:StopFlameEffect()
         local ent = self:FlameEmitter()
         if !IsValid(ent) then return end
-        local att = ent:LookupAttachment(self.FlameAttachment or "muzzle")
+        local att = MCV.CachedAttachment(ent, self.FlameAttachment or "muzzle")
         if att <= 0 then att = 1 end
         local ps = CreateParticleSystem(ent, self.FlameParticle, PATTACH_POINT_FOLLOW, att)
         local owner = self:GetOwner()
@@ -198,13 +198,17 @@ if CLIENT then
         if !IsValid(owner) then return end
         local src = owner:GetShootPos()
         local dir = owner:GetAimVector()
-        local tr = util.TraceLine({start = src, endpos = src + dir * self.FlameRange, filter = owner, mask = MASK_SHOT})
+        local target = src + dir * self.FlameRange
+        local request = self.FlameVisualTrace
+        if !request then request = {mask = MASK_SHOT} self.FlameVisualTrace = request end
+        request.start, request.endpos, request.filter = src, target, owner
+        local tr = util.TraceLine(request)
         ps:SetControlPoint(1, tr.HitPos)
         // Looking straight at a surface makes dir parallel to its normal. The
         // old cross product then had zero length, an invalid particle matrix.
         local basis = (tr.Hit and tr.HitNormal or -dir):Angle()
         ps:SetControlPointOrientation(1, basis:Forward(), basis:Right(), basis:Up())
-        ps:SetControlPoint(2, src + dir * self.FlameRange)
+        ps:SetControlPoint(2, target)
     end
 
     function SWEP:PreDrawViewModelWeapon(vm)
@@ -235,7 +239,7 @@ if CLIENT then
     end
 
     function SWEP:DrawWorldModel()
-        baseclass.Get("mcv_base_core").DrawWorldModel(self)
+        MCV.WeaponCommon.DrawWorldModel(self)
         self:Think_ClientFlame()
         if self:GetOwner() != LocalPlayer() then self:UpdateFlameControlPoints() end
     end

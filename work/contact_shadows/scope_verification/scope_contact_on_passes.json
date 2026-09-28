@@ -1,0 +1,26 @@
+[
+	{
+		"target": "backbuffer",
+		"stage": "PreDrawViewModels"
+	},
+	{
+		"target": "backbuffer",
+		"stage": "CaptureScopeOverlay"
+	},
+	{
+		"target": "backbuffer",
+		"stage": "PreDrawEffects"
+	},
+	{
+		"target": "backbuffer",
+		"stage": "PostDrawEffects"
+	},
+	{
+		"target": "backbuffer",
+		"stage": "PreDrawHUD"
+	},
+	{
+		"target": "backbuffer",
+		"stage": "PostDrawHUD"
+	}
+]

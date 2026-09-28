@@ -11,7 +11,9 @@ class ViewmodelDepthTests(unittest.TestCase):
     def test_screen_depth_matches_colour_without_composites(self):
         lua = LuaRuntime()
         lua.execute('''
-            SWEP={}; STUDIO_SSAODEPTHTEXTURE=2; STUDIO_SHADOWDEPTHTEXTURE=4
+            SWEP={}; MCV={}; STUDIO_SSAODEPTHTEXTURE=2; STUDIO_SHADOWDEPTHTEXTURE=4
+            math.Clamp=function(v,a,b) return math.max(a,math.min(b,v)) end
+            function CreateClientConVar() return {GetFloat=function() return 0 end} end
             bit={band=function(a,b) return a & b end}
             function Lerp(t,a,b) return a+(b-a)*t end
             function ScrW() return 1920 end
@@ -26,7 +28,8 @@ class ViewmodelDepthTests(unittest.TestCase):
             render={SetBlend=function(v) assert(v==1) end,
                 UpdateRefractTexture=function() log("refract") end}
         ''')
-        lua.execute(to_lua((ROOT / "lua/weapons/mcv_base_core/sh_vm.lua").read_text()))
+        lua.execute(to_lua((ROOT / "lua/mcv/client/cl_viewsettings.lua").read_text()))
+        lua.execute(to_lua((ROOT / "lua/mcv/weapon_common/sh_vm.lua").read_text()))
         lua.execute('''
             function SWEP:ViewModelHidden() return self.hidden end
             function SWEP:GetSightAmountVisual() return self.aim end

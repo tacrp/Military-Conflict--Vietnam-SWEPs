@@ -1,0 +1,2173 @@
+{
+  "models": 259,
+  "tracks": 2074,
+  "tail_jumps": [
+    {
+      "model": "v_bar_l",
+      "track": "shoot1d_ironsight_a",
+      "frames": 10,
+      "path": "work\\MCV_SMD_OG\\weapons\\v_bar_l\\v_bar_l_anims\\shoot1d_ironsight_a.smd",
+      "tail_errors": [
+        [
+          0.02054403894077306,
+          1.4146327961778056
+        ],
+        [
+          0.0,
+          0.06504554935415038
+        ],
+        [
+          0.24284887412751163,
+          1.9190289664617985
+        ]
+      ]
+    },
+    {
+      "model": "v_bar_l",
+      "track": "shoot2d_ironsight_a",
+      "frames": 10,
+      "path": "work\\MCV_SMD_OG\\weapons\\v_bar_l\\v_bar_l_anims\\shoot2d_ironsight_a.smd",
+      "tail_errors": [
+        [
+          0.02054305179373308,
+          1.4146327961778056
+        ],
+        [
+          0.0,
+          0.06504554935415038
+        ],
+        [
+          0.2901378829281002,
+          3.6017720602056786
+        ]
+      ]
+    },
+    {
+      "model": "v_dp28",
+      "track": "NotEmptyMove",
+      "frames": 20,
+      "path": "work\\MCV_SMD_OG\\weapons\\v_dp28\\v_dp28_anims\\NotEmptyMove.smd",
+      "tail_errors": [
+        [
+          0.0,
+          0.03495568504235325
+        ],
+        [
+          0.0,
+          0.03495568504235325
+        ],
+        [
+          5.472395583167759,
+          0.03495568504235325
+        ]
+      ]
+    },
+    {
+      "model": "v_hdm",
+      "track": "shoot3_a",
+      "frames": 21,
+      "path": "work\\MCV_SMD_OG\\weapons\\v_hdm\\v_hdm_anims\\shoot3_a.smd",
+      "tail_errors": [
+        [
+          0.0012924983558983741,
+          0.06504554935415038
+        ],
+        [
+          0.0,
+          0.06504554935415038
+        ],
+        [
+          0.7915724002048076,
+          81.18605692197518
+        ]
+      ]
+    },
+    {
+      "model": "v_highpower",
+      "track": "shoot3_a",
+      "frames": 21,
+      "path": "work\\MCV_SMD_OG\\weapons\\v_highpower\\v_highpower_anims\\shoot3_a.smd",
+      "tail_errors": [
+        [
+          0.0007404721466739988,
+          0.053250994400226036
+        ],
+        [
+          0.0,
+          0.053250994400226036
+        ],
+        [
+          1.4763922139946417,
+          52.99716365511332
+        ]
+      ]
+    },
+    {
+      "model": "v_m1911",
+      "track": "shoot3_a",
+      "frames": 21,
+      "path": "work\\MCV_SMD_OG\\weapons\\v_m1911\\v_m1911_anims\\shoot3_a.smd",
+      "tail_errors": [
+        [
+          0.006721198256263536,
+          0.07084228662818039
+        ],
+        [
+          0.0,
+          0.053250994400226036
+        ],
+        [
+          1.4763922139946417,
+          70.27597585648745
+        ]
+      ]
+    },
+    {
+      "model": "v_mamba",
+      "track": "shoot3_a",
+      "frames": 21,
+      "path": "work\\MCV_SMD_OG\\weapons\\v_mamba\\v_mamba_anims\\shoot3_a.smd",
+      "tail_errors": [
+        [
+          0.006721198256263536,
+          0.07084228662818039
+        ],
+        [
+          0.0,
+          0.053250994400226036
+        ],
+        [
+          1.4763922139946417,
+          70.27597585648745
+        ]
+      ]
+    },
+    {
+      "model": "v_mk22",
+      "track": "shoot3_a",
+      "frames": 21,
+      "path": "work\\MCV_SMD_OG\\weapons\\v_mk22\\v_mk22_anims\\shoot3_a.smd",
+      "tail_errors": [
+        [
+          0.0007391041875135061,
+          0.06504554935415038
+        ],
+        [
+          0.0,
+          0.06504554935415038
+        ],
+        [
+          1.4763941649369927,
+          73.0146545960866
+        ]
+      ]
+    },
+    {
+      "model": "v_mle1935",
+      "track": "shoot3_a",
+      "frames": 21,
+      "path": "work\\MCV_SMD_OG\\weapons\\v_mle1935\\v_mle1935_anims\\shoot3_a.smd",
+      "tail_errors": [
+        [
+          0.0007391041875135061,
+          0.06504554935415038
+        ],
+        [
+          0.0,
+          0.06504554935415038
+        ],
+        [
+          1.4763941649369927,
+          52.99716365511332
+        ]
+      ]
+    },
+    {
+      "model": "v_tt33",
+      "track": "shoot3_a",
+      "frames": 21,
+      "path": "work\\MCV_SMD_OG\\weapons\\v_tt33\\v_tt33_anims\\shoot3_a.smd",
+      "tail_errors": [
+        [
+          0.0007404721466739988,
+          0.053250994400226036
+        ],
+        [
+          0.0,
+          0.053250994400226036
+        ],
+        [
+          1.4763922139946417,
+          52.99716365511332
+        ]
+      ]
+    },
+    {
+      "model": "v_vcpistol2",
+      "track": "shoot3_a",
+      "frames": 21,
+      "path": "work\\MCV_SMD_OG\\weapons\\v_vcpistol2\\v_vcpistol2_anims\\shoot3_a.smd",
+      "tail_errors": [
+        [
+          0.006721198256263536,
+          0.07084228662818039
+        ],
+        [
+          0.0,
+          0.06504554935415038
+        ],
+        [
+          1.4763922139946417,
+          70.27597585648745
+        ]
+      ]
+    }
+  ],
+  "rig_mismatches": [],
+  "blend_lengths": [
+    {
+      "model": "v_aps",
+      "sequence": "shoot1_pose",
+      "lengths": [
+        [
+          "shoot1_a",
+          20
+        ],
+        [
+          "shoot1_ironsight_a",
+          20
+        ],
+        [
+          "shootlast_a",
+          21
+        ],
+        [
+          "shootlast_ironsight_a",
+          18
+        ]
+      ]
+    },
+    {
+      "model": "v_aps",
+      "sequence": "shoot2_pose",
+      "lengths": [
+        [
+          "shoot2_a",
+          20
+        ],
+        [
+          "shoot2_ironsight_a",
+          20
+        ],
+        [
+          "shootlast_a",
+          21
+        ],
+        [
+          "shootlast_ironsight_a",
+          18
+        ]
+      ]
+    },
+    {
+      "model": "v_aps",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          21
+        ],
+        [
+          "shoot3_ironsight_a",
+          16
+        ],
+        [
+          "shootlast_a",
+          21
+        ],
+        [
+          "shootlast_ironsight_a",
+          18
+        ]
+      ]
+    },
+    {
+      "model": "v_aps",
+      "sequence": "shoot4_pose",
+      "lengths": [
+        [
+          "shoot4_a",
+          21
+        ],
+        [
+          "shoot4_ironsight_a",
+          18
+        ],
+        [
+          "shootlast_a",
+          21
+        ],
+        [
+          "shootlast_ironsight_a",
+          18
+        ]
+      ]
+    },
+    {
+      "model": "v_aps",
+      "sequence": "shootlast_pose",
+      "lengths": [
+        [
+          "shootlast_a",
+          21
+        ],
+        [
+          "shootlast_ironsight_a",
+          18
+        ]
+      ]
+    },
+    {
+      "model": "v_bazooka",
+      "sequence": "shoot1_pose",
+      "lengths": [
+        [
+          "shoot1_a",
+          31
+        ],
+        [
+          "shoot1_ironsight_a",
+          30
+        ]
+      ]
+    },
+    {
+      "model": "v_car15",
+      "sequence": "shoot1_pose",
+      "lengths": [
+        [
+          "shoot1_a",
+          20
+        ],
+        [
+          "shoot1_ironsight_a",
+          10
+        ]
+      ]
+    },
+    {
+      "model": "v_car15",
+      "sequence": "shoot2_pose",
+      "lengths": [
+        [
+          "shoot2_a",
+          20
+        ],
+        [
+          "shoot2_ironsight_a",
+          10
+        ]
+      ]
+    },
+    {
+      "model": "v_car15",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          20
+        ],
+        [
+          "shoot3_ironsight_a",
+          11
+        ]
+      ]
+    },
+    {
+      "model": "v_chainsaw",
+      "sequence": "runlayer",
+      "lengths": [
+        [
+          "runIdle_a",
+          23
+        ],
+        [
+          "run_a",
+          19
+        ],
+        [
+          "runIdle_a",
+          23
+        ],
+        [
+          "runIdle_a",
+          23
+        ]
+      ]
+    },
+    {
+      "model": "v_cz52",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          21
+        ],
+        [
+          "shoot3_ironsight_a",
+          16
+        ]
+      ]
+    },
+    {
+      "model": "v_cz52",
+      "sequence": "shoot4_pose",
+      "lengths": [
+        [
+          "shoot4_a",
+          21
+        ],
+        [
+          "shoot4_ironsight_a",
+          16
+        ]
+      ]
+    },
+    {
+      "model": "v_cz52",
+      "sequence": "shootlast_pose",
+      "lengths": [
+        [
+          "shootlast_a",
+          21
+        ],
+        [
+          "shootlast_ironsight_a",
+          18
+        ]
+      ]
+    },
+    {
+      "model": "v_gyrojet_carbine",
+      "sequence": "shoot1_pose",
+      "lengths": [
+        [
+          "shoot1_a",
+          25
+        ],
+        [
+          "shoot1_ironsight_a",
+          14
+        ]
+      ]
+    },
+    {
+      "model": "v_gyrojet_carbine",
+      "sequence": "shoot2_pose",
+      "lengths": [
+        [
+          "shoot2_a",
+          20
+        ],
+        [
+          "shoot2_ironsight_a",
+          14
+        ]
+      ]
+    },
+    {
+      "model": "v_gyrojet_carbine",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          20
+        ],
+        [
+          "shoot3_ironsight_a",
+          14
+        ]
+      ]
+    },
+    {
+      "model": "v_gyrojet_carbine",
+      "sequence": "shootlast_pose",
+      "lengths": [
+        [
+          "shootlast_a",
+          20
+        ],
+        [
+          "shootlast_ironsight_a",
+          14
+        ]
+      ]
+    },
+    {
+      "model": "v_gyrojet_pistol",
+      "sequence": "shoot1_pose",
+      "lengths": [
+        [
+          "shoot1_a",
+          25
+        ],
+        [
+          "shoot1_ironsight_a",
+          14
+        ]
+      ]
+    },
+    {
+      "model": "v_gyrojet_pistol",
+      "sequence": "shoot2_pose",
+      "lengths": [
+        [
+          "shoot2_a",
+          20
+        ],
+        [
+          "shoot2_ironsight_a",
+          14
+        ]
+      ]
+    },
+    {
+      "model": "v_gyrojet_pistol",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          20
+        ],
+        [
+          "shoot3_ironsight_a",
+          14
+        ]
+      ]
+    },
+    {
+      "model": "v_gyrojet_pistol",
+      "sequence": "shootlast_pose",
+      "lengths": [
+        [
+          "shootlast_a",
+          20
+        ],
+        [
+          "shootlast_ironsight_a",
+          14
+        ]
+      ]
+    },
+    {
+      "model": "v_hdm",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          21
+        ],
+        [
+          "shoot3_ironsight_a",
+          20
+        ]
+      ]
+    },
+    {
+      "model": "v_highpower",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          21
+        ],
+        [
+          "shoot3_ironsight_a",
+          20
+        ]
+      ]
+    },
+    {
+      "model": "v_kbkg60",
+      "sequence": "grenade_shoot_pose",
+      "lengths": [
+        [
+          "gren_shoot1_a",
+          25
+        ],
+        [
+          "gren_shoot1_ironsight_a",
+          23
+        ]
+      ]
+    },
+    {
+      "model": "v_m16_flamer",
+      "sequence": "shoot1_pose",
+      "lengths": [
+        [
+          "shoot1_a",
+          20
+        ],
+        [
+          "shoot1_ironsight_a",
+          10
+        ]
+      ]
+    },
+    {
+      "model": "v_m16_flamer",
+      "sequence": "shoot2_pose",
+      "lengths": [
+        [
+          "shoot2_a",
+          20
+        ],
+        [
+          "shoot2_ironsight_a",
+          10
+        ]
+      ]
+    },
+    {
+      "model": "v_m16_flamer",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          20
+        ],
+        [
+          "shoot3_ironsight_a",
+          11
+        ]
+      ]
+    },
+    {
+      "model": "v_m16_flamer",
+      "sequence": "gl_shoot_pose",
+      "lengths": [
+        [
+          "gl_shoot_a",
+          20
+        ],
+        [
+          "gl_shoot_ironsight_a",
+          30
+        ]
+      ]
+    },
+    {
+      "model": "v_m16a1",
+      "sequence": "shoot1_pose",
+      "lengths": [
+        [
+          "shoot1_a",
+          20
+        ],
+        [
+          "shoot1_ironsight_a",
+          10
+        ]
+      ]
+    },
+    {
+      "model": "v_m16a1",
+      "sequence": "shoot2_pose",
+      "lengths": [
+        [
+          "shoot2_a",
+          20
+        ],
+        [
+          "shoot2_ironsight_a",
+          10
+        ]
+      ]
+    },
+    {
+      "model": "v_m16a1",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          20
+        ],
+        [
+          "shoot3_ironsight_a",
+          11
+        ]
+      ]
+    },
+    {
+      "model": "v_m1911",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          21
+        ],
+        [
+          "shoot3_ironsight_a",
+          20
+        ]
+      ]
+    },
+    {
+      "model": "v_m1919a6",
+      "sequence": "shoot1_pose",
+      "lengths": [
+        [
+          "shoot1_a",
+          30
+        ],
+        [
+          "shoot1_ironsight_a",
+          15
+        ]
+      ]
+    },
+    {
+      "model": "v_m1919a6",
+      "sequence": "shoot2_pose",
+      "lengths": [
+        [
+          "shoot2_a",
+          30
+        ],
+        [
+          "shoot2_ironsight_a",
+          15
+        ]
+      ]
+    },
+    {
+      "model": "v_m1919a6",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          31
+        ],
+        [
+          "shoot3_ironsight_a",
+          15
+        ]
+      ]
+    },
+    {
+      "model": "v_m1_carbine",
+      "sequence": "grenade_shoot_pose",
+      "lengths": [
+        [
+          "gren_shoot1_a",
+          25
+        ],
+        [
+          "gren_shoot1_ironsight_a",
+          30
+        ]
+      ]
+    },
+    {
+      "model": "v_m1c",
+      "sequence": "grenade_shoot_pose",
+      "lengths": [
+        [
+          "gren_shoot1_a",
+          25
+        ],
+        [
+          "gren_shoot1_ironsight_a",
+          30
+        ]
+      ]
+    },
+    {
+      "model": "v_m1c_sog",
+      "sequence": "grenade_shoot_pose",
+      "lengths": [
+        [
+          "gren_shoot1_a",
+          25
+        ],
+        [
+          "gren_shoot1_ironsight_a",
+          30
+        ]
+      ]
+    },
+    {
+      "model": "v_m1g_s",
+      "sequence": "grenade_shoot_pose",
+      "lengths": [
+        [
+          "gren_shoot1_a",
+          25
+        ],
+        [
+          "gren_shoot1_ironsight_a",
+          23
+        ]
+      ]
+    },
+    {
+      "model": "v_m203",
+      "sequence": "shoot1_pose",
+      "lengths": [
+        [
+          "shoot1_a",
+          20
+        ],
+        [
+          "shoot1_ironsight_a",
+          10
+        ]
+      ]
+    },
+    {
+      "model": "v_m203",
+      "sequence": "shoot2_pose",
+      "lengths": [
+        [
+          "shoot2_a",
+          20
+        ],
+        [
+          "shoot2_ironsight_a",
+          10
+        ]
+      ]
+    },
+    {
+      "model": "v_m203",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          20
+        ],
+        [
+          "shoot3_ironsight_a",
+          11
+        ]
+      ]
+    },
+    {
+      "model": "v_m203",
+      "sequence": "gl_shoot_pose",
+      "lengths": [
+        [
+          "gl_shoot_a",
+          20
+        ],
+        [
+          "gl_shoot_ironsight_a",
+          30
+        ]
+      ]
+    },
+    {
+      "model": "v_m2c",
+      "sequence": "grenade_shoot_pose",
+      "lengths": [
+        [
+          "gren_shoot1_a",
+          25
+        ],
+        [
+          "gren_shoot1_ironsight_a",
+          30
+        ]
+      ]
+    },
+    {
+      "model": "v_m2c_sog",
+      "sequence": "grenade_shoot_pose",
+      "lengths": [
+        [
+          "gren_shoot1_a",
+          25
+        ],
+        [
+          "gren_shoot1_ironsight_a",
+          30
+        ]
+      ]
+    },
+    {
+      "model": "v_m38",
+      "sequence": "grenade_shoot_pose",
+      "lengths": [
+        [
+          "gren_shoot1_a",
+          31
+        ],
+        [
+          "gren_shoot1_ironsight_a",
+          30
+        ]
+      ]
+    },
+    {
+      "model": "v_m38_s",
+      "sequence": "grenade_shoot_pose",
+      "lengths": [
+        [
+          "gren_shoot1_a",
+          31
+        ],
+        [
+          "gren_shoot1_ironsight_a",
+          30
+        ]
+      ]
+    },
+    {
+      "model": "v_m60",
+      "sequence": "shoot1_pose",
+      "lengths": [
+        [
+          "shoot1_a",
+          30
+        ],
+        [
+          "shoot1_ironsight_a",
+          15
+        ]
+      ]
+    },
+    {
+      "model": "v_m60",
+      "sequence": "shoot2_pose",
+      "lengths": [
+        [
+          "shoot2_a",
+          30
+        ],
+        [
+          "shoot2_ironsight_a",
+          15
+        ]
+      ]
+    },
+    {
+      "model": "v_m60",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          31
+        ],
+        [
+          "shoot3_ironsight_a",
+          15
+        ]
+      ]
+    },
+    {
+      "model": "v_m601",
+      "sequence": "shoot1_pose",
+      "lengths": [
+        [
+          "shoot1_a",
+          20
+        ],
+        [
+          "shoot1_ironsight_a",
+          10
+        ]
+      ]
+    },
+    {
+      "model": "v_m601",
+      "sequence": "shoot2_pose",
+      "lengths": [
+        [
+          "shoot2_a",
+          20
+        ],
+        [
+          "shoot2_ironsight_a",
+          10
+        ]
+      ]
+    },
+    {
+      "model": "v_m601",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          20
+        ],
+        [
+          "shoot3_ironsight_a",
+          11
+        ]
+      ]
+    },
+    {
+      "model": "v_m605",
+      "sequence": "shoot1_pose",
+      "lengths": [
+        [
+          "shoot1_a",
+          20
+        ],
+        [
+          "shoot1_ironsight_a",
+          10
+        ]
+      ]
+    },
+    {
+      "model": "v_m605",
+      "sequence": "shoot2_pose",
+      "lengths": [
+        [
+          "shoot2_a",
+          20
+        ],
+        [
+          "shoot2_ironsight_a",
+          10
+        ]
+      ]
+    },
+    {
+      "model": "v_m605",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          20
+        ],
+        [
+          "shoot3_ironsight_a",
+          11
+        ]
+      ]
+    },
+    {
+      "model": "v_m607",
+      "sequence": "shoot1_pose",
+      "lengths": [
+        [
+          "shoot1_a",
+          20
+        ],
+        [
+          "shoot1_ironsight_a",
+          10
+        ]
+      ]
+    },
+    {
+      "model": "v_m607",
+      "sequence": "shoot2_pose",
+      "lengths": [
+        [
+          "shoot2_a",
+          20
+        ],
+        [
+          "shoot2_ironsight_a",
+          10
+        ]
+      ]
+    },
+    {
+      "model": "v_m607",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          20
+        ],
+        [
+          "shoot3_ironsight_a",
+          11
+        ]
+      ]
+    },
+    {
+      "model": "v_m60b",
+      "sequence": "shoot1_pose",
+      "lengths": [
+        [
+          "shoot1_a",
+          30
+        ],
+        [
+          "shoot1_ironsight_a",
+          15
+        ]
+      ]
+    },
+    {
+      "model": "v_m60b",
+      "sequence": "shoot2_pose",
+      "lengths": [
+        [
+          "shoot2_a",
+          30
+        ],
+        [
+          "shoot2_ironsight_a",
+          15
+        ]
+      ]
+    },
+    {
+      "model": "v_m60b",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          31
+        ],
+        [
+          "shoot3_ironsight_a",
+          15
+        ]
+      ]
+    },
+    {
+      "model": "v_m635",
+      "sequence": "shoot1_pose",
+      "lengths": [
+        [
+          "shoot1_a",
+          20
+        ],
+        [
+          "shoot1_ironsight_a",
+          10
+        ]
+      ]
+    },
+    {
+      "model": "v_m635",
+      "sequence": "shoot2_pose",
+      "lengths": [
+        [
+          "shoot2_a",
+          20
+        ],
+        [
+          "shoot2_ironsight_a",
+          10
+        ]
+      ]
+    },
+    {
+      "model": "v_m635",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          20
+        ],
+        [
+          "shoot3_ironsight_a",
+          11
+        ]
+      ]
+    },
+    {
+      "model": "v_m656",
+      "sequence": "shoot1_pose",
+      "lengths": [
+        [
+          "shoot1_a",
+          20
+        ],
+        [
+          "shoot1_ironsight_a",
+          10
+        ]
+      ]
+    },
+    {
+      "model": "v_m656",
+      "sequence": "shoot2_pose",
+      "lengths": [
+        [
+          "shoot2_a",
+          20
+        ],
+        [
+          "shoot2_ironsight_a",
+          10
+        ]
+      ]
+    },
+    {
+      "model": "v_m656",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          20
+        ],
+        [
+          "shoot3_ironsight_a",
+          11
+        ]
+      ]
+    },
+    {
+      "model": "v_m8",
+      "sequence": "shoot1_pose",
+      "lengths": [
+        [
+          "shoot1_a",
+          20
+        ],
+        [
+          "shoot1_ironsight_a",
+          10
+        ]
+      ]
+    },
+    {
+      "model": "v_m91",
+      "sequence": "grenade_shoot_pose",
+      "lengths": [
+        [
+          "gren_shoot1_a",
+          31
+        ],
+        [
+          "gren_shoot1_ironsight_a",
+          30
+        ]
+      ]
+    },
+    {
+      "model": "v_mamba",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          21
+        ],
+        [
+          "shoot3_ironsight_a",
+          20
+        ]
+      ]
+    },
+    {
+      "model": "v_mas49",
+      "sequence": "grenade_shoot_pose",
+      "lengths": [
+        [
+          "gren_shoot1_a",
+          25
+        ],
+        [
+          "gren_shoot1_ironsight_a",
+          23
+        ]
+      ]
+    },
+    {
+      "model": "v_mg43",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          25
+        ],
+        [
+          "shoot3_ironsight_a",
+          26
+        ]
+      ]
+    },
+    {
+      "model": "v_mg43b",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          25
+        ],
+        [
+          "shoot3_ironsight_a",
+          26
+        ]
+      ]
+    },
+    {
+      "model": "v_mg43b",
+      "sequence": "deployshoot3_pose",
+      "lengths": [
+        [
+          "shoot3_d_a",
+          25
+        ],
+        [
+          "shoot3_di_a",
+          24
+        ]
+      ]
+    },
+    {
+      "model": "v_mg43d",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          25
+        ],
+        [
+          "shoot3_ironsight_a",
+          26
+        ]
+      ]
+    },
+    {
+      "model": "v_mk22",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          21
+        ],
+        [
+          "shoot3_ironsight_a",
+          20
+        ]
+      ]
+    },
+    {
+      "model": "v_mk4mod0",
+      "sequence": "shoot1_pose",
+      "lengths": [
+        [
+          "shoot1_a",
+          20
+        ],
+        [
+          "shoot1_ironsight_a",
+          10
+        ]
+      ]
+    },
+    {
+      "model": "v_mk4mod0",
+      "sequence": "shoot2_pose",
+      "lengths": [
+        [
+          "shoot2_a",
+          20
+        ],
+        [
+          "shoot2_ironsight_a",
+          10
+        ]
+      ]
+    },
+    {
+      "model": "v_mk4mod0",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          20
+        ],
+        [
+          "shoot3_ironsight_a",
+          11
+        ]
+      ]
+    },
+    {
+      "model": "v_mle1935",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          21
+        ],
+        [
+          "shoot3_ironsight_a",
+          20
+        ]
+      ]
+    },
+    {
+      "model": "v_p38",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          21
+        ],
+        [
+          "shoot3_ironsight_a",
+          16
+        ]
+      ]
+    },
+    {
+      "model": "v_p38",
+      "sequence": "shoot4_pose",
+      "lengths": [
+        [
+          "shoot4_a",
+          21
+        ],
+        [
+          "shoot4_ironsight_a",
+          16
+        ]
+      ]
+    },
+    {
+      "model": "v_p38",
+      "sequence": "shootlast_pose",
+      "lengths": [
+        [
+          "shootlast_a",
+          21
+        ],
+        [
+          "shootlast_ironsight_a",
+          18
+        ]
+      ]
+    },
+    {
+      "model": "v_panzerschreck",
+      "sequence": "shoot1_pose",
+      "lengths": [
+        [
+          "shoot1_a",
+          31
+        ],
+        [
+          "shoot1_ironsight_a",
+          30
+        ]
+      ]
+    },
+    {
+      "model": "v_pb",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          21
+        ],
+        [
+          "shoot3_ironsight_a",
+          16
+        ]
+      ]
+    },
+    {
+      "model": "v_pb",
+      "sequence": "shoot4_pose",
+      "lengths": [
+        [
+          "shoot4_a",
+          21
+        ],
+        [
+          "shoot4_ironsight_a",
+          16
+        ]
+      ]
+    },
+    {
+      "model": "v_pb",
+      "sequence": "shootlast_pose",
+      "lengths": [
+        [
+          "shootlast_a",
+          21
+        ],
+        [
+          "shootlast_ironsight_a",
+          18
+        ]
+      ]
+    },
+    {
+      "model": "v_pk",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          25
+        ],
+        [
+          "shoot3_ironsight_a",
+          26
+        ]
+      ]
+    },
+    {
+      "model": "v_pk_belt",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          25
+        ],
+        [
+          "shoot3_ironsight_a",
+          26
+        ]
+      ]
+    },
+    {
+      "model": "v_pm",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          21
+        ],
+        [
+          "shoot3_ironsight_a",
+          16
+        ]
+      ]
+    },
+    {
+      "model": "v_pm",
+      "sequence": "shoot4_pose",
+      "lengths": [
+        [
+          "shoot4_a",
+          21
+        ],
+        [
+          "shoot4_ironsight_a",
+          16
+        ]
+      ]
+    },
+    {
+      "model": "v_pm",
+      "sequence": "shootlast_pose",
+      "lengths": [
+        [
+          "shootlast_a",
+          21
+        ],
+        [
+          "shootlast_ironsight_a",
+          18
+        ]
+      ]
+    },
+    {
+      "model": "v_ppk",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          21
+        ],
+        [
+          "shoot3_ironsight_a",
+          16
+        ]
+      ]
+    },
+    {
+      "model": "v_ppk",
+      "sequence": "shoot4_pose",
+      "lengths": [
+        [
+          "shoot4_a",
+          21
+        ],
+        [
+          "shoot4_ironsight_a",
+          16
+        ]
+      ]
+    },
+    {
+      "model": "v_ppk",
+      "sequence": "shootlast_pose",
+      "lengths": [
+        [
+          "shootlast_a",
+          21
+        ],
+        [
+          "shootlast_ironsight_a",
+          18
+        ]
+      ]
+    },
+    {
+      "model": "v_r76",
+      "sequence": "shoot1_pose",
+      "lengths": [
+        [
+          "shoot1_a",
+          50
+        ],
+        [
+          "shoot1_ironsight_a",
+          25
+        ]
+      ]
+    },
+    {
+      "model": "v_r76",
+      "sequence": "shoot2_pose",
+      "lengths": [
+        [
+          "shoot2_a",
+          50
+        ],
+        [
+          "shoot2_ironsight_a",
+          25
+        ]
+      ]
+    },
+    {
+      "model": "v_r76",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          50
+        ],
+        [
+          "shoot3_ironsight_a",
+          25
+        ]
+      ]
+    },
+    {
+      "model": "v_rpd",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          25
+        ],
+        [
+          "shoot3_ironsight_a",
+          26
+        ]
+      ]
+    },
+    {
+      "model": "v_rpd_sog",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          25
+        ],
+        [
+          "shoot3_ironsight_a",
+          26
+        ]
+      ]
+    },
+    {
+      "model": "v_rpdb",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          25
+        ],
+        [
+          "shoot3_ironsight_a",
+          26
+        ]
+      ]
+    },
+    {
+      "model": "v_rpdb_sog",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          25
+        ],
+        [
+          "shoot3_ironsight_a",
+          26
+        ]
+      ]
+    },
+    {
+      "model": "v_rpg2",
+      "sequence": "shoot1_pose",
+      "lengths": [
+        [
+          "shoot1_a",
+          31
+        ],
+        [
+          "shoot1_ironsight_a",
+          30
+        ]
+      ]
+    },
+    {
+      "model": "v_rpg7",
+      "sequence": "shoot1_pose",
+      "lengths": [
+        [
+          "shoot1_a",
+          31
+        ],
+        [
+          "shoot1_ironsight_a",
+          30
+        ]
+      ]
+    },
+    {
+      "model": "v_ruby",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          21
+        ],
+        [
+          "shoot3_ironsight_a",
+          16
+        ]
+      ]
+    },
+    {
+      "model": "v_ruby",
+      "sequence": "shoot4_pose",
+      "lengths": [
+        [
+          "shoot4_a",
+          21
+        ],
+        [
+          "shoot4_ironsight_a",
+          16
+        ]
+      ]
+    },
+    {
+      "model": "v_ruby",
+      "sequence": "shootlast_pose",
+      "lengths": [
+        [
+          "shootlast_a",
+          21
+        ],
+        [
+          "shootlast_ironsight_a",
+          18
+        ]
+      ]
+    },
+    {
+      "model": "v_sks",
+      "sequence": "grenade_shoot_pose",
+      "lengths": [
+        [
+          "gren_shoot1_a",
+          31
+        ],
+        [
+          "gren_shoot1_ironsight_a",
+          32
+        ]
+      ]
+    },
+    {
+      "model": "v_springfield",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          20
+        ],
+        [
+          "shoot3_ironsight_a",
+          10
+        ]
+      ]
+    },
+    {
+      "model": "v_springfield",
+      "sequence": "shoot_last_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          20
+        ],
+        [
+          "shoot3_ironsight_a",
+          10
+        ]
+      ]
+    },
+    {
+      "model": "v_springfield",
+      "sequence": "grenade_shoot_pose",
+      "lengths": [
+        [
+          "gren_shoot1_a",
+          31
+        ],
+        [
+          "gren_shoot1_ironsight_a",
+          30
+        ]
+      ]
+    },
+    {
+      "model": "v_stg44",
+      "sequence": "shoot1_pose",
+      "lengths": [
+        [
+          "shoot1_a",
+          20
+        ],
+        [
+          "shoot1_ironsight_a",
+          10
+        ]
+      ]
+    },
+    {
+      "model": "v_stg44",
+      "sequence": "shoot2_pose",
+      "lengths": [
+        [
+          "shoot2_a",
+          20
+        ],
+        [
+          "shoot2_ironsight_a",
+          10
+        ]
+      ]
+    },
+    {
+      "model": "v_stg44",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          20
+        ],
+        [
+          "shoot3_ironsight_a",
+          10
+        ]
+      ]
+    },
+    {
+      "model": "v_tt33",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          21
+        ],
+        [
+          "shoot3_ironsight_a",
+          20
+        ]
+      ]
+    },
+    {
+      "model": "v_type56xm148",
+      "sequence": "gl_shoot_pose",
+      "lengths": [
+        [
+          "gl_shoot_a",
+          20
+        ],
+        [
+          "gl_shoot_ironsight_a",
+          30
+        ]
+      ]
+    },
+    {
+      "model": "v_type63",
+      "sequence": "grenade_shoot_pose",
+      "lengths": [
+        [
+          "gren_shoot1_a",
+          31
+        ],
+        [
+          "gren_shoot1_ironsight_a",
+          32
+        ]
+      ]
+    },
+    {
+      "model": "v_type63b",
+      "sequence": "grenade_shoot_pose",
+      "lengths": [
+        [
+          "gren_shoot1_a",
+          31
+        ],
+        [
+          "gren_shoot1_ironsight_a",
+          32
+        ]
+      ]
+    },
+    {
+      "model": "v_type79",
+      "sequence": "shoot1_pose",
+      "lengths": [
+        [
+          "shoot1_a",
+          20
+        ],
+        [
+          "shoot1_ironsight_a",
+          10
+        ]
+      ]
+    },
+    {
+      "model": "v_vcpistol2",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          21
+        ],
+        [
+          "shoot3_ironsight_a",
+          20
+        ]
+      ]
+    },
+    {
+      "model": "v_vz54",
+      "sequence": "grenade_shoot_pose",
+      "lengths": [
+        [
+          "gren_shoot1_a",
+          31
+        ],
+        [
+          "gren_shoot1_ironsight_a",
+          30
+        ]
+      ]
+    },
+    {
+      "model": "v_vz54s",
+      "sequence": "grenade_shoot_pose",
+      "lengths": [
+        [
+          "gren_shoot1_a",
+          31
+        ],
+        [
+          "gren_shoot1_ironsight_a",
+          30
+        ]
+      ]
+    },
+    {
+      "model": "v_vz59",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          25
+        ],
+        [
+          "shoot3_ironsight_a",
+          26
+        ]
+      ]
+    },
+    {
+      "model": "v_vz59b",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          25
+        ],
+        [
+          "shoot3_ironsight_a",
+          26
+        ]
+      ]
+    },
+    {
+      "model": "v_xm148",
+      "sequence": "shoot1_pose",
+      "lengths": [
+        [
+          "shoot1_a",
+          20
+        ],
+        [
+          "shoot1_ironsight_a",
+          10
+        ]
+      ]
+    },
+    {
+      "model": "v_xm148",
+      "sequence": "shoot2_pose",
+      "lengths": [
+        [
+          "shoot2_a",
+          20
+        ],
+        [
+          "shoot2_ironsight_a",
+          10
+        ]
+      ]
+    },
+    {
+      "model": "v_xm148",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          20
+        ],
+        [
+          "shoot3_ironsight_a",
+          11
+        ]
+      ]
+    },
+    {
+      "model": "v_xm148",
+      "sequence": "gl_shoot_pose",
+      "lengths": [
+        [
+          "gl_shoot_a",
+          20
+        ],
+        [
+          "gl_shoot_ironsight_a",
+          30
+        ]
+      ]
+    },
+    {
+      "model": "v_xm16super",
+      "sequence": "shoot1_pose",
+      "lengths": [
+        [
+          "shoot1_a",
+          20
+        ],
+        [
+          "shoot1_ironsight_a",
+          10
+        ]
+      ]
+    },
+    {
+      "model": "v_xm16super",
+      "sequence": "shoot2_pose",
+      "lengths": [
+        [
+          "shoot2_a",
+          20
+        ],
+        [
+          "shoot2_ironsight_a",
+          10
+        ]
+      ]
+    },
+    {
+      "model": "v_xm16super",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          20
+        ],
+        [
+          "shoot3_ironsight_a",
+          11
+        ]
+      ]
+    },
+    {
+      "model": "v_xm16super",
+      "sequence": "gl_shoot_pose",
+      "lengths": [
+        [
+          "gl_shoot_a",
+          20
+        ],
+        [
+          "gl_shoot_ironsight_a",
+          30
+        ]
+      ]
+    },
+    {
+      "model": "v_xm177",
+      "sequence": "shoot1_pose",
+      "lengths": [
+        [
+          "shoot1_a",
+          20
+        ],
+        [
+          "shoot1_ironsight_a",
+          10
+        ]
+      ]
+    },
+    {
+      "model": "v_xm177",
+      "sequence": "shoot2_pose",
+      "lengths": [
+        [
+          "shoot2_a",
+          20
+        ],
+        [
+          "shoot2_ironsight_a",
+          10
+        ]
+      ]
+    },
+    {
+      "model": "v_xm177",
+      "sequence": "shoot3_pose",
+      "lengths": [
+        [
+          "shoot3_a",
+          20
+        ],
+        [
+          "shoot3_ironsight_a",
+          11
+        ]
+      ]
+    }
+  ]
+}

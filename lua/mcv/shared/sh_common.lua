@@ -12,10 +12,12 @@ MCV.FIREMODE_VOLLEY = 10
 MCV.FIREMODE_HE = 11
 MCV.FIREMODE_BUCKSHOT = 12
 
-// Per-weapon replacement channels, following ARC9's report/distant separation.
-// CHAN_STATIC stacks every tail during automatic fire instead of replacing it.
-MCV.CHAN_SHOT = CHAN_WEAPON
-MCV.CHAN_SHOT_DISTANT = CHAN_USER_BASE
+// Bounded overlap per weapon: recordings can have 60-100 ms of mechanism before
+// the report. Replacing them every shot cuts that report out on fast automatics.
+// Four slots per layer preserve the attack without CHAN_STATIC's unbounded tails.
+MCV.SHOT_SOUND_SLOTS = 4
+MCV.CHAN_SHOT = CHAN_USER_BASE
+MCV.CHAN_SHOT_DISTANT = CHAN_USER_BASE + MCV.SHOT_SOUND_SLOTS
 
 MCV.FiremodeAmmo = {
     [MCV.FIREMODE_HE] = "smg1_grenade",

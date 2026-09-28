@@ -14,7 +14,7 @@ ROOT = Path(__file__).resolve().parents[1]
 def realm(module):
     lua = LuaRuntime()
     lua.execute('''
-        CLIENT = true; SERVER = false; SWEP = {}; clock = 10; first = true
+        CLIENT = true; SERVER = false; SWEP = {}; MCV = {}; clock = 10; first = true
         ACT_VM_DRAW = 1
         function CurTime() return clock end
         function IsFirstTimePredicted() return first end
@@ -40,7 +40,7 @@ def realm(module):
             end})
         end
     ''')
-    for f in ("lua/weapons/mcv_base_core/sh_timers.lua", module):
+    for f in ("lua/mcv/shared/sh_modelcache.lua", "lua/mcv/weapon_common/sh_timers.lua", module):
         lua.execute(to_lua((ROOT / f).read_text()))
     lua.execute('function SWEP:MeleeTrace() return {Hit=false} end')
     return lua
@@ -102,7 +102,7 @@ class ReplayTests(unittest.TestCase):
             ''')
 
     def test_movement_samples_match_across_hook_order_and_rollback(self):
-        lua=realm("lua/weapons/mcv_base_core/sh_timers.lua")
+        lua=realm("lua/mcv/weapon_common/sh_timers.lua")
         lua.execute('''
             hook={Add=function() end}
             predicting=true
@@ -112,7 +112,7 @@ class ReplayTests(unittest.TestCase):
             cmd={number=99,CommandNumber=function(s) return s.number end}
             function owner:GetCurrentCommand() return cmd end
         ''')
-        lua.execute(to_lua((ROOT / "lua/weapons/mcv_base_core/sh_movement.lua").read_text()))
+        lua.execute(to_lua((ROOT / "lua/mcv/weapon_common/sh_movement.lua").read_text()))
         lua.execute('''
             w=make(); w:CaptureMovement(99,100,true,false); before=copy(w.dt)
             cmd.number=100
@@ -162,7 +162,7 @@ class ReplayTests(unittest.TestCase):
             assert(once < 0.8 and once >= 0.4)
             assert(w.VisualSightFrame==101 and w:GetSightAmountRawVisual()==once)
         ''')
-        for module in ('lua/weapons/mcv_base_core/sh_think.lua','lua/weapons/mcv_base/sh_shoot.lua'):
+        for module in ('lua/mcv/weapon_common/sh_think.lua','lua/weapons/mcv_base/sh_shoot.lua'):
             lua.execute(to_lua((ROOT / module).read_text()))
         lua.execute('''
             function SWEP:GetStanceSpreadMultiplier() return 3 end
@@ -181,7 +181,7 @@ class ReplayTests(unittest.TestCase):
         ''')
 
     def test_recoil_applies_once_on_following_command_after_rollback(self):
-        lua = realm("lua/weapons/mcv_base_core/sh_timers.lua")
+        lua = realm("lua/mcv/weapon_common/sh_timers.lua")
         lua.execute('''
             local mt={}
             function V(x,y,z) return setmetatable({x=x,y=y,z=z},mt) end
@@ -201,7 +201,7 @@ class ReplayTests(unittest.TestCase):
             mv={velocity=vector_origin, GetVelocity=function(s) return s.velocity end,
                 SetVelocity=function(s,v) s.velocity=v end}
         ''')
-        lua.execute(to_lua((ROOT / "lua/weapons/mcv_base_core/sh_movement.lua").read_text()))
+        lua.execute(to_lua((ROOT / "lua/mcv/weapon_common/sh_movement.lua").read_text()))
         lua.execute('''
             w=make(); w:SetRecoilImpulse(vector_origin); before=copy(w.dt)
             w:QueueRecoilImpulse(1.5); moveHook(owner,mv,cmd)
@@ -230,9 +230,9 @@ class ReplayTests(unittest.TestCase):
         ''')
 
     def test_model_alias_and_engine_cache_follow_restored_mode(self):
-        lua = realm("lua/weapons/mcv_base_core/sh_timers.lua")
+        lua = realm("lua/mcv/weapon_common/sh_timers.lua")
         lua.execute('hook={Add=function() end}')
-        lua.execute(to_lua((ROOT / "lua/weapons/mcv_base_core/sh_deploy.lua").read_text()))
+        lua.execute(to_lua((ROOT / "lua/mcv/weapon_common/sh_deploy.lua").read_text()))
         lua.execute('''
             SWEP.HasAkimbo=true; SWEP.ViewModelAkimbo="dual"
             weapons={Get=function() return {ViewModel="single"} end}
@@ -281,7 +281,7 @@ class ReplayTests(unittest.TestCase):
             function owner:SetSaveValue(k,v) self[k]=v end
             SWEP.MilitaryConflictVietnam=true
         ''')
-        lua.execute(to_lua((ROOT / "lua/weapons/mcv_base_core/sh_deploy.lua").read_text()))
+        lua.execute(to_lua((ROOT / "lua/mcv/weapon_common/sh_deploy.lua").read_text()))
         lua.execute('''
             function SWEP:ClientHolster() end
             w=make(); target={}; before=copy(w.dt)

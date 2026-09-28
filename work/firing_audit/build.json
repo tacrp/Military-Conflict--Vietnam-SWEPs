@@ -1,0 +1,152 @@
+{
+  "v_hdm": {
+    "tracks": {
+      "shoot3_a.smd": {
+        "frames": 21,
+        "source": "work\\MCV_SMD_OG\\weapons\\v_hdm\\v_hdm_anims\\shoot3_a.smd",
+        "source_sha256": "bec3cbd19026b5517e8749ac3bf5ba240d29645cc9d28c1023f90b5aac67ae65",
+        "fixed_sha256": "e76b9d47971ae289c56e57085b712c1124c1346939dcfce0e2267f8887a604dc"
+      }
+    },
+    "installed": {
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_hdm.mdl": "89d4cc0b85d14d3aa7b3c86ca6490975992fa43c752cce83524803d7d5da429b",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_hdm.vvd": "f03aaa08364463dbb57519ce92c309e633a64dbac6a35aa49b458a58c62560ae",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_hdm.dx80.vtx": "0854364d4560d3efd6071f04b7782604a9eda21641943263fb3192f0ffcbdcc9",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_hdm.dx90.vtx": "6aa3be41a7595ae92e82c014bc629dc89212aa67e019076f7a4d1f3bb59cd3e5"
+    }
+  },
+  "v_highpower": {
+    "tracks": {
+      "shoot3_a.smd": {
+        "frames": 21,
+        "source": "work\\MCV_SMD_OG\\weapons\\v_highpower\\v_highpower_anims\\shoot3_a.smd",
+        "source_sha256": "55445a809f9e109a1b53106d6f56928be864c3b3df88a4a5a4eb0ebae9940193",
+        "fixed_sha256": "9d17b8c46687869aeaa1fa06089b8806cae8edc41944402042b222ab982f82c9"
+      }
+    },
+    "installed": {
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_highpower.mdl": "3dddf1713a3f9a5a4676b351afb87b6f2d2c535d02c396f29a9062daa74d33e2",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_highpower.vvd": "552f02a7ad2982cc94310d4fc6d5320b668255d7e8fecf310affc5bf9a387af2",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_highpower.dx80.vtx": "b21f3150ee570cc89a3755c26518d60f99e37875a7b566ab9e1a8ca3e3c2329a",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_highpower.dx90.vtx": "e50a6b26e2a53bb22a6c8d416ee1cae514a0d57976a8dd6ca59205e5f5cdb18d"
+    }
+  },
+  "v_m1911": {
+    "tracks": {
+      "shoot3_a.smd": {
+        "frames": 21,
+        "source": "work\\MCV_SMD_OG\\weapons\\v_m1911\\v_m1911_anims\\shoot3_a.smd",
+        "source_sha256": "3b4d324c4ac9b2abb3a430cdfaf0dc957029334d2613e8f083780560f87f4d93",
+        "fixed_sha256": "dc2a20a2019a35fec88b5e01d046fd3a88820725ed85b5c0e2bb9fc11312937a"
+      }
+    },
+    "installed": {
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_m1911.mdl": "18b5491293ee3f48cac9bf92c94cf022280db058fad933b3ef59299b498e41e8",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_m1911.vvd": "1c21726d7fcbbf569e226a3bed3b1849d5604716ba16e187e181c4fb00980a54",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_m1911.dx80.vtx": "b5604b47e4426fff919662f565ed78ebccf802b69c4108b09df2abd6b4b7c6a1",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_m1911.dx90.vtx": "c75b6a3d568fea3eeafa89266bc8ef99a6339d63eb7a56f4d782ff8d26423a1a"
+    }
+  },
+  "v_mamba": {
+    "tracks": {
+      "shoot3_a.smd": {
+        "frames": 21,
+        "source": "work\\MCV_SMD_OG\\weapons\\v_mamba\\v_mamba_anims\\shoot3_a.smd",
+        "source_sha256": "3b4d324c4ac9b2abb3a430cdfaf0dc957029334d2613e8f083780560f87f4d93",
+        "fixed_sha256": "dc2a20a2019a35fec88b5e01d046fd3a88820725ed85b5c0e2bb9fc11312937a"
+      }
+    },
+    "installed": {
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_mamba.mdl": "59712748c70d5b032b891a34b8c85d14635dc859c7f17a57de4768b3f4cc52a5",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_mamba.vvd": "97115e60ff5090e1b9da91c6b305f846e708ab6a98d1bf6c9af31856437793c0",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_mamba.dx80.vtx": "080c6e238760e2ed5565728fffe69663a48da33791aaa7a3a1452121e0a81794",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_mamba.dx90.vtx": "d7b389e4da54ce32e32a05013c60661a79aedf120e92437094d1c2b21a7f5da0"
+    }
+  },
+  "v_mk22": {
+    "tracks": {
+      "shoot3_a.smd": {
+        "frames": 21,
+        "source": "work\\MCV_SMD_OG\\weapons\\v_mk22\\v_mk22_anims\\shoot3_a.smd",
+        "source_sha256": "2992b90a34a4ab398dc1bb2d3cc4075c23f49bc888392b86b78c18c3631ed852",
+        "fixed_sha256": "2c7063a84872ddde4f0c9f887c24f63b6a442e917444ada9475ac574615a70f0"
+      }
+    },
+    "installed": {
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_mk22.mdl": "616ab8da1d7dca60ebb910047a0a95b118c46a6b552b732aed5a570ed95f0a5e",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_mk22.vvd": "69f92c7627645dcc7c2a128a37a2248d9698989241641ff9c2429daac6b28744",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_mk22.dx80.vtx": "d372e5b56416ef09eaaa78ea29ca20fd6bccbc3e79be91a60156eb31f4989385",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_mk22.dx90.vtx": "199efd74b50b143e77fb7082d02cecfebfabc07d9407f239800712c3a20ca6e8"
+    }
+  },
+  "v_mle1935": {
+    "tracks": {
+      "shoot3_a.smd": {
+        "frames": 21,
+        "source": "work\\MCV_SMD_OG\\weapons\\v_mle1935\\v_mle1935_anims\\shoot3_a.smd",
+        "source_sha256": "8f51af3046001ee9324008bdc6912730ed6dd670a1d2f8eac274959204b45cd0",
+        "fixed_sha256": "a70932a6f6395a74075797a905c758f56a294bf4b467813a068e2dba8dc494c1"
+      }
+    },
+    "installed": {
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_mle1935.mdl": "4eb33db6c1161d47fa722c566631bea2cc7ee5a5062067a8f723762b0d526a7b",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_mle1935.vvd": "4c5633999560d2ff714b38b4a87dca67f14df55dd687a5de0361d5573e6d0d90",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_mle1935.dx80.vtx": "2978b77d825b30b0d0c0067e49434af533410a37d8d762aa108139ff4011d944",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_mle1935.dx90.vtx": "cc5f33d37f7d3b446d4eafa45e70998ee363aeaed351b62b4278ef528c9b77cb"
+    }
+  },
+  "v_tt33": {
+    "tracks": {
+      "shoot3_a.smd": {
+        "frames": 21,
+        "source": "work\\MCV_SMD_OG\\weapons\\v_tt33\\v_tt33_anims\\shoot3_a.smd",
+        "source_sha256": "8359313ab2dd92a1d95bda52383974159d4888ce49e9a67456508623c9760760",
+        "fixed_sha256": "9cc8baba489916461aa99fcea29c40dc59a2157914eea11b596e91e43774510c"
+      }
+    },
+    "installed": {
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv\\models\\weapons\\mcv\\v_tt33.mdl": "239f7786691699ac241e396046a491731ccc1776abb3cd6281a2a68491f9bfae",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv\\models\\weapons\\mcv\\v_tt33.vvd": "ca44d2e8fc4ae35feb5ae414dec3196770a03ea8e2a85a79876bf24fc4d50ad9",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv\\models\\weapons\\mcv\\v_tt33.dx80.vtx": "e67a949d63f2d367fd798fb6ade677ceb00f4a59abf39c48c6a12fad1900cbd6",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv\\models\\weapons\\mcv\\v_tt33.dx90.vtx": "06ff3d4cd0dcf3937794cdd49ab80dae164f3829789531a9994f5a02779725b4"
+    }
+  },
+  "v_vcpistol2": {
+    "tracks": {
+      "shoot3_a.smd": {
+        "frames": 21,
+        "source": "work\\MCV_SMD_OG\\weapons\\v_vcpistol2\\v_vcpistol2_anims\\shoot3_a.smd",
+        "source_sha256": "0f9ba2b4f7111e5e068ea41020f8877b2ba4d0a5666c1e10dace9b255b76dea1",
+        "fixed_sha256": "e27264f5bdb8bf45c351fd3e9894ea6a81a49785bb74b48f721d0d189df0864f"
+      }
+    },
+    "installed": {
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv\\models\\weapons\\mcv\\v_vcpistol2.mdl": "c25120882c6c92f3eb72bcfe788c869289e9bb53a318653d55a7259c3fbdabf4",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv\\models\\weapons\\mcv\\v_vcpistol2.vvd": "71c2473838bd66797d84dab74ee3d163e6282bbf7fbe5a1a86d1ca367d5cdfc9",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv\\models\\weapons\\mcv\\v_vcpistol2.dx80.vtx": "948c17671e2c169c64a07729ffb9e4f6690129caa4ddac690174c9dfed115de1",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv\\models\\weapons\\mcv\\v_vcpistol2.dx90.vtx": "06aaaceed8d10a346d89658725e2c0e44ccf232f2e4e2aa2978ddd5e70a27ce4"
+    }
+  },
+  "v_bar_l": {
+    "tracks": {
+      "shoot1d_ironsight_a.smd": {
+        "frames": 10,
+        "source": "work\\MCV_SMD_OG\\weapons\\v_bar_l\\v_bar_l_anims\\shoot1d_ironsight_a.smd",
+        "source_sha256": "58d807103a9910bc2b47665eb6c59c84c32c19a8c64edd409c30060dc6b40e3a",
+        "fixed_sha256": "afa985db4071289cb80f7df4753b16ebfb422f4bfb19e68ded4686d8c5617755"
+      },
+      "shoot2d_ironsight_a.smd": {
+        "frames": 10,
+        "source": "work\\MCV_SMD_OG\\weapons\\v_bar_l\\v_bar_l_anims\\shoot2d_ironsight_a.smd",
+        "source_sha256": "72ab2e39fce04302fbb3e2039631f09990bb65841d99955fabc47d78c4b2b89e",
+        "fixed_sha256": "0143c7bc623b1fa04b676100c24264c221e042a8958d767ce21b6cbd650f2b17"
+      }
+    },
+    "installed": {
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_bar_l.mdl": "35497caed2b41ed2738f2fd179b324a886935a57430d7cb9cfacbc1f5f6435c4",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_bar_l.vvd": "c08cb99dfbaed7c71e319d2564ecb73fa0b722d696938883a160537ba967e026",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_bar_l.dx80.vtx": "6b536945fc4a3e516de5b4e2ed757be1baccf7456376fcfddd7ceac3acbeed9e",
+      "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_bar_l.dx90.vtx": "1579b29053d07cb3bb8a009d4cb96bd731cf69498506c3133e3860f624dcbdb9"
+    }
+  }
+}

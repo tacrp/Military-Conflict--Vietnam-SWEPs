@@ -1,4 +1,122 @@
-# Viewmodel depth projection — 2026-09-22
+# Viewmodel / shader compatibility
+
+## Contact Shadows scope fix verified in game — 2026-09-28
+
+The previous wrapper and first lens-layer implementation below were unsuccessful.
+The live render trace confirms **PreDrawEffects runs after viewmodels**, not before
+PreDrawViewModels. The wrapper therefore overwrote the clean scope input with the gun.
+It has been removed (including migration cleanup on refresh). The earlier offline
+capture test used the wrong hook order and has been corrected.
+
+The old lens layer also had alpha zero everywhere. Drawing the actual viewmodel again
+re-entered its hooks, and writing the layer's alpha inside the engine viewmodel pass
+did not work in the live renderer. The replacement uses two stages:
+
+1. Inside the real VM camera, a managed clientside model merges onto the existing
+   bones and copies skin/bodygroups/submaterials. Two draws into a private depth/stencil
+   target determine the visible lens. Original shaders preserve its software skinning.
+   Translucent/additive covers are excluded from depth occlusion (the OEG's glass would
+   otherwise mask out the entire lens); these are flags in `$flags`, not GetInt keys.
+2. After the normal OEG blend and muzzle particles, save the completed colour frame.
+   PreDrawHUD fills lens alpha from the saved stencil outside the engine VM pass, copies
+   saved pixels inside it, then composites after postprocessing. Point-sampled textures
+   preserve pixels exactly. Weapon/frame/target and completed-pixel guards reject stale
+   layers. The normal gun remains in depth buffers and receives Contact Shadows.
+
+No extra world render or second animation simulation is performed. There are two
+additional model draws and one colour copy while scoped, plus the late masked copy;
+the clientside model participates in MCV's existing ownership/holster/map cleanup.
+This deliberately protects the lens from all later scene postprocessing, including
+screen-space effects that might otherwise have been desirable inside the scope.
+
+User-authorized harness verification: isolated 64-bit multirun, port 27026, gm_construct,
+position (-1000,1300,-100), aim (-10,90,0) toward the water. Contact Shadows 3645490126,
+GShader Library and the user's other installed shaders remained active. Test scripts:
+`work/tests/scope_contact.txt`, `work/tests/scope_variants.txt`; explicit diagnostic helper:
+`lua/mcv_harness/scope_buffers.lua`; GPU image checker: `work/check_scope_buffers.py`.
+SVD, Vz.54 scopes, sighted FOV +/-25, shooting and XM177 OEG are covered. The checker
+requires a nonempty alpha mask and exact equality between every opaque lens pixel and
+the same frame's saved pre-postprocess image. The comparison with the overlay disabled
+shows the front sight's shadow reappear in the lens. Evidence lives under
+`work/contact_shadows/scope_verification/`. Lua-only update: change maps.
+
+References: https://wiki.facepunch.com/gmod/Render_Order,
+https://wiki.facepunch.com/gmod/Material_Flags.
+
+## Historical failed attempts (superseded by the verified fix above)
+
+## Late lens composite after further user feedback
+
+The earlier Contact Shadows capture wrapper did not eliminate the reported shadows
+over the scope. Capture timing alone does not protect the final lens pixels.
+`cl_scopeoverlay.lua` now captures a private lens layer from the real viewmodel camera
+in PostDrawViewModel, before manual muzzle particles. It uses an RGBA target with a
+separate depth attachment. The first model draw writes only depth; the second overrides
+every non-lens material with a no-draw material and writes the existing scope shader.
+Thus the hands/housing occlude the lens without a guessed circular screen mask.
+
+PreDrawHUD composites this layer after scene postprocessing, before normal HUD/UI.
+Frame, active-weapon and render-target checks prevent stale layers; the original gun
+keeps its normal depth/shadow participation. OEG colour blending is shared with its
+normal viewmodel pass, retaining the lens alpha mask during that blend. This costs two
+extra viewmodel draws while the scope is active, but no additional world render or
+clientside model. The earlier pre-Contact capture and refraction preservation remain.
+
+Offline test_scope_overlay.py checks per-material isolation, depth/colour ordering,
+error cleanup, OEG blending and stale-frame rejection. Scope capture, particle refraction,
+viewmodel depth and syntax checks also pass. These tests do not verify GPU output.
+No in-game verification was run; visual confirmation remains necessary. Change maps.
+
+## Contact Shadows inside the scope picture — 2026-09-26
+
+The original hypothesis incorrectly placed PreDrawEffects before the viewmodel capture.
+In reality that callback runs afterward; the wrapper below was removed.
+
+MCV now captures immediately before the installed `PreDrawEffects.ContactShadows`
+callback. A narrowly targeted wrapper is necessary because independent hook order is
+unspecified. The callback still receives its arguments, returns normally and draws the
+main scene. PreDrawViewModels keeps this earlier picture only for the same weapon,
+frame and render target; without a successful early capture it uses the normal late
+capture. The wrapper follows callback replacement and unwraps itself on Lua refresh.
+No shader settings, stencil values or viewmodel depth participation are changed.
+
+Tradeoff: the scope image excludes that entire Contact Shadows pass, including its
+character shadows, and anything applied afterward. Other scope/AO conflicts are not
+claimed fixed. Capturing before this specific postprocess avoids moving capture all
+the way back to PreDrawReconstruction (the earlier failed approach).
+
+Offline scope capture, refraction preservation, viewmodel depth and Lua syntax checks
+pass. Tests cover ordering, callback forwarding, shader disable, alternate targets,
+rejected views, callback replacement and hot reload. No in-game verification performed.
+Change maps to apply.
+
+## Contact Shadows after firing — 2026-09-25
+
+Inspected installed Workshop 3645490126 and its GShader Library dependency 3542644649.
+Contact Shadows explicitly configures `_rt_PowerOfTwoFB` for its weapon depth mask and
+binds it as `$texture4` in `contact_shadows_gmod.vmt`. Its stencil option defaults off.
+MCV's manual PCF batches call `render.UpdateRefractTexture`, which updates that same
+texture, after drawing the weapon. Those updates continue throughout muzzle smoke's
+lifetime. This is a concrete shared-buffer conflict and a likely explanation of the
+reported 2–3 second disappearance; visual causality has not been verified in-game.
+
+`weapon_common/sh_vm.lua` now saves that texture immediately before the first manual
+refraction update and restores it after the last particle batch. This preserves fresh
+heat haze during particle rendering and the earlier shader input afterward. Copies are
+conditional on shaderlib and enabled Contact Shadows, only occur with live PCFs, and
+reuse a size-matched RGBA render target. No depth attachment or global shader settings
+are changed. `render.CopyTexture` preserves the colour texture, including its alpha;
+it does not copy a depth attachment.
+
+Offline `test_particle_refraction.py` checks save/update/draw/restore order, input
+preservation, VM-only/world-only/mixed batches, target reuse, disabled compatibility,
+and skipped depth/hidden/empty passes. `test_viewmodel_depth.py` and Lua syntax checks
+also pass. No game was launched. Change maps for this Lua change. The older scope/AO
+issues below remain separate and unverified.
+
+References: https://steamcommunity.com/sharedfiles/filedetails/?id=3645490126,
+https://wiki.facepunch.com/gmod/render.UpdateRefractTexture,
+https://wiki.facepunch.com/gmod/render.CopyTexture.
 
 ## Current status after user visual feedback
 

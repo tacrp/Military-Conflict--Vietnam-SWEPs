@@ -134,6 +134,9 @@ class RocketTests(unittest.TestCase):
 
     def test_launch_multipliers_and_secondary_isolation(self):
         lua=runtime()
+        common=(ROOT/'lua/mcv/weapon_common/shared.lua').read_text()
+        lua.execute(to_lua(next(line for line in common.splitlines()
+                               if line.startswith('function SWEP:GetProjectileClass()'))))
         lua.execute(to_lua((ROOT/'lua/weapons/mcv_base/sh_shoot.lua').read_text()))
         lua.execute('''
             function SWEP:GetOwner() return owner end

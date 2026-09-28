@@ -2,7 +2,7 @@
 from pathlib import Path
 import os
 
-path = Path(__file__).resolve().parents[1] / 'lua/weapons/mcv_base_core/sh_deploy.lua'
+path = Path(__file__).resolve().parents[1] / 'lua/mcv/weapon_common/sh_deploy.lua'
 text = path.read_text()
 marker = '    // GMod merges nested lists:'
 if marker not in text:

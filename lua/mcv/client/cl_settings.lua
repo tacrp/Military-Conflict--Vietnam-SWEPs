@@ -16,7 +16,7 @@ local SERVER_SETTINGS = {
      help = "Alternate weapon handling schema inspired by Modern Warfare 4"},
 
     {convar = "mcv_surface_impacts", label = "The game's bullet impacts",
-     help = "Use the game's bullet impact particles"},
+     help = "Use Military Conflict: Vietnam's impact effects and decals. Disable to use standard Garry's Mod impacts and bullet holes instead."},
 
     {convar = "mcv_bullet_penetration", label = "Bullet penetration",
      help = "Bullets can pass through thin cover. Material, thickness and weapon stats determine whether they stop and how much damage remains."},
@@ -26,43 +26,48 @@ local SERVER_SETTINGS = {
 }
 
 local PHYSICAL_SETTINGS = {
-    {convar = "mcv_physbullets", label = "Enable physical bullets", help = "Server setting: bullets travel using weapon MuzzleVelocity instead of hitting instantly. Guns without a velocity stat retain hitscan."},
-    {convar = "mcv_physbullets_npcs", label = "NPC physical bullets", help = "Use travelling bullets for NPC guns as well as players."},
-    {convar = "mcv_physbullets_pellets", label = "Physical shotgun pellets", help = "Simulate each pellet separately. This costs more processing and network traffic."},
+    {convar = "mcv_physbullets", label = "Enable physical bullets", help = "Server setting: bullets travel using weapon MuzzleVelocity instead of hitting instantly."},
+    {convar = "mcv_physbullets_npcs", label = "NPC physical bullets"},
+    {convar = "mcv_physbullets_pellets", label = "Physical shotgun pellets", help = "Simulate each pellet separately"},
     {convar = "mcv_physbullets_velocity", label = "Muzzle velocity multiplier", slider = {0.1, 3, 2}, help = "1 uses the gun's MuzzleVelocity in metres per second. Higher values shorten travel time."},
     {convar = "mcv_physbullets_gravity", label = "Gravity multiplier", slider = {0, 3, 2}, help = "1 applies Earth gravity; 0 disables bullet drop."},
-    {convar = "mcv_physbullets_drag", label = "Air resistance (per second)", slider = {0, 2, 2}, help = "Linear drag slows bullets during flight. 0 keeps horizontal speed constant."},
-    {convar = "mcv_physbullets_lifetime", label = "Maximum flight time (seconds)", slider = {0.1, 10, 1}, help = "Remove bullets after this time or the existing maximum bullet range, whichever comes first."},
+    {convar = "mcv_physbullets_drag", label = "Air resistance (per second)", slider = {0, 2, 2}},
+    {convar = "mcv_physbullets_lifetime", label = "Maximum flight time (seconds)", slider = {0.1, 10, 1}},
 }
 
 local CLIENT_SETTINGS = {
-    {convar = "mcv_toggle_aim", label = "Toggle aim",
-     help = "Press aim once to raise sights and again to lower them. Disable to hold aim instead."},
-
+    {section = "Controls"},
+    {convar = "mcv_toggle_aim", label = "Toggle aim", help = "Press aim to raise or lower sights instead of holding it."},
+    {convar = "mcv_auto_reload", label = "Automatic reload", help = "Reload an empty gun automatically when reserve ammo is available. Your preference is shared with the server."},
+    {section = "Viewmodel"},
+    {convar = "mcv_viewmodel_fov_offset", label = "Viewmodel FOV offset", slider = {-25, 25, 0}, help = "Degrees added to the weapon's normal viewmodel FOV."},
+    {convar = "mcv_viewmodel_sighted_fov_offset", label = "Sighted viewmodel FOV offset", slider = {-25, 25, 0}, help = "Degrees added to the aimed viewmodel FOV."},
+    {convar = "mcv_ironsight_nozoom", label = "No iron-sight zoom", help = "Keep normal world FOV and sensitivity with iron sights; scopes are unchanged."},
+    {convar = "mcv_viewmodel_offset_x", label = "Hip position X (right/left)", slider = {-10, 10, 1},
+     help = "Move the hip viewmodel right (+) or left (-). Fades out when aiming; zero preserves its original position."},
+    {convar = "mcv_viewmodel_offset_y", label = "Hip position Y (forward/back)", slider = {-10, 10, 1},
+     help = "Move the hip viewmodel forward (+) or backward (-). Fades out when aiming."},
+    {convar = "mcv_viewmodel_offset_z", label = "Hip position Z (up/down)", slider = {-10, 10, 1},
+     help = "Move the hip viewmodel up (+) or down (-). Fades out when aiming."},
+    {section = "Effects"},
     {convar = "mcv_tracer_color", label = "Tracer colour",
      help = "Other players see this too",
      choices = {{"Default", "0"}, {"Player colour", "1"}, {"Weapon colour", "2"}}},
 
-    {convar = "mcv_hud_hints", label = "Control hints",
-     help = "Show control hints",
-     choices = {{"Off", "0"}, {"Always", "1"}, {"First Draw", "2"}}},
-
-    {section = "Effects",},
-
     {convar = "mcv_muzzle_light", label = "Muzzle flash light",
-     choices = {{"Lamp with shadows", "2"}, {"Simple light", "1"}, {"Off", "0"}}},
+     choices = {{"Lamp with shadows", "2"}, {"Simple light", "1"}, {"Off", "0"}}, help = "Choose how muzzle flashes light the gun and surroundings."},
 
-    {convar = "mcv_shell_smoke", label = "Shell smoke trail"},
+    {convar = "mcv_shell_smoke", label = "Shell smoke trail", help = "Draw smoke trails behind ejected cases."},
 
-    {convar = "mcv_shell_time", label = "Shells stay for", slider = {0, 60, 1}},
+    {convar = "mcv_shell_time", label = "Shell lifetime (seconds)", slider = {0, 60, 1}, help = "How long cases remain after coming to rest."},
 
     {section = "HUD",},
 
-    {convar = "mcv_hud_enable", label = "Enable HUD"},
+    {convar = "mcv_hud_enable", label = "Enable HUD", help = "Show the weapon information HUD."},
 
-    {convar = "mcv_hud_hints", label = "Hints", choices = {{"Never", "0"}, {"On Deploy", "1"}, {"First Deploy", "2"}, {"Always", "3"}}},
+    {convar = "mcv_hud_hints", label = "Control hints", choices = {{"Never", "0"}, {"On Deploy", "1"}, {"First Deploy", "2"}, {"Always", "3"}}, help = "Choose when weapon control hints appear."},
 
-    {convar = "mcv_hud_crosshair", label = "Enable Crosshair"},
+    {convar = "mcv_hud_crosshair", label = "Enable crosshair", help = "Show the weapon crosshair."},
 }
 
 // which category the sliders below are showing, an index into MCV.Categories
@@ -168,8 +173,31 @@ end
 
 local buildServer
 
+// Native GMod presets: defaults come from the registered convars, not menu copies.
+// The server page includes every category, even those not currently selected.
+local function addPresets(panel, group, lists, categories)
+    local defaults = {}
+    for _, list in ipairs(lists) do
+        for _, setting in ipairs(list) do
+            local cv = setting.convar and GetConVar(setting.convar)
+            if cv then defaults[setting.convar] = cv:GetDefault() end
+        end
+    end
+    if categories then
+        for _, category in ipairs(MCV.Categories) do
+            for _, stat in ipairs(MCV.CategoryStats) do
+                local name = MCV.CategoryConVarName(category, stat.key)
+                local cv = GetConVar(name)
+                if cv then defaults[name] = cv:GetDefault() end
+            end
+        end
+    end
+    panel:ToolPresets(group, defaults)
+end
+
 buildServer = function(panel)
     panel:ClearControls()
+    addPresets(panel, "mcv_server", {SERVER_SETTINGS, PHYSICAL_SETTINGS}, true)
 
     controls(panel, SERVER_SETTINGS)
     controls(panel, PHYSICAL_SETTINGS)
@@ -178,6 +206,7 @@ end
 
 local function buildClient(panel)
     panel:ClearControls()
+    addPresets(panel, "mcv_client", {CLIENT_SETTINGS})
 
     controls(panel, CLIENT_SETTINGS)
 end
@@ -186,15 +215,9 @@ hook.Add("PopulateToolMenu", "MCV_Settings", function()
     spawnmenu.AddToolMenuOption("Options", "Military Conflict: Vietnam", "mcv_settings_physical_bullets",
         "Physical Bullets", "", "", function(panel)
             panel:ClearControls()
+            addPresets(panel, "mcv_physical_bullets", {PHYSICAL_SETTINGS})
             panel:Help("Server-controlled ballistics. Particle tracers follow bullet flight; damage occurs at contact. Existing projectile weapons keep their own flight.")
             controls(panel, PHYSICAL_SETTINGS)
-            local reset = panel:Button("Reset physical bullet settings")
-            reset.DoClick = function()
-                for _, setting in ipairs(PHYSICAL_SETTINGS) do
-                    local cv = GetConVar(setting.convar)
-                    if cv then RunConsoleCommand(setting.convar, cv:GetDefault()) end
-                end
-            end
         end)
     spawnmenu.AddToolMenuOption("Options", "Military Conflict: Vietnam", "mcv_settings_server",
         "Server", "", "", buildServer)

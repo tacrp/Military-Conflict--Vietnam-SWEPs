@@ -11,7 +11,7 @@
 // way in world space whatever it hit. Only a clientside particle handle can set point 1, which
 // is why this goes out as an effect (effects/mcv_impact.lua) rather than a plain ParticleEffect.
 //
-// SWEP:DoImpactEffect (mcv_base_core/shared.lua) hands the trace here and returns what this
+// SWEP:DoImpactEffect (mcv/weapon_common/shared.lua) hands the trace here and returns what this
 // returns. Returning true takes the engine's UTIL_ImpactTrace off the shot, and that call is
 // what puts the bullet hole down as well, so the hole is put back here by hand.
 
@@ -20,6 +20,25 @@ MCV.RegisterConVar("mcv_surface_impacts", "1",
 
 function MCV.SurfaceImpacts()
     return MCV.ConVars.mcv_surface_impacts:GetBool()
+end
+
+// Both hitscan and physical bullets own their effects explicitly. Keep the stock
+// fallback here too so their surface data, decals and recipient rules agree.
+function MCV.BulletImpact(tr, damage, recipients, ricochet, color)
+    if !tr.Hit or tr.HitSky or tr.StartSolid or tr.AllSolid then return end
+    if MCV.SurfaceImpact(tr, damage, recipients, ricochet, color) then return end
+    local fx = EffectData()
+    fx:SetOrigin(tr.HitPos)
+    fx:SetStart(tr.StartPos)
+    fx:SetNormal(tr.HitNormal)
+    fx:SetSurfaceProp(tr.SurfaceProps or 0)
+    fx:SetDamageType(DMG_BULLET)
+    fx:SetHitBox(tr.HitBox or 0)
+    // Worldspawn fails IsValid, but the engine's Impact effect needs entity 0
+    // for map geometry (and static props addressed through HitBox). Dropping it
+    // leaves the effect without a target, so neither particles nor decals appear.
+    if tr.Entity then fx:SetEntity(tr.Entity) end
+    util.Effect("Impact", fx, true, recipients or true)
 end
 
 // The surfaces the impact pcf carries, each with three variants. Ordered, because the effect
@@ -36,6 +55,8 @@ MCV.ImpactFamilies = {
 
 game.AddParticles("particles/mcv_scaled_impacts.pcf")
 game.AddParticles("particles/mcv_scaled_impacts_cheap.pcf")
+game.AddParticles("particles/mcv_ricochet.pcf")
+PrecacheParticleSystem("mcv_ricochet")
 
 local index = {}
 for i, name in ipairs(MCV.ImpactFamilies) do
@@ -98,13 +119,13 @@ function MCV.ImpactScale(damage)
     return math.Clamp(math.sqrt(math.max(damage or 40, 0) / 40), 0.5, 2)
 end
 
-function MCV.SurfaceImpact(tr, damage, recipients)
+function MCV.SurfaceImpact(tr, damage, recipients, ricochet, color)
     if !MCV.SurfaceImpacts() then return false end
     if !tr or !tr.Hit or tr.HitSky then return false end
 
     local family = MCV.ImpactFamily(tr)
     local i = family and index[family]
-    if !i then return false end
+    if !i and !ricochet then return false end
     // This hook receives authoritative client impacts (including singleplayer),
     // outside user-command prediction. IsFirstTimePredicted can be false here;
     // it is not a replay indicator for this callback. The engine gates the hook.
@@ -112,11 +133,22 @@ function MCV.SurfaceImpact(tr, damage, recipients)
     local fx = EffectData()
     fx:SetOrigin(tr.HitPos)
     fx:SetNormal(tr.HitNormal)
-    fx:SetFlags(i)
+    // Only incoming bullets opt in. Melee and reverse penetration-exit traces
+    // share this surface effect but must never produce a bullet ricochet.
+    fx:SetDamageType(ricochet and DMG_BULLET or 0)
+    fx:SetStart(ricochet and tr.StartPos or tr.HitPos)
+    fx:SetFlags(i or 0) // zero adds only the ricochet; stock impact/blood still runs
     fx:SetScale(MCV.ImpactScale(damage))
+    if ricochet then
+        color = color or MCV.TracerColor(nil, "")
+        // RGB in otherwise unused payload fields; preserve Start for reflection.
+        fx:SetMagnitude(color.r)
+        fx:SetRadius(color.g)
+        fx:SetColor(math.floor(color.b + 0.5))
+    end
     // Authoritative/SP callers run outside prediction. Hitscan supplies its own
     // recipient filter and gates first-predicted dispatch at the firing callback.
     util.Effect("mcv_impact", fx, true, recipients or true)
 
-    return true
+    return i != nil
 end

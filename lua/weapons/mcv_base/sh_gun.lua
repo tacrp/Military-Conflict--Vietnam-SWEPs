@@ -1,4 +1,4 @@
-// Gun implementations of the mcv_base_core hooks.
+// Gun implementations of the mcv/weapon_common hooks.
 
 function SWEP:GetPrecacheParticles()
     return {
@@ -39,6 +39,7 @@ end
 SWEP.ScopeScreenZoom = 2
 
 function SWEP:GetScopeWorldFov()
+    if CLIENT and !self.HasScope and MCV.IronsightNoZoom() then return 90 end
     if !self.HasScope or self.OEGScope then return self.IronsightFov end
     return math.Clamp(self:GetScopeFOV() * self.ScopeScreenZoom, 30, self.IronsightFov)
 end
@@ -49,6 +50,7 @@ end
 
 // Magnification the player is looking through, for the mouse sensitivity
 function SWEP:GetLookMagnification()
+    if CLIENT and !self.HasScope and MCV.IronsightNoZoom() then return 1 end
     if self.HasScope and !self.OEGScope then
         return 90 / self:GetScopeFOV()
     end

@@ -5,7 +5,7 @@ import json
 import shutil
 import subprocess
 import sys
-from model_pose_fixes import m21_reload_rig
+from model_pose_fixes import restore_reload_rig
 
 here=Path(__file__).resolve().parent
 addon=here.parent
@@ -28,7 +28,7 @@ for model in models:
         original=here/'MCV_SMD_OG/weapons'/model/(model+'_anims')/(name+'.smd')
         dest=folder/'fixed_anims'/(name+'.smd')
         source=here/'MCV_SMD/weapons/v_m21/anims'/(name+'.smd')
-        m21_reload_rig(source,original,dest)
+        restore_reload_rig(source,original,dest)
         old='../../../MCV_SMD/weapons/v_m21/anims/'+name+'.smd'
         new='fixed_anims/'+name+'.smd'
         assert old.replace('/','\\') in text or new.replace('/','\\') in text

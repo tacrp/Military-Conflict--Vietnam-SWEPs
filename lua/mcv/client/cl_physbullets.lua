@@ -44,17 +44,24 @@ function MCV.PhysicalMuzzleOffset(offset, angle, viewFOV, worldFOV)
 end
 
 // Called with the bones and camera used to draw the gun, outside prediction.
+local muzzleNames = {"muzzle", "muzzleleft", "muzzle2"}
 function MCV.CapturePhysicalMuzzles(wep, vm)
+    if !MCV.PhysicalBulletsEnabled(wep) then muzzleCache[wep] = nil return end
     local owner = wep:GetOwner()
     if !IsValid(owner) or owner != LocalPlayer() or !IsValid(vm) then return end
     local eye, angle = EyePos(), EyeAngles()
-    local viewFOV = Lerp(wep:GetSightAmountVisual() ^ 3, wep.ViewModelFOV, wep.SightedViewModelFOV)
-    local entry = {vm = vm, model = vm:GetModel(), time = clock()}
-    for _, name in ipairs({"muzzle", "muzzleleft", "muzzle2"}) do
-        local id = vm:LookupAttachment(name)
+    local viewFOV = MCV.ViewmodelFOV(wep, wep:GetSightAmountVisual() ^ 3)
+    local entry = muzzleCache[wep] or {}
+    entry.vm, entry.model, entry.time = vm, vm:GetModel(), clock()
+    entry.muzzle, entry.muzzleleft, entry.muzzle2 = nil, nil, nil
+    local worldFOV = wep.ViewmodelCameraFrame == FrameNumber()
+        and wep.ViewmodelCameraFOV or owner:GetFOV()
+    for _, name in ipairs(muzzleNames) do
+        local id = MCV.CachedAttachment(vm, name)
         local att = id > 0 and vm:GetAttachment(id)
-        if att and (att.Pos - eye):Length() <= 256 then
-            entry[name] = MCV.PhysicalMuzzleOffset(att.Pos - eye, angle, viewFOV, owner:GetFOV())
+        local offset = att and att.Pos - eye
+        if offset and offset:Length() <= 256 then
+            entry[name] = MCV.PhysicalMuzzleOffset(offset, angle, viewFOV, worldFOV)
         end
     end
     muzzleCache[wep] = entry
@@ -74,9 +81,9 @@ local function muzzle(wep, owner, left, fallback)
                 if offset then return fallback + offset end
             end
             // Do not rebuild render bones from the user-command/prediction context.
-            att = left and mdl:LookupAttachment("muzzleleft") or 0
-            if left and att <= 0 then att = mdl:LookupAttachment("muzzle2") end
-            if att <= 0 then att = mdl:LookupAttachment("muzzle") end
+            att = left and MCV.CachedAttachment(mdl, "muzzleleft") or 0
+            if left and att <= 0 then att = MCV.CachedAttachment(mdl, "muzzle2") end
+            if att <= 0 then att = MCV.CachedAttachment(mdl, "muzzle") end
         end
     elseif wep.GetWorldModelAttachment then
         mdl, att = wep:GetWorldModelAttachment("muzzle", left)
@@ -129,20 +136,20 @@ local function startSmoke(b, pos)
     b.particle = ps
 end
 
-local function create(id, pos, vel, owner, tracer, visible, gravity, drag, lifetime, wep, left)
+local function create(id, pos, vel, owner, tracer, visible, gravity, drag, lifetime, wep, left, boost, burn)
     local family = tracer:gsub("^vietnam_tracer_", ""):gsub("_primary$", ""):gsub("_secondary$", "")
-    local green = family:find("_green", 1, true) != nil
     local smokeFamily = family:gsub("_green", "")
     local style = families[smokeFamily] or {0, 0}
     local smoke = families[smokeFamily] and ("mcv_phys_vietnam_tracer_" .. smokeFamily .. "_smoke")
-    local color = green and Color(96, 235, 51) or Color(235, 175, 51)
-    local preference = MCV.TracerColorMode(owner)
-    if IsValid(owner) and owner:IsPlayer() then
-        if preference == MCV.TRACER_COLOR_PLAYER then color = MCV.BrightColor(owner:GetPlayerColor()) end
-        if preference == MCV.TRACER_COLOR_WEAPON then color = MCV.BrightColor(owner:GetWeaponColor()) end
+    // The packet carries the family even when its weapon/owner is outside PVS.
+    // Keep remote flight/impacts, but never start (or restart) a silenced trail.
+    if smokeFamily == "silenced" and (!IsValid(owner) or owner != LocalPlayer()) then
+        smoke = nil
     end
+    local color = MCV.TracerColor(owner, tracer)
     remove(id)
     local b = {pos = pos, vel = vel, gravity = gravity, drag = drag,
+        boost = boost, boostTime = burn or 0, age = 0,
         expires = clock() + lifetime, lastTime = clock(), tail = style[1], width = style[2] * 0.2,
         visible = visible, color = color, travelled = 0}
     b.layers, b.budget = 0, 1
@@ -160,16 +167,18 @@ function MCV.PredictPhysicalBullets(wep, pos, dir)
     if wep:GetOwner() != LocalPlayer() or (!game.SinglePlayer() and !IsFirstTimePredicted()) then return end
     local key = MCV.PhysicalShotKey(wep)
     if key == "" then return end // SP/out-of-command fire uses the authoritative spawn.
-    local speed, gravity, drag, lifetime = MCV.PhysicalBulletParameters(wep)
+    local speed, gravity, drag, lifetime, acceleration, burn = MCV.PhysicalBulletParameters(wep)
     pos = pos or wep:GetOwner():GetShootPos()
     dir = (dir or wep:GetAimVector()):GetNormalized()
     for i = 1, MCV.PhysicalBulletCount(wep) do
         local token = key .. ":" .. i
         if pending[token] then continue end
-        local vel = MCV.PhysicalBulletHeading(wep, dir, i, key) * speed
+        local heading = MCV.PhysicalBulletHeading(wep, dir, i, key)
+        local vel = heading * speed
         local b = create(token, pos, vel, wep:GetOwner(), wep.TracerParticle or "",
             wep:Clip1() % math.max(wep.TracerFrequency or 1, 1) == 0, gravity, drag, lifetime, wep,
-            wep.GetAkimbo and wep:GetAkimbo() and wep:Clip1() % 2 == 1)
+            wep.GetAkimbo and wep:GetAkimbo() and wep:Clip1() % 2 == 1,
+            acceleration > 0 and heading * acceleration or nil, burn)
         b.predicted, b.started, b.wep = true, clock(), wep
         b.impactKey = MCV.PhysicalImpactKey(wep:GetOwner(), key, i)
         pending[token] = {bullet = b, expires = clock() + lifetime + 2}
@@ -188,7 +197,8 @@ net.Receive("MCV_PhysicalBullet", function()
             b.layers = layer
             b.travelled, b.damage, b.budget = distance, damage, budget
             local ahead = b.predicted and math.max(0, clock() - b.started - age) or 0
-            b.pos, b.vel = MCV.BulletFlightStep(pos, vel, ahead, b.gravity, b.drag)
+            b.pos, b.vel = MCV.BulletFlightStep(pos, vel, ahead, b.gravity, b.drag, b.boost, b.boostTime - age)
+            b.age = age + ahead
             b.lastTime, b.tailPos = clock(), nil
             b.hidden = false
             // A rope must not connect the old path to a corrected/penetrated path.
@@ -203,6 +213,8 @@ net.Receive("MCV_PhysicalBullet", function()
     local key, pellet = net.ReadString(), net.ReadUInt(16)
     local tracer, visible = net.ReadString(), net.ReadBool()
     local gravity, drag, lifetime = net.ReadFloat(), net.ReadFloat(), net.ReadFloat()
+    local boost, burn
+    if net.ReadBool() then boost, burn = readFlightVector(), net.ReadFloat() end
     local token = key .. ":" .. pellet
     local match = owner == LocalPlayer() and key != "" and pending[token]
     if match then
@@ -212,7 +224,8 @@ net.Receive("MCV_PhysicalBullet", function()
             bullets[token], bullets[id] = nil, b
             local elapsed = math.max(0, clock() - b.started)
             local previous = b.visualPos
-            b.pos, b.vel = MCV.BulletFlightStep(pos, vel, elapsed, gravity, drag)
+            b.boost, b.boostTime, b.age = boost, burn or 0, elapsed
+            b.pos, b.vel = MCV.BulletFlightStep(pos, vel, elapsed, gravity, drag, boost, burn)
             b.gravity, b.drag, b.lastTime = gravity, drag, clock()
             b.visualPos = MCV.PhysicalBulletVisualPosition(b.pos, b.muzzleOffset, b.travelled)
             if !b.hidden and (b.visualPos - previous):Length() > 32 then
@@ -223,27 +236,32 @@ net.Receive("MCV_PhysicalBullet", function()
         end
         return // Tombstones also suppress echoes after a predicted bullet expires.
     end
-    create(id, pos, vel, owner, tracer, visible, gravity, drag, lifetime, wep, left)
+    local b = create(id, pos, vel, owner, tracer, visible, gravity, drag, lifetime, wep, left, boost, burn)
+    b.age = age
 end)
 
 local function advanceVisual(b, dt, now)
-    local pos, vel = MCV.BulletFlightStep(b.pos, b.vel, dt, b.gravity, b.drag)
+    local pos, vel = MCV.BulletFlightStep(b.pos, b.vel, dt, b.gravity, b.drag, b.boost, b.boostTime - b.age)
+    b.age = b.age + dt
     if b.predicted then
         // Replicate contact and penetration cosmetically, never client damage.
-        local tr = util.TraceLine({start = b.pos, endpos = pos, mask = MASK_SHOT,
-            filter = {b.owner, b.wep}})
+        local tr = MCV.TracePhysicalBullet(b, b.pos, pos)
         if tr.Hit or tr.StartSolid then
             local hit = tr.StartSolid and b.pos or tr.HitPos
             local distance = b.travelled + (hit - b.pos):Length()
-            MCV.PhysicalBulletImpact(b.impactKey, b.layers, tr,
-                b.damage * math.pow((IsValid(b.wep) and b.wep.RangeModifier) or 1, distance / 500))
             local continuation = {}
             if IsValid(b.wep) then
                 b.wep:QueuePenetration(tr, {damage = b.damage, distance = b.travelled,
                     budget = b.budget, layers = b.layers}, continuation)
             end
             local nextState = continuation[1]
+            MCV.PhysicalBulletImpact(b.impactKey, b.layers * 2, tr,
+                b.damage * (IsValid(b.wep) and MCV.BulletRangeMultiplier(b.wep, distance) or 1),
+                !nextState and b.visible and MCV.HasTracerStreak(b.tracer), b.color)
             if nextState then
+                if nextState.exitTrace then
+                    MCV.PhysicalBulletImpact(b.impactKey, b.layers * 2 + 1, nextState.exitTrace, nextState.exitDamage)
+                end
                 b.pos, b.vel, b.lastTime = nextState.src, nextState.dir * vel:Length(), now
                 b.layers, b.budget, b.damage = nextState.layers, nextState.budget, nextState.damage
                 updateVisual(b, b.pos, b.vel, nextState.distance)
@@ -256,8 +274,7 @@ local function advanceVisual(b, dt, now)
         end
     end
     local distance = b.travelled + (pos - b.pos):Length()
-    b.pos, b.vel, b.lastTime = pos, vel, now
-    updateVisual(b, pos, vel, distance)
+    b.pos, b.vel, b.lastTime, b.travelled = pos, vel, now, distance
 end
 
 hook.Add("Think", "MCV_PhysicalBulletVisuals", function()
@@ -276,10 +293,15 @@ hook.Add("Think", "MCV_PhysicalBulletVisuals", function()
         if now > b.expires or now < b.lastTime or b.travelled >= 56756 or (b.predicted and !IsValid(b.wep)) then remove(id) continue end
         if b.hidden then continue end
         local dt = now - b.lastTime
-        local steps = math.max(1, math.ceil(dt / (1 / 120)))
-        for _ = 1, steps do
-            advanceVisual(b, dt / steps, now)
-            if b.hidden then break end
+        if dt > 0 then
+            local steps = math.max(1, math.ceil(dt / (1 / 120)))
+            for _ = 1, steps do
+                advanceVisual(b, dt / steps, now)
+                if b.hidden then break end
+            end
+            // Collision retains every substep; the renderer consumes only the
+            // frame's final pose. Terminal contacts update before hiding above.
+            if !b.hidden then updateVisual(b, b.pos, b.vel, b.travelled) end
         end
     end
 end)

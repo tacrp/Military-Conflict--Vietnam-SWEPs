@@ -17,6 +17,7 @@ ENT.ExplosionFamily = "grenade"
 ENT.ExplosionDamage = 175
 ENT.ExplosionRadius = 250
 ENT.ArmDelay = 2 // seconds after the stake goes in before the wire is live
+ENT.SelfDestructDelay = 300 // seconds from placement, including time waiting for a stake
 ENT.MineBodygroups = {mine = 0, stick = 1}
 
 function ENT:SetupDataTables()
@@ -46,14 +47,23 @@ function ENT:SetStakeEntity(stake)
     self:EmitSound("MCV_Weapon_C4_Demolition.Plant")
 end
 
+function ENT:GetWireStart()
+    // Model up follows the mounting surface, including a moving/rotating parent.
+    return self:GetPos() + self:GetUp() * 4
+end
+
 function ENT:WireEnds()
     local stake = self:GetStake()
     if !IsValid(stake) then return nil end
-    return self:GetPos() + Vector(0, 0, 4), stake:GetPos()
+    return self:GetWireStart(), stake:GetPos()
 end
 
 function ENT:Think()
     if SERVER then
+        if !self.Detonated and CurTime() >= self.SpawnTime + self.SelfDestructDelay then
+            self:PreDetonate()
+            return
+        end
         local stake = self:GetStake()
         if IsValid(stake) and self.LiveTime and CurTime() > self.LiveTime and !self.Detonated then
             local a, b = self:WireEnds()

@@ -1,0 +1,39 @@
+clua hook.Add('CreateMove','MCV_ScopeProbeAngle',function(cmd) cmd:SetViewAngles(Angle(-10,90,0)) end)
+give mcv_vz54s
+wait 3
+key +attack2
+wait 2
+clua MCV.ScopeProbe.Capture('vz54_scope')
+wait 1
+ccmd mcv_viewmodel_sighted_fov_offset 25
+wait 1
+clua MCV.ScopeProbe.Capture('vz54_fov25')
+wait 1
+ccmd mcv_viewmodel_sighted_fov_offset -25
+wait 1
+clua MCV.ScopeProbe.Capture('vz54_fovminus25')
+wait 1
+ccmd mcv_viewmodel_sighted_fov_offset 0
+tap +attack 0.1
+wait 0.1
+clua MCV.ScopeProbe.Capture('vz54_fired')
+wait 1
+key -attack2
+give mcv_xm177_oeg
+wait 3
+key +attack2
+wait 2
+clua MCV.ScopeProbe.Capture('oeg_contact_on')
+wait 1
+ccmd r_contact_shadows 0
+wait 1
+clua MCV.ScopeProbe.Capture('oeg_contact_off')
+wait 1
+ccmd r_contact_shadows 1
+key +attack
+wait 0.3
+clua MCV.ScopeProbe.Capture('oeg_firing')
+wait 1
+key -attack
+key -attack2
+clua hook.Remove('CreateMove','MCV_ScopeProbeAngle')

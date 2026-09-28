@@ -48,7 +48,7 @@ WEAPON_TYPE = {  # WeaponType -> (Slot, SubCategory, HoldType)
     "Revolver": (1, "Revolvers", "revolver"),
     "GrenadeLauncher": (4, "Anti-Armor", "shotgun"),
     "Crossbow": (3, "Bows", "crossbow"),
-    "Flaregun": (1, "Pistols", "pistol"),
+    "Flaregun": (4, "Equipment", "pistol"),
     "Ptrd": (3, "Anti-Armor", "ar2"),
     "SniperRifle": (3, "Sniper Rifles", "ar2"),
     "RocketLauncher": (4, "Anti-Armor", "rpg"),
@@ -57,7 +57,6 @@ WEAPON_TYPE = {  # WeaponType -> (Slot, SubCategory, HoldType)
     "Grenade": (4, "Explosives", "grenade"),
     "SmokeGrenade": (4, "Explosives", "grenade"),
     "Mine": (4, "Explosives", "slam"),
-    "Flaregun": (1, "Pistols", "pistol"),
     "RifleGrenade": (3, "Rifle Grenades", "ar2"),
     "Equipment": (5, "Equipment", "normal"),
 }
@@ -613,8 +612,6 @@ def sight_offsets(S):
     if num(S.get("BulletSpreadDegreesBipod")):
         out["SpreadBipod"] = fmt(num(S.get("BulletSpreadDegreesBipod")))
         out["SpreadBipodIronsighted"] = fmt(num(S.get("BulletSpreadDegreesBipodIronsighted")) or num(S.get("BulletSpreadDegreesBipod")))
-    if S.get("isSupressed") == "1":
-        out["TracerParticle"] = '""'
     return out
 
 def akimbo_model(name, vm, scripts_dir):
@@ -1608,6 +1605,12 @@ def generate(script_path, args):
     A("// Particles (the game's own systems; particles/*.pcf and their materials ship with the addon)")
     def part(key, default=""):
         v = S.get(key, default)
+        # The shipped PCF has one silenced parent (smoke only, no green streak).
+        if key == "TracerParticle" and (S.get("isSupressed") == "1"
+                or v == "vietnam_tracer_silenced_green_primary"):
+            v = "vietnam_tracer_silenced_primary"
+        elif key == "TracerParticle2" and S.get("isSupressed") == "1":
+            v = ""
         return fmt("" if v.lower() == "null" else v)
     A(line("MuzzleParticle", part("MuzzleParticle", muzzle)))
     A(line("MuzzleParticleSmoke", part("MuzzleParticle_Smoke")))

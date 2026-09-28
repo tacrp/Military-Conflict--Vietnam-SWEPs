@@ -63,7 +63,7 @@ function ENT:Draw()
 end
 
 function ENT:Impact(data, collider)
-    if self.HitDone then return end
+    if !SERVER or self.HitDone then return end
     self.HitDone = true
 
     local ent = data.HitEntity
@@ -89,6 +89,8 @@ function ENT:Impact(data, collider)
                 elseif tr.HitGroup == HITGROUP_CHEST or tr.HitGroup == HITGROUP_STOMACH then
                     dmginfo:ScaleDamage(self.ChestMultiplier)
                 end
+                MCV.BulletImpact(tr, dmginfo:GetDamage(), true)
+                return {effects = false}
             end,
         })
         self:EmitSound("MCV_Weapon_Crossbow.BoltHitBody")
@@ -97,6 +99,18 @@ function ENT:Impact(data, collider)
             timer.Simple(0.05, function() if IsValid(self) then self:Remove() end end)
         end
     else
+        // Trace across the contact normal for the actual surface/sky metadata.
+        // Physics collision normals point inward, unlike trace normals.
+        local normal = -data.HitNormal
+        local start = data.HitPos + normal * 4
+        local tr = util.TraceLine({start = start, endpos = data.HitPos - normal * 4,
+            mask = MASK_SHOT, filter = self})
+        if !tr.Hit or tr.Entity != ent then
+            // A moving prop can leave the contact before the deferred callback.
+            tr = {Hit = true, HitPos = data.HitPos, HitNormal = normal, StartPos = start,
+                Entity = ent, SurfaceProps = data.TheirSurfaceProps or 0}
+        end
+        MCV.BulletImpact(tr, self.Damage, true)
         self:EmitSound("MCV_Weapon_Crossbow.BoltHitWorld")
     end
 end

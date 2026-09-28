@@ -1,3 +1,6 @@
+// Keep the dependency explicit for live Lua refresh as well as normal startup.
+if !MCV.MeleeBloodColor or !MCV.MeleeBloodImpact then include("mcv/shared/sh_melee_effects.lua") end
+
 local STATE_IDLE = 0
 local STATE_CHARGE = 1
 local STATE_THROW_HOLD = 2
@@ -55,6 +58,7 @@ function SWEP:MeleeHit(range, damage, thrust)
 
     local dir = self:GetAimVector()
     local ent = tr.Entity
+    local blood = SERVER and MCV.MeleeBloodColor(ent)
 
     if IsValid(ent) then
         local dmginfo = DamageInfo()
@@ -66,13 +70,7 @@ function SWEP:MeleeHit(range, damage, thrust)
         dmginfo:SetInflictor(self)
         if SERVER then
             ent:TakeDamageInfo(dmginfo)
-            if isFlesh(ent) then
-                local fx = EffectData()
-                fx:SetOrigin(tr.HitPos)
-                fx:SetNormal(tr.HitNormal)
-                fx:SetEntity(ent)
-                util.Effect("BloodImpact", fx)
-            end
+            MCV.MeleeBloodImpact(tr, blood)
         end
     end
 

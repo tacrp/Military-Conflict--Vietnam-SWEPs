@@ -6,7 +6,7 @@ from glua_check import to_lua
 ROOT = Path(__file__).resolve().parents[1]
 
 for client in (True, False):
-    lua = realm('lua/weapons/mcv_base_core/sh_timers.lua')
+    lua = realm('lua/mcv/weapon_common/sh_timers.lua')
     lua.globals().CLIENT = client
     lua.globals().SERVER = not client
     lua.execute('function AddCSLuaFile() end; baseclass={Get=function() return {} end}')
@@ -39,7 +39,7 @@ for client in (True, False):
         assert(w.didReload and w:Clip2()==0)
     ''')
 
-lua = realm('lua/weapons/mcv_base_core/sh_timers.lua')
+lua = realm('lua/mcv/weapon_common/sh_timers.lua')
 lua.execute('''
     CLIENT=true; SERVER=false
     function AddCSLuaFile() end

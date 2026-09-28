@@ -1,0 +1,38 @@
+{
+  "hand_edit_sha256": "9ff8617f1248e0d9b859b9e3a3af5f68c4e1ef75f53051d5f5c3624d2d194c17",
+  "fixed_smd_sha256": "77aad0bab3791be455fb63e062067c497a5adccd9ce6f9215f92f4b483a0978b",
+  "frames": 70,
+  "duration_seconds": 2.3,
+  "compiled_reload": [
+    [
+      "@reload",
+      30.0,
+      0,
+      70
+    ],
+    [
+      "@reload",
+      30.0,
+      0,
+      70
+    ],
+    [
+      "@reload_empty",
+      30.0,
+      0,
+      94
+    ],
+    [
+      "@reload_empty",
+      30.0,
+      0,
+      94
+    ]
+  ],
+  "installed": {
+    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_cobra.mdl": "a51599ca10cda68f5f5d701bbd6d131624d11338799ab223cb3fb42281b0e006",
+    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_cobra.vvd": "c03d11687df4ffdb6a20b53329404574eb162baf03525672b89cb86fbc7d8b4a",
+    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_cobra.dx80.vtx": "8f3f9fc4653c2690998d8b11cd0446dfb8e460d36ed3b078b26aed44ee2b0ca1",
+    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_cobra.dx90.vtx": "a9ed545eed9e93b155b3605d49c623cfed9b62e221320702311a043e7e9b0b94"
+  }
+}

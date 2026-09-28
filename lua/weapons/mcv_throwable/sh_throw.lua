@@ -6,7 +6,7 @@ local STATE_THROWING = 3
 SWEP.DeferredActions = {"ThrowRelease", "ThrowEnd"}
 
 function SWEP:Initialize()
-    baseclass.Get("mcv_base_core").Initialize(self)
+    MCV.WeaponCommon.Initialize(self)
     if self.ModelSkin != nil then self:SetSkin(self.ModelSkin) end
 end
 
@@ -255,7 +255,8 @@ function SWEP:AfterThrow()
         local wep = owner:GetWeapon(class)
         if !IsValid(wep) then return end
         owner:StripWeapon(class)
-        owner:SelectWeapon(owner:GetWeapons()[1] and owner:GetWeapons()[1]:GetClass() or "")
+        local other = owner:GetWeapons()[1]
+        owner:SelectWeapon(other and other:GetClass() or "")
     end)
 end
 

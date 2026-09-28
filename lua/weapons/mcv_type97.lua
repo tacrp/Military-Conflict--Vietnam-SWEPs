@@ -10,10 +10,10 @@ AddCSLuaFile()
 SWEP.PrintName = "Type 97 Flaregun"
 SWEP.Category = "Military Conflict: Vietnam"
 SWEP.Country = "Japan"
-SWEP.SubCategory = "Pistols"
+SWEP.SubCategory = "Equipment"
 SWEP.Caliber = "26.5mm Flare"
 
-SWEP.Slot = 1
+SWEP.Slot = 4
 SWEP.HoldType = "pistol"
 SWEP.AimHoldType = "revolver"
 SWEP.SprintHoldType = "normal"

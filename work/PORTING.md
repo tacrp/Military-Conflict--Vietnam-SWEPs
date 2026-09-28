@@ -78,6 +78,12 @@ Categories are detected as: `dual` (name starts with `v_dual_`), `shell` (has
 
 ### Normal guns (Method 1)
 
+Firing-tail validation: model_pose_fixes repairs reviewed rest-then-jump final
+frames (M1911 and related pistols; BAR-L). step_validate rejects this pattern in
+future firing sources. See work/firing_audit/README.md for the full audit,
+rebuild command and regression checks. Original SMDs and existing frame counts
+are retained; generated tail repairs live under fixed_anims.
+
 7. Static pose animations that the game stored at `fps 0.5` become `fps 30`, one held frame
    (`frame 1 1` for `ironsight` and `ironsightdeploy`, `frame 0 1` for everything else:
    `ironsight_transition`, `HammerPos*`, `grenade_ironsight`) and `numframes 60`.
@@ -326,10 +332,13 @@ and geometry-preservation checks are under `fixed_anims/world_rig/`. This supers
 the inadequate Garand angle-only correction. `w_r76` retains its previous handling.
 Rebuild the three corrected worldmodels with `python work/build_nested_world_models.py`.
 
-`model_pose_fixes.prepare_pose_fixes` restores the missing `BaseRoot` in the M21's older hand-edited
-empty reload. It converts the animation into the current hierarchy without
-changing its world-space poses or timing. Corrected paths take precedence during
-QC generation; the user's files under `MCV_SMD/weapons/v_m21/anims/` are not edited.
+`model_pose_fixes.prepare_pose_fixes` restores the missing `BaseRoot` in the M21's
+older hand-edited empty reload and the Cobra's wet reload. The shared
+`restore_reload_rig` helper converts each animation into the current hierarchy
+without changing its world-space poses or timing. Corrected paths take precedence
+during QC generation; the user's files under `MCV_SMD/weapons/<model>/anims/` are
+not edited. Rebuild only the Cobra with `python work/fix_cobra_reload.py --compile`;
+`python work/test_reload_rigs.py` checks both weapons' source-pose preservation.
 
 ### At-ease movement layers
 

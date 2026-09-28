@@ -17,7 +17,7 @@ function SWEP:PrimaryAttack()
     // bash with USE + fire; not while deployed on the bipod (the PTRD can bash undeployed
     // even though it only fires deployed)
     if owner:KeyDown(IN_USE) and !bursting then
-        if !self:GetBipod() then
+        if !self:GetBipod() and owner:KeyPressed(IN_ATTACK) then
             self:Bash()
         end
         return
@@ -503,6 +503,18 @@ end
 // you hear the report with the far layer filling in underneath; further out only the far layer
 // is left. Splitting the listeners by distance instead meant the far recording only reached
 // someone already standing far away, and never the shooter.
+local function pickShotValue(value, fallback, key, discrete, predicted, name)
+    if !istable(value) then return value or fallback end
+    local lo, hi = discrete and 1 or value[1], discrete and (#value + 1) or value[2]
+    local n
+    if predicted then
+        n = util.SharedRandom("MCVShotSound:" .. name .. ":" .. key, lo, hi)
+    else
+        n = math.Rand(lo, hi)
+    end
+    return discrete and value[math.Clamp(math.floor(n), 1, #value)] or n
+end
+
 local function emitShotLayer(wep, name, channel)
     local props = sound.GetProperties(name)
     if !props then
@@ -512,33 +524,31 @@ local function emitShotLayer(wep, name, channel)
 
     // Resolve the script: Entity:EmitSound can ignore channel/volume overrides
     // on script names. Raw samples make each layer's replacement channel explicit.
-    // Never stack reports on CHAN_STATIC: long tails exhaust voices in long bursts.
-    local function pick(value, fallback, key, discrete)
-        if !istable(value) then return value or fallback end
+    // Each layer rotates through a fixed channel pool: preserve adjacent reports,
+    // but never stack all of their long tails on CHAN_STATIC.
+    local predicted = false
+    if istable(props.sound) or istable(props.volume) or istable(props.pitch) then
         local owner = wep:GetOwner()
-        local lo, hi = discrete and 1 or value[1], discrete and (#value + 1) or value[2]
-        local n
-        if IsValid(owner) and owner:IsPlayer() then
-            n = util.SharedRandom("MCVShotSound:" .. name .. ":" .. key, lo, hi)
-        else
-            n = math.Rand(lo, hi)
-        end
-        return discrete and value[math.Clamp(math.floor(n), 1, #value)] or n
+        predicted = IsValid(owner) and owner:IsPlayer()
     end
-    local sample = pick(props.sound, name, "sample", true)
-    local volume = pick(props.volume, 1, "volume")
-    local pitch = math.Round(pick(props.pitch, 100, "pitch"))
+    local sample = pickShotValue(props.sound, name, "sample", true, predicted, name)
+    local volume = pickShotValue(props.volume, 1, "volume", false, predicted, name)
+    local pitch = math.Round(pickShotValue(props.pitch, 100, "pitch", false, predicted, name))
     wep:EmitSound(sample, props.level or 75, pitch, volume, channel)
 end
 
 function SWEP:EmitShotSound(name)
     if !IsFirstTimePredicted() or (name or "") == "" then return end
 
-    emitShotLayer(self, name, MCV.CHAN_SHOT)
+    // Cosmetic only, advanced after the replay guard. Do not derive this from
+    // BurstCount: release/repress resets it and would cut off two quick taps.
+    local slot = self.MCVShotSoundSlot or 0
+    self.MCVShotSoundSlot = (slot + 1) % MCV.SHOT_SOUND_SLOTS
+    emitShotLayer(self, name, MCV.CHAN_SHOT + slot)
 
     local far = distantShot(name)
     if far then
-        emitShotLayer(self, far, MCV.CHAN_SHOT_DISTANT)
+        emitShotLayer(self, far, MCV.CHAN_SHOT_DISTANT + slot)
     end
 end
 
@@ -587,6 +597,9 @@ function SWEP:BulletAttack(shootPos, shootDir)
 
     local queue = {}
     local function fireSegment(state, count, cone, tracer)
+        if state.exitTrace then
+            MCV.HitscanEffects(self, state.exitTrace, state.exitDamage, 0, true)
+        end
         owner:FireBullets({
             Damage = state.damage,
             Num = count,
@@ -601,8 +614,9 @@ function SWEP:BulletAttack(shootPos, shootDir)
             Callback = function(attacker, tr, dmginfo)
                 local distance = state.distance + (tr.HitPos - tr.StartPos):Length()
                 self:ApplyBulletDamage(tr, dmginfo, distance)
+                local queued = #queue
                 self:QueuePenetration(tr, state, queue)
-                MCV.HitscanEffects(self, tr, dmginfo:GetDamage(), tracer)
+                MCV.HitscanEffects(self, tr, dmginfo:GetDamage(), tracer, #queue > queued)
                 return {effects = false}
             end
         })

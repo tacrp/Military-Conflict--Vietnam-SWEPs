@@ -1,8 +1,10 @@
+include("mcv/weapon_common/load.lua")
+
 // Hand grenades, smoke, gas, incendiaries. Left click winds up an overhand throw, right click
 // an underhand lob (a roll when crouched); the throw leaves the hand when the button is
 // released. USE + reload cycles the fuse presets, USE + attack bashes.
 
-SWEP.Base = "mcv_base_core"
+SWEP.Base = "weapon_base"
 SWEP.Spawnable = false
 
 SWEP.SubCategory = "Grenades"
@@ -59,19 +61,4 @@ SWEP.DrawCrosshair = true
 
 AddCSLuaFile()
 
-local searchdir = "weapons/mcv_throwable"
-
-for _, filename in pairs(file.Find(searchdir .. "/*.lua", "LUA")) do
-    if filename == "shared.lua" then continue end
-    local luatype = string.sub(filename, 1, 2)
-
-    if luatype == "sv" then
-        if SERVER then include(searchdir .. "/" .. filename) end
-    elseif luatype == "cl" then
-        AddCSLuaFile(searchdir .. "/" .. filename)
-        if CLIENT then include(searchdir .. "/" .. filename) end
-    else
-        AddCSLuaFile(searchdir .. "/" .. filename)
-        include(searchdir .. "/" .. filename)
-    end
-end
+MCV.IncludeWeaponModules("weapons/mcv_throwable")

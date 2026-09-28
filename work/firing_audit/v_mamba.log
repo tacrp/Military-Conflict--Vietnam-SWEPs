@@ -1,0 +1,218 @@
+StudioMDL.exe (Sep 16 2026) - Garry's Mod Edition
+WARNING: Failed to load keyvalues file cfg/mount.cfg!
+qdir:    "c:\program files (x86)\steam\steamapps\common\garrysmod\garrysmod\addons\mcv\work\mcv_smd_port\weapons\v_mamba\"
+gamedir: "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\"
+g_path:  "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\MCV_SMD_PORT\weapons\v_mamba\v_mamba.qc"
+Building binary model files...
+Working on "v_mamba.qc"
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\mamba.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\Default_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\Slideback_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\runIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\run_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\walkIdle_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\walk_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\shoot1_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\shoot1_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\shoot2_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\shoot2_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\shoot3_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\shoot3_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\shootlast_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\shootlast_ironsight_a_corrective_animation.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\PoseDelta.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\Default.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\Slideback.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\basePose_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\ironsight.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\ironsight_transition.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\runIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\run_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\walkIdle_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\walk_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\shoot1_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\shoot1_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\shoot2_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\shoot2_ironsight_a.smd
+SMD MODEL fixed_anims\shoot3_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\shoot3_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\shootlast_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\shootlast_ironsight_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\nearwall_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\nearwall_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\nearwall_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\nearwall_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\nearwall_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\nearwall_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\proneF.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\proneB.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\proneL.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\proneR.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\pickup_s_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\pickup_s_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\pickup_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\pickup_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\pickup_e_a.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\pickup_e_a_i.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\draw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\draw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\Firstdraw.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\Firstdraw_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\reload.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\reload_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\reload_empty.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\reload_empty_2.smd
+SMD MODEL safe_anims\mcv_safe_idletonearwall_0_00.smd
+SMD MODEL safe_anims\mcv_safe_idletonearwall_0_01.smd
+SMD MODEL safe_anims\mcv_safe_idletonearwall_0_02.smd
+SMD MODEL safe_anims\mcv_safe_idletonearwall_0_03.smd
+SMD MODEL safe_anims\mcv_safe_idletonearwall_0_04.smd
+SMD MODEL safe_anims\mcv_safe_idletonearwall_0_05.smd
+SMD MODEL safe_anims\mcv_safe_idletonearwall_0_06.smd
+SMD MODEL safe_anims\mcv_safe_idletonearwall_0_07.smd
+SMD MODEL safe_anims\mcv_safe_idletonearwall_0_08.smd
+SMD MODEL safe_anims\mcv_safe_idletonearwall_0_09.smd
+SMD MODEL safe_anims\mcv_safe_idletonearwall_0_10.smd
+SMD MODEL safe_anims\mcv_safe_idletonearwall_0_11.smd
+SMD MODEL safe_anims\mcv_safe_idletonearwall_0_12.smd
+SMD MODEL safe_anims\mcv_safe_idletonearwall_0_13.smd
+SMD MODEL safe_anims\mcv_safe_idletonearwall_0_14.smd
+SMD MODEL safe_anims\mcv_safe_idletonearwall_0_15.smd
+SMD MODEL safe_anims\mcv_safe_idletonearwall_0_16.smd
+SMD MODEL safe_anims\mcv_safe_idletonearwall_1_00.smd
+SMD MODEL safe_anims\mcv_safe_idletonearwall_1_01.smd
+SMD MODEL safe_anims\mcv_safe_idletonearwall_1_02.smd
+SMD MODEL safe_anims\mcv_safe_idletonearwall_1_03.smd
+SMD MODEL safe_anims\mcv_safe_idletonearwall_1_04.smd
+SMD MODEL safe_anims\mcv_safe_idletonearwall_1_05.smd
+SMD MODEL safe_anims\mcv_safe_idletonearwall_1_06.smd
+SMD MODEL safe_anims\mcv_safe_idletonearwall_1_07.smd
+SMD MODEL safe_anims\mcv_safe_idletonearwall_1_08.smd
+SMD MODEL safe_anims\mcv_safe_idletonearwall_1_09.smd
+SMD MODEL safe_anims\mcv_safe_idletonearwall_1_10.smd
+SMD MODEL safe_anims\mcv_safe_idletonearwall_1_11.smd
+SMD MODEL safe_anims\mcv_safe_idletonearwall_1_12.smd
+SMD MODEL safe_anims\mcv_safe_idletonearwall_1_13.smd
+SMD MODEL safe_anims\mcv_safe_idletonearwall_1_14.smd
+SMD MODEL safe_anims\mcv_safe_idletonearwall_1_15.smd
+SMD MODEL safe_anims\mcv_safe_idletonearwall_1_16.smd
+SMD MODEL safe_anims\mcv_safe_nearwall_0_00.smd
+SMD MODEL safe_anims\mcv_safe_nearwall_0_01.smd
+SMD MODEL safe_anims\mcv_safe_nearwall_0_02.smd
+SMD MODEL safe_anims\mcv_safe_nearwall_0_03.smd
+SMD MODEL safe_anims\mcv_safe_nearwall_0_04.smd
+SMD MODEL safe_anims\mcv_safe_nearwall_0_05.smd
+SMD MODEL safe_anims\mcv_safe_nearwall_0_06.smd
+SMD MODEL safe_anims\mcv_safe_nearwall_0_07.smd
+SMD MODEL safe_anims\mcv_safe_nearwall_0_08.smd
+SMD MODEL safe_anims\mcv_safe_nearwall_0_09.smd
+SMD MODEL safe_anims\mcv_safe_nearwall_0_10.smd
+SMD MODEL safe_anims\mcv_safe_nearwall_0_11.smd
+SMD MODEL safe_anims\mcv_safe_nearwall_0_12.smd
+SMD MODEL safe_anims\mcv_safe_nearwall_0_13.smd
+SMD MODEL safe_anims\mcv_safe_nearwall_0_14.smd
+SMD MODEL safe_anims\mcv_safe_nearwall_0_15.smd
+SMD MODEL safe_anims\mcv_safe_nearwall_0_16.smd
+SMD MODEL safe_anims\mcv_safe_nearwall_1_00.smd
+SMD MODEL safe_anims\mcv_safe_nearwall_1_01.smd
+SMD MODEL safe_anims\mcv_safe_nearwall_1_02.smd
+SMD MODEL safe_anims\mcv_safe_nearwall_1_03.smd
+SMD MODEL safe_anims\mcv_safe_nearwall_1_04.smd
+SMD MODEL safe_anims\mcv_safe_nearwall_1_05.smd
+SMD MODEL safe_anims\mcv_safe_nearwall_1_06.smd
+SMD MODEL safe_anims\mcv_safe_nearwall_1_07.smd
+SMD MODEL safe_anims\mcv_safe_nearwall_1_08.smd
+SMD MODEL safe_anims\mcv_safe_nearwall_1_09.smd
+SMD MODEL safe_anims\mcv_safe_nearwall_1_10.smd
+SMD MODEL safe_anims\mcv_safe_nearwall_1_11.smd
+SMD MODEL safe_anims\mcv_safe_nearwall_1_12.smd
+SMD MODEL safe_anims\mcv_safe_nearwall_1_13.smd
+SMD MODEL safe_anims\mcv_safe_nearwall_1_14.smd
+SMD MODEL safe_anims\mcv_safe_nearwall_1_15.smd
+SMD MODEL safe_anims\mcv_safe_nearwall_1_16.smd
+SMD MODEL safe_anims\mcv_safe_nearwalltoidle_0_00.smd
+SMD MODEL safe_anims\mcv_safe_nearwalltoidle_0_01.smd
+SMD MODEL safe_anims\mcv_safe_nearwalltoidle_0_02.smd
+SMD MODEL safe_anims\mcv_safe_nearwalltoidle_0_03.smd
+SMD MODEL safe_anims\mcv_safe_nearwalltoidle_0_04.smd
+SMD MODEL safe_anims\mcv_safe_nearwalltoidle_0_05.smd
+SMD MODEL safe_anims\mcv_safe_nearwalltoidle_0_06.smd
+SMD MODEL safe_anims\mcv_safe_nearwalltoidle_0_07.smd
+SMD MODEL safe_anims\mcv_safe_nearwalltoidle_0_08.smd
+SMD MODEL safe_anims\mcv_safe_nearwalltoidle_0_09.smd
+SMD MODEL safe_anims\mcv_safe_nearwalltoidle_0_10.smd
+SMD MODEL safe_anims\mcv_safe_nearwalltoidle_0_11.smd
+SMD MODEL safe_anims\mcv_safe_nearwalltoidle_0_12.smd
+SMD MODEL safe_anims\mcv_safe_nearwalltoidle_0_13.smd
+SMD MODEL safe_anims\mcv_safe_nearwalltoidle_0_14.smd
+SMD MODEL safe_anims\mcv_safe_nearwalltoidle_0_15.smd
+SMD MODEL safe_anims\mcv_safe_nearwalltoidle_0_16.smd
+SMD MODEL safe_anims\mcv_safe_nearwalltoidle_1_00.smd
+SMD MODEL safe_anims\mcv_safe_nearwalltoidle_1_01.smd
+SMD MODEL safe_anims\mcv_safe_nearwalltoidle_1_02.smd
+SMD MODEL safe_anims\mcv_safe_nearwalltoidle_1_03.smd
+SMD MODEL safe_anims\mcv_safe_nearwalltoidle_1_04.smd
+SMD MODEL safe_anims\mcv_safe_nearwalltoidle_1_05.smd
+SMD MODEL safe_anims\mcv_safe_nearwalltoidle_1_06.smd
+SMD MODEL safe_anims\mcv_safe_nearwalltoidle_1_07.smd
+SMD MODEL safe_anims\mcv_safe_nearwalltoidle_1_08.smd
+SMD MODEL safe_anims\mcv_safe_nearwalltoidle_1_09.smd
+SMD MODEL safe_anims\mcv_safe_nearwalltoidle_1_10.smd
+SMD MODEL safe_anims\mcv_safe_nearwalltoidle_1_11.smd
+SMD MODEL safe_anims\mcv_safe_nearwalltoidle_1_12.smd
+SMD MODEL safe_anims\mcv_safe_nearwalltoidle_1_13.smd
+SMD MODEL safe_anims\mcv_safe_nearwalltoidle_1_14.smd
+SMD MODEL safe_anims\mcv_safe_nearwalltoidle_1_15.smd
+SMD MODEL safe_anims\mcv_safe_nearwalltoidle_1_16.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\bash.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\bash_2.smd
+SMD MODEL ..\..\..\MCV_SMD_OG\weapons\v_mamba\v_mamba_anims\holster.smd
+Processing LOD for material: mamba
+Processing LOD for material: shells_small
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_mamba.mdl:
+Loading preexisting model: C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_mamba.mdl
+WARNING: LoadPreexistingSequenceOrder: Zero-size file or no sequences.
+bones        22356 bytes (98)
+animations  367960 bytes (164 anims) (3620 frames) [1:43]
+sequences     9872 bytes (26 seq) 
+ik/pose        244 bytes
+eyeballs         0 bytes (0 eyeballs)
+flexes           0 bytes (0 flexes)
+textures       140 bytes
+keyvalues       20 bytes
+bone transforms    13392 bytes
+bone flex driver       0 bytes
+collision        0 bytes
+total       420456
+---------------------
+writing C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_mamba.vvd:
+vertices    824016 bytes (17167 vertices)
+tangents    274672 bytes (17167 vertices)
+total      1098752 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_mamba.dx80.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:         154503 bytes
+indices:       155910 bytes
+bone changes:      72 bytes
+everything:    310671 bytes
+---------------------
+Generating optimized mesh "C:\Program Files (x86)\Steam\steamapps\common\GarrysMod\garrysmod\addons\mcv\work\compile_test_game\models/weapons/mcv/v_mamba.dx90.vtx":
+body parts:         8 bytes
+models:            20 bytes
+model LODs:        12 bytes
+meshes:            18 bytes
+strip groups:      50 bytes
+strips:            54 bytes
+verts:         154503 bytes
+indices:       155910 bytes
+bone changes:      72 bytes
+everything:    310671 bytes
+
+Completed "v_mamba.qc"

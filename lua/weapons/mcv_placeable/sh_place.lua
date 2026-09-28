@@ -29,11 +29,16 @@ end
 // The piece's angle on a surface: model up along the normal, facing the way the player looks,
 // then the weapon's PlacedAngleOffset (pitch, yaw, roll in the piece's own frame). The stake
 // faces the mine its wire runs to instead and takes StakeAngleOffset; the stake mesh has its
-// point at the top, so the default rolls it over and StakeRaise lifts it out of the ground.
-function SWEP:PlaceAngle(normal, base_yaw, offset)
+// point at the top, so the default rolls it over and StakeRaise lifts it off the surface.
+function SWEP:PlaceAngle(normal, facing, offset)
     local ang = normal:Angle()
     ang:RotateAroundAxis(ang:Right(), -90)
-    ang:RotateAroundAxis(ang:Up(), base_yaw or self:GetOwner():EyeAngles().y)
+    if isvector(facing) then
+        // Project the mine's direction into the stake's mounting plane. World
+        // yaw alone cannot aim a wall-mounted stake up/down along that wall.
+        facing = math.deg(math.atan2(-facing:Dot(ang:Right()), facing:Dot(ang:Forward())))
+    end
+    ang:RotateAroundAxis(ang:Up(), facing or self:GetOwner():EyeAngles().y)
     offset = offset or self.PlacedAngleOffset
     if offset then
         ang:RotateAroundAxis(ang:Up(), offset.y)
@@ -59,20 +64,19 @@ function SWEP:PlacementTrace()
 end
 
 function SWEP:CanPlaceAt(tr)
-    if !tr.Hit then return false end
+    if !tr.Hit or tr.HitSky or tr.StartSolid then return false end
+    if IsValid(tr.Entity) and (tr.Entity:IsPlayer() or tr.Entity:IsNPC() or tr.Entity:IsNextBot()) then return false end
     if self.PlaceKind == "mine" then
-        if tr.HitNormal.z < 0.7 then return false end // mines go on the ground
         if self:GetActionState() == STATE_STAKE then
             local mine = self:GetPlacedMine()
             if !IsValid(mine) then return false end
             local d = (tr.HitPos - mine:GetPos()):Length()
             if d < 24 or d > self.WireLength then return false end
             // the wire must not pass through walls
-            local wtr = util.TraceLine({start = mine:GetPos() + Vector(0, 0, 6), endpos = tr.HitPos + Vector(0, 0, 6), mask = MASK_SOLID_BRUSHONLY})
-            if wtr.Hit then return false end
+            local wtr = util.TraceLine({start = mine:GetWireStart(),
+                endpos = tr.HitPos + tr.HitNormal * self.StakeRaise, mask = MASK_SOLID_BRUSHONLY})
+            if wtr.Hit or wtr.StartSolid then return false end
         end
-    else
-        if IsValid(tr.Entity) and (tr.Entity:IsPlayer() or tr.Entity:IsNPC()) then return false end
     end
     return true
 end
@@ -144,7 +148,7 @@ end
 function SWEP:Deferred_Place()
     local tr = SERVER and self.PendingPlacement or {}
     if self:GetActionVariant() == 1 then
-        self:SpawnStake(tr.pos, tr.normal)
+        self:SpawnStake(tr.pos, tr.normal, tr.parent)
     else
         self:SpawnPlaced(tr.pos, tr.normal, tr.parent)
     end
@@ -197,7 +201,7 @@ function SWEP:SpawnPlaced(pos, normal, parent)
     end
 end
 
-function SWEP:SpawnStake(pos, normal)
+function SWEP:SpawnStake(pos, normal, parent)
     self:TakeRound(1)
     if CLIENT then return end
 
@@ -209,10 +213,11 @@ function SWEP:SpawnStake(pos, normal)
     stake.Model = self.StakeModel or self.WorldModel
     stake.MineBodygroups = self.MineBodygroups
     stake:SetPos(pos + normal * self.StakeRaise)
-    stake:SetAngles(self:PlaceAngle(normal, (mine:GetPos() - pos):Angle().y, self.StakeAngleOffset))
+    stake:SetAngles(self:PlaceAngle(normal, mine:GetPos() - pos, self.StakeAngleOffset))
     stake:SetOwner(self:GetOwner())
     stake:Spawn()
     stake:Activate()
+    if IsValid(parent) then stake:SetParent(parent) end
 
     mine:SetStakeEntity(stake)
     self:SetNWEntity("MCVPlacedMine", NULL)
@@ -421,9 +426,11 @@ if CLIENT then
 
         local model = self:GetGhostModel()
         if !IsValid(self.Ghost) or self.GhostModel != model then
-            if IsValid(self.Ghost) then self.Ghost:Remove() end
-            self.Ghost = ClientsideModel(model, RENDERGROUP_TRANSLUCENT)
-            self.Ghost:SetNoDraw(true)
+            MCV.RemoveClientModel(self, "Ghost")
+            local ghost = ClientsideModel(model, RENDERGROUP_TRANSLUCENT)
+            if !IsValid(ghost) then return end
+            ghost:SetNoDraw(true)
+            MCV.TrackClientModel(self, "Ghost", ghost)
             self.GhostModel = model
         end
 
@@ -432,7 +439,7 @@ if CLIENT then
         if state == STATE_STAKE then
             local mine = self:GetPlacedMine()
             raise = self.StakeRaise
-            ang = self:PlaceAngle(tr.HitNormal, IsValid(mine) and (mine:GetPos() - tr.HitPos):Angle().y or nil, self.StakeAngleOffset)
+            ang = self:PlaceAngle(tr.HitNormal, IsValid(mine) and (mine:GetPos() - tr.HitPos) or nil, self.StakeAngleOffset)
             if self.MineBodygroups then
                 self.Ghost:SetBodygroup(self.MineBodygroups.mine, blank_of(self.Ghost, self.MineBodygroups.mine))
                 self.Ghost:SetBodygroup(self.MineBodygroups.stick, 0)
@@ -457,7 +464,7 @@ if CLIENT then
             local mine = self:GetPlacedMine()
             if IsValid(mine) then
                 render.SetMaterial(Material("cable/rope"))
-                render.DrawBeam(mine:GetPos() + Vector(0, 0, 4), tr.HitPos + tr.HitNormal * self.StakeRaise, 0.6, 0, 1, col)
+                render.DrawBeam(mine:GetWireStart(), tr.HitPos + tr.HitNormal * self.StakeRaise, 0.6, 0, 1, col)
             end
         end
     end
@@ -473,15 +480,17 @@ if CLIENT then
     end)
 
     function SWEP:OnRemove()
-        if IsValid(self.Ghost) then self.Ghost:Remove() end
+        MCV.RemoveClientModel(self, "Ghost")
         if self.RemoveWorldModels then self:RemoveWorldModels() end
     end
 end
 
 function SWEP:GetControlHints()
     if self.PlaceKind == "mine" then
+        local state = self:GetActionState()
+        local stake = state == STATE_STAKE or (state == STATE_BUSY and self:GetActionVariant() == 1)
         return {
-            {"+attack", "Place mine, then the stake"},
+            {"+attack", stake and "Place stake" or "Place mine"},
             {"+use +attack", "Bash"},
         }
     elseif self.PlaceKind == "dynamite" then

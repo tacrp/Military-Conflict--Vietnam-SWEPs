@@ -15,7 +15,7 @@ compiler = game.parent/'bin/studiomdl.exe'
 scratch = folder/'compiled'
 scratch.mkdir(exist_ok=True)
 (scratch/'gameinfo.txt').write_text('"GameInfo" { game "MCV custom compile" FileSystem { SteamAppId 4000 SearchPaths { Game |gameinfo_path|. Game "'+game.as_posix()+'" } } }')
-addon = next((p for p in folder.parents if (p/'lua/weapons/mcv_base_core').exists()), None)
+addon = next((p for p in folder.parents if (p/'lua/mcv/weapon_common').exists()), None)
 if addon:
     sys.path.insert(0,str(addon/'work'))
     from pack_paths import asset_path

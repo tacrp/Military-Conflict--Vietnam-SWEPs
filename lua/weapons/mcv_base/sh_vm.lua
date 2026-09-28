@@ -1,4 +1,4 @@
-// Gun bodygroups and pose parameters (called from mcv_base_core/sh_vm.lua DoBodygroups
+// Gun bodygroups and pose parameters (called from mcv/weapon_common/sh_vm.lua DoBodygroups
 // with gameplay values from Think and visual values before render bone setup).
 // The game's ammo_fraction is the magazine's fraction: the chambered round is not in it
 // (the PPK's counter has a knot pair per magazine round and one for "all hidden"; the dual
@@ -10,8 +10,11 @@ function SWEP:MagFraction(count, per)
 end
 
 function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
+    // Snapshot only this invocation. The next replay/render call reads restored
+    // engine state again; none of these values live in an ordinary Lua cache.
+    local reloading, clip, akimbo = self:GetReloading(), self:Clip1(), self:GetAkimbo()
     local now = visual and self:GetViewModelTime() or CurTime()
-    local displayRoundsToLoad = self:GetReloading()
+    local displayRoundsToLoad = reloading
     local magOut = false // the old magazine / belt is out and the new one not yet in
 
     // A round-at-a-time reload has no magazine to swap. Nothing leaves the gun and nothing waits
@@ -24,7 +27,7 @@ function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
 
     elseif displayRoundsToLoad then
         local reloadprogress = vm:SequenceDuration() - (self:GetAnimLockTime() - now)
-        local empty = self:Clip1() == 0
+        local empty = clip == 0
         local tin = empty and self.MagInTimeEmpty or self.MagInTime
         local tout = empty and self.MagOutTimeEmpty or self.MagOutTime
 
@@ -32,7 +35,7 @@ function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
         magOut = !displayRoundsToLoad and !self.MagInClip and tout > 0 and reloadprogress >= tout
     end
 
-    local bodygroupbulletscount = self:Clip1()
+    local bodygroupbulletscount = clip
     local clipsize = self.Primary.ClipSize
 
     // A gun whose cycle animation moves the magazine on itself (the homemade pistol's harmonica:
@@ -40,15 +43,15 @@ function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
     // showing the count from before the shot until the cycle's own refresh point
     // (CycleClipPoseTime, the game's AE_WPN_CLIP_TO_POSEPARAM at frame 55); shown earlier, the
     // next chamber looked empty the moment the shot went off
-    local shown = self:Clip1()
+    local shown = clip
     // Clip-loaded pose selects how many rounds the hand carries in the insert animation.
     // Keep that selection while the actual ammo transfer waits for the insertion event.
-    local pendingInsert = self:GetReloading() and self.ReloadInsertTime and self:DeferPending("ReloadInsert")
+    local pendingInsert = reloading and self.ReloadInsertTime and self:DeferPending("ReloadInsert")
     if pendingInsert then
         local reserve = self:GetInfiniteAmmo() and math.huge or self:Ammo1()
         shown = math.min(shown + math.min(self.ShotgunReloadRounds, reserve), self:GetClip1Capacity())
     end
-    if self.CycleClipPoseTime and !self:GetReloading() then
+    if self.CycleClipPoseTime and !reloading then
         // NeedCycle from the shot until the cycle starts, then the networked start time
         // (ActionStart, sh_think.lua) until the refresh point; a Lua-side start time differed
         // between the realms and the server's networked pose parameter fought the client's
@@ -62,7 +65,7 @@ function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
     // still carrying it to the port then, so the round appeared in the gun before it went in.
     // The model says when it is actually in, through the refresh event the game puts partway
     // through the insert; until then the counter holds the count from before this round.
-    if self.ShotgunReload and self.InsertClipPoseTime and self:GetReloading() then
+    if self.ShotgunReload and self.InsertClipPoseTime and reloading then
         local insert = self.ShotgunAltReload and ACT_VM_RELOAD_INSERT or ACT_VM_RELOAD
 
         if vm:GetSequenceActivity(vm:GetSequence()) == insert
@@ -74,10 +77,10 @@ function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
     // the cycle's variant is picked by the count after the shot (the game sets ammo_fraction2
     // from the clip at the bolt pull's first frame)
     if self.CycleAmmoPose2 then
-        vm:SetPoseParameter("ammo_fraction2", self:MagFraction(self:Clip1(), clipsize))
+        vm:SetPoseParameter("ammo_fraction2", self:MagFraction(clip, clipsize))
     end
 
-    if self:GetAkimbo() then
+    if akimbo then
         clipsize = clipsize * 2
     end
 
@@ -86,12 +89,12 @@ function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
         // clip-fed rifle shows the clip emptying as its rounds go down into the receiver, so it
         // counts what is left to load; everything else shows the fresh magazine full.
         if self.MagInClip then
-            local bullets_to_load = math.min(clipsize - self:Clip1(), self:Ammo1())
+            local bullets_to_load = math.min(clipsize - clip, self:Ammo1())
 
             vm:SetPoseParameter("ammo_fraction", self:MagFraction(bullets_to_load, clipsize))
             bodygroupbulletscount = bullets_to_load
         else
-            local reserve = self:GetInfiniteAmmo() and math.huge or (self:Clip1() + self:Ammo1())
+            local reserve = self:GetInfiniteAmmo() and math.huge or (clip + self:Ammo1())
             local bullets_to_load = math.min(clipsize, self:GetClip1Capacity(), reserve)
 
             vm:SetPoseParameter("ammo_fraction", self:MagFraction(bullets_to_load, clipsize))
@@ -110,10 +113,10 @@ function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
     // splits floor / ceil, since the right gun fires on an even count; a reload's per-gun
     // swap times (AkimboMagInTimes, from the dual model's next-clip events per activity: the
     // right magazine first, the left one later) hand each gun its new count on its own cue.
-    if self:GetAkimbo() then
-        local n = self:Clip1()
+    if akimbo then
+        local n = clip
         local right, left = math.floor(n / 2), math.ceil(n / 2)
-        if self:GetReloading() then
+        if reloading then
             local reserve = self:GetInfiniteAmmo() and math.huge or (n + self:Ammo1())
             local total = math.min(self:GetClip1Capacity(), reserve)
             local nright, nleft = math.floor(total / 2), math.ceil(total / 2)
@@ -151,7 +154,7 @@ function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
         end
     end
 
-    local shouldhammer = self:GetNeedCycle() or self:GetEmptyReload() or ((self.ShotgunReload or !self:GetReloading()) and self:Clip1() == 0)
+    local shouldhammer = self:GetNeedCycle() or self:GetEmptyReload() or ((self.ShotgunReload or !reloading) and clip == 0)
 
     if self.InvertAnimationHammer then
         shouldhammer = !shouldhammer
@@ -164,11 +167,11 @@ function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
     // empty reload it drops the moment the new magazine is in (MagInTimeEmpty), as the game
     // does at its NEXTCLIP event: held to the end, the layer kept the bolt back while the
     // animation closed it, and the bolt visibly closed and reopened (M14, XM21, M2, vz.58, MAS-49).
-    local empty = ((pendingInsert and shown or self:Clip1()) == 0 and !displayRoundsToLoad) and 1 or 0
-    if self:GetAkimbo() and !displayRoundsToLoad then
+    local empty = ((pendingInsert and shown or clip) == 0 and !displayRoundsToLoad) and 1 or 0
+    if akimbo and !displayRoundsToLoad then
         // the dual models' SlidePosition has three states: none, the right gun empty (it fires
         // first, so it runs dry first), both empty (knots at 0, 1/3-2/3, 1)
-        local n = self:Clip1()
+        local n = clip
         empty = n == 0 and 1 or (math.floor(n / 2) == 0 and 0.5 or 0)
     end
     vm:SetPoseParameter("empty", empty)
@@ -176,7 +179,7 @@ function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
     vm:SetPoseParameter("ironsight", sa ^ 3)
 
     // Dual wield pose-driven recoil: 0 = frame 0 of the hand's shoot animation, 1 = at rest.
-    if self:GetAkimbo() and self:HasPoseRecoil() then
+    if akimbo and self:HasPoseRecoil() then
         local len = math.max(self.AkimboRecoilTime, 0.01)
         vm:SetPoseParameter("recoil_r", math.Clamp((now - self:GetLastShotTimeR()) / len, 0, 1))
         vm:SetPoseParameter("recoil_l", math.Clamp((now - self:GetLastShotTimeL()) / len, 0, 1))
@@ -193,7 +196,7 @@ function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
 
         local reloadprogress = vm:SequenceDuration() - (self:GetAnimLockTime() - now)
 
-        if self:Clip2() > 0 or (self:GetReloading() and reloadprogress > self.MagInTimeGrenade) then
+        if self:Clip2() > 0 or (reloading and reloadprogress > self.MagInTimeGrenade) then
             vm:SetBodygroup(self.GrenadeBodygroup, 1)
         else
             vm:SetBodygroup(self.GrenadeBodygroup, 0)
@@ -208,7 +211,7 @@ function SWEP:DoBodygroupsWeapon(vm, visual, sa, speed)
 
         local fm = self:GetFiremodeValue()
 
-        if self:GetAkimbo() then
+        if akimbo then
             if fm == MCV.FIREMODE_DA then
                 pose = 1
             end
@@ -286,6 +289,11 @@ function SWEP:PostDrawViewModelWeapon(vm)
     end
     if !self.OEGComposite or vm != self:GetOwner():GetViewModel() then return end
     self.OEGComposite = false
+    self:DrawOEGSceneComposite()
+end
+
+// Finish the normal OEG blend before the late scope layer captures its pixels.
+function SWEP:DrawOEGSceneComposite()
     local a = Lerp(math.Clamp((self:GetSightAmountVisual() - 0.6) / 0.4, 0, 1), 0, self.OEGSceneAlpha)
     if a <= 0 then return end
     cam.Start2D()

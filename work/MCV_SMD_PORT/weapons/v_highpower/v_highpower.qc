@@ -292,7 +292,7 @@ $animation "shoot2_ironsight_a" "..\..\..\MCV_SMD_OG\weapons\v_highpower\v_highp
 	subtract "shoot2_ironsight_a_corrective_animation" 0
 }
 
-$animation "shoot3_a" "..\..\..\MCV_SMD_OG\weapons\v_highpower\v_highpower_anims\shoot3_a.smd" {
+$animation "shoot3_a" "fixed_anims\shoot3_a.smd" {
 	fps 30
 	// Crowbar writes this subtract option to prevent jigglebone and poseparameter problems when delta sequences are recompiled.
 	subtract "shoot3_a_corrective_animation" 0

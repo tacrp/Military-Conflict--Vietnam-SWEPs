@@ -479,7 +479,10 @@ def step_particle_materials(args, vpk):
             # sheet resource inside the VTF and draws the whole sheet at once. SpriteCard is the
             # particle shader that samples sheets; switch to it when the base texture has one.
             bt = re.search(r'(?i)"?\$basetexture"?\s+"?([^"\s]+)"?', txt)
-            if bt and re.match(r'(?i)\s*"?unlitgeneric"?', txt):
+            # render_sprite_trail cannot draw this sheet with SpriteCard in GMod.
+            # Preserve the native shader for flying ricochets and metal sparks.
+            trail_material = m.replace("\\", "/").lower() == "effects/vietnam/vietnam_sparktrails_1"
+            if bt and not trail_material and re.match(r'(?i)\s*"?unlitgeneric"?', txt):
                 vtf = lower.get("materials/" + bt.group(1).replace("\\", "/").lower() + ".vtf")
                 if vtf and _vtf_has_sheet(vpk.read(vtf)[:256]):
                     txt = re.sub(r'(?i)^(\s*)"?unlitgeneric"?', r'\1"SpriteCard"', txt, count=1)

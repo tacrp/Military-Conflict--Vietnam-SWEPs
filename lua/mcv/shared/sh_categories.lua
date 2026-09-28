@@ -51,8 +51,20 @@ function MCV.CategorySlug(category)
     return (tostring(category or ""):lower():gsub("[^%w]+", "_"):gsub("^_+", ""):gsub("_+$", ""))
 end
 
+local categoryNames = {}
 function MCV.CategoryConVarName(category, stat)
-    return "mcv_cat_" .. MCV.CategorySlug(category) .. "_" .. stat
+    local key = category or ""
+    local names = categoryNames[key]
+    if !names then
+        names = {}
+        categoryNames[key] = names
+    end
+    local name = names[stat]
+    if !name then
+        name = "mcv_cat_" .. MCV.CategorySlug(category) .. "_" .. stat
+        names[stat] = name
+    end
+    return name
 end
 
 for _, category in ipairs(MCV.Categories) do

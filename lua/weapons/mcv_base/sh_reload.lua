@@ -12,12 +12,27 @@ function SWEP:PlayReloadGesture(t, event)
     owner:DoCustomAnimEvent(event or PLAYERANIMEVENT_RELOAD, math.max(1, math.floor((t or 0) * 1000)))
 end
 
-function SWEP:Reload()
+function SWEP:Think_AutoReload()
+    if self:GetReloading() or self:StillWaiting() or self:GetHolsterTime() != 0 then return end
+    if self:GetSafe() or self:GetNeedCycle() or self:GetPrimedAttack() or self:IsBayonetCharging() then return end
+    local owner = self:GetOwner()
+    if !IsValid(owner) or !owner:IsPlayer() or owner:GetInfoNum("mcv_auto_reload", 1) == 0 then return end
+    if self:GetGrenadeLauncher() then
+        if self:Clip2() != 0 or self:GetClip2Capacity() <= 0 or self:Ammo2() <= 0 then return end
+    else
+        if self:Clip1() != 0 or self:GetClip1Capacity() <= 0 or self:Ammo1() <= 0 then return end
+    end
+    self:Reload(true)
+end
+
+function SWEP:Reload(automatic)
     if IsValid(self:GetOwner()) and self:GetOwner():IsNPC() then return self:NPC_Reload() end
     if self:StillWaiting() then return end
-    if !self:GetOwner():KeyPressed(IN_RELOAD) then return end
+    if self:GetReloading() then return end
+    automatic = automatic == true
+    if !automatic and !self:GetOwner():KeyPressed(IN_RELOAD) then return end
 
-    if self:GetOwner():KeyDown(IN_USE) then
+    if !automatic and self:GetOwner():KeyDown(IN_USE) then
         self:ChangeFiremode()
         return
     end

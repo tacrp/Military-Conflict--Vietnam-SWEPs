@@ -106,7 +106,7 @@ SWEP.SneakMoveSpreadMultiplier = 1.45
 SWEP.CrouchMoveSpreadMultiplier = 1.35
 SWEP.JumpSpreadMultiplier = 3
 
-SWEP.HasBayonet = true
+SWEP.HasBayonet = false // No attach/detach or dedicated bayonet attack animations.
 SWEP.HasRifleGrenade = false
 
 SWEP.BashDamage = 50

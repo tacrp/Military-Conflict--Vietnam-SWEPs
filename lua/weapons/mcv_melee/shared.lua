@@ -1,8 +1,10 @@
+include("mcv/weapon_common/load.lua")
+
 // Knives, bayonets, machetes, shovels, fists, wrench. Left click slashes, right click
 // stabs (heavier), sprint + attack charges, USE + attack throws the blade (models with a
 // throw animation), the wrench repairs vehicles with right click.
 
-SWEP.Base = "mcv_base_core"
+SWEP.Base = "weapon_base"
 SWEP.Spawnable = false
 
 SWEP.SubCategory = "Melee"
@@ -71,19 +73,4 @@ SWEP.DrawCrosshair = true
 
 AddCSLuaFile()
 
-local searchdir = "weapons/mcv_melee"
-
-for _, filename in pairs(file.Find(searchdir .. "/*.lua", "LUA")) do
-    if filename == "shared.lua" then continue end
-    local luatype = string.sub(filename, 1, 2)
-
-    if luatype == "sv" then
-        if SERVER then include(searchdir .. "/" .. filename) end
-    elseif luatype == "cl" then
-        AddCSLuaFile(searchdir .. "/" .. filename)
-        if CLIENT then include(searchdir .. "/" .. filename) end
-    else
-        AddCSLuaFile(searchdir .. "/" .. filename)
-        include(searchdir .. "/" .. filename)
-    end
-end
+MCV.IncludeWeaponModules("weapons/mcv_melee")

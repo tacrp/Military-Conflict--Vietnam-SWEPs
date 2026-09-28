@@ -1,9 +1,8 @@
 // The tracer for one round, drawn from the gun that fired: the muzzle attachment of the
 // viewmodel in first person, of the drawn world model in third person (the left gun of a dual
 // on magnitude 1). The server sends the hit position, so the origin is worked out here, on the
-// client, where the drawn models live. The engine dispatches this as the bullet's own tracer
-// (Tracer / TracerName on the FireBullets call), so nothing is sent by hand and nothing is
-// counted on the weapon: everything comes off the gun this effect is handed.
+// client, where the drawn models live. MCV.HitscanEffects dispatches this from the firing
+// callback, with shooter-only delivery for silenced trails.
 //
 // Two halves. The game's particle system is started for the smoke it trails, bound in first
 // person to the weapon and the viewmodel's attachment so the engine draws it along with the
@@ -14,8 +13,6 @@
 // The streak's look, taken from the game's own systems: COLOR_* is the brightest pixel of the
 // texture each family draws with (vietnam_ae_tracers_01, and _02 for the green side), and each
 // entry below is that family's render_sprite_trail max length and Radius Random maximum.
-local COLOR_STD = Color(235, 175, 51)
-local COLOR_GREEN = Color(96, 235, 51)
 local SPEED = 10000 // units a second, the speed those systems carry a round at
 // the radius those systems give a particle reads about three times too wide as a drawn beam
 local STREAK_SCALE = 1 / 10
@@ -47,6 +44,10 @@ function EFFECT:Init(data)
     local wpn = data:GetEntity()
     if !IsValid(wpn) then return end
     local owner = wpn:GetOwner()
+    local tracer = wpn.TracerParticle
+    if !tracer or tracer == "" then return end
+    if tracer == "vietnam_tracer_silenced_primary"
+            and (!IsValid(owner) or owner != LocalPlayer()) then return end
     local to = data:GetOrigin()
     // off the gun: a dual's left gun fires on an odd count, the same rule the muzzle flash uses
     local left = wpn.GetAkimbo and wpn:GetAkimbo() and wpn:Clip1() % 2 == 0
@@ -82,14 +83,11 @@ function EFFECT:Init(data)
         from = IsValid(owner) and owner.GetShootPos and owner:GetShootPos() or wpn:GetPos()
     end
 
-    local tracer = wpn.TracerParticle
-    if !tracer or tracer == "" then return end
-
     // the game's system, on every round: its smoke child is what trails behind the shot
     self:Trail(tracer, from, to, bind_ent, bind_att)
 
     // Which rounds glow, off the gun as well: every TracerFrequency-th round in the magazine.
-    // The engine sends this effect for every bullet, so the smoke is on all of them and only
+    // The callback sends this effect for every bullet, so the smoke is on all of them and only
     // the streak is intermittent. Counting the round in the magazine rather than keeping a
     // tally means both realms reach the same answer without anything being networked for it.
     local freq = math.max(wpn.TracerFrequency or 1, 1)
@@ -105,7 +103,7 @@ function EFFECT:Init(data)
     local base = tracer:gsub("^vietnam_tracer_", ""):gsub("_primary$", ""):gsub("_secondary$", "")
     local green = base:find("_green", 1, true) != nil
     local fam = FAMILY[(base:gsub("_green", ""))]
-    if !fam or fam[1] <= 0 then return end // silenced rounds leave nothing to see, as in the game
+    if !fam or fam[1] <= 0 then return end // silenced rounds have smoke but no glowing streak
 
     local dir = to - from
     local dist = dir:Length()
@@ -127,15 +125,7 @@ end
 // person watching: everyone sees a player's rounds in the colour that player asked for. The
 // game's own colour is the default, so a server where nobody has touched it looks unchanged.
 function EFFECT:StreakColor(owner, wpn, green)
-    local mode = MCV.TracerColorMode(owner)
-
-    if mode == MCV.TRACER_COLOR_PLAYER then
-        return MCV.BrightColor(owner:GetPlayerColor())
-    elseif mode == MCV.TRACER_COLOR_WEAPON then
-        return MCV.BrightColor(owner:GetWeaponColor())
-    end
-
-    return green and COLOR_GREEN or COLOR_STD
+    return MCV.TracerColor(owner, wpn.TracerParticle)
 end
 
 // A two-point trail: control point 0 the start, 1 the end, which is what a tracer particle
@@ -143,8 +133,7 @@ end
 // the way the muzzle flash is (mcv_base/sh_effects.lua), so the trail leaves the muzzle where
 // the muzzle is on screen and follows it; otherwise the two points are set outright.
 //
-// Nothing here may ask the engine for a tracer. This effect is now the bullet's own tracer, so
-// a call that makes the engine produce one on this weapon comes straight back in here.
+// Keep this cosmetic: the firing callback already owns the bullet trace and damage.
 function EFFECT:Trail(name, from, to, ent, att)
     if IsValid(ent) and att and att > 0 then
         local ps = CreateParticleSystem(ent, name, PATTACH_POINT_FOLLOW, att)

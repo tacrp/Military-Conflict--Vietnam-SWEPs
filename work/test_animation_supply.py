@@ -6,7 +6,7 @@ from glua_check import to_lua
 
 class AnimationTests(unittest.TestCase):
     def test_render_recovers_timeline_after_engine_timestamp_changes(self):
-        lua = realm('lua/weapons/mcv_base_core/sh_anim.lua')
+        lua = realm('lua/mcv/weapon_common/sh_anim.lua')
         lua.execute('''
             game={SinglePlayer=function() return false end}
             engine={TickInterval=function() return 0.015 end}
@@ -15,6 +15,7 @@ class AnimationTests(unittest.TestCase):
             function LocalPlayer() return owner end
             function owner:GetInternalVariable() return 807 end
             vm={cycle=0.08,animtime=12.03,flags=0}
+            function vm:GetModel() return self.model or 'viewmodel' end
             function vm:GetSequence() return 7 end
             function vm:GetSequenceInfo() return {flags=self.flags} end
             function vm:SetCycle(v) self.cycle=v end
@@ -35,7 +36,7 @@ class AnimationTests(unittest.TestCase):
             assert(math.abs(vm.cycle-0.9814)<1e-6)
             w:SetAnimationStart(10.09); w:SetAnimationDuration(1)
             w:UpdateViewModelAnimation(vm); assert(vm.cycle==0.999)
-            vm.flags=1; w:UpdateViewModelAnimation(vm)
+            vm.flags=1; vm.model='looped_model'; w:UpdateViewModelAnimation(vm)
             assert(math.abs(vm.cycle-0.0186)<1e-6)
             w:SetNextIdle(math.huge); w:UpdateViewModelAnimation(vm)
             assert(vm.cycle==0.999) -- an insert must not wrap before its next command
@@ -48,7 +49,7 @@ class AnimationTests(unittest.TestCase):
         ''')
 
     def test_replay_reconstructs_animation_state_and_its_render_timeline(self):
-        lua = realm('lua/weapons/mcv_base_core/sh_anim.lua')
+        lua = realm('lua/mcv/weapon_common/sh_anim.lua')
         lua.execute('''
             vm={seq=0,parity=0,cycle=0.6,animtime=9,rate=1}
             function owner:GetViewModel() return vm end

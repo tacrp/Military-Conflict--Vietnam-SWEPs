@@ -1,6 +1,5 @@
 // The scope lens shader samples the frame from before the viewmodel was drawn: the world
-// without the colour viewmodel, but including world translucency/effects. Screen-space
-// shading may already contain viewmodel occlusion; see work/GSHADER_COMPATIBILITY.md.
+// without the colour viewmodel, but including world translucency/effects.
 local function captureScope()
     // Do not replace the main view with a reflection, camera or another addon's RT view.
     local view = render.GetViewSetup()
@@ -13,6 +12,18 @@ local function captureScope()
 
     if wpn.CaptureScopeScreen then wpn:CaptureScopeScreen() end
 end
+
+// Migrate the obsolete wrapper on Lua refresh. PreDrawEffects is AFTER viewmodels:
+// capturing there overwrites the clean world image with the gun and scope itself.
+local contactHook = MCV.ContactScopeHook
+if contactHook and contactHook.wrapper then
+    local effects = hook.GetTable().PreDrawEffects
+    if effects and effects.ContactShadows == contactHook.wrapper then
+        hook.Add("PreDrawEffects", "ContactShadows", contactHook.original)
+    end
+end
+MCV.ContactScopeHook = nil
+hook.Remove("PreRender", "MCV_ContactScopeCapture")
 
 hook.Add("PreDrawViewModels", "MCV_CaptureScopeScreen", function()
     captureScope()

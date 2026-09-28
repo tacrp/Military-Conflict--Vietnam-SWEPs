@@ -109,6 +109,7 @@ function SWEP:CaptureScopeScreen()
         IMAGE_FORMAT_RGB888)
     render.CopyRenderTargetToTexture(scopeScene)
     lensmat:SetTexture("$basetexture", scopeScene)
+    return true
 end
 
 // Where the scope axis meets the screen (0..1, y down): the muzzle attachment's forward, read

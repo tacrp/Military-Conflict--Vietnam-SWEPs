@@ -1778,6 +1778,8 @@ def step_tidy(qc, ctx):
 
 def step_validate(qc, ctx):
     """Blend length equality and missing files."""
+    from model_pose_fixes import validate_firing_tails
+    validate_firing_tails(qc, ctx, FIRE_ACTS)
     for b in qc.blocks("sequence"):
         anims = b.anims()
         if len(anims) > 1:
@@ -2290,6 +2292,8 @@ def port_one(args, og_dir):
 
     from m79_live_reload import prepare as prepare_m79_live_reload
     prepare_m79_live_reload(out_qc)
+    from build_chainsaw import prepare as prepare_chainsaw
+    prepare_chainsaw(out_qc)
     result = {"name": name, "mode": ctx.mode, "qc": out_qc, "warnings": ctx.warnings, "notes": ctx.notes}
     if args.compile:
         result["compile"] = compile_qc(args, out_qc)

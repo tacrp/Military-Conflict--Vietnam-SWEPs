@@ -1,0 +1,42 @@
+{
+  "scope_contact_on": {
+    "lens_pixels": 113616,
+    "mean_difference": 0.0,
+    "max_difference": 0
+  },
+  "vz54_scope": {
+    "lens_pixels": 107855,
+    "mean_difference": 0.0,
+    "max_difference": 0
+  },
+  "vz54_fov25": {
+    "lens_pixels": 35213,
+    "mean_difference": 0.0,
+    "max_difference": 0
+  },
+  "vz54_fovminus25": {
+    "lens_pixels": 671484,
+    "mean_difference": 0.0,
+    "max_difference": 0
+  },
+  "vz54_fired": {
+    "lens_pixels": 107855,
+    "mean_difference": 0.0,
+    "max_difference": 0
+  },
+  "oeg_contact_on": {
+    "lens_pixels": 67405,
+    "mean_difference": 0.0,
+    "max_difference": 0
+  },
+  "oeg_contact_off": {
+    "lens_pixels": 67405,
+    "mean_difference": 0.0,
+    "max_difference": 0
+  },
+  "oeg_firing": {
+    "lens_pixels": 73980,
+    "mean_difference": 0.0,
+    "max_difference": 0
+  }
+}

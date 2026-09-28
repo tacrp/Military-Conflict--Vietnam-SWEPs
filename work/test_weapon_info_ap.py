@@ -22,7 +22,8 @@ class WeaponInfoTests(unittest.TestCase):
             language={GetPhrase=function(s) return s end}
             baseclass={Get=function(s) return {ExplosionDamage=125,ExplosionRadius=300} end}
         ''')
-        source = (ROOT / "lua/weapons/mcv_base_core/cl_hud.lua").read_text()
+        source = (ROOT / "lua/mcv/weapon_common/cl_hud.lua").read_text()
+        lua.execute(to_lua((ROOT / "lua/mcv/shared/sh_physbullets.lua").read_text()))
         lua.execute(to_lua(source[source.index("local function boxes"):source.index("SWEP.Mat_Select = nil")]))
         lua.execute('''
             w=setmetatable({AmmoPerShot=1, Primary={Ammo="rpg",ClipSize=1}, ShootEntity="rocket",
@@ -39,6 +40,9 @@ class WeaponInfoTests(unittest.TestCase):
             assert(w:GetWeaponInfoTags()=="[DUAL] [RG] [SD] [BI] [BAYO] [VS] [AP]")
             w.RifleGrenadeIsUBGL=true
             assert(w:GetWeaponInfoTags()=="[DUAL] [GL] [SD] [BI] [BAYO] [VS] [AP]")
+            w.ThrowEntity=nil; w.DamageGeneric=15
+            w.DamageRampStart=0.25; w.DamageRampEnd=1.5; w.DamageRampDistance=2000
+            r=rows(); assert(r["Damage:"]=="3.8 - 22.5" and r["Full power:"]=="50.8 m")
         ''')
 
     def test_ap_direct_hits(self):
@@ -54,6 +58,7 @@ class WeaponInfoTests(unittest.TestCase):
             HITGROUP_HEAD=1; HITGROUP_CHEST=2; HITGROUP_STOMACH=3
             HITGROUP_LEFTARM=4; HITGROUP_RIGHTARM=5; HITGROUP_LEFTLEG=6; HITGROUP_RIGHTLEG=7
         ''')
+        lua.execute(to_lua((ROOT / "lua/mcv/shared/sh_physbullets.lua").read_text()))
         lua.execute(to_lua((ROOT / "lua/weapons/mcv_base/sh_penetration.lua").read_text()))
         lua.execute('''
             w=setmetatable({ArmorPiercing=true,Num=1,RangeModifier=0.995}, {__index=SWEP})

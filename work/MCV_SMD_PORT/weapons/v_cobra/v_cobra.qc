@@ -575,7 +575,7 @@ $sequence "Firstdraw" {
 }
 
 $sequence "reload" {
-	"..\..\..\MCV_SMD\weapons\v_cobra\anims\reload.smd"
+	"fixed_anims\reload.smd"
 	"..\..\..\MCV_SMD_OG\weapons\v_cobra\v_cobra_anims\reload_2.smd"
 	activity "ACT_VM_RELOAD" 1
 	blend "ironsight" 0 1

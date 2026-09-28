@@ -63,7 +63,7 @@ lua.execute('''
     function math.Clamp(v,a,b) return math.max(a,math.min(v,b)) end
     function SWEP:GetSafe() return self.safe end
 ''')
-lua.execute(to_lua((ROOT / "lua/weapons/mcv_base_core/sh_think.lua").read_text()))
+lua.execute(to_lua((ROOT / "lua/mcv/weapon_common/sh_think.lua").read_text()))
 lua.execute('''
     SWEP.MovementPoseWalk=138; SWEP.MovementPoseSprint=233
     SWEP.safe=true

@@ -22,7 +22,7 @@ end
 
 // Linear sight progress: 0 = hip, 1 = fully aimed. A networked float, integrated one tick at
 // a time by Think_Sights on both realms; GetSightAmountRaw / SetSightAmountRaw come from the
-// NetworkVar itself (mcv_base_core/shared.lua, which says why it is stored this way).
+// NetworkVar itself (mcv/weapon_common/shared.lua, which says why it is stored this way).
 
 local function applyEase(self, raw)
     if raw <= 0 then return 0 end

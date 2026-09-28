@@ -1,8 +1,10 @@
+include("mcv/weapon_common/load.lua")
+
 // Planted explosives: C4 (remote), dynamite (lit fuse) and tripwire mines placed in two
 // steps, the mine first and then the stake the wire runs to. A translucent ghost shows where
 // the piece will go.
 
-SWEP.Base = "mcv_base_core"
+SWEP.Base = "weapon_base"
 SWEP.Spawnable = false
 
 SWEP.SubCategory = "Explosives"
@@ -37,7 +39,7 @@ SWEP.StakeModel = nil
 SWEP.MineBodygroups = {mine = 0, stick = 1} // bodygroup indices on the mine world model
 // creator-side placement angles: the piece is set model-up on the surface facing the player,
 // then turned by these (pitch, yaw, roll in its own frame). The stake mesh is authored point
-// up, so it is rolled over and its origin (now the top) lifted StakeRaise units off the ground
+// up, so it is rolled over and its origin (now the top) lifted StakeRaise units off the surface
 SWEP.PlacedAngleOffset = nil
 SWEP.StakeAngleOffset = Angle(0, 0, 180)
 SWEP.StakeRaise = 6
@@ -56,19 +58,4 @@ SWEP.RemoveWhenEmpty = true
 
 AddCSLuaFile()
 
-local searchdir = "weapons/mcv_placeable"
-
-for _, filename in pairs(file.Find(searchdir .. "/*.lua", "LUA")) do
-    if filename == "shared.lua" then continue end
-    local luatype = string.sub(filename, 1, 2)
-
-    if luatype == "sv" then
-        if SERVER then include(searchdir .. "/" .. filename) end
-    elseif luatype == "cl" then
-        AddCSLuaFile(searchdir .. "/" .. filename)
-        if CLIENT then include(searchdir .. "/" .. filename) end
-    else
-        AddCSLuaFile(searchdir .. "/" .. filename)
-        include(searchdir .. "/" .. filename)
-    end
-end
+MCV.IncludeWeaponModules("weapons/mcv_placeable")

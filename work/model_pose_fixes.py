@@ -1,8 +1,74 @@
 """Targeted animation-rig corrections; original and hand-edited SMDs stay intact."""
 from pathlib import Path
 import shutil
+import re
 import numpy as np
 from bake_ik import load_smd, fk, euler, final_pose, rmat, write_rows
+
+# Reviewed rest-then-jump tails, found by audit_firing_tails.py. Preserve the
+# original track length/timing, holding the already-settled penultimate pose.
+FIRING_TAIL_FIXES = {
+    **{name: ('shoot3_a.smd',) for name in (
+        'v_hdm', 'v_highpower', 'v_m1911', 'v_mamba', 'v_mk22',
+        'v_mle1935', 'v_tt33', 'v_vcpistol2')},
+    'v_bar_l': ('shoot1d_ironsight_a.smd', 'shoot2d_ironsight_a.smd'),
+}
+
+def firing_tail_source(ctx, name):
+    override = Path(ctx.override_dir)/name
+    return override if override.exists() else Path(ctx.og_dir)/(ctx.name+'_anims')/name
+
+def validate_firing_tails(qc, ctx, fire_acts):
+    """Fail a port on a new firing track that leaves rest again on its last frame."""
+    visited = set()
+    def visit(name):
+        if name in visited: return
+        visited.add(name)
+        block = qc.find('sequence',name) or qc.find('animation',name)
+        if block and block.kind == 'sequence':
+            for child in block.anims()+block.layers(): visit(child)
+    for block in qc.blocks('sequence'):
+        if block.activity() in fire_acts: visit(block.name)
+    for block in qc.blocks('animation'):
+        if block.name not in visited or not block.get('subtract'): continue
+        # Counter/bolt-state and movement layers need not return to rest.
+        if not block.name.startswith(('shoot','gren_shoot','gl_shoot')): continue
+        if block.get('frame'): continue # pose-recoil samples intentionally hold a frame
+        path = Path(ctx.out_dir)/block.path.replace('\\','/')
+        corrective = qc.find('animation',re.search(r'"([^"]+)"',block.get('subtract')).group(1))
+        refpath = Path(ctx.out_dir)/corrective.path.replace('\\','/') if corrective else None
+        if not path.exists() or not refpath or not refpath.exists(): continue
+        nodes, frames, _ = load_smd(path)
+        if len(frames)<3: continue
+        cnodes, refs, _ = load_smd(refpath)
+        byname = {cnodes[i][0]:row for i,row in refs[0].items()}
+        errors=[]
+        for frame in frames[-2:]:
+            pos=rot=0.
+            for i,row in frame.items():
+                base=byname.get(nodes[i][0],np.zeros(6))
+                pos=max(pos,float(np.linalg.norm(row[:3]-base[:3])))
+                rot=max(rot,float(np.degrees(np.arccos(np.clip((np.trace(rmat(row[3:]).T@rmat(base[3:]))-1)/2,-1,1)))))
+            errors.append((pos,rot))
+        if errors[0][0]<.01 and errors[0][1]<.1 and (errors[1][0]>.05 or errors[1][1]>1):
+            raise ValueError(f'{ctx.name}/{block.name}: firing tail leaves settled pose; inspect {path}')
+
+
+def restore_firing_tail(source, corrective, output):
+    nodes, frames, lines = load_smd(source)
+    cnodes, refs, _ = load_smd(corrective)
+    reference = {cnodes[i][0]: row for i,row in refs[0].items()}
+    assert len(frames) >= 3
+    # Refuse to silently flatten newly authored motion if the source changes.
+    for i, row in frames[-2].items():
+        rest = reference.get(nodes[i][0], np.zeros(6))
+        assert np.linalg.norm(row[:3]-rest[:3]) < .01, source
+        angle = np.degrees(np.arccos(np.clip((np.trace(rmat(row[3:]).T@rmat(rest[3:]))-1)/2,-1,1)))
+        assert angle < .1, (source, nodes[i][0], angle)
+    rows = {(len(frames)-1, i): row for i,row in frames[-2].items()}
+    Path(output).parent.mkdir(parents=True, exist_ok=True)
+    write_rows(lines, rows, str(output))
+    return str(output)
 
 
 def dynamite_lighter(source, idle, corrective, output):
@@ -42,7 +108,8 @@ def dynamite_lighter(source, idle, corrective, output):
             'after_max_grip_matrix_error':max(errors)}
 
 
-def m21_reload_rig(source, original, output):
+def restore_reload_rig(source, original, output):
+    """Restore BaseRoot to an older hand edit without changing any existing pose."""
     nodes, frames, _ = load_smd(source)
     target_nodes, reference, _ = load_smd(original)
     if nodes == target_nodes:
@@ -81,6 +148,11 @@ def prepare_pose_fixes(ctx):
     """Register fixed paths before the port writes sequence paths into the QC."""
     original=Path(ctx.og_dir)
     fixed=Path(ctx.fixed_dir)
+    for name in FIRING_TAIL_FIXES.get(ctx.name, ()):
+        source = firing_tail_source(ctx, name)
+        corrective = Path(ctx.resolve_smd(ctx.name + '_anims/' + name.replace('.smd', '_corrective_animation.smd')))
+        ctx.normalized[name] = restore_firing_tail(source, corrective, fixed/name)
+        ctx.note(ctx.name + '/' + name + ': hold settled firing tail; retain all frames and timing')
     if ctx.name=='v_dynamite':
         animdir=original/'v_dynamite_anims'
         for name in ('run_a', 'walk_a'):
@@ -89,9 +161,11 @@ def prepare_pose_fixes(ctx):
             result=dynamite_lighter(source,animdir/'basePose_a.smd',corrective,fixed/(name+'.smd'))
             ctx.normalized[name+'.smd']=str(fixed/(name+'.smd'))
             ctx.note('Dynamite '+name+': lighter follows left hand; '+str(result))
-    if ctx.name=='v_m21':
-        for name in ['reload_empty.smd','reload_empty_2.smd']:
+    reloads = {'v_m21': ('reload_empty.smd', 'reload_empty_2.smd'),
+               'v_cobra': ('reload.smd',)}
+    if ctx.name in reloads:
+        for name in reloads[ctx.name]:
             source=Path(ctx.override_dir)/name
             if source.exists():
-                ctx.normalized[name]=m21_reload_rig(source,original/'v_m21_anims'/name,fixed/name)
-        ctx.note('M21 empty reload: restore BaseRoot hierarchy without moving the edited poses')
+                ctx.normalized[name]=restore_reload_rig(source,original/(ctx.name+'_anims')/name,fixed/name)
+        ctx.note(ctx.name+' reload: restore BaseRoot hierarchy without moving the edited poses')

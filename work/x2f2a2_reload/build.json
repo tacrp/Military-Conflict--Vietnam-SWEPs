@@ -1,0 +1,65 @@
+{
+  "frames": 115,
+  "bones": 58,
+  "duration_seconds": 3.8,
+  "donor": "v_l1a1/reload_empty_2",
+  "grip_transition_frames": 15,
+  "compiled_reload_before": [
+    [
+      "@reload",
+      30.0,
+      0,
+      93
+    ],
+    [
+      "@reload",
+      30.0,
+      0,
+      93
+    ],
+    [
+      "@reload_empty",
+      30.0,
+      0,
+      115
+    ],
+    [
+      "@reload_empty",
+      30.0,
+      0,
+      1
+    ]
+  ],
+  "compiled_reload_after": [
+    [
+      "@reload",
+      30.0,
+      0,
+      93
+    ],
+    [
+      "@reload",
+      30.0,
+      0,
+      93
+    ],
+    [
+      "@reload_empty",
+      30.0,
+      0,
+      115
+    ],
+    [
+      "@reload_empty",
+      30.0,
+      0,
+      115
+    ]
+  ],
+  "installed": {
+    "v_x2f2a2.mdl": "d47db313091b664bce368e504d3f0896137d750ab42258394ec1304ba64439a5",
+    "v_x2f2a2.vvd": "1c1992e5b30a9dd515218f34b261015912fee4a62268c0cb12539ab2b0b1d926",
+    "v_x2f2a2.dx90.vtx": "7e447ac752d88a2e9ce90d46e9b1cd932ac332042d774932a7bdfba4110ae1ca",
+    "v_x2f2a2.dx80.vtx": "659570f77b19f6e1bb1a9709e2c604831d28419c429a2d904b216f0aafc12f9a"
+  }
+}

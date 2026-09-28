@@ -1,0 +1,22 @@
+# Run in the explicit test instance: harness.py run work/tests/scope_contact.txt --port N
+give mcv_svd
+wait 3
+pos -1000 1300 -100
+clua include('mcv_harness/scope_buffers.lua'); hook.Add('CreateMove','MCV_ScopeProbeAngle',function(cmd) cmd:SetViewAngles(Angle(-10,90,0)) end)
+ccmd r_contact_shadows 1
+key +attack2
+wait 3
+clua MCV.ScopeProbe.Capture('scope_contact_on')
+wait 1
+clua MCV.ScopeProbe.OverlayHook=hook.GetTable().PreDrawHUD.MCV_ScopeAbovePostprocessing; hook.Remove('PreDrawHUD','MCV_ScopeAbovePostprocessing')
+wait 1
+clua MCV.ScopeProbe.Capture('scope_overlay_off')
+wait 1
+clua hook.Add('PreDrawHUD','MCV_ScopeAbovePostprocessing',MCV.ScopeProbe.OverlayHook)
+ccmd r_contact_shadows 0
+wait 1
+clua MCV.ScopeProbe.Capture('scope_contact_off')
+wait 1
+ccmd r_contact_shadows 1
+key -attack2
+clua hook.Remove('CreateMove','MCV_ScopeProbeAngle')

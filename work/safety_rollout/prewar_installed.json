@@ -1,0 +1,12 @@
+{
+  "model": "v_kar98_dov",
+  "timing_check": {
+    "matches_installed": true
+  },
+  "files": {
+    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_kar98_dov.mdl": "d8490d0c2a308abfec39e1601e42156dd55881fbe53e0f35bec8b2c6e13cca1b",
+    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_kar98_dov.vvd": "58344509547fae7815b7b050ff2355047fbf557791272b64102b49284a812f42",
+    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_kar98_dov.dx80.vtx": "72e5659d6d90f213fa17daeec0843d8039b13ebba878ead3a5799dd8c77ff252",
+    "C:\\Program Files (x86)\\Steam\\steamapps\\common\\GarrysMod\\garrysmod\\addons\\mcv-2\\models\\weapons\\mcv\\v_kar98_dov.dx90.vtx": "86b8a4c4504407e226df76dce1e23541016d1874ae8a3ebd5c046c0fa2b1d267"
+  }
+}

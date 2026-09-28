@@ -5,10 +5,11 @@ SWEP.PCFs = {}
 // Effect position and recipients belong to the shooter, never the default
 // EffectData origin (0,0,0). The firing client already predicts its own effects.
 local function dispatchWeaponEffect(name, data, owner)
-    data:SetOrigin(owner:GetShootPos())
+    local origin = owner:GetShootPos()
+    data:SetOrigin(origin)
     if SERVER then
         local recipients = RecipientFilter()
-        recipients:AddPVS(owner:GetShootPos())
+        recipients:AddPVS(origin)
         if owner:IsPlayer() and !game.SinglePlayer() then recipients:RemovePlayer(owner) end
         util.Effect(name, data, true, recipients)
     else
@@ -20,17 +21,20 @@ function SWEP:GetTracerOrigin()
     local owner = self:GetOwner()
     if SERVER or owner != LocalPlayer() or owner:ShouldDrawLocalPlayer() then
         // world model muzzle
-        local mdl, id = self, self:LookupAttachment("muzzle")
+        local mdl, id
         if CLIENT and self.GetWorldModelAttachment then
             mdl, id = self:GetWorldModelAttachment("muzzle", self:GetAkimbo() and self:Clip1() % 2 == 1)
+        else
+            mdl, id = self, MCV.CachedAttachment(self, "muzzle")
         end
         local att = IsValid(mdl) and id > 0 and mdl:GetAttachment(id)
         return att and att.Pos or owner:GetShootPos()
     end
     local vm = owner:GetViewModel()
-    local muzz_qca = vm:LookupAttachment("muzzle")
+    local muzz_qca = MCV.CachedAttachment(vm, "muzzle")
     if self:GetAkimbo() and self:Clip1() % 2 == 1 then // the left gun fires on an odd count (DoMuzzle, DoEject)
-        muzz_qca = vm:LookupAttachment("muzzleleft") > 0 and vm:LookupAttachment("muzzleleft") or vm:LookupAttachment("muzzle2")
+        local left = MCV.CachedAttachment(vm, "muzzleleft")
+        muzz_qca = left > 0 and left or MCV.CachedAttachment(vm, "muzzle2")
     end
     local att = muzz_qca > 0 and vm:GetAttachment(muzz_qca)
     if !att then
@@ -46,16 +50,17 @@ function SWEP:DoMuzzle(alt)
     if !IsValid(owner) then return end
     local vm = owner:IsPlayer() and owner:GetViewModel() or self
     if !IsValid(vm) then return end
-    local muzz_qca = vm:LookupAttachment("muzzle")
+    local muzz_qca = MCV.CachedAttachment(vm, "muzzle")
 
     if self:GetGrenadeLauncher() and self.RifleGrenadeIsUBGL then
-        muzz_qca = vm:LookupAttachment("muzzle2")
+        muzz_qca = MCV.CachedAttachment(vm, "muzzle2")
     end
 
     local is_volley = self:GetFiremodeValue() == MCV.FIREMODE_VOLLEY and self:Clip1() >= self.VolleyCount
 
     if self:GetAkimbo() and self:Clip1() % 2 == 1 and !is_volley then
-        muzz_qca = vm:LookupAttachment("muzzleleft") > 0 and vm:LookupAttachment("muzzleleft") or vm:LookupAttachment("muzzle2")
+        local left = MCV.CachedAttachment(vm, "muzzleleft")
+        muzz_qca = left > 0 and left or MCV.CachedAttachment(vm, "muzzle2")
     end
 
     local data = EffectData()
@@ -92,19 +97,20 @@ function SWEP:DoEject(attachment)
     local vm = owner:IsPlayer() and owner:GetViewModel() or self
     if !IsValid(vm) then return end
 
-    local names = {attachment or "eject"}
+    local first, second = attachment or "eject", nil
     if !attachment and self:GetAkimbo() then
         local is_volley = self:GetFiremodeValue() == MCV.FIREMODE_VOLLEY and self:Clip1() >= self.VolleyCount
         if is_volley then
-            names = {"eject", "eject2"}
+            second = "eject2"
         elseif self:Clip1() % 2 == 1 then
-            names = {"eject2"}
+            first = "eject2"
         end
     end
 
-    for _, name in ipairs(names) do
-        local eject_qca = vm:LookupAttachment(name)
-        if eject_qca <= 0 then eject_qca = vm:LookupAttachment("eject") end
+    for i = 1, second and 2 or 1 do
+        local name = i == 1 and first or second
+        local eject_qca = MCV.CachedAttachment(vm, name)
+        if eject_qca <= 0 then eject_qca = MCV.CachedAttachment(vm, "eject") end
 
         local data = EffectData()
         data:SetEntity(self)

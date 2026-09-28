@@ -1,15 +1,26 @@
 // Gun-specific per-tick work; the shared part (movement, hold type, timers, idle) runs in
-// mcv_base_core/sh_think.lua before this.
+// mcv/weapon_common/sh_think.lua before this.
 
 // Third person: the world model's "bipod" bodygroup (option 1 is the deployed one on every
 // game model) follows the bipod, and its "belt" bodygroup (the long belt, blank second) goes
 // away with the last round. The drawn copies take the weapon entity's bodygroups
 // (cl_worldmodel.lua). Bodygroups are engine predicted fields, so update both realms.
 function SWEP:Think_WorldBodygroups()
+    local model = self:GetModel()
+    local groups = self.MCVWorldBodygroups
+    if !groups or self.MCVWorldBodygroupModel != model then
+        groups = {
+            bayonet = self:FindBodygroupByName("bayonet"),
+            grenade = self:FindBodygroupByName("grenade"),
+            bipod = self:FindBodygroupByName("bipod"),
+            belt = self:FindBodygroupByName("belt"),
+        }
+        self.MCVWorldBodygroups, self.MCVWorldBodygroupModel = groups, model
+    end
 
     // the two the player changes with the weapon in hand; the rest are set once at Initialize
     if self.HasBayonet then
-        local b = self:FindBodygroupByName("bayonet")
+        local b = groups.bayonet
         if b >= 0 then
             local want = self:GetBayonet() and 1 or 0
             if self:GetBodygroup(b) != want then self:SetBodygroup(b, want) end
@@ -17,19 +28,19 @@ function SWEP:Think_WorldBodygroups()
     end
 
     if self.HasRifleGrenade then
-        local g = self:FindBodygroupByName("grenade")
+        local g = groups.grenade
         if g >= 0 then
             local want = self:GetGrenadeLauncher() and 1 or 0
             if self:GetBodygroup(g) != want then self:SetBodygroup(g, want) end
         end
     end
 
-    local bipod = self:FindBodygroupByName("bipod")
+    local bipod = groups.bipod
     if bipod >= 0 then
         local want = self:GetBipod() and 1 or 0
         if self:GetBodygroup(bipod) != want then self:SetBodygroup(bipod, want) end
     end
-    local belt = self:FindBodygroupByName("belt")
+    local belt = groups.belt
     if belt >= 0 then
         local want = self:Clip1() > 0 and 0 or 1
         if self:GetBodygroup(belt) != want then self:SetBodygroup(belt, want) end
@@ -66,7 +77,9 @@ function SWEP:ThinkWeapon()
             self:PlayAnimation(self:IdleActivity())
             self:SetPrimedAttack(false)
         end
-    elseif self:GetReloading() and self.ShotgunReload and owner:KeyPressed(IN_ATTACK) and self:Clip1() > 0 then
+    // LastClip is the predicted clip count captured when this reload began.
+    // Existing shells must not let a top-up skip its first insert.
+    elseif self:GetReloading() and self.ShotgunReload and owner:KeyPressed(IN_ATTACK) and self:Clip1() > self:GetLastClip() then
         self:SetEndReload(true)
     end
 
@@ -123,4 +136,5 @@ function SWEP:ThinkWeapon()
     if owner:KeyDown(IN_USE) and owner:KeyPressed(IN_WALK) then
         self:ToggleSafe()
     end
+    self:Think_AutoReload()
 end

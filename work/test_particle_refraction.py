@@ -23,7 +23,7 @@ class ParticleRefractionTests(unittest.TestCase):
                 return {Render=function() log("draw:"..name..":"..context) end}
             end
         ''')
-        lua.execute(to_lua((ROOT / "lua/weapons/mcv_base_core/sh_vm.lua").read_text()))
+        lua.execute(to_lua((ROOT / "lua/mcv/weapon_common/sh_vm.lua").read_text()))
         lua.execute('''
             function SWEP:IsDepthPass(flags) return flags==1 end
             function SWEP:PostDrawViewModelWeapon() end
@@ -46,6 +46,43 @@ class ParticleRefractionTests(unittest.TestCase):
             assert(draw({dead},0,true)=="")
             assert(draw({a,jet},1,true)=="")
             assert(draw({a,jet},0,false)=="")
+
+            -- The Contact Shadows mask must survive both refraction batches.
+            shaderlib={}; enabled=true; allocations=0
+            function GetConVar() return {GetBool=function() return enabled end} end
+            local function texture(name)
+                return {name=name, Width=function() return 1024 end,
+                        Height=function() return 1024 end}
+            end
+            source=texture("source"); source.value="weapon mask"
+            function GetRenderTargetEx()
+                allocations=allocations+1
+                return texture("backup")
+            end
+            render.GetRefractTexture=function() return source end
+            render.CopyTexture=function(a,b)
+                b.value=a.value
+                log(a==source and "save" or "restore")
+            end
+            render.UpdateRefractTexture=function()
+                source.value="fresh scene"
+                log("copy:"..context)
+            end
+            local renderA=a.Render
+            a.Render=function()
+                assert(source.value=="fresh scene")
+                renderA()
+            end
+            assert(draw({a,jet,b},0,true)=="save,"..expected..",restore")
+            assert(source.value=="weapon mask")
+            assert(draw({jet},0,true)=="save,copy:world,draw:jet:world,restore")
+            assert(draw({a},0,true)=="save,copy:vm,draw:a:vm,restore")
+            assert(allocations==1)
+            assert(draw({},0,true)=="")
+            assert(draw({a},1,true)=="")
+            assert(draw({a},0,false)=="")
+            enabled=false
+            assert(draw({a},0,true)=="copy:vm,draw:a:vm")
         ''')
 
 

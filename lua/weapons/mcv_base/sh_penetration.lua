@@ -21,7 +21,7 @@ function SWEP:ApplyBulletDamage(tr, dmginfo, distance, bulletCount)
     if (bulletCount or self:GetBulletCount()) > 1 then
         dmginfo:SetDamageType(bit.bor(dmginfo:GetDamageType(), DMG_BUCKSHOT))
     end
-    dmginfo:SetDamage(dmginfo:GetDamage() * math.pow(self.RangeModifier, math.max(distance / 500, 0)))
+    dmginfo:SetDamage(dmginfo:GetDamage() * MCV.BulletRangeMultiplier(self, distance))
     if !IsValid(tr.Entity) then return end
     if self.ArmorPiercing then
         local target = tr.Entity
@@ -96,7 +96,7 @@ function SWEP:QueuePenetration(tr, state, queue)
     if !MCV.BulletPenetration() or state.layers >= maxLayers then return end
     local depth, modifier = self:GetPenetrationStats(tr.MatType)
     local dir = (tr.HitPos - tr.StartPos):GetNormalized()
-    local exit, thickness = self:FindPenetrationExit(tr, dir, depth * state.budget)
+    local exit, thickness, back = self:FindPenetrationExit(tr, dir, depth * state.budget)
     if !exit then return end
     local budget = state.budget - thickness / depth
     // First-pass loss curve: higher script modifiers lose more damage, and
@@ -105,6 +105,9 @@ function SWEP:QueuePenetration(tr, state, queue)
     local damage = state.damage * math.pow(budget / state.budget, modifier)
     local distance = state.distance + (tr.HitPos - tr.StartPos):Length() + thickness + epsilon
     if damage < 1 or distance >= 56756 then return end
+    // Retain the real far face for a cosmetic impact/decal. Consumers dispatch
+    // it through their normal prediction/recipient path, without another damage hit.
     queue[#queue + 1] = {src = exit, dir = dir, damage = damage,
-        distance = distance, budget = budget, layers = state.layers + 1}
+        distance = distance, budget = budget, layers = state.layers + 1,
+        exitTrace = back, exitDamage = damage * MCV.BulletRangeMultiplier(self, distance - epsilon)}
 end

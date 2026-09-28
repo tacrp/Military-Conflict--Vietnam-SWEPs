@@ -83,6 +83,8 @@ SWEP.RTScopeMaterialIndex = 8
 // wear a lens_*; without this the eyepiece is a translucent decal rather than glass
 SWEP.ScopeIdleLensMaterial = "models/weapons/mcv/optics/lens_meopta"
 
+SWEP.AdjustableScopes = true
+
 SWEP.IronsightPos = Vector(0, -3.1, -0.21)
 SWEP.IronsightAng = Angle(0, 0, 0)
 

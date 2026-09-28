@@ -4,7 +4,7 @@ from lupa import LuaRuntime
 from glua_check import to_lua
 
 root = Path(__file__).resolve().parents[1]
-source = (root/'lua/weapons/mcv_base_core/sh_deploy.lua').read_text()
+source = (root/'lua/mcv/weapon_common/sh_deploy.lua').read_text()
 lua = LuaRuntime()
 lua.execute('''
 SWEP={}; SERVER=false
